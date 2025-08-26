@@ -42,6 +42,8 @@ const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
+const ServicesPricing = React.lazy(() => import('./pages/ServicesPricing'));
+const ServicesComparison = React.lazy(() => import('./pages/ServicesComparison'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -65,6 +67,8 @@ const baseRoutes = [
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
+  { path: '/services-pricing', element: <ServicesPricing /> },
+  { path: '/services-comparison', element: <ServicesComparison /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
 ];

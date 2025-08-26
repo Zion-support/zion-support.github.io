@@ -4,11 +4,7 @@ import { ProductListing } from "@/types/listings";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { Globe, ExternalLink, Star, Clock, Shield, Zap, Database, Code, Smartphone, Blockchain, Cpu, BarChart3 } from "lucide-react";
-=======
-import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
+import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart, ExternalLink, Star, Clock, Database, Smartphone, Blockchain, Cpu, Phone, Mail, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
 import { EXPANDED_SERVICES } from "@/data/expandedServices";
 
@@ -387,6 +383,305 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 267,
   },
 
+  // Emerging Technology Services
+  {
+    id: "quantum-computing-simulator",
+    title: "Quantum Computing Simulator",
+    description: "Access to quantum computing resources and simulation tools for research, optimization, and cryptography. Support for Qiskit, Cirq, and custom quantum algorithms.",
+    category: "Emerging Tech",
+    price: 299,
+    currency: "$",
+    tags: ["Quantum Computing", "Qiskit", "Cirq", "Cryptography", "Optimization"],
+    author: {
+      name: "Zion Quantum Labs",
+      id: "zion-quantum-labs",
+      avatarUrl: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-05T10:00:00.000Z",
+    aiScore: 96,
+    rating: 4.9,
+    reviewCount: 45,
+  },
+  {
+    id: "blockchain-development-platform",
+    title: "Blockchain Development Platform",
+    description: "Complete blockchain development suite with smart contract templates, DeFi protocols, and NFT marketplace solutions. Support for Ethereum, Polygon, and Solana.",
+    category: "Emerging Tech",
+    price: 79,
+    currency: "$",
+    tags: ["Blockchain", "Smart Contracts", "DeFi", "NFT", "Web3"],
+    author: {
+      name: "Zion Blockchain",
+      id: "zion-blockchain",
+      avatarUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-06T14:30:00.000Z",
+    aiScore: 93,
+    rating: 4.8,
+    reviewCount: 67,
+  },
+  {
+    id: "ai-robotics-platform",
+    title: "AI Robotics Control Platform",
+    description: "Cloud-based robotics control and automation platform with AI-powered decision making. Perfect for manufacturing, logistics, and autonomous systems.",
+    category: "Emerging Tech",
+    price: 199,
+    currency: "$",
+    tags: ["Robotics", "AI Control", "Automation", "Manufacturing", "Logistics"],
+    author: {
+      name: "Zion Robotics",
+      id: "zion-robotics",
+      avatarUrl: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-07T09:15:00.000Z",
+    aiScore: 94,
+    rating: 4.7,
+    reviewCount: 34,
+  },
+
+  // Advanced AI Services
+  {
+    id: "ai-voice-cloning",
+    title: "AI Voice Cloning & Synthesis",
+    description: "Professional voice cloning technology for content creation, accessibility, and personalized experiences. High-quality voice synthesis with emotion control.",
+    category: "AI & ML",
+    price: 49,
+    currency: "$",
+    tags: ["Voice Cloning", "Text-to-Speech", "Voice Synthesis", "Accessibility"],
+    author: {
+      name: "Zion Voice AI",
+      id: "zion-voice-ai",
+      avatarUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-08T11:45:00.000Z",
+    aiScore: 97,
+    rating: 4.9,
+    reviewCount: 89,
+  },
+  {
+    id: "ai-emotion-detection",
+    title: "AI Emotion Detection System",
+    description: "Real-time emotion detection and sentiment analysis for customer service, marketing, and user experience optimization. Multi-modal analysis including text, voice, and video.",
+    category: "AI & ML",
+    price: 69,
+    currency: "$",
+    tags: ["Emotion Detection", "Sentiment Analysis", "Customer Service", "UX Optimization"],
+    author: {
+      name: "Zion Emotion AI",
+      id: "zion-emotion-ai",
+      avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-09T13:20:00.000Z",
+    aiScore: 95,
+    rating: 4.8,
+    reviewCount: 56,
+  },
+
+  // Advanced Cybersecurity Services
+  {
+    id: "ai-behavioral-analysis",
+    title: "AI Behavioral Analysis Security",
+    description: "Advanced security system using AI to detect anomalous user behavior and potential insider threats. Continuous learning and adaptive threat detection.",
+    category: "Cybersecurity",
+    price: 399,
+    currency: "$",
+    tags: ["Behavioral Analysis", "Insider Threat Detection", "AI Security", "Anomaly Detection"],
+    author: {
+      name: "Zion Behavioral Security",
+      id: "zion-behavioral-security",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-10T15:30:00.000Z",
+    aiScore: 94,
+    rating: 4.9,
+    reviewCount: 78,
+  },
+  {
+    id: "quantum-encryption",
+    title: "Quantum-Safe Encryption",
+    description: "Future-proof encryption solutions resistant to quantum computing attacks. Post-quantum cryptography implementation for long-term data security.",
+    category: "Cybersecurity",
+    price: 599,
+    currency: "$",
+    tags: ["Quantum Encryption", "Post-Quantum Cryptography", "Future-Proof Security", "Data Protection"],
+    author: {
+      name: "Zion Quantum Security",
+      id: "zion-quantum-security",
+      avatarUrl: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-11T10:15:00.000Z",
+    aiScore: 96,
+    rating: 4.8,
+    reviewCount: 42,
+  },
+
+  // Advanced Cloud & Infrastructure
+  {
+    id: "ai-powered-load-balancing",
+    title: "AI-Powered Load Balancing",
+    description: "Intelligent traffic distribution and load balancing using machine learning algorithms. Predictive scaling and automatic failover for optimal performance.",
+    category: "Cloud & Infrastructure",
+    price: 89,
+    currency: "$",
+    tags: ["Load Balancing", "AI Traffic Management", "Predictive Scaling", "Auto-Failover"],
+    author: {
+      name: "Zion Cloud AI",
+      id: "zion-cloud-ai",
+      avatarUrl: "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-12T12:00:00.000Z",
+    aiScore: 91,
+    rating: 4.7,
+    reviewCount: 63,
+  },
+  {
+    id: "green-cloud-optimization",
+    title: "Green Cloud Optimization",
+    description: "AI-powered cloud resource optimization to reduce carbon footprint and energy costs. Sustainable computing with intelligent resource allocation.",
+    category: "Cloud & Infrastructure",
+    price: 59,
+    currency: "$",
+    tags: ["Green Computing", "Energy Optimization", "Carbon Reduction", "Sustainable Tech"],
+    author: {
+      name: "Zion Green Cloud",
+      id: "zion-green-cloud",
+      avatarUrl: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-13T14:45:00.000Z",
+    aiScore: 89,
+    rating: 4.6,
+    reviewCount: 38,
+  },
+
+  // Advanced Business Intelligence
+  {
+    id: "ai-predictive-maintenance",
+    title: "AI Predictive Maintenance",
+    description: "Predictive maintenance system using IoT sensors and AI to prevent equipment failures and optimize maintenance schedules. Industry 4.0 ready.",
+    category: "Business Intelligence",
+    price: 149,
+    currency: "$",
+    tags: ["Predictive Maintenance", "IoT Sensors", "Industry 4.0", "Equipment Optimization"],
+    author: {
+      name: "Zion Industrial AI",
+      id: "zion-industrial-ai",
+      avatarUrl: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-14T16:20:00.000Z",
+    aiScore: 93,
+    rating: 4.8,
+    reviewCount: 71,
+  },
+  {
+    id: "ai-supply-chain-optimization",
+    title: "AI Supply Chain Optimization",
+    description: "Intelligent supply chain management with demand forecasting, route optimization, and inventory management. Real-time tracking and predictive analytics.",
+    category: "Business Intelligence",
+    price: 179,
+    currency: "$",
+    tags: ["Supply Chain", "Demand Forecasting", "Route Optimization", "Inventory Management"],
+    author: {
+      name: "Zion Supply Chain AI",
+      id: "zion-supply-chain-ai",
+      avatarUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-15T09:30:00.000Z",
+    aiScore: 92,
+    rating: 4.7,
+    reviewCount: 54,
+  },
+
+  // Advanced Communication Services
+  {
+    id: "ai-real-time-translation",
+    title: "AI Real-Time Translation",
+    description: "Live translation service for meetings, calls, and presentations with support for 150+ languages. Real-time transcription and translation with cultural context.",
+    category: "Communication",
+    price: 39,
+    currency: "$",
+    tags: ["Real-Time Translation", "150+ Languages", "Live Transcription", "Cultural Context"],
+    author: {
+      name: "Zion Live Translation",
+      id: "zion-live-translation",
+      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-16T11:15:00.000Z",
+    aiScore: 95,
+    rating: 4.9,
+    reviewCount: 123,
+  },
+  {
+    id: "ai-video-production",
+    title: "AI Video Production Suite",
+    description: "Automated video creation, editing, and production using AI. Generate professional videos from text, create animations, and enhance existing footage.",
+    category: "Communication",
+    price: 79,
+    currency: "$",
+    tags: ["Video Production", "AI Video Creation", "Automated Editing", "Animation"],
+    author: {
+      name: "Zion Video AI",
+      id: "zion-video-ai",
+      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-17T13:45:00.000Z",
+    aiScore: 94,
+    rating: 4.8,
+    reviewCount: 87,
+  },
+
+  // Specialized Advanced Tools
+  {
+    id: "ai-legal-contract-generator",
+    title: "AI Legal Contract Generator",
+    description: "Intelligent contract creation and review with legal compliance checking. Generate contracts, analyze risks, and ensure regulatory compliance.",
+    category: "Specialized Tools",
+    price: 89,
+    currency: "$",
+    tags: ["Contract Generation", "Legal Compliance", "Risk Analysis", "Regulatory Compliance"],
+    author: {
+      name: "Zion Legal AI",
+      id: "zion-legal-ai",
+      avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-18T15:20:00.000Z",
+    aiScore: 91,
+    rating: 4.7,
+    reviewCount: 62,
+  },
+  {
+    id: "ai-personalized-learning",
+    title: "AI Personalized Learning Platform",
+    description: "Adaptive learning system that personalizes educational content based on individual learning styles and progress. AI tutors and progress tracking.",
+    category: "Specialized Tools",
+    price: 49,
+    currency: "$",
+    tags: ["Personalized Learning", "AI Tutors", "Adaptive Education", "Progress Tracking"],
+    author: {
+      name: "Zion Education AI",
+      id: "zion-education-ai",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-02-19T10:30:00.000Z",
+    aiScore: 93,
+    rating: 4.8,
+    reviewCount: 95,
+  },
+
   // Legacy services (keeping existing ones)
   {
     id: "service-1",
@@ -598,6 +893,7 @@ const SERVICE_FILTERS = [
   { label: 'Business Intelligence', value: 'business-intelligence' },
   { label: 'Communication', value: 'communication' },
   { label: 'Specialized Tools', value: 'specialized-tools' },
+  { label: 'Emerging Tech', value: 'emerging-tech' },
   { label: 'Development', value: 'development' },
   { label: 'Management', value: 'management' },
   { label: 'Security', value: 'security' },
@@ -619,28 +915,32 @@ export default function ServicesPage() {
 
   return (
     <>
-<<<<<<< HEAD
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link to="/enhanced-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2" />
-                Enhanced AI & IT Services
-              </Button>
-            </Link>
-=======
       <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-8 px-4 md:px-8 mb-8 border-b border-zion-purple/30">
         <div className="container mx-auto">
           <div className="text-center mb-6">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent">
               Zion Micro SAAS Services
             </h1>
-            <p className="text-xl text-zion-cyan/80 max-w-4xl mx-auto">
+            <p className="text-xl text-zion-cyan/80 max-w-4xl mx-auto mb-6">
               Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform your business operations. 
               From AI content generation to cybersecurity, we have the tools you need to succeed.
             </p>
+            <div className="bg-zion-purple/10 backdrop-blur-sm rounded-lg p-6 border border-zion-purple/20 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <h3 className="text-zion-cyan font-semibold mb-2">Ready to Transform?</h3>
+                  <p className="text-zion-cyan/70 text-sm">Get started with our AI solutions today</p>
+                </div>
+                <div>
+                  <h3 className="text-zion-cyan font-semibold mb-2">Expert Support</h3>
+                  <p className="text-zion-cyan/70 text-sm">24/7 technical assistance & onboarding</p>
+                </div>
+                <div>
+                  <h3 className="text-zion-cyan font-semibold mb-2">Free Trials</h3>
+                  <p className="text-zion-cyan/70 text-sm">Test drive any service for 14 days</p>
+                </div>
+              </div>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
@@ -683,11 +983,22 @@ export default function ServicesPage() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10 backdrop-blur-sm">
                 <Globe className="h-4 w-4 mr-2" />
                 Global IT Onsite Services
+              </Button>
+            </Link>
+            <Link to="/services-pricing">
+              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
+                <BarChart3 className="h-4 w-4 mr-2" />
+                View Pricing
+              </Button>
+            </Link>
+            <Link to="/services-comparison">
+              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
+                <TrendingUp className="h-4 w-4 mr-2" />
+                Compare Services
               </Button>
             </Link>
             <Link to="/request-quote">
@@ -713,6 +1024,90 @@ export default function ServicesPage() {
         categoryFilters={SERVICE_FILTERS}
         initialPrice={{ min: 19, max: 5000 }}
       />
+      
+      {/* Enhanced Contact & Sales Section */}
+      <section className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-16 px-4 md:px-8">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Accelerate Your Business with AI?
+          </h2>
+          <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto mb-8">
+            Our team of AI experts is ready to help you implement the perfect solutions for your business needs. 
+            Get personalized recommendations and expert guidance.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-6 border border-zion-purple/30">
+              <Phone className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+              <h3 className="text-white font-semibold text-lg mb-2">Call Us Directly</h3>
+              <p className="text-zion-cyan/70 mb-3">Speak with our AI specialists</p>
+              <a href="tel:+13024640950" className="text-zion-cyan hover:text-zion-cyan-light font-semibold text-lg">
+                +1 (302) 464-0950
+              </a>
+            </div>
+            
+            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-6 border border-zion-purple/30">
+              <Mail className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+              <h3 className="text-white font-semibold text-lg mb-2">Email Our Team</h3>
+              <p className="text-zion-cyan/70 mb-3">Get detailed proposals and quotes</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:text-zion-cyan-light font-semibold">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            
+            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-6 border border-zion-purple/30">
+              <MapPin className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+              <h3 className="text-white font-semibold text-lg mb-2">Visit Our Office</h3>
+              <p className="text-zion-cyan/70 mb-3">Schedule an in-person consultation</p>
+              <p className="text-zion-cyan font-semibold text-sm">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </p>
+            </div>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/request-quote">
+              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white shadow-lg shadow-zion-purple/25 px-8 py-3 text-lg">
+                Get Free Consultation
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm px-8 py-3 text-lg">
+                Schedule Demo
+              </Button>
+            </Link>
+            <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10 backdrop-blur-sm px-8 py-3 text-lg">
+                <ExternalLink className="h-5 w-5 mr-2" />
+                Visit Website
+              </Button>
+            </a>
+          </div>
+          
+          <div className="mt-12 bg-zion-purple/10 backdrop-blur-sm rounded-lg p-6 border border-zion-purple/20 max-w-4xl mx-auto">
+            <h3 className="text-white font-semibold text-xl mb-4">Why Choose Zion Tech Group?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              <div>
+                <h4 className="text-zion-cyan font-semibold mb-2">✓ Industry-Leading AI Technology</h4>
+                <p className="text-zion-cyan/70 text-sm">Cutting-edge AI models and algorithms</p>
+              </div>
+              <div>
+                <h4 className="text-zion-cyan font-semibold mb-2">✓ Enterprise-Grade Security</h4>
+                <p className="text-zion-cyan/70 text-sm">SOC 2 compliant with 99.9% uptime</p>
+              </div>
+              <div>
+                <h4 className="text-zion-cyan font-semibold mb-2">✓ 24/7 Expert Support</h4>
+                <p className="text-zion-cyan/70 text-sm">Dedicated technical account managers</p>
+              </div>
+              <div>
+                <h4 className="text-zion-cyan font-semibold mb-2">✓ Flexible Pricing Plans</h4>
+                <p className="text-zion-cyan/70 text-sm">Scale from startup to enterprise</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <TrustedBySection />
     </>
