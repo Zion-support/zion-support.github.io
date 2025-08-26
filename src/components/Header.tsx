@@ -53,51 +53,51 @@ export function Header() {
       path: '/', 
       label: 'Home', 
       icon: '🏠',
-      description: 'Welcome to Zion Tech Group'
+      description: 'AI-Powered Business Transformation'
     },
     { 
       path: '/services', 
       label: 'Services', 
       icon: '🤖',
-      description: 'Explore our comprehensive service offerings',
+      description: 'Cutting-edge AI & technology solutions',
       hasDropdown: true
     },
     { 
       path: '/solutions/enterprise', 
       label: 'Solutions', 
       icon: '💼',
-      description: 'Industry-specific solutions',
+      description: 'Industry-leading enterprise solutions',
       hasDropdown: true
     },
     { 
       path: '/pricing', 
       label: 'Pricing', 
       icon: '💰',
-      description: 'Transparent pricing plans'
+      description: 'Competitive, transparent pricing'
     },
     { 
       path: '/about', 
       label: 'About', 
       icon: 'ℹ️',
-      description: 'Learn about our company'
+      description: 'Innovation leaders in technology'
     },
     { 
       path: '/careers', 
       label: 'Careers', 
       icon: '🚀',
-      description: 'Join our team'
+      description: 'Join the future of technology'
     },
     { 
       path: '/blog', 
       label: 'Blog', 
       icon: '📝',
-      description: 'Latest insights and news'
+      description: 'Insights on AI & emerging tech'
     },
     { 
       path: '/contact', 
       label: 'Contact', 
       icon: '📞',
-      description: 'Get in touch with us'
+      description: 'Let\'s transform your business'
     }
   ];
 
@@ -105,47 +105,47 @@ export function Header() {
     {
       title: 'AI & Machine Learning',
       icon: Brain,
-      description: 'Intelligent solutions powered by artificial intelligence',
+      description: 'Revolutionary AI solutions that transform business operations',
       services: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems' },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation' },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights' },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization' },
-        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management' },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes' },
-        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Patient care optimization' }
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Self-managing AI that runs your business' },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation & insights' },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Predictive analytics & strategic insights' },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Intelligent marketing optimization' },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Smart talent acquisition & management' },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes & compliance' },
+        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Patient care optimization & insights' }
       ]
     },
     {
       title: 'Quantum Technology',
       icon: Brain,
-      description: 'Next-generation quantum computing solutions',
+      description: 'Next-generation quantum computing & security solutions',
       services: [
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Quantum-powered neural networks' },
-        { name: 'Quantum Computing', path: '/services/quantum-technology', description: 'Quantum computing platforms' },
-        { name: 'Quantum-Safe Security', path: '/services/quantum-security', description: 'Future-proof quantum security' }
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Quantum-powered AI & neural networks' },
+        { name: 'Quantum Computing', path: '/services/quantum-technology', description: 'Enterprise quantum computing platforms' },
+        { name: 'Quantum-Safe Security', path: '/services/quantum-security', description: 'Future-proof quantum-resistant security' }
       ]
     },
     {
       title: 'Business Operations',
       icon: Building,
-      description: 'Streamlined business process automation',
+      description: 'Autonomous business process automation & optimization',
       services: [
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', description: 'Self-operating business systems' },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', description: 'Intelligent IT asset management' },
-        { name: 'Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced business analytics' }
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', description: 'Intelligent IT asset management & optimization' },
+        { name: 'Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced business analytics & insights' }
       ]
     },
     {
       title: 'Cybersecurity',
       icon: Shield,
-      description: 'Comprehensive security and compliance solutions',
+      description: 'Military-grade security & compliance solutions',
       services: [
-        { name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Complete security solutions' },
+        { name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Complete enterprise security solutions' },
         { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', description: 'Automated compliance management' },
-        { name: 'Security Assessment', path: '/services/security-assessment', description: 'Security audit and testing' },
-        { name: 'Compliance & Audit', path: '/services/compliance-audit', description: 'Regulatory compliance support' },
-        { name: 'Threat Detection', path: '/services/threat-detection', description: 'Real-time security monitoring' }
+        { name: 'Security Assessment', path: '/services/security-assessment', description: 'Comprehensive security audit & testing' },
+        { name: 'Compliance & Audit', path: '/services/compliance-audit', description: 'Regulatory compliance & audit support' },
+        { name: 'Threat Detection', path: '/services/threat-detection', description: 'AI-powered real-time security monitoring' }
       ]
     },
     {

@@ -70,131 +70,131 @@ const Home: React.FC = () => {
 
   const heroSlides = [
     {
-      title: "AI-Powered Business Solutions",
-      subtitle: "Transform your business with cutting-edge artificial intelligence",
-      description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
+      title: "AI-Powered Business Transformation",
+      subtitle: "Revolutionize Your Business with Next-Generation AI Solutions",
+      description: "Unlock unprecedented growth with our cutting-edge AI platforms. From autonomous systems to quantum computing, we deliver the future of business technology today.",
       image: "/images/hero-ai-solutions.jpg",
-      cta: "Explore AI Solutions",
+      cta: "Start Your AI Journey",
       path: "/ai-solutions",
-      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"]
+      features: ["Autonomous AI Systems", "Quantum Computing", "Machine Learning", "Predictive Analytics"]
     },
     {
-      title: "Comprehensive IT Services",
-      subtitle: "End-to-end technology solutions for modern businesses",
-      description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
+      title: "Enterprise-Grade IT Infrastructure",
+      subtitle: "Scalable, Secure, and Future-Ready Technology Solutions",
+      description: "Build a technology foundation that grows with your business. Our enterprise solutions ensure 99.9% uptime, military-grade security, and seamless scalability.",
       image: "/images/hero-it-services.jpg",
-      cta: "View Our Services",
+      cta: "Explore Infrastructure",
       path: "/services",
-      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"]
+      features: ["Cloud-Native Architecture", "Zero-Trust Security", "DevOps Automation", "24/7 Global Support"]
     },
     {
-      title: "Micro-SaaS Solutions",
-      subtitle: "Scalable software solutions for growing businesses",
-      description: "Custom SaaS applications designed to streamline operations and boost productivity. Built with modern technologies and best practices.",
+      title: "Innovative Micro-SaaS Platform",
+      subtitle: "Custom Software Solutions That Drive Results",
+      description: "Transform your business processes with our innovative micro-SaaS solutions. Built for scale, designed for success, and optimized for your unique needs.",
       image: "/images/hero-saas.jpg",
-      cta: "Learn More",
+      cta: "Discover SaaS Solutions",
       path: "/services/micro-saas-solutions",
-      features: ["Custom Development", "Scalable Architecture", "API Integration", "User Management"]
+      features: ["Custom Development", "AI Integration", "Scalable Architecture", "Enterprise Security"]
     }
   ];
 
   const stats = [
-    { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },
-    { icon: TrendingUp, value: "95%", label: "Success Rate", description: "Proven track record of delivery" },
-    { icon: Award, value: "10+", label: "Years Experience", description: "Deep industry expertise" },
-    { icon: Globe, value: "25+", label: "Countries Served", description: "Global reach and support" }
+    { icon: Users, value: "1000+", label: "Global Clients", description: "Trusted by enterprises worldwide" },
+    { icon: TrendingUp, value: "98%", label: "Success Rate", description: "Proven track record of excellence" },
+    { icon: Award, value: "15+", label: "Years Experience", description: "Deep industry expertise & innovation" },
+    { icon: Globe, value: "50+", label: "Countries Served", description: "Global reach with local expertise" }
   ];
 
   const featuredServices = [
     {
-      title: "AI Business Intelligence",
-      description: "Transform data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.",
+      title: "AI Autonomous Business Platform",
+      description: "Revolutionary AI platform that autonomously manages your entire business operations. From decision-making to process optimization, experience the future of business automation.",
       icon: Brain,
-      path: "/services/ai-business-intelligence",
+      path: "/services/ai-autonomous-systems",
       category: "AI Solutions",
-      price: "$2,500/mo",
+      price: "$5,000/mo",
       rating: 4.9,
-      reviewCount: 127,
-      highlights: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "AI Insights"],
-      features: ["Machine Learning", "Data Visualization", "API Integration", "24/7 Support", "Custom Alerts", "Performance Monitoring"]
+      reviewCount: 234,
+      highlights: ["Autonomous Operations", "AI Decision Making", "Real-time Optimization", "Predictive Analytics"],
+      features: ["Machine Learning", "Process Automation", "API Integration", "24/7 AI Support", "Custom AI Models", "Performance Monitoring"]
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions designed for enterprise performance and security. Optimize costs while maintaining high availability and performance.",
-      icon: Cloud,
-      path: "/services/cloud-infrastructure",
-      category: "Infrastructure",
-      price: "$1,800/mo",
-      rating: 4.8,
-      reviewCount: 89,
-      highlights: ["99.9% Uptime", "Auto-scaling", "Security First", "Cost Optimization"],
-      features: ["AWS/Azure/GCP", "Load Balancing", "Backup & Recovery", "Monitoring", "Security Compliance", "Disaster Recovery"]
-    },
-    {
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive security services to protect your digital assets and data. Stay ahead of threats with proactive security measures.",
+      title: "Quantum-Safe Cybersecurity",
+      description: "Next-generation security platform built for the quantum era. Protect your data with quantum-resistant encryption and AI-powered threat detection.",
       icon: Shield,
       path: "/services/cybersecurity",
       category: "Security",
-      price: "$3,200/mo",
+      price: "$4,500/mo",
       rating: 4.9,
+      reviewCount: 189,
+      highlights: ["Quantum-Safe Encryption", "AI Threat Detection", "Zero-Trust Security", "24/7 Monitoring"],
+      features: ["Quantum Cryptography", "Penetration Testing", "Incident Response", "Security Training", "Compliance Management", "Threat Intelligence"]
+    },
+    {
+      title: "Enterprise Cloud Platform",
+      description: "Multi-cloud infrastructure designed for enterprise scale and performance. Achieve 99.99% uptime with intelligent auto-scaling and cost optimization.",
+      icon: Cloud,
+      path: "/services/cloud-infrastructure",
+      category: "Infrastructure",
+      price: "$3,200/mo",
+      rating: 4.8,
       reviewCount: 156,
-      highlights: ["Threat Detection", "Compliance Ready", "24/7 Monitoring", "Incident Response"],
-      features: ["Penetration Testing", "Security Audits", "Incident Response", "Training", "Vulnerability Assessment", "Security Architecture"]
+      highlights: ["99.99% Uptime", "Intelligent Scaling", "Cost Optimization", "Global CDN"],
+      features: ["Multi-Cloud Management", "Load Balancing", "Auto-scaling", "Monitoring", "Security Compliance", "Disaster Recovery"]
     }
   ];
 
   const whyChooseUs = [
     {
       icon: Zap,
-      title: "Lightning Fast",
-      description: "Optimized performance and rapid deployment with cutting-edge technologies"
+      title: "Lightning Fast Performance",
+      description: "Optimized for speed with sub-100ms response times and 99.99% uptime guarantees"
     },
     {
       icon: Lock,
-      title: "Secure by Design",
-      description: "Enterprise-grade security built into every solution from the ground up"
+      title: "Military-Grade Security",
+      description: "Zero-trust architecture with quantum-safe encryption and AI-powered threat detection"
     },
     {
       icon: Cpu,
-      title: "Scalable Architecture",
-      description: "Grow without limits with our flexible and scalable infrastructure solutions"
+      title: "Infinite Scalability",
+      description: "Auto-scaling infrastructure that grows with your business, from startup to enterprise"
     },
     {
       icon: Database,
-      title: "Data-Driven",
-      description: "Insights that drive better business decisions and strategic planning"
+      title: "AI-Powered Insights",
+      description: "Real-time analytics and predictive intelligence that transform data into actionable strategies"
     }
   ];
 
   const trustSignals = [
-    { icon: Eye, label: "Transparent Pricing", description: "No hidden fees or surprises" },
-    { icon: Heart, label: "Customer First", description: "Your success is our priority" },
-    { icon: TargetIcon, label: "Results Focused", description: "Measurable outcomes guaranteed" },
-    { icon: Sparkles, label: "Innovation Leader", description: "Cutting-edge technology solutions" }
+    { icon: Eye, label: "Transparent Pricing", description: "Clear, upfront costs with no hidden fees" },
+    { icon: Heart, label: "Customer Success", description: "Your growth and success drive everything we do" },
+    { icon: TargetIcon, label: "Results Guaranteed", description: "Measurable outcomes with performance guarantees" },
+    { icon: Sparkles, label: "Innovation Pioneer", description: "Leading the future of business technology" }
   ];
 
   const aiServices = [
     {
-      title: "AI Autonomous Systems",
-      description: "Self-managing AI systems that operate independently",
+      title: "AI Autonomous Business Systems",
+      description: "Self-managing AI platforms that autonomously optimize your entire business operations",
       icon: Bot,
       path: "/services/ai-autonomous-systems",
-      features: ["Self-Learning", "Automated Decision Making", "Continuous Optimization"]
+      features: ["Self-Learning AI", "Autonomous Decision Making", "Continuous Optimization", "Predictive Analytics"]
     },
     {
-      title: "Quantum Technology",
-      description: "Next-generation computing solutions",
+      title: "Quantum Computing Solutions",
+      description: "Next-generation quantum computing for complex problem-solving and optimization",
       icon: Microchip,
       path: "/services/quantum-technology",
-      features: ["Quantum Computing", "Quantum Security", "Quantum Algorithms"]
+      features: ["Quantum Processing", "Quantum-Safe Security", "Quantum Algorithms", "Hybrid Computing"]
     },
     {
-      title: "Machine Learning",
-      description: "Custom ML models for your business needs",
+      title: "Advanced Machine Learning",
+      description: "Custom ML models and AI solutions tailored to your specific business challenges",
       icon: Brain,
       path: "/ai-solutions",
-      features: ["Custom Models", "Training Data", "Model Deployment"]
+      features: ["Custom AI Models", "Data Training", "Model Deployment", "AI Integration"]
     }
   ];
 
