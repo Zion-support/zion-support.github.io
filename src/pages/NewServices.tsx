@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { comprehensiveServices } from '../data/comprehensiveServices';
+import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
 import { ADVANCED_INNOVATIVE_SERVICES } from '../data/advancedInnovativeServices';
 import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
-import { UnifiedService, hasTags, hasBenefits, hasEstimatedDelivery, hasSupportLevel, hasMarketPrice } from '../types/unifiedServiceTypes';
 
 export function NewServices() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -12,7 +11,7 @@ export function NewServices() {
 
   // Combine all services
   const allServices = [
-    ...comprehensiveServices,
+    ...COMPREHENSIVE_SERVICES,
     ...ADVANCED_INNOVATIVE_SERVICES,
     ...EMERGING_TECH_SERVICES
   ];
@@ -24,7 +23,7 @@ export function NewServices() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         (hasTags(service) && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         (('tags' in service && service.tags) ? service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())) : false);
     return matchesCategory && matchesSearch;
   });
 
@@ -234,7 +233,7 @@ export function NewServices() {
                 <div className="mb-4">
                   <h4 className="text-zion-cyan font-semibold mb-2">Benefits:</h4>
                   <ul className="space-y-1">
-                    {hasBenefits(service) && service.benefits.slice(0, 2).map((benefit, index) => (
+                    {service.benefits.slice(0, 2).map((benefit, index) => (
                       <li key={index} className="text-zion-slate-light text-sm flex items-center">
                         <span className="text-zion-cyan mr-2">→</span>
                         {benefit}
@@ -247,21 +246,21 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {hasEstimatedDelivery(service) ? service.estimatedDelivery : 'Contact Us'}
+                      Delivery: {service.estimatedDelivery}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {hasSupportLevel(service) ? service.supportLevel : 'Standard'} support
+                      {service.supportLevel} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
                     <span className="text-zion-slate-light text-sm">
-                      Market Price: {hasMarketPrice(service) ? service.marketPrice : 'Contact Us'}
+                      Market Price: {service.marketPrice}
                     </span>
                   </div>
                 </div>
 
                 {/* Tags */}
-                {hasTags(service) && (
+                {service.tags && (
                   <div className="mt-4 flex flex-wrap gap-2">
                     {service.tags.slice(0, 4).map((tag, index) => (
                       <span
@@ -338,7 +337,7 @@ export function NewServices() {
                 <div className="mb-4">
                   <h4 className="text-zion-cyan font-semibold mb-2">Benefits:</h4>
                   <ul className="space-y-1">
-                    {hasBenefits(service) && service.benefits.slice(0, 2).map((benefit, index) => (
+                    {service.benefits.slice(0, 2).map((benefit, index) => (
                       <li key={index} className="text-zion-slate-light text-sm flex items-center">
                         <span className="text-zion-cyan mr-2">→</span>
                         {benefit}
@@ -351,21 +350,21 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {hasEstimatedDelivery(service) ? service.estimatedDelivery : 'Contact Us'}
+                      Delivery: {service.estimatedDelivery}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {hasSupportLevel(service) ? service.supportLevel : 'Standard'} support
+                      {service.supportLevel} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
                     <span className="text-zion-slate-light text-sm">
-                      Market Price: {hasMarketPrice(service) ? service.marketPrice : 'Contact Us'}
+                      Market Price: {service.marketPrice}
                     </span>
                   </div>
                 </div>
 
                 {/* Tags */}
-                {hasTags(service) && (
+                {service.tags && (
                   <div className="mt-4 flex flex-wrap gap-2">
                     {service.tags.slice(0, 4).map((tag, index) => (
                       <span
