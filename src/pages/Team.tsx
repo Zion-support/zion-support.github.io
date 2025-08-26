@@ -1,141 +1,240 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import { Link } from 'react-router-dom';
+import { 
+  Users, 
+  Award, 
+  Globe, 
+  Zap, 
+  Shield, 
+  Code, 
+  Brain, 
+  Rocket,
+  Star,
+  Heart,
+  Lightbulb,
+  TrendingUp
+} from 'lucide-react';
 
-export default function Team() {
-  const teamMembers = [
+const Team: React.FC = () => {
+  const leadershipTeam = [
     {
       name: 'Dr. Sarah Chen',
       role: 'Chief Executive Officer',
-      bio: 'Visionary leader with 15+ years of experience in technology and AI. Former CTO at Fortune 500 companies.',
-      image: '👩‍💼',
-      expertise: ['AI Strategy', 'Digital Transformation', 'Leadership'],
-      linkedin: 'https://linkedin.com/in/sarahchen',
-      email: 'sarah.chen@ziontechgroup.com'
+      bio: 'Visionary leader with 15+ years of experience in AI and quantum computing. Former research director at leading tech institutions.',
+      expertise: ['AI Strategy', 'Quantum Computing', 'Business Innovation'],
+      avatar: 'SC',
+      linkedin: '#',
+      achievements: ['PhD Computer Science', '20+ Patents', 'Forbes 30 Under 30']
     },
     {
       name: 'Michael Rodriguez',
       role: 'Chief Technology Officer',
-      bio: 'Expert in cloud architecture and DevOps with deep knowledge of enterprise-scale systems.',
-      image: '👨‍💻',
-      expertise: ['Cloud Architecture', 'DevOps', 'System Design'],
-      linkedin: 'https://linkedin.com/in/michaelrodriguez',
-      email: 'michael.rodriguez@ziontechgroup.com'
+      bio: 'Technology innovator specializing in autonomous systems and enterprise architecture. Led digital transformation for Fortune 500 companies.',
+      expertise: ['Autonomous Systems', 'Enterprise Architecture', 'Digital Transformation'],
+      avatar: 'MR',
+      linkedin: '#',
+      achievements: ['MSc Engineering', '15+ Years Experience', 'Industry Speaker']
     },
     {
-      name: 'Dr. Emily Watson',
-      role: 'Head of AI Research',
-      bio: 'Leading researcher in machine learning and AI ethics. PhD from Stanford with 20+ publications.',
-      image: '👩‍🔬',
-      expertise: ['Machine Learning', 'AI Ethics', 'Research'],
-      linkedin: 'https://linkedin.com/in/emilywatson',
-      email: 'emily.watson@ziontechgroup.com'
+      name: 'Dr. James Kim',
+      role: 'Chief Innovation Officer',
+      bio: 'Research pioneer in emerging technologies. Leading our quantum computing and blockchain initiatives with breakthrough innovations.',
+      expertise: ['Quantum Computing', 'Blockchain', 'Emerging Tech'],
+      avatar: 'JK',
+      linkedin: '#',
+      achievements: ['PhD Physics', 'Research Papers', 'Innovation Awards']
     },
     {
-      name: 'David Kim',
-      role: 'VP of Cybersecurity',
-      bio: 'Cybersecurity expert with certifications in CISSP, CISM, and extensive experience in threat intelligence.',
-      image: '👨‍🔒',
-      expertise: ['Cybersecurity', 'Threat Intelligence', 'Compliance'],
-      linkedin: 'https://linkedin.com/in/davidkim',
-      email: 'david.kim@ziontechgroup.com'
+      name: 'Emily Watson',
+      role: 'Chief Operations Officer',
+      bio: 'Operations expert with deep experience in scaling technology companies. Ensures seamless delivery of our global services.',
+      expertise: ['Operations Management', 'Global Scaling', 'Service Delivery'],
+      avatar: 'EW',
+      linkedin: '#',
+      achievements: ['MBA Business', '10+ Years Operations', 'Process Optimization']
+    }
+  ];
+
+  const departmentHeads = [
+    {
+      name: 'Alex Thompson',
+      role: 'Head of AI Solutions',
+      department: 'AI & Machine Learning',
+      bio: 'Leading our AI initiatives with expertise in deep learning and neural networks.',
+      avatar: 'AT'
     },
     {
-      name: 'Lisa Thompson',
-      role: 'VP of Client Success',
-      bio: 'Dedicated to ensuring client satisfaction and successful project delivery across all engagements.',
-      image: '👩‍💼',
-      expertise: ['Client Relations', 'Project Management', 'Success Metrics'],
-      linkedin: 'https://linkedin.com/in/lisathompson',
-      email: 'lisa.thompson@ziontechgroup.com'
+      name: 'Dr. Lisa Park',
+      role: 'Head of Cybersecurity',
+      department: 'Security & Compliance',
+      bio: 'Cybersecurity expert with certifications in CISSP, CISM, and extensive threat intelligence experience.',
+      avatar: 'LP'
     },
     {
-      name: 'James Wilson',
-      role: 'Head of Infrastructure',
-      bio: 'Infrastructure specialist with expertise in network design, system administration, and scalability.',
-      image: '👨‍🏗️',
-      expertise: ['Network Design', 'System Administration', 'Scalability'],
-      linkedin: 'https://linkedin.com/in/jameswilson',
-      email: 'james.wilson@ziontechgroup.com'
+      name: 'David Chen',
+      role: 'Head of Cloud Architecture',
+      department: 'Cloud & DevOps',
+      bio: 'Cloud specialist with expertise in multi-cloud strategies and DevOps automation.',
+      avatar: 'DC'
+    },
+    {
+      name: 'Maria Garcia',
+      role: 'Head of Digital Transformation',
+      department: 'Business Solutions',
+      bio: 'Digital transformation consultant helping businesses navigate technological change.',
+      avatar: 'MG'
+    }
+  ];
+
+  const companyStats = [
+    {
+      number: '50+',
+      label: 'Team Members',
+      description: 'Diverse professionals from around the world'
+    },
+    {
+      number: '25+',
+      label: 'Countries',
+      description: 'Global team with local expertise'
+    },
+    {
+      number: '15+',
+      label: 'Years Experience',
+      description: 'Average experience per team member'
+    },
+    {
+      number: '95%',
+      label: 'Retention Rate',
+      description: 'High team satisfaction and loyalty'
+    }
+  ];
+
+  const values = [
+    {
+      icon: Lightbulb,
+      title: 'Innovation',
+      description: 'We encourage creative thinking and breakthrough solutions'
+    },
+    {
+      icon: Heart,
+      title: 'Passion',
+      description: 'Our team is passionate about technology and client success'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We believe in the power of teamwork and diverse perspectives'
+    },
+    {
+      icon: Star,
+      title: 'Excellence',
+      description: 'We strive for excellence in everything we do'
+    }
+  ];
+
+  const culture = [
+    {
+      title: 'Continuous Learning',
+      description: 'We invest in ongoing education and skill development for our team members.',
+      icon: Brain
+    },
+    {
+      title: 'Work-Life Balance',
+      description: 'We promote healthy work-life balance with flexible schedules and remote work options.',
+      icon: Heart
+    },
+    {
+      title: 'Innovation Time',
+      description: 'Team members get dedicated time to work on innovative projects and research.',
+      icon: Lightbulb
+    },
+    {
+      title: 'Global Perspective',
+      description: 'Our diverse team brings global perspectives and cultural insights to every project.',
+      icon: Globe
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <SEO 
-        title="Our Team - Zion Tech Group"
-        description="Meet the exceptional team of experts at Zion Tech Group. Our leadership brings decades of experience in AI, cloud computing, cybersecurity, and digital transformation."
-        keywords="team, leadership, experts, AI specialists, technology leaders, Zion Tech Group"
-        canonical="https://ziontechgroup.com/team"
-      />
-
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Meet Our Team
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
-            Exceptional talent driving innovation and delivering transformative technology solutions
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            We are a diverse team of innovators, engineers, and visionaries dedicated to transforming 
+            businesses through cutting-edge technology solutions.
           </p>
         </div>
       </section>
 
-      {/* Team Grid */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Leadership Team
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our leadership brings together decades of experience across technology, AI, and business transformation
+      {/* Company Stats */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {companyStats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
+                <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
+                <p className="text-sm text-gray-300">{stat.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Team */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Leadership Team</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Meet the visionaries and experts driving innovation at Zion Tech Group
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="p-6">
-                  <div className="text-center mb-6">
-                    <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
-                      {member.image}
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                    <p className="text-blue-600 font-medium">{member.role}</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {leadershipTeam.map((member, index) => (
+              <div key={index} className="bg-white/5 rounded-xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300">
+                <div className="flex items-start space-x-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-2xl">{member.avatar}</span>
                   </div>
-                  
-                  <p className="text-gray-600 text-center mb-6 leading-relaxed">
-                    {member.bio}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Areas of Expertise</h4>
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {member.expertise.map((skill, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
-                          {skill}
-                        </span>
-                      ))}
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
+                    <p className="text-blue-400 text-lg mb-3">{member.role}</p>
+                    <p className="text-gray-300 mb-4">{member.bio}</p>
+                    
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Expertise:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {member.expertise.map((skill, idx) => (
+                          <span key={idx} className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex justify-center space-x-4">
+
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Achievements:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {member.achievements.map((achievement, idx) => (
+                          <span key={idx} className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
+                            {achievement}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
                     <a
                       href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-700 transition-colors duration-300"
+                      className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
                     >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.032-3.047-1.033 0-1.191.805-1.191 2.951v5.665H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                      </svg>
-                    </a>
-                    <a
-                      href={`mailto:${member.email}`}
-                      className="text-gray-600 hover:text-gray-800 transition-colors duration-300"
-                    >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      <span>View Profile</span>
+                      <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </a>
                   </div>
@@ -146,32 +245,105 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Join Our Team Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Join Our Growing Team
-          </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals who are passionate about technology and innovation. 
-            Join us in shaping the future of technology.
+      {/* Department Heads */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Department Leadership</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our specialized teams are led by industry experts in their respective fields
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {departmentHeads.map((head, index) => (
+              <div key={index} className="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold text-xl">{head.avatar}</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{head.name}</h3>
+                <p className="text-blue-400 text-sm mb-1">{head.role}</p>
+                <p className="text-cyan-400 text-xs mb-3">{head.department}</p>
+                <p className="text-gray-300 text-sm">{head.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Company Values */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Our Values</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The principles that guide our team culture and decision-making
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
+                <div className="flex justify-center mb-4">
+                  <value.icon className="h-16 w-16 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">{value.title}</h3>
+                <p className="text-gray-300">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Company Culture */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Our Culture</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We foster an environment that promotes growth, innovation, and collaboration
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {culture.map((item, index) => (
+              <div key={index} className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <item.icon className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-gray-300">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Join Our Team */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6 text-white">Join Our Team</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            We're always looking for talented individuals who share our passion for innovation 
+            and technology. Join us in shaping the future of business technology.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/careers"
-              className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300"
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to="/careers"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
               View Open Positions
-            </a>
-            <a
-              href="/contact"
-              className="px-8 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
+            </Link>
+            <Link
+              to="/contact"
+              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default Team;
