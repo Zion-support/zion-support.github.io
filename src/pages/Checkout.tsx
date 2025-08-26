@@ -5,7 +5,16 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
-import { apiClient } from '@/utils/apiClient';
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components/ui/form';
+import { useFeatureFlags } from '@/context/FeatureFlagContext';
+import CheckoutV2 from './CheckoutV2';
 
 interface CartItem {
   id: string;
@@ -26,9 +35,9 @@ export default function CheckoutPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const [items, setItems] = useState<CartItem[]>([]);
-  const form = useForm<CheckoutForm>({
-    defaultValues: { name: '', email: '', address: '', city: '', country: '' },
-  });
+  const form = useForm<CheckoutForm>({ defaultValues: { name: '', email: '', address: '', city: '', country: '' } });
+  const { getVariant, track } = useFeatureFlags();
+  const variant = getVariant('new-checkout-v2');
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -91,11 +100,16 @@ export default function CheckoutPage() {
         }
         safeStorage.removeItem('guestCart');
         navigate(`/orders/${result.id}`);
+        track('new-checkout-v2:conversion');
       }
     } catch (err) {
       console.error('Payment failed', err);
     }
   };
+
+  if (variant.name === 'v2') {
+    return <CheckoutV2 />;
+  }
 
   return (
     <div className="max-w-2xl mx-auto p-6">

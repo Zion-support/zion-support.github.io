@@ -828,10 +828,30 @@ file in the project root with values for variables like `TEST_USER_EMAIL` and
 
 ### Node Server Health Check
 
-*   **URL:** `/health`
-*   **Method:** `GET`
-*   **Description:** Returns the app version, uptime, and database connectivity status.
-*   **Success Response:**
-    *   **Code:** 200
-    *   **Content:** `{ "version": "<package-version>", "uptime": 123.45, "db": "up" }`
-*   **Usage:** Used for Kubernetes liveness and readiness probes. See `docs/KubernetesProbes.md`.
+After running `npm run test`, open `coverage/lcov-report/index.html` in your
+browser to view detailed coverage information.
+
+When tests run on GitHub Actions, the workflow uploads the `coverage` directory
+using `actions/upload-artifact@v4`. Visit a workflow run and download the
+`coverage-report` artifact to retrieve the generated HTML coverage report.
+
+## Feature Flags
+
+This project uses [Unleash](https://www.getunleash.io/) to roll out new features.
+Set the `UNLEASH_URL` environment variable in your `.env` file and wrap
+components with the `FeatureFlag` component:
+
+```tsx
+import FeatureFlag from '@/components/FeatureFlag';
+import ElasticSearchSearch from '@/components/search/ElasticSearchSearch';
+
+export default function Example() {
+  return (
+    <FeatureFlag name="elasticsearch-search">
+      <ElasticSearchSearch />
+    </FeatureFlag>
+  );
+}
+```
+
+The admin UI is available at `/admin/feature-flags` for authorized users.
