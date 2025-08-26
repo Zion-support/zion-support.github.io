@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousSoftwareEngineer: React.FC = () => {
-  return (
-    <>
+const AIAutonomousSoftwareEngineer = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Software Engineer | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous software engineer that writes code, debugs programs, and develops software solutions with advanced AI capabilities and human-like programming skills." />
-        <meta name="keywords" content="AI software engineer, autonomous programming, AI coding, software development, AI development, autonomous coding" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-software-engineer" />
+        <meta name="description" content="Revolutionary AI autonomous software engineer that writes code, debugs programs, and develops software solutions with advanced AI capabilities and human-like programming skills."/>
+        <meta name="keywords" content="AI software engineer, autonomous programming, AI coding, software development, AI development, autonomous coding"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-software-engineer"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousSoftwareEngineer: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Programming Languages</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Python', 'JavaScript', 'Java', 'C++', 'C#', 'Go', 'Rust', 'TypeScript'].map((language) => (
-                <div key={language} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Python', 'JavaScript', 'Java', 'C++', 'C#', 'Go', 'Rust', 'TypeScript'].map((language) => (<div key={language} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{language}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousSoftwareEngineer: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousSoftwareEngineer;

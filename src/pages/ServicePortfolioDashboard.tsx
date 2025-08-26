@@ -1,91 +1,67 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
-  PieChart, 
-  TrendingUp, 
-  Award, 
-  Users, 
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Zap,
-  Lightbulb,
-  Rocket,
-  Shield,
-  Clock,
-  Target,
-  DollarSign,
-  Brain,
-  Eye
-} from 'lucide-react';
+import { BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket, Shield, Target, DollarSign, Brain } from 'lucide-react';
 import AdvancedServicePortfolioDashboard from '../components/AdvancedServicePortfolioDashboard';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-
-const ServicePortfolioDashboard: React.FC = () => {
-  const features = [
-    {
-      icon: <BarChart3 className="w-6 h-6 text-zion-cyan" />,
-      title: 'Comprehensive Analytics',
-      description: 'Real-time insights into service performance, revenue, and growth metrics'
-    },
-    {
-      icon: <PieChart className="w-6 h-6 text-zion-purple" />,
-      title: 'Portfolio Visualization',
-      description: 'Interactive charts and graphs showing service distribution and trends'
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6 text-zion-green" />,
-      title: 'Performance Tracking',
-      description: 'Monitor service performance, client satisfaction, and market demand'
-    },
-    {
-      icon: <Target className="w-6 h-6 text-zion-orange" />,
-      title: 'Strategic Insights',
-      description: 'Data-driven recommendations for portfolio optimization and growth'
-    }
-  ];
-
-  const benefits = [
-    'Comprehensive view of all service offerings and their performance',
-    'Real-time analytics and performance metrics for informed decision making',
-    'Portfolio optimization insights and strategic recommendations',
-    'Client engagement tracking and revenue analysis',
-    'Market demand analysis and competitive positioning',
-    'Technology maturity assessment and innovation tracking'
-  ];
-
-  const portfolioStats = [
-    {
-      label: 'Total Services',
-      value: '52+',
-      description: 'Cutting-edge technology solutions',
-      icon: <Rocket className="w-8 h-8 text-zion-cyan" />
-    },
-    {
-      label: 'Technology Categories',
-      value: '12+',
-      description: 'Major technology sectors covered',
-      icon: <Brain className="w-8 h-8 text-zion-purple" />
-    },
-    {
-      label: 'Price Range',
-      value: '$5K-$2M',
-      description: 'Monthly service pricing',
-      icon: <DollarSign className="w-8 h-8 text-zion-green" />
-    },
-    {
-      label: 'Market Coverage',
-      value: '95%+',
-      description: 'Technology market segments',
-      icon: <Globe className="w-8 h-8 text-zion-orange" />
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-zion-blue-dark">
+const ServicePortfolioDashboard = () => {
+    const features = [
+        {
+            icon: <BarChart3 className="w-6 h-6 text-zion-cyan"/>,
+            title: 'Comprehensive Analytics',
+            description: 'Real-time insights into service performance, revenue, and growth metrics'
+        },
+        {
+            icon: <PieChart className="w-6 h-6 text-zion-purple"/>,
+            title: 'Portfolio Visualization',
+            description: 'Interactive charts and graphs showing service distribution and trends'
+        },
+        {
+            icon: <TrendingUp className="w-6 h-6 text-zion-green"/>,
+            title: 'Performance Tracking',
+            description: 'Monitor service performance, client satisfaction, and market demand'
+        },
+        {
+            icon: <Target className="w-6 h-6 text-zion-orange"/>,
+            title: 'Strategic Insights',
+            description: 'Data-driven recommendations for portfolio optimization and growth'
+        }
+    ];
+    const benefits = [
+        'Comprehensive view of all service offerings and their performance',
+        'Real-time analytics and performance metrics for informed decision making',
+        'Portfolio optimization insights and strategic recommendations',
+        'Client engagement tracking and revenue analysis',
+        'Market demand analysis and competitive positioning',
+        'Technology maturity assessment and innovation tracking'
+    ];
+    const portfolioStats = [
+        {
+            label: 'Total Services',
+            value: '52+',
+            description: 'Cutting-edge technology solutions',
+            icon: <Rocket className="w-8 h-8 text-zion-cyan"/>
+        },
+        {
+            label: 'Technology Categories',
+            value: '12+',
+            description: 'Major technology sectors covered',
+            icon: <Brain className="w-8 h-8 text-zion-purple"/>
+        },
+        {
+            label: 'Price Range',
+            value: '$5K-$2M',
+            description: 'Monthly service pricing',
+            icon: <DollarSign className="w-8 h-8 text-zion-green"/>
+        },
+        {
+            label: 'Market Coverage',
+            value: '95%+',
+            description: 'Technology market segments',
+            icon: <Globe className="w-8 h-8 text-zion-orange"/>
+        }
+    ];
+    return (<div className="min-h-screen bg-zion-blue-dark">
       {/* Hero Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -95,11 +71,7 @@ const ServicePortfolioDashboard: React.FC = () => {
         </div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Service Portfolio Dashboard
             </h1>
@@ -108,17 +80,11 @@ const ServicePortfolioDashboard: React.FC = () => {
               and strategic analysis for informed decision making and portfolio optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"
-                onClick={() => document.getElementById('portfolio-dashboard')?.scrollIntoView({ behavior: 'smooth' })}
-              >
+              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick={() => document.getElementById('portfolio-dashboard')?.scrollIntoView({ behavior: 'smooth' })}>
                 View Dashboard
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"/>
               </Button>
-              <Button 
-                className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
-                onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Strategy Consultation', '_blank')}
-              >
+              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Strategy Consultation', '_blank')}>
                 Get Consultation
               </Button>
             </div>
@@ -129,13 +95,7 @@ const ServicePortfolioDashboard: React.FC = () => {
       {/* Portfolio Statistics */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Portfolio Overview
             </h2>
@@ -146,14 +106,7 @@ const ServicePortfolioDashboard: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {portfolioStats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
+            {portfolioStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 <Card className="h-full text-center hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="mx-auto w-16 h-16 bg-zion-blue-light/10 rounded-full flex items-center justify-center mb-4">
@@ -172,8 +125,7 @@ const ServicePortfolioDashboard: React.FC = () => {
                     </p>
                   </CardContent>
                 </Card>
-              </motion.div>
-            ))}
+              </motion.div>))}
           </div>
         </div>
       </section>
@@ -181,13 +133,7 @@ const ServicePortfolioDashboard: React.FC = () => {
       {/* Features Section */}
       <section className="py-16 px-6 bg-zion-blue-light/5">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Dashboard Features
             </h2>
@@ -197,14 +143,7 @@ const ServicePortfolioDashboard: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
+            {features.map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 <Card className="h-full hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-center gap-3">
@@ -222,8 +161,7 @@ const ServicePortfolioDashboard: React.FC = () => {
                     </p>
                   </CardContent>
                 </Card>
-              </motion.div>
-            ))}
+              </motion.div>))}
           </div>
         </div>
       </section>
@@ -231,13 +169,7 @@ const ServicePortfolioDashboard: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Why Use Our Portfolio Dashboard?
             </h2>
@@ -247,19 +179,10 @@ const ServicePortfolioDashboard: React.FC = () => {
           </motion.div>
 
           <div className="space-y-4">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start gap-3"
-              >
-                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />
+            {benefits.map((benefit, index) => (<motion.div key={index} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0"/>
                 <span className="text-zion-slate-dark">{benefit}</span>
-              </motion.div>
-            ))}
+              </motion.div>))}
           </div>
         </div>
       </section>
@@ -267,13 +190,7 @@ const ServicePortfolioDashboard: React.FC = () => {
       {/* Portfolio Dashboard Section */}
       <section id="portfolio-dashboard" className="py-16 px-6 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
               Interactive Portfolio Dashboard
             </h2>
@@ -290,12 +207,7 @@ const ServicePortfolioDashboard: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Optimize Your Portfolio?
             </h2>
@@ -304,26 +216,18 @@ const ServicePortfolioDashboard: React.FC = () => {
               informed decisions and drive strategic growth in your technology investments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"
-                onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Optimization Consultation', '_blank')}
-              >
-                <Rocket className="w-5 h-5 mr-2" />
+              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Optimization Consultation', '_blank')}>
+                <Rocket className="w-5 h-5 mr-2"/>
                 Get Portfolio Strategy
               </Button>
-              <Button 
-                className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
-                onClick={() => window.open('tel:+13024640950', '_blank')}
-              >
-                <Shield className="w-5 h-5 mr-2" />
+              <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick={() => window.open('tel:+13024640950', '_blank')}>
+                <Shield className="w-5 h-5 mr-2"/>
                 Speak with an Expert
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default ServicePortfolioDashboard;

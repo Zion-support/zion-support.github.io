@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousSystemsPlatform: React.FC = () => {
-  return (
-    <>
+const AIAutonomousSystemsPlatform = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Systems Platform | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI autonomous systems platform that orchestrates intelligent agents, automates complex workflows, and enables next-generation autonomous operations." />
-        <meta name="keywords" content="AI autonomous systems, autonomous platform, intelligent agents, workflow automation, AI orchestration" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-systems-platform" />
+        <meta name="description" content="Comprehensive AI autonomous systems platform that orchestrates intelligent agents, automates complex workflows, and enables next-generation autonomous operations."/>
+        <meta name="keywords" content="AI autonomous systems, autonomous platform, intelligent agents, workflow automation, AI orchestration"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-systems-platform"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -155,8 +153,6 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousSystemsPlatform;

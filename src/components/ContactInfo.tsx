@@ -1,29 +1,11 @@
 import React from 'react';
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-=======
-=======
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Clock, 
-  MessageSquare,
-  ExternalLink,
-  Star
-} from "lucide-react";
-
+import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from "lucide-react";
 export function ContactInfo() {
-  return (
-    <section className="py-20 bg-zion-blue-dark">
+    return (<section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -40,7 +22,7 @@ export function ContactInfo() {
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
-                  <Phone className="h-5 w-5 text-zion-cyan" />
+                  <Phone className="h-5 w-5 text-zion-cyan"/>
                   Contact Details
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
@@ -50,7 +32,7 @@ export function ContactInfo() {
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">
-                    <Phone className="h-5 w-5 text-zion-purple" />
+                    <Phone className="h-5 w-5 text-zion-purple"/>
                   </div>
                   <div>
                     <p className="text-white font-medium">Phone</p>
@@ -60,7 +42,7 @@ export function ContactInfo() {
                 
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-zion-purple" />
+                    <Mail className="h-5 w-5 text-zion-purple"/>
                   </div>
                   <div>
                     <p className="text-white font-medium">Email</p>
@@ -70,7 +52,7 @@ export function ContactInfo() {
                 
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">
-                    <MapPin className="h-5 w-5 text-zion-purple" />
+                    <MapPin className="h-5 w-5 text-zion-purple"/>
                   </div>
                   <div>
                     <p className="text-white font-medium">Address</p>
@@ -80,18 +62,13 @@ export function ContactInfo() {
                 
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">
-                    <Globe className="h-5 w-5 text-zion-purple" />
+                    <Globe className="h-5 w-5 text-zion-purple"/>
                   </div>
                   <div>
                     <p className="text-white font-medium">Website</p>
-                    <a 
-                      href="https://ziontechgroup.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1"
-                    >
+                    <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1">
                       ziontechgroup.com
-                      <ExternalLink className="h-4 w-4" />
+                      <ExternalLink className="h-4 w-4"/>
                     </a>
                   </div>
                 </div>
@@ -101,7 +78,7 @@ export function ContactInfo() {
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
-                  <Clock className="h-5 w-5 text-zion-cyan" />
+                  <Clock className="h-5 w-5 text-zion-cyan"/>
                   Business Hours
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
@@ -140,7 +117,7 @@ export function ContactInfo() {
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
-                  <MessageSquare className="h-5 w-5 text-zion-cyan" />
+                  <MessageSquare className="h-5 w-5 text-zion-cyan"/>
                   Quick Actions
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
@@ -155,19 +132,11 @@ export function ContactInfo() {
                 </Link>
                 
                 <Link to="/comprehensive-services">
-=======
-                <Link href="/comprehensive-services">
-=======
-                <Link to="/comprehensive-services">
                   <Button variant="outline" className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                     View All Services
                   </Button>
                 </Link>
                 
-                <Link to="/it-onsite-services">
-=======
-                <Link href="/it-onsite-services">
-=======
                 <Link to="/it-onsite-services">
                   <Button variant="outline" className="w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10">
                     IT Onsite Services
@@ -177,7 +146,7 @@ export function ContactInfo() {
                 <div className="pt-4 border-t border-zion-blue-light">
                   <p className="text-zion-slate-light text-sm mb-3">Need immediate assistance?</p>
                   <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-zion-cyan" />
+                    <Phone className="h-4 w-4 text-zion-cyan"/>
                     <span className="text-zion-cyan font-medium">Call us now: +1 302 464 0950</span>
                   </div>
                 </div>
@@ -187,7 +156,7 @@ export function ContactInfo() {
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
-                  <Star className="h-5 w-5 text-zion-cyan" />
+                  <Star className="h-5 w-5 text-zion-cyan"/>
                   Why Choose Zion Tech Group?
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
@@ -246,6 +215,5 @@ export function ContactInfo() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
 }

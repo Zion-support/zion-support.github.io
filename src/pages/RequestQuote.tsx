@@ -1,13 +1,14 @@
-
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+export default function RequestQuote() {
+    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Request Quote - Zion Tech Group", description: "Get a custom quote for your tech project from our expert team.", canonical: "https://ziontechgroup.com/request-quote" }), _jsx(Header, {}), _jsx("main", { className: "min-h-screen bg-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4 py-20", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Request Quote" }), _jsx("p", { className: "text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto", children: "Get a custom quote for your tech project from our expert team." })] }), _jsx("div", { className: "max-w-6xl mx-auto", children: _jsxs("div", { className: "bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Coming Soon" }), _jsx("p", { className: "text-zion-slate-light mb-6", children: "Our quote request system is currently under development." })] }) })] }) }), _jsx(Footer, {})] }));
+}
 import React from 'react';
-=======
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Request Quote - Zion Tech Group" 
-        description="Get a custom quote for your AI and tech project needs from Zion Tech Group."
-        keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group"
-        canonical="https://ziontechgroup.com/request-quote"
-      />
+<div className="min-h-screen bg-background">
+      <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group" canonical="https://ziontechgroup.com/request-quote"/>
       
       <AppHeader />
       
@@ -19,7 +20,6 @@ import React from 'react';
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Tell us about your project and we'll connect you with the perfect talent and services for your needs
-=======
             </p>
           </div>
           
@@ -27,24 +27,17 @@ import React from 'react';
             <QuoteRequestForm />
           </div>
         </div>
-=======
-=======
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, Users, Zap } from "lucide-react";
+import {SEO} from "@/components/SEO";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {QuoteRequestForm} from "@/components/QuoteRequestForm";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {CheckCircle, Clock, Users, Zap} from "lucide-react";
 
-export default function RequestQuote() {
+export default function RequestQuote() {}
   return (
     <div className="min-h-screen bg-zion-blue">
-      <SEO
-        title="Request a Quote | Zion Tech Group"
-        description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs."
-        keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes"
-        canonical="https://ziontechgroup.com/request-quote"
-      />
+      <SEO title="Request a Quote | Zion Tech Group" description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs." keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes" canonical="https://ziontechgroup.com/request-quote"/>
       <Header />
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -64,7 +57,7 @@ export default function RequestQuote() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
               <CardHeader className="text-center">
-                <Zap className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+                <Zap className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
                 <CardTitle className="text-lg">Fast Response</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
@@ -76,7 +69,7 @@ export default function RequestQuote() {
 
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
               <CardHeader className="text-center">
-                <CheckCircle className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+                <CheckCircle className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
                 <CardTitle className="text-lg">Customized</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
@@ -88,7 +81,7 @@ export default function RequestQuote() {
 
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
               <CardHeader className="text-center">
-                <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+                <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
                 <CardTitle className="text-lg">Expert Team</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
@@ -100,7 +93,7 @@ export default function RequestQuote() {
 
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
               <CardHeader className="text-center">
-                <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+                <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
                 <CardTitle className="text-lg">No Obligation</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
@@ -245,40 +238,26 @@ export default function RequestQuote() {
               For urgent requests or to speak with our team directly, contact us:
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:commercial@ziontechgroup.com"
-                className="inline-flex items-center px-6 py-3 bg-zion-cyan text-zion-blue-dark font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors"
-              >
+              <a href="mailto:commercial@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-zion-cyan text-zion-blue-dark font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors">
                 Email Us
               </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/10 transition-colors"
-              >
+              <a href="/contact" className="inline-flex items-center px-6 py-3 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/10 transition-colors">
                 Contact Page
               </a>
             </div>
           </div>
         </div>
-=======
       </main>
       
       <Footer />
     </div>
-=======
-=======
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
 
-export default function RequestQuote() {
+export default function RequestQuote() {}
   return (
     <>
-      <SEO 
-        title="Request a Quote - Zion Tech Group"
-        description="Get a customized quote for your IT services, AI solutions, or tech projects. Our team will provide you with a detailed estimate tailored to your needs."
-        keywords="request quote, IT services quote, AI solutions quote, tech project estimate, custom pricing"
-        canonical="https://ziontechgroup.com/request-quote"
-      />
+      <SEO title="Request a Quote - Zion Tech Group" description="Get a customized quote for your IT services, AI solutions, or tech projects. Our team will provide you with a detailed estimate tailored to your needs." keywords="request quote, IT services quote, AI solutions quote, tech project estimate, custom pricing" canonical="https://ziontechgroup.com/request-quote"/>
       <Header />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -299,6 +278,7 @@ export default function RequestQuote() {
       </main>
       <Footer />
     </>
-=======
   );
 }
+</></>;
+=======

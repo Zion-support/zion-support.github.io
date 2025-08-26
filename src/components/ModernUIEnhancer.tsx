@@ -1,133 +1,94 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Sparkles, 
-  Zap, 
-  Star, 
-  ArrowUp, 
-  Palette,
-  Sun,
-  Moon,
-  Monitor,
-  Smartphone,
-  Tablet
-} from 'lucide-react';
-
-interface ModernUIEnhancerProps {
-  enableAnimations?: boolean;
-  enableParticles?: boolean;
-  enableScrollEffects?: boolean;
-  enableThemeToggle?: boolean;
-  enableResponsiveDesign?: boolean;
-}
-
-export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
-  enableAnimations = true,
-  enableParticles = true,
-  enableScrollEffects = true,
-  enableThemeToggle = true,
-  enableResponsiveDesign = true,
-}) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark' | 'auto'>('auto');
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
-  const [deviceType, setDeviceType] = useState<'desktop' | 'tablet' | 'mobile'>('desktop');
-  const scrollToTopRef = useRef<HTMLButtonElement>(null);
-
-  // Detect device type
-  useEffect(() => {
-    const updateDeviceType = () => {
-      const width = window.innerWidth;
-      if (width < 768) {
-        setDeviceType('mobile');
-      } else if (width < 1024) {
-        setDeviceType('tablet');
-      } else {
-        setDeviceType('desktop');
-      }
-    };
-
-    updateDeviceType();
-    window.addEventListener('resize', updateDeviceType);
-    return () => window.removeEventListener('resize', updateDeviceType);
-  }, []);
-
-  // Scroll effects
-  useEffect(() => {
-    if (!enableScrollEffects) return;
-
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      setShowScrollToTop(scrollTop > 300);
-
-      // Parallax effect for background elements
-      const scrolled = window.pageYOffset;
-      const parallaxElements = document.querySelectorAll('[data-parallax]');
-      
-      parallaxElements.forEach((element) => {
-        const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
-        const yPos = -(scrolled * speed);
-        (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
-      });
-
-      // Fade in elements on scroll
-      const fadeElements = document.querySelectorAll('[data-fade-in]');
-      fadeElements.forEach((element) => {
-        const rect = element.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-        
-        if (isVisible) {
-          element.classList.add('fade-in-visible');
+import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
+export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true, }) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const [currentTheme, setCurrentTheme] = useState('auto');
+    const [showScrollToTop, setShowScrollToTop] = useState(false);
+    const [deviceType, setDeviceType] = useState('desktop');
+    const scrollToTopRef = useRef(null);
+    // Detect device type
+    useEffect(() => {
+        const updateDeviceType = () => {
+            const width = window.innerWidth;
+            if (width < 768) {
+                setDeviceType('mobile');
+            }
+            else if (width < 1024) {
+                setDeviceType('tablet');
+            }
+            else {
+                setDeviceType('desktop');
+            }
+        };
+        updateDeviceType();
+        window.addEventListener('resize', updateDeviceType);
+        return () => window.removeEventListener('resize', updateDeviceType);
+    }, []);
+    // Scroll effects
+    useEffect(() => {
+        if (!enableScrollEffects)
+            return;
+        const handleScroll = () => {
+            const scrollTop = window.pageYOffset;
+            setShowScrollToTop(scrollTop > 300);
+            // Parallax effect for background elements
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('[data-parallax]');
+            parallaxElements.forEach((element) => {
+                const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+            // Fade in elements on scroll
+            const fadeElements = document.querySelectorAll('[data-fade-in]');
+            fadeElements.forEach((element) => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                if (isVisible) {
+                    element.classList.add('fade-in-visible');
+                }
+            });
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [enableScrollEffects]);
+    // Theme management
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('theme') || 'auto';
+        setCurrentTheme(savedTheme);
+        applyTheme(savedTheme);
+    }, []);
+    const applyTheme = (theme) => {
+        const root = document.documentElement;
+        if (theme === 'auto') {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            root.classList.toggle('dark', prefersDark);
         }
-      });
+        else {
+            root.classList.toggle('dark', theme === 'dark');
+        }
+        localStorage.setItem('theme', theme);
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [enableScrollEffects]);
-
-  // Theme management
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'auto';
-    setCurrentTheme(savedTheme as 'light' | 'dark' | 'auto');
-    applyTheme(savedTheme as 'light' | 'dark' | 'auto');
-  }, []);
-
-  const applyTheme = (theme: 'light' | 'dark' | 'auto') => {
-    const root = document.documentElement;
-    
-    if (theme === 'auto') {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      root.classList.toggle('dark', prefersDark);
-    } else {
-      root.classList.toggle('dark', theme === 'dark');
-    }
-    
-    localStorage.setItem('theme', theme);
-  };
-
-  const toggleTheme = () => {
-    const themes: ('light' | 'dark' | 'auto')[] = ['light', 'dark', 'auto'];
-    const currentIndex = themes.indexOf(currentTheme);
-    const nextTheme = themes[(currentIndex + 1) % themes.length];
-    
-    setCurrentTheme(nextTheme);
-    applyTheme(nextTheme);
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
-  // Add CSS animations to the document
-  useEffect(() => {
-    if (!enableAnimations) return;
-
-    const style = document.createElement('style');
-    style.textContent = `
+    const toggleTheme = () => {
+        const themes = ['light', 'dark', 'auto'];
+        const currentIndex = themes.indexOf(currentTheme);
+        const nextTheme = themes[(currentIndex + 1) % themes.length];
+        setCurrentTheme(nextTheme);
+        applyTheme(nextTheme);
+    };
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+    // Add CSS animations to the document
+    useEffect(() => {
+        if (!enableAnimations)
+            return;
+        const style = document.createElement('style');
+        style.textContent = `
       .fade-in {
         opacity: 0;
         transform: translateY(30px);
@@ -256,168 +217,89 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
       }
     `;
-    
-    document.head.appendChild(style);
-    
-    return () => {
-      document.head.removeChild(style);
-    };
-  }, [enableAnimations]);
-
-  // Add intersection observer for scroll animations
-  useEffect(() => {
-    if (!enableScrollEffects) return;
-
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px',
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const element = entry.target as HTMLElement;
-          const animationType = element.getAttribute('data-animation');
-          
-          if (animationType) {
-            element.classList.add(`${animationType}-visible`);
-          }
-        }
-      });
-    }, observerOptions);
-
-    const animatedElements = document.querySelectorAll('[data-animation]');
-    animatedElements.forEach((element) => {
-      observer.observe(element);
-    });
-
-    return () => {
-      animatedElements.forEach((element) => {
-        observer.unobserve(element);
-      });
-    };
-  }, [enableScrollEffects]);
-
-  return (
-    <>
+        document.head.appendChild(style);
+        return () => {
+            document.head.removeChild(style);
+        };
+    }, [enableAnimations]);
+    // Add intersection observer for scroll animations
+    useEffect(() => {
+        if (!enableScrollEffects)
+            return;
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px',
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    const animationType = element.getAttribute('data-animation');
+                    if (animationType) {
+                        element.classList.add(`${animationType}-visible`);
+                    }
+                }
+            });
+        }, observerOptions);
+        const animatedElements = document.querySelectorAll('[data-animation]');
+        animatedElements.forEach((element) => {
+            observer.observe(element);
+        });
+        return () => {
+            animatedElements.forEach((element) => {
+                observer.unobserve(element);
+            });
+        };
+    }, [enableScrollEffects]);
+    return (<>
       {/* Theme Toggle Button */}
-      {enableThemeToggle && (
-        <motion.button
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={toggleTheme}
-          className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
-          title={`Current theme: ${currentTheme}`}
-        >
+      {enableThemeToggle && (<motion.button initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>
           <AnimatePresence mode="wait">
-            {currentTheme === 'light' && (
-              <motion.div
-                key="light"
-                initial={{ opacity: 0, rotate: -90 }}
-                animate={{ opacity: 1, rotate: 0 }}
-                exit={{ opacity: 0, rotate: 90 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Sun className="w-5 h-5 text-yellow-500" />
-              </motion.div>
-            )}
-            {currentTheme === 'dark' && (
-              <motion.div
-                key="dark"
-                initial={{ opacity: 0, rotate: -90 }}
-                animate={{ opacity: 1, rotate: 0 }}
-                exit={{ opacity: 0, rotate: 90 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Moon className="w-5 h-5 text-blue-400" />
-              </motion.div>
-            )}
-            {currentTheme === 'auto' && (
-              <motion.div
-                key="auto"
-                initial={{ opacity: 0, rotate: -90 }}
-                animate={{ opacity: 1, rotate: 0 }}
-                exit={{ opacity: 0, rotate: 90 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Monitor className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-              </motion.div>
-            )}
+            {currentTheme === 'light' && (<motion.div key="light" initial={{ opacity: 0, rotate: -90 }} animate={{ opacity: 1, rotate: 0 }} exit={{ opacity: 0, rotate: 90 }} transition={{ duration: 0.3 }}>
+                <Sun className="w-5 h-5 text-yellow-500"/>
+              </motion.div>)}
+            {currentTheme === 'dark' && (<motion.div key="dark" initial={{ opacity: 0, rotate: -90 }} animate={{ opacity: 1, rotate: 0 }} exit={{ opacity: 0, rotate: 90 }} transition={{ duration: 0.3 }}>
+                <Moon className="w-5 h-5 text-blue-400"/>
+              </motion.div>)}
+            {currentTheme === 'auto' && (<motion.div key="auto" initial={{ opacity: 0, rotate: -90 }} animate={{ opacity: 1, rotate: 0 }} exit={{ opacity: 0, rotate: 90 }} transition={{ duration: 0.3 }}>
+                <Monitor className="w-5 h-5 text-gray-600 dark:text-gray-400"/>
+              </motion.div>)}
           </AnimatePresence>
-        </motion.button>
-      )}
+        </motion.button>)}
 
       {/* Device Type Indicator */}
-      {enableResponsiveDesign && (
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700"
-        >
+      {enableResponsiveDesign && (<motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
           <div className="flex items-center space-x-2 text-sm">
-            {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-blue-500" />}
-            {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-green-500" />}
-            {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-purple-500" />}
+            {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-blue-500"/>}
+            {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-green-500"/>}
+            {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-purple-500"/>}
             <span className="text-gray-700 dark:text-gray-300 capitalize">{deviceType}</span>
           </div>
-        </motion.div>
-      )}
+        </motion.div>)}
 
       {/* Scroll to Top Button */}
       <AnimatePresence>
-        {showScrollToTop && (
-          <motion.button
-            ref={scrollToTopRef}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={scrollToTop}
-            className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-            title="Scroll to top"
-          >
-            <ArrowUp className="w-5 h-5" />
-          </motion.button>
-        )}
+        {showScrollToTop && (<motion.button ref={scrollToTopRef} initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToTop} className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="Scroll to top">
+            <ArrowUp className="w-5 h-5"/>
+          </motion.button>)}
       </AnimatePresence>
 
       {/* Floating Action Button */}
-      <motion.button
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-        title="UI Enhancements"
-      >
-        <Palette className="w-5 h-5" />
+      <motion.button initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="UI Enhancements">
+        <Palette className="w-5 h-5"/>
       </motion.button>
 
       {/* UI Enhancement Panel */}
       <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, y: 100, scale: 0.8 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 100, scale: 0.8 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="fixed bottom-24 right-6 z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden"
-          >
+        {isVisible && (<motion.div initial={{ opacity: 0, y: 100, scale: 0.8 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 100, scale: 0.8 }} transition={{ type: "spring", damping: 25, stiffness: 300 }} className="fixed bottom-24 right-6 z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <Sparkles className="w-5 h-5" />
+                  <Sparkles className="w-5 h-5"/>
                   <h3 className="font-semibold">UI Enhancements</h3>
                 </div>
-                <button
-                  onClick={() => setIsVisible(false)}
-                  className="text-white hover:text-gray-200 transition-colors"
-                >
+                <button onClick={() => setIsVisible(false)} className="text-white hover:text-gray-200 transition-colors">
                   ×
                 </button>
               </div>
@@ -476,36 +358,23 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
                 </div>
               </div>
             </div>
-          </motion.div>
-        )}
+          </motion.div>)}
       </AnimatePresence>
 
       {/* Background Particles */}
-      {enableParticles && (
-        <div className="fixed inset-0 pointer-events-none z-0">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-20"
-              initial={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
-              }}
-              animate={{
-                y: [0, -100, 0],
-                opacity: [0.2, 0.5, 0.2],
-              }}
-              transition={{
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            />
-          ))}
-        </div>
-      )}
-    </>
-  );
+      {enableParticles && (<div className="fixed inset-0 pointer-events-none z-0">
+          {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-20" initial={{
+                    x: Math.random() * window.innerWidth,
+                    y: Math.random() * window.innerHeight,
+                }} animate={{
+                    y: [0, -100, 0],
+                    opacity: [0.2, 0.5, 0.2],
+                }} transition={{
+                    duration: Math.random() * 10 + 10,
+                    repeat: Infinity,
+                    ease: "linear",
+                }}/>))}
+        </div>)}
+    </>);
 };
-
 export default ModernUIEnhancer;

@@ -1,103 +1,80 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-// Switch component replaced with checkbox
-// Label component replaced with simple label
-// Separator component replaced with simple div
-=======
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
-=======
-import * as Switch from '@radix-ui/react-switch';
-import * as Label from '@radix-ui/react-label';
-import { Separator } from '@/components/ui/separator';
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  focusIndicator: boolean;
-}
-
 export function AccessibilityEnhancer() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    screenReader: false,
-    keyboardNavigation: false,
-    focusIndicator: false,
-  });
-
-  useEffect(() => {
-    // Load saved settings
-    const savedSettings = localStorage.getItem('accessibility-settings');
-    if (savedSettings) {
-      try {
-        const parsed = JSON.parse(savedSettings);
-        setSettings(parsed);
-        applySettings(parsed);
-      } catch (error) {
-        console.error('Failed to parse accessibility settings:', error);
-      }
-    }
-  }, []);
-
-  const applySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
-    
-    if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-    
-    if (newSettings.largeText) {
-      root.classList.add('large-text');
-    } else {
-      root.classList.remove('large-text');
-    }
-    
-    if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-    
-    if (newSettings.focusIndicator) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
-  };
-
-  const handleSettingChange = (key: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-    applySettings(newSettings);
-  };
-
-  const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {
-      highContrast: false,
-      largeText: false,
-      reducedMotion: false,
-      screenReader: false,
-      keyboardNavigation: false,
-      focusIndicator: false,
+    const [isOpen, setIsOpen] = useState(false);
+    const [settings, setSettings] = useState({
+        highContrast: false,
+        largeText: false,
+        reducedMotion: false,
+        screenReader: false,
+        keyboardNavigation: false,
+        focusIndicator: false,
+    });
+    useEffect(() => {
+        // Load saved settings
+        const savedSettings = localStorage.getItem('accessibility-settings');
+        if (savedSettings) {
+            try {
+                const parsed = JSON.parse(savedSettings);
+                setSettings(parsed);
+                applySettings(parsed);
+            }
+            catch (error) {
+                console.error('Failed to parse accessibility settings:', error);
+            }
+        }
+    }, []);
+    const applySettings = (newSettings) => {
+        const root = document.documentElement;
+        if (newSettings.highContrast) {
+            root.classList.add('high-contrast');
+        }
+        else {
+            root.classList.remove('high-contrast');
+        }
+        if (newSettings.largeText) {
+            root.classList.add('large-text');
+        }
+        else {
+            root.classList.remove('large-text');
+        }
+        if (newSettings.reducedMotion) {
+            root.classList.add('reduced-motion');
+        }
+        else {
+            root.classList.remove('reduced-motion');
+        }
+        if (newSettings.focusIndicator) {
+            root.classList.add('focus-visible');
+        }
+        else {
+            root.classList.remove('focus-visible');
+        }
     };
-    setSettings(defaultSettings);
-    localStorage.removeItem('accessibility-settings');
-    applySettings(defaultSettings);
-  };
-
-  return (
-    <>
+    const handleSettingChange = (key, value) => {
+        const newSettings = { ...settings, [key]: value };
+        setSettings(newSettings);
+        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+        applySettings(newSettings);
+    };
+    const resetSettings = () => {
+        const defaultSettings = {
+            highContrast: false,
+            largeText: false,
+            reducedMotion: false,
+            screenReader: false,
+            keyboardNavigation: false,
+            focusIndicator: false,
+        };
+        setSettings(defaultSettings);
+        localStorage.removeItem('accessibility-settings');
+        applySettings(defaultSettings);
+    };
+    return (<>
       {/* Skip Links */}
       <div className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50">
         <a href="#main-content" className="bg-zion-cyan text-white px-4 py-2 rounded-md">
@@ -109,39 +86,19 @@ export function AccessibilityEnhancer() {
       </div>
 
       {/* Accessibility Toggle Button */}
-      <Button
-        onClick={() => setIsOpen(!isOpen)}
-        variant="outline"
-        size="sm"
-=======
-        size="icon"
-=======
-        size="icon"
-        className="fixed top-4 right-4 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 hover:bg-zion-cyan/10"
-        aria-label="Accessibility Settings"
-      >
+      <Button onClick={() => setIsOpen(!isOpen)} variant="outline" size="icon" className="fixed top-4 right-4 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 hover:bg-zion-cyan/10" aria-label="Accessibility Settings">
         <span className="text-zion-cyan">A</span>
       </Button>
 
       {/* Accessibility Panel */}
-      {isOpen && (
-        <Card className="fixed top-16 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 shadow-2xl">
+      {isOpen && (<Card className="fixed top-16 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 shadow-2xl">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg flex items-center gap-2">
                 <span className="text-zion-cyan">A</span>
                 Accessibility Settings
               </CardTitle>
-              <Button
-                variant="ghost"
-                size="sm"
-=======
-                size="icon"
-=======
-                size="icon"
-                onClick={() => setIsOpen(false)}
-                aria-label="Close accessibility settings"
-              >
+              <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} aria-label="Close accessibility settings">
                 ×
               </Button>
             </div>
@@ -159,122 +116,28 @@ export function AccessibilityEnhancer() {
               </h4>
               
               <div className="flex items-center justify-between">
-                <Label.Root htmlFor="high-contrast" className="text-sm">
-                  High Contrast
-                </Label.Root>
-                <Switch.Root
-                  id="high-contrast"
-                  checked={settings.highContrast}
-                  onCheckedChange={(checked) => handleSettingChange('highContrast', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
-                >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
-                </Switch.Root>
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <Label.Root htmlFor="large-text" className="text-sm">
-                  Large Text
-                </Label.Root>
-                <Switch.Root
-                  id="large-text"
-                  checked={settings.largeText}
-                  onCheckedChange={(checked) => handleSettingChange('largeText', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
-                >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
-                </Switch.Root>
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <Label.Root htmlFor="focus-indicator" className="text-sm">
-                  Enhanced Focus
-                </Label.Root>
-                <Switch.Root
-                  id="focus-indicator"
-                  checked={settings.focusIndicator}
-                  onCheckedChange={(checked) => handleSettingChange('focusIndicator', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
-                >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
-                </Switch.Root>
                 <Label htmlFor="high-contrast" className="text-sm">
                   High Contrast
                 </Label>
-                <Switch
-                  id="high-contrast"
-                  checked={settings.highContrast}
-                  onCheckedChange={(checked) => handleSettingChange('highContrast', checked)}
-                />
+                <Switch id="high-contrast" checked={settings.highContrast} onCheckedChange={(checked) => handleSettingChange('highContrast', checked)}/>
               </div>
               
               <div className="flex items-center justify-between">
                 <Label htmlFor="large-text" className="text-sm">
                   Large Text
                 </Label>
-                <Switch
-                  id="large-text"
-                  checked={settings.largeText}
-                  onCheckedChange={(checked) => handleSettingChange('largeText', checked)}
-                />
+                <Switch id="large-text" checked={settings.largeText} onCheckedChange={(checked) => handleSettingChange('largeText', checked)}/>
               </div>
               
               <div className="flex items-center justify-between">
                 <Label htmlFor="focus-indicator" className="text-sm">
                   Enhanced Focus
                 </Label>
-                <Switch
-                  id="focus-indicator"
-                  checked={settings.focusIndicator}
-                  onCheckedChange={(checked) => handleSettingChange('focusIndicator', checked)}
-                />
-=======
+                <Switch id="focus-indicator" checked={settings.focusIndicator} onCheckedChange={(checked) => handleSettingChange('focusIndicator', checked)}/>
               </div>
             </div>
             
             <Separator />
-                <label htmlFor="high-contrast" className="text-sm">
-                  High Contrast
-                </label>
-                <input
-                  type="checkbox"
-                  id="high-contrast"
-                  checked={settings.highContrast}
-                  onChange={(e) => handleSettingChange('highContrast', e.target.checked)}
-                  className="ml-2"
-                />
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <label htmlFor="large-text" className="text-sm">
-                  Large Text
-                </label>
-                <input
-                  type="checkbox"
-                  id="large-text"
-                  checked={settings.largeText}
-                  onChange={(e) => handleSettingChange('largeText', e.target.checked)}
-                  className="ml-2"
-                />
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <label htmlFor="focus-indicator" className="text-sm">
-                  Enhanced Focus
-                </label>
-                <input
-                  type="checkbox"
-                  id="focus-indicator"
-                  checked={settings.focusIndicator}
-                  onChange={(e) => handleSettingChange('focusIndicator', e.target.checked)}
-                  className="ml-2"
-                />
-              </div>
-            </div>
-            
-            <div className="border-t border-border my-2" />
-=======
-=======
             
             {/* Motion and Navigation */}
             <div className="space-y-3">
@@ -284,84 +147,21 @@ export function AccessibilityEnhancer() {
               </h4>
               
               <div className="flex items-center justify-between">
-                <Label.Root htmlFor="reduced-motion" className="text-sm">
-                  Reduced Motion
-                </Label.Root>
-                <Switch.Root
-                  id="reduced-motion"
-                  checked={settings.reducedMotion}
-                  onCheckedChange={(checked) => handleSettingChange('reducedMotion', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
-                >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
-                </Switch.Root>
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <Label.Root htmlFor="keyboard-nav" className="text-sm">
-                  Keyboard Navigation
-                </Label.Root>
-                <Switch.Root
-                  id="keyboard-nav"
-                  checked={settings.keyboardNavigation}
-                  onCheckedChange={(checked) => handleSettingChange('keyboardNavigation', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
-                >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
-                </Switch.Root>
                 <Label htmlFor="reduced-motion" className="text-sm">
                   Reduced Motion
                 </Label>
-                <Switch
-                  id="reduced-motion"
-                  checked={settings.reducedMotion}
-                  onCheckedChange={(checked) => handleSettingChange('reducedMotion', checked)}
-                />
+                <Switch id="reduced-motion" checked={settings.reducedMotion} onCheckedChange={(checked) => handleSettingChange('reducedMotion', checked)}/>
               </div>
               
               <div className="flex items-center justify-between">
                 <Label htmlFor="keyboard-nav" className="text-sm">
                   Keyboard Navigation
                 </Label>
-                <Switch
-                  id="keyboard-nav"
-                  checked={settings.keyboardNavigation}
-                  onCheckedChange={(checked) => handleSettingChange('keyboardNavigation', checked)}
-                />
-=======
+                <Switch id="keyboard-nav" checked={settings.keyboardNavigation} onCheckedChange={(checked) => handleSettingChange('keyboardNavigation', checked)}/>
               </div>
             </div>
             
             <Separator />
-                <label htmlFor="reduced-motion" className="text-sm">
-                  Reduced Motion
-                </label>
-                <input
-                  type="checkbox"
-                  id="reduced-motion"
-                  checked={settings.reducedMotion}
-                  onChange={(e) => handleSettingChange('reducedMotion', e.target.checked)}
-                  className="ml-2"
-                />
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <label htmlFor="keyboard-nav" className="text-sm">
-                  Keyboard Navigation
-                </label>
-                <input
-                  type="checkbox"
-                  id="keyboard-nav"
-                  checked={settings.keyboardNavigation}
-                  onChange={(e) => handleSettingChange('keyboardNavigation', e.target.checked)}
-                  className="ml-2"
-                />
-              </div>
-            </div>
-            
-            <div className="border-t border-border my-2" />
-=======
-=======
             
             {/* Screen Reader */}
             <div className="space-y-3">
@@ -371,59 +171,24 @@ export function AccessibilityEnhancer() {
               </h4>
               
               <div className="flex items-center justify-between">
-                <Label.Root htmlFor="screen-reader" className="text-sm">
-                  Enhanced Support
-                </Label.Root>
-                <Switch.Root
-                  id="screen-reader"
-                  checked={settings.screenReader}
-                  onCheckedChange={(checked) => handleSettingChange('screenReader', checked)}
-                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
-                >
-                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
-                </Switch.Root>
-                <label htmlFor="screen-reader" className="text-sm">
-                  Enhanced Support
-                </label>
-                <input
-                  type="checkbox"
-                  id="screen-reader"
-                  checked={settings.screenReader}
-                  onChange={(e) => handleSettingChange('screenReader', e.target.checked)}
-                  className="ml-2"
-                />
-=======
                 <Label htmlFor="screen-reader" className="text-sm">
                   Enhanced Support
                 </Label>
-                <Switch
-                  id="screen-reader"
-                  checked={settings.screenReader}
-                  onCheckedChange={(checked) => handleSettingChange('screenReader', checked)}
-                />
-=======
+                <Switch id="screen-reader" checked={settings.screenReader} onCheckedChange={(checked) => handleSettingChange('screenReader', checked)}/>
               </div>
             </div>
             
             {/* Quick Actions */}
             <div className="pt-2">
-              <Button
-                onClick={resetSettings}
-                variant="outline"
-                size="sm"
-                className="w-full"
-              >
+              <Button onClick={resetSettings} variant="outline" size="sm" className="w-full">
                 <span className="mr-2">⚙️</span>
                 Reset to Defaults
               </Button>
             </div>
           </CardContent>
-        </Card>
-      )}
-    </>
-  );
+        </Card>)}
+    </>);
 }
-
 // CSS classes for accessibility features
 export const accessibilityStyles = `
   /* High Contrast Mode */

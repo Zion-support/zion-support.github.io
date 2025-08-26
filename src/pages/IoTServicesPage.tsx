@@ -3,201 +3,182 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
-import { 
-  Settings, 
-  Database, 
-  BarChart3, 
-  Shield, 
-  Zap,
-  Globe,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Zap as Cpu,
-  Cloud,
-  Smartphone,
-  TrendingUp as Activity
-} from "lucide-react";
+import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity } from "lucide-react";
 import { TrustedBySection } from "../TrustedBySection";
-
 const iotServices = [
-  {
-    id: "iot-platform",
-    title: "IoT Device Management Platform",
-    description: "Complete IoT solution including device provisioning, monitoring, data collection, and analytics dashboard.",
-    price: 1200,
-    currency: "$",
-    period: "/month",
-    features: [
-      "Device provisioning & onboarding",
-      "Real-time monitoring",
-      "Data collection & storage",
-      "Analytics dashboard",
-      "Alert management",
-      "API integration"
-    ],
-    icon: <Settings className="h-8 w-8" />,
-    category: "Platform",
-    badge: "Popular",
-    link: "/services",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-  },
-  {
-    id: "iot-analytics",
-    title: "IoT Data Analytics & Insights",
-    description: "Advanced analytics platform for IoT data processing, machine learning, and predictive maintenance.",
-    price: 800,
-    currency: "$",
-    period: "/month",
-    features: [
-      "Real-time data processing",
-      "Machine learning models",
-      "Predictive maintenance",
-      "Custom dashboards",
-      "Data visualization",
-      "Export capabilities"
-    ],
-    icon: <BarChart3 className="h-8 w-8" />,
-    category: "Analytics",
-    badge: "Advanced",
-    link: "/services",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-  },
-  {
-    id: "iot-security",
-    title: "IoT Security & Compliance",
-    description: "Comprehensive security solutions for IoT devices including encryption, authentication, and threat detection.",
-    price: 1500,
-    currency: "$",
-    period: "/month",
-    features: [
-      "Device authentication",
-      "Data encryption",
-      "Threat detection",
-      "Compliance monitoring",
-      "Security audits",
-      "Incident response"
-    ],
-    icon: <Shield className="h-8 w-8" />,
-    category: "Security",
-    badge: "Critical",
-    link: "/services",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-  },
-  {
-    id: "iot-edge",
-    title: "Edge Computing for IoT",
-    description: "Edge computing solutions for real-time IoT data processing and local decision making.",
-    price: 2000,
-    currency: "$",
-    period: "/month",
-    features: [
-      "Edge node deployment",
-      "Local data processing",
-      "Real-time analytics",
-      "Offline operation",
-      "Edge AI models",
-      "Cloud synchronization"
-    ],
-    icon: <Cpu className="h-8 w-8" />,
-    category: "Edge Computing",
-    badge: "Innovative",
-    link: "/services",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-  },
-  {
-    id: "iot-integration",
-    title: "IoT System Integration",
-    description: "Seamless integration of IoT devices with existing enterprise systems and cloud platforms.",
-    price: 3000,
-    currency: "$",
-    period: "/project",
-    features: [
-      "System integration",
-      "API development",
-      "Data mapping",
-      "Workflow automation",
-      "Testing & validation",
-      "Training & support"
-    ],
-    icon: <Cloud className="h-8 w-8" />,
-    category: "Integration",
-    badge: "Custom",
-    link: "/services",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-  },
-  {
-    id: "iot-mobile",
-    title: "IoT Mobile Applications",
-    description: "Mobile apps for IoT device control, monitoring, and management on iOS and Android platforms.",
-    price: 2500,
-    currency: "$",
-    period: "/app",
-    features: [
-      "Cross-platform development",
-      "Real-time monitoring",
-      "Push notifications",
-      "Offline capabilities",
-      "User management",
-      "App store deployment"
-    ],
-    icon: <Smartphone className="h-8 w-8" />,
-    category: "Mobile",
-    badge: "Featured",
-    link: "/services",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
-  }
+    {
+        id: "iot-platform",
+        title: "IoT Device Management Platform",
+        description: "Complete IoT solution including device provisioning, monitoring, data collection, and analytics dashboard.",
+        price: 1200,
+        currency: "$",
+        period: "/month",
+        features: [
+            "Device provisioning & onboarding",
+            "Real-time monitoring",
+            "Data collection & storage",
+            "Analytics dashboard",
+            "Alert management",
+            "API integration"
+        ],
+        icon: <Settings className="h-8 w-8"/>,
+        category: "Platform",
+        badge: "Popular",
+        link: "/services",
+        image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
+    },
+    {
+        id: "iot-analytics",
+        title: "IoT Data Analytics & Insights",
+        description: "Advanced analytics platform for IoT data processing, machine learning, and predictive maintenance.",
+        price: 800,
+        currency: "$",
+        period: "/month",
+        features: [
+            "Real-time data processing",
+            "Machine learning models",
+            "Predictive maintenance",
+            "Custom dashboards",
+            "Data visualization",
+            "Export capabilities"
+        ],
+        icon: <BarChart3 className="h-8 w-8"/>,
+        category: "Analytics",
+        badge: "Advanced",
+        link: "/services",
+        image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
+    },
+    {
+        id: "iot-security",
+        title: "IoT Security & Compliance",
+        description: "Comprehensive security solutions for IoT devices including encryption, authentication, and threat detection.",
+        price: 1500,
+        currency: "$",
+        period: "/month",
+        features: [
+            "Device authentication",
+            "Data encryption",
+            "Threat detection",
+            "Compliance monitoring",
+            "Security audits",
+            "Incident response"
+        ],
+        icon: <Shield className="h-8 w-8"/>,
+        category: "Security",
+        badge: "Critical",
+        link: "/services",
+        image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
+    },
+    {
+        id: "iot-edge",
+        title: "Edge Computing for IoT",
+        description: "Edge computing solutions for real-time IoT data processing and local decision making.",
+        price: 2000,
+        currency: "$",
+        period: "/month",
+        features: [
+            "Edge node deployment",
+            "Local data processing",
+            "Real-time analytics",
+            "Offline operation",
+            "Edge AI models",
+            "Cloud synchronization"
+        ],
+        icon: <Cpu className="h-8 w-8"/>,
+        category: "Edge Computing",
+        badge: "Innovative",
+        link: "/services",
+        image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
+    },
+    {
+        id: "iot-integration",
+        title: "IoT System Integration",
+        description: "Seamless integration of IoT devices with existing enterprise systems and cloud platforms.",
+        price: 3000,
+        currency: "$",
+        period: "/project",
+        features: [
+            "System integration",
+            "API development",
+            "Data mapping",
+            "Workflow automation",
+            "Testing & validation",
+            "Training & support"
+        ],
+        icon: <Cloud className="h-8 w-8"/>,
+        category: "Integration",
+        badge: "Custom",
+        link: "/services",
+        image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
+    },
+    {
+        id: "iot-mobile",
+        title: "IoT Mobile Applications",
+        description: "Mobile apps for IoT device control, monitoring, and management on iOS and Android platforms.",
+        price: 2500,
+        currency: "$",
+        period: "/app",
+        features: [
+            "Cross-platform development",
+            "Real-time monitoring",
+            "Push notifications",
+            "Offline capabilities",
+            "User management",
+            "App store deployment"
+        ],
+        icon: <Smartphone className="h-8 w-8"/>,
+        category: "Mobile",
+        badge: "Featured",
+        link: "/services",
+        image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"
+    }
 ];
-
 const iotBenefits = [
-  {
-    title: "Real-time Monitoring",
-    description: "Monitor your assets and processes in real-time for immediate insights and rapid response",
-    icon: <Activity className="h-6 w-6" />
-  },
-  {
-    title: "Data-Driven Decisions",
-    description: "Make informed decisions based on comprehensive data collection and advanced analytics",
-    icon: <BarChart3 className="h-6 w-6" />
-  },
-  {
-    title: "Operational Efficiency",
-    description: "Automate processes and optimize operations to reduce costs and improve productivity",
-    icon: <Zap className="h-6 w-6" />
-  },
-  {
-    title: "Predictive Maintenance",
-    description: "Prevent equipment failures with predictive analytics and proactive maintenance scheduling",
-    icon: <TrendingUp className="h-6 w-6" />
-  }
+    {
+        title: "Real-time Monitoring",
+        description: "Monitor your assets and processes in real-time for immediate insights and rapid response",
+        icon: <Activity className="h-6 w-6"/>
+    },
+    {
+        title: "Data-Driven Decisions",
+        description: "Make informed decisions based on comprehensive data collection and advanced analytics",
+        icon: <BarChart3 className="h-6 w-6"/>
+    },
+    {
+        title: "Operational Efficiency",
+        description: "Automate processes and optimize operations to reduce costs and improve productivity",
+        icon: <Zap className="h-6 w-6"/>
+    },
+    {
+        title: "Predictive Maintenance",
+        description: "Prevent equipment failures with predictive analytics and proactive maintenance scheduling",
+        icon: <TrendingUp className="h-6 w-6"/>
+    }
 ];
-
 const iotUseCases = [
-  {
-    title: "Smart Manufacturing",
-    description: "Monitor production lines, predict maintenance needs, and optimize manufacturing processes",
-    icon: <Cpu className="h-6 w-6" />
-  },
-  {
-    title: "Smart Cities",
-    description: "Manage traffic, utilities, and public services with connected IoT infrastructure",
-    icon: <Globe className="h-6 w-6" />
-  },
-  {
-    title: "Connected Healthcare",
-    description: "Remote patient monitoring, medical device management, and healthcare analytics",
-    icon: <Activity className="h-6 w-6" />
-  },
-  {
-    title: "Smart Agriculture",
-    description: "Precision farming, environmental monitoring, and automated irrigation systems",
-    icon: <Settings className="h-6 w-6" />
-  }
+    {
+        title: "Smart Manufacturing",
+        description: "Monitor production lines, predict maintenance needs, and optimize manufacturing processes",
+        icon: <Cpu className="h-6 w-6"/>
+    },
+    {
+        title: "Smart Cities",
+        description: "Manage traffic, utilities, and public services with connected IoT infrastructure",
+        icon: <Globe className="h-6 w-6"/>
+    },
+    {
+        title: "Connected Healthcare",
+        description: "Remote patient monitoring, medical device management, and healthcare analytics",
+        icon: <Activity className="h-6 w-6"/>
+    },
+    {
+        title: "Smart Agriculture",
+        description: "Precision farming, environmental monitoring, and automated irrigation systems",
+        icon: <Settings className="h-6 w-6"/>
+    }
 ];
-
 export default function IoTServicesPage() {
-  return (
-    <div className="min-h-screen bg-background">
+    return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">
         <div className="container mx-auto px-4 text-center">
@@ -238,8 +219,7 @@ export default function IoTServicesPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {iotBenefits.map((benefit, index) => (
-              <div key={index} className="text-center p-6">
+            {iotBenefits.map((benefit, index) => (<div key={index} className="text-center p-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan rounded-full mb-4">
                   <div className="text-white">
                     {benefit.icon}
@@ -247,8 +227,7 @@ export default function IoTServicesPage() {
                 </div>
                 <h3 className="text-white text-xl font-semibold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -263,8 +242,7 @@ export default function IoTServicesPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {iotUseCases.map((useCase, index) => (
-              <div key={index} className="text-center p-6 border border-zion-blue-light rounded-lg">
+            {iotUseCases.map((useCase, index) => (<div key={index} className="text-center p-6 border border-zion-blue-light rounded-lg">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-purple rounded-full mb-4">
                   <div className="text-white">
                     {useCase.icon}
@@ -272,8 +250,7 @@ export default function IoTServicesPage() {
                 </div>
                 <h3 className="text-white text-xl font-semibold mb-2">{useCase.title}</h3>
                 <p className="text-zion-slate-light">{useCase.description}</p>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -288,25 +265,18 @@ export default function IoTServicesPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {iotServices.map((service) => (
-              <Card key={service.id} className="overflow-hidden hover:shadow-lg transition-all duration-300">
+            {iotServices.map((service) => (<Card key={service.id} className="overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"/>
                 </div>
                 <CardHeader className="pb-3">
                   <div className="flex justify-between items-start mb-2">
                     <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple">
                       {service.category}
                     </Badge>
-                    {service.badge && (
-                      <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
+                    {service.badge && (<Badge variant="outline" className="border-zion-cyan text-zion-cyan">
                         {service.badge}
-                      </Badge>
-                    )}
+                      </Badge>)}
                   </div>
                   <div className="flex items-center gap-3 mb-3">
                     <div className="p-2 bg-zion-blue/10 rounded-lg">
@@ -326,24 +296,21 @@ export default function IoTServicesPage() {
                     <span className="text-muted-foreground">{service.period}</span>
                   </div>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 3).map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2 text-sm">
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                    {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="flex items-center gap-2 text-sm">
+                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0"/>
                         <span>{feature}</span>
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
                 </CardContent>
                 <CardContent className="pt-0">
                   <Button asChild className="w-full">
                     <Link href={service.link}>
                       Learn More
-                      <ArrowRight className="h-4 w-4 ml-2" />
+                      <ArrowRight className="h-4 w-4 ml-2"/>
                     </Link>
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -380,6 +347,5 @@ export default function IoTServicesPage() {
       </section>
 
       <TrustedBySection />
-    </div>
-  );
+    </div>);
 }

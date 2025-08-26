@@ -3,26 +3,12 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  TrendingUp, 
-  CheckCircle,
-  ArrowRight,
-  Star
-} from 'lucide-react';
+import { Brain, Shield, Users, TrendingUp, ArrowRight, Star } from 'lucide-react';
 import { ADVANCED_SERVICES } from '@/data/advancedServices';
-
 // Featured services for the showcase
 const FEATURED_SERVICES = ADVANCED_SERVICES.filter(service => service.featured).slice(0, 6);
-
 export function AdvancedServicesShowcase() {
-  return (
-    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
+    return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -38,7 +24,7 @@ export function AdvancedServicesShowcase() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">
-                <Brain className="w-6 h-6 text-zion-blue" />
+                <Brain className="w-6 h-6 text-zion-blue"/>
               </div>
               <h3 className="text-zion-cyan font-semibold">AI-Powered</h3>
               <p className="text-zion-slate-light text-sm">Intelligent automation & insights</p>
@@ -46,7 +32,7 @@ export function AdvancedServicesShowcase() {
             
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">
-                <Shield className="w-6 h-6 text-zion-blue" />
+                <Shield className="w-6 h-6 text-zion-blue"/>
               </div>
               <h3 className="text-zion-cyan font-semibold">Enterprise Security</h3>
               <p className="text-zion-slate-light text-sm">Bank-level protection</p>
@@ -54,7 +40,7 @@ export function AdvancedServicesShowcase() {
             
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">
-                <TrendingUp className="w-6 h-6 text-zion-blue" />
+                <TrendingUp className="w-6 h-6 text-zion-blue"/>
               </div>
               <h3 className="text-zion-cyan font-semibold">Proven Results</h3>
               <p className="text-zion-slate-light text-sm">Track record of success</p>
@@ -62,7 +48,7 @@ export function AdvancedServicesShowcase() {
             
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">
-                <Users className="w-6 h-6 text-zion-blue" />
+                <Users className="w-6 h-6 text-zion-blue"/>
               </div>
               <h3 className="text-zion-cyan font-semibold">Expert Team</h3>
               <p className="text-zion-slate-light text-sm">Certified professionals</p>
@@ -72,8 +58,7 @@ export function AdvancedServicesShowcase() {
 
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {FEATURED_SERVICES.map((service) => (
-            <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-cyan transition-all duration-300 hover:scale-105">
+          {FEATURED_SERVICES.map((service) => (<Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-cyan transition-all duration-300 hover:scale-105">
               <CardHeader>
                 <div className="flex items-start justify-between mb-2">
                   <CardTitle className="text-lg text-white line-clamp-2">{service.title}</CardTitle>
@@ -90,11 +75,11 @@ export function AdvancedServicesShowcase() {
                 {/* Service Details */}
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center gap-2 text-zion-slate-light">
-                    <Star className="w-4 h-4 text-yellow-500" />
+                    <Star className="w-4 h-4 text-yellow-500"/>
                     <span>{service.rating} ({service.reviewCount} reviews)</span>
                   </div>
                   <div className="flex items-center gap-2 text-zion-cyan">
-                    <Brain className="w-4 h-4" />
+                    <Brain className="w-4 h-4"/>
                     <span>AI Score: {service.aiScore}</span>
                   </div>
                 </div>
@@ -109,11 +94,9 @@ export function AdvancedServicesShowcase() {
                 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
-                  {service.tags.slice(0, 2).map((tag, index) => (
-                    <Badge key={index} variant="secondary" className="bg-zion-blue-light text-zion-blue text-xs">
+                  {service.tags.slice(0, 2).map((tag, index) => (<Badge key={index} variant="secondary" className="bg-zion-blue-light text-zion-blue text-xs">
                       {tag}
-                    </Badge>
-                  ))}
+                    </Badge>))}
                 </div>
                 
                 {/* CTA */}
@@ -121,8 +104,7 @@ export function AdvancedServicesShowcase() {
                   Learn More
                 </Button>
               </CardContent>
-            </Card>
-          ))}
+            </Card>))}
         </div>
 
         {/* Service Categories Overview */}
@@ -172,7 +154,7 @@ export function AdvancedServicesShowcase() {
               <Link to="/advanced-services">
                 <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue">
                   View All Services
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"/>
                 </Button>
               </Link>
             </div>
@@ -182,12 +164,7 @@ export function AdvancedServicesShowcase() {
               <p>Call us: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
               <p className="mt-1">Address: 364 E Main St STE 1008, Middletown DE 19709</p>
               <p className="mt-2">
-                <a 
-                  href="https://ziontechgroup.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-zion-cyan hover:text-zion-cyan-dark"
-                >
+                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-dark">
                   ziontechgroup.com
                 </a>
               </p>
@@ -195,6 +172,5 @@ export function AdvancedServicesShowcase() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
 }

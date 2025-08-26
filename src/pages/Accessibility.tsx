@@ -1,125 +1,106 @@
 import React from 'react';
-
-export default function Accessibility() {
-	return (
-		<div className="min-h-screen bg-background text-foreground py-16">
-			<div className="container mx-auto px-4 max-w-3xl">
-				<h1 className="text-3xl font-bold mb-4">Accessibility</h1>
-				<p className="text-muted-foreground">
-					We are committed to ensuring our website is accessible to all users. If you experience
-					any difficulty accessing content, please contact us at info@ziontechgroup.com.
-				</p>
-			</div>
-		</div>
-	);
-=======
-import { Eye, Ear, Hand, Brain, Shield, Users, Globe, Zap, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
-
-const Accessibility: React.FC = () => {
-  const accessibilityFeatures = [
-    {
-      icon: Eye,
-      title: "Visual Accessibility",
-      description: "Support for users with visual impairments",
-      features: ["High contrast mode", "Screen reader compatibility", "Resizable text", "Color-blind friendly design"]
-    },
-    {
-      icon: Ear,
-      title: "Auditory Accessibility",
-      description: "Support for users with hearing impairments",
-      features: ["Closed captions", "Audio descriptions", "Visual alerts", "Transcripts available"]
-    },
-    {
-      icon: Hand,
-      title: "Motor Accessibility",
-      description: "Support for users with motor impairments",
-      features: ["Keyboard navigation", "Voice control support", "Large click targets", "Customizable timing"]
-    },
-    {
-      icon: Brain,
-      title: "Cognitive Accessibility",
-      description: "Support for users with cognitive impairments",
-      features: ["Clear navigation", "Consistent layout", "Readable fonts", "Logical content flow"]
-    }
-  ];
-
-  const complianceStandards = [
-    {
-      standard: "WCAG 2.1",
-      level: "AA",
-      description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",
-      status: "Compliant"
-    },
-    {
-      standard: "Section 508",
-      level: "Federal",
-      description: "Federal accessibility requirements for electronic information",
-      status: "Compliant"
-    },
-    {
-      standard: "ADA Title III",
-      level: "Legal",
-      description: "Americans with Disabilities Act digital accessibility requirements",
-      status: "Compliant"
-    },
-    {
-      standard: "EN 301 549",
-      level: "European",
-      description: "European accessibility requirements for ICT products and services",
-      status: "Compliant"
-    }
-  ];
-
-  const toolsAndTechnologies = [
-    {
-      name: "Screen Readers",
-      description: "Compatible with JAWS, NVDA, VoiceOver, and TalkBack",
-      icon: Eye
-    },
-    {
-      name: "Voice Control",
-      description: "Support for Dragon NaturallySpeaking and built-in voice assistants",
-      icon: Ear
-    },
-    {
-      name: "Keyboard Navigation",
-      description: "Full keyboard accessibility with visible focus indicators",
-      icon: Hand
-    },
-    {
-      name: "High Contrast",
-      description: "High contrast mode for better visibility",
-      icon: Eye
-    },
-    {
-      name: "Text Scaling",
-      description: "Text can be scaled up to 200% without loss of functionality",
-      icon: Brain
-    },
-    {
-      name: "Alternative Text",
-      description: "Descriptive alt text for all images and graphics",
-      icon: Eye
-    }
-  ];
-
-  const ongoingImprovements = [
-    "Regular accessibility audits and testing",
-    "User feedback integration",
-    "Continuous monitoring and updates",
-    "Staff accessibility training",
-    "Third-party accessibility reviews",
-    "Compliance monitoring and reporting"
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
+import { Eye, Ear, Hand, Brain, Shield, Award, CheckCircle } from 'lucide-react';
+const Accessibility = () => {
+    const accessibilityFeatures = [
+        {
+            icon: Eye,
+            title: "Visual Accessibility",
+            description: "Support for users with visual impairments",
+            features: ["High contrast mode", "Screen reader compatibility", "Resizable text", "Color-blind friendly design"]
+        },
+        {
+            icon: Ear,
+            title: "Auditory Accessibility",
+            description: "Support for users with hearing impairments",
+            features: ["Closed captions", "Audio descriptions", "Visual alerts", "Transcripts available"]
+        },
+        {
+            icon: Hand,
+            title: "Motor Accessibility",
+            description: "Support for users with motor impairments",
+            features: ["Keyboard navigation", "Voice control support", "Large click targets", "Customizable timing"]
+        },
+        {
+            icon: Brain,
+            title: "Cognitive Accessibility",
+            description: "Support for users with cognitive impairments",
+            features: ["Clear navigation", "Consistent layout", "Readable fonts", "Logical content flow"]
+        }
+    ];
+    const complianceStandards = [
+        {
+            standard: "WCAG 2.1",
+            level: "AA",
+            description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",
+            status: "Compliant"
+        },
+        {
+            standard: "Section 508",
+            level: "Federal",
+            description: "Federal accessibility requirements for electronic information",
+            status: "Compliant"
+        },
+        {
+            standard: "ADA Title III",
+            level: "Legal",
+            description: "Americans with Disabilities Act digital accessibility requirements",
+            status: "Compliant"
+        },
+        {
+            standard: "EN 301 549",
+            level: "European",
+            description: "European accessibility requirements for ICT products and services",
+            status: "Compliant"
+        }
+    ];
+    const toolsAndTechnologies = [
+        {
+            name: "Screen Readers",
+            description: "Compatible with JAWS, NVDA, VoiceOver, and TalkBack",
+            icon: Eye
+        },
+        {
+            name: "Voice Control",
+            description: "Support for Dragon NaturallySpeaking and built-in voice assistants",
+            icon: Ear
+        },
+        {
+            name: "Keyboard Navigation",
+            description: "Full keyboard accessibility with visible focus indicators",
+            icon: Hand
+        },
+        {
+            name: "High Contrast",
+            description: "High contrast mode for better visibility",
+            icon: Eye
+        },
+        {
+            name: "Text Scaling",
+            description: "Text can be scaled up to 200% without loss of functionality",
+            icon: Brain
+        },
+        {
+            name: "Alternative Text",
+            description: "Descriptive alt text for all images and graphics",
+            icon: Eye
+        }
+    ];
+    const ongoingImprovements = [
+        "Regular accessibility audits and testing",
+        "User feedback integration",
+        "Continuous monitoring and updates",
+        "Staff accessibility training",
+        "Third-party accessibility reviews",
+        "Compliance monitoring and reporting"
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-green-500/10 text-green-400 rounded-full text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
+              <Shield className="w-4 h-4 mr-2"/>
               Accessibility Commitment
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -131,16 +112,10 @@ const Accessibility: React.FC = () => {
               regardless of their abilities or disabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#features"
-                className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
+              <a href="#features" className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                 Learn More
               </a>
-              <a
-                href="/contact"
-                className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
+              <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
                 Report Issues
               </a>
             </div>
@@ -162,26 +137,19 @@ const Accessibility: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {accessibilityFeatures.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
-              >
+            {accessibilityFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white" />
+                  <feature.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.features.map((item, idx) => (
-                    <li key={idx} className="text-sm text-gray-400 flex items-start">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                  {feature.features.map((item, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0"/>
                       {item}
-                    </li>
-                  ))}
+                    </li>))}
                 </ul>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -200,11 +168,7 @@ const Accessibility: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {complianceStandards.map((standard, index) => (
-              <div
-                key={index}
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6"
-              >
+            {complianceStandards.map((standard, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">{standard.standard}</h3>
                   <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm font-medium">
@@ -213,8 +177,7 @@ const Accessibility: React.FC = () => {
                 </div>
                 <p className="text-gray-400 text-sm mb-2">{standard.level}</p>
                 <p className="text-gray-300">{standard.description}</p>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -233,18 +196,13 @@ const Accessibility: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {toolsAndTechnologies.map((tool, index) => (
-              <div
-                key={index}
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300"
-              >
+            {toolsAndTechnologies.map((tool, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <tool.icon className="w-8 h-8 text-white" />
+                  <tool.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{tool.name}</h3>
                 <p className="text-gray-300">{tool.description}</p>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -262,17 +220,15 @@ const Accessibility: React.FC = () => {
                 our website through regular audits, user feedback, and updates.
               </p>
               <ul className="space-y-3">
-                {ongoingImprovements.map((improvement, index) => (
-                  <li key={index} className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                {ongoingImprovements.map((improvement, index) => (<li key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
                     {improvement}
-                  </li>
-                ))}
+                  </li>))}
               </ul>
             </div>
             <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2xl p-8 border border-green-500/30">
               <div className="text-center">
-                <Award className="w-24 h-24 text-green-400 mx-auto mb-4" />
+                <Award className="w-24 h-24 text-green-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">Our Commitment</h3>
                 <p className="text-gray-300 mb-6">
                   We believe that digital accessibility is not just a legal 
@@ -300,25 +256,26 @@ const Accessibility: React.FC = () => {
             improvement, we want to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
+            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Contact Us
             </a>
-            <a
-              href="mailto:accessibility@ziontechgroup.com"
-              className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-            >
+            <a href="mailto:accessibility@ziontechgroup.com" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               Email Accessibility Team
             </a>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default Accessibility;
 =======
+
+export default function Accessibility() {
+  return (
+    <div className="container mx-auto px-4 py-12 text-white">
+      <h1 className="text-3xl font-bold mb-4">Accessibility</h1>
+      <p className="text-gray-300">We are committed to accessibility. This page will include our full statement.</p>
+    </div>
+  );
 }
+>>>>>>> cursor/website-audit-and-enhancement-5885

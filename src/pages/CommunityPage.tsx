@@ -1,5 +1,10 @@
-=======
-
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+export default function CommunityPage() {
+    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Community - Zion Tech Group", description: "Join our tech community and connect with fellow professionals.", canonical: "https://ziontechgroup.com/community" }), _jsx(Header, {}), _jsx("main", { className: "min-h-screen bg-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4 py-20", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Community" }), _jsx("p", { className: "text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto", children: "Connect with fellow tech professionals, share knowledge, and grow your network." })] }), _jsx("div", { className: "max-w-6xl mx-auto", children: _jsxs("div", { className: "bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Coming Soon" }), _jsx("p", { className: "text-zion-slate-light mb-6", children: "Our community platform is currently under development." })] }) })] }) }), _jsx(Footer, {})] }));
 import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -7,254 +12,162 @@ import { SEO } from "@/components/SEO";
 import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
-import { ForumPost } from "@/types/community";
-
 // Mock data for featured posts
-const featuredPosts: ForumPost[] = [
-  {
-    id: "1",
-    title: "Best practices for AI model fine-tuning",
-    content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
-    author: {
-      id: "user1",
-      name: "Alex Johnson",
-      avatar: "https://i.pravatar.cc/150?img=3",
-      role: "Verified Talent"
+const featuredPosts = [
+    {
+        id: "1",
+        title: "Best practices for AI model fine-tuning",
+        content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
+        author: {
+            id: "user1",
+            name: "Alex Johnson",
+            avatar: "https://i.pravatar.cc/150?img=3",
+            role: "Verified Talent"
+        },
+        authorId: "user1",
+        category: "ai-tools",
+        categoryId: "ai-tools",
+        tags: ["machine-learning", "fine-tuning", "gpt"],
+        createdAt: "2025-04-01T12:00:00Z",
+        updatedAt: "2025-04-01T12:00:00Z",
+        replies: [],
+        likes: 48,
+        views: 120,
+        upvotes: 48,
+        downvotes: 2,
+        replyCount: 12,
+        isPinned: false,
+        isLocked: false,
+        isAnswered: true,
+        authorName: "Alex Johnson",
+        authorAvatar: "https://i.pravatar.cc/150?img=3",
+        authorRole: "Verified Talent"
     },
-    authorId: "user1",
-    category: "ai-tools",
-    categoryId: "ai-tools",
-    tags: ["machine-learning", "fine-tuning", "gpt"],
-    createdAt: "2025-04-01T12:00:00Z",
-    updatedAt: "2025-04-01T12:00:00Z",
-    replies: [],
-    likes: 48,
-    views: 120,
-    upvotes: 48,
-    downvotes: 2,
-    replyCount: 12,
-    isPinned: false,
-    isLocked: false,
-    isAnswered: true,
-    authorName: "Alex Johnson",
-    authorAvatar: "https://i.pravatar.cc/150?img=3",
-    authorRole: "Verified Talent"
-  },
-  {
-    id: "2",
-    title: "How to build an effective AI talent profile?",
-    content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
-    author: {
-      id: "user2",
-      name: "Sarah Chen",
-      avatar: "https://i.pravatar.cc/150?img=5",
-      role: "Verified Talent"
-    },
-    authorId: "user2",
-    category: "getting-hired",
-    categoryId: "getting-hired",
-    tags: ["profile", "tips", "hiring"],
-    createdAt: "2025-04-03T09:15:00Z",
-    updatedAt: "2025-04-03T09:15:00Z",
-    replies: [],
-    likes: 32,
-    views: 89,
-    upvotes: 32,
-    downvotes: 0,
-    replyCount: 8,
-    isPinned: true,
-    isLocked: false,
-    isAnswered: false,
-    authorName: "Sarah Chen",
-    authorAvatar: "https://i.pravatar.cc/150?img=5",
-    authorRole: "Verified Talent"
-  }
+    {
+        id: "2",
+        title: "How to build an effective AI talent profile?",
+        content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
+        author: {
+            id: "user2",
+            name: "Sarah Chen",
+            avatar: "https://i.pravatar.cc/150?img=5",
+            role: "Verified Talent"
+        },
+        authorId: "user2",
+        category: "getting-hired",
+        categoryId: "getting-hired",
+        tags: ["profile", "tips", "hiring"],
+        createdAt: "2025-04-03T09:15:00Z",
+        updatedAt: "2025-04-03T09:15:00Z",
+        replies: [],
+        likes: 32,
+        views: 89,
+        upvotes: 32,
+        downvotes: 0,
+        replyCount: 8,
+        isPinned: true,
+        isLocked: false,
+        isAnswered: false,
+        authorName: "Sarah Chen",
+        authorAvatar: "https://i.pravatar.cc/150?img=5",
+        authorRole: "Verified Talent"
+    }
 ];
-
 // Mock data for recent posts
-const recentPosts: ForumPost[] = [
-  {
-    id: "3",
-    title: "Looking for feedback on my automated testing approach",
-    content: "I've set up a CI/CD pipeline with the following testing strategy...",
-    author: {
-      id: "user3",
-      name: "Michael Wong",
-      avatar: "https://i.pravatar.cc/150?img=7",
-      role: "Developer"
+const recentPosts = [
+    {
+        id: "3",
+        title: "Looking for feedback on my automated testing approach",
+        content: "I've set up a CI/CD pipeline with the following testing strategy...",
+        author: {
+            id: "user3",
+            name: "Michael Wong",
+            avatar: "https://i.pravatar.cc/150?img=7",
+            role: "Developer"
+        },
+        authorId: "user3",
+        category: "project-help",
+        categoryId: "project-help",
+        tags: ["testing", "automation", "ci-cd"],
+        createdAt: "2025-04-10T14:30:00Z",
+        updatedAt: "2025-04-10T14:30:00Z",
+        replies: [],
+        likes: 5,
+        views: 45,
+        upvotes: 5,
+        downvotes: 0,
+        replyCount: 2,
+        isPinned: false,
+        isLocked: false,
+        isAnswered: false,
+        authorName: "Michael Wong",
+        authorAvatar: "https://i.pravatar.cc/150?img=7",
+        authorRole: "Developer"
     },
-    authorId: "user3",
-    category: "project-help",
-    categoryId: "project-help",
-    tags: ["testing", "automation", "ci-cd"],
-    createdAt: "2025-04-10T14:30:00Z",
-    updatedAt: "2025-04-10T14:30:00Z",
-    replies: [],
-    likes: 5,
-    views: 45,
-    upvotes: 5,
-    downvotes: 0,
-    replyCount: 2,
-    isPinned: false,
-    isLocked: false,
-    isAnswered: false,
-    authorName: "Michael Wong",
-    authorAvatar: "https://i.pravatar.cc/150?img=7",
-    authorRole: "Developer"
-  },
-  {
-    id: "4",
-    title: "Feature request: Team collaboration tools",
-    content: "It would be really helpful if we could have built-in tools for team collaboration...",
-    author: {
-      id: "user4",
-      name: "Emma Davis",
-      avatar: "https://i.pravatar.cc/150?img=9",
-      role: "Product Manager"
+    {
+        id: "4",
+        title: "Feature request: Team collaboration tools",
+        content: "It would be really helpful if we could have built-in tools for team collaboration...",
+        author: {
+            id: "user4",
+            name: "Emma Davis",
+            avatar: "https://i.pravatar.cc/150?img=9",
+            role: "Product Manager"
+        },
+        authorId: "user4",
+        category: "feedback",
+        categoryId: "feedback",
+        tags: ["feature-request", "teams", "collaboration"],
+        createdAt: "2025-04-09T18:45:00Z",
+        updatedAt: "2025-04-09T18:45:00Z",
+        replies: [],
+        likes: 12,
+        views: 67,
+        upvotes: 12,
+        downvotes: 1,
+        replyCount: 3,
+        isPinned: false,
+        isLocked: false,
+        isAnswered: false,
+        authorName: "Emma Davis",
+        authorAvatar: "https://i.pravatar.cc/150?img=9",
+        authorRole: "Product Manager"
     },
-    authorId: "user4",
-    category: "feedback",
-    categoryId: "feedback",
-    tags: ["feature-request", "teams", "collaboration"],
-    createdAt: "2025-04-09T18:45:00Z",
-    updatedAt: "2025-04-09T18:45:00Z",
-    replies: [],
-    likes: 12,
-    views: 67,
-    upvotes: 12,
-    downvotes: 1,
-    replyCount: 3,
-    isPinned: false,
-    isLocked: false,
-    isAnswered: false,
-    authorName: "Emma Davis",
-    authorAvatar: "https://i.pravatar.cc/150?img=9",
-    authorRole: "Product Manager"
-  },
-  {
-    id: "5",
-    title: "How to handle client scope creep?",
-    content: "I'm working on a project where the client keeps adding requirements...",
-    author: {
-      id: "user5",
-      name: "David Lin",
-      avatar: "https://i.pravatar.cc/150?img=11",
-      role: "Freelancer"
-    },
-    authorId: "user5",
-    category: "project-help",
-    categoryId: "project-help",
-    tags: ["client-management", "scope", "projects"],
-    createdAt: "2025-04-08T10:20:00Z",
-    updatedAt: "2025-04-08T10:20:00Z",
-    replies: [],
-    likes: 24,
-    views: 89,
-    upvotes: 24,
-    downvotes: 0,
-    replyCount: 7,
-    isPinned: false,
-    isLocked: false,
-    isAnswered: true,
-    authorName: "David Lin",
-    authorAvatar: "https://i.pravatar.cc/150?img=11",
-    authorRole: "Freelancer"
-  }
+    {
+        id: "5",
+        title: "How to handle client scope creep?",
+        content: "I'm working on a project where the client keeps adding requirements...",
+        author: {
+            id: "user5",
+            name: "David Lin",
+            avatar: "https://i.pravatar.cc/150?img=11",
+            role: "Freelancer"
+        },
+        authorId: "user5",
+        category: "project-help",
+        categoryId: "project-help",
+        tags: ["client-management", "scope", "projects"],
+        createdAt: "2025-04-08T10:20:00Z",
+        updatedAt: "2025-04-08T10:20:00Z",
+        replies: [],
+        likes: 24,
+        views: 89,
+        upvotes: 24,
+        downvotes: 0,
+        replyCount: 7,
+        isPinned: false,
+        isLocked: false,
+        isAnswered: true,
+        authorName: "David Lin",
+        authorAvatar: "https://i.pravatar.cc/150?img=11",
+        authorRole: "Freelancer"
+    }
 ];
-
 export default function CommunityPage() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("categories");
-  
-  return (
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Users, MessageCircle, Calendar, BookOpen, Award, Globe, Lightbulb, Rocket, Heart, Star, Zap, Target } from 'lucide-react';
-
-export default function CommunityPage() {
-  const communityFeatures = [
-    {
-      icon: MessageCircle,
-      title: 'Discussion Forums',
-      description: 'Engage in meaningful conversations about AI, technology trends, and industry insights with fellow professionals.',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: BookOpen,
-      title: 'Knowledge Sharing',
-      description: 'Access and contribute to our growing library of technical articles, tutorials, and best practices.',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Calendar,
-      title: 'Events & Meetups',
-      description: 'Join our virtual and in-person events, workshops, and networking opportunities.',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Award,
-      title: 'Recognition Program',
-      description: 'Get recognized for your contributions and achievements within the community.',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Globe,
-      title: 'Global Network',
-      description: 'Connect with professionals from around the world and expand your professional network.',
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Innovation Hub',
-      description: 'Collaborate on innovative projects and share breakthrough ideas with the community.',
-      color: 'from-red-500 to-pink-500'
-    }
-  ];
-
-  const upcomingEvents = [
-    {
-      title: 'AI Ethics & Responsible Development',
-      date: 'March 15, 2024',
-      time: '2:00 PM EST',
-      type: 'Webinar',
-      attendees: 127,
-      icon: Rocket
-    },
-    {
-      title: 'Quantum Computing Workshop',
-      date: 'March 22, 2024',
-      time: '10:00 AM EST',
-      type: 'Workshop',
-      attendees: 89,
-      icon: Zap
-    },
-    {
-      title: 'Cybersecurity Best Practices',
-      date: 'March 29, 2024',
-      time: '3:00 PM EST',
-      type: 'Panel Discussion',
-      attendees: 156,
-      icon: Target
-    }
-  ];
-
-  const communityStats = [
-    { label: 'Active Members', value: '2,847', icon: Users },
-    { label: 'Discussions', value: '1,234', icon: MessageCircle },
-    { label: 'Resources Shared', value: '567', icon: BookOpen },
-    { label: 'Events Hosted', value: '89', icon: Calendar }
-  ];
-
-  return (
-=======
-=======
-    <>
-      <SEO
-        title="Community Forum | Zion AI Marketplace"
-        description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
-        keywords="community, forum, discussion, AI marketplace, questions, answers"
-        canonical="https://ziontechgroup.com/community"
-      />
+    const { user } = useAuth();
+    const [activeTab, setActiveTab] = useState("categories");
+    return (<>
+      <SEO title="Community Forum | Zion AI Marketplace" description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals." keywords="community, forum, discussion, AI marketplace, questions, answers" canonical="https://ziontechgroup.com/community"/>
       
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
@@ -263,7 +176,6 @@ export default function CommunityPage() {
             <p className="text-muted-foreground mt-2">
               Join the conversation, ask questions, and share your knowledge
             </p>
-=======
           </div>
           
           <CreatePostButton />
@@ -282,181 +194,17 @@ export default function CommunityPage() {
           
           <TabsContent value="featured">
             <div className="space-y-4">
-              {featuredPosts.map((post) => (
-                <PostCard key={post.id} post={post} />
-              ))}
+              {featuredPosts.map((post) => (<PostCard key={post.id} post={post}/>))}
             </div>
           </TabsContent>
           
           <TabsContent value="recent">
             <div className="space-y-4">
-              {recentPosts.map((post) => (
-                <PostCard key={post.id} post={post} />
-              ))}
+              {recentPosts.map((post) => (<PostCard key={post.id} post={post}/>))}
             </div>
           </TabsContent>
         </Tabs>
       </div>
-    </>
-          </div>
-        </div>
-
-        {/* Community Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {communityStats.map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Community Features */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            What You'll Find in Our Community
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {communityFeatures.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-4`}>
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{feature.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Upcoming Events */}
-        <div className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-white">Upcoming Events</h2>
-            <Link to="/events" className="text-blue-400 hover:text-blue-300 transition-colors">
-              View All Events →
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {upcomingEvents.map((event, index) => {
-              const Icon = event.icon;
-              return (
-                <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
-                        {event.type}
-                      </span>
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-3">{event.title}</h3>
-                  <div className="space-y-2 text-sm text-gray-300 mb-4">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{event.date}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="w-4 h-4" />
-                      <span>{event.attendees} attending</span>
-                    </div>
-                  </div>
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2 rounded-lg font-medium transition-all duration-300">
-                    Register Now
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Community Guidelines */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Community Guidelines
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Heart className="w-4 h-4 text-green-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Be Respectful</h3>
-                    <p className="text-gray-300 text-sm">Treat all community members with respect and kindness. Constructive feedback is welcome, but personal attacks are not.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Star className="w-4 h-4 text-blue-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Share Knowledge</h3>
-                    <p className="text-gray-300 text-sm">Contribute valuable insights, ask thoughtful questions, and help others learn from your experiences.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Target className="w-4 h-4 text-purple-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Stay On Topic</h3>
-                    <p className="text-gray-300 text-sm">Keep discussions relevant to technology, AI, and professional development. Off-topic content may be removed.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Zap className="w-4 h-4 text-orange-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Be Professional</h3>
-                    <p className="text-gray-300 text-sm">Maintain a professional tone and avoid spam, self-promotion, or inappropriate content.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Get Involved */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Get Involved?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of professionals who are already part of our community. Start connecting, learning, and growing today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
-                Join Now - It's Free!
-              </button>
-              <Link
-                to="/contact"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>);
 =======
-=======
-  );
 }

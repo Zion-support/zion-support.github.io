@@ -1,10 +1,11 @@
 import React from 'react';
 // Next.js routing - no need for react-router-dom
-
 export default function DeveloperRoutes() {
-  return (
-    <>
+    return (<>
       {/* Developer portal routes can be added here */}
-    </>
-  );
+    </>);
+=======
+import { Fragment as _Fragment, jsx as _jsx } from "react/jsx-runtime";
+export default function DeveloperRoutes() {
+    return (_jsx(_Fragment, {}));
 }

@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousContainerSecurity: React.FC = () => {
-  return (
-    <>
+const AIAutonomousContainerSecurity = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Container Security Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous container security platform that continuously secures containers, detects threats, and protects container infrastructure with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI container security, autonomous container security, container protection, threat detection, autonomous operations, AI container security platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-container-security" />
+        <meta name="description" content="Revolutionary AI autonomous container security platform that continuously secures containers, detects threats, and protects container infrastructure with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI container security, autonomous container security, container protection, threat detection, autonomous operations, AI container security platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-container-security"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-lime-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousContainerSecurity: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Container Security Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Docker Security', 'Kubernetes Security', 'Container Registry Security', 'Runtime Security', 'Image Security', 'Network Security', 'Storage Security', 'Orchestration Security'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Docker Security', 'Kubernetes Security', 'Container Registry Security', 'Runtime Security', 'Image Security', 'Network Security', 'Storage Security', 'Orchestration Security'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousContainerSecurity: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousContainerSecurity;

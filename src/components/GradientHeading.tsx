@@ -1,26 +1,16 @@
-
+<<<<<<< HEAD
+import { jsx as _jsx } from "react/jsx-runtime";
+import { cn } from "@/lib/utils";
+export function GradientHeading({ children, className, level = "h2", id }) {
+    const Tag = level;
+    return (_jsx(Tag, { id: id, className: cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent", className), children: children }));
+=======
 import { cn } from "@/lib/utils";
 import React from "react";
-
-interface GradientHeadingProps {
-  children: React.ReactNode;
-  className?: string;
-  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-  id?: string;
-}
-
-export function GradientHeading({ children, className, level = "h2", id }: GradientHeadingProps) {
-  const Tag = level;
-  
-  return (
-    <Tag 
-      id={id}
-      className={cn(
-        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
-        className
-      )}
-    >
+export function GradientHeading({ children, className, level = "h2", id }) {
+    const Tag = level;
+    return (<Tag id={id} className={cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent", className)}>
       {children}
-    </Tag>
-  );
+    </Tag>);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }
