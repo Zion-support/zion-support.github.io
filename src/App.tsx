@@ -5,8 +5,11 @@ import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { ConsentProvider } from "./context/ConsentContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import PwaInstallButton from "./components/PwaInstallButton";
+import { CookieBanner } from "./components/CookieBanner";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -83,11 +86,11 @@ import ContactPage from './pages/Contact';
 import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
 import Checkout from './pages/Checkout';
-import ProductPage from './pages/ProductPage';
-=======
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const CartPage = React.lazy(() => import('./pages/cart'));
+=======
+import PrivacySettings from './pages/PrivacySettings';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -123,6 +126,7 @@ const baseRoutes = [
   { path: '/cart', element: <CartPage /> },
   { path: '/checkout', element: <Checkout /> },
 =======
+  { path: '/privacy-settings', element: <PrivacySettings /> },
 ];
 
 // Loading Component
@@ -146,8 +150,9 @@ const App = () => {
   
   return (
     <WhitelabelProvider>
-      <ThemeProvider>
-        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+      <ConsentProvider>
+        <ThemeProvider defaultTheme="dark">
+          <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <ErrorBoundary>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
@@ -169,10 +174,11 @@ const App = () => {
         </Suspense>
         <Toaster />
         <SonnerToaster position="top-right" />
-        <SupportChatbot />
-        <PwaInstallButton />
-      </ThemeProvider>
-    </EnhancedErrorBoundary>
+          <CookieBanner />
+          <PwaInstallButton />
+        </ThemeProvider>
+      </ConsentProvider>
+    </WhitelabelProvider>
   );
 };
 
