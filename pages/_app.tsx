@@ -1,37 +1,32 @@
-import React from 'react';
-import type { AppProps } from 'next/app';
-import '../styles/globals.css';
-import Layout from '../components/layout/Layout';
-import Analytics from '../components/Analytics';
-import { Inter } from 'next/font/google';
+import type { AppProps } from 'next/app'
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import '../styles/globals.css'
 
-export default function App({ Component, pageProps }: any) {
-	const router = useRouter();
-	const baseUrl = 'https://ziontechgroup.com';
-	const canonical = `${baseUrl}${router.asPath === '/' ? '' : router.asPath}`.replace(/\/$/, '/');
-	return (
-		<SEOContext.Consumer>
-			{(ctx) => {
-				const alreadyRendered = ctx?.renderedRef?.current;
-				if (alreadyRendered) return null;
-				if (!renderedRef.current) renderedRef.current = true;
-				return <SEO />;
-			}}
-		</SEOContext.Consumer>
-	);
-}
+export default function ZionApp({ Component, pageProps }: AppProps) {
+	const router = useRouter()
+	const baseUrl = 'https://ziontechgroup.com'
+	const canonicalUrl = (baseUrl + (router.asPath === '/' ? '/' : router.asPath)).replace(/\/$/, '/')
 
-export default function App({ Component, pageProps }: AppProps) {
-	const renderedRef = useRef(false);
 	return (
-		<SEOContext.Provider value={{ renderedRef }}>
-			<Analytics />
-			<div className={inter.className}>
-				<Layout>
-					<Component {...pageProps} />
-				</Layout>
-			</div>
-			<DefaultSEO />
-		</SEOContext.Provider>
-	);
+		<>
+			<Head>
+				<meta charSet="utf-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="theme-color" content="#0f172a" />
+				<meta name="color-scheme" content="dark light" />
+				<meta name="author" content="Zion Tech Group" />
+				<meta name="robots" content="index,follow" />
+				<link rel="icon" href="/favicon.ico" />
+				<link rel="canonical" href={canonicalUrl} />
+				<meta property="og:site_name" content="Zion Tech Group" />
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content={canonicalUrl} />
+				<meta property="og:title" content="Zion Tech Group" />
+				<meta property="og:description" content="Revolutionary AI, quantum computing, and micro SAAS solutions." />
+				<meta name="twitter:card" content="summary_large_image" />
+			</Head>
+			<Component {...pageProps} />
+		</>
+	)
 }
