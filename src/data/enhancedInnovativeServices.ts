@@ -58,11 +58,73 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
       "Regulatory compliance automation"
     ],
     benefits: [
-      "Increase portfolio returns by 15-25%",
-      "Reduce investment risk through AI analysis",
-      "Automated compliance & reporting",
-      "24/7 portfolio monitoring",
-      "Personalized investment strategies"
+      "Reduce contract review time by 85%",
+      "Identify 95% of potential legal risks automatically",
+      "Ensure 100% regulatory compliance",
+      "Save up to $50,000 annually in legal review costs",
+      "Improve contract negotiation outcomes by 40%"
+    ],
+    useCases: [
+      "Corporate legal departments",
+      "Law firms and legal practices",
+      "HR departments for employment contracts",
+      "Procurement teams for vendor agreements",
+      "Real estate companies for lease agreements"
+    ],
+    targetAudience: [
+      "General Counsel",
+      "Legal Operations Managers",
+      "Contract Managers",
+      "Compliance Officers",
+      "HR Directors"
+    ],
+    tags: ["AI", "Legal Tech", "Contract Analysis", "Risk Assessment", "Compliance", "Automation"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,299 - $4,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-legal-contract-analyzer",
+    demoUrl: "https://ziontechgroup.com/demo/ai-legal-contract-analyzer",
+    documentationUrl: "https://docs.ziontechgroup.com/ai-legal-contract-analyzer",
+    technologyStack: ["OpenAI GPT-4", "Azure Cognitive Services", "React", "Node.js", "PostgreSQL", "Redis"],
+    complianceStandards: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "HIPAA"],
+    integrationOptions: ["DocuSign", "Adobe Sign", "Microsoft Word", "Google Docs", "Salesforce", "HubSpot"],
+    deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
+    sla: "99.9%",
+    uptime: "99.95%"
+  },
+  // 2. Autonomous Financial Advisory Platform
+  {
+    id: "autonomous-financial-advisor",
+    title: "Autonomous Financial Advisory & Portfolio Optimization Platform",
+    description: "AI-driven financial advisory platform that provides personalized investment recommendations, portfolio optimization, and automated wealth management strategies.",
+    category: "AI & FinTech",
+    subcategory: "Financial Advisory",
+    price: 2499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered investment strategy generation",
+      "Real-time portfolio optimization algorithms",
+      "Risk assessment and tolerance analysis",
+      "Tax-loss harvesting automation",
+      "ESG and sustainable investing options",
+      "Multi-asset class portfolio management",
+      "Advanced rebalancing algorithms",
+      "Performance tracking and analytics",
+      "Regulatory compliance monitoring",
+      "Integration with major brokerages and banks"
+    ],
+    benefits: [
+      "Improve portfolio returns by 15-25% annually",
+      "Reduce investment management fees by 60%",
+      "Automate tax optimization strategies",
+      "Provide 24/7 portfolio monitoring",
+      "Ensure regulatory compliance automatically"
     ],
     useCases: [
       "Wealth management firms",
@@ -78,7 +140,69 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
       "High-net-worth clients",
       "Institutional investors"
     ],
-    tags: ["AI", "Financial Advisory", "Wealth Management", "Investment", "Portfolio Optimization"],
+    tags: ["AI", "FinTech", "Investment Management", "Portfolio Optimization", "Wealth Management", "Automation"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,499 - $7,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/autonomous-financial-advisor",
+    demoUrl: "https://ziontechgroup.com/demo/autonomous-financial-advisor",
+    documentationUrl: "https://docs.ziontechgroup.com/autonomous-financial-advisor",
+    technologyStack: ["TensorFlow", "Python", "React", "Node.js", "PostgreSQL", "Redis", "AWS"],
+    complianceStandards: ["SEC", "FINRA", "GDPR", "SOC 2", "PCI DSS"],
+    integrationOptions: ["Charles Schwab", "Fidelity", "Vanguard", "TD Ameritrade", "E*TRADE", "Mint"],
+    deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
+    sla: "99.9%",
+    uptime: "99.95%"
+  },
+  // 3. AI-Powered Healthcare Diagnostics Platform
+  {
+    id: "ai-healthcare-diagnostics",
+    title: "AI-Powered Healthcare Diagnostics & Medical Imaging Analysis Platform",
+    description: "Advanced AI platform for medical image analysis, diagnostic assistance, and patient outcome prediction using deep learning algorithms.",
+    category: "AI & Healthcare",
+    subcategory: "Medical Diagnostics",
+    price: 3999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered medical image analysis (X-rays, MRIs, CT scans)",
+      "Diagnostic accuracy validation and improvement",
+      "Patient outcome prediction algorithms",
+      "Integration with major PACS systems",
+      "Real-time diagnostic assistance",
+      "Multi-modality image processing",
+      "Automated report generation",
+      "Clinical decision support tools",
+      "HIPAA-compliant data handling",
+      "FDA regulatory compliance features"
+    ],
+    benefits: [
+      "Improve diagnostic accuracy by 30-40%",
+      "Reduce diagnostic time by 60%",
+      "Lower healthcare costs by 25%",
+      "Enhance patient outcomes and safety",
+      "Support remote healthcare delivery"
+    ],
+    useCases: [
+      "Hospitals and medical centers",
+      "Radiology departments",
+      "Telemedicine platforms",
+      "Medical research institutions",
+      "Healthcare startups"
+    ],
+    targetAudience: [
+      "Radiologists",
+      "Medical Directors",
+      "Healthcare IT Managers",
+      "Clinical Researchers",
+      "Telemedicine Providers"
+    ],
+    tags: ["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Deep Learning", "Telemedicine"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
     marketPrice: "$2,999 - $8,999/month",
@@ -92,8 +216,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["Bloomberg", "Reuters", "Yahoo Finance", "Trading Platforms", "Banking APIs"],
     compliance: ["SEC", "FINRA", "GDPR", "SOC 2", "PCI DSS"]
   },
-
-  // AI-Powered Healthcare Solutions
+  // 4. Quantum-Safe Cybersecurity Platform
   {
     id: "ai-healthcare-diagnostic-platform",
     title: "AI Healthcare Diagnostic & Patient Care Platform",
@@ -148,8 +271,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["Epic", "Cerner", "PACS Systems", "Lab Information Systems", "Pharmacy Systems"],
     compliance: ["HIPAA", "FDA", "SOC 2", "HITECH", "ISO 27001"]
   },
-
-  // AI-Powered Legal Services
+  // 5. Autonomous Supply Chain Optimization Platform
   {
     id: "ai-legal-research-assistant",
     title: "AI Legal Research & Document Analysis Platform",
@@ -769,8 +891,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
-  // AI-Powered Education & Learning Platform
+  // 6. AI-Powered Energy Management Platform
   {
     id: "ai-education-platform",
     title: "AI-Powered Adaptive Learning & Educational Analytics Platform",
@@ -891,8 +1012,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
-  // AI-Powered Agriculture & Precision Farming
+  // 7. Autonomous Customer Experience Platform
   {
     id: "ai-precision-agriculture",
     title: "AI Precision Agriculture & Crop Management Platform",
@@ -952,8 +1072,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
-  // AI-Powered Construction & Project Management
+  // 8. Quantum Machine Learning Platform
   {
     id: "ai-construction-management",
     title: "AI Construction Project Management & Safety Platform",
@@ -1013,8 +1132,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
-  // AI-Powered Hospitality & Tourism
+  // 9. Autonomous Data Governance Platform
   {
     id: "ai-hospitality-platform",
     title: "AI Hospitality Management & Guest Experience Platform",
@@ -1135,8 +1253,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
-  // AI-Powered Legal Research & Document Analysis
+  // 10. AI-Powered Talent Acquisition Platform
   {
     id: "ai-legal-research",
     title: "AI Legal Research & Document Analysis Platform",
@@ -1624,19 +1741,26 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     uptime: "99.99%"
   }
 ];
-
-export const getInnovativeServiceByCategory = (category: string) => {
+// Helper functions
+export const getServiceById = (id: string): EnhancedInnovativeService | undefined => {
+  return ENHANCED_INNOVATIVE_SERVICES.find(service => service.id === id);
+};
+export const getServicesByCategory = (category: string): EnhancedInnovativeService[] => {
   return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.category === category);
 };
-
-export const getInnovativeServiceBySubcategory = (subcategory: string) => {
-  return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.subcategory === subcategory);
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number): EnhancedInnovativeService[] => {
+  return ENHANCED_INNOVATIVE_SERVICES.filter(service =>
+    service.price >= minPrice && service.price <= maxPrice
+  );
 };
-
-export const getFeaturedInnovativeServices = () => {
-  return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.rating >= 4.7).slice(0, 8);
+export const getFeaturedServices = (): EnhancedInnovativeService[] => {
+  return ENHANCED_INNOVATIVE_SERVICES.slice(0, 6);
 };
-
-export const getServicesByAIScore = (minScore: number) => {
-  return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.aiScore && service.aiScore >= minScore);
+export const searchServices = (query: string): EnhancedInnovativeService[] => {
+  const lowerQuery = query.toLowerCase();
+  return ENHANCED_INNOVATIVE_SERVICES.filter(service =>
+    service.title.toLowerCase().includes(lowerQuery) ||
+    service.description.toLowerCase().includes(lowerQuery) ||
+    service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
+  );
 };

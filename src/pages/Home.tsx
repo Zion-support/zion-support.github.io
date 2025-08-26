@@ -1,15 +1,160 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
+=======
+import { HeroSection } from "@/components/HeroSection";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-background relative">
+      <HeroSection />
+      
+      {/* Service Categories Overview */}
+      <section className="py-20 bg-white/5 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Our Core Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to accelerate your digital transformation journey
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* AI & Machine Learning */}
+            <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 p-8 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI & Machine Learning</h3>
+              <p className="text-gray-300 mb-6">
+                Custom AI solutions, machine learning models, and intelligent automation systems
+              </p>
+              <ul className="text-gray-400 space-y-2">
+                <li>• Predictive Analytics</li>
+                <li>• Natural Language Processing</li>
+                <li>• Computer Vision</li>
+                <li>• AI Consulting</li>
+              </ul>
+            </div>
+
+            {/* Cloud & Infrastructure */}
+            <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 p-8 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Cloud & Infrastructure</h3>
+              <p className="text-gray-300 mb-6">
+                Scalable cloud solutions, DevOps automation, and infrastructure optimization
+              </p>
+              <ul className="text-gray-400 space-y-2">
+                <li>• Cloud Migration</li>
+                <li>• Kubernetes & Docker</li>
+                <li>• Serverless Architecture</li>
+                <li>• Infrastructure as Code</li>
+              </ul>
+            </div>
+
+            {/* Cybersecurity */}
+            <div className="bg-gradient-to-br from-red-900/50 to-orange-900/50 p-8 rounded-2xl border border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
+              <p className="text-gray-300 mb-6">
+                Comprehensive security solutions, compliance frameworks, and threat protection
+              </p>
+              <ul className="text-gray-400 space-y-2">
+                <li>• Security Audits</li>
+                <li>• Penetration Testing</li>
+                <li>• Compliance (SOC2, ISO)</li>
+                <li>• Incident Response</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We combine cutting-edge technology with proven expertise to deliver exceptional results
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">🚀</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>
+              <p className="text-gray-400">Always at the forefront of emerging technologies</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">💎</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Quality Assured</h3>
+              <p className="text-gray-400">Rigorous testing and quality assurance processes</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">🤝</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Client Partnership</h3>
+              <p className="text-gray-400">Long-term relationships built on trust and results</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Rapid Delivery</h3>
+              <p className="text-gray-400">Agile methodologies for faster time-to-market</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our technology solutions can accelerate your digital transformation
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Get Started Today
+            </button>
+            <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
+              Schedule a Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 import React from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -21,10 +166,6 @@ import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { PricingSection } from "@/components/PricingSection";
 import { TechSolutionsSection } from "@/components/TechSolutionsSection";
@@ -71,8 +212,6 @@ export default function Home() {
       <ITServiceRequestHero />
       <FloatingCTA />
     </>
-<<<<<<< HEAD
-=======
 import { AnimatedBackground, FloatingParticles } from "@/components/ui/AnimatedBackground";
 
 // Lazy load heavy components for better performance
@@ -90,276 +229,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
-};
-
-// Enhanced service categories with better descriptions
-const serviceCategories = [
-  {
-    name: "AI Solutions",
-    description: "Cutting-edge artificial intelligence services for business transformation",
-    icon: "🤖",
-    href: "/ai-solutions",
-    count: 15,
-    color: "from-zion-cyan to-zion-blue"
-  },
-  {
-    name: "Cloud & DevOps",
-    description: "Scalable cloud infrastructure and automated deployment solutions",
-    icon: "☁️",
-    href: "/services/cloud",
-    count: 12,
-    color: "from-zion-blue to-zion-purple"
-  },
-  {
-    name: "Cybersecurity",
-    description: "Advanced security protocols and threat protection systems",
-    icon: "🔒",
-    href: "/services/cybersecurity",
-    count: 8,
-    color: "from-zion-red to-zion-orange"
-  },
-  {
-    name: "Digital Transformation",
-    description: "End-to-end business process modernization and optimization",
-    icon: "🚀",
-    href: "/services/transformation",
-    count: 10,
-    color: "from-zion-green to-zion-cyan"
-  },
-  {
-    name: "Infrastructure",
-    description: "Robust IT infrastructure and network management solutions",
-    icon: "🏗️",
-    href: "/services/infrastructure",
-    count: 6,
-    color: "from-zion-purple to-zion-pink"
-  },
-  {
-    name: "Consulting",
-    description: "Strategic technology consulting and implementation guidance",
-    icon: "💡",
-    href: "/services/consulting",
-    count: 9,
-    color: "from-zion-orange to-zion-green"
-  }
-];
-
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
-        title="Zion Tech Group - Leading AI & Technology Solutions" 
-        description="Transform your business with Zion's cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. Join the future of technology."
-        keywords="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting, Zion Tech Group"
-        canonical="https://ziontechgroup.com/"
-      />
-
-      {/* Enhanced Animated Background */}
-      <AnimatedBackground variant="particles" />
-      <FloatingParticles count={20} />
-
-      {/* IT Service Request Hero - Enhanced */}
-      <ITServiceRequestHero />
-
-      {/* Main Hero Section */}
-      <HeroSection />
-      
-      {/* Enhanced Service Categories Overview */}
-      <motion.section 
-        className="py-24 bg-gradient-to-b from-white/5 to-white/10 backdrop-blur-sm relative"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        {/* Background decoration */}
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10" />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div className="text-center mb-20" variants={itemVariants}>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Our <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">Service Categories</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-              Explore our comprehensive range of technology solutions designed to transform your business and drive innovation
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-          >
-            {serviceCategories.map((category, index) => (
-              <motion.div
-                key={category.name}
-                variants={itemVariants}
-                className="group"
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <Link to={category.href} className="block h-full">
-                  <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25 h-full flex flex-col justify-between">
-                    <div>
-                      <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
-                        <span className="text-3xl">{category.icon}</span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-white mb-4 text-center group-hover:text-zion-cyan transition-colors duration-300">
-                        {category.name}
-                      </h3>
-                      <p className="text-zion-slate-light text-center mb-6 leading-relaxed">
-                        {category.description}
-                      </p>
-                    </div>
-                    <div className="text-center">
-                      <span className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-semibold border border-zion-cyan/30">
-                        {category.count} Services
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
-
-      {/* Interactive Service Showcase - Lazy Loaded */}
-      <Suspense fallback={
-        <div className="py-20 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="animate-pulse">
-                <div className="h-12 bg-zion-cyan/20 rounded-lg mb-4 max-w-md mx-auto"></div>
-                <div className="h-6 bg-zion-slate-light/20 rounded-lg max-w-2xl mx-auto"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      }>
-        <InteractiveServiceShowcase />
-      </Suspense>
-
-      {/* Enhanced Featured Services Section */}
-      <motion.section 
-        className="py-24 bg-gradient-to-b from-zion-slate-dark to-background"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center mb-20" variants={itemVariants}>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Services</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover our most popular and innovative technology solutions
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-          >
-            {/* AI-Powered Solutions */}
-            <motion.div variants={itemVariants} className="group">
-              <div className="bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 backdrop-blur-md p-8 rounded-3xl border border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">🤖</span>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">AI-Powered Solutions</h3>
-                    <p className="text-zion-cyan text-sm font-medium">Most Popular</p>
-                  </div>
-                </div>
-                <p className="text-zion-slate-light mb-6 leading-relaxed">
-                  Leverage cutting-edge artificial intelligence to automate processes, gain insights, and transform your business operations with our comprehensive AI solutions.
-                </p>
-                <Link 
-                  to="/ai-solutions" 
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 group-hover:scale-105"
-                >
-                  Explore AI Solutions
-                  <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Cloud & DevOps */}
-            <motion.div variants={itemVariants} className="group">
-              <div className="bg-gradient-to-br from-zion-blue/20 to-zion-purple/20 backdrop-blur-md p-8 rounded-3xl border border-zion-blue/30 hover:border-zion-blue/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-blue/25">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">☁️</span>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">Cloud & DevOps</h3>
-                    <p className="text-zion-blue text-sm font-medium">Enterprise Ready</p>
-                  </div>
-                </div>
-                <p className="text-zion-slate-light mb-6 leading-relaxed">
-                  Build, deploy, and scale your applications with our enterprise-grade cloud infrastructure and automated DevOps practices.
-                </p>
-                <Link 
-                  to="/services/cloud" 
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-blue to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-blue/25 transition-all duration-300 group-hover:scale-105"
-                >
-                  Explore Cloud Services
-                  <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </motion.section>
-
-      {/* Enhanced Quick Access Section */}
-      <QuickAccess />
-
-      {/* Enhanced Feature Highlights */}
-      <FeatureHighlights />
-
-      {/* Enhanced Feature CTAs */}
-      <FeatureCTAs />
-
-      {/* Enhanced Categories Section */}
-      <CategoriesSection />
-
-      {/* Enhanced Benefits Section */}
-      <BenefitsSection />
-
-      {/* Enhanced How It Works Section */}
-      <HowItWorksSection />
-
-      {/* Enhanced Featured Listings Section */}
-      <FeaturedListingsSection />
-
-      {/* Enhanced Newsletter Section */}
-      <NewsletterSection />
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 }
+=======
+export default Home;

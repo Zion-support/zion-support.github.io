@@ -1,11 +1,5 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Users, Target, Award, Globe, Zap, Shield, Brain, Rocket } from 'lucide-react';
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
 
 const About: NextPage = () => {
   return (
@@ -21,14 +15,12 @@ const About: NextPage = () => {
       </main>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default About;
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
 =======
+=======
+import Link from 'next/link';
 
 export default function AboutPage() {
 	return (
@@ -46,9 +38,6 @@ export default function AboutPage() {
 			</main>
 		</>
 	);
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 import { motion } from 'framer-motion';
 import { Brain, Shield, Rocket, Cpu, Database, Users, Target, Star, Award, Globe } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
@@ -312,4 +301,5 @@ export default function AboutPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+}

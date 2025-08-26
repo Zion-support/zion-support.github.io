@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-=======
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
@@ -177,6 +176,18 @@ export async function getStaticPaths() {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
 	};
+=======
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+
+// Simple service interface
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  tagline?: string;
+  price?: string;
+  features?: string[];
+  link?: string;
 }
 
 	export async function getStaticProps({ params }: { params: { slug: string } }) {
@@ -532,12 +543,12 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
       </div>
     </Layout>
   );
-}
-=======
 				{service.benefits?.length ? (
 					<div className="text-sm text-gray-600">Benefits: {service.benefits.slice(0, 5).join(' • ')}</div>
 				) : null}
 			</main>
 		</div>
 	);
+}
+=======
 }

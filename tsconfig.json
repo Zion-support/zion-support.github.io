@@ -36,6 +36,12 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
 =======
@@ -70,17 +76,30 @@
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false,
-    "incremental": true
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-    "src/main.tsx",
-    "src/App.tsx",
-    "src/index.css",
-    "vite-env.d.ts"
+    "src",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "src/**",
     "node_modules"
   ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

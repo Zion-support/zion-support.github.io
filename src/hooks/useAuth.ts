@@ -10,12 +10,6 @@ interface User {
   avatarUrl?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function useAuth() {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
-=======
 interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
@@ -28,12 +22,10 @@ export const useAuth = () => {
     isAuthenticated: false,
     isLoading: true,
   });
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
@@ -52,10 +44,6 @@ export function useAuth() {
     checkAuth();
   }, []);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const login = async (email: string, password: string) => {
     // Implement actual login logic here
     const mockUser: User = {
@@ -68,8 +56,6 @@ export function useAuth() {
     setUser(mockUser);
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     return mockUser;
-<<<<<<< HEAD
-=======
   const login = async (email: string, _password: string) => {
     // In a real app, you would make an API call to your backend
     setAuthState({
@@ -84,9 +70,7 @@ export function useAuth() {
       isLoading: false,
     });
     localStorage.setItem('authToken', 'dummy-token');
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   };
 
   const logout = () => {
@@ -94,10 +78,6 @@ export function useAuth() {
     localStorage.removeItem('zion_user');
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const register = async (email: string, password: string, name: string) => {
     // Implement actual registration logic here
     const mockUser: User = {
@@ -112,11 +92,7 @@ export function useAuth() {
     return mockUser;
   };
 
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return {
     user,
     loading,
@@ -126,12 +102,8 @@ export function useAuth() {
     isAuthenticated: !!user,
     isAdmin: user?.role === 'admin'
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
+};
+=======
 }
 =======
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-}
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

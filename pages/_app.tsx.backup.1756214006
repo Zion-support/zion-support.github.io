@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-import type { AppProps } from 'next/app'
-import Head from 'next/head'
-import React from 'react'
-import '../src/index.css'
-import { AppLayout } from '@/layout/AppLayout'
-
-export default function MyApp({ Component, pageProps }: AppProps) {
-	return (
-		<>
-			<Head>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
-			<AppLayout>
-				<Component {...pageProps} />
-			</AppLayout>
-		</>
-	)
-=======
 import type { AppProps } from 'next/app';
+<<<<<<< HEAD
 import '../src/index.css';
+=======
+import '../src/App.css';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-167a
 
 export default function App({ Component, pageProps }: AppProps) {
 	return <Component {...pageProps} />;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-5c64
 }
