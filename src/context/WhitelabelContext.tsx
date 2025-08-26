@@ -30,7 +30,7 @@ const defaultConfig: WhitelabelConfig = {
 
 const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig);
 
-export const useWhitelabel = (): WhitelabelContextType =>
+export const useWhitelabel = () =>
   useContext<WhitelabelContextType>(WhitelabelContext);
 
 interface WhitelabelProviderProps {
