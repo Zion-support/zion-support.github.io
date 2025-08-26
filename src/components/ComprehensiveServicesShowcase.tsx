@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
 import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
+import { expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
+import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';
+import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
 
 interface Service {
   id: string;
@@ -44,7 +47,13 @@ const ComprehensiveServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
-  const allServices = [...comprehensiveMicroSaasServices2025, ...innovativeITAIServices2025];
+  const allServices = [
+    ...comprehensiveMicroSaasServices2025, 
+    ...innovativeITAIServices2025,
+    ...expandedInnovativeServices2025,
+    ...emergingTechInnovationServices2025,
+    ...enterpriseITInnovationServices2025
+  ];
   
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
@@ -64,7 +73,30 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     { id: 'autonomous-devops', name: 'Autonomous DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length },
     { id: 'ai-data-governance', name: 'AI Data Governance', count: allServices.filter(s => s.category.includes('Data Governance')).length },
     { id: 'ai-api-management', name: 'AI API Management', count: allServices.filter(s => s.category.includes('API Management')).length },
-    { id: 'autonomous-cloud-migration', name: 'Autonomous Cloud Migration', count: allServices.filter(s => s.category.includes('Cloud Migration')).length }
+    { id: 'autonomous-cloud-migration', name: 'Autonomous Cloud Migration', count: allServices.filter(s => s.category.includes('Cloud Migration')).length },
+    { id: 'ai-legal-compliance', name: 'AI Legal & Compliance', count: allServices.filter(s => s.category.includes('Legal') || s.category.includes('Compliance')).length },
+    { id: 'quantum-security-communication', name: 'Quantum Security & Communication', count: allServices.filter(s => s.category.includes('Quantum') && (s.category.includes('Security') || s.category.includes('Communication'))).length },
+    { id: 'ai-healthcare-diagnostics', name: 'AI Healthcare & Diagnostics', count: allServices.filter(s => s.category.includes('Healthcare') || s.category.includes('Diagnostics')).length },
+    { id: 'autonomous-supply-chain-logistics', name: 'Autonomous Supply Chain & Logistics', count: allServices.filter(s => s.category.includes('Supply Chain') || s.category.includes('Logistics')).length },
+    { id: 'blockchain-digital-identity', name: 'Blockchain & Digital Identity', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('Digital Identity')).length },
+    { id: 'ai-finance-trading', name: 'AI Finance & Trading', count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Trading')).length },
+    { id: 'space-technology-innovation', name: 'Space Technology & Innovation', count: allServices.filter(s => s.category.includes('Space') || s.category.includes('Innovation')).length },
+    { id: 'metaverse-virtual-reality', name: 'Metaverse & Virtual Reality', count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('Virtual Reality')).length },
+    { id: 'sustainable-energy-green-tech', name: 'Sustainable Energy & Green Tech', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Green Tech')).length },
+    { id: 'advanced-robotics-automation', name: 'Advanced Robotics & Automation', count: allServices.filter(s => s.category.includes('Robotics') || s.category.includes('Automation')).length },
+    { id: 'quantum-internet-networking', name: 'Quantum Internet & Networking', count: allServices.filter(s => s.category.includes('Quantum') && (s.category.includes('Internet') || s.category.includes('Networking'))).length },
+    { id: 'climate-tech-sustainability', name: 'Climate Tech & Sustainability', count: allServices.filter(s => s.category.includes('Climate') || s.category.includes('Sustainability')).length },
+    { id: 'autonomous-vehicles-transportation', name: 'Autonomous Vehicles & Transportation', count: allServices.filter(s => s.category.includes('Vehicle') || s.category.includes('Transportation')).length },
+    { id: 'brain-computer-interface-neuroscience', name: 'Brain-Computer Interface & Neuroscience', count: allServices.filter(s => s.category.includes('Brain-Computer') || s.category.includes('Neuroscience')).length },
+    { id: 'synthetic-biology-biotechnology', name: 'Synthetic Biology & Biotechnology', count: allServices.filter(s => s.category.includes('Biology') || s.category.includes('Biotechnology')).length },
+    { id: 'enterprise-data-analytics', name: 'Enterprise Data & Analytics', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Data') || s.category.includes('Analytics'))).length },
+    { id: 'multi-cloud-infrastructure', name: 'Multi-Cloud & Infrastructure', count: allServices.filter(s => s.category.includes('Multi-Cloud') || s.category.includes('Infrastructure')).length },
+    { id: 'enterprise-api-integration', name: 'Enterprise API & Integration', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('API') || s.category.includes('Integration'))).length },
+    { id: 'enterprise-itsm', name: 'Enterprise IT Service Management', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('IT Service Management')).length },
+    { id: 'enterprise-security-soc', name: 'Enterprise Security & SOC', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Security') || s.category.includes('SOC'))).length },
+    { id: 'enterprise-governance', name: 'Enterprise Data Governance', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('Data Governance')).length },
+    { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length },
+    { id: 'enterprise-digital-twin-iot', name: 'Enterprise Digital Twin & IoT', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Digital Twin') || s.category.includes('IoT'))).length }
   ];
 
   const filteredServices = selectedCategory === 'all' 
@@ -72,7 +104,38 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     : allServices.filter(service => {
         const category = categories.find(c => c.id === selectedCategory);
         if (!category) return true;
-        return service.category.toLowerCase().includes(category.name.toLowerCase().replace(' & ', ' ').replace('AI ', '').replace('Autonomous ', ''));
+        
+        // Handle special category mappings
+        const categoryMappings: { [key: string]: string[] } = {
+          'ai-legal-compliance': ['Legal', 'Compliance'],
+          'quantum-security-communication': ['Quantum', 'Security', 'Communication'],
+          'ai-healthcare-diagnostics': ['Healthcare', 'Diagnostics'],
+          'autonomous-supply-chain-logistics': ['Supply Chain', 'Logistics'],
+          'blockchain-digital-identity': ['Blockchain', 'Digital Identity'],
+          'ai-finance-trading': ['Finance', 'Trading'],
+          'space-technology-innovation': ['Space', 'Innovation'],
+          'metaverse-virtual-reality': ['Metaverse', 'Virtual Reality'],
+          'sustainable-energy-green-tech': ['Energy', 'Green Tech'],
+          'advanced-robotics-automation': ['Robotics', 'Automation'],
+          'quantum-internet-networking': ['Quantum', 'Internet', 'Networking'],
+          'climate-tech-sustainability': ['Climate', 'Sustainability'],
+          'autonomous-vehicles-transportation': ['Vehicle', 'Transportation'],
+          'brain-computer-interface-neuroscience': ['Brain-Computer', 'Neuroscience'],
+          'synthetic-biology-biotechnology': ['Biology', 'Biotechnology'],
+          'enterprise-data-analytics': ['Enterprise', 'Data', 'Analytics'],
+          'multi-cloud-infrastructure': ['Multi-Cloud', 'Infrastructure'],
+          'enterprise-api-integration': ['Enterprise', 'API', 'Integration'],
+          'enterprise-itsm': ['Enterprise', 'IT Service Management'],
+          'enterprise-security-soc': ['Enterprise', 'Security', 'SOC'],
+          'enterprise-governance': ['Enterprise', 'Data Governance'],
+          'enterprise-workflow-automation': ['Enterprise', 'Workflow', 'Automation'],
+          'enterprise-digital-twin-iot': ['Enterprise', 'Digital Twin', 'IoT']
+        };
+        
+        const targetKeywords = categoryMappings[selectedCategory] || [category.name];
+        return targetKeywords.some(keyword => 
+          service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ', ' ').replace('AI ', '').replace('Autonomous ', ''))
+        );
       });
 
   const fadeInUp = {
@@ -94,12 +157,13 @@ const ComprehensiveServicesShowcase: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-8">
             Comprehensive
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 block">
-              Micro SAAS Services
+              Innovative Services
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
             Discover our cutting-edge collection of AI-powered micro SAAS services, innovative IT solutions, 
-            and revolutionary technology platforms designed to transform your business operations.
+            emerging technology innovations, enterprise services, quantum computing solutions, and revolutionary 
+            technology platforms designed to transform your business operations across all industries.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a

@@ -9,6 +9,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Services = lazy(() => import('./pages/Services'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
+const InnovativeServicesOverview = lazy(() => import('./pages/InnovativeServicesOverview'));
 
 // Loading spinner component
 const LoadingSpinner = () => (
@@ -29,6 +30,7 @@ const App: React.FC = () => {
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services/comprehensive" element={<ComprehensiveServicesShowcase />} />
+              <Route path="/services/overview" element={<InnovativeServicesOverview />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
