@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+<<<<<<< HEAD
+=======
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
@@ -24,6 +26,7 @@ import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
 import { realMarketServices } from '../../data/real-market-services';
 
 type Service = typeof enhancedRealMicroSaasServices[number];
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e0d1
 
 const contactInfo = {
 	mobile: '+1 302 464 0950',
@@ -32,6 +35,8 @@ const contactInfo = {
 	website: 'https://ziontechgroup.com'
 };
 
+<<<<<<< HEAD
+=======
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
@@ -72,6 +77,7 @@ function extractServiceSlugFromLink(link: string): string | null {
 	}
 }
 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e0d1
 export async function getStaticPaths() {
 	return {
 		paths: [
