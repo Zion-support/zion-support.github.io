@@ -19,8 +19,10 @@ import { LanguageProvider } from './context/LanguageContext';
 import { LanguageDetectionPopup } from './components/LanguageDetectionPopup.tsx';
 
 // Import auth and notification providers
-import { AuthProvider } from './context/auth/AuthProvider';
-import { NotificationProvider } from './context/notifications/NotificationContext';
+// Import the AuthProvider directly from the auth context barrel file. Using the
+// alias here ensures Vite resolves the path correctly when building.
+import { AuthProvider } from '@/context/auth';
+import { NotificationProvider } from './context';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
