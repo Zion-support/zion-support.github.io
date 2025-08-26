@@ -6,13 +6,9 @@ import { Input } from '@/components/ui/input';
 import { safeStorage } from '@/utils/safeStorage';
 import { getCartKey } from '@/utils/cartUtils';
 import { Button } from '@/components/ui/button';
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { ControllerRenderProps } from 'react-hook-form';
-import CheckoutProgress from '@/components/checkout/CheckoutProgress';
+import { useNavigate } from 'react-router-dom';
+import { getStripe } from '@/utils/getStripe';
+import { apiClient } from '@/utils/apiClient';
 
 interface CartItem {
   id: string;
@@ -57,7 +53,7 @@ export default function CheckoutPage() {
 
   const onSubmit = async (data: CheckoutForm) => {
     try {
-      const res = await fetch('/api/create-payment-intent', {
+      const response = await apiClient('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: subtotal }),

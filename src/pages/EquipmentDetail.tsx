@@ -12,7 +12,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useCart } from '@/context/CartContext';
 import { getCartKey } from '@/utils/cartUtils';
 import { getStripe } from "@/utils/getStripe";
-import { EQUIPMENT_DETAILS, EquipmentDetails } from "@/data/equipmentDetails";
+import { apiClient } from "@/utils/apiClient";
 
 
 export default function EquipmentDetail() {
@@ -75,7 +75,7 @@ export default function EquipmentDetail() {
 
     setIsAdding(true);
     try {
-      const response = await fetch('/api/checkout_sessions', {
+      const response = await apiClient('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ productId: equipmentId }),
