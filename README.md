@@ -179,12 +179,7 @@ through the product submission form and view it in the gallery tabs (Images, Vid
 - Progressive enhancement
 - Performance optimization
 
-### ♿ Accessibility
-- WCAG 2.1 AA compliance
-- Screen reader support
-- Keyboard navigation
-- High contrast modes
-- Focus management
+If you see a warning about `glob@7.2.3` or `rimraf@3.0.2` being deprecated, run:
 
 ### ⚡ Performance
 - Code splitting and lazy loading
@@ -771,76 +766,4 @@ A minimal script is available to push a built Zion instance to IPFS for offline 
 npx deploy-zion-ipfs
 ```
 
-The command uploads the `dist` directory to your configured IPFS gateway and prints the resulting CID. Jobs, profiles, proposals and docs can be stored on IPFS, while messages and DAO vote logs sync through OrbitDB. See `src/offworld/` for helper modules.
-
-A remote test environment is available at **`/remote/dao`**. This route exposes a
-delay-tolerant governance panel that queues proposals and votes locally and
-syncs them once a low-latency link becomes available.
-
-If you see `npm WARN deprecated @humanwhocodes/object-schema@2.0.3`, the project
-uses an override to replace this package with `@eslint/object-schema`. Pull the
-latest code and run `npm install` to update your lock file and remove the
-warning.
-
-### Whitelabel Tenant Errors
-
-The `token/multichain` directory provides Solidity contracts for deploying ZION$ across multiple chains. The LayerZero-based bridge wrapper allows deploying on zkSync while mirroring DAO votes to Starknet. Run the Hardhat script in `token/multichain/deploy` to deploy and record addresses.
-
-## Codex Automation
-
-This repository includes an optional workflow for automatically fixing lint errors using OpenAI Codex.
-
-- **codex-pipeline.yaml** – Defines an `openai-operator` pipeline that lints the `app/` directory, extracts failing code, sends it to Codex for a patch and then runs tests.
-- **scripts/codexApiFixer.js** – Simple script that sends a single file to Codex and writes the fixed version.
-- **scripts/codexWebhookServer.js** – Express server exposing `/webhook/trigger-fix` to launch the pipeline from external error reports.
-
-Start the webhook server with:
-
-```bash
-node scripts/codexWebhookServer.js
-```
-
-Some Cypress tests rely on environment variables. Create a `cypress.env.json`
-file in the project root with values for variables like `TEST_USER_EMAIL` and
-`TEST_USER_PASSWORD` before running the end-to-end tests. An example file:
-
-```json
-{
-  "TEST_USER_DISPLAY_NAME": "Test User",
-  "TEST_USER_EMAIL": "test@example.com",
-  "TEST_USER_PASSWORD": "Password123",
-  "TEST_USER_NAME": "Test User",
-  "EXISTING_USER_EMAIL": "existing@test.com",
-  "EXISTING_USER_PASSWORD": "password123",
-  "STRIPE_TEST_CARD": "4242424242424242"
-}
-```
-
-## How it Works
-
-
-## API Endpoints
-
-### Health Check
-
-*   **URL:** `/api/health`
-*   **Method:** `GET`
-*   **Description:** Provides a health check for the application. It returns the current status and the deployed commit hash.
-*   **Success Response:**
-    *   **Code:** 200
-    *   **Content:** `{ "status": "ok", "version": "<commit-hash>" }`
-*   **Usage:** This endpoint is used by Netlify during the pre-deploy phase. If the endpoint does not return a 200 OK status with the expected JSON response, the deployment is halted to prevent a broken version from going live.
-
-### Node Server Health Check
-
-After running `npm run test`, open `coverage/lcov-report/index.html` in your
-browser to view detailed coverage information.
-
-When tests run on GitHub Actions, the workflow uploads the `coverage` directory
-using `actions/upload-artifact@v4`. Visit a workflow run and download the
-`coverage-report` artifact to retrieve the generated HTML coverage report.
-
-## Currency Rates
-
-Exchange rates are stored in the `currencies` table. Run `python backend/currencies/update_currencies.py`
-daily (e.g. via cron) to refresh rates from openexchangerates.org.
+This updates `rimraf` so it no longer relies on the deprecated `glob` version.
