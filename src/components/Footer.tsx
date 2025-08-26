@@ -30,6 +30,7 @@ const footerNavigation = {
   services: {
     title: 'Services',
     items: [
+      { name: 'Enhanced Services 2025', href: '/enhanced-services', icon: Sparkles },
       { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
       { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
