@@ -1,0 +1,1 @@
+export const emergingTech2025Services: Array<Record<string, any>> = []
