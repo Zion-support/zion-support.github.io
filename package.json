@@ -1,9 +1,11 @@
 {
-  "name": "bolt.new.zion.app",
-  "version": "0.1.0",
-  "private": true,
+  "name": @zion-holdings/zion.app
+  
   "version": "0.0.0",
-  "type": "module",
+    "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "bin": {
+    "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.js"
+  },
   "scripts": {
     "dev": "vite",
     "build": "NODE_ENV=production tsc && NODE_ENV=production vite build",
