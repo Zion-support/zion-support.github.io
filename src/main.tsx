@@ -1,11 +1,25 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { HelmetProvider } from 'react-helmet-async'
-import { BrowserRouter } from 'react-router-dom'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import App from './App'
-import { AppWrapper } from './AppWrapper'
-import './index.css'
+console.log("main.tsx: Start");
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+// Integrate axe-core accessibility auditing in development
+if (process.env.NODE_ENV !== 'production') {
+  // Dynamically require to avoid bundling in production
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const axe = require('@axe-core/react');
+  axe(React, ReactDOM, 1000);
+}
+import App from './App.tsx';
+import './index.css';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n'; // Adjust the path if your i18n.js is elsewhere
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { showApiError } from '@/utils/apiErrorHandler';
+import './utils/globalFetchInterceptor';
+import './utils/consoleErrorToast';
+import ToastProvider from './components/ToastProvider';
 
 // Import i18n configuration
 import './i18n';
@@ -37,30 +51,40 @@ try {
   // Render the app with proper provider structure
   ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-      <HelmetProvider>
-        <QueryClientProvider client={queryClient}>
-          <WhitelabelProvider>
-            <Router>
-              <AuthProvider>
-                <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ViewModeProvider>
-                        <CartProvider>
-                          <AppLayout>
-                            <App />
-                          </AppLayout>
-                        </CartProvider>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
-                    </LanguageProvider>
-                  </AnalyticsProvider>
-                </NotificationProvider>
-              </AuthProvider>
-            </Router>
-          </WhitelabelProvider>
-        </QueryClientProvider>
-      </HelmetProvider>
+      <Provider store={store}>
+        <I18nextProvider i18n={i18n}>
+          <HelmetProvider>
+            <QueryClientProvider client={queryClient}>
+              <WhitelabelProvider>
+                <Router>
+                <AuthProvider>
+                  <NotificationProvider>
+                    <AnalyticsProvider>
+                      <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                        <ViewModeProvider>
+                          <CartProvider>
+                            <FavoritesProvider>
+                              <ReferralMiddleware>
+                                <ToastProvider>
+                                  <AppLayout>
+                                    <App />
+                                  </AppLayout>
+                                </ToastProvider>
+                              </ReferralMiddleware>
+                            </FavoritesProvider>
+                          </CartProvider>
+                        </ViewModeProvider>
+                        <LanguageDetectionPopup />
+                      </LanguageProvider>
+                    </AnalyticsProvider>
+                  </NotificationProvider>
+                </AuthProvider>
+              </Router>
+            </WhitelabelProvider>
+          </QueryClientProvider>
+        </HelmetProvider>
+        </I18nextProvider>
+      </Provider>
     </React.StrictMode>,
   );
 } catch (error) {

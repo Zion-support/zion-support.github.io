@@ -78,23 +78,63 @@ export default function Signup() {
         data.email,
         data.password
       );
-      if (error) {
-        form.setError("root", { message: error });
-        toast({
-          variant: "destructive",
-          title: "Registration failed",
-          description: error,
-        });
-      } else {
-        toast({
-          title: "Account created",
-          description: "Check your email to verify your account.",
-        });
-        navigate("/login");
+
+      // Handle duplicate email error from API
+      if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
+        form.setError('email', { message: resData.message });
+        toast.error('Email already registered – please login.');
+        return;
       }
 
-      toast.success("Account created");
-      navigate("/login");
+      // Check for successful response
+      if (res.ok && resData.token && resData.user) {
+        // Successful registration
+        safeStorage.setItem('authToken', resData.token);
+        setUser(resData.user);
+        setTokens({ accessToken: resData.token, refreshToken: resData.refreshToken || null });
+
+      // Handle email verification required case
+      if (resData?.emailVerificationRequired) {
+        setShowVerificationMessage(true);
+        // Do not proceed to set session or navigate
+      } else if (resData?.session) {
+        // Set the session directly if verification is not required
+        const { error: sessionError } = await supabase.auth.setSession(resData.session);
+        if (sessionError) {
+          console.error("Error setting session:", sessionError);
+          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." });
+          toast.error(sessionError.message || "Failed to set session. Please try logging in.");
+          return;
+        }
+        // The onAuthStateChange listener in AuthProvider should now handle
+        // updating user state and navigating if necessary for other cases.
+        // For direct signup with session, we can navigate.
+        toast.success("Welcome to ZionAI 🎉");
+        navigate("/dashboard");
+      } else {
+        // This case might indicate an unexpected response from the API
+        console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
+        form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
+        toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
+        // Potentially navigate to login or show a more specific error
+        return;
+      }
+
+      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
+      if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
+        try {
+          await mailchimpService.addSubscriber({
+            email: data.email,
+            mergeFields: { FNAME: data.displayName }
+          });
+          await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
+        } catch (err) {
+          console.error('Mailchimp subscription failed', err);
+          // Non-critical error, don't block user flow
+        }
+      }
+      // Toast and navigation are handled above if session is present
+      // If emailVerificationRequired, no toast/navigation here, message is shown
     } catch (err: any) {
       const message = err.message ?? "Registration failed";
       form.setError("root", { message });
