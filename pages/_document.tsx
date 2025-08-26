@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import { Html, Head, Main, NextScript } from 'next/document';
-
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  );
-=======
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class MyDocument extends Document {
@@ -24,7 +10,7 @@ export default class MyDocument extends Document {
 					<meta property="og:site_name" content="Zion Tech Group" />
 					<link rel="icon" href="/favicon.svg" />
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
-					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 					<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 					<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 				</Head>
@@ -35,5 +21,4 @@ export default class MyDocument extends Document {
 			</Html>
 		)
 	}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 }

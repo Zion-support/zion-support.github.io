@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 console.log("main.tsx: Start");
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
@@ -20,31 +16,20 @@ import ToastProvider from './components/ToastProvider';
 // Import i18n configuration
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
-<<<<<<< HEAD
-=======
 import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 
 // Import auth and notification providers
 import { AuthProvider } from './context/auth/AuthProvider';
-<<<<<<< HEAD
-import { NotificationProvider } from './components/ui/notification';
-
-// Providers trimmed for build
-// import { AnalyticsProvider } from './context/AnalyticsContext';
-=======
 import { NotificationProvider } from './context/notifications/NotificationContext';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
-=======
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
@@ -55,7 +40,6 @@ import { AppWrapper } from './AppWrapper'
 import './index.css'
 
 // Create a client
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -65,35 +49,6 @@ const queryClient = new QueryClient({
   },
 })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const rootElement = document.getElementById('root');
-
-function renderApp() {
-  const app = (
-    <React.StrictMode>
-      <HelmetProvider>
-        <QueryClientProvider client={queryClient}>
-          <WhitelabelProvider>
-            <Router>
-              <AuthProvider>
-                <NotificationProvider>
-                  
-                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <AppLayout>
-                      <App />
-                    </AppLayout>
-                  </LanguageProvider>
-                  
-                </NotificationProvider>
-              </AuthProvider>
-            </Router>
-          </WhitelabelProvider>
-        </QueryClientProvider>
-      </HelmetProvider>
-    </React.StrictMode>
-  );
-=======
 // Performance monitoring setup
 if (import.meta.env.DEV) {
   console.log('🚀 Zion Tech Group - Development Mode')
@@ -106,8 +61,6 @@ window.addEventListener('unhandledrejection', (event) => {
   console.error('Unhandled promise rejection:', event.reason)
   // In production, you might want to send this to an error reporting service
 })
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 const rootElement = document.getElementById('root');
 
 function renderApp() {
@@ -137,7 +90,6 @@ function renderApp() {
       </HelmetProvider>
     </React.StrictMode>
   );
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 // Error handling for uncaught errors
 window.addEventListener('error', (event) => {
@@ -174,75 +126,31 @@ if ('serviceWorker' in navigator) {
   })
 }
 
-<<<<<<< HEAD
-function displayFatalError(message: string) {
-  if (rootElement) {
-    rootElement.innerHTML = `
-      <div style="padding:20px;text-align:center;font-family:sans-serif;">
-        <h1>Application Error</h1>
-        <p>${message}</p>
-      </div>`;
-  }
-}
-
-try {
-  renderApp();
-} catch (error) {
-  console.error('Global error caught in main.tsx:', error);
-  displayFatalError((error as Error).message);
-}
-
-window.addEventListener('error', (e) => {
-  console.error('Unhandled error:', e.error || e.message);
-  displayFatalError(e.message);
-});
-
-// Render the app with proper provider structure
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <WhitelabelProvider>
           <Router>
             <AuthProvider>
               <NotificationProvider>
-<<<<<<< HEAD
-                
-=======
                 <AnalyticsProvider>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                     <AppLayout>
                       <App />
                     </AppLayout>
-<<<<<<< HEAD
-                  </LanguageProvider>
-                
-=======
                     <LanguageDetectionPopup />
                   </LanguageProvider>
                 </AnalyticsProvider>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </NotificationProvider>
             </AuthProvider>
           </Router>
         </WhitelabelProvider>
-<<<<<<< HEAD
-=======
         <BrowserRouter>
           <AppWrapper>
             <App />
           </AppWrapper>
         </BrowserRouter>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>,
