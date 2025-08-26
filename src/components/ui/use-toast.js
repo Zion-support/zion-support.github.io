@@ -1,37 +1,49 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 export function useToast() {
     const [toasts, setToasts] = useState([]);
-    const toast = useCallback((options) => {
-        const id = Math.random().toString(36).substr(2, 9);
+    const toast = (options) => {
+        const id = Date.now().toString();
         const newToast = {
             id,
-            title: options.title,
-            description: options.description,
-            variant: options.variant || 'default',
-            duration: options.duration || 5000,
+            duration: 5000,
+            ...options
         };
         setToasts(prev => [...prev, newToast]);
-        // Auto-remove toast after duration
+        // Auto remove toast after duration
         setTimeout(() => {
-            setToasts(prev => prev.filter(toast => toast.id !== id));
+            setToasts(prev => prev.filter(t => t.id !== id));
         }, newToast.duration);
         return id;
-    }, []);
-    const dismiss = useCallback((id) => {
-        setToasts(prev => prev.filter(toast => toast.id !== id));
-    }, []);
-    const dismissAll = useCallback(() => {
-        setToasts([]);
-    }, []);
+    };
+    const dismiss = (id) => {
+        setToasts(prev => prev.filter(t => t.id !== id));
+    };
+    const success = (title, description) => {
+        return toast({ title, description, type: 'success' });
+    };
+    const error = (title, description) => {
+        return toast({ title, description, type: 'error', variant: 'destructive' });
+    };
+    const warning = (title, description) => {
+        return toast({ title, description, type: 'warning' });
+    };
+    const info = (title, description) => {
+        return toast({ title, description, type: 'info' });
+    };
     return {
         toasts,
         toast,
         dismiss,
-        dismissAll,
+        success,
+        error,
+        warning,
+        info
     };
 }
-// Export a default toast function for backward compatibility
+// Export a standalone toast function for convenience
 export const toast = (options) => {
-    // This is a simplified version - in a real app, you'd want to use a toast context
+    // This is a simplified version that just logs to console
+    // In a real app, you'd want to integrate with a toast library
     console.log('Toast:', options);
+    return Date.now().toString();
 };
