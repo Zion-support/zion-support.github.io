@@ -24,10 +24,116 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
-  };
+  const navigationItems = [
+    { 
+      path: '/', 
+      label: 'Home', 
+      icon: '🏠',
+      description: 'Welcome to Zion Tech Group'
+    },
+    { 
+      path: '/services', 
+      label: 'AI Services', 
+      icon: '🤖',
+      description: 'Explore our AI service offerings'
+    },
+    { 
+      path: '/emerging-tech', 
+      label: 'Emerging Tech', 
+      icon: '🚀',
+      description: 'Cutting-edge technology solutions'
+    },
+    { 
+      path: '/comprehensive-services', 
+      label: 'All Services', 
+      icon: '⚡',
+      description: 'Complete service catalog'
+    },
+    { 
+      path: '/services-comparison', 
+      label: 'Compare', 
+      icon: '📊',
+      description: 'Compare service options'
+    },
+    { 
+      path: '/it-onsite-services', 
+      label: 'Onsite IT', 
+      icon: '🔧',
+      description: 'Onsite IT support services'
+    },
+    { 
+      path: '/pricing', 
+      label: 'Pricing', 
+      icon: '💰',
+      description: 'Transparent pricing plans'
+    },
+    { 
+      path: '/about', 
+      label: 'About', 
+      icon: 'ℹ️',
+      description: 'Learn about our company'
+    },
+    { 
+      path: '/contact', 
+      label: 'Contact', 
+      icon: '📞',
+      description: 'Get in touch with us'
+    },
+    { 
+      path: '/white-papers', 
+      label: 'White Papers', 
+      icon: '📄',
+      description: 'Research and technical documentation'
+    },
+    { 
+      path: '/events', 
+      label: 'Events', 
+      icon: '🎪',
+      description: 'Conferences, workshops, and events'
+    },
+    { 
+      path: '/webinars', 
+      label: 'Webinars', 
+      icon: '🎥',
+      description: 'Live and on-demand learning sessions'
+    }
+  ];
+
+  const serviceCategories = [
+    {
+      title: 'AI & Machine Learning',
+      services: [
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager' },
+        { name: 'AI Business Platform', path: '/ai-autonomous-business-platform' },
+        { name: 'AI Code Review', path: '/ai-autonomous-code-review' },
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems' }
+      ]
+    },
+    {
+      title: 'Cybersecurity',
+      services: [
+        { name: 'Quantum-Safe Security', path: '/services/cybersecurity' },
+        { name: 'Security Assessment', path: '/services/cybersecurity' },
+        { name: 'Compliance & Audit', path: '/services/cybersecurity' }
+      ]
+    },
+    {
+      title: 'Cloud & Infrastructure',
+      services: [
+        { name: 'Cloud Migration', path: '/services/it-infrastructure' },
+        { name: 'Network Infrastructure', path: '/services/it-infrastructure' },
+        { name: 'Managed IT Services', path: '/services/it-infrastructure' }
+      ]
+    },
+    {
+      title: 'Emerging Tech',
+      services: [
+        { name: 'Blockchain Solutions', path: '/emerging-tech' },
+        { name: 'Quantum Technology', path: '/services/quantum-technology' },
+        { name: 'IoT & Edge Computing', path: '/emerging-tech' }
+      ]
+    }
+  ];
 
   const isActive = (path: string) => location.pathname === path;
 
