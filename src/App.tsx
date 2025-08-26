@@ -43,6 +43,11 @@ const EmergingTech = lazy(() => import('./pages/EmergingTech'));
 const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
 
+// 2027 Innovation Pages
+const CuttingEdgeInnovations2027 = lazy(() => import('./pages/CuttingEdgeInnovations2027'));
+const PracticalMicroSaas2027 = lazy(() => import('./pages/PracticalMicroSaas2027'));
+const AllServices2027 = lazy(() => import('./pages/AllServices2027'));
+
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
 const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
@@ -183,6 +188,11 @@ const baseRoutes = [
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
   { path: '/pricing', element: <PricingPage /> },
   { path: '/emerging-tech', element: <EmergingTech /> },
+  
+  // 2027 Innovation Routes
+  { path: '/cutting-edge-innovations-2027', element: <CuttingEdgeInnovations2027 /> },
+  { path: '/practical-micro-saas-2027', element: <PracticalMicroSaas2027 /> },
+  { path: '/all-services-2027', element: <AllServices2027 /> },
   
   // New missing page routes
   { path: '/quantum-neural-network-platform', element: <QuantumNeuralNetworkPlatform /> },
