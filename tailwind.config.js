@@ -9,7 +9,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -48,23 +47,19 @@ module.exports = {
         'zion-blue': '#2e73ea',
         'zion-purple': '#8c15e9',
         'zion-blue-dark': '#172d67',
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-=======
-        'zion-blue-dark': '#172d67',
-        'zion-blue': '#1e3a8a',
         'zion-blue-light': '#2e73ea',
-        'zion-purple': '#8c15e9',
         'zion-purple-dark': '#6b21a8',
         'zion-purple-light': '#a855f7',
-        'zion-cyan': '#22ddd2',
         'zion-cyan-dark': '#14b8a6',
         'zion-slate-light': '#94a3b8',
         'zion-slate': '#64748b',
         'zion-slate-dark': '#475569',
+        // Additional colors for components
+        'zion-red': '#ef4444',
+        'zion-green': '#10b981',
+        'zion-orange': '#f97316',
+        'zion-yellow': '#eab308',
+        'zion-pink': '#ec4899',
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -188,7 +183,6 @@ module.exports = {
       minHeight: {
         'screen-75': '75vh',
         'screen-90': '90vh',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
       },
     },
   },
