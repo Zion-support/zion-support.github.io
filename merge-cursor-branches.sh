@@ -14,14 +14,14 @@ log_message() {
 }
 
 # Get list of cursor enhancement branches that are not merged
-BRANCHES=$(git branch -r --no-merged main | grep "cursor/enhance" | sed 's/^[[:space:]]*origin\///' | head -5)
+BRANCHES=$(git branch -r --no-merged main | grep "cursor/enhance" | sed 's/^[[:space:]]*origin\///')
 
 # Counter for tracking progress
 SUCCESS_COUNT=0
 FAILED_COUNT=0
 TOTAL_BRANCHES=$(echo "$BRANCHES" | wc -l)
 
-log_message "📊 Found $TOTAL_BRANCHES cursor enhancement branches to merge (test run - first 5)"
+log_message "📊 Found $TOTAL_BRANCHES cursor enhancement branches to merge"
 
 # Process each branch
 for branch in $BRANCHES; do

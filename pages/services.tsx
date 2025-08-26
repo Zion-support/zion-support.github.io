@@ -56,6 +56,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { quantumSpaceServices } from '../data/quantum-space-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
+<<<<<<< HEAD
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -161,6 +162,200 @@ const categories = [
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-767b
 
 export default function ServicesPage() {
+=======
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { newRealServices } from '../data/new-real-services';
+import { industryRealServices } from '../data/industry-real-services';
+import { professionalServices } from '../data/professional-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { emergingTechnologyServices } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
+import { curatedMarketServices } from '../data/curated-market-services';
+import { realMarketServices } from '../data/real-market-services';
+import { new2025Services } from '../data/new-2025-services';
+import { newRealInnovations } from '../data/new-real-innovations';
+import { serviceExpansions2025 } from '../data/service-expansions-2025';
+import { newOperationalServices2025 } from '../data/new-operational-services-2025';
+import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import { extraServices } from '../data/extra-services';
+import { newlyAddedServices } from '../data/newly-added-services';
+import { moreRealServices2025 } from '../data/more-real-services-2025';
+import { verified2025Additions } from '../data/verified-2025-additions';
+import { realServicesQ12025 } from '../data/real-services-q1-2025';
+import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
+import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025';
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
+import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
+import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
+import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
+import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
+import { ultimate2026Services } from '../data/ultimate-2026-services';
+import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
+
+export default function ServicesPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+
+  const allServices = [
+    ...innovativeAIServices,
+    ...quantumSpaceServices,
+    ...enterpriseITServices,
+    ...enhancedRealMicroSaasServices,
+    ...additionalEnhancedServices,
+    ...extraServices,
+    ...newlyAddedServices,
+    ...newRealServices,
+    ...moreRealServices2025,
+    ...industryRealServices,
+    ...professionalServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,
+    ...marketValidatedServices,
+    ...emergingTechnologyServices,
+    ...comprehensiveITSolutions,
+    ...curatedMarketServices,
+    ...realMarketServices,
+    ...new2025Services,
+    ...verified2025Additions,
+    ...newRealInnovations,
+    ...serviceExpansions2025,
+    ...newOperationalServices2025,
+    ...realServicesQ12025,
+    ...realEnterpriseServices2025,
+    ...verifiedRealServices2025Batch2,
+    ...innovative2025Services,
+    ...emergingTech2025Services,
+    ...realMarketAugmentations2025,
+    ...innovative2026MicroSaasServicesV2,
+    ...innovative2026MicroSaasServicesV4,
+    ...emergingTech2026ServicesV2,
+    ...emergingTech2026ServicesV4,
+    ...enterpriseIT2026ServicesV2,
+    ...enterpriseIT2026ServicesV4,
+    ...aiAutonomousServices2026,
+    ...quantumSpaceTechServices2026,
+    ...metaverseDigitalRealityServices2026,
+    ...ultimate2026Services,
+    ...revolutionary2026Innovations
+  ];
+
+  // Dynamic category counts mapped to the same filter logic below
+  const aiCount = allServices.filter(service => (service.category?.includes('AI') || service.category?.includes('Machine Learning') || service.category?.includes('AI Autonomous') || service.category?.includes('AI Consciousness') || service.category?.includes('AI Legal') || service.category?.includes('AI Scientific') || service.category?.includes('AI Creative') || service.category?.includes('AI Healthcare') || service.category?.includes('AI Education'))).length;
+  const quantumCount = allServices.filter(service => (service.category?.includes('Quantum') || service.category.includes('Space') || service.category?.includes('Quantum Space'))).length;
+  const enterpriseCount = allServices.filter(service => (service.category?.includes('Enterprise') || service.category?.includes('IT'))).length;
+  const microSaasCount = allServices.filter(service => (service.category?.includes('Micro SaaS'))).length;
+  const metaverseCount = allServices.filter(service => (service.category?.includes('Metaverse') || service.category?.includes('Digital Reality') || service.category?.includes('Consciousness Interface') || service.category?.includes('Holographic'))).length;
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
+    { id: 'metaverse', name: 'Metaverse & Digital Reality', icon: '🌐', count: metaverseCount }
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
+    { id: 'premium', name: '$20K+/month', range: '$20K+' }
+  ];
+
+  const sortOptions = [
+    { id: 'name', name: 'Name A-Z' },
+    { id: 'price-low', name: 'Price Low to High' },
+    { id: 'price-high', name: 'Price High to Low' },
+    { id: 'rating', name: 'Rating' },
+    { id: 'customers', name: 'Customer Count' }
+  ];
+
+  // Filter and sort services
+  const filteredServices = React.useMemo(() => {
+    const parsePriceToNumber = (price: any): number => {
+      if (typeof price === 'number') return price;
+      if (typeof price === 'string') {
+        const match = price.replace(/[^0-9.]/g, '');
+        const parsed = parseFloat(match || '0');
+        return isNaN(parsed) ? 0 : parsed;
+      }
+      return 0;
+    };
+
+    let filtered = allServices.filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
+      
+      const matchesCategory = selectedCategory === 'all' || 
+                             (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning') || service.category.includes('AI Autonomous') || service.category.includes('AI Consciousness') || service.category.includes('AI Legal') || service.category.includes('AI Scientific') || service.category.includes('AI Creative') || service.category.includes('AI Healthcare') || service.category.includes('AI Education'))) ||
+                             (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space') || service.category.includes('Quantum Space'))) ||
+                             (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT') || service.category.includes('Cloud') || service.category.includes('Security'))) ||
+                             (selectedCategory === 'micro-saas' && service.category.includes('Micro SaaS')) ||
+                             (selectedCategory === 'metaverse' && (service.category.includes('Metaverse') || service.category.includes('Digital Reality') || service.category.includes('Consciousness Interface') || service.category.includes('Holographic')));
+      
+      const numericPrice = parsePriceToNumber((service as any).price);
+      const matchesPrice = selectedPriceRange === 'all' ||
+                          (selectedPriceRange === 'low' && numericPrice < 1000) ||
+                          (selectedPriceRange === 'medium' && numericPrice >= 1000 && numericPrice < 5000) ||
+                          (selectedPriceRange === 'high' && numericPrice >= 5000 && numericPrice < 20000) ||
+                          (selectedPriceRange === 'premium' && numericPrice >= 20000);
+      
+      return matchesSearch && matchesCategory && matchesPrice;
+    });
+
+    // Sort services
+    switch (sortBy) {
+      case 'name':
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      case 'price-low':
+        filtered.sort((a, b) => parsePriceToNumber((a as any).price) - parsePriceToNumber((b as any).price));
+        break;
+      case 'price-high':
+        filtered.sort((a, b) => parsePriceToNumber((b as any).price) - parsePriceToNumber((a as any).price));
+        break;
+      case 'rating':
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        break;
+      case 'customers':
+        filtered.sort((a, b) => {
+          const getCustomers = (s: any) => (s.customerCount ?? s.customers ?? 0) as number;
+          return getCustomers(b) - getCustomers(a);
+        });
+        break;
+      default:
+        break;
+    }
+
+    return filtered;
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+
+  React.useEffect(() => {
+    const hash = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '';
+    if (hash === 'ai') setSelectedCategory('ai');
+    else if (hash === 'quantum') setSelectedCategory('quantum');
+    else if (hash === 'enterprise' || hash === 'it') setSelectedCategory('enterprise');
+    else if (hash === 'micro-saas') setSelectedCategory('micro-saas');
+    else if (hash === 'metaverse') setSelectedCategory('metaverse');
+  }, []);
+
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7821
   return (
     <>
       <Head>
