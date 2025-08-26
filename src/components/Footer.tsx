@@ -18,27 +18,23 @@ function Footer() {
     { name: 'About Us', path: '/about' },
     { name: 'Our Team', path: '/about' },
     { name: 'Careers', path: '/careers' },
+    { name: 'News', path: '/news' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Pricing', path: '/pricing' },
-    { name: 'Support', path: '/support' }
+    { name: 'Contact', path: '/contact' }
   ];
 
   const resources = [
-    { name: "Case Studies", path: "/case-studies" },
-    { name: "White Papers", path: "/white-papers" },
-    { name: "Webinars", path: "/webinars" },
-    { name: "Tutorials", path: "/tutorials" },
-    { name: "Documentation", path: "/docs" },
-    { name: "Sitemap", path: "/sitemap" }
+    { name: "Case Studies", path: "/services" },
+    { name: "White Papers", path: "/services" },
+    { name: "Webinars", path: "/services" },
+    { name: "Documentation", path: "/services" }
   ];
 
   const legal = [
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Terms of Service', path: '/terms' },
     { name: 'Cookie Policy', path: '/cookies' },
-    { name: 'GDPR Compliance', path: '/gdpr' },
-    { name: 'Security', path: '/security' },
-    { name: 'Compliance', path: '/compliance' }
+    { name: 'Contact', path: '/contact' }
   ];
 
   const socialLinks = [
@@ -148,24 +144,31 @@ function Footer() {
             </motion.p>
             
             {/* Contact Info */}
-            <motion.div 
-              className="space-y-4 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              {contactInfo.map((contact, index) => (
-                <a
-                  key={contact.label}
-                  href={contact.href}
-                  className="flex items-center gap-3 text-gray-300 hover:text-zion-cyan transition-colors duration-300 group"
-                >
-                  <contact.icon className="h-5 w-5 text-zion-cyan group-hover:scale-110 transition-transform duration-300" />
-                  <span className="text-sm">{contact.label}</span>
+            <div className="space-y-2 mb-6 text-sm text-gray-400">
+              <div className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <a href="tel:+13024640950" className="hover:text-white transition-colors duration-300">
+                  +1 (302) 464-0950
                 </a>
-              ))}
-            </motion.div>
+              </div>
+              <div className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <a href="mailto:info@ziontechgroup.com" className="hover:text-white transition-colors duration-300">
+                  info@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314-11.314z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Wilmington, DE & Remote
+              </div>
+            </div>
             
             {/* Social Links */}
             <motion.div 
@@ -222,30 +225,25 @@ function Footer() {
           ))}
         </div>
 
-        {/* Newsletter Section */}
-        <motion.div 
-          className="mt-20 pt-12 border-t border-white/10"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Tech Trends
-            </h3>
-            <p className="text-gray-300 mb-8">
-              Get the latest insights on AI, cybersecurity, and digital transformation delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300 backdrop-blur-sm"
-              />
-              <button className="px-8 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-medium rounded-xl hover:from-zion-purple-dark hover:to-zion-cyan-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-purple/25">
-                Subscribe
-              </button>
+        {/* Bottom Section */}
+        <div className="border-t border-white/10 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <div className="flex items-center">
+                <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                ISO 27001 Certified
+              </div>
+              <div className="flex items-center">
+                <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                SOC 2 Type II
+              </div>
+              <div className="flex items-center">
+                <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+                Microsoft Gold Partner
+              </div>
             </div>
             <p className="text-zion-slate-light text-xs mt-3">
               We respect your privacy. Unsubscribe at any time.

@@ -18,22 +18,11 @@ const Careers = lazy(() => import('./pages/Careers'));
 const Partners = lazy(() => import('./pages/Partners'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const Blog = lazy(() => import('./pages/Blog'));
-const News = lazy(() => import('./pages/News'));
-const Events = lazy(() => import('./pages/Events'));
-const Webinars = lazy(() => import('./pages/Webinars'));
-const WhitePapers = lazy(() => import('./pages/WhitePapers'));
-const ResearchDevelopment = lazy(() => import('./pages/ResearchDevelopment'));
-const Tutorials = lazy(() => import('./pages/Tutorials'));
-const Pricing = lazy(() => import('./pages/Pricing'));
-const FAQ = lazy(() => import('./pages/FAQ'));
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-const Support = lazy(() => import('./pages/Support'));
-const Training = lazy(() => import('./pages/Training'));
-const RequestQuote = lazy(() => import('./pages/RequestQuote'));
+const Careers = lazy(() => import('./pages/Careers'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Cookies = lazy(() => import('./pages/Cookies'));
-const Sitemap = lazy(() => import('./pages/Sitemap'));
+const News = lazy(() => import('./pages/News'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Enhanced loading spinner component with accessibility
@@ -85,31 +74,33 @@ function App() {
 
   return (
     <Router>
-      <ErrorBoundary>
-        <div className="App min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1 pt-16" role="main">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
-                <Route path="/advanced-services-2025" element={<AdvancedServices2025 />} />
-                <Route path="/advanced-services-showcase-2025" element={<AdvancedServicesShowcase2025 />} />
-                <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricing2025 />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-          <FloatingActionButton />
-          <EnhancedScrollToTop />
-          <PerformanceMonitor />
-        </div>
-      </ErrorBoundary>
+      <div className="App min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1 pt-16"> {/* Add padding-top to account for fixed header */}
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
+              <Route path="/advanced-services-2025" element={<AdvancedServices2025 />} />
+              <Route path="/advanced-services-showcase-2025" element={<AdvancedServicesShowcase2025 />} />
+              <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricing2025 />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/news" element={<News />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+        <FloatingActionButton />
+        <EnhancedScrollToTop />
+      </div>
     </Router>
   );
 }

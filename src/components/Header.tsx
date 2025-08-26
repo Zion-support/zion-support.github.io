@@ -18,20 +18,12 @@ export function Header() {
   }, []);
 
   const services = [
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & AI Services' },
-    { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Cloud Migration & Automation' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Threat Protection' },
-    { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Network & System Management' },
-    { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Process Optimization' },
-    { name: 'Consulting', href: '/services/consulting', description: 'Technology Strategy & Advisory' },
-    { name: 'Quantum Computing', href: '/quantum-technology', description: 'Quantum Solutions & Platforms' },
-    { name: 'Blockchain & Web3', href: '/services/blockchain', description: 'Distributed Ledger Technology' },
-    { name: 'IoT Services', href: '/iot-services', description: 'Internet of Things Solutions' },
-    { name: 'Micro SAAS', href: '/micro-saas', description: 'Software as a Service Solutions' },
-    { name: 'Space Technology', href: '/space-tech', description: 'Aerospace & Satellite Solutions' },
-    { name: 'Green IT', href: '/green-it', description: 'Sustainable Technology Solutions' },
-    { name: 'Manufacturing', href: '/manufacturing-solutions', description: 'Industry 4.0 & Smart Factory' },
-    { name: 'Financial Solutions', href: '/financial-solutions', description: 'FinTech & Banking Technology' }
+    { name: 'AI Solutions', href: '/services', description: 'Machine Learning & AI Services' },
+    { name: 'Cloud & DevOps', href: '/services', description: 'Cloud Migration & Automation' },
+    { name: 'Cybersecurity', href: '/services', description: 'Security & Threat Protection' },
+    { name: 'IT Infrastructure', href: '/services', description: 'Network & System Management' },
+    { name: 'Digital Transformation', href: '/services', description: 'Business Process Optimization' },
+    { name: 'Consulting', href: '/services', description: 'Technology Strategy & Advisory' }
   ];
 
   const companyLinks = [
@@ -190,7 +182,25 @@ export function Header() {
               to="/pricing"
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
-              Pricing
+              About
+            </Link>
+            <Link
+              to="/news"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              News
+            </Link>
+            <Link
+              to="/blog"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              Blog
+            </Link>
+            <Link
+              to="/careers"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              Careers
             </Link>
             
             <Link
@@ -340,7 +350,28 @@ export function Header() {
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Pricing
+                About
+              </Link>
+              <Link
+                to="/news"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                News
+              </Link>
+              <Link
+                to="/blog"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
+              </Link>
+              <Link
+                to="/careers"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Careers
               </Link>
               
               <Link
