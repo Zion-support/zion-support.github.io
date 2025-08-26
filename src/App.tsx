@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import { Header } from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
@@ -27,6 +27,7 @@ import { ScrollToTop } from './components/ScrollToTop';
 import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
 import { BrokenLinkFixer } from './components/BrokenLinkFixer';
 import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
+import { SiteHealthDashboard } from './components/SiteHealthDashboard';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -315,6 +316,7 @@ const App: React.FC = () => {
                       <Route path="/docs" element={<Docs />} />
                       <Route path="/marketplace" element={<Marketplace />} />
                       <Route path="/community" element={<Community />} />
+                      <Route path="/site-health" element={<SiteHealthDashboard />} />
                       
                       {/* AI Autonomous Service routes */}
                       <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />

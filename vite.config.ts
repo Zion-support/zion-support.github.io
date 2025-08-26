@@ -35,6 +35,14 @@ export default defineConfig(async () => ({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+      },
+      format: {
+        comments: false,
       },
     },
     rollupOptions: {
@@ -126,6 +134,9 @@ export default defineConfig(async () => ({
     },
     chunkSizeWarningLimit: 1000,
     sourcemap: false,
+    assetsInlineLimit: 4096,
+    cssCodeSplit: true,
+    reportCompressedSize: false,
   },
   optimizeDeps: {
     include: [

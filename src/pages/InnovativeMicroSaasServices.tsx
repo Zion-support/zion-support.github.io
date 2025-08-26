@@ -31,8 +31,8 @@ import {
   ChevronUp,
   ExternalLink
 } from 'lucide-react';
-import { ADVANCED_MICRO_SAAS_SERVICES } from '../data/advancedMicroSaasServices';
-import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
+import { ADVANCED_MICRO_SAAS_SERVICES, AdvancedMicroSaasService } from '../data/advancedMicroSaasServices';
+import { EMERGING_TECH_SERVICES, EmergingTechService } from '../data/emergingTechServices';
 
 interface Service {
   id: string;
@@ -70,10 +70,55 @@ const InnovativeMicroSaasServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
+  // Adapter functions to normalize the different service types
+  const adaptAdvancedService = (service: AdvancedMicroSaasService): Service => ({
+    id: service.id,
+    title: service.name,
+    description: service.description,
+    category: service.category,
+    subcategory: service.subcategory,
+    price: service.price,
+    currency: 'USD',
+    pricingModel: service.pricingModel,
+    features: service.features,
+    benefits: service.benefits,
+    useCases: service.targetAudience,
+    targetAudience: service.targetAudience,
+    tags: service.tags || [],
+    estimatedDelivery: service.estimatedDelivery || 'TBD',
+    supportLevel: service.supportLevel || 'Standard',
+    marketPrice: service.marketPrice,
+    contactInfo: service.contactInfo,
+    technology: service.technology,
+    integrations: service.integrations,
+    compliance: service.compliance,
+    roi: service.roi
+  });
+
+  const adaptEmergingService = (service: EmergingTechService): Service => ({
+    id: service.id,
+    title: service.title,
+    description: service.description,
+    category: service.category,
+    subcategory: service.subcategory,
+    price: typeof service.price === 'object' ? (service.price.monthly || service.price.yearly || service.price.oneTime || 0) : service.price,
+    currency: typeof service.price === 'object' ? service.price.currency : 'USD',
+    pricingModel: typeof service.price === 'object' ? service.price.pricingModel : 'Monthly',
+    features: service.features,
+    benefits: service.benefits,
+    useCases: service.useCases || [],
+    targetAudience: service.targetAudience,
+    tags: [],
+    estimatedDelivery: 'TBD',
+    supportLevel: 'Standard',
+    marketPrice: service.marketPrice,
+    contactInfo: service.contactInfo
+  });
+
   // Combine all services
   const allServices: Service[] = [
-    ...ADVANCED_MICRO_SAAS_SERVICES,
-    ...EMERGING_TECH_SERVICES
+    ...ADVANCED_MICRO_SAAS_SERVICES.map(adaptAdvancedService),
+    ...EMERGING_TECH_SERVICES.map(adaptEmergingService)
   ];
 
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];

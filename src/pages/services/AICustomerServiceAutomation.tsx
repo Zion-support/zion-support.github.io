@@ -30,7 +30,7 @@ import {
   TrendingUp,
   Phone,
   Mail,
-  Chat,
+  MessageSquare,
   Bot
 } from 'lucide-react';
 
@@ -158,7 +158,7 @@ export default function AICustomerServiceAutomation() {
 
   const channels = [
     {
-      icon: Chat,
+      icon: MessageSquare,
       title: "Live Chat",
       description: "Real-time chat support with instant AI responses and seamless human handoff"
     },
@@ -238,7 +238,7 @@ export default function AICustomerServiceAutomation() {
             <div className="text-gray-400">Resolution Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-indigo-400 mb-2"><1s</div>
+            <div className="text-3xl font-bold text-indigo-400 mb-2">&lt;1s</div>
             <div className="text-gray-400">Response Time</div>
           </div>
         </div>
