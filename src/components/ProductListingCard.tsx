@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
 import { DollarSign } from "lucide-react";
-import StarRating from "@/components/StarRating";
+import { RatingStars } from "./RatingStars";
 import { FavoriteButton } from "@/components/FavoriteButton";
 
 interface ProductListingCardProps {
@@ -125,8 +125,9 @@ export function ProductListingCard({
             </Badge>
             {listing.rating && (
               <div className="flex items-center text-zion-slate-light">
-                <StarRating value={listing.rating} />
-                {typeof listing.reviewCount === 'number' && (
+                <RatingStars value={listing.rating} />
+                <span className="ml-1">{listing.rating.toFixed(1)}</span>
+                {listing.reviewCount && (
                   <span className="text-xs ml-1">({listing.reviewCount})</span>
                 )}
               </div>

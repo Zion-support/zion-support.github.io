@@ -5,10 +5,9 @@ import { ChatWidget } from "@/components/ChatWidget";
 import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Skeleton from "@/components/ui/skeleton";
-import ImageWithRetry from '@/components/ui/ImageWithRetry';
-import { Star, MessageSquare, Brain, Shield } from "lucide-react";
-import StarRating from "@/components/StarRating";
+import { Skeleton } from "@/components/ui/skeleton";
+import { MessageSquare, Brain, Shield } from "lucide-react";
+import { RatingStars } from "@/components/RatingStars";
 import { cn } from "@/lib/utils";
 import Link from 'next/link';
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
@@ -162,9 +161,9 @@ export default function ListingDetail() {
                 <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
                 
                 {listing.rating && (
-                  <div className="flex items-center gap-2 mb-6 text-zion-slate-light">
-                    <StarRating value={listing.rating} />
-                    <span className="text-sm">
+                  <div className="flex items-center gap-2 mb-6">
+                    <RatingStars value={listing.rating} />
+                    <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
                     </span>
                   </div>

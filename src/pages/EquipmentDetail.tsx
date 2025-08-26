@@ -5,8 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
-import StarRating from "@/components/StarRating";
+import { ShoppingCart, Truck, Shield, RotateCcw, Clock } from "lucide-react";
+import { RatingStars } from "@/components/RatingStars";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
@@ -211,9 +211,9 @@ export default function EquipmentDetail() {
                 
                 {/* Rating */}
                 {equipment.rating && (
-                  <div className="flex items-center gap-2 mb-4 text-zion-slate-light">
-                    <StarRating value={equipment.rating} />
-                    <span className="text-sm">
+                  <div className="flex items-center gap-2 mb-4">
+                    <RatingStars value={equipment.rating} />
+                    <span className="text-sm text-zion-slate-light">
                       {equipment.rating.toFixed(1)} ({equipment.reviewCount} reviews)
                     </span>
                   </div>

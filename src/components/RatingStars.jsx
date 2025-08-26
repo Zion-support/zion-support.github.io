@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, StarHalf } from 'lucide-react';
+import { Star, StarHalf, Star as StarOutline } from 'lucide-react';
 
 export function RatingStars({ value = 0 }) {
   const filled = Math.floor(value);
@@ -14,7 +14,7 @@ export function RatingStars({ value = 0 }) {
         if (i === filled && half) {
           return <StarHalf key={i} data-testid="star-half" className="h-4 w-4 text-yellow-400 fill-yellow-400" />;
         }
-        return <Star key={i} data-testid="star-outline" className="h-4 w-4 text-gray-300" />;
+        return <StarOutline key={i} data-testid="star-outline" className="h-4 w-4 text-gray-300" />;
       })}
     </div>
   );

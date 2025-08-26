@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import StarRating from "@/components/StarRating";
+import { RatingStars } from "./RatingStars";
 
 interface ListingScoreCardProps {
   title: string;
@@ -63,9 +63,11 @@ export function ListingScoreCard({
         
         {/* Rating */}
         {rating > 0 && (
-          <div className="flex items-center gap-1 mb-4 text-zion-slate-light">
-            <StarRating value={rating} />
-            <span className="text-sm ml-1">({reviewCount})</span>
+          <div className="flex items-center gap-1 mb-4">
+            <RatingStars value={rating} />
+            <span className="text-sm text-zion-slate-light ml-1">
+              ({reviewCount})
+            </span>
           </div>
         )}
         
