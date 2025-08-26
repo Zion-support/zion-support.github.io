@@ -1,107 +1,94 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
-export const TestimonialsSection = () => {
-    const testimonials = [
-        {
-            id: 1,
-            name: "Sarah Johnson",
-            company: "TechCorp Solutions",
-            role: "CTO",
-            content: "Zion Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.",
-            rating: 5,
-            avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
-        },
-        {
-            id: 2,
-            name: "Michael Chen",
-            company: "InnovateTech",
-            role: "VP of Engineering",
-            content: "The team at Zion delivered exceptional results. Their AI-powered security solutions protected our systems from advanced threats while maintaining optimal performance.",
-            rating: 5,
-            avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-        },
-        {
-            id: 3,
-            name: "Emily Rodriguez",
-            company: "DataFlow Systems",
-            role: "Data Science Director",
-            content: "Working with Zion Tech Group was a game-changer. Their AI business intelligence platform gave us insights we never had before, driving 25% revenue growth.",
-            rating: 5,
-            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-        },
-        {
-            id: 4,
-            name: "David Kim",
-            company: "Quantum Industries",
-            role: "Research Director",
-            content: "Zion's quantum computing expertise is unmatched. They helped us implement cutting-edge quantum algorithms that solved problems we thought were impossible.",
-            rating: 5,
-            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-        },
-        {
-            id: 5,
-            name: "Lisa Thompson",
-            company: "GreenTech Solutions",
-            role: "Sustainability Officer",
-            content: "Zion's Green IT solutions helped us reduce our carbon footprint by 30% while improving our technology infrastructure. Truly innovative approach.",
-            rating: 5,
-            avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face"
-        },
-        {
-            id: 6,
-            name: "Robert Wilson",
-            company: "SpaceTech Ventures",
-            role: "CEO",
-            content: "The space technology solutions from Zion Tech Group are revolutionary. They helped us develop satellite systems that exceeded all our expectations.",
-            rating: 5,
-            avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
-        }
-    ];
-    return (<section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 text-orange-400 rounded-full text-sm font-medium mb-6">
-            <Quote className="w-4 h-4 mr-2"/>
-            Client Success Stories
-          </div>
+
+export function TestimonialsSection({ 
+  title = "What Our Clients Say",
+  subtitle = "Don't just take our word for it. Here's what industry leaders have to say about our services.",
+  testimonials,
+  className = ""
+}) {
+  return (
+    <section className={`py-16 bg-zion-slate-dark ${className}`}>
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            What Our Clients Say
+            {title}
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Discover how Zion Tech Group has transformed businesses across industries 
-            with our cutting-edge technology solutions.
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            {subtitle}
           </p>
-        </div>
-
+        </motion.div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (<div key={testimonial.id} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
-              <div className="flex items-center mb-4">
-                <div className="flex -space-x-2 mr-4">
-                  <img className="w-12 h-12 rounded-full border-2 border-white/20" src={testimonial.avatar} alt={testimonial.name}/>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-400">{testimonial.role}</p>
-                  <p className="text-sm text-orange-400">{testimonial.company}</p>
-                </div>
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              className="bg-zion-blue-dark/30 p-6 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -5 }}
+            >
+              {/* Quote Icon */}
+              <div className="mb-4">
+                <Quote className="w-8 h-8 text-zion-cyan/60 group-hover:text-zion-cyan transition-colors" />
               </div>
-
-              <div className="flex items-center mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current"/>))}
+              
+              {/* Rating */}
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+                <span className="text-zion-slate-light text-sm ml-2">
+                  {testimonial.rating}/5
+                </span>
               </div>
-
-              <blockquote className="text-gray-300 italic">
+              
+              {/* Content */}
+              <p className="text-zion-slate-light mb-6 italic leading-relaxed">
                 "{testimonial.content}"
-              </blockquote>
-            </div>))}
+              </p>
+              
+              {/* Author Info */}
+              <div className="flex items-center gap-3">
+                <img 
+                  src={testimonial.avatar} 
+                  alt={testimonial.name}
+                  className="w-12 h-12 rounded-full object-cover border-2 border-zion-cyan/20"
+                />
+                <div className="flex-1">
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-zion-cyan font-medium text-sm">{testimonial.role}</div>
+                  <div className="text-zion-slate-light text-sm">{testimonial.company}</div>
+                </div>
+              </div>
+              
+              {/* Date */}
+              <div className="text-zion-slate-light text-xs mt-3 text-right">
+                {testimonial.date}
+              </div>
+            </motion.div>
+          ))}
         </div>
-
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300">
-            <Quote className="w-5 h-5 mr-2"/>
-            Read More Success Stories
-          </div>
-        </div>
+        
+        {/* View All Button */}
+        <motion.div 
+          className="text-center mt-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <button className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors">
+            View All Testimonials
+          </button>
+        </motion.div>
       </div>
-    </section>);
-};
+    </section>
+  );
+}

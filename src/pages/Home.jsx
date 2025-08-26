@@ -1,71 +1,184 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { HeroSection } from '@/components/HeroSection';
+import { StatsSection } from '@/components/StatsSection';
+import { ServicesShowcase } from '@/components/ServicesShowcase';
+import { FeaturesSection } from '@/components/FeaturesSection';
+import { TestimonialsSection } from '@/components/TestimonialsSection';
+import { CTASection } from '@/components/CTASection';
+import { 
+  Users, 
+  TrendingUp, 
+  Award,
+  Zap,
+  Brain, 
+  Shield, 
+  Cloud,
+  Rocket,
+  Globe,
+  Lock,
+  Clock
+} from 'lucide-react';
 
 export default function Home() {
+  const stats = [
+    { icon: Users, value: '500+', label: 'Happy Clients' },
+    { icon: TrendingUp, value: '95%', label: 'Success Rate' },
+    { icon: Award, value: '50+', label: 'Awards Won' },
+    { icon: Zap, value: '24/7', label: 'Support' }
+  ];
+
+  const features = [
+    {
+      icon: Rocket,
+      title: 'Rapid Deployment',
+      description: 'Get your solutions up and running in days, not months, with our pre-built infrastructure and templates.'
+    },
+    {
+      icon: Lock,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with SOC 2 compliance, end-to-end encryption, and 24/7 threat monitoring.'
+    },
+    {
+      icon: Globe,
+      title: 'Global Scale',
+      description: 'Deploy anywhere in the world with our multi-region infrastructure and CDN optimization.'
+    },
+    {
+      icon: Clock,
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support and monitoring to ensure your systems never go down.'
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      company: 'TechCorp',
+      content: 'Zion Tech Group transformed our business with their AI solutions. Our efficiency increased by 300%.',
+      rating: 5,
+      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
+      date: 'March 2024'
+    },
+    {
+      name: 'Michael Chen',
+      role: 'CEO',
+      company: 'DataFlow Inc',
+      content: 'The cybersecurity implementation was flawless. We feel completely protected in today\'s digital landscape.',
+      rating: 5,
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
+      date: 'February 2024'
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'VP Engineering',
+      company: 'CloudScale',
+      content: 'Their cloud solutions are cutting-edge. We scaled from 100 to 10,000 users seamlessly.',
+      rating: 5,
+      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face',
+      date: 'January 2024'
+    }
+  ];
+
+  const services = [
+    {
+      icon: Brain,
+      title: 'AI & Analytics',
+      description: 'Advanced AI-powered business intelligence and analytics solutions.',
+      features: ['Machine Learning', 'Predictive Analytics', 'Natural Language Processing']
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity',
+      description: 'Enterprise-grade security and threat detection systems.',
+      features: ['Threat Detection', 'Incident Response', 'Compliance Management']
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and DevOps services.',
+      features: ['AWS/Azure/GCP', 'Container Orchestration', 'CI/CD Pipelines']
+    }
+  ];
+
+  const handleGetStarted = () => {
+    // Navigate to contact page or open contact form
+    window.location.href = '/contact';
+  };
+
+  const handleWatchDemo = () => {
+    // Open demo video or modal
+    console.log('Opening demo video...');
+  };
+
   return (
-    <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Welcome to <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Zion Tech Group</span>
-          </h1>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Pioneering the future with cutting-edge AI solutions, quantum technology, and innovative IT services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:scale-105 transition-transform">
-              Get Started
-            </button>
-            <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
+    <>
+      <SEO 
+        title="Zion Tech Group - AI Solutions & Technology Services"
+        description="Pioneering the future with cutting-edge AI solutions, quantum technology, and innovative IT services. Transform your business with Zion Tech Group."
+      />
+      
+      <div className="min-h-screen bg-futuristic">
+        {/* Hero Section */}
+        <HeroSection
+          title="Welcome to Zion Tech Group"
+          subtitle="Pioneering the future with cutting-edge AI solutions, quantum technology, and innovative IT services. Transform your business with our expertise."
+          primaryCTA={{
+            text: "Get Started",
+            action: handleGetStarted
+          }}
+          secondaryCTA={{
+            text: "Watch Demo",
+            action: handleWatchDemo,
+            icon: undefined // Will use Play icon by default
+          }}
+          showBackgroundElements={true}
+        />
 
-      {/* Services Preview */}
-      <section className="py-16 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Our Services
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
-              <h3 className="text-xl font-semibold text-white mb-4">AI & Analytics</h3>
-              <p className="text-zion-slate-light">
-                Advanced AI-powered business intelligence and analytics solutions.
-              </p>
-            </div>
-            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Cybersecurity</h3>
-              <p className="text-zion-slate-light">
-                Enterprise-grade security and threat detection systems.
-              </p>
-            </div>
-            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Cloud Solutions</h3>
-              <p className="text-zion-slate-light">
-                Scalable cloud infrastructure and DevOps services.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        {/* Statistics Section */}
+        <StatsSection 
+          stats={stats}
+          background="dark"
+        />
 
-      {/* Contact CTA */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-white/90 mb-8">
-            Contact us today to discuss your technology needs.
-          </p>
-          <button className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform">
-            Contact Us
-          </button>
-        </div>
-      </section>
-    </div>
+        {/* Features Section */}
+        <FeaturesSection
+          title="Why Choose Zion Tech Group?"
+          subtitle="We combine cutting-edge technology with proven methodologies to deliver results that exceed expectations."
+          features={features}
+          columns={4}
+          background="light"
+        />
+
+        {/* Services Preview */}
+        <ServicesShowcase 
+          title="Our Services"
+          subtitle="Comprehensive technology solutions designed to drive innovation and growth in your organization"
+          services={services}
+          showFeatures={true}
+          showCTA={true}
+        />
+
+        {/* Testimonials Section */}
+        <TestimonialsSection 
+          title="What Our Clients Say"
+          subtitle="Don't just take our word for it. Here's what industry leaders have to say about our services."
+          testimonials={testimonials}
+        />
+
+        {/* Contact CTA */}
+        <CTASection
+          title="Ready to Transform Your Business?"
+          subtitle="Join hundreds of companies that have already revolutionized their operations with our cutting-edge technology solutions."
+          primaryButton={{
+            text: "Contact Us Today",
+            action: handleGetStarted
+          }}
+          background="gradient"
+        />
+      </div>
+    </>
   );
 }
