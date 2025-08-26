@@ -9,8 +9,23 @@ import {
   Rocket, Target, Microscope
 } from 'lucide-react';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+<<<<<<< HEAD
+=======
 const UltraFuturisticFooter2034: React.FC = () => {
   const currentYear = new Date().getFullYear();
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   const serviceCategories = [
     {

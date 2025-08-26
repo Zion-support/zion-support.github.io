@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Check, Cloud, Zap, Shield, Database, Users, Target, Activity, Server, Globe, Cpu, GitBranch } from 'lucide-react';
 
 export default function DevOpsCloudServices() {

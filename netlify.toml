@@ -1,5 +1,40 @@
 [build]
+<<<<<<< HEAD
   command = "npm ci && npm run build"
+<<<<<<< HEAD
+  publish = ".next"
+
+[build.environment]
+=======
+  # Use `npm ci` for deterministic installs
+  # Generate Prisma client before building to ensure models are up to date
+  command = "npm run build:netlify:prepare"
+  # Netlify UI sets `publish` to `out` which causes the Next.js plugin to fail
+  # because no exported directory exists. Explicitly publish the `.next`
+  # directory so the plugin can run correctly.
+  publish = ".next"
+  # Increase build timeout for 176+ pages
+  command_timeout = "30m"
+
+[build.environment]
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+  NODE_OPTIONS = "--max_old_space_size=4096"
+  NPM_FLAGS = "--prefer-offline"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+  NODE_VERSION = "20"
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-145a
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+=======
   publish = "dist"
 
 [build.environment]
@@ -42,12 +77,99 @@
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
   status = 301
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
-[[redirects]]
-  from = "/ai-consciousness-evolution"
-  to = "/ai-consciousness-evolution-2029"
-  status = 301
+<<<<<<< HEAD
+# Autonomous scheduled functions
+[[scheduled.functions]]
+  function = "auto_repo_sync"
+  cron = "*/15 * * * *"
 
+<<<<<<< HEAD
+[[scheduled.functions]]
+  function = "link_health"
+  cron = "*/30 * * * *"
+
+[[scheduled.functions]]
+  function = "promo_rotator"
+  cron = "*/30 * * * *"
+
+[[scheduled.functions]]
+  function = "site_index"
+  cron = "@hourly"
+
+[[scheduled.functions]]
+  function = "seo_audit"
+  cron = "0 2 * * *"
+
+[[scheduled.functions]]
+  function = "daily_status_report"
+  cron = "0 3 * * *"
+
+[[scheduled.functions]]
+  function = "issue_link_health"
+  cron = "15 3 * * *"
+
+[[scheduled.functions]]
+  function = "pagespeed_audit"
+  cron = "0 * * * *"
+
+[[scheduled.functions]]
+  function = "security_headers_audit"
+  cron = "0 * * * *"
+
+[[scheduled.functions]]
+  function = "stale_content_issues"
+  cron = "0 4 * * *"
+
+[[scheduled.functions]]
+  function = "sitemap_from_index"
+  cron = "0 */6 * * *"
+
+[[scheduled.functions]]
+  function = "og_meta_audit"
+  cron = "*/45 * * * *"
+
+[[scheduled.functions]]
+  function = "rss_generator"
+  cron = "0 */12 * * *"
+
+[[scheduled.functions]]
+  function = "broken_image_checker"
+  cron = "*/45 * * * *"
+
+[[scheduled.functions]]
+  function = "commit_changelog"
+  cron = "0 */6 * * *"
+
+[[scheduled.functions]]
+  function = "deep_link_health_from_index"
+  cron = "*/30 * * * *"
+
+[[scheduled.functions]]
+  function = "sitemap_submitter"
+  cron = "0 */6 * * *"
+
+[[scheduled.functions]]
+  function = "osv_dependency_audit"
+  cron = "0 5 * * *"
+
+[[scheduled.functions]]
+  function = "external_link_audit"
+  cron = "0 */6 * * *"
+
+[[scheduled.functions]]
+  function = "automation_summary"
+  cron = "*/30 * * * *"
+
+[[scheduled.functions]]
+  function = "readme_badges_updater"
+  cron = "0 */6 * * *" 
+=======
+[[plugins]]
+  package = "netlify-plugin-cloudinary" 
+>>>>>>> origin/cursor/website-audit-and-enhancement-145a
+=======
 [[redirects]]
   from = "/autonomous-it-operations"
   to = "/autonomous-it-operations-center"
@@ -87,3 +209,49 @@
   from = "/quantum-data-center"
   to = "/quantum-services"
   status = 301
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+[functions.environment]
+  SENTRY_LOG_LEVEL = "debug"
+=======
+# Static redirects for exported site
+[[redirects]]
+  from = "/ai-customer-success-platform"
+  to = "/services/ai-customer-success-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-sales-intelligence-platform"
+  to = "/services/ai-sales-intelligence-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-financial-planning-platform"
+  to = "/services/ai-financial-planning-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-powered-decision-engine"
+  to = "/services/ai-powered-decision-engine/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-content-automation-platform"
+  to = "/services/intelligent-content-automation-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-hr-analytics-platform"
+  to = "/services/intelligent-hr-analytics-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/smart-crm-intelligence-suite"
+  to = "/services/smart-crm-intelligence-suite/"
+  status = 301
+
+[[redirects]]
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

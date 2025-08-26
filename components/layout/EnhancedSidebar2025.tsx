@@ -262,6 +262,18 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
     setExpandedSections(newExpanded);
   };
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+  const filteredServices = sidebarItems.flatMap(item =>
+    item.children?.filter(child =>
+      child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      child.description?.toLowerCase().includes(searchQuery.toLowerCase())
+    ) || []
+  );
+<<<<<<< HEAD
+=======
   const toggleItem = (itemName: string) => {
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(itemName)) {
@@ -285,6 +297,9 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
   }, [isOpen]);
 
   const isActive = (href: string) => router.pathname === href;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   return (
     <>

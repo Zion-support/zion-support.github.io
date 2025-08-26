@@ -2,6 +2,43 @@
 
 import * as React from "react";
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+export type Theme = "dark" | "light" | "system"
+
+type ThemeProviderProps = {
+  children: React.ReactNode
+}
+
+export type ThemeProviderState = {
+  theme: Theme
+  setTheme: (theme: Theme) => void
+}
+
+const initialState: ThemeProviderState = {
+  theme: "dark",
+  setTheme: () => null,
+}
+
+export const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
+
+export function ThemeProvider({ children }: ThemeProviderProps) {
+  const [theme] = useState<Theme>("dark")
+
+  useEffect(() => {
+    const root = window.document.documentElement
+    root.classList.remove("light", "dark")
+    root.classList.add("dark")
+  }, [])
+
+  const value = {
+    theme,
+    setTheme: () => {},
+  }
+<<<<<<< HEAD
+=======
 interface ThemeProviderProps {
   children: React.ReactNode;
   defaultTheme?: string;
@@ -45,6 +82,9 @@ export function ThemeProvider({
     }),
     [theme, storageKey]
   );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   return (
     <ThemeContext.Provider value={value}>
@@ -53,6 +93,20 @@ export function ThemeProvider({
   );
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+export const useTheme = (): ThemeProviderState => {
+  const context = useContext(ThemeProviderContext)
+
+  if (context === undefined)
+    throw new Error("useTheme must be used within a ThemeProvider")
+
+  return context
+}
+<<<<<<< HEAD
+=======
 interface ThemeContextType {
   theme: string;
   setTheme: (theme: string) => void;
@@ -67,3 +121,6 @@ export const useTheme = () => {
   }
   return context;
 };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
