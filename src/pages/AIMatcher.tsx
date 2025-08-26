@@ -1,7 +1,6 @@
 
 import { useState } from "react";
-import { useRouter } from "next/router";
-import { Footer } from "@/components/Footer";
+import { useNavigate } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { AIMatchmaker } from "@/components/AIMatchmaker";
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
@@ -75,7 +74,6 @@ export default function AIMatcherPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
