@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import { ThemeProvider } from './components/ThemeProvider';
 import { Toaster as SonnerToaster } from './components/ui/sonner';
