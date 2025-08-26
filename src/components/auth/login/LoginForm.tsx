@@ -7,7 +7,8 @@ import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from "lucide-react";
 
 import { useAuth } from "@/hooks/useAuth";
-import { loginUser } from "@/services/authService";
+import { toast } from "@/hooks/use-toast";
+import { auth } from "@/services/auth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -44,22 +45,17 @@ export function LoginForm() {
     },
   });
 
-  const onSubmit = async (data: LoginFormValues) => {
+  const handleLogin = async (data: LoginFormValues) => {
     if (isSubmitting) return;
 
     try {
       setIsSubmitting(true);
-      const { res, data: resData } = await loginUser(data.email, data.password);
-      if (res.status !== 200) {
-        const message = resData?.error || "Invalid credentials";
-        form.setError("root", { message });
-        return;
+      const res = await auth.login(data.email, data.password);
+      if (res.status === 200) {
+        navigate('/dashboard');
+      } else if (res.status >= 400 && res.status < 500) {
+        toast.error(res.data?.error || 'Invalid credentials');
       }
-
-      await login(data.email, data.password);
-
-      const next = searchParams.get('next') || '/';
-      navigate(next);
     } finally {
       setIsSubmitting(false);
     }
@@ -68,7 +64,7 @@ export function LoginForm() {
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit(onSubmit)}
+        onSubmit={form.handleSubmit(handleLogin)}
         className="space-y-6"
         autoComplete="off" // Disable browser autofill
       >
