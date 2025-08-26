@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, Award } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Added Link import
+
 const featuredListings = [
     {
         id: 1,
@@ -271,32 +273,57 @@ export function FeaturedListingsSection() {
 
                   {/* Expanded details on hover */}
                   <AnimatePresence>
-                    {hoveredListing === listing.id && (<motion.div className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
+                    {hoveredListing === listing.id && (
+                      <motion.div 
+                        className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" 
+                        initial={{ opacity: 0, height: 0, y: 10 }} 
+                        animate={{ opacity: 1, height: "auto", y: 0 }} 
+                        exit={{ opacity: 0, height: 0, y: 10 }} 
+                        transition={{ duration: 0.3 }}
+                      >
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Highlights:</h4>
                         <div className="space-y-2 mb-4">
-                          {listing.highlights.map((highlight, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }}>
+                          {listing.highlights.map((highlight, idx) => (
+                            <motion.div 
+                              key={idx} 
+                              className="flex items-center gap-2 text-zion-slate-light/80 text-xs" 
+                              initial={{ opacity: 0, x: -10 }} 
+                              animate={{ opacity: 1, x: 0 }} 
+                              transition={{ delay: idx * 0.1 }}
+                            >
                               <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                               <span>{highlight}</span>
-                            </motion.div>))}
+                            </motion.div>
+                          ))}
                         </div>
 
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
-                          {listing.technologies.slice(0, 4).map((tech, idx) => (<motion.span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: idx * 0.1 }}>
+                          {listing.technologies.slice(0, 4).map((tech, idx) => (
+                            <motion.span 
+                              key={idx} 
+                              className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" 
+                              initial={{ opacity: 0, scale: 0.8 }} 
+                              animate={{ opacity: 1, scale: 1 }} 
+                              transition={{ delay: idx * 0.1 }}
+                            >
                               {tech}
-                            </motion.span>))}
+                            </motion.span>
+                          ))}
                         </div>
-                      </motion.div>)}
+                      </motion.div>
+                    )}
                   </AnimatePresence>
                 </div>
               </div>
               
               <div className="px-6 pb-6">
-                <Link to={service.link} className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg">
+                <Link to={`/services/${listing.id}`} className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg">
                   Get Started
                 </Link>
               </div>
-            </div>))}
+            </motion.div>
+          ))}
         </motion.div>
       </div>
       

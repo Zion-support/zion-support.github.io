@@ -190,15 +190,31 @@ export function HowItWorksSection() {
 
                   {/* Interactive details on hover */}
                   <AnimatePresence>
-                    {hoveredStep === index && (<motion.div className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
+                    {hoveredStep === index && (
+                      <motion.div 
+                        className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" 
+                        initial={{ opacity: 0, height: 0, y: 10 }} 
+                        animate={{ opacity: 1, height: "auto", y: 0 }} 
+                        exit={{ opacity: 0, height: 0, y: 10 }} 
+                        transition={{ duration: 0.3 }}
+                      >
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Features:</h4>
                         <div className="space-y-2">
-                          {step.details.map((detail, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }}>
+                          {step.details.map((detail, idx) => (
+                            <motion.div 
+                              key={idx} 
+                              className="flex items-center gap-2 text-zion-slate-light/80 text-xs" 
+                              initial={{ opacity: 0, x: -10 }} 
+                              animate={{ opacity: 1, x: 0 }} 
+                              transition={{ delay: idx * 0.1 }}
+                            >
                               <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                               <span>{detail}</span>
-                            </motion.div>))}
+                            </motion.div>
+                          ))}
                         </div>
-                      </motion.div>)}
+                      </motion.div>
+                    )}
                   </AnimatePresence>
 
                   {/* Hover indicator */}
@@ -206,17 +222,10 @@ export function HowItWorksSection() {
                     {hoveredStep === index ? "Hover to see details" : "Hover for details"}
                   </div>
                 </div>
-                
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-                
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </div>))}
+              </motion.div>
+            ))}
           </div>
-        </></div>
+        </motion.div>
         
         {/* Enhanced bottom CTA */}
         <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
@@ -259,8 +268,7 @@ export function HowItWorksSection() {
             <p className="text-zion-slate-light text-sm">24/7 support from our team</p>
           </div>
         </motion.div>
-      </div>);
-    section >
-    ;
-    ;
+      </div>
+    </section>
+  );
 }
