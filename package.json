@@ -38,10 +38,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.8.2",
-<<<<<<< HEAD
-=======
     "@tanstack/react-query": "^5.85.5",
->>>>>>> origin/main
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "d3-color": "^3.1.0",
@@ -57,13 +54,9 @@
     "react-day-picker": "^8.9.1",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^6.0.0",
-<<<<<<< HEAD
-    "react-hook-form": "^7.47.0",
-=======
     "react-helmet-async": "^2.0.5",
     "react-hook-form": "^7.47.0",
     "react-hot-toast": "^2.6.0",
->>>>>>> origin/main
     "react-redux": "^9.2.0",
     "react-remove-scroll-bar": "^2.3.8",
     "react-router-dom": "^6.20.0",
