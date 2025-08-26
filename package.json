@@ -136,21 +136,13 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vitest": "^1.4.0",
-    "@playwright/test": "^1.41.2"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
-    ]
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/jest-dom": "^6.1.2",
+    "jsdom": "^24.0.0",
+    "@eslint/config-array": "^1.0.0"
   },
   "overrides": {
-    "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
-    "glob": "^10.4.5",
-    "rimraf": "^5.0.5"
-  },
-  "resolutions": {
-    "glob": "^10.4.5",
-    "rimraf": "^5.0.5",
-    "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0"
+    "@humanwhocodes/config-array": "npm:@eslint/config-array@^1.0.0"
   }
 }
+
