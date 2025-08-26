@@ -14,7 +14,12 @@ interface MessagingContextType {
   markAsRead: (id: string) => void;
 }
 
-const MessagingContext = createContext<MessagingContextType | undefined>(undefined);
+// "createContext" may be untyped if React type definitions are missing.
+// To avoid TS2347 when the definitions are unavailable, we cast the default
+// value instead of passing a generic type parameter directly.
+const MessagingContext = createContext(
+  undefined as MessagingContextType | undefined
+);
 
 export function MessagingProvider({ children }: { children: ReactNode }) {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -52,7 +57,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {
 }
 
 export function useMessaging() {
-  const context = useContext(MessagingContext);
+  const context = useContext<MessagingContextType | undefined>(MessagingContext);
   if (context === undefined) {
     throw new Error('useMessaging must be used within a MessagingProvider');
   }

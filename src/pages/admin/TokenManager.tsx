@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-
-import { Footer } from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -10,6 +8,7 @@ import { TokenTransaction } from '@/types/tokens';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
+import { apiClient } from '@/utils/apiClient';
 
 export default function TokenManager() {
   const { user } = useAuth();
@@ -35,7 +34,7 @@ export default function TokenManager() {
 
   const handleIssue = async (type: 'earn' | 'burn') => {
     if (!userId || amount <= 0) return;
-    const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
+    const res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, amount }),
@@ -59,6 +58,7 @@ export default function TokenManager() {
   return (
     <ProtectedRoute adminOnly>
       <div>
+        
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <h1 className="text-3xl font-bold text-white mb-6">Token Manager</h1>
@@ -93,7 +93,7 @@ export default function TokenManager() {
             </Tabs>
           </div>
         </div>
-        <Footer />
+        
       </div>
     </ProtectedRoute>
   );

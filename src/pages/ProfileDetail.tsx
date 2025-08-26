@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
-import { Footer } from "@/components/Footer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -23,9 +22,8 @@ import {
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 
 export default function ProfileDetail() {
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
-  const { profileId } = useParams();
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { profileId } = useParams() as { profileId?: string };
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -101,6 +99,7 @@ export default function ProfileDetail() {
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
       />
+      
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
           {/* Main Content */}
@@ -309,7 +308,7 @@ export default function ProfileDetail() {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 }

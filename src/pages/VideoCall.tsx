@@ -1,21 +1,24 @@
 
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
-import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 
 export default function VideoCall() {
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
   const { roomId } = useParams();
   const navigate = useNavigate();
   const [isJoining, setIsJoining] = useState(false);
   const [hasJoined, setHasJoined] = useState(false);
-  const [participants, setParticipants] = useState<Array<{
+  const [participants, setParticipants] = useState([
+    {
+      id: 'user-1',
+      name: 'You',
+      isVideoEnabled: true,
+      isMuted: false
+    }
+  ] as Array<{
     id: string;
     name: string;
     avatar?: string;
@@ -23,14 +26,7 @@ export default function VideoCall() {
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
     isHost?: boolean;
-  }>>([
-    {
-      id: 'user-1',
-      name: 'You',
-      isVideoEnabled: true,
-      isMuted: false
-    }
-  ]);
+  }>);
 
   const handleJoinCall = () => {
     setIsJoining(true);
@@ -75,6 +71,7 @@ export default function VideoCall() {
   return (
     <>
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />
+      
       <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
         {!hasJoined ? (
           <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">
@@ -106,7 +103,7 @@ export default function VideoCall() {
           </div>
         )}
       </main>
-      <Footer />
+      
     </>
   );
 }

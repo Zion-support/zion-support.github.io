@@ -3,13 +3,18 @@ import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { ControllerRenderProps } from 'react-hook-form';
-import CheckoutProgress from '@/components/checkout/CheckoutProgress';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { getStripe } from '@/utils/getStripe';
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components/ui/form';
+import { useFeatureFlags } from '@/context/FeatureFlagContext';
+import CheckoutV2 from './CheckoutV2';
 
 interface CartItem {
   id: string;
@@ -28,19 +33,16 @@ interface CheckoutForm {
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const location = useLocation();
   const [items, setItems] = useState<CartItem[]>([]);
-  const form = useForm<CheckoutForm>({
-    defaultValues: { name: '', email: '', address: '', city: '', country: '' },
-  });
+  const form = useForm<CheckoutForm>({ defaultValues: { name: '', email: '', address: '', city: '', country: '' } });
+  const { getVariant, track } = useFeatureFlags();
+  const variant = getVariant('new-checkout-v2');
 
   useEffect(() => {
-    if (sku) {
-      setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
-      return;
-    }
-
-    const stored = safeStorage.getItem('cart');
+    const params = new URLSearchParams(location.search);
+    const productParam = params.get('product');
+    const stored = localStorage.getItem('cart');
     if (stored) {
       try {
         setItems(JSON.parse(stored) as CartItem[]);
@@ -48,13 +50,28 @@ export default function CheckoutPage() {
         setItems([]);
       }
     }
-  }, [sku]);
+    if (productParam) {
+      setItems([
+        { id: productParam, name: 'Test Item', price: 25, quantity: 1 },
+      ]);
+    } else {
+      // Provide mock data if cart empty
+      setItems([
+        {
+          id: 'prod_mock',
+          name: 'Test Item',
+          price: 25,
+          quantity: 1,
+        },
+      ]);
+    }
+  }, [location.search]);
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
 
   const onSubmit = async (data: CheckoutForm) => {
     try {
-      const res = await fetch('/api/create-payment-intent', {
+      const response = await fetch('/api/stripe/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: subtotal }),
@@ -70,13 +87,29 @@ export default function CheckoutPage() {
           },
         });
         if (payment.error) throw payment.error;
-        safeStorage.removeItem('cart');
+        if (user?.id) {
+          try {
+            await fetch('/api/points/add', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
+            });
+          } catch (e) {
+            console.error('Failed to add points', e);
+          }
+        }
+        safeStorage.removeItem('guestCart');
         navigate(`/orders/${result.id}`);
+        track('new-checkout-v2:conversion');
       }
     } catch (err) {
       console.error('Payment failed', err);
     }
   };
+
+  if (variant.name === 'v2') {
+    return <CheckoutV2 />;
+  }
 
   return (
     <div className="max-w-2xl mx-auto p-6">

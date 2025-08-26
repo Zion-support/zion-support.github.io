@@ -1,7 +1,6 @@
 
 import { useState } from "react";
-import { NextSeo } from "@/components/NextSeo";
-import { useRouter } from 'next/router';
+import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -10,13 +9,13 @@ import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-reac
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
-import { EQUIPMENT_DETAILS, EquipmentDetails } from "@/data/equipmentDetails";
+import { useAppDispatch } from '@/store/hooks';
+import { addItem } from '@/store/cartSlice';
 
 
 export default function EquipmentDetail() {
+  // Cast to specify the expected route param type since useParams may be untyped
   const { equipmentId } = useParams() as { equipmentId?: string };
-  const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
@@ -28,7 +27,7 @@ export default function EquipmentDetail() {
   if (!equipment) {
     return (
       <>
-        <NextSeo title="Equipment Not Found" description="Equipment not available" />
+        
         <div className="min-h-screen bg-zion-blue py-12 px-4">
           <div className="container mx-auto">
             <div className="text-center py-20">
@@ -37,60 +36,35 @@ export default function EquipmentDetail() {
             </div>
           </div>
         </div>
-        <Footer />
+        
       </>
     );
   }
 
+  const dispatch = useAppDispatch();
   const handleAddToCart = () => {
-    setIsAdding(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsAdding(false);
-      toast({
-        title: "Added to cart",
-        description: `${quantity}x ${equipment.name} added to your cart.`,
-      });
-    }, 800);
+    dispatch(addItem({
+      id: equipment.id,
+      name: equipment.name,
+      price: equipment.price,
+      quantity,
+    }));
+    toast({ title: 'Added to cart 🛒' });
   };
 
   const handleBuyNow = async () => {
     if (!isAuthenticated) {
-      navigate(`/login?next=/equipment/${equipmentId}`);
+      navigate(`/login?next=/checkout/${id}`);
       return;
     }
 
-    setIsAdding(true);
-    try {
-      const response = await fetch('/api/checkout_sessions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId: equipmentId }),
-      });
-      const { sessionId } = await response.json();
-      const stripe = await getStripe();
-      if (stripe && sessionId) {
-        await stripe.redirectToCheckout({ sessionId });
-      }
-    } catch (err) {
-      toast({ title: 'Payment error', description: 'Could not start checkout.' });
-    } finally {
-      setIsAdding(false);
-    }
+    dispatch(addItem({ id, title: equipment.name, price: equipment.price }));
+    navigate(`/checkout/${id}`);
   };
 
   return (
     <>
-      <NextSeo
-        title={equipment.name}
-        description={equipment.description}
-        openGraph={{
-          title: equipment.name,
-          description: equipment.description,
-          images: equipment.images.length ? [{ url: equipment.images[0] }] : undefined,
-        }}
-      />
+      
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -99,7 +73,7 @@ export default function EquipmentDetail() {
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 {/* Main Image */}
                 <div className="aspect-video w-full relative">
-                  <img 
+                  <img loading="lazy" 
                     src={equipment.images[selectedImageIndex]} 
                     alt={equipment.name} 
                     className="w-full h-full object-contain bg-zion-blue-light/10 p-4"
@@ -117,7 +91,7 @@ export default function EquipmentDetail() {
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         }`}
                       >
-                        <img 
+                        <img loading="lazy" 
                           src={image} 
                           alt={`${equipment.name} - image ${index + 1}`} 
                           className="w-full h-full object-cover"
@@ -333,7 +307,7 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 }

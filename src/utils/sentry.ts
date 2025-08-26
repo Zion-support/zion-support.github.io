@@ -1,11 +1,16 @@
-import * as Sentry from '@sentry/react';
+import * as Sentry from '@sentry/browser';
 
-Sentry.init({
-  dsn: import.meta.env.VITE_SENTRY_DSN,
-  integrations: [new Sentry.BrowserTracing()],
-  tracesSampleRate: 1.0,
-});
+const DSN = import.meta.env.VITE_SENTRY_DSN;
+
+if (DSN) {
+  Sentry.init({ dsn: DSN });
+}
 
 export function captureException(error: unknown) {
-  Sentry.captureException(error);
+  if (DSN) {
+    Sentry.captureException(error);
+  }
+  if (typeof console !== 'undefined') {
+    console.error('Sentry captured exception:', error);
+  }
 }

@@ -1,53 +1,45 @@
-import React from 'react';
 
-export function HowItWorksSection() {
-  const steps = [
-    {
-      number: '01',
-      title: 'Discovery & Assessment',
-      description: 'We begin by understanding your business needs, current infrastructure, and goals for transformation.',
-      icon: '🔍',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      number: '02',
-      title: 'Strategy & Planning',
-      description: 'Our experts develop a comprehensive roadmap tailored to your specific requirements and timeline.',
-      icon: '📋',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      number: '03',
-      title: 'Implementation',
-      description: 'We execute the plan with precision, ensuring minimal disruption to your ongoing operations.',
-      icon: '⚙️',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      number: '04',
-      title: 'Testing & Optimization',
-      description: 'Rigorous testing and performance optimization to ensure everything works flawlessly.',
-      icon: '🧪',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      number: '05',
-      title: 'Launch & Support',
-      description: 'Go-live with confidence, backed by our ongoing support and maintenance services.',
-      icon: '🚀',
-      color: 'from-red-500 to-pink-500'
-    }
-  ];
+import { GradientHeading } from "./GradientHeading";
+import { Check, Handshake, Search, Send } from "lucide-react";
+import { cn } from "@/lib/utils";
 
+const steps = [
+  {
+    title: "Post",
+    description: "Publish your service, job, or equipment in minutes with our AI-powered form.",
+    icon: Send,
+  },
+  {
+    title: "Match",
+    description: "Our AI automatically matches your needs with the perfect providers or opportunities.",
+    icon: Search,
+  },
+  {
+    title: "Hire/Buy",
+    description: "Connect directly with matched providers and complete your transaction securely.",
+    icon: Handshake,
+  },
+  {
+    title: "Done",
+    description: "Enjoy hassle-free delivery and support for your technology solutions.",
+    icon: Check,
+  },
+];
+
+export interface HowItWorksSectionProps extends React.HTMLAttributes<HTMLElement> {}
+
+export function HowItWorksSection({ className, style, ...props }: HowItWorksSectionProps) {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            How We Work
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our proven methodology ensures successful project delivery and maximum value for your business
+    <section
+      className={cn("py-20 bg-zion-blue", className)}
+      style={style}
+      {...props}
+    >
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <GradientHeading>How It Works</GradientHeading>
+          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
+            A simple four-step process to connect technology providers with clients
           </p>
         </div>
         

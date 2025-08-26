@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import { Footer } from "@/components/Footer";
 import { useAdminQuotes } from "@/hooks/useAdminQuotes";
 import { useAuth } from "@/hooks/useAuth";
 import { 
@@ -61,7 +60,9 @@ export default function QuoteManager() {
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
-    setDateRange({ from: undefined, to: undefined });
+    // Resetting the calendar selection requires `undefined` rather than an
+    // empty object so that `react-day-picker` clears the range correctly.
+    setDateRange(undefined);
   };
 
   if (!isAdmin) {
@@ -71,6 +72,7 @@ export default function QuoteManager() {
   return (
     <ProtectedRoute adminOnly>
       <div>
+        
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -145,7 +147,7 @@ export default function QuoteManager() {
           }}
         />
         
-        <Footer />
+        
       </div>
     </ProtectedRoute>
   );

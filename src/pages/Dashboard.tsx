@@ -1,6 +1,5 @@
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-import { Footer } from "@/components/Footer";
 import { CommunityDiscussion } from "@/components/CommunityDiscussion";
 import { Badge } from "@/components/ui/badge";
 import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react";
@@ -34,6 +33,7 @@ export default function Dashboard() {
 const Dashboard: React.FC = () => {
   return (
     <>
+      
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -232,6 +232,7 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 };

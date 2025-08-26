@@ -1,29 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  CheckCircle, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { 
-  ChartBarIcon, 
-  CpuChipIcon, 
-  GlobeAltIcon, 
-  RocketLaunchIcon,
-  ShieldCheckIcon,
-  LightBulbIcon,
-  UsersIcon,
-  CogIcon
-} from '@heroicons/react/24/outline';
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Building, 
@@ -265,6 +240,13 @@ const CaseStudies = () => {
   ShoppingCart,
   GraduationCap
 } from 'lucide-react';
+=======
+import { CASE_STUDIES } from "@/data/case-studies";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function CaseStudies() {
   const caseStudies = [
@@ -2816,12 +2798,17 @@ const CaseStudies = () => {
                 key={industry.name}
                 className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
               >
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                  <industry.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
-                <p className="text-cyan-400 font-bold">{industry.count}+ Cases</p>
-              </div>
+                <CardContent className="p-6 flex-1 flex flex-col gap-4">
+                  <img loading="lazy" src={study.companyLogo} alt={`${study.company} logo`} className="h-10 w-auto" />
+                  <h3 className="text-xl font-bold text-white">{study.title}</h3>
+                  <p className="text-zion-slate-light line-clamp-3">{study.excerpt}</p>
+                </CardContent>
+                <CardFooter className="p-6 pt-0">
+                  <Button variant="link" className="text-zion-cyan p-0" asChild>
+                    <Link href={`/case-studies/${study.slug}`}>Read More →</Link>
+                  </Button>
+                </CardFooter>
+              </Card>
             ))}
           </div>
         </section>

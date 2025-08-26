@@ -18,7 +18,8 @@
     "toggle_mobile_menu": "Toggle mobile menu",
     "greeting_user": "Hello, {{name}}!",
     "status_page": "Status Page",
-    "check_status_page": "You can try refreshing the page or visit our"
+    "check_status_page": "You can try refreshing the page or visit our",
+    "back_to_top": "Back to Top"
   },
   "nav": {
     "home": "Home",
@@ -154,6 +155,14 @@
     "submitting": "Submitting...",
     "post_job_button": "Post Job"
   },
+  "onboarding": {
+    "title": "What brings you to Zion?",
+    "subtitle": "Choose how you want to use our platform",
+    "talent_title": "I'm offering services",
+    "talent_desc": "Find work and showcase your skills",
+    "client_title": "I'm hiring",
+    "client_desc": "Post jobs and find talented professionals"
+  },
   "language": {
     "en": "English",
     "es": "Español",
@@ -184,8 +193,58 @@
     "saved": "Saved",
     "changes_saved": "Translation changes have been saved"
   },
-  "error_boundary": {
-    "message": "Something went wrong.",
-    "retry": "Retry"
+  "categories": {
+    "services": "Services",
+    "services_desc": "On-demand IT support, consulting, development, and more",
+    "talents": "Talents",
+    "talents_desc": "Connect with AI experts, developers, and tech specialists",
+    "equipment": "Equipment", 
+    "equipment_desc": "Rent or buy specialized hardware, servers, and devices",
+    "innovation": "Innovation",
+    "innovation_desc": "Discover cutting-edge solutions and tech breakthroughs",
+    "it_onsite_services": "IT Onsite Services"
+  },
+  "benefits": {
+    "ai_matchmaking": "AI-Powered Matchmaking",
+    "ai_matchmaking_desc": "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
+    "global_availability": "Global Availability", 
+    "global_availability_desc": "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
+    "support_24_7": "24/7 Support",
+    "support_24_7_desc": "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
+    "cost_reduction": "Cost Reduction",
+    "cost_reduction_desc": "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors."
+  },
+  "how_it_works": {
+    "post": "Post",
+    "post_desc": "Publish your service, job, or equipment in minutes with our AI-powered form.",
+    "match": "Match",
+    "match_desc": "Our AI automatically matches your needs with the perfect providers or opportunities.",
+    "hire_buy": "Hire/Buy",
+    "hire_buy_desc": "Connect directly with matched providers and complete your transaction securely.",
+    "done": "Done",
+    "done_desc": "Enjoy hassle-free delivery and support for your technology solutions."
+  },
+  "errors": {
+    "page_not_found": "Oops! Page not found",
+    "return_home": "Return to Home",
+    "forgot_password_prompt": "Did you forget your password? You can reset it here:",
+    "reset_password": "Reset Password",
+    "or_return_home": "Or return to Home",
+    "access_denied": "Access Denied",
+    "no_permission": "You don't have permission to access this page. This could be because your account doesn't have the required permissions or you need to complete your profile.",
+    "login_different_account": "Login with Different Account",
+    "payment_success_title": "Payment Successful!",
+    "payment_success_message": "Your payment has been processed successfully. You now have access to all the premium features.",
+    "go_to_dashboard": "Go to Dashboard",
+    "go_back": "Go Back",
+    "page_not_found_details": "The page you're looking for seems to have vanished into the digital void. Let's get you back on track to explore the future of AI and technology.",
+    "explore_marketplace": "Explore Our Marketplace",
+    "browse_marketplace": "Browse Marketplace",
+    "find_talent": "Find Talent",
+    "browse_categories": "Browse Categories",
+    "get_help": "Get Help",
+    "error_help_intro": "If you believe this is an error, please",
+    "error_help_contact": "contact our support team",
+    "error_help_or": "or check our"
   }
 }

@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { CartContextType, CartItem, CartAction } from '@/types/cart';
 import { safeStorage } from '@/utils/safeStorage';
+import { useAuth } from '@/hooks/useAuth';
+import { useAnalytics } from './AnalyticsContext';
 
 interface CartState { items: CartItem[]; }
 
@@ -26,6 +28,8 @@ function cartReducer(state: CartState, action: CartAction): CartState {
       return { items: state.items.filter(i => i.id !== action.payload) };
     case 'CLEAR_CART':
       return { items: [] };
+    case 'SET_ITEMS':
+      return { items: action.payload };
     default:
       return state;
   }
@@ -40,38 +44,48 @@ export function useCart(): CartContextType {
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  console.log('[CartProvider] Initializing...');
-  const items = useSelector((state: RootState) => state.cart.items);
-  const reduxDispatch = useDispatch<AppDispatch>();
-
-  const dispatch = (action: CartAction) => {
-    switch (action.type) {
-      case 'ADD_ITEM':
-        reduxDispatch(
-          addItem({
-            id: action.payload.id,
-            title: action.payload.name,
-            price: action.payload.price,
-            image: action.payload.image,
-          })
-        );
-        break;
-      case 'REMOVE_ITEM':
-        reduxDispatch(removeItem(action.payload));
-        break;
-      case 'CLEAR_CART':
-        reduxDispatch(clear());
-        break;
-      case 'SET_ITEMS':
-        reduxDispatch(setItems(action.payload));
-        break;
-      default:
-        break;
+  const [state, dispatch] = useReducer(
+    cartReducer,
+    initialState,
+    () => {
+      try {
+        const stored = safeStorage.getItem('cart');
+        return stored ? { items: JSON.parse(stored) as CartItem[] } : initialState;
+      } catch {
+        return initialState;
+      }
     }
   );
 
+  const { user } = useAuth();
+  const { trackConversion } = useAnalytics();
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token');
+    if (token) {
+      fetch(`/cart/restore/${token}`)
+        .then(res => res.ok ? res.json() : Promise.reject())
+        .then(data => {
+          dispatch({ type: 'SET_ITEMS', payload: data.items as CartItem[] });
+          safeStorage.setItem('cart', JSON.stringify(data.items));
+          trackConversion('cart_restored');
+        })
+        .catch(() => {});
+    }
+  }, []);
+
   useEffect(() => {
     safeStorage.setItem('cart', JSON.stringify(state.items));
+    fetch('/cart/snapshot', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        items: state.items,
+        user: user?.id,
+        email: user?.email,
+      }),
+    }).catch(() => {});
   }, [state.items]);
 
   const value: CartContextType = {

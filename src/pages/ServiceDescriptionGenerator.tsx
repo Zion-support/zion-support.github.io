@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import { Footer } from "@/components/Footer";
 import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm";
 import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay";
 import { SEO } from "@/components/SEO";
@@ -9,7 +8,7 @@ import { Navigate } from "react-router-dom";
 
 export default function ServiceDescriptionGenerator() {
   const { isAuthenticated, isLoading } = useAuth();
-  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+  const [generatedDescription, setGeneratedDescription] = useState(null as string | null);
   
   // Show loading while checking authentication
   if (isLoading) {
@@ -39,6 +38,7 @@ export default function ServiceDescriptionGenerator() {
         description="Generate professional service descriptions using AI"
         keywords="service description, AI content, professional description generator"
       />
+      
       <main className="flex-1 p-6 md:p-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-white mb-2">Service Description Generator</h1>
@@ -58,7 +58,7 @@ export default function ServiceDescriptionGenerator() {
           </div>
         </div>
       </main>
-      <Footer />
+      
     </div>
   );
 }

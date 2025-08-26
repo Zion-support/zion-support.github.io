@@ -3,32 +3,38 @@ import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
-import { DollarSign } from "lucide-react";
-import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { useDispatch } from 'react-redux';
-import type { AppDispatch } from '@/store';
-import { addItem } from '@/store/cartSlice';
-import Image from 'next/image'; // Import next/image
+import { Star, DollarSign, Heart } from "lucide-react";
+import { useAppDispatch } from "@/store/hooks";
+import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
+import { useAuth } from "@/hooks/useAuth";
+import { useLocation } from "react-router-dom";
+import { toast } from "sonner";
 
 interface ProductListingCardProps {
   listing: ProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
+  /**
+   * Base path for linking to the detail page. Defaults to
+   * `/marketplace/listing` to preserve existing behaviour.
+   */
   detailBasePath?: string;
 }
 
-const ProductListingCardComponent = ({
+export function ProductListingCard({
   listing,
   view = 'grid',
   onRequestQuote,
   detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
+}: ProductListingCardProps) {
   const isGrid = view === 'grid';
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
-  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0
+  const location = useLocation();
+  const { user } = useAuth();
+  const dispatch = useAppDispatch();
+  
+  // Get the first image or use a placeholder
+  const imageUrl = listing.images && listing.images.length > 0 
     ? listing.images[0] 
     : '/placeholder.svg'
   );
@@ -49,22 +55,6 @@ const ProductListingCardComponent = ({
   const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`);
   };
-
-  const dispatch = useDispatch<AppDispatch>();
-
-  const addToCart = () => {
-    setLoading(true);
-    dispatch(
-      addItem({
-        id: listing.id,
-        title: listing.title,
-        price: listing.price ?? 0,
-        image: listing.images && listing.images.length > 0 ? listing.images[0] : undefined,
-      })
-    );
-    setLoading(false);
-    navigate('/cart');
-  };
   
   const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -75,6 +65,22 @@ const ProductListingCardComponent = ({
     } else {
       navigate(`/request-quote?listing=${listing.id}`);
     }
+  };
+
+  const handleSave = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!user) {
+      toast.info('Log in to save favorites');
+      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
+      return;
+    }
+    dispatch(addToWishlist({ id: listing.id, type: 'product', data: listing }));
+    fetch(`${getApiUrl()}/wishlist`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: listing.id, type: 'product' }),
+    }).catch(() => {});
   };
   
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
@@ -180,13 +186,17 @@ const ProductListingCardComponent = ({
           
           <div className="flex gap-2">
             <Button
-              size="sm"
-              className="bg-primary hover:bg-primary/80 text-primary-foreground"
-              onClick={(e) => {
-                e.stopPropagation(); // Prevent card click event
-                addToCart();
-              }}
-              disabled={loading}
+              variant="ghost"
+              size="icon"
+              onClick={handleSave}
+              aria-label="save-to-wishlist"
+              className="text-zion-slate-light hover:text-zion-cyan"
+            >
+              <Heart className="h-5 w-5" />
+            </Button>
+            <Link
+              to={`${detailBasePath}/${listing.id}`}
+              onClick={(e) => e.stopPropagation()}
             >
               {loading ? (
                 <>

@@ -16,7 +16,104 @@ const LoginPage = () => {
     }
   }, [user, isLoading, router]);
 
-  if (isLoading) {
+  const handleResendVerification = async () => {
+    if (!email) {
+      setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError);
+      return;
+    }
+    
+    setIsResendingVerification(true);
+    try {
+      const response = await fetch('/api/resend-verification-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      
+      if (response.ok) {
+        setVerificationEmailSent(true);
+        setError(null);
+      } else {
+        const data = await response.json();
+        setError({ name: 'ResendError', message: data.message || 'Failed to resend verification email' } as AuthError);
+      }
+    } catch (err) {
+      setError({ name: 'NetworkError', message: 'Failed to resend verification email. Please try again.' } as AuthError);
+    } finally {
+      setIsResendingVerification(false);
+    }
+  };
+
+  const handleLogin = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!isSupabaseConfigured) {
+      setError({ name: 'ConfigurationError', message: 'Supabase is not configured. Cannot attempt login.' } as AuthError);
+      return;
+    }
+    setIsLoading(true);
+    setError(null);
+    setIsEmailUnverified(false);
+    setVerificationEmailSent(false);
+    
+    try {
+      console.log('Attempting Supabase login with email:', email);
+      const { data, error: signInError } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+
+      if (signInError) {
+        console.error('Supabase sign-in error:', signInError);
+
+        const normalizedMessage = signInError.message || (signInError as any).error_description || (signInError as any).error || 'Invalid email or password';
+
+        // Check if error is related to email verification
+        if (normalizedMessage.toLowerCase().includes('email not confirmed') ||
+            normalizedMessage.toLowerCase().includes('email_not_confirmed') ||
+            normalizedMessage.toLowerCase().includes('verify') ||
+            normalizedMessage.toLowerCase().includes('confirm')) {
+          setIsEmailUnverified(true);
+          setError({
+            name: 'EmailNotVerifiedError',
+            message: 'Please verify your email address before logging in. Check your inbox for a verification link.'
+          } as AuthError);
+
+          // Auto-resend verification email
+          setTimeout(() => {
+            handleResendVerification();
+          }, 1000);
+        } else {
+          setError({ name: signInError.name || 'SignInError', message: normalizedMessage } as AuthError);
+        }
+      } else if (data.user) {
+        console.log('Supabase sign-in successful, user:', data.user);
+        setUser(data.user); // setUser to trigger useEffect for redirection
+        // Redirection is now handled by the useEffect hook
+      } else {
+        // Should not happen if signInError is null and data.user is null
+        console.warn('Supabase sign-in returned no error but no user.');
+        setError({ name: 'UnknownAuthError', message: 'Invalid email or password' } as AuthError);
+      }
+    } catch (catchedError: any) {
+      console.error('Exception during Supabase sign-in:', catchedError);
+      setError({ name: 'ExceptionError', message: catchedError.message || 'An unexpected error occurred.' } as AuthError);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Auto-redirect to verification status page for unverified users after showing message
+  useEffect(() => {
+    if (isEmailUnverified && verificationEmailSent && email) {
+      const timer = setTimeout(() => {
+        router.push(`/verify-status?email=${encodeURIComponent(email)}`);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+    return undefined;
+  }, [isEmailUnverified, verificationEmailSent, email, router]);
+
+  if (isCheckingSession || (isLoading && !error)) { // Show loader if checking session OR loading and no error yet
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
