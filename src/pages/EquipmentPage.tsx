@@ -2,23 +2,7 @@ import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 import { useEffect, useState } from "react";
 import { generateRandomEquipment } from "@/utils/generateRandomEquipment";
-import { Button } from "@/components/ui/button";
-import { Loader2, Sparkles } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { useNavigate, useLocation } from "react-router-dom";
-import useSWRMutation from "swr/mutation";
-import Skeleton, { SkeletonCard } from "@/components/ui/skeleton"; // Import SkeletonCard
-import { FilterSidebarSkeleton } from "@/components/skeletons/FilterSidebarSkeleton"; // Import FilterSidebarSkeleton
-import { useDelayedError } from '@/hooks/useDelayedError';
-import ErrorBoundary from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
-import { safeStorage } from '@/utils/safeStorage';
-import { captureException } from '@/utils/sentry';
-
-// The EQUIPMENT_LISTINGS constant has been removed as it was commented out
-// and the page primarily relies on API calls and dynamic data generation.
-// This helps simplify the file and eliminate potential parsing issues.
-
+import { EQUIPMENT_LISTINGS } from "@/data/equipmentListings";
 const EQUIPMENT_FILTERS = [
   { label: "Servers", value: "Servers" },
   { label: "Networking", value: "Networking" },
