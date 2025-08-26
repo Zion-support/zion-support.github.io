@@ -427,11 +427,96 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                     transition={{ duration: 0.3 }}
                     className="space-y-2 ml-6"
                   >
-                    {section.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="space-y-2">
-                        <button
-                          onClick={() => toggleItem(item.name)}
-                          className="w-full flex items-center justify-between p-2 hover:bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"
+                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-xs text-gray-400">{stat.label}</div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="p-6 border-b border-cyan-500/30">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
+                <Star className="w-5 h-5 text-cyan-400" />
+                <span>Quick Links</span>
+              </h3>
+              <div className="space-y-2">
+                {quickLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href.endsWith('/') ? link.href : `${link.href}/`}
+                    onClick={onClose}
+                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
+                  >
+                    <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                      {link.icon}
+                    </div>
+                    <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
+                      {link.name}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Compact Links */}
+            <div className="p-6 border-b border-cyan-500/30">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
+                <Rocket className="w-5 h-5 text-cyan-400" />
+                <span>Quick Access</span>
+              </h3>
+              <div className="mt-6 space-y-2">
+                <a href="/services" className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10">All Services</a>
+                <a href="/pricing" className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10">Pricing</a>
+                <a href="/market-pricing" className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10">Market Pricing</a>
+                <a href="/services-advertising" className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10">Services Advertising</a>
+                <a href="/events" className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10">Events</a>
+                <a href="/webinars" className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10">Webinars</a>
+                <a href="/contact" className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10">Contact</a>
+                <a href="/rag-evaluation-lab" className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10">RAG Evaluation Lab</a>
+                <a href="/soc2-compliance-automation" className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10">SOC 2 Compliance Automation</a>
+                <a href="/browser-automation-cloud" className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10">Browser Automation Cloud</a>
+                <a href="/secrets-rotation-automation" className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10">Secrets Rotation Automation</a>
+                <a href="/api-performance-testing" className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10">API Performance Testing</a>
+              </div>
+            </div>
+
+            {/* Service Categories */}
+            <div className="p-6 border-b border-cyan-500/30">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
+                <Rocket className="w-5 h-5 text-cyan-400" />
+                <span>Service Categories</span>
+              </h3>
+              <div className="space-y-2">
+                {sidebarSections.map((section) => (
+                  <div key={section.title}>
+                    <button
+                      onClick={() => toggleCategory(section.title)}
+                      className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
+                    >
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>
+                          {section.icon}
+                        </div>
+                        <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
+                          {section.title}
+                        </span>
+                      </div>
+                      <ChevronRight 
+                        className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+                          expandedCategory === section.title ? 'rotate-90' : ''
+                        }`} 
+                      />
+                    </button>
+                    
+                    <AnimatePresence>
+                      {expandedCategory === section.title && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="ml-8 mt-2 space-y-1"
                         >
                           <div className="flex items-center gap-3">
                             <item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />

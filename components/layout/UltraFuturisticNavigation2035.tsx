@@ -40,15 +40,14 @@ const navigationItems: NavigationItem[] = [
       { name: 'Blog', href: '/blog', description: 'Insights and updates' },
       { name: 'Case Studies', href: '/case-studies', description: 'Proven results' },
       { name: 'Developer', href: '/developer', description: 'Docs and SDKs' },
-<<<<<<< HEAD
-      { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' }
 =======
+      { name: 'Events', href: '/events', description: 'Upcoming conferences and meetups' },
+      { name: 'Webinars', href: '/webinars', description: 'Live and on-demand sessions' },
       { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' },
       { name: 'AI Knowledge Graph Studio', href: '/services/ai-knowledge-graph-studio', description: 'Semantic search & lineage' },
       { name: 'LLM Guarded API Gateway', href: '/services/llm-guarded-api-gateway', description: 'Safety and policies for LLM apps' },
       { name: 'Events', href: '/events', description: 'Upcoming events' },
       { name: 'Webinars', href: '/webinars', description: 'Live and on-demand' }
->>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
     ]
   },
   {
@@ -57,65 +56,6 @@ const navigationItems: NavigationItem[] = [
     icon: <Phone className="w-5 h-5" />,
     description: 'Talk to our team',
     featured: true,
-<<<<<<< HEAD
-    children: [
-      { name: 'Contact Sales', href: '/contact', description: 'Get a quote' },
-      { name: 'Support', href: '/support', description: 'Help center' }
-    ]
-  },
-  {
-    name: 'Services',
-    href: '/services',
-    icon: <Grid className="w-5 h-5" />,
-    description: 'Browse by category',
-    badge: 'New',
-    children: [
-      { name: 'AI & Data', href: '/services#ai-consciousness', description: 'AI, data, ML services' },
-      { name: 'Cloud & FinOps', href: '/services#enterprise-it', description: 'Cloud, cost, platform' },
-      { name: 'Observability', href: '/services#enterprise-it', description: 'Monitoring & telemetry' },
-      { name: 'Developer Tools', href: '/services#enterprise-it', description: 'Developer productivity' },
-      { name: 'Training & Education', href: '/training', description: 'Learning and R&D' },
-      { name: 'SEO Automation Suite', href: '/seo-automation-suite', description: 'Technical SEO automation' },
-      { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent', description: 'Agentless discovery' },
-      { name: 'Managed Postgres HA', href: '/managed-postgres-ha', description: 'HA Postgres ops' },
-      { name: 'Micro SAAS', href: '/micro-saas', description: 'Business tools and automation' }
-    ]
-  },
-  {
-    name: 'All Services',
-    href: '/comprehensive-services-showcase-2025',
-    icon: <Globe className="w-5 h-5" />,
-    description: 'Complete portfolio of all technology services',
-    badge: 'Showcase',
-    featured: true,
-    children: [
-      { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
-      { name: 'Ultimate 2035 Futuristic', href: '/ultimate-2035-futuristic-services-showcase', description: 'Revolutionary future technology', featured: true },
-      { name: 'Ultimate 2025 Micro SAAS', href: '/ultimate-2025-micro-saas-showcase', description: 'Latest innovative services', featured: true },
-      { name: 'Service Categories', href: '/comprehensive-services-showcase-2025', description: 'Browse by category' },
-      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025', description: 'Compare service costs' },
-      { name: 'Service Search', href: '/comprehensive-services-showcase-2025', description: 'Find specific services' },
-      { name: 'Market Pricing', href: '/market-pricing', description: 'Average market prices & references' },
-      { name: 'Latest Innovations', href: '/revolutionary-2025-services-showcase', description: 'Cutting-edge solutions' },
-      { name: '2026 Services', href: '/revolutionary-2026-services', description: 'Next generation solutions' },
-      { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },
-      { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' },
-      { name: 'Enterprise Solutions', href: '/enterprise-solutions-showcase', description: 'Enterprise-grade solutions' },
-      { name: 'Innovative Business Solutions', href: '/innovative-business-solutions', description: 'Business transformation services' },
-      { name: 'AI Sales Copilot', href: '/ai-sales-copilot', description: 'Prospecting, outreach, scoring' },
-      { name: 'AI Autonomous Marketing', href: '/ai-autonomous-marketing-platform', description: 'Always-on marketing automation' },
-      { name: 'AI Customer Service', href: '/ai-customer-service', description: 'Omnichannel AI support' }
-    ]
-  },
-  {
-    name: 'AI & Consciousness',
-    href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
-    description: 'Revolutionary AI consciousness and emotional intelligence',
-    badge: 'New',
-    color: 'from-purple-500 to-pink-500',
-=======
->>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
     children: [
       { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform', description: 'Predict and prevent churn with AI', featured: true },
       { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', description: 'Supercharge sales with AI automation' },
