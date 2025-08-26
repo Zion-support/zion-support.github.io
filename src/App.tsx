@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
@@ -130,107 +130,9 @@ const Team = React.lazy(() => import('./pages/Team'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 
-const baseRoutes = [
-  { path: '/', element: <Home /> },
-  { path: '/about', element: <About /> },
-  { path: '/team', element: <Team /> },
-  { path: '/careers', element: <Careers /> },
-  { path: '/pricing', element: <Pricing /> },
-  { path: '/case-studies', element: <CaseStudies /> },
-  { path: '/white-papers', element: <WhitePapers /> },
-  { path: '/privacy', element: <Privacy /> },
-  { path: '/terms', element: <Terms /> },
-  
-  // Additional missing pages
-  { path: '/partners', element: <Partners /> },
-  { path: '/docs', element: <Documentation /> },
-  { path: '/cookies', element: <Cookies /> },
-  { path: '/sitemap', element: <Sitemap /> },
-  { path: '/help', element: <HelpCenter /> },
-  { path: '/training', element: <Training /> },
-  { path: '/webinars', element: <Webinars /> },
-  { path: '/events', element: <Events /> },
-  { path: '/support', element: <Support /> },
-  { path: '/faq', element: <FAQ /> },
-  { path: '/green-it', element: <GreenIT /> },
-  { path: '/financial-solutions', element: <FinancialSolutions /> },
-  { path: '/mobile', element: <Mobile /> },
-  { path: '/quantum-technology', element: <QuantumTechnology /> },
-  { path: '/space-tech', element: <SpaceTech /> },
-  
-  // New routes from incoming branch
-  { path: '/services', element: <Services /> },
-  { path: '/ai-solutions', element: <AISolutions /> },
-  { path: '/services-showcase', element: <ServicesShowcase /> },
-  { path: '/innovative-services-showcase', element: <InnovativeServicesShowcase /> },
-  { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
-  { path: '/pricing', element: <PricingPage /> },
-  { path: '/emerging-tech', element: <EmergingTech /> },
-  
-  // Revolutionary Services 2025 (maps to EnhancedServicesPage)
-  { path: '/revolutionary-services-2025', element: <EnhancedServicesPage /> },
-  
-  // 2027 Innovation Routes
-  { path: '/cutting-edge-innovations-2027', element: <CuttingEdgeInnovations2027 /> },
-  { path: '/practical-micro-saas-2027', element: <PracticalMicroSaas2027 /> },
-  { path: '/all-services-2027', element: <AllServices2027 /> },
-  
-  // New missing page routes
-  { path: '/quantum-neural-network-platform', element: <QuantumNeuralNetworkPlatform /> },
-  { path: '/autonomous-business-operations-platform', element: <AutonomousBusinessOperationsPlatform /> },
-  { path: '/ai-powered-it-asset-management', element: <AIPoweredITAssetManagement /> },
-  { path: '/soc2-compliance-automation', element: <SOC2ComplianceAutomation /> },
-  { path: '/ai-autonomous-research-assistant', element: <AIAutonomousResearchAssistant /> },
-  { path: '/5g-enterprise-solutions', element: <FiveGEnterpriseSolutions /> },
-  
-  // Service routes
-  { path: '/services/ai', element: <AIServices /> },
-  { path: '/services/cloud', element: <CloudServices /> },
-  { path: '/services/cybersecurity', element: <CybersecurityServices /> },
-  { path: '/services/infrastructure', element: <InfrastructureServices /> },
-  { path: '/services/transformation', element: <DigitalTransformation /> },
-  { path: '/services/consulting', element: <ConsultingServices /> },
-  { path: '/services/quantum-ai', element: <QuantumAIServices /> },
-  
-  // Additional service routes
-  { path: '/innovative-services-2025', element: <InnovativeServices2025 /> },
-  { path: '/advanced-services-2025', element: <AdvancedServices2025 /> },
-  { path: '/advanced-services-showcase-2025', element: <AdvancedServicesShowcase2025 /> },
-  { path: '/comprehensive-pricing-2025', element: <ComprehensivePricing2025 /> },
-  { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
-  { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
-  { path: '/services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
-  
-  // Ultimate Innovative Services 2026
-  { path: '/ultimate-services-showcase-2026', element: <UltimateServicesShowcase2026 /> },
-  { path: '/ultimate-services-2026', element: <UltimateServicesShowcase2026 /> },
-  { path: '/comprehensive-pricing-2026', element: <ComprehensivePricing2026 /> },
-  { path: '/pricing-2026', element: <ComprehensivePricing2026 /> },
-  
-  // Other routes
-  { path: '/match', element: <AIMatcherPage /> },
-  { path: '/login', element: <Login /> },
-  { path: '/signup', element: <Signup /> },
-  { path: '/talent', element: <TalentDirectory /> },
-  { path: '/talents', element: <TalentsPage /> },
-  { path: '/services', element: <ServicesPage /> },
-  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
-  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
-  { path: '/categories', element: <Categories /> },
-  { path: '/equipment', element: <EquipmentPage /> },
-  { path: '/equipment/:id', element: <EquipmentDetail /> },
-  { path: '/analytics', element: <Analytics /> },
-  { path: '/mobile-launch', element: <MobileLaunchPage /> },
-  { path: '/open-app', element: <OpenAppRedirect /> },
-  { path: '/community', element: <CommunityPage /> },
-  { path: '/contact', element: <ContactPage /> },
-  { path: '/partners', element: <PartnersPage /> },
-  { path: '/zion-hire-ai', element: <ZionHireAI /> },
-  { path: '/hire-ai', element: <ZionHireAI /> },
-  { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/blog', element: <Blog /> },
-  { path: '/blog/:slug', element: <BlogPost /> },
-];
+// Zion 2026 pages (lazy)
+const Zion2026ServicesShowcase = lazy(() => import('./pages/Zion2026ServicesShowcase'));
+const Zion2026Pricing = lazy(() => import('./pages/Zion2026Pricing'));
 
 // Enhanced loading component with skeleton
 const LoadingFallback = () => (
@@ -250,7 +152,7 @@ function App() {
         <AppHeader />
         
         <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingFallback />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -264,6 +166,35 @@ function App() {
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/mobile" element={<Mobile />} />
+
+              {/* Zion 2026 Services */}
+              <Route path="/zion-2026-services" element={<Zion2026ServicesShowcase />} />
+              <Route path="/zion-2026-pricing" element={<Zion2026Pricing />} />
+
+              {/* Content Pages */}
+              <Route path="/events" element={<Events />} />
+              <Route path="/tutorials" element={<Tutorials />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/documentation" element={<Documentation />} />
+              <Route path="/api" element={<API />} />
+              <Route path="/developer" element={<Developer />} />
+
+              {/* Enterprise & Business Pages */}
+              <Route path="/enterprise" element={<Enterprise />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/community" element={<Community />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+
+              {/* Talent & HR Pages */}
+              <Route path="/talent" element={<Talent />} />
+              <Route path="/talents" element={<Talents />} />
+              <Route path="/talent-directory" element={<TalentDirectory />} />
+
+              {/* Auth Pages */}
               <Route path="/login" element={<Login />} />
             </Routes>
           </Suspense>
