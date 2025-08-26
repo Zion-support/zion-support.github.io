@@ -32,84 +32,6 @@ import {
   Youtube, 
   Facebook, 
   Instagram,
-  Globe,
-  Shield,
-  Brain,
-  Cpu,
-  Rocket,
-  Building,
-  Users,
-  Target,
-  Zap,
-  Database,
-  Network
-} from 'lucide-react';
-
-export function Footer() {
-  const currentYear = new Date().getFullYear();
-
-      title: "AI & Technology Services",
-      icon: Brain,
-      links: [
-        { label: "AI Content Hub Pro", path: "/services/ai-content-hub-pro" },
-        { label: "AI Customer Service Automation", path: "/services/ai-customer-service-automation" },
-        { label: "AI Sales Intelligence Platform", path: "/services/ai-sales-intelligence-platform" },
-        { label: "AI Fintech Platform", path: "/services/ai-fintech-platform" },
-        { label: "AI Healthcare Technology", path: "/services/ai-healthcare-tech-platform" },
-        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
-        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
-        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
-        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "Machine Learning Solutions", path: "/services/ai-machine-learning" },
-        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" }
-      ]
-    },
-    {
-      title: 'Services',
-      links: [
-        { label: "Cloud Cost Optimization", path: "/services/cloud-cost-optimization-finops" },
-        { label: "DevOps Automation Platform", path: "/services/devops-automation-cicd-platform" },
-        { label: "Data Analytics Platform", path: "/services/data-analytics-business-intelligence" },
-        { label: "IoT & Edge Computing", path: "/services/iot-edge-computing-platform" },
-        { label: "API Management Platform", path: "/services/api-management-integration-platform" },
-        { label: "Advanced Cybersecurity", path: "/services/advanced-cybersecurity-platform" },
-        { label: "5G Enterprise Networks", path: "/services/5g-enterprise-network-solutions" }
-      ]
-    },
-    {
-      title: "Industry Solutions",
-      icon: Building,
-      links: [
-        { label: "Enterprise Solutions", path: "/solutions/enterprise" },
-        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
-        { label: "Financial Solutions", path: "/solutions/financial" },
-        { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
-        { label: "Retail Solutions", path: "/solutions/retail" },
-        { label: "Government Solutions", path: "/solutions/government" },
-        { label: "AI Engineers", href: "/talent" },
-        { label: "Data Scientists", href: "/talent" },
-        { label: "DevOps Specialists", href: "/talent" },
-        { label: "Full-Stack Developers", href: "/talent" },
-        { label: "Equipment & Tools", href: "/equipment" },
-        { label: "Learning Resources", href: "/blog" },
-      ]
-    },
-    {
-      title: "Enterprise",
-      links: [
-        { label: "Custom Solutions", href: "/enterprise" },
-        { label: "White-Label Platform", href: "/enterprise" },
-        { label: "API Access", href: "/developers" },
-        { label: "Dedicated Support", href: "/enterprise" },
-        { label: "Security & Compliance", href: "/services" },
-        { label: "Migration Services", href: "/services" },
-      ]
-    },
-    {
-      title: "Company",
-=======
         { label: "Digital Transformation", path: "/digital-transformation" },
         { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" }
       ]
@@ -178,6 +100,45 @@ export function Footer() {
   const contactInfo = {
 =======
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">
+=======
+  Github,
+  ChevronUp,
+} from "lucide-react";
+import Link from "next/link"; // Changed from react-router-dom
+import { useTranslation } from "react-i18next";
+
+function resolveUrl(envVar: string | undefined, fallback: string) {
+  if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
+    return fallback;
+  }
+  return envVar;
+}
+
+const TWITTER_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
+  "https://twitter.com/ZionTechGroup"
+);
+const LINKEDIN_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL,
+  "https://linkedin.com/company/ziontechgroup"
+);
+const FACEBOOK_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL,
+  "https://facebook.com/ZionTechGroup"
+);
+const INSTAGRAM_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL,
+  "https://instagram.com/ZionTechGroup"
+);
+const GITHUB_URL = resolveUrl(
+  process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL,
+  "https://github.com/ZionTechGroup"
+);
+
+export function Footer() {
+  const { t } = useTranslation();
+  return (
+    <footer className="bg-card border-t border-primary/20 pt-12 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8 relative overflow-hidden">
@@ -1479,14 +1440,6 @@ function Footer() {
           </div>
         </div>
 
-          <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Support & Resources</h3>
-            <ul className="space-y-2">
-              <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
-              <li><Link to="/developers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Developer Portal</Link></li>
-              <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Zion Hire AI</Link></li>
-              <li><Link to="/mobile-launch" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Mobile App</Link></li>
-=======
           {/* Services */}
           <div>
             <h3 className="text-white font-semibold mb-6 text-lg flex items-center">
@@ -1603,6 +1556,17 @@ function Footer() {
               </li>
             </ul>
           </div>
+=======
+        <div className="mt-8 flex justify-end">
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors"
+            aria-label={t('general.back_to_top')}
+          >
+            <ChevronUp className="h-4 w-4" aria-hidden="true" />
+            <span>{t('general.back_to_top')}</span>
+          </button>
         </div>
 
         {/* Newsletter Section */}

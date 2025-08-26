@@ -57,15 +57,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       i18n.changeLanguage(savedLang);
       setCurrentLanguage(savedLang);
     } else {
-      fetch('/api/detect-language')
-        .then(res => res.json())
-        .then(data => {
-          if (data.lang && supportedLanguages.some(l => l === data.lang.substring(0,2))) {
-            i18n.changeLanguage(data.lang.substring(0,2));
-            setCurrentLanguage(data.lang.substring(0,2) as SupportedLanguage);
-          }
-        })
-        .catch(() => {});
+      const detected = i18n.language.substring(0, 2) as SupportedLanguage;
+      if (supportedLanguages.some(l => l.code === detected)) {
+        setCookie('i18n_lang', detected, 365);
+        safeStorage.setItem('i18n_lang', detected);
+        setCurrentLanguage(detected);
+      }
     }
   }, []);
   

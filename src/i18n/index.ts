@@ -59,12 +59,14 @@ if (!i18n) {
     i18n.on('languageChanged', (lng) => {
       document.documentElement.dir = i18n.dir();
 
-  // Save language preference to cookie and localStorage
-  Cookies.set('zion_language', lng, { expires: 365 });
-  safeStorage.setItem('zion_language', lng);
-  
-  // If user is authenticated, save language preference to profile
-  // This will be implemented in the LanguageContext
-});
+      // Save language preference to cookie and localStorage
+      setCookie('i18n_lang', lng, 365);
+      safeStorage.setItem('i18n_lang', lng);
+
+      // If user is authenticated, save language preference to profile
+      // This will be implemented in the LanguageContext
+    });
+  }
+}
 
 export default i18n;
