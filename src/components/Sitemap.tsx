@@ -37,6 +37,7 @@ const Sitemap: React.FC = () => {
     ],
     showcase: [
       { path: '/services-showcase', label: 'Services Showcase', description: 'Showcase of our services' },
+      { path: '/comprehensive-services-showcase', label: 'Comprehensive Services Showcase', description: 'Complete overview of all services' },
       { path: '/innovative-services-2025', label: 'Innovative Services 2025', description: 'Latest innovative services' }
     ],
     legal: [

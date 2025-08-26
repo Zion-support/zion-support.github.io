@@ -117,6 +117,9 @@ import AIConsumerWillingnessToUse from './pages/AIConsumerWillingnessToUse';
 // Sitemap Component
 import Sitemap from './components/Sitemap';
 
+// Comprehensive Services Showcase
+import ComprehensiveServicesShowcase from './components/ComprehensiveServicesShowcase';
+
 function App() {
   return (
     <Router>
@@ -238,6 +241,9 @@ function App() {
             
             {/* Sitemap */}
             <Route path="/sitemap" element={<Sitemap />} />
+            
+            {/* Comprehensive Services Showcase */}
+            <Route path="/comprehensive-services-showcase" element={<ComprehensiveServicesShowcase />} />
             
             {/* Catch all route */}
             <Route path="*" element={<NotFound />} />

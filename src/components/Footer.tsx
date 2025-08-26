@@ -81,6 +81,7 @@ const Footer: React.FC = () => {
       title: 'Resources',
       links: [
         { name: 'Services Showcase', href: '/services-showcase' },
+        { name: 'Comprehensive Services Showcase', href: '/comprehensive-services-showcase' },
         { name: 'Innovative Services 2025', href: '/innovative-services-2025' },
         { name: 'Comprehensive Pricing', href: '/comprehensive-pricing' },
         { name: 'AI Consumer Research', href: '/ai-consumer-willingness-to-try' },

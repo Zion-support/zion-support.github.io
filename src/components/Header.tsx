@@ -115,7 +115,7 @@ const Header: React.FC = () => {
               <button
                 onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-300 flex items-center space-x-1 ${
-                  location.pathname.startsWith('/services') || location.pathname.startsWith('/ai-autonomous')
+                  location.pathname.startsWith('/services') || location.pathname.startsWith('/ai-autonomous') || location.pathname.startsWith('/comprehensive-services-showcase')
                     ? 'text-blue-400'
                     : 'text-gray-300 hover:text-white'
                 }`}
@@ -126,7 +126,7 @@ const Header: React.FC = () => {
                 <svg className={`w-4 h-4 transition-transform duration-200 ${isServicesDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-                {(location.pathname.startsWith('/services') || location.pathname.startsWith('/ai-autonomous')) && (
+                {(location.pathname.startsWith('/services') || location.pathname.startsWith('/ai-autonomous') || location.pathname.startsWith('/comprehensive-services-showcase')) && (
                   <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-blue-400 to-cyan-400" />
                 )}
               </button>
@@ -174,6 +174,18 @@ const Header: React.FC = () => {
                           onClick={() => setIsServicesDropdownOpen(false)}
                         >
                           View All Services →
+                        </Link>
+                      </div>
+
+                      {/* Comprehensive Services Showcase */}
+                      <div className="border-t border-gray-700 pt-3">
+                        <Link
+                          to="/comprehensive-services-showcase"
+                          className="block p-3 rounded-lg bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 hover:from-blue-600/30 hover:to-cyan-600/30 transition-all duration-200"
+                          onClick={() => setIsServicesDropdownOpen(false)}
+                        >
+                          <div className="font-medium text-white">🚀 Comprehensive Services Showcase</div>
+                          <div className="text-sm text-blue-300">View all our services in one place</div>
                         </Link>
                       </div>
                     </div>
@@ -311,6 +323,12 @@ const Header: React.FC = () => {
                 className="block px-6 py-2 text-base font-medium text-blue-400 hover:text-blue-300 transition-colors duration-200"
               >
                 View All Services
+              </Link>
+              <Link
+                to="/comprehensive-services-showcase"
+                className="block px-6 py-2 text-base font-medium text-blue-400 hover:text-blue-300 transition-colors duration-200 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-md"
+              >
+                🚀 Comprehensive Services Showcase
               </Link>
             </div>
 
