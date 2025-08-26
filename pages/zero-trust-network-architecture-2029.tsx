@@ -7,12 +7,8 @@ import {
   Zap, Sparkles, Lock, Cpu, Database, Cloud, Users, 
   Briefcase, BookOpen, MessageCircle, TrendingUp,
   Target, Layers, Globe, Brain, Atom, Building, Network,
-  Eye, Key, Server, LockKeyhole, Fingerprint, ShieldCheck
-  Brain, Atom, Rocket, Sparkles, Star, CheckCircle, 
-  ArrowRight, Phone, Mail, MapPin, Globe, Shield,
-  Users, TrendingUp, Target, Zap, Eye, Cpu, 
-  Database, Lock, Cloud, BarChart3, Settings,
-  BookOpen, GraduationCap, Award, DollarSign
+  Eye, Key, Server, LockKeyhole, Fingerprint, ShieldCheck,
+  Rocket, BarChart3, Settings, GraduationCap, Award, DollarSign
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
@@ -107,6 +103,9 @@ const pricingPlans = [
     ],
     popular: false
   }
+];
+
+const technology = [
   'Advanced Neural Networks',
   'Quantum Computing',
   'Consciousness Theory',
