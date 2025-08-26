@@ -50,8 +50,17 @@ const specialServices = [
     link: "/it-onsite-services"
   },
   {
+<<<<<<< HEAD
     title: "View All Services",
     link: "/comprehensive-services"
+=======
+    title: "Advanced AI & IT Services",
+    link: "/advanced-services"
+  },
+  {
+    title: "Services Comparison",
+    link: "/services-comparison"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e41a
   }
 ];
 
