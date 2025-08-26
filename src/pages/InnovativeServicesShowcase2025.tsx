@@ -1,477 +1,701 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
+  Cloud, 
   Shield, 
-  Globe, 
   Database, 
-  Cpu, 
-  Zap, 
-  Rocket, 
-  Eye, 
   Network, 
-  Atom,
-  Search,
-  Filter,
-  Star,
-  Users,
-  TrendingUp,
-  Award,
-  CheckCircle,
+  Code, 
+  BarChart3, 
+  Target, 
+  Lightbulb, 
+  Rocket, 
+  Zap, 
+  Globe, 
+  Lock, 
+  Cpu, 
+  Sparkles,
+  ShieldCheck,
+  Globe2,
   ArrowRight,
+  CheckCircle,
+  Star,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  ExternalLink
 } from 'lucide-react';
-import { cuttingEdgeInnovativeServices } from '../../data/2025-cutting-edge-innovative-services-expansion';
-import { specializedEnterpriseSolutions } from '../../data/2025-specialized-enterprise-solutions';
-
-interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string;
-  period: string;
-  features: string[];
-  category: string;
-  marketSize: string;
-  targetAudience: string;
-  competitiveAdvantage: string;
-  useCases: string[];
-  integrations: string[];
-  compliance: string[];
-  website: string;
-  contact: {
-    phone: string;
-    email: string;
-    address: string;
-  };
-  trialDays: number;
-  setupTime: string;
-  competitors: string[];
-  roi: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  technology: string[];
-  industryFocus: string[];
-}
+import SEOHead from '../components/SEOHead';
 
 const InnovativeServicesShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedTechnology, setSelectedTechnology] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [sortBy, setSortBy] = useState<string>('rating');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedService, setSelectedService] = useState<string | null>(null);
 
-  // Combine all services
-  const allServices: Service[] = [
-    ...cuttingEdgeInnovativeServices,
-    ...specializedEnterpriseSolutions
+  const serviceCategories = [
+    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-600 to-pink-600' },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, color: 'from-blue-600 to-cyan-600' },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-600 to-pink-600' },
+    { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, color: 'from-indigo-600 to-purple-600' },
+    { id: 'quantum', name: 'Quantum Technology', icon: Globe2, color: 'from-violet-600 to-purple-600' },
+    { id: 'healthcare', name: 'Healthcare Tech', icon: Target, color: 'from-green-600 to-emerald-600' },
+    { id: 'fintech', name: 'Financial Technology', icon: BarChart3, color: 'from-yellow-600 to-orange-600' },
+    { id: 'legal-tech', name: 'Legal Technology', icon: Lock, color: 'from-purple-600 to-indigo-600' },
+    { id: 'edge-computing', name: 'Edge Computing', icon: Cpu, color: 'from-cyan-600 to-blue-600' },
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: Network, color: 'from-orange-600 to-red-600' }
   ];
 
-  // Get unique categories and technologies
-  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
-  const technologies = ['all', ...Array.from(new Set(allServices.flatMap(s => s.technology)))];
+  const innovativeServices = [
+    // AI & Machine Learning Services
+    {
+      id: 'ai-legal-document-analyzer',
+      name: 'AI Legal Document Analyzer',
+      tagline: 'Intelligent legal document review and analysis with AI-powered insights',
+      price: '$299',
+      period: '/month',
+      description: 'Advanced AI platform that analyzes legal documents, contracts, and agreements to identify risks, opportunities, and compliance issues.',
+      features: [
+        'AI-powered contract analysis with 95% accuracy',
+        'Risk assessment and compliance checking',
+        'Automated legal document summarization',
+        'Contract clause comparison and benchmarking',
+        'Legal precedent research and citation'
+      ],
+      category: 'ai-ml',
+      icon: '⚖️',
+      color: 'from-purple-600 to-indigo-600',
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-legal-analyzer',
+      marketPosition: 'Competes with DocuSign ($25/user/month), ContractPodAi ($50/user/month)',
+      targetAudience: 'Law firms, Legal departments, Contract managers, Compliance officers',
+      roi: '500% ROI through reduced review time and improved accuracy',
+      competitors: ['DocuSign', 'ContractPodAi', 'Kira Systems', 'eBrevia'],
+      marketSize: '$2.8B legal tech market',
+      growthRate: '28% annual growth'
+    },
+    {
+      id: 'ai-healthcare-diagnostics',
+      name: 'AI Healthcare Diagnostics Platform',
+      tagline: 'Advanced medical imaging analysis and diagnostic support',
+      price: '$899',
+      period: '/month',
+      description: 'Comprehensive AI platform for medical imaging analysis, diagnostic support, and patient care optimization.',
+      features: [
+        'AI-powered medical image analysis (95%+ accuracy)',
+        'Support for X-ray, MRI, CT, ultrasound, and pathology images',
+        'Automated abnormality detection and classification',
+        'Diagnostic report generation and recommendations',
+        'Patient history integration and trend analysis'
+      ],
+      category: 'healthcare',
+      icon: '🏥',
+      color: 'from-blue-600 to-cyan-600',
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
+      marketPosition: 'Competes with Aidoc ($500/study), Arterys ($200/study)',
+      targetAudience: 'Hospitals, Imaging centers, Radiology practices, Healthcare systems',
+      roi: '400% ROI through improved diagnostic accuracy and efficiency',
+      competitors: ['Aidoc', 'Arterys', 'Zebra Medical Vision', 'Enlitic'],
+      marketSize: '$45B medical imaging market',
+      growthRate: '32% annual growth in AI segment'
+    },
+    {
+      id: 'ai-content-creation-studio',
+      name: 'AI Content Creation Studio',
+      tagline: 'Professional content creation powered by artificial intelligence',
+      price: '$399',
+      period: '/month',
+      description: 'Comprehensive AI-powered content creation platform that generates high-quality text, images, videos, and audio content.',
+      features: [
+        'AI-powered text, image, video, and audio generation',
+        'Brand voice training and consistency',
+        'Multi-format content creation (blog, social, video)',
+        'Advanced editing and customization tools',
+        'SEO optimization and keyword research'
+      ],
+      category: 'ai-ml',
+      icon: '🎨',
+      color: 'from-pink-600 to-rose-600',
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-content-studio',
+      marketPosition: 'Competes with Jasper ($39/month), Copy.ai ($36/month), Midjourney ($30/month)',
+      targetAudience: 'Marketing agencies, Content creators, E-commerce businesses, Social media managers',
+      roi: '300% ROI through improved content quality and reduced creation time',
+      competitors: ['Jasper', 'Copy.ai', 'Midjourney', 'DALL-E', 'Canva'],
+      marketSize: '$18B content creation market',
+      growthRate: '35% annual growth'
+    },
 
-  // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesTechnology = selectedTechnology === 'all' || 
-        service.technology.some(tech => tech === selectedTechnology);
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      
-      return matchesCategory && matchesTechnology && matchesSearch;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'rating':
-          return b.rating - a.rating;
-        case 'price':
-          return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
-        case 'customers':
-          return b.customers - a.customers;
-        case 'name':
-          return a.name.localeCompare(b.name);
-        default:
-          return 0;
-      }
-    });
+    // Cybersecurity Services
+    {
+      id: 'quantum-safe-cybersecurity',
+      name: 'Quantum-Safe Cybersecurity Platform',
+      tagline: 'Post-quantum cryptography for future-proof security',
+      price: '$1,299',
+      period: '/month',
+      description: 'Next-generation cybersecurity platform that implements post-quantum cryptography algorithms to protect against future quantum computing threats.',
+      features: [
+        'Post-quantum cryptography algorithms (NIST standards)',
+        'Quantum-resistant key management',
+        'Real-time threat detection and response',
+        'Zero-trust security architecture',
+        'Advanced encryption standards (AES-256, ChaCha20)'
+      ],
+      category: 'cybersecurity',
+      icon: '🔐',
+      color: 'from-green-600 to-emerald-600',
+      popular: false,
+      link: 'https://ziontechgroup.com/quantum-safe-cybersecurity',
+      marketPosition: 'Leading edge in quantum-safe security',
+      targetAudience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors',
+      roi: '300% ROI through reduced security risks and compliance benefits',
+      competitors: ['Traditional cybersecurity vendors', 'Quantum-safe startups'],
+      marketSize: '$150B cybersecurity market',
+      growthRate: '45% annual growth in quantum-safe segment'
+    },
+    {
+      id: 'ai-cybersecurity-soc',
+      name: 'AI Cybersecurity Operations Center',
+      tagline: 'Intelligent security operations with AI-powered threat detection',
+      price: '$1,899',
+      period: '/month',
+      description: 'Advanced cybersecurity operations center that uses AI and machine learning to detect, analyze, and respond to security threats in real-time.',
+      features: [
+        'AI-powered threat detection and analysis',
+        'Real-time security monitoring',
+        'Automated incident response',
+        'Threat intelligence and correlation',
+        'Vulnerability assessment and management'
+      ],
+      category: 'cybersecurity',
+      icon: '🛡️',
+      color: 'from-red-600 to-pink-600',
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-cybersecurity-soc',
+      marketPosition: 'Competes with Splunk ($150/GB/month), IBM QRadar ($1,000/month)',
+      targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations',
+      roi: '400% ROI through improved security posture and reduced incident response time',
+      competitors: ['Splunk', 'IBM QRadar', 'Exabeam', 'Rapid7'],
+      marketSize: '$45B cybersecurity market',
+      growthRate: '28% annual growth'
+    },
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI & Business Intelligence':
-        return <Brain className="w-6 h-6" />;
-      case 'Cybersecurity & Quantum Computing':
-        return <Shield className="w-6 h-6" />;
-      case 'Edge Computing & AI':
-        return <Cpu className="w-6 h-6" />;
-      case 'Blockchain & Supply Chain':
-        return <Database className="w-6 h-6" />;
-      case 'Healthcare & AI':
-        return <Eye className="w-6 h-6" />;
-      case 'Sustainability & Energy':
-        return <Zap className="w-6 h-6" />;
-      case 'Robotics & Automation':
-        return <Rocket className="w-6 h-6" />;
-      case 'Digital Twin & IoT':
-        return <Globe className="w-6 h-6" />;
-      case 'Quantum Computing & AI':
-        return <Atom className="w-6 h-6" />;
-      case 'Metaverse & Virtual Reality':
-        return <Eye className="w-6 h-6" />;
-      case 'Legal Technology & AI':
-        return <Shield className="w-6 h-6" />;
-      case 'Quantum Computing & Finance':
-        return <TrendingUp className="w-6 h-6" />;
-      case 'Space Technology & Aerospace':
-        return <Rocket className="w-6 h-6" />;
-      case 'Neuromorphic Computing & AI':
-        return <Brain className="w-6 h-6" />;
-      case 'Synthetic Biology & Biotechnology':
-        return <Atom className="w-6 h-6" />;
-      case 'Materials Science & AI':
-        return <Database className="w-6 h-6" />;
-      case 'Quantum Internet & Communication':
-        return <Network className="w-6 h-6" />;
-      default:
-        return <Star className="w-6 h-6" />;
+    // Cloud & Infrastructure Services
+    {
+      id: 'multi-cloud-orchestration',
+      name: 'Multi-Cloud Orchestration Platform',
+      tagline: 'Unified management across AWS, Azure, Google Cloud, and private clouds',
+      price: '$1,299',
+      period: '/month',
+      description: 'Enterprise-grade multi-cloud orchestration platform that provides unified management, monitoring, and optimization across multiple cloud providers.',
+      features: [
+        'Unified dashboard for multiple cloud providers',
+        'Intelligent workload placement optimization',
+        'Automated cost optimization and savings',
+        'Seamless cloud migration and portability',
+        'Multi-cloud security and compliance management'
+      ],
+      category: 'cloud-infrastructure',
+      icon: '☁️',
+      color: 'from-blue-600 to-cyan-600',
+      popular: true,
+      link: 'https://ziontechgroup.com/multi-cloud-orchestration',
+      marketPosition: 'Competes with HashiCorp ($0.50/hour), Terraform Cloud ($20/user/month)',
+      targetAudience: 'Enterprises, Cloud architects, DevOps teams, IT operations',
+      roi: '400% ROI through reduced cloud costs and improved efficiency',
+      competitors: ['HashiCorp', 'Terraform Cloud', 'CloudBolt', 'RightScale'],
+      marketSize: '$25B multi-cloud management market',
+      growthRate: '35% annual growth'
+    },
+    {
+      id: 'ai-devops-automation',
+      name: 'AI-Powered DevOps Automation Platform',
+      tagline: 'Intelligent automation for development and operations',
+      price: '$899',
+      period: '/month',
+      description: 'Comprehensive DevOps automation platform that uses AI and machine learning to optimize CI/CD pipelines, infrastructure management, and operational processes.',
+      features: [
+        'AI-powered CI/CD pipeline optimization',
+        'Intelligent infrastructure as code',
+        'Automated testing and quality assurance',
+        'Performance monitoring and optimization',
+        'Incident prediction and prevention'
+      ],
+      category: 'cloud-infrastructure',
+      icon: '⚡',
+      color: 'from-yellow-600 to-orange-600',
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-devops-automation',
+      marketPosition: 'Competes with GitLab ($99/user/month), GitHub Actions ($4/month), Jenkins (free)',
+      targetAudience: 'Development teams, DevOps engineers, IT operations, Software companies',
+      roi: '300% ROI through reduced deployment time and improved reliability',
+      competitors: ['GitLab', 'GitHub Actions', 'Jenkins', 'CircleCI', 'Travis CI'],
+      marketSize: '$8B DevOps market',
+      growthRate: '28% annual growth'
+    },
+
+    // Quantum Technology Services
+    {
+      id: 'quantum-machine-learning',
+      name: 'Quantum Machine Learning Platform',
+      tagline: 'Revolutionary machine learning powered by quantum computing',
+      price: '$2,999',
+      period: '/month',
+      description: 'Cutting-edge quantum machine learning platform that leverages quantum computing to solve complex optimization problems, accelerate AI training, and provide quantum advantage.',
+      features: [
+        'Quantum machine learning algorithms',
+        'Hybrid quantum-classical computing',
+        'Quantum optimization and sampling',
+        'Quantum neural networks',
+        'Integration with classical ML frameworks'
+      ],
+      category: 'quantum',
+      icon: '🔮',
+      color: 'from-violet-600 to-purple-600',
+      popular: false,
+      link: 'https://ziontechgroup.com/quantum-ml',
+      marketPosition: 'Leading edge in quantum machine learning',
+      targetAudience: 'Research institutions, Pharmaceutical companies, Financial services, Aerospace',
+      roi: '600% ROI through accelerated discoveries and breakthroughs',
+      competitors: ['IBM Quantum', 'Google Quantum', 'AWS Braket', 'Azure Quantum'],
+      marketSize: '$1.8B quantum computing market',
+      growthRate: '55% annual growth'
+    },
+    {
+      id: 'quantum-internet-infrastructure',
+      name: 'Quantum Internet Infrastructure Platform',
+      tagline: 'Next-generation quantum networking for ultra-secure communications',
+      price: '$3,999',
+      period: '/month',
+      description: 'Cutting-edge quantum internet infrastructure platform that enables ultra-secure quantum communications and networking.',
+      features: [
+        'Quantum key distribution (QKD)',
+        'Quantum repeater networks',
+        'Quantum network management',
+        'Quantum-safe communications',
+        'Integration with classical networks'
+      ],
+      category: 'quantum',
+      icon: '🌐🔮',
+      color: 'from-violet-600 to-purple-600',
+      popular: false,
+      link: 'https://ziontechgroup.com/quantum-internet',
+      marketPosition: 'Leading edge in quantum internet',
+      targetAudience: 'Government agencies, Defense contractors, Financial institutions, Research institutions',
+      roi: '800% ROI through enhanced security and capabilities',
+      competitors: ['Traditional networking vendors', 'Quantum networking startups'],
+      marketSize: '$1.2B quantum networking market',
+      growthRate: '70% annual growth'
+    },
+
+    // Financial Technology Services
+    {
+      id: 'ai-financial-risk-management',
+      name: 'AI Financial Risk Management Platform',
+      tagline: 'Intelligent risk assessment and portfolio optimization',
+      price: '$1,499',
+      period: '/month',
+      description: 'Advanced financial risk management platform that uses AI and machine learning to assess market risks, optimize portfolios, and provide real-time risk monitoring.',
+      features: [
+        'AI-powered risk assessment and modeling',
+        'Real-time portfolio risk monitoring',
+        'Stress testing and scenario analysis',
+        'Regulatory compliance (Basel III, Solvency II)',
+        'Multi-asset class support'
+      ],
+      category: 'fintech',
+      icon: '💰',
+      color: 'from-yellow-600 to-orange-600',
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-financial-risk',
+      marketPosition: 'Competes with RiskMetrics ($2,000/month), Bloomberg Risk ($1,500/month)',
+      targetAudience: 'Banks, Investment firms, Insurance companies, Asset managers, Hedge funds',
+      roi: '450% ROI through improved risk management and compliance',
+      competitors: ['RiskMetrics', 'Bloomberg Risk', 'MSCI', 'FactSet'],
+      marketSize: '$8.5B risk management market',
+      growthRate: '25% annual growth'
+    },
+
+    // Blockchain & Web3 Services
+    {
+      id: 'blockchain-supply-chain',
+      name: 'Blockchain Supply Chain Transparency Platform',
+      tagline: 'End-to-end supply chain visibility with blockchain technology',
+      price: '$599',
+      period: '/month',
+      description: 'Comprehensive supply chain transparency platform using blockchain technology to provide real-time tracking, verification, and compliance across the entire supply chain.',
+      features: [
+        'Blockchain-based supply chain tracking',
+        'Real-time product traceability',
+        'Smart contract automation for compliance',
+        'Supplier verification and certification',
+        'Product authenticity verification'
+      ],
+      category: 'blockchain',
+      icon: '🔗',
+      color: 'from-orange-600 to-red-600',
+      popular: false,
+      link: 'https://ziontechgroup.com/blockchain-supply-chain',
+      marketPosition: 'Competes with IBM Food Trust ($100/month), VeChain ($50/month)',
+      targetAudience: 'Manufacturers, Retailers, Logistics companies, Food producers, Pharmaceutical companies',
+      roi: '350% ROI through improved transparency and reduced fraud',
+      competitors: ['IBM Food Trust', 'VeChain', 'Provenance', 'Ambrosus'],
+      marketSize: '$3.2B blockchain supply chain market',
+      growthRate: '38% annual growth'
+    },
+
+    // Edge Computing Services
+    {
+      id: 'edge-ai-computing',
+      name: 'Edge AI Computing Platform',
+      tagline: 'Distributed AI processing at the edge for real-time intelligence',
+      price: '$799',
+      period: '/month',
+      description: 'Revolutionary edge AI computing platform that brings artificial intelligence processing to the edge of networks, enabling real-time decision making and reduced latency.',
+      features: [
+        'Distributed AI processing at network edge',
+        'Real-time inference and decision making',
+        'Low-latency AI model deployment',
+        'Edge device management and monitoring',
+        'Federated learning capabilities'
+      ],
+      category: 'edge-computing',
+      icon: '🌐',
+      color: 'from-indigo-600 to-purple-600',
+      popular: false,
+      link: 'https://ziontechgroup.com/edge-ai-computing',
+      marketPosition: 'Leading edge in distributed AI computing',
+      targetAudience: 'IoT companies, Autonomous vehicle manufacturers, Smart city developers, Industrial automation',
+      roi: '400% ROI through improved real-time capabilities and reduced latency',
+      competitors: ['Traditional cloud AI platforms', 'Edge computing startups'],
+      marketSize: '$12B edge AI market',
+      growthRate: '42% annual growth'
+    },
+
+    // Advanced Computing Services
+    {
+      id: 'neuromorphic-computing',
+      name: 'Neuromorphic Computing Platform',
+      tagline: 'Brain-inspired computing for ultra-efficient AI processing',
+      price: '$3,999',
+      period: '/month',
+      description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing.',
+      features: [
+        'Neuromorphic computing architecture',
+        'Spiking neural networks',
+        'Ultra-low power consumption',
+        'Real-time learning and adaptation',
+        'Custom neuromorphic chip design'
+      ],
+      category: 'ai-ml',
+      icon: '🧠',
+      color: 'from-cyan-600 to-blue-600',
+      popular: false,
+      link: 'https://ziontechgroup.com/neuromorphic-computing',
+      marketPosition: 'Leading edge in neuromorphic computing',
+      targetAudience: 'Research institutions, AI companies, Semiconductor manufacturers, Government agencies',
+      roi: '800% ROI through breakthrough discoveries and energy savings',
+      competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SynSense'],
+      marketSize: '$2.1B neuromorphic computing market',
+      growthRate: '65% annual growth'
     }
-  };
+  ];
 
-  const getCategoryColor = (category: string) => {
-    const colors = {
-      'AI & Business Intelligence': 'from-blue-500 to-cyan-500',
-      'Cybersecurity & Quantum Computing': 'from-red-500 to-pink-500',
-      'Edge Computing & AI': 'from-green-500 to-emerald-500',
-      'Blockchain & Supply Chain': 'from-purple-500 to-indigo-500',
-      'Healthcare & AI': 'from-teal-500 to-cyan-500',
-      'Sustainability & Energy': 'from-yellow-500 to-orange-500',
-      'Robotics & Automation': 'from-gray-500 to-slate-500',
-      'Digital Twin & IoT': 'from-indigo-500 to-purple-500',
-      'Quantum Computing & AI': 'from-violet-500 to-purple-500',
-      'Metaverse & Virtual Reality': 'from-pink-500 to-rose-500',
-      'Legal Technology & AI': 'from-amber-500 to-yellow-500',
-      'Quantum Computing & Finance': 'from-emerald-500 to-green-500',
-      'Space Technology & Aerospace': 'from-sky-500 to-blue-500',
-      'Neuromorphic Computing & AI': 'from-rose-500 to-pink-500',
-      'Synthetic Biology & Biotechnology': 'from-lime-500 to-green-500',
-      'Materials Science & AI': 'from-orange-500 to-red-500',
-      'Quantum Internet & Communication': 'from-cyan-500 to-blue-500'
-    };
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-slate-500';
-  };
+  const filteredServices = selectedCategory === 'all' 
+    ? innovativeServices 
+    : innovativeServices.filter(service => service.category === selectedCategory);
+
+  const selectedServiceData = selectedService 
+    ? innovativeServices.find(service => service.id === selectedService)
+    : null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOHead 
+        config={{
+          title: "Innovative Services Showcase 2025 | Zion Tech Group",
+          description: "Discover our cutting-edge micro SAAS services, IT solutions, and AI platforms. From quantum computing to AI-powered healthcare diagnostics.",
+          keywords: "AI services, micro SAAS, IT solutions, quantum computing, cybersecurity, healthcare AI, blockchain, edge computing"
+        }}
+      />
+
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Innovative Services
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Innovative Services Showcase
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                2025
               </span>
-              <br />
-              <span className="text-white">Showcase 2025</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover cutting-edge micro SAAS services, IT solutions, and AI innovations that are transforming industries worldwide. 
-              From quantum computing to synthetic biology, we're pushing the boundaries of what's possible.
+              Discover our cutting-edge micro SAAS services, IT solutions, and AI platforms that are transforming industries and driving innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>20+ Revolutionary Services</span>
+              <span className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                Real, Market-Ready Solutions
+              </span>
+              <span className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                Competitive Pricing
+              </span>
+              <span className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                Expert Support
+              </span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information Banner */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-8 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
+            <div className="flex flex-col items-center gap-2">
+              <Phone className="w-6 h-6" />
+              <span className="font-semibold">+1 302 464 0950</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <Mail className="w-6 h-6" />
+              <span className="font-semibold">kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <MapPin className="w-6 h-6" />
+              <span className="font-semibold">364 E Main St STE 1008 Middletown DE 19709</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Category Filter */}
+      <section className="py-12 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            {serviceCategories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                <category.icon className="w-5 h-5" />
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-12 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
+                onClick={() => setSelectedService(service.id)}
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <span className="text-4xl">{service.icon}</span>
+                  {service.popular && (
+                    <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-xs px-2 py-1 rounded-full font-medium">
+                      Popular
+                    </span>
+                  )}
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
+                
+                <div className="mb-4">
+                  <span className="text-2xl font-bold text-white">{service.price}</span>
+                  <span className="text-gray-400">{service.period}</span>
+                </div>
+                
+                <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
+                
+                <div className="space-y-2 mb-4">
+                  {service.features.slice(0, 3).map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2 text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-400 bg-white/10 px-2 py-1 rounded">
+                    {service.category.replace('-', ' ').toUpperCase()}
+                  </span>
+                  <button className="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                    Learn More →
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Detail Modal */}
+      {selectedServiceData && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+          >
+            <div className="p-8">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center gap-4">
+                  <span className="text-6xl">{selectedServiceData.icon}</span>
+                  <div>
+                    <h2 className="text-3xl font-bold text-white">{selectedServiceData.name}</h2>
+                    <p className="text-xl text-gray-300">{selectedServiceData.tagline}</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setSelectedService(null)}
+                  className="text-gray-400 hover:text-white text-2xl"
+                >
+                  ×
+                </button>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>Cutting-Edge Technology</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>Proven ROI Results</span>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">Service Overview</h3>
+                  <p className="text-gray-300 mb-6">{selectedServiceData.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                    <div className="space-y-2">
+                      {selectedServiceData.features.map((feature, index) => (
+                        <div key={index} className="flex items-center gap-2 text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Target Audience</h4>
+                    <p className="text-gray-300">{selectedServiceData.targetAudience}</p>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="bg-white/10 rounded-xl p-6 mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-4">Pricing & Market</h4>
+                    <div className="space-y-3">
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Price:</span>
+                        <span className="text-white font-semibold">{selectedServiceData.price}{selectedServiceData.period}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">ROI:</span>
+                        <span className="text-green-400 font-semibold">{selectedServiceData.roi}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Market Size:</span>
+                        <span className="text-white font-semibold">{selectedServiceData.marketSize}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Growth Rate:</span>
+                        <span className="text-blue-400 font-semibold">{selectedServiceData.growthRate}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/10 rounded-xl p-6 mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-4">Competitive Analysis</h4>
+                    <p className="text-gray-300 mb-3">{selectedServiceData.marketPosition}</p>
+                    <div>
+                      <span className="text-gray-400 text-sm">Competitors:</span>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        {selectedServiceData.competitors.map((competitor, index) => (
+                          <span key={index} className="bg-red-500/20 text-red-300 text-xs px-2 py-1 rounded">
+                            {competitor}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <a
+                      href={selectedServiceData.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Visit Service
+                    </a>
+                    <a
+                      href="mailto:kleber@ziontechgroup.com?subject=Inquiry about service"
+                      className="flex-1 bg-white/10 text-white py-3 px-6 rounded-xl font-semibold text-center hover:bg-white/20 transition-all duration-300"
+                    >
+                      Contact Us
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
         </div>
-      </div>
+      )}
 
-      {/* Contact Banner */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between text-white">
-            <div className="text-center md:text-left mb-4 md:mb-0">
-              <h3 className="text-2xl font-bold mb-2">Ready to Transform Your Business?</h3>
-              <p className="text-blue-100">Get expert consultation and start your digital transformation journey today</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
+      {/* Call to Action */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+13024640950"
-                className="flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                +1 302 464 0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="flex items-center gap-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                href="mailto:kleber@ziontechgroup.com?subject=Service consultation request"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Mail className="w-5 h-5" />
-                Get Quote
+                Get Free Consultation
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="bg-white/10 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
-
-      {/* Filters and Search */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            {/* Search */}
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            {/* Category Filter */}
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {categories.map(category => (
-                <option key={category} value={category} className="bg-slate-800 text-white">
-                  {category === 'all' ? 'All Categories' : category}
-                </option>
-              ))}
-            </select>
-
-            {/* Technology Filter */}
-            <select
-              value={selectedTechnology}
-              onChange={(e) => setSelectedTechnology(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {technologies.map(tech => (
-                <option key={tech} value={tech} className="bg-slate-800 text-white">
-                  {tech === 'all' ? 'All Technologies' : tech}
-                </option>
-              ))}
-            </select>
-
-            {/* Sort By */}
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="rating" className="bg-slate-800 text-white">Sort by Rating</option>
-              <option value="price" className="bg-slate-800 text-white">Sort by Price</option>
-              <option value="customers" className="bg-slate-800 text-white">Sort by Customers</option>
-              <option value="name" className="bg-slate-800 text-white">Sort by Name</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      {/* Services Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold text-white mb-2">
-            {filteredServices.length} Innovative Services Available
-          </h2>
-          <p className="text-gray-400">
-            Filtered by {selectedCategory !== 'all' ? selectedCategory : 'all categories'} • {selectedTechnology !== 'all' ? selectedTechnology : 'all technologies'}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group"
-            >
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                {/* Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)}`}>
-                    {getCategoryIcon(service.category)}
-                  </div>
-                  <div className="flex items-center gap-1 text-yellow-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="text-sm font-semibold">{service.rating}</span>
-                    <span className="text-xs text-gray-400">({service.reviews})</span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                    {service.name}
-                  </h3>
-                  <p className="text-blue-200 text-sm mb-3">{service.tagline}</p>
-                  <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
-                </div>
-
-                {/* Stats */}
-                <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
-                  <div className="text-center p-3 bg-white/5 rounded-lg">
-                    <div className="text-white font-semibold">{service.customers.toLocaleString()}</div>
-                    <div className="text-gray-400 text-xs">Customers</div>
-                  </div>
-                  <div className="text-center p-3 bg-white/5 rounded-lg">
-                    <div className="text-white font-semibold">{service.marketSize}</div>
-                    <div className="text-gray-400 text-xs">Market Size</div>
-                  </div>
-                </div>
-
-                {/* Features */}
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                  <div className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
-                        <span className="line-clamp-2">{feature}</span>
-                      </div>
-                    ))}
-                    {service.features.length > 3 && (
-                      <div className="text-xs text-gray-500 mt-1">
-                        +{service.features.length - 3} more features
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Price and CTA */}
-                <div className="border-t border-white/20 pt-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <div className="text-2xl font-bold text-white">{service.price}</div>
-                      <div className="text-sm text-gray-400">{service.period}</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm text-green-400 font-semibold">{service.trialDays} days free</div>
-                      <div className="text-xs text-gray-400">Setup: {service.setupTime}</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex gap-2">
-                    <a
-                      href={service.website}
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center gap-2"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
-                    <a
-                      href={`mailto:${service.contact.email}?subject=Inquiry about ${service.name}`}
-                      className="px-4 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-colors"
-                    >
-                      <Mail className="w-5 h-5" />
-                    </a>
-                  </div>
-                </div>
-
-                {/* ROI Highlight */}
-                <div className="mt-4 p-3 bg-green-500/10 border border-green-500/20 rounded-lg">
-                  <div className="text-sm text-green-400 font-semibold">Proven Results</div>
-                  <div className="text-xs text-green-300">{service.roi}</div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {filteredServices.length === 0 && (
-          <div className="text-center py-16">
-            <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
-            <button
-              onClick={() => {
-                setSelectedCategory('all');
-                setSelectedTechnology('all');
-                setSearchTerm('');
-              }}
-              className="text-blue-400 hover:text-blue-300 underline"
-            >
-              Clear all filters
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* Contact Section */}
-      <div className="bg-gradient-to-r from-slate-800 to-slate-900 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our team of experts is ready to help you implement these cutting-edge solutions. 
-              Get in touch today to discuss your specific needs and discover how we can transform your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-600/20 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <Phone className="w-8 h-8 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-gray-300 mb-2">+1 302 464 0950</p>
-              <p className="text-sm text-gray-400">Available 24/7 for urgent inquiries</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-purple-600/20 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <Mail className="w-8 h-8 text-purple-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-gray-300 mb-2">kleber@ziontechgroup.com</p>
-              <p className="text-sm text-gray-400">We respond within 2 hours</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-green-600/20 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <MapPin className="w-8 h-8 text-green-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-gray-300 mb-2">364 E Main St STE 1008</p>
-              <p className="text-sm text-gray-400">Middletown DE 19709</p>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <a
-              href="https://ziontechgroup.com"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
-            >
-              Visit Our Website
-              <ArrowRight className="w-5 h-5" />
-            </a>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };
