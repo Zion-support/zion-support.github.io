@@ -4,9 +4,9 @@ export interface MicroSaasService {
   description: string;
   category: string;
   subcategory?: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
+  price?: number;
+  currency?: string;
+  pricingModel?: string;
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -34,7 +34,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "ai-chatbot-builder",
     title: "AI Chatbot Builder Pro",
-    description: "No-code AI chatbot creation platform with advanced NLP, multi-language support, and seamless integrations. Perfect for customer service, sales, and support automation.",
+    description: "No-code AI chatbot creation platform with advanced NLP, multi-language support, and seamless integrations.",
     category: "AI Services",
     subcategory: "Chatbots & Conversational AI",
     price: 99,
@@ -80,7 +80,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "ai-content-generator",
     title: "AI Content Generator Suite",
-    description: "Advanced AI-powered content creation platform for blogs, social media, marketing copy, and product descriptions. Includes SEO optimization and brand voice customization.",
+    description: "Advanced AI-powered content creation platform for blogs, social media, marketing copy, and product descriptions.",
     category: "AI Services",
     subcategory: "Content Creation",
     price: 79,
@@ -97,20 +97,19 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Analytics & performance tracking"
     ],
     benefits: [
-      "Save 15+ hours per week on content creation",
-      "Improve SEO rankings by 45%",
-      "Increase engagement rates by 65%",
-      "Reduce content costs by 75%",
-      "Maintain consistent brand voice"
+      "Save 10+ hours per week on content creation",
+      "Improve SEO rankings by 40%",
+      "Increase engagement rates by 60%",
+      "Reduce content costs by 70%"
     ],
-    targetAudience: ["Marketing teams", "Content creators", "Small businesses", "Agencies", "Bloggers"],
+    targetAudience: ["Marketing teams", "Content creators", "Small businesses", "Agencies"],
     marketPrice: "$79-199/month",
     website: "https://ziontechgroup.com/ai-content-generator",
     contactEmail: "kleber@ziontechgroup.com",
-    tags: ["AI Content", "SEO", "Marketing", "Automation"],
-    aiScore: 93,
-    rating: 4.9,
-    reviewCount: 234,
+    tags: ["AI Content", "SEO", "Marketing", "Copywriting"],
+    aiScore: 92,
+    rating: 4.7,
+    reviewCount: 203,
     featured: true,
     location: "Global",
     availability: "Immediate",
@@ -120,8 +119,8 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-20T14:30:00.000Z"
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
   },
   {
     id: "ai-customer-support",
@@ -163,7 +162,54 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-02-15T12:00:00.000Z"
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
   }
 ];
+
+export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
+  return MICRO_SAAS_SERVICES.find(service => service.id === id);
+};
+
+export const MICRO_SAAS_CATEGORIES = [
+  'AI Business Solutions',
+  'IT Infrastructure', 
+  'Data Analytics',
+  'AI Development',
+  'FinTech',
+  'HealthTech',
+  'E-commerce',
+  'EdTech'
+];
+
+export const PRICING_TIERS = [
+  {
+    name: 'Starter',
+    price: 29,
+    features: ['Basic features', 'Email support', '1 user']
+  },
+  {
+    name: 'Professional', 
+    price: 99,
+    features: ['Advanced features', 'Priority support', 'Up to 10 users']
+  },
+  {
+    name: 'Enterprise',
+    price: 299,
+    features: ['Custom features', '24/7 support', 'Unlimited users']
+  }
+];
+
+export const CONTACT_INFO = {
+  email: 'kleber@ziontechgroup.com',
+  phone: '+1 (555) 123-4567',
+  address: '123 Tech Street, Innovation City, IC 12345'
+};
+
+export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
+  return MICRO_SAAS_SERVICES.filter(service => service.category === category);
+};
+
+export const getMicroSaasCategories = (): string[] => {
+  return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
+};
