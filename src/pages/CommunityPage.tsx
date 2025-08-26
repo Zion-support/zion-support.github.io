@@ -1,7 +1,7 @@
-
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
+import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
 import ForumCategories from "@/components/community/ForumCategories";
@@ -96,42 +96,31 @@ const recentPosts: ForumPost[] = [
 ];
 
 export default function CommunityPage() {
-  const communityFeatures = [
-    {
-      icon: MessageCircle,
-      title: 'Discussion Forums',
-      description: 'Engage in meaningful conversations about AI, technology trends, and industry insights with fellow professionals.',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: BookOpen,
-      title: 'Knowledge Sharing',
-      description: 'Access and contribute to our growing library of technical articles, tutorials, and best practices.',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Calendar,
-      title: 'Events & Meetups',
-      description: 'Join our virtual and in-person events, workshops, and networking opportunities.',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Award,
-      title: 'Recognition Program',
-      description: 'Get recognized for your contributions and achievements within the community.',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Globe,
-      title: 'Global Network',
-      description: 'Connect with professionals from around the world and expand your professional network.',
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Innovation Hub',
-      description: 'Collaborate on innovative projects and share breakthrough ideas with the community.',
-      color: 'from-red-500 to-pink-500'
+
+  logInfo('CommunityPage rendering');
+  const { t } = useTranslation();
+  const { user } = useAuth();
+  const { featuredPosts, recentPosts } = useCommunity();
+  const [activeTab, setActiveTab] = useState("categories");
+  const router = useRouter();
+  const [showNewPost, setShowNewPost] = useState(false);
+  const { markCommunityVisited } = useAdvancedOnboardingStatus();
+
+  // Combine posts for Q&A section, removing duplicates by id
+  const qaPosts = Array.from(
+    new Map(
+      [...featuredPosts, ...recentPosts].map((post) => [post.id, post])
+    ).values()
+  );
+
+  const initialCategory = router.query.category as ForumCategory | null;
+
+  useEffect(() => {
+    const wantsNew = router.query.new === "1";
+    if (wantsNew && !user) {
+      const returnTo = encodeURIComponent(`/community?new=1${initialCategory ? `&category=${initialCategory}` : ""}`);
+      router.replace(`/auth/login?returnTo=${returnTo}`);
+      return;
     }
   ];
 
@@ -181,44 +170,62 @@ export default function CommunityPage() {
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
           <div>
-            <h1 className="text-3xl font-bold">Community Forum</h1>
+            <h1 className="text-3xl font-bold">{t('community_page.title')}</h1>
             <p className="text-muted-foreground mt-2">
-              Join the conversation, ask questions, and share your knowledge
+              {t('community_page.subtitle')}
             </p>
           </div>
         </div>
 
-        {/* Community Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {communityStats.map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-6 h-6 text-white" />
+        <Tabs value={activeTab} onValueChange={handleTabChange} className="mb-8">
+          <TabsList className="mb-6">
+            <TabsTrigger value="categories">{t('categories')}</TabsTrigger>
+            <TabsTrigger value="featured">{t('featured')}</TabsTrigger>
+            <TabsTrigger value="recent">{t('recent')}</TabsTrigger>
+            <TabsTrigger value="qa">{t('q_and_a')}</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="categories">
+            <ForumCategories />
+          </TabsContent>
+          
+          <TabsContent value="featured">
+            <div className="space-y-4">
+              {featuredPosts && featuredPosts.length > 0 ? (
+                featuredPosts.map((post) => (
+                  <PostCard key={post.id} post={post} />
+                ))
+              ) : (
+                <div className="text-center py-8 text-muted-foreground">
+                  <p>{t('community_page.no_featured')}</p>
                 </div>
-                <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            );
-          })}
-        </div>
+              )}
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="recent">
+            <div className="space-y-4">
+              {recentPosts && recentPosts.length > 0 ? (
+                recentPosts.map((post) => (
+                  <PostCard key={post.id} post={post} />
+                ))
+              ) : (
+                <div className="text-center py-8 text-muted-foreground">
+                  <p>{t('community_page.no_recent')}</p>
+                </div>
+              )}
+            </div>
+          </TabsContent>
 
-        {/* Community Features */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            What You'll Find in Our Community
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {communityFeatures.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-4`}>
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{feature.description}</p>
+          <TabsContent value="qa">
+            <div className="space-y-4">
+              {qaPosts && qaPosts.length > 0 ? (
+                qaPosts.map((post) => (
+                  <PostCard key={post.id} post={post} />
+                ))
+              ) : (
+                <div className="text-center py-8 text-muted-foreground">
+                  <p>{t('community_page.no_qa')}</p>
                 </div>
               );
             })}

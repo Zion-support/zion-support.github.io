@@ -20,7 +20,9 @@
     "greeting_user": "Bonjour, {{name}} !",
     "status_page": "Page de statut",
     "check_status_page": "Vous pouvez essayer de rafraîchir la page ou visiter notre",
-    "back_to_top": "Haut de page"
+    "featured": "En Vedette",
+    "recent": "Récent",
+    "q_and_a": "Questions-Réponses"
   },
   "nav": {
     "home": "Home",
@@ -201,5 +203,73 @@
     "hire_buy_desc": "Connectez-vous directement avec les fournisseurs appariés et complétez votre transaction en sécurité.",
     "done": "Terminé",
     "done_desc": "Profitez d'une livraison sans tracas et du support pour vos solutions technologiques."
+  },
+  "quote_form": {
+    "title": "Obtenez un Devis Maintenant",
+    "subtitle": "Demandez votre proposition commerciale instantanée et découvrez comment Zion peut révolutionner vos opérations informatiques",
+    "sent_title": "Demande de Devis Envoyée !",
+    "sent_desc": "Merci pour votre intérêt pour les services de Zion. Notre équipe préparera votre proposition commerciale personnalisée et vous contactera bientôt.",
+    "submit_another": "Envoyer une Autre Demande",
+    "labels": {
+      "name": "Nom",
+      "company": "Entreprise",
+      "email": "Email",
+      "phone": "Téléphone",
+      "interests": "Je suis intéressé par (sélectionnez tout ce qui s'applique)",
+      "interest_ai": "Produits/Services IA",
+      "interest_equipment": "Équipement informatique",
+      "interest_servers": "Solutions de Serveurs",
+      "interest_storage": "Solutions de Stockage",
+      "interest_networking": "Réseautage",
+      "interest_support": "Support 24h/24 7j/7",
+      "interest_recycling": "Services de Recyclage",
+      "additional_details": "Détails supplémentaires"
+    },
+    "sending": "Envoi en cours...",
+    "submit": "Obtenez Votre Proposition Commerciale Gratuite"
+  },
+  "login": "Connexion",
+  "signup": "S'inscrire",
+  "community_page": {
+    "title": "Forum Communautaire",
+    "subtitle": "Participez à la conversation, posez des questions et partagez vos connaissances",
+    "no_featured": "Aucun article en vedette pour le moment.",
+    "no_recent": "Aucun article récent pour le moment.",
+    "no_qa": "Aucun message Q&R pour le moment."
+  },
+  "footer": {
+    "tagline": "Le premier marché gratuit dédié aux hautes technologies et à l'intelligence artificielle.",
+    "sections": {
+      "marketplace": {
+        "title": "Marché",
+        "products": "Produits",
+        "services": "Services",
+        "talent": "Talent",
+        "equipment": "Équipement",
+        "categories": "Catégories",
+        "green_it": "Green IT"
+      },
+      "company": {
+        "title": "Entreprise",
+        "about_us": "À Propos",
+        "blog": "Blog",
+        "innovation": "Innovation",
+        "partners": "Partenaires",
+        "careers": "Carrières",
+        "contact": "Contact",
+        "sitemap": "Plan du Site"
+      },
+      "newsletter": {
+        "title": "Newsletter",
+        "description": "Restez informé des dernières actualités sur la technologie, l'IA et les opportunités du marché."
+      }
+    },
+    "back_to_top": "Haut de page",
+    "bottom": {
+      "privacy_policy": "Politique de Confidentialité",
+      "terms_of_service": "Conditions d'Utilisation",
+      "api_status": "Statut de l'API",
+      "copyright": "© {{year}} Zion Tech Group. Tous droits réservés."
+    }
   }
 }
