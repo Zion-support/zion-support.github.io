@@ -560,5 +560,3 @@ export default function EnhancedFooter() {
     </footer>
   );
 };
-
-export default EnhancedFooter;
