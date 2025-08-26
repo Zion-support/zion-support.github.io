@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 
 const Services: React.FC = () => {
   const services = [
@@ -49,6 +50,7 @@ const Services: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -100,43 +102,11 @@ const Services: React.FC = () => {
         </div>
       </section>
 
-      {/* Innovative Services Promotion */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Discover Our Latest
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-              {" "}Innovative Services 2025
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Explore cutting-edge micro SAAS solutions, advanced IT services, and AI-powered platforms designed for the future
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
-              <div className="text-3xl mb-3">🚀</div>
-              <h3 className="text-lg font-semibold text-white mb-2">Micro SAAS Services</h3>
-              <p className="text-sm text-gray-300">8 innovative micro SAAS solutions with competitive pricing and proven ROI</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
-              <div className="text-3xl mb-3">⚡</div>
-              <h3 className="text-lg font-semibold text-white mb-2">Advanced IT Services</h3>
-              <p className="text-sm text-gray-300">8 cutting-edge IT infrastructure and cybersecurity solutions</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
-              <div className="text-3xl mb-3">🤖</div>
-              <h3 className="text-lg font-semibold text-white mb-2">AI-Powered Solutions</h3>
-              <p className="text-sm text-gray-300">8 advanced AI services with high accuracy scores and real-world applications</p>
-            </div>
-          </div>
-          <Link
-            to="/innovative-services"
-            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-          >
-            Explore Innovative Services
-          </Link>
-        </div>
-      </section>
+      {/* Enhanced Services Showcase */}
+      <EnhancedServicesShowcase 
+        title="Comprehensive Technology Solutions"
+        subtitle="Discover our cutting-edge micro SAAS, AI, and IT services designed to transform your business"
+      />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
@@ -155,10 +125,12 @@ const Services: React.FC = () => {
               Contact Us Today
             </Link>
             <a
-              href="tel:+13024640950"
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
             >
-              Call Now: +1 302 464 0950
+              Visit Our Website
             </a>
           </div>
         </div>
