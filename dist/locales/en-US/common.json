@@ -22,7 +22,11 @@
     "home": "Home",
     "services": "Services",
     "marketplace": "Marketplace",
+<<<<<<< HEAD:dist/locales/en-US/common.json
     "micro-saas": "Micro SAAS",
+=======
+    "services": "Services",
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b:src/i18n/locales/en/translation.json
     "categories": "Categories",
     "services": "Services",
     "micro-saas": "Micro SAAS",
@@ -34,8 +38,16 @@
     "messages": "Messages",
     "post_job": "Post Job",
     "analytics": "Analytics",
+<<<<<<< HEAD:dist/locales/en-US/common.json
     "faq": "FAQ",
     "help": "Help Center"
+=======
+    "ai-hiring": "AI Hiring",
+    "help": "Help Center",
+    "faq": "FAQ",
+    "about": "About",
+    "contact": "Contact"
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b:src/i18n/locales/en/translation.json
   },
   "auth": {
     "login": "Login",

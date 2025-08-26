@@ -1,8 +1,28 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { SEO } from '@/components/SEO';
+=======
+
+import React from 'react';
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react";
+import { useState } from "react";
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm";
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks";
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard";
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard";
+import { PartnerResources } from "@/components/partners/PartnerResources";
+import { useAuth } from "@/hooks/useAuth";
+import { useNavigate } from "react-router-dom";
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 
 export default function Partners() {
   const strategicPartners = [
@@ -36,6 +56,7 @@ export default function Partners() {
     }
   ];
 
+<<<<<<< HEAD
   const technologyPartners = [
     {
       name: 'OpenAI',
@@ -239,6 +260,24 @@ const Partners: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
             Collaborating with industry leaders to deliver exceptional technology solutions and drive innovation
           </p>
+=======
+  // If not authenticated, display partner program info and signup CTA
+  if (!isAuthenticated) {
+    return (
+      <>
+        <SEO
+          title="Partner Program - Zion Tech Group"
+          description="Join Zion Tech Group's partner program and earn rewards by referring AI talent and clients to our marketplace."
+          keywords="partner program, referrals, AI marketplace, Zion Tech Group, affiliate program"
+          canonical="https://ziontechgroup.com/partners"
+        />
+        <AppHeader />
+        <main className="pt-16 pb-20">
+          <div className="container max-w-6xl py-10">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>
+          <p className="text-xl text-zion-slate-light">Earn rewards by referring AI talent and clients to our marketplace</p>
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
         </div>
       </section>
 
@@ -324,6 +363,7 @@ const Partners: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Technology Partners */}
@@ -353,9 +393,35 @@ const Partners: React.FC = () => {
               </div>
             ))}
           </div>
+=======
+      </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  // Authenticated user view - Partner Dashboard
+  return (
+    <>
+      <SEO
+        title="Partner Dashboard - Zion Tech Group"
+        description="Manage your referral links and track your performance in Zion Tech Group's partner program."
+        keywords="partner dashboard, referrals, earnings, Zion Tech Group"
+        canonical="https://ziontechgroup.com/partners"
+      />
+      <AppHeader />
+      <main className="pt-16 pb-20">
+        <div className="container max-w-7xl py-10">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-white">Partner Dashboard</h1>
+          <p className="text-zion-slate-light">Manage your referral links and track your performance</p>
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Become a Partner */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -383,6 +449,51 @@ const Partners: React.FC = () => {
       </section>
     </div>
   );
+=======
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
+        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">
+          <TabsTrigger value="overview">Overview</TabsTrigger>
+          <TabsTrigger value="referrals">Referral Links</TabsTrigger>
+          <TabsTrigger value="earnings">Earnings</TabsTrigger>
+          <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
+          <TabsTrigger value="resources">Resources</TabsTrigger>
+        </TabsList>
+        
+        <TabsContent value="overview" className="space-y-4">
+          <PartnerDashboard />
+        </TabsContent>
+        
+        <TabsContent value="referrals" className="space-y-4">
+          <PartnerReferralLinks />
+        </TabsContent>
+        
+        <TabsContent value="earnings" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>Earnings & Payouts</CardTitle>
+              <CardDescription>Track your earnings and manage payouts</CardDescription>
+            </CardHeader>
+            <CardContent>
+              {/* This will be implemented later */}
+              <p className="text-zion-slate-light">Earnings tracking and payout requests will be available soon.</p>
+            </CardContent>
+          </Card>
+        </TabsContent>
+        
+        <TabsContent value="leaderboard" className="space-y-4">
+          <PartnerLeaderboard />
+        </TabsContent>
+        
+        <TabsContent value="resources" className="space-y-4">
+          <PartnerResources />
+        </TabsContent>
+      </Tabs>
+        </div>
+        </main>
+        <Footer />
+      </>
+    );
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 }
 =======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">

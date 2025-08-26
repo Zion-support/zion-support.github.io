@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +18,11 @@ import {
 =======
 import { AppLayout } from "@/layout/AppLayout";
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
+=======
+import React from 'react';
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -569,7 +575,8 @@ export default function Careers() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
         canonical="https://ziontechgroup.com/careers"
       />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+      <AppHeader />
+      <main className="min-h-screen bg-background pt-16 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 >>>>>>> origin/cursor/website-audit-and-enhancement-50d5
           <div className="text-center mb-16">
@@ -1408,11 +1415,16 @@ export default function Careers() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
 =======
       </main>
+<<<<<<< HEAD
     </AppLayout>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-50d5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
+=======
+      <Footer />
+    </>
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
   );
 };
 

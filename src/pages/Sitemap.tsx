@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -196,6 +197,10 @@ const Sitemap: React.FC = () => {
 =======
 import { AppLayout } from "@/layout/AppLayout";
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
+=======
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 import { SEO } from "@/components/SEO";
 import { completeSitemap } from "@/config/sitemap";
 import { Link } from "react-router-dom";
@@ -739,6 +744,7 @@ const Sitemap: React.FC = () => {
     <AppLayout>
       <SEO
 <<<<<<< HEAD
+<<<<<<< HEAD
         title="Sitemap | Zion Tech Group"
         description="Complete sitemap for Zion Tech Group - navigate through all our services, pages, and resources"
         keywords="sitemap, navigation, Zion Tech Group, services, pages"
@@ -756,6 +762,15 @@ const Sitemap: React.FC = () => {
         canonical="https://ziontechgroup.com/sitemap"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+=======
+        title="Sitemap | Zion Tech Group"
+        description="Human readable sitemap for all public routes"
+        keywords="sitemap, navigation"
+        canonical="https://ziontechgroup.com/sitemap"
+      />
+      <AppHeader />
+      <main className="min-h-screen bg-background pt-16 pb-20">
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl font-bold mb-8 text-white">Site Map</h1>
