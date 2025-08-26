@@ -1,19 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ThemeToggle } from './ThemeToggle';
-import { Button } from './ui/button';
-import {
-	Menu,
-	X,
-	ChevronDown,
-	Search,
-	User,
-	Bell,
-	Globe,
-	Shield,
-	Zap,
-} from 'lucide-react';
+import React, { useState } from 'react';
+import Link from 'next/link';
 
 // Enhanced navigation structure
 const navigation = [

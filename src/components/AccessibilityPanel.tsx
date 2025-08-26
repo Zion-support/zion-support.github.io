@@ -198,19 +198,78 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
               ))}
             </div>
 
-            {/* Content */}
-            <div className="p-4 max-h-96 overflow-y-auto">
-              <AnimatePresence>
-                {activeTab === 'general' && (
-                  <motion.div
-                    key="general"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="space-y-4"
-                  >
-                    <div>
-                      <label className="flex items-center space-x-3">
+          {/* Tab Content */}
+          <AnimatePresence>
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+            >
+              {/* General Tab */}
+              {activeTab === 'general' && (
+                <div className="space-y-4">
+                  <div className="bg-slate-700/30 rounded-lg p-4">
+                    <h3 className="text-lg font-semibold text-white mb-3">Quick Actions</h3>
+                    <div className="grid grid-cols-2 gap-3">
+                      <button
+                        onClick={() => handleFontSizeChange(120)}
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm transition-colors"
+                      >
+                        Increase Font
+                      </button>
+                      <button
+                        onClick={() => handleFontSizeChange(100)}
+                        className="bg-slate-600 hover:bg-slate-700 text-white px-3 py-2 rounded-md text-sm transition-colors"
+                      >
+                        Reset Font
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-slate-700/30 rounded-lg p-4">
+                    <h3 className="text-lg font-semibold text-white mb-3">Keyboard Shortcuts</h3>
+                    <div className="space-y-2 text-sm text-slate-300">
+                      <div className="flex justify-between">
+                        <span>Open Accessibility Panel:</span>
+                        <kbd className="bg-slate-600 px-2 py-1 rounded text-xs">Alt + A</kbd>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Toggle High Contrast:</span>
+                        <kbd className="bg-slate-600 px-2 py-1 rounded text-xs">Alt + H</kbd>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Toggle Focus Indicator:</span>
+                        <kbd className="bg-slate-600 px-2 py-1 rounded text-xs">Alt + F</kbd>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Visual Tab */}
+              {activeTab === 'visual' && (
+                <div className="space-y-4">
+                  <div className="bg-slate-700/30 rounded-lg p-4">
+                    <h3 className="text-lg font-semibold text-white mb-3">Display Settings</h3>
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-slate-300">High Contrast</span>
+                        <button
+                          onClick={() => handleToggle('highContrast')}
+                          className={`w-12 h-6 rounded-full transition-colors ${
+                            settings.highContrast ? 'bg-blue-600' : 'bg-slate-600'
+                          }`}
+                        >
+                          <div className={`w-4 h-4 bg-white rounded-full transition-transform ${
+                            settings.highContrast ? 'translate-x-6' : 'translate-x-1'
+                          }`} />
+                        </button>
+                      </div>
+                      
+                      <div>
+                        <label className="text-slate-300 text-sm mb-2 block">Font Size: {settings.fontSize}%</label>
                         <input
                           type="checkbox"
                           checked={settings.highContrast}

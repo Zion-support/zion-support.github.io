@@ -151,14 +151,12 @@ export function ContactInfo() {
                   </Button>
                 </Link>
                 
-                <Link to="/comprehensive-services">
                 <Link href="/comprehensive-services">
                   <Button variant="outline" className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                     View All Services
                   </Button>
                 </Link>
                 
-                <Link to="/it-onsite-services">
                 <Link href="/it-onsite-services">
                   <Button variant="outline" className="w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10">
                     IT Onsite Services
@@ -224,7 +222,7 @@ export function ContactInfo() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/request-quote">
-                <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-3">
+                <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-purple px-8 py-3">
                   Get Free Consultation
                 </Button>
               </Link>

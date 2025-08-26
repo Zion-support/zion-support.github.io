@@ -311,7 +311,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
           className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
           title={`Current theme: ${currentTheme}`}
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             {currentTheme === 'light' && (
               <motion.div
                 key="light"
