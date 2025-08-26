@@ -371,6 +371,7 @@
     "master:health": "node automation/master-automation-launcher.cjs health",
     "master:status": "node automation/master-automation-launcher.cjs status",
     "master:report": "node automation/master-automation-launcher.cjs report"
+
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
