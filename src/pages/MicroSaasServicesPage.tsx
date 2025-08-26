@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,6 +142,8 @@ export default function MicroSaasServicesPage() {
               </div>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Filter, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
@@ -242,14 +245,18 @@ export default function MicroSaasServicesPage() {
               <span className="text-sm font-medium">{service.rating}</span>
               <span className="text-xs text-zion-slate-light">({service.reviewCount})</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -460,6 +467,8 @@ export default function MicroSaasServicesPage() {
       <TrustedBySection />
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -565,9 +574,12 @@ export default function MicroSaasServicesPage() {
               </div>
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Service Info */}
       <div className="space-y-4">
         <div>
@@ -618,13 +630,17 @@ export default function MicroSaasServicesPage() {
               </Badge>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
 
         {/* Benefits */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -637,6 +653,8 @@ export default function MicroSaasServicesPage() {
                 <span>{benefit}</span>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <div className="space-y-2">
           <p className="text-sm font-medium text-white">Benefits:</p>
           <div className="space-y-1">
@@ -645,14 +663,18 @@ export default function MicroSaasServicesPage() {
                 <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                 <span className="text-xs text-zion-slate-light">{benefit}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </div>
             ))}
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -668,6 +690,8 @@ export default function MicroSaasServicesPage() {
             <span>AI Score: {service.aiScore}</span>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Target Audience */}
         <div>
           <p className="text-sm font-medium text-white mb-2">Perfect for:</p>
@@ -678,13 +702,17 @@ export default function MicroSaasServicesPage() {
               </Badge>
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
 
         {/* Action Buttons */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -850,6 +878,8 @@ export default function MicroSaasServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <div className="flex space-x-3 pt-4">
           <Button 
             asChild 
@@ -1028,13 +1058,17 @@ export default function MicroSaasServicesPage() {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               {filteredServices.map((service) => (
                 <ServiceCard key={service.id} service={service} />
               ))}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1126,6 +1160,8 @@ export default function MicroSaasServicesPage() {
     </>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </>
         )}
       </div>
@@ -1154,8 +1190,11 @@ export default function MicroSaasServicesPage() {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 }

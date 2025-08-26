@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { ForumPost } from '@/types/community';
 
 interface PostCardProps {
@@ -58,9 +61,13 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 };
 
 export default PostCard;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
@@ -278,6 +281,7 @@ export function HowItWorksSection() {
                   {/* Hover indicator */}
                   <div className="mt-4 text-zion-cyan/60 text-xs">
                     {hoveredStep === index ? "Hover to see details" : "Hover for details"}
+<<<<<<< HEAD
 =======
 import React from 'react';
 
@@ -349,6 +353,8 @@ export function HowItWorksSection() {
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4 shadow-md border-2 border-gray-200">
                     {step.icon}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   </div>
                 </div>
                 

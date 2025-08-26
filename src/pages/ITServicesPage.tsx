@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -409,11 +410,16 @@ const ITServicesPage: React.FC = () => {
             </div>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { 
   Cloud, 
@@ -639,6 +645,7 @@ export default function ITServicesPage() {
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <MessageSquare className="h-5 w-5 mr-2" />
               Get Consultation
+<<<<<<< HEAD
 =======
 import { 
   Server, 
@@ -984,11 +991,14 @@ export default function ITServicesPage() {
               <MessageSquare className="h-5 w-5 mr-2" />
               Get Free Consultation
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </Button>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       {/* Stats Section */}
@@ -1014,12 +1024,17 @@ export default function ITServicesPage() {
       </div>
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {categories.map((category) => (
             <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               key={category.value}
               variant={selectedCategory === category.value ? "default" : "outline"}
               onClick={() => setSelectedCategory(category.value)}
@@ -1049,6 +1064,7 @@ export default function ITServicesPage() {
                       {service.badge}
                     </Badge>
                   )}
+<<<<<<< HEAD
 =======
               key={category}
               variant={selectedCategory === category ? "default" : "outline"}
@@ -1088,6 +1104,8 @@ export default function ITServicesPage() {
                     </div>
                   </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </div>
                 <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
                   {service.title}
@@ -1097,6 +1115,9 @@ export default function ITServicesPage() {
                 </CardDescription>
               </CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               <CardContent className="pb-4">
                 <div className="mb-4">
                   <p className="text-2xl font-bold text-zion-cyan mb-2">{service.price}</p>
@@ -1116,6 +1137,7 @@ export default function ITServicesPage() {
                   <Link to={service.link}>
                     Get Started
                   </Link>
+<<<<<<< HEAD
 =======
               
               <CardContent className="space-y-4">
@@ -1165,12 +1187,17 @@ export default function ITServicesPage() {
                   <Phone className="h-4 w-4 mr-2" />
                   Call Now
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </Button>
               </div>
             </Card>
           ))}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
         {/* CTA Section */}
         <div className="text-center py-12">
@@ -1190,6 +1217,7 @@ export default function ITServicesPage() {
               View Case Studies
             </Button>
           </div>
+<<<<<<< HEAD
 =======
       </div>
 
@@ -1260,10 +1288,13 @@ export default function ITServicesPage() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
           </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -1275,3 +1306,6 @@ export default ITServicesPage;
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

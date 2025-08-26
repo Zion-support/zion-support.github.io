@@ -12,12 +12,16 @@ interface ErrorBoundaryProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   onError?: (error: Error, errorInfo: any) => void;
 }
 
 interface ErrorFallbackProps {
   error?: Error;
   resetError: () => void;
+<<<<<<< HEAD
 }
 
 =======
@@ -77,6 +81,10 @@ interface ErrorFallbackProps {
 }
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+}
+
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
   const navigate = useNavigate();
 
@@ -159,13 +167,17 @@ export function ErrorBoundary({ children, fallback, onError }: ErrorBoundaryProp
       if (process.env.NODE_ENV === 'development') {
         console.error('ErrorBoundary caught an error:', event.error);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       }
     };
 
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -179,6 +191,8 @@ export function ErrorBoundary({ children, fallback, onError }: ErrorBoundaryProp
       });
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       setHasError(true);
       setError(new Error(event.reason));
       
@@ -191,9 +205,12 @@ export function ErrorBoundary({ children, fallback, onError }: ErrorBoundaryProp
         console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     };
 
     window.addEventListener('error', handleError);
@@ -203,6 +220,7 @@ export function ErrorBoundary({ children, fallback, onError }: ErrorBoundaryProp
       window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleUnhandledRejection);
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -302,6 +320,8 @@ export function ErrorBoundary({ children, fallback, onError }: ErrorBoundaryProp
       </div>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }, [onError]);
 
   const resetError = () => {
@@ -333,6 +353,7 @@ export function useErrorHandler() {
   const handleError = React.useCallback((error: Error) => {
     setError(error);
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error('Error caught by useErrorHandler:', error);
 =======
 <<<<<<< HEAD
@@ -341,6 +362,9 @@ export function useErrorHandler() {
     console.error('Error caught by useErrorHandler:', error);
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+    console.error('Error caught by useErrorHandler:', error);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }, []);
 
   const clearError = React.useCallback(() => {
@@ -349,10 +373,13 @@ export function useErrorHandler() {
 
   return { error, handleError, clearError };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }
 
 // Higher-order component for wrapping components with error handling
@@ -368,7 +395,10 @@ export function withErrorBoundary<P extends object>(
     );
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

@@ -7,6 +7,9 @@ import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/2025-innovative-real-micro-saas-services';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const service = useMemo(() => {
     if (!slug) return undefined;
     const all: any[] = ([] as any[])
@@ -43,6 +46,7 @@ import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/202
       }
     });
     if (byLink) return byLink;
+<<<<<<< HEAD
 =======
 // Node modules will be required inside getStaticPaths to avoid client bundling
 
@@ -119,6 +123,8 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   const services = getAllServices();
   const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   let service: Service | undefined = services.find((s) => {
     if (!s.link) return false;

@@ -11,6 +11,7 @@ export interface Listing {
     name: string;
     id: string;
     avatarUrl?: string;
+<<<<<<< HEAD
 =======
   images: string[];
   seller: {
@@ -51,8 +52,11 @@ export interface ListingFilter {
     min: number;
     max: number;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   };
   location?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   availability?: string;
   aiScore?: number;
@@ -104,4 +108,9 @@ export interface ListingStats {
   averagePrice: number;
   categoryDistribution: Record<string, number>;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+  availability?: string;
+  aiScore?: number;
+  pricingTier?: string;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
 import { 
   Building, 
@@ -158,9 +161,12 @@ const Partners: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
 =======
       icon: Building,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       title: 'Technology Partners',
       description: 'Strategic partnerships with leading technology companies to deliver comprehensive solutions.',
       benefits: [
@@ -314,6 +320,7 @@ const Partners: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const partnerBenefits = [
     {
       icon: TrendingUp,
@@ -338,6 +345,8 @@ const Partners: React.FC = () => {
     }
   ];
 
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
@@ -481,6 +490,9 @@ const Partners: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {partnerCategories.map((category, categoryIndex) => (
         <div key={categoryIndex} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <div className="text-center mb-12">
@@ -651,6 +663,9 @@ const Partners: React.FC = () => {
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
             >

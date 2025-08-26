@@ -2,18 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { AppLayout } from "@/layout/AppLayout";
 =======
 import React from 'react';
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -138,9 +145,12 @@ export default function GreenIT() {
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         canonical="https://ziontechgroup.com/green-it"
 =======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
@@ -153,6 +163,14 @@ export default function GreenIT() {
 =======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      />
+      <AppHeader />
+      <main className="min-h-screen bg-background pt-16 pb-20">
+=======
+        canonical="https://ziontechgroup.com/marketplace/category/green-it"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       />
       <AppHeader />
       <main className="min-h-screen bg-background pt-16 pb-20">

@@ -2,10 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 =======
 import Link from 'next/link';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { 
   Brain, 
   Cloud, 
@@ -217,10 +221,14 @@ export const EnhancedAbout: React.FC = () => {
           >
             <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
               to="/contact"
 =======
               href="/contact"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+              to="/contact"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group"
             >
               Get Started
@@ -228,10 +236,14 @@ export const EnhancedAbout: React.FC = () => {
             </Link>
             <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
               to="/services"
 =======
               href="/services"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+              to="/services"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
             >
               Our Services
@@ -490,10 +502,14 @@ export const EnhancedAbout: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
               to="/contact"
 =======
               href="/contact"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+              to="/contact"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group"
             >
               Get Started Today
@@ -501,10 +517,14 @@ export const EnhancedAbout: React.FC = () => {
             </Link>
             <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
               to="/services"
 =======
               href="/services"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+              to="/services"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
             >
               View Our Services

@@ -1,8 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cn } from '@/lib/utils';
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+import { cn } from '@/lib/utils';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
@@ -15,6 +19,9 @@ interface LoadingSpinnerProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export function LoadingSpinner({
   size = 'md',
   color = 'primary',
@@ -55,6 +62,7 @@ export function LoadingSpinner({
         }}
         role="status"
         aria-label="Loading"
+<<<<<<< HEAD
 =======
 export function LoadingSpinner({ 
   size = 'md', 
@@ -95,21 +103,29 @@ export function LoadingSpinner({
           borderTopColor: customColor && color === 'custom' ? customColor : undefined
         }}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       />
       
       {showText && (
         <motion.p
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           className="mt-3 text-sm text-zion-slate-light text-center"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
+<<<<<<< HEAD
 =======
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.3 }}
           className={`mt-3 text-zion-slate-light ${textSizes[size]} font-medium`}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         >
           {text}
         </motion.p>
@@ -119,6 +135,9 @@ export function LoadingSpinner({
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 // Skeleton loading component for content
 export function SkeletonLoader({
   className,
@@ -141,6 +160,7 @@ export function SkeletonLoader({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 }}
+<<<<<<< HEAD
 =======
 // Optimized skeleton loader
 export function SkeletonLoader({ 
@@ -162,6 +182,8 @@ export function SkeletonLoader({
           transition={{ delay: index * 0.1, duration: 0.3 }}
           className={`${height} bg-white/10 rounded-lg animate-pulse`}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         />
       ))}
     </div>
@@ -169,6 +191,9 @@ export function SkeletonLoader({
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 // Page loading component
 export function PageLoader({
   text = 'Loading page...',
@@ -198,6 +223,7 @@ export function ButtonLoader({
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
       <span className="ml-2">Loading...</span>
+<<<<<<< HEAD
 =======
 // Page loading overlay
 export function PageLoader({ 
@@ -307,6 +333,8 @@ export function ContentPlaceholder({
         ))
       )}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     </div>
   );
 }

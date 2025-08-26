@@ -546,6 +546,7 @@ body {
   animation: matrix-scroll-2029 30s linear infinite;
 }
 
+<<<<<<< HEAD
 @keyframes matrix-scroll-2029 {
   0% { background-position: 0px 0px; }
   100% { background-position: 60px 60px; }
@@ -1301,6 +1302,11 @@ td {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: holographic-shift 3s ease infinite;
+=======
+/* Animation Classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }
 
 /* Mobile-First Scrollbar Styles */

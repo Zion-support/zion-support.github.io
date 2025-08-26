@@ -2369,8 +2369,11 @@ export const serviceCategories = [
   }
 ];
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 // Service categories
 export const serviceCategories = [
   'All',

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, X, Bot, User } from 'lucide-react';
@@ -135,6 +138,7 @@ export function ChatAssistant({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
+<<<<<<< HEAD
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-1 hover:bg-white/20 rounded transition-colors"
@@ -196,10 +200,13 @@ export const ChatAssistant: React.FC = () => {
           <div className="bg-zion-blue p-3 rounded-t-lg">
             <div className="flex items-center justify-between">
               <h3 className="text-white font-semibold">Zion Tech Assistant</h3>
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-zion-slate-light hover:text-white"
               >
+<<<<<<< HEAD
                 ✕
               </button>
             </div>
@@ -243,6 +250,9 @@ export const ChatAssistant: React.FC = () => {
               >
                 Send
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+                <X className="w-4 h-4" />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </button>
             </div>
           </div>

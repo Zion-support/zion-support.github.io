@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
@@ -13,6 +16,7 @@ export default function Privacy() {
         canonical="https://ziontechgroup.com/privacy"
       />
       <Header />
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { SEO } from '@/components/SEO';
@@ -29,12 +33,17 @@ const Privacy: React.FC = () => {
       />
       
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <GradientHeading>Privacy Policy</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               Your privacy is important to us. This page explains how we collect,
               use, and safeguard your information.
             </p>
@@ -70,6 +79,7 @@ const Privacy: React.FC = () => {
     </>
   );
 }
+<<<<<<< HEAD
 =======
               Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </p>
@@ -225,3 +235,5 @@ const Privacy: React.FC = () => {
 
 export default Privacy;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

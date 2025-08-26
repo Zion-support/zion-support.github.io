@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { Link } from "react-router-dom";
@@ -11,6 +12,8 @@ import { Button } from "../ui/button";
 import { useTranslation } from "react-i18next";
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Menu from 'lucide-react/dist/esm/icons/menu';
@@ -27,9 +30,12 @@ import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 interface MobileMenuProps {
   className?: string;
@@ -41,6 +47,7 @@ export function MobileMenu({ className }: MobileMenuProps) {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -123,6 +130,8 @@ export function MobileMenu({ className }: MobileMenuProps) {
     }
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navigationItems = [
@@ -133,9 +142,12 @@ export function MobileMenu({ className }: MobileMenuProps) {
     { href: '/equipment', label: t('nav.equipment'), icon: Store, matches: (path: string) => path.startsWith('/equipment') },
     { href: '/community', label: t('nav.community'), icon: Users, matches: (path: string) => path.startsWith('/community') },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   ];
 
   if (isAuthenticated) {

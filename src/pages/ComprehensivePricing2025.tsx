@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
@@ -132,6 +133,8 @@ const ComprehensivePricing2025: React.FC = () => {
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover:from-green-700 hover:to-blue-700 transition-all duration-300"
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
 import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
 
@@ -247,9 +250,12 @@ const ComprehensivePricing2025: React.FC = () => {
                     : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'
                 }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               >
                 <Download className="w-5 h-5" />
                 Download Pricing Guide
@@ -338,6 +344,7 @@ const ComprehensivePricing2025: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -465,6 +472,8 @@ const ComprehensivePricing2025: React.FC = () => {
                     </div>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Pricing Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -501,9 +510,12 @@ const ComprehensivePricing2025: React.FC = () => {
                       : service.price
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   </div>
                   <div className="text-gray-400 mb-2">{service.period}</div>
                   {billingCycle === 'annual' && service.annualDiscount && (
@@ -513,6 +525,7 @@ const ComprehensivePricing2025: React.FC = () => {
                   )}
                 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -533,6 +546,8 @@ const ComprehensivePricing2025: React.FC = () => {
                       <span className="text-blue-300 text-sm">+{service.features.length - 4} more features</span>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -548,9 +563,12 @@ const ComprehensivePricing2025: React.FC = () => {
                         +{service.features.length - 4} more features
                       </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                     )}
                   </ul>
                 </div>
@@ -570,6 +588,7 @@ const ComprehensivePricing2025: React.FC = () => {
                   </div>
                 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -662,6 +681,8 @@ const ComprehensivePricing2025: React.FC = () => {
         </motion.div>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 <div className="space-y-3">
                   <a
                     href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
@@ -739,9 +760,12 @@ const ComprehensivePricing2025: React.FC = () => {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
         {/* Call to Action */}
         {sortedServices.length === 0 && (
@@ -773,6 +797,7 @@ const ComprehensivePricing2025: React.FC = () => {
             Ready to Get Started?
           </h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our services can help transform your business and drive competitive advantage
 =======
@@ -785,6 +810,10 @@ const ComprehensivePricing2025: React.FC = () => {
             Let's discuss how our services can help transform your business and drive competitive advantage
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our services can help transform your business and drive competitive advantage
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -816,6 +845,7 @@ const ComprehensivePricing2025: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
@@ -831,6 +861,11 @@ const ComprehensivePricing2025: React.FC = () => {
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+            <a
+              href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             >
               <Phone className="w-5 h-5 inline mr-2" />
               Call +1 302 464 0950
@@ -840,6 +875,7 @@ const ComprehensivePricing2025: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-900 transition-all duration-300"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
               Schedule Consultation
             </a>
@@ -853,6 +889,10 @@ const ComprehensivePricing2025: React.FC = () => {
             </a>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+              Schedule Consultation
+            </a>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </div>

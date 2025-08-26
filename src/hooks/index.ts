@@ -10,6 +10,7 @@ export * from './usePageViewTracking';
 export * from './useReactId';
 export * from './useScrollToTop';
 export * from './usePostsByCategory';
+<<<<<<< HEAD
 =======
 export function useScrollToTop() {
   // Simple hook to scroll to top
@@ -26,3 +27,5 @@ export function useAuth() {
   };
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

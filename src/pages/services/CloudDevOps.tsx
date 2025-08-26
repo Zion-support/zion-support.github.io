@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import { 
   Cloud, 
@@ -52,6 +53,12 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
+=======
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 const CloudDevOps: React.FC = () => {
   const features = [
@@ -60,8 +67,11 @@ const CloudDevOps: React.FC = () => {
       title: "Cloud Migration",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       description: "Seamless migration to cloud infrastructure with zero downtime"
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       description: "Seamless migration to cloud platforms with minimal downtime",
       features: ["AWS Migration", "Azure Migration", "Google Cloud Migration", "Multi-cloud Strategy"],
       icon: "☁️"
@@ -77,8 +87,11 @@ const CloudDevOps: React.FC = () => {
       description: "Manage and scale containerized applications efficiently",
       features: ["Kubernetes", "Docker", "Service Mesh", "Microservices Architecture"],
       icon: "📦"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'lucide-react';
 
@@ -89,11 +102,15 @@ const CloudDevOps: React.FC = () => {
       title: "Cloud Migration",
       description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency.",
       features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-438b
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     },
     {
       icon: Server,
       title: "Infrastructure as Code",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       description: "Automated infrastructure management and deployment"
@@ -101,10 +118,15 @@ const CloudDevOps: React.FC = () => {
       description: "Automated infrastructure provisioning and management using modern DevOps practices.",
       features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
 >>>>>>> origin/cursor/website-audit-and-enhancement-438b
+=======
+      description: "Automated infrastructure provisioning and management using modern DevOps practices.",
+      features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     },
     {
       icon: GitBranch,
       title: "CI/CD Pipelines",
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Streamlined development and deployment workflows"
     },
@@ -125,6 +147,10 @@ const CloudDevOps: React.FC = () => {
       description: "Version-controlled infrastructure management and deployment",
       features: ["Terraform", "CloudFormation", "Ansible", "Infrastructure Automation"],
 =======
+=======
+      description: "Version-controlled infrastructure management and deployment",
+      features: ["Terraform", "CloudFormation", "Ansible", "Infrastructure Automation"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       description: "Seamless migration to cloud platforms with minimal downtime",
       features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"],
       icon: "☁️"
@@ -145,13 +171,18 @@ const CloudDevOps: React.FC = () => {
       title: "Infrastructure Management",
       description: "Automate and manage cloud infrastructure efficiently",
       features: ["Terraform/CloudFormation", "Cost Optimization", "Security Hardening", "Backup & Recovery"],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
       icon: "🏗️"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+      icon: "🏗️"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
 
   const cloudPlatforms = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -172,6 +203,8 @@ const CloudDevOps: React.FC = () => {
       />
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     { name: "AWS", features: ["EC2", "S3", "Lambda", "RDS", "CloudFormation"] },
     { name: "Azure", features: ["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "ARM Templates"] },
     { name: "Google Cloud", features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "Deployment Manager"] }
@@ -184,6 +217,7 @@ const CloudDevOps: React.FC = () => {
     { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const benefits = [
     "Faster deployment cycles and reduced time to market",
@@ -344,6 +378,8 @@ const CloudDevOps: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
                     <p className="text-gray-300">{benefit}</p>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
     <>
       <Helmet>
@@ -354,6 +390,7 @@ const CloudDevOps: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/cloud-devops" />
         <link rel="canonical" href="https://ziontechgroup.com/services/cloud-devops" />
       </Helmet>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 
 <<<<<<< HEAD
@@ -420,6 +457,9 @@ const CloudDevOps: React.FC = () => {
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       description: "Automated build, test, and deployment pipelines for faster, more reliable releases.",
       features: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
     },
@@ -548,13 +588,17 @@ const CloudDevOps: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{platform.name}</h3>
                 <p className="text-gray-300">{platform.description}</p>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-438b
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -583,6 +627,8 @@ const CloudDevOps: React.FC = () => {
                 </motion.div>
               ))}
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -638,13 +684,17 @@ const CloudDevOps: React.FC = () => {
                   and best practices.
                 </p>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-438b
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -659,6 +709,8 @@ const CloudDevOps: React.FC = () => {
       </section>
     </div>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -722,7 +774,10 @@ const CloudDevOps: React.FC = () => {
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   </div>
                 </div>
               ))}
@@ -731,9 +786,12 @@ const CloudDevOps: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Cloud Platforms */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -903,12 +961,16 @@ const CloudDevOps: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
               Let's discuss how cloud and DevOps can accelerate your development 
               and improve your system reliability.
@@ -928,6 +990,8 @@ const CloudDevOps: React.FC = () => {
               </a>
             </div>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               Let's discuss how cloud migration and DevOps can accelerate your business
             </p>
             <Link
@@ -936,11 +1000,15 @@ const CloudDevOps: React.FC = () => {
             >
               Start Your Cloud Journey
             </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </section>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -948,6 +1016,8 @@ const CloudDevOps: React.FC = () => {
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -974,8 +1044,11 @@ const CloudDevOps: React.FC = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-438b
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 };
 

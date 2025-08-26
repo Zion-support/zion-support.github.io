@@ -1,12 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";
@@ -26,6 +30,22 @@ import { ArrowRight, Zap, Users, Brain } from "lucide-react";
 
 export function HeroSection() {
   const { t } = useTranslation();
+=======
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";
+import { useRef } from "react";
+
+export function HeroSection() {
+  const { t } = useTranslation();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,25 +60,37 @@ export function HeroSection() {
 
   const itemVariants = {
 <<<<<<< HEAD
+<<<<<<< HEAD
     hidden: { y: 30, opacity: 0 },
 =======
     hidden: { opacity: 0, y: 20 },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+    hidden: { y: 30, opacity: 0 },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     visible: {
       opacity: 1,
       y: 0,
       transition: {
+<<<<<<< HEAD
         duration: 0.6,
+=======
+        duration: 0.8,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         ease: "easeOut"
       }
     }
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const floatingVariants = {
     animate: {
       y: [-15, 15, -15],
       rotate: [0, 5, 0],
+<<<<<<< HEAD
 =======
   const particleVariants = {
     animate: {
@@ -67,6 +99,22 @@ export function HeroSection() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       transition: {
         duration: 3,
+=======
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const pulseVariants = {
+    animate: {
+      scale: [1, 1.1, 1],
+      opacity: [0.5, 0.8, 0.5],
+      transition: {
+        duration: 2,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         repeat: Infinity,
         ease: "easeInOut"
       }
@@ -75,6 +123,9 @@ export function HeroSection() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
       {/* Enhanced background with parallax effect */}
       <motion.div 
@@ -92,6 +143,7 @@ export function HeroSection() {
         <motion.div 
           className="absolute top-1/3 right-1/3 w-6 h-6 rounded-full bg-zion-cyan opacity-50"
           variants={floatingVariants}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -207,10 +259,13 @@ export function HeroSection() {
           className="absolute top-1/3 right-1/3 w-3 h-3 rounded-full bg-zion-cyan"
           variants={particleVariants}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           animate="animate"
           style={{ animationDelay: '1s' }}
         />
         <motion.div 
+<<<<<<< HEAD
 <<<<<<< HEAD
           className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full bg-zion-purple opacity-70"
           variants={floatingVariants}
@@ -218,6 +273,10 @@ export function HeroSection() {
           className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple"
           variants={particleVariants}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+          className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full bg-zion-purple opacity-70"
+          variants={floatingVariants}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           animate="animate"
           style={{ animationDelay: '2s' }}
         />
@@ -227,8 +286,24 @@ export function HeroSection() {
           animate="animate"
           style={{ animationDelay: '0.5s' }}
         />
+<<<<<<< HEAD
       </div>
 <<<<<<< HEAD
+=======
+        <motion.div 
+          className="absolute top-3/4 left-1/6 w-2 h-2 rounded-full bg-zion-purple-light opacity-80"
+          variants={floatingVariants}
+          animate="animate"
+          style={{ animationDelay: '1.5s' }}
+        />
+        <motion.div 
+          className="absolute top-1/6 right-1/6 w-4 h-4 rounded-full bg-zion-cyan opacity-40"
+          variants={floatingVariants}
+          animate="animate"
+          style={{ animationDelay: '2.5s' }}
+        />
+      </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
       {/* Enhanced decorative geometric shapes with animations */}
       <motion.div 
@@ -254,8 +329,11 @@ export function HeroSection() {
         animate="animate"
         style={{ animationDelay: '1s' }}
       />
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       
       <motion.div 
         className="container relative z-10 px-4 mx-auto text-center"
@@ -264,6 +342,9 @@ export function HeroSection() {
         animate="visible"
       >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Enhanced title with better typography and animations */}
         <motion.div variants={itemVariants} className="mb-8">
           <GradientHeading className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight">
@@ -273,6 +354,7 @@ export function HeroSection() {
 
         {/* Enhanced subtitle with better spacing and animations */}
         <motion.p 
+<<<<<<< HEAD
 =======
         <motion.div variants={itemVariants}>
           <GradientHeading className="mb-4 md:mb-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
@@ -292,6 +374,11 @@ export function HeroSection() {
           variants={itemVariants}
         >
 <<<<<<< HEAD
+=======
+          variants={itemVariants}
+          className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-16 max-w-5xl mx-auto leading-relaxed font-light"
+        >
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           {t('home.hero_subtitle') || "Discover the world's most advanced AI marketplace. Connect with top tech talent, cutting-edge services, and revolutionary equipment in one seamless platform."}
         </motion.p>
 
@@ -336,6 +423,7 @@ export function HeroSection() {
 
         {/* Enhanced CTA buttons with better animations and effects */}
         <motion.div 
+<<<<<<< HEAD
 =======
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-base md:text-lg py-4 md:py-6 px-8 md:px-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
@@ -497,6 +585,11 @@ export function HeroSection() {
           variants={itemVariants}
         >
 <<<<<<< HEAD
+=======
+          variants={itemVariants}
+          className="flex flex-col sm:flex-row justify-center gap-6 mb-16"
+        >
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -594,6 +687,7 @@ export function HeroSection() {
             </div>
             <div className="text-zion-slate-light">Uptime</div>
           </motion.div>
+<<<<<<< HEAD
 =======
           <div className="text-center p-4">
             <div className="w-12 h-12 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -626,6 +720,13 @@ export function HeroSection() {
   );
 }
 =======
+=======
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -843,4 +944,7 @@ export const HeroSection: React.FC = () => {
     </section>
   );
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
@@ -111,6 +112,8 @@ export function NeonBorder({ className = '', children }: { className?: string; c
       <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue rounded-lg blur-sm opacity-50"></div>
       <div className="relative bg-zion-slate-dark/90 rounded-lg border border-zion-purple/30">
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useEffect, useRef } from 'react';
 
 interface AnimatedBackgroundProps {
@@ -367,12 +370,16 @@ export function GradientBorder({ children, className = '', borderWidth = '2px' }
       }}
     >
       <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {children}
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -395,4 +402,6 @@ export function FloatingElement({ className = '', children }: { className?: stri
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

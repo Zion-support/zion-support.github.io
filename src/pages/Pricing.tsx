@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -158,155 +159,33 @@ const Pricing: React.FC = () => {
       answer: 'All plans include email support. Professional and Enterprise plans include priority support with faster response times and additional channels.'
     }
   ];
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { CogIcon } from '@heroicons/react/24/outline';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
+const $page: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Simple, <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Transparent</span> Pricing
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Choose the plan that fits your business needs. All plans include our core AI-powered features with no hidden costs.
-            </p>
-            
-            {/* Billing Toggle */}
-            <div className="mt-8 flex items-center justify-center">
-              <div className="bg-slate-800/50 rounded-lg p-1 border border-white/10">
-                <button
-                  onClick={() => setBillingCycle('monthly')}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                    billingCycle === 'monthly'
-                      ? 'bg-blue-600 text-white'
-                      : 'text-gray-300 hover:text-white'
-                  }`}
-                >
-                  Monthly
-                </button>
-                <button
-                  onClick={() => setBillingCycle('annual')}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                    billingCycle === 'annual'
-                      ? 'bg-blue-600 text-white'
-                      : 'text-gray-300 hover:text-white'
-                  }`}
-                >
-                  Annual
-                  <span className="ml-1 px-2 py-1 bg-green-500 text-white text-xs rounded-full">Save 20%</span>
-                </button>
-              </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <div className="p-3 bg-blue-600/20 rounded-full">
+              <CogIcon className="h-12 w-12 text-blue-400" />
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Pricing Plans */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {plans.map((plan, index) => (
-              <motion.div
-                key={plan.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 ${
-                  plan.popular
-                    ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20 scale-105'
-                    : 'border-white/10 hover:border-blue-500/30'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${plan.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                    <plan.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300">{plan.description}</p>
-                </div>
-                
-                <div className="text-center mb-8">
-                  {plan.price === 'Custom' ? (
-                    <div className="text-3xl font-bold text-white">Custom Pricing</div>
-                  ) : (
-                    <div className="flex items-center justify-center gap-2">
-                      <span className="text-4xl font-bold text-white">${plan.price}</span>
-                      {plan.originalPrice && (
-                        <span className="text-xl text-gray-400 line-through">${plan.originalPrice}</span>
-                      )}
-                      <span className="text-gray-300">/month</span>
-                    </div>
-                  )}
-                </div>
-                
-                <div className="mb-8">
-                  <h4 className="text-white font-semibold mb-4">What's included:</h4>
-                  <ul className="space-y-3">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  {plan.notIncluded.length > 0 && (
-                    <>
-                      <h4 className="text-white font-semibold mb-4 mt-6">Not included:</h4>
-                      <ul className="space-y-3">
-                        {plan.notIncluded.map((feature, idx) => (
-                          <li key={idx} className="flex items-start gap-3">
-                            <XMarkIcon className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-400 text-sm">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  )}
-                </div>
-                
-                <a
-                  href={plan.name === 'Enterprise' ? '/contact' : '/contact'}
-                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 hover:shadow-lg'
-                      : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700 hover:shadow-lg'
-                  }`}
-                >
-                  {plan.cta}
-                </a>
-              </motion.div>
-            ))}
           </div>
-        </div>
-      </section>
-
-      {/* Add-ons Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            $page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            This page is under development. Contact us for more information.
+          </p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
           >
+<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">Add-on Services</h2>
             <p className="text-xl text-gray-300">Enhance your plan with additional services tailored to your needs</p>
           </motion.div>
@@ -908,6 +787,10 @@ const $page: React.FC = () => {
             Contact Us for More Information
           </Link>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+            Contact Us for More Information
+          </Link>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </section>
     </div>

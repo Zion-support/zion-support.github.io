@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     phone: '',
     company: '',
     phone: '',
@@ -74,6 +77,7 @@ import {
   Clock, 
   MessageSquare, 
   ArrowRight,
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import { 
@@ -85,15 +89,21 @@ import {
   Globe, 
   Building,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   Send,
   CheckCircle
 } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Contact = () => {
 =======
 const Contact: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+const Contact = () => {
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -101,6 +111,9 @@ const Contact: React.FC = () => {
     company: '',
     phone: '',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 =======
@@ -245,6 +258,7 @@ const Contact: React.FC = () => {
   };
 
 =======
+<<<<<<< HEAD
 =======
     service: '',
     message: ''
@@ -258,6 +272,8 @@ const Contact: React.FC = () => {
   };
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -279,6 +295,9 @@ const Contact: React.FC = () => {
         phone: '',
         service: '',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
 =======
 =======
@@ -428,8 +447,11 @@ const Contact: React.FC = () => {
       link: 'tel:+13024640950',
       description: 'Available Monday-Friday, 9AM-6PM EST'
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         message: ''
       });
     }, 3000);
@@ -527,6 +549,9 @@ const Contact: React.FC = () => {
       phone: '+44 20 7123 4567',
       email: 'london@ziontechgroup.com'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
       name: "Headquarters",
       address: "123 Tech Avenue, San Francisco, CA 94105",
@@ -538,13 +563,19 @@ const Contact: React.FC = () => {
       address: "456 Innovation Street, New York, NY 10001",
       phone: "+1 302 464 0950", 
       email: "commercial@ziontechgroup.com"
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     
       <SEO 
         title="Contact Zion - Get in Touch" 
@@ -661,6 +692,7 @@ const Contact: React.FC = () => {
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Ready to transform your business? Let's discuss how our AI-powered solutions can drive your success.
+<<<<<<< HEAD
 =======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -673,11 +705,16 @@ const Contact: React.FC = () => {
             Ready to transform your business with cutting-edge technology? Let's discuss how we can help 
             you achieve your digital transformation goals.
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </p>
         </div>
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
@@ -945,6 +982,7 @@ const Contact: React.FC = () => {
                   )}
                 </button>
               </form>
+<<<<<<< HEAD
 =======
       {/* Contact Information */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -1127,6 +1165,8 @@ const Contact: React.FC = () => {
                 </form>
               )}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
 
             {/* Office Locations */}
@@ -1134,11 +1174,15 @@ const Contact: React.FC = () => {
               <h2 className="text-3xl font-bold mb-8 text-white">Our Offices</h2>
               <div className="space-y-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 {officeLocations.map((office, index) => (
                   <div key={index} className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Building className="w-6 h-6 text-cyan-400" />
+<<<<<<< HEAD
 =======
                 {offices.map((office, index) => (
                   <div key={index} className="p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
@@ -1146,6 +1190,8 @@ const Contact: React.FC = () => {
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Building className="h-6 w-6 text-white" />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-semibold text-white mb-2">
@@ -1153,6 +1199,9 @@ const Contact: React.FC = () => {
                         </h3>
                         <div className="space-y-2 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                           <p className="flex items-center space-x-2">
                             <MapPin className="w-4 h-4 text-gray-400" />
                             <span>{office.address}, {office.city}, {office.zip}</span>
@@ -1172,6 +1221,7 @@ const Contact: React.FC = () => {
                           <p className="flex items-center space-x-2">
                             <Clock className="w-4 h-4 text-gray-400" />
                             <span>{office.hours}</span>
+<<<<<<< HEAD
 =======
                           <p className="flex items-center">
                             <MapPin className="h-4 w-4 mr-2 text-blue-400" />
@@ -1185,6 +1235,8 @@ const Contact: React.FC = () => {
                             <Mail className="h-4 w-4 mr-2 text-blue-400" />
                             {office.email}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                           </p>
                         </div>
                       </div>
@@ -1194,6 +1246,9 @@ const Contact: React.FC = () => {
               </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               {/* Social Media */}
               <div className="mt-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Follow Us</h3>
@@ -1568,6 +1623,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 =======
+<<<<<<< HEAD
 =======
               {/* Additional Contact Options */}
               <div className="mt-8 p-6 rounded-xl bg-white/5">
@@ -1599,6 +1655,8 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </div>
@@ -1631,6 +1689,9 @@ const Contact: React.FC = () => {
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
@@ -2169,6 +2230,7 @@ const Contact: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-4">Response Time</h3>
               <p className="text-zion-slate-light mb-4">
                 We typically respond to all inquiries within 24 hours during business days.
+<<<<<<< HEAD
 =======
             <div className="bg-white/5 p-6 rounded-xl">
               <h3 className="text-xl font-semibold text-white mb-3">Do you provide ongoing support?</h3>
@@ -2176,11 +2238,16 @@ const Contact: React.FC = () => {
                 Absolutely! We offer comprehensive support packages including 24/7 monitoring, 
                 regular maintenance, and continuous optimization of your solutions.
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </p>
             </div>
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
 
 
@@ -3502,8 +3569,11 @@ export default Contact;
             </Link>
           </div>
         </div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </section>
     </div>
   );

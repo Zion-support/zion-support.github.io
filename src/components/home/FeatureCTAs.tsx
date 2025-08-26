@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,6 +14,7 @@ import {
   Zap, 
   Settings, 
   Search, 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -83,6 +87,8 @@ export function FeatureCTAs() {
       }
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   MessageSquare, 
   Smartphone, 
   Calendar,
@@ -91,6 +97,9 @@ export function FeatureCTAs() {
   Building,
   Clock,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   Brain,
   Server,
   TrendingUp,
@@ -134,6 +143,7 @@ export function FeatureCTAs() {
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   Shield,
@@ -181,6 +191,8 @@ export function FeatureCTAs() {
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       link: "/marketplace",
       badge: "Popular",
       details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities."
@@ -189,14 +201,19 @@ export function FeatureCTAs() {
       title: "Talent Directory",
       description: "Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
 =======
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+      icon: <Users className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       link: "/talent",
       details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability."
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       title: "AI Services Hub",
@@ -208,6 +225,8 @@ export function FeatureCTAs() {
     },
     {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       title: "Equipment Catalog",
       description: "Find specialized hardware and tech equipment for AI development and research.",
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />,
@@ -223,11 +242,15 @@ export function FeatureCTAs() {
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       title: "Enterprise Solutions",
       description: "Custom-branded hiring portal, dedicated talent pool, and powerful admin controls for your organization.",
       icon: <Building className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
       link: "/enterprise",
       details: "Scale your talent acquisition with white-labeled solutions, analytics dashboards, and dedicated account managers."
+<<<<<<< HEAD
 =======
       title: "Mobile Experience",
       description: "Take Zion with you on the go with our mobile app for iOS and Android devices.",
@@ -272,6 +295,8 @@ export function FeatureCTAs() {
       badge: "New",
       details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank."
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     },
     {
       title: "Zion Hire AI",
@@ -281,6 +306,9 @@ export function FeatureCTAs() {
       badge: "Premium",
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
 
@@ -302,6 +330,7 @@ export function FeatureCTAs() {
                   {feature.icon}
                   {feature.badge && (
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
+<<<<<<< HEAD
 =======
     },
 <<<<<<< HEAD
@@ -910,10 +939,13 @@ export function FeatureCTAs() {
                     <Badge variant="secondary" className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 text-zion-purple border-zion-purple/30">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                       {feature.badge}
                     </Badge>
                   )}
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <CardTitle className="mt-4">{feature.title}</CardTitle>
                 <CardDescription className="line-clamp-2">{feature.description}</CardDescription>
@@ -921,16 +953,24 @@ export function FeatureCTAs() {
                 <CardTitle className="mt-4 text-lg group-hover:text-zion-cyan transition-colors duration-300">{feature.title}</CardTitle>
                 <CardDescription className="line-clamp-2 text-sm">{feature.description}</CardDescription>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+                <CardTitle className="mt-4">{feature.title}</CardTitle>
+                <CardDescription className="line-clamp-2">{feature.description}</CardDescription>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">{feature.details}</p>
               </CardContent>
               <CardFooter>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 <Button className="w-full gap-1">
                   <Link to={feature.link}>
                     <span>Explore {feature.title}</span>
                     <ArrowRight className="h-4 w-4" />
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -945,6 +985,8 @@ export function FeatureCTAs() {
                     <span>Explore {feature.title}</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   </Link>
                 </Button>
               </CardFooter>
@@ -952,17 +994,23 @@ export function FeatureCTAs() {
           ))}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </div>
     </section>
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import { ArrowRight, Play, Download, Users, Zap } from 'lucide-react';
 
@@ -1058,6 +1106,9 @@ export const FeatureCTAs: React.FC = () => {
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-438b
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

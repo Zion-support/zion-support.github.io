@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -45,6 +48,7 @@ export function SEO({ title, description, keywords, image, canonical, ogImage, u
       <meta name="robots" content="index, follow" />
       <meta name="author" content={siteName} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
 =======
 
 import React from 'react';
@@ -302,6 +306,8 @@ export function SEO({
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     </Helmet>
   );
 }

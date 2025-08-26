@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -26,6 +29,9 @@ module.exports = {
         foreground: "hsl(var(--foreground))",
         primary: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
@@ -37,6 +43,7 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
           950: '#172554',
+<<<<<<< HEAD
 =======
       screens: {
         xs: "475px",
@@ -152,6 +159,8 @@ module.exports = {
             "background-position": "right center",
           },
 >>>>>>> origin/cursor/website-audit-and-enhancement-145a
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         },
         glow: {
           "0%": { boxShadow: "0 0 20px rgba(147, 51, 234, 0.3)" },
@@ -326,6 +335,7 @@ module.exports = {
         '3xl': '1600px',
         '4xl': '1920px',
         '5xl': '2560px',
+<<<<<<< HEAD
 =======
       },
       backgroundImage: {
@@ -406,6 +416,8 @@ module.exports = {
         'screen-90': '90vh',
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       },
     },
   },

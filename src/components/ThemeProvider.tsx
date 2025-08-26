@@ -3,6 +3,9 @@
 import * as React from "react";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export type Theme = "dark" | "light" | "system"
 
 type ThemeProviderProps = {
@@ -34,6 +37,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     theme,
     setTheme: () => {},
   }
+<<<<<<< HEAD
 =======
 interface ThemeProviderProps {
   children: React.ReactNode;
@@ -79,6 +83,8 @@ export function ThemeProvider({
     [theme, storageKey]
   );
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   return (
     <ThemeContext.Provider value={value}>
@@ -88,6 +94,9 @@ export function ThemeProvider({
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export const useTheme = (): ThemeProviderState => {
   const context = useContext(ThemeProviderContext)
 
@@ -96,6 +105,7 @@ export const useTheme = (): ThemeProviderState => {
 
   return context
 }
+<<<<<<< HEAD
 =======
 interface ThemeContextType {
   theme: string;
@@ -112,3 +122,5 @@ export const useTheme = () => {
   return context;
 };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

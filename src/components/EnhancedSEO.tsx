@@ -2,6 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
@@ -28,6 +31,7 @@ export default function EnhancedSEO({
   nofollow = false
 }: EnhancedSEOProps) {
   const currentUrl = typeof window !== 'undefined' ? window.location.href : canonical || 'https://ziontechgroup.com';
+<<<<<<< HEAD
 =======
 interface SEOProps {
   title?: string;
@@ -71,6 +75,8 @@ export function EnhancedSEO({
   const fullTitle = title.includes('Zion') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   
   // Default structured data for organization
   const defaultStructuredData = {
@@ -78,6 +84,9 @@ export function EnhancedSEO({
     "@type": "Organization",
     "name": "Zion Tech Group",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/images/logo.png",
     "description": description,
@@ -106,6 +115,7 @@ export function EnhancedSEO({
       "lowPrice": "599",
       "highPrice": "25000",
       "description": "Enterprise AI and Technology Solutions"
+<<<<<<< HEAD
 =======
     "url": "https://app.ziontechgroup.com",
     "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
@@ -126,6 +136,8 @@ export function EnhancedSEO({
       "@type": "PostalAddress",
       "addressCountry": "US"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   };
 
@@ -136,6 +148,9 @@ export function EnhancedSEO({
     <Helmet>
       {/* Basic Meta Tags */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -179,6 +194,7 @@ export function EnhancedSEO({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black" />
       <meta name="format-detection" content="telephone=no" />
+<<<<<<< HEAD
 =======
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
@@ -252,6 +268,8 @@ export function EnhancedSEO({
         as="style" 
       />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -259,6 +277,9 @@ export function EnhancedSEO({
       </script>
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -273,6 +294,7 @@ export function EnhancedSEO({
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+<<<<<<< HEAD
 =======
       {/* Additional SEO enhancements */}
       <meta name="application-name" content="Zion Tech Group" />
@@ -294,6 +316,8 @@ export function EnhancedSEO({
       {/* Microsoft Tiles */}
       <meta name="msapplication-config" content="/browserconfig.xml" />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     </Helmet>
   );
 }

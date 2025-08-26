@@ -3,11 +3,20 @@ export interface EmergingTechBreakthrough2029 {
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   features: string[];
+=======
+  period: string;
+  description: string;
+  features: string[];
+  category: string;
+  technology: string[];
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }
 
 export const emergingTechBreakthroughs2029: EmergingTechBreakthrough2029[] = [
   {
+<<<<<<< HEAD
     id: 'emerging-tech-2029-1',
     name: 'Emerging Tech Breakthrough 2029 1',
     tagline: 'Emerging tech breakthrough 2029',
@@ -20,3 +29,23 @@ export const emergingTechBreakthroughs2029: EmergingTechBreakthrough2029[] = [
 export const emergingTechBreakthroughServices2029 = emergingTechBreakthroughs2029;
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+<<<<<<< HEAD
+    id: 'quantum-consciousness-interface-2029',
+    name: 'Quantum Consciousness Interface 2029',
+    tagline: 'Next-generation quantum consciousness technology',
+    price: '$35,999',
+    period: '/month',
+    description: 'Advanced quantum consciousness interface for 2029 with breakthrough capabilities.',
+    features: [
+      'Quantum consciousness',
+      'Advanced interface',
+      'Breakthrough technology',
+      'Future-ready design',
+      'Quantum algorithms'
+    ],
+    category: 'Quantum Technology',
+    technology: ['Quantum Computing', 'Consciousness Research', 'Advanced Interfaces', 'Breakthrough Tech']
+  }
+];
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -171,6 +172,8 @@ export function MicroSaasServicesSection() {
             </Card>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { Zap, Star, ArrowRight, CheckCircle, TrendingUp, Shield, Code, Users } from 'lucide-react';
 import { getFeaturedMicroSaasServices } from '@/data/microSaasServices';
@@ -275,13 +278,17 @@ export function MicroSaasServicesSection() {
           {featuredServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           ))}
         </div>
 
         {/* Stats Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -333,6 +340,8 @@ export function MicroSaasServicesSection() {
                   Get Free Quote
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div className="text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
@@ -394,9 +403,12 @@ export function MicroSaasServicesSection() {
                 <Link to="/contact">
                   Get Consultation
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </Link>
               </Button>
             </div>

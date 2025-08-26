@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState } from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -9,6 +12,9 @@ import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Clock, Globe, Shield, Zap, MapPin, CheckCircle } from "lucide-react";
 
 export function ITServiceRequestHero() {
@@ -25,6 +31,7 @@ export function ITServiceRequestHero() {
         setIsSubmitting(false);
         navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
       }, 1000);
+<<<<<<< HEAD
 =======
 import { MapPin, Clock, Globe, ArrowRight, Shield, Zap } from "lucide-react";
 
@@ -37,6 +44,8 @@ export function ITServiceRequestHero() {
     if (location.trim()) {
       navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   };
 
@@ -62,6 +71,9 @@ export function ITServiceRequestHero() {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const features = [
     { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
@@ -75,6 +87,7 @@ export function ITServiceRequestHero() {
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
+<<<<<<< HEAD
 =======
   return (
 <<<<<<< HEAD
@@ -114,6 +127,8 @@ export function ITServiceRequestHero() {
         </div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </div>
 
       <motion.div 
@@ -243,6 +258,7 @@ export function ITServiceRequestHero() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import React from 'react';
@@ -350,3 +366,5 @@ export const ITServiceRequestHero: React.FC = () => {
 };
 >>>>>>> origin/cursor/website-audit-and-enhancement-438b
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

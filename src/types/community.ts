@@ -40,6 +40,7 @@ export interface ForumCategoryInfo {
   };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
@@ -93,3 +94,5 @@ export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
   },
 ];
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

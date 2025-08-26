@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 =======
@@ -211,6 +212,10 @@ export function QuickAccess() {
 =======
 import React from 'react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight } from 'lucide-react';
 
 export const QuickAccess: React.FC = () => {
@@ -309,8 +314,12 @@ export const QuickAccess: React.FC = () => {
     </section>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 };
 >>>>>>> origin/cursor/website-audit-and-enhancement-438b
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

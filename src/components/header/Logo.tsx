@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 export const Logo: React.FC = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     <Link to="/" className="flex items-center space-x-2">
@@ -11,6 +12,8 @@ export const Logo: React.FC = () => {
         Zion Tech
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <Link to="/" className="flex items-center group">
       <div className="flex items-center space-x-2">
         {/* Icon */}
@@ -31,9 +34,12 @@ export const Logo: React.FC = () => {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </div>
       <div className="text-xs lg:text-sm text-gray-300 font-medium">Group</div>
     </Link>

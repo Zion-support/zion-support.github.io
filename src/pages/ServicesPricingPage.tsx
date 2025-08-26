@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -49,6 +52,7 @@ export default function ServicesPricingPage() {
                 View All Services
               </Button>
             </Link>
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -191,11 +195,16 @@ export default function ServicesPricingPage() {
               Contact Sales
             </Button>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Contact Information */}
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
@@ -218,6 +227,7 @@ export default function ServicesPricingPage() {
                 ziontechgroup.com
               </a>
             </div>
+<<<<<<< HEAD
 =======
       {/* Contact Banner */}
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 border-b border-zion-blue-light">
@@ -236,11 +246,16 @@ export default function ServicesPricingPage() {
               <span>kleber@ziontechgroup.com</span>
             </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Pricing Tiers */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -250,6 +265,7 @@ export default function ServicesPricingPage() {
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
               Flexible pricing tiers designed to scale with your business needs
+<<<<<<< HEAD
 =======
       {/* Pricing Tiers Overview */}
       <div className="py-16 bg-gray-50">
@@ -261,11 +277,16 @@ export default function ServicesPricingPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Flexible pricing options designed to scale with your business needs
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             {Object.entries(PRICING_TIERS).map(([tierName, tier], index) => (
               <Card key={tierName} className={`bg-zion-blue border-zion-blue-light ${
                 index === 1 ? 'ring-2 ring-zion-cyan scale-105' : ''
@@ -299,6 +320,7 @@ export default function ServicesPricingPage() {
                   
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                     <Phone className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
 =======
             {pricingTiers.map((tier, index) => (
               <Card key={tier.name} className={`relative ${index === 1 ? 'border-2 border-zion-blue shadow-xl scale-105' : ''}`}>
@@ -323,6 +345,8 @@ export default function ServicesPricingPage() {
                   </ul>
                   <Button className="w-full mt-6" variant={index === 1 ? "default" : "outline"}>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                     Get Started
                   </Button>
                 </CardContent>
@@ -333,6 +357,9 @@ export default function ServicesPricingPage() {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Service-Specific Pricing */}
       <div className="bg-zion-blue-dark py-16 px-4">
         <div className="container mx-auto">
@@ -425,6 +452,7 @@ export default function ServicesPricingPage() {
                 <p className="text-zion-slate-light text-sm">{feature.description}</p>
               </div>
             ))}
+<<<<<<< HEAD
 =======
       {/* Services by Category Pricing */}
       <div className="py-16 bg-white">
@@ -757,11 +785,16 @@ export default function ServicesPricingPage() {
               </CardContent>
             </Card>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
@@ -778,6 +811,7 @@ export default function ServicesPricingPage() {
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <Mail className="w-5 h-5 mr-2" />
+<<<<<<< HEAD
 =======
       {/* Contact CTA Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple py-20 text-white">
@@ -820,6 +854,8 @@ export default function ServicesPricingPage() {
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue text-lg px-8 py-6">
               <Phone className="mr-3 h-6 w-6" />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               Schedule Consultation
             </Button>
           </div>

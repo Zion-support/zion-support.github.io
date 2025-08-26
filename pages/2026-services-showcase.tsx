@@ -7,7 +7,11 @@ import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowR
 
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+<<<<<<< HEAD
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
+=======
+import { innovative2026MicroSaasV2Services } from '../data/innovative-2026-micro-saas-v2';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
 import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
 
@@ -60,7 +64,11 @@ export default function Services2026ShowcasePage() {
 
   // Combine all 2026 services
   const all2026Services = [
+<<<<<<< HEAD
     ...innovative2026MicroSaasServicesV2,
+=======
+    ...innovative2026MicroSaasV2Services,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ...emergingTech2026ServicesV2,
     ...enterpriseIT2026ServicesV2
   ];

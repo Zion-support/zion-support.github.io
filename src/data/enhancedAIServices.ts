@@ -4,6 +4,7 @@ export interface AIService {
   description: string;
   category: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   subcategory: string;
@@ -12,6 +13,8 @@ export interface AIService {
   pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium';
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   pricing: {
     monthly: number;
     yearly: number;
@@ -20,13 +23,17 @@ export interface AIService {
     pricingModel: string;
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   features: string[];
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -644,6 +651,8 @@ export const AI_SERVICE_PRICING_TIERS = [
 ];
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   technologies: string[];
   integrations: string[];
   support: string[];
@@ -1191,6 +1200,9 @@ export const getAIServiceCategories = (): string[] => {
   return [...new Set(ENHANCED_AI_SERVICES.map(service => service.category))];
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

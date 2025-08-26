@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 import type { AppProps } from 'next/app';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useRef } from 'react';
 import '../styles/globals.css';
 import { SEOContext } from '../components/SEOContext';
@@ -18,6 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
 		</SEOContext.Provider>
 	);
 }
+<<<<<<< HEAD
 =======
 import '../styles/globals.css';
 import SiteLayout from '../components/layout/SiteLayout';
@@ -51,3 +55,5 @@ export default function App({ Component, pageProps }: AppProps) {
 	)
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

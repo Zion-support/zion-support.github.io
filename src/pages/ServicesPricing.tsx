@@ -133,6 +133,7 @@ const serviceCategories = [
       { name: "Marketing Automation", starter: 999, professional: 2999, enterprise: 5999 },
       { name: "Web Development", starter: 1999, professional: 4999, enterprise: 9999 },
       { name: "Mobile App Development", starter: 2999, professional: 6999, enterprise: 14999 }
+<<<<<<< HEAD
     ]
   },
   {
@@ -408,6 +409,8 @@ const serviceCategories = [
         popular: false,
         link: "https://ziontechgroup.com/marketing-attribution"
       }
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ]
   }
 ];

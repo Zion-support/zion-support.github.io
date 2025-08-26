@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const real2027Q1Additions = [
   {
     id: 'q1-2027-service-1',
@@ -7,6 +8,8 @@ export const real2027Q1Additions = [
     price: '$499',
     category: 'Q1 2027 Services'
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export interface Real2027Q1Addition {
   id: string;
   name: string;
@@ -22,6 +25,9 @@ export const real2027Q1Additions: Real2027Q1Addition[] = [
     tagline: 'First quarter 2027 addition',
     price: '$1199',
     features: ['Q1 2027 features', 'Future innovations', 'Next-gen solutions']
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

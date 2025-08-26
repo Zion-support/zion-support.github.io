@@ -1,6 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 =======
 import Link from 'next/link';
@@ -29,6 +32,7 @@ const SpaceTech: React.FC = () => {
       title: "Space Analytics",
       description: "AI-powered analysis of space data for scientific research and commercial applications.",
       applications: ["Space Weather Prediction", "Orbital Mechanics", "Resource Mapping", "Scientific Discovery"]
+<<<<<<< HEAD
 =======
 import Link from 'next/link';
 
@@ -144,10 +148,13 @@ const ResearchDevelopment: React.FC = () => {
       focus: ["Edge AI", "Distributed Systems", "5G Networks", "IoT Integration"]
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -302,12 +309,17 @@ const ResearchDevelopment: React.FC = () => {
             </Link>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               Space
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {" "}Technology
@@ -316,6 +328,7 @@ const ResearchDevelopment: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advancing humanity's reach into space with cutting-edge technology solutions 
               for exploration, communication, and scientific discovery
+<<<<<<< HEAD
 =======
               Research &
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
@@ -325,11 +338,16 @@ const ResearchDevelopment: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Pushing the boundaries of technology through innovative research and cutting-edge development
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             {spaceTechnologies.map((tech, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.title}</h3>
@@ -342,6 +360,7 @@ const ResearchDevelopment: React.FC = () => {
                       <li key={idx} className="text-sm text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
                         {app}
+<<<<<<< HEAD
 =======
             {researchAreas.map((area, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
@@ -356,6 +375,8 @@ const ResearchDevelopment: React.FC = () => {
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
                         {item}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                       </li>
                     ))}
                   </ul>
@@ -367,21 +388,28 @@ const ResearchDevelopment: React.FC = () => {
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               <h3 className="text-2xl font-bold mb-4">Reach for the Stars</h3>
               <p className="text-gray-300 mb-6">
                 Ready to explore the final frontier? Let's discuss how space technology 
                 can advance your mission and expand human capabilities.
+<<<<<<< HEAD
 =======
               <h3 className="text-2xl font-bold mb-4">Collaborate With Us</h3>
               <p className="text-gray-300 mb-6">
                 Interested in research collaboration or want to learn more about our R&D initiatives? 
                 Let's explore opportunities to work together.
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </p>
               <Link
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Explore Space Solutions
               </Link>
@@ -392,6 +420,11 @@ const ResearchDevelopment: React.FC = () => {
             </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+                Explore Space Solutions
+              </Link>
+            </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </section>
@@ -400,7 +433,11 @@ const ResearchDevelopment: React.FC = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default SpaceTech;
 =======
 export default ResearchDevelopment;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+export default SpaceTech;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

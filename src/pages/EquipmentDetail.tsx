@@ -65,14 +65,19 @@ export default function EquipmentDetail() {
     setIsAdding(true);
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
       const response = await fetch('/checkout/create-session', {
 =======
       const response = await fetch('/api/checkout_sessions', {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+      const response = await fetch('/checkout/create-session', {
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ productId: equipmentId }),
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
       const { url } = await response.json();
       if (url) {
@@ -83,6 +88,11 @@ export default function EquipmentDetail() {
       if (stripe && sessionId) {
         await stripe.redirectToCheckout({ sessionId });
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+      const { url } = await response.json();
+      if (url) {
+        window.location.href = url as string;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       }
     } catch (err) {
       toast({ title: 'Payment error', description: 'Could not start checkout.' });

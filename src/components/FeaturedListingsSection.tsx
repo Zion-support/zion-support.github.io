@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar } from 'lucide-react';
@@ -124,6 +127,7 @@ const categories = [
   "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
 ];
 
+<<<<<<< HEAD
 export function FeaturedListingsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<number | null>(null);
@@ -180,6 +184,25 @@ export function FeaturedListingsSection() {
       link: '/services/cybersecurity',
       features: ['Security Audits', 'Threat Detection', 'Incident Response']
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+export function FeaturedListingsSection() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [hoveredListing, setHoveredListing] = useState<number | null>(null);
+  const [showFilters, setShowFilters] = useState(false);
+
+  const filteredListings = selectedCategory === "All" 
+    ? featuredListings 
+    : featuredListings.filter(listing => listing.category === selectedCategory);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.1
+      }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
 
@@ -416,6 +439,7 @@ export function FeaturedListingsSection() {
                       </motion.div>
                     )}
                   </AnimatePresence>
+<<<<<<< HEAD
 =======
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -475,6 +499,8 @@ export function FeaturedListingsSection() {
                     Learn More →
                   </Link>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </div>
               </div>
               
@@ -511,6 +537,7 @@ export function FeaturedListingsSection() {
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
 =======
         <div className="text-center mt-12">
           <Link
@@ -524,6 +551,8 @@ export function FeaturedListingsSection() {
           </Link>
         </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </div>
     </section>
   );

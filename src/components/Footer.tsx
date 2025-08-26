@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+<<<<<<< HEAD
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -83,6 +83,12 @@ const Footer: React.FC = () => {
       )
     }
   ];
+=======
+export function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   return (
     <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
@@ -115,6 +121,7 @@ const Footer: React.FC = () => {
             {/* Contact info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 text-zion-slate-light">
+<<<<<<< HEAD
                 <Mail className="h-4 w-4 text-zion-cyan" />
                 <span>info@ziontechgroup.com</span>
               </div>
@@ -125,6 +132,18 @@ const Footer: React.FC = () => {
               <div className="flex items-center gap-3 text-zion-slate-light">
                 <MapPin className="h-4 w-4 text-zion-cyan" />
                 <span>Delaware, USA</span>
+=======
+                <Mail className="w-4 h-4 text-zion-cyan" />
+                <span className="text-sm">hello@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center gap-3 text-zion-slate-light">
+                <Phone className="w-4 h-4 text-zion-cyan" />
+                <span className="text-sm">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center gap-3 text-zion-slate-light">
+                <MapPin className="w-4 h-4 text-zion-cyan" />
+                <span className="text-sm">Global • Remote First</span>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </div>
             </div>
           </motion.div>
@@ -194,8 +213,9 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Marketplace */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-4 text-lg">Services</h3>
             <ul className="space-y-2">
               <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
@@ -203,23 +223,46 @@ const Footer: React.FC = () => {
               <li><Link to="/quantum-technology" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Technology</Link></li>
               <li><Link to="/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
               <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact Us</Link></li>
+=======
+            <h3 className="text-white font-semibold mb-4 text-lg">Marketplace</h3>
+            <ul className="space-y-3">
+              <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Products</Link></li>
+              <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Services</Link></li>
+              <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Talent</Link></li>
+              <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Equipment</Link></li>
+              <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Categories</Link></li>
+              <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Green IT</Link></li>
+              <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">IT Onsite Services</Link></li>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </ul>
           </div>
 
           {/* Company */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
+<<<<<<< HEAD
             <ul className="space-y-2">
               <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About Us</Link></li>
               <li><Link to="/team" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Our Team</Link></li>
               <li><Link to="/case-studies" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Case Studies</Link></li>
               <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
               <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
+=======
+            <ul className="space-y-3">
+              <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">About Us</Link></li>
+              <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Blog</Link></li>
+              <li><Link to="/partners" className="text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Partners</Link></li>
+              <li><Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Careers</Link></li>
+              <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Contact</Link></li>
+              <li><Link to="/faq" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">FAQ</Link></li>
+              <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Sitemap</Link></li>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </ul>
           </div>
 
           {/* Support & Resources */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
             <ul className="space-y-2">
               <li><Link to="/resources" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Resources</Link></li>
@@ -227,6 +270,17 @@ const Footer: React.FC = () => {
               <li><Link to="/reports" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Reports</Link></li>
               <li><Link to="/docs" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Documentation</Link></li>
               <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
+=======
+            <h3 className="text-white font-semibold mb-4 text-lg">Support & Resources</h3>
+            <ul className="space-y-3 mb-6">
+              <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Help Center</Link></li>
+              <li><Link to="/faq" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">FAQ</Link></li>
+              <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Contact Support</Link></li>
+              <li><Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Terms of Service</Link></li>
+              <li><Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Privacy Policy</Link></li>
+              <li><Link to="/security" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Security</Link></li>
+              <li><Link to="/status" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">System Status</Link></li>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </ul>
           </div>
           
@@ -240,6 +294,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </motion.div>
+<<<<<<< HEAD
 
         {/* Bottom section */}
         <div className="pt-8 border-t border-zion-blue-light">
@@ -499,6 +554,36 @@ export function Footer() {
               ))}
             </motion.div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+
+        {/* Bottom section */}
+        <div className="pt-8 border-t border-zion-blue-light">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
+              <p className="text-zion-slate-light text-sm">
+                &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+              </p>
+              <div className="flex items-center gap-2 text-zion-slate-light/60">
+                <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
+                <span className="text-xs">Live</span>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-6">
+              <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
+              <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Cookies</Link>
+              <Link to="/accessibility" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Accessibility</Link>
+            </div>
+            <motion.div 
+              className="flex items-center space-x-2 text-zion-slate-light text-sm"
+              whileHover={{ scale: 1.05 }}
+            >
+              <span>Made with</span>
+              <Heart className="w-4 h-4 text-red-400 animate-pulse" />
+              <span>for the future of technology</span>
+            </motion.div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
 
           {/* Additional Links */}
@@ -535,6 +620,9 @@ export function Footer() {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Scroll to top button */}
       <motion.button
         onClick={scrollToTop}
@@ -550,6 +638,7 @@ export function Footer() {
     </footer>
   );
 }
+<<<<<<< HEAD
 =======
       {/* Scroll to Top Button */}
       <motion.button
@@ -565,3 +654,5 @@ export function Footer() {
   );
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

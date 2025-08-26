@@ -94,6 +94,9 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // AI-Powered Predictive Healthcare Analytics
 =======
   // AI-Powered Drug Discovery Platform
@@ -159,6 +162,9 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // Autonomous Financial Trading AI
 =======
   // AI-Powered Financial Trading Platform
@@ -224,6 +230,9 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // AI-Powered Supply Chain Optimization
 =======
   // AI-Powered Climate Prediction Engine
@@ -350,6 +359,9 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // AI-Powered Educational Personalization
 =======
   // AI-Powered Creative Design Platform

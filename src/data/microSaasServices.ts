@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -427,11 +428,14 @@ export const CONTACT_INFO = {
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export interface MicroSaasService {
   id: string;
   title: string;
   description: string;
   category: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   marketPrice: string;
   website: string;
@@ -460,11 +464,17 @@ export interface MicroSaasService {
   contactEmail: string;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+  marketPrice: string;
+  website: string;
+  contactEmail: string;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   tags: string[];
   aiScore: number;
   rating: number;
   reviewCount: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   featured: boolean;
   location: string;
   availability: string;
@@ -476,11 +486,17 @@ export interface MicroSaasService {
   availability: string;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+  featured: boolean;
+  location: string;
+  availability: string;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   author: {
     name: string;
     id: string;
     avatarUrl?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     verified: boolean;
 =======
 <<<<<<< HEAD
@@ -488,12 +504,16 @@ export interface MicroSaasService {
     verified: boolean;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+    verified: boolean;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   };
   images: string[];
   createdAt: string;
 }
 
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -550,6 +570,8 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     subcategory: "Customer Support",
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // AI & Machine Learning Services
   {
     id: "ai-chatbot-builder",
@@ -604,13 +626,17 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     category: "AI Services",
     subcategory: "Content Creation",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     price: 79,
     currency: "$",
     pricingModel: "monthly",
     features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -646,6 +672,8 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     images: ["https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=500"],
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       "AI-powered content generation",
       "SEO optimization tools",
       "Brand voice customization",
@@ -680,13 +708,17 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     },
     images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     createdAt: "2024-01-20T14:30:00.000Z"
   },
   {
     id: "ai-data-analytics",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -697,20 +729,26 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: 199,
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     title: "AI-Powered Business Intelligence",
     description: "Intelligent data analytics platform that transforms raw data into actionable insights. Features predictive analytics, automated reporting, and real-time dashboards.",
     category: "AI Services",
     subcategory: "Data Analytics",
     price: 149,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Real-time data processing",
       "Predictive analytics",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -879,6 +917,8 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     subcategory: "Finance",
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       "Automated reporting",
       "Custom dashboards",
       "Data visualization",
@@ -919,13 +959,17 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     category: "AI Services",
     subcategory: "Developer Tools",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     price: 29,
     currency: "$",
     pricingModel: "monthly",
     features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1081,6 +1125,8 @@ export const getServicesBySubcategory = (subcategory: string): MicroSaasService[
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5241
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       "AI code completion",
       "Bug detection & fixing",
       "Code optimization",
@@ -1360,9 +1406,12 @@ export const getServicesBySubcategory = (subcategory: string): MicroSaasService[
       "Multi-channel support",
       "Knowledge base",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   pricing: {
     monthly: number;
     yearly: number;
@@ -1514,13 +1563,17 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "Ticket routing & escalation",
       "Customer satisfaction surveys",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       "Performance analytics",
       "Integration APIs"
     ],
     benefits: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1660,6 +1713,8 @@ export const searchMicroSaasServices = (query: string) => {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       "Reduce response time by 90%",
       "Handle 70% of queries automatically",
       "Improve customer satisfaction by 45%",
@@ -1921,7 +1976,10 @@ export const getMicroSaasServicesByCategory = (category: string): MicroSaasServi
 export const getMicroSaasCategories = (): string[] => {
   return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 };

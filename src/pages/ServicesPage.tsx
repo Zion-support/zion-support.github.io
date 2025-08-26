@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from 'next/link';
 import { 
@@ -15,6 +18,7 @@ import {
   Rocket,
   Users
 } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
 
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
@@ -24,13 +28,30 @@ import { TrustedBySection } from "@/components/TrustedBySection";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+<<<<<<<< HEAD:src/pages/ServicesPage.tsx
 import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
+========
+<<<<<<< HEAD
+import { Globe, ExternalLink, Star, Clock, Shield, Zap, Database, Code, Smartphone, Blockchain, Cpu, BarChart3 } from "lucide-react";
+=======
+import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
+>>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/ServicesPage.tsx.backup.1756208062
 import { useEffect, useState } from "react";
 <<<<<<< HEAD
 import { SEO } from "@/components/SEO";
 =======
 import { EXPANDED_SERVICES } from "@/data/expandedServices";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+
+import { ProductListing } from "@/types/listings";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
+import { useEffect, useState } from "react";
+import { SEO } from "@/components/SEO";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 // Enhanced service listings with new micro SAAS services
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -638,7 +659,31 @@ export default function ServicesPage() {
   }, []);
 
   return (
+<<<<<<< HEAD
     <>
+<<<<<<< HEAD
+=======
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="IT & AI Services - Zion Tech Group" 
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
+        keywords="IT services, AI services, technology consulting, Zion Tech Group"
+        url="https://ziontechgroup.com/services"
+      />
+      
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <h2 className="text-white text-lg font-medium">Featured Services</h2>
+          <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
+            <Link to="/enhanced-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                Enhanced AI & IT Services
+              </Button>
+            </Link>
+=======
       <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-8 px-4 md:px-8 mb-8 border-b border-zion-purple/30">
         <div className="container mx-auto">
           <div className="text-center mb-6">
@@ -691,6 +736,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10 backdrop-blur-sm">
                 <Globe className="h-4 w-4 mr-2" />
@@ -706,6 +752,17 @@ export default function ServicesPage() {
               <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
                 <MessageCircle className="h-4 w-4 mr-2" />
                 Contact Sales
+=======
+            <Link to="/comprehensive-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                View All Services
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                Request a Quote
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </Button>
             </Link>
           </div>
@@ -713,6 +770,9 @@ export default function ServicesPage() {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-zion-blue mb-4">IT & AI Services</h1>
@@ -758,6 +818,7 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 =======
       <DynamicListingPage 
         title="Comprehensive Micro SAAS Solutions"
@@ -771,5 +832,7 @@ export default function ServicesPage() {
       <TrustedBySection />
     </>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 }

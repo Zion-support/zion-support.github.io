@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { ForumCategoryInfo } from '@/types/community';
 
 export default function ForumCategories() {
@@ -72,9 +75,13 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 };
 
 export default ForumCategories;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

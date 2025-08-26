@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import { 
   Lightbulb, 
@@ -18,15 +19,21 @@ const Consulting: React.FC = () => {
       icon: "🔍",
       features: ["Infrastructure Review", "Technology Stack Analysis", "Gap Identification", "Recommendations"]
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       title: "Technology Assessment",
       description: "Comprehensive evaluation of your current technology landscape and capabilities",
       features: ["Infrastructure Review", "Technology Stack Analysis", "Gap Identification", "Recommendations"],
       icon: "🔍"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     },
     {
       title: "Strategic Planning",
       description: "Develop long-term technology strategy aligned with business objectives",
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: "📋",
       features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"]
@@ -34,10 +41,15 @@ const Consulting: React.FC = () => {
       features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
       icon: "📋"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+      features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
+      icon: "📋"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     },
     {
       title: "Vendor Selection",
       description: "Expert guidance in selecting the right technology partners and solutions",
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: "🤝",
       features: ["Requirements Analysis", "Vendor Evaluation", "Contract Negotiation", "Implementation Support"]
@@ -113,6 +125,8 @@ const Consulting: React.FC = () => {
                 View Solutions
               </a>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       features: ["Requirements Analysis", "Vendor Evaluation", "Contract Negotiation", "Implementation Support"],
       icon: "🤝"
     },
@@ -178,11 +192,15 @@ import Link from 'next/link';
               >
                 View All Services
               </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -208,6 +226,8 @@ import Link from 'next/link';
                         <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                         {feature}
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Consulting Approach */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -298,7 +318,10 @@ import Link from 'next/link';
                       <li key={idx} className="text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {solution}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                       </li>
                     ))}
                   </ul>
@@ -308,6 +331,7 @@ import Link from 'next/link';
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Industries Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -319,6 +343,8 @@ import Link from 'next/link';
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Deep expertise across diverse industry sectors
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Success Stories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -364,11 +390,15 @@ import Link from 'next/link';
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Deep knowledge across leading technology platforms and solutions
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
               {industries.map((industry, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center hover:border-purple-500/50 transition-all duration-300">
@@ -428,6 +458,8 @@ import Link from 'next/link';
                   <h3 className="text-xl font-semibold text-white mb-2">{phase.title}</h3>
                   <p className="text-gray-300">{phase.description}</p>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               {[
                 "Cloud Platforms", "Security Solutions", "Data Analytics", "AI/ML",
                 "DevOps Tools", "Enterprise Software", "Integration Platforms", "Mobile Technologies",
@@ -438,7 +470,10 @@ import Link from 'next/link';
                   className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center hover:border-white/40 transition-all duration-300"
                 >
                   <span className="text-gray-300 font-medium">{tech}</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </div>
               ))}
             </div>
@@ -446,6 +481,7 @@ import Link from 'next/link';
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -471,6 +507,8 @@ import Link from 'next/link';
               </a>
             </div>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -485,7 +523,10 @@ import Link from 'next/link';
             >
               Get Expert Consultation
             </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </section>
       </div>

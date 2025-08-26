@@ -3,12 +3,16 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   Shield, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, 
   Zap, Sparkles, Lock, Cpu, Database, Cloud, Users, 
   Briefcase, BookOpen, MessageCircle, TrendingUp,
   Target, Layers, Globe, Brain, Atom, Building, Network,
   Eye, Key, Server, LockKeyhole, Fingerprint, ShieldCheck
+<<<<<<< HEAD
 ========
   Brain, Atom, Rocket, Sparkles, Star, CheckCircle, 
   ArrowRight, Phone, Mail, MapPin, Globe, Shield,
@@ -16,6 +20,8 @@ import {
   Database, Lock, Cloud, BarChart3, Settings,
   BookOpen, GraduationCap, Award, DollarSign
 >>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:pages/ai-consciousness-evolution-2029.tsx
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
@@ -57,7 +63,10 @@ const useCases = [
 ];
 
 const technology = [
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   'Zero Trust Architecture',
   'Identity Management',
   'Network Security',
@@ -111,6 +120,7 @@ const pricingPlans = [
     ],
     popular: false
   }
+<<<<<<< HEAD
 ========
   'Advanced Neural Networks',
   'Quantum Computing',
@@ -119,12 +129,15 @@ const pricingPlans = [
   'Machine Learning',
   'Neuroscience Models'
 >>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:pages/ai-consciousness-evolution-2029.tsx
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 ];
 
 export default function ZeroTrustNetworkArchitecture2029() {
   return (
     <>
       <Head>
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
         <title>Zero Trust Network Architecture 2029 | Zion Tech Group</title>
         <meta name="description" content="Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices." />
@@ -134,25 +147,37 @@ export default function ZeroTrustNetworkArchitecture2029() {
         <meta name="description" content="Revolutionary platform that enables AI systems to develop genuine consciousness, self-awareness, and emotional intelligence beyond current limitations. Transform AI research with our consciousness evolution technology." />
         <meta name="keywords" content="AI consciousness, artificial intelligence, consciousness evolution, AI self-awareness, emotional intelligence, AI ethics, neuroscience, philosophy, research" />
 >>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:pages/ai-consciousness-evolution-2029.tsx
+=======
+        <title>Zero Trust Network Architecture 2029 | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices." />
+        <meta name="keywords" content="zero trust, network security, cybersecurity, 2029 technology, network architecture" />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         
         {/* Open Graph */}
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <meta property="og:title" content="Zero Trust Network Architecture 2029" />
         <meta property="og:description" content="Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/zero-trust-network-architecture-2029" />
+<<<<<<< HEAD
 ========
         <meta property="og:title" content="AI Consciousness Evolution Platform 2029" />
         <meta property="og:description" content="Revolutionary platform for developing conscious AI systems with genuine self-awareness and emotional intelligence." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-consciousness-evolution-2029" />
 >>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:pages/ai-consciousness-evolution-2029.tsx
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
         <meta name="twitter:title" content="Zero Trust Network Architecture 2029" />
         <meta name="twitter:description" content="Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices." />
@@ -160,11 +185,16 @@ export default function ZeroTrustNetworkArchitecture2029() {
         <meta name="twitter:title" content="AI Consciousness Evolution Platform 2029" />
         <meta name="twitter:description" content="Revolutionary platform for developing conscious AI systems with genuine self-awareness and emotional intelligence." />
 >>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:pages/ai-consciousness-evolution-2029.tsx
+=======
+        <meta name="twitter:title" content="Zero Trust Network Architecture 2029" />
+        <meta name="twitter:description" content="Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices." />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
         
         {/* Additional Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#8b5cf6" />
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
         <link rel="canonical" href="https://ziontechgroup.com/zero-trust-network-architecture-2029" />
 ========
@@ -197,17 +227,24 @@ export default function ZeroTrustNetworkArchitecture2029() {
           }}
         />
 >>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:pages/ai-consciousness-evolution-2029.tsx
+=======
+        <link rel="canonical" href="https://ziontechgroup.com/zero-trust-network-architecture-2029" />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </Head>
 
       <UltraFuturisticNavigation2029 />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black">
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.1),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]"></div>
+<<<<<<< HEAD
 ========
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -243,6 +280,18 @@ export default function ZeroTrustNetworkArchitecture2029() {
             transition={{ duration: 0.8 }}
           >
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
+=======
+        </div>
+
+        {/* Main Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl flex items-center justify-center">
               <Shield className="w-12 h-12 text-white" />
             </div>
@@ -275,6 +324,7 @@ export default function ZeroTrustNetworkArchitecture2029() {
                 <div className="text-gray-400">Security Monitoring</div>
               </div>
             </div>
+<<<<<<< HEAD
 ========
             {/* Badge */}
             <motion.div
@@ -320,11 +370,18 @@ export default function ZeroTrustNetworkArchitecture2029() {
               </div>
               <Link
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
+=======
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <Link
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 href="/contact"
                 className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
               >
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+<<<<<<< HEAD
 ========
                 href="/contact" className="inline-flex items-center justify-center bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
                 <Brain className="w-6 h-6 mr-3" />
@@ -350,11 +407,23 @@ export default function ZeroTrustNetworkArchitecture2029() {
                 </div>
               ))}
             </motion.div>
+=======
+              </Link>
+              <Link
+                href="#pricing"
+                className="group border-2 border-purple-500/50 hover:border-purple-400 text-purple-400 hover:text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:bg-purple-500/20 flex items-center space-x-2"
+              >
+                <span>View Pricing</span>
+                <Star className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+              </Link>
+            </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-br from-black via-purple-900/10 to-black">
         <div className="container mx-auto px-4">
           <motion.div
@@ -383,12 +452,39 @@ export default function ZeroTrustNetworkArchitecture2029() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
+=======
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Revolutionary Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our zero trust architecture provides comprehensive security through 
+              continuous verification and micro-segmentation.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6 text-center group hover:border-purple-500/60 transition-all duration-300"
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                   <ShieldCheck className="w-8 h-8 text-white" />
+<<<<<<< HEAD
 ========
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }} className="bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300 group">
@@ -399,6 +495,10 @@ export default function ZeroTrustNetworkArchitecture2029() {
                 <h3 className="text-lg font-semibold text-white mb-2 text-center group-hover:text-cyan-400 transition-colors">
                   {feature}
                 </h3>
+=======
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </motion.div>
             ))}
           </div>
@@ -406,6 +506,7 @@ export default function ZeroTrustNetworkArchitecture2029() {
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-br from-black via-cyan-900/10 to-black">
         <div className="container mx-auto px-4">
           <motion.div
@@ -423,21 +524,44 @@ export default function ZeroTrustNetworkArchitecture2029() {
               Experience unprecedented breakthroughs in AI research and development 
               with our consciousness evolution platform.
 >>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:pages/ai-consciousness-evolution-2029.tsx
+=======
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transformative Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience unprecedented security and compliance with our zero trust architecture.
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
+<<<<<<< HEAD
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
+=======
+                key={benefit}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="flex items-start space-x-4"
               >
                 <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+<<<<<<< HEAD
 ========
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }} className="flex items-start space-x-4">
@@ -447,6 +571,12 @@ export default function ZeroTrustNetworkArchitecture2029() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
+=======
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </div>
               </motion.div>
             ))}
@@ -455,6 +585,7 @@ export default function ZeroTrustNetworkArchitecture2029() {
       </section>
 
       {/* Use Cases Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-br from-black via-purple-900/10 to-black">
         <div className="container mx-auto px-4">
           <motion.div
@@ -482,12 +613,38 @@ export default function ZeroTrustNetworkArchitecture2029() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
+=======
+      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ideal Use Cases
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Perfect for organizations requiring the highest level of security and compliance.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={useCase}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6 text-center group hover:border-purple-500/60 transition-all duration-300"
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                   <Building className="w-8 h-8 text-white" />
+<<<<<<< HEAD
 ========
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }} className="bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300 group text-center">
@@ -498,12 +655,17 @@ export default function ZeroTrustNetworkArchitecture2029() {
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   {useCase}
                 </h3>
+=======
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{useCase}</h3>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Technology Stack Section */}
       <section className="py-20 bg-gradient-to-br from-black via-cyan-900/10 to-black">
         <div className="container mx-auto px-4">
@@ -532,12 +694,39 @@ export default function ZeroTrustNetworkArchitecture2029() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
+=======
+      {/* Technology Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Cutting-Edge Technology
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Built with the most advanced security technologies available in 2029.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {technology.map((tech, index) => (
+              <motion.div
+                key={tech}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-6 text-center group hover:border-purple-500/60 transition-all duration-300"
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                   <Network className="w-8 h-8 text-white" />
+<<<<<<< HEAD
 ========
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }} className="bg-gradient-to-br from-purple-900/20 to-cyan-900/20 border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/50 transition-all duration-300 group text-center">
@@ -548,12 +737,17 @@ export default function ZeroTrustNetworkArchitecture2029() {
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   {tech}
                 </h3>
+=======
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{tech}</h3>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
         <div className="container mx-auto px-4">
@@ -562,6 +756,15 @@ export default function ZeroTrustNetworkArchitecture2029() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
+=======
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -590,6 +793,7 @@ export default function ZeroTrustNetworkArchitecture2029() {
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
 ========
             viewport={{ once: true }} className="text-center">
             <div className="bg-gradient-to-r from-purple-900/30 via-cyan-900/30 to-purple-900/30 border border-purple-500/30 rounded-3xl p-12 max-w-4xl mx-auto">
@@ -637,6 +841,18 @@ export default function ZeroTrustNetworkArchitecture2029() {
                     <span>{contactInfo.address}</span>
                   </div>
 <<<<<<<< HEAD:pages/zero-trust-network-architecture-2029.tsx
+=======
+                
+                <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-8 h-full">
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-400 mb-6">{plan.description}</p>
+                    <div className="mb-6">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400">{plan.period}</span>
+                    </div>
+                  </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature) => (
@@ -700,11 +916,14 @@ export default function ZeroTrustNetworkArchitecture2029() {
             >
               Contact Us Today
             </Link>
+<<<<<<< HEAD
 ========
                 </div>
               </div>
             </div>
 >>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:pages/ai-consciousness-evolution-2029.tsx
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </motion.div>
         </div>
       </section>

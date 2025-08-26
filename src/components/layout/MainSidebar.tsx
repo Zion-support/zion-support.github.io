@@ -28,9 +28,13 @@ interface MainSidebarProps {
 export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
   const location = useLocation();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   const navigationItems = [
     {

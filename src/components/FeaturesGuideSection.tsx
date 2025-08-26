@@ -1,5 +1,8 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 export function FeaturesGuideSection() {
   const features = [
@@ -48,6 +51,7 @@ export function FeaturesGuideSection() {
     </section>
   );
 }
+<<<<<<< HEAD
 =======
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Badge } from '../ui/badge';
@@ -189,3 +193,5 @@ export const FeaturesGuideSection: React.FC = () => {
   );
 };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

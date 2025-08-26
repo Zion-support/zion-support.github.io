@@ -4,6 +4,7 @@ export interface ITService {
   description: string;
   category: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   subcategory: string;
@@ -603,6 +604,8 @@ export const IT_SERVICE_PRICING_MODELS = [
 ];
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   pricing: {
     hourly: number;
     project: number;
@@ -1192,6 +1195,9 @@ export const getITServiceCategories = (): string[] => {
   return [...new Set(ENHANCED_IT_SERVICES.map(service => service.category))];
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

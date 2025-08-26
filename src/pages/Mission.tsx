@@ -253,6 +253,7 @@ const Mission: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const strategicGoals = [
     {
       icon: Globe,
@@ -304,6 +305,8 @@ const Mission: React.FC = () => {
     }
   ];
 
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
 <<<<<<< HEAD
       {/* Mission Pillars */}
@@ -508,6 +511,9 @@ const Mission: React.FC = () => {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Strategic Goals Timeline */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">

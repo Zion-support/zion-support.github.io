@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, TrendingUp, X, Gift, Star, Award } from 'lucide-react';
 
@@ -32,17 +35,25 @@ const stats = [
   { value: "24/7", label: "Support" },
   { value: "100%", label: "Free" }
 ];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 export function NewsletterSection() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false);
   const [showBenefits, setShowBenefits] = useState(false);
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+  const [isLoading, setIsLoading] = useState(false);
+  const [showBenefits, setShowBenefits] = useState(false);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -53,6 +64,9 @@ export function NewsletterSection() {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const handleUnsubscribe = () => {
     setIsSubscribed(false);
     setEmail('');
@@ -284,6 +298,7 @@ export function NewsletterSection() {
                 <Award className="w-4 h-4" />
                 <span>Industry Leader</span>
               </div>
+<<<<<<< HEAD
             </div>
           </motion.div>
         </motion.div>
@@ -371,6 +386,8 @@ export function NewsletterSection() {
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
             <h3 className="font-semibold mb-2">Early Access</h3>
             <p className="text-sm text-blue-200">Be first to know about new features</p>

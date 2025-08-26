@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { jsx as _jsx } from "react/jsx-runtime";
 import { useEffect, useRef, useState } from 'react';
 export function PerformanceMonitor({ onMetrics, logToConsole = false, sendToAnalytics = false, analyticsEndpoint = '/api/analytics/performance', }) {
@@ -270,3 +271,6 @@ export function getCurrentPerformanceMetrics() {
         fmp: ((_b = paintEntries[paintEntries.length - 1]) === null || _b === void 0 ? void 0 : _b.startTime) || null,
     };
 }
+=======
+export {};
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

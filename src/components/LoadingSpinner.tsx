@@ -2,6 +2,7 @@ import React from 'react';
 
 interface LoadingSpinnerProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg';
   color?: 'blue' | 'white' | 'gray';
   text?: string;
@@ -15,10 +16,16 @@ interface LoadingSpinnerProps {
   text?: string;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'blue' | 'white' | 'gray';
+  text?: string;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   className?: string;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -37,6 +44,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     blue: 'text-blue-500',
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   size = 'md', 
   color = 'blue', 
   text,
@@ -52,13 +61,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     blue: 'text-blue-500',
     white: 'text-white',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     gray: 'text-gray-500'
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -84,6 +97,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       </svg>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <div className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}>
         <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">
@@ -106,9 +121,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <p className="mt-3 text-sm text-gray-500 animate-pulse">{text}</p>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     </div>
   );
 };

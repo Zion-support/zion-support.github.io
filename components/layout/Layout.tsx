@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Top Contact Bar */}
       <TopContactBar />
       
@@ -137,6 +140,7 @@ import React, { useState } from 'react';
 }
 =======
 import EnhancedNavigation2025 from './EnhancedNavigation2025';
+<<<<<<< HEAD
 =======
 import UltraFuturisticNavigation2034 from './UltraFuturisticNavigation2034';
 import UltraFuturisticFooter2034 from './UltraFuturisticFooter2034';
@@ -144,6 +148,8 @@ import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2035 from '../ui/UltraFuturisticBackground2035';
 // import TopContactBar from './TopContactBar';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -151,6 +157,9 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
       {/* Skip to content link for accessibility */}
@@ -183,6 +192,7 @@ export default function Layout({ children }: LayoutProps) {
       </UltraFuturisticBackground2035>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -214,3 +224,6 @@ export default function Layout({ children }: LayoutProps) {
 	);
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

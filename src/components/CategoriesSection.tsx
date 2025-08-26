@@ -4,11 +4,14 @@ import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
+<<<<<<< HEAD
 =======
 import Link from "next/link";
 import { Briefcase, HardDrive, Lightbulb, Users, Brain } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 const categories = [
   {
@@ -126,6 +129,9 @@ interface CategoriesSectionProps {
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

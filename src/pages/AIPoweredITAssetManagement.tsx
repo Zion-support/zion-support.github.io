@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive } from 'lucide-react';
 import { Cpu, Database, Shield, TrendingUp, Users, Globe, ArrowRight, Network, Code, BarChart3 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,6 +64,8 @@ import SEOHead from '../components/SEOHead';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Helmet } from 'react-helmet-async';
 import { 
   Database, 
@@ -95,10 +98,13 @@ import {
   Router
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-2b07
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { 
   Brain, 
   Cpu, 
@@ -138,12 +144,15 @@ import {
 import SEOHead from '../components/SEOHead';
 <<<<<<< HEAD
 import { Cpu, Shield, TrendingUp, Database, ArrowRight, Zap, Target, BarChart3 } from 'lucide-react';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ec46
 =======
 import { Cpu, Shield, TrendingUp, Database, ArrowRight, Zap, Target, BarChart3 } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 const AIPoweredITAssetManagement = () => {
   const features = [
@@ -741,6 +750,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
     }
   ];
 import { Database, Brain, Shield, TrendingUp, ArrowRight, Users, Target, Clock, BarChart3, Zap } from 'lucide-react';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-efd3
     }
@@ -752,6 +762,8 @@ import { Database, Brain, Shield, TrendingUp, ArrowRight, Users, Target, Clock, 
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 const AIPoweredITAssetManagement: React.FC = () => {
   const features = [
@@ -962,6 +974,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1238,6 +1251,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-9d3a
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -1776,6 +1791,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             })}
 <<<<<<< HEAD
           </div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-d426
           </div>
@@ -1804,6 +1820,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
             </p>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           
           {/* Asset Types */}
           <div className="mb-16">
@@ -1854,10 +1872,13 @@ const AIPoweredITAssetManagement: React.FC = () => {
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our platform manages all types of IT assets across your organization.
             </p>
@@ -2141,6 +2162,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
 <<<<<<< HEAD
             </div>
           </div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
             </div>
@@ -2193,6 +2215,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
         <div className="container mx-auto max-w-6xl">
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionize your IT infrastructure with intelligent asset management. Monitor, optimize, and secure every device with AI-driven insights.
             </p>
@@ -2367,6 +2391,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2402,6 +2427,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
               </motion.div>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Capabilities Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -2416,9 +2443,12 @@ const AIPoweredITAssetManagement: React.FC = () => {
           </div>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Capabilities Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2525,6 +2555,9 @@ const AIPoweredITAssetManagement: React.FC = () => {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Asset Types Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -2683,6 +2716,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2698,6 +2732,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
               across all industries.
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Comprehensive Asset Coverage
             </h2>
@@ -2928,6 +2964,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             ))}
 <<<<<<< HEAD
           </div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-d426
           </div>
@@ -3075,6 +3112,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
               </Link>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           
           {/* CTA Section */}
           <div className="text-center">
@@ -3099,6 +3138,9 @@ const AIPoweredITAssetManagement: React.FC = () => {
                 </Link>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export interface NextGenInnovativeService2025 {
   id: string;
   title: string;
@@ -383,6 +386,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService2025[] =
     competitors: ["WattTime", "Carbon Trust", "Sustain.Life"],
     launchDate: "Q2 2025",
     betaAccess: true
+<<<<<<< HEAD
 =======
 export interface ServiceContact {
   phone: string;
@@ -932,6 +936,8 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     supportLevel: "enterprise",
     innovationScore: 9.2
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];
 

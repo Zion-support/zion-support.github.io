@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
@@ -167,6 +170,7 @@ export default function CommunityPage() {
   const [activeTab, setActiveTab] = useState("categories");
   
   return (
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -267,6 +271,8 @@ export default function CommunityPage() {
             </button>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <>
       <SEO
         title="Community Forum | Zion AI Marketplace"
@@ -283,6 +289,9 @@ export default function CommunityPage() {
               Join the conversation, ask questions, and share your knowledge
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
           
           <CreatePostButton />
@@ -317,6 +326,7 @@ export default function CommunityPage() {
         </Tabs>
       </div>
     </>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
           </div>
@@ -478,5 +488,7 @@ export default function CommunityPage() {
       </div>
     </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 =======
@@ -7,22 +8,32 @@ import React, { useState } from 'react';
 import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES, EXPANDED_SERVICE_SUBCATEGORIES } from '@/data/expandedServices';
 import { ProductListing } from '@/types/listings';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import {
   Brain, Cloud, Database, Shield, Settings, Zap, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart,
   Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Filter, Building
 } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
+<<<<<<< HEAD
 =======
 =======
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -30,14 +41,18 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { 
   Search, 
   Filter, 
   Star, 
   Clock, 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -478,6 +493,8 @@ export default function ComprehensiveServicesPage() {
     </div>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   Users, 
   Zap,
   ArrowRight,
@@ -534,6 +551,9 @@ export default function ComprehensiveServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const [selectedPricingTier, setSelectedPricingTier] = useState('all');
 
   const filteredServices = useMemo(() => {
@@ -551,6 +571,7 @@ export default function ComprehensiveServicesPage() {
 
   const getCategoryIcon = (categoryName: string) => {
     return '💼';
+<<<<<<< HEAD
 =======
   const [activeTab, setActiveTab] = useState('micro-saas');
 
@@ -618,6 +639,8 @@ export default function ComprehensiveServicesPage() {
     };
     return iconMap[category] || <Settings className="h-6 w-6" />;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   };
 
   const getServiceTypeColor = (type: string) => {
@@ -631,6 +654,9 @@ export default function ComprehensiveServicesPage() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <div className="min-h-screen bg-zion-blue-dark">
               <SEO 
           title="Comprehensive Micro SAAS Solutions - Zion Tech Group" 
@@ -908,6 +934,7 @@ export default function ComprehensiveServicesPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 =======
     <>
       <SEO 
@@ -1248,5 +1275,7 @@ export default function ComprehensiveServicesPage() {
     </>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 }

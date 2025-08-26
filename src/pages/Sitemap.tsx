@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -89,6 +92,7 @@ import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout";
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
@@ -180,6 +184,8 @@ import { AppLayout } from "@/layout";
             Can't find what you're looking for? Our team is here to help.
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { 
   MapIcon, 
   CogIcon, 

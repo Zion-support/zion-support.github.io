@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { 
   CalendarIcon,
   ClockIcon,
@@ -20,6 +21,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+import { SEO } from '../components/SEO';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 const News: React.FC = () => {
   const fadeInUp = {
@@ -29,6 +33,9 @@ const News: React.FC = () => {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const categories = [
   Calendar, 
   User, 
@@ -94,6 +101,7 @@ export default function News() {
     { id: '2024', name: '2024', count: 28 },
     { id: '2023', name: '2023', count: 16 }
   ];
+<<<<<<< HEAD
 =======
   const staggerContainer = {
     animate: {
@@ -103,6 +111,8 @@ export default function News() {
     }
   };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   const newsArticles = [
     {
@@ -800,19 +810,18 @@ export default function News() {
   ];
 
   const categories = [
-    { id: 'all', name: 'All News', icon: NewspaperIcon },
-    { id: 'company', name: 'Company News', icon: NewspaperIcon },
-    { id: 'partnerships', name: 'Partnerships', icon: UserIcon },
-    { id: 'research', name: 'Research & Development', icon: LightbulbIcon },
-    { id: 'awards', name: 'Awards & Recognition', icon: StarIcon },
-    { id: 'expansion', name: 'Business Expansion', icon: GlobeIcon },
-    { id: 'ethics', name: 'AI Ethics', icon: ShieldIcon },
-    { id: 'quantum', name: 'Quantum Technology', icon: ZapIcon },
-    { id: 'healthcare', name: 'Healthcare AI', icon: HeartIcon },
-    { id: 'financial', name: 'Financial Results', icon: CalendarIcon },
-    { id: 'governance', name: 'Corporate Governance', icon: UserIcon }
+    'All News',
+    'Product Launch',
+    'Partnership',
+    'Security',
+    'Company',
+    'Events',
+    'Research',
+    'Case Study',
+    'Awards'
   ];
 
+<<<<<<< HEAD
   // Combine all news sources
   const allNews = [...breakingNews, ...latestNews, ...pressReleases];
   const featuredNews = allNews.filter(article => article.priority === 'breaking');
@@ -954,6 +963,55 @@ export default function News() {
             ))}
           </motion.div>
         </section>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      {/* Header Section */}
+      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
+            News & Updates
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Stay informed about our latest innovations, partnerships, and industry insights. Discover how we're shaping the future of AI and technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
+              Subscribe to Newsletter
+            </button>
+            <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/20 transition-all duration-300">
+              RSS Feed
+            </button>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Latest News & Updates
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Stay informed about our latest developments, product updates, industry insights, 
+              and company milestones as we continue to innovate and grow.
+            </p>
+            
+            {/* Search and Filter */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search news, updates, or topics..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
+            </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3">
@@ -1116,6 +1174,9 @@ export default function News() {
                   </div>
                   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   <h3 className="text-2xl font-bold text-white mb-4">{featuredArticle.title}</h3>
                   <p className="text-gray-300 mb-6">{featuredArticle.excerpt}</p>
                   
@@ -1390,6 +1451,9 @@ export default function News() {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export default News;
 =======
       title: 'Zion Tech Group Named Top AI Company by Tech Innovation Awards',

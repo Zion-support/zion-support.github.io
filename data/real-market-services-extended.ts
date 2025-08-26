@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const realMarketServicesExtended = [
   {
     id: 'extended-service-1',
@@ -7,6 +8,8 @@ export const realMarketServicesExtended = [
     price: '$399',
     category: 'Extended Services'
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export interface RealMarketServiceExtended {
   id: string;
   name: string;
@@ -22,6 +25,9 @@ export const realMarketServicesExtended: RealMarketServiceExtended[] = [
     tagline: 'Extended market coverage',
     price: '$599',
     features: ['Extended features', 'Market coverage', 'Advanced analytics']
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

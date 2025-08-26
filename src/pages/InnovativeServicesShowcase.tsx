@@ -34,6 +34,7 @@ import {
   Sparkles
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -42,6 +43,8 @@ import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIV
 export default function InnovativeServicesShowcase() {
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import SEOHead from '../components/SEOHead';
 
 // Import all service data
@@ -52,14 +55,18 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServi
 
 const InnovativeServicesShowcase: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
   const [priceRange, setPriceRange] = useState<string>('all');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -82,6 +89,8 @@ const InnovativeServicesShowcase: React.FC = () => {
   }, [searchTerm, selectedCategory, selectedSubcategory, priceRange]);
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // SEO configuration
   const seoConfig = {
     title: "Innovative Services 2025 - Zion Tech Group",
@@ -98,9 +107,12 @@ const InnovativeServicesShowcase: React.FC = () => {
     ...INNOVATIVE_MICRO_SAAS_SERVICES
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   const getSubcategoriesForCategory = (category: string) => {
     if (category === 'all') return [];
@@ -137,6 +149,7 @@ const InnovativeServicesShowcase: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -208,6 +221,8 @@ const InnovativeServicesShowcase: React.FC = () => {
               <span className="text-white">https://ziontechgroup.com</span>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <SEOHead config={seoConfig} />
       
@@ -235,9 +250,12 @@ const InnovativeServicesShowcase: React.FC = () => {
                 <span>Global Support</span>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </div>
@@ -300,6 +318,9 @@ const InnovativeServicesShowcase: React.FC = () => {
 
       {/* Services Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {sortedServices.length === 0 ? (
           <div className="text-center py-12">
@@ -458,6 +479,7 @@ const InnovativeServicesShowcase: React.FC = () => {
             <p className="text-sm">
               <MapPin className="w-4 h-4 inline mr-2" />
               364 E Main St STE 1008, Middletown DE 19709
+<<<<<<< HEAD
 =======
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -469,6 +491,8 @@ const InnovativeServicesShowcase: React.FC = () => {
               Discover our comprehensive portfolio of innovative services designed to future-proof your business 
               and drive digital transformation across all industries.
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </p>
           </div>
 

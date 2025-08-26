@@ -2,8 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
   Building2, Factory, Car, Heart, GraduationCap, 
   Shield, Globe, Zap, Brain, Rocket, Users, BarChart3
+=======
+  Building, Car, Heart, DollarSign, GraduationCap, 
+  Shield, Factory, Globe, Brain, Atom, Rocket,
+  ArrowRight, CheckCircle, Star, Users, Zap
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 } from 'lucide-react';
 
 export default function SolutionsPage() {

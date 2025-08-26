@@ -26,6 +26,9 @@ export interface SpecializedITInfrastructureService2025 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureService2025[] = [
   // Edge Computing Orchestration Platform
 =======
@@ -85,6 +88,9 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // Quantum-Ready Cloud Infrastructure
 =======
   // Quantum Network Infrastructure
@@ -195,6 +201,9 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // Autonomous DevOps Infrastructure
   {
     id: "autonomous-devops-infrastructure",

@@ -455,6 +455,7 @@ export default function EquipmentPage() {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+<<<<<<< HEAD
 =======
 export default function EquipmentPage() {
   const [listings, setListings] = useState<ProductListing[]>([
@@ -467,6 +468,8 @@ export default function EquipmentPage() {
     }, 120000); // add new equipment every 2 minutes
     return () => clearInterval(interval);
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }, []);
 
   return (

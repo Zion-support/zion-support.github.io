@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -40,6 +43,7 @@ const ServicesShowcase: React.FC = () => {
           description: "Streamline business processes with intelligent automation",
           href: "/services/ai-workflow-automation",
           features: ["Process Optimization", "Error Reduction", "Efficiency Gains"]
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -151,11 +155,16 @@ const ServicesShowcase: React.FC = () => {
           competitors: ["Mailchimp", "Constant Contact", "ConvertKit"],
           competitiveAdvantage: "AI personalization, predictive analytics, and automated optimization"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         }
       ]
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       category: "Cloud & Infrastructure",
       icon: Cloud,
       services: [
@@ -176,6 +185,7 @@ const ServicesShowcase: React.FC = () => {
           description: "End-to-end digital transformation consulting and implementation",
           href: "/services/transformation",
           features: ["Strategy Development", "Technology Selection", "Change Management"]
+<<<<<<< HEAD
 =======
       title: "Advanced AI & Machine Learning",
       subtitle: "Enterprise-grade artificial intelligence solutions that drive innovation and competitive advantage",
@@ -247,11 +257,16 @@ const ServicesShowcase: React.FC = () => {
           competitors: ["Adobe Experience Cloud", "Salesforce Service Cloud", "Oracle CX"],
           competitiveAdvantage: "AI-driven personalization, real-time optimization, and comprehensive analytics"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         }
       ]
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       category: "Cybersecurity & Compliance",
       icon: Shield,
       services: [
@@ -272,6 +287,7 @@ const ServicesShowcase: React.FC = () => {
           description: "Modern zero trust security implementation",
           href: "/zero-trust-network-architecture",
           features: ["Identity Verification", "Access Control", "Continuous Monitoring"]
+<<<<<<< HEAD
 =======
       title: "Emerging Technology Solutions",
       subtitle: "Cutting-edge technology services that position businesses for the future",
@@ -343,11 +359,16 @@ const ServicesShowcase: React.FC = () => {
           competitors: ["Ethereum Enterprise", "Hyperledger", "Corda"],
           competitiveAdvantage: "Custom development, enterprise integration, and regulatory compliance"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         }
       ]
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       category: "Emerging Technologies",
       icon: Rocket,
       services: [
@@ -499,6 +520,7 @@ const ServicesShowcase: React.FC = () => {
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                             <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+<<<<<<< HEAD
 =======
       title: "Advanced IT Infrastructure",
       subtitle: "Modern IT infrastructure solutions for enterprise-scale operations",
@@ -713,12 +735,17 @@ export default function ServicesShowcase() {
                           <li key={idx} className="text-gray-300 flex items-center">
                             <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                     
                     <Link
                       to={service.href}
@@ -775,6 +802,7 @@ export default function ServicesShowcase() {
   );
 };
 
+<<<<<<< HEAD
 export default ServicesShowcase;
 =======
 
@@ -1153,3 +1181,6 @@ const $page: React.FC = () => {
 export default $page;
 >>>>>>> origin/cursor/website-audit-and-enhancement-56af
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+export default ServicesShowcase;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

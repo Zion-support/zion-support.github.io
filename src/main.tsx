@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 console.log("main.tsx: Start");
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
@@ -17,15 +20,27 @@ import ToastProvider from './components/ToastProvider';
 // Import i18n configuration
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
+<<<<<<< HEAD
+=======
+import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 
 // Import auth and notification providers
 import { AuthProvider } from './context/auth/AuthProvider';
+<<<<<<< HEAD
 import { NotificationProvider } from './components/ui/notification';
 
 // Providers trimmed for build
 // import { AnalyticsProvider } from './context/AnalyticsContext';
+=======
+import { NotificationProvider } from './context/notifications/NotificationContext';
+
+// Import analytics provider
+import { AnalyticsProvider } from './context/AnalyticsContext';
+import { ViewModeProvider } from './context/ViewModeContext';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
@@ -50,6 +65,7 @@ const queryClient = new QueryClient({
   },
 })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const rootElement = document.getElementById('root');
 
@@ -91,6 +107,37 @@ window.addEventListener('unhandledrejection', (event) => {
   // In production, you might want to send this to an error reporting service
 })
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+const rootElement = document.getElementById('root');
+
+function renderApp() {
+  const app = (
+    <React.StrictMode>
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <WhitelabelProvider>
+            <Router>
+              <AuthProvider>
+                <NotificationProvider>
+                  <AnalyticsProvider>
+                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                      <ViewModeProvider>
+                        <AppLayout>
+                          <App />
+                        </AppLayout>
+                      </ViewModeProvider>
+                      <LanguageDetectionPopup />
+                    </LanguageProvider>
+                  </AnalyticsProvider>
+                </NotificationProvider>
+              </AuthProvider>
+            </Router>
+          </WhitelabelProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
+    </React.StrictMode>
+  );
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 // Error handling for uncaught errors
 window.addEventListener('error', (event) => {
@@ -158,21 +205,35 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <WhitelabelProvider>
           <Router>
             <AuthProvider>
               <NotificationProvider>
+<<<<<<< HEAD
                 
+=======
+                <AnalyticsProvider>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                     <AppLayout>
                       <App />
                     </AppLayout>
+<<<<<<< HEAD
                   </LanguageProvider>
                 
+=======
+                    <LanguageDetectionPopup />
+                  </LanguageProvider>
+                </AnalyticsProvider>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </NotificationProvider>
             </AuthProvider>
           </Router>
         </WhitelabelProvider>
+<<<<<<< HEAD
 =======
         <BrowserRouter>
           <AppWrapper>
@@ -180,6 +241,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           </AppWrapper>
         </BrowserRouter>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>,

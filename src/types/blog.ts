@@ -13,6 +13,7 @@ export interface BlogPost {
   readTime: number;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export const generateRandomBlogPost = (): BlogPost => {
@@ -71,3 +72,5 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 ];
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

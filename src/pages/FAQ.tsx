@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,10 +67,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent } from "@/components/ui/card";
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -112,11 +116,18 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 >>>>>>> origin/cursor/website-audit-and-enhancement-45a9
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 export default function FAQ() {
   const faqData = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       question: "What is Zion Tech Group?",
       answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect talented professionals with innovative companies, offering a comprehensive platform for AI services, tech talent, and specialized equipment."
     },
@@ -163,6 +174,7 @@ export default function FAQ() {
     {
       question: "How can I get started on Zion?",
       answer: "Getting started is simple! Create a free account, complete your profile, and start exploring the marketplace. You can immediately browse listings, connect with professionals, or showcase your own services and expertise."
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       category: "Getting Started",
@@ -476,11 +488,16 @@ export default function FAQ() {
       icon: Users
 >>>>>>> origin/cursor/website-audit-and-enhancement-374e
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <>
       <SEO 
         title="FAQ - Frequently Asked Questions" 
@@ -489,6 +506,7 @@ export default function FAQ() {
         canonical="https://ziontechgroup.com/faq"
       />
       <Header />
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -876,12 +894,17 @@ export default FAQ;
         canonical="https://ziontechgroup.com/faq"
       />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <GradientHeading>Frequently Asked Questions</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               Find answers to the most common questions about Zion Tech Group and our marketplace platform
             </p>
           </div>
@@ -922,6 +945,7 @@ export default FAQ;
                 >
                   Help Center
                 </a>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
               Find answers to the most common questions about Zion Tech Group
@@ -1062,16 +1086,22 @@ export default FAQ;
                 </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-374e
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </div>
             </div>
           </div>
         </div>
       </main>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <Footer />
     </>
   );
 }
+<<<<<<< HEAD
 =======
     </>
   );
@@ -1167,3 +1197,5 @@ export default FAQ;
 }
 >>>>>>> origin/cursor/website-audit-and-enhancement-374e
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

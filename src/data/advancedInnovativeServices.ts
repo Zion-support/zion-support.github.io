@@ -21,6 +21,7 @@ export interface AdvancedInnovativeService {
     website: string;
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   websiteUrl: string;
@@ -32,6 +33,8 @@ export interface AdvancedInnovativeService {
 export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   technology: string[];
   integrations: string[];
   compliance: string[];
@@ -107,13 +110,17 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // Quantum Machine Learning Platform
   {
     id: "quantum-machine-learning-platform",
     title: "Quantum Machine Learning Platform",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -150,6 +157,8 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Supply chain optimization"
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     description: "Revolutionary platform that combines quantum computing principles with machine learning to solve complex optimization problems and accelerate AI model training.",
     category: "Quantum Computing",
     subcategory: "Machine Learning",
@@ -183,15 +192,19 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Cryptography and security",
       "Material science research"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ],
     targetAudience: [
       "Research institutions",
       "Pharmaceutical companies",
       "Financial institutions",
       "Government agencies",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -203,6 +216,8 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketPrice: "$15,000 - $50,000/month",
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       "Technology companies"
     ],
     tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Innovation"],
@@ -210,14 +225,18 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     supportLevel: "enterprise",
     marketPrice: "$1,500 - $8,000/month",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -340,6 +359,8 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     websiteUrl: "https://ziontechgroup.com/ai-drug-discovery"
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     technology: ["Qiskit", "PennyLane", "Cirq", "Python", "React", "TensorFlow", "PyTorch"],
     integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
     compliance: ["ISO 27001", "FedRAMP", "SOC 2", "NIST"],
@@ -349,15 +370,19 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     innovationLevel: "Pioneering quantum-classical hybrid approaches",
     uniqueValue: "First commercial platform combining quantum computing with practical ML applications"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   },
 
   // Autonomous Drone Fleet Management
   {
     id: "autonomous-drone-fleet-management",
     title: "Autonomous Drone Fleet Management Platform",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -392,6 +417,8 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Emergency response"
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     description: "AI-powered platform for managing autonomous drone fleets for delivery, inspection, surveillance, and data collection with real-time monitoring and optimization.",
     category: "Autonomous Systems",
     subcategory: "Drone Management",
@@ -425,9 +452,12 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Security and surveillance",
       "Environmental monitoring"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ],
     targetAudience: [
       "Biotech researchers",
@@ -437,10 +467,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Medical professionals"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     tags: ["Autonomous Systems", "Drones", "AI", "Fleet Management", "IoT", "Logistics"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$799 - $3,000/month",
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     tags: ["Drones", "Autonomous Systems", "Fleet Management", "IoT", "Automation"],
@@ -448,11 +482,14 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     supportLevel: "premium",
     marketPrice: "$7,000 - $22,000/month",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     technology: ["Deep Learning", "Bioinformatics", "Python", "TensorFlow", "Molecular modeling"],
@@ -785,6 +822,8 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     price: 8500,
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     technology: ["Python", "ROS", "React", "Node.js", "MongoDB", "AWS", "Computer Vision"],
     integrations: ["DJI SDK", "Parrot SDK", "Weather APIs", "GIS systems", "ERP systems"],
     compliance: ["FAA Part 107", "ISO 27001", "SOC 2", "GDPR"],
@@ -1119,13 +1158,17 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     subcategory: "Medical Diagnostics",
     price: 599,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Medical image analysis",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1164,6 +1207,8 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketPrice: "$8,500 - $25,000/month",
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       "Diagnostic assistance",
       "Patient risk assessment",
       "Treatment recommendations",
@@ -1201,14 +1246,18 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     supportLevel: "enterprise",
     marketPrice: "$599 - $2,200/month",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1217,6 +1266,8 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
 ];
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "MongoDB", "AWS"],
     integrations: ["PACS systems", "EHR platforms", "Telemedicine systems", "Medical devices"],
     compliance: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
@@ -1293,6 +1344,9 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
 
 export default ADVANCED_INNOVATIVE_SERVICES;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

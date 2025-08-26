@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 import path from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { defineConfig } from 'vite'
@@ -20,6 +21,8 @@ export default defineConfig({
   plugins: [react()],
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -41,10 +44,14 @@ export default defineConfig({
     },
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
     }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
 =======
@@ -120,12 +127,15 @@ export default defineConfig({
       '@assets': resolve(__dirname, './src/assets'),
     },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   },
   build: {
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
     rollupOptions: {
+<<<<<<< HEAD
       output: {
         manualChunks: {
           // Vendor chunks for better caching
@@ -248,4 +258,9 @@ export default defineConfig({
       }
     },
   },
+=======
+      external: ['lucide-react']
+    }
+  }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 })

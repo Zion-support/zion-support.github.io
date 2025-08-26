@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "target": "ES2020",
+=======
+    "target": "ES2024",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     "useDefineForClassFields": true,
     "lib": [
       "ES2020",
@@ -12,10 +16,18 @@
     "skipLibCheck": true,
     "moduleResolution": "bundler",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "esModuleInterop": true,
 =======
     "allowImportingTsExtensions": true,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+    "esModuleInterop": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     "resolveJsonModule": true,
     "strict": true,
     "noUnusedLocals": false,
@@ -69,6 +81,7 @@
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     "incremental": true
   },
   "include": [
@@ -88,6 +101,8 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     "incremental": true,
     "plugins": [
       {
@@ -104,6 +119,7 @@
   ],
   "exclude": [
     "node_modules",
+<<<<<<< HEAD
     ".next",
     "out",
     "dist",
@@ -115,5 +131,14 @@
     "*.fix.js",
     "*.fix.cjs"
 >>>>>>> origin/cursor/website-audit-and-enhancement-145a
+=======
+    "zion.app/recovered-content/**",
+    "contracts/**",
+    "temp_components/**",
+    "zion_academy/**",
+    "zion-os/**",
+    "automation/**",
+    "typechain-types/**"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   ]
 }

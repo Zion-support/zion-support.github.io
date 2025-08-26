@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -475,6 +476,8 @@ const InnovativeServicesShowcase2025: React.FC = () => {
             </div>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import EnhancedComprehensiveServicesShowcase from '../components/EnhancedComprehensiveServicesShowcase';
 
@@ -535,16 +538,23 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               Get Custom Quote
             </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/pages/InnovativeServicesShowcase2025.tsx
 =======
 <<<<<<< HEAD
+========
+>>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/InnovativeServicesShowcase2025.tsx.cleanup-backup.1756208768
       {/* Category Filter */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
@@ -767,6 +777,8 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </motion.div>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -1000,9 +1012,12 @@ const InnovativeServicesShowcase2025: React.FC = () => {
             </a>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </section>
     </div>

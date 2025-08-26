@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
@@ -25,3 +26,12 @@ export function CreatePostButton({ categoryId, className }) {
     return (_jsx(TooltipProvider, { children: _jsxs(Tooltip, { children: [_jsx(TooltipTrigger, { asChild: true, children: _jsx(Button, { className: className, onClick: handleClick, children: "Create New Post" }) }), !user && (_jsx(TooltipContent, { children: "Please log in to use this feature" }))] }) }));
 }
 export default CreatePostButton;
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+export default function CreatePostButton({ categoryId }) {
+    return (<Button className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate-dark">
+      Create New Post
+    </Button>);
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

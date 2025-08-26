@@ -382,6 +382,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 94
+<<<<<<< HEAD
   },
   {
     id: "mlops-platform",
@@ -523,6 +524,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 96
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];
 
@@ -548,9 +551,12 @@ export const SERVICE_PRICING_TIERS = {
   enterprise: { range: "$8,000 - $25,000+", description: "Custom enterprise solutions with dedicated support" }
 };
 
+<<<<<<< HEAD
 // Backward-compatible alias expected by EnhancedServicesPage
 export const PRICING_TIERS = SERVICE_PRICING_TIERS;
 
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 // Contact information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",

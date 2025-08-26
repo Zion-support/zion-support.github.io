@@ -306,6 +306,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     customers: 234,
     rating: 4.8,
     reviews: 178
+<<<<<<< HEAD
 =======
 export const innovativeMicroSaasSolutions2025 = [
   {
@@ -573,5 +574,7 @@ export const innovativeMicroSaasSolutions2025 = [
     integrations: ['CRM systems', 'E-commerce platforms', 'Analytics tools', 'Social media platforms', 'Marketing tools'],
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

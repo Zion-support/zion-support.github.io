@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MainNavigation } from './MainNavigation';
@@ -18,6 +21,7 @@ export function AppHeader() {
       </div>
     </header>
   );
+<<<<<<< HEAD
 }
 =======
 
@@ -255,3 +259,6 @@ export function AppHeader() {
   );
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

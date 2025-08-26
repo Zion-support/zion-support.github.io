@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import { Users, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -27,6 +28,8 @@ export default function DigitalTransformation() {
       description: "Develop a comprehensive roadmap for your digital transformation journey",
       features: ["Technology Assessment", "Roadmap Planning", "Vendor Selection", "Implementation Strategy"]
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
@@ -51,47 +54,68 @@ const DigitalTransformation: React.FC = () => {
       description: "Guide your organization through digital transformation with expert change management",
       features: ["Stakeholder Engagement", "Training Programs", "Communication Strategy", "Success Metrics"],
       icon: "🔄"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     },
     {
       title: "Business Process Optimization",
       description: "Streamline operations and improve efficiency through digital workflows",
+<<<<<<< HEAD
 <<<<<<< HEAD
       features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"]
 =======
       features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
       icon: "⚡"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+      features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
+      icon: "⚡"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     },
     {
       title: "Customer Experience Enhancement",
       description: "Create seamless digital experiences that delight your customers",
+<<<<<<< HEAD
 <<<<<<< HEAD
       features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"]
 =======
       features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
       icon: "🎯"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+      features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
+      icon: "🎯"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     },
     {
       title: "Data & Analytics Strategy",
       description: "Leverage data insights to drive informed business decisions",
+<<<<<<< HEAD
 <<<<<<< HEAD
       features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"]
 =======
       features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
       icon: "📊"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+      features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
+      icon: "📊"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     },
     {
       title: "Technology Infrastructure",
       description: "Modernize your technology stack for scalability and performance",
+<<<<<<< HEAD
 <<<<<<< HEAD
       features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"]
     }
   ];
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
       icon: "🏗️"
     }
@@ -105,7 +129,10 @@ const DigitalTransformation: React.FC = () => {
     "Competitive advantage in the digital marketplace"
   ];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const transformationApproach = [
     { step: "Assessment", icon: "🔍", description: "Evaluate current state and identify opportunities" },
     { step: "Strategy", icon: "📋", description: "Develop comprehensive transformation roadmap" },
@@ -114,6 +141,7 @@ const DigitalTransformation: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       <Head>
@@ -144,6 +172,8 @@ const DigitalTransformation: React.FC = () => {
             </a>
           </div>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       <SEO 
         title="Digital Transformation - Zion Tech Group"
@@ -188,11 +218,15 @@ const DigitalTransformation: React.FC = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </section>
 
       {/* Services Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section id="services" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -212,6 +246,8 @@ const DigitalTransformation: React.FC = () => {
                 </ul>
               </div>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -249,12 +285,16 @@ const DigitalTransformation: React.FC = () => {
                   </ul>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Approach Section */}
       <section className="py-20 px-4 bg-gray-800/30">
@@ -268,6 +308,8 @@ const DigitalTransformation: React.FC = () => {
                 <p className="text-gray-300">{phase.description}</p>
               </div>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -360,12 +402,16 @@ const DigitalTransformation: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{step.step}</h3>
                 <p className="text-gray-300">{step.description}</p>
               </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-20 px-4">
@@ -391,6 +437,8 @@ const DigitalTransformation: React.FC = () => {
             <ArrowRight className="w-5 h-5 ml-2" />
           </a>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -407,11 +455,15 @@ const DigitalTransformation: React.FC = () => {
             Start Your Transformation
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -419,3 +471,8 @@ const DigitalTransformation: React.FC = () => {
 
 export default DigitalTransformation;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+};
+
+export default DigitalTransformation;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

@@ -1,6 +1,9 @@
 
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { SEO } from './SEO';
 import { completeSitemap } from '../config/sitemap';
@@ -106,6 +109,7 @@ export default function SitemapPage() {
                   >
                     {route.label || route.title}
                   </Link>
+<<<<<<< HEAD
 =======
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
 import { Link } from 'react-router-dom';
@@ -287,12 +291,17 @@ export const SitemapPage: React.FC = () => {
                     {path} <span className="ml-2 text-xs italic">({key})</span>
                   </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </li>
               ))}
             </ul>
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
         {/* All Routes List */}
         <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -320,9 +329,12 @@ export const SitemapPage: React.FC = () => {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
       </div>
     </>
   );
 };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

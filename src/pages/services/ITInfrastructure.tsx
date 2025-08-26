@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import { 
   Server, 
@@ -49,10 +50,17 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
+=======
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 const ITInfrastructure: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       icon: Server,
@@ -83,6 +91,8 @@ const ITInfrastructure: React.FC = () => {
     "Enhanced performance and reliability",
     "Expert support and maintenance"
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       title: "Network Management",
       description: "Comprehensive network infrastructure design, implementation, and maintenance",
       features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],
@@ -113,7 +123,10 @@ const ITInfrastructure: React.FC = () => {
     { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
     { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
     { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   ];
 
   return (
@@ -124,7 +137,10 @@ const ITInfrastructure: React.FC = () => {
         keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
         canonical="https://ziontechgroup.com/services/infrastructure"
       />
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       title: "Network Infrastructure",
       description: "Design, implement, and maintain robust network solutions",
       features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
@@ -147,7 +163,10 @@ const ITInfrastructure: React.FC = () => {
       description: "Multi-layered security infrastructure protection",
       features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],
       icon: "🔒"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
 
@@ -158,6 +177,7 @@ const ITInfrastructure: React.FC = () => {
     { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const benefits = [
     "Improved system reliability and uptime",
@@ -213,6 +233,8 @@ const ITInfrastructure: React.FC = () => {
                 View Solutions
               </a>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
     <>
       <Helmet>
@@ -223,6 +245,7 @@ const ITInfrastructure: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure" />
         <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure" />
       </Helmet>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 
 <<<<<<< HEAD
@@ -339,6 +362,9 @@ const ITInfrastructure: React.FC = () => {
       </section>
     </div>
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -366,11 +392,15 @@ const ITInfrastructure: React.FC = () => {
               >
                 View All Services
               </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -399,6 +429,8 @@ const ITInfrastructure: React.FC = () => {
                     ))}
                   </ul>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Infrastructure Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -432,13 +464,17 @@ const ITInfrastructure: React.FC = () => {
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Infrastructure Areas Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -450,6 +486,8 @@ const ITInfrastructure: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive coverage across all critical infrastructure components
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Infrastructure Areas */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -459,12 +497,16 @@ const ITInfrastructure: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Multi-layered approach to building robust IT infrastructure
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureAreas.map((area, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
@@ -473,6 +515,8 @@ const ITInfrastructure: React.FC = () => {
                       <li key={idx} className="text-gray-300 text-sm flex items-center">
                         <ArrowRight className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
@@ -482,7 +526,10 @@ const ITInfrastructure: React.FC = () => {
                     {area.solutions.map((solution, idx) => (
                       <li key={idx} className="text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                         {solution}
                       </li>
                     ))}
@@ -493,6 +540,7 @@ const ITInfrastructure: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Technologies Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -538,6 +586,8 @@ const ITInfrastructure: React.FC = () => {
                 </div>
               ))}
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -580,12 +630,16 @@ const ITInfrastructure: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Security</h3>
                 <p className="text-gray-300">Multi-layered security for comprehensive protection</p>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -611,6 +665,8 @@ const ITInfrastructure: React.FC = () => {
               </a>
             </div>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -625,11 +681,15 @@ const ITInfrastructure: React.FC = () => {
             >
               Get Infrastructure Consultation
             </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </section>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -637,6 +697,8 @@ const ITInfrastructure: React.FC = () => {
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 };
 
