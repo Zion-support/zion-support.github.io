@@ -1,264 +1,228 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
+    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
+    { name: "GitHub", url: "https://github.com/ziontechgroup", icon: "💻", color: "hover:bg-gray-600/20" },
+    { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
+    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
+  ];
+
+  const footerSections = [
+    {
+      title: "Services",
+      links: [
+        { label: "AI Solutions", path: "/services" },
+        { label: "Cloud & DevOps", path: "/services" },
+        { label: "Cybersecurity", path: "/services" },
+        { label: "Quantum Computing", path: "/services" },
+        { label: "Blockchain & Web3", path: "/services" },
+        { label: "Micro SAAS", path: "/micro-saas" }
+      ]
+    },
+    {
+      title: "Company",
+      links: [
+        { label: "About Us", path: "/about" },
+        { label: "Our Team", path: "/about" },
+        { label: "Careers", path: "/careers" },
+        { label: "News & Updates", path: "/blog" },
+        { label: "Case Studies", path: "/case-studies" },
+        { label: "Partners", path: "/partners" }
+      ]
+    },
+    {
+      title: "Resources",
+      links: [
+        { label: "Blog", path: "/blog" },
+        { label: "Documentation", path: "/docs" },
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "Research", path: "/research" },
+        { label: "Events", path: "/events" }
+      ]
+    },
+    {
+      title: "Support",
+      links: [
+        { label: "Contact Us", path: "/contact" },
+        { label: "Help Center", path: "/help" },
+        { label: "Support Portal", path: "/support" },
+        { label: "Training", path: "/training" },
+        { label: "Consulting", path: "/consulting" },
+        { label: "Request Quote", path: "/request-quote" }
+      ]
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <motion.footer 
+      className="bg-slate-900 text-white"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+          <motion.div className="lg:col-span-2" variants={itemVariants}>
+            <div className="flex items-center mb-6">
+              <motion.div 
+                className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <span className="text-white font-bold text-xl">Z</span>
+              </motion.div>
+              <span className="text-2xl font-bold">Zion Tech Group</span>
+            </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise.
+              Leading provider of innovative technology solutions, AI-powered services, 
+              and digital transformation expertise. We help businesses navigate the future of technology.
             </p>
+            
+            {/* Social Links */}
             <div className="flex space-x-4">
-              <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <span className="sr-only">LinkedIn</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.032-3.047-1.033 0-1.191.805-1.191 2.951v5.665H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
-              <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <span className="sr-only">Twitter</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                </svg>
-              </a>
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-lg ${social.color} hover:scale-110 transition-all duration-300`}
+                  aria-label={`Follow us on ${social.name}`}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                >
+                  {social.icon}
+                </motion.a>
+              ))}
             </div>
-          </div>
+          </motion.div>
 
-          {/* AI Solutions */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">AI Solutions</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/ai-autonomous-research-assistant" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Research Assistant
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-autonomous-business-operations" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Business Operations
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-powered-it-asset-management" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  IT Asset Management
-                </Link>
-              </li>
-              <li>
-                <Link to="/quantum-neural-network-platform" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Quantum Neural Networks
-                </Link>
-              </li>
-              <li>
-                <Link to="/autonomous-business-operations-platform" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Autonomous Platform
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Specialized Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Specialized Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/accessibility-auditor" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Accessibility Auditor
-                </Link>
-              </li>
-              <li>
-                <Link to="/advanced-cybersecurity-suite" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Cybersecurity Suite
-                </Link>
-              </li>
-              <li>
-                <Link to="/affiliate-attribution-hub" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Affiliate Attribution
-                </Link>
-              </li>
-              <li>
-                <Link to="/soc2-compliance-automation" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  SOC2 Compliance
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company & Resources */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Company & Resources</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/team" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Our Team
-                </Link>
-              </li>
-              <li>
-                <Link to="/leadership" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Leadership
-                </Link>
-              </li>
-              <li>
-                <Link to="/careers" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link to="/partners" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Partners
-                </Link>
-              </li>
-              <li>
-                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Additional Resources Section */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Support & Resources</h4>
+          {/* Footer Sections */}
+          {footerSections.map((section, sectionIndex) => (
+            <motion.div key={section.title} variants={itemVariants}>
+              <h3 className="text-lg font-semibold text-white mb-4">{section.title}</h3>
               <ul className="space-y-2">
-                <li>
-                  <Link to="/help-center" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    Help Center
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/support" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    Support
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/docs" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/tutorials" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    Tutorials
-                  </Link>
-                </li>
+                {section.links.map((link, linkIndex) => (
+                  <motion.li
+                    key={link.label}
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Link
+                      to={link.path}
+                      className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm"
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.li>
+                ))}
               </ul>
-            </div>
+            </motion.div>
+          ))}
+        </motion.div>
 
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Events & Content</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/events" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    Events
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/webinars" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    Webinars
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/white-papers" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    White Papers
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/news" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    News
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Research & Development</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/research-development" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    R&D
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    Enterprise
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/micro-saas" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    Micro SAAS
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/quantum-services" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    Quantum Services
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Marketplace</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/marketplace" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    Marketplace
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/space-tech" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    Space Tech
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/green-it" className="text-gray-300 hover:text-white transition-colors duration-300 text-sm">
-                    Green IT
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
+        {/* Newsletter Signup */}
+        <motion.div 
+          className="mt-12 pt-8 border-t border-white/20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <div className="max-w-md">
+            <h3 className="text-lg font-semibold text-white mb-3">Stay Updated</h3>
+            <p className="text-gray-400 text-sm mb-4">
+              Get the latest insights on AI, quantum computing, and emerging technologies.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+            <div className="flex gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <motion.button
+                className="px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Subscribe
+              </motion.button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Bottom Footer */}
+      <motion.div 
+        className="border-t border-white/10 py-6"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex space-x-6 text-sm">
+              <Link to="/privacy" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+              <Link to="/terms" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+              <Link to="/cookies" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                 Cookie Policy
+              </Link>
+              <Link to="/sitemap" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                Sitemap
               </Link>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </motion.div>
+    </motion.footer>
   );
 };
 
