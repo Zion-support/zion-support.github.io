@@ -6,6 +6,11 @@ import {
   Globe, Rocket, Cpu, Database, Lock, 
   Cloud, Server, Code, BarChart3, Target
 } from 'lucide-react';
+<<<<<<< HEAD
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+import EnhancedServiceCard from '../components/ui/EnhancedServiceCard';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+=======
 
 // Import all the new 2025 service data
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
@@ -20,6 +25,7 @@ import { advancedITServices2025 } from '../data/2025-advanced-it-services';
 import { advancedEmergingTechServices2025 } from '../data/2025-advanced-emerging-tech-services';
 
 // Import existing services for comprehensive coverage
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { extraServices } from '../data/extra-services';
@@ -202,6 +208,34 @@ const allServices = [
 
 const categories = [
   {
+<<<<<<< HEAD
+    id: 'all',
+    name: 'All Services',
+    icon: <Grid className="w-6 h-6" />,
+    color: 'from-gray-500 to-slate-500',
+    description: 'Complete portfolio of all services'
+  },
+  {
+    id: 'enterprise-it',
+    name: 'Enterprise IT',
+    icon: <Building className="w-6 h-6" />,
+    color: 'from-blue-500 to-purple-500',
+    description: 'Enterprise solutions and infrastructure'
+  },
+  {
+    id: 'ai-consciousness',
+    name: 'AI & Consciousness',
+    icon: <Brain className="w-6 h-6" />,
+    color: 'from-cyan-500 to-blue-500',
+    description: 'Revolutionary AI consciousness and emotional intelligence'
+  },
+  {
+    id: 'quantum-emerging',
+    name: 'Quantum & Emerging Tech',
+    icon: <Atom className="w-6 h-6" />,
+    color: 'from-purple-500 to-pink-500',
+    description: 'Quantum computing and breakthrough technologies'
+=======
     id: 'ai-consciousness',
     title: '🧠 AI & Consciousness',
     description: 'Revolutionary AI consciousness and emotional intelligence platforms',
@@ -227,6 +261,7 @@ const categories = [
     color: 'from-blue-500 to-cyan-500',
     services: [...innovativeITServices2025, ...advancedITServices2025],
     gradient: 'from-blue-500/20 to-teal-500/20'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
   },
   {
     id: 'space-metaverse',
@@ -237,12 +272,19 @@ const categories = [
   },
   {
     id: 'micro-saas',
+<<<<<<< HEAD
+    name: 'Micro SAAS',
+    icon: <Target className="w-6 h-6" />,
+    color: 'from-orange-500 to-red-500',
+    description: 'Innovative business solutions'
+=======
     title: '🎯 Micro SAAS',
     description: 'Innovative solutions for every business need',
     icon: Target,
     color: 'from-green-500 to-yellow-500',
     services: [...realMicroSaasServices2025, ...enhancedRealMicroSaasServices, ...advancedMicroSaasServices2025],
     gradient: 'from-green-500/20 to-orange-500/20'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
   },
   {
     id: 'creative-media',

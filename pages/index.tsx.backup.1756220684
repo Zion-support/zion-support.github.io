@@ -1,6 +1,30 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom } from 'lucide-react';
+import Button from '../components/ui/Button';
+import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
+import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
+import EnhancedFooter from '../components/layout/EnhancedFooter';
+import EnhancedServiceShowcase from '../components/sections/EnhancedServiceShowcase';
+import Enhanced2026ServicesShowcase from '../components/sections/Enhanced2026ServicesShowcase';
+import Revolutionary2026ServiceShowcase from '../components/sections/Revolutionary2026ServiceShowcase';
+import Revolutionary2027ServicesShowcase from '../components/sections/Revolutionary2027ServicesShowcase';
+import Enhanced2027ServicesShowcase from '../components/sections/Enhanced2027ServicesShowcase';
+import Revolutionary2027Hero from '../components/sections/Revolutionary2027Hero';
+import EnhancedHero2026 from '../components/sections/EnhancedHero2026';
+import UltraFuturisticHero2027 from '../components/sections/UltraFuturisticHero2027';
+import { motion } from 'framer-motion';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { extraServices } from '../data/extra-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { nextGenInnovativeServices } from '../data/next-gen-innovative-services';
+import { enterpriseAIServices } from '../data/enterprise-ai-services';
+=======
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Target } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -55,6 +79,7 @@ const stats = [
   { number: '99.9%', label: 'Uptime', icon: Shield, color: 'text-green-400' },
   { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
 ];
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
 
 export default function HomePage() {
   const heroStats = [
@@ -228,6 +253,21 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center text-gray-300"
               >
+<<<<<<< HEAD
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-5 h-5 text-cyan-400" />
+                  <span>{contactInfo.mobile}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-5 h-5 text-cyan-400" />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <MapPin className="w-5 h-5 text-cyan-400" />
+                  <span>{contactInfo.address}</span>
+                </div>
+              </motion.div>
+=======
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </motion.div>
@@ -456,6 +496,7 @@ export default function HomePage() {
                 <Mail className="w-5 h-5 mr-2" />
                 Send Email
               </a>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
             </div>
           </div>
         </section>
