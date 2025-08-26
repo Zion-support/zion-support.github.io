@@ -235,12 +235,40 @@ const Services: React.FC = () => {
           ))}
         </div>
 
-        {/* Why Choose Us */}
-        <section className="mb-20">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We deliver exceptional value through expertise, innovation, and unwavering commitment to client success
+      {/* Enhanced CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our innovative services can help drive your success
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Contact Us Today
+            </Link>
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center px-8 py-2 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+            >
+              Call: +1 302 464 0950
+            </a>
+          </div>
+          <div className="mb-6">
+            <Link
+              to="/comprehensive-services-2025"
+              className="inline-flex items-center px-6 py-2 text-blue-400 hover:text-blue-300 border border-blue-400 rounded-lg transition-all duration-300"
+            >
+              View Complete Services Portfolio →
+            </Link>
+            <p className="text-sm text-gray-400 mt-2">
+              Discover our comprehensive showcase of 30+ innovative micro SAAS services, specialized IT solutions, and cutting-edge AI platforms for 2025
+            </p>
+          </div>
             </p>
           </div>
           

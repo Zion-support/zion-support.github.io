@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { innovativeMicroSaasServices2025 } from '../data/innovativeMicroSaasServices2025';
 import { innovativeITServices2025 } from '../data/innovativeITServices2025';
-import { innovativeAIServices2025 } from '../data/innovativeAIServices2025';
+import { INNOVATIVE_AI_SERVICES_2025 } from '../data/innovativeAIServices2025';
 
 const InnovativeServicesShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState('microsaas');
@@ -10,7 +10,7 @@ const InnovativeServicesShowcase: React.FC = () => {
   const tabs = [
     { id: 'microsaas', name: 'Micro SAAS Services', count: innovativeMicroSaasServices2025.length },
     { id: 'it', name: 'IT Services', count: innovativeITServices2025.length },
-    { id: 'ai', name: 'AI Services', count: innovativeAIServices2025.length }
+    { id: 'ai', name: 'AI Services', count: INNOVATIVE_AI_SERVICES_2025.length }
   ];
 
   const getServicesByTab = () => {
@@ -20,7 +20,7 @@ const InnovativeServicesShowcase: React.FC = () => {
       case 'it':
         return innovativeITServices2025;
       case 'ai':
-        return innovativeAIServices2025;
+        return INNOVATIVE_AI_SERVICES_2025;
       default:
         return [];
     }
@@ -51,7 +51,7 @@ const InnovativeServicesShowcase: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg px-6 py-3">
               <span className="text-2xl font-bold text-blue-400">
-                {innovativeMicroSaasServices2025.length + innovativeITServices2025.length + innovativeAIServices2025.length}
+                {innovativeMicroSaasServices2025.length + innovativeITServices2025.length + INNOVATIVE_AI_SERVICES_2025.length}
               </span>
               <p className="text-sm text-gray-300">Total Services</p>
             </div>
