@@ -8,6 +8,7 @@ import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MessageSquare, Sparkles } from "lucide-react";
 =======
 import { MessageSquare, ChevronDown, Users, Briefcase, Settings, BarChart3 } from "lucide-react";
@@ -37,6 +38,11 @@ import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 >>>>>>> origin/cursor/website-audit-and-enhancement-aa85
+=======
+import { MessageSquare, ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -56,6 +62,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,11 +108,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 >>>>>>> origin/cursor/website-audit-and-enhancement-aa85
+=======
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 
   const baseLinks = [
     {
       key: 'home',
       href: '/',
+<<<<<<< HEAD
       matches: (path: string) => path === '/',
       name: t('nav.home')
     },
@@ -179,10 +190,21 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services')
+=======
+      name: 'Home',
+      matches: (path: string) => path === '/'
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
+    },
+    {
+      key: 'services',
+      href: '/services',
+      name: 'Services',
+      matches: (path: string) => path.startsWith('/services')
     },
     {
       key: 'marketplace',
       href: '/marketplace',
+<<<<<<< HEAD
 <<<<<<< HEAD
       matches: (path: string) => path.startsWith('/marketplace')
     },
@@ -232,6 +254,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/marketplace'),
       name: t('nav.marketplace')
 >>>>>>> origin/cursor/website-audit-and-enhancement-aa85
+=======
+      name: 'Marketplace',
+      matches: (path: string) => path.startsWith('/marketplace'),
+      dropdown: [
+        { href: '/marketplace', label: 'All Products' },
+        { href: '/categories', label: 'Categories' },
+        { href: '/equipment', label: 'Equipment' },
+        { href: '/green-it', label: 'Green IT' }
+      ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
     },
     {
 >>>>>>> origin/cursor/website-audit-and-enhancement-6726
@@ -241,6 +273,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
       key: 'talent',
       href: '/talent',
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
       name: t('nav.talent')
     },
@@ -278,10 +311,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'partners',
       href: '/partners',
       matches: (path: string) => path.startsWith('/partners')
+=======
+      name: 'Talent',
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
+      dropdown: [
+        { href: '/talent', label: 'Find Talent' },
+        { href: '/talent/apply', label: 'Apply as Talent' },
+        { href: '/zion-hire-ai', label: 'AI Hiring' }
+      ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
     },
     {
       key: 'community',
       href: '/community',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
@@ -346,10 +389,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/faq',
       icon: <HelpCircle className="w-4 h-4" />,
       description: 'Frequently asked questions'
+=======
+      name: 'Community',
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
+      dropdown: [
+        { href: '/community', label: 'Forums' },
+        { href: '/blog', label: 'Blog' },
+        { href: '/partners', label: 'Partners' }
+      ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
     },
     {
       key: 'about',
       href: '/about',
+<<<<<<< HEAD
       icon: <FileText className="w-4 h-4" />,
       description: 'Learn about Zion Tech Group'
     },
@@ -469,12 +522,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+=======
+      name: 'About',
+      matches: (path: string) => path.startsWith('/about') || path === '/careers' || path === '/contact'
+    }
+  ];
+
+  let links = baseLinks;
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
   
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
       key: 'dashboard',
-      name: t('nav.dashboard'),
+      name: 'Dashboard',
       href: '/dashboard',
       matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
     });
@@ -484,7 +545,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   if (isAdmin) {
     links.push({
       key: 'analytics',
-      name: t('nav.analytics'),
+      name: 'Analytics',
       href: '/analytics',
       matches: (path: string) => path.startsWith('/analytics')
     });
@@ -541,6 +602,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   };
 >>>>>>> origin/cursor/website-audit-and-enhancement-aa85
   
+  const handleDropdownToggle = (key: string) => {
+    setActiveDropdown(activeDropdown === key ? null : key);
+  };
+
+  const handleDropdownClose = () => {
+    setActiveDropdown(null);
+  };
+  
   return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)}>
 =======
@@ -556,6 +625,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       <ul className="flex items-center gap-1">
 <<<<<<< HEAD
         {links.map((link) => (
+<<<<<<< HEAD
           <li key={link.name} className="relative">
             <Link
               to={link.href}
@@ -591,6 +661,55 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               <span className="relative z-10">{link.name}</span>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
             </Link>
+=======
+          <li key={link.key} className="relative" onMouseLeave={handleDropdownClose}>
+            {link.dropdown ? (
+              <div className="relative">
+                <button
+                  onClick={() => handleDropdownToggle(link.key)}
+                  onMouseEnter={() => setActiveDropdown(link.key)}
+                  className={cn(
+                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+                    link.matches(location.pathname)
+                      ? "bg-zion-purple/20 text-zion-cyan"
+                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  )}
+                >
+                  {link.name}
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                
+                {activeDropdown === link.key && (
+                  <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
+                    <div className="py-2">
+                      {link.dropdown.map((item) => (
+                        <Link
+                          key={item.href}
+                          to={item.href}
+                          className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+                          onClick={handleDropdownClose}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                to={link.href}
+                className={cn(
+                  "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+                  link.matches(location.pathname)
+                    ? "bg-zion-purple/20 text-zion-cyan"
+                    : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                )}
+              >
+                {link.name}
+              </Link>
+            )}
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
           </li>
         ))}
 <<<<<<< HEAD
@@ -966,7 +1085,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               onClick={closeDropdown}
             >
               <MessageSquare className="w-4 h-4 mr-1" />
-              {t('nav.messages')}
+              Messages
               {unreadCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
                   {unreadCount}
@@ -975,6 +1094,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </Link>
           </li>
         )}
+
+        {/* Request Quote CTA */}
+        <li>
+          <Link
+            to="/request-quote"
+            className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium bg-zion-purple hover:bg-zion-purple/80 text-white transition-colors"
+          >
+            Get Quote
+          </Link>
+        </li>
       </ul>
     </nav>
   );

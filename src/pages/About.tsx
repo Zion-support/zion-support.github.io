@@ -106,6 +106,7 @@ export default function About() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
@@ -115,6 +116,8 @@ export default function About() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-aa85
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-beb3
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
         canonical="https://ziontechgroup.com/about"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
