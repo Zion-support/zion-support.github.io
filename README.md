@@ -787,7 +787,23 @@ Start the webhook server with:
 node scripts/codexWebhookServer.js
 ```
 
-Then POST to `http://localhost:3001/webhook/trigger-fix` to trigger the automated fix pipeline.
+Some Cypress tests rely on environment variables. Create a `cypress.env.json`
+file in the project root with values for variables like `TEST_USER_EMAIL` and
+`TEST_USER_PASSWORD` before running the end-to-end tests. An example file:
+
+```json
+{
+  "TEST_USER_DISPLAY_NAME": "Test User",
+  "TEST_USER_EMAIL": "test@example.com",
+  "TEST_USER_PASSWORD": "Password123",
+  "TEST_USER_NAME": "Test User",
+  "EXISTING_USER_EMAIL": "existing@test.com",
+  "EXISTING_USER_PASSWORD": "password123",
+  "STRIPE_TEST_CARD": "4242424242424242"
+}
+```
+
+## How it Works
 
 
 ## API Endpoints
