@@ -1,41 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-a776
 
 interface FeatureCardProps {
   title: string;
   description: string;
   icon?: React.ReactNode;
-<<<<<<< HEAD
   className?: string;
-}
-
-export const FeatureCard: React.FC<FeatureCardProps> = ({
-  title,
-  description,
-  icon,
-  className = ''
-}) => {
-  return (
-    <div className={`bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}>
-      {icon && (
-        <div className="text-3xl text-blue-600 dark:text-blue-400 mb-4">
-          {icon}
-        </div>
-      )}
-      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-        {title}
-      </h3>
-      <p className="text-gray-600 dark:text-gray-300">
-        {description}
-      </p>
-    </div>
-  );
-};
-=======
   color?: string;
   bgColor?: string;
   borderColor?: string;
@@ -44,17 +15,18 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
   onClick?: () => void;
 }
 
-export function FeatureCard({
+export const FeatureCard: React.FC<FeatureCardProps> = ({
   title,
   description,
   icon,
+  className = '',
   color = 'text-zion-cyan',
   bgColor = 'bg-zion-blue-light/10',
   borderColor = 'border-zion-blue-light/20',
   stats,
   href,
   onClick
-}: FeatureCardProps) {
+}) => {
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -66,7 +38,7 @@ export function FeatureCard({
   return (
     <motion.div
       whileHover="hover"
-      className={`group relative ${bgColor} border-2 ${borderColor} rounded-2xl p-6 backdrop-blur-sm hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 cursor-pointer`}
+      className={`group relative ${bgColor} border-2 ${borderColor} rounded-2xl p-6 backdrop-blur-sm hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 cursor-pointer ${className}`}
       onClick={handleClick}
     >
       {/* Icon */}
@@ -95,5 +67,4 @@ export function FeatureCard({
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/5 to-zion-purple/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     </motion.div>
   );
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-a776
+};

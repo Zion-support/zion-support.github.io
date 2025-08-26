@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Cookie, Shield, Settings, Eye, Database, Globe, Mail, Phone } from 'lucide-react';
