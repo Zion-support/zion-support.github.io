@@ -1,0 +1,1 @@
+export default function Pricing(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Pricing</h1><p>General guidance: Micro SaaS $99–$999/mo, AI Services $499–$4,999/mo, Enterprise IT $2,000–$15,000/mo. Contact us for a tailored quote.</p></main>);}

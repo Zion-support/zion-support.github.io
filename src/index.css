@@ -6,42 +6,6 @@
   :root {
     --font-sans: 'Orbitron', system-ui, sans-serif;
 
-<<<<<<< HEAD
-.dark {
-  --background: 0 0% 7%;
-  --foreground: 142 71% 45%;
-  --card: 0 0% 7%;
-  --card-foreground: 142 71% 45%;
-  --popover: 0 0% 7%;
-  --popover-foreground: 142 71% 45%;
-  --primary: 216 84% 50%;
-  --primary-foreground: 142 71% 45%;
-  --secondary: 0 0% 68%;
-  --secondary-foreground: 0 0% 7%;
-  --muted: 0 0% 68%;
-  --muted-foreground: 215 20% 65%;
-  --accent: 228 12% 92%;
-  --accent-foreground: 0 0% 7%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 142 71% 45%;
-  --border: 0 0% 68%;
-  --input: 0 0% 68%;
-  --ring: 216 84% 53%;
-  --sidebar-background: 228 12% 92%;
-  --sidebar-foreground: 0 0% 7%;
-  --sidebar-primary: 216 84% 53%;
-  --sidebar-primary-foreground: 142 71% 45%;
-  --sidebar-accent: 0 0% 68%;
-  --sidebar-accent-foreground: 0 0% 7%;
-  --sidebar-border: 0 0% 68%;
-  --sidebar-ring: 216 84% 53%;
-}
-
-=======
-@layer base {
-  :root {
-    --font-sans: 'Orbitron', system-ui, sans-serif;
-
     --background: 0 0% 7%;
     --foreground: 142 71% 45%;
 
@@ -73,61 +37,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 228 12% 92%;
-
     --sidebar-foreground: 0 0% 7%;
-
     --sidebar-primary: 216 84% 53%;
-
     --sidebar-primary-foreground: 142 71% 45%;
-
     --sidebar-accent: 0 0% 68%;
-
-=======
-    --background: 0 0% 7%;
-    --foreground: 142 71% 45%;
-
-    --card: 0 0% 7%;
-    --card-foreground: 142 71% 45%;
-
-    --popover: 0 0% 7%;
-    --popover-foreground: 142 71% 45%;
-
-    --primary: 216 84% 50%;
-    --primary-foreground: 142 71% 45%;
-
-    --secondary: 0 0% 68%;
-    --secondary-foreground: 0 0% 7%;
-
-    --muted: 0 0% 68%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 228 12% 92%;
-    --accent-foreground: 0 0% 7%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 142 71% 45%;
-
-    --border: 0 0% 68%;
-    --input: 0 0% 68%;
-    --ring: 216 84% 53%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 228 12% 92%;
-
-    --sidebar-foreground: 0 0% 7%;
-
-    --sidebar-primary: 216 84% 53%;
-
-    --sidebar-primary-foreground: 142 71% 45%;
-
-    --sidebar-accent: 0 0% 68%;
-
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     --sidebar-accent-foreground: 0 0% 7%;
-
     --sidebar-border: 0 0% 68%;
-
     --sidebar-ring: 216 84% 53%;
   }
 
@@ -211,17 +126,15 @@
   }
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
   @keyframes pulse {
@@ -243,16 +156,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: theme('colors["zion-blue"].DEFAULT');
+    background: #2e73ea;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: theme('colors["zion-purple"].dark');
+    background: #530c8b;
     border-radius: 5px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: theme('colors["zion-purple"].DEFAULT');
+    background: #8c15e9;
   }
 
   /* Smooth scrolling */
@@ -327,7 +240,7 @@
 
   .neon-border {
     border: 1px solid transparent;
-    background: linear-gradient(45deg, theme('colors.zion-cyan'), theme('colors.zion-purple')) border-box;
+    background: linear-gradient(45deg, #22ddd2, #8c15e9) border-box;
     -webkit-mask: 
       linear-gradient(#fff 0 0) padding-box, 
       linear-gradient(#fff 0 0);
@@ -335,7 +248,6 @@
     mask-composite: exclude;
   }
 
-<<<<<<< HEAD
   .fade-in-up {
     animation: fade-in-up 0.8s ease-out;
   }
@@ -360,93 +272,6 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
-<<<<<<< HEAD
-  
-  /* Large Text Mode */
-  .large-text {
-    font-size: 1.2em;
-    line-height: 1.6;
-  }
-  
-  .large-text h1 { font-size: 2.5em; }
-  .large-text h2 { font-size: 2em; }
-  .large-text h3 { font-size: 1.75em; }
-  .large-text p { font-size: 1.2em; }
-}
-
-/* Zion Tech Group specific styles */
-.zion-gradient {
-  background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%);
-}
-
-.zion-text-gradient {
-  background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.zion-border-gradient {
-  border: 2px solid;
-  border-image: linear-gradient(135deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%) 1;
-}
-
-/* Animation classes */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.floating-delay-1 {
-  animation: float 6s ease-in-out infinite;
-  animation-delay: 0s;
-}
-
-.floating-delay-2 {
-  animation: float 6s ease-in-out infinite;
-  animation-delay: 2s;
-}
-
-.floating-delay-3 {
-  animation: float 6s ease-in-out infinite;
-  animation-delay: 4s;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Dark mode scrollbar */
-.dark ::-webkit-scrollbar-track {
-  background: #1f2937;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: #4b5563;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;
-=======
-=======
 
   .glass-dark {
     background: rgba(0, 0, 0, 0.3);
@@ -454,7 +279,46 @@
     border: 1px solid rgba(34, 221, 210, 0.2);
   }
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+  /* Zion Tech Group specific styles */
+  .zion-gradient {
+    background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%);
+  }
+
+  .zion-text-gradient {
+    background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .zion-border-gradient {
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%) 1;
+  }
+
+  /* Animation classes */
+  @keyframes float-strong {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-float {
+    animation: float-strong 6s ease-in-out infinite;
+  }
+
+  .floating-delay-1 { animation-delay: 0s; }
+  .floating-delay-2 { animation-delay: 2s; }
+  .floating-delay-3 { animation-delay: 4s; }
+
+  /* Scrollbar (light and dark) */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; }
+  ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #555; }
+  .dark ::-webkit-scrollbar-track { background: #1f2937; }
+  .dark ::-webkit-scrollbar-thumb { background: #4b5563; }
+  .dark ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+
   /* LiveKit UI overrides */
   [data-lk-theme='default'] {
     --lk-color-accent: #06B6D4;
@@ -463,8 +327,4 @@
     --lk-bg1: #0B1120;
     --lk-bg2: #0F172A;
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

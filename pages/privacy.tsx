@@ -1,0 +1,1 @@
+export default function Privacy(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Privacy Policy</h1><p>We respect your privacy. This placeholder will be replaced with our full policy.</p></main>);}

@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
   robots: 'index, follow',
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
