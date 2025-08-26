@@ -49,7 +49,7 @@ import {
   Users as UsersIcon
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
-import { ENHANCED_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/enhancedMicroSaasServices2025";
+import { enhancedMicroSaasServices2025 as ENHANCED_MICRO_SAAS_SERVICES_2025 } from "@/data/enhancedMicroSaasServices2025";
 import { INNOVATIVE_SERVICES_2025 } from "@/data/innovativeServices2025";
 
 export default function InnovativeServicesShowcase() {

@@ -12,7 +12,6 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
 import { Menu, X, Search as SearchIcon, Sparkles } from "lucide-react";
 
 export interface HeaderProps {
@@ -71,9 +70,11 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   
   return (
     <header 
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-purple-dark/95 to-zion-slate-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10"
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-slate-dark/95 to-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md neon-pulse"
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20' 
+          : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'
+      }`}
       style={headerStyle}
     >
       {/* Animated background pattern */}
@@ -86,10 +87,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
         {/* Desktop Navigation */}
-
-        {/* Search Bar */}
-        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
-        <div className="ml-6 flex-1 hidden md:block">
+        <div className="ml-6 flex-1 hidden lg:block">
           <MainNavigation />
         </div>
 
@@ -106,109 +104,47 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
           />
         </form>
 
-      </div>
-      
-      {/* Animated Header Border */}
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
-        {/* Desktop Actions */}
-        <div className="hidden lg:flex items-center gap-3">
-          <Button 
-            asChild 
-            variant="outline" 
-            className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"
-          >
-            <Link to="/pricing">
-              <Sparkles className="h-4 w-4 mr-2" />
-              Pricing
-            </Link>
-          </Button>
-        {/* Desktop Actions */}
-        <div className="flex items-center gap-2 hidden md:flex">
+        {/* Right Side Actions */}
+        <div className="flex items-center gap-3">
+          {/* AI Assistant Button */}
+          <button className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 text-zion-cyan hover:from-zion-purple/30 hover:to-zion-cyan/30 transition-all duration-300 group">
+            <Sparkles className="h-4 w-4 group-hover:animate-pulse" />
+            <span className="text-sm font-medium">AI Assistant</span>
+          </button>
+
           <LanguageSelector />
           {!hideLogin && <UserMenu />}
-        </div>
 
-        {/* Mobile Menu */}
-        <MobileMenu className="md:hidden" />
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMobileMenu}
+            className="lg:hidden p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+          >
+            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
-    <>
-      <header 
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20' 
-            : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'
-        }`}
-        style={headerStyle}
-      >
-        <div className="container flex h-16 items-center px-4 sm:px-6">
-          <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
-          {/* Desktop Navigation */}
-          <div className="ml-6 flex-1 hidden lg:block">
-            <MainNavigation />
-          </div>
-
-          {/* Search Bar */}
-          <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <EnhancedSearchInput
-                value={query}
-                onChange={setQuery}
-                onSelectSuggestion={(text) => {
-                  navigate(`/search?q=${encodeURIComponent(text)}`);
-                  setQuery("");
-                }}
-                searchSuggestions={searchSuggestions}
-              />
-              <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                <SearchIcon className="h-4 w-4 text-zion-slate-light" />
-              </div>
+      {/* Mobile Search Bar */}
+      <div className="lg:hidden px-4 pb-4">
+        <form onSubmit={handleSubmit}>
+          <div className="relative">
+            <EnhancedSearchInput
+              value={query}
+              onChange={setQuery}
+              onSelectSuggestion={(text) => {
+                navigate(`/search?q=${encodeURIComponent(text)}`);
+                setQuery("");
+              }}
+              searchSuggestions={searchSuggestions}
+              placeholder="Search services, talent, equipment..."
+            />
+            <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+              <SearchIcon className="h-4 w-4 text-zion-slate-light" />
             </div>
-          </form>
-
-          {/* Right Side Actions */}
-          <div className="flex items-center gap-3">
-            {/* AI Assistant Button */}
-            <button className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 text-zion-cyan hover:from-zion-purple/30 hover:to-zion-cyan/30 transition-all duration-300 group">
-              <Sparkles className="h-4 w-4 group-hover:animate-pulse" />
-              <span className="text-sm font-medium">AI Assistant</span>
-            </button>
-
-            <LanguageSelector />
-            {!hideLogin && <UserMenu />}
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={toggleMobileMenu}
-              className="lg:hidden p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
-            >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
           </div>
-        </div>
-
-        {/* Mobile Search Bar */}
-        <div className="lg:hidden px-4 pb-4">
-          <form onSubmit={handleSubmit}>
-            <div className="relative">
-              <EnhancedSearchInput
-                value={query}
-                onChange={setQuery}
-                onSelectSuggestion={(text) => {
-                  navigate(`/search?q=${encodeURIComponent(text)}`);
-                  setQuery("");
-                }}
-                searchSuggestions={searchSuggestions}
-                placeholder="Search services, talent, equipment..."
-              />
-              <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                <SearchIcon className="h-4 w-4 text-zion-slate-light" />
-              </div>
-            </div>
-          </form>
-        </div>
-      </header>
+        </form>
+      </div>
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
@@ -216,10 +152,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
           <div className="flex flex-col h-full">
             <div className="flex justify-between items-center p-4 border-b border-zion-purple/30">
               <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
-              <button
-                onClick={toggleMobileMenu}
-                className="p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10"
-              >
+              <button onClick={toggleMobileMenu} className="p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10">
                 <X className="h-5 w-5" />
               </button>
             </div>
@@ -227,84 +160,33 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             <nav className="flex-1 p-4">
               <ul className="space-y-2">
                 <li>
-                  <Link
-                    to="/"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+                  <Link to="/" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/services"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+                  <Link to="/services" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/talent"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+                  <Link to="/talent" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
                     Talent
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/equipment"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+                  <Link to="/equipment" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
                     Equipment
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/community"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
+                  <Link to="/community" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
                     Community
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/ai-content-generator"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
-                    AI Content Generator
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/cybersecurity-suite"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
-                    Cybersecurity Suite
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/cloud-optimizer"
-                    onClick={toggleMobileMenu}
-                    className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                  >
-                    Cloud Cost Optimizer
                   </Link>
                 </li>
                 {user && (
                   <li>
-                    <Link
-                      to="/dashboard"
-                      onClick={toggleMobileMenu}
-                      className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                    >
+                    <Link to="/dashboard" onClick={toggleMobileMenu} className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors">
                       Dashboard
                     </Link>
                   </li>
@@ -320,18 +202,10 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                 </button>
                 {!user && (
                   <div className="flex gap-2">
-                    <Link
-                      to="/login"
-                      onClick={toggleMobileMenu}
-                      className="flex-1 px-4 py-2 text-center rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
-                    >
+                    <Link to="/login" onClick={toggleMobileMenu} className="flex-1 px-4 py-2 text-center rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors">
                       Login
                     </Link>
-                    <Link
-                      to="/signup"
-                      onClick={toggleMobileMenu}
-                      className="flex-1 px-4 py-2 text-center rounded-lg bg-zion-purple text-white hover:bg-zion-purple-dark transition-colors"
-                    >
+                    <Link to="/signup" onClick={toggleMobileMenu} className="flex-1 px-4 py-2 text-center rounded-lg bg-zion-purple text-white hover:bg-zion-purple-dark transition-colors">
                       Sign Up
                     </Link>
                   </div>
@@ -345,6 +219,5 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       {/* Neon glow effect */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60" />
     </header>
-    </>
   );
 }
