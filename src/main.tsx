@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
-import './index.css';
+import './styles.css';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import { HelmetProvider } from 'react-helmet-async';
@@ -13,7 +13,6 @@ import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 import { Provider as ReduxProvider } from 'react-redux';
 import { store } from '@/store';
-import { AuthProvider } from './context/auth/AuthProvider';
 import { NotificationProvider } from './components/ui/notification';
 
 const queryClient = new QueryClient({
@@ -33,15 +32,13 @@ root.render(
 				<ReduxProvider store={store}>
 					<WhitelabelProvider>
 						<Router>
-							<AuthProvider>
-								<NotificationProvider>
-									<LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-										<AppLayout>
-											<App />
-										</AppLayout>
-									</LanguageProvider>
-								</NotificationProvider>
-							</AuthProvider>
+							<NotificationProvider>
+								<LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+									<AppLayout>
+										<App />
+									</AppLayout>
+								</LanguageProvider>
+							</NotificationProvider>
 						</Router>
 					</WhitelabelProvider>
 				</ReduxProvider>

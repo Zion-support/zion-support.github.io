@@ -615,11 +615,212 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Enhanced Quick Access Section */}
-      <QuickAccess />
+      {/* Innovative Services 2027 Section */}
+      <motion.section 
+        className="py-20 bg-zion-slate-dark"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div className="text-center mb-20" variants={itemVariants}>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Innovative</span> Services 2027
+            </h2>
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto">
+              Discover our cutting-edge portfolio of AI, cybersecurity, quantum computing, and emerging technology solutions designed to transform your business
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            {/* AI Business Intelligence */}
+            <motion.div variants={itemVariants} className="group">
+              <div className="bg-gradient-to-br from-zion-slate to-zion-slate-dark p-6 rounded-2xl border border-zion-slate-light hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-3">
+                    <span className="text-xl">🧠</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white">AI Business Intelligence</h3>
+                    <p className="text-zion-cyan text-xs font-medium">AI Score: 98</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light mb-4 text-sm leading-relaxed">
+                  Real-time insights, predictive analytics, and automated reporting with 95% accuracy.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-zion-cyan">$299</span>
+                  <Link 
+                    to="/innovative-services-2027" 
+                    className="text-zion-cyan hover:text-white transition-colors duration-300"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Quantum Computing */}
+            <motion.div variants={itemVariants} className="group">
+              <div className="bg-gradient-to-br from-zion-slate to-zion-slate-dark p-6 rounded-2xl border border-zion-slate-light hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-xl flex items-center justify-center mr-3">
+                    <span className="text-xl">⚛️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white">Quantum Computing</h3>
+                    <p className="text-zion-cyan text-xs font-medium">AI Score: 99</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light mb-4 text-sm leading-relaxed">
+                  Access to 100+ qubit quantum processors for cryptography and optimization.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-zion-cyan">$1,999</span>
+                  <Link 
+                    to="/innovative-services-2027" 
+                    className="text-zion-cyan hover:text-white transition-colors duration-300"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Autonomous Cybersecurity */}
+            <motion.div variants={itemVariants} className="group">
+              <div className="bg-gradient-to-br from-zion-slate to-zion-slate-dark p-6 rounded-2xl border border-zion-slate-light hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mr-3">
+                    <span className="text-xl">🛡️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white">Autonomous Cybersecurity</h3>
+                    <p className="text-zion-cyan text-xs font-medium">AI Score: 97</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light mb-4 text-sm leading-relaxed">
+                  24/7 AI-powered threat detection and response with 90% incident reduction.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-zion-cyan">$499</span>
+                  <Link 
+                    to="/innovative-services-2027" 
+                    className="text-zion-cyan hover:text-white transition-colors duration-300"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Edge AI Computing */}
+            <motion.div variants={itemVariants} className="group">
+              <div className="bg-gradient-to-br from-zion-slate to-zion-slate-dark p-6 rounded-2xl border border-zion-slate-light hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center mr-3">
+                    <span className="text-xl">🔌</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white">Edge AI Computing</h3>
+                    <p className="text-zion-cyan text-xs font-medium">AI Score: 96</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light mb-4 text-sm leading-relaxed">
+                  Real-time AI processing at the edge with 95% latency reduction.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-zion-cyan">$399</span>
+                  <Link 
+                    to="/innovative-services-2027" 
+                    className="text-zion-cyan hover:text-white transition-colors duration-300"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Blockchain as a Service */}
+            <motion.div variants={itemVariants} className="group">
+              <div className="bg-gradient-to-br from-zion-slate to-zion-slate-dark p-6 rounded-2xl border border-zion-slate-light hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mr-3">
+                    <span className="text-xl">⛓️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white">Blockchain Platform</h3>
+                    <p className="text-zion-cyan text-xs font-medium">AI Score: 94</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light mb-4 text-sm leading-relaxed">
+                  Multi-blockchain support with smart contracts and DeFi integration tools.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-zion-cyan">$599</span>
+                  <Link 
+                    to="/innovative-services-2027" 
+                    className="text-zion-cyan hover:text-white transition-colors duration-300"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* AI Content Creation */}
+            <motion.div variants={itemVariants} className="group">
+              <div className="bg-gradient-to-br from-zion-slate to-zion-slate-dark p-6 rounded-2xl border border-zion-slate-light hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mr-3">
+                    <span className="text-xl">✍️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white">AI Content Creation</h3>
+                    <p className="text-zion-cyan text-xs font-medium">AI Score: 95</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light mb-4 text-sm leading-relaxed">
+                  Generate text, images, videos, and audio content with AI-powered creativity.
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-zion-cyan">$199</span>
+                  <Link 
+                    to="/innovative-services-2027" 
+                    className="text-zion-cyan hover:text-white transition-colors duration-300"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          <motion.div className="text-center mt-12" variants={itemVariants}>
+            <Link 
+              to="/all-services-2027" 
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
+            >
+              View All Services 2027
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+          </motion.div>
+        </div>
+      </motion.section>
 
       {/* Enhanced Feature Highlights */}
       <FeatureHighlights />
+
+      {/* Enhanced Quick Access Section */}
+      <QuickAccess />
 
       {/* Enhanced Feature CTAs */}
       <FeatureCTAs />
