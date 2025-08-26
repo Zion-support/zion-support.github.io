@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
-
 interface TenantAdminStatus {
   isAdmin: boolean;
   isLoading: boolean;
 }
-
 export const useTenantAdminStatus = (tenantId?: string): TenantAdminStatus => {
   const [_setStatus] = useState<{
     isAdmin: boolean;
@@ -13,7 +11,6 @@ export const useTenantAdminStatus = (tenantId?: string): TenantAdminStatus => {
     isAdmin: false,
     isLoading: true,
   });
-
   useEffect(() => {
     const checkTenantAdminStatus = async (_tenantId: string) => {
       try {
@@ -24,10 +21,8 @@ export const useTenantAdminStatus = (tenantId?: string): TenantAdminStatus => {
         return false;
       }
     };
-
     checkTenantAdminStatus(tenantId || 'default');
   }, [tenantId]);
-
   return {
     isAdmin: false, // Placeholder, as the status is not directly managed by this hook
     isLoading: true, // Placeholder, as the status is not directly managed by this hook

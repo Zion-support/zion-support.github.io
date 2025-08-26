@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedHome: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center text-white">
@@ -7,5 +6,4 @@ const EnhancedHome: React.FC = () => {
     </div>
   );
 };
-
 export default EnhancedHome;

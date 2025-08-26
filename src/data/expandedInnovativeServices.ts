@@ -28,7 +28,6 @@ export interface ExpandedInnovativeService {
   demoUrl?: string;
   documentationUrl?: string;
 }
-
 export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
   // AI-Powered Content Creation & Marketing
   {
@@ -90,7 +89,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     demoUrl: "https://ziontechgroup.com/demo/ai-content-suite",
     documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite"
   },
-
   // AI-Powered Video Analytics Platform
   {
     id: "ai-video-analytics-platform",
@@ -149,7 +147,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "350% within 12 months",
     competitors: ["Vintra", "BriefCam", "Avigilon", "Milestone Systems"]
   },
-
   // AI-Powered Financial Planning Platform
   {
     id: "ai-financial-planning-platform",
@@ -208,7 +205,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "500% within 18 months",
     competitors: ["Betterment", "Wealthfront", "Personal Capital", "M1 Finance"]
   },
-
   // AI-Powered Healthcare Diagnostics Platform
   {
     id: "ai-healthcare-diagnostics-platform",
@@ -267,7 +263,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "400% within 24 months",
     competitors: ["Aidoc", "Zebra Medical Vision", "Butterfly Network", "Enlitic"]
   },
-
   // AI-Powered Supply Chain Optimization
   {
     id: "ai-supply-chain-optimization",
@@ -326,7 +321,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "450% within 15 months",
     competitors: ["Llamasoft", "E2open", "Kinaxis", "Blue Yonder"]
   },
-
   // AI-Powered Legal Research & Document Analysis
   {
     id: "ai-legal-research-platform",
@@ -385,7 +379,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "350% within 12 months",
     competitors: ["Casetext", "ROSS Intelligence", "Harvey", "DoNotPay"]
   },
-
   // AI-Powered Real Estate Analytics Platform
   {
     id: "ai-real-estate-analytics",
@@ -444,7 +437,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "400% within 18 months",
     competitors: ["Zillow", "Redfin", "Realtor.com", "PropStream", "RealtyMogul"]
   },
-
   // AI-Powered HR & Talent Management Platform
   {
     id: "ai-hr-talent-management",
@@ -503,7 +495,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "350% within 12 months",
     competitors: ["Workday", "BambooHR", "Greenhouse", "Lever", "Hired"]
   },
-
   // AI-Powered Energy Management Platform
   {
     id: "ai-energy-management-platform",
@@ -562,7 +553,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "400% within 18 months",
     competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"]
   },
-
   // AI-Powered Manufacturing Quality Control
   {
     id: "ai-manufacturing-quality-control",
@@ -621,7 +611,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "450% within 15 months",
     competitors: ["Siemens", "GE Digital", "PTC", "Rockwell Automation"]
   },
-
   // AI-Powered Education & Learning Platform
   {
     id: "ai-education-learning-platform",
@@ -680,7 +669,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "300% within 12 months",
     competitors: ["Duolingo", "Khan Academy", "Coursera", "Udemy", "Pluralsight"]
   },
-
   // AI-Powered Agriculture & Precision Farming
   {
     id: "ai-agriculture-precision-farming",
@@ -739,7 +727,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "400% within 18 months",
     competitors: ["John Deere", "Climate Corporation", "Farmers Edge", "Granular"]
   },
-
   // AI-Powered Transportation & Logistics Optimization
   {
     id: "ai-transportation-logistics",
@@ -798,7 +785,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "400% within 15 months",
     competitors: ["Convoy", "KeepTruckin", "Samsara", "Verizon Connect"]
   },
-
   // AI-Powered Insurance & Risk Assessment
   {
     id: "ai-insurance-risk-assessment",
@@ -857,7 +843,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     roi: "450% within 18 months",
     competitors: ["Lemonade", "Root Insurance", "Metromile", "Trov"]
   },
-
   // AI-Powered Gaming & Entertainment Platform
   {
     id: "ai-gaming-entertainment",
@@ -917,7 +902,6 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     competitors: ["Unity", "Epic Games", "Steam", "Twitch", "Discord"]
   }
 ];
-
 export const EXPANDED_SERVICE_CATEGORIES = [
   "AI & Content Marketing",
   "AI & Video Analytics",
@@ -935,7 +919,6 @@ export const EXPANDED_SERVICE_CATEGORIES = [
   "AI & Insurance",
   "AI & Gaming"
 ];
-
 export const EXPANDED_SERVICE_SUBCATEGORIES = [
   "Content Creation",
   "Computer Vision",

@@ -35,7 +35,6 @@ export interface ITService {
   responseTime?: string;
   sla?: string;
 }
-
 export const ENHANCED_IT_SERVICES: ITService[] = [
   // Cloud Infrastructure & Migration
   {
@@ -97,7 +96,6 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     responseTime: "1 hour",
     sla: "99.9% uptime guarantee"
   },
-
   // Cybersecurity & Compliance
   {
     id: "cybersecurity-compliance-suite",
@@ -158,7 +156,6 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     responseTime: "30 minutes",
     sla: "99.99% security incident response"
   },
-
   // DevOps & CI/CD Implementation
   {
     id: "devops-cicd-implementation",
@@ -219,7 +216,6 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     responseTime: "2 hours",
     sla: "99.5% pipeline uptime"
   },
-
   // Data Analytics & Business Intelligence
   {
     id: "data-analytics-business-intelligence",
@@ -279,7 +275,6 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     responseTime: "4 hours",
     sla: "99% data availability"
   },
-
   // Network Infrastructure & Security
   {
     id: "network-infrastructure-security",
@@ -339,7 +334,6 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     responseTime: "1 hour",
     sla: "99.9% network uptime"
   },
-
   // IT Support & Managed Services
   {
     id: "it-support-managed-services",
@@ -399,7 +393,6 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     responseTime: "15 minutes",
     sla: "99% first-call resolution"
   },
-
   // Software Development & Custom Solutions
   {
     id: "software-development-custom-solutions",
@@ -459,7 +452,6 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     responseTime: "24 hours",
     sla: "95% on-time delivery"
   },
-
   // Digital Transformation Consulting
   {
     id: "digital-transformation-consulting",
@@ -519,7 +511,6 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     responseTime: "48 hours",
     sla: "90% client satisfaction"
   },
-
   // AI & Machine Learning Implementation
   {
     id: "ai-machine-learning-implementation",
@@ -580,7 +571,6 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     sla: "95% model accuracy"
   }
 ];
-
 export const IT_SERVICE_CATEGORIES = [
   "Cloud Services",
   "Security",
@@ -592,7 +582,6 @@ export const IT_SERVICE_CATEGORIES = [
   "Consulting",
   "AI & ML"
 ];
-
 export const IT_SERVICE_PRICING_MODELS = [
   { name: "Hourly", description: "Flexible hourly rates for consulting and development", range: "$150-500/hour" },
   { name: "Monthly", description: "Recurring monthly services for ongoing support", range: "$150-15,000/month" },

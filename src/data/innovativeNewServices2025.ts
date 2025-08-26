@@ -21,7 +21,6 @@ export interface InnovativeService2025 {
     website: string;
   };
 }
-
 export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
   {
     id: "ai-predictive-business-intelligence",
@@ -116,13 +115,11 @@ export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
     }
   }
 ];
-
 export const getServicesByCategory = (category: string) => {
   return INNOVATIVE_NEW_SERVICES_2025.filter(service => service.category === category);
 };
-
 export const getFeaturedServices = () => {
-  return INNOVATIVE_NEW_SERVICES_2025.filter(service => 
+  return INNOVATIVE_NEW_SERVICES_2025.filter(service =>
     service.price >= 3000 || service.category === "AI & Analytics"
   );
 };

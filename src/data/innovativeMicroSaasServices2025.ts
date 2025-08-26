@@ -30,7 +30,6 @@ export interface InnovativeMicroSaasService {
   scalability: string;
   support: string;
 }
-
 export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
   {
     id: 1,
@@ -653,5 +652,4 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     support: "Customer experience expert support"
   }
 ];
-
 export default innovativeMicroSaasServices2025;

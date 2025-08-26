@@ -32,7 +32,6 @@ export interface EnterpriseITInfrastructureService {
   integrations: string[];
   sla: string;
 }
-
 export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureService[] = [
   // Enterprise Infrastructure Services
   {
@@ -476,5 +475,4 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
     sla: '99.9% uptime guarantee'
   }
 ];
-
 export default ENTERPRISE_IT_INFRASTRUCTURE_2025;

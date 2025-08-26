@@ -31,7 +31,6 @@ export interface EmergingTechnologySolution2025 {
   industryApplications: string[];
   futurePotential: string[];
 }
-
 export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[] = [
   // Space Technology Infrastructure Platform
   {
@@ -97,7 +96,6 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
     industryApplications: ["Space Technology", "Telecommunications", "Research", "Defense", "Environmental", "Agriculture"],
     futurePotential: ["Interplanetary communications", "Space mining operations", "Space tourism infrastructure", "Mars colonization support"]
   },
-
   // Biotechnology and Synthetic Biology Platform
   {
     id: "biotechnology-synthetic-biology-platform-2025",
@@ -162,7 +160,6 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
     industryApplications: ["Pharmaceutical", "Agriculture", "Industrial", "Medical", "Environmental", "Energy"],
     futurePotential: ["Personalized medicine", "Synthetic organisms", "Bio-computing", "Space biotechnology", "Climate engineering"]
   },
-
   // Neuromorphic Computing Platform
   {
     id: "neuromorphic-computing-platform-2025",
@@ -227,7 +224,6 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
     industryApplications: ["Technology", "Automotive", "Robotics", "IoT", "Healthcare", "Research"],
     futurePotential: ["Brain-computer interfaces", "Conscious AI", "Human-like cognition", "Quantum neuromorphic", "Biological computing"]
   },
-
   // Quantum Internet Infrastructure Platform
   {
     id: "quantum-internet-infrastructure-platform-2025",
@@ -292,7 +288,6 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
     industryApplications: ["Telecommunications", "Financial Services", "Government", "Defense", "Healthcare", "Technology"],
     futurePotential: ["Global quantum internet", "Quantum cloud computing", "Quantum sensor networks", "Interplanetary quantum communication"]
   },
-
   // Autonomous Flying Vehicle Platform
   {
     id: "autonomous-flying-vehicle-platform-2025",
@@ -357,7 +352,6 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
     industryApplications: ["Transportation", "Logistics", "Urban Planning", "Emergency Services", "Defense", "Infrastructure"],
     futurePotential: ["Personal flying vehicles", "Flying cities", "Space tourism", "Interplanetary transport", "Underwater flying vehicles"]
   },
-
   // Brain-Computer Interface Platform
   {
     id: "brain-computer-interface-platform-2025",
@@ -422,7 +416,6 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
     industryApplications: ["Healthcare", "Research", "Medical Technology", "Human Enhancement", "Neuroscience", "Assistive Technology"],
     futurePotential: ["Mind reading", "Thought control", "Memory enhancement", "Consciousness transfer", "Human-AI symbiosis"]
   },
-
   // Advanced Materials and Nanotechnology Platform
   {
     id: "advanced-materials-nanotechnology-platform-2025",
@@ -488,5 +481,4 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
     futurePotential: ["Self-healing materials", "Programmable matter", "Quantum materials", "Bio-inspired materials", "Space materials"]
   }
 ];
-
 export default EMERGING_TECHNOLOGY_SOLUTIONS_2025;

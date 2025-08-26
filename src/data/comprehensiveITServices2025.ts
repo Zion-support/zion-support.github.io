@@ -31,7 +31,6 @@ export interface ComprehensiveITService {
   support: string;
   certifications: string[];
 }
-
 export const comprehensiveITServices2025: ComprehensiveITService[] = [
   {
     id: 1,
@@ -664,5 +663,4 @@ export const comprehensiveITServices2025: ComprehensiveITService[] = [
     certifications: ["APM", "Cloud Platforms", "Performance Management", "Monitoring"]
   }
 ];
-
 export default comprehensiveITServices2025;

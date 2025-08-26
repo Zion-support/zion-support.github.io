@@ -1,8 +1,7 @@
 {
-  "name": @zion-holdings/zion.app
-  
+  "name": "@zion-holdings/zion.app",
   "version": "0.0.0",
-    "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "bin": {
     "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.js"
   },
@@ -15,7 +14,6 @@
     "test:watch": "vitest --watch",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
-    bplr8i-codex/fix-npm-ci-errors-and-missing-dependencies
     "test:accessibility": "vitest run tests/Accessibility.test.tsx",
     "test:e2e": "playwright test",
     "prepare": "husky install"

@@ -30,7 +30,6 @@ export interface EnhancedInnovativeService {
   sla: string;
   uptime: string;
 }
-
 export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
   // 1. AI-Powered Legal Tech Solutions
   {
@@ -94,7 +93,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // 2. Autonomous Financial Advisory Platform
   {
     id: "autonomous-financial-advisor",
@@ -157,7 +155,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // 3. AI-Powered Healthcare Diagnostics Platform
   {
     id: "ai-healthcare-diagnostics",
@@ -220,7 +217,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // 4. Quantum-Safe Cybersecurity Platform
   {
     id: "quantum-safe-cybersecurity",
@@ -283,7 +279,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // 5. Autonomous Supply Chain Optimization Platform
   {
     id: "autonomous-supply-chain",
@@ -346,7 +341,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // 6. AI-Powered Energy Management Platform
   {
     id: "ai-energy-management",
@@ -409,7 +403,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // 7. Autonomous Customer Experience Platform
   {
     id: "autonomous-customer-experience",
@@ -472,7 +465,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // 8. Quantum Machine Learning Platform
   {
     id: "quantum-machine-learning",
@@ -535,7 +527,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // 9. Autonomous Data Governance Platform
   {
     id: "autonomous-data-governance",
@@ -598,7 +589,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-
   // 10. AI-Powered Talent Acquisition Platform
   {
     id: "ai-talent-acquisition",
@@ -662,26 +652,21 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     uptime: "99.95%"
   }
 ];
-
 // Helper functions
 export const getServiceById = (id: string): EnhancedInnovativeService | undefined => {
   return ENHANCED_INNOVATIVE_SERVICES.find(service => service.id === id);
 };
-
 export const getServicesByCategory = (category: string): EnhancedInnovativeService[] => {
   return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.category === category);
 };
-
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number): EnhancedInnovativeService[] => {
-  return ENHANCED_INNOVATIVE_SERVICES.filter(service => 
+  return ENHANCED_INNOVATIVE_SERVICES.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   );
 };
-
 export const getFeaturedServices = (): EnhancedInnovativeService[] => {
   return ENHANCED_INNOVATIVE_SERVICES.slice(0, 6);
 };
-
 export const searchServices = (query: string): EnhancedInnovativeService[] => {
   const lowerQuery = query.toLowerCase();
   return ENHANCED_INNOVATIVE_SERVICES.filter(service =>

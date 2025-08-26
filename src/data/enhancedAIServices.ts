@@ -36,7 +36,6 @@ export interface AIService {
   compliance?: string[];
   scalability?: string;
 }
-
 export const ENHANCED_AI_SERVICES: AIService[] = [
   // AI-Powered Predictive Analytics Platform
   {
@@ -100,7 +99,6 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     compliance: ["GDPR", "SOC2", "ISO27001"],
     scalability: "Handles millions of data points, real-time processing"
   },
-
   // AI-Powered Natural Language Processing Suite
   {
     id: "ai-nlp-suite",
@@ -163,7 +161,6 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     compliance: ["GDPR", "CCPA", "SOC2"],
     scalability: "Processes millions of text documents daily"
   },
-
   // AI-Powered Computer Vision Platform
   {
     id: "ai-computer-vision-platform",
@@ -226,7 +223,6 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     compliance: ["GDPR", "HIPAA", "SOC2"],
     scalability: "Processes thousands of images/videos per second"
   },
-
   // AI-Powered Recommendation Engine
   {
     id: "ai-recommendation-engine",
@@ -289,7 +285,6 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     compliance: ["GDPR", "CCPA", "SOC2"],
     scalability: "Handles millions of users and products"
   },
-
   // AI-Powered Fraud Detection System
   {
     id: "ai-fraud-detection-system",
@@ -352,7 +347,6 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     compliance: ["PCI DSS", "SOC2", "GDPR", "SOX"],
     scalability: "Processes millions of transactions per day"
   },
-
   // AI-Powered Voice Recognition & Speech Analytics
   {
     id: "ai-voice-recognition-speech-analytics",
@@ -415,7 +409,6 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     compliance: ["GDPR", "CCPA", "SOC2", "HIPAA"],
     scalability: "Processes thousands of audio streams simultaneously"
   },
-
   // AI-Powered Process Automation Platform
   {
     id: "ai-process-automation-platform",
@@ -478,7 +471,6 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     compliance: ["SOC2", "ISO27001", "GDPR"],
     scalability: "Automates thousands of processes simultaneously"
   },
-
   // AI-Powered Customer Intelligence Platform
   {
     id: "ai-customer-intelligence-platform",
@@ -541,7 +533,6 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     compliance: ["GDPR", "CCPA", "SOC2"],
     scalability: "Analyzes millions of customer interactions daily"
   },
-
   // AI-Powered Supply Chain Optimization
   {
     id: "ai-supply-chain-optimization",
@@ -605,7 +596,6 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
     scalability: "Optimizes complex global supply chains"
   }
 ];
-
 export const AI_SERVICE_CATEGORIES = [
   "AI Analytics",
   "AI Language",
@@ -617,7 +607,6 @@ export const AI_SERVICE_CATEGORIES = [
   "AI Customer Experience",
   "AI Operations"
 ];
-
 export const AI_SERVICE_PRICING_TIERS = [
   { name: "Starter", price: "$499-699", features: ["Basic AI features", "Standard support", "Up to 10,000 API calls"] },
   { name: "Professional", price: "$699-1,499", features: ["Advanced AI features", "Priority support", "Up to 100,000 API calls"] },

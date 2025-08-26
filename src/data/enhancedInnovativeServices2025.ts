@@ -4,7 +4,6 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
-
 export interface MicroSaasService {
   id: number;
   name: string;
@@ -27,7 +26,6 @@ export interface MicroSaasService {
   freeTier: boolean;
   trialPeriod: string;
 }
-
 export interface ITService {
   id: number;
   name: string;
@@ -47,7 +45,6 @@ export interface ITService {
   deliveryTime: string;
   support: string;
 }
-
 export interface AIService {
   id: number;
   name: string;
@@ -69,7 +66,6 @@ export interface AIService {
   aiScore: number;
   useCases: string[];
 }
-
 // Enhanced Innovative Micro SAAS Services for 2025
 export const enhancedInnovativeMicroSaasServices2025: MicroSaasService[] = [
   {
@@ -503,7 +499,6 @@ export const enhancedInnovativeMicroSaasServices2025: MicroSaasService[] = [
     trialPeriod: "7 days"
   }
 ];
-
 // Enhanced IT Services for 2025
 export const enhancedITServices2025: ITService[] = [
   {
@@ -827,7 +822,6 @@ export const enhancedITServices2025: ITService[] = [
     support: "Business hours + emergency support"
   }
 ];
-
 // Enhanced AI Services for 2025
 export const enhancedAIServices2025: AIService[] = [
   {
@@ -1167,7 +1161,6 @@ export const enhancedAIServices2025: AIService[] = [
     useCases: ["Website localization", "Customer support", "Document translation", "Real-time communication"]
   }
 ];
-
 // Export all services
 export const allEnhancedServices2025 = {
   microSaas: enhancedInnovativeMicroSaasServices2025,

@@ -30,7 +30,6 @@ export interface SpecializedIndustryService {
   useCases: string[];
   industryStandards: string[];
 }
-
 export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
   // Healthcare & Biotech Solutions
   {
@@ -129,7 +128,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     useCases: ["KYC verification", "Fraud prevention", "Regulatory reporting", "Risk assessment"],
     industryStandards: ["ISO 20022", "SWIFT", "ACH", "SEPA"]
   },
-
   // Manufacturing & Industry 4.0
   {
     id: 3,
@@ -179,7 +177,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     useCases: ["Predictive maintenance", "Quality control", "Production optimization", "Energy management"],
     industryStandards: ["OPC UA", "MQTT", "Modbus", "Ethernet/IP"]
   },
-
   // Retail & E-commerce Solutions
   {
     id: 4,
@@ -229,7 +226,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     useCases: ["Personalized shopping", "Inventory management", "Customer service", "Marketing automation"],
     industryStandards: ["REST APIs", "GraphQL", "OAuth 2.0", "Webhooks"]
   },
-
   // Education & EdTech
   {
     id: 5,
@@ -279,7 +275,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     useCases: ["K-12 education", "Higher education", "Corporate training", "Special education"],
     industryStandards: ["LTI", "SCORM", "xAPI", "Common Core"]
   },
-
   // Transportation & Logistics
   {
     id: 6,
@@ -329,7 +324,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     useCases: ["Route optimization", "Fleet management", "Warehouse optimization", "Last-mile delivery"],
     industryStandards: ["EDI", "API standards", "GPS protocols", "IoT standards"]
   },
-
   // Energy & Sustainability
   {
     id: 7,
@@ -379,7 +373,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     useCases: ["Solar optimization", "Wind farm management", "Grid stability", "Energy trading"],
     industryStandards: ["IEC 61850", "DNP3", "Modbus", "OPC UA"]
   },
-
   // Real Estate & PropTech
   {
     id: 8,
@@ -429,7 +422,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     useCases: ["Property investment", "Market analysis", "Portfolio management", "Risk assessment"],
     industryStandards: ["RESO", "RETS", "Open Real Estate", "Financial data standards"]
   },
-
   // Legal & Compliance
   {
     id: 9,
@@ -479,7 +471,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     useCases: ["Contract review", "Legal research", "Compliance monitoring", "Document generation"],
     industryStandards: ["Legal XML", "Case law standards", "Document formats", "API standards"]
   },
-
   // Agriculture & AgTech
   {
     id: 10,
@@ -530,32 +521,26 @@ export const specializedIndustrySolutions2025: SpecializedIndustryService[] = [
     industryStandards: ["ISO 11783", "Precision agriculture protocols", "IoT standards", "Data formats"]
   }
 ];
-
 // Utility functions for specialized industry services
 export const getServicesByIndustry = (industry: string): SpecializedIndustryService[] => {
   return specializedIndustrySolutions2025.filter(service => service.industry === industry);
 };
-
 export const getServicesByCategory = (category: string): SpecializedIndustryService[] => {
   return specializedIndustrySolutions2025.filter(service => service.category === category);
 };
-
 export const getServicesByCompliance = (compliance: string): SpecializedIndustryService[] => {
-  return specializedIndustrySolutions2025.filter(service => 
+  return specializedIndustrySolutions2025.filter(service =>
     service.compliance.some(comp => comp.toLowerCase().includes(compliance.toLowerCase()))
   );
 };
-
 export const getServicesByTechnology = (technology: string): SpecializedIndustryService[] => {
-  return specializedIndustrySolutions2025.filter(service => 
+  return specializedIndustrySolutions2025.filter(service =>
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
   );
 };
-
 export const getPopularIndustryServices = (limit: number = 6): SpecializedIndustryService[] => {
   return specializedIndustrySolutions2025.slice(0, limit);
 };
-
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number): SpecializedIndustryService[] => {
   return specializedIndustrySolutions2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
 };
