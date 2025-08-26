@@ -1,11 +1,6 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "target": "ES2020",
-=======
     "target": "ES2024",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     "useDefineForClassFields": true,
     "lib": [
       "ES2020",
@@ -17,18 +12,17 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*", "./pages/*"],
+      "@/pages/*": ["./src/pages/*"],
       "@/components/*": ["./src/components/*"],
       "@/api/*": ["./src/api/*"],
-      "@/types/*": ["./src/types/*", "./types/*"],
+      "@/types/*": ["./src/types/*"],
       "@/utils/*": ["./src/utils/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/context/*": ["./src/context/*"],
       "@/services/*": ["./src/services/*"],
-      "react-router-dom": ["./src/stubs/react-router-dom.tsx"],
-      "react-router": ["./src/stubs/react-router-dom.tsx"],
-      "next-cloudinary": ["./types/next-cloudinary.d.ts"],
-      "types/*": ["./types/*"]
+      "axios": ["./src/lib/axios.ts"],
+      "notistack": ["./src/stubs/notistack.ts"],
+      "@sentry/browser": ["./src/stubs/sentry.ts"]
     },
     "typeRoots": ["./node_modules/@types", "./types"],
     "types": ["node"],
@@ -37,7 +31,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -72,32 +66,21 @@
         "./*"
       ]
     },
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false,
-<<<<<<< HEAD
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowJs": true,
-    "incremental": true,
-    "plugins": [{ "name": "next" }]
+    "incremental": true
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/index.css",
+    "vite-env.d.ts"
   ],
   "exclude": [
-    "src/components.disabled",
-    "src/components.disabled/**/*",
-    "src/pages.disabled",
-    "src/pages.disabled/**/*"
+    "src/**",
+    "node_modules"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
