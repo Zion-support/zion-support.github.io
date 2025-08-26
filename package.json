@@ -12,7 +12,15 @@
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
-    "fix:all": "npm run lint -- --fix || true"
+    "fix:all": "npm run lint -- --fix || true",
+    "test": "vitest run",
+    "test:ci": "vitest run --coverage",
+    "test:watch": "vitest",
+    "security:scan": "npm audit --audit-level=moderate",
+    "automation:improvement": "echo 'Automation improvement script placeholder'",
+    "diversify": "echo 'Diversification script placeholder'",
+    "automation:status": "echo 'Automation status check placeholder'",
+    "cypress:run": "echo 'Cypress tests placeholder'"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -77,6 +85,8 @@
     "tailwindcss": "^3.4.17",
     "terser": "^5.43.1",
     "typescript": "^4.9.5",
-    "vite": "^5.4.19"
+    "vite": "^5.4.19",
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0"
   }
 }
