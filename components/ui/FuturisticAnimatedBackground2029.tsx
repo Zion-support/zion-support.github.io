@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface UltraFuturisticBackground2034Props {
+interface FuturisticAnimatedBackground2029Props {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high';
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'space-time';
@@ -12,7 +12,7 @@ interface UltraFuturisticBackground2034Props {
   enableSpaceTime?: boolean;
 }
 
-export default function UltraFuturisticBackground2034({
+export default function FuturisticAnimatedBackground2029({
   children,
   intensity = 'medium',
   colorScheme = 'quantum-fusion',
@@ -22,7 +22,7 @@ export default function UltraFuturisticBackground2034({
   enableQuantumEffects = true,
   enableNeonEffects = true,
   enableSpaceTime = true
-}: UltraFuturisticBackground2034Props) {
+}: FuturisticAnimatedBackground2029Props) {
   const getIntensityClass = () => {
     switch (intensity) {
       case 'low': return 'opacity-30';

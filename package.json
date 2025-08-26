@@ -15,7 +15,6 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-<<<<<<< HEAD
     "pm2:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.config.cjs --update-env",
     "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
     "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
@@ -372,7 +371,6 @@
     "master:health": "node automation/master-automation-launcher.cjs health",
     "master:status": "node automation/master-automation-launcher.cjs status",
     "master:report": "node automation/master-automation-launcher.cjs report"
-
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",

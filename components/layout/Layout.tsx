@@ -39,4 +39,3 @@ export default function Layout({ children }: LayoutProps) {
 	);
 }
 
-export default Layout;
