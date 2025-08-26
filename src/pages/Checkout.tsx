@@ -3,13 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { ControllerRenderProps } from 'react-hook-form';
-import CheckoutProgress from '@/components/checkout/CheckoutProgress';
+import { Input } from '@/components/ui/input';
+import { safeStorage } from '@/utils/safeStorage';
+import { getStripe } from '@/utils/getStripe';
+import { apiClient } from '@/utils/apiClient';
 
 interface CartItem {
   id: string;
@@ -28,7 +25,8 @@ interface CheckoutForm {
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const [searchParams] = useSearchParams();
+  const sku = searchParams.get('sku');
   const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({
     defaultValues: { name: '', email: '', address: '', city: '', country: '' },
@@ -40,7 +38,7 @@ export default function CheckoutPage() {
       return;
     }
 
-    const stored = safeStorage.getItem('cart');
+    const stored = safeStorage.getItem(getCartKey(user?.id));
     if (stored) {
       try {
         setItems(JSON.parse(stored) as CartItem[]);
@@ -54,7 +52,7 @@ export default function CheckoutPage() {
 
   const onSubmit = async (data: CheckoutForm) => {
     try {
-      const res = await fetch('/api/create-payment-intent', {
+      const response = await apiClient('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: subtotal }),
@@ -70,7 +68,18 @@ export default function CheckoutPage() {
           },
         });
         if (payment.error) throw payment.error;
-        safeStorage.removeItem('cart');
+        if (user?.id) {
+          try {
+            await fetch('/api/points/add', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
+            });
+          } catch (e) {
+            console.error('Failed to add points', e);
+          }
+        }
+        safeStorage.removeItem(getCartKey(user?.id));
         navigate(`/orders/${result.id}`);
       }
     } catch (err) {

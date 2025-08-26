@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
@@ -14,12 +13,12 @@ import { Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 
 export default function ContentGenerator() {
   const { user, isLoading } = useAuth();
-  const navigate = useNavigate();
-  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
+  const router = useRouter();
+  const [contentType, setContentType] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'>('blog');
   const [customPrompt, setCustomPrompt] = useState('');
   const [topic, setTopic] = useState('');
   const [autoPublish, setAutoPublish] = useState(false);
@@ -32,9 +31,9 @@ export default function ContentGenerator() {
   React.useEffect(() => {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page");
-      navigate("/login?redirect=/content-generator");
+      router.push("/login?redirect=/content-generator");
     }
-  }, [user, isLoading, navigate]);
+  }, [user, isLoading, router]);
 
   const generateContent = async () => {
     setIsGenerating(true);
@@ -98,16 +97,18 @@ export default function ContentGenerator() {
   if (isLoading) {
     return (
       <>
+        
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="animate-pulse text-white">Loading...</div>
         </div>
-        <Footer />
+        
       </>
     );
   }
 
   return (
     <>
+      
       <div className="min-h-screen bg-zion-blue py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-white mb-8">Content Generator</h1>
@@ -385,7 +386,7 @@ export default function ContentGenerator() {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 }

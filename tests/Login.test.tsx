@@ -1,29 +1,41 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+import { vi } from 'vitest';
 import { LoginForm } from '@/components/auth/login';
-import * as authService from '@/services/authService';
 import * as authHook from '@/hooks/useAuth';
+import axios from 'axios';
 
-jest.spyOn(authHook, 'useAuth').mockReturnValue({ isLoading: false, login: jest.fn() } as any);
+vi.mock('axios', () => {
+  const instance = { post: vi.fn(), interceptors: { request: { use: vi.fn() } } };
+  return { default: { create: () => instance } };
+}, { virtual: true });
+
+vi.mock('@/services/auth');
+
+// Get the mocked axios instance
+const mockedAxios: any = (axios as any).create();
 
 describe('LoginForm', () => {
-  it('shows server error on 401 response', async () => {
-    jest.spyOn(authService, 'loginUser').mockResolvedValue({
-      res: { status: 401 } as Response,
-      data: { error: 'Invalid credentials' },
-    });
+  it('redirects to dashboard on successful login', async () => {
+    mockedAxios.post.mockResolvedValue({ status: 200, data: { token: 'abc' } });
+    const navigateMock = vi.fn();
+    vi.spyOn(require('react-router-dom'), 'useNavigate').mockReturnValue(navigateMock);
 
     render(
-      <MemoryRouter>
-        <LoginForm />
+      <MemoryRouter initialEntries={['/login']}>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<div>Dashboard</div>} />
+        </Routes>
       </MemoryRouter>
     );
 
-    fireEvent.input(screen.getByLabelText(/email address/i), { target: { value: 'a@b.com' } });
+    fireEvent.input(screen.getByLabelText(/email/i), { target: { value: 'a@b.com' } });
     fireEvent.input(screen.getByLabelText(/password/i), { target: { value: 'secret' } });
-    fireEvent.submit(screen.getByRole('button', { name: /login/i }));
+    fireEvent.click(screen.getByRole('button', { name: /login/i }));
 
-    // wait for error message to appear
-    await screen.findByText('Invalid credentials');
+    await waitFor(() => {
+      expect(navigateMock).toHaveBeenCalledWith('/dashboard');
+    });
   });
 });

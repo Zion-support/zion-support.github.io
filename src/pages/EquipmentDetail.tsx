@@ -1,7 +1,6 @@
 
 import { useState } from "react";
-import { NextSeo } from "@/components/NextSeo";
-import { useRouter } from 'next/router';
+import { useParams } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -28,7 +27,7 @@ export default function EquipmentDetail() {
   if (!equipment) {
     return (
       <>
-        <NextSeo title="Equipment Not Found" description="Equipment not available" />
+        
         <div className="min-h-screen bg-zion-blue py-12 px-4">
           <div className="container mx-auto">
             <div className="text-center py-20">
@@ -37,7 +36,7 @@ export default function EquipmentDetail() {
             </div>
           </div>
         </div>
-        <Footer />
+        
       </>
     );
   }
@@ -47,6 +46,15 @@ export default function EquipmentDetail() {
     
     // Simulate API call
     setTimeout(() => {
+      const stored = safeStorage.getItem(getCartKey(user?.id));
+      let cart: { id: string; name: string; price: number; quantity: number }[] = [];
+      if (stored) {
+        try { cart = JSON.parse(stored); } catch { /* ignore */ }
+      }
+      const existing = cart.find(i => i.id === equipment.id);
+      if (existing) existing.quantity += quantity; else cart.push({ id: equipment.id, name: equipment.name, price: equipment.price, quantity });
+      safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
+      dispatch({ type: 'SET_ITEMS', payload: cart });
       setIsAdding(false);
       toast({
         title: "Added to cart",
@@ -57,21 +65,20 @@ export default function EquipmentDetail() {
 
   const handleBuyNow = async () => {
     if (!isAuthenticated) {
-      navigate(`/login?next=/equipment/${equipmentId}`);
+      navigate(`/login?next=/product/${id}`);
       return;
     }
 
     setIsAdding(true);
     try {
-      const response = await fetch('/api/checkout_sessions', {
+      const response = await fetch('/checkout/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ productId: equipmentId }),
       });
-      const { sessionId } = await response.json();
-      const stripe = await getStripe();
-      if (stripe && sessionId) {
-        await stripe.redirectToCheckout({ sessionId });
+      const { url } = await response.json();
+      if (url) {
+        window.location.href = url as string;
       }
     } catch (err) {
       toast({ title: 'Payment error', description: 'Could not start checkout.' });
@@ -82,15 +89,7 @@ export default function EquipmentDetail() {
 
   return (
     <>
-      <NextSeo
-        title={equipment.name}
-        description={equipment.description}
-        openGraph={{
-          title: equipment.name,
-          description: equipment.description,
-          images: equipment.images.length ? [{ url: equipment.images[0] }] : undefined,
-        }}
-      />
+      
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -99,7 +98,7 @@ export default function EquipmentDetail() {
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 {/* Main Image */}
                 <div className="aspect-video w-full relative">
-                  <img 
+                  <img loading="lazy" 
                     src={equipment.images[selectedImageIndex]} 
                     alt={equipment.name} 
                     className="w-full h-full object-contain bg-zion-blue-light/10 p-4"
@@ -117,7 +116,7 @@ export default function EquipmentDetail() {
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         }`}
                       >
-                        <img 
+                        <img loading="lazy" 
                           src={image} 
                           alt={`${equipment.name} - image ${index + 1}`} 
                           className="w-full h-full object-cover"
@@ -333,7 +332,7 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 }

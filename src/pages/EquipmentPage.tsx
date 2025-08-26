@@ -16,18 +16,148 @@ const EQUIPMENT_FILTERS = [
   { label: "Robotics", value: "Robotics" },
 ];
 
-// Market insights component
-const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
-  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
-    <CardContent className="p-6">
-      <div className="flex items-center gap-2 mb-4">
-        <TrendingUp className="h-5 w-5 text-blue-400" />
-        <h3 className="text-lg font-semibold">Equipment Market Insights</h3>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice / 1000)}k</div>
-          <div className="text-sm text-muted-foreground">Avg Price</div>
+const EQUIPMENT_CACHE_KEY = 'equipmentCache';
+
+export async function fetchEquipment(): Promise<ProductListing[]> {
+  // Added a try-catch block for better error handling during API call
+  try {
+    const { data } = await apiClient.get('/equipment');
+    if (typeof window !== 'undefined') {
+      safeStorage.setItem(EQUIPMENT_CACHE_KEY, JSON.stringify(data));
+    }
+    return data;
+  } catch (error: any) {
+    captureException(error);
+    console.error("Raw error object in fetchEquipment:", error);
+    if (error.response) {
+      console.error("Error response data in fetchEquipment:", error.response.data);
+    }
+    console.error("Failed to fetch equipment:", error);
+    toast({
+      title: error.message || 'Failed to fetch equipment',
+      variant: 'destructive',
+    });
+    // Offline fallback from localStorage if available
+    if (typeof window !== 'undefined') {
+      const cached = safeStorage.getItem(EQUIPMENT_CACHE_KEY);
+      if (cached) {
+        try {
+          return JSON.parse(cached) as ProductListing[];
+        } catch (_) {
+          // ignore parse errors and fall through to throw
+        }
+      }
+    }
+    // Propagate the error so react-query can handle it
+    throw error;
+  }
+}
+
+export default function EquipmentPage() {
+  // Initialize with undefined or null to better distinguish between empty data and loading states
+  const [equipment, setEquipment] = useState<ProductListing[] | undefined>(undefined);
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const {
+    data: fetchedEquipment,
+    error: equipmentError,
+    isLoading: isLoadingEquipment,
+    refetch: refetchEquipment
+  } = useQuery<ProductListing[], Error>({
+    queryKey: ['equipment'],
+    queryFn: fetchEquipment,
+    retry: 3,
+    retryDelay: (attempt) => Math.min(1000 * 2 ** attempt, 10000),
+    initialData: () => {
+      if (typeof window === 'undefined') return undefined;
+      const cached = safeStorage.getItem(EQUIPMENT_CACHE_KEY);
+      return cached ? (JSON.parse(cached) as ProductListing[]) : undefined;
+    },
+    onSuccess: (data) => {
+      if (typeof window !== 'undefined') {
+        safeStorage.setItem(EQUIPMENT_CACHE_KEY, JSON.stringify(data));
+      }
+    },
+  });
+  const delayedError = useDelayedError(equipmentError);
+
+  useEffect(() => {
+    if (fetchedEquipment) {
+      setEquipment(fetchedEquipment);
+    }
+    // Added equipmentError to dependency array for useEffect,
+    // so if an error occurs, we can potentially clear existing equipment or handle error state.
+  }, [fetchedEquipment, equipmentError]);
+
+  const {
+    trigger: fetchRecommendations,
+    isMutating: isFetchingRecommendations,
+  } = useSWRMutation(
+    "/api/equipment/recommendations",
+    async ( // Added async here
+      url: string,
+      { arg }: { arg: { userId: string } }
+    ): Promise<ProductListing[]> => { // Added return type
+      const res = await fetch(`${url}?userId=${arg.userId}`); // Added await
+      if (!res.ok) {
+        // Enhanced error handling for failed recommendations fetch
+        const errorData = await res.json().catch(() => ({ message: "Failed to fetch recommendations, and error response is not JSON."}));
+        console.error("Raw error object in fetchRecommendations:", errorData);
+        // The errorData is already logged, but this is to ensure it's captured before throwing.
+        console.error("Recommendation fetch error:", errorData);
+        throw new Error(errorData.message || "Failed to fetch recommendations");
+      }
+      return res.json();
+    }
+  );
+
+  // Interval for adding random equipment
+  // useEffect(() => {
+  //   // Only set interval if equipment is already loaded/exists to prevent adding to undefined
+  //   if (equipment && equipment.length > 0) {
+  //     const interval = setInterval(() => {
+  //       setEquipment((prev = []) => [...prev, generateRandomEquipment()]); // Ensure prev is an array
+  //     }, 120000);
+  //     return () => clearInterval(interval);
+  //   }
+  // }, [equipment]); // Added equipment to dependency array
+  // Removed the random equipment generation interval to rely on API data.
+
+  const handleRecommendations = async () => {
+    if (!user) {
+      navigate('/login?next=/equipment&reco=1');
+      return;
+    }
+    try {
+      // Ensure data is correctly typed or cast if necessary
+      const data: ProductListing[] = await fetchRecommendations({ userId: user.id });
+      setEquipment(data); // data should be ProductListing[]
+      toast({ title: 'Showing personalized recommendations' });
+    } catch (err: any) { // Typed error
+      console.error("Error in handleRecommendations:", err);
+      toast({ title: err.message || 'Failed to load recommendations', variant: 'destructive' });
+    }
+  };
+
+  // Make sure handleRecommendations is memoized or stable if it's a dependency elsewhere, though not strictly required here.
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (params.get('reco') === '1' && user) {
+      handleRecommendations();
+    }
+    // Added handleRecommendations to dependency array, ensure it's stable (e.g. via useCallback if it were passed down)
+    // For now, this is okay as it's defined in the same scope.
+  }, [user, location.search, handleRecommendations]);
+
+  // Updated loading condition to specifically check for equipment being undefined
+  if (isLoadingEquipment && equipment === undefined) {
+    return (
+      <div data-testid="loading-state-equipment" className="container mx-auto p-4 space-y-4" aria-busy="true">
+        {/* Skeleton for the top button (e.g., AI Recommendations) */}
+        <div className="flex justify-end mb-6">
+            <Skeleton className="h-10 w-48" /> {/* Removed specific bg color, base Skeleton handles it */}
         </div>
         <div className="text-center">
           <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
@@ -327,80 +457,16 @@ export default function EquipmentPage() {
   }, []);
 
   return (
-    <div className="container py-8">
-      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Datacenter Equipment
-        </h1>
-        <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure and AI workloads</p>
-      </motion.div>
-
-      {marketStats && (
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          <EquipmentMarketInsights stats={marketStats} />
-        </motion.div>
-      )}
-
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-        <EquipmentFilterControls
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          filterCategory={filterCategory}
-          setFilterCategory={setFilterCategory}
-          categories={categories}
-          priceRange={priceRange}
-          setPriceRange={setPriceRange}
-          filterBrand={filterBrand}
-          setFilterBrand={setFilterBrand}
-          brandOptions={brandOptions}
-          filterAvailability={filterAvailability}
-          setFilterAvailability={setFilterAvailability}
-          availabilityOptions={availabilityOptions}
-          minRating={minRating}
-          setMinRating={setMinRating}
-          showRecommended={showRecommended}
-          setShowRecommended={setShowRecommended}
-          loading={isFetching}
-        />
-      </motion.div>
-
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
-        <AnimatePresence mode="popLayout">
-          {equipment.map((item, index) => (
-            <motion.div
-              key={item.id} ref={index === equipment.length - 1 ? lastElementRef : null}
-              initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ delay: Math.min(index * 0.03, 0.5) }} whileHover={{ scale: 1.02 }}
-            >
-              <EquipmentCard equipment={item} onViewDetails={() => router.push(`/equipment/${item.id}`)} />
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </motion.div>
-
-      {(isFetching || loading) && (
-        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-          <EquipmentLoadingGrid count={4} />
-        </motion.div>
-      )}
-
-      {!hasMore && equipment.length > 0 && (
-        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-          <div className="text-muted-foreground text-lg mb-2">🏭 You've explored all available equipment!</div>
-          <div className="text-sm text-muted-foreground">Showing {equipment.length} datacenter equipment items</div>
-        </motion.div>
-      )}
-
-      <AnimatePresence>
-        {showScrollTop && (
-          <motion.button onClick={scrollToTop} className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
-            initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
-          >
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />
-          </motion.button>
-        )}
-      </AnimatePresence>
-    </div>
+    
+      <DynamicListingPage
+        title="Datacenter Equipment"
+        description="Browse professional hardware for modern datacenter and network deployments."
+        categorySlug="equipment"
+        listings={listings}
+        categoryFilters={EQUIPMENT_FILTERS}
+        initialPrice={{ min: 400, max: 50000 }}
+        detailBasePath="/equipment"
+      />
+    
   );
 }

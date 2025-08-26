@@ -1,6 +1,5 @@
 
 import React from "react";
-import { Footer } from "@/components/Footer";
 import { TransactionHistory } from "@/components/transactions/TransactionHistory";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -8,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Payments() {
   return (
     <>
+      
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="mb-12 text-center">
@@ -92,7 +92,7 @@ export default function Payments() {
           </Tabs>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 }

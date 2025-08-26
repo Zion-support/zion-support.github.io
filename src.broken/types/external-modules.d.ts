@@ -279,53 +279,14 @@ declare module 'react-hook-form' {
 
   // Minimal generic typings to satisfy local usage without full type defs
   export type FieldValues = Record<string, any>
-  export type FieldPath<TFieldValues extends FieldValues> =
-    keyof TFieldValues & string
-
-  export type Control<TFieldValues extends FieldValues = FieldValues> = any
-
-  export interface UseFormReturn<
-    TFieldValues extends FieldValues = FieldValues,
-  > {
-    control: Control<TFieldValues>
-    handleSubmit: any
-    register: any
-    formState: any
-    [key: string]: any
-  }
-
-  export function useForm<
-    TFieldValues extends FieldValues = FieldValues,
-  >(options?: any): UseFormReturn<TFieldValues>
-
-  export function useFieldArray<
-    TFieldValues extends FieldValues = FieldValues,
-  >(options: any): any
-
-  export interface ControllerProps<
-    TFieldValues extends FieldValues = FieldValues,
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-  > {
-    name: TName
-    control?: Control<TFieldValues>
-    rules?: any
-    defaultValue?: any
-    render: (props: any) => ReactElement
-  }
-
-  export const Controller: ComponentType<ControllerProps<any, any>>
-
-  export interface FormProviderProps<
-    TFieldValues extends FieldValues = FieldValues,
-  > {
-    children?: ReactNode
-    [key: string]: any
-  }
-
-  export const FormProvider: ComponentType<FormProviderProps<any>>
-  export function useFormContext<
-    TFieldValues extends FieldValues = FieldValues,
-  >(): UseFormReturn<TFieldValues>
+  export type FieldPath<TFieldValues extends FieldValues = FieldValues> = string
+  export type UseFormReturn<TFieldValues extends Record<string, any> = Record<string, any>> = any;
+  export function useForm<TFieldValues extends Record<string, any> = Record<string, any>>(options?: any): UseFormReturn<TFieldValues>;
+  export function useFieldArray<TFieldValues extends Record<string, any> = Record<string, any>>(options: any): any;
+  export const Controller: any;
+  export type ControllerProps<TFieldValues extends FieldValues = FieldValues, TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>> = any
+  export const FormProvider: React.ComponentType<any>
+  export function useFormContext<TFieldValues extends FieldValues = FieldValues>(): UseFormReturn<TFieldValues>
 }
 declare module 'react-i18next';
 declare module 'react-dom/client';

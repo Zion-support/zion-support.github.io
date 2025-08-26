@@ -1,29 +1,23 @@
-import React, { useState } from 'react';
 
-export function NewsletterSection() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
+import { GradientHeading } from "@/components/GradientHeading";
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
+import { cn } from "@/lib/utils";
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the email to your newsletter service
-    console.log('Newsletter subscription:', email);
-    setIsSubscribed(true);
-    setEmail('');
-  };
+export interface NewsletterSectionProps extends React.HTMLAttributes<HTMLElement> {}
 
-  if (isSubscribed) {
-    return (
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <h2 className="text-3xl font-bold mb-4">Thank You for Subscribing!</h2>
-          <p className="text-xl text-blue-100 mb-6">
-            You're now part of our community. We'll keep you updated with the latest insights and updates.
+export function NewsletterSection({ className, style, ...props }: NewsletterSectionProps) {
+  return (
+    <section
+      className={cn("py-20 bg-zion-blue-dark", className)}
+      id="newsletter"
+      style={style}
+      {...props}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <GradientHeading>Stay Informed</GradientHeading>
+          <p className="mt-4 text-zion-slate-light text-xl mb-8">
+            Subscribe to our newsletter for the latest updates on Zion's services, Google trending tech news, and marketplace opportunities.
           </p>
           <button
             onClick={() => setIsSubscribed(false)}

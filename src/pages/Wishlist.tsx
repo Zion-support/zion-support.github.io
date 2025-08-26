@@ -7,13 +7,15 @@ import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
-import { useRouter } from 'next/router'; // Changed from useNavigate
-import { useEffect } from 'react'; // Added useEffect
+import { useCart } from '@/context/CartContext';
+import { getCartKey } from '@/utils/cartUtils';
+import { useNavigate } from 'react-router-dom';
 
 export default function WishlistPage() {
   const { favorites, loading } = useFavorites();
-  const { user, isLoading: isAuthLoading } = useAuth(); // Added isAuthLoading
-  const router = useRouter(); // Changed from navigate
+  const { user } = useAuth();
+  const { dispatch } = useCart();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Redirect if not authenticated and auth loading is complete
@@ -29,17 +31,11 @@ export default function WishlistPage() {
   const { items, dispatch } = useCart();
 
   const addToCart = (item: { id: string; title?: string; price?: number }) => {
-    if (items.some(i => i.id === item.id)) return;
-    dispatch({
-      type: 'ADD_ITEM',
-      payload: {
-        id: item.id,
-        name: item.title || 'Item',
-        price: item.price || 0,
-        quantity: 1
-      }
-    });
-    toast.success(`1× ${item.title || 'Item'} added`);
+    const stored = safeStorage.getItem(getCartKey(user?.id));
+    const cart = stored ? JSON.parse(stored) : [];
+    cart.push({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });
+    safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
+    dispatch({ type: 'SET_ITEMS', payload: cart });
   };
 
   const productMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {

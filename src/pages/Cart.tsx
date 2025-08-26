@@ -1,34 +1,39 @@
 import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
-import apiClient from '@/services/apiClient';
-
-interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-}
+import Link from 'next/link';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import Skeleton from '@/components/ui/skeleton';
+import axios from 'axios';
+import { useAuth } from '@/hooks/useAuth';
+import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
+import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
+// CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
+// import { CartItem as CartItemType } from '@/types/cart';
+// safeStorage is no longer needed here for reading
+// import { safeStorage } from '@/utils/safeStorage';
+import { getStripe } from '@/utils/getStripe';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react';
+import { useWishlist } from '@/hooks/useWishlist';
+import ProductCard from '@/components/ProductCard';
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 export default function CartPage() {
   const navigate = useNavigate();
-  const [items, setItems] = useState<CartItem[]>([]);
-  const [code, setCode] = useState('');
-  const [discount, setDiscount] = useState(0);
+  const { items, dispatch } = useCart();
+  const { user } = useAuth();
+  const [loading, setLoading] = useState(false);
+  const [cartLoading, setCartLoading] = useState(true);
+  const [showEmpty, setShowEmpty] = useState(false);
 
   useEffect(() => {
-    const load = async () => {
-      if (user) {
-        try {
-          const res = await fetch('/api/cart');
-          if (res.ok) {
-            const data = await res.json();
-            dispatch(setItemsAction(data.items || []));
-            return;
-          }
-        } catch (err) {
-          console.error('Failed to fetch cart', err);
-        }
-      }
+    if (reduxItems.length > 0) {
+      setItems(reduxItems);
+      setCartLoading(false);
+    } else {
       const stored = safeStorage.getItem('zion_cart');
       if (stored) {
         try {
@@ -56,6 +61,17 @@ export default function CartPage() {
         console.error('Failed to update cart', err);
       }
     }
+    setCartLoading(false);
+  }, [reduxItems]);
+
+  useEffect(() => {
+    if (!cartLoading && items.length === 0) {
+      setShowEmpty(true);
+    }
+  }, [cartLoading, items]);
+
+  const updateQuantity = (id: string, qty: number) => {
+    dispatch(updateQuantityAction({ id, quantity: qty }));
   };
 
   const removeItem = (id: string) => {
@@ -79,16 +95,55 @@ export default function CartPage() {
   };
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-  const total = subtotal - discount;
+  const tax = subtotal * 0.08; // 8% tax estimate
+  
+  // Only add shipping for physical items
+  const hasPhysicalItems = items.some(item => 
+    !item.type || item.type === 'physical' // Default to physical if type not specified
+  );
+  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
+  const total = subtotal + tax + shipping;
+  const { items: saved } = useWishlist();
+  const savedMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {
+    acc[p.id] = p;
+    return acc;
+  }, {});
 
-  if (items.length === 0) {
+  if (cartLoading) {
+    return (
+      <div className="container py-10 space-y-4">
+        <Skeleton className="h-8 w-1/3" />
+        <Skeleton className="h-32 w-full" />
+      </div>
+    );
+  }
+
+  if (showEmpty) {
     return (
       <div className="container py-10 text-center">
-        <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" />
-        <p>Your cart is empty</p>
-        <Button asChild className="mt-4">
-          <Link href="/marketplace">Browse Marketplace</Link>
-        </Button>
+        <img loading="lazy"
+          src="/images/empty-cart.svg"
+          alt="Empty cart"
+          className="mx-auto mb-4 w-48 h-36"
+        />
+
+        {saved.length > 0 && (
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-white mb-4">Saved for Later</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {saved.map(id => {
+                const p = savedMap[id];
+                return p ? (
+                  <ProductCard
+                    key={id}
+                    product={{ ...p, price: p.price || 0, description: p.description || '' }}
+                    onBuy={() => router.push('/checkout')}
+                  />
+                ) : null;
+              })}
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -137,18 +192,13 @@ export default function CartPage() {
         <span>Subtotal</span>
         <span>${subtotal.toFixed(2)}</span>
       </div>
-      {discount > 0 && (
-        <div className="flex justify-between font-semibold text-green-600">
-          <span>Discount</span>
-          <span>-${discount.toFixed(2)}</span>
-        </div>
-      )}
-      <div className="flex justify-between font-semibold">
-        <span>Total</span>
-        <span>${total.toFixed(2)}</span>
-      </div>
-      <Button className="mt-4 w-full" onClick={() => navigate('/checkout')}>
-        Checkout
+      <Button
+        className="mt-4 w-full"
+        onClick={() =>
+          user ? navigate('/checkout') : navigate('/login?next=/checkout')
+        }
+      >
+        {user ? 'Checkout' : 'Login to Checkout'}
       </Button>
     </div>
   );
