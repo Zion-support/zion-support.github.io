@@ -4,9 +4,6 @@ import { ProductListing } from "@/types/listings";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { ServicesOverview } from "@/components/services/ServicesOverview";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Globe, ArrowRight, Star, TrendingUp } from "lucide-react";
-=======
 import { 
   Globe, 
   Brain, 
@@ -43,6 +40,10 @@ import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
 =======
 import apiClient from "@/services/apiClient";
 import { toast } from "@/hooks/use-toast";
+=======
+import Link from "next/link";
+import { Globe } from "lucide-react";
+import ServicesList from '@/components/ServicesList';
 
 // Enhanced service listings with real pricing and descriptions
 =======

@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 import { Footer } from "@/components/Footer";
 import { GradientHeading } from "@/components/GradientHeading";
 import { AIMatchmaker } from "@/components/AIMatchmaker";
@@ -9,7 +9,7 @@ import { toast } from "@/hooks/use-toast";
 import { MatchResult } from "@/lib/ai-matchmaking";
 
 export default function AIMatcherPage() {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   
   const handleMatchSelect = (match: MatchResult) => {
@@ -30,10 +30,11 @@ export default function AIMatcherPage() {
     });
     
     // Navigate to the quote request page with the selected item
-    navigate("/request-quote", {
-      state: { 
+    router.push({
+      pathname: "/request-quote",
+      query: {
         serviceType: itemType,
-        specificItem: match.item
+        item: match.item.id
       }
     });
   };

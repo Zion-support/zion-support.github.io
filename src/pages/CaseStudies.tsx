@@ -1,29 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  CheckCircle, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Clock, 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { 
-  ChartBarIcon, 
-  CpuChipIcon, 
-  GlobeAltIcon, 
-  RocketLaunchIcon,
-  ShieldCheckIcon,
-  LightBulbIcon,
-  UsersIcon,
-  CogIcon
-} from '@heroicons/react/24/outline';
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Building, 
@@ -265,6 +240,13 @@ const CaseStudies = () => {
   ShoppingCart,
   GraduationCap
 } from 'lucide-react';
+=======
+import { CASE_STUDIES } from "@/data/case-studies";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function CaseStudies() {
   const caseStudies = [

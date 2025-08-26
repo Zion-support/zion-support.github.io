@@ -34,21 +34,8 @@ import React from 'react';
 =======
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { 
-  Users, 
-  Lightbulb, 
-  Award, 
-  Globe, 
-  Zap,
-  CheckCircle,
-  TrendingUp,
-  Shield,
-  Heart
-} from "lucide-react";
+import { GradientHeading } from "@/components/GradientHeading";
+import Link from "next/link";
 
 export default function About() {
   const companyStats = [

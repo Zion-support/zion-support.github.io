@@ -1,9 +1,4 @@
 
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
-=======
 import { motion } from 'framer-motion';
 import { 
   Calendar, 
@@ -13,6 +8,21 @@ import {
   ArrowRight,
 =======
 import { ArrowRight, Calendar, Clock, User, Tag, Search, Filter, TrendingUp, Brain, Atom, Shield, Cloud, Rocket, Lightbulb, Globe, Database, Code, Target, Zap, Star, BookOpen, MessageSquare, Heart, Share2 } from 'lucide-react';
+=======
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useDebounce } from "@/hooks/useDebounce";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
+import { BlogPost } from "@/types/blog";
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { Search } from "lucide-react";
 
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('');
