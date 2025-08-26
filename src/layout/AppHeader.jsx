@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Search, User, Bell, Menu, X } from 'lucide-react';
+
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -16,7 +18,19 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Marketplace', href: '/marketplace', current: false },
+    { name: 'Talent', href: '/talent', current: false },
+    { name: 'Blog', href: '/blog', current: false },
     { name: 'Contact', href: '/contact', current: false },
+  ];
+
+  const servicesDropdown = [
+    { name: 'AI Solutions', href: '/services/ai' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'Cloud Services', href: '/services/cloud' },
+    { name: 'IT Consulting', href: '/services/consulting' },
+    { name: 'Green IT', href: '/green-it' },
+    { name: 'Micro SaaS', href: '/services/micro-saas' },
   ];
 
   return (

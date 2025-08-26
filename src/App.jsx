@@ -17,6 +17,22 @@ const Privacy = React.lazy(() => import('./pages/Privacy.tsx'));
 const Terms = React.lazy(() => import('./pages/Terms.tsx'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT.tsx'));
+const Services = React.lazy(() => import('./pages/Services.jsx'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace.jsx'));
+const Talent = React.lazy(() => import('./pages/Talent.jsx'));
+const Equipment = React.lazy(() => import('./pages/EquipmentDetail.jsx'));
+const Categories = React.lazy(() => import('./pages/CategoriesSection.jsx'));
+const HelpCenter = React.lazy(() => import('./pages/HelpCenterPage.jsx'));
+const Documentation = React.lazy(() => import('./pages/Documentation.jsx'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers.jsx'));
+const Webinars = React.lazy(() => import('./pages/Webinars.jsx'));
+const Training = React.lazy(() => import('./pages/Training.jsx'));
+const Research = React.lazy(() => import('./pages/Research.jsx'));
+const Support = React.lazy(() => import('./pages/Support.jsx'));
+const Security = React.lazy(() => import('./pages/Security.jsx'));
+const SystemStatus = React.lazy(() => import('./pages/SystemStatus.jsx'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility.jsx'));
+const Cookies = React.lazy(() => import('./pages/Cookies.jsx'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -47,6 +63,28 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
+              
+              {/* Services and Marketplace */}
+              <Route path="/services" element={<Services />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/talent" element={<Talent />} />
+              <Route path="/equipment" element={<Equipment />} />
+              <Route path="/categories" element={<Categories />} />
+              
+              {/* Resources */}
+              <Route path="/help" element={<HelpCenter />} />
+              <Route path="/docs" element={<Documentation />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/training" element={<Training />} />
+              <Route path="/research" element={<Research />} />
+              
+              {/* Support */}
+              <Route path="/support" element={<Support />} />
+              <Route path="/security" element={<Security />} />
+              <Route path="/status" element={<SystemStatus />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/cookies" element={<Cookies />} />
 
               {/* Catch-all route for 404 */}
               <Route path="*" element={

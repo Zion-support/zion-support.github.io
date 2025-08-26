@@ -1,147 +1,266 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Video, Brain, Cpu, Shield, Zap, Rocket, Building } from 'lucide-react';
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { Link } from 'react-router-dom';
+import { Calendar, Clock, Users, Play, ExternalLink, BookOpen } from 'lucide-react';
+
 export default function Webinars() {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [selectedStatus, setSelectedStatus] = useState('all');
-    const categories = [
-        { id: 'all', name: 'All Topics', icon: Video },
-        { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },
-        { id: 'quantum', name: 'Quantum Technology', icon: Cpu },
-        { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
-        { id: 'cloud', name: 'Cloud & DevOps', icon: Zap },
-        { id: 'business', name: 'Business Solutions', icon: Building },
-        { id: 'emerging-tech', name: 'Emerging Tech', icon: Rocket }
-    ];
-    const statuses = [
-        { id: 'all', name: 'All Webinars' },
-        { id: 'upcoming', name: 'Upcoming' },
-        { id: 'live', name: 'Live Now' },
-        { id: 'recorded', name: 'Recorded' }
-    ];
-    const Webinars = () => {
-        const webinars = [
-            {
-                title: "AI-Powered Business Transformation",
-                date: "March 25, 2024",
-                duration: "60 minutes",
-                speaker: "Dr. Sarah Chen",
-                description: "Learn how AI is revolutionizing business operations and creating new opportunities for growth.",
-                category: "AI & Business"
-            },
-            {
-                title: "Cybersecurity Best Practices 2024",
-                date: "April 10, 2024",
-                duration: "45 minutes",
-                speaker: "Michael Rodriguez",
-                description: "Essential cybersecurity strategies to protect your business from evolving threats.",
-                category: "Security"
-            },
-            {
-                title: "Cloud Migration Strategies",
-                date: "April 25, 2024",
-                duration: "75 minutes",
-                speaker: "David Kim",
-                description: "Step-by-step guide to successful cloud migration and optimization.",
-                category: "Cloud & DevOps"
-            }
-        ];
-        return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Expert
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Webinars
-              </span>
+  const upcomingWebinars = [
+    {
+      id: 1,
+      title: "AI-Powered Cybersecurity: Next-Generation Threat Detection",
+      description: "Join our cybersecurity experts as they demonstrate cutting-edge AI technologies for threat detection and response.",
+      date: "2025-01-15",
+      time: "14:00 EST",
+      duration: "60 min",
+      speaker: "Dr. Sarah Chen",
+      attendees: 1247,
+      category: "Cybersecurity",
+      isLive: true,
+      registrationUrl: "#"
+    },
+    {
+      id: 2,
+      title: "Green IT Implementation: Sustainable Technology Solutions",
+      description: "Learn practical strategies for implementing environmentally conscious IT practices in enterprise environments.",
+      date: "2025-01-22",
+      time: "15:30 EST",
+      duration: "45 min",
+      speaker: "Michael Rodriguez",
+      attendees: 892,
+      category: "Green IT",
+      isLive: true,
+      registrationUrl: "#"
+    },
+    {
+      id: 3,
+      title: "Micro SaaS Architecture: Building Scalable Solutions",
+      description: "Deep dive into micro SaaS architecture patterns and best practices for building maintainable applications.",
+      date: "2025-01-29",
+      time: "13:00 EST",
+      duration: "90 min",
+      speaker: "Alex Thompson",
+      attendees: 1567,
+      category: "Micro SaaS",
+      isLive: true,
+      registrationUrl: "#"
+    }
+  ];
+
+  const pastWebinars = [
+    {
+      id: 4,
+      title: "5G Enterprise Solutions: Network Optimization Strategies",
+      description: "Advanced strategies for optimizing 5G networks in enterprise environments with focus on performance and reliability.",
+      date: "2024-12-15",
+      time: "14:00 EST",
+      duration: "75 min",
+      speaker: "Dr. James Wilson",
+      attendees: 1892,
+      category: "5G Solutions",
+      recordingUrl: "#",
+      slidesUrl: "#"
+    },
+    {
+      id: 5,
+      title: "Data Privacy in AI Systems: Compliance and Best Practices",
+      description: "Comprehensive overview of data privacy requirements and best practices for AI-powered systems in regulated industries.",
+      date: "2024-12-08",
+      time: "15:30 EST",
+      duration: "60 min",
+      speaker: "Lisa Park",
+      attendees: 2987,
+      category: "AI & Privacy",
+      recordingUrl: "#",
+      slidesUrl: "#"
+    },
+    {
+      id: 6,
+      title: "Edge Computing and IoT: Building the Connected Future",
+      description: "Explore edge computing infrastructure and IoT integration for smart city and industrial applications.",
+      date: "2024-11-30",
+      time: "13:00 EST",
+      duration: "80 min",
+      speaker: "Dr. Emily Watson",
+      attendees: 1654,
+      category: "Edge Computing",
+      recordingUrl: "#",
+      slidesUrl: "#"
+    }
+  ];
+
+  const categories = ["All", "AI", "Cybersecurity", "Green IT", "Micro SaaS", "5G Solutions", "Edge Computing"];
+
+  return (
+    <>
+      <SEO 
+        title="Webinars - Zion Tech Group Live & On-Demand Sessions" 
+        description="Join our live webinars and access on-demand recordings covering AI, cybersecurity, green IT, and emerging technologies." 
+        canonical="/webinars" 
+        url="https://ziontechgroup.com/webinars"
+      />
+
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Webinars & Live Sessions
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join industry experts for in-depth discussions on technology trends, 
-              best practices, and innovative solutions
+            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Join our live webinars featuring industry experts and access on-demand recordings 
+              covering the latest in technology and innovation.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {webinars.map((webinar, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="mb-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">{webinar.category}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{webinar.title}</h3>
-                <p className="text-gray-300 mb-4">{webinar.description}</p>
-                
-                <div className="space-y-2 mb-4">
-                  <p className="text-gray-400 text-sm flex items-center">
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                    </svg>
-                    {webinar.date}
-                  </p>
-                  <p className="text-gray-400 text-sm flex items-center">
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    {webinar.duration}
-                  </p>
-                  <p className="text-gray-400 text-sm flex items-center">
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                    </svg>
-                    {webinar.speaker}
-                  </p>
-                </div>
-                
-                <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
-                  Register Now
-                  <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
-                  </svg>
-                </Link>
-              </div>))}
+
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className="px-6 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white hover:border-zion-cyan transition-all duration-300"
+              >
+                {category}
+              </button>
+            ))}
           </div>
-          
+
+          {/* Upcoming Webinars */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              Upcoming Webinars
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {upcomingWebinars.map((webinar) => (
+                <div key={webinar.id} className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan transition-all duration-300">
+                  <div className="mb-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full">
+                        {webinar.category}
+                      </span>
+                      {webinar.isLive && (
+                        <span className="inline-block px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full animate-pulse">
+                          Live
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
+                      {webinar.title}
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
+                      {webinar.description}
+                    </p>
+                  </div>
+
+                  {/* Meta Information */}
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                      <Calendar className="w-4 h-4" />
+                      <span>{new Date(webinar.date).toLocaleDateString()}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                      <Clock className="w-4 h-4" />
+                      <span>{webinar.time} • {webinar.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                      <Users className="w-4 h-4" />
+                      <span>{webinar.speaker}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                      <BookOpen className="w-4 h-4" />
+                      <span>{webinar.attendees} registered</span>
+                    </div>
+                  </div>
+
+                  {/* Registration Button */}
+                  <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-4 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium flex items-center justify-center gap-2">
+                    <Play className="w-5 h-5" />
+                    Register Now
+                  </button>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Past Webinars */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              Past Webinars
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {pastWebinars.map((webinar) => (
+                <div key={webinar.id} className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan transition-all duration-300">
+                  <div className="mb-4">
+                    <span className="inline-block px-3 py-1 bg-zion-blue-light/30 text-zion-slate-light text-sm rounded-full mb-3">
+                      {webinar.category}
+                    </span>
+                    <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
+                      {webinar.title}
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
+                      {webinar.description}
+                    </p>
+                  </div>
+
+                  {/* Meta Information */}
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                      <Calendar className="w-4 h-4" />
+                      <span>{new Date(webinar.date).toLocaleDateString()}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                      <Clock className="w-4 h-4" />
+                      <span>{webinar.time} • {webinar.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                      <Users className="w-4 h-4" />
+                      <span>{webinar.speaker}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                      <BookOpen className="w-4 h-4" />
+                      <span>{webinar.attendees} attended</span>
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex gap-3">
+                    <button className="flex-1 bg-zion-cyan text-white py-3 px-4 rounded-lg hover:bg-zion-cyan-dark transition-all duration-300 font-medium flex items-center justify-center gap-2">
+                      <Play className="w-4 h-4" />
+                      Watch Recording
+                    </button>
+                    <button className="flex-1 bg-zion-blue-light/30 text-white py-3 px-4 rounded-lg hover:bg-zion-blue-light/50 transition-all duration-300 font-medium flex items-center justify-center gap-2">
+                      <ExternalLink className="w-4 h-4" />
+                      Slides
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Call to Action */}
           <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Stay Informed</h3>
-              <p className="text-gray-300 mb-6">
-                Subscribe to our webinar series and never miss an opportunity to learn 
-                from industry experts and technology leaders.
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-8">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Stay Updated with Webinar Schedule
+              </h2>
+              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+                Get notified about upcoming webinars and access to exclusive content. 
+                Join our community of technology professionals and innovators.
               </p>
-              <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                Subscribe to Webinars
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="px-6 py-3 bg-zion-blue-light/30 border border-zion-blue-light/50 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent flex-1 max-w-md"
+                />
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium">
+                  Subscribe
+                </button>
+              </div>
             </div>
           </div>
-=======
-import {CogIcon} from '@heroicons/react/24/outline';
-
-const $page: React.FC = () => {}
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400"/>
-            </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            $page
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under development. Contact us for more information.
-          </p>
-          <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
-            Contact Us for More Information
-          </Link>
         </div>
-      </section>
-    </div>
+      </main>
+    </>
   );
-};
-
-export default $page;
-        </></></>);
-    };
 }
