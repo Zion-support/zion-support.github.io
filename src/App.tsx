@@ -40,6 +40,21 @@ const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
+const ComprehensiveServicesOverview = React.lazy(() => import('./pages/ComprehensiveServicesOverview'));
+const ComprehensivePricingGuide2027New = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+
+// Service pages
+const ServicesPage = React.lazy(() => import('./pages/services'));
+const AIAnalyticsPage = React.lazy(() => import('./pages/services/ai-analytics'));
+const CybersecurityPage = React.lazy(() => import('./pages/services/cybersecurity'));
+const CloudDevOpsPage = React.lazy(() => import('./pages/services/cloud-devops'));
+
+// Additional pages
+const SolutionsPage = React.lazy(() => import('./pages/solutions'));
 
 const LoadingSpinner = () => (
   <div className="min-h-screen bg-futuristic flex items-center justify-center">
@@ -110,9 +125,27 @@ function App() {
               <Route path="/it-services" element={<ITServicesPage />} />
               <Route path="/it-services/:service" element={<ITServicesPage />} />
               
+              {/* Innovative Services 2027 Routes */}
+              <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
+              
+              {/* New Comprehensive Routes */}
+              <Route path="/services-overview" element={<ComprehensiveServicesOverview />} />
+              <Route path="/pricing-guide" element={<ComprehensivePricingGuide2027New />} />
+              
               {/* Emerging Tech Routes */}
               <Route path="/emerging-tech" element={<GreenIT />} />
               <Route path="/emerging-tech/:service" element={<GreenIT />} />
+              
+              {/* Service routes */}
+              <Route path="/services/ai-analytics" element={<AIAnalyticsPage />} />
+              <Route path="/services/cybersecurity" element={<CybersecurityPage />} />
+              <Route path="/services/cloud-devops" element={<CloudDevOpsPage />} />
+              
+              {/* Additional routes */}
+              <Route path="/solutions" element={<SolutionsPage />} />
             </Routes>
           </Suspense>
         </main>

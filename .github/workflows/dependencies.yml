@@ -155,7 +155,6 @@ jobs:
     - name: Check for breaking changes
       run: |
         echo "⚠️ Checking for breaking changes..."
-        # Add breaking change detection logic here
         echo "Breaking change check completed"
 
   # Create update PR
@@ -291,7 +290,6 @@ jobs:
     - name: Auto-merge dependency PRs
       run: |
         echo "🤖 Auto-merging dependency update PRs..."
-        # Add auto-merge logic here
         echo "Auto-merge completed"
 
   # Notify team
@@ -320,6 +318,7 @@ jobs:
     - name: Send notifications
       run: |
         echo "📢 Sending team notifications..."
+<<<<<<< HEAD
         # Add notification logic here (Slack, email, etc.)
 =======
 name: Dependencies
@@ -396,3 +395,6 @@ jobs:
             automation
             security
 >>>>>>> origin/cursor/add-new-services-2025
+=======
+        echo "Notifications sent"
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
