@@ -37,11 +37,13 @@ it('loads posts for category', async () => {
 it('shows message when no posts', async () => {
   vi.spyOn(forumService, 'fetchPostsByCategory').mockResolvedValue([]);
   render(
-    <MemoryRouter initialEntries={['/community/category/project-help']}>
-      <Routes>
-        <Route path='/community/category/:categoryId' element={<ForumCategoryPage />} />
-      </Routes>
-    </MemoryRouter>
+    <QueryClientProvider client={new QueryClient()}>
+      <MemoryRouter initialEntries={['/community/category/project-help']}>
+        <Routes>
+          <Route path='/community/category/:categoryId' element={<ForumCategoryPage />} />
+        </Routes>
+      </MemoryRouter>
+    </QueryClientProvider>
   );
   expect(await screen.findByText(/no posts yet/i)).toBeInTheDocument();
 });
