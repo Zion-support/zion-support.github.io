@@ -278,6 +278,56 @@ const Home: React.FC = () => {
         </div>
       </motion.section>
 
+      {/* Advanced Services Showcase */}
+      <motion.section 
+        className="py-20 bg-white/5 backdrop-blur-sm"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Advanced <span className="gradient-text">Real Services</span> 2025
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Discover our comprehensive collection of 20+ advanced real micro SAAS, IT, and AI services. 
+              Market-ready solutions with proven ROI and competitive pricing.
+            </p>
+          </motion.div>
+          
+          <motion.div className="text-center mb-12" variants={itemVariants}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-6 border border-blue-500/30">
+                <div className="text-3xl mb-2">🤖</div>
+                <h3 className="text-lg font-semibold text-white mb-2">AI & Machine Learning</h3>
+                <p className="text-sm text-gray-300">Advanced AI services with proven ROI and competitive pricing</p>
+              </div>
+              <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-500/30">
+                <div className="text-3xl mb-2">🔐</div>
+                <h3 className="text-lg font-semibold text-white mb-2">Cybersecurity</h3>
+                <p className="text-sm text-gray-300">Quantum-safe security solutions for future-proof protection</p>
+              </div>
+              <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl p-6 border border-green-500/30">
+                <div className="text-3xl mb-2">🌐</div>
+                <h3 className="text-lg font-semibold text-white mb-2">Edge Computing</h3>
+                <p className="text-sm text-gray-300">Intelligent edge computing for IoT and real-time processing</p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div className="text-center" variants={itemVariants}>
+            <Link
+              to="/advanced-real-services-showcase-2025"
+              className="btn-primary text-lg px-8 py-4"
+            >
+              🚀 Explore All Advanced Services
+            </Link>
+          </motion.div>
+        </div>
+      </motion.section>
+
       {/* CTA Section */}
       <motion.section 
         className="py-20"
