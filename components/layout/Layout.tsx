@@ -61,8 +61,15 @@ export default Layout;
 =======
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+<<<<<<< HEAD
       {/* Futuristic Background */}
       <UltraFuturisticBackground2025 />
+=======
+      {/* Skip to content link for accessibility */}
+      <a href="#main" className="skip-link">Skip to main content</a>
+              {/* Futuristic Background */}
+        <UltraFuturisticBackground2036 variant="quantum" intensity="high" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917e
       
       {/* Layout Structure */}
       <div className="relative z-10">
