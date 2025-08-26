@@ -33,7 +33,7 @@
   --zion-error: #dc2626;
 }
 
-/* Custom animations */
+/* Enhanced Custom animations */
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -62,7 +62,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
 }
 
@@ -130,6 +130,27 @@
   }
 }
 
+
+
+.animate-float.floating-delay-2 {
+  animation-delay: 2s;
+}
+
+.animate-float.floating-delay-3 {
+  animation-delay: 3s;
+}
+
+.animate-float.floating-delay-4 {
+  animation-delay: 4s;
+}
+
+.animate-float.floating-delay-5 {
+  animation-delay: 5s;
+}
+
+.animate-float.floating-delay-6 {
+  animation-delay: 6s;
+=======
 @keyframes gradient-text {
   0% {
     background-position: 0% 50%;
@@ -227,6 +248,20 @@
   animation: bounce-gentle 2s ease-in-out infinite;
 }
 
+
+.bg-zion-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(34, 221, 210, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(140, 21, 233, 0.1) 0%, transparent 50%);
+}
+
+.bg-zion-grid {
+  background-image: 
+    linear-gradient(rgba(34, 221, 210, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 221, 210, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
 /* Line clamp utilities */
 .line-clamp-1 {
   overflow: hidden;
@@ -269,6 +304,8 @@
   }
 }
 
+
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -302,6 +339,12 @@
 ::-moz-selection {
   background: rgba(34, 221, 210, 0.3);
   color: white;
+}
+
+
+
+.z-tooltip-overlay {
+  z-index: 10000;
 }
 
 /* Smooth scrolling */
@@ -360,4 +403,5 @@ html {
 .backdrop-blur-2xl {
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
+}
 }
