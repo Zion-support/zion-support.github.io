@@ -11,7 +11,7 @@ import {
   Network, Server, ShieldCheck, ZapIcon,
   GlobeIcon, StarIcon, TrendingUpIcon, UsersIcon,
   CheckCircleIcon, ArrowRightIcon, CpuIcon,
-  DollarSign, Phone, ArrowRight, Mail, MapPin, Dna, BookOpen, Building
+  DollarSign, Phone, ArrowRight, Mail, MapPin, Dna, BookOpen, Building, Sparkles
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -244,6 +244,24 @@ export default function EnhancedNavigation2025() {
     setIsOpen(false);
   };
 
+  const primaryLinks = [
+		{ name: 'Home', href: '/' },
+		{ name: 'Services', href: '/services/' },
+		{ name: 'Pricing', href: '/pricing/' },
+		{ name: 'Resources', href: '/resources/' },
+		{ name: 'Blog', href: '/blog/' },
+		{ name: 'Contact', href: '/contact/' },
+	];
+
+	const megaMenuLinks = [
+		{ name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform/' },
+		{ name: 'AI HR Analytics', href: '/ai-hr-analytics-platform/' },
+		{ name: 'AI Financial Planning', href: '/ai-financial-planning-platform/' },
+		{ name: 'Edge Orchestration', href: '/edge-computing-orchestration/' },
+		{ name: 'Zero Trust Security', href: '/zero-trust-security-platform/' },
+		{ name: 'Quantum Cloud', href: '/quantum-cloud-infrastructure/' },
+	];
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800/50' : 'bg-transparent'
@@ -287,7 +305,7 @@ export default function EnhancedNavigation2025() {
               </div>
               <div className="text-xs text-gray-400">Revolutionary Technology</div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
 
