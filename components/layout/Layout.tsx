@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,12 @@ import EnhancedFooter from './EnhancedFooter';
 =======
 import NeoFuturisticFooter from './NeoFuturisticFooter';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9cca
+=======
+import React, { useState } from 'react';
+import UltraFuturisticNavigation2035 from './UltraFuturisticNavigation2035';
+import UltraFuturisticFooter2035 from './UltraFuturisticFooter2035';
+import EnhancedSidebar2025 from './EnhancedSidebar2025';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
 import UltraAdvancedFuturisticBackground from '../ui/UltraAdvancedFuturisticBackground';
 =======
 import React, { useState } from 'react';
@@ -42,6 +49,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 				<TopContactBar />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				<UltraFuturisticNavigation />
 =======
 				<EnhancedNavigation />
@@ -58,6 +66,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 					{children}
 				</main>
 				<EnhancedFooter />
+=======
+				<UltraFuturisticNavigation2035 />
+				<div className="flex">
+					<EnhancedSidebar2025 isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+					<main id="main" className="flex-1 pt-24 lg:pt-28">
+						{children}
+					</main>
+				</div>
+				<UltraFuturisticFooter2035 />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
 			</UltraAdvancedFuturisticBackground>
 		</div>
 	);

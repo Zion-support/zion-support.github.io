@@ -77,6 +77,12 @@ import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025';
 import { realMarketServices } from '../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../data/2024-ai-emerging-tech-services';
 
+// Import advanced 2025 services
+import { advancedMicroSaasServices2025 } from '../data/2025-advanced-micro-saas-services';
+import { advancedAIServices2025 } from '../data/2025-advanced-ai-services';
+import { advancedITServices2025 } from '../data/2025-advanced-it-services';
+import { advancedEmergingTechServices2025 } from '../data/2025-advanced-emerging-tech-services';
+
 // Import existing services for comprehensive coverage
 =======
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -174,7 +180,11 @@ const categories = [
     description: 'Next-generation AI consciousness and creativity',
     icon: Brain,
     color: 'from-violet-500 to-purple-500',
+<<<<<<< HEAD
     services: [...futuristicAIServices2032, ...innovativeAIServices2033, ...aiEmergingTechServices.filter(s => s.category.includes('AI'))],
+=======
+    services: [...innovativeAIServices2025, ...advancedAIServices2025],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
     gradient: 'from-violet-500/20 to-indigo-500/20'
   },
   {
@@ -183,7 +193,11 @@ const categories = [
     description: 'Quantum computing, DNA computing, and beyond',
     icon: Atom,
     color: 'from-indigo-500 to-blue-500',
+<<<<<<< HEAD
     services: [...quantumEmergingTechServices2032, ...quantumEmergingTechServices2033, ...aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain'))],
+=======
+    services: [...emergingTechServices2025, ...advancedEmergingTechServices2025],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
     gradient: 'from-indigo-500/20 to-cyan-500/20'
   },
   {
@@ -192,7 +206,11 @@ const categories = [
     description: 'Autonomous operations and zero-trust security',
     icon: Shield,
     color: 'from-blue-500 to-cyan-500',
+<<<<<<< HEAD
     services: [...enterpriseITServices2032, ...enterpriseITServices2033, ...realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project'))],
+=======
+    services: [...innovativeITServices2025, ...advancedITServices2025],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
     gradient: 'from-blue-500/20 to-teal-500/20'
   },
   {
@@ -210,7 +228,11 @@ const categories = [
     description: 'Intelligent automation solutions',
     icon: Rocket,
     color: 'from-green-500 to-yellow-500',
+<<<<<<< HEAD
     services: [...aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge'))],
+=======
+    services: [...realMicroSaasServices2025, ...enhancedRealMicroSaasServices, ...advancedMicroSaasServices2025],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
     gradient: 'from-green-500/20 to-orange-500/20'
   },
   {

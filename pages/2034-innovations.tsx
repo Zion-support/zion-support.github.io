@@ -1,7 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
+=======
+import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
+import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -33,10 +38,18 @@ export default function Innovations2034Page() {
         <meta name="twitter:description" content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms." />
       </Head>
 
+<<<<<<< HEAD
       <Layout>
         <div className="min-h-screen bg-black">
           {/* Hero Section */}
           <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+=======
+      <div className="min-h-screen bg-black">
+        <UltraFuturisticNavigation2032 />
+        
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
           {/* Animated Background */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,255,255,0.15),transparent_50%)] animate-pulse"></div>
