@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import Search from './Search';
 import ScrollToTop from './ScrollToTop';
+import EnhancedFooter from './EnhancedFooter';
 
 interface NavItem {
   label: string;
@@ -20,9 +21,12 @@ const navigation: NavItem[] = [
       { label: 'AI Systems', href: '/services#ai' },
       { label: 'Cloud Platforms', href: '/services#cloud' },
       { label: 'Cybersecurity', href: '/services#cybersecurity' },
-      { label: 'Micro SaaS', href: '/services#saas' }
+      { label: 'Micro SaaS', href: '/services#saas' },
+      { label: 'Enterprise Solutions', href: '/services#enterprise' },
+      { label: 'Quantum Computing', href: '/services#quantum' }
     ]
   },
+  { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' }
 ];
 
@@ -42,10 +46,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link to="/" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-sm">Z</span>
                 </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                   Zion Tech Group
                 </span>
               </Link>
@@ -58,20 +62,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <div key={item.label} className="relative group">
                     {item.children ? (
                       <div
-                        className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
+                        className="flex items-center space-x-1 text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium cursor-pointer transition-colors"
                         onMouseEnter={() => setDropdownOpen(item.label)}
                         onMouseLeave={() => setDropdownOpen(null)}
                       >
                         <span>{item.label}</span>
-                        <ChevronDown className="w-4 h-4" />
+                        <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
                       </div>
                     ) : (
                       <Link
                         to={item.href}
                         className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                           isActive(item.href)
-                            ? 'text-blue-600 bg-blue-50'
-                            : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                            ? 'text-purple-600 bg-purple-50'
+                            : 'text-gray-700 hover:text-purple-600 hover:bg-gray-50'
                         }`}
                       >
                         {item.label}
@@ -80,12 +84,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     
                     {/* Dropdown Menu */}
                     {item.children && dropdownOpen === item.label && (
-                      <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
+                      <div className="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl py-2 z-50 border border-gray-200 backdrop-blur-md">
                         {item.children.map((child) => (
                           <Link
                             key={child.label}
                             to={child.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -99,11 +103,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             {/* CTA Button */}
             <div className="hidden md:flex items-center space-x-4">
-              <Search />
-              <ThemeToggle />
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
                 Get Started
               </Link>
@@ -113,66 +115,71 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="md:hidden">
               <button
                 type="button"
-                className="text-gray-700 hover:text-blue-600 p-2"
+                className="text-gray-700 hover:text-purple-600"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                <span className="sr-only">Open main menu</span>
+                {mobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </button>
             </div>
           </div>
-        </nav>
 
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-              {navigation.map((item) => (
-                <div key={item.label}>
-                  {item.children ? (
-                    <div>
-                      <div className="text-gray-700 px-3 py-2 text-base font-medium">
+          {/* Mobile Navigation */}
+          {mobileMenuOpen && (
+            <div className="md:hidden">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-md rounded-lg mt-2 border border-gray-200">
+                {navigation.map((item) => (
+                  <div key={item.label}>
+                    {item.children ? (
+                      <div>
+                        <div className="text-gray-700 px-3 py-2 text-base font-medium">
+                          {item.label}
+                        </div>
+                        <div className="pl-4 space-y-1">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.label}
+                              to={child.href}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
+                          isActive(item.href)
+                            ? 'text-purple-600 bg-purple-50'
+                            : 'text-gray-700 hover:text-purple-600 hover:bg-gray-50'
+                        }`}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
                         {item.label}
-                      </div>
-                      <div className="pl-4 space-y-1">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            to={child.href}
-                            className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`block px-3 py-2 rounded-md text-base font-medium ${
-                        isActive(item.href)
-                          ? 'text-blue-600 bg-blue-50'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                      }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
+                      </Link>
+                    )}
+                  </div>
+                ))}
+                <div className="pt-4 border-t border-gray-200">
+                  <Link
+                    to="/contact"
+                    className="block w-full text-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Get Started
+                  </Link>
                 </div>
-              ))}
-              <div className="pt-4">
-                <Link
-                  to="/contact"
-                  className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </nav>
       </header>
 
       {/* Main Content */}
@@ -180,68 +187,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Company Info */}
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">Z</span>
-                </div>
-                <span className="text-xl font-bold">Zion Tech Group</span>
-              </div>
-              <p className="text-slate-300 mb-4 max-w-md">
-                Building autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">
-                  <span className="sr-only">LinkedIn</span>
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.032-3.047-1.033 0-1.191.847-1.191 1.972v5.644H12.5v-6.5c0-1.328-.027-3.047-1.032-3.047-1.033 0-1.191.847-1.191 1.972v5.644H8.5v-6.5c0-1.328-.027-3.047-1.032-3.047-1.033 0-1.191.847-1.191 1.972v5.644H4.5V9h3.554v-1.5c0-1.328.027-3.047 1.032-3.047 1.033 0 1.191.847 1.191 1.972V9h3.554v-1.5c0-1.328.027-3.047 1.032-3.047 1.033 0 1.191.847 1.191 1.972V9h3.554v11.452z"/>
-                  </svg>
-                </a>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">
-                  <span className="sr-only">Twitter</span>
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
+      {/* Enhanced Footer */}
+      <EnhancedFooter />
 
-            {/* Services */}
-            <div>
-              <h3 className="text-sm font-semibold text-slate-300 tracking-wider uppercase mb-4">Services</h3>
-              <ul className="space-y-2">
-                <li><a href="/services#ai" className="text-slate-400 hover:text-white transition-colors">AI Systems</a></li>
-                <li><a href="/services#cloud" className="text-slate-400 hover:text-white transition-colors">Cloud Platforms</a></li>
-                <li><a href="/services#cybersecurity" className="text-slate-400 hover:text-white transition-colors">Cybersecurity</a></li>
-                <li><a href="/services#saas" className="text-slate-400 hover:text-white transition-colors">Micro SaaS</a></li>
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div>
-              <h3 className="text-sm font-semibold text-slate-300 tracking-wider uppercase mb-4">Company</h3>
-              <ul className="space-y-2">
-                <li><a href="/contact" className="text-slate-400 hover:text-white transition-colors">Contact</a></li>
-                <li><a href="/privacy" className="text-slate-400 hover:text-white transition-colors">Privacy</a></li>
-                <li><a href="/terms" className="text-slate-400 hover:text-white transition-colors">Terms</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-slate-800">
-            <p className="text-slate-400 text-sm text-center">
-              © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-      
-      {/* Scroll to Top Button */}
+      {/* Scroll to Top */}
       <ScrollToTop />
     </div>
   );
