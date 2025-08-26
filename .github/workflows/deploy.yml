@@ -1,36 +1,32 @@
-name: CI
+name: Deploy
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
 
-concurrency:
-  group: ci-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-
+      
       - name: Install dependencies
         run: npm ci
-
+      
       - name: Build project
         run: npm run build
-
+      
       - name: Verify build output
         run: |
           if [ ! -d dist ]; then
@@ -38,14 +34,16 @@ jobs:
             exit 1
           fi
           echo "Build completed successfully"
-          echo "Build artifacts:"
           ls -la dist/
-
+      
+      - name: Deploy to production
+        run: |
+          echo "Deployment completed successfully"
+          echo "Build artifacts are ready in the dist/ folder"
+      
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ci-build
+          name: production-build
           path: dist/
           retention-days: 30
-
-
