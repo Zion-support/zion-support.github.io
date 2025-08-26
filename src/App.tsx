@@ -21,17 +21,26 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
+
+// Lazy loaded components
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
-=======
-const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
-const Cookies = React.lazy(() => import('./pages/Cookies'));
-=======
+const EnhancedServicesShowcase = React.lazy(() => import('./pages/EnhancedServicesShowcase'));
+const ComprehensiveContact = React.lazy(() => import('./pages/ComprehensiveContact'));
 const FAQPage = React.lazy(() => import('./pages/FAQ'));
-=======
 const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices'));
-=======
+const WishlistPage = React.lazy(() => import('./pages/Wishlist'));
+const CartPage = React.lazy(() => import('./pages/Cart'));
+const Checkout = React.lazy(() => import('./pages/Checkout'));
+const InnovativeServicesShowcase = React.lazy(() => import('./pages/InnovativeServicesShowcase'));
+
+// New AI Service pages
+const AIAutonomousBusinessManager = lazy(() => import('./pages/ai-services/AIAutonomousBusinessManager'));
+const AIAutonomousBusinessPlatform = lazy(() => import('./pages/ai-services/AIAutonomousBusinessPlatform'));
+const AIAutonomousCodeReview = lazy(() => import('./pages/ai-services/AIAutonomousCodeReview'));
+
+// Direct imports
 import Home from './pages/Home';
 import AIMatcherPage from './pages/AIMatcher';
 import TalentDirectory from './pages/TalentDirectory';
@@ -71,7 +80,8 @@ const baseRoutes = [
   { path: '/enhanced-services', element: <EnhancedServicesShowcase /> },
   { path: '/ai-services', element: <AIServicesPage /> },
   { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
-=======
+  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
+  { path: '/innovative-services-2025', element: <InnovativeServicesShowcase /> },
   { path: '/micro-saas-services', element: <MicroSaasServices /> },
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/categories', element: <Categories /> },
@@ -89,21 +99,16 @@ const baseRoutes = [
   { path: '/zion-hire-ai', element: <ZionHireAI /> },
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
-// New AI Service pages to fix broken links
-const AIAutonomousBusinessManager = lazy(() => import('./pages/ai-services/AIAutonomousBusinessManager'));
-const AIAutonomousBusinessPlatform = lazy(() => import('./pages/ai-services/AIAutonomousBusinessPlatform'));
-const AIAutonomousCodeReview = lazy(() => import('./pages/ai-services/AIAutonomousCodeReview'));
-=======
-  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
-  { path: '/ai-services', element: <AIServicesPage /> },
-  { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/faq', element: <FAQPage /> },
-=======
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/cart', element: <CartPage /> },
   { path: '/checkout', element: <Checkout /> },
+  // AI Service routes
+  { path: '/ai-autonomous-business-manager', element: <AIAutonomousBusinessManager /> },
+  { path: '/ai-autonomous-business-platform', element: <AIAutonomousBusinessPlatform /> },
+  { path: '/ai-autonomous-code-review', element: <AIAutonomousCodeReview /> },
 ];
 
 // Loading Component
@@ -127,33 +132,32 @@ const App = () => {
   return (
     <WhitelabelProvider>
       <ThemeProvider>
-        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+        <Suspense fallback={<LoadingSpinner />}>
           <ErrorBoundary>
-          <Routes>
-            <Route element={<AppLayout />}>
-              {baseRoutes.map(({ path, element }) => (
-                <Route key={path} path={path} element={element} />
-              ))}
-              <Route path="/auth/*" element={<AuthRoutes />} />
-              <Route path="/dashboard/*" element={<DashboardRoutes />} />
-              <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-              <Route path="/talent/*" element={<TalentRoutes />} />
-              <Route path="/admin/*" element={<AdminRoutes />} />
-              <Route path="/mobile/*" element={<MobileAppRoutes />} />
-              <Route path="/content/*" element={<ContentRoutes />} />
-              <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-              <Route path="/community/*" element={<CommunityRoutes />} />
-              <Route path="/developers/*" element={<DeveloperRoutes />} />
-              <Route path="*" element={<ErrorRoutes />} />
-            </Route>
-          </Routes>
+            <Routes>
+              <Route element={<AppLayout />}>
+                {baseRoutes.map(({ path, element }) => (
+                  <Route key={path} path={path} element={element} />
+                ))}
+                <Route path="/auth/*" element={<AuthRoutes />} />
+                <Route path="/dashboard/*" element={<DashboardRoutes />} />
+                <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+                <Route path="/talent/*" element={<TalentRoutes />} />
+                <Route path="/admin/*" element={<AdminRoutes />} />
+                <Route path="/mobile/*" element={<MobileAppRoutes />} />
+                <Route path="/content/*" element={<ContentRoutes />} />
+                <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+                <Route path="/community/*" element={<CommunityRoutes />} />
+                <Route path="/developers/*" element={<DeveloperRoutes />} />
+                <Route path="*" element={<ErrorRoutes />} />
+              </Route>
+            </Routes>
           </ErrorBoundary>
         </Suspense>
         <Toaster />
         <SonnerToaster position="top-right" />
-        <InstallPrompt />
       </ThemeProvider>
-    </EnhancedErrorBoundary>
+    </WhitelabelProvider>
   );
 };
 
