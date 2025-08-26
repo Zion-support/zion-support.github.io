@@ -424,7 +424,11 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Phone</h3>
+<<<<<<< HEAD
                     <p className="text-gray-300">+1 (302) 464-0950</p>
+=======
+                    <p className="text-gray-300">+1 302 464 0950</p>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0542
                   </div>
                 </div>
                 
@@ -436,7 +440,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-300">info@ziontechgroup.com</p>
+                    <p className="text-gray-300">kleber@ziontechgroup.com</p>
                   </div>
                 </div>
                 
@@ -449,7 +453,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-300">San Francisco, CA</p>
+                    <p className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</p>
                   </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
                 </div>

@@ -844,6 +844,7 @@ const Services = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'AI & Machine Learning': return 'from-purple-500 to-pink-500';
@@ -861,6 +862,9 @@ const Services = () => {
       default: return 'from-gray-500 to-slate-500';
 =======
   const emergingTech = [
+=======
+    // Existing Micro SAAS Services
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0542
     {
       title: "Quantum Computing",
       icon: <Cpu className="w-8 h-8" />,
@@ -886,8 +890,190 @@ const Services: React.FC = () => {
   const services = [
     // Core AI & Technology Services
     {
+<<<<<<< HEAD
       title: "AI Business Intelligence Suite",
       description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting for data-driven decision making.",
+=======
+      title: "Email Marketing Automation",
+      description: "Intelligent email campaigns with personalization and automation",
+      icon: "📧",
+      features: ["Behavioral triggers", "A/B testing", "Personalization", "Analytics"],
+      path: "/services/email-automation",
+      pricing: "$89 - $399/month",
+      benefits: ["3x higher engagement", "Automated campaigns", "ROI tracking"]
+    },
+    {
+      title: "Project Management AI",
+      description: "AI-powered project planning, resource allocation, and risk management",
+      icon: "📋",
+      features: ["Smart scheduling", "Resource optimization", "Risk prediction", "Progress tracking"],
+      path: "/services/project-ai",
+      pricing: "$129 - $549/month",
+      benefits: ["20% faster delivery", "Resource optimization", "Risk mitigation"]
+    },
+
+    // NEW INNOVATIVE MICRO SAAS SERVICES
+    {
+      title: "AI-Powered HR Assistant",
+      description: "Intelligent HR automation for recruitment, onboarding, and employee management",
+      icon: "👥",
+      features: ["Resume screening", "Interview scheduling", "Employee onboarding", "Performance tracking"],
+      path: "/services/hr-assistant",
+      pricing: "$199 - $799/month",
+      benefits: ["70% faster hiring", "Reduced bias", "Improved retention"]
+    },
+    {
+      title: "Smart Inventory Management",
+      description: "AI-driven inventory optimization and supply chain management",
+      icon: "📦",
+      features: ["Demand forecasting", "Automated reordering", "Supplier management", "Real-time tracking"],
+      path: "/services/inventory-management",
+      pricing: "$149 - $599/month",
+      benefits: ["30% inventory reduction", "Zero stockouts", "Cost optimization"]
+    },
+    {
+      title: "AI Legal Document Analyzer",
+      description: "Automated legal document review and contract analysis",
+      icon: "⚖️",
+      features: ["Contract analysis", "Risk assessment", "Compliance checking", "Legal research"],
+      path: "/services/legal-ai",
+      pricing: "$299 - $1,199/month",
+      benefits: ["90% faster review", "Risk identification", "Compliance assurance"]
+    },
+    {
+      title: "Smart Financial Planning",
+      description: "AI-powered financial planning and investment advisory platform",
+      icon: "💰",
+      features: ["Portfolio optimization", "Risk assessment", "Tax planning", "Goal tracking"],
+      path: "/services/financial-planning",
+      pricing: "$99 - $399/month",
+      benefits: ["Optimized returns", "Risk management", "Tax efficiency"]
+    },
+    {
+      title: "AI Sales Intelligence",
+      description: "Predictive sales analytics and lead scoring automation",
+      icon: "🎯",
+      features: ["Lead scoring", "Sales forecasting", "Pipeline analytics", "Performance insights"],
+      path: "/services/sales-intelligence",
+      pricing: "$179 - $699/month",
+      benefits: ["25% increase in conversions", "Better lead quality", "Sales optimization"]
+    },
+    {
+      title: "Smart Customer Feedback",
+      description: "AI-powered sentiment analysis and customer feedback management",
+      icon: "💬",
+      features: ["Sentiment analysis", "Feedback categorization", "Trend identification", "Action recommendations"],
+      path: "/services/feedback-management",
+      pricing: "$79 - $299/month",
+      benefits: ["Real-time insights", "Improved satisfaction", "Proactive support"]
+    },
+    {
+      title: "AI Marketing Attribution",
+      description: "Multi-channel marketing attribution and ROI optimization",
+      icon: "📈",
+      features: ["Cross-channel tracking", "ROI analysis", "Budget optimization", "Performance insights"],
+      path: "/services/marketing-attribution",
+      pricing: "$199 - $799/month",
+      benefits: ["Accurate ROI tracking", "Budget optimization", "Performance improvement"]
+    },
+    {
+      title: "Smart Vendor Management",
+      description: "AI-powered vendor selection, performance tracking, and relationship management",
+      icon: "🤝",
+      features: ["Vendor scoring", "Performance monitoring", "Contract management", "Cost optimization"],
+      path: "/services/vendor-management",
+      pricing: "$129 - $499/month",
+      benefits: ["Better vendor selection", "Cost reduction", "Performance improvement"]
+    },
+    {
+      title: "AI Compliance Monitor",
+      description: "Automated compliance monitoring and regulatory reporting",
+      icon: "✅",
+      features: ["Regulatory tracking", "Compliance alerts", "Audit preparation", "Risk assessment"],
+      path: "/services/compliance-monitor",
+      pricing: "$249 - $999/month",
+      benefits: ["Compliance assurance", "Risk mitigation", "Audit readiness"]
+    },
+    {
+      title: "Smart Energy Management",
+      description: "AI-powered energy consumption optimization and sustainability tracking",
+      icon: "⚡",
+      features: ["Usage optimization", "Cost analysis", "Sustainability tracking", "Predictive maintenance"],
+      path: "/services/energy-management",
+      pricing: "$179 - $699/month",
+      benefits: ["20% energy savings", "Cost reduction", "Sustainability goals"]
+    },
+
+    // NEW ADVANCED IT SERVICES
+    {
+      title: "Quantum Computing Consulting",
+      description: "Expert guidance on quantum computing implementation and strategy",
+      icon: "⚛️",
+      features: ["Quantum strategy", "Use case identification", "Vendor selection", "Implementation planning"],
+      path: "/services/quantum-consulting",
+      pricing: "$5,000 - $25,000/month",
+      benefits: ["Future-ready strategy", "Competitive advantage", "Innovation leadership"]
+    },
+    {
+      title: "Edge Computing Solutions",
+      description: "Distributed computing infrastructure for IoT and real-time applications",
+      icon: "🌐",
+      features: ["Edge deployment", "Latency optimization", "IoT integration", "Real-time processing"],
+      path: "/services/edge-computing",
+      pricing: "$3,000 - $20,000/month",
+      benefits: ["Ultra-low latency", "Real-time processing", "Cost optimization"]
+    },
+    {
+      title: "5G Network Optimization",
+      description: "5G network design, deployment, and optimization services",
+      icon: "📡",
+      features: ["Network planning", "Performance optimization", "Coverage analysis", "Capacity planning"],
+      path: "/services/5g-optimization",
+      pricing: "$4,000 - $30,000/month",
+      benefits: ["Maximum performance", "Optimal coverage", "Future scalability"]
+    },
+    {
+      title: "Blockchain Infrastructure",
+      description: "Enterprise blockchain development and deployment services",
+      icon: "🔗",
+      features: ["Smart contracts", "DApp development", "Consensus mechanisms", "Security auditing"],
+      path: "/services/blockchain",
+      pricing: "$5,000 - $40,000/month",
+      benefits: ["Transparency", "Security", "Automation"]
+    },
+    {
+      title: "IoT Platform Development",
+      description: "Custom IoT platform development and device management",
+      icon: "🌍",
+      features: ["Device management", "Data collection", "Analytics dashboard", "Security framework"],
+      path: "/services/iot-platform",
+      pricing: "$3,500 - $25,000/month",
+      benefits: ["Connected ecosystem", "Data insights", "Operational efficiency"]
+    },
+    {
+      title: "Zero Trust Architecture",
+      description: "Modern security architecture implementation and management",
+      icon: "🛡️",
+      features: ["Identity verification", "Access control", "Network segmentation", "Continuous monitoring"],
+      path: "/services/zero-trust",
+      pricing: "$4,500 - $35,000/month",
+      benefits: ["Enhanced security", "Compliance", "Risk reduction"]
+    },
+
+    // NEW ADVANCED AI SERVICES
+    {
+      title: "AI Ethics & Governance",
+      description: "AI ethics framework development and governance implementation",
+      icon: "⚖️",
+      features: ["Ethics framework", "Bias detection", "Compliance monitoring", "Audit trails"],
+      path: "/services/ai-ethics",
+      pricing: "$1,500 - $12,000/month",
+      benefits: ["Ethical AI", "Compliance assurance", "Risk mitigation"]
+    },
+    {
+      title: "AI Model Training",
+      description: "Custom AI model development and training services",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0542
       icon: "🧠",
       features: ["AI-powered data analysis", "Predictive analytics", "Real-time dashboards", "Natural language queries", "Multi-source integration"],
       path: "/services/ai-business-intelligence",
@@ -895,6 +1081,7 @@ const Services: React.FC = () => {
       benefits: ["70% faster decision-making", "85% improved forecasting accuracy", "Data-driven culture", "Hidden opportunity identification"]
     },
     {
+<<<<<<< HEAD
       title: "AI Customer Experience Platform",
       description: "Comprehensive AI-powered customer experience platform that personalizes customer interactions, predicts customer needs, and optimizes customer journeys across all touchpoints.",
       icon: "🎯",
@@ -1137,6 +1324,246 @@ const Services: React.FC = () => {
       pricing: "$1,499 - $6,000/month",
       benefits: ["90% project success rate", "70% risk reduction", "On-time delivery", "Stakeholder satisfaction"]
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
+=======
+      title: "Natural Language Processing",
+      description: "Advanced NLP solutions for text analysis and language understanding",
+      icon: "📝",
+      features: ["Text analysis", "Sentiment analysis", "Language translation", "Custom models"],
+      path: "/services/nlp",
+      pricing: "$2,500 - $20,000/month",
+      benefits: ["Text understanding", "Automated processing", "Insight extraction"]
+    },
+    {
+      title: "Computer Vision Solutions",
+      description: "AI-powered image and video analysis for various industries",
+      icon: "👁️",
+      features: ["Object detection", "Image classification", "Video analysis", "Custom training"],
+      path: "/services/computer-vision",
+      pricing: "$4,000 - $30,000/month",
+      benefits: ["Automated analysis", "Quality control", "Process automation"]
+    },
+    {
+      title: "Predictive Analytics Platform",
+      description: "AI-powered predictive analytics for business forecasting",
+      icon: "🔮",
+      features: ["Data modeling", "Forecasting algorithms", "Visualization tools", "API integration"],
+      path: "/services/predictive-analytics",
+      pricing: "$3,500 - $25,000/month",
+      benefits: ["Data-driven decisions", "Risk mitigation", "Opportunity identification"]
+    },
+    {
+      title: "AI Chatbot Development",
+      description: "Custom AI chatbots for customer service and support",
+      icon: "🤖",
+      features: ["Natural language processing", "Multi-language support", "Integration APIs", "Analytics dashboard"],
+      path: "/services/ai-chatbot",
+      pricing: "$2,000 - $15,000/month",
+      benefits: ["24/7 customer support", "Instant responses", "Cost reduction"]
+    },
+    {
+      title: "AI-Powered Fraud Detection",
+      description: "Advanced fraud detection and prevention using machine learning",
+      icon: "🚨",
+      features: ["Real-time monitoring", "Pattern recognition", "Risk scoring", "Alert system"],
+      path: "/services/fraud-detection",
+      pricing: "$3,000 - $25,000/month",
+      benefits: ["Fraud prevention", "Cost savings", "Risk reduction"]
+    },
+    {
+      title: "AI Supply Chain Optimization",
+      description: "Intelligent supply chain optimization and demand forecasting",
+      icon: "🚚",
+      features: ["Demand forecasting", "Route optimization", "Inventory management", "Supplier analytics"],
+      path: "/services/supply-chain-ai",
+      pricing: "$4,000 - $30,000/month",
+      benefits: ["Cost reduction", "Efficiency improvement", "Risk mitigation"]
+    },
+    {
+      title: "AI-Powered Quality Control",
+      description: "Automated quality control and defect detection systems",
+      icon: "🔍",
+      features: ["Visual inspection", "Defect detection", "Quality metrics", "Process optimization"],
+      path: "/services/quality-control-ai",
+      pricing: "$2,500 - $20,000/month",
+      benefits: ["Quality improvement", "Cost reduction", "Process efficiency"]
+    },
+    {
+      title: "AI Customer Segmentation",
+      description: "Intelligent customer segmentation and personalized marketing",
+      icon: "👥",
+      features: ["Behavioral analysis", "Segmentation models", "Personalization", "Campaign optimization"],
+      path: "/services/customer-segmentation",
+      pricing: "$1,500 - $12,000/month",
+      benefits: ["Better targeting", "Higher conversions", "ROI improvement"]
+    },
+
+    // NEW EMERGING TECHNOLOGY SERVICES
+    {
+      title: "Metaverse Development",
+      description: "Virtual and augmented reality platform development",
+      icon: "🥽",
+      features: ["VR/AR development", "3D modeling", "Interactive experiences", "Platform integration"],
+      path: "/services/metaverse",
+      pricing: "$8,000 - $60,000/month",
+      benefits: ["Innovation leadership", "New revenue streams", "Customer engagement"]
+    },
+    {
+      title: "Web3 Development",
+      description: "Decentralized application development and blockchain integration",
+      icon: "🌐",
+      features: ["DApp development", "Smart contracts", "DeFi solutions", "NFT platforms"],
+      path: "/services/web3",
+      pricing: "$6,000 - $45,000/month",
+      benefits: ["Decentralization", "Innovation", "New business models"]
+    },
+    {
+      title: "AI-Powered Cybersecurity",
+      description: "Next-generation cybersecurity using artificial intelligence",
+      icon: "🤖🔒",
+      features: ["Threat detection", "Behavioral analysis", "Automated response", "Predictive security"],
+      path: "/services/ai-cybersecurity",
+      pricing: "$5,000 - $40,000/month",
+      benefits: ["Proactive protection", "Zero-day prevention", "Automated response"]
+    },
+    {
+      title: "Quantum-Safe Cryptography",
+      description: "Post-quantum cryptography implementation and migration",
+      icon: "🔐",
+      features: ["Algorithm selection", "Implementation", "Testing", "Migration planning"],
+      path: "/services/quantum-crypto",
+      pricing: "$4,000 - $30,000/month",
+      benefits: ["Future security", "Quantum resistance", "Compliance"]
+    },
+    {
+      title: "AI-Powered Healthcare",
+      description: "Healthcare AI solutions for diagnosis and patient care",
+      icon: "🏥",
+      features: ["Medical imaging", "Diagnostic assistance", "Patient monitoring", "Drug discovery"],
+      path: "/services/healthcare-ai",
+      pricing: "$8,000 - $60,000/month",
+      benefits: ["Improved diagnosis", "Better care", "Cost reduction"]
+    },
+    {
+      title: "Green Tech Solutions",
+      description: "Sustainable technology solutions for environmental impact",
+      icon: "🌱",
+      features: ["Carbon tracking", "Energy optimization", "Sustainability reporting", "Green infrastructure"],
+      path: "/services/green-tech",
+      pricing: "$3,000 - $25,000/month",
+      benefits: ["Environmental impact", "Cost savings", "Compliance"]
+    },
+
+    // NEW INNOVATIVE MICRO SAAS SERVICES - 2025
+    {
+      title: "AI-Powered Social Media Management",
+      description: "Intelligent social media automation with content creation and analytics",
+      icon: "📱",
+      features: ["AI content generation", "Automated posting", "Engagement analytics", "Trend prediction", "Multi-platform management"],
+      path: "/services/social-media-ai",
+      pricing: "$149 - $899/month",
+      benefits: ["3x engagement increase", "Time savings", "Better reach", "Automated optimization"]
+    },
+    {
+      title: "Smart Email Marketing Automation",
+      description: "Advanced email marketing with AI-driven personalization and optimization",
+      icon: "📧",
+      features: ["AI personalization", "Behavioral triggers", "A/B testing", "Predictive analytics", "Advanced segmentation"],
+      path: "/services/email-automation-advanced",
+      pricing: "$199 - $1,299/month",
+      benefits: ["40% higher open rates", "Better conversions", "Automated optimization", "ROI tracking"]
+    },
+    {
+      title: "AI-Powered SEO Optimization",
+      description: "Intelligent SEO optimization with automated content and keyword analysis",
+      icon: "🔍",
+      features: ["Keyword research automation", "Content optimization", "Ranking tracking", "Competitor analysis", "Performance reporting"],
+      path: "/services/seo-ai",
+      pricing: "$299 - $1,999/month",
+      benefits: ["50% ranking improvement", "Traffic growth", "Automated optimization", "Comprehensive reporting"]
+    },
+    {
+      title: "Smart Customer Support Automation",
+      description: "AI-powered customer support with intelligent ticket routing and resolution",
+      icon: "🆘",
+      features: ["Intelligent routing", "Automated responses", "Sentiment analysis", "Escalation prediction", "Performance analytics"],
+      path: "/services/support-automation",
+      pricing: "$179 - $799/month",
+      benefits: ["80% faster resolution", "24/7 support", "Customer satisfaction", "Cost reduction"]
+    },
+    {
+      title: "AI-Powered Lead Generation",
+      description: "Intelligent lead generation with predictive scoring and qualification",
+      icon: "🎯",
+      features: ["Predictive lead scoring", "Automated qualification", "Behavioral tracking", "Nurture campaigns", "ROI analytics"],
+      path: "/services/lead-generation-ai",
+      pricing: "$249 - $1,499/month",
+      benefits: ["3x higher conversion rates", "Better lead quality", "Automated nurturing", "Increased revenue"]
+    },
+    {
+      title: "Smart Event Management Platform",
+      description: "AI-powered event management with automated planning and optimization",
+      icon: "🎪",
+      features: ["Automated planning", "Attendee engagement", "Resource optimization", "Real-time analytics", "Post-event insights"],
+      path: "/services/event-management",
+      pricing: "$399 - $2,499/month",
+      benefits: ["Reduced planning time", "Better attendee experience", "Resource optimization", "ROI tracking"]
+    },
+
+    // NEW ADVANCED IT SERVICES - 2025
+    {
+      title: "Zero Trust Security Architecture",
+      description: "Comprehensive zero trust security implementation and management",
+      icon: "🛡️",
+      features: ["Identity verification", "Access control", "Network segmentation", "Continuous monitoring", "Threat detection"],
+      path: "/services/zero-trust",
+      pricing: "$4,500 - $35,000/month",
+      benefits: ["Enhanced security", "Compliance assurance", "Risk reduction", "Operational efficiency"]
+    },
+    {
+      title: "Edge Computing Infrastructure",
+      description: "Distributed edge computing solutions for IoT and real-time applications",
+      icon: "🌐",
+      features: ["Edge deployment", "Latency optimization", "IoT integration", "Real-time processing", "Scalable infrastructure"],
+      path: "/services/edge-computing",
+      pricing: "$3,000 - $25,000/month",
+      benefits: ["Ultra-low latency", "Real-time processing", "Cost optimization", "Scalable performance"]
+    },
+    {
+      title: "5G Network Optimization",
+      description: "5G network design, deployment, and performance optimization",
+      icon: "📡",
+      features: ["Network planning", "Performance optimization", "Coverage analysis", "Capacity planning", "Monitoring"],
+      path: "/services/5g-optimization",
+      pricing: "$4,000 - $30,000/month",
+      benefits: ["Maximum performance", "Optimal coverage", "Future scalability", "Cost efficiency"]
+    },
+    {
+      title: "AI-Powered DevOps Automation",
+      description: "Intelligent DevOps automation with AI-driven optimization",
+      icon: "🚀",
+      features: ["CI/CD automation", "Performance monitoring", "Resource optimization", "Deployment automation", "Incident management"],
+      path: "/services/devops-ai",
+      pricing: "$2,500 - $20,000/month",
+      benefits: ["Faster deployments", "Reduced downtime", "Cost optimization", "Improved reliability"]
+    },
+    {
+      title: "Quantum-Safe Cryptography",
+      description: "Post-quantum cryptography implementation and migration services",
+      icon: "🔐",
+      features: ["Algorithm selection", "Implementation", "Testing", "Migration planning", "Compliance assurance"],
+      path: "/services/quantum-crypto",
+      pricing: "$4,000 - $30,000/month",
+      benefits: ["Future security", "Quantum resistance", "Compliance", "Risk mitigation"]
+    },
+    {
+      title: "Smart Data Center Management",
+      description: "AI-powered data center optimization and management",
+      icon: "🏢",
+      features: ["Energy optimization", "Capacity planning", "Performance monitoring", "Predictive maintenance", "Cost management"],
+      path: "/services/data-center-ai",
+      pricing: "$3,500 - $25,000/month",
+      benefits: ["Energy savings", "Performance optimization", "Cost reduction", "Operational efficiency"]
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0542
     }
   ];
 
@@ -4609,6 +5036,17 @@ export default Services;
             >
               View Innovative Services 2025
             </Link>
+<<<<<<< HEAD
+=======
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+            >
+              Call: +1 302 464 0950
+            </a>
+          </div>
+          <div className="mb-6 flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0542
             <Link
               to="/comprehensive-pricing-2025"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
@@ -4639,6 +5077,12 @@ export default Services;
               className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Learn More About Us
+            </Link>
+            <Link
+              to="/advanced-services-2025"
+              className="inline-flex items-center px-6 py-2 text-cyan-400 hover:text-cyan-300 border border-cyan-400 rounded-lg transition-all duration-300"
+            >
+              Advanced Services 2025 →
             </Link>
           </div>
 <<<<<<< HEAD
