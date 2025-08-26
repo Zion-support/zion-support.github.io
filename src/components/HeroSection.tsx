@@ -51,8 +51,15 @@ const HeroSection: React.FC = () => {
     { icon: "⚡", title: "Lightning Fast", description: "Sub-second response times" }
   ];
 
+  const techFeatures = [
+    { icon: "🤖", label: "AI-Powered", description: "Advanced AI algorithms" },
+    { icon: "🔮", label: "Quantum Ready", description: "Future-proof technology" },
+    { icon: "🌐", label: "Cloud Native", description: "Scalable architecture" },
+    { icon: "🛡️", label: "Enterprise Grade", description: "Production ready" }
+  ];
+
   return (
-    <section className="relative overflow-hidden min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
+    <section className="relative overflow-hidden min-h-screen flex items-center justify-center bg-zion-gradient">
       {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-cyan/30 animate-float" />
@@ -61,12 +68,11 @@ const HeroSection: React.FC = () => {
         <div className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan/25 animate-float floating-delay-3" />
         
         {/* Enhanced Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.08)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
         
-        {/* Floating Tech Icons */}
-        <div className="absolute top-1/5 right-1/6 text-4xl opacity-20 animate-float floating-delay-4">🤖</div>
-        <div className="absolute bottom-1/5 left-1/6 text-3xl opacity-20 animate-float floating-delay-5">🔮</div>
-        <div className="absolute top-1/3 left-1/4 text-2xl opacity-20 animate-float floating-delay-6">⚡</div>
+        {/* Additional floating elements */}
+        <div className="absolute top-1/6 right-1/6 w-2 h-2 rounded-full bg-zion-purple/30 animate-float floating-delay-4" />
+        <div className="absolute bottom-1/3 left-1/6 w-3 h-3 rounded-full bg-zion-cyan/20 animate-float floating-delay-5" />
       </div>
 
       {/* Main Content */}
@@ -78,13 +84,12 @@ const HeroSection: React.FC = () => {
       >
         {/* Enhanced Badge */}
         <motion.div 
-          className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-8 backdrop-blur-sm shadow-lg"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-6 backdrop-blur-sm hover:bg-zion-cyan/30 transition-all duration-300"
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
         >
-          <span className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse" />
-          <span className="font-semibold">🚀 AI-Powered Technology Solutions</span>
-          <span className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse" />
+          <span className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse" />
+          🚀 AI-Powered Technology Solutions
         </motion.div>
 
         {/* Enhanced Main Heading */}
@@ -94,9 +99,7 @@ const HeroSection: React.FC = () => {
         >
           <span className="text-white drop-shadow-lg">The Future of</span>
           <br />
-          <span className="gradient-text bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent drop-shadow-lg">
-            Tech & AI
-          </span>
+          <span className="gradient-text animate-gradient">Tech & AI</span>
           <br />
           <span className="text-white drop-shadow-lg">Marketplace</span>
         </motion.h1>
@@ -121,7 +124,7 @@ const HeroSection: React.FC = () => {
         >
           <Link
             to="/services"
-            className="btn-primary text-lg py-5 px-10 neon-border transform hover:scale-105 transition-all duration-300 shadow-2xl"
+            className="btn-primary text-lg py-4 px-8 neon-border hover:scale-105 transition-transform duration-300"
           >
             <span className="flex items-center gap-3">
               <span className="text-2xl">🚀</span>
@@ -132,7 +135,7 @@ const HeroSection: React.FC = () => {
           
           <a
             href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry"
-            className="btn-secondary text-lg py-5 px-10 transform hover:scale-105 transition-all duration-300 shadow-xl"
+            className="btn-secondary text-lg py-4 px-8 hover:scale-105 transition-transform duration-300"
           >
             <span className="flex items-center gap-3">
               <span className="text-2xl">💬</span>
@@ -162,27 +165,30 @@ const HeroSection: React.FC = () => {
           ))}
         </motion.div>
 
-        {/* Enhanced Key Features Grid */}
+        {/* New Tech Features Section */}
         <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16"
+          className="max-w-4xl mx-auto mb-12"
           variants={itemVariants}
         >
-          {keyFeatures.map((feature, index) => (
-            <motion.div
-              key={index}
-              className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 group"
-              whileHover={{ scale: 1.05, y: -5 }}
-            >
-              <div className="text-3xl mb-3 group-hover:animate-bounce-gentle">{feature.icon}</div>
-              <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-              <p className="text-zion-slate-light text-sm">{feature.description}</p>
-            </motion.div>
-          ))}
+          <h3 className="text-2xl font-semibold text-white mb-6">✨ Technology Features</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {techFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300"
+                whileHover={{ scale: 1.05, y: -5 }}
+              >
+                <div className="text-2xl mb-2">{feature.icon}</div>
+                <div className="text-zion-cyan font-semibold text-sm mb-1">{feature.label}</div>
+                <div className="text-zion-slate-light text-xs">{feature.description}</div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Enhanced Contact Info Card */}
         <motion.div 
-          className="glass max-w-3xl mx-auto p-8 rounded-3xl border border-white/20 shadow-2xl"
+          className="glass max-w-2xl mx-auto p-6 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300"
           variants={itemVariants}
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300 }}
@@ -224,17 +230,22 @@ const HeroSection: React.FC = () => {
           className="flex flex-wrap justify-center items-center gap-4 mt-12 text-zion-slate-light text-sm"
           variants={itemVariants}
         >
-          {[
-            { text: "AI-Powered Matching", color: "from-zion-cyan to-zion-blue" },
-            { text: "Verified Professionals", color: "from-zion-purple to-zion-cyan" },
-            { text: "Secure Payments", color: "from-zion-blue to-zion-green" },
-            { text: "Enterprise Security", color: "from-zion-cyan to-zion-purple" }
-          ].map((pill, index) => (
-            <div key={index} className={`flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${pill.color} bg-opacity-20 border border-zion-cyan/30 rounded-full hover:scale-105 transition-all duration-300`}>
-              <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse" />
-              <span className="font-medium">{pill.text}</span>
-            </div>
-          ))}
+          <div className="flex items-center gap-2 px-3 py-1 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full hover:bg-zion-cyan/30 transition-colors duration-300">
+            <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse" />
+            <span>AI-Powered Matching</span>
+          </div>
+          <div className="flex items-center gap-2 px-3 py-1 bg-zion-purple/20 border border-zion-purple/30 rounded-full hover:bg-zion-purple/30 transition-colors duration-300">
+            <div className="w-2 h-2 bg-zion-purple rounded-full animate-pulse" />
+            <span>Verified Professionals</span>
+          </div>
+          <div className="flex items-center gap-2 px-3 py-1 bg-zion-blue/20 border border-zion-blue/30 rounded-full hover:bg-zion-blue/30 transition-colors duration-300">
+            <div className="w-2 h-2 bg-zion-blue rounded-full animate-pulse" />
+            <span>Secure Payments</span>
+          </div>
+          <div className="flex items-center gap-2 px-3 py-1 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full hover:bg-zion-cyan/30 transition-colors duration-300">
+            <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse" />
+            <span>Enterprise Security</span>
+          </div>
         </motion.div>
       </motion.div>
 
@@ -244,8 +255,8 @@ const HeroSection: React.FC = () => {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-8 h-12 border-2 border-zion-cyan/50 rounded-full flex justify-center shadow-lg">
-          <div className="w-1 h-4 bg-zion-cyan rounded-full mt-2 animate-bounce" />
+        <div className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center hover:border-zion-cyan transition-colors duration-300">
+          <div className="w-1 h-3 bg-zion-cyan rounded-full mt-2 animate-bounce" />
         </div>
       </motion.div>
     </section>
