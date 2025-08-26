@@ -59,7 +59,7 @@ export default function Revolutionary2025ServicesShowcase() {
       default:
         return 0;
     }
-  ];
+  });
 
   return (
     <>
@@ -136,10 +136,10 @@ export default function Revolutionary2025ServicesShowcase() {
       </div>
     </>
   );
+}
 
 export async function getServerSideProps() {
   return {
     props: {}
   };
-}
 }

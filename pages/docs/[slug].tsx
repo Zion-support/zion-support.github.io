@@ -1,39 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import path from 'path';
-import fs from 'fs';
-import { marked } from 'marked';
 
 type DocPageProps = {
   title: string;
-  html: string;
+  content: string;
 };
 
-const DOC_FILES: string[] = [
-  'README.md',
-  'ARCHITECTURE.md',
-  'API.md',
-  'CONTRIBUTING.md',
-  'DEPLOYMENT.md',
-  'SECURITY.md',
-  'TESTING.md',
-  'README_GITHUB_ACTIONS.md',
-  'SERVICE_GENERATION_README.md',
-  'content-generation-report.md',
-  'performance-weekly-report.md',
-  'lighthouse-live-report.md',
-  'lighthouse-budgets-report.md',
-  'netlify-monitor-report.md',
-  'ci-lint-types-build-report.md',
-  'dependencies-report.md',
-  'AUTOMATION_COMPLETION_REPORT.md',
-  'README_COMPREHENSIVE_REDUNDANCY.md',
-  'README_ULTIMATE_REDUNDANCY.md',
-  'README_PM2_REDUNDANCY_COMPLETE.md'
-];
-
-export default function DocPage({ title, html }: DocPageProps) {
+export default function DocPage({ title, content }: DocPageProps) {
   return (
     <>
       <Head>
@@ -49,7 +23,23 @@ export default function DocPage({ title, html }: DocPageProps) {
           </nav>
           <article className="prose prose-invert max-w-4xl mx-auto">
             <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">{title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div className="bg-white/5 rounded-lg p-8 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4">Documentation Coming Soon</h2>
+              <p className="text-white/80 mb-4">
+                We're currently developing comprehensive documentation for our services and solutions.
+              </p>
+              <p className="text-white/60 mb-6">
+                In the meantime, please contact us for any technical questions or support needs.
+              </p>
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-blue-800">
+                <h3 className="font-semibold mb-2">Contact Information</h3>
+                <div className="space-y-1 text-sm">
+                  <p>📞 <a href="tel:+13024640950" className="hover:underline">+1 302 464 0950</a></p>
+                  <p>✉️ <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">kleber@ziontechgroup.com</a></p>
+                  <p>📍 364 E Main St STE 1008 Middletown DE 19709</p>
+                </div>
+              </div>
+            </div>
           </article>
         </main>
       </div>
@@ -58,47 +48,19 @@ export default function DocPage({ title, html }: DocPageProps) {
 }
 
 export async function getStaticPaths() {
-  const paths = DOC_FILES.map((file) => ({
-    params: { slug: file.replace(/\.md$/i, '') }
-  }));
-  return { paths, fallback: false };
+  // For now, return empty paths since we don't have documentation
+  return { paths: [], fallback: 'blocking' };
 }
 
 export async function getStaticProps(context: { params: { slug: string } }) {
   const slug = context.params.slug;
-  const rootDir = process.cwd();
-  const candidates = [
-    `${slug}.md`,
-    `${slug.toUpperCase()}.md`,
-    `${slug.toLowerCase()}.md`
-  ];
-
-  let filePath: string | null = null;
-  for (const candidate of candidates) {
-    const abs = path.join(rootDir, candidate);
-    if (fs.existsSync(abs)) {
-      filePath = abs;
-      break;
-    }
-  }
-
-  if (!filePath) {
-    const match = DOC_FILES.find((f) => f.replace(/\.md$/i, '') === slug);
-    if (match) {
-      filePath = path.join(rootDir, match);
-    }
-  }
-
-  if (!filePath) {
-    return { notFound: true };
-  }
-
-  const source = fs.readFileSync(filePath, 'utf8');
-  const html = marked.parse(source);
-  const title = path.basename(filePath).replace(/\.md$/i, '');
+  
+  // Return a simple documentation page
+  const title = slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, ' ');
+  const content = `Documentation for ${title}`;
 
   return {
-    props: { title, html }
+    props: { title, content }
   };
 }
 

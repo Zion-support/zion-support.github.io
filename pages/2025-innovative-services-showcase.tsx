@@ -343,8 +343,6 @@ export default function InnovativeServicesShowcase2025() {
                     )}
                   </div>
                 </div>
-=======
-                </div>
 
                 {/* Service Details */}
                 <div className="space-y-3 mb-6 text-sm">

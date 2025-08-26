@@ -196,10 +196,10 @@ export default function InnovativeServicesShowcase2029() {
       </div>
     </>
   );
+}
 
 export async function getServerSideProps() {
   return {
     props: {}
   };
-}
 }

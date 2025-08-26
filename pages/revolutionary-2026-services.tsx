@@ -109,10 +109,10 @@ export default function Revolutionary2026ServicesPage() {
       </div>
     </>
   );
+}
 
 export async function getServerSideProps() {
   return {
     props: {}
   };
-}
 }

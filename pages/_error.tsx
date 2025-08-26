@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { captureException } from '@/utils/sentry';
+import { useRouter } from 'next/router';
 
 interface ErrorPageProps {
   statusCode?: number;
@@ -8,22 +7,24 @@ interface ErrorPageProps {
 }
 
 export default function ErrorPage({ statusCode = 500, err }: ErrorPageProps) {
-  const location = useLocation();
+  const router = useRouter();
 
   useEffect(() => {
     if (err) {
-      captureException({
-        path: location.pathname,
-        message: err.message,
-        statusCode,
-      });
+      console.error('Error occurred:', err);
     }
-  }, [err, location.pathname, statusCode]);
+  }, [err]);
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-6 text-center">
       <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
       <p>Please try again later.</p>
+      <button 
+        onClick={() => router.push('/')}
+        className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+      >
+        Go Home
+      </button>
     </main>
   );
 }

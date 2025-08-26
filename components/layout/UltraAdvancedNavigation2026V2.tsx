@@ -69,6 +69,7 @@ export default function UltraAdvancedNavigation2026V2() {
             <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Zion Tech Group
             </Link>
+          </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -162,7 +163,7 @@ export default function UltraAdvancedNavigation2026V2() {
             {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
           </motion.button>
         </div>
-      </nav>
+      </div>
 
       {/* Mobile Menu */}
       <AnimatePresence>

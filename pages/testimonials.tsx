@@ -1,8 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import Link from 'next/link';
 
 const Testimonials: NextPage = () => {
@@ -156,8 +154,6 @@ const Testimonials: NextPage = () => {
         <meta name="description" content="Read what our clients say about working with Zion Tech Group. Discover real success stories, client reviews, and testimonials from businesses we've transformed." />
         <meta name="keywords" content="client testimonials, customer reviews, success stories, client feedback, Zion Tech Group reviews" />
       </Head>
-
-      <Navigation />
 
       <main className="container mx-auto px-4 py-16 pt-32">
         {/* Hero Section */}
@@ -395,8 +391,6 @@ const Testimonials: NextPage = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };

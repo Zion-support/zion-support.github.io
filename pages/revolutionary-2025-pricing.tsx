@@ -159,10 +159,10 @@ export default function Revolutionary2025Pricing() {
       </div>
     </>
   );
+}
 
 export async function getServerSideProps() {
   return {
     props: {}
   };
-}
 }

@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 import React, { Component, ReactNode } from "react";
 
 interface ErrorBoundaryProps {
-  fallback: ReactNode;
+  children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface ErrorBoundaryState {
@@ -25,112 +25,21 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback;
+      return this.props.fallback || (
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
+            >
+              Reload Page
+            </button>
+          </div>
+        </div>
+      );
     }
     return this.props.children;
-=======
-import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
-
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: this.generateErrorId()
-    };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null,
-      errorId: this.generateErrorId()
-    };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // In production, you might want to send this to an error reporting service
-    // Example: Sentry.captureException(error, { extra: errorInfo });
-  }
-
-  private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: this.generateErrorId()
-    });
-  };
-
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleGoBack = () => {
-    window.history.back();
-  };
-
-  private handleReportError = () => {
-    const { error, errorInfo, errorId } = this.state;
-    const errorReport = {
-      errorId,
-      message: error?.message,
-      stack: error?.stack,
-      componentStack: errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
-      url: window.location.href,
-      userAgent: navigator.userAgent
-    };
-
-    // In production, send this to your error reporting service
-    console.log('Error Report:', errorReport);
-    
-    return (
-      <ErrorFallback
-        error={error || undefined}
-        resetError={resetError}
-      />
-    );
->>>>>>> origin/main
   }
 }
-
-export default ErrorBoundary;

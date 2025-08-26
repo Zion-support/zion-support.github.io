@@ -1,95 +1,42 @@
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
-          {/* Error Message */}
-          <div className="mb-8 space-y-4">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              {t('errors.page_not_found')}
-            </h1>
-            <p className="text-zion-slate-light text-lg md:text-xl max-w-lg mx-auto">
-              {t('errors.page_not_found_details')}
-            </p>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              onClick={handleGoBack}
-              variant="outline" 
-              className="bg-zion-blue-dark border-zion-purple text-white hover:bg-zion-purple hover:border-zion-purple-light min-w-[180px]"
+export default function Custom404() {
+  return (
+    <>
+      <Head>
+        <title>404 - Page Not Found | Zion Tech Group</title>
+        <meta name="description" content="The page you're looking for doesn't exist." />
+      </Head>
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white flex items-center justify-center">
+        <div className="text-center max-w-2xl mx-auto px-6">
+          <h1 className="text-6xl md:text-8xl font-bold text-red-400 mb-6">404</h1>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Page Not Found</h2>
+          <p className="text-gray-300 mb-8 text-lg">
+            The page you're looking for doesn't exist or has been moved.
+          </p>
+          
+          <div className="space-y-4">
+            <Link
+              href="/"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" aria-hidden="true" />
-              {t('errors.go_back')}
-            </Button>
+              Go Home
+            </Link>
             
-            <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white min-w-[180px]">
-              <Link href="/">
-                <Home className="w-4 h-4 mr-2" aria-hidden="true" />
-                {t('errors.return_home')}
-              </Link>
-            </Button>
-          </div>
-
-          {/* Quick Navigation Links */}
-          <div className="bg-zion-blue-dark/50 backdrop-blur-sm rounded-2xl border border-zion-blue-light p-6 mb-8">
-            <h2 className="text-xl font-semibold text-white mb-4">
-              {t('errors.explore_marketplace')}
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Link 
-                href="/marketplace" 
-                className="flex items-center gap-3 p-3 rounded-lg bg-zion-blue-dark/70 hover:bg-zion-purple/20 text-zion-slate-light hover:text-white transition-all group"
+            <div className="pt-4">
+              <Link
+                href="/services"
+                className="text-blue-400 hover:text-blue-300 underline"
               >
-                <ShoppingCart className="w-5 h-5 text-zion-cyan group-hover:text-zion-cyan-light" aria-hidden="true" />
-                <span>{t('errors.browse_marketplace')}</span>
-                <ExternalLink className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
-              </Link>
-              
-              <Link 
-                href="/talent" 
-                className="flex items-center gap-3 p-3 rounded-lg bg-zion-blue-dark/70 hover:bg-zion-purple/20 text-zion-slate-light hover:text-white transition-all group"
-              >
-                <Users className="w-5 h-5 text-zion-cyan group-hover:text-zion-cyan-light" aria-hidden="true" />
-                <span>{t('errors.find_talent')}</span>
-                <ExternalLink className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
-              </Link>
-              
-              <Link 
-                href="/categories" 
-                className="flex items-center gap-3 p-3 rounded-lg bg-zion-blue-dark/70 hover:bg-zion-purple/20 text-zion-slate-light hover:text-white transition-all group"
-              >
-                <Search className="w-5 h-5 text-zion-cyan group-hover:text-zion-cyan-light" aria-hidden="true" />
-                <span>{t('errors.browse_categories')}</span>
-                <ExternalLink className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
-              </Link>
-              
-              <Link 
-                href="/help" 
-                className="flex items-center gap-3 p-3 rounded-lg bg-zion-blue-dark/70 hover:bg-zion-purple/20 text-zion-slate-light hover:text-white transition-all group"
-              >
-                <span className="w-5 h-5 text-zion-cyan group-hover:text-zion-cyan-light text-center leading-none font-bold" aria-hidden="true">?</span>
-                <span>{t('errors.get_help')}</span>
-                <ExternalLink className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
+                Browse Our Services
               </Link>
             </div>
           </div>
-
-          {/* Additional Info */}
-          <div className="text-sm text-zion-slate-light/70">
-            <p>
-              {t('errors.error_help_intro')}{' '}
-              <Link href="/help" className="text-zion-cyan hover:text-zion-cyan-light underline">
-                {t('errors.error_help_contact')}
-              </Link>{' '}
-              {t('errors.error_help_or')}{' '}
-              <Link href="/status" className="text-zion-cyan hover:text-zion-cyan-light underline">
-                {t('general.status_page')}
-              </Link>
-              .
-            </p>
-          </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

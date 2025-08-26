@@ -1,168 +1,143 @@
-import type { NextPage } from 'next';
+import React, { useState } from 'react';
 import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
-import Card from '../../components/ui/Card';
 import Link from 'next/link';
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { extraServices } from '../../data/extra-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { realMarketServices } from '../../data/real-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { realOperationalServices } from '../../data/real-operational-services';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
-import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
-import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
-import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-import { real2025Q3Additions } from '../../data/real-2025-q3-additions';
+import { ZION_SERVICES } from '../../src/data/services';
 
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
 const categories = [
-  'AI & Data',
-  'Developer Tools',
-  'Cloud & FinOps',
-  'Observability',
-  'Quality & Monitoring',
+  'Micro SaaS',
+  'IT Services',
+  'AI Services'
 ];
 
 export default function ServicesIndexPage() {
-  const all = (enhancedRealMicroSaasServices as unknown[])
-    .concat(
-      extraServices as unknown[],
-      additionalEnhancedServices as unknown[],
-      newlyAddedServices as unknown[],
-      curatedMarketServices as unknown[],
-      realMarketServices as unknown[],
-      new2025Services as unknown[],
-      marketValidatedServices as unknown[],
-      moreRealServices2025 as unknown[],
-      realOperationalServices as unknown[],
-      verified2025Additions as unknown[],
-      realServicesQ12025 as unknown[],
-      realEnterpriseServices2025 as unknown[],
-      realMarketAugmentations2025 as unknown[],
-      verifiedRealServices2025Batch2 as unknown[],
-      additionalLiveServices2025 as unknown[],
-      real2025Q2Additions as unknown[],
-      augmentedServicesBatch3 as unknown[],
-      realServicesQ22025 as unknown[],
-      real2025Q3Additions as unknown[]
-    );
-  const byCategory: Record<string, unknown[]> = {};
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredServices = ZION_SERVICES.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.name?.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const byCategory: Record<string, typeof ZION_SERVICES> = {};
   for (const c of categories) byCategory[c] = [];
-  // Normalize various category labels into our main buckets
-  const categoryAliases: Record<string, string> = {
-    'AI & Data': 'AI & Data',
-    'AI & Machine Learning': 'AI & Data',
-    'GenAI': 'AI & Data',
-    'Cloud & FinOps': 'Cloud & FinOps',
-    'Cloud & Data': 'Cloud & FinOps',
-    'Platform Engineering': 'Cloud & FinOps',
-    'Observability': 'Observability',
-    'Observability & Telemetry': 'Observability',
-    'Quality & Monitoring': 'Quality & Monitoring',
-    'Security & Reliability': 'Quality & Monitoring',
-    'Security & Compliance': 'Quality & Monitoring',
-    'Developer Tools': 'Developer Tools',
-    'Growth & Marketing': 'Developer Tools'
-  };
-  for (const s of all) {
-    const service = s as { category?: string };
-    const rawCat = (service.category || '').trim();
-    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
-    byCategory[mapped].push(s);
+  
+  for (const service of ZION_SERVICES) {
+    const category = service.category;
+    if (category && byCategory[category]) {
+      byCategory[category].push(service);
+    }
   }
 
   const anchorMap: Record<string, string> = {
-    'AI & Data': 'ai',
-    'Developer Tools': 'developer-tools',
-    'Cloud & FinOps': 'cloud',
-    'Observability': 'observability',
-    'Quality & Monitoring': 'quality',
+    'Micro SaaS': 'micro-saas',
+    'IT Services': 'it-services',
+    'AI Services': 'ai-services',
   };
 
-  const [shownCounts, setShownCounts] = React.useState<Record<string, number>>(() => Object.fromEntries(categories.map(c => [c, 12])));
+  const [shownCounts, setShownCounts] = useState<Record<string, number>>(() => 
+    Object.fromEntries(categories.map(c => [c, 12]))
+  );
 
   return (
-    <UltraAdvancedFuturisticBackground>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
-        <title>Zion AI Marketplace - Services</title>
-        <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Discover our comprehensive range of AI, Micro SaaS, and IT services." />
       </Head>
+      
       <div className="relative">
         <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
-        <div className="flex flex-col sm:flex-row gap-6">
-          <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
-          <div className="flex-1">
-            <div className="mb-4 flex items-center justify-between">
-              <h1 className="text-2xl font-semibold text-white">Services</h1>
-              <div className="text-sm text-white/70">{filtered.length} results</div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {filtered.map((service) => (
-                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
-              ))}
+        
+        {/* Header */}
+        <div className="text-center py-20">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+            Our Services
+          </h1>
+          <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+            Discover our comprehensive range of AI, Micro SaaS, and IT services designed to transform your business.
+          </p>
+          
+          {/* Search and Filter */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400"
+              />
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400"
+              >
+                <option value="all">All Categories</option>
+                {categories.map(cat => (
+                  <option key={cat} value={cat}>{cat}</option>
+                ))}
+              </select>
             </div>
           </div>
         </div>
 
-        {categories.map((cat) => (
-          <section key={cat} id={anchorMap[cat] || toSlug(cat)}>
-            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">{cat}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {byCategory[cat].slice(0, (shownCounts[cat] ?? 12)).map((s) => {
-                const service = s as { id?: string; name?: string; link?: string; category?: string; tagline?: string; description?: string; price?: string; period?: string };
-                const slug = service.link ? (() => { try { const u = new URL(service.link); const p = u.pathname.replace(/^\/+|\/+$/g, ''); return p.startsWith('services/') ? p.substring('services/'.length) : toSlug(service.id || service.name || ''); } catch { return toSlug(service.id || service.name || ''); } })() : toSlug(service.id || service.name || '');
-                return (
-                  <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">
-                    <div className="text-sm text-gray-400 mb-1">{service.category || 'Service'}</div>
-                    <h3 className="text-white text-xl font-semibold mb-2">{service.name}</h3>
-                    <p className="text-gray-300/90 line-clamp-3 mb-3">{service.tagline || service.description}</p>
-                    <div className="text-gray-100 font-bold mb-4">{service.price}<span className="text-sm text-gray-400 font-medium">{service.period}</span></div>
-                    <div className="flex gap-3">
-                      <Link href={service.link || `/services/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
-                      <Link href={service.link || `/services/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover:border-cyan-500/70">Learn</Link>
-                    </div>
-                  </Card>
-                );
-              })}
-            </div>
-            {byCategory[cat].length > (shownCounts[cat] ?? 12) && (
-              <div className="mt-6 flex justify-center">
-                <button
-                  onClick={() => setShownCounts(prev => ({ ...prev, [cat]: (prev[cat] ?? 12) + 12 }))}
-                  className="px-4 py-2 rounded-lg bg-gray-800/60 border border-gray-700/70 hover:border-cyan-500/50"
-                >
-                  Show more
-                </button>
+        {/* Services Grid */}
+        <div className="max-w-7xl mx-auto px-6 pb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredServices.map((service) => (
+              <div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                <div className="text-sm text-cyan-400 mb-2">{service.category}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title || service.name}</h3>
+                <p className="text-white/70 mb-4 line-clamp-3">{service.description}</p>
+                
+                {service.price && (
+                  <div className="text-2xl font-bold text-cyan-400 mb-4">
+                    ${service.price.monthly}/mo
+                  </div>
+                )}
+                
+                {service.features && service.features.length > 0 && (
+                  <div className="space-y-2 mb-6">
+                    {service.features.slice(0, 3).map((feature, index) => (
+                      <div key={index} className="flex items-center text-sm text-white/70">
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3" />
+                        {feature}
+                      </div>
+                    ))}
+                    {service.features.length > 3 && (
+                      <div className="text-white/50 text-sm">
+                        +{service.features.length - 3} more features
+                      </div>
+                    )}
+                  </div>
+                )}
+                
+                <div className="flex gap-3">
+                  <Link
+                    href={`/services/${service.id}`}
+                    className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 text-center"
+                  >
+                    Learn More
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="px-4 py-2 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+                  >
+                    Contact
+                  </Link>
+                </div>
               </div>
-            )}
-          </section>
-        ))}
+            ))}
+          </div>
+        </div>
       </div>
-    </UltraAdvancedFuturisticBackground>
-  );
-}
-
-      <QuoteRequestModal
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        service={selected}
-        onSubmit={handleSubmit}
-      />
     </div>
   );
-};
-
-export default ServicesPage;
+}

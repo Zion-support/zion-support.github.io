@@ -383,10 +383,10 @@ export default function ComprehensivePricing2029() {
       <UltraFuturisticFooter2029 />
     </div>
   );
+}
 
 export async function getServerSideProps() {
   return {
     props: {}
   };
-}
 }

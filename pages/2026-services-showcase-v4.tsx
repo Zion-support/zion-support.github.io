@@ -109,10 +109,10 @@ export default function Services2026ShowcaseV4Page() {
       </div>
     </>
   );
+}
 
 export async function getServerSideProps() {
   return {
     props: {}
   };
-}
 }
