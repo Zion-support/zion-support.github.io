@@ -4,8 +4,8 @@ import { useAuthOperations } from "../../hooks/useAuthOperations";
 import { AuthContext } from "./AuthContext";
 import { cleanupAuthState } from "../../utils/authUtils";
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useAuthState } from "./useAuthState";
-import { useAuthEventHandlers } from "./useAuthEventHandlers";
+// import { useAuthState } from "./useAuthState";
+// import { useAuthEventHandlers } from "./useAuthEventHandlers";
 import { mapProfileToUser } from "./profileMapper";
 import { loginUser, registerUser } from "@/services/authService";
 import { safeStorage } from "@/utils/safeStorage";
@@ -14,13 +14,28 @@ import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 
+function useLocalAuthState() {
+	const [user, setUser] = React.useState<any>(null)
+	const [isLoading, setIsLoading] = React.useState<boolean>(false)
+	const [onboardingStep, setOnboardingStep] = React.useState<number>(0)
+	const [tokens, setTokens] = React.useState<{accessToken: string | null; refreshToken: string | null | undefined}>({ accessToken: null, refreshToken: null })
+	return { user, setUser, isLoading, setIsLoading, onboardingStep, setOnboardingStep, tokens, setTokens }
+}
+
+function useAuthEventHandlers(setUser: (u: any)=>void, setOnboardingStep: (n: number)=>void) {
+	return {
+		handleSignedIn: (u: any) => setUser(u),
+		handleSignedOut: () => { setUser(null); setOnboardingStep(0) },
+	}
+}
+
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const {
     user, setUser,
     isLoading, setIsLoading,
     onboardingStep, setOnboardingStep,
     tokens, setTokens
-  } = useAuthState();
+  } = useLocalAuthState();
   
   const navigate = useNavigate();
   const location = useLocation();

@@ -77,10 +77,9 @@ import { Cpu, Shield, TrendingUp, Database, ArrowRight, Zap, Target, BarChart3 }
 const AIPoweredITAssetManagement = () => {
   const features = [
     {
-      description: "AI-powered discovery and mapping of all IT assets across your infrastructure"
       icon: Database,
       title: "Intelligent Asset Discovery",
-      description: "AI-powered automatic discovery and classification of all IT assets across your network infrastructure."
+      description: "AI-powered discovery and mapping of all IT assets across your infrastructure"
     },
     {
       icon: Zap,

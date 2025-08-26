@@ -127,7 +127,7 @@ const InnovativeServicesShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Search and Filter Section */}
       <section className="py-12 bg-zion-slate-light">
@@ -517,7 +517,7 @@ const InnovativeServicesShowcase: React.FC = () => {
             </div>
           )}
         </div>
-      </section>
+      </div>
 
       {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple">

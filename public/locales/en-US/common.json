@@ -21,14 +21,9 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
-<<<<<<< HEAD:public/locales/en-US/common.json
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
     "services": "Services",
-    "micro-saas": "Micro SAAS",
-=======
-    "services": "Services",
->>>>>>> origin/cursor/website-audit-and-enhancement-39b5:src/i18n/locales/en/translation.json
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
@@ -38,21 +33,17 @@
     "messages": "Messages",
     "post_job": "Post Job",
     "analytics": "Analytics",
-<<<<<<< HEAD:public/locales/en-US/common.json
     "faq": "FAQ",
-    "help": "Help Center"
-=======
+    "help": "Help Center",
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",
     "contact": "Contact",
     "products": "Products",
     "green-it": "Green IT",
-    "help": "Help Center",
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
     "sitemap": "Sitemap"
->>>>>>> origin/cursor/website-audit-and-enhancement-39b5:src/i18n/locales/en/translation.json
   },
   "auth": {
     "login": "Login",
@@ -117,42 +108,6 @@
     "deadline": "Deadline",
     "job_posted": "Job posted successfully",
     "title_placeholder": "Enter job title",
-    "description_placeholder": "Describe the job in detail",
-    "requirements_placeholder": "List required skills and qualifications",
-    "submitting": "Submitting...",
-    "post_job_button": "Post Job"
-  },
-  "language": {
-    "en": "English",
-    "es": "Español",
-    "pt": "Português",
-    "ar": "العربية",
-    "language_changed": "Language changed to {{language}}",
-    "switch_to_detected": "Switch to {{language}}?"
-  },
-  "translation": {
-    "auto_translate": "Auto-Translate",
-    "translation_success": "Translation Successful",
-    "translation_failed": "Translation Failed",
-    "content_translated": "Content has been translated successfully",
-    "no_content": "No Content to Translate",
-    "add_content_first": "Please add content in at least one language first",
-    "unknown_error": "An unknown error occurred",
-    "manager_title": "Translation Manager",
-    "manager_description": "Manage translations for the Zion AI Marketplace",
-    "search_placeholder": "Search translations...",
-    "key": "Translation Key",
-    "translations": "Translations",
-    "actions": "Actions",
-    "no_results": "No translation keys found matching your search",
-    "missing": "Not translated",
-    "missing_languages": "Missing in {{count}} languages",
-    "edit": "Edit",
-    "saved": "Saved",
-    "changes_saved": "Translation changes have been saved"
-  },
-  "error_boundary": {
-    "message": "Something went wrong.",
-    "retry": "Retry"
+    "description_placeholder": "Describe the job in detail"
   }
 }
