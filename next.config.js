@@ -1,15 +1,14 @@
 /** @type {import('next').NextConfig} */
+const assetPrefix = process.env.ASSET_PREFIX || '';
 const nextConfig = {
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
 	assetPrefix,
+	pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
 	images: {
 		// Using unoptimized to support static hosting/CDN without Next Image optimization
 		unoptimized: true
-	},
-	typescript: {
-		ignoreBuildErrors: true
 	},
 	eslint: {
 		ignoreDuringBuilds: true
