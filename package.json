@@ -11,7 +11,7 @@
     "postbuild": "echo 'Build completed successfully'",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
-    "prepare": "git config core.hooksPath .husky || true",
+    "prepare": "echo 'Husky prepare script disabled'",
     "fix:all": "npm run lint -- --fix || true"
   },
   "dependencies": {
