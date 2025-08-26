@@ -7,7 +7,7 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { Footer } from "./components/Footer";
+import Footer from "./components/Footer";
 import {
   AuthRoutes,
   DashboardRoutes,
