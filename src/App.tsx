@@ -7,6 +7,12 @@ import { Footer } from './components/Footer';
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
+
+// Lazy load service pages
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const QuantumDataAnalytics = React.lazy(() => import('./pages/services/QuantumDataAnalytics'));
+const BlockchainInfrastructure = React.lazy(() => import('./pages/services/BlockchainInfrastructure'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -31,6 +37,12 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<ServicesOverview />} />
+              
+              {/* Service Routes */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+              <Route path="/services/quantum-data-analytics" element={<QuantumDataAnalytics />} />
+              <Route path="/services/blockchain-infrastructure" element={<BlockchainInfrastructure />} />
             </Routes>
           </Suspense>
         </main>

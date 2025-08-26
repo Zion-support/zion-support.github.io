@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Search, User, Bell } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const location = useLocation();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,10 +16,10 @@ export function AppHeader() {
   };
 
   const navigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Services', href: '/services', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Home', href: '/', current: location.pathname === '/' },
+    { name: 'About', href: '/about', current: location.pathname === '/about' },
+    { name: 'Services', href: '/services', current: location.pathname.startsWith('/services') },
+    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
   ];
 
   return (
@@ -40,7 +41,11 @@ export function AppHeader() {
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                  item.current 
+                    ? 'text-cyan-400 border-b-2 border-cyan-400' 
+                    : 'text-slate-300 hover:text-cyan-400'
+                }`}
               >
                 {item.name}
               </Link>
@@ -100,7 +105,11 @@ export function AppHeader() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-slate-300 hover:text-cyan-400 block px-3 py-2 text-base font-medium transition-colors duration-200"
+                  className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
+                    item.current 
+                      ? 'text-cyan-400 bg-cyan-500/10 rounded-lg' 
+                      : 'text-slate-300 hover:text-cyan-400'
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

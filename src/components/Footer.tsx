@@ -15,13 +15,30 @@ export const Footer: React.FC = () => {
 
   const footerSections = [
     {
-      title: "Services",
+      title: "AI & ML Services",
       links: [
-        { label: "AI Solutions", path: "/services/ai" },
-        { label: "Cloud & DevOps", path: "/services/cloud" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "IT Infrastructure", path: "/services/infrastructure" },
-        { label: "Digital Transformation", path: "/services/transformation" }
+        { label: "AI Workflow Automation", path: "/services/ai-workflow-automation" },
+        { label: "AI Content Generation", path: "/services" },
+        { label: "AI Analytics Platform", path: "/services" },
+        { label: "Machine Learning Solutions", path: "/services" }
+      ]
+    },
+    {
+      title: "Quantum & Blockchain",
+      links: [
+        { label: "Quantum Data Analytics", path: "/services/quantum-data-analytics" },
+        { label: "Blockchain Infrastructure", path: "/services/blockchain-infrastructure" },
+        { label: "NFT Marketplace", path: "/services" },
+        { label: "DeFi Solutions", path: "/services" }
+      ]
+    },
+    {
+      title: "Security & Cloud",
+      links: [
+        { label: "Zero Trust Security", path: "/services" },
+        { label: "SOC 2 Compliance", path: "/services" },
+        { label: "Cloud Migration", path: "/services" },
+        { label: "DevOps Automation", path: "/services" }
       ]
     },
     {
@@ -54,7 +71,7 @@ export const Footer: React.FC = () => {
         { label: "Help Center", path: "/help" },
         { label: "Support Portal", path: "/support" },
         { label: "FAQ", path: "/faq" },
-        { label: "Consulting", path: "/services/consulting" },
+        { label: "Consulting", path: "/services" },
         { label: "Request Quote", path: "/contact" }
       ]
     }
@@ -75,7 +92,7 @@ export const Footer: React.FC = () => {
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-6">
