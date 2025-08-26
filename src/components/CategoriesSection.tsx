@@ -1,10 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
-
+import { motion } from 'framer-motion';
+import { Briefcase, HardDrive, Users, Brain, ArrowRight } from "lucide-react";
 import { GradientHeading } from "./GradientHeading";
-import Link from "next/link";
-import { Briefcase, HardDrive, Lightbulb, Users, Brain } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 
 const categories = [
   {
@@ -13,6 +10,8 @@ const categories = [
     icon: <Briefcase className="w-10 h-10" />,
     link: "/comprehensive-services",
     color: "from-purple-500 to-indigo-600",
+    features: ["Micro SAAS Solutions", "IT Infrastructure", "Cloud Services", "Digital Transformation"],
+    stats: "50+ Projects Completed"
   },
   {
     title: "AI Solutions",
@@ -20,6 +19,8 @@ const categories = [
     icon: <Brain className="w-10 h-10" />,
     link: "/ai-solutions",
     color: "from-pink-500 to-rose-600",
+    features: ["Machine Learning", "Neural Networks", "AI Integration", "Predictive Analytics"],
+    stats: "30+ AI Models Deployed"
   },
   {
     title: "Talents",
@@ -27,6 +28,8 @@ const categories = [
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
     color: "from-cyan-500 to-blue-600",
+    features: ["Expert Developers", "AI Specialists", "Tech Consultants", "Project Managers"],
+    stats: "100+ Experts Available"
   },
   {
     title: "Equipment",
@@ -34,29 +37,41 @@ const categories = [
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
     color: "from-amber-500 to-orange-600",
+    features: ["High-Performance Servers", "AI Workstations", "Network Equipment", "Storage Solutions"],
+    stats: "24/7 Support Available"
   },
 ];
 
 const specialServices = [
   {
     title: "Enhanced AI & IT Services",
-    link: "/enhanced-services"
+    link: "/enhanced-services",
+    icon: <Brain className="w-4 h-4" />,
+    description: "Advanced AI solutions with enterprise-grade IT support"
   },
   {
     title: "IT Onsite Services",
-    link: "/it-onsite-services"
+    link: "/it-onsite-services",
+    icon: <Briefcase className="w-4 h-4" />,
+    description: "Professional IT services delivered at your location"
   },
   {
     title: "AI Development",
-    link: "/ai-development"
+    link: "/ai-development",
+    icon: <Brain className="w-4 h-4" />,
+    description: "Custom AI development and integration services"
   },
   {
     title: "Cloud Migration",
-    link: "/cloud-migration"
+    link: "/cloud-migration",
+    icon: <HardDrive className="w-4 h-4" />,
+    description: "Seamless cloud migration and optimization"
   },
   {
     title: "Cybersecurity",
-    link: "/cybersecurity"
+    link: "/cybersecurity",
+    icon: <Users className="w-4 h-4" />,
+    description: "Comprehensive cybersecurity and protection services"
   }
 ];
 
@@ -140,7 +155,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <Link to={category.link} className="group block h-full">
+              <a href={category.link} className="group block h-full">
                 <motion.div 
                   className="rounded-2xl overflow-hidden h-full border border-zion-blue-light/30 bg-zion-blue-dark/80 backdrop-blur-sm p-8 transition-all duration-300 hover:border-zion-purple/50 hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:bg-zion-blue-dark"
                   variants={cardVariants}
@@ -185,7 +200,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                     <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300" />
                   </div>
                 </motion.div>
-              </Link>
+              </a>
             </motion.div>
           ))}
         </motion.div>
@@ -209,7 +224,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 whileHover={{ y: -4 }}
               >
-                <Link to={service.link} className="group block">
+                <a href={service.link} className="group block">
                   <div className="px-6 py-4 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 backdrop-blur-sm hover:shadow-lg hover:shadow-zion-purple/20">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="text-zion-purple-light group-hover:text-zion-purple transition-colors">
@@ -221,7 +236,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                       {service.description}
                     </p>
                   </div>
-                </Link>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -234,96 +249,15 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <Link 
-              to="/comprehensive-services"
+            <a 
+              href="/comprehensive-services"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple border border-zion-purple/50 hover:border-zion-purple rounded-xl text-white transition-all duration-300 shadow-lg hover:shadow-zion-purple/25 font-semibold group"
             >
               View All Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
-  return (
-    <section className="py-20 bg-zion-blue">
-      <div className="container mx-auto px-4">
-        {showTitle && (
-          <div className="text-center mb-16">
-            <GradientHeading className="mb-4">
-              Explore Our Service Categories
-            </GradientHeading>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              Discover comprehensive solutions across multiple domains
-            </p>
-          </div>
-        )}
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {categories.map((category, index) => (
-            <div key={category.title}>
-              <Link href={category.link} className="group block h-full">
-                <div className="rounded-2xl overflow-hidden h-full border border-blue-400/30 bg-gradient-to-br from-slate-800/50 to-slate-800 p-8 transition-all duration-500 hover:border-blue-400/60 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-blue-400/20 backdrop-blur-sm">
-                  <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                    <div className="text-white text-3xl">
-                      {category.icon}
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-white text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors">
-                    {category.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {category.description}
-                  </p>
-
-                  {/* Feature list */}
-                  <ul className="space-y-2 mb-6">
-                    {category.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
-                    <span className="text-sm font-medium">Learn More</span>
-                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-        
-        <div className="mt-16">
-          <h3 className="text-center text-2xl font-bold text-white mb-8">Premium Services</h3>
-          <div className="flex flex-wrap justify-center gap-6">
-            {specialServices.map((service) => (
-              <Link 
-                key={service.title}
-                href={service.link}
-                className="group flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 hover:from-blue-600/30 hover:to-cyan-600/30 border border-blue-400/30 hover:border-blue-400/50 rounded-2xl text-blue-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/20 backdrop-blur-sm"
-              >
-                {service.title}
-              </Link>
-            ))}
-          </div>
-        </div>
-        
-        <div className="mt-16 flex justify-center">
-          <Link 
-            href="/services" 
-            className="group inline-flex items-center gap-3 text-blue-400 border-b-2 border-blue-400 hover:border-blue-300 transition-colors text-lg font-medium py-2"
-          >
-            View All Services
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-        </div>
       </div>
     </section>
   );

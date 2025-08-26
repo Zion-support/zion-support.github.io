@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -7,28 +6,19 @@ import {
   Lock, 
   Eye, 
   EyeOff, 
-  User,
-  Building,
   ArrowRight,
   Shield,
   Zap,
-  Users,
-  CheckCircle
+  Users
 } from "lucide-react";
 
-export default function Signup() {
+export default function Login() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
     email: '',
-    company: '',
-    password: '',
-    confirmPassword: ''
+    password: ''
   });
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -39,23 +29,13 @@ export default function Signup() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!agreedToTerms) {
-      alert('Please agree to the terms and conditions');
-      return;
-    }
-    
-    if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match');
-      return;
-    }
-    
     setIsLoading(true);
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-    // Here you would typically make an API call to register
-    console.log('Signup attempt:', formData);
+    // Here you would typically make an API call to authenticate
+    console.log('Login attempt:', formData);
     
     setIsLoading(false);
   };
@@ -78,18 +58,9 @@ export default function Signup() {
     }
   ];
 
-  const benefits = [
-    "Access to cutting-edge AI solutions",
-    "24/7 customer support",
-    "Free consultation session",
-    "Exclusive partner discounts",
-    "Early access to new features",
-    "Dedicated account manager"
-  ];
-
   return (
     <div className="min-h-screen bg-zion-blue text-white flex">
-      {/* Left Side - Signup Form */}
+      {/* Left Side - Login Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
           {/* Header */}
@@ -102,13 +73,13 @@ export default function Signup() {
             <Link to="/" className="inline-block mb-6">
               <div className="text-3xl font-bold text-zion-cyan">Zion Tech Group</div>
             </Link>
-            <h1 className="text-3xl font-bold text-white mb-2">Create Account</h1>
+            <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
             <p className="text-zion-slate-light">
-              Join thousands of businesses transforming with AI
+              Sign in to your account to continue
             </p>
           </motion.div>
 
-          {/* Signup Form */}
+          {/* Login Form */}
           <motion.form
             onSubmit={handleSubmit}
             className="space-y-6"
@@ -116,46 +87,6 @@ export default function Signup() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {/* Name Fields */}
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="firstName" className="block text-sm font-medium text-zion-slate-light mb-2">
-                  First Name
-                </label>
-                <div className="relative">
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    required
-                    className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                    placeholder="First name"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="lastName" className="block text-sm font-medium text-zion-slate-light mb-2">
-                  Last Name
-                </label>
-                <div className="relative">
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    required
-                    className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                    placeholder="Last name"
-                  />
-                </div>
-              </div>
-            </div>
-
             {/* Email Field */}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
@@ -176,114 +107,64 @@ export default function Signup() {
               </div>
             </div>
 
-            {/* Company Field */}
+            {/* Password Field */}
             <div>
-              <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
-                Company Name
+              <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
+                Password
               </label>
               <div className="relative">
-                <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
+                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
                 <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
+                  type={showPassword ? "text" : "password"}
+                  id="password"
+                  name="password"
+                  value={formData.password}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                  placeholder="Company name (optional)"
+                  required
+                  className="w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  placeholder="Enter your password"
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
+                >
+                  {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                </button>
               </div>
             </div>
 
-            {/* Password Fields */}
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
-                  Password
-                </label>
-                <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    id="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                    required
-                    className="w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                    placeholder="Create password"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-                  >
-                    {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
-                  </button>
-                </div>
-              </div>
-              <div>
-                <label htmlFor="confirmPassword" className="block text-sm font-medium text-zion-slate-light mb-2">
-                  Confirm Password
-                </label>
-                <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-                  <input
-                    type={showConfirmPassword ? "text" : "password"}
-                    id="confirmPassword"
-                    name="confirmPassword"
-                    value={formData.confirmPassword}
-                    onChange={handleChange}
-                    required
-                    className="w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                    placeholder="Confirm password"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-                  >
-                    {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Terms Agreement */}
-            <div className="flex items-start gap-3">
-              <input
-                type="checkbox"
-                id="terms"
-                checked={agreedToTerms}
-                onChange={(e) => setAgreedToTerms(e.target.checked)}
-                className="w-4 h-4 text-zion-cyan bg-zion-blue-light/20 border-zion-purple/30 rounded focus:ring-zion-cyan focus:ring-2 mt-1"
-              />
-              <label htmlFor="terms" className="text-sm text-zion-slate-light">
-                I agree to the{' '}
-                <Link to="/terms" className="text-zion-cyan hover:text-zion-cyan-light">
-                  Terms of Service
-                </Link>{' '}
-                and{' '}
-                <Link to="/privacy" className="text-zion-cyan hover:text-zion-cyan-light">
-                  Privacy Policy
-                </Link>
+            {/* Remember Me & Forgot Password */}
+            <div className="flex items-center justify-between">
+              <label className="flex items-center">
+                <input
+                  type="checkbox"
+                  className="w-4 h-4 text-zion-cyan bg-zion-blue-light/20 border-zion-purple/30 rounded focus:ring-zion-cyan focus:ring-2"
+                />
+                <span className="ml-2 text-sm text-zion-slate-light">Remember me</span>
               </label>
+              <Link
+                to="/forgot-password"
+                className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors"
+              >
+                Forgot password?
+              </Link>
             </div>
 
             {/* Submit Button */}
             <button
               type="submit"
-              disabled={isLoading || !agreedToTerms}
+              disabled={isLoading}
               className="w-full bg-zion-purple hover:bg-zion-purple/80 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isLoading ? (
                 <>
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  Creating Account...
+                  Signing In...
                 </>
               ) : (
                 <>
-                  Create Account
+                  Sign In
                   <ArrowRight className="h-5 w-5" />
                 </>
               )}
@@ -299,7 +180,7 @@ export default function Signup() {
               </div>
             </div>
 
-            {/* Social Signup Buttons */}
+            {/* Social Login Buttons */}
             <div className="grid grid-cols-2 gap-3">
               <button
                 type="button"
@@ -324,15 +205,15 @@ export default function Signup() {
               </button>
             </div>
 
-            {/* Sign In Link */}
+            {/* Sign Up Link */}
             <div className="text-center">
               <p className="text-zion-slate-light">
-                Already have an account?{' '}
+                Don't have an account?{' '}
                 <Link
-                  to="/login"
+                  to="/signup"
                   className="text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors"
                 >
-                  Sign in here
+                  Sign up for free
                 </Link>
               </p>
             </div>
@@ -340,7 +221,7 @@ export default function Signup() {
         </div>
       </div>
 
-      {/* Right Side - Features & Benefits */}
+      {/* Right Side - Features & Info */}
       <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-zion-purple to-zion-purple-light p-12">
         <div className="w-full max-w-lg mx-auto">
           <motion.div
@@ -349,15 +230,15 @@ export default function Signup() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Join the AI Revolution
+              Transform Your Business with AI
             </h2>
             <p className="text-xl text-zion-slate-light mb-12 leading-relaxed">
-              Get access to cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 
-              Start your journey towards business innovation today.
+              Access cutting-edge AI solutions, cybersecurity services, and digital transformation expertise. 
+              Join thousands of businesses already leveraging our technology to drive growth and innovation.
             </p>
 
             {/* Features List */}
-            <div className="space-y-8 mb-12">
+            <div className="space-y-8">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
@@ -377,31 +258,12 @@ export default function Signup() {
               ))}
             </div>
 
-            {/* Benefits List */}
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold text-white mb-6">What You'll Get</h3>
-              <div className="space-y-3">
-                {benefits.map((benefit, index) => (
-                  <motion.div
-                    key={benefit}
-                    className="flex items-center gap-3"
-                    initial={{ opacity: 0, x: 30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 1 + index * 0.1 }}
-                  >
-                    <CheckCircle className="h-5 w-5 text-zion-cyan flex-shrink-0" />
-                    <span className="text-zion-slate-light">{benefit}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
             {/* Stats */}
             <motion.div
-              className="grid grid-cols-3 gap-8 text-center"
+              className="mt-16 grid grid-cols-3 gap-8 text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.5 }}
+              transition={{ duration: 0.8, delay: 1 }}
             >
               <div>
                 <div className="text-3xl font-bold text-white mb-1">500+</div>
