@@ -33,7 +33,8 @@ import {
   TrendingUp,
   Award,
   Globe,
-  Headphones
+  Headphones,
+  MapPin
 } from 'lucide-react';
 
 export default function Pricing() {
@@ -1209,7 +1210,7 @@ export default function Pricing() {
                 <p className="text-gray-300">{faq.answer}</p>
 >>>>>>> origin/cursor/website-audit-and-enhancement-bc98
               </div>
-            ))}
+            </div>
           </div>
         </div>
 <<<<<<< HEAD

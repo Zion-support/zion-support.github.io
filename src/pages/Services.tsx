@@ -5,37 +5,7 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServi
 import { ADVANCED_ENTERPRISE_SOLUTIONS } from '../data/advancedEnterpriseSolutions';
 import { SPECIALIZED_IT_SERVICES } from '../data/specializedITServices';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  Cpu, 
-  Cloud, 
-  Rocket, 
-  Target, 
-  Users, 
-  Code, 
-  Network, 
-  Database, 
-  Lock, 
-  BarChart3, 
-  Heart, 
-  DollarSign, 
-  ShoppingCart, 
-  Building,
-  Eye,
-  Zap,
-  Globe,
-  ArrowRight,
-  Search,
-  Filter,
-  Star,
-  CheckCircle,
-  Clock,
-  TrendingUp,
-  FileText,
-  MessageCircle,
-  Truck
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export function Services() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -46,232 +16,6 @@ export function Services() {
     ...INNOVATIVE_MICRO_SAAS_SERVICES,
     ...ADVANCED_ENTERPRISE_SOLUTIONS,
     ...SPECIALIZED_IT_SERVICES
-  ];
-
-  const serviceCategories = [
-    {
-      id: 'ai-ml',
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      description: 'Intelligent solutions powered by artificial intelligence',
-      services: [
-        {
-          name: 'AI Autonomous Systems',
-          path: '/services/ai-autonomous-systems',
-          description: 'Advanced autonomous AI systems that operate independently',
-          icon: Brain,
-          features: ['Self-learning algorithms', 'Predictive analytics', 'Automated decision making'],
-          pricing: 'Starting from $5,000/month'
-        },
-        {
-          name: 'AI Research Assistant',
-          path: '/ai-autonomous-research-assistant',
-          description: 'AI-powered research automation and insights',
-          icon: Brain,
-          features: ['Data analysis', 'Literature review', 'Trend identification'],
-          pricing: 'Starting from $3,000/month'
-        },
-        {
-          name: 'AI Business Intelligence',
-          path: '/services/ai-business-intelligence',
-          description: 'Advanced analytics and business insights',
-          icon: BarChart3,
-          features: ['Real-time dashboards', 'Predictive modeling', 'Performance tracking'],
-          pricing: 'Starting from $4,000/month'
-        },
-        {
-          name: 'AI Marketing Automation',
-          path: '/services/ai-marketing-automation',
-          description: 'Smart marketing optimization and automation',
-          icon: Target,
-          features: ['Customer segmentation', 'Campaign optimization', 'ROI tracking'],
-          pricing: 'Starting from $2,500/month'
-        },
-        {
-          name: 'AI Legal Document Automation',
-          path: '/services/ai-legal-document-automation',
-          description: 'AI-powered legal document generation and compliance',
-          icon: FileText,
-          features: ['Smart document generation', 'Compliance monitoring', 'Legal research automation'],
-          pricing: 'Starting from $299/month'
-        },
-        {
-          name: 'AI Healthcare Analytics',
-          path: '/services/ai-healthcare-analytics',
-          description: 'AI-powered healthcare diagnostics and patient monitoring',
-          icon: Heart,
-          features: ['Predictive diagnostics', 'Real-time monitoring', 'Population health analytics'],
-          pricing: 'Starting from $799/month'
-        },
-        {
-          name: 'AI Financial Trading',
-          path: '/services/ai-financial-trading',
-          description: 'AI-powered trading algorithms and portfolio optimization',
-          icon: TrendingUp,
-          features: ['AI trading algorithms', 'Risk management', 'High-frequency trading'],
-          pricing: 'Starting from $99/month'
-        },
-        {
-          name: 'AI Supply Chain Optimization',
-          path: '/services/ai-supply-chain-optimization',
-          description: 'AI-powered supply chain management and optimization',
-          icon: Truck,
-          features: ['Demand forecasting', 'Route optimization', 'Inventory management'],
-          pricing: 'Starting from $499/month'
-        },
-        {
-          name: 'AI Customer Service Automation',
-          path: '/services/ai-customer-service-automation',
-          description: 'AI-powered customer support and service automation',
-          icon: MessageCircle,
-          features: ['AI chatbots', 'Multi-channel support', 'Smart routing'],
-          pricing: 'Starting from $199/month'
-        }
-      ]
-    },
-    {
-      id: 'quantum',
-      title: 'Quantum Technology',
-      icon: Brain,
-      color: 'from-blue-500 to-cyan-500',
-      description: 'Next-generation quantum computing solutions',
-      services: [
-        {
-          name: 'Quantum Neural Networks',
-          path: '/quantum-neural-network-platform',
-          description: 'Quantum-powered neural networks for complex problems',
-          icon: Brain,
-          features: ['Quantum algorithms', 'Superior performance', 'Future-proof technology'],
-          pricing: 'Starting from $15,000/month'
-        },
-        {
-          name: 'Quantum Computing',
-          path: '/services/quantum-technology',
-          description: 'Quantum computing platforms and solutions',
-          icon: Cpu,
-          features: ['Quantum supremacy', 'Complex simulations', 'Cryptography'],
-          pricing: 'Starting from $20,000/month'
-        }
-      ]
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity',
-      icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      description: 'Comprehensive security and compliance solutions',
-      services: [
-        {
-          name: 'Cybersecurity Services',
-          path: '/services/cybersecurity',
-          description: 'Complete security solutions for your business',
-          icon: Shield,
-          features: ['Threat detection', 'Vulnerability assessment', 'Incident response'],
-          pricing: 'Starting from $3,500/month'
-        },
-        {
-          name: 'SOC2 Compliance Automation',
-          path: '/soc2-compliance-automation',
-          description: 'Automated compliance management and monitoring',
-          icon: Lock,
-          features: ['Automated audits', 'Real-time monitoring', 'Compliance reporting'],
-          pricing: 'Starting from $4,500/month'
-        }
-      ]
-    },
-    {
-      id: 'infrastructure',
-      title: 'Cloud & Infrastructure',
-      icon: Cpu,
-      color: 'from-blue-500 to-indigo-500',
-      description: 'Scalable cloud solutions and infrastructure management',
-      services: [
-        {
-          name: 'Cloud DevOps',
-          path: '/cloud-devops',
-          description: 'Cloud development and operations automation',
-          icon: Cloud,
-          features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting'],
-          pricing: 'Starting from $3,000/month'
-        },
-        {
-          name: 'IT Infrastructure',
-          path: '/services/it-infrastructure',
-          description: 'Complete IT infrastructure solutions',
-          icon: Network,
-          features: ['Network design', 'Hardware management', 'Performance optimization'],
-          pricing: 'Starting from $2,500/month'
-        },
-        {
-          name: '5G Enterprise Solutions',
-          path: '/5g-enterprise-solutions',
-          description: 'High-speed 5G connectivity solutions',
-          icon: Network,
-          features: ['Ultra-fast connectivity', 'Low latency', 'High bandwidth'],
-          pricing: 'Starting from $5,000/month'
-        }
-      ]
-    },
-    {
-      id: 'business',
-      title: 'Business Operations',
-      icon: Building,
-      color: 'from-green-500 to-emerald-500',
-      description: 'Streamlined business process automation',
-      services: [
-        {
-          name: 'Autonomous Business Platform',
-          path: '/autonomous-business-operations-platform',
-          description: 'Self-operating business systems and automation',
-          icon: Building,
-          features: ['Process automation', 'Workflow optimization', 'Performance analytics'],
-          pricing: 'Starting from $6,000/month'
-        },
-        {
-          name: 'AI Asset Management',
-          path: '/ai-powered-it-asset-management',
-          description: 'Intelligent IT asset management and tracking',
-          icon: Database,
-          features: ['Asset tracking', 'Lifecycle management', 'Cost optimization'],
-          pricing: 'Starting from $2,000/month'
-        }
-      ]
-    },
-    {
-      id: 'industry',
-      title: 'Industry Solutions',
-      icon: Target,
-      color: 'from-orange-500 to-yellow-500',
-      description: 'Tailored solutions for specific industries',
-      services: [
-        {
-          name: 'Healthcare Technology',
-          path: '/solutions/healthcare',
-          description: 'Technology solutions for healthcare industry',
-          icon: Heart,
-          features: ['Patient management', 'Medical analytics', 'Compliance'],
-          pricing: 'Starting from $8,000/month'
-        },
-        {
-          name: 'Financial Services',
-          path: '/services/financial-services',
-          description: 'Fintech solutions and financial technology',
-          icon: DollarSign,
-          features: ['Risk management', 'Fraud detection', 'Compliance'],
-          pricing: 'Starting from $7,000/month'
-        },
-        {
-          name: 'Manufacturing Intelligence',
-          path: '/services/manufacturing-intelligence',
-          description: 'Smart manufacturing and Industry 4.0 solutions',
-          icon: Cpu,
-          features: ['Predictive maintenance', 'Quality control', 'Supply chain optimization'],
-          pricing: 'Starting from $6,500/month'
-        }
-      ]
-    }
-
   ];
   
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
@@ -463,7 +207,7 @@ export function Services() {
               Let's discuss how our technology solutions can accelerate your growth and 
               give you a competitive edge in the market.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Link
                 to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
@@ -508,7 +252,7 @@ export function Services() {
               <div>
                 <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
                 <div className="space-y-2 text-zion-slate-light">
-                  <p>📱 +1 302 464 0950</p>
+                  <p>📱 +1 (302) 464-0950</p>
                   <p>✉️ kleber@ziontechgroup.com</p>
                   <p>📍 364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
@@ -539,6 +283,20 @@ export function Services() {
                 © 2024 Zion Tech Group. All rights reserved. | 
                 <a href="/privacy" className="ml-2 hover:text-zion-cyan transition-colors">Privacy Policy</a> | 
                 <a href="/terms" className="ml-2 hover:text-zion-cyan transition-colors">Terms of Service</a>
+              </p>
+            </div>
+            
+            {/* Advanced Services Showcase Link */}
+            <div className="text-center">
+              <Link
+                to="/advanced-services-showcase-2025"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 group"
+              >
+                <span>View Advanced Services Showcase 2025</span>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <p className="text-sm text-gray-400 mt-2">
+                Discover our cutting-edge micro SAAS solutions and emerging technology platforms
               </p>
             </div>
           </div>

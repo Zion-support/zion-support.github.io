@@ -4,16 +4,15 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-// Note: These dashboard components may need to be created or have different exports
-// import { PerformanceDashboard } from './components/PerformanceDashboard';
-// import { AnalyticsDashboard } from './components/AnalyticsDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
 import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
-// import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-// import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { MachineLearningDashboard } from './components/MachineLearningDashboard';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
@@ -21,8 +20,8 @@ import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
-import EnhancedAccessibility from './components/EnhancedAccessibility';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { EnhancedAccessibility } from './components/EnhancedAccessibility';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
 import { BrokenLinkFixer } from './components/BrokenLinkFixer';
@@ -181,22 +180,17 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            {/* <PerformanceOptimizer
-              enableMonitoring={true}
-              enableOptimizations={true}
-              showMetrics={import.meta.env.DEV}
-            > */}
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
-                {/* <EnhancedSEO 
+                <EnhancedSEO 
                   title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
-                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services."
-                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation"
-                  canonicalUrl="https://ziontechgroup.com"
+                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                  keywords={["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"]}
+                  canonical="https://ziontechgroup.com"
                   ogImage="https://ziontechgroup.com/og-image.jpg"
                   ogType="website"
                   twitterCard="summary_large_image"
-                /> */}
+                />
                 
                 <Header />
                 <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
@@ -206,19 +200,13 @@ const App: React.FC = () => {
                     <Routes>
                       {/* Main Routes */}
                       <Route path="/" element={<Home />} />
-                      <Route path="/home" element={<Home />} />
                       <Route path="/services" element={<Services />} />
                       <Route path="/ai-solutions" element={<AISolutions />} />
                       <Route path="/services-showcase" element={<ServicesShowcase />} />
-                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       <Route path="/ai-matcher" element={<AIMatcherPage />} />
                       <Route path="/talent-directory" element={<TalentDirectory />} />
                       <Route path="/talents" element={<TalentsPage />} />
                       <Route path="/emerging-tech" element={<EmergingTech />} />
-                      
-                      {/* New routes from incoming branch */}
-                      <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-                      <Route path="/pricing" element={<PricingPage />} />
                       
                       {/* Service Routes */}
                       <Route path="/ai-services" element={<AIServices />} />
@@ -237,19 +225,12 @@ const App: React.FC = () => {
                       <Route path="/help" element={<HelpCenter />} />
                       <Route path="/new-services" element={<NewServices />} />
                       
-                      {/* Additional missing pages */}
-                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
-                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
-                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
-                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
-                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
-                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirector />} />
-                      
                       {/* Company Routes */}
                       <Route path="/about" element={<About />} />
                       <Route path="/contact" element={<Contact />} />
                       <Route path="/mission" element={<Mission />} />
                       <Route path="/team" element={<Team />} />
+                      <Route path="/pricing" element={<Pricing />} />
                       <Route path="/careers" element={<Careers />} />
                       <Route path="/partners" element={<Partners />} />
                       <Route path="/blog" element={<Blog />} />
@@ -374,12 +355,12 @@ const App: React.FC = () => {
                 <SonnerToaster />
                 
                 {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility 
-                  position="bottom-right" 
-                  showOnLoad={false}
-                  enableKeyboardShortcuts={true}
-                  enableVoiceCommands={import.meta.env.DEV}
-                />
+                <EnhancedAccessibility position="bottom-right" />
+                
+                {/* Website Improvement Tools */}
+                <ContentQualityEnhancer />
+                <BrokenLinkFixer />
+                <WebsiteImprovementDashboard />
                 
                 {/* Website Improvement Tools */}
                 <ContentQualityEnhancer />
@@ -388,6 +369,9 @@ const App: React.FC = () => {
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
+                
+                {/* Scroll to Top Button */}
+                <ScrollToTop />
                 
                 {/* Collaborative Text Editor - Development Mode */}
                 {import.meta.env.DEV && (
@@ -412,36 +396,40 @@ const App: React.FC = () => {
                 )}
                 
                 {/* Development Dashboards */}
-                {/* {import.meta.env.DEV && (
+                {import.meta.env.DEV && (
                   <>
+                    {/* Performance Dashboard */}
                     <div className="fixed top-4 left-4 z-40">
                       <PerformanceDashboard />
                     </div>
                     
+                    {/* Analytics Dashboard */}
                     <div className="fixed top-4 right-4 z-40">
                       <AnalyticsDashboard />
                     </div>
                     
+                    {/* Enterprise Dashboard */}
                     <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
                       <EnterpriseDashboard />
                     </div>
                     
+                    {/* Security & Compliance Dashboard */}
                     <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
                       <SecurityComplianceDashboard />
                     </div>
                     
+                    {/* Machine Learning Dashboard */}
                     <div className="fixed top-4 right-4 z-40">
                       <MachineLearningDashboard />
                     </div>
                   </>
-                )} */}
+                )}
               </div>
-            {/* </PerformanceOptimizer> */}
-          </Router>
+            </Router>
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
-};
+}
 
 export default App;

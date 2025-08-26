@@ -1,327 +1,538 @@
 export interface SpecializedITInfrastructureService2025 {
   id: string;
-  name: string;
+  title: string;
+  description: string;
   category: string;
   subcategory: string;
-  description: string;
   price: number;
+  currency: string;
   pricingModel: string;
-  userLimit: string;
   features: string[];
   benefits: string[];
+  useCases: string[];
   targetAudience: string[];
   tags: string[];
-  marketPrice: string;
-  roi: string;
-  competitors: string[];
-  technology: string[];
-  integrations: string[];
-  compliance: string[];
   estimatedDelivery: string;
   supportLevel: string;
+  marketPrice: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
-    address: string;
   };
-  demoUrl?: string;
-  documentationUrl?: string;
-  freeTrial: boolean;
-  freeTrialDays: number;
-  uniqueValueProposition: string;
-  marketSize: string;
-  growthPotential: string;
 }
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService2025[] = [
-  // AI-Powered Edge Computing Platform
+  // Cloud-Native Infrastructure
   {
-    id: "edge-computing-ai-platform",
-    name: "EdgeAI Computing Platform",
-    category: "Edge Computing",
-    subcategory: "AI-Powered Infrastructure",
-    description: "Revolutionary AI-powered edge computing platform that brings machine learning capabilities to edge devices, enabling real-time processing, reduced latency, and improved performance for IoT and mobile applications.",
-    price: 1800,
+    id: "kubernetes-native-enterprise-platform",
+    title: "Kubernetes-Native Enterprise Infrastructure Platform",
+    description: "Enterprise-grade Kubernetes platform with advanced orchestration, security, and monitoring capabilities for modern cloud-native applications.",
+    category: "Cloud & Infrastructure",
+    subcategory: "Container Orchestration",
+    price: 1500,
+    currency: "$",
     pricingModel: "monthly",
-    userLimit: "Up to 1000 edge nodes",
     features: [
-      "AI model deployment at edge",
-      "Real-time data processing",
-      "Automatic model optimization",
-      "Edge device management",
-      "Performance monitoring",
-      "Security at edge",
-      "Scalable architecture",
-      "Multi-cloud integration"
+      "Multi-cluster management",
+      "Advanced security policies",
+      "Automated scaling",
+      "Real-time monitoring",
+      "Disaster recovery",
+      "CI/CD integration",
+      "Cost optimization",
+      "Compliance automation"
     ],
     benefits: [
-      "Reduce latency by 80%",
-      "Lower bandwidth costs by 60%",
-      "Improve application performance by 200%",
-      "Enable offline AI processing",
-      "Reduce cloud computing costs by 40%"
+      "Reduce infrastructure costs by 40%",
+      "Improve deployment speed by 300%",
+      "Enhanced security & compliance",
+      "Automated operations",
+      "Scalable architecture"
+    ],
+    useCases: [
+      "Enterprise applications",
+      "Microservices architecture",
+      "DevOps teams",
+      "Cloud-native startups",
+      "Digital transformation"
     ],
     targetAudience: [
-      "IoT device manufacturers",
-      "Mobile app developers",
-      "Industrial companies",
-      "Smart city projects",
-      "Retail chains"
+      "DevOps engineers",
+      "Infrastructure architects",
+      "Platform engineers",
+      "CTOs",
+      "IT directors"
     ],
-    tags: ["Edge Computing", "AI", "IoT", "Machine Learning", "Real-time Processing"],
-    marketPrice: "$1,800 - $6,000/month",
-    roi: "450% within 8 months",
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
-    technology: ["TensorFlow Lite", "PyTorch Mobile", "Kubernetes", "Docker", "React", "Python"],
-    integrations: ["AWS", "Azure", "GCP", "IoT platforms", "Mobile apps", "Enterprise systems"],
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
+    tags: ["Kubernetes", "Cloud-Native", "DevOps", "Microservices", "Infrastructure"],
     estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
+    supportLevel: "enterprise",
+    marketPrice: "$1,500 - $4,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    demoUrl: "https://ziontechgroup.com/demo/edge-computing-ai",
-    documentationUrl: "https://ziontechgroup.com/docs/edge-computing-ai",
-    freeTrial: true,
-    freeTrialDays: 14,
-    uniqueValueProposition: "First AI-powered edge computing platform achieving 80% latency reduction and 200% performance improvement",
-    marketSize: "$8.6 billion (edge computing market)",
-    growthPotential: "400% annual growth expected"
+      website: "https://ziontechgroup.com"
+    }
   },
-
-  // AI-Powered Zero Trust Security Platform
   {
-    id: "zero-trust-security-ai",
-    name: "ZeroTrust AI Security Platform",
-    category: "Cybersecurity",
-    subcategory: "Zero Trust Architecture",
-    description: "Advanced AI-powered zero trust security platform that continuously monitors, authenticates, and authorizes every user and device in real-time, providing enterprise-grade security for modern hybrid work environments.",
-    price: 2500,
+    id: "edge-computing-infrastructure",
+    title: "Edge Computing Infrastructure & IoT Management Platform",
+    description: "Distributed edge computing platform that brings computation closer to data sources, reducing latency and improving performance for IoT applications.",
+    category: "Edge Computing",
+    subcategory: "IoT Infrastructure",
+    price: 2200,
+    currency: "$",
     pricingModel: "monthly",
-    userLimit: "Up to 5000 users",
     features: [
-      "Continuous authentication",
-      "Behavioral analytics",
-      "Threat detection",
-      "Access control",
-      "Network segmentation",
-      "Compliance monitoring",
-      "Incident response",
-      "Security analytics"
+      "Edge node management",
+      "Real-time data processing",
+      "Low-latency computing",
+      "IoT device integration",
+      "Edge analytics",
+      "Security at edge",
+      "Scalable deployment",
+      "Performance monitoring"
     ],
     benefits: [
-      "Reduce security incidents by 90%",
-      "Improve compliance scores by 95%",
-      "Reduce security costs by 40%",
-      "Enable secure remote work",
-      "Real-time threat prevention"
+      "Reduce latency by 90%",
+      "Improve performance by 200%",
+      "Lower bandwidth costs",
+      "Enhanced reliability",
+      "Real-time processing"
+    ],
+    useCases: [
+      "IoT applications",
+      "Real-time analytics",
+      "Autonomous vehicles",
+      "Smart cities",
+      "Industrial IoT"
     ],
     targetAudience: [
-      "Enterprise companies",
-      "Financial institutions",
-      "Healthcare organizations",
-      "Government agencies",
-      "Educational institutions"
+      "IoT architects",
+      "Infrastructure engineers",
+      "Data engineers",
+      "System architects",
+      "Technology consultants"
     ],
-    tags: ["Cybersecurity", "Zero Trust", "AI", "Identity Management", "Network Security"],
-    marketPrice: "$2,500 - $10,000/month",
-    roi: "600% within 10 months",
-    competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],
-    technology: ["TensorFlow", "Machine Learning", "React", "Python", "Kubernetes", "Docker"],
-    integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "SIEM systems", "Firewalls"],
-    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
-    estimatedDelivery: "4-5 weeks",
+    tags: ["Edge Computing", "IoT", "Real-time", "Low Latency", "Distributed Systems"],
+    estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
+    marketPrice: "$2,200 - $6,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    demoUrl: "https://ziontechgroup.com/demo/zero-trust-security",
-    documentationUrl: "https://ziontechgroup.com/docs/zero-trust-security",
-    freeTrial: true,
-    freeTrialDays: 14,
-    uniqueValueProposition: "First AI-powered zero trust platform achieving 90% security incident reduction",
-    marketSize: "$19.6 billion (zero trust security market)",
-    growthPotential: "500% annual growth expected"
+      website: "https://ziontechgroup.com"
+    }
   },
-
-  // AI-Powered Hybrid Cloud Management Platform
   {
-    id: "hybrid-cloud-management-ai",
-    name: "HybridCloud AI Management",
-    category: "Cloud Management",
-    subcategory: "Hybrid Cloud",
-    description: "Intelligent AI-powered hybrid cloud management platform that optimizes workloads across multiple cloud providers, on-premises infrastructure, and edge locations for maximum performance and cost efficiency.",
-    price: 2200,
+    id: "quantum-ready-network-infrastructure",
+    title: "Quantum-Ready Network Infrastructure & Security Platform",
+    description: "Future-proof network infrastructure designed to support quantum computing and quantum-resistant cryptography for enhanced security.",
+    category: "Quantum Computing",
+    subcategory: "Network Infrastructure",
+    price: 3500,
+    currency: "$",
     pricingModel: "monthly",
-    userLimit: "Up to 2000 workloads",
+    features: [
+      "Quantum-resistant encryption",
+      "Advanced network security",
+      "Quantum key distribution",
+      "High-performance routing",
+      "Zero-trust architecture",
+      "Quantum-safe protocols",
+      "Network monitoring",
+      "Compliance frameworks"
+    ],
+    benefits: [
+      "Future-proof security",
+      "Enhanced network performance",
+      "Quantum-ready architecture",
+      "Advanced threat protection",
+      "Regulatory compliance"
+    ],
+    useCases: [
+      "Financial institutions",
+      "Government agencies",
+      "Healthcare organizations",
+      "Research institutions",
+      "Critical infrastructure"
+    ],
+    targetAudience: [
+      "Network architects",
+      "Security engineers",
+      "Infrastructure managers",
+      "CISOs",
+      "Technology directors"
+    ],
+    tags: ["Quantum Computing", "Network Security", "Infrastructure", "Cryptography", "Future-Proof"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,500 - $10,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
+    id: "ai-powered-infrastructure-automation",
+    title: "AI-Powered Infrastructure Automation & Self-Healing Platform",
+    description: "Intelligent infrastructure platform that uses AI to automate operations, predict failures, and self-heal systems for maximum uptime.",
+    category: "AI & Machine Learning",
+    subcategory: "Infrastructure Automation",
+    price: 1800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered automation",
+      "Predictive maintenance",
+      "Self-healing systems",
+      "Intelligent monitoring",
+      "Automated scaling",
+      "Anomaly detection",
+      "Performance optimization",
+      "Cost management"
+    ],
+    benefits: [
+      "Reduce downtime by 99.9%",
+      "Lower operational costs by 50%",
+      "Automated problem resolution",
+      "Predictive maintenance",
+      "Enhanced performance"
+    ],
+    useCases: [
+      "Data centers",
+      "Cloud infrastructure",
+      "Enterprise networks",
+      "Critical systems",
+      "DevOps operations"
+    ],
+    targetAudience: [
+      "Infrastructure engineers",
+      "DevOps engineers",
+      "System administrators",
+      "IT operations managers",
+      "Technology directors"
+    ],
+    tags: ["AI", "Infrastructure", "Automation", "Self-Healing", "Predictive Maintenance"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,800 - $5,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
+    id: "hybrid-cloud-orchestration-platform",
+    title: "Hybrid Cloud Orchestration & Multi-Cloud Management Platform",
+    description: "Comprehensive platform for managing and orchestrating workloads across multiple cloud providers and on-premises infrastructure.",
+    category: "Cloud & Infrastructure",
+    subcategory: "Multi-Cloud Management",
+    price: 1200,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
       "Multi-cloud orchestration",
-      "Workload optimization",
-      "Cost management",
-      "Performance monitoring",
-      "Security compliance",
-      "Disaster recovery",
-      "Resource scaling",
-      "Governance controls"
-    ],
-    benefits: [
-      "Reduce cloud costs by 35%",
-      "Improve performance by 40%",
-      "Simplify multi-cloud management",
-      "Ensure compliance across environments",
-      "Optimize resource utilization"
-    ],
-    targetAudience: [
-      "Enterprise companies",
-      "Cloud service providers",
-      "Managed service providers",
-      "Government agencies",
-      "Financial institutions"
-    ],
-    tags: ["Cloud Management", "Hybrid Cloud", "AI", "Multi-cloud", "DevOps"],
-    marketPrice: "$2,200 - $8,000/month",
-    roi: "500% within 9 months",
-    competitors: ["VMware", "Red Hat", "HashiCorp", "Terraform", "Ansible"],
-    technology: ["Kubernetes", "Docker", "Terraform", "Ansible", "React", "Python"],
-    integrations: ["AWS", "Azure", "GCP", "VMware", "OpenStack", "Kubernetes"],
-    compliance: ["SOC 2", "ISO 27001", "FedRAMP", "GDPR", "HIPAA"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "premium",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    demoUrl: "https://ziontechgroup.com/demo/hybrid-cloud-management",
-    documentationUrl: "https://ziontechgroup.com/docs/hybrid-cloud-management",
-    freeTrial: true,
-    freeTrialDays: 14,
-    uniqueValueProposition: "First AI-powered hybrid cloud management platform achieving 35% cost reduction and 40% performance improvement",
-    marketSize: "$12.3 billion (hybrid cloud market)",
-    growthPotential: "450% annual growth expected"
-  },
-
-  // AI-Powered Data Center Automation Platform
-  {
-    id: "data-center-automation-ai",
-    name: "DataCenter AI Automation",
-    category: "Data Center",
-    subcategory: "Automation & AI",
-    description: "Next-generation AI-powered data center automation platform that optimizes operations, reduces energy consumption, and ensures maximum uptime through intelligent monitoring and predictive maintenance.",
-    price: 3000,
-    pricingModel: "monthly",
-    userLimit: "Up to 100 data centers",
-    features: [
-      "Autonomous operations",
-      "Energy optimization",
-      "Predictive maintenance",
-      "Performance monitoring",
-      "Capacity planning",
+      "Workload portability",
+      "Cost optimization",
       "Security management",
-      "Compliance reporting",
+      "Performance monitoring",
+      "Compliance automation",
+      "Resource scheduling",
       "Disaster recovery"
     ],
     benefits: [
-      "Reduce energy costs by 30%",
-      "Improve uptime to 99.999%",
-      "Reduce operational costs by 40%",
-      "Predict and prevent 95% of failures",
-      "Optimize resource utilization"
+      "Reduce cloud costs by 35%",
+      "Improve resource utilization",
+      "Enhanced flexibility",
+      "Vendor independence",
+      "Centralized management"
+    ],
+    useCases: [
+      "Enterprise applications",
+      "Multi-cloud strategies",
+      "Hybrid deployments",
+      "Cloud migration",
+      "Disaster recovery"
     ],
     targetAudience: [
-      "Data center operators",
-      "Cloud service providers",
-      "Enterprise companies",
-      "Colocation providers",
-      "Government agencies"
+      "Cloud architects",
+      "Infrastructure engineers",
+      "DevOps engineers",
+      "IT directors",
+      "Technology consultants"
     ],
-    tags: ["Data Center", "Automation", "AI", "Energy Management", "Predictive Maintenance"],
-    marketPrice: "$3,000 - $15,000/month",
-    roi: "700% within 12 months",
-    competitors: ["Schneider Electric", "Eaton", "Vertiv", "HPE", "Dell"],
-    technology: ["TensorFlow", "IoT sensors", "React", "Python", "Kubernetes", "Machine Learning"],
-    integrations: ["DCIM systems", "BMS systems", "Power management", "Cooling systems", "Security systems"],
-    compliance: ["Uptime Institute", "ISO 27001", "SOC 2", "LEED", "Energy Star"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    demoUrl: "https://ziontechgroup.com/demo/data-center-automation",
-    documentationUrl: "https://ziontechgroup.com/docs/data-center-automation",
-    freeTrial: true,
-    freeTrialDays: 7,
-    uniqueValueProposition: "First AI-powered data center automation platform achieving 99.999% uptime and 30% energy cost reduction",
-    marketSize: "$25.8 billion (data center automation market)",
-    growthPotential: "600% annual growth expected"
-  },
-
-  // AI-Powered Network Performance Optimization Platform
-  {
-    id: "network-performance-optimization-ai",
-    name: "NetworkAI Performance",
-    category: "Network Management",
-    subcategory: "Performance Optimization",
-    description: "Advanced AI-powered network performance optimization platform that continuously monitors, analyzes, and optimizes network performance in real-time, ensuring maximum efficiency and user experience.",
-    price: 1900,
-    pricingModel: "monthly",
-    userLimit: "Up to 10000 network devices",
-    features: [
-      "Real-time monitoring",
-      "Performance optimization",
-      "Traffic analysis",
-      "Bandwidth management",
-      "Quality of service",
-      "Security monitoring",
-      "Predictive analytics",
-      "Automated troubleshooting"
-    ],
-    benefits: [
-      "Improve network performance by 50%",
-      "Reduce network downtime by 80%",
-      "Optimize bandwidth utilization by 40%",
-      "Reduce IT support tickets by 60%",
-      "Real-time performance insights"
-    ],
-    targetAudience: [
-      "Network service providers",
-      "Enterprise companies",
-      "Educational institutions",
-      "Healthcare organizations",
-      "Government agencies"
-    ],
-    tags: ["Network Management", "Performance Optimization", "AI", "Monitoring", "Automation"],
-    marketPrice: "$1,900 - $7,000/month",
-    roi: "550% within 9 months",
-    competitors: ["Cisco", "Juniper", "Aruba", "Extreme Networks", "Fortinet"],
-    technology: ["TensorFlow", "Network protocols", "React", "Python", "SNMP", "NetFlow"],
-    integrations: ["Network devices", "SDN controllers", "Monitoring tools", "SIEM systems", "Ticketing systems"],
-    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
+    tags: ["Multi-Cloud", "Hybrid Cloud", "Orchestration", "Cloud Management", "Infrastructure"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
+    marketPrice: "$1,200 - $3,500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    demoUrl: "https://ziontechgroup.com/demo/network-performance",
-    documentationUrl: "https://ziontechgroup.com/docs/network-performance",
-    freeTrial: true,
-    freeTrialDays: 14,
-    uniqueValueProposition: "First AI-powered network performance platform achieving 50% performance improvement and 80% downtime reduction",
-    marketSize: "$15.7 billion (network management market)",
-    growthPotential: "500% annual growth expected"
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
+    id: "zero-trust-network-architecture",
+    title: "Zero-Trust Network Architecture & Security Platform",
+    description: "Advanced zero-trust security platform that implements comprehensive security controls and continuous verification for modern network environments.",
+    category: "Cybersecurity",
+    subcategory: "Network Security",
+    price: 2500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Zero-trust architecture",
+      "Continuous verification",
+      "Micro-segmentation",
+      "Identity management",
+      "Threat detection",
+      "Compliance automation",
+      "Security analytics",
+      "Incident response"
+    ],
+    benefits: [
+      "Reduce security incidents by 90%",
+      "Enhanced compliance",
+      "Improved security posture",
+      "Simplified management",
+      "Advanced threat protection"
+    ],
+    useCases: [
+      "Enterprise networks",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies",
+      "Critical infrastructure"
+    ],
+    targetAudience: [
+      "Security architects",
+      "Network engineers",
+      "CISOs",
+      "Compliance officers",
+      "IT security managers"
+    ],
+    tags: ["Zero-Trust", "Network Security", "Cybersecurity", "Identity Management", "Compliance"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,500 - $7,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
+    id: "serverless-enterprise-platform",
+    title: "Serverless Enterprise Platform & Function-as-a-Service Infrastructure",
+    description: "Enterprise-grade serverless platform that enables scalable, event-driven applications with automatic scaling and pay-per-use pricing.",
+    category: "Cloud & Infrastructure",
+    subcategory: "Serverless Computing",
+    price: 899,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Serverless functions",
+      "Event-driven architecture",
+      "Auto-scaling",
+      "Pay-per-use pricing",
+      "API management",
+      "Monitoring & logging",
+      "Security controls",
+      "Integration services"
+    ],
+    benefits: [
+      "Reduce infrastructure costs by 60%",
+      "Automatic scaling",
+      "Faster development",
+      "Reduced operational overhead",
+      "Pay-per-use model"
+    ],
+    useCases: [
+      "Web applications",
+      "API services",
+      "Data processing",
+      "IoT applications",
+      "Microservices"
+    ],
+    targetAudience: [
+      "Developers",
+      "DevOps engineers",
+      "Architects",
+      "CTOs",
+      "Technology leaders"
+    ],
+    tags: ["Serverless", "FaaS", "Cloud Computing", "Auto-scaling", "Event-Driven"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$899 - $2,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
+    id: "software-defined-network-platform",
+    title: "Software-Defined Network (SDN) Platform & Network Virtualization",
+    description: "Advanced SDN platform that provides centralized network control, programmability, and automation for modern network infrastructure.",
+    category: "Network Infrastructure",
+    subcategory: "Software-Defined Networking",
+    price: 1800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Centralized network control",
+      "Network programmability",
+      "Virtual network management",
+      "Traffic optimization",
+      "Security policies",
+      "Automated provisioning",
+      "Performance monitoring",
+      "API integration"
+    ],
+    benefits: [
+      "Improve network efficiency by 40%",
+      "Reduce configuration time by 80%",
+      "Enhanced flexibility",
+      "Centralized management",
+      "Automated operations"
+    ],
+    useCases: [
+      "Data centers",
+      "Enterprise networks",
+      "Cloud infrastructure",
+      "Service providers",
+      "Research networks"
+    ],
+    targetAudience: [
+      "Network engineers",
+      "Infrastructure architects",
+      "Network administrators",
+      "Technology directors",
+      "System architects"
+    ],
+    tags: ["SDN", "Network Virtualization", "Network Automation", "Centralized Control", "Programmability"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,800 - $5,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
+    id: "hyperconverged-infrastructure-platform",
+    title: "Hyperconverged Infrastructure (HCI) Platform & Unified Management",
+    description: "Integrated hyperconverged infrastructure platform that combines compute, storage, and networking in a single, scalable solution.",
+    category: "Infrastructure",
+    subcategory: "Hyperconverged Infrastructure",
+    price: 2800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Unified infrastructure",
+      "Scalable architecture",
+      "Integrated management",
+      "High availability",
+      "Disaster recovery",
+      "Performance optimization",
+      "Resource management",
+      "Monitoring & analytics"
+    ],
+    benefits: [
+      "Reduce infrastructure complexity by 60%",
+      "Improve resource utilization by 40%",
+      "Simplified management",
+      "Enhanced scalability",
+      "Lower total cost of ownership"
+    ],
+    useCases: [
+      "Data centers",
+      "Enterprise applications",
+      "Virtual desktop infrastructure",
+      "Database systems",
+      "Cloud platforms"
+    ],
+    targetAudience: [
+      "Infrastructure architects",
+      "System engineers",
+      "Data center managers",
+      "IT directors",
+      "Technology consultants"
+    ],
+    tags: ["HCI", "Infrastructure", "Unified Management", "Scalability", "Resource Optimization"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,800 - $8,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
+    id: "green-data-center-solutions",
+    title: "Green Data Center Solutions & Sustainable Infrastructure Platform",
+    description: "Environmentally conscious data center solutions that optimize energy efficiency, reduce carbon footprint, and implement sustainable practices.",
+    category: "Sustainability",
+    subcategory: "Green Infrastructure",
+    price: 2200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Energy optimization",
+      "Renewable energy integration",
+      "Cooling efficiency",
+      "Carbon footprint tracking",
+      "Sustainable practices",
+      "Performance monitoring",
+      "Compliance reporting",
+      "Cost optimization"
+    ],
+    benefits: [
+      "Reduce energy costs by 35%",
+      "Lower carbon footprint",
+      "Enhanced sustainability",
+      "Regulatory compliance",
+      "Improved efficiency"
+    ],
+    useCases: [
+      "Data centers",
+      "Cloud providers",
+      "Enterprise infrastructure",
+      "Colocation facilities",
+      "Sustainable organizations"
+    ],
+    targetAudience: [
+      "Data center managers",
+      "Sustainability officers",
+      "Infrastructure managers",
+      "Facility managers",
+      "Environmental consultants"
+    ],
+    tags: ["Green Infrastructure", "Sustainability", "Energy Efficiency", "Data Centers", "Environmental Impact"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,200 - $6,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   }
+];
+
+export const SPECIALIZED_IT_INFRASTRUCTURE_CATEGORIES_2025 = [
+  "Cloud & Infrastructure",
+  "Edge Computing",
+  "Quantum Computing",
+  "AI & Machine Learning",
+  "Cybersecurity",
+  "Network Infrastructure",
+  "Infrastructure",
+  "Sustainability"
 ];
