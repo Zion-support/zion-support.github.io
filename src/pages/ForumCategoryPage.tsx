@@ -111,12 +111,12 @@ function CategoryContent({
     categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin");
 
   return (
-    
+    <AppLayout>
       <SEO
         title={`${category.name} | Community Forum | Zion AI Marketplace`}
         description={category.description}
         keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`}
-        canonical={`https://app.ziontechgroup.com/community/category/${categoryId}`}
+        canonical={`https://app.ziontechgroup.com/community/category/${category.id}`}
       />
       
       <div className="container py-8">
