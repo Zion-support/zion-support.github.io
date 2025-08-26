@@ -1,192 +1,119 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
+import { MessageCircle, X, Send, Bot } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Send, X, Bot, User } from 'lucide-react';
 
-interface ChatAssistantProps {
-  isOpen?: boolean;
-  onClose?: () => void;
-  recipient?: {
-    id: string;
-    name: string;
-    avatarUrl: string;
-    role: string;
-  };
-  onSendMessage?: (message: string) => Promise<void>;
-}
-
-export function ChatAssistant({ 
-  isOpen: externalIsOpen, 
-  onClose, 
-  recipient,
-  onSendMessage 
-}: ChatAssistantProps = {}) {
-  const [internalIsOpen, setInternalIsOpen] = useState(false);
+export const ChatAssistant: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
-  const [chatHistory, setChatHistory] = useState<Array<{ 
-    type: 'user' | 'assistant'; 
-    content: string;
-    timestamp: Date;
-    id: string;
-  }>>([]);
-  const [isTyping, setIsTyping] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
 
-  // Use external state if provided, otherwise use internal state
-  const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen;
-  const setIsOpen = externalIsOpen !== undefined ? (onClose || (() => {})) : setInternalIsOpen;
-
-  // Auto-scroll to bottom when new messages arrive
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [chatHistory]);
-
-  // Focus input when chat opens
-  useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [isOpen]);
-
-  const handleSendMessage = async () => {
-    if (!message.trim()) return;
-
-    const userMessage = { 
-      type: 'user' as const, 
-      content: message,
-      timestamp: new Date(),
-      id: `user-${Date.now()}`
-    };
-    setChatHistory(prev => [...prev, userMessage]);
-    const currentMessage = message;
-    setMessage('');
-
-    if (onSendMessage) {
-      try {
-        await onSendMessage(currentMessage);
-      } catch (error) {
-        console.error('Error sending message:', error);
-      }
-    } else {
-      // Simulate assistant response with typing indicator
-      setIsTyping(true);
-      setTimeout(() => {
-        setIsTyping(false);
-        const assistantMessage = { 
-          type: 'assistant' as const, 
-          content: 'Thank you for your message! I\'m here to help you with any questions about our services, marketplace, or technical support. How can I assist you today?',
-          timestamp: new Date(),
-          id: `assistant-${Date.now()}`
-        };
-        setChatHistory(prev => [...prev, assistantMessage]);
-      }, 2000);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (message.trim()) {
+      // Handle message submission here
+      console.log('Message sent:', message);
+      setMessage('');
     }
   };
-
-  const formatTime = (date: Date) => {
-    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  };
-
-  if (!isOpen) {
-    return (
-      <motion.button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 z-50 group"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <MessageCircle className="w-6 h-6" />
-        <div className="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
-      </motion.button>
-    );
-  }
 
   return (
-    <AnimatePresence>
-      <motion.div 
-        className="fixed bottom-6 right-6 w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 overflow-hidden"
-        initial={{ opacity: 0, scale: 0.8, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.8, y: 20 }}
-        transition={{ type: "spring", damping: 25, stiffness: 300 }}
+    <>
+      {/* Chat Button */}
+      <button
+        onClick={() => setIsOpen(true)}
+        className="fixed bottom-8 left-8 w-16 h-16 bg-zion-cyan text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-zion-cyan/25 hover:scale-110 transition-all duration-300 z-40"
+        aria-label="Open chat assistant"
       >
-        {/* Header */}
-        <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                <Bot className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-semibold">Zion AI Assistant</h3>
-                <p className="text-xs text-white/80">Always here to help</p>
-              </div>
-            </div>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="p-1 hover:bg-white/20 rounded transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
+        <MessageCircle className="w-6 h-6" />
+      </button>
 
-        {/* Chat Messages */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4">
-          {chatHistory.map((msg) => (
-            <div
-              key={msg.id}
-              className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}
-            >
-              <div
-                className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-                  msg.type === 'user'
-                    ? 'bg-zion-cyan text-white'
-                    : 'bg-gray-100 text-gray-800'
-                }`}
+      {/* Chat Window */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            transition={{ duration: 0.3 }}
+            className="fixed bottom-24 left-8 w-80 h-96 bg-zion-slate-dark border border-zion-cyan/30 rounded-2xl shadow-2xl shadow-zion-cyan/20 z-50 overflow-hidden"
+          >
+            {/* Header */}
+            <div className="bg-zion-cyan/20 border-b border-zion-cyan/30 p-4 flex items-center justify-between">
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
+                  <Bot className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-white">Zion AI Assistant</h3>
+                  <p className="text-xs text-zion-slate-light">Ready to help you innovate</p>
+                </div>
+              </div>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-zion-slate-light hover:text-white transition-colors duration-200"
               >
-                <p className="text-sm">{msg.content}</p>
-                <p className="text-xs opacity-70 mt-1">
-                  {formatTime(msg.timestamp)}
-                </p>
-              </div>
+                <X className="w-5 h-5" />
+              </button>
             </div>
-          ))}
-          {isTyping && (
-            <div className="flex justify-start">
-              <div className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg">
-                <p className="text-sm">Typing...</p>
-              </div>
-            </div>
-          )}
-          <div ref={messagesEndRef} />
-        </div>
 
-        {/* Input Area */}
-        <div className="border-t border-gray-100 p-4">
-          <div className="flex gap-2">
-            <input
-              ref={inputRef}
-              type="text"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-              placeholder="Type your message..."
-              className="flex-1 px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-            />
-            <button
-              onClick={handleSendMessage}
-              disabled={!message.trim()}
-              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            >
-              <Send className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+            {/* Chat Messages */}
+            <div className="flex-1 p-4 overflow-y-auto">
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center flex-shrink-0">
+                    <Bot className="w-3 h-3 text-white" />
+                  </div>
+                  <div className="bg-zion-slate-light/20 rounded-lg p-3 max-w-xs">
+                    <p className="text-sm text-white">
+                      Hello! I'm your Zion AI assistant. How can I help you discover our innovative services today?
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3 justify-end">
+                  <div className="bg-zion-cyan/20 rounded-lg p-3 max-w-xs">
+                    <p className="text-sm text-white">
+                      I'd like to learn about your quantum computing services
+                    </p>
+                  </div>
+                  <div className="w-6 h-6 bg-zion-purple rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-xs text-white font-bold">U</span>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center flex-shrink-0">
+                    <Bot className="w-3 h-3 text-white" />
+                  </div>
+                  <div className="bg-zion-slate-light/20 rounded-lg p-3 max-w-xs">
+                    <p className="text-sm text-white">
+                      Excellent choice! Our Quantum Neural Network Platform offers revolutionary AI capabilities with 1000x faster training times. Would you like me to schedule a consultation?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Input Form */}
+            <form onSubmit={handleSubmit} className="p-4 border-t border-zion-cyan/30">
+              <div className="flex space-x-2">
+                <input
+                  type="text"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Type your message..."
+                  className="flex-1 bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-sm"
+                />
+                <button
+                  type="submit"
+                  className="bg-zion-cyan text-white p-2 rounded-lg hover:bg-zion-cyan/80 transition-colors duration-200"
+                >
+                  <Send className="w-4 h-4" />
+                </button>
+              </div>
+            </form>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
-}
+};

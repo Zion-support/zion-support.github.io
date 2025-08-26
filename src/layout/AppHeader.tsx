@@ -1,243 +1,324 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MainNavigation } from './MainNavigation';
-
-export function AppHeader() {
-  return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
-            </Link>
-          </div>
-          <MainNavigation />
-        </div>
-      </div>
-    </header>
-  );
-
-import { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
-import { MainNavigation } from './MainNavigation';
-import { Logo } from '@/components/header/Logo';
-import { ModeToggle } from '@/components/ModeToggle';
-import Menu from 'lucide-react/dist/esm/icons/menu';
-import X from 'lucide-react/dist/esm/icons/x';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Sidebar } from '@/components/Sidebar';
-
-export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-import { Menu, X, Search, User, Bell } from 'lucide-react';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { useAuth } from '@/hooks/useAuth';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, X, Search, User, Bell, Globe, Brain, Cpu, Shield, 
+  Rocket, Cloud, Database, Network, Zap, ChevronDown, 
+  ChevronRight, Phone, Mail, MapPin, PanelLeft
+} from 'lucide-react';
+import { useSidebar } from '../context/SidebarContext';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const isMobile = useIsMobile();
-  const { user, logout } = useAuth();
-  
-  // Try to access the messaging context, but provide a fallback value if it's not available
-  let unreadCount = 0;
-  try {
-    const { unreadCount: count } = useMessaging();
-    unreadCount = count;
-  } catch (error) {
-    console.warn('Messaging context not available');
-  }
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { sidebarOpen, setSidebarOpen } = useSidebar();
+  const location = useLocation();
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // Navigate to search results
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
-  
+
+  const navigation = [
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      children: [
+        { name: 'AI Solutions', href: '/services/ai', description: 'Advanced AI & Machine Learning' },
+        { name: 'Quantum Tech', href: '/services/quantum', description: 'Quantum Computing & AI' },
+        { name: 'Blockchain & Web3', href: '/services/blockchain', description: 'Decentralized Solutions' },
+        { name: 'IoT & Edge', href: '/services/iot', description: 'Connected Intelligence' },
+        { name: 'Robotics & RPA', href: '/services/robotics', description: 'Process Automation' },
+        { name: 'Extended Reality', href: '/services/xr', description: 'VR/AR/MR Solutions' },
+        { name: 'Space Technology', href: '/services/space', description: 'Space Innovation' },
+        { name: 'Climate Tech', href: '/services/climate', description: 'Environmental Solutions' }
+      ]
+    },
+    {
+      name: 'Innovation 2027',
+      href: '/innovative-services-showcase-2027',
+      icon: Rocket,
+      children: [
+        { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform', description: 'Revolutionary AI' },
+        { name: 'Autonomous Operations', href: '/autonomous-business-operations-platform', description: 'AI-Powered Business' },
+        { name: 'IT Asset Management', href: '/ai-powered-it-asset-management', description: 'Smart IT Solutions' },
+        { name: 'SOC2 Compliance', href: '/soc2-compliance-automation', description: 'Automated Security' },
+        { name: 'AI Research Assistant', href: '/ai-autonomous-research-assistant', description: 'Research Automation' },
+        { name: '5G Enterprise', href: '/5g-enterprise-solutions', description: 'Next-Gen Connectivity' }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Cpu,
+      children: [
+        { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Scalable Infrastructure' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced Protection' },
+        { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Evolution' },
+        { name: 'Consulting', href: '/services/consulting', description: 'Expert Guidance' },
+        { name: 'Infrastructure', href: '/services/infrastructure', description: 'Robust Systems' }
+      ]
+    },
+    {
+      name: 'Company',
+      href: '/about',
+      icon: Globe,
+      children: [
+        { name: 'About Us', href: '/about', description: 'Our Story & Mission' },
+        { name: 'Team', href: '/team', description: 'Expert Professionals' },
+        { name: 'Careers', href: '/careers', description: 'Join Our Team' },
+        { name: 'Partners', href: '/partners', description: 'Strategic Alliances' },
+        { name: 'News', href: '/news', description: 'Latest Updates' }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      icon: Database,
+      children: [
+        { name: 'Blog', href: '/blog', description: 'Insights & Analysis' },
+        { name: 'Documentation', href: '/docs', description: 'Technical Guides' },
+        { name: 'White Papers', href: '/white-papers', description: 'Research & Reports' },
+        { name: 'Webinars', href: '/webinars', description: 'Expert Sessions' },
+        { name: 'Training', href: '/training', description: 'Skill Development' }
+      ]
+    }
+  ];
+
+  const contactInfo = [
+    { icon: Phone, label: 'Phone', value: '+1 302 464 0950', href: 'tel:+13024640950' },
+    { icon: Mail, label: 'Email', value: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: MapPin, label: 'Address', value: '364 E Main St STE 1008, Middletown DE 19709' }
+  ];
+
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md">
+      <header 
+        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-zion-slate-dark/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-lg shadow-zion-cyan/10' 
+            : 'bg-zion-slate-dark/80 backdrop-blur-sm border-b border-zion-cyan/10'
+        }`}
+      >
         <div className="container flex h-16 items-center px-4 sm:px-6">
           {/* Sidebar Toggle */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="mr-4 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
+            className="mr-4 p-2 text-zion-cyan/70 hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 hover:scale-110"
             aria-label="Toggle sidebar"
           >
             <PanelLeft className="h-5 w-5" />
           </button>
           
-          <Logo />
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2 mr-8">
+            <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
+              Zion Tech Group
+            </span>
+          </Link>
           
-          {/* Search Bar - Hidden on mobile */}
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-1">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                <button className="flex items-center space-x-1 px-4 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 rounded-lg hover:bg-zion-cyan/10">
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.name}</span>
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                </button>
+                
+                {/* Dropdown Menu */}
+                <div className="absolute top-full left-0 w-80 bg-zion-slate-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <div className="p-4">
+                    <div className="grid grid-cols-1 gap-2">
+                      {item.children?.map((child) => (
+                        <Link
+                          key={child.name}
+                          to={child.href}
+                          className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors duration-200 group/item"
+                        >
+                          <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 group-hover/item:scale-150 transition-transform duration-200"></div>
+                          <div className="flex-1">
+                            <div className="font-medium text-white group-hover/item:text-zion-cyan transition-colors duration-200">
+                              {child.name}
+                            </div>
+                            <div className="text-sm text-zion-slate-light">
+                              {child.description}
+                            </div>
+                          </div>
+                          <ChevronRight className="w-4 h-4 text-zion-slate-light group-hover/item:text-zion-cyan transition-colors duration-200" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </nav>
+
+          {/* Search Bar */}
           <div className="hidden md:flex ml-6 flex-1 max-w-md">
             <form onSubmit={handleSearch} className="relative w-full">
               <input
                 type="text"
-                placeholder="Search services, talent, equipment..."
+                placeholder="Search services, technologies, solutions..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
               />
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
               >
                 <Search className="h-4 w-4" />
               </button>
             </form>
           </div>
 
-          <div className="ml-6 flex-1 hidden lg:block">
-            <MainNavigation unreadCount={unreadCount} />
-          </div>
-          
-          {/* Right side actions */}
-          <div className="flex items-center space-x-2 ml-auto">
-            {/* Notifications */}
-            {user && (
-              <Link
-                to="/notifications"
-                className="relative p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-colors"
-              >
-                <Bell className="h-5 w-5" />
-                {unreadCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                    {unreadCount}
-                  </span>
-                )}
-              </Link>
-            )}
-
-            {/* User Menu */}
-            {user ? (
-              <div className="relative group">
-                <button className="flex items-center space-x-2 p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-colors">
-                  <User className="h-5 w-5" />
-                  <span className="hidden sm:block text-sm font-medium">{user.name || user.email}</span>
-                </button>
-                
-                {/* Dropdown Menu */}
-                <div className="absolute right-0 top-full mt-2 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="py-2">
-                    <Link
-                      to="/dashboard"
-                      className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
-                    >
-                      Dashboard
-                    </Link>
-                    <Link
-                      to="/profile"
-                      className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
-                    >
-                      Profile
-                    </Link>
-                    <Link
-                      to="/settings"
-                      className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
-                    >
-                      Settings
-                    </Link>
-                    <hr className="border-zion-purple/20 my-2" />
-                    <button
-                      onClick={logout}
-                      className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
-                    >
-                      Sign Out
-                    </button>
-                  </div>
+          {/* Right Side Actions */}
+          <div className="ml-6 flex items-center space-x-4">
+            {/* Contact Info - Hidden on mobile */}
+            <div className="hidden xl:flex items-center space-x-4">
+              {contactInfo.map((info, index) => (
+                <div key={index} className="flex items-center space-x-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200">
+                  <info.icon className="w-4 h-4" />
+                  {info.href ? (
+                    <a href={info.href} className="text-sm hover:underline">
+                      {info.value}
+                    </a>
+                  ) : (
+                    <span className="text-sm">{info.value}</span>
+                  )}
                 </div>
-              </div>
-            ) : (
-              <div className="flex items-center space-x-2">
-                <Link
-                  to="/login"
-                  className="text-zion-slate-light hover:text-zion-cyan transition-colors px-3 py-2 rounded-lg hover:bg-zion-purple/10"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  to="/signup"
-                  className="bg-zion-purple hover:bg-zion-purple/80 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                >
-                  Sign Up
-                </Link>
-              </div>
-            )}
-
-            {/* Mobile menu button */}
-            <div className="lg:hidden ml-2">
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none"
-                aria-expanded={mobileMenuOpen}
-                aria-label="Toggle mobile menu"
-              >
-                <span className="sr-only">Open main menu</span>
-                {mobileMenuOpen ? (
-                  <X className="block h-6 w-6" aria-hidden="true" />
-                ) : (
-                  <Menu className="block h-6 w-6" aria-hidden="true" />
-                )}
-              </button>
+              ))}
             </div>
-            
-            <ModeToggle />
+
+            {/* Action Buttons */}
+            <div className="flex items-center space-x-2">
+              <Link
+                to="/contact"
+                className="hidden sm:inline-flex items-center px-4 py-2 bg-zion-cyan/20 border border-zion-cyan/30 text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan/30 transition-all duration-300 hover:scale-105"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/login"
+                className="inline-flex items-center px-4 py-2 bg-zion-purple/20 border border-zion-purple/30 text-zion-purple rounded-lg font-medium hover:bg-zion-purple/30 transition-all duration-300 hover:scale-105"
+              >
+                Login
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 text-zion-cyan/70 hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
+              aria-label="Toggle mobile menu"
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
         </div>
       </header>
-      
-      {/* Sidebar */}
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      
-      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-40 pt-16">
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            {/* Mobile Search */}
-            <div className="p-4 border-b border-zion-purple/20">
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-md border-b border-zion-cyan/20"
+          >
+            <div className="px-4 py-6 space-y-6">
+              {/* Mobile Search */}
               <form onSubmit={handleSearch} className="relative">
                 <input
                   type="text"
-                  placeholder="Search services, talent, equipment..."
+                  placeholder="Search services, technologies, solutions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
                 >
                   <Search className="h-4 w-4" />
                 </button>
               </form>
-            </div>
-            
-            <MobileMenu 
-              unreadCount={unreadCount} 
-              onClose={() => setMobileMenuOpen(false)} 
-            />
-          </div>
-        </div>
-      )}
 
-      {/* Mobile Bottom Navigation */}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+              {/* Mobile Navigation */}
+              <nav className="space-y-4">
+                {navigation.map((item) => (
+                  <div key={item.name}>
+                    <Link
+                      to={item.href}
+                      className="flex items-center justify-between w-full px-4 py-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-colors duration-200"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <div className="flex items-center space-x-3">
+                        <item.icon className="w-5 h-5" />
+                        <span>{item.name}</span>
+                      </div>
+                      <ChevronRight className="w-4 h-4" />
+                    </Link>
+                    
+                    {/* Mobile Submenu */}
+                    <div className="ml-8 mt-2 space-y-2">
+                      {item.children?.map((child) => (
+                        <Link
+                          key={child.name}
+                          to={child.href}
+                          className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </nav>
+
+              {/* Mobile Contact Info */}
+              <div className="pt-4 border-t border-zion-cyan/20">
+                <div className="space-y-3">
+                  {contactInfo.map((info, index) => (
+                    <div key={index} className="flex items-center space-x-3 text-zion-slate-light">
+                      <info.icon className="w-4 h-4" />
+                      {info.href ? (
+                        <a href={info.href} className="text-sm hover:text-zion-cyan transition-colors duration-200">
+                          {info.value}
+                        </a>
+                      ) : (
+                        <span className="text-sm">{info.value}</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
-}
 }
