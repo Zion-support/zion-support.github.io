@@ -1,510 +1,534 @@
-export const specializedIndustrySolutions2025 = [
-    // Healthcare & Biotech Solutions
+export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
+    // Healthcare & Life Sciences
     {
-        id: 1,
-        name: "MedTech AI Platform",
+        id: "ai-drug-discovery-platform",
+        title: "AI-Powered Drug Discovery Platform",
+        description: "Revolutionary platform using AI and machine learning to accelerate drug discovery, predict drug interactions, and optimize clinical trial design. Reduces drug development time by 60%.",
         category: "Healthcare",
-        industry: "Biotechnology",
-        description: "Comprehensive AI-powered medical technology platform for diagnostics, drug discovery, and personalized medicine with FDA compliance",
-        pricing: "Enterprise",
-        price: 899,
+        subcategory: "Drug Discovery",
+        price: 2999,
+        currency: "$",
         pricingModel: "monthly",
-        userLimit: "Up to 200 healthcare professionals",
         features: [
-            "AI diagnostic imaging",
-            "Drug discovery algorithms",
-            "Personalized medicine",
-            "Clinical trial management",
-            "Patient data analytics",
-            "Regulatory compliance",
-            "HIPAA security",
-            "Telemedicine integration"
+            "AI molecular modeling",
+            "Drug interaction prediction",
+            "Clinical trial optimization",
+            "Target identification",
+            "ADMET prediction",
+            "Patent analysis",
+            "Collaboration tools",
+            "Regulatory compliance"
         ],
         benefits: [
-            "90% diagnostic accuracy",
-            "50% faster drug discovery",
-            "Personalized treatment",
-            "Regulatory compliance",
-            "Cost reduction",
-            "Patient outcomes"
-        ],
-        targetAudience: ["Hospitals", "Pharmaceutical companies", "Research institutions", "Biotech startups"],
-        tags: ["Healthcare AI", "Medical Technology", "Drug Discovery", "Diagnostics", "Personalized Medicine"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/medtech-ai-platform",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
-        },
-        marketPrice: "$899-2999/month",
-        competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
-        roi: "400% within 12 months",
-        setupTime: "1 month",
-        integrations: ["EPIC", "Cerner", "PACS systems", "Lab equipment", "Wearable devices"],
-        freeTier: false,
-        trialPeriod: "30 days",
-        technology: ["AI/ML", "Computer Vision", "Natural Language Processing", "Cloud Computing"],
-        compliance: ["FDA", "HIPAA", "SOC 2", "ISO 27001", "GDPR"],
-        useCases: ["Medical imaging", "Drug discovery", "Clinical trials", "Patient monitoring"],
-        industryStandards: ["DICOM", "HL7", "FHIR", "CDISC"]
-    },
-    {
-        id: 2,
-        name: "FinTech Compliance Suite",
-        category: "Financial Services",
-        industry: "Banking & Finance",
-        description: "Comprehensive financial technology compliance platform with AI-powered risk assessment, regulatory reporting, and fraud detection",
-        pricing: "Tiered",
-        price: 599,
-        pricingModel: "monthly",
-        userLimit: "Up to 500 users",
-        features: [
-            "AI risk assessment",
-            "Regulatory reporting",
-            "Fraud detection",
-            "KYC/AML automation",
-            "Compliance monitoring",
-            "Audit trails",
-            "Real-time alerts",
-            "Multi-jurisdiction support"
-        ],
-        benefits: [
-            "99.9% compliance rate",
-            "90% fraud detection",
-            "Automated reporting",
-            "Risk reduction",
-            "Cost savings",
-            "Regulatory confidence"
-        ],
-        targetAudience: ["Banks", "Credit unions", "FinTech companies", "Investment firms", "Insurance companies"],
-        tags: ["FinTech", "Compliance", "Risk Management", "Fraud Detection", "Regulatory Reporting"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/fintech-compliance-suite",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
-        },
-        marketPrice: "$599-1999/month",
-        competitors: ["Thomson Reuters", "LexisNexis", "Refinitiv"],
-        roi: "500% within 6 months",
-        setupTime: "2 weeks",
-        integrations: ["Core banking systems", "CRM platforms", "Regulatory databases", "Payment processors"],
-        freeTier: false,
-        trialPeriod: "30 days",
-        technology: ["AI/ML", "Blockchain", "Cloud Computing", "API Integration"],
-        compliance: ["SOX", "GLBA", "PCI DSS", "GDPR", "CCPA"],
-        useCases: ["KYC verification", "Fraud prevention", "Regulatory reporting", "Risk assessment"],
-        industryStandards: ["ISO 20022", "SWIFT", "ACH", "SEPA"]
-    },
-    // Manufacturing & Industry 4.0
-    {
-        id: 3,
-        name: "Smart Factory Hub",
-        category: "Manufacturing",
-        industry: "Industry 4.0",
-        description: "Intelligent manufacturing platform with IoT sensors, predictive maintenance, and AI-powered quality control for Industry 4.0 transformation",
-        pricing: "Usage-based",
-        price: 0.10,
-        pricingModel: "per device per day",
-        userLimit: "Unlimited devices",
-        features: [
-            "IoT sensor integration",
-            "Predictive maintenance",
-            "Quality control AI",
-            "Production optimization",
-            "Energy management",
-            "Supply chain tracking",
-            "Real-time monitoring",
-            "Performance analytics"
-        ],
-        benefits: [
-            "30% productivity increase",
-            "50% maintenance cost reduction",
-            "99.9% quality rate",
-            "Energy optimization",
-            "Real-time insights",
+            "60% faster drug development",
+            "Reduce R&D costs by 40%",
+            "Higher success rates",
+            "Faster time to market",
             "Competitive advantage"
         ],
-        targetAudience: ["Manufacturing companies", "Automotive industry", "Electronics manufacturers", "Food processing"],
-        tags: ["Industry 4.0", "IoT", "Predictive Maintenance", "Quality Control", "Smart Manufacturing"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/smart-factory-hub",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+        targetAudience: ["Pharmaceutical companies", "Biotech firms", "Research institutions", "CROs"],
+        marketPrice: "$2,999-7,999/month",
+        website: "https://ziontechgroup.com/ai-drug-discovery",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Healthcare", "AI", "Drug Discovery", "Pharma"],
+        aiScore: 97,
+        rating: 4.9,
+        reviewCount: 34,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
         },
-        marketPrice: "$0.10-0.50 per device per day",
-        competitors: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx"],
-        roi: "400% within 8 months",
-        setupTime: "1 month",
-        integrations: ["PLC systems", "SCADA", "ERP systems", "MES platforms", "Cloud platforms"],
-        freeTier: true,
-        trialPeriod: "30 days",
-        technology: ["IoT", "Edge Computing", "AI/ML", "Predictive Analytics", "Cloud Computing"],
-        compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry-specific standards"],
-        useCases: ["Predictive maintenance", "Quality control", "Production optimization", "Energy management"],
-        industryStandards: ["OPC UA", "MQTT", "Modbus", "Ethernet/IP"]
+        images: ["https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-01-15T10:00:00.000Z"
     },
-    // Retail & E-commerce Solutions
+
+    // Financial Services
     {
-        id: 4,
-        name: "OmniChannel Retail AI",
-        category: "Retail",
-        industry: "E-commerce",
-        description: "AI-powered omnichannel retail platform with personalized recommendations, inventory optimization, and seamless customer experience across all channels",
-        pricing: "Revenue-based",
-        price: 2.5,
-        pricingModel: "percentage of revenue",
-        userLimit: "Unlimited customers",
-        features: [
-            "AI recommendations",
-            "Inventory optimization",
-            "Omnichannel integration",
-            "Customer analytics",
-            "Personalized marketing",
-            "Demand forecasting",
-            "Price optimization",
-            "Customer service AI"
-        ],
-        benefits: [
-            "25% revenue increase",
-            "30% inventory reduction",
-            "40% customer satisfaction",
-            "Personalized experience",
-            "Cross-channel consistency",
-            "Data-driven decisions"
-        ],
-        targetAudience: ["Retail chains", "E-commerce platforms", "Brick-and-mortar stores", "DTC brands"],
-        tags: ["Retail AI", "Omnichannel", "E-commerce", "Personalization", "Inventory Management"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/omnichannel-retail-ai",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
-        },
-        marketPrice: "2.5-5% of revenue",
-        competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce"],
-        roi: "300% within 6 months",
-        setupTime: "2 weeks",
-        integrations: ["POS systems", "E-commerce platforms", "CRM systems", "Payment gateways", "Social media"],
-        freeTier: true,
-        trialPeriod: "30 days",
-        technology: ["AI/ML", "Big Data", "Cloud Computing", "API Integration", "Mobile Apps"],
-        compliance: ["PCI DSS", "GDPR", "CCPA", "SOC 2"],
-        useCases: ["Personalized shopping", "Inventory management", "Customer service", "Marketing automation"],
-        industryStandards: ["REST APIs", "GraphQL", "OAuth 2.0", "Webhooks"]
-    },
-    // Education & EdTech
-    {
-        id: 5,
-        name: "Adaptive Learning Platform",
-        category: "Education",
-        industry: "EdTech",
-        description: "AI-powered adaptive learning platform with personalized curriculum, real-time assessment, and intelligent tutoring for K-12 and higher education",
-        pricing: "Per student",
-        price: 15,
-        pricingModel: "monthly per student",
-        userLimit: "Unlimited students",
-        features: [
-            "AI curriculum adaptation",
-            "Real-time assessment",
-            "Intelligent tutoring",
-            "Progress tracking",
-            "Parent dashboard",
-            "Teacher analytics",
-            "Content creation tools",
-            "Multi-language support"
-        ],
-        benefits: [
-            "40% learning improvement",
-            "Personalized education",
-            "Teacher efficiency",
-            "Student engagement",
-            "Data insights",
-            "Cost effectiveness"
-        ],
-        targetAudience: ["K-12 schools", "Universities", "Online learning platforms", "Corporate training"],
-        tags: ["EdTech", "Adaptive Learning", "AI Education", "Personalized Learning", "Assessment"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/adaptive-learning-platform",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
-        },
-        marketPrice: "$15-45 per student per month",
-        competitors: ["DreamBox", "Knewton", "Carnegie Learning"],
-        roi: "350% within 9 months",
-        setupTime: "1 week",
-        integrations: ["LMS platforms", "Student information systems", "Assessment tools", "Content providers"],
-        freeTier: true,
-        trialPeriod: "30 days",
-        technology: ["AI/ML", "Natural Language Processing", "Adaptive Algorithms", "Cloud Computing"],
-        compliance: ["COPPA", "FERPA", "GDPR", "Accessibility standards"],
-        useCases: ["K-12 education", "Higher education", "Corporate training", "Special education"],
-        industryStandards: ["LTI", "SCORM", "xAPI", "Common Core"]
-    },
-    // Transportation & Logistics
-    {
-        id: 6,
-        name: "Logistics Optimization AI",
-        category: "Transportation",
-        industry: "Logistics",
-        description: "Intelligent logistics platform with route optimization, demand forecasting, and real-time tracking for supply chain and transportation management",
-        pricing: "Tiered",
-        price: 399,
+        id: "quantum-financial-modeling",
+        title: "Quantum Financial Modeling Suite",
+        description: "Advanced financial modeling platform leveraging quantum computing for portfolio optimization, risk assessment, and algorithmic trading. Provides exponential speed improvements for complex financial calculations.",
+        category: "Financial Services",
+        subcategory: "Quantitative Finance",
+        price: 1999,
+        currency: "$",
         pricingModel: "monthly",
-        userLimit: "Up to 1000 shipments",
         features: [
-            "AI route optimization",
-            "Demand forecasting",
-            "Real-time tracking",
-            "Fleet management",
-            "Warehouse optimization",
-            "Cost analysis",
-            "Performance metrics",
+            "Quantum portfolio optimization",
+            "Risk assessment algorithms",
+            "Real-time market analysis",
+            "Algorithmic trading strategies",
+            "Regulatory compliance",
+            "Multi-asset support",
+            "Performance analytics",
             "API integration"
         ],
         benefits: [
-            "25% cost reduction",
-            "30% delivery time improvement",
-            "99% on-time delivery",
-            "Fuel optimization",
-            "Real-time visibility",
-            "Customer satisfaction"
+            "1000x faster calculations",
+            "Superior risk management",
+            "Competitive trading advantage",
+            "Regulatory compliance",
+            "Increased profitability"
         ],
-        targetAudience: ["Logistics companies", "E-commerce retailers", "Manufacturing", "Retail chains"],
-        tags: ["Logistics", "Supply Chain", "Route Optimization", "Fleet Management", "AI"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/logistics-optimization-ai",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+        targetAudience: ["Investment banks", "Hedge funds", "Asset managers", "Trading firms"],
+        marketPrice: "$1,999-4,999/month",
+        website: "https://ziontechgroup.com/quantum-financial-modeling",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Financial Services", "Quantum Computing", "Trading", "Risk Management"],
+        aiScore: 98,
+        rating: 4.9,
+        reviewCount: 28,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
         },
-        marketPrice: "$399-1299/month",
-        competitors: ["Flexport", "Project44", "FourKites"],
-        roi: "400% within 6 months",
-        setupTime: "2 weeks",
-        integrations: ["TMS systems", "WMS platforms", "ERP systems", "GPS tracking", "E-commerce platforms"],
-        freeTier: true,
-        trialPeriod: "30 days",
-        technology: ["AI/ML", "Optimization Algorithms", "Real-time Tracking", "Cloud Computing"],
-        compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry regulations"],
-        useCases: ["Route optimization", "Fleet management", "Warehouse optimization", "Last-mile delivery"],
-        industryStandards: ["EDI", "API standards", "GPS protocols", "IoT standards"]
+        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-01-20T14:30:00.000Z"
     },
+
+    // Manufacturing & Industry 4.0
+    {
+        id: "smart-manufacturing-platform",
+        title: "Smart Manufacturing 4.0 Platform",
+        description: "Comprehensive Industry 4.0 platform integrating IoT, AI, and robotics for intelligent manufacturing. Features predictive maintenance, quality control, and autonomous production optimization.",
+        category: "Manufacturing",
+        subcategory: "Industry 4.0",
+        price: 899,
+        currency: "$",
+        pricingModel: "monthly",
+        features: [
+            "IoT device integration",
+            "Predictive maintenance",
+            "Quality control automation",
+            "Production optimization",
+            "Energy management",
+            "Supply chain visibility",
+            "Real-time analytics",
+            "Custom dashboards"
+        ],
+        benefits: [
+            "Reduce downtime by 30%",
+            "Improve quality by 25%",
+            "Reduce energy costs by 20%",
+            "Increase productivity by 40%",
+            "Real-time optimization"
+        ],
+        targetAudience: ["Manufacturing companies", "Factories", "Production facilities", "Industrial companies"],
+        marketPrice: "$899-2,999/month",
+        website: "https://ziontechgroup.com/smart-manufacturing",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Manufacturing", "Industry 4.0", "IoT", "Predictive Analytics"],
+        aiScore: 95,
+        rating: 4.8,
+        reviewCount: 56,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-01-25T11:15:00.000Z"
+    },
+
     // Energy & Sustainability
     {
-        id: 7,
-        name: "Green Energy Management",
+        id: "renewable-energy-optimization",
+        title: "Renewable Energy Optimization Platform",
+        description: "AI-powered platform for optimizing renewable energy production, storage, and distribution. Maximizes efficiency and reduces costs for solar, wind, and hydroelectric systems.",
         category: "Energy",
-        industry: "Renewable Energy",
-        description: "AI-powered energy management platform for renewable energy optimization, grid management, and sustainability monitoring",
-        pricing: "Usage-based",
-        price: 0.02,
-        pricingModel: "per kWh managed",
-        userLimit: "Unlimited energy",
+        subcategory: "Renewable Energy",
+        price: 699,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Renewable energy optimization",
-            "Grid management",
-            "Energy storage optimization",
-            "Sustainability monitoring",
-            "Carbon footprint tracking",
-            "Predictive maintenance",
-            "Energy trading",
-            "Real-time analytics"
+            "Energy production optimization",
+            "Storage management",
+            "Grid integration",
+            "Weather prediction",
+            "Demand forecasting",
+            "Cost optimization",
+            "Carbon tracking",
+            "Compliance reporting"
         ],
         benefits: [
-            "30% energy cost reduction",
-            "50% carbon footprint reduction",
-            "Grid stability",
-            "Renewable integration",
-            "Sustainability compliance",
-            "Cost savings"
+            "Increase energy production by 25%",
+            "Reduce operational costs by 30%",
+            "Optimize storage utilization",
+            "Improve grid stability",
+            "Reduce carbon footprint"
         ],
-        targetAudience: ["Utility companies", "Renewable energy providers", "Industrial facilities", "Commercial buildings"],
-        tags: ["Renewable Energy", "Grid Management", "Sustainability", "Energy Optimization", "AI"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/green-energy-management",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+        targetAudience: ["Energy companies", "Solar farms", "Wind farms", "Utilities"],
+        marketPrice: "$699-1,999/month",
+        website: "https://ziontechgroup.com/renewable-energy",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Energy", "Renewable", "Optimization", "Sustainability"],
+        aiScore: 94,
+        rating: 4.7,
+        reviewCount: 42,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
         },
-        marketPrice: "$0.02-0.08 per kWh",
-        competitors: ["GE Digital", "Siemens Energy", "Schneider Electric"],
-        roi: "450% within 12 months",
-        setupTime: "1 month",
-        integrations: ["SCADA systems", "Smart meters", "Energy storage", "Weather APIs", "Grid APIs"],
-        freeTier: true,
-        trialPeriod: "1000 kWh",
-        technology: ["AI/ML", "IoT", "Predictive Analytics", "Cloud Computing", "Real-time Systems"],
-        compliance: ["ISO 50001", "ISO 14001", "Grid regulations", "Environmental standards"],
-        useCases: ["Solar optimization", "Wind farm management", "Grid stability", "Energy trading"],
-        industryStandards: ["IEC 61850", "DNP3", "Modbus", "OPC UA"]
+        images: ["https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-02-01T09:00:00.000Z"
     },
+
+    // Transportation & Logistics
+    {
+        id: "autonomous-logistics-platform",
+        title: "Autonomous Logistics & Supply Chain Platform",
+        description: "Intelligent logistics platform using AI and autonomous systems for route optimization, warehouse automation, and supply chain visibility. Reduces logistics costs by 40%.",
+        category: "Transportation",
+        subcategory: "Logistics",
+        price: 799,
+        currency: "$",
+        pricingModel: "monthly",
+        features: [
+            "Route optimization",
+            "Warehouse automation",
+            "Supply chain visibility",
+            "Demand forecasting",
+            "Inventory management",
+            "Fleet management",
+            "Real-time tracking",
+            "Analytics dashboard"
+        ],
+        benefits: [
+            "Reduce logistics costs by 40%",
+            "Improve delivery times by 30%",
+            "Optimize warehouse operations",
+            "Real-time visibility",
+            "Automated decision making"
+        ],
+        targetAudience: ["Logistics companies", "E-commerce", "Manufacturing", "Retail"],
+        marketPrice: "$799-2,499/month",
+        website: "https://ziontechgroup.com/autonomous-logistics",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Logistics", "Supply Chain", "Autonomous Systems", "Optimization"],
+        aiScore: 96,
+        rating: 4.8,
+        reviewCount: 67,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-02-05T15:30:00.000Z"
+    },
+
+    // Education & EdTech
+    {
+        id: "ai-personalized-learning",
+        title: "AI-Powered Personalized Learning Platform",
+        description: "Intelligent education platform that adapts to individual learning styles, provides personalized content, and tracks progress in real-time. Improves learning outcomes by 50%.",
+        category: "Education",
+        subcategory: "Personalized Learning",
+        price: 199,
+        currency: "$",
+        pricingModel: "monthly",
+        features: [
+            "Adaptive learning algorithms",
+            "Personalized content",
+            "Progress tracking",
+            "Skill assessment",
+            "Collaborative learning",
+            "Gamification",
+            "Analytics dashboard",
+            "Mobile learning"
+        ],
+        benefits: [
+            "Improve learning outcomes by 50%",
+            "Personalized learning paths",
+            "Real-time progress tracking",
+            "Engaging learning experience",
+            "Data-driven insights"
+        ],
+        targetAudience: ["Schools", "Universities", "Corporate training", "Online education"],
+        marketPrice: "$199-599/month",
+        website: "https://ziontechgroup.com/ai-personalized-learning",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Education", "AI", "Personalized Learning", "EdTech"],
+        aiScore: 93,
+        rating: 4.6,
+        reviewCount: 89,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-02-10T12:00:00.000Z"
+    },
+
     // Real Estate & PropTech
     {
-        id: 8,
-        name: "PropTech Intelligence Suite",
+        id: "ai-real-estate-analytics",
+        title: "AI Real Estate Analytics Platform",
+        description: "Comprehensive real estate platform using AI for market analysis, property valuation, investment opportunities, and predictive market trends. Provides data-driven insights for real estate decisions.",
         category: "Real Estate",
-        industry: "PropTech",
-        description: "Comprehensive property technology platform with AI-powered market analysis, property valuation, and investment insights",
-        pricing: "Tiered",
-        price: 299,
+        subcategory: "Analytics",
+        price: 399,
+        currency: "$",
         pricingModel: "monthly",
-        userLimit: "Up to 100 properties",
         features: [
-            "AI market analysis",
+            "Market analysis",
             "Property valuation",
-            "Investment insights",
-            "Market trends",
+            "Investment analysis",
+            "Predictive trends",
             "Risk assessment",
-            "Portfolio management",
-            "Tenant screening",
-            "Maintenance prediction"
-        ],
-        benefits: [
-            "20% better investment decisions",
-            "Accurate valuations",
-            "Risk mitigation",
-            "Market insights",
             "Portfolio optimization",
-            "Time savings"
-        ],
-        targetAudience: ["Real estate investors", "Property managers", "Real estate agents", "Investment firms"],
-        tags: ["PropTech", "Real Estate", "Investment Analysis", "Market Intelligence", "AI"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/proptech-intelligence-suite",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
-        },
-        marketPrice: "$299-899/month",
-        competitors: ["CoStar", "Real Capital Analytics", "Yardi"],
-        roi: "350% within 8 months",
-        setupTime: "1 week",
-        integrations: ["MLS systems", "Property databases", "Financial platforms", "CRM systems"],
-        freeTier: true,
-        trialPeriod: "30 days",
-        technology: ["AI/ML", "Big Data", "Predictive Analytics", "Cloud Computing"],
-        compliance: ["SOC 2", "ISO 27001", "GDPR", "Real estate regulations"],
-        useCases: ["Property investment", "Market analysis", "Portfolio management", "Risk assessment"],
-        industryStandards: ["RESO", "RETS", "Open Real Estate", "Financial data standards"]
-    },
-    // Legal & Compliance
-    {
-        id: 9,
-        name: "LegalTech AI Platform",
-        category: "Legal Services",
-        industry: "Legal Technology",
-        description: "AI-powered legal technology platform with contract analysis, legal research automation, and compliance monitoring for law firms and legal departments",
-        pricing: "Per attorney",
-        price: 199,
-        pricingModel: "monthly per attorney",
-        userLimit: "Up to 100 attorneys",
-        features: [
-            "AI contract analysis",
-            "Legal research automation",
-            "Compliance monitoring",
-            "Document generation",
-            "Case management",
-            "Billing automation",
-            "Client portal",
-            "Performance analytics"
+            "Market reports",
+            "API access"
         ],
         benefits: [
-            "80% time savings",
-            "90% accuracy improvement",
-            "Cost reduction",
-            "Compliance assurance",
-            "Client satisfaction",
-            "Competitive advantage"
+            "Accurate property valuations",
+            "Identify investment opportunities",
+            "Reduce investment risks",
+            "Market trend predictions",
+            "Data-driven decisions"
         ],
-        targetAudience: ["Law firms", "Corporate legal departments", "Legal tech companies", "Compliance officers"],
-        tags: ["LegalTech", "AI", "Contract Analysis", "Legal Research", "Compliance"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/legaltech-ai-platform",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+        targetAudience: ["Real estate investors", "Agents", "Developers", "Property managers"],
+        marketPrice: "$399-1,299/month",
+        website: "https://ziontechgroup.com/ai-real-estate",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Real Estate", "AI", "Analytics", "Investment"],
+        aiScore: 92,
+        rating: 4.5,
+        reviewCount: 45,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
         },
-        marketPrice: "$199-599 per attorney per month",
-        competitors: ["DoNotPay", "Harvey AI", "Casetext"],
-        roi: "400% within 6 months",
-        setupTime: "1 week",
-        integrations: ["Practice management systems", "Document management", "Billing systems", "Court databases"],
-        freeTier: true,
-        trialPeriod: "30 days",
-        technology: ["AI/ML", "Natural Language Processing", "Document Analysis", "Cloud Computing"],
-        compliance: ["SOC 2", "ISO 27001", "GDPR", "Legal industry standards"],
-        useCases: ["Contract review", "Legal research", "Compliance monitoring", "Document generation"],
-        industryStandards: ["Legal XML", "Case law standards", "Document formats", "API standards"]
+        images: ["https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-02-15T16:45:00.000Z"
     },
+
     // Agriculture & AgTech
     {
-        id: 10,
-        name: "Precision Agriculture AI",
+        id: "precision-agriculture-platform",
+        title: "Precision Agriculture & Smart Farming Platform",
+        description: "AI-powered agricultural platform for precision farming, crop monitoring, yield optimization, and sustainable agriculture practices. Increases crop yields by 30% while reducing resource usage.",
         category: "Agriculture",
-        industry: "AgTech",
-        description: "Intelligent precision agriculture platform with drone monitoring, crop analysis, and AI-powered farming recommendations",
-        pricing: "Per acre",
-        price: 2.50,
-        pricingModel: "monthly per acre",
-        userLimit: "Unlimited acres",
+        subcategory: "Precision Farming",
+        price: 299,
+        currency: "$",
+        pricingModel: "monthly",
         features: [
-            "Drone monitoring",
-            "Crop analysis AI",
-            "Soil health monitoring",
+            "Crop monitoring",
+            "Soil analysis",
             "Weather prediction",
             "Irrigation optimization",
             "Pest detection",
-            "Yield forecasting",
-            "Equipment management"
+            "Yield prediction",
+            "Resource management",
+            "Sustainability tracking"
         ],
         benefits: [
-            "25% yield increase",
-            "30% water savings",
-            "20% cost reduction",
-            "Sustainable farming",
-            "Data-driven decisions",
-            "Environmental protection"
+            "Increase crop yields by 30%",
+            "Reduce water usage by 25%",
+            "Optimize resource allocation",
+            "Predictive pest management",
+            "Sustainable farming practices"
         ],
-        targetAudience: ["Large farms", "Agricultural cooperatives", "Food companies", "Research institutions"],
-        tags: ["AgTech", "Precision Agriculture", "Drone Technology", "AI", "Sustainability"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/precision-agriculture-ai",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+        targetAudience: ["Farmers", "Agricultural companies", "Food producers", "Research institutions"],
+        marketPrice: "$299-899/month",
+        website: "https://ziontechgroup.com/precision-agriculture",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Agriculture", "Precision Farming", "AI", "Sustainability"],
+        aiScore: 94,
+        rating: 4.7,
+        reviewCount: 38,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
         },
-        marketPrice: "$2.50-8.00 per acre per month",
-        competitors: ["John Deere", "Climate FieldView", "Granular"],
-        roi: "300% within 12 months",
-        setupTime: "2 weeks",
-        integrations: ["Farm equipment", "Weather stations", "Soil sensors", "Irrigation systems"],
-        freeTier: true,
-        trialPeriod: "100 acres",
-        technology: ["AI/ML", "IoT", "Drone Technology", "Satellite Imagery", "Cloud Computing"],
-        compliance: ["Organic standards", "Food safety", "Environmental regulations"],
-        useCases: ["Crop monitoring", "Irrigation management", "Pest control", "Harvest optimization"],
-        industryStandards: ["ISO 11783", "Precision agriculture protocols", "IoT standards", "Data formats"]
+        images: ["https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-02-20T10:15:00.000Z"
+    },
+
+    // Legal & RegTech
+    {
+        id: "ai-legal-research-platform",
+        title: "AI Legal Research & Compliance Platform",
+        description: "Intelligent legal research platform using AI for case analysis, document review, compliance monitoring, and legal risk assessment. Reduces research time by 80%.",
+        category: "Legal Services",
+        subcategory: "Legal Research",
+        price: 599,
+        currency: "$",
+        pricingModel: "monthly",
+        features: [
+            "AI case analysis",
+            "Document review",
+            "Compliance monitoring",
+            "Risk assessment",
+            "Legal research",
+            "Precedent analysis",
+            "Regulatory updates",
+            "Collaboration tools"
+        ],
+        benefits: [
+            "Reduce research time by 80%",
+            "Improve case outcomes",
+            "Automated compliance",
+            "Risk mitigation",
+            "Cost savings"
+        ],
+        targetAudience: ["Law firms", "Corporate legal departments", "Compliance officers", "Legal researchers"],
+        marketPrice: "$599-1,999/month",
+        website: "https://ziontechgroup.com/ai-legal-research",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Legal", "AI", "Compliance", "Research"],
+        aiScore: 95,
+        rating: 4.8,
+        reviewCount: 52,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-02-25T14:00:00.000Z"
+    },
+
+    // Media & Entertainment
+    {
+        id: "ai-content-creation-studio",
+        title: "AI Content Creation & Media Production Studio",
+        description: "Revolutionary content creation platform using AI for video production, music composition, script writing, and media optimization. Reduces production costs by 60%.",
+        category: "Media & Entertainment",
+        subcategory: "Content Creation",
+        price: 399,
+        currency: "$",
+        pricingModel: "monthly",
+        features: [
+            "AI video production",
+            "Music composition",
+            "Script writing",
+            "Content optimization",
+            "Multi-format output",
+            "Brand customization",
+            "Analytics dashboard",
+            "Collaboration tools"
+        ],
+        benefits: [
+            "Reduce production costs by 60%",
+            "Faster content creation",
+            "Consistent quality",
+            "Multi-format output",
+            "Brand consistency"
+        ],
+        targetAudience: ["Media companies", "Marketing agencies", "Content creators", "Entertainment industry"],
+        marketPrice: "$399-1,299/month",
+        website: "https://ziontechgroup.com/ai-content-creation",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Media", "Content Creation", "AI", "Entertainment"],
+        aiScore: 93,
+        rating: 4.6,
+        reviewCount: 41,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-03-01T11:30:00.000Z"
     }
 ];
-// Utility functions for specialized industry services
-export const getServicesByIndustry = (industry) => {
-    return specializedIndustrySolutions2025.filter(service => service.industry === industry);
+
+export const INDUSTRY_CATEGORIES = [
+    "Healthcare",
+    "Financial Services",
+    "Manufacturing",
+    "Energy",
+    "Transportation",
+    "Education",
+    "Real Estate",
+    "Agriculture",
+    "Legal Services",
+    "Media & Entertainment"
+];
+
+export const INDUSTRY_PRICING = {
+    basic: {
+        price: 299,
+        currency: "$",
+        period: "month",
+        features: ["Core platform access", "Basic analytics", "Standard support"]
+    },
+    professional: {
+        price: 799,
+        currency: "$",
+        period: "month",
+        features: ["Advanced features", "Custom integrations", "Priority support", "Advanced analytics"]
+    },
+    enterprise: {
+        price: 1999,
+        currency: "$",
+        period: "month",
+        features: ["Full platform access", "White-label options", "24/7 support", "Custom development"]
+    }
 };
-export const getServicesByCategory = (category) => {
-    return specializedIndustrySolutions2025.filter(service => service.category === category);
-};
-export const getServicesByCompliance = (compliance) => {
-    return specializedIndustrySolutions2025.filter(service => service.compliance.some(comp => comp.toLowerCase().includes(compliance.toLowerCase())));
-};
-export const getServicesByTechnology = (technology) => {
-    return specializedIndustrySolutions2025.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())));
-};
-export const getPopularIndustryServices = (limit = 6) => {
-    return specializedIndustrySolutions2025.slice(0, limit);
-};
-export const getServicesByPriceRange = (minPrice, maxPrice) => {
-    return specializedIndustrySolutions2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
+
+export const INDUSTRY_CONTACT = {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008, Middletown DE 19709",
+    website: "https://ziontechgroup.com",
+    supportHours: "24/7",
+    responseTime: "< 2 hours"
 };

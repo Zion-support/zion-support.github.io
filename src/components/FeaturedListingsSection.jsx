@@ -11,8 +11,13 @@ import {
   Zap,
   Shield,
   Rocket,
-  Brain
+  Brain,
+  Award,
+  TrendingUp,
+  Phone
 } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 export default function FeaturedListingsSection() {
   const [hoveredListing, setHoveredListing] = useState(null);
@@ -21,14 +26,15 @@ export default function FeaturedListingsSection() {
     {
       id: 1,
       title: "AI-Powered Business Intelligence Platform",
+      category: "AI Services",
       description: "Advanced analytics platform with machine learning capabilities for enterprise decision making.",
-      price: "$2,999/month",
+      price: "$399/month",
       rating: 4.9,
       reviews: 127,
       views: 2847,
       likes: 156,
-      duration: "8-12 weeks",
-      team: "5-8 experts",
+      duration: "Immediate",
+      team: "AI Experts",
       tags: ["AI", "Analytics", "Machine Learning", "Business Intelligence"],
       highlights: [
         "Real-time data processing",
@@ -37,19 +43,21 @@ export default function FeaturedListingsSection() {
         "API integration"
       ],
       technologies: ["Python", "TensorFlow", "React", "PostgreSQL", "AWS"],
-      link: "/services/ai-business-intelligence"
+      link: "/services/ai-business-intelligence",
+      featured: true
     },
     {
       id: 2,
-      title: "Quantum Financial Modeling Platform",
+      title: "Quantum Financial Modeling Suite",
+      category: "Quantum Computing",
       description: "Cutting-edge quantum computing solution for portfolio optimization and risk assessment.",
-      price: "$10,000/month",
+      price: "$1,999/month",
       rating: 4.8,
       reviews: 89,
       views: 1956,
       likes: 134,
-      duration: "16-20 weeks",
-      team: "8-12 experts",
+      duration: "Immediate",
+      team: "Quantum Experts",
       tags: ["Quantum Computing", "Finance", "Risk Management", "Portfolio Optimization"],
       highlights: [
         "Quantum algorithm optimization",
@@ -58,19 +66,21 @@ export default function FeaturedListingsSection() {
         "Compliance monitoring"
       ],
       technologies: ["Qiskit", "Python", "React", "Financial APIs", "Quantum Hardware"],
-      link: "/services/quantum-financial-modeling"
+      link: "/services/quantum-financial-modeling",
+      featured: true
     },
     {
       id: 3,
-      title: "AI-Powered Cybersecurity Suite",
+      title: "AI-Powered Cybersecurity Platform",
+      category: "Cybersecurity",
       description: "Comprehensive security platform using AI to detect and prevent cyber threats in real-time.",
-      price: "$3,500/month",
+      price: "$399/month",
       rating: 4.9,
       reviews: 203,
       views: 3421,
       likes: 189,
-      duration: "10-14 weeks",
-      team: "6-10 experts",
+      duration: "Immediate",
+      team: "Security Experts",
       tags: ["Cybersecurity", "AI", "Threat Detection", "Compliance"],
       highlights: [
         "AI threat detection",
@@ -79,7 +89,77 @@ export default function FeaturedListingsSection() {
         "24/7 monitoring"
       ],
       technologies: ["Python", "TensorFlow", "React", "Kubernetes", "Security APIs"],
-      link: "/services/ai-cybersecurity"
+      link: "/services/ai-cybersecurity",
+      featured: true
+    },
+    {
+      id: 4,
+      title: "Autonomous Robotics Management Platform",
+      category: "Autonomous Systems",
+      description: "Intelligent platform for managing fleets of autonomous robots in warehouses and manufacturing.",
+      price: "$599/month",
+      rating: 4.7,
+      reviews: 45,
+      views: 1234,
+      likes: 89,
+      duration: "Immediate",
+      team: "Robotics Experts",
+      tags: ["Robotics", "AI", "Automation", "Manufacturing"],
+      highlights: [
+        "Multi-robot fleet management",
+        "AI pathfinding algorithms",
+        "Task optimization",
+        "Real-time monitoring"
+      ],
+      technologies: ["Python", "ROS", "Computer Vision", "IoT", "Cloud"],
+      link: "/services/autonomous-robotics",
+      featured: true
+    },
+    {
+      id: 5,
+      title: "Digital Twin Enterprise Platform",
+      category: "Digital Twin",
+      description: "Create virtual replicas of physical assets for real-time monitoring and predictive maintenance.",
+      price: "$799/month",
+      rating: 4.8,
+      reviews: 67,
+      views: 1890,
+      likes: 112,
+      duration: "Immediate",
+      team: "IoT Experts",
+      tags: ["Digital Twin", "IoT", "Predictive Analytics", "3D Modeling"],
+      highlights: [
+        "3D asset modeling",
+        "Real-time data sync",
+        "Predictive analytics",
+        "AR/VR visualization"
+      ],
+      technologies: ["Unity", "IoT", "3D Graphics", "Machine Learning", "Cloud"],
+      link: "/services/digital-twin",
+      featured: true
+    },
+    {
+      id: 6,
+      title: "Edge AI Computing Platform",
+      category: "Edge Computing",
+      description: "Deploy AI models directly on edge devices for real-time processing and offline capabilities.",
+      price: "$299/month",
+      rating: 4.6,
+      reviews: 34,
+      views: 890,
+      likes: 67,
+      duration: "Immediate",
+      team: "Edge Computing Experts",
+      tags: ["Edge Computing", "AI", "IoT", "Real-time"],
+      highlights: [
+        "Edge AI deployment",
+        "Real-time inference",
+        "Offline processing",
+        "Device management"
+      ],
+      technologies: ["TensorFlow Lite", "IoT", "Edge Devices", "Python", "Cloud"],
+      link: "/services/edge-ai",
+      featured: true
     }
   ];
 
@@ -100,210 +180,199 @@ export default function FeaturedListingsSection() {
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue rounded-full"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          className="text-center mb-16" 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Projects</span>
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Discover our most innovative and successful technology projects. Each solution is crafted with cutting-edge AI, 
-            quantum computing, and advanced cybersecurity technologies.
-          </p>
+          <motion.div 
+            className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 backdrop-blur-sm rounded-full border border-zion-cyan/30 mb-6"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Rocket className="h-5 w-5 text-zion-cyan" />
+            <span className="text-zion-cyan text-sm font-medium">Featured Services</span>
+          </motion.div>
+          
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            Cutting-Edge Micro SAAS Solutions
+          </motion.h2>
+          
+          <motion.p 
+            className="text-xl text-zion-slate-light max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            Discover our most innovative and in-demand services that are transforming industries 
+            and driving digital transformation across the globe.
+          </motion.p>
         </motion.div>
 
         {/* Featured Listings Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredListings.map((listing, index) => (
             <motion.div
               key={listing.id}
-              className="group bg-zion-blue-dark/80 backdrop-blur-sm rounded-2xl border border-zion-cyan/20 overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 transform hover:-translate-y-2"
+              className="group relative"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              onMouseEnter={() => setHoveredListing(listing.id)}
-              onMouseLeave={() => setHoveredListing(null)}
+              onHoverStart={() => setHoveredListing(listing.id)}
+              onHoverEnd={() => setHoveredListing(null)}
             >
-              {/* Header with image placeholder */}
-              <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10"></div>
-                <div className="absolute top-4 right-4">
-                  <div className="flex items-center gap-2 bg-zion-blue-dark/80 backdrop-blur-sm rounded-full px-3 py-1 border border-zion-cyan/30">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-white text-sm font-medium">{listing.rating}</span>
-                    <span className="text-zion-slate-light text-xs">({listing.reviews})</span>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full transition-all duration-300 hover:bg-white/10 hover:border-zion-cyan/30 hover:transform hover:scale-105">
+                {/* Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
+                        {listing.category}
+                      </Badge>
+                      {listing.featured && (
+                        <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-500 border-yellow-500/30">
+                          <Star className="h-3 w-3 mr-1" />
+                          Featured
+                        </Badge>
+                      )}
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                      {listing.title}
+                    </h3>
                   </div>
                 </div>
-                
-                {/* Floating tech icons */}
-                <div className="absolute bottom-4 left-4 flex gap-2">
-                  {listing.technologies.slice(0, 3).map((tech, idx) => (
-                    <motion.div
-                      key={idx}
-                      className="w-8 h-8 bg-zion-blue-dark/80 backdrop-blur-sm rounded-lg flex items-center justify-center border border-zion-cyan/30"
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: index * 0.1 + idx * 0.1 }}
-                    >
-                      <span className="text-zion-cyan text-xs font-bold">{tech.charAt(0)}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-6">
-                {/* Title and description */}
+                {/* Description */}
+                <p className="text-zion-slate-light mb-4 line-clamp-2">
+                  {listing.description}
+                </p>
+
+                {/* Highlights */}
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
-                    {listing.title}
-                  </h3>
-                  <p className="text-zion-slate-light text-sm leading-relaxed">
-                    {listing.description}
-                  </p>
+                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {listing.highlights.slice(0, 3).map((highlight, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-zion-slate-light">
+                        <Zap className="h-3 w-3 text-zion-cyan mr-2 flex-shrink-0" />
+                        {highlight}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {listing.tags.slice(0, 3).map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                  {listing.tags.length > 3 && (
-                    <span className="px-2 py-1 bg-zion-purple/10 text-zion-purple text-xs rounded-full border border-zion-purple/30">
-                      +{listing.tags.length - 3} more
-                    </span>
-                  )}
+                {/* Technologies */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-white mb-2">Technologies:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {listing.technologies.slice(0, 4).map((tech, idx) => (
+                      <span key={idx} className="px-2 py-1 bg-zion-blue/20 text-zion-blue-light text-xs rounded-md border border-zion-blue/30">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-4 text-center">
+                <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                   <div className="text-center">
-                    <div className="flex items-center justify-center gap-1 text-zion-slate-light mb-1">
-                      <Eye className="w-4 h-4" />
-                      <span className="text-xs">{listing.views}</span>
+                    <div className="flex items-center justify-center mb-1">
+                      {renderStars(listing.rating)}
                     </div>
-                    <span className="text-white text-sm font-medium">Views</span>
+                    <div className="text-xs text-zion-slate-light">
+                      {listing.rating} ({listing.reviews})
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex items-center justify-center gap-1 text-zion-slate-light mb-1">
-                      <Heart className="w-4 h-4" />
-                      <span className="text-xs">{listing.likes}</span>
+                    <div className="flex items-center justify-center mb-1">
+                      <Eye className="h-4 w-4 text-zion-cyan" />
                     </div>
-                    <span className="text-white text-sm font-medium">Likes</span>
+                    <div className="text-xs text-zion-slate-light">
+                      {listing.views}
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="flex items-center justify-center gap-1 text-zion-slate-light mb-1">
-                      <Clock className="w-4 h-4" />
-                      <span className="text-xs">{listing.duration}</span>
+                    <div className="flex items-center justify-center mb-1">
+                      <Heart className="h-4 w-4 text-zion-purple" />
                     </div>
-                    <span className="text-white text-sm font-medium">Duration</span>
+                    <div className="text-xs text-zion-slate-light">
+                      {listing.likes}
+                    </div>
                   </div>
-                </div>
-
-                {/* Team size */}
-                <div className="flex items-center gap-2 mb-4 text-zion-slate-light">
-                  <Users className="w-4 h-4" />
-                  <span className="text-sm">{listing.team}</span>
                 </div>
 
                 {/* Price and CTA */}
-                <div className="flex items-center justify-between mt-auto">
-                  <span className="text-2xl font-bold text-zion-cyan">
-                    {listing.price}
-                  </span>
-                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
-                    View Details
-                    <ArrowRight className="w-4 h-4"/>
-                  </button>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="text-2xl font-bold text-zion-cyan">
+                      {listing.price}
+                    </div>
+                    <div className="text-sm text-zion-slate-light">
+                      {listing.duration} • {listing.team}
+                    </div>
+                  </div>
+                  <Button 
+                    className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white"
+                    size="sm"
+                    asChild
+                  >
+                    <Link to={listing.link}>
+                      <span>Learn More</span>
+                      <ArrowRight className="h-4 w-4 ml-1" />
+                    </Link>
+                  </Button>
                 </div>
-
-                {/* Expanded details on hover */}
-                <AnimatePresence>
-                  {hoveredListing === listing.id && (
-                    <motion.div 
-                      className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" 
-                      initial={{ opacity: 0, height: 0, y: 10 }} 
-                      animate={{ opacity: 1, height: "auto", y: 0 }} 
-                      exit={{ opacity: 0, height: 0, y: 10 }} 
-                      transition={{ duration: 0.3 }}
-                    >
-                      <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Highlights:</h4>
-                      <div className="space-y-2 mb-4">
-                        {listing.highlights.map((highlight, idx) => (
-                          <motion.div 
-                            key={idx} 
-                            className="flex items-center gap-2 text-zion-slate-light/80 text-xs" 
-                            initial={{ opacity: 0, x: -10 }} 
-                            animate={{ opacity: 1, x: 0 }} 
-                            transition={{ delay: idx * 0.1 }}
-                          >
-                            <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                            <span>{highlight}</span>
-                          </motion.div>
-                        ))}
-                      </div>
-
-                      <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologies:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {listing.technologies.slice(0, 4).map((tech, idx) => (
-                          <motion.span 
-                            key={idx} 
-                            className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" 
-                            initial={{ opacity: 0, scale: 0.8 }} 
-                            animate={{ opacity: 1, scale: 1 }} 
-                            transition={{ delay: idx * 0.1 }}
-                          >
-                            {tech}
-                          </motion.span>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-              
-              <div className="px-6 pb-6">
-                <Link to={`/project/${listing.id}`} className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg">
-                  Get Started
-                </Link>
               </div>
             </motion.div>
           ))}
-        </motion.div>
-        
-        {/* Enhanced bottom CTA */}
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
-          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
-            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
-              <p className="text-white text-lg mb-4">
-                Ready to start your next project?
-              </p>
-              <Link 
-                to="/services"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
-              >
-                View All Projects
-                <ArrowRight className="w-5 h-5"/>
+        </div>
+
+        {/* CTA Section */}
+        <motion.div 
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <p className="text-zion-slate-light mb-6 text-lg">
+            Ready to explore our complete portfolio of 100+ micro SAAS services?
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button 
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8"
+              size="lg"
+              asChild
+            >
+              <Link to="/all-services-2027">
+                <span>View All Services</span>
+                <ArrowRight className="h-5 w-5 ml-2" />
               </Link>
-            </div>
+            </Button>
+            <Button 
+              variant="outline" 
+              className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white text-lg py-6 px-8"
+              size="lg"
+              asChild
+            >
+              <Link to="/contact">
+                <span>Contact Sales</span>
+                <Phone className="h-5 w-5 ml-2" />
+              </Link>
+            </Button>
           </div>
         </motion.div>
       </div>
