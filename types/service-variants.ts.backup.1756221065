@@ -77,7 +77,30 @@ export type ServiceVariant =
   | 'monitoring-futuristic'
   | 'backup-futuristic'
   | 'analytics-futuristic'
+<<<<<<< HEAD
+  | 'it-futuristic'
+  | 'saas-futuristic'
+  | 'micro-saas-futuristic'
+  | 'business-intelligence-futuristic'
+  | 'customer-service-futuristic'
+  | 'marketing-futuristic'
+  | 'sales-futuristic'
+  | 'hr-futuristic'
+  | 'finance-futuristic'
+  | 'project-management-futuristic'
+  | 'supply-chain-futuristic'
+  | 'legal-futuristic'
+  | 'healthcare-futuristic'
+  | 'ai-content'
+  | 'ai-education'
+  | 'blockchain-futuristic'
+  | '5g-futuristic'
+  | 'biometric-futuristic'
+  | 'edge-futuristic'
+  | 'digital-twin-futuristic';
+=======
   | 'emerging-tech'
   | 'space-tech'
   | 'autonomous-systems'
   | 'quantum-futuristic';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd25
