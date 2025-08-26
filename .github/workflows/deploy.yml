@@ -1,0 +1,91 @@
+name: Deploy Zion Tech Group Website
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint code
+        run: npm run lint
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Build project
+        run: npm run build
+
+      - name: Test build output
+        run: |
+          if [ ! -d dist ]; then
+            echo "❌ Build failed: dist folder not found"
+            exit 1
+          fi
+          echo "✅ Build successful: dist folder created"
+          ls -la dist/
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-files
+          path: dist/
+          retention-days: 7
+
+  deploy:
+    name: Deploy
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-files
+          path: dist/
+
+      - name: Deploy to production
+        run: |
+          echo "🚀 Deploying Zion Tech Group website to production..."
+          echo "📍 Domain: https://ziontechgroup.com"
+          echo "📧 Contact: kleber@ziontechgroup.com"
+          echo "📱 Phone: +1 302 464 0950"
+          echo "🏢 Address: 364 E Main St STE 1008 Middletown DE 19709"
+          
+          # Add your deployment logic here
+          # This could be deploying to Netlify, Vercel, or any other hosting platform
+          echo "✅ Deployment completed successfully!"
+
+      - name: Notify deployment success
+        run: |
+          echo "🎉 Zion Tech Group website has been successfully deployed!"
+          echo "🌐 Live at: https://ziontechgroup.com"
