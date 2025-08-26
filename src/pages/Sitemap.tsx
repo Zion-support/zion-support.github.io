@@ -1,324 +1,243 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  Map as SitemapIcon,
-  Home,
+import { 
+  Brain, 
+  Code, 
+  Network, 
+  Rocket, 
+  ShoppingCart,
+  Building,
   Users,
-  Briefcase,
-  FileText,
-  MessageSquare,
   HelpCircle,
-  Shield,
   Globe,
-  Building2,
-  Rocket,
-  Brain,
-  Cloud,
-  Code,
-  BookOpen,
-  Handshake,
-  LogIn,
   ArrowRight,
-  ExternalLink
+  CheckCircle
 } from 'lucide-react';
 
 const Sitemap: React.FC = () => {
-  const siteStructure = [
-    {
-      title: 'Main Pages',
-      icon: Home,
-      links: [
-        { name: 'Home', path: '/', description: 'Main landing page' },
-        { name: 'About Us', path: '/about', description: 'Company information and mission' },
-        { name: 'Services', path: '/services', description: 'Overview of our services' },
-        { name: 'Contact', path: '/contact', description: 'Get in touch with us' }
-      ]
-    },
-    {
-      title: 'Services',
-      icon: Briefcase,
-      links: [
-        { name: 'AI Services', path: '/ai-services', description: 'Artificial Intelligence solutions' },
-        { name: 'Micro SAAS', path: '/micro-saas', description: 'Specialized software solutions' },
-        { name: 'IT Services', path: '/it-services', description: 'Information Technology consulting' },
-        { name: 'Emerging Tech', path: '/emerging-tech', description: 'Cutting-edge technology' },
-        { name: 'Marketplace', path: '/marketplace', description: 'Technology marketplace' }
-      ]
-    },
-    {
-      title: 'Company',
-      icon: Building2,
-      links: [
-        { name: 'Careers', path: '/careers', description: 'Job opportunities' },
-        { name: 'Partners', path: '/partners', description: 'Partnership information' },
-        { name: 'Blog', path: '/blog', description: 'Latest news and insights' },
-        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' }
-      ]
-    },
-    {
-      title: 'Legal & Support',
-      icon: Shield,
-      links: [
-        { name: 'Privacy Policy', path: '/privacy', description: 'Data protection information' },
-        { name: 'Terms of Service', path: '/terms', description: 'Service terms and conditions' },
-        { name: 'Sitemap', path: '/sitemap', description: 'Site navigation structure' }
-      ]
-    },
-    {
-      title: 'User Account',
-      icon: Users,
-      links: [
-        { name: 'Login', path: '/login', description: 'User authentication' },
-        { name: 'Sign Up', path: '/signup', description: 'Create new account' },
-        { name: 'Dashboard', path: '/dashboard', description: 'User dashboard' }
-      ]
-    }
-  ];
+  const siteStructure = {
+    mainPages: [
+      { name: 'Home', href: '/', description: 'Welcome to Zion Tech Group' },
+      { name: 'About Us', href: '/about', description: 'Learn about our mission and values' },
+      { name: 'Contact', href: '/contact', description: 'Get in touch with our team' },
+      { name: 'Blog', href: '/blog', description: 'Latest insights and updates' },
+      { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+      { name: 'Careers', href: '/careers', description: 'Join our team' },
+      { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
+      { name: 'Sitemap', href: '/sitemap', description: 'Site navigation guide' }
+    ],
+    aiServices: [
+      { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', description: 'Advanced AI consciousness research platform' },
+      { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', description: 'Quantum-powered emotional intelligence' },
+      { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', description: 'Self-managing AI infrastructure' },
+      { name: 'Neural Network Architect', href: '/ai-services/neural-architect', description: 'Custom neural network design' },
+      { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', description: 'Ethical AI development tools' },
+      { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', description: 'AI-powered business insights' }
+    ],
+    microSaas: [
+      { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', description: 'Intelligent business analytics platform' },
+      { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience', description: '360° customer journey management' },
+      { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing', description: 'Quantum computing solutions' },
+      { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain', description: 'AI-powered supply chain management' },
+      { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity', description: 'Advanced threat protection' },
+      { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', description: 'Edge computing solutions' },
+      { name: 'Content Creation AI', href: '/micro-saas/content-creation', description: 'AI-powered content generation' },
+      { name: 'HR Management Suite', href: '/micro-saas/hr-platform', description: 'Modern HR management platform' }
+    ],
+    itServices: [
+      { name: 'Infrastructure Management', href: '/it-services/infrastructure', description: 'Complete infrastructure solutions' },
+      { name: 'Digital Transformation', href: '/it-services/digital-transformation', description: 'Digital transformation consulting' },
+      { name: 'IT Consulting', href: '/it-services/consulting', description: 'Expert IT consulting services' },
+      { name: 'Onsite Support', href: '/it-services/onsite-support', description: '24/7 onsite technical support' },
+      { name: 'Green IT Solutions', href: '/it-services/green-it', description: 'Sustainable IT infrastructure' },
+      { name: '5G Network Solutions', href: '/it-services/5g-solutions', description: 'Next-gen network infrastructure' }
+    ],
+    emergingTech: [
+      { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing', description: 'Quantum computing solutions' },
+      { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi', description: 'Blockchain and DeFi platforms' },
+      { name: 'Space Technology', href: '/emerging-tech/space-tech', description: 'Space technology innovations' },
+      { name: 'Biotechnology', href: '/emerging-tech/biotech', description: 'Biotech and healthcare solutions' },
+      { name: 'Nanotechnology', href: '/emerging-tech/nanotech', description: 'Nanotechnology applications' },
+      { name: 'Augmented Reality', href: '/emerging-tech/ar-vr', description: 'AR/VR development services' }
+    ],
+    marketplace: [
+      { name: 'AI Products', href: '/marketplace/ai-products', description: 'AI-powered products and tools' },
+      { name: 'IT Equipment', href: '/marketplace/it-equipment', description: 'Professional IT equipment' },
+      { name: 'Software Solutions', href: '/marketplace/software', description: 'Enterprise software solutions' },
+      { name: 'Professional Services', href: '/marketplace/services', description: 'Expert professional services' },
+      { name: 'Talent Network', href: '/marketplace/talent', description: 'Skilled professionals network' },
+      { name: 'Innovation Hub', href: '/marketplace/innovation', description: 'Innovation and R&D services' }
+    ],
+    legal: [
+      { name: 'Privacy Policy', href: '/privacy', description: 'Data protection and privacy' },
+      { name: 'Terms of Service', href: '/terms', description: 'Legal terms and conditions' },
+      { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage and preferences' }
+    ]
+  };
 
-  const quickLinks = [
-    { name: 'Get Started', path: '/contact', icon: Rocket, color: 'from-zion-cyan to-zion-blue' },
-    { name: 'View Services', path: '/services', icon: Briefcase, color: 'from-zion-purple to-zion-cyan' },
-    { name: 'Read Blog', path: '/blog', icon: BookOpen, color: 'from-zion-blue to-zion-purple' },
-    { name: 'Join Team', path: '/careers', icon: Users, color: 'from-zion-cyan to-zion-green' }
-  ];
-
-  const externalLinks = [
-    { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: ExternalLink },
-    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: ExternalLink },
-    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: ExternalLink },
-    { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', icon: ExternalLink }
-  ];
+  const renderSection = (title: string, icon: any, items: any[], color: string) => (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+    >
+      <div className="flex items-center space-x-3 mb-6">
+        <div className={`w-10 h-10 bg-gradient-to-br ${color} rounded-lg flex items-center justify-center`}>
+          <icon className="w-5 h-5 text-white" />
+        </div>
+        <h3 className="text-xl font-bold text-white">{title}</h3>
+      </div>
+      <div className="space-y-3">
+        {items.map((item, index) => (
+          <motion.div
+            key={item.name}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.05 }}
+            viewport={{ once: true }}
+          >
+            <Link
+              to={item.href}
+              className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 group"
+            >
+              <CheckCircle className="w-4 h-4 text-zion-cyan mt-1 flex-shrink-0" />
+              <div className="flex-1">
+                <h4 className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">
+                  {item.name}
+                </h4>
+                <p className="text-sm text-zion-slate-light mt-1">
+                  {item.description}
+                </p>
+              </div>
+              <ArrowRight className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan group-hover:translate-x-1 transition-all duration-300" />
+            </Link>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-6xl mx-auto">
-            <motion.div
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light"></div>
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-5xl lg:text-7xl font-bold text-white mb-6"
             >
-              <SitemapIcon className="w-20 h-20 text-zion-cyan mx-auto mb-8" />
-              <h1 className="text-5xl md:text-7xl font-bold mb-8">
-                Site <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                  Navigation
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto">
-                Explore our complete website structure and find the information you need quickly and easily.
-              </p>
+              Site
+              <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+                Map
+              </span>
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl lg:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
+            >
+              Navigate through our comprehensive website structure to find exactly what you're looking for.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sitemap Content */}
+      <section className="py-20 bg-zion-slate-dark">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Main Pages */}
+            {renderSection('Main Pages', Building, siteStructure.mainPages, 'from-zion-cyan to-zion-blue')}
+            
+            {/* AI Services */}
+            {renderSection('AI Services', Brain, siteStructure.aiServices, 'from-zion-cyan to-zion-purple')}
+            
+            {/* Micro SAAS */}
+            {renderSection('Micro SAAS', Code, siteStructure.microSaas, 'from-zion-purple to-zion-cyan')}
+            
+            {/* IT Services */}
+            {renderSection('IT Services', Network, siteStructure.itServices, 'from-zion-blue to-zion-purple')}
+            
+            {/* Emerging Tech */}
+            {renderSection('Emerging Tech', Rocket, siteStructure.emergingTech, 'from-zion-cyan to-zion-blue')}
+            
+            {/* Marketplace */}
+            {renderSection('Marketplace', ShoppingCart, siteStructure.marketplace, 'from-zion-purple to-zion-cyan')}
+            
+            {/* Legal */}
+            {renderSection('Legal & Policies', Users, siteStructure.legal, 'from-zion-blue to-zion-cyan')}
+            
+            {/* Quick Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-zion-slate/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+            >
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
+                  <Globe className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Quick Links</h3>
+              </div>
+              <div className="space-y-3">
+                <Link to="/contact" className="block p-3 text-zion-cyan hover:text-zion-purple transition-colors duration-300">
+                  Contact Support
+                </Link>
+                <Link to="/help" className="block p-3 text-zion-cyan hover:text-zion-purple transition-colors duration-300">
+                  Help Center
+                </Link>
+                <Link to="/status" className="block p-3 text-zion-cyan hover:text-zion-purple transition-colors duration-300">
+                  System Status
+                </Link>
+                <Link to="/api" className="block p-3 text-zion-cyan hover:text-zion-purple transition-colors duration-300">
+                  API Documentation
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Quick Links */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Quick <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Access</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Can't Find What You're Looking For?
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Popular destinations and key pages for quick navigation
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Our support team is here to help you navigate our services and find the perfect solution for your needs.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickLinks.map((link, index) => (
-              <motion.div
-                key={link.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
               >
-                <Link
-                  to={link.path}
-                  className="block bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${link.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                    <link.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white text-center mb-2">{link.name}</h3>
-                  <div className="flex items-center justify-center text-zion-cyan">
-                    <span className="text-sm">Visit Page</span>
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Site Structure */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Complete <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Site Map</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Organized navigation structure for easy browsing
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {siteStructure.map((section, sectionIndex) => (
-              <motion.div
-                key={section.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: sectionIndex * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+                Contact Support
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/help"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 transform hover:scale-105"
               >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
-                    <section.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{section.title}</h3>
-                </div>
-
-                <div className="space-y-3">
-                  {section.links.map((link, linkIndex) => (
-                    <motion.div
-                      key={link.path}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: linkIndex * 0.05 }}
-                      viewport={{ once: true }}
-                    >
-                      <Link
-                        to={link.path}
-                        className="block p-3 rounded-lg hover:bg-zion-slate-dark/30 transition-colors duration-300 group"
-                      >
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <h4 className="text-white font-semibold group-hover:text-zion-cyan transition-colors">
-                              {link.name}
-                            </h4>
-                            <p className="text-zion-slate-light text-sm">{link.description}</p>
-                          </div>
-                          <ArrowRight className="w-4 h-4 text-zion-cyan opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                        </div>
-                      </Link>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* External Links */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Connect <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">With Us</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Follow us on social media and explore our online presence
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {externalLinks.map((link, index) => (
-              <motion.div
-                key={link.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:transform hover:scale-105 text-center"
-                >
-                  <link.icon className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-                  <h3 className="text-lg font-bold text-white mb-2">{link.name}</h3>
-                  <div className="flex items-center justify-center text-zion-cyan text-sm">
-                    <span>Visit</span>
-                    <ExternalLink className="w-4 h-4 ml-1" />
-                  </div>
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Search & Navigation Help */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Need <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Help</span>?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-12">
-              Can't find what you're looking for? We're here to help you navigate our website.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="text-center">
-                <HelpCircle className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">FAQ Section</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Find answers to common questions about our services and website
-                </p>
-                <Link 
-                  to="/faq"
-                  className="inline-block px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-                >
-                  Browse FAQ
-                </Link>
-              </div>
-              
-              <div className="text-center">
-                <MessageSquare className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">Contact Support</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Get in touch with our team for personalized assistance
-                </p>
-                <Link 
-                  to="/contact"
-                  className="inline-block px-6 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 text-zion-cyan font-semibold rounded-xl hover:bg-zion-slate-dark/70 transition-all duration-300"
-                >
-                  Contact Us
-                </Link>
-              </div>
+                Help Center
+              </Link>
             </div>
           </motion.div>
         </div>
