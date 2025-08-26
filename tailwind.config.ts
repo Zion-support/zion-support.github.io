@@ -55,38 +55,50 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom Zion colors (updated palette)
-        "zion-blue": {
-          DEFAULT: "#2e73ea",
-          light: "#8ab1f3",
-          dark: "#172d67",
-        },
-        "zion-purple": {
-          DEFAULT: "#8c15e9",
-          light: "#b971f2",
-          dark: "#530c8b",
-        },
-        "zion-cyan": {
-          DEFAULT: "#22ddd2",
-          light: "#7aeae4",
-          dark: "#14847e",
-        },
-        "zion-slate": {
-          DEFAULT: "#17072b",
-          light: "#451582",
-          dark: "#000000",
-        },
-        "zion-neon": {
-          DEFAULT: "#22ddd2",
-          light: "#7aeae4",
-          dark: "#14847e",
-          glow: "#22ddd2",
-        },
-        "zion-purple": {
-          DEFAULT: "#8c15e9",
-          light: "#b971f2",
-          dark: "#530c8b",
-          neon: "#b971f2",
+        // Enhanced Zion Tech Group color palette
+        "zion": {
+          blue: {
+            DEFAULT: "#2e73ea",
+            light: "#8ab1f3",
+            dark: "#172d67",
+            neon: "#00d4ff",
+          },
+          purple: {
+            DEFAULT: "#8c15e9",
+            light: "#b971f2",
+            dark: "#530c8b",
+            neon: "#b971f2",
+          },
+          cyan: {
+            DEFAULT: "#22ddd2",
+            light: "#7aeae4",
+            dark: "#14847e",
+            neon: "#22ddd2",
+          },
+          slate: {
+            DEFAULT: "#17072b",
+            light: "#451582",
+            dark: "#000000",
+            glow: "#2a1b3d",
+          },
+          green: {
+            DEFAULT: "#10b981",
+            light: "#34d399",
+            dark: "#059669",
+            neon: "#00ff88",
+          },
+          orange: {
+            DEFAULT: "#f59e0b",
+            light: "#fbbf24",
+            dark: "#d97706",
+            neon: "#ff6b35",
+          },
+          red: {
+            DEFAULT: "#ef4444",
+            light: "#f87171",
+            dark: "#dc2626",
+            neon: "#ff4757",
+          },
         },
       },
       borderRadius: {
@@ -96,6 +108,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        mono: ["var(--font-mono)", ...fontFamily.mono],
+        display: ["var(--font-display)", ...fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
@@ -130,6 +144,18 @@ const config: Config = {
           from: { transform: "translateX(100%)" },
           to: { transform: "translateX(0)" },
         },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        "glow": {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(34, 221, 210, 0.5)" },
+          "50%": { boxShadow: "0 0 40px rgba(34, 221, 210, 0.8)" },
+        },
+        "pulse-slow": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -140,6 +166,18 @@ const config: Config = {
         "slide-in-from-bottom": "slide-in-from-bottom 0.3s ease-out",
         "slide-in-from-left": "slide-in-from-left 0.3s ease-out",
         "slide-in-from-right": "slide-in-from-right 0.3s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
+        "pulse-slow": "pulse-slow 3s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "zion-gradient": "linear-gradient(135deg, #17072b 0%, #451582 50%, #8c15e9 100%)",
+        "zion-cyber": "linear-gradient(135deg, #22ddd2 0%, #2e73ea 50%, #8c15e9 100%)",
+      },
+      backdropBlur: {
+        xs: "2px",
       },
     },
   },

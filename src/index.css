@@ -2,3 +2,264 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom CSS Variables for Zion Tech Group Theme */
+:root {
+  --zion-blue: #2e73ea;
+  --zion-blue-light: #8ab1f3;
+  --zion-blue-dark: #172d67;
+  --zion-purple: #8c15e9;
+  --zion-purple-light: #b971f2;
+  --zion-purple-dark: #530c8b;
+  --zion-cyan: #22ddd2;
+  --zion-cyan-light: #7aeae4;
+  --zion-cyan-dark: #14847e;
+  --zion-slate: #17072b;
+  --zion-slate-light: #451582;
+  --zion-slate-dark: #000000;
+  --zion-green: #10b981;
+  --zion-orange: #f59e0b;
+  --zion-red: #ef4444;
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--zion-slate-dark) 0%, var(--zion-slate) 50%, var(--zion-slate-light) 100%);
+  }
+  
+  /* Focus Styles for Accessibility */
+  *:focus {
+    outline: 2px solid var(--zion-cyan);
+    outline-offset: 2px;
+  }
+  
+  /* Skip Links */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--zion-cyan);
+    color: var(--zion-slate-dark);
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: top 0.3s;
+  }
+  
+  .skip-link:focus {
+    top: 6px;
+  }
+  
+  /* High Contrast Mode */
+  .high-contrast {
+    --zion-blue: #ffffff;
+    --zion-blue-light: #ffffff;
+    --zion-blue-dark: #ffffff;
+    --zion-purple: #ffffff;
+    --zion-purple-light: #ffffff;
+    --zion-purple-dark: #ffffff;
+    --zion-cyan: #ffffff;
+    --zion-cyan-light: #ffffff;
+    --zion-cyan-dark: #ffffff;
+    --zion-slate: #000000;
+    --zion-slate-light: #000000;
+    --zion-slate-dark: #000000;
+    --zion-green: #ffffff;
+    --zion-orange: #ffffff;
+    --zion-red: #ffffff;
+  }
+  
+  .high-contrast * {
+    background-color: var(--zion-slate) !important;
+    color: var(--zion-cyan) !important;
+    border-color: var(--zion-cyan) !important;
+  }
+  
+  /* Reduced Motion */
+  .reduced-motion *,
+  .reduced-motion *::before,
+  .reduced-motion *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Dark Mode */
+  .dark {
+    --zion-slate: #000000;
+    --zion-slate-light: #1a1a1a;
+    --zion-slate-dark: #000000;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--zion-slate);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--zion-cyan);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--zion-cyan-light);
+  }
+}
+
+/* Component Styles */
+@layer components {
+  /* Button Styles */
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25;
+  }
+  
+  /* Card Styles */
+  .card {
+    @apply bg-zion-slate-dark/50 backdrop-blur-md border border-zion-cyan/20 rounded-lg p-6 shadow-xl shadow-zion-cyan/10;
+  }
+  
+  .card-hover {
+    @apply card hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/20 transition-all duration-300;
+  }
+  
+  /* Input Styles */
+  .input-primary {
+    @apply w-full px-4 py-3 bg-zion-slate/50 border border-zion-cyan/30 rounded-lg text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300;
+  }
+  
+  /* Gradient Text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent;
+  }
+  
+  /* Glow Effects */
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(34, 221, 210, 0.3);
+  }
+  
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(140, 21, 233, 0.3);
+  }
+  
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(46, 115, 234, 0.3);
+  }
+  
+  /* Animation Classes */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+  }
+  
+  /* Background Patterns */
+  .bg-zion-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(34, 221, 210, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(140, 21, 233, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(46, 115, 234, 0.05) 0%, transparent 50%);
+  }
+  
+  /* Glass Morphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-zion-slate-dark/80 backdrop-blur-md border border-zion-cyan/20;
+  }
+}
+
+/* Utility Styles */
+@layer utilities {
+  /* Text Shadows */
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Backdrop Filters */
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+  
+  /* Custom Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(34, 221, 210, 0.5); }
+    50% { box-shadow: 0 0 40px rgba(34, 221, 210, 0.8); }
+  }
+  
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  /* Responsive Typography */
+  .text-responsive {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }
+  
+  .text-responsive-lg {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+  
+  .text-responsive-xl {
+    font-size: clamp(2rem, 6vw, 4rem);
+  }
+  
+  /* Print Styles */
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    
+    body {
+      background: white !important;
+      color: black !important;
+    }
+  }
+  
+  /* High DPI Displays */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .retina-image {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+  }
+}
+

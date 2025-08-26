@@ -1,391 +1,349 @@
-import React, { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-// Switch component replaced with checkbox
-// Label component replaced with simple label
-// Separator component replaced with simple div
-import { Switch } from '@/components/ui/switch';
-import { Label } from '@/components/ui/label';
-import { Separator } from '@/components/ui/separator';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Eye, 
+  Type, 
+  Volume2, 
+  VolumeX, 
+  Contrast, 
+  Keyboard, 
+  X,
+  Plus,
+  Minus,
+  Settings,
+  Accessibility,
+  Sun,
+  Moon
+} from 'lucide-react';
 
 interface AccessibilitySettings {
+  fontSize: number;
   highContrast: boolean;
-  largeText: boolean;
   reducedMotion: boolean;
-  screenReader: boolean;
+  soundEnabled: boolean;
   keyboardNavigation: boolean;
-  focusIndicator: boolean;
+  darkMode: boolean;
 }
 
-export function AccessibilityEnhancer() {
+export const AccessibilityEnhancer: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
+    fontSize: 16,
     highContrast: false,
-    largeText: false,
     reducedMotion: false,
-    screenReader: false,
+    soundEnabled: true,
     keyboardNavigation: false,
-    focusIndicator: false,
+    darkMode: false
   });
 
-  useEffect(() => {
-    // Load saved settings
-    const savedSettings = localStorage.getItem('accessibility-settings');
-    if (savedSettings) {
-      try {
-        const parsed = JSON.parse(savedSettings);
-        setSettings(parsed);
-        applySettings(parsed);
-      } catch (error) {
-        console.error('Failed to parse accessibility settings:', error);
-      }
-    }
-  }, []);
-
-  const applySettings = (newSettings: AccessibilitySettings) => {
+  // Apply accessibility settings to document
+  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
+    // Font size
+    root.style.fontSize = `${newSettings.fontSize}px`;
+    
+    // High contrast
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
     
-    if (newSettings.largeText) {
-      root.classList.add('large-text');
-    } else {
-      root.classList.remove('large-text');
-    }
-    
+    // Reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
     
-    if (newSettings.focusIndicator) {
-      root.classList.add('focus-visible');
+    // Dark mode
+    if (newSettings.darkMode) {
+      root.classList.add('dark');
     } else {
-      root.classList.remove('focus-visible');
+      root.classList.remove('dark');
     }
-  };
-
-  const handleSettingChange = (key: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
+    
+    // Store settings in localStorage
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-    applySettings(newSettings);
+  }, []);
+
+  // Load settings from localStorage on mount
+  useEffect(() => {
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      const parsedSettings = JSON.parse(savedSettings);
+      setSettings(parsedSettings);
+      applySettings(parsedSettings);
+    }
+  }, [applySettings]);
+
+  // Apply settings when they change
+  useEffect(() => {
+    applySettings(settings);
+  }, [settings, applySettings]);
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ctrl/Cmd + Shift + A to toggle accessibility panel
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'A') {
+        e.preventDefault();
+        setIsOpen(!isOpen);
+      }
+      
+      // Ctrl/Cmd + Plus to increase font size
+      if ((e.ctrlKey || e.metaKey) && e.key === '=') {
+        e.preventDefault();
+        setSettings(prev => ({ ...prev, fontSize: Math.min(prev.fontSize + 2, 24) }));
+      }
+      
+      // Ctrl/Cmd + Minus to decrease font size
+      if ((e.ctrlKey || e.metaKey) && e.key === '-') {
+        e.preventDefault();
+        setSettings(prev => ({ ...prev, fontSize: Math.max(prev.fontSize - 2, 12) }));
+      }
+      
+      // Ctrl/Cmd + Shift + H to toggle high contrast
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'H') {
+        e.preventDefault();
+        setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }));
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen]);
+
+  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+    setSettings(prev => ({ ...prev, [key]: value }));
   };
 
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
+      fontSize: 16,
       highContrast: false,
-      largeText: false,
       reducedMotion: false,
-      screenReader: false,
+      soundEnabled: true,
       keyboardNavigation: false,
-      focusIndicator: false,
+      darkMode: false
     };
     setSettings(defaultSettings);
-    localStorage.removeItem('accessibility-settings');
-    applySettings(defaultSettings);
   };
 
   return (
     <>
-      {/* Skip Links */}
-      <div className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50">
-        <a href="#main-content" className="bg-zion-cyan text-white px-4 py-2 rounded-md">
-          Skip to main content
-        </a>
-        <a href="#navigation" className="bg-zion-cyan text-white px-4 py-2 rounded-md ml-2">
-          Skip to navigation
-        </a>
-      </div>
-
-      {/* Accessibility Toggle Button */}
-      <Button
+      {/* Floating Accessibility Button */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        variant="outline"
-        size="sm"
-        size="icon"
-        className="fixed top-4 right-4 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 hover:bg-zion-cyan/10"
+        className="fixed bottom-6 left-6 z-50 p-3 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30"
         aria-label="Accessibility Settings"
+        title="Accessibility Settings (Ctrl+Shift+A)"
       >
-        <span className="text-zion-cyan">A</span>
-      </Button>
+        <Accessibility className="w-6 h-6" />
+      </motion.button>
 
       {/* Accessibility Panel */}
-      {isOpen && (
-        <Card className="fixed top-16 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 shadow-2xl">
-          <CardHeader className="pb-3">
-            <div className="flex items-center justify-between">
-              <CardTitle className="text-lg flex items-center gap-2">
-                <span className="text-zion-cyan">A</span>
-                Accessibility Settings
-              </CardTitle>
-              <Button
-                variant="ghost"
-                size="sm"
-                size="icon"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            className="fixed left-6 bottom-20 z-50 w-80 bg-zion-slate-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-2xl shadow-zion-cyan/10 text-white"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b border-zion-cyan/20">
+              <div className="flex items-center space-x-2">
+                <Accessibility className="w-5 h-5 text-zion-cyan" />
+                <h3 className="font-semibold">Accessibility</h3>
+              </div>
+              <button
                 onClick={() => setIsOpen(false)}
-                aria-label="Close accessibility settings"
+                className="p-1 hover:bg-zion-cyan/20 rounded transition-colors"
+                aria-label="Close accessibility panel"
               >
-                ×
-              </Button>
+                <X className="w-4 h-4" />
+              </button>
             </div>
-            <CardDescription>
-              Customize your experience for better accessibility
-            </CardDescription>
-          </CardHeader>
-          
-          <CardContent className="space-y-4">
-            {/* Visual Enhancements */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold flex items-center gap-2">
-                <span>👁️</span>
-                Visual Enhancements
-              </h4>
-              
-              <div className="flex items-center justify-between">
-                <Label htmlFor="high-contrast" className="text-sm">
-                  High Contrast
-                </Label>
-                <Switch
-                  id="high-contrast"
-                  checked={settings.highContrast}
-                  onCheckedChange={(checked) => handleSettingChange('highContrast', checked)}
-                />
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <Label htmlFor="large-text" className="text-sm">
-                  Large Text
-                </Label>
-                <Switch
-                  id="large-text"
-                  checked={settings.largeText}
-                  onCheckedChange={(checked) => handleSettingChange('largeText', checked)}
-                />
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <Label htmlFor="focus-indicator" className="text-sm">
-                  Enhanced Focus
-                </Label>
-                <Switch
-                  id="focus-indicator"
-                  checked={settings.focusIndicator}
-                  onCheckedChange={(checked) => handleSettingChange('focusIndicator', checked)}
-                />
-              </div>
-            </div>
-            
-            <Separator />
-                <label htmlFor="high-contrast" className="text-sm">
-                  High Contrast
+
+            {/* Settings Content */}
+            <div className="p-4 space-y-4">
+              {/* Font Size */}
+              <div className="space-y-2">
+                <label className="flex items-center space-x-2 text-sm font-medium">
+                  <Type className="w-4 h-4 text-zion-cyan" />
+                  <span>Font Size</span>
+                  <span className="text-zion-cyan">{settings.fontSize}px</span>
                 </label>
-                <input
-                  type="checkbox"
-                  id="high-contrast"
-                  checked={settings.highContrast}
-                  onChange={(e) => handleSettingChange('highContrast', e.target.checked)}
-                  className="ml-2"
-                />
+                <div className="flex items-center space-x-2">
+                  <button
+                    onClick={() => updateSetting('fontSize', Math.max(settings.fontSize - 2, 12))}
+                    className="p-2 bg-zion-slate hover:bg-zion-slate-light rounded transition-colors"
+                    aria-label="Decrease font size"
+                  >
+                    <Minus className="w-4 h-4" />
+                  </button>
+                  <div className="flex-1 h-2 bg-zion-slate rounded-full">
+                    <div 
+                      className="h-full bg-zion-cyan rounded-full transition-all duration-300"
+                      style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}
+                    />
+                  </div>
+                  <button
+                    onClick={() => updateSetting('fontSize', Math.min(settings.fontSize + 2, 24))}
+                    className="p-2 bg-zion-slate hover:bg-zion-slate-light rounded transition-colors"
+                    aria-label="Increase font size"
+                  >
+                    <Plus className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
-              
+
+              {/* High Contrast */}
               <div className="flex items-center justify-between">
-                <label htmlFor="large-text" className="text-sm">
-                  Large Text
+                <label className="flex items-center space-x-2 text-sm font-medium">
+                  <Contrast className="w-4 h-4 text-zion-cyan" />
+                  <span>High Contrast</span>
                 </label>
-                <input
-                  type="checkbox"
-                  id="large-text"
-                  checked={settings.largeText}
-                  onChange={(e) => handleSettingChange('largeText', e.target.checked)}
-                  className="ml-2"
-                />
+                <button
+                  onClick={() => updateSetting('highContrast', !settings.highContrast)}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    settings.highContrast ? 'bg-zion-cyan' : 'bg-zion-slate'
+                  }`}
+                  role="switch"
+                  aria-checked={settings.highContrast}
+                >
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      settings.highContrast ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
+                </button>
               </div>
-              
+
+              {/* Reduced Motion */}
               <div className="flex items-center justify-between">
-                <label htmlFor="focus-indicator" className="text-sm">
-                  Enhanced Focus
+                <label className="flex items-center space-x-2 text-sm font-medium">
+                  <Eye className="w-4 h-4 text-zion-cyan" />
+                  <span>Reduced Motion</span>
                 </label>
-                <input
-                  type="checkbox"
-                  id="focus-indicator"
-                  checked={settings.focusIndicator}
-                  onChange={(e) => handleSettingChange('focusIndicator', e.target.checked)}
-                  className="ml-2"
-                />
+                <button
+                  onClick={() => updateSetting('reducedMotion', !settings.reducedMotion)}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    settings.reducedMotion ? 'bg-zion-cyan' : 'bg-zion-slate'
+                  }`}
+                  role="switch"
+                  aria-checked={settings.reducedMotion}
+                >
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
+                </button>
               </div>
-            </div>
-            
-            <div className="border-t border-border my-2" />
-            
-            {/* Motion and Navigation */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold flex items-center gap-2">
-                <span>🖱️</span>
-                Navigation & Motion
-              </h4>
-              
+
+              {/* Sound */}
               <div className="flex items-center justify-between">
-                <Label htmlFor="reduced-motion" className="text-sm">
-                  Reduced Motion
-                </Label>
-                <Switch
-                  id="reduced-motion"
-                  checked={settings.reducedMotion}
-                  onCheckedChange={(checked) => handleSettingChange('reducedMotion', checked)}
-                />
-              </div>
-              
-              <div className="flex items-center justify-between">
-                <Label htmlFor="keyboard-nav" className="text-sm">
-                  Keyboard Navigation
-                </Label>
-                <Switch
-                  id="keyboard-nav"
-                  checked={settings.keyboardNavigation}
-                  onCheckedChange={(checked) => handleSettingChange('keyboardNavigation', checked)}
-                />
-              </div>
-            </div>
-            
-            <Separator />
-                <label htmlFor="reduced-motion" className="text-sm">
-                  Reduced Motion
+                <label className="flex items-center space-x-2 text-sm font-medium">
+                  {settings.soundEnabled ? (
+                    <Volume2 className="w-4 h-4 text-zion-cyan" />
+                  ) : (
+                    <VolumeX className="w-4 h-4 text-zion-cyan" />
+                  )}
+                  <span>Sound Effects</span>
                 </label>
-                <input
-                  type="checkbox"
-                  id="reduced-motion"
-                  checked={settings.reducedMotion}
-                  onChange={(e) => handleSettingChange('reducedMotion', e.target.checked)}
-                  className="ml-2"
-                />
+                <button
+                  onClick={() => updateSetting('soundEnabled', !settings.soundEnabled)}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    settings.soundEnabled ? 'bg-zion-cyan' : 'bg-zion-slate'
+                  }`}
+                  role="switch"
+                  aria-checked={settings.soundEnabled}
+                >
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      settings.soundEnabled ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
+                </button>
               </div>
-              
+
+              {/* Keyboard Navigation */}
               <div className="flex items-center justify-between">
-                <label htmlFor="keyboard-nav" className="text-sm">
-                  Keyboard Navigation
+                <label className="flex items-center space-x-2 text-sm font-medium">
+                  <Keyboard className="w-4 h-4 text-zion-cyan" />
+                  <span>Keyboard Navigation</span>
                 </label>
-                <input
-                  type="checkbox"
-                  id="keyboard-nav"
-                  checked={settings.keyboardNavigation}
-                  onChange={(e) => handleSettingChange('keyboardNavigation', e.target.checked)}
-                  className="ml-2"
-                />
+                <button
+                  onClick={() => updateSetting('keyboardNavigation', !settings.keyboardNavigation)}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    settings.keyboardNavigation ? 'bg-zion-cyan' : 'bg-zion-slate'
+                  }`}
+                  role="switch"
+                  aria-checked={settings.keyboardNavigation}
+                >
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
+                </button>
               </div>
-            </div>
-            
-            <div className="border-t border-border my-2" />
-            
-            {/* Screen Reader */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold flex items-center gap-2">
-                <span>🔊</span>
-                Screen Reader
-              </h4>
-              
+
+              {/* Dark Mode */}
               <div className="flex items-center justify-between">
-                <label htmlFor="screen-reader" className="text-sm">
-                  Enhanced Support
+                <label className="flex items-center space-x-2 text-sm font-medium">
+                  {settings.darkMode ? (
+                    <Moon className="w-4 h-4 text-zion-cyan" />
+                  ) : (
+                    <Sun className="w-4 h-4 text-zion-cyan" />
+                  )}
+                  <span>Dark Mode</span>
                 </label>
-                <input
-                  type="checkbox"
-                  id="screen-reader"
-                  checked={settings.screenReader}
-                  onChange={(e) => handleSettingChange('screenReader', e.target.checked)}
-                  className="ml-2"
-                />
-                <Label htmlFor="screen-reader" className="text-sm">
-                  Enhanced Support
-                </Label>
-                <Switch
-                  id="screen-reader"
-                  checked={settings.screenReader}
-                  onCheckedChange={(checked) => handleSettingChange('screenReader', checked)}
-                />
+                <button
+                  onClick={() => updateSetting('darkMode', !settings.darkMode)}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                    settings.darkMode ? 'bg-zion-cyan' : 'bg-zion-slate'
+                  }`}
+                  role="switch"
+                  aria-checked={settings.darkMode}
+                >
+                  <span
+                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                      settings.darkMode ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                  />
+                </button>
               </div>
-            </div>
-            
-            {/* Quick Actions */}
-            <div className="pt-2">
-              <Button
+
+              {/* Reset Button */}
+              <button
                 onClick={resetSettings}
-                variant="outline"
-                size="sm"
-                className="w-full"
+                className="w-full px-4 py-2 bg-zion-slate hover:bg-zion-slate-light text-zion-cyan rounded transition-colors"
               >
-                <span className="mr-2">⚙️</span>
                 Reset to Defaults
-              </Button>
+              </button>
+
+              {/* Keyboard Shortcuts Help */}
+              <div className="pt-2 border-t border-zion-cyan/20">
+                <h4 className="text-xs font-medium text-zion-cyan mb-2">Keyboard Shortcuts</h4>
+                <div className="text-xs space-y-1 text-gray-300">
+                  <div>Ctrl+Shift+A: Toggle panel</div>
+                  <div>Ctrl+Plus: Increase font</div>
+                  <div>Ctrl+Minus: Decrease font</div>
+                  <div>Ctrl+Shift+H: High contrast</div>
+                </div>
+              </div>
             </div>
-          </CardContent>
-        </Card>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
-}
-
-// CSS classes for accessibility features
-export const accessibilityStyles = `
-  /* High Contrast Mode */
-  .high-contrast {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    --primary: 0 0% 100%;
-    --secondary: 0 0% 20%;
-    --muted: 0 0% 20%;
-    --accent: 0 0% 100%;
-    --border: 0 0% 100%;
-    --input: 0 0% 100%;
-    --ring: 0 0% 100%;
-  }
-  
-  /* Large Text Mode */
-  .large-text {
-    font-size: 1.2em;
-    line-height: 1.6;
-  }
-  
-  .large-text h1 { font-size: 2.5em; }
-  .large-text h2 { font-size: 2em; }
-  .large-text h3 { font-size: 1.75em; }
-  .large-text p { font-size: 1.2em; }
-  
-  /* Reduced Motion */
-  .reduced-motion *, .reduced-motion *::before, .reduced-motion *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-  
-  /* Focus Indicator */
-  .focus-visible:focus {
-    outline: 3px solid hsl(var(--ring));
-    outline-offset: 2px;
-  }
-  
-  /* Screen Reader Only */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-  
-  /* Focus visible utility */
-  .focus-visible:focus-visible {
-    outline: 2px solid hsl(var(--ring));
-    outline-offset: 2px;
-  }
-`;
+};
