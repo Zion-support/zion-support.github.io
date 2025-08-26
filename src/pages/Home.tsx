@@ -2,7 +2,6 @@
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import React from 'react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -26,8 +25,94 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
+import { CheckCircle, ArrowRight, Star, Users, Globe, Zap, Shield } from 'lucide-react';
+
+// Data structures
+const stats = [
+  {
+    icon: Users,
+    value: "500+",
+    label: "Happy Clients",
+    description: "Trusted by businesses worldwide"
+  },
+  {
+    icon: Globe,
+    value: "50+",
+    label: "Countries",
+    description: "Global presence and reach"
+  },
+  {
+    icon: Zap,
+    value: "1000+",
+    label: "Projects",
+    description: "Successfully delivered"
+  },
+  {
+    icon: Shield,
+    value: "99.9%",
+    label: "Uptime",
+    description: "Reliable service guarantee"
+  }
+];
+
+const aiServices = [
+  {
+    icon: Users,
+    title: "AI Consulting",
+    description: "Strategic AI implementation guidance for your business",
+    features: ["AI Strategy Development", "Technology Assessment", "Implementation Roadmap"],
+    path: "/services/ai-consulting"
+  },
+  {
+    icon: Zap,
+    title: "Machine Learning",
+    description: "Custom ML models and predictive analytics solutions",
+    features: ["Model Development", "Data Processing", "Performance Optimization"],
+    path: "/services/machine-learning"
+  },
+  {
+    icon: Shield,
+    title: "AI Automation",
+    description: "Streamline operations with intelligent automation",
+    features: ["Process Automation", "Workflow Optimization", "ROI Tracking"],
+    path: "/services/ai-automation"
+  }
+];
+
+const featuredServices = [
+  {
+    icon: Users,
+    title: "Enterprise AI Solutions",
+    price: "$50K+",
+    category: "Enterprise",
+    description: "Comprehensive AI transformation for large organizations",
+    rating: 4.9
+  },
+  {
+    icon: Zap,
+    title: "Cloud Migration",
+    price: "$25K+",
+    category: "Infrastructure",
+    description: "Seamless cloud migration and optimization",
+    rating: 4.8
+  },
+  {
+    icon: Shield,
+    title: "Cybersecurity",
+    price: "$30K+",
+    category: "Security",
+    description: "Advanced threat protection and compliance",
+    rating: 4.9
+  }
+];
 
 export default function Home() {
+  const [isVisible, setIsVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <>
       <SEO 

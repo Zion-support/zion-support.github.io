@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
 
@@ -51,14 +51,14 @@ export default function Contact() {
 							</p>
 							<div className="flex items-center justify-center gap-x-6">
 								<Link
-									to="/services"
+									href="/services"
 									className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-colors"
 								>
 									View Services
 								</Link>
 								<Link
-									to="/"
-									className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
+									href="/"
+									className="text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 transition-colors"
 								>
 									Back to Home
 								</Link>
@@ -305,7 +305,7 @@ export default function Contact() {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/services"
+								href="/services"
 								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
 							>
 								View Services
