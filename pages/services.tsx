@@ -282,6 +282,7 @@ import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { advancedITServices } from '../data/advanced-it-services';
@@ -300,6 +301,10 @@ import { marketReadyServices } from '../data/market-ready-services';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-915b
+=======
+import { emergingTechServices } from '../data/emerging-tech-services';
+import { aiFuturisticServices } from '../data/ai-futuristic-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9c80
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -317,6 +322,7 @@ export default function ServicesPage() {
     ...additionalEnhancedServices,
 <<<<<<< HEAD
     ...extraServices,
+<<<<<<< HEAD
     ...newlyAddedServices,
     ...newRealServices,
     ...moreRealServices2025,
@@ -377,6 +383,11 @@ export default function ServicesPage() {
     ...newRealServices,
     ...marketReadyServices
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
+=======
+    ...additionalEnhancedServices,
+    ...emergingTechServices,
+    ...aiFuturisticServices
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9c80
   ];
 
   // Dynamic category counts mapped to the same filter logic below
