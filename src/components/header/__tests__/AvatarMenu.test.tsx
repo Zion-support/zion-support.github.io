@@ -48,7 +48,6 @@ describe('UserProfileDropdown', () => {
       user: { id: '1', displayName: 'Test User', email: 'test@example.com' },
       logout: mockLogout,
       isLoading: false,
-      // Add other properties returned by your useAuth hook if needed
     } as unknown as AuthContextType);
     render(<UserProfileDropdown />);
     expect(screen.getByLabelText('User profile')).toBeInTheDocument();
