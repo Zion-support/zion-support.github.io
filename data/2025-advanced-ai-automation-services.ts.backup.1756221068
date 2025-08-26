@@ -66,11 +66,19 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     icon: '🔍',
     color: 'from-emerald-600 to-teal-600',
     textColor: 'text-emerald-400',
+<<<<<<< HEAD
+    link: 'https://ziontechgroup.com/ai-code-review',
+    marketPosition: 'Competes with SonarQube ($20/user/month), CodeClimate ($8/user/month). Our advantage: AI-powered insights reduce review time by 80% and catch 95% of issues.',
+    targetAudience: 'Software development teams, DevOps engineers, Quality assurance teams, Engineering managers, Tech leads',
+    trialDays: 30,
+    setupTime: '1-2 days',
+=======
     link: 'https://ziontechgroup.com/ai-autonomous-code-review',
     marketPosition: 'Competes with SonarQube ($20/month), CodeClimate ($8/month). Our advantage: AI-powered analysis reduces false positives by 70% and provides actionable insights.',
     targetAudience: ['Software development teams', 'DevOps engineers', 'Quality assurance teams', 'Open source projects', 'Enterprise development'],
     trialDays: 14,
     setupTime: '2-4 hours',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     category: 'AI Development Tools',
     realService: true,
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes'],
@@ -119,12 +127,21 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     icon: '📝',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-400',
+<<<<<<< HEAD
+    link: 'https://ziontechgroup.com/ai-content-marketing',
+    marketPosition: 'Competes with HubSpot ($800/month), Marketo ($1,250/month). Our advantage: AI automation reduces content creation time by 70% and improves engagement by 40%.',
+    targetAudience: 'Marketing teams, Content creators, Digital agencies, B2B companies, E-commerce businesses',
+    trialDays: 21,
+    setupTime: '1 week',
+    category: 'AI Marketing Automation',
+=======
     link: 'https://ziontechgroup.com/ai-autonomous-testing',
     marketPosition: 'Competes with Selenium ($0), Cypress ($75/month), TestComplete ($2,000/year). Our advantage: AI automation reduces manual test creation by 90% and improves coverage.',
     targetAudience: ['QA teams', 'Software developers', 'DevOps engineers', 'Product managers', 'Enterprise organizations'],
     trialDays: 14,
     setupTime: '1-2 days',
     category: 'AI Testing & Quality Assurance',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     realService: true,
     technology: ['GPT-4, Claude, React, Node.js, MongoDB, Redis, AWS, Google Cloud'],
     integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Hootsuite, Buffer, Google Analytics'],
@@ -172,9 +189,15 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     icon: '🤖',
     color: 'from-blue-600 to-indigo-600',
     textColor: 'text-blue-400',
+<<<<<<< HEAD
+    link: 'https://ziontechgroup.com/ai-customer-support',
+    marketPosition: 'Competes with Zendesk ($49/user/month), Intercom ($39/user/month). Our advantage: AI automation handles 80% of support queries and reduces response time by 90%.',
+    targetAudience: 'Customer support teams, E-commerce businesses, SaaS companies, Service providers, Retail businesses',
+=======
     link: 'https://ziontechgroup.com/ai-autonomous-devops',
     marketPosition: 'Competes with GitLab ($19/month), Jenkins ($0), Azure DevOps ($6/month). Our advantage: AI automation reduces manual DevOps tasks by 80% and improves reliability.',
     targetAudience: ['DevOps engineers', 'System administrators', 'Cloud architects', 'IT managers', 'Enterprise organizations'],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     trialDays: 14,
     setupTime: '3-5 days',
     category: 'AI Customer Support',
@@ -278,12 +301,21 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     icon: '🏥',
     color: 'from-red-600 to-pink-600',
     textColor: 'text-red-400',
+<<<<<<< HEAD
+    link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
+    marketPosition: 'Competes with GE Healthcare ($50,000+), Siemens Healthineers ($45,000+). Our advantage: AI-powered analysis improves diagnostic accuracy by 25% and reduces reading time by 60%.',
+    targetAudience: 'Hospitals, Medical imaging centers, Radiologists, Healthcare providers, Medical device companies',
+    trialDays: 30,
+    setupTime: '4-6 weeks',
+    category: 'AI Healthcare',
+=======
     link: 'https://ziontechgroup.com/ai-autonomous-security',
     marketPosition: 'Competes with CrowdStrike ($8.92/month), SentinelOne ($2.50/month), Carbon Black ($6.67/month). Our advantage: AI automation reduces false positives by 85% and provides proactive protection.',
     targetAudience: ['Security teams', 'IT managers', 'Compliance officers', 'Enterprise organizations', 'Government agencies'],
     trialDays: 14,
     setupTime: '1-3 days',
     category: 'AI Cybersecurity',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     realService: true,
     technology: ['Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis, Docker, AWS'],
     integrations: ['PACS systems, EHR systems, DICOM viewers, Hospital information systems'],
@@ -386,7 +418,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-code-review-assistant',
     marketPosition: 'Leading AI-powered code review platform with advanced analysis, automated feedback, and comprehensive quality assurance capabilities.',
+<<<<<<< HEAD
+    targetAudience: 'Development teams, Software companies, DevOps engineers, Code quality managers, Technical leads',
+=======
     targetAudience: ['Development teams', 'Software companies', 'DevOps engineers', 'Code quality managers', 'Technical leads'],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'AI Development Tools',
@@ -439,7 +475,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-testing-automation-platform',
     marketPosition: 'Leading AI-powered testing automation platform with intelligent test generation, execution, and optimization capabilities.',
+<<<<<<< HEAD
+    targetAudience: 'QA teams, Development teams, DevOps engineers, Test automation specialists, Software companies',
+=======
     targetAudience: ['QA teams', 'Development teams', 'DevOps engineers', 'Test automation specialists', 'Software companies'],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'AI Testing & QA',
@@ -492,7 +532,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-devops-intelligence-platform',
     marketPosition: 'Leading AI-powered DevOps platform with intelligent automation, optimization, and comprehensive operational insights.',
+<<<<<<< HEAD
+    targetAudience: 'DevOps teams, Development teams, Operations engineers, Site reliability engineers, Technology companies',
+=======
     targetAudience: ['DevOps teams', 'Development teams', 'Operations engineers', 'Site reliability engineers', 'Technology companies'],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     trialDays: 30,
     setupTime: '4-5 weeks',
     category: 'AI DevOps & Operations',
@@ -545,7 +589,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-security-automation-platform',
     marketPosition: 'Leading AI-powered security automation platform with intelligent threat detection, response, and comprehensive protection capabilities.',
+<<<<<<< HEAD
+    targetAudience: 'Security teams, CISOs, Security analysts, IT security managers, Technology companies',
+=======
     targetAudience: ['Security teams', 'CISOs', 'Security analysts', 'IT security managers', 'Technology companies'],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     trialDays: 30,
     setupTime: '4-6 weeks',
     category: 'AI Security & Compliance',
@@ -598,7 +646,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-data-pipeline-automation',
     marketPosition: 'Advanced AI-powered data pipeline platform with intelligent automation, quality monitoring, and comprehensive data management capabilities.',
+<<<<<<< HEAD
+    targetAudience: 'Data engineers, Data scientists, Analytics teams, Business intelligence teams, Technology companies',
+=======
     targetAudience: ['Data engineers', 'Data scientists', 'Analytics teams', 'Business intelligence teams', 'Technology companies'],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'AI Data & Analytics',
@@ -651,7 +703,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-infrastructure-automation',
     marketPosition: 'Leading AI-powered infrastructure automation platform with intelligent provisioning, optimization, and comprehensive management capabilities.',
+<<<<<<< HEAD
+    targetAudience: 'Infrastructure engineers, Cloud architects, DevOps teams, IT operations, Technology companies',
+=======
     targetAudience: ['Infrastructure engineers', 'Cloud architects', 'DevOps teams', 'IT operations', 'Technology companies'],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     trialDays: 30,
     setupTime: '4-6 weeks',
     category: 'AI Infrastructure & Cloud',

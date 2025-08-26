@@ -64,6 +64,16 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     ],
     popular: true,
     icon: '☁️',
+<<<<<<< HEAD
+    color: 'from-blue-600 to-cyan-600',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/multi-cloud-orchestration',
+    marketPosition: 'Competes with HashiCorp ($0.50/hour), Terraform Cloud ($20/user/month). Our advantage: Unified multi-cloud management with intelligent optimization.',
+    targetAudience: 'Enterprises, Cloud architects, DevOps teams, IT operations, Multi-cloud organizations',
+    trialDays: 21,
+    setupTime: '2-3 weeks',
+    category: 'Cloud Infrastructure',
+=======
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-enhanced-cloud-infrastructure',
@@ -72,6 +82,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Quantum Cloud Computing',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     realService: true,
     technology: ['Python, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes, Terraform'],
     integrations: ['AWS, Azure, Google Cloud, VMware, OpenStack, Ansible, Jenkins'],
@@ -88,6 +99,11 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+    implementationDetails: 'Multi-cloud orchestration platform providing unified management across multiple cloud providers with intelligent optimization.',
+    launchDate: '2025-01-20',
+    customers: 67,
+=======
     implementationDetails: 'Hybrid quantum-classical cloud infrastructure with quantum processing capabilities and classical cloud services.',
     launchDate: '2024-11-01',
     customers: 23,
@@ -144,6 +160,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     implementationDetails: 'Autonomous edge computing network with intelligent optimization and real-time processing capabilities.',
     launchDate: '2024-10-15',
     customers: 45,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     rating: 4.8,
     reviews: 45
   },
@@ -172,12 +189,21 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     icon: '🔒',
     color: 'from-red-600 to-pink-600',
     textColor: 'text-red-400',
+<<<<<<< HEAD
+    link: 'https://ziontechgroup.com/zero-trust-security',
+    marketPosition: 'Leading edge in zero-trust security. Competes with traditional network security but offers superior protection and compliance.',
+    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Critical infrastructure',
+    trialDays: 30,
+    setupTime: '3-4 weeks',
+    category: 'Network Security',
+=======
     link: 'https://ziontechgroup.com/zero-trust-security-architecture',
     marketPosition: 'Competes with Palo Alto ($50/month), Cisco ($100/month), Fortinet ($200/month). Our advantage: AI-powered continuous verification reduces security incidents by 90%.',
     targetAudience: ['Enterprise organizations', 'Government agencies', 'Financial services', 'Healthcare', 'Education'],
     trialDays: 14,
     setupTime: '2-4 weeks',
     category: 'Cybersecurity',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     realService: true,
     technology: ['Python, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes'],
     integrations: ['Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls'],
@@ -597,11 +623,19 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     color: 'from-blue-500 to-cyan-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-data-center-platform',
+<<<<<<< HEAD
+    marketPosition: 'First-to-market autonomous data center platform with AI-powered management, optimization, and comprehensive infrastructure automation capabilities.',
+    targetAudience: 'Data center operators, Cloud providers, Large enterprises, Technology companies, Infrastructure providers',
+    trialDays: 60,
+    setupTime: '10-12 weeks',
+    category: 'Autonomous Infrastructure',
+=======
     marketPosition: 'Competes with Equinix ($500/month), Digital Realty ($1000/month), CyrusOne ($800/month). Our advantage: AI automation reduces operational costs by 60% and improves reliability.',
     targetAudience: ['Enterprise organizations', 'Cloud providers', 'Telecommunications', 'Financial services', 'Government'],
     trialDays: 14,
     setupTime: '4-6 weeks',
     category: 'Data Center Infrastructure',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     realService: true,
     technology: ['Artificial Intelligence', 'Machine Learning', 'Data Center Management', 'Infrastructure Automation', 'Python', 'TensorFlow', 'React'],
     integrations: ['Data center management systems', 'Monitoring tools', 'Power management systems', 'Cooling systems', 'Security systems'],
@@ -647,6 +681,15 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     ],
     popular: true,
     icon: '🌐',
+<<<<<<< HEAD
+    color: 'from-cyan-500 to-blue-600',
+    textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup.com/quantum-networking-infrastructure',
+    marketPosition: 'First-to-market quantum networking infrastructure with quantum key distribution and unbreakable communication capabilities.',
+    targetAudience: 'Government agencies, Defense contractors, Financial institutions, Telecommunications, Research institutions',
+    trialDays: 90,
+    setupTime: '16-20 weeks',
+=======
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-networking-platform',
@@ -654,6 +697,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     targetAudience: ['Government agencies', 'Financial services', 'Healthcare', 'Telecommunications', 'Defense contractors'],
     trialDays: 14,
     setupTime: '3-5 weeks',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     category: 'Quantum Networking',
     realService: true,
     technology: ['Quantum Computing', 'Quantum Key Distribution', 'Quantum Cryptography', 'Network Security', 'Python', 'Quantum SDKs'],
@@ -671,6 +715,8 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+=======
     implementationDetails: 'Quantum networking platform with unbreakable encryption and intelligent network optimization capabilities.',
     launchDate: '2024-07-20',
     customers: 19,
@@ -936,6 +982,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     implementationDetails: 'Enterprise-grade quantum networking infrastructure with quantum key distribution, advanced security protocols, and comprehensive network management capabilities.',
     launchDate: '2025-05-01',
     customers: 3,
@@ -969,7 +1016,11 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-powered-infrastructure-management',
     marketPosition: 'Advanced AI-powered infrastructure management platform with intelligent monitoring, optimization, and comprehensive infrastructure automation capabilities.',
+<<<<<<< HEAD
+    targetAudience: 'Infrastructure engineers, Cloud architects, DevOps teams, IT operations, Technology companies',
+=======
     targetAudience: ['Infrastructure engineers', 'Cloud architects', 'DevOps teams', 'IT operations', 'Technology companies'],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     trialDays: 45,
     setupTime: '6-8 weeks',
     category: 'AI Infrastructure Management',
@@ -1022,7 +1073,11 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/hybrid-cloud-orchestration-platform',
     marketPosition: 'Advanced hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud integration capabilities.',
+<<<<<<< HEAD
+    targetAudience: 'Cloud architects, DevOps teams, Infrastructure engineers, Technology companies, Multi-cloud organizations',
+=======
     targetAudience: ['Cloud architects', 'DevOps teams', 'Infrastructure engineers', 'Technology companies', 'Multi-cloud organizations'],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     trialDays: 45,
     setupTime: '6-8 weeks',
     category: 'Hybrid Cloud Management',

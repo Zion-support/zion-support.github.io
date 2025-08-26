@@ -89,33 +89,86 @@ const serviceCategories = [
   {
     title: 'AI & Consciousness',
     description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
+<<<<<<< HEAD
+    services: cuttingEdgeAIServices2025.slice(0, 3),
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+    href: '/ai-services',
+    gradient: 'bg-gradient-to-br from-violet-500/20 to-purple-600/20'
+=======
     services: innovativeAIServicesEnhanced2025.slice(0, 4),
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
     href: '/ai-services',
     features: ['Emotional Intelligence', 'Self-Awareness', 'Consciousness Evolution', 'Autonomous Research']
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
   },
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum computing and space technology solutions',
+<<<<<<< HEAD
+    services: cuttingEdgeEmergingTechServices2025.slice(0, 3),
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-600',
+    href: '/quantum-services',
+    gradient: 'bg-gradient-to-br from-indigo-500/20 to-blue-600/20'
+=======
     services: emergingTechServicesEnhanced2025.slice(0, 4),
     icon: Atom,
     color: 'from-indigo-500 to-blue-600',
     href: '/quantum-services',
     features: ['Quantum Computing', 'Space Mining', 'Brain-Computer Interface', 'Autonomous Vehicles']
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
   },
   {
     title: 'Enterprise IT',
     description: 'Advanced enterprise infrastructure and security solutions',
+<<<<<<< HEAD
+    services: cuttingEdgeITServices2025.slice(0, 3),
+    icon: Shield,
+    color: 'from-blue-500 to-cyan-600',
+    href: '/enterprise-it',
+    gradient: 'bg-gradient-to-br from-blue-500/20 to-cyan-600/20'
+=======
     services: innovativeITServicesEnhanced2025.slice(0, 4),
     icon: Shield,
     color: 'from-blue-500 to-cyan-600',
     href: '/enterprise-it',
     features: ['Zero Trust Security', 'Quantum Cloud', 'Autonomous Operations', 'Edge Computing']
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
   },
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
+<<<<<<< HEAD
+    services: cuttingEdgeMicroSaasServices2025.slice(0, 3),
+    icon: Rocket,
+    color: 'from-teal-500 to-emerald-600',
+    href: '/micro-saas',
+    gradient: 'bg-gradient-to-br from-teal-500/20 to-emerald-600/20'
+  }
+];
+
+  // Service statistics
+  const serviceStats = {
+    totalServices: allServices.length,
+    aiServices: nextGenerationAIServices.length + innovativeAIServices.length + realMarketServices.filter(s => s.category.includes('AI')).length + revolutionary2025Services.filter(s => s.category.includes('AI')).length + nextGenInnovations2025.filter(s => s.category.includes('AI')).length + innovative2026Services.filter(s => s.category.includes('AI')).length + emergingTech2026Services.filter(s => s.category.includes('AI')).length + innovative2026MicroSaasServices.filter(s => s.category.includes('AI')).length + innovative2026MicroSaasServicesV2.filter(s => s.category.includes('AI')).length + nextGenAIServices2026.filter(s => s.category.includes('AI')).length,
+    emergingTech: emergingTechnologyServices.length + emergingTechServices2025.length + emergingTech2026Services.length + emergingTech2026ServicesNew.length + innovative2026MicroSaasServicesV2.filter(s => s.category.includes('Emerging')).length + spaceTechInnovations2026.filter(s => s.category.includes('Emerging')).length,
+    itSolutions: comprehensiveITSolutions.length + enterpriseITServices.length + enterpriseIT2026Services.length + enterpriseIT2026ServicesNew.length,
+    microSaas: enhancedRealMicroSaasServices.length + innovativeMicroSaasServices.length + innovative2026Services.filter(s => s.category.includes('SaaS')).length + innovative2026MicroSaasServices.length + innovative2026MicroSaasServicesV2.length,
+    revolutionaryServices: revolutionary2025Services.length + nextGenInnovations2025.length + innovative2026Services.length + emergingTech2026Services.length + enterpriseIT2026Services.length + innovative2026MicroSaasServices.length + innovative2026MicroSaasServicesV2.length + nextGenAIServices2026.length + blockchainInnovations2026.length + spaceTechInnovations2026.length,
+    quantumServices: quantumSpaceServices.length + quantumAIServices2025.filter(s => s.category.includes('Quantum')).length + innovative2026MicroSaasServicesV2.filter(s => s.category.includes('Quantum')).length + spaceTechInnovations2026.filter(s => s.category.includes('Quantum')).length,
+    blockchainServices: enterpriseIT2026Services.filter(s => s.category.includes('Blockchain')).length + blockchainInnovations2026.length,
+    spaceTech: quantumSpaceServices.filter(s => s.category.includes('Space')).length + spaceTechInnovations2026.length
+  };
+
+const featuredServices = [
+  {
+    name: 'AI Consciousness Evolution 2029',
+    description: 'Next-generation AI with advanced consciousness and self-awareness',
+    price: '$1,299',
+    period: '/month',
+=======
     services: innovativeRealMicroSaasServices2025.slice(0, 4),
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
@@ -126,6 +179,7 @@ const serviceCategories = [
     title: 'Advanced AI Automation',
     description: 'Revolutionary AI automation for development, testing, DevOps, and security',
     services: advancedAIAutomationServices2025.slice(0, 4),
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
     icon: Brain,
     color: 'from-emerald-500 to-teal-600',
     href: '/advanced-ai-automation-services',
@@ -147,7 +201,38 @@ const serviceCategories = [
     icon: Target,
     color: 'from-green-500 to-emerald-600',
     href: '/innovative-business-solutions',
+<<<<<<< HEAD
+    features: ['Business Intelligence', 'Marketing Automation', 'Sales Intelligence']
+  },
+  {
+    title: 'Cutting Edge AI Services',
+    description: 'Latest AI innovations and breakthrough technologies',
+    services: cuttingEdgeAIServices2025.slice(0, 3),
+    icon: Brain,
+    color: 'from-pink-500 to-rose-600',
+    href: '/cutting-edge-ai-services',
+    features: ['Code Review AI', 'DevOps Automation', 'Testing Intelligence']
+  },
+  {
+    title: 'Enhanced Business Solutions',
+    description: 'Advanced AI-powered business automation and intelligence',
+    services: innovativeBusinessSolutionsEnhanced2025.slice(0, 3),
+    icon: Target,
+    color: 'from-orange-500 to-red-600',
+    href: '/enhanced-business-solutions',
+    features: ['Marketing AI', 'Sales Intelligence', 'HR Automation']
+  },
+  {
+    title: 'Emerging Technology Services',
+    description: 'Cutting-edge quantum, blockchain, and space technology solutions',
+    services: emergingTechnologyServicesEnhanced2025.slice(0, 3),
+    icon: Atom,
+    color: 'from-violet-500 to-purple-600',
+    href: '/emerging-technology-services',
+    features: ['Quantum Computing', 'Blockchain Infrastructure', 'Space Technology']
+=======
     features: ['Business Intelligence', 'Marketing Automation', 'Sales Intelligence', 'HR Analytics']
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
   }
 ];
 
@@ -338,6 +423,10 @@ export default function HomePage() {
       </section>
 
       {/* Service Categories Section */}
+<<<<<<< HEAD
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto px-6">
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -578,6 +667,7 @@ export default function HomePage() {
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

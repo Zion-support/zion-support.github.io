@@ -512,6 +512,9 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     launchDate: '2025-02-25',
     customers: 89,
     rating: 4.7,
+<<<<<<< HEAD
+    reviews: 67
+=======
     reviews: 56
   },
 
@@ -937,5 +940,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     customers: 5,
     rating: 5.0,
     reviews: 3
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd86
   }
 ];
