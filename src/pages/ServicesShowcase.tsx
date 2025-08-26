@@ -62,6 +62,41 @@ const ServicesShowcase: React.FC = () => {
           pricing: "$1,500 - $12,000/month",
           features: ["Ethics framework", "Bias detection", "Compliance monitoring", "Audit trails"],
           benefits: ["Ethical AI", "Compliance assurance", "Risk mitigation"]
+        },
+        {
+          name: "AI-Powered Fraud Detection",
+          description: "Advanced fraud detection using machine learning",
+          pricing: "$3,000 - $25,000/month",
+          features: ["Real-time monitoring", "Pattern recognition", "Risk scoring", "Alert system"],
+          benefits: ["Fraud prevention", "Cost savings", "Risk reduction"]
+        },
+        {
+          name: "AI Supply Chain Optimization",
+          description: "Intelligent supply chain optimization and forecasting",
+          pricing: "$4,000 - $30,000/month",
+          features: ["Demand forecasting", "Route optimization", "Inventory management", "Supplier analytics"],
+          benefits: ["Cost reduction", "Efficiency improvement", "Risk mitigation"]
+        },
+        {
+          name: "AI-Powered Quality Control",
+          description: "Automated quality control and defect detection",
+          pricing: "$2,500 - $20,000/month",
+          features: ["Visual inspection", "Defect detection", "Quality metrics", "Process optimization"],
+          benefits: ["Quality improvement", "Cost reduction", "Process efficiency"]
+        },
+        {
+          name: "AI Customer Segmentation",
+          description: "Intelligent customer segmentation and personalization",
+          pricing: "$1,500 - $12,000/month",
+          features: ["Behavioral analysis", "Segmentation models", "Personalization", "Campaign optimization"],
+          benefits: ["Better targeting", "Higher conversions", "ROI improvement"]
+        },
+        {
+          name: "AI-Powered Healthcare",
+          description: "Healthcare AI solutions for diagnosis and care",
+          pricing: "$8,000 - $60,000/month",
+          features: ["Medical imaging", "Diagnostic assistance", "Patient monitoring", "Drug discovery"],
+          benefits: ["Improved diagnosis", "Better care", "Cost reduction"]
         }
       ]
     },
@@ -103,6 +138,76 @@ const ServicesShowcase: React.FC = () => {
           pricing: "$129 - $549/month",
           features: ["Smart scheduling", "Resource optimization", "Risk prediction", "Progress tracking"],
           benefits: ["20% faster delivery", "Resource optimization", "Risk mitigation"]
+        },
+        {
+          name: "AI-Powered HR Assistant",
+          description: "Intelligent HR automation for recruitment and management",
+          pricing: "$199 - $799/month",
+          features: ["Resume screening", "Interview scheduling", "Employee onboarding", "Performance tracking"],
+          benefits: ["70% faster hiring", "Reduced bias", "Improved retention"]
+        },
+        {
+          name: "Smart Inventory Management",
+          description: "AI-driven inventory optimization and supply chain",
+          pricing: "$149 - $599/month",
+          features: ["Demand forecasting", "Automated reordering", "Supplier management", "Real-time tracking"],
+          benefits: ["30% inventory reduction", "Zero stockouts", "Cost optimization"]
+        },
+        {
+          name: "AI Legal Document Analyzer",
+          description: "Automated legal document review and analysis",
+          pricing: "$299 - $1,199/month",
+          features: ["Contract analysis", "Risk assessment", "Compliance checking", "Legal research"],
+          benefits: ["90% faster review", "Risk identification", "Compliance assurance"]
+        },
+        {
+          name: "Smart Financial Planning",
+          description: "AI-powered financial planning and advisory",
+          pricing: "$99 - $399/month",
+          features: ["Portfolio optimization", "Risk assessment", "Tax planning", "Goal tracking"],
+          benefits: ["Optimized returns", "Risk management", "Tax efficiency"]
+        },
+        {
+          name: "AI Sales Intelligence",
+          description: "Predictive sales analytics and lead scoring",
+          pricing: "$179 - $699/month",
+          features: ["Lead scoring", "Sales forecasting", "Pipeline analytics", "Performance insights"],
+          benefits: ["25% increase in conversions", "Better lead quality", "Sales optimization"]
+        },
+        {
+          name: "Smart Customer Feedback",
+          description: "AI-powered sentiment analysis and feedback management",
+          pricing: "$79 - $299/month",
+          features: ["Sentiment analysis", "Feedback categorization", "Trend identification", "Action recommendations"],
+          benefits: ["Real-time insights", "Improved satisfaction", "Proactive support"]
+        },
+        {
+          name: "AI Marketing Attribution",
+          description: "Multi-channel marketing attribution and ROI optimization",
+          pricing: "$199 - $799/month",
+          features: ["Cross-channel tracking", "ROI analysis", "Budget optimization", "Performance insights"],
+          benefits: ["Accurate ROI tracking", "Budget optimization", "Performance improvement"]
+        },
+        {
+          name: "Smart Vendor Management",
+          description: "AI-powered vendor selection and performance tracking",
+          pricing: "$129 - $499/month",
+          features: ["Vendor scoring", "Performance monitoring", "Contract management", "Cost optimization"],
+          benefits: ["Better vendor selection", "Cost reduction", "Performance improvement"]
+        },
+        {
+          name: "AI Compliance Monitor",
+          description: "Automated compliance monitoring and reporting",
+          pricing: "$249 - $999/month",
+          features: ["Regulatory tracking", "Compliance alerts", "Audit preparation", "Risk assessment"],
+          benefits: ["Compliance assurance", "Risk mitigation", "Audit readiness"]
+        },
+        {
+          name: "Smart Energy Management",
+          description: "AI-powered energy consumption optimization",
+          pricing: "$179 - $699/month",
+          features: ["Usage optimization", "Cost analysis", "Sustainability tracking", "Predictive maintenance"],
+          benefits: ["20% energy savings", "Cost reduction", "Sustainability goals"]
         }
       ]
     },
@@ -123,6 +228,27 @@ const ServicesShowcase: React.FC = () => {
           pricing: "$2,200 - $18,000/month",
           features: ["Network Management", "System Administration", "Data Center Operations", "Performance Optimization"],
           benefits: ["Proactive maintenance", "Performance optimization", "Scalable solutions"]
+        },
+        {
+          name: "Edge Computing Solutions",
+          description: "Distributed computing for IoT and real-time applications",
+          pricing: "$3,000 - $20,000/month",
+          features: ["Edge deployment", "Latency optimization", "IoT integration", "Real-time processing"],
+          benefits: ["Ultra-low latency", "Real-time processing", "Cost optimization"]
+        },
+        {
+          name: "5G Network Optimization",
+          description: "5G network design, deployment, and optimization",
+          pricing: "$4,000 - $30,000/month",
+          features: ["Network planning", "Performance optimization", "Coverage analysis", "Capacity planning"],
+          benefits: ["Maximum performance", "Optimal coverage", "Future scalability"]
+        },
+        {
+          name: "IoT Platform Development",
+          description: "Custom IoT platform development and management",
+          pricing: "$3,500 - $25,000/month",
+          features: ["Device management", "Data collection", "Analytics dashboard", "Security framework"],
+          benefits: ["Connected ecosystem", "Data insights", "Operational efficiency"]
         }
       ]
     },
@@ -150,6 +276,27 @@ const ServicesShowcase: React.FC = () => {
           pricing: "$800 - $5,000/month",
           features: ["Automated backups", "Cloud storage", "Recovery testing", "RTO optimization"],
           benefits: ["99.99% recovery success", "Automated testing", "Cloud redundancy"]
+        },
+        {
+          name: "Zero Trust Architecture",
+          description: "Modern security architecture implementation",
+          pricing: "$4,500 - $35,000/month",
+          features: ["Identity verification", "Access control", "Network segmentation", "Continuous monitoring"],
+          benefits: ["Enhanced security", "Compliance", "Risk reduction"]
+        },
+        {
+          name: "AI-Powered Cybersecurity",
+          description: "Next-generation cybersecurity using AI",
+          pricing: "$5,000 - $40,000/month",
+          features: ["Threat detection", "Behavioral analysis", "Automated response", "Predictive security"],
+          benefits: ["Proactive protection", "Zero-day prevention", "Automated response"]
+        },
+        {
+          name: "Quantum-Safe Cryptography",
+          description: "Post-quantum cryptography implementation",
+          pricing: "$4,000 - $30,000/month",
+          features: ["Algorithm selection", "Implementation", "Testing", "Migration planning"],
+          benefits: ["Future security", "Quantum resistance", "Compliance"]
         }
       ]
     },
@@ -184,6 +331,47 @@ const ServicesShowcase: React.FC = () => {
           pricing: "$600 - $4,000/month",
           features: ["Performance metrics", "Capacity planning", "Optimization recommendations", "Alert system"],
           benefits: ["Proactive optimization", "Capacity planning", "Performance improvement"]
+        }
+      ]
+    },
+    {
+      title: "Emerging Technology Services",
+      description: "Cutting-edge technology solutions for future-ready businesses",
+      services: [
+        {
+          name: "Quantum Computing Consulting",
+          description: "Expert guidance on quantum computing implementation",
+          pricing: "$5,000 - $25,000/month",
+          features: ["Quantum strategy", "Use case identification", "Vendor selection", "Implementation planning"],
+          benefits: ["Future-ready strategy", "Competitive advantage", "Innovation leadership"]
+        },
+        {
+          name: "Blockchain Infrastructure",
+          description: "Enterprise blockchain development and deployment",
+          pricing: "$5,000 - $40,000/month",
+          features: ["Smart contracts", "DApp development", "Consensus mechanisms", "Security auditing"],
+          benefits: ["Transparency", "Security", "Automation"]
+        },
+        {
+          name: "Metaverse Development",
+          description: "Virtual and augmented reality platform development",
+          pricing: "$8,000 - $60,000/month",
+          features: ["VR/AR development", "3D modeling", "Interactive experiences", "Platform integration"],
+          benefits: ["Innovation leadership", "New revenue streams", "Customer engagement"]
+        },
+        {
+          name: "Web3 Development",
+          description: "Decentralized application development and integration",
+          pricing: "$6,000 - $45,000/month",
+          features: ["DApp development", "Smart contracts", "DeFi solutions", "NFT platforms"],
+          benefits: ["Decentralization", "Innovation", "New business models"]
+        },
+        {
+          name: "Green Tech Solutions",
+          description: "Sustainable technology solutions for environmental impact",
+          pricing: "$3,000 - $25,000/month",
+          features: ["Carbon tracking", "Energy optimization", "Sustainability reporting", "Green infrastructure"],
+          benefits: ["Environmental impact", "Cost savings", "Compliance"]
         }
       ]
     },
