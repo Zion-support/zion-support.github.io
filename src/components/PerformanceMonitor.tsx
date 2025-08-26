@@ -1,245 +1,245 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  fmp: number;
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  domLoad: number | null;
+  windowLoad: number | null;
 }
 
-interface PerformanceRecommendations {
-  type: 'good' | 'needs-improvement' | 'poor';
-  message: string;
-  action: string;
+// Extended interfaces for specific performance entry types
+interface FirstInputEntry extends PerformanceEntry {
+  processingStart: number;
+  target?: EventTarget;
+}
+
+interface LayoutShiftEntry extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [recommendations, setRecommendations] = useState<PerformanceRecommendations[]>([]);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    domLoad: null,
+    windowLoad: null
+  });
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Monitor Core Web Vitals
-    if ('PerformanceObserver' in window) {
-      // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcp = entries[entries.length - 1];
-        if (fcp) {
-          setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-        }
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lcp = entries[entries.length - 1];
-        if (lcp) {
-          setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-        }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fid = entries[entries.length - 1];
-        if (fid && 'processingStart' in fid) {
-          setMetrics(prev => ({ ...prev, fid: (fid as any).processingStart - fid.startTime }));
-        }
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        for (const entry of list.getEntries()) {
-          if (!('hadRecentInput' in entry) || !(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // Time to First Byte
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
-      }
-
-      // First Meaningful Paint (estimated)
-      const paintEntries = performance.getEntriesByType('paint');
-      const fmp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      if (fmp) {
-        setMetrics(prev => ({ ...prev, fmp: fmp.startTime }));
-      }
+    // Only show in development or when explicitly enabled
+    if (process.env.NODE_ENV === 'development' || process.env.REACT_APP_SHOW_PERFORMANCE === 'true') {
+      setIsVisible(true);
     }
 
-    // Show monitor after a delay
-    const timer = setTimeout(() => setIsVisible(true), 2000);
+    const measurePerformance = () => {
+      // Check if PerformanceObserver is supported
+      if ('PerformanceObserver' in window) {
+        // First Contentful Paint (FCP)
+        const fcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+          if (fcpEntry) {
+            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+          }
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
+
+        // Largest Contentful Paint (LCP)
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          }
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // First Input Delay (FID)
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            if (entry.entryType === 'first-input') {
+              const fidEntry = entry as FirstInputEntry;
+              setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+            }
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+
+        // Cumulative Layout Shift (CLS)
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
+            if (entry.entryType === 'layout-shift') {
+              const layoutShiftEntry = entry as LayoutShiftEntry;
+              if (!layoutShiftEntry.hadRecentInput) {
+                clsValue += layoutShiftEntry.value;
+                setMetrics(prev => ({ ...prev, cls: clsValue }));
+              }
+            }
+          });
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+        // Time to First Byte (TTFB)
+        const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigationEntry) {
+          setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+        }
+
+        // DOM Content Loaded (using legacy timing API as fallback)
+        if ('timing' in performance) {
+          const timing = (performance as any).timing;
+          const domLoadTime = timing.domContentLoadedEventEnd - timing.navigationStart;
+          setMetrics(prev => ({ ...prev, domLoad: domLoadTime }));
+          
+          // Window Load
+          const windowLoadTime = timing.loadEventEnd - timing.navigationStart;
+          setMetrics(prev => ({ ...prev, windowLoad: windowLoadTime }));
+        }
+
+        // Cleanup observers
+        return () => {
+          fcpObserver.disconnect();
+          lcpObserver.disconnect();
+          fidObserver.disconnect();
+          clsObserver.disconnect();
+        };
+      }
+    };
+
+    // Measure performance after a short delay to ensure page is loaded
+    const timer = setTimeout(measurePerformance, 1000);
+
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    if (metrics) {
-      const newRecommendations: PerformanceRecommendations[] = [];
+  const getPerformanceScore = (metric: keyof PerformanceMetrics): string => {
+    const value = metrics[metric];
+    if (value === null) return 'N/A';
 
-      // FCP recommendations
-      if (metrics.fcp > 2000) {
-        newRecommendations.push({
-          type: 'poor',
-          message: 'First Contentful Paint is too slow',
-          action: 'Optimize critical rendering path and reduce server response time'
-        });
-      } else if (metrics.fcp > 1000) {
-        newRecommendations.push({
-          type: 'needs-improvement',
-          message: 'First Contentful Paint could be faster',
-          action: 'Consider image optimization and CSS minification'
-        });
-      }
-
-      // LCP recommendations
-      if (metrics.lcp > 4000) {
-        newRecommendations.push({
-          type: 'poor',
-          message: 'Largest Contentful Paint is very slow',
-          action: 'Optimize images, implement lazy loading, and improve server performance'
-        });
-      } else if (metrics.lcp > 2500) {
-        newRecommendations.push({
-          type: 'needs-improvement',
-          message: 'Largest Contentful Paint needs improvement',
-          action: 'Optimize hero images and critical resources'
-        });
-      }
-
-      // FID recommendations
-      if (metrics.fid > 300) {
-        newRecommendations.push({
-          type: 'poor',
-          message: 'First Input Delay is too high',
-          action: 'Reduce JavaScript execution time and optimize event handlers'
-        });
-      }
-
-      // CLS recommendations
-      if (metrics.cls > 0.25) {
-        newRecommendations.push({
-          type: 'poor',
-          message: 'Cumulative Layout Shift is too high',
-          action: 'Set explicit dimensions for images and avoid layout shifts'
-        });
-      } else if (metrics.cls > 0.1) {
-        newRecommendations.push({
-          type: 'needs-improvement',
-          message: 'Cumulative Layout Shift could be improved',
-          action: 'Reserve space for dynamic content and optimize loading'
-        });
-      }
-
-      setRecommendations(newRecommendations);
-    }
-  }, [metrics]);
-
-  const getScoreColor = (type: string) => {
-    switch (type) {
-      case 'good': return 'text-green-500';
-      case 'needs-improvement': return 'text-yellow-500';
-      case 'poor': return 'text-red-500';
-      default: return 'text-gray-500';
+    switch (metric) {
+      case 'fcp':
+        if (value < 1800) return '🟢 Good';
+        if (value < 3000) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      case 'lcp':
+        if (value < 2500) return '🟢 Good';
+        if (value < 4000) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      case 'fid':
+        if (value < 100) return '🟢 Good';
+        if (value < 300) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      case 'cls':
+        if (value < 0.1) return '🟢 Good';
+        if (value < 0.25) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      case 'ttfb':
+        if (value < 800) return '🟢 Good';
+        if (value < 1800) return '🟡 Needs Improvement';
+        return '🔴 Poor';
+      default:
+        return 'N/A';
     }
   };
 
-  const getScoreBg = (type: string) => {
-    switch (type) {
-      case 'good': return 'bg-green-100 dark:bg-green-900/20';
-      case 'needs-improvement': return 'bg-yellow-100 dark:bg-yellow-900/20';
-      case 'poor': return 'bg-red-100 dark:bg-red-900/20';
-      default: return 'bg-gray-100 dark:bg-gray-900/20';
+  const getMetricValue = (metric: keyof PerformanceMetrics): string => {
+    const value = metrics[metric];
+    if (value === null) return 'N/A';
+    
+    switch (metric) {
+      case 'fcp':
+      case 'lcp':
+      case 'fid':
+      case 'ttfb':
+      case 'domLoad':
+      case 'windowLoad':
+        return `${Math.round(value)}ms`;
+      case 'cls':
+        return value.toFixed(3);
+      default:
+        return 'N/A';
     }
   };
 
   if (!isVisible) return null;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="fixed bottom-4 right-4 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-gray-200 dark:border-slate-700 p-4 z-50"
-    >
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-          Performance Monitor
-        </h3>
+    <div className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-md text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-sm font-semibold">Performance Monitor</h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+          className="text-gray-400 hover:text-white text-xs"
+          aria-label="Close performance monitor"
         >
-          ×
+          ✕
         </button>
       </div>
-
-      {metrics && (
-        <div className="space-y-3">
-          <div className="grid grid-cols-2 gap-2 text-sm">
-            <div className="bg-gray-50 dark:bg-slate-700 p-2 rounded">
-              <div className="text-gray-600 dark:text-gray-400">FCP</div>
-              <div className="font-mono">{Math.round(metrics.fcp)}ms</div>
-            </div>
-            <div className="bg-gray-50 dark:bg-slate-700 p-2 rounded">
-              <div className="text-gray-600 dark:text-gray-400">LCP</div>
-              <div className="font-mono">{Math.round(metrics.lcp)}ms</div>
-            </div>
-            <div className="bg-gray-50 dark:bg-slate-700 p-2 rounded">
-              <div className="text-gray-600 dark:text-gray-400">FID</div>
-              <div className="font-mono">{Math.round(metrics.fid)}ms</div>
-            </div>
-            <div className="bg-gray-50 dark:bg-slate-700 p-2 rounded">
-              <div className="text-gray-600 dark:text-gray-400">CLS</div>
-              <div className="font-mono">{metrics.cls.toFixed(3)}</div>
-            </div>
-          </div>
-
-          {recommendations.length > 0 && (
-            <div className="mt-4">
-              <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2">
-                Recommendations
-              </h4>
-              <div className="space-y-2">
-                {recommendations.map((rec, index) => (
-                  <div
-                    key={index}
-                    className={`p-3 rounded-lg ${getScoreBg(rec.type)}`}
-                  >
-                    <div className={`text-sm font-medium ${getScoreColor(rec.type)} mb-1`}>
-                      {rec.message}
-                    </div>
-                    <div className="text-xs text-gray-600 dark:text-gray-400">
-                      {rec.action}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+      
+      <div className="space-y-2 text-xs">
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className="font-mono">{getMetricValue('fcp')}</span>
+          <span>{getPerformanceScore('fcp')}</span>
         </div>
-      )}
-
-      <div className="mt-4 pt-3 border-t border-gray-200 dark:border-slate-700">
+        
+        <div className="flex justify-between">
+          <span>LCP:</span>
+          <span className="font-mono">{getMetricValue('lcp')}</span>
+          <span>{getPerformanceScore('lcp')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>FID:</span>
+          <span className="font-mono">{getMetricValue('fid')}</span>
+          <span>{getPerformanceScore('fid')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>CLS:</span>
+          <span className="font-mono">{getMetricValue('cls')}</span>
+          <span>{getPerformanceScore('cls')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>TTFB:</span>
+          <span className="font-mono">{getMetricValue('ttfb')}</span>
+          <span>{getPerformanceScore('ttfb')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>DOM Load:</span>
+          <span className="font-mono">{getMetricValue('domLoad')}</span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span>Window Load:</span>
+          <span className="font-mono">{getMetricValue('windowLoad')}</span>
+        </div>
+      </div>
+      
+      <div className="mt-3 pt-2 border-t border-gray-600">
         <button
           onClick={() => window.location.reload()}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 px-3 rounded-md transition-colors"
+          className="w-full bg-zion-cyan text-black text-xs py-1 px-2 rounded hover:bg-zion-cyan/80 transition-colors"
         >
           Refresh Metrics
         </button>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
