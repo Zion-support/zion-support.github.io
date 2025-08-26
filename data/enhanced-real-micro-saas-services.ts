@@ -98,11 +98,11 @@ export const enhancedRealMicroSaasServices: SimpleMicroSaasService[] = [
     realService: true,
     technology: ['Computer Vision', 'AI Video Processing', 'Cloud Computing', 'Machine Learning'],
     integrations: ['YouTube', 'Vimeo', 'Adobe Creative Suite', 'Stock footage APIs'],
-    useCases: ['YouTube content', 'Marketing videos', 'Social media posts', 'Training videos'],
-    roi: '300% ROI through time savings',
-    competitors: ['Adobe Premiere Pro', 'Final Cut Pro', 'DaVinci Resolve'],
-    marketSize: '$1.2B video editing market',
-    growthRate: '120% annual growth'
+    useCases: ['Video editing', 'Content creation', 'Marketing videos', 'Social media content', 'Film production'],
+    roi: '350% ROI through time savings and content quality improvement',
+    competitors: ['Adobe Premiere Pro', 'Final Cut Pro', 'DaVinci Resolve', 'Camtasia'],
+    marketSize: '$3.2B video editing software market',
+    growthRate: '220% annual growth'
   },
   {
     id: 'smart-seo-optimizer',

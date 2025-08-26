@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
   Building2, Factory, Car, Heart, GraduationCap, 
-  Shield, Globe, Zap, Brain, Rocket, Users, BarChart3
+  Shield, Globe, Zap, Brain, Rocket, Users, BarChart3, Cloud
 } from 'lucide-react';
 
 export default function SolutionsPage() {
