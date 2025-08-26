@@ -2,7 +2,8 @@ import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { servicesCatalog } from '@/data/servicesCatalog';
-import { Phone, Mail, MapPin, ExternalLink, Star, Zap, Shield, Brain, Cpu, Database, Globe, TrendingUp } from 'lucide-react';
+import { Phone, Mail, MapPin, ExternalLink, Star, Zap, Shield, Brain, Cpu, Database, Globe, TrendingUp, Rocket, Heart, DollarSign, Eye, Bot } from 'lucide-react';
+import FuturisticServicesShowcase from '@/components/FuturisticServicesShowcase';
 
 export default function Services() {
 	const contact = {
@@ -24,6 +25,11 @@ export default function Services() {
 			case 'Blockchain & Web3': return <Database className="w-6 h-6" />;
 			case 'IoT & Edge': return <Cpu className="w-6 h-6" />;
 			case 'Green Tech': return <TrendingUp className="w-6 h-6" />;
+			case 'Space Tech': return <Rocket className="w-6 h-6" />;
+			case 'BioTech & Health': return <Heart className="w-6 h-6" />;
+			case 'FinTech & DeFi': return <DollarSign className="w-6 h-6" />;
+			case 'Metaverse & AR/VR': return <Eye className="w-6 h-6" />;
+			case 'Autonomous Systems': return <Bot className="w-6 h-6" />;
 			default: return <Star className="w-6 h-6" />;
 		}
 	};
@@ -159,6 +165,9 @@ export default function Services() {
 						))}
 					</div>
 				</div>
+
+				{/* Futuristic Services Showcase */}
+				<FuturisticServicesShowcase />
 
 				{/* Contact Section */}
 				<div className="container mx-auto px-4 py-16">
