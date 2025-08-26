@@ -16,12 +16,12 @@ const Footer: React.FC = () => {
     {
       title: "Services",
       links: [
-        { label: "AI Solutions", path: "/services" },
-        { label: "Cloud & DevOps", path: "/services" },
-        { label: "Cybersecurity", path: "/services" },
-        { label: "Quantum Computing", path: "/services" },
-        { label: "Blockchain & Web3", path: "/services" },
-        { label: "Micro SAAS", path: "/micro-saas" }
+        { label: "AI Solutions", path: "/services/ai" },
+        { label: "Cloud & DevOps", path: "/services/cloud" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "IT Infrastructure", path: "/services/infrastructure" },
+        { label: "Digital Transformation", path: "/services/transformation" },
+        { label: "Micro SAAS", path: "/services-showcase" }
       ]
     },
     {
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
         { label: "About Us", path: "/about" },
         { label: "Our Team", path: "/about" },
         { label: "Careers", path: "/careers" },
-        { label: "News & Updates", path: "/blog" },
+        { label: "News & Updates", path: "/news" },
         { label: "Case Studies", path: "/case-studies" },
         { label: "Partners", path: "/partners" }
       ]
@@ -42,8 +42,9 @@ const Footer: React.FC = () => {
         { label: "Documentation", path: "/docs" },
         { label: "White Papers", path: "/white-papers" },
         { label: "Webinars", path: "/webinars" },
-        { label: "Research", path: "/research" },
-        { label: "Events", path: "/events" }
+        { label: "Research", path: "/research-development" },
+        { label: "Events", path: "/events" },
+        { label: "Training", path: "/training" }
       ]
     },
     {
@@ -52,9 +53,9 @@ const Footer: React.FC = () => {
         { label: "Contact Us", path: "/contact" },
         { label: "Help Center", path: "/help" },
         { label: "Support Portal", path: "/support" },
-        { label: "Training", path: "/training" },
-        { label: "Consulting", path: "/consulting" },
-        { label: "Request Quote", path: "/request-quote" }
+        { label: "FAQ", path: "/faq" },
+        { label: "Consulting", path: "/services/consulting" },
+        { label: "Request Quote", path: "/contact" }
       ]
     }
   ];

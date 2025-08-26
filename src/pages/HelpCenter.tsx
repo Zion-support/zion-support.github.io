@@ -1,211 +1,277 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Search, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function HelpCenter() {
-  const faqCategories = [
+const HelpCenter: React.FC = () => {
+  const helpCategories = [
     {
-      title: 'Getting Started',
-      icon: BookOpen,
-      items: [
-        {
-          question: 'How do I create an account?',
-          answer: 'Click the "Sign Up" button in the top right corner and fill out the registration form with your email and password.'
-        },
-        {
-          question: 'How do I post a job or service?',
-          answer: 'After logging in, go to your dashboard and click "Post Job" or "Create Service" to get started.'
-        },
-        {
-          question: 'What information do I need to create a profile?',
-          answer: 'You\'ll need basic information like your name, skills, experience, and optionally a profile picture and portfolio.'
-        }
+      title: "Getting Started",
+      icon: "🚀",
+      description: "New to Zion Tech Group? Start here to learn the basics.",
+      articles: [
+        { title: "How to Get Started", path: "/help/getting-started" },
+        { title: "Account Setup Guide", path: "/help/account-setup" },
+        { title: "First Project Walkthrough", path: "/help/first-project" }
       ]
     },
     {
-      title: 'Marketplace',
-      icon: Settings,
-      items: [
-        {
-          question: 'How do I find talent or services?',
-          answer: 'Use the search bar or browse categories to find what you\'re looking for. You can also use our AI-powered matching system.'
-        },
-        {
-          question: 'How do payments work?',
-          answer: 'We support secure payments through Stripe. Payments are held in escrow until the work is completed and approved.'
-        },
-        {
-          question: 'What if I\'m not satisfied with the work?',
-          answer: 'We have a dispute resolution process. Contact our support team if you need help resolving an issue.'
-        }
+      title: "Services & Solutions",
+      icon: "⚙️",
+      description: "Learn about our services and how to use them effectively.",
+      articles: [
+        { title: "AI Solutions Guide", path: "/help/ai-solutions" },
+        { title: "Cloud Migration Help", path: "/help/cloud-migration" },
+        { title: "Security Implementation", path: "/help/security" }
       ]
     },
     {
-      title: 'Account & Billing',
-      icon: Users,
-      items: [
-        {
-          question: 'How do I update my profile?',
-          answer: 'Go to your dashboard and click on "Edit Profile" to make changes to your information.'
-        },
-        {
-          question: 'How do I change my password?',
-          answer: 'Go to Account Settings and click on "Change Password" to update your password.'
-        },
-        {
-          question: 'What are the fees?',
-          answer: 'We charge a small percentage fee on successful transactions. There are no upfront costs to use our platform.'
-        }
+      title: "Technical Support",
+      icon: "🔧",
+      description: "Technical issues and troubleshooting guides.",
+      articles: [
+        { title: "Common Issues", path: "/help/common-issues" },
+        { title: "API Documentation", path: "/docs" },
+        { title: "Performance Optimization", path: "/help/performance" }
       ]
     },
     {
-      title: 'Technical Support',
-      icon: HelpCircle,
-      items: [
-        {
-          question: 'The website is not loading properly',
-          answer: 'Try refreshing the page, clearing your browser cache, or using a different browser. If the issue persists, contact support.'
-        },
-        {
-          question: 'I can\'t upload files',
-          answer: 'Check that your file size is under 10MB and that you\'re using a supported file format (PDF, DOC, JPG, PNG).'
-        },
-        {
-          question: 'How do I contact support?',
-          answer: 'You can reach us through the contact form, email us at support@ziontechgroup.com, or call us at +1 (555) 123-4567.'
-        }
+      title: "Billing & Account",
+      icon: "💳",
+      description: "Questions about billing, pricing, and account management.",
+      articles: [
+        { title: "Pricing Plans", path: "/pricing" },
+        { title: "Billing FAQ", path: "/help/billing" },
+        { title: "Account Management", path: "/help/account" }
       ]
     }
   ];
 
-  const quickLinks = [
-    { title: 'Contact Support', href: '/contact', icon: MessageCircle, description: 'Get in touch with our support team' },
-    { title: 'API Documentation', href: '/api-docs', icon: FileText, description: 'Developer resources and API guides' },
-    { title: 'Community Forum', href: '/community', icon: Users, description: 'Connect with other users' },
-    { title: 'Blog & Updates', href: '/blog', icon: FileText, description: 'Latest news and platform updates' }
+  const popularQuestions = [
+    {
+      question: "How do I get started with Zion Tech Group services?",
+      answer: "Getting started is easy! Simply contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best solutions.",
+      category: "Getting Started"
+    },
+    {
+      question: "What AI solutions do you offer?",
+      answer: "We offer comprehensive AI solutions including machine learning models, natural language processing, computer vision, predictive analytics, and custom AI development tailored to your business needs.",
+      category: "Services"
+    },
+    {
+      question: "How long does a typical project take?",
+      answer: "Project timelines vary depending on complexity and scope. Simple implementations can take 2-4 weeks, while complex enterprise solutions may take 3-6 months. We'll provide a detailed timeline during our initial consultation.",
+      category: "Project Management"
+    },
+    {
+      question: "Do you provide ongoing support after project completion?",
+      answer: "Yes! We offer comprehensive post-implementation support including maintenance, updates, training, and 24/7 technical support to ensure your solutions continue to perform optimally.",
+      category: "Support"
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Help Center | Zion Tech Group" 
-        description="Get help and support for using the Zion Tech Group platform. Find answers to frequently asked questions and contact our support team."
-        keywords="help, support, FAQ, customer service, Zion Tech Group"
-        canonical="https://ziontechgroup.com/help"
-      />
-
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">Help Center</h1>
-          <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-            Find answers to common questions and get the support you need to make the most of our platform.
-          </p>
-        </div>
-
-        {/* Search Bar */}
-        <div className="max-w-2xl mx-auto mb-12">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-5 w-5" />
-            <input
-              type="text"
-              placeholder="Search for help articles, FAQs, or topics..."
-              className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
-            />
+    <>
+      <Helmet>
+        <title>Help Center - Zion Tech Group</title>
+        <meta name="description" content="Get help and support for Zion Tech Group services. Find answers to common questions, troubleshooting guides, and contact our support team." />
+        <meta name="keywords" content="help center, support, FAQ, troubleshooting, Zion Tech Group, customer service" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              How Can We
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Help?</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Find answers to your questions, get technical support, and access helpful resources 
+              to make the most of Zion Tech Group's services.
+            </p>
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search for help articles, guides, or topics..."
+                  className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors text-lg"
+                />
+                <button className="absolute right-3 top-3 text-gray-400 hover:text-white">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        {/* Quick Links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {quickLinks.map((link) => {
-            const IconComponent = link.icon;
-            return (
-              <Link key={link.title} to={link.href}>
-                <Card className="h-full hover:bg-zion-blue-dark/50 transition-colors cursor-pointer border-zion-blue-light">
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center space-x-2">
-                      <IconComponent className="h-5 w-5 text-zion-cyan" />
-                      <CardTitle className="text-white text-lg">{link.title}</CardTitle>
+        {/* Help Categories */}
+        <section className="pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Browse Help Topics
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {helpCategories.map((category) => (
+                <div key={category.title} className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-6">
+                    <div className="text-4xl mr-4">{category.icon}</div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white">{category.title}</h3>
+                      <p className="text-gray-400 text-sm">{category.description}</p>
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-zion-slate-light">
-                      {link.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </Link>
-            );
-          })}
-        </div>
-
-        {/* FAQ Categories */}
-        <div className="space-y-8">
-          {faqCategories.map((category) => {
-            const IconComponent = category.icon;
-            return (
-              <Card key={category.title} className="border-zion-blue-light">
-                <CardHeader>
-                  <div className="flex items-center space-x-3">
-                    <IconComponent className="h-6 w-6 text-zion-cyan" />
-                    <CardTitle className="text-white text-xl">{category.title}</CardTitle>
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <Accordion type="single" collapsible className="w-full">
-                    {category.items.map((item, index) => (
-                      <AccordionItem key={index} value={`item-${index}`}>
-                        <AccordionTrigger className="text-left text-zion-slate-light hover:text-white">
-                          {item.question}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-zion-slate-light">
-                          {item.answer}
-                        </AccordionContent>
-                      </AccordionItem>
+                  <div className="space-y-3">
+                    {category.articles.map((article) => (
+                      <Link
+                        key={article.title}
+                        to={article.path}
+                        className="block text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                      >
+                        {article.title} →
+                      </Link>
                     ))}
-                  </Accordion>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        {/* Contact Support Section */}
-        <div className="mt-16 text-center">
-          <Card className="border-zion-blue-light bg-zion-blue-dark/50">
-            <CardHeader>
-              <CardTitle className="text-white text-2xl">Still Need Help?</CardTitle>
-              <CardDescription className="text-zion-slate-light text-lg">
-                Can't find what you're looking for? Our support team is here to help.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
+        {/* Popular Questions */}
+        <section className="pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-6">
+              {popularQuestions.map((faq, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-6">
+                  <div className="mb-4">
+                    <span className="text-xs text-blue-400 bg-blue-400/10 px-2 py-1 rounded-full">
+                      {faq.category}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3">
+                    {faq.question}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Support */}
+        <section className="pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-2xl border border-white/10 p-12 text-center">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Still Need Help?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Our support team is here to help you with any questions or issues. 
+                We're committed to providing excellent customer service.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">Email Support</h3>
+                  <p className="text-gray-300 text-sm">support@ziontechgroup.com</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">Phone Support</h3>
+                  <p className="text-gray-300 text-sm">+1 (555) 123-4567</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">Live Chat</h3>
+                  <p className="text-gray-300 text-sm">Available 24/7</p>
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple/90 transition-colors"
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  <MessageCircle className="h-5 w-5 mr-2" />
                   Contact Support
                 </Link>
                 <a
                   href="mailto:support@ziontechgroup.com"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light text-white font-medium rounded-lg hover:bg-zion-blue-light/20 transition-colors"
+                  className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
                 >
-                  <Mail className="h-5 w-5 mr-2" />
-                  Email Support
+                  Send Email
                 </a>
               </div>
-              <p className="text-zion-slate-light">
-                Response time: Usually within 24 hours
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Resources */}
+        <section className="pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Additional Resources
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-8 text-center">
+                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Documentation</h3>
+                <p className="text-gray-400 mb-4">Comprehensive guides and technical documentation for all our services.</p>
+                <Link
+                  to="/docs"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  Browse Documentation
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+              <div className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-8 text-center">
+                <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Video Tutorials</h3>
+                <p className="text-gray-400 mb-4">Step-by-step video guides to help you get the most out of our services.</p>
+                <Link
+                  to="/webinars"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  Watch Tutorials
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default HelpCenter;
