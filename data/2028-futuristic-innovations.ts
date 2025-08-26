@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface Futuristic2028Service {
@@ -11,14 +12,22 @@ import { ServiceVariant } from '../types/service-variants';
 
 export interface Futuristic2028Service {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
+=======
+import { ServiceVariant } from '../types/service-variants';
+
+export interface Futuristic2028Service {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1ce
   id: string;
   name: string;
   tagline: string;
   price: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1ce
   period: string;
   description: string;
   features: string[];
@@ -42,6 +51,7 @@ export interface Futuristic2028Service {
   growthRate: string;
   variant: ServiceVariant;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   description: string;
   features: string[];
@@ -51,14 +61,19 @@ export interface Futuristic2028Service {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1ce
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1ce
     website: string;
   };
   realImplementation: boolean;
@@ -427,10 +442,14 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     marketSize: '$18B AI education market',
     growthRate: '35% annual growth',
 <<<<<<< HEAD
+<<<<<<< HEAD
     variant: 'ai-education',
 =======
     variant: 'ai-futuristic',
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
+=======
+    variant: 'ai-education',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1ce
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -471,15 +490,25 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/autonomous-manufacturing',
     marketPosition: 'Leading autonomous manufacturing platform with the most advanced AI optimization algorithms. Used by major manufacturing companies worldwide.',
+<<<<<<< HEAD
     targetAudience: ['Manufacturing companies', 'Automotive industry', 'Electronics manufacturers', 'Food processors', 'Chemical companies', 'Pharmaceutical manufacturers'],
+=======
+    targetAudience: ['Manufacturing companies', 'Industrial companies', 'Automotive industry', 'Electronics manufacturers', 'Food processors', 'Chemical companies'],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1ce
     trialDays: 60,
     setupTime: '6 weeks',
     category: 'Autonomous Manufacturing',
     realService: true,
     technology: ['Python', 'TensorFlow', 'IoT', 'Robotics', 'AWS', 'Docker', 'React', 'Node.js'],
+<<<<<<< HEAD
     integrations: ['ERP systems', 'MES systems', 'SCADA systems', 'Quality management', 'Supply chain platforms'],
     useCases: ['Production optimization', 'Quality control', 'Predictive maintenance', 'Supply chain management', 'Energy optimization'],
     roi: 'Manufacturing companies report 700% ROI through increased production efficiency and reduced operational costs.',
+=======
+    integrations: ['ERP systems', 'MES systems', 'Equipment APIs', 'Supply chain systems', 'Quality management'],
+    useCases: ['Production optimization', 'Quality control', 'Predictive maintenance', 'Supply chain management', 'Energy optimization'],
+    roi: 'Manufacturing companies report 700% ROI through increased efficiency and reduced operational costs.',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1ce
     competitors: ['Siemens', 'GE Digital', 'Rockwell Automation'],
     marketSize: '$30B smart manufacturing market',
     growthRate: '40% annual growth',
@@ -502,6 +531,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
   {
     id: 'quantum-internet-security-gateway',
     name: 'Quantum Internet Security Gateway',
+<<<<<<< HEAD
     tagline: 'Unbreakable quantum encryption for the internet',
     price: '$3,999',
     period: '/month',
@@ -517,6 +547,23 @@ export const futuristic2028Services: Futuristic2028Service[] = [
       'Analytics dashboard',
       'API for applications',
       'Mobile security app'
+=======
+    tagline: 'Unbreakable internet security with quantum encryption',
+    price: '$3,999',
+    period: '/month',
+    description: 'Next-generation internet security solution that uses quantum encryption to protect data transmission, prevent cyber attacks, and ensure secure communications.',
+    features: [
+      'Quantum key distribution',
+      'Post-quantum cryptography',
+      'Real-time threat detection',
+      'Secure communication channels',
+      'Zero-trust networking',
+      'Compliance monitoring',
+      'Performance analytics',
+      'Mobile security app',
+      'API for applications',
+      'Security dashboard'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1ce
     ],
     popular: true,
     icon: '🌐',
@@ -524,11 +571,16 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-internet-security',
     marketPosition: 'First-to-market quantum internet security solution. Provides military-grade security for internet communications with quantum-resistant encryption.',
+<<<<<<< HEAD
     targetAudience: ['Internet service providers', 'Cloud providers', 'Financial institutions', 'Government agencies', 'Healthcare organizations', 'Technology companies'],
+=======
+    targetAudience: ['Government agencies', 'Financial institutions', 'Healthcare organizations', 'Technology companies', 'Defense contractors', 'Research institutions'],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1ce
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Quantum Internet Security',
     realService: true,
+<<<<<<< HEAD
     technology: ['Quantum Computing', 'Post-Quantum Cryptography', 'Python', 'C++', 'Rust', 'AWS', 'Docker'],
     integrations: ['Firewalls', 'Load balancers', 'CDN services', 'Cloud platforms', 'Security tools'],
     useCases: ['Internet security', 'Cloud security', 'Financial data protection', 'Government communications', 'Healthcare data protection'],
@@ -536,6 +588,15 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     competitors: ['Cloudflare', 'Akamai', 'Fastly'],
     marketSize: '$20B internet security market',
     growthRate: '30% annual growth',
+=======
+    technology: ['Quantum Computing', 'Post-Quantum Cryptography', 'Python', 'C++', 'AWS', 'Docker', 'React', 'Node.js'],
+    integrations: ['Firewalls', 'VPN systems', 'Identity providers', 'Cloud platforms', 'Security tools'],
+    useCases: ['Secure communications', 'Data protection', 'Cyber attack prevention', 'Compliance management', 'Government communications'],
+    roi: 'Government agencies report 600% ROI through prevented cyber attacks and secure communications.',
+    competitors: ['Cisco', 'Palo Alto Networks', 'Fortinet'],
+    marketSize: '$45B cybersecurity market',
+    growthRate: '35% annual growth',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1ce
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -544,6 +605,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
     implementationDetails: 'Complete quantum internet security platform with quantum key distribution, post-quantum cryptography, and AI threat detection. Includes analytics and compliance tools.',
     launchDate: '2028-02-10',
     customers: 180,
@@ -579,5 +641,12 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
+=======
+    implementationDetails: 'Complete quantum internet security platform with quantum encryption, threat detection, and secure communications. Includes compliance tools and analytics.',
+    launchDate: '2028-02-10',
+    customers: 110,
+    rating: 4.9,
+    reviews: 89
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1ce
   }
 ];

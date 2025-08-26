@@ -90,6 +90,7 @@ export type ServiceVariant =
   | 'supply-chain-futuristic'
   | 'legal-futuristic'
   | 'healthcare-futuristic'
+<<<<<<< HEAD
   | 'biotech-futuristic'
   | 'simulation-futuristic'
   | 'space-futuristic'
@@ -215,3 +216,12 @@ export type ServiceVariant =
   | 'saas-biotech'
   | 'saas-simulation'
   | 'saas-intelligence';
+=======
+  | 'ai-content'
+  | 'ai-education'
+  | 'blockchain-futuristic'
+  | '5g-futuristic'
+  | 'biometric-futuristic'
+  | 'edge-futuristic'
+  | 'digital-twin-futuristic';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a1ce
