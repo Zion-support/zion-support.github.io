@@ -1,181 +1,127 @@
-# Zion Tech Group Website
+# Zion Tech Group - Modern Web Application
 
-A modern, responsive website built with React, TypeScript, and Tailwind CSS for Zion Tech Group - a leading provider of AI, cloud, and cybersecurity solutions.
+A cutting-edge web application built with React 18, TypeScript, and modern web technologies, showcasing Zion Tech Group's innovative solutions and services.
 
-## 🚀 Features
+## 🚀 Technology Stack
 
-### Enhanced User Experience
-- **Responsive Design**: Mobile-first approach with seamless desktop experience
-- **Smooth Animations**: CSS animations and micro-interactions for better engagement
-- **Interactive Elements**: Hover effects, transitions, and visual feedback
-- **Accessibility**: ARIA labels, semantic HTML, and keyboard navigation support
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite (fast, modern build tool)
+- **Styling**: Tailwind CSS with custom Zion design system
+- **Routing**: React Router v6
+- **State Management**: Redux Toolkit
+- **UI Components**: Radix UI components with custom styling
+- **Forms**: React Hook Form with Zod validation
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Charts**: Recharts for data visualization
+- **Error Handling**: React Error Boundary
+- **Notifications**: React Hot Toast
 
-### Content & Navigation
-- **Homepage**: Hero section, features showcase, testimonials, and statistics
-- **Services**: Comprehensive service offerings with detailed descriptions
-- **About**: Company mission, values, team, and company timeline
-- **Blog**: Industry insights and thought leadership content
-- **Contact**: Enhanced contact form with validation and better UX
-
-### Technical Improvements
-- **Performance**: Optimized bundle splitting and lazy loading
-- **SEO**: Proper meta tags, semantic structure, and accessibility
-- **TypeScript**: Strict typing and better code quality
-- **Modern Stack**: React 18, Vite, Tailwind CSS, and modern tooling
-
-## 🛠️ Technology Stack
-
-- **Frontend**: React 18 with TypeScript
-- **Build Tool**: Vite for fast development and optimized builds
-- **Styling**: Tailwind CSS with custom animations
-- **Icons**: Lucide React for consistent iconography
-- **Routing**: React Router for client-side navigation
-- **Forms**: Enhanced form handling with validation
-- **Animations**: Custom CSS animations and Framer Motion
-
-## 📁 Project Structure
+## 🏗️ Project Structure
 
 ```
 src/
 ├── components/          # Reusable UI components
-│   ├── Layout.tsx      # Main layout with navigation
-│   ├── PageTransition.tsx # Page transition animations
-│   └── LoadingSpinner.tsx # Loading states
+│   ├── ui/            # Base UI components (buttons, inputs, etc.)
+│   ├── auth/          # Authentication components
+│   ├── home/          # Homepage-specific components
+│   └── header/        # Header and navigation components
 ├── pages/              # Page components
-│   ├── index.tsx       # Homepage
-│   ├── about.tsx       # About page
-│   ├── blog/           # Blog section
-│   ├── services/       # Services page
-│   └── contact.tsx     # Contact page
-├── types/              # TypeScript type definitions
+├── hooks/              # Custom React hooks
+├── store/              # Redux store configuration
 ├── utils/              # Utility functions
-└── index.css           # Global styles and animations
+├── types/              # TypeScript type definitions
+├── data/               # Static data and mock content
+└── services/           # API services and external integrations
 ```
 
-## 🎨 Design System
-
-### Color Palette
-- **Primary**: Blue (#3B82F6) to Purple (#8B5CF6) gradient
-- **Neutral**: Slate grays for text and backgrounds
-- **Accent**: Green for success states, red for errors
-
-### Typography
-- **Headings**: Bold, gradient text for main titles
-- **Body**: Clean, readable fonts with proper hierarchy
-- **Responsive**: Scalable typography for all screen sizes
-
-### Components
-- **Cards**: Hover effects and smooth transitions
-- **Buttons**: Gradient backgrounds with hover animations
-- **Forms**: Focus states and validation feedback
-- **Navigation**: Dropdown menus and mobile responsiveness
-
-## 🚀 Getting Started
+## 🛠️ Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ 
 - npm or yarn
 
 ### Installation
-```bash
-# Clone the repository
-git clone <repository-url>
-cd zion-tech-group-website
 
-# Install dependencies
-npm install
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd zion-tech-group
+   ```
 
-# Start development server
-npm run dev
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Build for production
-npm run build
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-# Preview production build
-npm run start
-```
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-### Development Commands
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Preview production build
-npm run lint         # Run ESLint
-npm run type-check   # Run TypeScript type checking
-```
+5. **Preview production build**
+   ```bash
+   npm run preview
+   ```
 
-## 📱 Responsive Design
+## 📱 Available Scripts
 
-The website is fully responsive with breakpoints:
-- **Mobile**: 320px - 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: 1024px+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
 
-## ♿ Accessibility Features
+## 🎨 Design System
 
-- Semantic HTML structure
-- ARIA labels and roles
-- Keyboard navigation support
-- High contrast ratios
-- Screen reader compatibility
-- Focus management
+The application uses a custom Zion design system with:
 
-## 🎯 Performance Optimizations
+- **Colors**: Zion purple, blue, cyan, and slate color palettes
+- **Typography**: Modern, readable font stack
+- **Components**: Consistent, accessible UI components
+- **Animations**: Smooth, purposeful motion design
+- **Responsive**: Mobile-first responsive design
 
-- **Code Splitting**: Lazy loading of page components
-- **Bundle Optimization**: Vendor chunk separation
-- **Image Optimization**: Responsive images and lazy loading
-- **CSS Optimization**: Purged unused styles
-- **Caching**: Efficient asset caching strategies
+## 🔧 Configuration
 
-## 🔧 Configuration Files
+### Vite Configuration
+- Path aliases (`@` points to `src/`)
+- Optimized build settings
+- Legacy browser support
 
-- **vite.config.ts**: Build configuration and optimizations
-- **tailwind.config.js**: Tailwind CSS customization
-- **tsconfig.json**: TypeScript configuration
-- **package.json**: Dependencies and scripts
+### Tailwind Configuration
+- Custom color palette
+- Extended animations and keyframes
+- Responsive breakpoints
 
-## 📈 Analytics & SEO
+## 🚀 Deployment
 
-- Meta tags for social sharing
-- Structured data markup
-- Performance monitoring
-- Search engine optimization
-- Social media integration
+The application is configured for deployment on Netlify with:
+- Optimized build output
+- Static file serving
+- SPA routing support
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+1. Follow the existing code style
+2. Use TypeScript for new components
+3. Ensure all tests pass
+4. Update documentation as needed
 
 ## 📄 License
 
 This project is proprietary to Zion Tech Group.
 
-## 📞 Contact
+## 🆘 Support
 
-- **Website**: https://ziontechgroup.com
-- **Email**: kleber@ziontechgroup.com
-- **Phone**: +1 302 464 0950
-- **Address**: 364 E Main St STE 1008, Middletown, DE 19709
-
-## 🔄 Recent Updates
-
-### Version 2025.1.0
-- ✅ Enhanced homepage with testimonials and better CTAs
-- ✅ Improved navigation with dropdown menus
-- ✅ Added About page with company information
-- ✅ Created Blog section for content marketing
-- ✅ Enhanced contact form with validation
-- ✅ Added smooth animations and micro-interactions
-- ✅ Improved mobile responsiveness
-- ✅ Better accessibility features
-- ✅ Performance optimizations
-- ✅ Modern design system implementation
+For technical support or questions, please contact the development team.
 
 ---
 
-Built with ❤️ by the Zion Tech Group team
+**Built with ❤️ by Zion Tech Group Development Team**
