@@ -19,6 +19,7 @@ import { realOperationalServices } from '../../data/real-operational-services';
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
+<<<<<<< HEAD
 import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
 import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
 import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
@@ -76,6 +77,9 @@ import { real2036SpecializedServices } from '../../data/real-2036-specialized-se
 =======
 import { real2029ServiceAdditions } from '../../data/real-2029-service-additions';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
+=======
+import { newRealServices2025 } from '../../data/new-real-services-2025';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cb67
 
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -168,8 +172,21 @@ export default function ServicesIndexPage() {
       extraServices as any[],
       additionalEnhancedServices as any[],
       newlyAddedServices as any[],
+<<<<<<< HEAD
       newRealServices as any[],
       marketReadyServices as any[]
+=======
+      curatedMarketServices as any[],
+      realMarketServices as any[],
+      new2025Services as any[],
+      marketValidatedServices as any[],
+      moreRealServices2025 as any[],
+      realOperationalServices as any[],
+      verified2025Additions as any[],
+      realServicesQ12025 as any[],
+      realEnterpriseServices2025 as any[],
+      newRealServices2025 as any[]
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cb67
     );
   const byCategory: Record<string, any[]> = {};
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d

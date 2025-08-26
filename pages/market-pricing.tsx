@@ -19,6 +19,29 @@ export default function MarketPricingPage() {
           <p className="text-slate-300">Below are easy-to-verify vendor references and typical pricing ranges to help you benchmark our offerings.</p>
 
           <div className="space-y-6">
+<<<<<<< HEAD
+=======
+            <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">MLOps, Prompting & Evaluation</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>Weights & Biases: <a className="text-cyan-400 underline" href={`https://wandb.ai/site/pricing`} target="_blank" rel="noopener noreferrer">wandb.ai/site/pricing</a></li>
+                <li>Humanloop: <a className="text-cyan-400 underline" href={`https://humanloop.com/pricing`} target="_blank" rel="noopener noreferrer">humanloop.com/pricing</a></li>
+                <li>Promptfoo: <a className="text-cyan-400 underline" href={`https://www.promptfoo.dev/pricing`} target="_blank" rel="noopener noreferrer">promptfoo.dev/pricing</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$800/month depending on test volume and team size.</div>
+            </div>
+
+            <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
+              <h2 className="text-2xl font-semibold mb-2">AI Guardrails & Safety</h2>
+              <ul className="list-disc list-inside text-slate-300 space-y-1">
+                <li>OpenAI Safety: <a className="text-cyan-400 underline" href={`https://openai.com/index/safety/`} target="_blank" rel="noopener noreferrer">openai.com/index/safety</a></li>
+                <li>Anthropic RAI: <a className="text-cyan-400 underline" href={`https://www.anthropic.com/news`} target="_blank" rel="noopener noreferrer">anthropic.com/news</a> (policy updates)</li>
+                <li>Guardrails libraries: <a className="text-cyan-400 underline" href={`https://github.com/shreyashankar/gpt-guardrails`} target="_blank" rel="noopener noreferrer">github.com/shreyashankar/gpt-guardrails</a></li>
+                <li>Prompt injection resources: <a className="text-cyan-400 underline" href={`https://owasp.org/www-project-top-10-for-large-language-model-applications/`} target="_blank" rel="noopener noreferrer">OWASP Top 10 for LLM</a></li>
+              </ul>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $0–$500/month for hosted tools; internal policies recommended.</div>
+            </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cb67
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">LLM & AI Platforms</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -47,7 +70,13 @@ export default function MarketPricingPage() {
                 <li>Snowflake pricing: <a className="text-cyan-400 underline" href={`https://www.snowflake.com/pricing/`} target="_blank" rel="noopener noreferrer">snowflake.com/pricing</a></li>
                 <li>BigQuery pricing: <a className="text-cyan-400 underline" href={`https://cloud.google.com/bigquery/pricing`} target="_blank" rel="noopener noreferrer">cloud.google.com/bigquery/pricing</a></li>
                 <li>Databricks: <a className="text-cyan-400 underline" href={`https://www.databricks.com/product/pricing`} target="_blank" rel="noopener noreferrer">databricks.com/product/pricing</a></li>
+<<<<<<< HEAD
                 <li>ClickHouse Cloud: <a className="text-cyan-400 underline" href={`https://clickhouse.com/cloud/pricing`} target="_blank" rel="noopener noreferrer">clickhouse.com/cloud/pricing</a></li>
+=======
+                <li>dbt Cloud: <a className="text-cyan-400 underline" href={`https://www.getdbt.com/pricing/`} target="_blank" rel="noopener noreferrer">getdbt.com/pricing</a></li>
+                <li>ClickHouse Cloud: <a className="text-cyan-400 underline" href={`https://clickhouse.com/pricing`} target="_blank" rel="noopener noreferrer">clickhouse.com/pricing</a></li>
+                <li>Feast (feature store): <a className="text-cyan-400 underline" href={`https://docs.feast.dev/`} target="_blank" rel="noopener noreferrer">docs.feast.dev</a> (open source)</li>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cb67
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$3,000/month depending on storage, queries, and concurrency.</div>
             </div>
@@ -58,10 +87,16 @@ export default function MarketPricingPage() {
                 <li>AWS pricing calculator: <a className="text-cyan-400 underline" href={`https://calculator.aws`} target="_blank" rel="noopener noreferrer">calculator.aws</a></li>
                 <li>Azure pricing: <a className="text-cyan-400 underline" href={`https://azure.microsoft.com/pricing`} target="_blank" rel="noopener noreferrer">azure.microsoft.com/pricing</a></li>
                 <li>Cloudflare plans: <a className="text-cyan-400 underline" href={`https://www.cloudflare.com/plans/`} target="_blank" rel="noopener noreferrer">cloudflare.com/plans</a></li>
+<<<<<<< HEAD
                 <li>Vercel pricing: <a className="text-cyan-400 underline" href={`https://vercel.com/pricing`} target="_blank" rel="noopener noreferrer">vercel.com/pricing</a></li>
+=======
+                <li>Netlify plans: <a className="text-cyan-400 underline" href={`https://www.netlify.com/pricing/`} target="_blank" rel="noopener noreferrer">netlify.com/pricing</a></li>
+                <li>Twilio (contact center): <a className="text-cyan-400 underline" href={`https://www.twilio.com/pricing`} target="_blank" rel="noopener noreferrer">twilio.com/pricing</a></li>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cb67
               </ul>
-              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$10,000/month depending on traffic and workloads.</div>
+              <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$3,000/month depending on edge usage and egress.</div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Vector Search & RAG Infra</h2>
@@ -133,6 +168,8 @@ export default function MarketPricingPage() {
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
 >>>>>>> origin/main
             </div>
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cb67
           </div>
         </div>
       </div>

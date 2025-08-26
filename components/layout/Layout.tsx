@@ -30,7 +30,11 @@ import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2025 from '../backgrounds/UltraFuturisticBackground2025';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7e85
 import TopContactBar from './TopContactBar';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7cbf
+=======
+import NeoFuturisticFooter from './NeoFuturisticFooter';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cb67
 
 interface SimpleLayoutProps { children: React.ReactNode }
 
@@ -65,6 +69,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7f29
 					{children}
 				</main>
+<<<<<<< HEAD
 				<EnhancedFooter />
 =======
 				<UltraFuturisticNavigation2035 />
@@ -76,6 +81,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 				</div>
 				<UltraFuturisticFooter2035 />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aa58
+=======
+				<NeoFuturisticFooter />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cb67
 			</UltraAdvancedFuturisticBackground>
 		</div>
 	);
