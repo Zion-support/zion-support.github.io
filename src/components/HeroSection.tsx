@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Play, Pause, Volume2, VolumeX, ChevronLeft, ChevronRight, Zap, Shield, Users, Globe } from 'lucide-react';
+import { ArrowRight, Play, Pause, Volume2, VolumeX, ChevronLeft, ChevronRight, Zap, Shield, Users, Globe, Star } from 'lucide-react';
 
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { ArrowRight, Play, Star } from "lucide-react";
 
 export function HeroSection() {
   const { t } = useTranslation();

@@ -2,8 +2,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star } from 'lucide-react';
-import { CategoriesSection } from "@/components/CategoriesSection";
+import { ArrowRight, CheckCircle, Star, Award, Shield, Globe, Brain, Clock, TrendingUp, Users, Rocket, Cloud, Zap, Database, Code, Target, Lightbulb, ChevronLeft, ChevronRight } from 'lucide-react';
+// import { CategoriesSection } from "@/components/CategoriesSection"; // TODO: Create this component
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
@@ -279,7 +279,8 @@ export default function Home() {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </motion.div>
-            );}
+            );
+            })}
           </div>
 
           <div className="text-center mt-12">
@@ -522,4 +523,4 @@ export default function Home() {
   );
 }
 
-export default Home;
+// Removed duplicate export - using function export above

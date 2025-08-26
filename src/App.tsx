@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
 import PerformanceDashboard from './components/PerformanceDashboard';
@@ -20,8 +20,8 @@ import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
-import EnhancedAccessibility from './components/EnhancedAccessibility';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { EnhancedAccessibility } from './components/EnhancedAccessibility';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
 import { BrokenLinkFixer } from './components/BrokenLinkFixer';
@@ -162,8 +162,6 @@ const App: React.FC = () => {
 
   return (
     <EnhancedErrorBoundary>
-      <EnhancedAccessibility />
-      <PerformanceMonitor />
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
@@ -351,82 +349,81 @@ const App: React.FC = () => {
               </div>
             </PerformanceOptimizer>
                 
-                {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility 
-                  position="bottom-right" 
-                  showOnLoad={false}
-                  enableKeyboardShortcuts={true}
-                  enableVoiceCommands={import.meta.env.DEV}
+            {/* Enhanced Accessibility Controls */}
+            <EnhancedAccessibility 
+              position="bottom-right" 
+              showOnLoad={false}
+              enableKeyboardShortcuts={true}
+              enableVoiceCommands={import.meta.env.DEV}
+            />
+            
+            {/* Website Improvement Tools */}
+            <ContentQualityEnhancer />
+            <BrokenLinkFixer />
+            <WebsiteImprovementDashboard />
+            
+            {/* AI Chatbot - Always Available */}
+            <AIChatbot />
+            
+            {/* Scroll to Top Button */}
+            <ScrollToTop />
+            
+            {/* Collaborative Text Editor - Development Mode */}
+            {import.meta.env.DEV && (
+              <div className="fixed bottom-24 left-6 z-40 w-96">
+                <CollaborativeTextEditor
+                  roomId="dev-editor"
+                  userId="dev-user"
+                  userName="Developer"
+                  initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
+                  enableAI={true}
+                  enableCollaboration={true}
+                  enableVersioning={true}
                 />
-                
-                {/* Website Improvement Tools */}
-                <ContentQualityEnhancer />
-                <BrokenLinkFixer />
-                <WebsiteImprovementDashboard />
-                
-                {/* AI Chatbot - Always Available */}
-                <AIChatbot />
-                
-                {/* Scroll to Top Button */}
-                <ScrollToTop />
-                
-                {/* Collaborative Text Editor - Development Mode */}
-                {import.meta.env.DEV && (
-                  <div className="fixed bottom-24 left-6 z-40 w-96">
-                    <CollaborativeTextEditor
-                      roomId="dev-editor"
-                      userId="dev-user"
-                      userName="Developer"
-                      initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
-                      enableAI={true}
-                      enableCollaboration={true}
-                      enableVersioning={true}
-                    />
-                  </div>
-                )}
-                
-                {/* AI Code Generator - Development Mode */}
-                {import.meta.env.DEV && (
-                  <div className="fixed bottom-24 right-6 z-40 w-96">
-                    <AICodeGenerator />
-                  </div>
-                )}
-                
-                {/* Development Dashboards */}
-                {import.meta.env.DEV && (
-                  <>
-                    {/* Performance Dashboard */}
-                    <div className="fixed top-4 left-4 z-40">
-                      <PerformanceDashboard />
-                    </div>
-                    
-                    {/* Analytics Dashboard */}
-                    <div className="fixed top-4 right-4 z-40">
-                      <AnalyticsDashboard />
-                    </div>
-                    
-                    {/* Enterprise Dashboard */}
-                    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
-                      <EnterpriseDashboard />
-                    </div>
-                    
-                    {/* Security & Compliance Dashboard */}
-                    <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
-                      <SecurityComplianceDashboard />
-                    </div>
-                    
-                    {/* Machine Learning Dashboard */}
-                    <div className="fixed top-4 right-4 z-40">
-                      <MachineLearningDashboard />
-                    </div>
-                  </>
-                )}
               </div>
-            </Router>
+            )}
+            
+            {/* AI Code Generator - Development Mode */}
+            {import.meta.env.DEV && (
+              <div className="fixed bottom-24 right-6 z-40 w-96">
+                <AICodeGenerator />
+              </div>
+            )}
+            
+            {/* Development Dashboards */}
+            {import.meta.env.DEV && (
+              <>
+                {/* Performance Dashboard */}
+                <div className="fixed top-4 left-4 z-40">
+                  <PerformanceDashboard />
+                </div>
+                
+                {/* Analytics Dashboard */}
+                <div className="fixed top-4 right-4 z-40">
+                  <AnalyticsDashboard />
+                </div>
+                
+                {/* Enterprise Dashboard */}
+                <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
+                  <EnterpriseDashboard />
+                </div>
+                
+                {/* Security & Compliance Dashboard */}
+                <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
+                  <SecurityComplianceDashboard />
+                </div>
+                
+                {/* Machine Learning Dashboard */}
+                <div className="fixed top-4 right-4 z-40">
+                  <MachineLearningDashboard />
+                </div>
+              </>
+            )}
+          </Router>
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
-}
+};
 
 export default App;
