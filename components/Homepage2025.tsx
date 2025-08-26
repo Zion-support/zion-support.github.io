@@ -716,7 +716,64 @@ const Homepage2025: React.FC = () => {
           </motion.div>
         </div>
       </section>
-    </div>
+
+      {/* Enhanced Footer */}
+      <footer className="bg-black/60 border-t border-white/10 py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div>
+              <h3 className="text-white font-bold text-lg mb-4">ZionTech Group</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Services</h4>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li><a href="#services" className="hover:text-cyan-400 transition-colors">Micro SAAS</a></li>
+                <li><a href="#ai" className="hover:text-cyan-400 transition-colors">AI Services</a></li>
+                <li><a href="#automation" className="hover:text-cyan-400 transition-colors">AI Automation</a></li>
+                <li><a href="#quantum" className="hover:text-cyan-400 transition-colors">Quantum Security</a></li>
+                <li><a href="#it" className="hover:text-cyan-400 transition-colors">IT Solutions</a></li>
+                <li><a href="#emerging" className="hover:text-cyan-400 transition-colors">Emerging Tech</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Company</h4>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">About Us</a></li>
+                <li><a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a></li>
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Careers</a></li>
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Blog</a></li>
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">News</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Connect</h4>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a></li>
+                <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a></li>
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Website</a></li>
+                <li><a href="https://www.linkedin.com/company/zion-tech-group" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
+                <li><a href="https://twitter.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">Twitter</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-white/10 pt-8 text-center">
+            <p className="text-gray-400 text-sm">
+              © 2025 ZionTech Group. All rights reserved. | 
+              <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 ml-2">
+                https://ziontechgroup.com
+              </a>
+            </p>
+            <p className="text-gray-500 text-xs mt-2">
+              Revolutionizing technology, one breakthrough at a time.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </UltraFuturisticBackground2026>
   );
 };
 

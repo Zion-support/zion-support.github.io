@@ -28,7 +28,7 @@ export default function ServicesAdvertisingPage() {
 					<p className="text-slate-300">Automate LLM evals, regression tests, red-teaming, and leaderboards across OpenAI, Anthropic, Groq, and more.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $50–$400/mo + API usage</li>
-						<li>References: {ext('https://openai.com/pricing')}, {ext('https://www.anthropic.com/pricing')}, {ext('https://openrouter.ai/models')}</li>
+						<li>References: {ext('https://platform.openai.com/pricing')}, {ext('https://www.anthropic.com/pricing')}, {ext('https://openrouter.ai/models')}</li>
 					</ul>
 				</section>
 
@@ -55,7 +55,7 @@ export default function ServicesAdvertisingPage() {
 					<p className="text-slate-300">Policy engine, PII detection, jailbreak protection, and audit logs for LLM apps.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $0–$500/mo</li>
-						<li>References: {ext('https://openai.com/safety')}, {ext('https://github.com/guardrails-ai/guardrails')}</li>
+						<li>References: {ext('https://openai.com/safety')}, {ext('https://github.com/shreyashankar/guardrails')}</li>
 					</ul>
 				</section>
 				
@@ -633,7 +633,7 @@ export default function ServicesAdvertisingPage() {
 					<p className="text-slate-300">Automated WCAG checks with CI annotations and remediation guidance.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $20–$150/mo</li>
-						<li>References: {ext('https://www.deque.com/axe/')}, {ext('https://pagespeed.web.dev/pricing')}</li>
+						<li>References: {ext('https://www.deque.com/axe/core-documentation/')}, {ext('https://pagespeed.web.dev/')}</li>
 					</ul>
 					<div><a className="text-cyan-400 underline" href="/accessibility-scanner">Learn more</a></div>
 				</section>
