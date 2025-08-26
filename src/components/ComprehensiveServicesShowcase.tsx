@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { enhancedInnovativeMicroSaasServices2025, enhancedITServices2025, enhancedAIServices2025 } from '../data/enhancedInnovativeServices2025';
 import { nextGenInnovativeServices2025 } from '../data/nextGenInnovativeServices2025';
 
@@ -12,8 +12,13 @@ interface ServiceContact {
 const ComprehensiveServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedServices, setSelectedServices] = useState<number[]>([]);
+  const [showComparison, setShowComparison] = useState(false);
+  const [priceRange, setPriceRange] = useState([0, 10000]);
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'type'>('name');
+  const [favorites, setFavorites] = useState<number[]>([]);
 
-  const allServices = [
+  const allServices = useMemo(() => [
     ...enhancedInnovativeMicroSaasServices2025.map(service => ({ 
       ...service, 
       type: 'Micro SAAS',
@@ -38,15 +43,32 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       displayPrice: service.price,
       displayPricingModel: service.pricingModel
     }))
-  ];
+  ], []);
 
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.type === activeCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+  const filteredServices = useMemo(() => {
+    let filtered = allServices.filter(service => {
+      const matchesCategory = activeCategory === 'all' || service.type === activeCategory;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      const matchesPrice = service.displayPrice >= priceRange[0] && service.displayPrice <= priceRange[1];
+      return matchesCategory && matchesSearch && matchesPrice;
+    });
+
+    // Sort services
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'price':
+          return a.displayPrice - b.displayPrice;
+        case 'type':
+          return a.type.localeCompare(b.type);
+        default:
+          return a.name.localeCompare(b.name);
+      }
+    });
+
+    return filtered;
+  }, [allServices, activeCategory, searchTerm, priceRange, sortBy]);
 
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
@@ -61,6 +83,26 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     if (model === 'one-time') return `$${price.toLocaleString()}`;
     return `$${price.toLocaleString()}`;
   };
+
+  const toggleServiceSelection = (serviceId: number) => {
+    setSelectedServices(prev => 
+      prev.includes(serviceId) 
+        ? prev.filter(id => id !== serviceId)
+        : prev.length < 3 
+          ? [...prev, serviceId]
+          : prev
+    );
+  };
+
+  const toggleFavorite = (serviceId: number) => {
+    setFavorites(prev => 
+      prev.includes(serviceId) 
+        ? prev.filter(id => id !== serviceId)
+        : [...prev, serviceId]
+    );
+  };
+
+  const selectedServicesData = allServices.filter(service => selectedServices.includes(service.id));
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -86,10 +128,46 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
+                aria-label="Search services"
               />
               <svg className="absolute right-3 top-3 h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
+            </div>
+          </div>
+
+          {/* Advanced Filters */}
+          <div className="max-w-4xl mx-auto mb-8 space-y-4">
+            {/* Price Range Filter */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
+              <label className="text-gray-300 text-sm font-medium">Price Range:</label>
+              <div className="flex items-center gap-2">
+                <span className="text-gray-400">${priceRange[0].toLocaleString()}</span>
+                <input
+                  type="range"
+                  min="0"
+                  max="10000"
+                  step="100"
+                  value={priceRange[1]}
+                  onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                  className="w-32 h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer"
+                />
+                <span className="text-gray-400">${priceRange[1].toLocaleString()}</span>
+              </div>
+            </div>
+
+            {/* Sort Options */}
+            <div className="flex items-center gap-4 justify-center">
+              <label className="text-gray-300 text-sm font-medium">Sort by:</label>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'type')}
+                className="px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
+              >
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+                <option value="type">Type</option>
+              </select>
             </div>
           </div>
 
@@ -104,13 +182,83 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
                     : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'
                 }`}
+                aria-pressed={activeCategory === category.id}
+                aria-label={`Filter by ${category.name}`}
               >
                 {category.name} ({category.count})
               </button>
             ))}
           </div>
+
+          {/* Comparison Bar */}
+          {selectedServices.length > 0 && (
+            <div className="max-w-4xl mx-auto mb-8 p-4 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <span className="text-blue-400 font-semibold">
+                    {selectedServices.length} service{selectedServices.length !== 1 ? 's' : ''} selected for comparison
+                  </span>
+                  <button
+                    onClick={() => setShowComparison(!showComparison)}
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    {showComparison ? 'Hide' : 'Show'} Comparison
+                  </button>
+                </div>
+                <button
+                  onClick={() => setSelectedServices([])}
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label="Clear selection"
+                >
+                  Clear All
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
+
+      {/* Service Comparison Section */}
+      {showComparison && selectedServicesData.length > 0 && (
+        <section className="pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Comparison</h2>
+            <div className="overflow-x-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 min-w-max">
+                {selectedServicesData.map((service) => (
+                  <div
+                    key={service.id}
+                    className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border-2 border-blue-400/50"
+                  >
+                    <div className="text-center mb-4">
+                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full font-medium">
+                        {service.type}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2 text-center">{service.name}</h3>
+                    <div className="space-y-3">
+                      <div className="text-center">
+                        <span className="text-2xl font-bold text-blue-400">
+                          {formatPrice(service.displayPrice, service.displayPricingModel)}
+                        </span>
+                      </div>
+                      <div className="text-sm text-gray-300">
+                        <strong>Features:</strong> {service.features.length}
+                      </div>
+                      <div className="text-sm text-gray-300">
+                        <strong>Benefits:</strong> {service.benefits.length}
+                      </div>
+                      <div className="text-sm text-gray-300">
+                        <strong>Tags:</strong> {service.tags.length}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Services Grid */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
@@ -118,8 +266,12 @@ const ComprehensiveServicesShowcase: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <div
-                key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
+                key={service.id}
+                className={`bg-white/10 backdrop-blur-lg rounded-xl p-6 border transition-all duration-300 hover:transform hover:scale-105 ${
+                  selectedServices.includes(service.id) 
+                    ? 'border-blue-400/50 bg-blue-500/10' 
+                    : 'border-white/20 hover:border-white/40'
+                }`}
               >
                 {/* Service Header */}
                 <div className="mb-4">
@@ -127,11 +279,22 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                     <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full font-medium">
                       {service.type}
                     </span>
-                    <span className="text-2xl">
-                      {service.type === 'Micro SAAS' ? '🚀' : 
-                       service.type === 'IT Services' ? '🖥️' : 
-                       service.type === 'AI Services' ? '🤖' : '⚡'}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => toggleFavorite(service.id)}
+                        className={`text-2xl transition-transform hover:scale-110 ${
+                          favorites.includes(service.id) ? 'text-yellow-400' : 'text-gray-400'
+                        }`}
+                        aria-label={favorites.includes(service.id) ? 'Remove from favorites' : 'Add to favorites'}
+                      >
+                        {favorites.includes(service.id) ? '⭐' : '☆'}
+                      </button>
+                      <span className="text-2xl">
+                        {service.type === 'Micro SAAS' ? '🚀' : 
+                         service.type === 'IT Services' ? '🖥️' : 
+                         service.type === 'AI Services' ? '🤖' : '⚡'}
+                      </span>
+                    </div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                   <p className="text-gray-300 text-sm">{service.description}</p>
@@ -200,19 +363,29 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Contact Info */}
-                <div className="border-t border-white/20 pt-4">
-                  <div className="text-center">
+                {/* Action Buttons */}
+                <div className="border-t border-white/20 pt-4 space-y-3">
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => toggleServiceSelection(service.id)}
+                      className={`flex-1 px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                        selectedServices.includes(service.id)
+                          ? 'bg-red-600 text-white hover:bg-red-700'
+                          : 'bg-blue-600 text-white hover:bg-blue-700'
+                      }`}
+                    >
+                      {selectedServices.includes(service.id) ? 'Remove' : 'Compare'}
+                    </button>
                     <a
                       href={`mailto:${service.contactInfo.email}`}
-                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+                      className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-center"
                     >
                       Get Started
                     </a>
-                    <div className="mt-2 text-xs text-gray-400">
-                      <p>📧 {service.contactInfo.email}</p>
-                      <p>📱 {service.contactInfo.phone}</p>
-                    </div>
+                  </div>
+                  <div className="text-xs text-gray-400 text-center">
+                    <p>📧 {service.contactInfo.email}</p>
+                    <p>📱 {service.contactInfo.phone}</p>
                   </div>
                 </div>
               </div>
