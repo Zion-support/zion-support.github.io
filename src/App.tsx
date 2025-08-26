@@ -117,6 +117,7 @@ const routes = [
   { path: '/comprehensive-pricing-2025', element: <ComprehensivePricing2025 /> },
   { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
   { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
   
   // Other routes
   { path: '/match', element: <AIMatcherPage /> },
