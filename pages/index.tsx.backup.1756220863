@@ -22,6 +22,8 @@ import { realOperationalServices } from '../data/real-operational-services';
 import { newOperationalServices2025 } from '../data/new-operational-services-2025';
 import { revolutionary2025Services } from '../data/revolutionary-2025-services';
 import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
+<<<<<<< HEAD
+=======
 import { innovative2025MicroSaasServices } from '../data/innovative-2025-micro-saas';
 import { emergingTech2025Services as newEmergingTech2025Services } from '../data/emerging-tech-2025-services';
 import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
@@ -31,6 +33,7 @@ import { revolutionaryAI2025ServicesV2 } from '../data/revolutionary-2025-ai-ser
 import { emergingTechSpaceServices2025 } from '../data/emerging-tech-space-services-2025';
 import { emergingTechInnovations2025 } from '../data/emerging-tech-innovations-2025';
 import { autonomousSystemsRobotics2025 } from '../data/autonomous-systems-robotics-2025';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cf18
 
 export default function HomePage() {
   const heroStats = [
@@ -66,6 +69,9 @@ export default function HomePage() {
     ...realOperationalServices,
     ...newOperationalServices2025,
     ...revolutionary2025Services,
+<<<<<<< HEAD
+    ...nextGenInnovations2025
+=======
     ...nextGenInnovations2025,
     ...innovative2025MicroSaasServices,
     ...newEmergingTech2025Services,
@@ -76,6 +82,7 @@ export default function HomePage() {
     ...emergingTechSpaceServices2025,
     ...emergingTechInnovations2025,
     ...autonomousSystemsRobotics2025
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cf18
   ];
 
   const featuredOffers = professionalServices.slice(0, 3);
@@ -83,6 +90,18 @@ export default function HomePage() {
   // Service statistics
   const serviceStats = {
     totalServices: allServices.length,
+<<<<<<< HEAD
+    aiServices: nextGenerationAIServices.length + innovativeAIServices.length + realMarketServices.filter(s => s.category.includes('AI')).length + revolutionary2025Services.filter(s => s.category.includes('AI')).length + nextGenInnovations2025.filter(s => s.category.includes('AI')).length + innovative2026Services.filter(s => s.category.includes('AI')).length + emergingTech2026Services.filter(s => s.category.includes('AI')).length + innovative2026MicroSaasServices.filter(s => s.category.includes('AI')).length + innovative2026MicroSaasServicesV2.filter(s => s.category.includes('AI')).length + emergingTech2026ServicesV2.filter(s => s.category.includes('AI')).length + enterpriseIT2026ServicesV2.filter(s => s.category.includes('AI')).length + revolutionary2026AIServices.length + revolutionary2026AIAutomationServices.length + revolutionary2026HealthcareBiotechServices.filter(s => s.category.includes('AI')).length + revolutionary2026FintechBlockchainServices.filter(s => s.category.includes('AI')).length,
+          emergingTech: emergingTechnologyServices.length + emergingTechServices2025.length + emergingTech2026Services.length + emergingTech2026ServicesNew.length + emergingTech2026ServicesV2.length + revolutionary2026EmergingTechServices.length,
+      itSolutions: comprehensiveITSolutions.length + enterpriseITServices.length + enterpriseIT2026Services.length + enterpriseIT2026ServicesNew.length + enterpriseIT2026ServicesV2.length + revolutionary2026ITServices.length,
+      microSaas: enhancedRealMicroSaasServices.length + innovativeMicroSaasServices.length + innovative2026Services.filter(s => s.category.includes('SaaS')).length + innovative2026MicroSaasServices.length + innovative2026MicroSaasServicesV2.length + revolutionary2026MicroSaasServices.length,
+      healthcareBiotech: revolutionary2026HealthcareBiotechServices.length,
+      fintechBlockchain: revolutionary2026FintechBlockchainServices.length,
+          revolutionaryServices: revolutionary2025Services.length + nextGenInnovations2025.length + innovative2026Services.length + emergingTech2026Services.length + enterpriseIT2026Services.length + innovative2026MicroSaasServices.length + innovative2026MicroSaasServicesV2.length + emergingTech2026ServicesV2.length + enterpriseIT2026ServicesV2.length + revolutionary2026MicroSaasServices.length + revolutionary2026ITServices.length + revolutionary2026AIServices.length + revolutionary2026AIAutomationServices.length + revolutionary2026EmergingTechServices.length + revolutionary2026HealthcareBiotechServices.length + revolutionary2026FintechBlockchainServices.length,
+          quantumServices: quantumSpaceServices.length + quantumAIServices2025.filter(s => s.category.includes('Quantum')).length + revolutionary2026ITServices.filter(s => s.category.includes('Quantum')).length + revolutionary2026AIServices.filter(s => s.category.includes('Quantum')).length + revolutionary2026AIAutomationServices.filter(s => s.category.includes('Quantum')).length + revolutionary2026EmergingTechServices.filter(s => s.category.includes('Quantum')).length + revolutionary2026FintechBlockchainServices.filter(s => s.category.includes('Quantum')).length,
+          blockchainServices: enterpriseIT2026Services.filter(s => s.category.includes('Blockchain')).length + revolutionary2026ITServices.filter(s => s.category.includes('Blockchain')).length + revolutionary2026FintechBlockchainServices.filter(s => s.category.includes('Blockchain')).length,
+          spaceTech: quantumSpaceServices.filter(s => s.category.includes('Space')).length + revolutionary2026EmergingTechServices.filter(s => s.category.includes('Space')).length
+=======
     aiServices: nextGenerationAIServices.length + innovativeAIServices.length + realMarketServices.filter(s => s.category.includes('AI')).length + revolutionary2025Services.filter(s => s.category.includes('AI')).length + nextGenInnovations2025.filter(s => s.category.includes('AI')).length + revolutionaryAI2025Services.length + revolutionaryMicroSaas2025Services.filter(s => s.category.includes('AI')).length + revolutionaryAI2025ServicesV2.filter(s => s.category.includes('AI')).length,
     emergingTech: emergingTechnologyServices.length + emergingTech2025Services.length + newEmergingTech2025Services.length + emergingTechInnovations2025.length,
     itSolutions: comprehensiveITSolutions.length + enterpriseITServices.length + revolutionaryITInfrastructure2025Services.length,
@@ -97,6 +116,7 @@ export default function HomePage() {
     dnaComputing: emergingTechInnovations2025.filter(s => s.category.includes('DNA')).length,
     photonicComputing: emergingTechInnovations2025.filter(s => s.category.includes('Photonic')).length,
     holographicTech: emergingTechInnovations2025.filter(s => s.category.includes('Holographic')).length
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cf18
   };
 
   return (
@@ -192,6 +212,23 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
               >
+<<<<<<< HEAD
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"
+                >
+                  <Rocket className="w-5 h-5 mr-2" />
+                  Get Started Today
+                </Link>
+                
+                <Link
+                  href="/services"
+                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg"
+                >
+                  <Sparkles className="w-5 h-5 mr-2" />
+                  Explore Services
+                </Link>
+=======
                 Revolutionary <span className="text-cyan-400 font-bold">AI</span>, <span className="text-purple-400 font-bold">Quantum Computing</span> & <span className="text-pink-400 font-bold">IT Services</span>
               </motion.p>
 
@@ -256,6 +293,7 @@ export default function HomePage() {
                   <div className="text-xl font-bold text-orange-300">{serviceStats.holographicTech}+</div>
                   <div className="text-sm text-orange-200">Holographic Tech</div>
                 </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cf18
               </motion.div>
 
               {/* Contact Info */}
@@ -265,6 +303,9 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center text-gray-300"
               >
+<<<<<<< HEAD
+                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+=======
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -857,6 +898,7 @@ export default function HomePage() {
               >
                 <span>Explore All 1000+ Services</span>
                 <ArrowRight className="ml-3 w-5 h-5" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cf18
               </Link>
             </motion.div>
 
