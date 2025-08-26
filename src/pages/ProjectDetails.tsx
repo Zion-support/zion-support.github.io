@@ -53,9 +53,7 @@ import {
 } from "lucide-react";
 
 function ProjectDetailsContent() {
-  const router = useRouter();
-  // Get projectId from Next.js router query params
-  const { projectId } = router.query as { projectId?: string };
+  const { projectId } = useParams() as { projectId?: string };
   const { user } = useAuth();
   const { getProjectById, updateProjectStatus } = useProjects();
   
