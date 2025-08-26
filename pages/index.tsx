@@ -1,14 +1,19 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import EnhancedHero from '../components/ui/EnhancedHero';
+import ServiceCard from '../components/ui/ServiceCard';
+import EnhancedCard from '../components/ui/EnhancedCard';
+import { motion } from 'framer-motion';
+import { Star, Users, Clock, Shield, Zap, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function HomePage() {
   const heroStats = [
-    { value: '500+', label: 'Revolutionary Micro SaaS Services', color: 'text-cyan-400' },
-    { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400' },
-    { value: '30+', label: 'Day Free Trials', color: 'text-blue-400' },
-    { value: '24/7', label: 'AI Support', color: 'text-green-400' },
-    { value: '$100B+', label: 'Combined Market Value', color: 'text-yellow-400' },
-    { value: '1200%+', label: 'Average ROI', color: 'text-purple-400' },
+    { value: '500+', label: 'Revolutionary Micro SaaS Services', icon: <Zap className="w-6 h-6" />, color: 'text-cyan-400' },
+    { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" />, color: 'text-fuchsia-400' },
+    { value: '30+', label: 'Day Free Trials', icon: <Clock className="w-6 h-6" />, color: 'text-blue-400' },
+    { value: '24/7', label: 'AI Support', icon: <Star className="w-6 h-6" />, color: 'text-green-400' },
+    { value: '$100B+', label: 'Combined Market Value', icon: <Users className="w-6 h-6" />, color: 'text-yellow-400' },
+    { value: '1200%+', label: 'Average ROI', icon: <Zap className="w-6 h-6" />, color: 'text-purple-400' },
   ];
 
   const contactInfo = {
@@ -23,27 +28,70 @@ export default function HomePage() {
       title: 'AI-Powered Solutions',
       description: 'Advanced artificial intelligence systems for business automation and decision-making',
       link: '/services/ai-solutions',
-      icon: '🤖'
+      icon: '🤖',
+      category: 'Artificial Intelligence',
+      features: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics'],
+      rating: 4.9,
+      users: 2500,
+      trialDays: 30,
+      popular: true
     },
     {
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud-native platforms and infrastructure solutions',
       link: '/services/cloud-infrastructure',
-      icon: '☁️'
+      icon: '☁️',
+      category: 'Cloud Computing',
+      features: ['Auto-scaling', 'Load Balancing', 'Disaster Recovery'],
+      rating: 4.8,
+      users: 1800,
+      trialDays: 30
     },
     {
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions for modern digital threats',
       link: '/services/cybersecurity',
-      icon: '🔒'
+      icon: '🔒',
+      category: 'Security',
+      features: ['Threat Detection', 'Zero Trust', 'Compliance'],
+      rating: 4.9,
+      users: 3200,
+      trialDays: 30
     },
     {
       title: 'Quantum Computing',
       description: 'Next-generation quantum computing and optimization services',
       link: '/services/quantum-computing',
-      icon: '⚛️'
+      icon: '⚛️',
+      category: 'Quantum Technology',
+      features: ['Quantum Algorithms', 'Optimization', 'Simulation'],
+      rating: 4.7,
+      users: 800,
+      trialDays: 30
     }
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
 
   return (
     <>
@@ -92,118 +140,124 @@ export default function HomePage() {
 
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl sm:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
-              We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/services" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Explore Services
-              </Link>
-              <Link 
-                href="/contact" 
-                className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {heroStats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className={`text-3xl font-bold ${stat.color} mb-2`}>
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-gray-400">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <EnhancedHero
+          title="Zion Tech Group"
+          subtitle="Leading Technology Innovation"
+          description="We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business."
+          primaryCTA={{
+            text: "Explore Services",
+            href: "/services",
+            variant: "primary"
+          }}
+          secondaryCTA={{
+            text: "Get Started",
+            href: "/contact",
+            variant: "outline"
+          }}
+          stats={heroStats}
+          background="gradient"
+        />
 
         {/* Featured Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
-              Our Core Services
-            </h2>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="max-w-7xl mx-auto"
+          >
+            <motion.div variants={itemVariants} className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+                Our Core Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover our comprehensive portfolio of cutting-edge technology solutions designed to accelerate your business transformation.
+              </p>
+            </motion.div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {featuredServices.map((service, index) => (
-                <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-20 transition-all">
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <Link 
-                    href={service.link}
-                    className="text-blue-400 hover:text-blue-300 font-medium"
-                  >
-                    Learn More →
-                  </Link>
-                </div>
+                <motion.div key={index} variants={itemVariants}>
+                  <ServiceCard
+                    service={service}
+                    variant={service.popular ? 'featured' : 'default'}
+                  />
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <motion.h2 variants={itemVariants} className="text-3xl sm:text-4xl font-bold mb-6">
               Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            </motion.h2>
+            <motion.p variants={itemVariants} className="text-xl mb-8 text-blue-100">
               Join the future of technology with Zion Tech Group's cutting-edge solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </motion.p>
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg inline-flex items-center"
               >
                 Contact Us
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link 
                 href="/pricing" 
-                className="border border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
               >
                 View Pricing
               </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </section>
 
         {/* Contact Info */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-8">Get in Touch</h3>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <motion.h3 variants={itemVariants} className="text-2xl font-bold mb-8">
+              Get in Touch
+            </motion.h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div>
-                <div className="text-blue-400 font-semibold mb-2">Phone</div>
-                <div className="text-gray-300">{contactInfo.mobile}</div>
-              </div>
-              <div>
-                <div className="text-blue-400 font-semibold mb-2">Email</div>
-                <div className="text-gray-300">{contactInfo.email}</div>
-              </div>
-              <div>
-                <div className="text-blue-400 font-semibold mb-2">Address</div>
-                <div className="text-gray-300">{contactInfo.address}</div>
-              </div>
+              <motion.div variants={itemVariants}>
+                <EnhancedCard className="text-center p-6" glassmorphism={true}>
+                  <Phone className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                  <div className="text-blue-400 font-semibold mb-2">Phone</div>
+                  <div className="text-gray-300">{contactInfo.mobile}</div>
+                </EnhancedCard>
+              </motion.div>
+              <motion.div variants={itemVariants}>
+                <EnhancedCard className="text-center p-6" glassmorphism={true}>
+                  <Mail className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                  <div className="text-blue-400 font-semibold mb-2">Email</div>
+                  <div className="text-gray-300">{contactInfo.email}</div>
+                </EnhancedCard>
+              </motion.div>
+              <motion.div variants={itemVariants}>
+                <EnhancedCard className="text-center p-6" glassmorphism={true}>
+                  <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-3" />
+                  <div className="text-blue-400 font-semibold mb-2">Address</div>
+                  <div className="text-gray-300">{contactInfo.address}</div>
+                </EnhancedCard>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </section>
       </main>
     </>
