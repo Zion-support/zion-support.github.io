@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 interface FuturisticAnimatedBackground2029Props {
@@ -16,7 +15,6 @@ export const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackgr
   theme = 'default'
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-=======
 
 interface FuturisticAnimatedBackground2029Props {
   intensity?: number;
@@ -29,26 +27,24 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
-<<<<<<< HEAD
     if (!ctx) return;
 
     let animationFrameId: number;
     let particles: Array<{
-=======
     if (!canvas) return;
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const particles: Array<{
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
       x: number;
       y: number;
       vx: number;
@@ -56,7 +52,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       size: number;
       opacity: number;
       color: string;
-<<<<<<< HEAD
       type: 'particle' | 'energy' | 'data';
     }> = [];
 
@@ -96,7 +91,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         });
       }
     };
-=======
       type: 'particle' | 'wave' | 'grid';
     }> = [];
 
@@ -121,12 +115,11 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         type: Math.random() > 0.7 ? 'wave' : Math.random() > 0.5 ? 'grid' : 'particle'
       });
     }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-<<<<<<< HEAD
       // Create advanced gradient background
       const gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
@@ -149,7 +142,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
@@ -161,7 +153,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
 
-<<<<<<< HEAD
         // Draw particle based on type
         ctx.beginPath();
         if (particle.type === 'energy') {
@@ -198,7 +189,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
 
         // Draw connecting lines for nearby particles
         particles.slice(index + 1).forEach(otherParticle => {
-=======
         // Draw based on type
         if (particle.type === 'particle') {
           ctx.beginPath();
@@ -223,12 +213,11 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         particles.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
           
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
           const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) + 
             Math.pow(particle.y - otherParticle.y, 2)
           );
-<<<<<<< HEAD
           
           if (distance < 120) {
             ctx.beginPath();
@@ -246,7 +235,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
             
             ctx.strokeStyle = lineColor;
             ctx.lineWidth = 0.8;
-=======
 
           if (distance < 200) {
             ctx.beginPath();
@@ -254,13 +242,12 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 200) * 0.2 * 255).toString(16).padStart(2, '0')}`;
             ctx.lineWidth = 0.5;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
             ctx.stroke();
           }
         });
       });
 
-<<<<<<< HEAD
       // Draw advanced grid with perspective
       ctx.strokeStyle = 'rgba(100, 150, 255, 0.08)';
       ctx.lineWidth = 0.5;
@@ -380,7 +367,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }
-=======
       // Add theme-specific effects
       if (theme === 'cyberpunk') {
         ctx.save();
@@ -460,12 +446,11 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         cancelAnimationFrame(animationRef.current);
       }
       window.removeEventListener('resize', handleResize);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     };
   }, [intensity, theme]);
 
   return (
-<<<<<<< HEAD
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
       <canvas
         ref={canvasRef}
@@ -538,7 +523,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         }}
       />
     </div>
-=======
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
@@ -547,7 +531,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none'
       }}
     />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
   );
 };
 

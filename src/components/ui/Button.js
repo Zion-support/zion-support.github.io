@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -32,7 +31,6 @@ const Button = React.forwardRef((_a, ref) => {
 });
 Button.displayName = 'Button';
 export { Button };
-=======
 import React from 'react';
 import { cva } from 'class-variance-authority';
 import { cn } from '../../lib/utils';
@@ -77,4 +75,4 @@ const Button = React.forwardRef(({ className, variant, size, fullWidth, loading 
 });
 Button.displayName = "Button";
 export { Button, buttonVariants };
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======

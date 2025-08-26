@@ -38,9 +38,10 @@ export function EnterpriseTestimonials() {
 
         <Carousel className="w-full">
           <CarouselContent>
-            {testimonials.map((testimonial, index) => (<CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
-                <div className="bg-card rounded-xl p-8 border border-border h-full">
-                  <Quote className="h-10 w-10 text-primary/20 mb-4"/>
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
+                <div className="bg-card rounded-xl p-8 border border-gray-200 h-full">
+                  <Quote className="h-10 w-10 text-primary/20 mb-4" />
                   <blockquote className="text-xl mb-6 italic">
                     "{testimonial.quote}"
                   </blockquote>

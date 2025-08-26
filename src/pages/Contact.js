@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
@@ -116,7 +115,6 @@ export default function Contact() {
                     role: 'Support Bot'
                 }, onSendMessage: handleSendMessage }))] }));
 }
-=======
 "use strict";
 phone: '',
     company;
@@ -133,4 +131,4 @@ phone: '',
 '',
     message;
 '';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======

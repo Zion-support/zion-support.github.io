@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { BlogPost } from '@/types/blog';
 
 export function generateRandomBlogPost(): BlogPost {
@@ -39,8 +36,6 @@ export function generateRandomBlogPost(): BlogPost {
     featuredImage: `/blog/${randomId}.jpg`
   };
 }
-<<<<<<< HEAD
-=======
 import { BlogPost } from '../types/blog';
 
 const topics = [
@@ -126,6 +121,5 @@ export function generateMultipleBlogPosts(count: number): BlogPost[] {
   }
   return posts;
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======

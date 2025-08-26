@@ -382,7 +382,154 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 94
-<<<<<<< HEAD
+  },
+  {
+    id: "ai-website-personalization",
+    title: "AI Website Personalization",
+    description: "Dynamic on-site personalization that adapts content, offers, and CTAs per visitor segment using first-party data and ML scoring.",
+    category: "Growth & CRO",
+    price: 1299,
+    currency: "$",
+    tags: ["Personalization", "CRO", "A/B Testing", "Segmentation"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-05T09:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 76,
+    location: "Global",
+    availability: "1-2 Weeks",
+    aiScore: 90
+  },
+  {
+    id: "managed-help-desk",
+    title: "Managed Help Desk (24/7)",
+    description: "End-user IT support with SLA-backed response times, onboarding, remote assistance, and monthly reporting.",
+    category: "Managed IT",
+    price: 49,
+    currency: "$",
+    tags: ["Help Desk", "SLA", "Support", "ITSM"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-07T10:30:00.000Z",
+    rating: 4.8,
+    reviewCount: 142,
+    location: "USA & Remote",
+    availability: "Immediate",
+    aiScore: 85
+  },
+  {
+    id: "managed-endpoint-security",
+    title: "Managed Endpoint Security (NGAV/EDR)",
+    description: "Next-gen antivirus and endpoint detection and response with central monitoring, threat hunting, and automated quarantine.",
+    category: "Cybersecurity",
+    price: 7,
+    currency: "$",
+    tags: ["EDR", "AV", "Threat Hunting", "Monitoring"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-09T12:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 98,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 88
+  },
+  {
+    id: "review-responder-ai",
+    title: "ReviewResponder.ai",
+    description: "Auto-generate professional responses to customer reviews across Google, Yelp, and Facebook with tone controls and approvals.",
+    category: "Micro SaaS",
+    price: 19,
+    currency: "$",
+    tags: ["Reputation", "Social", "Automation", "AI Copy"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-11T08:45:00.000Z",
+    rating: 4.6,
+    reviewCount: 211,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 87
+  },
+  {
+    id: "invoice-sync",
+    title: "InvoiceSync (AI for AP)",
+    description: "AI-assisted invoice capture, reconciliation, duplicate detection, and auto-reminders integrated with QuickBooks and Xero.",
+    category: "Micro SaaS",
+    price: 15,
+    currency: "$",
+    tags: ["AP", "OCR", "Accounting", "Automation"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-13T09:10:00.000Z",
+    rating: 4.5,
+    reviewCount: 67,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 86
+  },
+  {
+    id: "uptime-pulse",
+    title: "UptimePulse (Monitoring)",
+    description: "Global uptime, SSL, DNS, and performance monitoring with Core Web Vitals and public status pages.",
+    category: "Micro SaaS",
+    price: 9,
+    currency: "$",
+    tags: ["Monitoring", "Uptime", "Status Page", "Alerts"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-15T11:25:00.000Z",
+    rating: 4.6,
+    reviewCount: 83,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 84
+  },
+  {
+    id: "data-quality-observability",
+    title: "Data Quality & Observability",
+    description: "End-to-end data quality monitoring with anomaly detection, lineage, SLAs, and incident workflows for modern data stacks.",
+    category: "Data Platform",
+    price: 2799,
+    currency: "$",
+    tags: ["Data Quality", "Lineage", "SLAs", "Observability"],
+=======
   },
   {
     id: "mlops-platform",
@@ -524,8 +671,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 96
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];
 
@@ -551,12 +696,9 @@ export const SERVICE_PRICING_TIERS = {
   enterprise: { range: "$8,000 - $25,000+", description: "Custom enterprise solutions with dedicated support" }
 };
 
-<<<<<<< HEAD
 // Backward-compatible alias expected by EnhancedServicesPage
 export const PRICING_TIERS = SERVICE_PRICING_TIERS;
 
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 // Contact information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 =======
 import React, { useState, useCallback, useEffect, useRef } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, 

@@ -1,15 +1,13 @@
-<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/Button";
-=======
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 import { ArrowLeft, Calendar, Clock, ChevronLeft, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 // Importing the sample blog posts - in a real app, you would fetch this from an API
@@ -39,13 +37,11 @@ export default function BlogPost() {
         window.scrollTo(0, 0);
     }, [slug, navigate]);
     if (!post) {
-<<<<<<< HEAD
-        return (_jsx("div", { className: "min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center", children: _jsx("div", { className: "animate-pulse", children: "Loading article..." }) }));
-=======
         return (<div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
         <div className="animate-pulse">Loading article...</div>
       </div>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+        return (_jsx("div", { className: "min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center", children: _jsx("div", { className: "animate-pulse", children: "Loading article..." }) }));
     }
     // Helper function to get share URL
     const getShareUrl = (platform) => {
@@ -62,7 +58,6 @@ export default function BlogPost() {
                 return '#';
         }
     };
-<<<<<<< HEAD
     return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: post.title, description: post.excerpt, keywords: post.tags.join(", "), image: post.featuredImage, canonical: `https://app.ziontechgroup.com/blog/${post.slug}` }), _jsx("div", { className: "min-h-screen bg-zion-blue pt-12 pb-20 px-4", children: _jsxs("div", { className: "container mx-auto", children: [_jsx("div", { className: "mb-8", children: _jsx(Button, { variant: "outline", className: "border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white", asChild: true, children: _jsxs(Link, { to: "/blog", children: [_jsx(ArrowLeft, { className: "mr-2 h-4 w-4" }), "Back to all articles"] }) }) }), _jsxs("div", { className: "mb-8 max-w-4xl mx-auto", children: [_jsx("span", { className: "text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4", children: post.category }), _jsx("h1", { className: "text-4xl md:text-5xl font-bold text-white mb-6", children: post.title }), _jsx("p", { className: "text-xl text-zion-slate-light mb-8", children: post.excerpt }), _jsxs("div", { className: "flex flex-col sm:flex-row sm:items-center justify-between mb-8", children: [_jsxs("div", { className: "flex items-center mb-4 sm:mb-0", children: [_jsx("img", { src: post.author.avatarUrl, alt: post.author.name, className: "w-12 h-12 rounded-full mr-3", onError: (e) => {
                                                         const target = e.target;
                                                         target.src = "/images/blog-placeholder.svg";
@@ -73,7 +68,6 @@ export default function BlogPost() {
                                                                 const target = e.target;
                                                                 target.src = "/images/blog-placeholder.svg";
                                                             } }) }), _jsxs("div", { className: "p-4", children: [_jsx("span", { className: "text-xs text-zion-cyan", children: relatedPost.category }), _jsx("h4", { className: "text-white font-bold mt-1 line-clamp-2", children: relatedPost.title })] })] }, relatedPost.id))) })] })), _jsx("div", { className: "flex justify-between items-center mt-12", children: _jsx(Button, { variant: "outline", className: "border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white", asChild: true, children: _jsxs(Link, { to: "/blog", children: [_jsx(ChevronLeft, { className: "mr-2 h-4 w-4" }), "All Articles"] }) }) })] })] }) })] }));
-=======
     return (<>
       <SEO title={post.title} description={post.excerpt} keywords={post.tags.join(", ")} ogImage={post.featuredImage} canonical={`https://ziontechgroup.com/blog/${post.slug}`}/>
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
@@ -202,5 +196,5 @@ export default function BlogPost() {
         </div>
       </div>
     </>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 }

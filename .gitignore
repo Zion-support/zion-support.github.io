@@ -182,3 +182,10 @@ automation/logs/*.runtime.log
 automation/data/*.json
 !automation/data/autonomous-config.json
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+
+automation/logs/**
+automation/backups/**
+dist/**
+tsconfig.tsbuildinfo
+
+.next/**

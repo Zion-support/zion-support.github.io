@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useCallback } from 'react';
 export function useToast() {
     const [toasts, setToasts] = useState([]);
@@ -24,7 +23,6 @@ export function useToast() {
     const dismissAll = useCallback(() => {
         setToasts([]);
     }, []);
-=======
 import { useState } from 'react';
 export function useToast() {
     const [toasts, setToasts] = useState([]);
@@ -57,12 +55,11 @@ export function useToast() {
     const info = (title, description) => {
         return toast({ title, description, type: 'info' });
     };
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     return {
         toasts,
         toast,
         dismiss,
-<<<<<<< HEAD
         dismissAll,
     };
 }
@@ -70,7 +67,6 @@ export function useToast() {
 export const toast = (options) => {
     // This is a simplified version - in a real app, you'd want to use a toast context
     console.log('Toast:', options);
-=======
         success,
         error,
         warning,
@@ -83,5 +79,5 @@ export const toast = (options) => {
     // In a real app, you'd want to integrate with a toast library
     console.log('Toast:', options);
     return Date.now().toString();
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 };

@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function Accessibility() {
 	return (
@@ -14,10 +12,7 @@ export default function Accessibility() {
 			</div>
 		</div>
 	);
-}
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Eye, Ear, Hand, Brain, Shield, Users, Globe, Zap, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
 
 const Accessibility: React.FC = () => {
@@ -324,9 +319,6 @@ const Accessibility: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Accessibility;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
-export default Accessibility;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+}

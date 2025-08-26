@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   UsersIcon, 
@@ -97,14 +95,12 @@ const Team: React.FC = () => {
       image: '/team/lisa-park.jpg',
       email: 'lisa@ziontechgroup.com',
       linkedin: 'https://linkedin.com/in/lisa-park'
-=======
 import { Link } from 'react-router-dom';
 import { 
 =======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   Users, 
   Award, 
   Globe, 
@@ -114,15 +110,6 @@ import {
   Brain, 
   Rocket,
   Star,
-<<<<<<< HEAD
-  Heart,
-  Lightbulb,
-  TrendingUp
-} from 'lucide-react';
-
-const Team: React.FC = () => {
-  const leadershipTeam = [
-=======
   CheckCircle
 =======
 import { Link } from 'react-router-dom';
@@ -176,7 +163,6 @@ export default function Team() {
       linkedin: 'https://linkedin.com/in/kleber-santos',
       twitter: 'https://twitter.com/kleber_santos'
     },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     {
       name: 'Dr. Sarah Chen',
       role: 'Chief Executive Officer',
@@ -258,22 +244,11 @@ export default function Team() {
       description: 'Global team with local expertise'
     },
     {
-<<<<<<< HEAD
-      number: '15+',
-      label: 'Years Experience',
-      description: 'Average experience per team member'
-    },
-    {
-      number: '95%',
-      label: 'Retention Rate',
-      description: 'High team satisfaction and loyalty'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     }
   ];
 
   const values = [
     {
-<<<<<<< HEAD
       icon: LightBulbIcon,
       title: 'Innovation',
       description: 'We encourage creative thinking and embrace new ideas that push boundaries.'
@@ -292,7 +267,6 @@ export default function Team() {
       icon: HeartIcon,
       title: 'Passion',
       description: 'We\'re passionate about technology and its potential to change the world.'
-=======
       icon: Lightbulb,
       title: 'Innovation',
       description: 'We encourage creative thinking and breakthrough solutions'
@@ -334,7 +308,6 @@ export default function Team() {
       title: 'Global Perspective',
       description: 'Our diverse team brings global perspectives and cultural insights to every project.',
       icon: Globe
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
       name: 'Client Success',
       icon: Users,
@@ -487,13 +460,11 @@ export default function Team() {
       bio: 'Former research director at leading quantum computing labs.',
       image: '/images/team/elena-petrova.jpg',
       linkedin: 'https://linkedin.com/in/elena-petrova'
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -512,7 +483,6 @@ export default function Team() {
               The brilliant minds behind Zion Tech Group's innovative solutions and exceptional client experiences.
             </p>
           </motion.div>
-=======
 =======
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO 
@@ -571,19 +541,11 @@ export default function Team() {
               <div className="text-gray-400">Projects Delivered</div>
             </div>
           </div>
+=======
         </div>
       </section>
 
       {/* Leadership Team */}
-      <section id="team" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Leadership Team
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Meet the visionary leaders driving innovation and growth at Zion Tech Group.
-=======
       name: "Executive Leadership",
       icon: Building,
       description: "Strategic vision and company direction",
@@ -1020,7 +982,6 @@ export default function Team() {
   const regularMembers = filteredTeam.filter(member => !member.featured);
 
   return (
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -1047,16 +1008,10 @@ export default function Team() {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </section>
 
       {/* Leadership Team */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -1100,8 +1055,6 @@ export default function Team() {
                             className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm border border-blue-500/30"
                           >
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1127,17 +1080,12 @@ export default function Team() {
                       <div className="flex flex-wrap gap-2">
                         {member.expertise.map((skill, idx) => (
                           <span key={idx} className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full">
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                             {skill}
                           </span>
                         ))}
                       </div>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <div className="flex items-center space-x-2">
@@ -1168,8 +1116,6 @@ export default function Team() {
                 </div>
               </motion.div>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Achievements:</h4>
@@ -1182,26 +1128,11 @@ export default function Team() {
                       </div>
                     </div>
 
-<<<<<<< HEAD
-                    <a
-                      href={member.linkedin}
-                      className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
-                    >
-                      <span>View Profile</span>
-                      <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Senior Team */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1298,7 +1229,6 @@ export default function Team() {
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{value.description}</p>
               </motion.div>
-=======
       {/* Department Heads */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -1388,70 +1318,18 @@ export default function Team() {
                       <Mail className="w-4 h-4" />
                     </a>
                   )}
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{head.name}</h3>
                 <p className="text-blue-400 text-sm mb-1">{head.role}</p>
                 <p className="text-cyan-400 text-xs mb-3">{head.department}</p>
                 <p className="text-gray-300 text-sm">{head.bio}</p>
               </div>
-<<<<<<< HEAD
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Company Values */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Our Values</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The principles that guide our team culture and decision-making
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                  <value.icon className="h-16 w-16 text-blue-400" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Company Culture */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Our Culture</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We foster an environment that promotes growth, innovation, and collaboration
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {culture.map((item, index) => (
-              <div key={index} className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <item.icon className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-gray-300">{item.description}</p>
-                </div>
-              </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
             ))}
           </div>
         </div>
       </section>
 
       {/* Join Our Team */}
-<<<<<<< HEAD
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -1510,7 +1388,6 @@ export default function Team() {
               </a>
             </div>
           </motion.div>
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Join Our Team</h2>
@@ -1532,7 +1409,6 @@ export default function Team() {
               Contact Us
             </Link>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
         </div>
       </section>
 =======
@@ -1592,7 +1468,9 @@ export default function Team() {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+        </div>
+      </section>
     </div>
   );
 };

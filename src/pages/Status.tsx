@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 export default function Status() {
 	return (
@@ -10,8 +9,6 @@ export default function Status() {
 			</div>
 		</div>
 	);
-}
-=======
 import Link from 'next/link';
 import { 
   CheckCircle, 
@@ -426,4 +423,5 @@ const Status: React.FC = () => {
 };
 
 export default Status;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+}

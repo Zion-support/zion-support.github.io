@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   BriefcaseIcon, 
@@ -152,7 +150,6 @@ const Careers: React.FC = () => {
       icon: SparklesIcon,
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do.'
-=======
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -255,7 +252,6 @@ export default function Careers() {
       icon: <Shield className="w-8 h-8 text-zion-cyan" />,
       title: "Security",
       description: "Competitive salary, equity, and retirement benefits"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -376,13 +372,11 @@ export default function Careers() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       )
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -686,7 +680,6 @@ export default function Careers() {
     </div>
   );
 }
-=======
     <>
       <SEO 
         title="Careers - Join Zion Tech Group" 
@@ -930,16 +923,9 @@ export default function Careers() {
               Send General Application
             </Button>
           </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </main>
     </>
   );
-<<<<<<< HEAD
-};
-
-export default Careers;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======

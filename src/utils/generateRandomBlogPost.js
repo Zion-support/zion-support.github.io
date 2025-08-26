@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const titles = [
     'The Future of AI in Software Development',
     'Building Scalable Microservices Architecture',
@@ -44,7 +43,6 @@ export function generateRandomBlogPost() {
         readTime: Math.floor(Math.random() * 10) + 5,
         tags: ['sample', 'tech', 'development'],
         slug: randomTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-=======
 export function generateRandomBlogPost() {
     const titles = [
         'The Future of AI in Technology',
@@ -75,6 +73,6 @@ export function generateRandomBlogPost() {
         category: 'Technology',
         readTime: Math.floor(Math.random() * 10) + 5,
         featuredImage: `/blog/${randomId}.jpg`
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     };
 }

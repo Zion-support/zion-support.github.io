@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2034Props {
@@ -12,7 +11,6 @@ export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground20
   className = '' 
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-=======
 
 interface UltraFuturisticBackground2034Props {
   intensity?: number;
@@ -25,7 +23,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -34,15 +32,13 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-<<<<<<< HEAD
-    let animationFrameId: number;
-    let particles: Array<{
-=======
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const particles: Array<{
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+    let animationFrameId: number;
+    let particles: Array<{
       x: number;
       y: number;
       vx: number;
@@ -52,7 +48,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       color: string;
     }> = [];
 
-<<<<<<< HEAD
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -74,7 +69,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         });
       }
     };
-=======
     const colors = {
       quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'],
       neon: ['#ff0080', '#8000ff', '#00ffff', '#ffff00'],
@@ -95,12 +89,11 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         color: selectedColors[Math.floor(Math.random() * selectedColors.length)]
       });
     }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-<<<<<<< HEAD
       // Create gradient background
       const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.95)');
@@ -112,7 +105,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
@@ -127,14 +119,12 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-<<<<<<< HEAD
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
 
         // Draw connecting lines
         particles.slice(index + 1).forEach(otherParticle => {
-=======
         ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
         ctx.fill();
 
@@ -142,12 +132,11 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         particles.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
           
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
           const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) + 
             Math.pow(particle.y - otherParticle.y, 2)
           );
-<<<<<<< HEAD
           
           if (distance < 100) {
             ctx.beginPath();
@@ -155,7 +144,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = `rgba(100, 150, 255, ${0.1 * (1 - distance / 100)})`;
             ctx.lineWidth = 0.5;
-=======
 
           if (distance < 150) {
             ctx.beginPath();
@@ -163,13 +151,12 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 150) * 0.3 * 255).toString(16).padStart(2, '0')}`;
             ctx.lineWidth = 1;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
             ctx.stroke();
           }
         });
       });
 
-<<<<<<< HEAD
       // Draw grid lines
       ctx.strokeStyle = 'rgba(100, 150, 255, 0.1)';
       ctx.lineWidth = 0.5;
@@ -297,7 +284,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         }}
       />
     </div>
-=======
       // Add quantum effects
       if (theme === 'quantum') {
         ctx.save();
@@ -394,7 +380,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
       }}
     />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
   );
 };
 

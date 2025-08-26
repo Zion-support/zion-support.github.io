@@ -1,11 +1,20 @@
 module.exports = {
   plugins: {
-<<<<<<< HEAD
-    'tailwindcss': {},
-    'autoprefixer': {},
-=======
-    "@tailwindcss/postcss": {},
+    tailwindcss: {},
     autoprefixer: {},
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
+=======
+    tailwindcss: {},
+    'autoprefixer': {},
+    'cssnano': process.env.NODE_ENV === 'production' ? {
+      preset: ['default', {
+        discardComments: {
+          removeAll: true,
+        },
+        normalizeWhitespace: true,
+        colormin: true,
+        minifyFontValues: true,
+        minifySelectors: true,
+      }]
+    } : false,
   },
 };

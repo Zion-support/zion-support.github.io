@@ -6,17 +6,6 @@ export interface Listing {
   currency: string;
   category: string;
   tags: string[];
-<<<<<<< HEAD
-  author: {
-    name: string;
-    id: string;
-    avatarUrl?: string;
-<<<<<<< HEAD
-=======
-  images: string[];
-  seller: {
-    id: string;
-    name: string;
     avatar: string;
     rating: number;
     reviews: number;
@@ -51,66 +40,16 @@ export interface ListingFilter {
   priceRange?: {
     min: number;
     max: number;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+  author: {
+    name: string;
+    id: string;
+    avatarUrl?: string;
   };
   location?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  availability?: string;
-  aiScore?: number;
-  pricingTier?: string;
-=======
-  condition?: string;
-  tags?: string[];
-  sellerRating?: number;
-  sortBy?: 'price' | 'date' | 'rating' | 'views';
-  sortOrder?: 'asc' | 'desc';
-}
-
-export interface ListingSearchResult {
-  listings: Listing[];
-  total: number;
-  page: number;
-  limit: number;
-  hasMore: boolean;
-}
-
-export interface ListingFormData {
-  title: string;
-  description: string;
-  price: number;
-  currency: string;
-  category: string;
-  tags: string[];
-  images: File[];
-  condition: string;
-  specifications: Record<string, any>;
-  shipping: {
-    available: boolean;
-    cost: number;
-    method: string;
-    estimatedDays: number;
-  };
-  returns: {
-    allowed: boolean;
-    days: number;
-    cost: number;
-  };
-}
-
-export interface ListingStats {
-  totalListings: number;
-  activeListings: number;
-  totalViews: number;
-  totalFavorites: number;
-  averagePrice: number;
-  categoryDistribution: Record<string, number>;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
   availability?: string;
   aiScore?: number;
   pricingTier?: string;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

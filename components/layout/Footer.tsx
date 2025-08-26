@@ -14,11 +14,11 @@ const Footer: React.FC = () => {
     {
       title: 'Services',
       links: [
-        { name: 'AI & Machine Learning', href: '/services?category=ai' },
-        { name: 'Quantum Computing', href: '/services?category=quantum' },
-        { name: 'Enterprise IT', href: '/services?category=enterprise' },
-        { name: 'Micro SaaS', href: '/services?category=micro-saas' },
-        { name: 'Next-Gen Solutions', href: '/services?category=next-gen' }
+        { name: 'All Services', href: '/services' },
+        { name: 'AI & Machine Learning', href: '/services' },
+        { name: 'Quantum & Security', href: '/quantum-secure-communication' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Contact Sales', href: '/contact' }
       ]
     },
     {
@@ -26,19 +26,19 @@ const Footer: React.FC = () => {
       links: [
         { name: 'About Us', href: '/about' },
         { name: 'Careers', href: '/careers' },
-        { name: 'Case Studies', href: '/case-studies' },
         { name: 'News', href: '/news' },
+        { name: 'Events', href: '/events' },
         { name: 'Contact', href: '/contact' }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Documentation', href: '/docs' },
+        { name: 'Resources', href: '/resources' },
         { name: 'Blog', href: '/blog' },
-        { name: 'Support', href: '/support' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Status', href: '/status' }
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Market Pricing', href: '/pricing-2033' }
       ]
     },
     {
@@ -46,9 +46,7 @@ const Footer: React.FC = () => {
       links: [
         { name: 'Privacy Policy', href: '/privacy' },
         { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'Security', href: '/security' },
-        { name: 'Compliance', href: '/compliance' }
+        { name: 'Security', href: '/security' }
       ]
     }
   ];

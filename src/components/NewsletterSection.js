@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import React from 'react';
 import { useState } from 'react';
@@ -60,7 +59,6 @@ export function NewsletterSection() {
       </div>
     </section>
   );
-=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, X, Gift, Star, Award } from 'lucide-react';
@@ -230,5 +228,5 @@ export function NewsletterSection() {
         </motion.div>
       </div>
     </section>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 }

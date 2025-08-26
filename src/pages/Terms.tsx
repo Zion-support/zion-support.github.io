@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -25,8 +22,6 @@ export default function Terms() {
     </>
   );
 }
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -200,6 +195,5 @@ const Terms: React.FC = () => {
 };
 
 export default Terms;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======

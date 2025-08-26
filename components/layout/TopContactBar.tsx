@@ -63,5 +63,3 @@ const TopContactBar: React.FC = () => {
     </div>
   );
 };
-
-export default TopContactBar;

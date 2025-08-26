@@ -6,7 +6,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-<<<<<<< HEAD
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -27,12 +26,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 =======
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import { 
   Shield, 
   Lock, 
   Eye, 
-<<<<<<< HEAD
   service.category.includes('Cybersecurity') || 
   service.category.includes('Security') || 
 =======
@@ -71,7 +68,6 @@ const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
   service.category.includes('Cybersecurity') || 
   service.category.includes('Security') ||
   service.category.includes('Zero Trust')
-=======
   AlertTriangle, 
   CheckCircle, 
   Star,
@@ -96,7 +92,7 @@ import { TrustedBySection } from '@/components/TrustedBySection';
 
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service => 
   service.category === 'Cybersecurity'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
 );
 
 const SECURITY_SERVICE_CATEGORIES = [
@@ -135,7 +131,6 @@ export default function CybersecurityServicesPage() {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -668,7 +663,6 @@ export default function CybersecurityServicesPage() {
         </div>
       </div>
     </div>
-=======
     <>
       <SEO 
         title="Cybersecurity Services & Solutions - Zion Tech Group" 
@@ -956,13 +950,12 @@ export default function CybersecurityServicesPage() {
       
       <Footer />
     </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
   );
 }
 
 // Security Service Card Component
 function SecurityServiceCard({ service }: { service: any }) {
-<<<<<<< HEAD
   return (
     <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
       <CardHeader>
@@ -1442,9 +1435,8 @@ export default function CybersecurityServicesPage() {
   };
 
   const getPricingModelText = (model: string) => {
-=======
   const getPricingModelLabel = (model: string) => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
     switch (model) {
       case 'one-time': return 'One-time';
       case 'monthly': return 'Monthly';
@@ -1553,7 +1545,6 @@ export default function CybersecurityServicesPage() {
             Learn More
           </Button>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Search and Filters */}
@@ -2716,9 +2707,8 @@ const CybersecurityServicesPage = () => {
 export default CybersecurityServicesPage;
 =======
 }
-=======
       </CardContent>
     </Card>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======

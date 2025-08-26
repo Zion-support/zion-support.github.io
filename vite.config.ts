@@ -1,28 +1,7 @@
-<<<<<<< HEAD
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 import path from 'node:path'
+=======
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-<<<<<<< HEAD
-import { resolve } from 'path'
-=======
-import path from 'node:path'
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -43,99 +22,29 @@ export default defineConfig({
       },
     },
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src')
-    }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
-=======
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 import { resolve } from 'path';
+=======
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
-      manifest: {
-        name: 'Zion Tech Group - Revolutionary Technology Solutions',
-        short_name: 'Zion Tech',
-        description: 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.',
-        theme_color: '#06b6d4',
-        background_color: '#0f172a',
-        display: 'standalone',
-        orientation: 'portrait-primary',
-        scope: '/',
-        start_url: '/',
-        icons: [
-          {
-            src: 'icon-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-            purpose: 'maskable any'
-          },
-          {
-            src: 'icon-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'maskable any'
-          }
-        ],
-        shortcuts: [
-          {
-            name: 'Services',
-            short_name: 'Services',
-            description: 'Explore our revolutionary technology services',
-            url: '/services'
-          },
-          {
-            name: 'Contact',
-            short_name: 'Contact',
-            description: 'Get in touch with our team',
-            url: '/contact'
-          },
-          {
-            name: 'About',
-            short_name: 'About',
-            description: 'Learn about Zion Tech Group',
-            url: '/about'
-          }
-        ]
-      }
-    })
-  ],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
+=======
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@pages': resolve(__dirname, './src/pages'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@hooks': resolve(__dirname, './src/hooks'),
-      '@types': resolve(__dirname, './src/types'),
-      '@styles': resolve(__dirname, './src/styles'),
-      '@assets': resolve(__dirname, './src/assets'),
-    },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+      '@': path.resolve(__dirname, './src')
+    }
   },
   build: {
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
     rollupOptions: {
-<<<<<<< HEAD
+=======
       output: {
         manualChunks: {
           // Vendor chunks for better caching
@@ -258,9 +167,4 @@ export default defineConfig({
       }
     },
   },
-=======
-      external: ['lucide-react']
-    }
-  }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 })

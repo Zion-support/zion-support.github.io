@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 console.log("main.tsx: Start");
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
@@ -17,45 +13,21 @@ import './utils/globalFetchInterceptor';
 import './utils/consoleErrorToast';
 import ToastProvider from './components/ToastProvider';
 
-// Import i18n configuration
-import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
-<<<<<<< HEAD
-=======
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
+import { store } from '@/store';
+import { Provider as ReduxProvider } from 'react-redux';
 
 // Import auth and notification providers
 import { AuthProvider } from './context/auth/AuthProvider';
-<<<<<<< HEAD
 import { NotificationProvider } from './components/ui/notification';
 
 // Providers trimmed for build
 // import { AnalyticsProvider } from './context/AnalyticsContext';
-=======
-import { NotificationProvider } from './context/notifications/NotificationContext';
-
-// Import analytics provider
-import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
-=======
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { HelmetProvider } from 'react-helmet-async'
-import { BrowserRouter } from 'react-router-dom'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import App from './App'
-import { AppWrapper } from './AppWrapper'
-import './index.css'
-
-// Create a client
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -65,48 +37,8 @@ const queryClient = new QueryClient({
   },
 })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const rootElement = document.getElementById('root');
 
-function renderApp() {
-  const app = (
-    <React.StrictMode>
-      <HelmetProvider>
-        <QueryClientProvider client={queryClient}>
-          <WhitelabelProvider>
-            <Router>
-              <AuthProvider>
-                <NotificationProvider>
-                  
-                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <AppLayout>
-                      <App />
-                    </AppLayout>
-                  </LanguageProvider>
-                  
-                </NotificationProvider>
-              </AuthProvider>
-            </Router>
-          </WhitelabelProvider>
-        </QueryClientProvider>
-      </HelmetProvider>
-    </React.StrictMode>
-  );
-=======
-// Performance monitoring setup
-if (import.meta.env.DEV) {
-  console.log('🚀 Zion Tech Group - Development Mode')
-  console.log('📊 Performance monitoring enabled')
-  console.log('🔧 Accessibility controls available')
-}
-
-// Error handling for unhandled promise rejections
-window.addEventListener('unhandledrejection', (event) => {
-  console.error('Unhandled promise rejection:', event.reason)
-  // In production, you might want to send this to an error reporting service
-})
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 const rootElement = document.getElementById('root');
 
@@ -118,18 +50,12 @@ function renderApp() {
           <WhitelabelProvider>
             <Router>
               <AuthProvider>
-                <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ViewModeProvider>
-                        <AppLayout>
-                          <App />
-                        </AppLayout>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
-                    </LanguageProvider>
-                  </AnalyticsProvider>
-                </NotificationProvider>
+                <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                  <ViewModeProvider>
+                    <App />
+                  </ViewModeProvider>
+                  {/* LanguageDetectionPopup removed */}
+                </LanguageProvider>
               </AuthProvider>
             </Router>
           </WhitelabelProvider>
@@ -137,7 +63,6 @@ function renderApp() {
       </HelmetProvider>
     </React.StrictMode>
   );
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 // Error handling for uncaught errors
 window.addEventListener('error', (event) => {
@@ -174,7 +99,6 @@ if ('serviceWorker' in navigator) {
   })
 }
 
-<<<<<<< HEAD
 function displayFatalError(message: string) {
   if (rootElement) {
     rootElement.innerHTML = `
@@ -198,52 +122,42 @@ window.addEventListener('error', (e) => {
 });
 
 // Render the app with proper provider structure
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <WhitelabelProvider>
           <Router>
             <AuthProvider>
               <NotificationProvider>
-<<<<<<< HEAD
                 
-=======
-                <AnalyticsProvider>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                     <AppLayout>
                       <App />
                     </AppLayout>
-<<<<<<< HEAD
                   </LanguageProvider>
                 
-=======
-                    <LanguageDetectionPopup />
-                  </LanguageProvider>
-                </AnalyticsProvider>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </NotificationProvider>
             </AuthProvider>
           </Router>
         </WhitelabelProvider>
-<<<<<<< HEAD
-=======
-        <BrowserRouter>
-          <AppWrapper>
-            <App />
-          </AppWrapper>
-        </BrowserRouter>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>,
-)
+=======
+=======
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+=======
+      </QueryClientProvider>
+    </HelmetProvider>
+  </React.StrictMode>,
+);

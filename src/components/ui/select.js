@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -40,7 +39,6 @@ const SelectItem = React.forwardRef((_a, ref) => {
 });
 SelectItem.displayName = 'SelectItem';
 export { Select, SelectValue, SelectTrigger, SelectContent, SelectItem };
-=======
 import React from 'react';
 export function Select({ children, className = '', value, onValueChange }) {
     return (<select className={`${baseClasses} ${className}`} value={value} onChange={onChange} disabled={disabled}>
@@ -82,4 +80,4 @@ export function SelectItem({ children, className = '', value, ...props }) {
       {children}
     </div>);
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======

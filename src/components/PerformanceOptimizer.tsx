@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -150,8 +147,6 @@ if (typeof window !== 'undefined') {
 }
 
 export default PerformanceOptimizer;
-<<<<<<< HEAD
-=======
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -295,7 +290,7 @@ export function PerformanceOptimizer() {
           <Progress value={Math.min(100, (metrics.ttfb / 800) * 100)} className="h-1" />
         </div>
         
-        <div className="pt-2 border-t border-border">
+        <div className="pt-2 border-t border-gray-200">
           <div className="flex items-center justify-between">
             <span className="text-xs font-medium">Overall Score</span>
             <div className="flex items-center gap-2">
@@ -310,6 +305,5 @@ export function PerformanceOptimizer() {
     </Card>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======

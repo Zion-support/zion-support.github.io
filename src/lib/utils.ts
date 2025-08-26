@@ -1,15 +1,15 @@
-import clsx, { type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
-
-<<<<<<< HEAD
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
-=======
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs))
+}
+export function formatDate(date: Date | string): string {
+  const d = new Date(date);
+  return d.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
 }
 
 export function formatCurrency(amount: number, currency = 'USD'): string {
@@ -52,30 +52,14 @@ export function throttle<T extends (...args: any[]) => any>(
     }
   };
 }
-
-export function generateId(): string {
-  return Math.random().toString(36).substr(2, 9);
-}
-
-export function isValidEmail(email: string): boolean {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-export function truncateText(text: string, maxLength: number): string {
-  if (text.length <= maxLength) return text;
-  return text.slice(0, maxLength) + '...';
-}
-
-export function capitalizeFirst(str: string): string {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-export function sleep(ms: number): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, ms));
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+}
+=======
+=======
+import clsx, { type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
 }

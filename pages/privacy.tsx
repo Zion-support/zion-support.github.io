@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-
-export default function PrivacyPage() {
-	return (
-		<div className="container mx-auto px-4 py-12">
-			<Head>
-				<title>Privacy Policy - Zion Tech Solutions</title>
-				<meta name="description" content="Privacy Policy for Zion Tech Solutions." />
-			</Head>
-			<h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
-			<p className="text-gray-700 leading-7">
-				We value your privacy. This page outlines how we collect, use, and safeguard your
-				information. For questions, please contact us via the Contact page.
-			</p>
-		</div>
-	);
-=======
 import React from 'react';
 import Head from 'next/head';
 
@@ -152,5 +134,23 @@ export default function Privacy() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+}
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+
+export default function Placeholder() {
+  return (
+    <main className="min-h-screen p-8">
+      <Head>
+        <title>Privacy - Placeholder</title>
+        <meta name="robots" content="noindex" />
+      </Head>
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-2xl font-semibold mb-2">Privacy</h1>
+        <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/privacy</code>.</p>
+        <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></Link>
+      </div>
+    </main>
+  );
 }

@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head';
 import { 
   Server, 
@@ -36,63 +34,21 @@ const ITInfrastructure: React.FC = () => {
       description: "Multi-layered security solutions to protect your IT assets",
       icon: "🔒",
       features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"]
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { Server, Network, Database, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 =======
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
-=======
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 =======
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 const ITInfrastructure: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Server,
-      title: "Server Management",
-      description: "Comprehensive server infrastructure and management solutions"
-    },
-    {
-      icon: Network,
-      title: "Network Design",
-      description: "Scalable network architecture and optimization"
-    },
-    {
-      icon: Database,
-      title: "Data Centers",
-      description: "Modern data center solutions and management"
-    },
-    {
-      icon: Shield,
-      title: "Infrastructure Security",
-      description: "Multi-layered security for your IT infrastructure"
-    }
-  ];
-
-  const benefits = [
-    "99.9% uptime guarantee",
-    "Scalable infrastructure solutions",
-    "Reduced operational costs",
-    "Enhanced performance and reliability",
-    "Expert support and maintenance"
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       title: "Network Management",
       description: "Comprehensive network infrastructure design, implementation, and maintenance",
       features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],
@@ -123,10 +79,6 @@ const ITInfrastructure: React.FC = () => {
     { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
     { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
     { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   ];
 
   return (
@@ -137,10 +89,7 @@ const ITInfrastructure: React.FC = () => {
         keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
         canonical="https://ziontechgroup.com/services/infrastructure"
       />
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       title: "Network Infrastructure",
       description: "Design, implement, and maintain robust network solutions",
       features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
@@ -163,10 +112,7 @@ const ITInfrastructure: React.FC = () => {
       description: "Multi-layered security infrastructure protection",
       features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],
       icon: "🔒"
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
 
@@ -177,8 +123,6 @@ const ITInfrastructure: React.FC = () => {
     { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const benefits = [
     "Improved system reliability and uptime",
     "Enhanced performance and scalability",
@@ -233,8 +177,6 @@ const ITInfrastructure: React.FC = () => {
                 View Solutions
               </a>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
     <>
       <Helmet>
@@ -245,126 +187,8 @@ const ITInfrastructure: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure" />
         <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure" />
       </Helmet>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
-
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
-          <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            IT Infrastructure
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
-              {" "}Excellence
-            </span>
-          </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl text-purple-100 max-w-4xl mx-auto leading-relaxed mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Build a solid foundation for your business with our comprehensive IT infrastructure 
-            solutions designed for performance, reliability, and scalability.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
-              Build Your Infrastructure
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Infrastructure Capabilities</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              End-to-end IT infrastructure solutions for modern businesses
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Infrastructure Solutions?</h2>
-              <p className="text-xl text-gray-600">
-                Experience the benefits of a well-designed IT infrastructure
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-center p-4 bg-white rounded-lg shadow-sm"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                    <TrendingUp className="w-4 h-4 text-purple-600" />
-                  </div>
-                  <span className="text-lg text-gray-700">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Build Your Infrastructure?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how our IT infrastructure solutions can support your business growth and success.
-          </p>
-          <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Schedule a Consultation
-          </button>
-        </div>
-      </section>
-    </div>
-=======
 =======
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -392,16 +216,11 @@ const ITInfrastructure: React.FC = () => {
               >
                 View All Services
               </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -429,8 +248,6 @@ const ITInfrastructure: React.FC = () => {
                     ))}
                   </ul>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Infrastructure Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -464,18 +281,13 @@ const ITInfrastructure: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Infrastructure Areas Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
@@ -486,8 +298,6 @@ const ITInfrastructure: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive coverage across all critical infrastructure components
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Infrastructure Areas */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -497,17 +307,12 @@ const ITInfrastructure: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Multi-layered approach to building robust IT infrastructure
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureAreas.map((area, index) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
                   <ul className="space-y-2">
@@ -515,8 +320,6 @@ const ITInfrastructure: React.FC = () => {
                       <li key={idx} className="text-gray-300 text-sm flex items-center">
                         <ArrowRight className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
@@ -526,10 +329,7 @@ const ITInfrastructure: React.FC = () => {
                     {area.solutions.map((solution, idx) => (
                       <li key={idx} className="text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                         {solution}
                       </li>
                     ))}
@@ -540,8 +340,6 @@ const ITInfrastructure: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Technologies Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -586,8 +384,6 @@ const ITInfrastructure: React.FC = () => {
                 </div>
               ))}
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -630,17 +426,12 @@ const ITInfrastructure: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Security</h3>
                 <p className="text-gray-300">Multi-layered security for comprehensive protection</p>
               </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -665,8 +456,6 @@ const ITInfrastructure: React.FC = () => {
               </a>
             </div>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -681,24 +470,13 @@ const ITInfrastructure: React.FC = () => {
             >
               Get Infrastructure Consultation
             </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 };
 

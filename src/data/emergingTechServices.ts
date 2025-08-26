@@ -1230,11 +1230,11 @@ export const getEmergingTechServiceBySubcategory = (subcategory: string) => {
 };
 
 export const getFeaturedEmergingTechServices = () => {
-  return EMERGING_TECH_SERVICES.filter(service => service.rating >= 4.7).slice(0, 8);
+  // Return first 8 services since rating property doesn't exist
+  return EMERGING_TECH_SERVICES.slice(0, 8);
 };
 
 export const getServicesByInnovationScore = (minScore: number) => {
-<<<<<<< HEAD
     technology: ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],
     integrations: ["Display hardware", "Content management systems", "Streaming platforms", "Mobile apps"],
     compliance: ["Content standards", "Accessibility guidelines", "Industry regulations"],
@@ -1252,7 +1252,6 @@ export default EMERGING_TECH_SERVICES;
   // In the future, this could be enhanced with actual innovation scoring
   return EMERGING_TECH_SERVICES;
 };
-=======
   return EMERGING_TECH_SERVICES.filter(service => service.innovationScore >= minScore);
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======

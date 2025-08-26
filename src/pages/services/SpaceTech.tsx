@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head';
 import { 
   Rocket, 
@@ -35,53 +33,10 @@ const SpaceTech: React.FC = () => {
       description: "Ground-based infrastructure for space operations",
       icon: "🏗️",
       features: ["Ground Stations", "Launch Facilities", "Mission Control Centers", "Testing Facilities"]
-=======
-<<<<<<< HEAD
-import { Rocket, Satellite, Globe, Cpu, Database, Shield, Zap, Target, TrendingUp, Users, Lightbulb, Orbit } from 'lucide-react';
-
-const SpaceTech: React.FC = () => {
-  const spaceServices = [
-    {
-      icon: Satellite,
-      title: "Satellite Systems",
-      description: "Design and development of satellite communication, navigation, and Earth observation systems",
-      features: ["Communication satellites", "Navigation systems", "Earth observation", "Satellite operations"]
-    },
-    {
-      icon: Database,
-      title: "Space Data Analytics",
-      description: "Advanced analytics and AI for processing satellite imagery and space data",
-      features: ["Remote sensing", "Image processing", "Data fusion", "Predictive analytics"]
-    },
-    {
-      icon: Shield,
-      title: "Space Cybersecurity",
-      description: "Security solutions for space systems, satellites, and ground stations",
-      features: ["Satellite security", "Ground station protection", "Signal encryption", "Threat detection"]
-    },
-    {
-      icon: Cpu,
-      title: "Space Computing",
-      description: "High-performance computing solutions for space applications and research",
-      features: ["On-board processing", "Edge computing", "AI in space", "Real-time analytics"]
-    },
-    {
-      icon: Globe,
-      title: "Ground Systems",
-      description: "Ground station infrastructure and mission control systems",
-      features: ["Mission control", "Telemetry systems", "Ground networks", "Data processing"]
-    },
-    {
-      icon: Rocket,
-      title: "Launch Support",
-      description: "Technology solutions for launch vehicle operations and mission planning",
-      features: ["Launch planning", "Mission simulation", "Trajectory analysis", "Risk assessment"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     }
   ];
 
   const applications = [
-<<<<<<< HEAD
     "Earth Observation & Monitoring",
     "Satellite Communications",
     "Navigation & GPS Systems",
@@ -283,7 +238,6 @@ const SpaceTech: React.FC = () => {
 };
 
 export default SpaceTech;
-=======
     {
       title: "Earth Observation",
       description: "Environmental monitoring, climate research, and natural disaster assessment",
@@ -602,7 +556,6 @@ export default SpaceTech;
           </div>
 =======
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 
@@ -628,23 +581,13 @@ const $service: React.FC = () => {
           >
             Contact Us for More Information
           </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </section>
     </div>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default SpaceTech;
+export default $service;
 =======
 export default $service;
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
-export default $service;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface DialogContextType {
@@ -36,8 +33,6 @@ export function Dialog({
   return (
     <DialogContext.Provider value={{ isOpen, setIsOpen }}>
       <div className="relative">
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { cn } from '@/lib/utils';
 
@@ -102,17 +97,13 @@ export const Dialog: React.FC<DialogProps> = ({
       }
     }}}>
       <div className={cn('relative', className)} {...props}>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
         {children}
       </div>
     </DialogContext.Provider>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }
 
 export function DialogTrigger({ children, asChild = false }: { children: ReactNode; asChild?: boolean }) {
@@ -144,8 +135,6 @@ export function DialogContent({ children, className = '' }: { children: ReactNod
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => context.setIsOpen(false)} />
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
-<<<<<<< HEAD
-=======
 };
 
 export const DialogTrigger: React.FC<DialogTriggerProps> = ({
@@ -198,17 +187,13 @@ export const DialogContent: React.FC<DialogContentProps> = ({
         )}
         {...props}
       >
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
         {children}
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }
 
 export function DialogHeader({ children, className = '' }: { children: ReactNode; className?: string }) {
@@ -226,8 +211,6 @@ export function DialogDescription({ children, className = '' }: { children: Reac
 export function DialogFooter({ children, className = '' }: { children: ReactNode; className?: string }) {
   return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>;
 }
-<<<<<<< HEAD
-=======
 };
 
 export const DialogHeader: React.FC<DialogHeaderProps> = ({
@@ -277,6 +260,5 @@ export const DialogFooter: React.FC<DialogFooterProps> = ({
     </div>
   );
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
