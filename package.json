@@ -18,7 +18,17 @@
     bplr8i-codex/fix-npm-ci-errors-and-missing-dependencies
     "test:accessibility": "vitest run tests/Accessibility.test.tsx",
     "test:e2e": "playwright test",
-    "prepare": "husky install"
+    "seed": "prisma db seed",
+    "es:index": "node scripts/index-elasticsearch.js",
+    "devnet": "node scripts/start-devnet.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test:node": "node -v",
+    "check-updates": "ncu",
+    "audit-vulnerabilities": "npm audit",
+    "hourly-job": "node scripts/hourly-job.js"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
     "@hello-pangea/dnd": "^18.0.1",

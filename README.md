@@ -654,4 +654,194 @@ For support, questions, or business inquiries:
 
 ---
 
-*Transform your business with Zion Tech Group's revolutionary micro SAAS services and AI solutions. Experience the future of technology today.*
+This keeps the site content up to date and search‑engine optimized using the existing `<SEO>` component on each page.
+
+## Troubleshooting GitHub Codespaces Terminal Issues
+
+If you experience issues with the integrated terminal in GitHub Codespaces (e.g., typed commands not appearing or executing), try the following steps:
+
+1.  **Check `~/.bashrc` (or your shell's equivalent configuration file):**
+
+    - Open your user-specific shell configuration file (e.g., `~/.bashrc`, `~/.zshrc`).
+    - Look for any lines that might include `stty -echo` or similar commands that could suppress terminal output.
+    - If you find such a line, try commenting it out (by adding a `#` at the beginning of the line) or removing it.
+    - Save the file and restart your terminal or Codespace.
+
+2.  **Ensure Locales are Correctly Configured:**
+
+    - Proper locale settings are important for terminal behavior.
+    - If you have a `devcontainer.json` file in your repository (usually in a `.devcontainer` directory), consider adding or ensuring the following `onCreateCommand` is present:
+      ```json
+      "onCreateCommand": "sudo apt-get update && sudo apt-get install -y locales && sudo locale-gen en_US.UTF-8"
+      ```
+    - If you do not have a `devcontainer.json` file, you might need to create one or use the GitHub Codespaces UI to rebuild your Codespace. When rebuilding, look for options to customize setup commands and add the line above.
+    - After adding this command, you'll need to rebuild your Codespace for the changes to take effect.
+
+3.  **Use the "Terminal (Web)" Extension as a Fallback:**
+
+    - If the integrated terminal remains unresponsive after trying the above steps, you can install the "Terminal (Web)" VS Code extension. This extension provides an alternative terminal interface that runs in a web view and can sometimes bypass issues affecting the standard integrated terminal.
+    - Search for "Terminal (Web)" in the VS Code Extensions view (Ctrl+Shift+X or Cmd+Shift+X) and install it.
+
+4.  **Ensure Shell Integration is Enabled:**
+    - The project includes a workspace setting to enable shell integration: `.vscode/settings.json` contains `"terminal.integrated.shellIntegration.enabled": true`. This should be applied automatically. If you've overridden this in your user settings, consider reverting to the workspace setting.
+
+Remember to **rebuild your Codespace** after making changes to configurations like `devcontainer.json` for them to apply.
+
+## Testing Stripe Payments
+
+To test the Stripe checkout flow without using real credit cards, you can use Stripe's test card numbers.
+
+### Common Test Card Numbers:
+
+- **Visa (Successful Payment):** `4242 4242 4242 4242` (Any future date, any 3-digit CVC)
+- **Mastercard (Successful Payment):** `5555 5555 5555 5555` (Any future date, any 3-digit CVC)
+- **American Express (Successful Payment):** `3782 8282 8282 8282` (Any future date, any 4-digit CVC)
+- **Card Declined:** Use a card number that typically results in a decline, e.g., one ending in `0000` as per Stripe docs for specific decline reasons if needed. For a generic decline, `4000 0000 0000 0000` might work depending on Stripe's test environment setup.
+
+### Important Notes:
+
+- **Expiration Date:** Use any valid future expiration date (e.g., 12/30).
+- **CVC/CVV:** Use any random 3-digit number (or 4-digit for Amex).
+- **Name on Card:** Any name can be used.
+
+For a comprehensive list of test cards, including cards for specific scenarios (e.g., insufficient funds, fraud warnings), please refer to the official Stripe documentation:
+[Stripe Testing Documentation](https://stripe.com/docs/testing)
+
+**Reminder for `/checkout-test` route:**
+Ensure that a dummy product with a $1 price has been created in your Stripe account's **test mode**. The `priceId` for this product must be updated in the `pages/checkout-test/index.tsx` file.
+
+## Running Smoke Tests
+
+To run the pre-deploy smoke tests locally, first ensure the application is built and served:
+
+1.  Build the application:
+    ```bash
+    npm run build
+    ```
+2.  Serve the application from the `out` directory on port 5000:
+    ```bash
+    npx serve out/ -s -l 5000
+    ```
+3.  In a new terminal window, run the smoke tests:
+    ```bash
+    npm run smoke:test
+    ```
+
+Make sure your `cypress.config.ts` has `baseUrl: 'http://localhost:5000'` for local execution against the served build.
+
+### Blank Render Checks
+
+The Cypress test `cypress/e2e/blank_render.cy.ts` verifies that key routes render content inside the `<main>` element. To include additional pages in this check, add the desired path to the `routesToCheck` array at the top of that file.
+
+## Book Builder
+
+Use the `/book-builder` route to preview the Zion OS book. From there you can download a PDF edition or print a hard copy.
+
+## DevNet Sandbox
+
+Run `npm run devnet` to launch a local DevNet simulator. This command starts a
+Hardhat network alongside the development server. Once running, visit `/devnet`
+to access tools like the token faucet, proposal sandbox and GPT playground
+without impacting production data.
+
+## Offworld Deployment
+
+A minimal script is available to push a built Zion instance to IPFS for offline or mesh network distribution. After running `npm run build`, execute:
+
+```bash
+npx deploy-zion-ipfs
+```
+
+The command uploads the `dist` directory to your configured IPFS gateway and prints the resulting CID. Jobs, profiles, proposals and docs can be stored on IPFS, while messages and DAO vote logs sync through OrbitDB. See `src/offworld/` for helper modules.
+
+A remote test environment is available at **`/remote/dao`**. This route exposes a
+delay-tolerant governance panel that queues proposals and votes locally and
+syncs them once a low-latency link becomes available.
+
+## Multichain Governance
+
+The `token/multichain` directory provides Solidity contracts for deploying ZION$ across multiple chains. The LayerZero-based bridge wrapper allows deploying on zkSync while mirroring DAO votes to Starknet. Run the Hardhat script in `token/multichain/deploy` to deploy and record addresses.
+
+## Codex Automation
+
+This repository includes an optional workflow for automatically fixing lint errors using OpenAI Codex.
+
+- **codex-pipeline.yaml** – Defines an `openai-operator` pipeline that lints the `app/` directory, extracts failing code, sends it to Codex for a patch and then runs tests.
+- **scripts/codexApiFixer.js** – Simple script that sends a single file to Codex and writes the fixed version.
+- **scripts/codexWebhookServer.js** – Express server exposing `/webhook/trigger-fix` to launch the pipeline from external error reports.
+
+Start the webhook server with:
+
+```bash
+node scripts/codexWebhookServer.js
+```
+
+Then POST to `http://localhost:3001/webhook/trigger-fix` to trigger the automated fix pipeline.
+
+
+## API Endpoints
+
+### Health Check
+
+*   **URL:** `/api/health`
+*   **Method:** `GET`
+*   **Description:** Provides a health check for the application. It returns the current status and the deployed commit hash.
+*   **Success Response:**
+    *   **Code:** 200
+    *   **Content:** `{ "status": "ok", "version": "<commit-hash>" }`
+*   **Usage:** This endpoint is used by Netlify during the pre-deploy phase. If the endpoint does not return a 200 OK status with the expected JSON response, the deployment is halted to prevent a broken version from going live.
+
+## Automation & Maintenance
+
+This project includes several scripts and automated workflows to help with development, maintenance, and CI/CD.
+
+### Available Scripts
+
+These scripts are located in the `scripts/` directory and can be run from the project root (e.g., `bash scripts/security-audit.sh` or via `npm run <script-name>` if also added to `package.json`).
+
+*   **`security-audit.sh`**:
+    *   Checks for outdated npm dependencies using `npm-check-updates`.
+    *   Audits installed dependencies for known vulnerabilities using `npm audit`.
+    *   Can be run via `npm run check-updates` and `npm run audit-vulnerabilities` for individual checks.
+*   **`generate-test-stubs.sh`**:
+    *   Scans the `src/` directory (and its subdirectories like `components`, `pages`, `utils`, `lib`) for JavaScript/TypeScript files.
+    *   Generates basic placeholder test files (e.g., `*.test.js` or `*.test.ts`) for files that do not yet have corresponding test files. This helps in identifying areas needing test coverage.
+*   **`lint-format.sh`**:
+    *   Formats all relevant project files (JS, JSX, TS, TSX, JSON, CSS, MD) using Prettier.
+    *   Lints the codebase using ESLint and attempts to automatically fix any linting issues.
+    *   Can be run via `npm run lint-format`. Individual formatting and linting can be run with `npm run format` and `npm run lint -- --fix`.
+
+### Automated Workflows (GitHub Actions)
+
+The following GitHub Actions workflows are configured in the `.github/workflows/` directory:
+
+*   **`ci-cd.yml` (Node.js CI/CD)**:
+    *   **Triggers**: Automatically on pushes and pull requests to the `main` branch.
+    *   **Actions**:
+        *   Installs Node.js and project dependencies.
+        *   Runs security audits (`scripts/security-audit.sh`).
+        *   Runs linters and formatters (`scripts/lint-format.sh`).
+        *   Executes unit and integration tests (`npm test`).
+        *   Builds the application (`npm run build`).
+    *   **Purpose**: Ensures code quality, security, and that the application builds and tests successfully before merging changes.
+
+*   **`scheduled-audits.yml` (Scheduled Audits)**:
+    *   **Triggers**: Runs automatically every Sunday at midnight UTC. Can also be manually triggered.
+    *   **Actions**:
+        *   Installs Node.js and project dependencies.
+        *   Runs dependency and vulnerability audits (`scripts/security-audit.sh`).
+        *   Includes a placeholder for future integration of performance audits.
+    *   **Purpose**: Regularly checks for new vulnerabilities and outdated dependencies to help keep the project secure and up-to-date.
+
+### Health Check
+
+*   The application exposes a health check endpoint at `/healthz` (in the Node.js/Express server located in `server/app.js`).
+*   This endpoint can be used by monitoring services or orchestration platforms (like Kubernetes) to verify the application's operational status.
+*   Example Kubernetes probe configurations using this endpoint can be found in `kubernetes/probes-example.yaml`.
+
+### Hourly Alerts
+
+Running `npm run hourly-job` executes maintenance tasks and then calls
+`scripts/notify-slack-discord.js` to post a summary to Slack and Discord. Alerts
+include the top slow endpoints, any patched packages, latest test results, and a
+link to the commit if an automated fix was made.
