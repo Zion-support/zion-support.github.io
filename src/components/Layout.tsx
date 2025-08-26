@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import Search from './Search';
 import ScrollToTop from './ScrollToTop';
@@ -13,6 +13,7 @@ interface NavItem {
 
 const navigation: NavItem[] = [
   { label: 'Home', href: '/' },
+  { label: 'Enhanced Home', href: '/enhanced' },
   { 
     label: 'Services', 
     href: '/services',
@@ -20,7 +21,8 @@ const navigation: NavItem[] = [
       { label: 'AI Systems', href: '/services#ai' },
       { label: 'Cloud Platforms', href: '/services#cloud' },
       { label: 'Cybersecurity', href: '/services#cybersecurity' },
-      { label: 'Micro SaaS', href: '/services#saas' }
+      { label: 'Micro SaaS', href: '/services#saas' },
+      { label: 'Enhanced Services', href: '/enhanced-services' }
     ]
   },
   { label: 'Contact', href: '/contact' }
@@ -34,18 +36,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+      <header className="bg-white/90 backdrop-blur-xl border-b border-slate-200/50 sticky top-0 z-50 shadow-lg shadow-slate-200/20">
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link to="/" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <Link to="/" className="flex items-center space-x-3 group">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
                   <span className="text-white font-bold text-sm">Z</span>
                 </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="text-xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">
                   Zion Tech Group
                 </span>
               </Link>
@@ -103,7 +105,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <ThemeToggle />
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:via-purple-700 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 border border-white/20"
               >
                 Get Started
               </Link>
@@ -181,20 +183,41 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <footer className="bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold text-sm">Z</span>
                 </div>
-                <span className="text-xl font-bold">Zion Tech Group</span>
+                <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Zion Tech Group</span>
               </div>
-              <p className="text-slate-300 mb-4 max-w-md">
+              <p className="text-slate-300 mb-6 max-w-md text-lg">
                 Building autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business.
               </p>
+              <div className="text-slate-300 text-sm space-y-2 mb-6">
+                <div className="flex items-center space-x-2">
+                  <Phone className="h-4 w-4 text-cyan-400" />
+                  <span>+1 (302) 464-0950</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="h-4 w-4 text-cyan-400" />
+                  <span>kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <MapPin className="h-4 w-4 text-cyan-400" />
+                  <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+                </div>
+              </div>
               <div className="flex space-x-4">
                 <a href="#" className="text-slate-400 hover:text-white transition-colors">
                   <span className="sr-only">LinkedIn</span>
@@ -213,29 +236,55 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Services */}
             <div>
-              <h3 className="text-sm font-semibold text-slate-300 tracking-wider uppercase mb-4">Services</h3>
-              <ul className="space-y-2">
-                <li><a href="/services#ai" className="text-slate-400 hover:text-white transition-colors">AI Systems</a></li>
-                <li><a href="/services#cloud" className="text-slate-400 hover:text-white transition-colors">Cloud Platforms</a></li>
-                <li><a href="/services#cybersecurity" className="text-slate-400 hover:text-white transition-colors">Cybersecurity</a></li>
-                <li><a href="/services#saas" className="text-slate-400 hover:text-white transition-colors">Micro SaaS</a></li>
+              <h3 className="text-sm font-semibold text-cyan-400 tracking-wider uppercase mb-4">Services</h3>
+              <ul className="space-y-3">
+                <li><a href="/services#ai" className="text-slate-300 hover:text-cyan-400 transition-colors flex items-center space-x-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                  <span>AI Systems</span>
+                </a></li>
+                <li><a href="/services#cloud" className="text-slate-300 hover:text-cyan-400 transition-colors flex items-center space-x-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                  <span>Cloud Platforms</span>
+                </a></li>
+                <li><a href="/services#cybersecurity" className="text-slate-300 hover:text-cyan-400 transition-colors flex items-center space-x-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                  <span>Cybersecurity</span>
+                </a></li>
+                <li><a href="/services#saas" className="text-slate-300 hover:text-cyan-400 transition-colors flex items-center space-x-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                  <span>Micro SaaS</span>
+                </a></li>
+                <li><a href="/enhanced-services" className="text-slate-300 hover:text-cyan-400 transition-colors flex items-center space-x-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                  <span>Enhanced Services</span>
+                </a></li>
               </ul>
             </div>
 
             {/* Company */}
             <div>
-              <h3 className="text-sm font-semibold text-slate-300 tracking-wider uppercase mb-4">Company</h3>
-              <ul className="space-y-2">
-                <li><a href="/contact" className="text-slate-400 hover:text-white transition-colors">Contact</a></li>
-                <li><a href="/privacy" className="text-slate-400 hover:text-white transition-colors">Privacy</a></li>
-                <li><a href="/terms" className="text-slate-400 hover:text-white transition-colors">Terms</a></li>
+              <h3 className="text-sm font-semibold text-cyan-400 tracking-wider uppercase mb-4">Company</h3>
+              <ul className="space-y-3">
+                <li><a href="/contact" className="text-slate-300 hover:text-cyan-400 transition-colors flex items-center space-x-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                  <span>Contact</span>
+                </a></li>
+                <li><a href="/privacy" className="text-slate-300 hover:text-cyan-400 transition-colors flex items-center space-x-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                  <span>Privacy</span>
+                </a></li>
+                <li><a href="/terms" className="text-slate-300 hover:text-cyan-400 transition-colors flex items-center space-x-2 group">
+                  <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform"></div>
+                  <span>Terms</span>
+                </a></li>
               </ul>
             </div>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-slate-800">
-            <p className="text-slate-400 text-sm text-center">
-              © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+          <div className="mt-8 pt-8 border-t border-slate-700/50">
+            <p className="text-slate-300 text-sm text-center">
+              © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
+              <span className="text-cyan-400 ml-1">Building the future of technology</span>
             </p>
           </div>
         </div>

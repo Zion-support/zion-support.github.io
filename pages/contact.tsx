@@ -214,10 +214,10 @@ export default function Contact() {
 										<h3 className="text-lg font-semibold text-gray-900">Email</h3>
 										<p className="text-gray-600">
 											<a 
-												href="mailto:contact@ziontechgroup.com" 
+												href="mailto:kleber@ziontechgroup.com" 
 												className="text-blue-600 hover:text-blue-500 transition-colors"
 											>
-												contact@ziontechgroup.com
+												kleber@ziontechgroup.com
 											</a>
 										</p>
 										<p className="text-sm text-gray-500 mt-1">
@@ -234,10 +234,10 @@ export default function Contact() {
 										<h3 className="text-lg font-semibold text-gray-900">Phone</h3>
 										<p className="text-gray-600">
 											<a 
-												href="tel:+1-555-123-4567" 
+												href="tel:+13024640950" 
 												className="text-blue-600 hover:text-blue-500 transition-colors"
 											>
-												+1 (555) 123-4567
+												+1 (302) 464-0950
 											</a>
 										</p>
 										<p className="text-sm text-gray-500 mt-1">
@@ -253,9 +253,9 @@ export default function Contact() {
 									<div>
 										<h3 className="text-lg font-semibold text-gray-900">Office</h3>
 										<p className="text-gray-600">
-											123 Tech Street<br />
-											Innovation District<br />
-											San Francisco, CA 94105
+											364 E Main St STE 1008<br />
+											Middletown, DE 19709<br />
+											United States
 										</p>
 										<p className="text-sm text-gray-500 mt-1">
 											By appointment only
