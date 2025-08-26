@@ -1,1 +1,1 @@
-export const cuttingEdgeInnovations2027 = [] as any[];
+export const cuttingEdge2027Innovations = [] as any[];
