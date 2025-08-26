@@ -29,6 +29,15 @@ const Header: React.FC = () => {
     { name: "Consulting", path: "/services/consulting", description: "Technology Advisory" }
   ];
 
+  const additionalPages = [
+    { name: "Research & Development", path: "/research-development" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "Events & Webinars", path: "/events" },
+    { name: "White Papers", path: "/white-papers" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Support", path: "/support" }
+  ];
+
   return (
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -48,7 +57,7 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             <Link
               to="/"
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
@@ -133,19 +142,77 @@ const Header: React.FC = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
               )}
             </Link>
-            <Link
-              to="/blog"
-              className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
-                isActive('/blog')
-                  ? 'text-white bg-blue-600/20'
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
-              }`}
-            >
-              Blog
-              {isActive('/blog') && (
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
+
+            {/* Resources Dropdown */}
+            <div className="relative group">
+              <button
+                className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
+                  location.pathname === '/blog' || location.pathname === '/events' || location.pathname === '/white-papers' || location.pathname === '/case-studies'
+                    ? 'text-white bg-blue-600/20'
+                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                }`}
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                Resources
+                <svg className="ml-1 h-4 w-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+                {(location.pathname === '/blog' || location.pathname === '/events' || location.pathname === '/white-papers' || location.pathname === '/case-studies') && (
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
+                )}
+              </button>
+              
+              {isServicesOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg border border-white/20 rounded-lg shadow-xl"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <div className="p-4">
+                    <div className="grid grid-cols-1 gap-2">
+                      <Link
+                        to="/blog"
+                        className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                      >
+                        <div className="flex-1">
+                          <div className="text-white font-medium">Blog</div>
+                          <div className="text-gray-400 text-sm">Latest insights & updates</div>
+                        </div>
+                      </Link>
+                      <Link
+                        to="/events"
+                        className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                      >
+                        <div className="flex-1">
+                          <div className="text-white font-medium">Events & Webinars</div>
+                          <div className="text-gray-400 text-sm">Upcoming events</div>
+                        </div>
+                      </Link>
+                      <Link
+                        to="/white-papers"
+                        className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                      >
+                        <div className="flex-1">
+                          <div className="text-white font-medium">White Papers</div>
+                          <div className="text-gray-400 text-sm">In-depth research</div>
+                        </div>
+                      </Link>
+                      <Link
+                        to="/case-studies"
+                        className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                      >
+                        <div className="flex-1">
+                          <div className="text-white font-medium">Case Studies</div>
+                          <div className="text-gray-400 text-sm">Success stories</div>
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               )}
-            </Link>
+            </div>
+
             <Link
               to="/careers"
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
@@ -159,6 +226,7 @@ const Header: React.FC = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
               )}
             </Link>
+
             <Link
               to="/contact"
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
@@ -235,6 +303,41 @@ const Header: React.FC = () => {
                 ))}
               </div>
             </div>
+
+            {/* Mobile Resources */}
+            <div className="px-3 py-2">
+              <div className="text-gray-300 font-medium mb-2">Resources</div>
+              <div className="ml-4 space-y-1">
+                <Link
+                  to="/blog"
+                  className="block px-3 py-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md text-sm"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Blog
+                </Link>
+                <Link
+                  to="/events"
+                  className="block px-3 py-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md text-sm"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Events & Webinars
+                </Link>
+                <Link
+                  to="/white-papers"
+                  className="block px-3 py-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md text-sm"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  White Papers
+                </Link>
+                <Link
+                  to="/case-studies"
+                  className="block px-3 py-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md text-sm"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Case Studies
+                </Link>
+              </div>
+            </div>
             
             <Link
               to="/about"
@@ -246,17 +349,6 @@ const Header: React.FC = () => {
               onClick={closeMenu}
             >
               About
-            </Link>
-            <Link
-              to="/blog"
-              className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                isActive('/blog')
-                  ? 'text-white bg-blue-600/20 border-l-4 border-blue-400'
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
-              }`}
-              onClick={closeMenu}
-            >
-              Blog
             </Link>
             
             <div className="pt-4 border-t border-white/10">
