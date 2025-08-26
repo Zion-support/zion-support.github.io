@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 interface EnhancedLoadingProps {
   variant?: 'spinner' | 'dots' | 'pulse' | 'bars';
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   text?: string;
   className?: string;
 }
@@ -17,7 +17,8 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
   };
 
   const renderSpinner = () => (
@@ -68,7 +69,7 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
       {[0, 1, 2, 3].map((i) => (
         <motion.div
           key={i}
-          className={`w-1 ${size === 'sm' ? 'h-3' : size === 'md' ? 'h-6' : 'h-8'} bg-blue-400 rounded-full`}
+          className={`w-1 ${size === 'sm' ? 'h-3' : size === 'md' ? 'h-6' : size === 'lg' ? 'h-8' : 'h-12'} bg-blue-400 rounded-full`}
           animate={{
             scaleY: [1, 1.5, 1],
             opacity: [0.5, 1, 0.5]

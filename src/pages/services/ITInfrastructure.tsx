@@ -1,51 +1,51 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { Lightbulb, Users, Target, TrendingUp, Zap, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+import { Server, Network, Database, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
 
-const Consulting: React.FC = () => {
+const ITInfrastructure: React.FC = () => {
   const features = [
     {
-      icon: Lightbulb,
-      title: "Strategic Consulting",
-      description: "Expert guidance for technology strategy and business alignment"
+      icon: Server,
+      title: "Server Management",
+      description: "Comprehensive server infrastructure and management solutions"
     },
     {
-      icon: Users,
-      title: "Team Training",
-      description: "Comprehensive training programs for your technology teams"
+      icon: Network,
+      title: "Network Design",
+      description: "Scalable network architecture and optimization"
     },
     {
-      icon: Target,
-      title: "Project Management",
-      description: "Professional project management and delivery services"
+      icon: Database,
+      title: "Data Centers",
+      description: "Modern data center solutions and management"
     },
     {
-      icon: TrendingUp,
-      title: "Performance Optimization",
-      description: "Data-driven insights to improve business performance"
+      icon: Shield,
+      title: "Infrastructure Security",
+      description: "Multi-layered security for your IT infrastructure"
     }
   ];
 
   const benefits = [
-    "Expert guidance from industry professionals",
-    "Customized solutions for your business needs",
-    "Proven methodologies and best practices",
-    "Ongoing support and consultation",
-    "Measurable results and ROI"
+    "99.9% uptime guarantee",
+    "Scalable infrastructure solutions",
+    "Reduced operational costs",
+    "Enhanced performance and reliability",
+    "Expert support and maintenance"
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Technology Consulting - Zion Tech Group"
-        description="Get expert technology consulting services to align your business strategy with cutting-edge solutions."
-        keywords="technology consulting, strategic consulting, team training, project management, performance optimization"
-        canonical="https://ziontechgroup.com/services/consulting"
+        title="IT Infrastructure - Zion Tech Group"
+        description="Build a robust and scalable IT infrastructure with our expert solutions and management services."
+        keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
+        canonical="https://ziontechgroup.com/services/infrastructure"
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-indigo-900 via-indigo-800 to-blue-900 text-white py-20">
+      <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
           <motion.h1 
@@ -54,27 +54,27 @@ const Consulting: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Technology
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400">
-              {" "}Consulting
+            IT Infrastructure
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
+              {" "}Excellence
             </span>
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto leading-relaxed mb-8"
+            className="text-xl md:text-2xl text-purple-100 max-w-4xl mx-auto leading-relaxed mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Get expert guidance to navigate the complex technology landscape and make informed 
-            decisions that drive your business forward.
+            Build a solid foundation for your business with our comprehensive IT infrastructure 
+            solutions designed for performance, reliability, and scalability.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <button className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-              Get Expert Advice
+            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+              Build Your Infrastructure
             </button>
           </motion.div>
         </div>
@@ -84,9 +84,9 @@ const Consulting: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Consulting Services</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Infrastructure Capabilities</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive consulting solutions to address your technology challenges
+              End-to-end IT infrastructure solutions for modern businesses
             </p>
           </div>
 
@@ -100,8 +100,8 @@ const Consulting: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-indigo-600" />
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -116,9 +116,9 @@ const Consulting: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Consulting Services?</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Infrastructure Solutions?</h2>
               <p className="text-xl text-gray-600">
-                Experience the benefits of expert technology consulting
+                Experience the benefits of a well-designed IT infrastructure
               </p>
             </div>
 
@@ -132,8 +132,8 @@ const Consulting: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                    <TrendingUp className="w-4 h-4 text-purple-600" />
                   </div>
                   <span className="text-lg text-gray-700">{benefit}</span>
                 </motion.div>
@@ -144,13 +144,13 @@ const Consulting: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Get Expert Guidance?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Build Your Infrastructure?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how our consulting services can help you make better technology decisions.
+            Let's discuss how our IT infrastructure solutions can support your business growth and success.
           </p>
-          <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Schedule a Consultation
           </button>
         </div>
@@ -159,4 +159,4 @@ const Consulting: React.FC = () => {
   );
 };
 
-export default Consulting;
+export default ITInfrastructure;
