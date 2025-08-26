@@ -1,347 +1,302 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Calendar, MapPin, Clock, Users, ExternalLink, ArrowRight } from 'lucide-react';
+
 const Events = () => {
-    const upcomingEvents = [
+    const [selectedCategory, setSelectedCategory] = useState('All');
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const events = [
         {
             id: 1,
-            title: "AI in Enterprise: 2025 Trends & Strategies",
-            type: "Webinar",
-            date: "2025-01-15",
-            time: "2:00 PM EST",
-            duration: "60 minutes",
-            description: "Join our AI experts as they discuss the latest trends in enterprise AI adoption, implementation strategies, and ROI measurement.",
-            speakers: ["Dr. Sarah Chen", "Marcus Rodriguez"],
-            category: "AI & Machine Learning",
-            registrationUrl: "#",
-            isFree: true,
-            maxAttendees: 500
+            title: "AI & Digital Transformation Summit 2025",
+            category: "Conference",
+            date: "March 15-17, 2025",
+            time: "9:00 AM - 6:00 PM",
+            location: "San Francisco Convention Center",
+            description: "Join industry leaders and experts for three days of insights on AI-driven digital transformation strategies, implementation best practices, and future trends.",
+            attendees: "500+",
+            price: "Free",
+            isVirtual: false,
+            registrationUrl: "/contact"
         },
         {
             id: 2,
-            title: "Cybersecurity Summit 2025",
-            type: "Conference",
-            date: "2025-02-20",
-            time: "9:00 AM EST",
-            duration: "Full Day",
-            description: "A comprehensive one-day conference covering the latest cybersecurity threats, defense strategies, and compliance requirements.",
-            speakers: ["Alex Thompson", "Dr. Emily Watson", "David Kim"],
-            category: "Cybersecurity",
-            registrationUrl: "#",
-            isFree: false,
-            price: "$299",
-            maxAttendees: 200
+            title: "Cybersecurity Workshop: Zero-Trust Architecture",
+            category: "Workshop",
+            date: "February 28, 2025",
+            time: "1:00 PM - 5:00 PM",
+            location: "Virtual Event",
+            description: "Learn about implementing zero-trust security architecture in your organization with hands-on exercises and real-world case studies.",
+            attendees: "100",
+            price: "$99",
+            isVirtual: true,
+            registrationUrl: "/contact"
         },
         {
             id: 3,
-            title: "Cloud Migration Best Practices",
-            type: "Workshop",
-            date: "2025-01-28",
-            time: "1:00 PM EST",
-            duration: "3 hours",
-            description: "Hands-on workshop covering cloud migration strategies, cost optimization, and security best practices.",
-            speakers: ["David Kim", "Lisa Thompson"],
-            category: "Cloud & Infrastructure",
-            registrationUrl: "#",
-            isFree: false,
-            price: "$149",
-            maxAttendees: 50
+            title: "Cloud Migration Best Practices Webinar",
+            category: "Webinar",
+            date: "February 15, 2025",
+            time: "2:00 PM - 3:30 PM",
+            location: "Virtual Event",
+            description: "Discover proven strategies for successful cloud migration, including planning, execution, and optimization techniques.",
+            attendees: "250",
+            price: "Free",
+            isVirtual: true,
+            registrationUrl: "/contact"
         },
         {
             id: 4,
-            title: "Digital Transformation Roadmap",
-            type: "Webinar",
-            date: "2025-02-05",
-            time: "3:00 PM EST",
-            duration: "90 minutes",
-            description: "Learn how to create and execute a successful digital transformation strategy for your organization.",
-            speakers: ["Lisa Thompson", "Dr. Sarah Chen"],
-            category: "Digital Transformation",
-            registrationUrl: "#",
-            isFree: true,
-            maxAttendees: 300
-        }
-    ];
-    const pastEvents = [
+            title: "Quantum Computing in Enterprise",
+            category: "Seminar",
+            date: "January 30, 2025",
+            time: "10:00 AM - 12:00 PM",
+            location: "New York Tech Hub",
+            description: "Explore the potential of quantum computing in enterprise environments and learn about early adoption strategies.",
+            attendees: "75",
+            price: "$149",
+            isVirtual: false,
+            registrationUrl: "/contact"
+        },
         {
             id: 5,
-            title: "AI Ethics & Responsible Development",
-            type: "Panel Discussion",
-            date: "2024-12-10",
-            description: "Expert panel discussion on ethical AI development, bias mitigation, and responsible AI deployment.",
-            speakers: ["Dr. Emily Watson", "Dr. James Wilson"],
-            category: "AI Ethics",
-            recordingUrl: "#"
+            title: "Data Analytics & AI Implementation",
+            category: "Training",
+            date: "January 20-22, 2025",
+            time: "9:00 AM - 4:00 PM",
+            location: "Austin Innovation Center",
+            description: "Comprehensive training on implementing data analytics and AI solutions in your business operations.",
+            attendees: "50",
+            price: "$599",
+            isVirtual: false,
+            registrationUrl: "/contact"
         },
         {
             id: 6,
-            title: "Quantum Computing Workshop",
-            type: "Workshop",
-            date: "2024-11-25",
-            description: "Introduction to quantum computing principles and their applications in AI and cryptography.",
-            speakers: ["Dr. James Wilson", "Marcus Rodriguez"],
-            category: "Quantum Computing",
-            recordingUrl: "#"
+            title: "Future of Work: AI & Automation",
+            category: "Panel Discussion",
+            date: "January 10, 2025",
+            time: "3:00 PM - 5:00 PM",
+            location: "Virtual Event",
+            description: "Join industry experts for a discussion on how AI and automation are reshaping the future of work.",
+            attendees: "300",
+            price: "Free",
+            isVirtual: true,
+            registrationUrl: "/contact"
         }
     ];
-    const eventCategories = [
-        { name: "AI & Machine Learning", count: 8, color: "from-purple-500 to-pink-500" },
-        { name: "Cybersecurity", count: 6, color: "from-red-500 to-orange-500" },
-        { name: "Cloud & Infrastructure", count: 5, color: "from-blue-500 to-cyan-500" },
-        { name: "Digital Transformation", count: 4, color: "from-green-500 to-emerald-500" },
-        { name: "Quantum Computing", count: 3, color: "from-indigo-500 to-purple-500" }
+
+    const categories = [
+        { name: "All", count: events.length },
+        { name: "Conference", count: events.filter(e => e.category === "Conference").length },
+        { name: "Workshop", count: events.filter(e => e.category === "Workshop").length },
+        { name: "Webinar", count: events.filter(e => e.category === "Webinar").length },
+        { name: "Seminar", count: events.filter(e => e.category === "Seminar").length },
+        { name: "Training", count: events.filter(e => e.category === "Training").length },
+        { name: "Panel Discussion", count: events.filter(e => e.category === "Panel Discussion").length }
     ];
-    const formatDate = (dateString) => {
-        const date = new Date(dateString);
-        return date.toLocaleDateString('en-US', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-    };
-    const getEventTypeColor = (type) => {
-        switch (type) {
-            case 'Webinar':
-                return 'bg-blue-100 text-blue-800';
-            case 'Conference':
-                return 'bg-purple-100 text-purple-800';
-            case 'Workshop':
-                return 'bg-green-100 text-green-800';
-            case 'Panel Discussion':
-                return 'bg-orange-100 text-orange-800';
-            default:
-                return 'bg-gray-100 text-gray-800';
-        }
-    };
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Events & Webinars
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join our experts for insightful discussions, hands-on workshops, and cutting-edge insights 
-              into the latest technology trends and innovations.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Event Categories */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Event Categories</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Explore our diverse range of events covering all aspects of modern technology and business transformation.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {eventCategories.map((category, index) => (<div key={index} className="text-center p-6 rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors duration-300">
-                <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-full mx-auto mb-4 flex items-center justify-center`}>
-                  <span className="text-2xl text-white font-bold">{category.count}</span>
+    const filteredEvents = events.filter(event => {
+        const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            event.description.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesCategory = selectedCategory === 'All' || event.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
+
+    return (
+        <div className="min-h-screen bg-slate-900">
+            {/* Hero Section */}
+            <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                <div className="container mx-auto px-4 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="max-w-4xl mx-auto"
+                    >
+                        <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full mb-6">
+                            <Calendar className="w-10 h-10 text-white" />
+                        </div>
+                        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
+                            Events & Webinars
+                        </h1>
+                        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                            Join us for insightful events, workshops, and webinars on the latest technology trends and innovations
+                        </p>
+
+                        {/* Search and Filters */}
+                        <div className="max-w-4xl mx-auto mb-8">
+                            <div className="flex flex-col lg:flex-row gap-4">
+                                <div className="relative flex-1">
+                                    <Calendar className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                                    <input
+                                        type="text"
+                                        placeholder="Search events..."
+                                        value={searchTerm}
+                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    />
+                                </div>
+                                <select
+                                    value={selectedCategory}
+                                    onChange={(e) => setSelectedCategory(e.target.value)}
+                                    className="px-6 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                >
+                                    {categories.map((category) => (
+                                        <option key={category.name} value={category.name}>
+                                            {category.name} ({category.count})
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900">{category.name}</h3>
-              </div>))}
-          </div>
-        </div>
-      </section>
+            </section>
 
-      {/* Upcoming Events */}
-      <section className="py-16 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Upcoming Events</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Register for our upcoming events and stay ahead of the technology curve.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {upcomingEvents.map((event) => (<div key={event.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${getEventTypeColor(event.type)}`}>
-                      {event.type}
-                    </span>
-                    <span className="text-sm text-gray-500">
-                      {event.isFree ? 'Free' : event.price}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">{event.title}</h3>
-                  <p className="text-gray-600 mb-4">{event.description}</p>
-                  
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <div className="text-sm font-medium text-gray-500">Date & Time</div>
-                      <div className="text-sm text-gray-900">{formatDate(event.date)}</div>
-                      <div className="text-sm text-gray-900">{event.time} ({event.duration})</div>
+            {/* Events Grid */}
+            <section className="py-20">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                            Upcoming Events
+                        </h2>
+                        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                            Discover our upcoming events and register to secure your spot
+                        </p>
                     </div>
-                    <div>
-                      <div className="text-sm font-medium text-gray-500">Category</div>
-                      <div className="text-sm text-gray-900">{event.category}</div>
-                      <div className="text-sm text-gray-500">Max: {event.maxAttendees} attendees</div>
-                    </div>
-                  </div>
-                  
-                  <div className="mb-4">
-                    <div className="text-sm font-medium text-gray-500 mb-2">Speakers</div>
-                    <div className="flex flex-wrap gap-2">
-                      {event.speakers.map((speaker, index) => (<span key={index} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
-                          {speaker}
-                        </span>))}
-                    </div>
-                  </div>
-                  
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                    Register Now
-                  </button>
-import React from 'react';
-import {Link} from 'react-router-dom';
 
-const Events: React.FC = () => {}
-  const upcomingEvents = [
-    {title}: "AI Innovation Summit 2024",
-      date: "March 15-16, 2024",
-      location: "Virtual Event",
-      description: "Join industry leaders for insights on AI transformation and business innovation",
-      type: "Conference"
-    },
-    {title}: "Cybersecurity Workshop",
-      date: "April 5, 2024",
-      location: "Delaware Tech Hub",
-      description: "Hands-on workshop on modern cybersecurity threats and defense strategies",
-      type: "Workshop"
-    },
-    {title}: "Cloud Migration Webinar",
-      date: "April 20, 2024",
-      location: "Online",
-      description: "Learn best practices for successful cloud migration and optimization",
-      type: "Webinar"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Upcoming
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Events
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join us for industry insights, networking opportunities, and hands-on learning experiences
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {upcomingEvents.map((event, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="mb-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">{event.type}</span>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {filteredEvents.map((event, index) => (
+                            <motion.div
+                                key={event.id}
+                                className="bg-slate-800/50 rounded-xl border border-slate-700 p-6 hover:border-blue-500/50 transition-all duration-300 group"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="flex items-center justify-between mb-4">
+                                    <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
+                                        {event.category}
+                                    </span>
+                                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                                        event.isVirtual 
+                                            ? 'bg-green-500/20 text-green-400' 
+                                            : 'bg-orange-500/20 text-orange-400'
+                                    }`}>
+                                        {event.isVirtual ? 'Virtual' : 'In-Person'}
+                                    </span>
+                                </div>
+                                
+                                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                                    {event.title}
+                                </h3>
+                                
+                                <div className="space-y-3 mb-4">
+                                    <div className="flex items-center text-gray-300 text-sm">
+                                        <Calendar className="w-4 h-4 mr-2 text-blue-400" />
+                                        {event.date}
+                                    </div>
+                                    <div className="flex items-center text-gray-300 text-sm">
+                                        <Clock className="w-4 h-4 mr-2 text-blue-400" />
+                                        {event.time}
+                                    </div>
+                                    <div className="flex items-center text-gray-300 text-sm">
+                                        <MapPin className="w-4 h-4 mr-2 text-blue-400" />
+                                        {event.location}
+                                    </div>
+                                    <div className="flex items-center text-gray-300 text-sm">
+                                        <Users className="w-4 h-4 mr-2 text-blue-400" />
+                                        {event.attendees} attendees
+                                    </div>
+                                </div>
+                                
+                                <p className="text-gray-300 mb-4 line-clamp-3">{event.description}</p>
+                                
+                                <div className="flex items-center justify-between">
+                                    <span className="text-lg font-semibold text-blue-400">{event.price}</span>
+                                    <Link
+                                        to={event.registrationUrl}
+                                        className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium transition-colors duration-300"
+                                    >
+                                        Register
+                                        <ArrowRight className="w-4 h-4 ml-2" />
+                                    </Link>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                    
+                    {filteredEvents.length === 0 && (
+                        <div className="text-center py-12">
+                            <Calendar className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                            <h3 className="text-xl font-semibold text-gray-300 mb-2">No events found</h3>
+                            <p className="text-gray-400">Try adjusting your search terms or category filter</p>
+                        </div>
+                    )}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{event.title}</h3>
-                <div className="space-y-2 mb-4">
-                  <p className="text-gray-400 text-sm flex items-center">
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                    </svg>
-                    {event.date}
-                  </p>
-                  <p className="text-gray-400 text-sm flex items-center">
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    </svg>
-                    {event.location}
-                  </p>
+            </section>
+
+            {/* Newsletter Signup */}
+            <section className="py-20 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
+                <div className="max-w-4xl mx-auto px-6 text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                            Stay Updated
+                        </h2>
+                        <p className="text-xl text-gray-300 mb-8">
+                            Never miss an important event. Subscribe to our newsletter for updates on upcoming events, webinars, and exclusive content.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                className="flex-1 px-6 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            />
+                            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold text-white hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+                                Subscribe
+                            </button>
+                        </div>
+                    </motion.div>
                 </div>
-                <p className="text-gray-300 mb-4">{event.description}</p>
-                <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
-                  Register Now
-                  <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
-                  </svg>
-                </Link>
-              </div>))}
-          </div>
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Stay Updated</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Never miss an important event. Subscribe to our newsletter and get notified about upcoming events, 
-            webinars, and exclusive content.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"/>
-            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
+            </section>
 
-      {/* Contact Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">Host Your Event With Us</h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Interested in hosting a technology event, workshop, or conference? 
-            We'd love to collaborate and help bring your vision to life.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-              Get in Touch
-            </Link>
-            <Link to="/services" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300">
-              Our Services
-            </Link>
-          
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
-              <p className="text-gray-300 mb-6">
-                Subscribe to our newsletter to receive updates about upcoming events, 
-                industry insights, and exclusive content.
-              </p>
-              <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                Subscribe Now
-              </Link>
-            </div>
-          </div>
+            {/* CTA Section */}
+            <section className="py-20">
+                <div className="max-w-4xl mx-auto px-6 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                        Host Your Event With Us
+                    </h2>
+                    <p className="text-xl text-gray-300 mb-8">
+                        Interested in hosting a technology event, workshop, or conference? We'd love to collaborate and help bring your vision to life.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link
+                            to="/contact"
+                            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold text-white hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                        >
+                            Get in Touch
+                            <ArrowRight className="w-5 h-5 ml-2" />
+                        </Link>
+                        <Link
+                            to="/services"
+                            className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
+                        >
+                            Our Services
+                        </Link>
+                    </div>
+                </div>
+            </section>
         </div>
-      </></section>
-
-      {/* Newsletter Signup */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Stay Updated on Upcoming Events
-              </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Get notified about new events, early bird discounts, and exclusive invitations.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <input type="email" placeholder="Enter your email address" className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
-                <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-                  Subscribe
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </></div>
-    </></div>
-  );
+    );
 };
 
-export default Events;</></>))}</></></></>);
-};
+export default Events;
