@@ -219,6 +219,9 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
+<<<<<<< HEAD
+export default function UltraFuturisticNavigation2035() {
+=======
 const navigationItems: NavigationItem[] = [
   {
     name: 'Pricing',
@@ -429,6 +432,7 @@ const quickActions = [
 ];
 
 const UltraFuturisticNavigation2035: React.FC = () => {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');

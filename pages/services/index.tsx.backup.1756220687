@@ -4,6 +4,18 @@ import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { 
+  Brain, Rocket, Target, Cpu, Globe, Eye, 
+  ChevronRight, Star, TrendingUp, Zap, Shield,
+  ArrowRight, Search, Filter, Grid, List,
+  Phone, Mail, MapPin, ExternalLink, Sparkles
+} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../../components/ui/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029V2 from '../../components/layout/UltraFuturisticNavigation2029V2';
+import UltraFuturisticFooter2029V2 from '../../components/layout/UltraFuturisticFooter2029V2';
+=======
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
 import { extraServices } from '../../data/extra-services';
@@ -36,6 +48,7 @@ import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
 import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
 import { real2028ServiceExpansions } from '../../data/real-2028-service-expansions';
 import { real2029ServiceAdditions } from '../../data/real-2029-service-additions';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -107,6 +120,8 @@ const serviceCategories = [
   }
 ];
 
+<<<<<<< HEAD
+=======
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
@@ -177,6 +192,7 @@ export default function ServicesIndexPage() {
 
   const [shownCounts, setShownCounts] = React.useState<Record<string, number>>(() => Object.fromEntries(categories.map(c => [c, 12])));
 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
   return (
     <UltraFuturisticBackground2029>
       <div className="min-h-screen bg-black/90">
