@@ -1,44 +1,59 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { FuturisticNavigation } from './components/FuturisticNavigation';
 import { FuturisticFooter } from './components/FuturisticFooter';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { ChatAssistant } from './components/ChatAssistant';
 
-// Lazy load pages - only import existing ones
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/PartnersPage'));
-const Login = React.lazy(() => import('./pages/Login'));
-const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Careers = React.lazy(() => import('./pages/Careers'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const Services = React.lazy(() => import('./pages/Services'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Careers = lazy(() => import('./pages/Careers'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Blog = lazy(() => import('./pages/Blog'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
+const PartnersPage = lazy(() => import('./pages/PartnersPage'));
+const Login = lazy(() => import('./pages/Login'));
+const FAQ = lazy(() => import('./pages/FAQ'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
+const GreenIT = lazy(() => import('./pages/GreenIT'));
+const EnhancedServices = lazy(() => import('./pages/EnhancedServices'));
+
+// Service pages
+const AIServices = lazy(() => import('./pages/AIServices'));
+const CloudServices = lazy(() => import('./pages/CloudServices'));
+const CybersecurityServices = lazy(() => import('./pages/CybersecurityServices'));
+const InfrastructureServices = lazy(() => import('./pages/InfrastructureServices'));
+const DigitalTransformationServices = lazy(() => import('./pages/DigitalTransformationServices'));
+const ConsultingServices = lazy(() => import('./pages/ConsultingServices'));
 
 // New service pages
-const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
-const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
-const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const AIServicesPage = lazy(() => import('./pages/AIServicesPage'));
+const MicroSAASServicesPage = lazy(() => import('./pages/MicroSAASServicesPage'));
+const ITServicesPage = lazy(() => import('./pages/ITServicesPage'));
 
-// Enhanced loading component with better UX
-const EnhancedLoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="relative">
-      <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
-      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
-        ZION
-      </div>
-      <div className="mt-4 text-center">
-        <div className="text-zion-cyan text-sm animate-pulse">Loading amazing experiences...</div>
-      </div>
+// Loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen bg-slate-900">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500 mx-auto"></div>
+      <p className="mt-4 text-cyan-400 text-lg">Loading...</p>
+    </div>
+  </div>
+);
+
+// NotFound component
+const NotFound = () => (
+  <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-6xl font-bold text-cyan-400 mb-4">404</h1>
+      <p className="text-xl text-gray-300 mb-8">Page not found</p>
+      <a href="/" className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">
+        Go Home
+      </a>
     </div>
   </div>
 );
@@ -54,24 +69,32 @@ function App() {
         <FuturisticNavigation />
         
         <main className="flex-1 relative z-10">
-          <Suspense fallback={<EnhancedLoadingSpinner />}>
+          <Suspense fallback={<LoadingSpinner />}>
             <Routes>
-              {/* Main Routes */}
+              {/* Main pages */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/faq" element={<FAQ />} />
               <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/services" element={<Services />} />
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/enhanced-services" element={<EnhancedServices />} />
+              
+              {/* Service pages */}
+              <Route path="/services/ai" element={<AIServices />} />
+              <Route path="/services/cloud" element={<CloudServices />} />
+              <Route path="/services/cybersecurity" element={<CybersecurityServices />} />
+              <Route path="/services/infrastructure" element={<InfrastructureServices />} />
+              <Route path="/services/transformation" element={<DigitalTransformationServices />} />
+              <Route path="/services/consulting" element={<ConsultingServices />} />
               
               {/* AI Services Routes */}
               <Route path="/ai-services" element={<AIServicesPage />} />
@@ -92,6 +115,9 @@ function App() {
               {/* Marketplace Routes */}
               <Route path="/marketplace" element={<GreenIT />} />
               <Route path="/marketplace/:service" element={<GreenIT />} />
+              
+              {/* 404 catch-all */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>

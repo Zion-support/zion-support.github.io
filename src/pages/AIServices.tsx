@@ -2,129 +2,109 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle,
+  Brain, 
+  Cpu, 
+  Zap, 
+  Target,
+  TrendingUp,
+  Shield,
   Users,
   Globe,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Target
+  Rocket,
+  CheckCircle
 } from 'lucide-react';
 
-export default function CybersecurityServices() {
-  const securityServices = [
+export default function AIServices() {
+  const aiServices = [
     {
-      title: "Zero Trust Architecture",
-      description: "Implement comprehensive zero-trust security framework for your organization",
+      title: "AI-Powered Business Intelligence",
+      description: "Transform raw data into actionable insights with our advanced AI analytics platform",
       features: [
-        "Identity Verification",
-        "Device Trust Assessment",
-        "Network Segmentation",
-        "Continuous Monitoring"
+        "Predictive Analytics",
+        "Real-time Data Processing",
+        "Custom Dashboard Creation",
+        "Automated Reporting"
       ],
-      icon: Shield,
+      icon: Brain,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Machine Learning Models",
+      description: "Custom ML solutions tailored to your business needs and industry requirements",
+      features: [
+        "Custom Algorithm Development",
+        "Model Training & Optimization",
+        "Continuous Learning Systems",
+        "Performance Monitoring"
+      ],
+      icon: Cpu,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Threat Detection & Response",
-      description: "Advanced threat detection and automated response systems",
+      title: "Natural Language Processing",
+      description: "Advanced NLP solutions for text analysis, chatbots, and language understanding",
       features: [
-        "Real-time Monitoring",
-        "AI-Powered Detection",
-        "Automated Response",
-        "Incident Investigation"
+        "Sentiment Analysis",
+        "Text Classification",
+        "Language Translation",
+        "Chatbot Development"
       ],
-      icon: Eye,
+      icon: Zap,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Penetration Testing",
-      description: "Comprehensive security testing to identify vulnerabilities",
+      title: "Computer Vision Solutions",
+      description: "Image and video analysis powered by state-of-the-art computer vision technology",
       features: [
-        "External Testing",
-        "Internal Testing",
-        "Social Engineering",
-        "Physical Security"
+        "Object Detection",
+        "Image Classification",
+        "Facial Recognition",
+        "Video Analytics"
       ],
       icon: Target,
       color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Security Audits & Compliance",
-      description: "Ensure compliance with industry standards and regulations",
-      features: [
-        "SOC 2 Compliance",
-        "ISO 27001",
-        "GDPR Compliance",
-        "HIPAA Security"
-      ],
-      icon: Lock,
-      color: "from-purple-500 to-pink-500"
-    }
-  ];
-
-  const securitySolutions = [
-    {
-      category: "Network Security",
-      solutions: [
-        "Firewall Management",
-        "Intrusion Detection",
-        "VPN Solutions",
-        "Network Monitoring"
-      ]
-    },
-    {
-      category: "Endpoint Security",
-      solutions: [
-        "Antivirus Protection",
-        "Device Management",
-        "Data Encryption",
-        "Access Control"
-      ]
-    },
-    {
-      category: "Application Security",
-      solutions: [
-        "Code Review",
-        "Vulnerability Assessment",
-        "API Security",
-        "Secure Development"
-      ]
-    },
-    {
-      category: "Data Protection",
-      solutions: [
-        "Data Encryption",
-        "Backup Security",
-        "Access Management",
-        "Compliance Monitoring"
-      ]
     }
   ];
 
   const benefits = [
     {
-      icon: Shield,
-      title: "Comprehensive Protection",
-      description: "Multi-layered security approach covering all attack vectors"
+      icon: TrendingUp,
+      title: "Increased Efficiency",
+      description: "Automate repetitive tasks and streamline business processes"
     },
     {
-      icon: Zap,
-      title: "24/7 Monitoring",
-      description: "Round-the-clock security monitoring and threat detection"
+      icon: Shield,
+      title: "Enhanced Security",
+      description: "AI-powered threat detection and security monitoring"
     },
     {
       icon: Users,
-      title: "Expert Team",
-      description: "Certified cybersecurity professionals with industry experience"
+      title: "Better Customer Experience",
+      description: "Personalized interactions and improved customer service"
     },
     {
       icon: Globe,
-      title: "Global Standards",
-      description: "Compliance with international security standards and best practices"
+      title: "Global Scalability",
+      description: "Deploy AI solutions across multiple locations and markets"
+    }
+  ];
+
+  const useCases = [
+    {
+      industry: "Healthcare",
+      applications: ["Diagnostic Imaging", "Patient Data Analysis", "Drug Discovery", "Predictive Medicine"]
+    },
+    {
+      industry: "Finance",
+      applications: ["Fraud Detection", "Risk Assessment", "Algorithmic Trading", "Customer Insights"]
+    },
+    {
+      industry: "Manufacturing",
+      applications: ["Quality Control", "Predictive Maintenance", "Supply Chain Optimization", "Process Automation"]
+    },
+    {
+      industry: "Retail",
+      applications: ["Demand Forecasting", "Personalized Marketing", "Inventory Management", "Customer Behavior Analysis"]
     }
   ];
 
@@ -140,33 +120,33 @@ export default function CybersecurityServices() {
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Cybersecurity Services
+              AI Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced security solutions to protect your business from evolving cyber threats
+              Cutting-edge artificial intelligence solutions to transform your business
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              From zero-trust architecture to threat detection and compliance management, 
-              we provide comprehensive cybersecurity solutions that keep your business secure.
+              From machine learning to natural language processing, computer vision to predictive analytics, 
+              we deliver AI solutions that drive innovation and competitive advantage.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Security Services Grid */}
+      {/* AI Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Security Services
+              Our AI Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive cybersecurity solutions designed for modern threats
+              Comprehensive artificial intelligence solutions designed for enterprise success
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityServices.map((service, index) => (
+            {aiServices.map((service, index) => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
@@ -195,52 +175,15 @@ export default function CybersecurityServices() {
         </div>
       </section>
 
-      {/* Security Solutions Section */}
+      {/* Benefits Section */}
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Solutions
+              Why Choose Our AI Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive security coverage across all aspects of your business
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securitySolutions.map((solution, index) => (
-              <motion.div
-                key={index}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-xl font-bold text-cyan-400 mb-4">{solution.category}</h3>
-                <ul className="space-y-2">
-                  {solution.solutions.map((item, idx) => (
-                    <li key={idx} className="text-sm text-gray-300 flex items-center">
-                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Security Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive protection backed by expertise and innovation
+              Discover the advantages of partnering with Zion Tech Group for your AI initiatives
             </p>
           </div>
           
@@ -267,14 +210,51 @@ export default function CybersecurityServices() {
         </div>
       </section>
 
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              AI solutions that drive innovation across diverse industries
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-xl font-bold text-cyan-400 mb-4">{useCase.industry}</h3>
+                <ul className="space-y-2">
+                  {useCase.applications.map((app, idx) => (
+                    <li key={idx} className="text-sm text-gray-300 flex items-center">
+                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
+                      {app}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Secure Your Business?
+            Ready to Harness the Power of AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our cybersecurity solutions can protect your organization
+            Let's discuss how our AI solutions can transform your business and drive innovation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
