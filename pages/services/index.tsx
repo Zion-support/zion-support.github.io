@@ -52,6 +52,7 @@ import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
 import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
 import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
 import { real2028ServiceExpansions } from '../../data/real-2028-service-expansions';
+<<<<<<< HEAD
 import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
 import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
 import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
@@ -72,6 +73,9 @@ import { real2026Q4ExpansionsV3 } from '../../data/real-2026-q4-expansions-v3';
 import { real2036InnovativeServices } from '../../data/real-2036-innovative-services';
 import { real2036SpecializedServices } from '../../data/real-2036-specialized-services';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917e
+=======
+import { real2029ServiceAdditions } from '../../data/real-2029-service-additions';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
 
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -129,6 +133,7 @@ export default function ServicesIndexPage() {
       real2026Q4NewServices as unknown[],
       real2027Q1Additions as unknown[],
       real2027Q2Additions as unknown[],
+<<<<<<< HEAD
       real2027Q3Additions as unknown[],
       real2028ServiceExpansions as unknown[],
       real2029Q1Additions as unknown[],
@@ -151,6 +156,11 @@ export default function ServicesIndexPage() {
     )
     .concat(real2036ServiceExpansions as unknown[]);
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917e
+=======
+      real2028ServiceExpansions as unknown[],
+      real2029ServiceAdditions as unknown[]
+    );
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
   const byCategory: Record<string, unknown[]> = {};
 =======
   const all = (enhancedRealMicroSaasServices as any[])

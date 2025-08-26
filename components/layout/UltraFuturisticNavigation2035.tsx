@@ -294,10 +294,17 @@ const navigationItems: NavigationItem[] = [
     badge: 'New',
     children: [
       { name: 'AI & Data', href: '/services#ai', description: 'AI, data, ML services' },
+<<<<<<< HEAD
       { name: 'Developer Tools', href: '/services#developer-tools', description: 'Dev productivity & tooling' },
       { name: 'Cloud & FinOps', href: '/services#cloud', description: 'Cloud, cost, platform' },
       { name: 'Observability', href: '/services#observability', description: 'Monitoring & telemetry' },
       { name: 'Quality & Monitoring', href: '/services#quality', description: 'QA, testing, reliability' },
+=======
+      { name: 'Developer Tools', href: '/services#developer-tools', description: 'Dev tools & growth' },
+      { name: 'Cloud & FinOps', href: '/services#cloud', description: 'Cloud, cost, platform' },
+      { name: 'Observability', href: '/services#observability', description: 'Monitoring & telemetry' },
+      { name: 'Quality & Monitoring', href: '/services#quality', description: 'Quality & testing' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaa8
       { name: 'AI Evaluation Orchestrator', href: '/ai-evaluation-orchestrator', description: 'Automated LLM evals' },
       { name: 'SEO Automation Suite', href: '/seo-automation-suite', description: 'Technical SEO automation' },
       { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent', description: 'Agentless discovery' },
