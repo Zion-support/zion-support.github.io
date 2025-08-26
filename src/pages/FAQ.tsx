@@ -119,7 +119,7 @@ export default function FAQ() {
     )
   })).filter(category => category.questions.length > 0);
 
-  const toggleCategory = (title: string) => {
+  const toggleCategory = (title) => {
     setExpandedCategory(expandedCategory === title ? null : title);
   };
 

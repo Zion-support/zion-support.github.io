@@ -110,7 +110,7 @@ export default function Blog() {
     return matchesSearch && matchesCategory;
   });
 
-  const formatDate = (dateString: string) => {
+      const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
