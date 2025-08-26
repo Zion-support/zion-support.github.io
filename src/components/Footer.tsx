@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/company/ziontechgroup',
+      href: 'https://www.linkedin.com/company/ziontechgroup',
       icon: (
         <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.032-3.047-1.033 0-1.191.805-1.191 2.951v5.665H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
     },
     {
       name: 'YouTube',
-      href: 'https://youtube.com/@ziontechgroup',
+      href: 'https://www.youtube.com/@ziontechgroup',
       icon: (
         <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
           <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
@@ -45,14 +45,25 @@ const Footer: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'Services',
+      title: 'AI Services',
       links: [
-        { name: 'AI Solutions', href: '/services' },
-        { name: 'Cloud & DevOps', href: '/services' },
-        { name: 'Cybersecurity', href: '/services' },
-        { name: 'Digital Transformation', href: '/services' },
-        { name: 'Web Development', href: '/services' },
-        { name: 'Data Analytics', href: '/services' }
+        { name: 'AI Analytics', href: '/ai-autonomous-analytics' },
+        { name: 'AI Automation', href: '/ai-autonomous-automation' },
+        { name: 'AI Security', href: '/ai-autonomous-security' },
+        { name: 'AI Development', href: '/ai-autonomous-development' },
+        { name: 'AI Research', href: '/ai-autonomous-research' },
+        { name: 'AI Innovation', href: '/ai-autonomous-innovation' }
+      ]
+    },
+    {
+      title: 'Core Services',
+      links: [
+        { name: 'AI Solutions', href: '/services/ai' },
+        { name: 'Cloud & DevOps', href: '/services/cloud' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Infrastructure', href: '/services/infrastructure' },
+        { name: 'Consulting', href: '/services/consulting' },
+        { name: 'Digital Transformation', href: '/services/transformation' }
       ]
     },
     {
@@ -62,32 +73,28 @@ const Footer: React.FC = () => {
         { name: 'Our Team', href: '/about' },
         { name: 'Careers', href: '/careers' },
         { name: 'Blog', href: '/blog' },
-        { name: 'News', href: '/news' },
-        { name: 'Press Kit', href: '/press' }
+        { name: 'Contact', href: '/contact' },
+        { name: 'Pricing', href: '/comprehensive-pricing-2025' }
       ]
     },
     {
-      title: 'Support',
+      title: 'Resources',
       links: [
-        { name: 'Contact Us', href: '/contact' },
-        { name: 'Help Center', href: '/help' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Status Page', href: '/status' },
-        { name: 'Support Portal', href: '/support' }
-      ]
-    },
-    {
-      title: 'Legal',
-      links: [
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'GDPR Compliance', href: '/gdpr' },
-        { name: 'Security', href: '/security' },
-        { name: 'Compliance', href: '/compliance' }
+        { name: 'Services Showcase', href: '/services-showcase' },
+        { name: 'Innovative Services 2025', href: '/innovative-services-2025' },
+        { name: 'Comprehensive Pricing', href: '/comprehensive-pricing' },
+        { name: 'AI Consumer Research', href: '/ai-consumer-willingness-to-try' },
+        { name: 'Technology Trends', href: '/blog' },
+        { name: 'Case Studies', href: '/services' }
       ]
     }
+  ];
+
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/privacy' },
+    { name: 'GDPR Compliance', href: '/privacy' }
   ];
 
   return (
@@ -103,7 +110,7 @@ const Footer: React.FC = () => {
               </h3>
               <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
                 Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. 
-                We help businesses thrive in the digital age.
+                We help businesses thrive in the digital age with cutting-edge AI autonomous systems and comprehensive technology solutions.
               </p>
             </div>
             
@@ -176,7 +183,7 @@ const Footer: React.FC = () => {
           <div className="max-w-md">
             <h4 className="text-lg font-semibold mb-3 text-white">Stay Updated</h4>
             <p className="text-gray-300 mb-4 text-sm">
-              Get the latest insights on technology trends and industry updates.
+              Get the latest insights on technology trends, AI innovations, and industry updates.
             </p>
             <div className="flex">
               <input
@@ -199,14 +206,20 @@ const Footer: React.FC = () => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
-                Cookie Policy
+              {legalLinks.map((link) => (
+                <Link 
+                  key={link.name}
+                  to={link.href} 
+                  className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <Link 
+                to="/sitemap" 
+                className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
+              >
+                Site Map
               </Link>
             </div>
           </div>
