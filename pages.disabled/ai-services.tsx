@@ -3,113 +3,30 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Brain, Cpu, Rocket, Shield, Zap, Globe, Star, Users,
-  Target, Microscope, Atom, Database, Lock, Cloud, 
-  BarChart3, Settings, Eye, Code, Palette, Layers,
-  Network, Server, ShieldCheck, ZapIcon, GlobeIcon, 
-  StarIcon, TrendingUpIcon, UsersIcon, CheckCircleIcon, 
-  ArrowRightIcon, CpuIcon, DollarSign, Phone, 
-  ArrowRight, Mail, MapPin, Dna, HelpCircle,
-  Sparkles, Crown, Infinity, Target as TargetIcon, 
-  Award, MessageCircle, ChevronRight
-=======
   Brain, Zap, Shield, Sparkles, Atom, 
   Cpu, Target, Users, ArrowRight, Star,
   CheckCircle, Clock, DollarSign, TrendingUp
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
 } from 'lucide-react';
-
 const aiServices = [
   {
-<<<<<<< HEAD
-    id: 'ai-consciousness-evolution-pro',
-    name: 'AI Consciousness Evolution Pro',
-    description: 'Advanced AI consciousness development platform with emotional intelligence and self-awareness capabilities',
-    features: [
-      'Emotional Intelligence Framework',
-      'Consciousness Mapping',
-      'Self-Learning Algorithms',
-      'Ethical Decision Making',
-      'Human-AI Collaboration Tools'
-    ],
-    pricing: '$15,000/month',
-=======
     name: 'AI Consciousness Evolution Pro',
     href: '/ai-consciousness-evolution-pro',
     description: 'Advanced AI consciousness development and emotional intelligence systems',
     features: ['Emotional AI', 'Consciousness Simulation', 'Ethical Framework', 'Human-AI Interaction'],
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
     isNew: true,
     badge: 'New',
     color: 'from-violet-500 to-purple-600'
   },
   {
-<<<<<<< HEAD
-    id: 'quantum-ai-fusion-platform',
-    name: 'Quantum AI Fusion Platform',
-    description: 'Revolutionary quantum-AI hybrid computing platform for unprecedented processing power',
-    features: [
-      'Quantum-AI Hybrid Processing',
-      'Real-time Learning',
-      'Quantum Neural Networks',
-      'Advanced Pattern Recognition',
-      'Scalable Architecture'
-    ],
-    pricing: '$25,000/month',
-=======
     name: 'Quantum AI Fusion Platform',
     href: '/quantum-ai-fusion-platform',
     description: 'Revolutionary quantum-AI hybrid computing platform',
     features: ['Quantum Processing', 'AI Acceleration', 'Hybrid Algorithms', 'Real-time Learning'],
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
     isHot: true,
     badge: 'Hot',
     color: 'from-indigo-500 to-blue-600'
   },
   {
-<<<<<<< HEAD
-    id: 'ai-autonomous-ecosystem',
-    name: 'AI Autonomous Ecosystem',
-    description: 'Self-managing AI systems that operate independently while maintaining human oversight',
-    features: [
-      'Autonomous Decision Making',
-      'Self-Optimization',
-      'Predictive Maintenance',
-      'Resource Management',
-      'Performance Monitoring'
-    ],
-    pricing: '$18,000/month',
-    color: 'from-cyan-500 to-teal-600'
-  },
-  {
-    id: 'ai-ethics-governance',
-    name: 'AI Ethics & Governance',
-    description: 'Comprehensive framework for ethical AI development and governance',
-    features: [
-      'Ethical Guidelines',
-      'Bias Detection',
-      'Transparency Tools',
-      'Compliance Monitoring',
-      'Audit Trails'
-    ],
-    pricing: '$12,000/month',
-    color: 'from-green-500 to-emerald-600'
-  },
-  {
-    id: 'ai-creativity-studio-pro',
-    name: 'AI Creativity Studio Pro',
-    description: 'AI-powered creative platform for content generation and artistic collaboration',
-    features: [
-      'Content Generation',
-      'Creative Collaboration',
-      'Style Transfer',
-      'Multi-Media Support',
-      'Brand Consistency'
-    ],
-    pricing: '$20,000/month',
-=======
     name: 'AI Autonomous Ecosystem',
     href: '/ai-autonomous-ecosystem',
     description: 'Self-managing AI systems with autonomous decision-making',
@@ -128,35 +45,14 @@ const aiServices = [
     href: '/ai-creativity-studio-pro',
     description: 'AI-powered creative platform for content generation and design',
     features: ['Content Creation', 'Design Generation', 'Creative Collaboration', 'Style Transfer'],
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
     isNew: true,
     badge: 'New',
     color: 'from-pink-500 to-rose-600'
   }
 ];
-
 const benefits = [
   {
     icon: <Brain className="w-8 h-8 text-cyan-400" />,
-<<<<<<< HEAD
-    title: 'Advanced Intelligence',
-    description: 'State-of-the-art AI models with consciousness and emotional intelligence'
-  },
-  {
-    icon: <Zap className="w-8 h-8 text-blue-400" />,
-    title: 'Lightning Fast',
-    description: 'Quantum-enhanced processing for real-time AI operations'
-  },
-  {
-    icon: <Shield className="w-8 h-8 text-green-400" />,
-    title: 'Secure & Ethical',
-    description: 'Built-in security and ethical frameworks for responsible AI'
-  },
-  {
-    icon: <Rocket className="w-8 h-8 text-purple-400" />,
-    title: 'Future-Ready',
-    description: 'Cutting-edge technology that evolves with your business needs'
-=======
     title: 'Advanced Consciousness',
     description: 'Develop AI systems with genuine understanding and emotional intelligence'
   },
@@ -174,38 +70,25 @@ const benefits = [
     icon: <Sparkles className="w-8 h-8 text-purple-400" />,
     title: 'Innovative Solutions',
     description: 'Cutting-edge AI technologies that push the boundaries of possibility'
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
   }
 ];
-
 export default function AIServices() {
   return (
     <>
       <Head>
         <title>AI & Consciousness Services - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Revolutionary AI consciousness and emotional intelligence services. Advanced AI solutions for the future of technology." />
-        <meta name="keywords" content="AI consciousness, emotional intelligence, quantum AI, autonomous AI, AI ethics, AI creativity" />
-=======
         <meta name="description" content="Revolutionary AI consciousness and emotional intelligence services. Advanced AI systems with ethical frameworks and quantum-enhanced processing." />
         <meta name="keywords" content="AI consciousness, emotional AI, quantum AI, autonomous AI, AI ethics, AI creativity" />
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
         <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Head>
-
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
-<<<<<<< HEAD
-          <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-black to-indigo-900/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
   Brain, Zap, Target, Users, 
   Shield, Rocket, Globe, Sparkles,
   Check, ArrowRight, Star, Award,
   Cpu, Database, Network, Lock, Eye
 } from 'lucide-react';
-
 export default function AiServices() {
   const services = [
     {
@@ -299,7 +182,6 @@ export default function AiServices() {
       link: '/ai-healthcare-diagnostics-pro'
     }
   ];
-
   const capabilities = [
     {
       title: 'Natural Language Processing',
@@ -326,7 +208,6 @@ export default function AiServices() {
       examples: ['Process Automation', 'Quality Assurance', 'Logistics', 'Manufacturing']
     }
   ];
-
   const useCases = [
     {
       industry: 'Healthcare',
@@ -349,7 +230,6 @@ export default function AiServices() {
       icon: <Globe className="w-6 h-6" />
     }
   ];
-
   return (
     <>
       <Head>
@@ -358,32 +238,18 @@ export default function AiServices() {
         <meta name="keywords" content="AI services, artificial intelligence, AI consciousness, AI ethics, AI creativity, AI decision making, AI legal analysis, AI healthcare" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
           <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-purple-500/5 to-indigo-500/10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.1),transparent_50%)]" />
-          
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className="text-center"
-            >
-<<<<<<< HEAD
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-violet-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-                AI & Consciousness
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Revolutionary AI consciousness and emotional intelligence solutions that redefine the boundaries of artificial intelligence
-=======
             >
               <div className="flex items-center justify-center space-x-2 mb-6">
                 <Brain className="w-12 h-12 text-violet-400" />
@@ -394,36 +260,23 @@ export default function AiServices() {
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Pioneering the future of autonomous technology and AI-driven innovation. 
                 We deliver cutting-edge solutions that transform businesses and accelerate growth.
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
-<<<<<<< HEAD
-                  className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-200 hover:scale-105"
-=======
                   className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-xl font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-200 hover:scale-105"
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
                 >
                   Get Started
                 </Link>
                 <Link
                   href="/comprehensive-services-showcase-2025"
-<<<<<<< HEAD
-                  className="px-8 py-4 border border-violet-500/50 text-violet-400 rounded-lg font-semibold hover:bg-violet-500/10 transition-all duration-200"
-                >
-                  View All Services
-                </Link>
-=======
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6">
                 <Brain className="w-4 h-4 mr-2" />
                 AI Services
               </div>
-              
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500 bg-clip-text text-transparent mb-6">
                 AI Services
               </h1>
-              
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Revolutionary artificial intelligence services that push the boundaries of what's possible. 
                 From consciousness development to healthcare diagnostics, we're shaping the future of AI.
@@ -431,7 +284,6 @@ export default function AiServices() {
             </motion.div>
           </div>
         </section>
-
         {/* AI Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -442,7 +294,6 @@ export default function AiServices() {
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Our AI Services</h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
                   <motion.div
@@ -455,10 +306,8 @@ export default function AiServices() {
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-4`}>
                       {service.icon}
                     </div>
-                    
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
-                    
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-400">
@@ -467,52 +316,32 @@ export default function AiServices() {
                         </li>
                       ))}
                     </ul>
-                    
                     <Link href={service.link} className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </motion.div>
                 ))}
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
                   className="px-8 py-4 border border-violet-500/40 text-violet-300 rounded-xl font-semibold hover:bg-violet-500/10 transition-all duration-200"
                 >
                   View All Services
                 </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
               </div>
             </motion.div>
           </div>
         </section>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 bg-gray-900/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
         {/* AI Capabilities */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
         {/* Services Grid */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Services?</h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Experience the future of AI with our cutting-edge consciousness and emotional intelligence platforms
-=======
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -523,7 +352,6 @@ export default function AiServices() {
                 Explore our comprehensive suite of AI consciousness and emotional intelligence solutions
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
                 <motion.div
@@ -545,7 +373,6 @@ export default function AiServices() {
                         {service.badge}
                       </span>
                     )}
-                    
                     <div className="mb-6">
                       <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                         <Brain className="w-8 h-8 text-white" />
@@ -557,7 +384,6 @@ export default function AiServices() {
                         {service.description}
                       </p>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features:</h4>
                       <div className="space-y-2">
@@ -569,7 +395,6 @@ export default function AiServices() {
                         ))}
                       </div>
                     </div>
-
                     <Link
                       href={service.href}
                       className="inline-flex items-center space-x-2 text-violet-400 hover:text-violet-300 font-semibold group-hover:translate-x-1 transition-all duration-200"
@@ -583,7 +408,6 @@ export default function AiServices() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 relative bg-gradient-to-br from-gray-900/30 to-gray-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -599,26 +423,11 @@ export default function AiServices() {
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Experience the future of AI with our cutting-edge consciousness and emotional intelligence solutions
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
-<<<<<<< HEAD
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center p-6 rounded-xl bg-gray-800/50 border border-gray-700/50 hover:border-violet-500/50 transition-all duration-200"
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-800 rounded-full mb-4">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-400">{benefit.description}</p>
-=======
                   key={benefit.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -635,22 +444,14 @@ export default function AiServices() {
                   <p className="text-gray-400 leading-relaxed">
                     {benefit.description}
                   </p>
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
-        {/* Services Grid */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">AI Capabilities</h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {capabilities.map((capability, index) => (
                   <motion.div
@@ -666,9 +467,7 @@ export default function AiServices() {
                       </div>
                       <h3 className="text-xl font-bold text-white">{capability.title}</h3>
                     </div>
-                    
                     <p className="text-gray-300 mb-4">{capability.description}</p>
-                    
                     <div className="space-y-2">
                       {capability.examples.map((example, exampleIndex) => (
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-400">
@@ -683,78 +482,16 @@ export default function AiServices() {
             </motion.div>
           </div>
         </section>
-
         {/* Industry Use Cases */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Our AI Services</h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Discover our comprehensive suite of AI consciousness and intelligence solutions
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {aiServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 hover:border-violet-500/50 transition-all duration-200 hover:shadow-2xl hover:shadow-violet-500/10"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-white">{service.name}</h3>
-                    {service.badge && (
-                      <span className={`px-3 py-1 rounded-full text-sm font-bold ${
-                        service.isNew ? 'bg-green-500 text-white' :
-                        service.isHot ? 'bg-red-500 text-white' :
-                        'bg-blue-500 text-white'
-                      }`}>
-                        {service.badge}
-                      </span>
-                    )}
-                  </div>
-                  
-                  <p className="text-gray-400 mb-6 text-lg">{service.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-300">
-                          <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-violet-400">{service.pricing}</div>
-                    <Link
-                      href={`/contact?service=${service.id}`}
-                      className="px-6 py-3 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-200 hover:scale-105 flex items-center"
-                    >
-                      Get Quote
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-=======
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Industry Applications</h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {useCases.map((useCase, index) => (
                   <motion.div
@@ -767,9 +504,7 @@ export default function AiServices() {
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                       {useCase.icon}
                     </div>
-                    
                     <h3 className="text-lg font-bold text-white mb-4">{useCase.industry}</h3>
-                    
                     <div className="space-y-2">
                       {useCase.applications.map((application, appIndex) => (
                         <div key={appIndex} className="text-sm text-gray-400">
@@ -783,7 +518,6 @@ export default function AiServices() {
             </motion.div>
           </div>
         </section>
-
         {/* Why Choose Our AI */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
@@ -794,7 +528,6 @@ export default function AiServices() {
               className="text-center"
             >
               <h2 className="text-3xl font-bold text-white mb-8">Why Choose Our AI Services?</h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   {
@@ -832,36 +565,19 @@ export default function AiServices() {
                 ))}
               </div>
             </motion.div>
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
           </div>
         </section>
-
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 bg-gradient-to-r from-violet-900/20 to-indigo-900/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            >
-<<<<<<< HEAD
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Experience the Future of AI?
-              </h2>
-              <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
-                Join the revolution in AI consciousness and emotional intelligence. Contact us today to get started with your AI transformation journey.
-=======
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
@@ -871,22 +587,10 @@ export default function AiServices() {
               <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 Join the revolution in AI consciousness and emotional intelligence. 
                 Transform your business with our cutting-edge solutions.
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact"
-<<<<<<< HEAD
-                  className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-200 hover:scale-105"
-                >
-                  Contact Us
-                </Link>
-                <Link
-                  href="/comprehensive-services-showcase-2025"
-                  className="px-8 py-4 border border-violet-500/50 text-violet-400 rounded-lg font-semibold hover:bg-violet-500/10 transition-all duration-200"
-                >
-                  View All Services
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience the Future of AI?
               </h2>
@@ -894,7 +598,6 @@ export default function AiServices() {
                 Discover how our revolutionary AI services can transform your business and unlock new possibilities. 
                 Start your AI journey today.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200">
                   Get Started
@@ -902,7 +605,6 @@ export default function AiServices() {
                 </Link>
                 <Link href="/case-studies" className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
                   View Case Studies
->>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
                   className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-xl font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-200 hover:scale-105"
                 >
@@ -913,7 +615,6 @@ export default function AiServices() {
                   className="px-8 py-4 border border-violet-500/40 text-violet-300 rounded-xl font-semibold hover:bg-violet-500/10 transition-all duration-200"
                 >
                   Explore All Services
->>>>>>> origin/cursor/website-audit-and-enhancement-5aba
                 </Link>
               </div>
             </motion.div>

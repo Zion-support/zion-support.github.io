@@ -1,15 +1,8 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 import React from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -21,10 +14,6 @@ import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { PricingSection } from "@/components/PricingSection";
 import { TechSolutionsSection } from "@/components/TechSolutionsSection";
@@ -37,7 +26,6 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
-
 export default function Home() {
   return (
     <>
@@ -47,7 +35,6 @@ export default function Home() {
         canonical="/"
         url="https://ziontechgroup.com"
       />
-      
       <HeroSection />
       <QuickAccess />
       <AIServicesShowcase />
@@ -71,13 +58,9 @@ export default function Home() {
       <ITServiceRequestHero />
       <FloatingCTA />
     </>
-<<<<<<< HEAD
-=======
 import { AnimatedBackground, FloatingParticles } from "@/components/ui/AnimatedBackground";
-
 // Lazy load heavy components for better performance
 const InteractiveServiceShowcase = React.lazy(() => import('@/components/InteractiveServiceShowcase'));
-
 // Animation variants for smooth performance
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -89,7 +72,6 @@ const containerVariants = {
     }
   }
 };
-
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -101,7 +83,6 @@ const itemVariants = {
     }
   }
 };
-
 // Enhanced service categories with better descriptions
 const serviceCategories = [
   {
@@ -153,7 +134,6 @@ const serviceCategories = [
     color: "from-zion-orange to-zion-green"
   }
 ];
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
@@ -163,17 +143,13 @@ export default function Home() {
         keywords="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting, Zion Tech Group"
         canonical="https://ziontechgroup.com/"
       />
-
       {/* Enhanced Animated Background */}
       <AnimatedBackground variant="particles" />
       <FloatingParticles count={20} />
-
       {/* IT Service Request Hero - Enhanced */}
       <ITServiceRequestHero />
-
       {/* Main Hero Section */}
       <HeroSection />
-      
       {/* Enhanced Service Categories Overview */}
       <motion.section 
         className="py-24 bg-gradient-to-b from-white/5 to-white/10 backdrop-blur-sm relative"
@@ -184,7 +160,6 @@ export default function Home() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10" />
-        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div className="text-center mb-20" variants={itemVariants}>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -194,7 +169,6 @@ export default function Home() {
               Explore our comprehensive range of technology solutions designed to transform your business and drive innovation
             </p>
           </motion.div>
-          
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
             variants={containerVariants}
@@ -235,7 +209,6 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.section>
-
       {/* Interactive Service Showcase - Lazy Loaded */}
       <Suspense fallback={
         <div className="py-20 bg-background">
@@ -251,7 +224,6 @@ export default function Home() {
       }>
         <InteractiveServiceShowcase />
       </Suspense>
-
       {/* Enhanced Featured Services Section */}
       <motion.section 
         className="py-24 bg-gradient-to-b from-zion-slate-dark to-background"
@@ -269,7 +241,6 @@ export default function Home() {
               Discover our most popular and innovative technology solutions
             </p>
           </motion.div>
-          
           <motion.div 
             className="grid grid-cols-1 lg:grid-cols-2 gap-12"
             variants={containerVariants}
@@ -303,7 +274,6 @@ export default function Home() {
                 </Link>
               </div>
             </motion.div>
-
             {/* Cloud & DevOps */}
             <motion.div variants={itemVariants} className="group">
               <div className="bg-gradient-to-br from-zion-blue/20 to-zion-purple/20 backdrop-blur-md p-8 rounded-3xl border border-zion-blue/30 hover:border-zion-blue/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-blue/25">
@@ -333,33 +303,23 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.section>
-
       {/* Enhanced Quick Access Section */}
       <QuickAccess />
-
       {/* Enhanced Feature Highlights */}
       <FeatureHighlights />
-
       {/* Enhanced Feature CTAs */}
       <FeatureCTAs />
-
       {/* Enhanced Categories Section */}
       <CategoriesSection />
-
       {/* Enhanced Benefits Section */}
       <BenefitsSection />
-
       {/* Enhanced How It Works Section */}
       <HowItWorksSection />
-
       {/* Enhanced Featured Listings Section */}
       <FeaturedListingsSection />
-
       {/* Enhanced Newsletter Section */}
       <NewsletterSection />
     </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 }

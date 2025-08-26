@@ -1,33 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-=======
 import * as React from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 import React, { createContext, useContext, useState, ReactNode } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 interface LanguageContextType {
   language: string;
   setLanguage: (lang: string) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   t: (key: string) => string;
   isRTL: boolean;
 }
-
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-
 interface LanguageProviderProps {
   children: ReactNode;
 }
-
 export function LanguageProvider({ children }: LanguageProviderProps) {
   const [language, setLanguage] = useState('en');
-
   const translations: Record<string, Record<string, string>> = {
     en: {
       'welcome': 'Welcome',
@@ -42,20 +27,16 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       'contact_us': 'Contáctanos'
     }
   };
-
   const t = (key: string): string => {
     return translations[language]?.[key] || key;
   };
-
   const isRTL = language === 'ar' || language === 'he';
-
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
       {children}
     </LanguageContext.Provider>
   );
 }
-
 export function useLanguage(): LanguageContextType {
   const context = useContext(LanguageContext);
   if (!context) {
@@ -63,22 +44,16 @@ export function useLanguage(): LanguageContextType {
   }
   return context;
 }
-<<<<<<< HEAD
-=======
 }
-
 const LanguageContext = React.createContext<LanguageContextType | undefined>(undefined);
-
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = React.useState('en');
-
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   );
 };
-
 export const useLanguage = (): LanguageContextType => {
   const context = React.useContext(LanguageContext);
   if (context === undefined) {
@@ -86,6 +61,4 @@ export const useLanguage = (): LanguageContextType => {
   }
   return context;
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

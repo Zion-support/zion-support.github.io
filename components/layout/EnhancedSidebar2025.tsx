@@ -9,7 +9,6 @@ import {
   Award, Clock, Heart, Lightbulb, Users, FileText, 
   HelpCircle, BookOpen, Target, TrendingUp, Star
 } from 'lucide-react';
-
 interface SidebarItem {
   name: string;
   href: string;
@@ -23,7 +22,6 @@ interface SidebarItem {
   isPremium?: boolean;
   category?: string;
 }
-
 const sidebarSections = [
   {
     title: 'Revolutionary Services',
@@ -242,16 +240,13 @@ const sidebarSections = [
     ]
   }
 ];
-
 interface EnhancedSidebar2025Props {
   isOpen: boolean;
   onClose: () => void;
 }
-
 export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-
   const toggleSection = (sectionTitle: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(sectionTitle)) {
@@ -261,19 +256,12 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
     }
     setExpandedSections(newExpanded);
   };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const filteredServices = sidebarItems.flatMap(item =>
     item.children?.filter(child =>
       child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       child.description?.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   );
-<<<<<<< HEAD
-=======
   const toggleItem = (itemName: string) => {
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(itemName)) {
@@ -283,24 +271,18 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
     }
     setExpandedItems(newExpanded);
   };
-
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
     }
-
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
-
   const isActive = (href: string) => router.pathname === href;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
   return (
     <>
       {/* Backdrop */}
@@ -316,7 +298,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
           />
         )}
       </AnimatePresence>
-
       {/* Sidebar */}
       <motion.div
         initial={{ x: '-100%' }}
@@ -348,7 +329,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
               <X className="w-5 h-5 text-gray-400" />
             </button>
           </div>
-
           {/* Contact Bar */}
           <div className="space-y-3">
             <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">
@@ -361,7 +341,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             </div>
           </div>
         </div>
-
         {/* Navigation Content */}
         <div className="p-6 space-y-6">
           {/* Home Link */}
@@ -373,7 +352,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             <Home className="w-5 h-5 text-cyan-400" />
             <span className="text-white font-semibold">Home</span>
           </Link>
-
           {/* Service Sections */}
           {sidebarSections.map((section, sectionIndex) => (
             <div key={sectionIndex} className="space-y-3">
@@ -393,7 +371,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                   }`} 
                 />
               </button>
-
               <AnimatePresence>
                 {expandedSections.has(section.title) && (
                   <motion.div
@@ -426,7 +403,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                             />
                           )}
                         </button>
-
                         {/* Sub-items */}
                         {item.subItems && item.subItems.length > 0 && (
                           <AnimatePresence>
@@ -462,7 +438,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
               </AnimatePresence>
             </div>
           ))}
-
           {/* Quick Stats */}
           <div className="pt-6 border-t border-gray-800/50">
             <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Quick Stats</h4>
@@ -477,7 +452,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
               </div>
             </div>
           </div>
-
           {/* Contact CTA */}
           <div className="pt-6 border-t border-gray-800/50">
             <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30">

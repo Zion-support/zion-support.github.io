@@ -3,24 +3,16 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, Search as SearchIcon, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles as SparklesIcon, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain as BrainIcon, Atom as AtomIcon, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon2, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as CodeIcon2, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon2, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon2, Atom as AtomIcon2, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
-
-
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-<<<<<<< HEAD
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-=======
 import { innovative2026MicroSaasV2Services } from '../data/innovative-2026-micro-saas-v2';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
 import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
-
 export default function Services2026ShowcasePage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
-
   // Map service variants to supported card variants
   const mapServiceVariantToCardVariant = (serviceVariant: string): 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'enterprise-futuristic' | 'quantum-futuristic' | 'holographic-futuristic' | 'quantum-iot' | 'quantum-logistics' | 'quantum-financial' | 'quantum-energy' | 'quantum-neural' | 'quantum-cyberpunk' => {
     if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 'quantum-advanced';
@@ -54,25 +46,18 @@ export default function Services2026ShowcasePage() {
     if (serviceVariant.includes('analytics')) return 'neural';
     return 'default';
   };
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   // Combine all 2026 services
   const all2026Services = [
-<<<<<<< HEAD
-    ...innovative2026MicroSaasServicesV2,
-=======
     ...innovative2026MicroSaasV2Services,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ...emergingTech2026ServicesV2,
     ...enterpriseIT2026ServicesV2
   ];
-
   // Enhanced categories for 2026
   const categories = [
     { id: 'all', name: 'All 2026 Services', icon: '🚀', count: all2026Services.length },
@@ -81,7 +66,6 @@ export default function Services2026ShowcasePage() {
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length },
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: all2026Services.filter(s => s.category.includes('SaaS')).length }
   ];
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
@@ -89,7 +73,6 @@ export default function Services2026ShowcasePage() {
     { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
   ];
-
   const sortOptions = [
     { id: 'name', name: 'Name A-Z' },
     { id: 'price-low', name: 'Price Low to High' },
@@ -97,11 +80,9 @@ export default function Services2026ShowcasePage() {
     { id: 'popularity', name: 'Most Popular' },
     { id: 'newest', name: 'Newest First' }
   ];
-
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = all2026Services;
-
     // Search filter
     if (searchTerm) {
       filtered = filtered.filter(service =>
@@ -110,7 +91,6 @@ export default function Services2026ShowcasePage() {
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
@@ -121,7 +101,6 @@ export default function Services2026ShowcasePage() {
         return true;
       });
     }
-
     // Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
@@ -133,7 +112,6 @@ export default function Services2026ShowcasePage() {
         return true;
       });
     }
-
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -149,14 +127,11 @@ export default function Services2026ShowcasePage() {
           return a.name.localeCompare(b.name);
       }
     });
-
     return filtered;
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, all2026Services]);
-
   return (
     <UltraFuturisticBackground 
       intensity="high" 
-      
     >
       <div className="min-h-screen">
         <Head>
@@ -171,7 +146,6 @@ export default function Services2026ShowcasePage() {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase" />
         </Head>
-
         {/* Hero Section */}
         <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
@@ -201,7 +175,6 @@ export default function Services2026ShowcasePage() {
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filters */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -216,7 +189,6 @@ export default function Services2026ShowcasePage() {
                   onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-gray-800/50 border border-gray-600/50 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
-
               {/* Filters */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 {/* Category Filter */}
@@ -232,7 +204,6 @@ export default function Services2026ShowcasePage() {
                     ))}
                   </select>
                 </div>
-
                 {/* Price Range Filter */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
@@ -246,7 +217,6 @@ export default function Services2026ShowcasePage() {
                     ))}
                   </select>
                 </div>
-
                 {/* Sort Options */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
@@ -261,7 +231,6 @@ export default function Services2026ShowcasePage() {
                   </select>
                 </div>
               </div>
-
               {/* Results Count */}
               <div className="text-center">
                 <p className="text-gray-400">
@@ -272,7 +241,6 @@ export default function Services2026ShowcasePage() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -314,7 +282,6 @@ export default function Services2026ShowcasePage() {
                               </div>
                             )}
                           </div>
-
                           {/* Service Info */}
                           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                             {service.name}
@@ -322,7 +289,6 @@ export default function Services2026ShowcasePage() {
                           <p className="text-gray-300 text-sm mb-4 flex-grow">
                             {service.description}
                           </p>
-
                           {/* Price */}
                           <div className="mb-4">
                             <div className="text-2xl font-bold text-white">
@@ -333,7 +299,6 @@ export default function Services2026ShowcasePage() {
                               {service.trialDays}-day free trial • Setup in {service.setupTime}
                             </div>
                           </div>
-
                           {/* Features */}
                           <div className="mb-6">
                             <div className="text-sm text-gray-300 mb-2">Key Features:</div>
@@ -351,7 +316,6 @@ export default function Services2026ShowcasePage() {
                               )}
                             </div>
                           </div>
-
                           {/* Stats */}
                           <div className="grid grid-cols-2 gap-4 mb-6 text-xs">
                             <div className="text-center">
@@ -366,7 +330,6 @@ export default function Services2026ShowcasePage() {
                               </div>
                             </div>
                           </div>
-
                           {/* CTA */}
                           <div className="mt-auto">
                             <Link href={service.link}>
@@ -385,7 +348,6 @@ export default function Services2026ShowcasePage() {
             </AnimatePresence>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

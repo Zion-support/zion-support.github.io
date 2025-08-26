@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { MessageCircle, X, ChevronUp, Zap } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-export function FloatingCTA() {
-    const [isVisible, setIsVisible] = useState(false);
-    const [isExpanded, setIsExpanded] = useState(false);
-    const { t } = useTranslation();
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollTop = window.pageYOffset;
-            setIsVisible(scrollTop > 300);
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';
@@ -24,7 +8,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     useEffect(() => {
         const handleScroll = () => {
             setShowScrollTop(window.scrollY > 400);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -32,46 +15,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
-<<<<<<< HEAD
-    const containerVariants = {
-        hidden: { scale: 0, opacity: 0 },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-                type: "spring",
-                stiffness: 260,
-                damping: 20
-            }
-        },
-        hover: {
-            scale: 1.1,
-            transition: {
-                duration: 0.2
-            }
-        }
-    };
-    const expandVariants = {
-        hidden: {
-            scale: 0.8,
-            opacity: 0,
-            y: 20
-        },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            y: 0,
-            transition: {
-                type: "spring",
-                stiffness: 300,
-                damping: 25
-            }
-        }
-    };
-    if (!isVisible)
-        return null;
-    return (_jsxs("div", { className: "fixed bottom-6 right-6 z-50", children: [_jsx(AnimatePresence, { children: isExpanded && (_jsxs(motion.div, { className: "absolute bottom-20 right-0 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-2xl p-6 shadow-2xl backdrop-blur-md", variants: expandVariants, initial: "hidden", animate: "visible", exit: "hidden", children: [_jsxs("div", { className: "flex items-center justify-between mb-4", children: [_jsx("h3", { className: "text-white font-semibold text-lg", children: "Quick Actions" }), _jsx("button", { onClick: () => setIsExpanded(false), className: "text-zion-slate-light hover:text-white transition-colors", children: _jsx(X, { className: "h-5 w-5" }) })] }), _jsxs("div", { className: "space-y-3", children: [_jsxs(Link, { to: "/match", className: "flex items-center gap-3 p-3 rounded-lg bg-zion-purple/20 hover:bg-zion-purple/30 transition-colors group", onClick: () => setIsExpanded(false), children: [_jsx("div", { className: "p-2 rounded-full bg-zion-purple/30 group-hover:scale-110 transition-transform", children: _jsx(Zap, { className: "h-4 w-4 text-zion-cyan" }) }), _jsxs("div", { className: "flex-1", children: [_jsx("p", { className: "text-white font-medium", children: "AI Talent Matcher" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "Find perfect matches instantly" })] })] }), _jsxs(Link, { to: "/contact", className: "flex items-center gap-3 p-3 rounded-lg bg-zion-cyan/20 hover:bg-zion-cyan/30 transition-colors group", onClick: () => setIsExpanded(false), children: [_jsx("div", { className: "p-2 rounded-full bg-zion-cyan/30 group-hover:scale-110 transition-transform", children: _jsx(MessageCircle, { className: "h-4 w-4 text-zion-purple" }) }), _jsxs("div", { className: "flex-1", children: [_jsx("p", { className: "text-white font-medium", children: "Get Support" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "24/7 expert assistance" })] })] })] }), _jsx("div", { className: "mt-4 pt-4 border-t border-zion-purple/20", children: _jsx("p", { className: "text-zion-slate-light text-sm text-center", children: "Need help? Our team is here for you" }) })] })) }), _jsxs("div", { className: "flex flex-col gap-3", children: [_jsx(motion.button, { onClick: scrollToTop, className: "w-14 h-14 bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center transition-all duration-300 group", variants: containerVariants, initial: "hidden", animate: "visible", whileHover: "hover", children: _jsx(ChevronUp, { className: "h-6 w-6 text-white group-hover:text-zion-cyan transition-colors" }) }), _jsx(motion.button, { onClick: () => setIsExpanded(!isExpanded), className: "w-14 h-14 bg-gradient-to-r from-zion-purple to-zion-purple-dark border border-zion-purple/30 hover:border-zion-purple/50 rounded-full shadow-lg hover:shadow-xl flex items-center justify-center transition-all duration-300 group", variants: containerVariants, initial: "hidden", animate: "visible", whileHover: "hover", children: _jsx(MessageCircle, { className: "h-6 w-6 text-white group-hover:text-zion-cyan transition-colors" }) })] })] }));
-=======
     const getPositionClasses = () => {
         switch (position) {
             case 'bottom-left':
@@ -118,7 +61,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                   <X className="w-5 h-5"/>
                 </button>
               </div>
-              
               <div className="space-y-3">
                 <Link to="/marketplace" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
                   <div className="w-10 h-10 bg-zion-cyan/10 rounded-lg flex items-center justify-center group-hover:bg-zion-cyan/20 transition-colors">
@@ -129,7 +71,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                     <div className="text-sm text-gray-500">Find AI services & talent</div>
                   </div>
                 </Link>
-                
                 <Link to="/contact" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
                   <div className="w-10 h-10 bg-zion-purple/10 rounded-lg flex items-center justify-center group-hover:bg-zion-purple/20 transition-colors">
                     <MessageCircle className="w-5 h-5 text-zion-purple"/>
@@ -139,7 +80,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                     <div className="text-sm text-gray-500">24/7 assistance</div>
                   </div>
                 </Link>
-                
                 <Link to="/signup" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
                   <div className="w-10 h-10 bg-zion-cyan-light/10 rounded-lg flex items-center justify-center group-hover:bg-zion-cyan-light/20 transition-colors">
                     <Users className="w-5 h-5 text-zion-cyan-light"/>
@@ -150,7 +90,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                   </div>
                 </Link>
               </div>
-              
               <div className="mt-4 pt-4 border-t border-gray-100">
                 <div className="text-xs text-gray-500 text-center">
                   Need help? <span className="text-zion-cyan cursor-pointer hover:underline">Chat with us</span>
@@ -175,7 +114,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 <X className="w-5 h-5"/>
               </button>
             </div>
-            
             <div className="space-y-3">
               <Link to="/marketplace" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
                 <div className="w-10 h-10 bg-zion-cyan/10 rounded-lg flex items-center justify-center group-hover:bg-zion-cyan/20 transition-colors">
@@ -186,7 +124,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                   <div className="text-sm text-gray-500">Find what you need</div>
                 </div>
               </Link>
-              
               <Link to="/contact" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
                 <div className="w-10 h-10 bg-zion-purple/10 rounded-lg flex items-center justify-center group-hover:bg-zion-purple/20 transition-colors">
                   <MessageCircle className="w-5 h-5 text-zion-purple"/>
@@ -197,7 +134,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 </div>
               </Link>
             </div>
-            
             <div className="mt-4 pt-4 border-t border-gray-100">
               <div className="text-xs text-gray-500 text-center">
                 Or start a conversation with our AI assistant
@@ -206,5 +142,4 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
           </motion.div>)}
       </AnimatePresence>
     </div>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

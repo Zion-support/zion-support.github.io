@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect, useRef, useCallback } from 'react';
-=======
 import React, { useState, useCallback, useEffect, useRef } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, 
@@ -16,7 +12,6 @@ import {
   Sparkles
 } from 'lucide-react';
 import { useAnalytics } from '../hooks/useAnalytics';
-
 interface ChatMessage {
   id: string;
   type: 'user' | 'bot';
@@ -29,7 +24,6 @@ interface ChatMessage {
     suggestions?: string[];
   };
 }
-
 interface ChatbotConfig {
   welcomeMessage?: string;
   maxMessages?: number;
@@ -37,7 +31,6 @@ interface ChatbotConfig {
   enableContext?: boolean;
   responseDelay?: number;
 }
-
 export const AIChatbot: React.FC<ChatbotConfig> = ({
   welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?",
   maxMessages = 50,
@@ -49,16 +42,13 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
     enableTracking: true,
     enableUserBehaviorTracking: true
   });
-
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-
   // Initialize chatbot
   useEffect(() => {
     if (isOpen && messages.length === 0) {
@@ -74,17 +64,14 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
       });
     }
   }, [isOpen, messages.length, welcomeMessage]);
-
   // Auto-scroll to bottom
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
-
   // Track chatbot interactions
   const trackChatbotInteraction = useCallback((action: string, metadata?: any) => {
     trackEvent('chatbot', action, 'chatbot_interaction', undefined, metadata);
   }, [trackEvent]);
-
   // Add message to chat
   const addMessage = useCallback((message: Omit<ChatMessage, 'id' | 'timestamp'>) => {
     const newMessage: ChatMessage = {
@@ -92,21 +79,17 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
       id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       timestamp: new Date()
     };
-
     setMessages(prev => {
       const updated = [...prev, newMessage];
       // Keep only the last maxMessages
       return updated.slice(-maxMessages);
     });
-
     // Update conversation context
     if (enableContext && message.content.length > 10) {
       // setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed
     }
-
     return newMessage;
   }, [maxMessages, enableContext]);
-
   // Add bot message with typing effect
   const addBotMessage = useCallback((content: string, metadata?: ChatMessage['metadata']) => {
     const message = addMessage({
@@ -114,74 +97,58 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
       content,
       metadata
     });
-
     // Track bot response
     trackChatbotInteraction('bot_response', { 
       messageId: message.id, 
       intent: metadata?.intent,
       confidence: metadata?.confidence 
     });
-
     return message;
   }, [addMessage, trackChatbotInteraction]);
-
   // Simulate AI processing
   const simulateAIProcessing = useCallback(async (userInput: string): Promise<string> => {
     // Simulate processing delay
     await new Promise(resolve => setTimeout(resolve, responseDelay));
-
     // Simple AI logic - in production, this would connect to a real AI service
     const input = userInput.toLowerCase();
-    
     // Intent recognition
     if (input.includes('service') || input.includes('offer')) {
       return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";
     }
-    
     if (input.includes('quote') || input.includes('price') || input.includes('cost')) {
       return "I'd be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";
     }
-    
     if (input.includes('contact') || input.includes('phone') || input.includes('email')) {
       return "You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?";
     }
-    
     if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {
       return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";
     }
-    
     if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {
       return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?";
     }
-    
     // Default response with suggestions
     return "I understand you're asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you're looking for?";
   }, [responseDelay]);
-
   // Handle user input
   const handleUserInput = useCallback(async (input: string) => {
     if (!input.trim()) return;
-
     // Add user message
     const userMessage = addMessage({
       type: 'user',
       content: input.trim()
     });
-
     // Track user input
     trackChatbotInteraction('user_input', { 
       messageId: userMessage.id, 
       inputLength: input.length 
     });
-
     // Clear input
     setInputValue('');
     setIsTyping(true);
-
     try {
       // Get AI response
       const response = await simulateAIProcessing(input);
-      
       // Add bot response
       addBotMessage(response, {
         intent: 'response',
@@ -193,20 +160,17 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
           "Contact sales"
         ]
       });
-
       // Track successful interaction
       trackChatbotInteraction('conversation_success', { 
         userInput: input,
         responseLength: response.length 
       });
-
     } catch (error) {
       // Handle error
       addBotMessage("I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {
         intent: 'error',
         confidence: 0.8
       });
-
       trackChatbotInteraction('conversation_error', { 
         error: error instanceof Error ? error.message : 'Unknown error' 
       });
@@ -214,38 +178,32 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
       setIsTyping(false);
     }
   }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);
-
   // Handle form submission
   const handleSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
     handleUserInput(inputValue);
   }, [inputValue, handleUserInput]);
-
   // Handle suggestion click
   const handleSuggestionClick = useCallback((suggestion: string) => {
     handleUserInput(suggestion);
     trackChatbotInteraction('suggestion_clicked', { suggestion });
   }, [handleUserInput, trackChatbotInteraction]);
-
   // Toggle chatbot
   const toggleChatbot = useCallback(() => {
     setIsOpen(!isOpen);
     trackChatbotInteraction('chatbot_toggled', { action: !isOpen ? 'opened' : 'closed' });
   }, [isOpen, trackChatbotInteraction]);
-
   // Minimize/maximize
   const toggleMinimize = useCallback(() => {
     setIsMinimized(!isMinimized);
     trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' });
   }, [isMinimized, trackChatbotInteraction]);
-
   // Clear conversation
   const clearConversation = useCallback(() => {
     setMessages([]);
     // setConversationContext([]); // This line was removed
     trackChatbotInteraction('conversation_cleared');
   }, [trackChatbotInteraction]);
-
   // Get typing indicator
   const TypingIndicator = () => (
     <motion.div
@@ -262,7 +220,6 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
       <span className="text-sm text-gray-600 dark:text-gray-400">AI is typing...</span>
     </motion.div>
   );
-
   // Get message suggestions
   const MessageSuggestions = ({ suggestions }: { suggestions: string[] }) => (
     <motion.div
@@ -281,7 +238,6 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
       ))}
     </motion.div>
   );
-
   return (
     <>
       {/* Chatbot Toggle Button */}
@@ -299,7 +255,6 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
           </div>
         )}
       </motion.button>
-
       {/* Chatbot Interface */}
       <AnimatePresence>
         {isOpen && (
@@ -340,7 +295,6 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
                 </div>
               </div>
             </div>
-
             {/* Chat Content */}
             {!isMinimized && (
               <>
@@ -363,14 +317,12 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
                         }`}>
                           {message.type === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
                         </div>
-                        
                         <div className={`rounded-lg p-3 ${
                           message.type === 'user'
                             ? 'bg-blue-500 text-white'
                             : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'
                         }`}>
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-                          
                           {/* Message Metadata */}
                           {message.metadata && (
                             <div className="mt-2 text-xs opacity-70">
@@ -382,7 +334,6 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
                               )}
                             </div>
                           )}
-                          
                           {/* Suggestions */}
                           {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (
                             <MessageSuggestions suggestions={message.metadata.suggestions} />
@@ -391,14 +342,11 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
                       </div>
                     </motion.div>
                   ))}
-                  
                   {/* Typing Indicator */}
                   {isTyping && <TypingIndicator />}
-                  
                   {/* Scroll anchor */}
                   <div ref={messagesEndRef} />
                 </div>
-
                 {/* Input Area */}
                 <div className="p-4 border-t border-gray-200 dark:border-gray-700">
                   <form onSubmit={handleSubmit} className="flex gap-2">
@@ -423,7 +371,6 @@ export const AIChatbot: React.FC<ChatbotConfig> = ({
                       )}
                     </button>
                   </form>
-                  
                   {/* Quick Actions */}
                   <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
                     <button

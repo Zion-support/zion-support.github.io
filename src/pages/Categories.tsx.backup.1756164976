@@ -1,24 +1,5 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
-
-<<<<<<< HEAD
-const Categories: React.FC = () => {
-  return (
-    <>
-      <SEO 
-        title="Categories - Zion Tech Group"
-        description="Browse our service categories"
-        canonical="https://ziontechgroup.com/categories"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Categories
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Browse our service categories
-=======
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { GradientHeading } from "@/components/GradientHeading";
 import { SEO } from "@/components/SEO";
@@ -39,7 +20,6 @@ import {
   Lock,
   BarChart3
 } from "lucide-react";
-
 export default function Categories() {
   const mainCategories = [
     {
@@ -139,7 +119,6 @@ export default function Categories() {
       href: "/categories/emerging-tech"
     }
   ];
-
   return (
     <>
       <SEO
@@ -155,7 +134,6 @@ export default function Categories() {
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Explore our extensive range of AI services and products organized by category. 
               Find exactly what you're looking for to enhance your business or personal projects.
->>>>>>> origin/cursor/website-audit-and-enhancement-f8cc
             </p>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto">
               <p className="text-white">
@@ -163,9 +141,6 @@ export default function Categories() {
               </p>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-          
           {/* Main Categories Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
             {mainCategories.map((category, index) => (
@@ -199,13 +174,11 @@ export default function Categories() {
               </Card>
             ))}
           </div>
-          
           {/* Reuse the Categories Section component for detailed view */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8 text-center">Detailed Category Breakdown</h2>
             <CategoriesSection showTitle={false} />
           </div>
-          
           {/* Call to Action */}
           <div className="text-center">
             <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12">
@@ -230,11 +203,9 @@ export default function Categories() {
               </div>
             </div>
           </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-f8cc
         </div>
       </div>
     </>
   );
 };
-
 export default Categories;

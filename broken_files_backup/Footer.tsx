@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { FooterNewsletter } from "@/components/FooterNewsletter";
-import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin, Sparkles, Zap, Shield, Brain, Code, Database, BarChart3, Link as LinkIcon, UserCheck } from "lucide-react";
-import Workflow from "lucide-react/dist/esm/icons/workflow";
-=======
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 =======
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
@@ -68,7 +63,6 @@ import {
   Info,
   ExternalLink
 } from 'lucide-react';
-
 export function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
@@ -103,15 +97,12 @@ export function Footer() {
               </a>
 =======
 =======
->>>>>>> origin/main
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Mail, Phone, MapPin, Globe } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
-
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
   const socialLinks = [
     { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
     { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
@@ -119,7 +110,6 @@ const Footer: React.FC = () => {
     { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
     { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
   ];
-
   const footerSections = [
     {
       title: "Services",
@@ -166,14 +156,12 @@ const Footer: React.FC = () => {
       ]
     }
   ];
-
   const contactInfo = [
     { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
     { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
     { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
   ];
-
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -183,7 +171,6 @@ const Footer: React.FC = () => {
       }
     }
   };
-
   const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -195,17 +182,14 @@ const Footer: React.FC = () => {
       }
     }
   };
-
   return (
     <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
-      
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse" />
       <div className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-zion-purple/20 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-zion-cyan/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
-
       {/* Main Footer Content */}
       <motion.div 
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10"
@@ -221,64 +205,6 @@ const Footer: React.FC = () => {
               <div className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mr-4 shadow-lg">
                 <span className="text-white font-bold text-2xl">Z</span>
               </div>
-<<<<<<< HEAD
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold mb-4">Follow Us</h3>
-              <div className="flex flex-wrap gap-3">
-                {socialLinks.map((link, index) => (
-                  <button
-                    key={index}
-                    onClick={(e) => handleSocialLinkClick(link, e)}
-                    className="w-10 h-10 bg-zion-slate-light/20 hover:bg-zion-cyan/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                    title={link.name}
-                  >
-                    <span className="text-lg">{link.icon}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-white font-semibold mb-4">Newsletter</h3>
-              <p className="text-zion-slate-light text-sm mb-4">
-                Stay updated with our latest insights and innovations
-              </p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-3 py-2 bg-zion-slate-light/20 border border-zion-blue-light/30 rounded-l-md text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan"
-                />
-                <button className="px-4 py-2 bg-zion-cyan text-black font-medium rounded-r-md hover:bg-zion-cyan/80 transition-colors">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Services</h3>
-            <ul className="space-y-2">
-              <li><Link href="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
-              <li><Link href="/ai-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Solutions</Link></li>
-              <li><Link href="/quantum-technology" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Technology</Link></li>
-              <li><Link href="/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
-              <li><Link href="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact Us</Link></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
-            <ul className="space-y-2">
-              <li><Link to="/ai-matcher" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Matcher</Link></li>
-              <li><Link to="/service-description-generator" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Service Generator</Link></li>
-              <li><Link to="/content-generator" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Content Generator</Link></li>
-              <li><Link to="/portfolio-builder" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Portfolio Builder</Link></li>
-=======
             <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
             <ul className="space-y-2">
               <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>
@@ -294,7 +220,6 @@ const Footer: React.FC = () => {
               <li><Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
-          
           <div>
 =======
             <h3 className="text-white font-semibold mb-4 text-lg">Marketplace</h3>
@@ -313,14 +238,12 @@ const Footer: React.FC = () => {
 =======
               <span className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
                 Zion Tech Group
->>>>>>> origin/main
               </span>
             </div>
             <p className="text-zion-slate-light mb-8 max-w-md leading-relaxed text-lg">
               Leading provider of innovative technology solutions, AI-powered services, 
               and digital transformation expertise. We help businesses navigate the future of technology.
             </p>
-            
             {/* Contact Info */}
             <div className="space-y-3 mb-8">
               {contactInfo.map((contact, index) => (
@@ -338,7 +261,6 @@ const Footer: React.FC = () => {
                 </motion.a>
               ))}
             </div>
-            
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -357,7 +279,6 @@ const Footer: React.FC = () => {
               ))}
             </div>
           </motion.div>
-
           {/* Footer Sections */}
           {footerSections.map((section, sectionIndex) => (
             <motion.div key={section.title} variants={itemVariants}>
@@ -387,7 +308,6 @@ const Footer: React.FC = () => {
           ))}
         </div>
       </motion.div>
-
       {/* Newsletter Signup */}
       <motion.div 
         className="border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10"
@@ -398,12 +318,6 @@ const Footer: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
-<<<<<<< HEAD
-            <h3 className="text-white font-semibold mb-4 text-xl">Stay Updated</h3>
-            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-              Get the latest news on tech, AI, and marketplace opportunities. 
-              Join thousands of professionals staying ahead of the curve.
-=======
           <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <h3 className="text-foreground font-semibold mb-4 text-lg">{t('footer.sections.newsletter.title')}</h3>
             <p className="text-foreground/80 mb-4 text-sm">
@@ -427,7 +341,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
           {/* Services */}
           <div>
             <h3 className="text-white font-semibold mb-6 text-lg flex items-center">
@@ -467,7 +380,6 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-
           {/* Resources */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
@@ -480,7 +392,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Newsletter Section */}
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="max-w-2xl mx-auto text-center">
@@ -500,7 +411,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -552,7 +462,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Bottom Footer */}
       <motion.div 
         className="border-t border-white/10 bg-white/5 backdrop-blur-md relative z-10"
@@ -571,7 +480,6 @@ const Footer: React.FC = () => {
               <Link to="/terms" className="hover:text-zion-cyan transition-colors duration-300">Terms of Service</Link>
               <span className="w-1 h-1 bg-zion-cyan rounded-full" />
               <Link to="/cookies" className="hover:text-zion-cyan transition-colors duration-300">Cookie Policy</Link>
->>>>>>> origin/main
             </div>
           </div>
         </div>
@@ -579,5 +487,4 @@ const Footer: React.FC = () => {
     </footer>
   );
 }
-
 export default Footer;

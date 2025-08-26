@@ -1,14 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { ForumPost } from '@/types/community';
-
 interface PostCardProps {
   post: ForumPost;
 }
-
 export default function PostCard({ post }: PostCardProps) {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
@@ -31,7 +25,6 @@ export default function PostCard({ post }: PostCardProps) {
             <span>{post.views} views</span>
           </div>
 =======
-
 interface PostCardProps {
   post: {
     id: string;
@@ -43,7 +36,6 @@ interface PostCardProps {
     replies: number;
   };
 }
-
 const PostCard: React.FC<PostCardProps> = ({ post }) => {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4">
@@ -55,19 +47,11 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
         <div className="flex items-center space-x-4">
           <span>{post.likes} likes</span>
           <span>{post.replies} replies</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 };
-
 export default PostCard;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

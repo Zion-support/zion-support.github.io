@@ -1,12 +1,5 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Users, Target, Award, Globe, Zap, Shield, Brain, Rocket } from 'lucide-react';
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
-
 const About: NextPage = () => {
   return (
     <div>
@@ -14,22 +7,15 @@ const About: NextPage = () => {
         <title>About - Zion Tech Solutions</title>
         <meta name="description" content="About page" />
       </Head>
-      
       <main>
         <h1>About</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
-
 export default About;
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
 =======
-
 export default function AboutPage() {
 	return (
 		<>
@@ -47,14 +33,12 @@ export default function AboutPage() {
 		</>
 	);
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 import { motion } from 'framer-motion';
 import { Brain, Shield, Rocket, Cpu, Database, Users, Target, Star, Award, Globe } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
-
 export default function AboutPage() {
   const values = [
     {
@@ -82,7 +66,6 @@ export default function AboutPage() {
       color: "from-emerald-500 to-teal-500"
     }
   ];
-
   const milestones = [
     {
       year: "2023",
@@ -100,7 +83,6 @@ export default function AboutPage() {
       description: "Developed quantum neural network platform and expanded services"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <Head>
@@ -113,9 +95,7 @@ export default function AboutPage() {
         <meta property="og:url" content="https://ziontechgroup.com/about" />
         <link rel="canonical" href="https://ziontechgroup.com/about" />
       </Head>
-
       <EnhancedNavigation />
-
       <main className="pt-20">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4">
@@ -138,7 +118,6 @@ export default function AboutPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -161,7 +140,6 @@ export default function AboutPage() {
                   cutting-edge research and practical business applications.
                 </p>
               </motion.div>
-              
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -204,7 +182,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -221,7 +198,6 @@ export default function AboutPage() {
                 The principles that guide everything we do
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <motion.div
@@ -241,7 +217,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
         {/* Timeline Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
@@ -258,7 +233,6 @@ export default function AboutPage() {
                 Key milestones in our mission to revolutionize technology
               </p>
             </motion.div>
-
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
                 <motion.div
@@ -287,7 +261,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -307,9 +280,7 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-
       <EnhancedFooter />
     </div>
   );
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

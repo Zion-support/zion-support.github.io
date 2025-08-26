@@ -1,66 +1,3 @@
-<<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import React from 'react';
-import { useState } from 'react';
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
-import { Mail } from 'lucide-react';
-export function NewsletterSection() {
-  return (
-    <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan/10 rounded-full opacity-30"></div>
-        <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple/10 rotate-45 opacity-30"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-zion-cyan/5 rounded-full opacity-20"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Stay Ahead of the Technology Curve
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-            Get exclusive insights into the latest AI trends, technology breakthroughs, and industry updates. 
-            Join thousands of professionals who trust Zion Tech Group for cutting-edge technology intelligence.
-          </p>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your professional email address"
-                className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300 text-lg"
-                required
-              />
-              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-lg">
-                Subscribe Now
-              </button>
-            </div>
-            <p className="text-sm text-zion-slate-light mt-4">
-              🔒 We respect your privacy. Unsubscribe at any time.
-            </p>
-          </div>
-          
-          <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-zion-slate-light text-sm">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-              <span>Weekly insights delivered</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-zion-purple rounded-full"></div>
-              <span>Exclusive content access</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-              <span>Early access to new features</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, X, Gift, Star, Award } from 'lucide-react';
@@ -116,21 +53,18 @@ export function NewsletterSection() {
             backgroundSize: '50px 50px'
         }}/>
       </div>
-
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
         <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }}/>
         <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}/>
       </div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <motion.div className="text-center max-w-5xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           {/* Enhanced header */}
           <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-zion-cyan to-zion-blue mb-8 shadow-lg">
             <Mail className="w-12 h-12 text-white"/>
           </div>
-          
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Stay <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Connected</span>
           </h2>
@@ -138,7 +72,6 @@ export function NewsletterSection() {
             Get the latest updates on new services, tech insights, and exclusive offers delivered straight to your inbox. 
             Join thousands of professionals staying ahead of the curve.
           </p>
-
           {/* Stats section */}
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
             {stats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -146,7 +79,6 @@ export function NewsletterSection() {
                 <div className="text-zion-slate-light text-sm">{stat.label}</div>
               </motion.div>))}
           </motion.div>
-          
           {/* Benefits toggle */}
           <motion.div className="mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
             <button onClick={() => setShowBenefits(!showBenefits)} className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors">
@@ -158,7 +90,6 @@ export function NewsletterSection() {
               </motion.div>
             </button>
           </motion.div>
-
           {/* Benefits grid */}
           <AnimatePresence>
             {showBenefits && (<motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.4 }}>
@@ -173,7 +104,6 @@ export function NewsletterSection() {
                   </motion.div>))}
               </motion.div>)}
           </AnimatePresence>
-          
           {/* Subscription form or success message */}
           {!isSubscribed ? (<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto mb-6">
@@ -188,7 +118,6 @@ export function NewsletterSection() {
                     </>)}
                 </button>
               </form>
-
               {/* Special offer */}
               <motion.div className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan px-6 py-3 rounded-xl mb-6" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.6 }}>
                 <Gift className="w-5 h-5"/>
@@ -204,13 +133,11 @@ export function NewsletterSection() {
                 <X className="w-5 h-5"/>
               </button>
             </motion.div>)}
-          
           {/* Privacy notice */}
           <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.7 }}>
             <p className="text-zion-slate-light/70 text-sm mb-4">
               No spam, unsubscribe at any time. We respect your privacy.
             </p>
-            
             {/* Trust indicators */}
             <div className="flex items-center justify-center gap-6 text-zion-slate-light/50 text-xs">
               <div className="flex items-center gap-2">
@@ -230,5 +157,4 @@ export function NewsletterSection() {
         </motion.div>
       </div>
     </section>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

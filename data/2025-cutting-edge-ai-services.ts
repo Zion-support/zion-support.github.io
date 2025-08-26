@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface CuttingEdgeAIService {
   id: string;
   name: string;
@@ -40,30 +39,19 @@ export interface CuttingEdgeAIService {
   rating: number;
   reviews: number;
 }
-
 export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
   // AI-Powered Quantum Financial Trading
   {
     id: 'ai-quantum-financial-trading',
     name: 'AI Quantum Financial Trading Platform',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    tagline: 'Revolutionary AI-powered quantum trading with predictive market analysis',
-=======
     tagline: 'Revolutionary AI-powered quantum trading with predictive market intelligence',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
     tagline: 'Revolutionary AI-powered quantum trading with predictive market analysis',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     price: '$2,999',
     period: '/month',
     description: 'Advanced AI platform combining quantum computing algorithms with machine learning for ultra-fast, predictive financial trading across global markets.',
     features: [
       'Quantum-enhanced market prediction algorithms',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       'Real-time global market analysis',
       'AI-powered risk management',
       'Automated portfolio optimization',
@@ -73,8 +61,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Regulatory compliance automation',
       'Performance analytics dashboard',
       '24/7 AI monitoring and alerts'
-<<<<<<< HEAD
-=======
       'Real-time AI sentiment analysis',
       'Multi-asset portfolio optimization',
       'Risk management with AI forecasting',
@@ -84,35 +70,18 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'API for institutional integration',
       '24/7 market monitoring',
       'Custom strategy development'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ],
     popular: true,
     icon: '🚀',
     color: 'from-purple-600 to-indigo-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-quantum-financial-trading',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     marketPosition: 'Competes with Bloomberg Terminal ($24,000/year), TradingView Pro ($29.95/month). Our advantage: Quantum AI algorithms provide 40% better prediction accuracy.',
     targetAudience: 'Hedge funds, Investment banks, Professional traders, Financial institutions, High-frequency trading firms',
     trialDays: 7,
     setupTime: '2-4 hours',
     category: 'Financial Technology & AI',
-<<<<<<< HEAD
-    realService: true,
-    technology: ['Python, TensorFlow, Quantum Computing APIs, React, PostgreSQL, Redis, Docker, Kubernetes'],
-    integrations: ['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, E*TRADE, MetaTrader, TradingView'],
-    useCases: ['Algorithmic trading, Portfolio management, Risk assessment, Market analysis, Automated trading strategies'],
-    roi: 'Financial institutions report 500% ROI through improved trading accuracy and reduced risk.',
-    competitors: ['Bloomberg Terminal, TradingView Pro, MetaTrader, Interactive Brokers'],
-    marketSize: '$45.2B algorithmic trading market',
-    growthRate: '22% annual growth',
-    variant: 'ai-quantum-trading',
-=======
     marketPosition: 'Competes with Bloomberg Terminal ($24,000/year), Thomson Reuters ($15,000/year). Our advantage: AI automation reduces manual analysis by 90% and provides quantum-enhanced predictions.',
     targetAudience: 'Hedge funds, Investment banks, Asset managers, High-frequency traders, Institutional investors',
     trialDays: 30,
@@ -127,7 +96,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$45.2B financial technology market',
     growthRate: '22% annual growth',
     variant: 'ai-quantum-trading-enterprise',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
     realService: true,
     technology: ['Python, TensorFlow, Quantum Computing APIs, React, PostgreSQL, Redis, Docker, Kubernetes'],
@@ -138,7 +106,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$45.2B algorithmic trading market',
     growthRate: '22% annual growth',
     variant: 'ai-quantum-trading',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -146,35 +113,22 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     implementationDetails: 'Cloud-native platform with quantum computing integration, real-time data processing, and AI-powered trading algorithms.',
     launchDate: '2024-12-01',
     customers: 28,
     rating: 4.9,
     reviews: 15
-<<<<<<< HEAD
-=======
     implementationDetails: 'Cloud-native SaaS platform with quantum computing integration, real-time market data processing, and AI-powered trading algorithms.',
     launchDate: '2025-01-15',
     customers: 12,
     rating: 4.9,
     reviews: 8
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   },
-
   // AI-Powered Healthcare Diagnostics
   {
     id: 'ai-healthcare-diagnostics-platform',
     name: 'AI Healthcare Diagnostics Platform',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     tagline: 'Revolutionary AI-powered medical diagnostics with 99.7% accuracy',
     price: '$1,499',
     period: '/month',
@@ -190,8 +144,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Clinical decision support',
       'Performance analytics',
       '24/7 AI monitoring'
-<<<<<<< HEAD
-=======
     tagline: 'Advanced AI medical imaging and diagnostic analysis for healthcare professionals',
     price: '$1,499',
     period: '/month',
@@ -207,19 +159,13 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Real-time diagnostic assistance',
       'Performance analytics and reporting',
       'Custom model training capabilities'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ],
     popular: true,
     icon: '🏥',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     marketPosition: 'Competes with IBM Watson Health ($50,000/year), Google Cloud Healthcare API ($0.50/1000 API calls). Our advantage: 99.7% diagnostic accuracy vs industry average of 85%.',
     targetAudience: 'Hospitals, Medical clinics, Diagnostic centers, Radiologists, Healthcare providers',
     trialDays: 14,
@@ -234,8 +180,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$67.8B AI healthcare market',
     growthRate: '28% annual growth',
     variant: 'ai-healthcare-diagnostics',
-<<<<<<< HEAD
-=======
     marketPosition: 'Competes with Aidoc ($500/study), Zebra Medical ($200/study). Our advantage: Comprehensive platform with predictive analytics and outcome modeling.',
     targetAudience: 'Hospitals, Medical imaging centers, Radiologists, Healthcare systems, Research institutions',
     trialDays: 21,
@@ -250,9 +194,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$38.7B medical AI market',
     growthRate: '28% annual growth',
     variant: 'ai-healthcare-enterprise',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -260,35 +202,22 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     implementationDetails: 'HIPAA-compliant cloud platform with advanced AI algorithms for medical image analysis and diagnostic support.',
     launchDate: '2024-11-15',
     customers: 42,
     rating: 4.8,
     reviews: 31
-<<<<<<< HEAD
-=======
     implementationDetails: 'Enterprise-grade SaaS platform with FDA-compliant AI models, secure cloud infrastructure, and comprehensive medical imaging analysis.',
     launchDate: '2025-01-20',
     customers: 28,
     rating: 4.8,
     reviews: 15
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   },
-
   // AI-Powered Autonomous Manufacturing
   {
     id: 'ai-autonomous-manufacturing-platform',
     name: 'AI Autonomous Manufacturing Platform',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     tagline: 'Revolutionary AI-powered autonomous manufacturing with predictive maintenance',
     price: '$3,999',
     period: '/month',
@@ -304,8 +233,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Performance analytics',
       'Predictive analytics',
       '24/7 autonomous operation'
-<<<<<<< HEAD
-=======
     tagline: 'Intelligent automation for smart factories with predictive maintenance and quality control',
     price: '$3,999',
     period: '/month',
@@ -321,19 +248,13 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Workforce productivity analytics',
       'Custom automation workflows',
       'Integration with MES/ERP systems'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ],
     popular: true,
     icon: '🏭',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-manufacturing',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     marketPosition: 'Competes with Siemens Mindsphere ($50,000/year), GE Predix ($100,000/year). Our advantage: 60% reduction in downtime and 45% improvement in efficiency.',
     targetAudience: 'Manufacturing companies, Industrial plants, Automotive manufacturers, Electronics manufacturers, Chemical plants',
     trialDays: 21,
@@ -348,8 +269,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$89.3B industrial AI market',
     growthRate: '25% annual growth',
     variant: 'ai-autonomous-manufacturing',
-<<<<<<< HEAD
-=======
     marketPosition: 'Competes with Siemens Mindsphere ($50,000/year), GE Predix ($75,000/year). Our advantage: Comprehensive AI integration with 40% lower implementation costs.',
     targetAudience: 'Manufacturing companies, Industrial facilities, Automotive plants, Electronics manufacturers, Food processing plants',
     trialDays: 45,
@@ -364,9 +283,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$67.8B industrial IoT market',
     growthRate: '25% annual growth',
     variant: 'ai-manufacturing-enterprise',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -374,17 +291,12 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     implementationDetails: 'Industrial-grade AI platform with IoT integration, predictive analytics, and autonomous manufacturing capabilities.',
     launchDate: '2024-10-01',
     customers: 35,
     rating: 4.7,
     reviews: 28
   },
-
   // AI-Powered Cybersecurity Threat Intelligence
   {
     id: 'ai-cybersecurity-threat-intelligence',
@@ -404,15 +316,12 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Compliance reporting',
       '24/7 security monitoring',
       'AI-powered threat hunting'
-<<<<<<< HEAD
-=======
     implementationDetails: 'Enterprise-grade IoT platform with AI algorithms, real-time data processing, and comprehensive manufacturing automation capabilities.',
     launchDate: '2025-01-25',
     customers: 18,
     rating: 4.7,
     reviews: 12
   },
-
   // AI-Powered Cybersecurity Platform
   {
     id: 'ai-cybersecurity-platform',
@@ -432,18 +341,12 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Custom security policies',
       'Integration with SIEM systems',
       '24/7 security monitoring'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ],
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-pink-600',
     textColor: 'text-red-400',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     link: 'https://ziontechgroup.com/ai-cybersecurity-threat-intelligence',
     marketPosition: 'Competes with CrowdStrike ($8.99/user/month), Palo Alto Networks ($50,000/year). Our advantage: 95% threat detection accuracy with 0% false positives.',
     targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Educational institutions',
@@ -459,8 +362,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$156.5B cybersecurity market',
     growthRate: '18% annual growth',
     variant: 'ai-cybersecurity',
-<<<<<<< HEAD
-=======
     link: 'https://ziontechgroup.com/ai-cybersecurity',
     marketPosition: 'Competes with CrowdStrike ($8.99/endpoint/month), SentinelOne ($6.50/endpoint/month). Our advantage: AI-powered prediction and automated response capabilities.',
     targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Educational institutions',
@@ -476,9 +377,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$182.3B cybersecurity market',
     growthRate: '18% annual growth',
     variant: 'ai-cybersecurity-enterprise',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -486,17 +385,12 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     implementationDetails: 'Enterprise-grade cybersecurity platform with AI-powered threat detection and automated incident response.',
     launchDate: '2024-09-01',
     customers: 67,
     rating: 4.9,
     reviews: 45
   },
-
   // AI-Powered Content Creation Studio
   {
     id: 'ai-content-creation-studio',
@@ -516,35 +410,12 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Multi-language support',
       'Content templates',
       '24/7 content generation'
-<<<<<<< HEAD
-    ],
-    popular: true,
-    icon: '✍️',
-    color: 'from-yellow-600 to-orange-600',
-    textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-content-creation-studio',
-    marketPosition: 'Competes with Jasper ($39/month), Copy.ai ($49/month), Writesonic ($19/month). Our advantage: Human-like quality with 80% faster content creation.',
-    targetAudience: 'Marketing agencies, Content creators, E-commerce businesses, Social media managers, Bloggers',
-    trialDays: 7,
-    setupTime: '1-2 hours',
-    category: 'Content Creation & AI',
-    realService: true,
-    technology: ['Python, GPT-4, Claude, React, PostgreSQL, Redis, Docker, AWS'],
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms, CMS systems'],
-    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions, Email campaigns'],
-    roi: 'Businesses report 250% ROI through increased content production and improved engagement.',
-    competitors: ['Jasper, Copy.ai, Writesonic, ContentBot, Rytr'],
-    marketSize: '$12.4B AI content creation market',
-    growthRate: '35% annual growth',
-    variant: 'ai-content-creation',
-=======
     implementationDetails: 'Enterprise-grade security platform with AI algorithms, real-time threat intelligence, and automated incident response capabilities.',
     launchDate: '2025-01-30',
     customers: 35,
     rating: 4.9,
     reviews: 22
   },
-
   // AI-Powered Education Platform
   {
     id: 'ai-education-platform',
@@ -584,7 +455,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$89.1B education technology market',
     growthRate: '20% annual growth',
     variant: 'ai-education-enterprise',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
     ],
     popular: true,
@@ -606,7 +476,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$12.4B AI content creation market',
     growthRate: '35% annual growth',
     variant: 'ai-content-creation',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -614,24 +483,16 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     implementationDetails: 'Cloud-native content creation platform with advanced AI models and multi-format content generation capabilities.',
     launchDate: '2024-08-01',
     customers: 156,
     rating: 4.6,
     reviews: 89
-<<<<<<< HEAD
-=======
     implementationDetails: 'Cloud-native education platform with AI algorithms, adaptive learning capabilities, and comprehensive analytics for personalized education.',
     launchDate: '2025-02-05',
     customers: 42,
     rating: 4.8,
     reviews: 28
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

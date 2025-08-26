@@ -1,4 +1,3 @@
-
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 import { TrustedBySection } from "@/components/TrustedBySection";
@@ -7,7 +6,6 @@ import { Link } from "react-router-dom";
 import { Globe, Zap, Brain } from "lucide-react";
 import { useEffect, useState } from "react";
 import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
-
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -294,11 +292,9 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 76,
   }
 ];
-
 function getRandomItem<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];
 }
-
 function generateRandomService(idNum: number): ProductListing {
   const templates = [
     {
@@ -344,7 +340,6 @@ function generateRandomService(idNum: number): ProductListing {
       tags: ["Transformation", "Strategy", "Business"],
     },
   ];
-
   const authors = [
     "Global AI Experts",
     "InnovateTech",
@@ -353,20 +348,17 @@ function generateRandomService(idNum: number): ProductListing {
     "DataVisor",
     "NexGen Solutions",
   ];
-
   const images = [
     "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500",
     "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500",
     "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
     "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500",
   ];
-
   const template = getRandomItem(templates);
   const author = getRandomItem(authors);
   const price = Math.round(
     Math.random() * (template.max - template.min) + template.min
   );
-
   return {
     id: `auto-service-${idNum}`,
     title: template.title,
@@ -383,7 +375,6 @@ function generateRandomService(idNum: number): ProductListing {
     reviewCount: Math.floor(50 + Math.random() * 150),
   };
 }
-
 // Filter options specific to services
 const SERVICE_FILTERS = [
   { label: 'Development', value: 'development' },
@@ -400,44 +391,16 @@ const SERVICE_FILTERS = [
   { label: 'DevOps', value: 'devops' },
   { label: 'Compliance', value: 'compliance' },
 ];
-
 export default function ServicesPage() {
   const [listings, setListings] = useState<ProductListing[]>([...SERVICE_LISTINGS, ...MICRO_SAAS_SERVICES]);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setListings(prev => [...prev, generateRandomService(prev.length + 1)]);
     }, 120000);
-
     return () => clearInterval(interval);
   }, []);
-
   return (
     <>
-<<<<<<< HEAD:src/pages/ServicesPage.tsx
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link to="/services-showcase">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2" />
-                Services Showcase
-              </Button>
-            </Link>
-            <Link to="/pricing">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2" />
-                View Pricing
-              </Button>
-            </Link>
-            <Link to="/services-comparison">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2" />
-                Compare Services
-              </Button>
-            </Link>
-=======
       {/* Hero Section */}
       <div className="bg-zion-blue-dark py-16 px-4 md:px-8 border-b border-zion-blue-light">
         <div className="container mx-auto text-center">
@@ -448,7 +411,6 @@ export default function ServicesPage() {
             Transform your business with our comprehensive suite of AI, cybersecurity, cloud, and digital transformation services. 
             Expert solutions tailored to drive innovation and growth.
           </p>
-          
           {/* Contact Information */}
           <div className="bg-zion-blue-light/10 rounded-lg p-6 max-w-4xl mx-auto border border-zion-blue-light/20">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -484,9 +446,7 @@ export default function ServicesPage() {
               Address: 364 E Main St STE 1008, Middletown DE 19709
             </div>
           </div>
-
           <div className="flex flex-wrap justify-center gap-4 mt-8">
->>>>>>> 6de525ab7fd2268019c6a3413cbe79321aeb887d:src_disabled/ServicesPage.tsx
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
@@ -508,10 +468,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Comprehensive Services Showcase */}
       <ComprehensiveServicesShowcase />
-
       {/* Marketplace Services */}
       <div className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -523,7 +481,6 @@ export default function ServicesPage() {
               Discover additional services from our verified partners and technology experts in the marketplace
             </p>
           </div>
-          
           <DynamicListingPage 
             title="Marketplace Services"
             description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
@@ -534,7 +491,6 @@ export default function ServicesPage() {
           />
         </div>
       </div>
-
       <TrustedBySection />
     </>
   );

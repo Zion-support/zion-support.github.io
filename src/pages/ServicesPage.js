@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-export default function ServicesPage() {
-    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Tech Services - Zion Tech Group", description: "Browse our comprehensive range of technology services and solutions.", canonical: "https://ziontechgroup.com/services" }), _jsx(Header, {}), _jsx("main", { className: "min-h-screen bg-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4 py-20", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Tech Services" }), _jsx("p", { className: "text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto", children: "Comprehensive technology services to help your business grow and succeed in the digital age." })] }), _jsx("div", { className: "max-w-6xl mx-auto", children: _jsxs("div", { className: "bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter",                 children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Revolutionary Services Available Now!" }), _jsx("p", { className: "text-zion-slate-light mb-6", children: "Explore our cutting-edge micro SAAS services, specialized IT solutions, and innovative AI platforms designed to transform your business in 2025 and beyond." }), _jsx("div", { className: "text-center mt-6 mb-8", children: _jsx("a", { href: "/revolutionary-services-2025", className: "bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105", children: "Explore Revolutionary Services 2025" }) }) }), _jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8", children: [_jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83D\uDCBB" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Web Development" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "Custom websites, web apps, and e-commerce solutions" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83D\uDCF1" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Mobile Apps" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "iOS, Android, and cross-platform mobile applications" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-cyan-light/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\u2601\uFE0F" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Cloud Services" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "AWS, Azure, and Google Cloud solutions" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-purple-light/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83D\uDD12" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Cybersecurity" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "Security audits, penetration testing, and compliance" })] })] })] }) })] }) }), _jsx(Footer, {})] }));
-=======
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
@@ -600,7 +591,6 @@ export default function ServicesPage() {
     }, []);
     return (<div className="min-h-screen bg-background">
       <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com/services"/>
-      
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
@@ -619,7 +609,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-zion-blue mb-4">IT & AI Services</h1>
@@ -627,14 +616,12 @@ export default function ServicesPage() {
             Find expert technology service providers for your business needs, from AI development to infrastructure management.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {listings.map((service) => (<div key={service.id} className="bg-white rounded-lg shadow-lg p-6 border border-zion-blue-light">
               <div className="mb-4">
                 <h3 className="text-xl font-semibold text-zion-blue mb-2">{service.title}</h3>
                 <p className="text-zion-slate-light">{service.description}</p>
               </div>
-              
               <div className="flex items-center justify-between mb-4">
                 <div className="text-2xl font-bold text-zion-purple">
                   ${service.price?.toLocaleString()}
@@ -645,13 +632,11 @@ export default function ServicesPage() {
                   <span className="text-zion-slate-light text-sm">({service.reviewCount})</span>
                 </div>
               </div>
-
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.slice(0, 3).map((tag, index) => (<span key={index} className="px-2 py-1 bg-zion-blue/10 text-zion-blue text-xs rounded-full">
                     {tag}
                   </span>))}
               </div>
-
               <Link to="/contact">
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   Get Quote
@@ -661,5 +646,4 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

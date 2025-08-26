@@ -1,5 +1,4 @@
 import { ProductListing } from "@/types/listings";
-
 // Enhanced real micro SAAS services and solutions
 export const ENHANCED_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services
@@ -68,7 +67,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "Immediate",
     aiScore: 91
   },
-
   // Cloud & Infrastructure Services
   {
     id: "multi-cloud-orchestration",
@@ -113,7 +111,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 92
   },
-
   // Cybersecurity Services
   {
     id: "ai-threat-detection",
@@ -158,7 +155,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 93
   },
-
   // Data & Analytics Services
   {
     id: "real-time-data-pipeline",
@@ -202,7 +198,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 92
   },
-
   // Business Intelligence & Reporting
   {
     id: "ai-business-intelligence",
@@ -226,7 +221,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "1-2 Weeks",
     aiScore: 94
   },
-
   // Development & DevOps Services
   {
     id: "ai-code-review",
@@ -270,7 +264,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 91
   },
-
   // Digital Transformation Services
   {
     id: "digital-transformation-consulting",
@@ -294,7 +287,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "8-12 Weeks",
     aiScore: 95
   },
-
   // Industry-Specific Solutions
   {
     id: "healthcare-ai-platform",
@@ -338,7 +330,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 93
   },
-
   // Emerging Technology Services
   {
     id: "blockchain-enterprise",
@@ -382,153 +373,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 94
-<<<<<<< HEAD
-  },
-  {
-    id: "mlops-platform",
-    title: "Managed MLOps Platform",
-    description: "End-to-end model lifecycle management with CI/CD for ML, feature store, model registry, automated evaluations, and safe rollout.",
-    category: "AI Platform",
-    price: 7999,
-    currency: "$",
-    tags: ["MLOps", "Model Registry", "Feature Store", "CI/CD"],
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com"
-    },
-    images: [
-      "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&h=500"
-    ],
-    createdAt: "2024-03-05T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 64,
-    featured: false,
-    location: "Global",
-    availability: "4-6 Weeks",
-    aiScore: 94
-  },
-  {
-    id: "finops-cost-optimization",
-    title: "Cloud FinOps Cost Optimization",
-    description: "Data-driven cloud spend optimization across AWS, Azure, and GCP with continuous rightsizing, commitment planning, and anomaly detection.",
-    category: "Cloud Management",
-    price: 2499,
-    currency: "$",
-    tags: ["FinOps", "Cost Optimization", "AWS", "Azure", "GCP"],
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com"
-    },
-    images: [
-      "https://images.unsplash.com/photo-1508711043292-8f5023f1c3d9?auto=format&fit=crop&w=800&h=500"
-    ],
-    createdAt: "2024-03-12T09:30:00.000Z",
-    rating: 4.7,
-    reviewCount: 102,
-    location: "Global",
-    availability: "2-3 Weeks",
-    aiScore: 88
-  },
-  {
-    id: "soc2-compliance-automation",
-    title: "SOC 2 Compliance Automation",
-    description: "Automated evidence collection, control monitoring, policy management, and audit readiness with mapped tasks and dashboards.",
-    category: "Security & Compliance",
-    price: 3999,
-    currency: "$",
-    tags: ["SOC 2", "Compliance", "Audit", "GRC"],
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com"
-    },
-    images: [
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"
-    ],
-    createdAt: "2024-03-18T11:00:00.000Z",
-    rating: 4.9,
-    reviewCount: 41,
-    featured: true,
-    location: "Global",
-    availability: "3-5 Weeks",
-    aiScore: 90
-  },
-  {
-    id: "ai-sales-sdr",
-    title: "AI Sales SDR Automation",
-    description: "Outbound research, personalized messaging, meeting scheduling, and CRM updates driven by AI agents with human-in-the-loop.",
-    category: "Sales Automation",
-    price: 1299,
-    currency: "$",
-    tags: ["SDR", "Outreach", "Personalization", "CRM"],
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com"
-    },
-    images: [
-      "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=800&h=500"
-    ],
-    createdAt: "2024-03-22T08:15:00.000Z",
-    rating: 4.6,
-    reviewCount: 133,
-    location: "Global",
-    availability: "Immediate",
-    aiScore: 89
-  },
-  {
-    id: "data-governance-catalog",
-    title: "Data Governance & Catalog",
-    description: "Centralized data catalog with lineage, PII detection, access workflows, and policy enforcement for compliance and productivity.",
-    category: "Data Governance",
-    price: 2999,
-    currency: "$",
-    tags: ["Data Catalog", "Lineage", "PII", "Access Control"],
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com"
-    },
-    images: [
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"
-    ],
-    createdAt: "2024-03-28T13:40:00.000Z",
-    rating: 4.8,
-    reviewCount: 58,
-    location: "Global",
-    availability: "3-4 Weeks",
-    aiScore: 91
-  },
-  {
-    id: "llm-evaluation-lab",
-    title: "LLM Evaluation & Safety Lab",
-    description: "Red teaming, prompt-injection hardening, grounding, and automated evals for accuracy, bias, toxicity, and safety.",
-    category: "AI Safety",
-    price: 4999,
-    currency: "$",
-    tags: ["LLM", "Safety", "Evaluations", "Red Teaming"],
-    author: {
-      name: "Zion Tech Group",
-      id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com"
-    },
-    images: [
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500"
-    ],
-    createdAt: "2024-04-02T10:05:00.000Z",
-    rating: 4.9,
-    reviewCount: 27,
-    featured: true,
-    location: "Global",
-    availability: "2-3 Weeks",
-    aiScore: 96
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];
-
 // Service categories for filtering
 export const ENHANCED_SERVICE_CATEGORIES = [
   { label: 'AI & Machine Learning', value: 'ai-ml' },
@@ -543,20 +389,12 @@ export const ENHANCED_SERVICE_CATEGORIES = [
   { label: 'Blockchain', value: 'blockchain' },
   { label: 'Quantum Computing', value: 'quantum-computing' }
 ];
-
 // Pricing tiers for different service levels
 export const SERVICE_PRICING_TIERS = {
   basic: { range: "$500 - $2,000", description: "Essential services for small businesses" },
   professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies" },
   enterprise: { range: "$8,000 - $25,000+", description: "Custom enterprise solutions with dedicated support" }
 };
-
-<<<<<<< HEAD
-// Backward-compatible alias expected by EnhancedServicesPage
-export const PRICING_TIERS = SERVICE_PRICING_TIERS;
-
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 // Contact information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",

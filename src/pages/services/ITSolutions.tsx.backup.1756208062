@@ -1,14 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { Settings, Monitor, Database, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
-=======
 import { SEO } from "@/components/SEO";
 import Link from 'next/link';
 import { Check, Server, Shield, Cloud, Database, Network, Monitor, Zap } from 'lucide-react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
-
 const ITSolutions: React.FC = () => {
   const features = [
     {
@@ -32,7 +25,6 @@ const ITSolutions: React.FC = () => {
       description: "Multi-layered security for your IT infrastructure"
     }
   ];
-
   const benefits = [
     "Improved system reliability and performance",
     "Reduced IT operational costs",
@@ -40,7 +32,6 @@ const ITSolutions: React.FC = () => {
     "Streamlined business processes",
     "Expert technical support and maintenance"
   ];
-
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -49,7 +40,6 @@ const ITSolutions: React.FC = () => {
         keywords="IT solutions, system integration, IT support, data management, IT security"
         canonical="https://ziontechgroup.com/services/it-solutions"
       />
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -85,7 +75,6 @@ const ITSolutions: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -95,7 +84,6 @@ const ITSolutions: React.FC = () => {
               End-to-end IT solutions to modernize your business operations
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -116,7 +104,6 @@ const ITSolutions: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -127,7 +114,6 @@ const ITSolutions: React.FC = () => {
                 Experience the benefits of optimized IT infrastructure
               </p>
             </div>
-
             <div className="space-y-6">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -148,7 +134,6 @@ const ITSolutions: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -164,5 +149,4 @@ const ITSolutions: React.FC = () => {
     </div>
   );
 };
-
 export default ITSolutions;

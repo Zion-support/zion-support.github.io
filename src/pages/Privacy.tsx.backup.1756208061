@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
 import Link from 'next/link';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
-
 const Privacy: React.FC = () => {
   return (
     <>
@@ -13,7 +8,6 @@ const Privacy: React.FC = () => {
         <meta name="description" content="Learn about how Zion Tech Group collects, uses, and protects your personal information. Read our comprehensive privacy policy." />
         <meta name="keywords" content="privacy policy, data protection, personal information, Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-lg p-8">
@@ -21,7 +15,6 @@ const Privacy: React.FC = () => {
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
               <p className="text-lg text-gray-600">Last updated: {new Date().toLocaleDateString()}</p>
             </div>
-
             <div className="prose prose-lg max-w-none">
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
@@ -32,10 +25,8 @@ const Privacy: React.FC = () => {
                   By using our services, you agree to the collection and use of information in accordance with this policy.
                 </p>
               </section>
-
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Information We Collect</h2>
-                
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">2.1 Personal Information</h3>
                 <p className="text-gray-700 mb-4">
                   We may collect personal information that you voluntarily provide to us, including:
@@ -47,7 +38,6 @@ const Privacy: React.FC = () => {
                   <li>Communication preferences</li>
                   <li>Resume and professional information (for job applications)</li>
                 </ul>
-
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">2.2 Automatically Collected Information</h3>
                 <p className="text-gray-700 mb-4">
                   When you visit our website, we automatically collect certain information, including:
@@ -61,7 +51,6 @@ const Privacy: React.FC = () => {
                   <li>Cookies and similar technologies</li>
                 </ul>
               </section>
-
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. How We Use Your Information</h2>
                 <p className="text-gray-700 mb-4">
@@ -77,7 +66,6 @@ const Privacy: React.FC = () => {
                   <li>Protect against fraud and security threats</li>
                 </ul>
               </section>
-
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Information Sharing and Disclosure</h2>
                 <p className="text-gray-700 mb-4">
@@ -91,7 +79,6 @@ const Privacy: React.FC = () => {
                   <li>In connection with a business transfer or merger</li>
                 </ul>
               </section>
-
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Data Security</h2>
                 <p className="text-gray-700 mb-4">
@@ -105,7 +92,6 @@ const Privacy: React.FC = () => {
                   <li>Employee training on data protection</li>
                 </ul>
               </section>
-
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Cookies and Tracking Technologies</h2>
                 <p className="text-gray-700 mb-4">
@@ -121,7 +107,6 @@ const Privacy: React.FC = () => {
                   <li>Preference cookies to remember your settings</li>
                 </ul>
               </section>
-
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Your Rights and Choices</h2>
                 <p className="text-gray-700 mb-4">
@@ -136,7 +121,6 @@ const Privacy: React.FC = () => {
                   <li>Opt-out of marketing communications</li>
                 </ul>
               </section>
-
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Data Retention</h2>
                 <p className="text-gray-700 mb-4">
@@ -146,21 +130,18 @@ const Privacy: React.FC = () => {
                   When we no longer need your personal information, we will securely delete or anonymize it.
                 </p>
               </section>
-
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. International Data Transfers</h2>
                 <p className="text-gray-700 mb-4">
                   Your personal information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.
                 </p>
               </section>
-
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Children's Privacy</h2>
                 <p className="text-gray-700 mb-4">
                   Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information, please contact us immediately.
                 </p>
               </section>
-
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Changes to This Privacy Policy</h2>
                 <p className="text-gray-700 mb-4">
@@ -170,7 +151,6 @@ const Privacy: React.FC = () => {
                   We encourage you to review this Privacy Policy periodically for any changes.
                 </p>
               </section>
-
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Contact Us</h2>
                 <p className="text-gray-700 mb-4">
@@ -191,7 +171,6 @@ const Privacy: React.FC = () => {
                   </p>
                 </div>
               </section>
-
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">13. Governing Law</h2>
                 <p className="text-gray-700">
@@ -199,7 +178,6 @@ const Privacy: React.FC = () => {
                 </p>
               </section>
             </div>
-
             <div className="mt-12 pt-8 border-t border-gray-200 text-center">
               <p className="text-gray-600">
                 Thank you for trusting Zion Tech Group with your information. We are committed to protecting your privacy and maintaining the highest standards of data protection.
@@ -211,5 +189,4 @@ const Privacy: React.FC = () => {
     </>
   );
 };
-
 export default Privacy;

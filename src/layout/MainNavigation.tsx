@@ -1,15 +1,9 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, ChevronDown, Users, Briefcase, Settings, BarChart3 } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { MessageSquare, ChevronDown, Brain, Shield, Cloud, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
@@ -37,10 +31,6 @@ import { useState } from "react";
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
 import { useTranslation } from "react-i18next";
 import {
@@ -49,18 +39,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
 }
-
 interface NavigationLink {
   key: string;
   href: string;
@@ -68,43 +52,30 @@ interface NavigationLink {
   matches: (path: string) => boolean;
   dropdown?: { href: string; name: string; }[];
 }
-
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 =======
-
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-<<<<<<< HEAD
-        setActiveDropdown(null);
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 =======
-
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         setDropdownOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
@@ -120,7 +91,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 =======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   const toggleDropdown = (dropdownName: string) => {
     if (activeDropdown === dropdownName) {
       setActiveDropdown(null);
@@ -128,9 +98,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       setActiveDropdown(dropdownName);
     }
   };
-
   const isActive = (path: string) => location.pathname === path;
-
   // Align to live site routes discovered in sitemap
   const navigationItems = [
     { key: 'home', href: '/', label: t('nav.home'), icon: null },
@@ -151,18 +119,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     { key: 'careers', href: '/careers', label: t('nav.careers') ?? 'Careers', icon: null },
     { key: 'contact', href: '/contact', label: t('nav.contact'), icon: null }
   ];
-
   const adminItems = [
     { key: 'dashboard', href: '/dashboard', label: t('nav.dashboard'), icon: <BarChart3 className="w-4 h-4" /> },
     { key: 'admin', href: '/admin', label: t('nav.admin'), icon: <Settings className="w-4 h-4" /> }
   ];
-
   const userItems = [
     { key: 'profile', href: '/dashboard/profile', label: t('nav.profile'), icon: <Users className="w-4 h-4" /> },
     { key: 'projects', href: '/dashboard/projects', label: t('nav.projects'), icon: <Briefcase className="w-4 h-4" /> },
     { key: 'help', href: '/help', label: t('nav.help'), icon: <HelpCircle className="w-4 h-4" /> }
   ];
-
   const serviceDropdowns = [
     {
       key: 'ai-services',
@@ -224,16 +189,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     { key: 'cloud-migration', href: '/cloud-migration-services', name: 'Cloud Migration' },
     { key: 'it-onsite', href: '/it-onsite-services', name: 'IT Onsite Services' }
   ];
-
   let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
 =======
       matches: (path: string) => path.startsWith('/blog'),
       name: t('nav.blog')
     }
   ];
-
   let links = baseLinks;
-  
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -241,7 +203,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         setIsServicesOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
@@ -252,7 +213,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/about') || path === '/careers' || path === '/contact'
     }
   ];
-
   let links = baseLinks;
 =======
       name: 'Community',
@@ -275,9 +235,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       ]
     }
   ];
-
   let links: NavigationLink[] = baseLinks;
-  
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
@@ -287,7 +245,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
     });
   }
-  
   // Add admin-only links
   if (isAdmin) {
     links.push({
@@ -297,46 +254,34 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/analytics')
     });
   }
-
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
-
   const closeDropdown = () => {
     setActiveDropdown(null);
   };
-  
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
-
   const handleDropdownClose = () => {
     setActiveDropdown(null);
   };
-  
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
-
   const closeDropdowns = () => {
     setActiveDropdown(null);
   };
-  
   return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)}>
 =======
   const toggleDropdown = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
-
   const isDropdownActive = (key: string) => activeDropdown === key;
-  
   return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
       <ul className="flex items-center gap-1">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative overflow-hidden group",
                 link.matches(location.pathname)
                   ? "bg-gradient-to-r from-zion-purple/30 to-zion-cyan/30 text-zion-cyan shadow-lg shadow-zion-purple/20"
@@ -348,19 +293,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 "absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md",
                 link.matches(location.pathname) && "opacity-100"
               )} />
-              
               {/* Glowing border effect */}
               <div className={cn(
                 "absolute inset-0 rounded-md border border-transparent group-hover:border-zion-purple/30 transition-all duration-300",
                 link.matches(location.pathname) && "border-zion-cyan/50"
               )} />
-              
               <span className="relative z-10">{link.name}</span>
             </Link>
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           <li key={link.key} className="relative" onMouseLeave={handleDropdownClose}>
 =======
           <li key={link.name} className="relative">
@@ -379,7 +320,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   {link.name}
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-                
                 {activeDropdown === link.key && (
                   <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-md shadow-lg z-50">
                     <div className="py-2">
@@ -418,7 +358,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </li>
             );
           }
-          
           if (link.key === 'company') {
             return (
               <li key={link.key}>
@@ -426,7 +365,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </li>
             );
           }
-          
           return (
             <li key={link.name}>
               <Link
@@ -444,7 +382,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           );
         })}
 =======
-
         {/* Service Dropdowns */}
         {serviceDropdowns.map((dropdown) => (
           <li key={dropdown.key} className="relative">
@@ -465,7 +402,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 isDropdownActive(dropdown.key) ? "rotate-180" : ""
               )} />
             </button>
-
             {/* Dropdown Menu */}
             {isDropdownActive(dropdown.key) && (
               <div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 backdrop-blur-xl z-50">
@@ -487,7 +423,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
           </li>
         ))}
-        
         {/* Services Dropdown */}
         <li className="relative">
           <button
@@ -504,7 +439,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             Services
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
-          
           {isServicesOpen && (
             <div
               className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50"
@@ -538,7 +472,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </div>
           )}
         </li>
-        
         {/* Company Dropdown */}
         <li className="relative">
           <button
@@ -555,7 +488,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             Company
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
-          
           {isCompanyOpen && (
             <div
               className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50"
@@ -595,7 +527,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </div>
           )}
         </li>
-        
         {/* More dropdown */}
         <li className="relative">
           <div ref={dropdownRef}>
@@ -611,7 +542,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             More
             <ChevronDown className={cn("ml-1 w-4 h-4 transition-transform", dropdownOpen && "rotate-180")} />
           </button>
-          
           {dropdownOpen && (
             <div className="absolute top-full left-0 mt-1 w-64 bg-zion-blue-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
               <div className="p-2">
@@ -636,7 +566,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           )}
           </div>
         </li>
-        
         {/* Services Dropdown */}
         <li className="relative" ref={dropdownRef}>
           <button
@@ -651,7 +580,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             Services
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
-          
           {isServicesOpen && (
             <div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
               <div className="py-2">
@@ -672,7 +600,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </div>
           )}
         </li>
-        
         {/* Company dropdown */}
         <li className="relative">
           <button
@@ -722,7 +649,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </div>
           )}
         </li>
-
         {/* Support dropdown */}
         <li className="relative">
           <button
@@ -764,10 +690,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </div>
             </div>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
         {links.map((link) => (
           <li key={link.name}>
@@ -784,7 +706,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </Link>
           </li>
         ))}
-        
         {/* Resources Dropdown */}
         <li>
           <DropdownMenu>
@@ -816,7 +737,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </DropdownMenuContent>
           </DropdownMenu>
         </li>
-        
         {/* Company Dropdown */}
         <li>
           <DropdownMenu>
@@ -853,58 +773,38 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </li>
-        
         {/* Messages link with unread counter */}
         {isAuthenticated && (
           <li>
             <Link
               to="/messages"
               className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-<<<<<<< HEAD
-=======
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:border hover:border-zion-purple/20"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               )}
               onClick={closeDropdown}
             >
               <MessageSquare className="w-4 h-4 mr-1" />
               Messages
               {unreadCount > 0 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-=======
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   {unreadCount}
                 </span>
               )}
             </Link>
           </li>
         )}
-
         {/* Request Quote CTA */}
         <li>
           <Link

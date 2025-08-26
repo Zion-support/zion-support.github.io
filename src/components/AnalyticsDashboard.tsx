@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { 
   BarChart3, 
   TrendingUp, 
@@ -16,13 +10,11 @@ import {
   RefreshCw
 } from 'lucide-react';
 import { useAnalytics } from '../hooks/useAnalytics';
-
 interface AnalyticsDashboardProps {
   className?: string;
   showRealTime?: boolean;
   refreshInterval?: number;
 }
-
 export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
   className = '',
   showRealTime = true,
@@ -42,22 +34,17 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
     enableUserBehaviorTracking: true,
     enableHeatmapTracking: false
   });
-
   const [isExpanded, setIsExpanded] = useState(false);
   const [selectedTimeRange, setSelectedTimeRange] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
   const [analyticsSummary, setAnalyticsSummary] = useState<any>(null);
-
   // Auto-refresh analytics data
   useEffect(() => {
     if (!showRealTime) return;
-
     const interval = setInterval(() => {
       updateAnalyticsSummary();
     }, refreshInterval);
-
     return () => clearInterval(interval);
   }, [showRealTime, refreshInterval]);
-
   // Update analytics summary
   const updateAnalyticsSummary = () => {
     const summary = getAnalyticsSummary();
@@ -65,51 +52,39 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
       setAnalyticsSummary(summary);
     }
   };
-
   // Update summary when events change
   useEffect(() => {
     updateAnalyticsSummary();
   }, [events, currentSession]);
-
   // Track dashboard interactions
   const handleDashboardInteraction = (action: string, metadata?: any) => {
     trackEvent('dashboard', action, 'dashboard_interaction', undefined, metadata);
   };
-
   // Track conversion goal
   const handleTrackConversion = () => {
     trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange });
   };
-
   // Get events by category for chart
   const getEventsByCategory = () => {
     if (!analyticsSummary?.eventsByCategory) return [];
-    
     return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
       category,
       count: count as number
     }));
   };
-
   // Get performance score
   const getPerformanceScore = () => {
     if (!performanceMetrics) return 0;
-    
     let score = 100;
-    
     // Deduct points for poor performance
     if (performanceMetrics.pageLoadTime > 3000) score -= 20;
     else if (performanceMetrics.pageLoadTime > 1000) score -= 10;
-    
     if (performanceMetrics.firstContentfulPaint > 2000) score -= 15;
     else if (performanceMetrics.firstContentfulPaint > 1000) score -= 5;
-    
     if (performanceMetrics.cumulativeLayoutShift > 0.1) score -= 25;
     else if (performanceMetrics.cumulativeLayoutShift > 0.05) score -= 10;
-    
     return Math.max(0, score);
   };
-
   // Format duration
   const formatDuration = (seconds: number) => {
     if (seconds < 60) return `${seconds}s`;
@@ -117,14 +92,12 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
     const remainingSeconds = seconds % 60;
     return `${minutes}m ${remainingSeconds}s`;
   };
-
   // Format number with K/M suffix
   const formatNumber = (num: number) => {
     if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
     if (num >= 1000) return `${(num / 1000).toFixed(1)}K`;
     return num.toString();
   };
-
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header */}
@@ -142,7 +115,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
               <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-400' : 'bg-red-400'}`}></div>
               {isTracking ? 'Tracking' : 'Stopped'}
             </div>
-            
             {/* Time Range Selector */}
             <select
               value={selectedTimeRange}
@@ -157,7 +129,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
               <option value="7d">7 Days</option>
               <option value="30d">30 Days</option>
             </select>
-            
             <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="p-1 hover:bg-white/20 rounded transition-colors"
@@ -168,7 +139,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
           </div>
         </div>
       </div>
-
       {/* Key Metrics Overview */}
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -182,7 +152,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
             </div>
             <div className="text-xs text-gray-600 dark:text-gray-400">Session Duration</div>
           </div>
-
           {/* Page Views */}
           <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
             <div className="flex items-center justify-center mb-2">
@@ -193,7 +162,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
             </div>
             <div className="text-xs text-gray-600 dark:text-gray-400">Page Views</div>
           </div>
-
           {/* Total Events */}
           <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
             <div className="flex items-center justify-center mb-2">
@@ -204,7 +172,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
             </div>
             <div className="text-xs text-gray-600 dark:text-gray-400">Total Events</div>
           </div>
-
           {/* Performance Score */}
           <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
             <div className="flex items-center justify-center mb-2">
@@ -217,7 +184,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
           </div>
         </div>
       </div>
-
       {/* Real-time Events Feed */}
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
         <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">
@@ -227,7 +193,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
           )}
         </h4>
-        
         <div className="space-y-2 max-h-32 overflow-y-auto">
           {events.slice(-5).reverse().map((event) => (
             <div key={event.id} className="flex items-center justify-between text-sm p-2 bg-gray-50 dark:bg-gray-700 rounded">
@@ -246,7 +211,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
               </span>
             </div>
           ))}
-          
           {events.length === 0 && (
             <div className="text-center text-gray-500 text-sm py-4">
               No events tracked yet
@@ -254,12 +218,10 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
           )}
         </div>
       </div>
-
       {/* Detailed Analytics */}
       {isExpanded && (
         <div className="border-t border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">
           <h4 className="font-medium text-gray-900 dark:text-white mb-3">Detailed Analytics</h4>
-          
           {/* Performance Metrics */}
           {performanceMetrics && (
             <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
@@ -284,7 +246,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
               </div>
             </div>
           )}
-
           {/* Events by Category */}
           <div className="mb-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
             <h5 className="font-medium text-green-800 dark:text-green-200 mb-2">Events by Category</h5>
@@ -309,7 +270,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
               ))}
             </div>
           </div>
-
           {/* Session Information */}
           {currentSession && (
             <div className="mb-4 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
@@ -338,7 +298,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
           )}
         </div>
       )}
-
       {/* Controls */}
       <div className="p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
         <div className="flex gap-2">
@@ -352,7 +311,6 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
             <RefreshCw className="w-4 h-4" />
             Refresh Data
           </button>
-          
           <button
             onClick={() => {
               handleTrackConversion();

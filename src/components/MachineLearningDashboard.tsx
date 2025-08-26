@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useState, useCallback } from 'react';
-=======
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Brain,
@@ -24,21 +20,17 @@ import {
 } from 'lucide-react';
 import { useMachineLearning } from '../hooks/useMachineLearning';
 import { useAnalytics } from '../hooks/useAnalytics';
-
 interface MLDashboardProps {
   className?: string;
 }
-
 export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className = '' }) => {
   const { trackEvent } = useAnalytics({
     enableTracking: true,
     enableUserBehaviorTracking: true
   });
-
   const [activeTab, setActiveTab] = useState<'overview' | 'models' | 'training' | 'predictions' | 'analytics'>('overview');
   const [showCreateModel, setShowCreateModel] = useState(false);
   const [showImportModel, setShowImportModel] = useState(false);
-
   const {
     models,
     trainingJobs,
@@ -54,18 +46,15 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
     exportModel,
     importModel
   } = useMachineLearning();
-
   const [newModelForm, setNewModelForm] = useState({
     name: '',
     type: 'classification' as const,
     framework: 'tensorflow' as const
   });
-
   const [predictionForm, setPredictionForm] = useState({
     modelId: '',
     input: ''
   });
-
   const handleCreateModel = useCallback(() => {
     if (newModelForm.name.trim()) {
       createModel({
@@ -78,7 +67,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
       trackEvent('ml', 'dashboard', 'model_created');
     }
   }, [newModelForm, createModel, trackEvent]);
-
   const handleStartTraining = useCallback(async (modelId: string) => {
     const hyperparameters = {
       learningRate: 0.001,
@@ -86,7 +74,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
       epochs: 100,
       optimizer: 'adam'
     };
-    
     try {
       await startTraining(modelId, hyperparameters);
       trackEvent('ml', 'dashboard', 'training_started');
@@ -94,22 +81,18 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
       console.error('Training failed:', error);
     }
   }, [startTraining, trackEvent]);
-
   const handleStopTraining = useCallback((jobId: string) => {
     stopTraining(jobId);
     trackEvent('ml', 'dashboard', 'training_stopped');
   }, [stopTraining, trackEvent]);
-
   const handleDeployModel = useCallback((modelId: string) => {
     deployModel(modelId);
     trackEvent('ml', 'dashboard', 'model_deployed');
   }, [deployModel, trackEvent]);
-
   const handleArchiveModel = useCallback((modelId: string) => {
     archiveModel(modelId);
     trackEvent('ml', 'dashboard', 'model_archived');
   }, [archiveModel, trackEvent]);
-
   const handleMakePrediction = useCallback(async () => {
     if (predictionForm.modelId && predictionForm.input.trim()) {
       try {
@@ -123,7 +106,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
       }
     }
   }, [predictionForm, makePrediction, trackEvent]);
-
   const handleExportModel = useCallback((modelId: string) => {
           try {
         const modelData = exportModel(modelId);
@@ -133,7 +115,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
         console.error('Export failed:', error);
       }
   }, [exportModel, trackEvent]);
-
   const handleImportModel = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
@@ -151,7 +132,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
       reader.readAsText(file);
     }
   }, [importModel, trackEvent]);
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'deployed': return 'text-green-600 bg-green-100';
@@ -161,7 +141,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getJobStatusColor = (status: string) => {
     switch (status) {
       case 'running': return 'text-blue-600 bg-blue-100';
@@ -171,7 +150,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getModelTypeIcon = (type: string) => {
     switch (type) {
       case 'classification': return <Target className="w-4 h-4" />;
@@ -183,7 +161,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
       default: return <Brain className="w-4 h-4" />;
     }
   };
-
   return (
     <div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {/* Header */}
@@ -201,7 +178,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
             </p>
           </div>
         </div>
-        
         <div className="flex items-center space-x-2">
           <button
             onClick={() => setShowImportModel(!showImportModel)}
@@ -210,7 +186,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
             <Upload className="w-4 h-4" />
             <span>Import</span>
           </button>
-          
           <button
             onClick={() => setShowCreateModel(!showCreateModel)}
             className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700"
@@ -220,7 +195,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
           </button>
         </div>
       </div>
-
       {/* Navigation Tabs */}
       <div className="flex border-b border-gray-200 dark:border-gray-700">
         {[
@@ -244,7 +218,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
           </button>
         ))}
       </div>
-
       {/* Content */}
       <div className="p-4">
         <AnimatePresence mode="wait">
@@ -267,7 +240,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                     <Brain className="w-8 h-8 text-purple-500" />
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -277,7 +249,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                     <CheckCircle className="w-8 h-8 text-green-500" />
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -287,7 +258,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                     <Target className="w-8 h-8 text-blue-500" />
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -298,7 +268,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                   </div>
                 </div>
               </div>
-
               {/* Training Jobs Status */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Training Jobs</h3>
@@ -321,7 +290,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                   </div>
                 </div>
               </div>
-
               {/* Recent Models */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Models</h3>
@@ -353,7 +321,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
               </div>
             </motion.div>
           )}
-
           {activeTab === 'models' && (
             <motion.div
               key="models"
@@ -374,7 +341,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                   </button>
                 </div>
               </div>
-
               {/* Create Model Form */}
               <AnimatePresence>
                 {showCreateModel && (
@@ -433,7 +399,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                   </motion.div>
                 )}
               </AnimatePresence>
-
               {/* Import Model */}
               <AnimatePresence>
                 {showImportModel && (
@@ -459,7 +424,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                   </motion.div>
                 )}
               </AnimatePresence>
-
               {/* Models List */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {models.map((model) => (
@@ -490,12 +454,10 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                         </button>
                       </div>
                     </div>
-                    
                     <h4 className="font-medium text-gray-900 dark:text-white mb-2">{model.name}</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                       {model.type} • {model.framework} • v{model.version}
                     </p>
-                    
                     <div className="space-y-2 mb-4">
                       <div className="flex justify-between text-sm">
                         <span className="text-gray-500 dark:text-gray-400">Accuracy:</span>
@@ -516,7 +478,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                         </span>
                       </div>
                     </div>
-                    
                     <div className="flex space-x-2">
                       {model.status === 'ready' && (
                         <>
@@ -549,7 +510,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
               </div>
             </motion.div>
           )}
-
           {activeTab === 'training' && (
             <motion.div
               key="training"
@@ -559,7 +519,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
               className="space-y-4"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Training Jobs</h3>
-              
               <div className="space-y-4">
                 {trainingJobs.map((job) => {
                   const model = models.find(m => m.id === job.modelId);
@@ -583,7 +542,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                           {job.status}
                         </span>
                       </div>
-                      
                       {job.status === 'running' && (
                         <div className="mb-3">
                           <div className="flex justify-between text-sm mb-1">
@@ -598,7 +556,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                           </div>
                         </div>
                       )}
-                      
                       {job.metrics.accuracy.length > 0 && (
                         <div className="grid grid-cols-2 gap-4 mb-3">
                           <div>
@@ -615,7 +572,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                           </div>
                         </div>
                       )}
-                      
                       <div className="flex space-x-2">
                         {job.status === 'running' && (
                           <button
@@ -642,7 +598,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                     </div>
                   );
                 })}
-                
                 {trainingJobs.length === 0 && (
                   <div className="text-center py-8 text-gray-500 dark:text-gray-400">
                     <Activity className="w-12 h-12 mx-auto mb-4 text-gray-400" />
@@ -653,7 +608,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
               </div>
             </motion.div>
           )}
-
           {activeTab === 'predictions' && (
             <motion.div
               key="predictions"
@@ -663,7 +617,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
               className="space-y-4"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Make Predictions</h3>
-              
               {/* Prediction Form */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -700,7 +653,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
               </div>
-
               {/* Recent Predictions */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <h4 className="font-medium text-gray-900 dark:text-white mb-3">Recent Predictions</h4>
@@ -726,7 +678,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                             {prediction.timestamp.toLocaleTimeString()}
                           </span>
                         </div>
-                        
                         {prediction.status === 'completed' && prediction.result && (
                           <div className="text-sm text-gray-700 dark:text-gray-300">
                             <p><strong>Result:</strong> {JSON.stringify(prediction.result)}</p>
@@ -738,7 +689,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                             )}
                           </div>
                         )}
-                        
                         {prediction.status === 'failed' && prediction.error && (
                           <div className="text-sm text-red-600 dark:text-red-400">
                             <strong>Error:</strong> {prediction.error}
@@ -747,7 +697,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                       </div>
                     );
                   })}
-                  
                   {predictions.length === 0 && (
                     <div className="text-center py-4 text-gray-500 dark:text-gray-400">
                       <Target className="w-8 h-8 mx-auto mb-2 text-gray-400" />
@@ -758,7 +707,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
               </div>
             </motion.div>
           )}
-
           {activeTab === 'analytics' && (
             <motion.div
               key="analytics"
@@ -768,7 +716,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
               className="space-y-4"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Analytics</h3>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Model Performance</h4>
@@ -791,7 +738,6 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
                     ))}
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Prediction Metrics</h4>
                   <div className="space-y-3">

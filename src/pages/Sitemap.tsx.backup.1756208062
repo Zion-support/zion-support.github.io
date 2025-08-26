@@ -1,139 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { 
-  Brain, 
-  Cpu, 
-  Shield, 
-  Cloud, 
-  Building, 
-  Users, 
-  Heart, 
-  Rocket, 
-  Code, 
-  BarChart3, 
-  Target, 
-  Network, 
-  Eye, 
-  Clock, 
-  Star, 
-  Globe, 
-  FileText, 
-  Calendar, 
-  Video, 
-  Zap, 
-  TrendingUp, 
-  ShoppingCart,
-  Lock,
-  Database,
-  Palette,
-  Workflow,
-  Home,
-  Info,
-  Phone,
-  DollarSign,
-  BookOpen,
-  HelpCircle,
-  Users as TeamIcon,
-  Briefcase,
-  Shield as SecurityIcon,
-  Server,
-  RefreshCw,
-  MessageSquare
-} from 'lucide-react';
-
-const Sitemap = () => {
-  const siteStructure = [
-    {
-      title: 'Main Pages',
-      icon: Home,
-      pages: [
-        { name: 'Home', path: '/', description: 'Welcome to Zion Tech Group' },
-        { name: 'About Us', path: '/about', description: 'Learn about our company' },
-        { name: 'Team', path: '/team', description: 'Meet our team' },
-        { name: 'Contact', path: '/contact', description: 'Get in touch with us' },
-        { name: 'Careers', path: '/careers', description: 'Join our team' },
-        { name: 'Get Started', path: '/get-started', description: 'Start your journey with us' }
-      ]
-    },
-    {
-      title: 'Services',
-      icon: Code,
-      pages: [
-        { name: 'AI Solutions', path: '/services/ai', description: 'AI-powered business solutions' },
-        { name: 'Cloud & DevOps', path: '/services/cloud', description: 'Cloud infrastructure & automation' },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', description: 'Advanced security solutions' },
-        { name: 'IT Infrastructure', path: '/services/infrastructure', description: 'Robust IT foundations' },
-        { name: 'Digital Transformation', path: '/services/transformation', description: 'Business modernization' },
-        { name: 'Consulting', path: '/services/consulting', description: 'Strategic technology guidance' }
-      ]
-    },
-    {
-      title: 'Solutions',
-      icon: Building,
-      pages: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', description: 'Large-scale business solutions' },
-        { name: 'Financial Solutions', path: '/solutions/financial', description: 'Fintech & banking solutions' },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Healthcare technology' },
-        { name: 'Government Solutions', path: '/solutions/government', description: 'Public sector solutions' },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', description: 'Industry 4.0 solutions' },
-        { name: 'Retail Solutions', path: '/solutions/retail', description: 'E-commerce & retail tech' }
-      ]
-    },
-    {
-      title: 'Resources',
-      icon: BookOpen,
-      pages: [
-        { name: 'Blog', path: '/blog', description: 'Latest insights and updates' },
-        { name: 'Events', path: '/events', description: 'Upcoming events and conferences' },
-        { name: 'Webinars', path: '/webinars', description: 'Educational webinars' },
-        { name: 'White Papers', path: '/white-papers', description: 'In-depth research papers' },
-        { name: 'Tutorials', path: '/tutorials', description: 'Step-by-step guides' },
-        { name: 'Research & Development', path: '/research-development', description: 'Our R&D initiatives' }
-      ]
-    },
-    {
-      title: 'Specialized Technologies',
-      icon: Rocket,
-      pages: [
-        { name: 'Quantum Technology', path: '/quantum-technology', description: 'Quantum computing platforms' },
-        { name: 'Space Tech', path: '/space-tech', description: 'Space technology solutions' },
-        { name: 'Green IT', path: '/green-it', description: 'Sustainable technology solutions' }
-      ]
-    },
-    {
-      title: 'Support & Legal',
-      icon: HelpCircle,
-      pages: [
-        { name: 'Help Center', path: '/help-center', description: 'Get help and support' },
-        { name: 'Support', path: '/support', description: 'Technical support services' },
-        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
-        { name: 'Privacy Policy', path: '/privacy', description: 'Our privacy practices' },
-        { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' }
-      ]
-    },
-    {
-      title: 'Business Tools',
-      icon: BarChart3,
-      pages: [
-        { name: 'Pricing', path: '/pricing', description: 'Service pricing and plans' },
-        { name: 'Service Comparison', path: '/service-comparison', description: 'Compare our services' },
-        { name: 'Service Portfolio', path: '/service-portfolio', description: 'View our service portfolio' },
-        { name: 'Service Recommendations', path: '/service-recommendations', description: 'Get personalized recommendations' },
-        { name: 'Service Innovation Hub', path: '/service-innovation-hub', description: 'Innovation showcase' },
-        { name: 'Services Showcase', path: '/services-showcase', description: 'Featured services' }
-=======
 =======
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
-
 const Sitemap: React.FC = () => {
   const sitemapSections = [
     {
@@ -195,70 +62,21 @@ const Sitemap: React.FC = () => {
         { name: "Privacy Policy", path: "/privacy", description: "Data protection and privacy" },
         { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
         { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" }
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
       ]
     }
   ];
 =======
 =======
 import { AppLayout } from "@/layout/AppLayout";
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 =======
-
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
 import { SEO } from "@/components/SEO";
 import { completeSitemap } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout";
->>>>>>> origin/cursor/website-audit-and-enhancement-50d5
-
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Site Map
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore all the pages and resources available on the Zion Tech Group website. 
-            Find exactly what you're looking for with our comprehensive site navigation.
-          </p>
-        </div>
-
-        {/* Site Structure */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {siteStructure.map((section) => (
-            <div key={section.title} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center mb-4">
-                <div className="p-2 bg-blue-100 rounded-lg mr-3">
-                  <section.icon className="h-6 w-6 text-blue-600" />
-                </div>
-                <h2 className="text-xl font-semibold text-gray-900">{section.title}</h2>
-              </div>
-              
-              <div className="space-y-3">
-                {section.pages.map((page) => (
-                  <Link
-                    key={page.path}
-                    to={page.path}
-                    className="block p-3 rounded-lg hover:bg-blue-50 transition-colors duration-200 group"
-                  >
-                    <div className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
-                      {page.name}
-                    </div>
-                    <div className="text-sm text-gray-600 mt-1">
-                      {page.description}
-                    </div>
-                  </Link>
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
@@ -271,7 +89,6 @@ import { AppLayout } from "@/layout";
             technology solutions, resources, and company information.
           </p>
         </div>
-
         {/* Sitemap Sections */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {sitemapSections.map((section) => (
@@ -300,49 +117,11 @@ import { AppLayout } from "@/layout";
                       </div>
                     </Link>
                   </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
                 ))}
               </div>
             </div>
           ))}
         </div>
-
-<<<<<<< HEAD
-        {/* Quick Links */}
-        <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Quick Links</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link
-              to="/contact"
-              className="flex flex-col items-center p-4 rounded-lg hover:bg-blue-50 transition-colors duration-200 group"
-            >
-              <Phone className="h-8 w-8 text-blue-600 mb-2" />
-              <span className="text-sm font-medium text-gray-900 group-hover:text-blue-600">Contact Us</span>
-            </Link>
-            
-            <Link
-              to="/get-started"
-              className="flex flex-col items-center p-4 rounded-lg hover:bg-blue-50 transition-colors duration-200 group"
-            >
-              <Rocket className="h-8 w-8 text-green-600 mb-2" />
-              <span className="text-sm font-medium text-gray-900 group-hover:text-green-600">Get Started</span>
-            </Link>
-            
-            <Link
-              to="/pricing"
-              className="flex flex-col items-center p-4 rounded-lg hover:bg-blue-50 transition-colors duration-200 group"
-            >
-              <DollarSign className="h-8 w-8 text-purple-600 mb-2" />
-              <span className="text-sm font-medium text-gray-900 group-hover:text-purple-600">Pricing</span>
-            </Link>
-            
-            <Link
-              to="/support"
-              className="flex flex-col items-center p-4 rounded-lg hover:bg-blue-50 transition-colors duration-200 group"
-            >
-              <HelpCircle className="h-8 w-8 text-orange-600 mb-2" />
-              <span className="text-sm font-medium text-gray-900 group-hover:text-orange-600">Support</span>
-=======
         {/* Quick Links Section */}
         <div className="mt-16 bg-slate-800/50 rounded-xl p-8 border border-white/10">
           <h2 className="text-2xl font-bold text-white mb-6 text-center">
@@ -372,26 +151,16 @@ import { AppLayout } from "@/layout";
               className="text-center p-4 bg-slate-700 rounded-lg text-white font-semibold hover:bg-slate-600 transition-all duration-300"
             >
               About Us
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
             </Link>
           </div>
         </div>
-
         {/* Contact Information */}
-<<<<<<< HEAD
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl text-white p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Need Help Finding Something?</h2>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-            Can't find what you're looking for? Our team is here to help you navigate our website 
-            and find the information you need.
-=======
         <div className="mt-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-6">
             Need Help?
           </h2>
           <p className="text-gray-300 mb-8">
             Can't find what you're looking for? Our team is here to help.
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
 =======
 import { 
   MapIcon, 
@@ -401,7 +170,6 @@ import {
   RocketLaunchIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-
 const Sitemap: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -424,7 +192,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Main Navigation */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -443,7 +210,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors duration-300">Blog</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-green-400">Company</h3>
               <ul className="space-y-2">
@@ -455,7 +221,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/pricing" className="text-gray-300 hover:text-white transition-colors duration-300">Pricing</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-purple-400">Resources</h3>
               <ul className="space-y-2">
@@ -467,7 +232,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/news" className="text-gray-300 hover:text-white transition-colors duration-300">News</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-orange-400">Legal</h3>
               <ul className="space-y-2">
@@ -480,7 +244,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* AI & Technology Services */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -500,7 +263,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/ai-code-review" className="text-gray-300 hover:text-white transition-colors duration-300">AI Code Review</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-green-400">AI Autonomous Systems</h3>
               <ul className="space-y-2 text-sm">
@@ -512,7 +274,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/ai-autonomous-testing" className="text-gray-300 hover:text-white transition-colors duration-300">AI Testing</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-purple-400">AI Specialized Services</h3>
               <ul className="space-y-2 text-sm">
@@ -524,7 +285,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/ai-autonomous-robotics" className="text-gray-300 hover:text-white transition-colors duration-300">AI Robotics</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-orange-400">AI Research & Development</h3>
               <ul className="space-y-2 text-sm">
@@ -536,7 +296,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/ai-consciousness-evolution" className="text-gray-300 hover:text-white transition-colors duration-300">AI Consciousness</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">AI Content & Marketing</h3>
               <ul className="space-y-2 text-sm">
@@ -548,7 +307,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/ai-ad-creative-generator" className="text-gray-300 hover:text-white transition-colors duration-300">AI Ad Creative Generator</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-pink-400">AI Infrastructure</h3>
               <ul className="space-y-2 text-sm">
@@ -563,7 +321,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Quantum & Advanced Tech */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -583,7 +340,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/quantum-services" className="text-gray-300 hover:text-white transition-colors duration-300">Quantum Services</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-blue-400">5G & Network Services</h3>
               <ul className="space-y-2 text-sm">
@@ -593,7 +349,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/5g-private-network-solutions" className="text-gray-300 hover:text-white transition-colors duration-300">5G Private Network Solutions</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-green-400">Advanced Services</h3>
               <ul className="space-y-2 text-sm">
@@ -606,7 +361,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Infrastructure & Business Solutions */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -626,7 +380,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/enterprise-it" className="text-gray-300 hover:text-white transition-colors duration-300">Enterprise IT</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-blue-400">Business Operations</h3>
               <ul className="space-y-2 text-sm">
@@ -636,7 +389,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/autonomous-business-operations" className="text-gray-300 hover:text-white transition-colors duration-300">Autonomous Business Operations</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-purple-400">Specialized Solutions</h3>
               <ul className="space-y-2 text-sm">
@@ -650,7 +402,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Special Solutions */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -668,7 +419,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/accessibility-scanner" className="text-gray-300 hover:text-white transition-colors duration-300">Accessibility Scanner</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">AI Tools & Platforms</h3>
               <ul className="space-y-2 text-sm">
@@ -678,7 +428,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/affiliate-attribution-hub" className="text-gray-300 hover:text-white transition-colors duration-300">Affiliate Attribution Hub</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-pink-400">Service Management</h3>
               <ul className="space-y-2 text-sm">
@@ -691,7 +440,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -701,32 +449,19 @@ const Sitemap: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Our comprehensive sitemap should help you navigate to the right page. 
             If you still need assistance, don't hesitate to contact us.
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
-=======
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
             >
               Contact Support
             </Link>
             <Link
-<<<<<<< HEAD
-              to="/help-center"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
-            >
-              Visit Help Center
-=======
               to="/help"
               className="bg-slate-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-all duration-300"
             >
               Help Center
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
             </Link>
           </div>
         </div>
@@ -745,47 +480,21 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
     </div>
 =======
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
     <AppLayout>
       <SEO
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title="Sitemap | Zion Tech Group"
-        description="Complete sitemap for Zion Tech Group - navigate through all our services, pages, and resources"
-        keywords="sitemap, navigation, Zion Tech Group, services, pages"
-=======
         title="Sitemap | Zion AI Marketplace"
         description="Human readable sitemap for all public routes"
         keywords="sitemap, navigation"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-35e5
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-aa85
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-beb3
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-d85a
         canonical="https://ziontechgroup.com/sitemap"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -797,14 +506,12 @@ const Sitemap: React.FC = () => {
       />
       <AppHeader />
       <main className="min-h-screen bg-background pt-16 pb-20">
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl font-bold mb-8 text-white">Site Map</h1>
             <p className="text-zion-slate-light mb-8 text-lg">
               Navigate through all our services, pages, and resources
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div>
                 <h2 className="text-2xl font-semibold mb-4 text-zion-cyan">Main Pages</h2>
@@ -820,7 +527,6 @@ const Sitemap: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              
               <div>
                 <h2 className="text-2xl font-semibold mb-4 text-zion-cyan">Services</h2>
                 <ul className="space-y-2">
@@ -835,7 +541,6 @@ const Sitemap: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              
               <div>
                 <h2 className="text-2xl font-semibold mb-4 text-zion-cyan">Marketplace</h2>
                 <ul className="space-y-2">
@@ -854,16 +559,8 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-    </AppLayout>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-50d5
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
     </>
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
   );
 };
-
 export default Sitemap;

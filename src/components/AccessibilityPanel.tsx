@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 interface AccessibilitySettings {
   // Visual
   highContrast: boolean;
@@ -11,12 +10,10 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
   focusIndicator: boolean;
 }
-
 interface AccessibilityPanelProps {
   isOpen: boolean;
   onToggle: () => void;
 }
-
 export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
   isOpen,
   onToggle
@@ -31,9 +28,7 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
     focusIndicator: true
   });
   const [accessibilityScore, setAccessibilityScore] = useState(85);
-
   const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'audio' | 'navigation'>('general');
-
   useEffect(() => {
     // Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
@@ -46,18 +41,14 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
       }
     }
   }, []);
-
   useEffect(() => {
     // Apply settings to document
     applySettings(settings);
-    
     // Save to localStorage
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
-
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
     // High contrast
     if (newSettings.highContrast) {
       root.style.setProperty('--high-contrast', '1');
@@ -66,30 +57,25 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
       root.style.setProperty('--high-contrast', '0');
       root.classList.remove('high-contrast');
     }
-    
     // Font size
     root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
-    
     // Reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.style.setProperty('--reduced-motion', 'no-preference');
     }
-    
     // Apply focus indicator
     if (settings.focusIndicator) {
       root.style.setProperty('--focus-visible', 'auto');
     } else {
       root.style.setProperty('--focus-visible', 'none');
     }
-    
     // Color blindness
     root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
     if (newSettings.colorBlindness !== 'none') {
       root.classList.add(newSettings.colorBlindness);
     }
-    
     // Focus indicator
     if (newSettings.focusIndicator) {
       root.classList.add('focus-visible');
@@ -97,14 +83,12 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
       root.classList.remove('focus-visible');
     }
   };
-
   const updateSetting = <K extends keyof AccessibilitySettings>(
     key: K,
     value: AccessibilitySettings[K]
   ) => {
     setSettings(prev => ({ ...prev, [key]: value }));
   };
-
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
       highContrast: false,
@@ -117,37 +101,26 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
     };
     setSettings(defaultSettings);
   };
-
   const tabs = [
     { id: 'general', label: 'General', icon: '⚙️' },
     { id: 'visual', label: 'Visual', icon: '👁️' },
     { id: 'audio', label: 'Audio', icon: '🔊' },
     { id: 'navigation', label: 'Navigation', icon: '⌨️' }
   ] as const;
-
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
     return 'text-red-400';
   };
-
   const getScoreLabel = (score: number) => {
     if (score >= 90) return 'Excellent';
     if (score >= 70) return 'Good';
     if (score >= 50) return 'Needs Improvement';
     return 'Poor';
   };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (!isVisible) return null;
-=======
   if (!isOpen) return null;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
   if (!isVisible) return null;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
   return (
     <>
       {/* Toggle Button */}
@@ -161,7 +134,6 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
         </svg>
       </button>
-
       {/* Panel */}
       <AnimatePresence>
         {isOpen && (
@@ -186,7 +158,6 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                 </button>
               </div>
             </div>
-
             {/* Tabs */}
             <div className="flex border-b border-gray-200 dark:border-slate-700">
               {tabs.map((tab) => (
@@ -204,7 +175,6 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                 </button>
               ))}
             </div>
-
             {/* Content */}
             <div className="p-4 max-h-96 overflow-y-auto">
               <AnimatePresence>
@@ -232,7 +202,6 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                         Increases contrast for better readability
                       </p>
                     </div>
-
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Font Size: {settings.fontSize}%
@@ -247,7 +216,6 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                         className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                       />
                     </div>
-
                     <div>
                       <label className="flex items-center space-x-3">
                         <input
@@ -266,7 +234,6 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                     </div>
                   </motion.div>
                 )}
-
                 {activeTab === 'visual' && (
                   <motion.div
                     key="visual"
@@ -290,7 +257,6 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                         <option value="tritanopia">Tritanopia (Blue-Blind)</option>
                       </select>
                     </div>
-
                     <div>
                       <label className="flex items-center space-x-3">
                         <input
@@ -309,7 +275,6 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                     </div>
                   </motion.div>
                 )}
-
                 {activeTab === 'audio' && (
                   <motion.div
                     key="audio"
@@ -334,7 +299,6 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                         Optimizes content for screen readers
                       </p>
                     </div>
-
                     <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
                       <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">
                         Keyboard Shortcuts
@@ -348,7 +312,6 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                     </div>
                   </motion.div>
                 )}
-
                 {activeTab === 'navigation' && (
                   <motion.div
                     key="navigation"
@@ -373,7 +336,6 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                         Improves keyboard navigation experience
                       </p>
                     </div>
-
                     <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
                       <h4 className="text-sm font-medium text-green-800 dark:text-green-200 mb-2">
                         Navigation Tips
@@ -389,7 +351,6 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                 )}
               </AnimatePresence>
             </div>
-
             {/* Footer */}
             <div className="border-t border-gray-200 dark:border-slate-700 p-4 bg-gray-50 dark:bg-slate-700/50">
               <div className="flex space-x-2">
@@ -413,5 +374,4 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
     </>
   );
 };
-
 export default AccessibilityPanel;

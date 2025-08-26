@@ -1,15 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
 import Link from 'next/link';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { 
   Brain, 
   Cloud, 
@@ -24,28 +18,24 @@ import {
   Zap,
   Target
 } from 'lucide-react';
-
 interface CompanyValue {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
   color: string;
 }
-
 interface TeamMember {
   name: string;
   role: string;
   expertise: string[];
   avatar: string;
 }
-
 interface Milestone {
   year: string;
   title: string;
   description: string;
   achievement: string;
 }
-
 export const EnhancedAbout: React.FC = () => {
   const companyValues: CompanyValue[] = [
     {
@@ -73,7 +63,6 @@ export const EnhancedAbout: React.FC = () => {
       color: 'zion-purple'
     }
   ];
-
   const teamMembers: TeamMember[] = [
     {
       name: 'Kleber',
@@ -100,7 +89,6 @@ export const EnhancedAbout: React.FC = () => {
       avatar: '🔒'
     }
   ];
-
   const milestones: Milestone[] = [
     {
       year: '2020',
@@ -133,7 +121,6 @@ export const EnhancedAbout: React.FC = () => {
       achievement: '95% client satisfaction rate'
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -143,7 +130,6 @@ export const EnhancedAbout: React.FC = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -155,7 +141,6 @@ export const EnhancedAbout: React.FC = () => {
       }
     }
   };
-
   const cardVariants = {
     hidden: { scale: 0.9, opacity: 0 },
     visible: {
@@ -175,7 +160,6 @@ export const EnhancedAbout: React.FC = () => {
       }
     }
   };
-
   const timelineVariants = {
     hidden: { opacity: 0, x: -50 },
     visible: {
@@ -187,7 +171,6 @@ export const EnhancedAbout: React.FC = () => {
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -220,30 +203,18 @@ export const EnhancedAbout: React.FC = () => {
             variants={itemVariants}
           >
             <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-              to="/contact"
-=======
               href="/contact"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
               to="/contact"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group"
             >
               Get Started
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-              to="/services"
-=======
               href="/services"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
               to="/services"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
             >
               Our Services
@@ -251,7 +222,6 @@ export const EnhancedAbout: React.FC = () => {
           </motion.div>
         </motion.div>
       </section>
-
       {/* Mission & Vision */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -274,7 +244,6 @@ export const EnhancedAbout: React.FC = () => {
                 </p>
               </div>
             </motion.div>
-
             <motion.div variants={itemVariants}>
               <div className="mb-6">
                 <Globe className="h-16 w-16 text-zion-purple mb-4" />
@@ -290,7 +259,6 @@ export const EnhancedAbout: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Company Values */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -308,7 +276,6 @@ export const EnhancedAbout: React.FC = () => {
               The principles that guide everything we do
             </p>
           </motion.div>
-          
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             variants={containerVariants}
@@ -333,7 +300,6 @@ export const EnhancedAbout: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Team Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -351,7 +317,6 @@ export const EnhancedAbout: React.FC = () => {
               Meet the talented professionals driving innovation
             </p>
           </motion.div>
-          
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             variants={containerVariants}
@@ -382,7 +347,6 @@ export const EnhancedAbout: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Company Timeline */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -400,11 +364,9 @@ export const EnhancedAbout: React.FC = () => {
               Key milestones in our growth and success
             </p>
           </motion.div>
-          
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-zion-cyan to-zion-purple"></div>
-            
             <motion.div 
               className="space-y-12"
               variants={containerVariants}
@@ -422,7 +384,6 @@ export const EnhancedAbout: React.FC = () => {
                 >
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zion-cyan rounded-full border-4 border-slate-900"></div>
-                  
                   {/* Content */}
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -438,7 +399,6 @@ export const EnhancedAbout: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -456,7 +416,6 @@ export const EnhancedAbout: React.FC = () => {
               <div className="text-4xl font-bold text-zion-cyan mb-2">100+</div>
               <div className="text-gray-300">Projects Completed</div>
             </motion.div>
-            
             <motion.div 
               className="text-center"
               variants={itemVariants}
@@ -464,7 +423,6 @@ export const EnhancedAbout: React.FC = () => {
               <div className="text-4xl font-bold text-zion-purple mb-2">50+</div>
               <div className="text-gray-300">Happy Clients</div>
             </motion.div>
-            
             <motion.div 
               className="text-center"
               variants={itemVariants}
@@ -472,7 +430,6 @@ export const EnhancedAbout: React.FC = () => {
               <div className="text-4xl font-bold text-zion-cyan mb-2">95%</div>
               <div className="text-gray-300">Client Satisfaction</div>
             </motion.div>
-            
             <motion.div 
               className="text-center"
               variants={itemVariants}
@@ -483,7 +440,6 @@ export const EnhancedAbout: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <motion.div 
@@ -501,30 +457,18 @@ export const EnhancedAbout: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-              to="/contact"
-=======
               href="/contact"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
               to="/contact"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group"
             >
               Get Started Today
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-              to="/services"
-=======
               href="/services"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
               to="/services"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
             >
               View Our Services

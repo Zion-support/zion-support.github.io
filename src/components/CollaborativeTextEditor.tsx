@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect, useRef, useCallback } from 'react';
-=======
 import React, { useState, useCallback, useEffect, useRef, useMemo } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion } from 'framer-motion';
 import { 
   Users, 
@@ -14,7 +10,6 @@ import {
 } from 'lucide-react';
 import { useRealTimeCollaboration } from '../hooks/useRealTimeCollaboration';
 import { useAnalytics } from '../hooks/useAnalytics';
-
 interface TextChange {
   id: string;
   type: 'insert' | 'delete' | 'replace';
@@ -25,7 +20,6 @@ interface TextChange {
   userId: string;
   version: number;
 }
-
 interface AISuggestion {
   id: string;
   type: 'grammar' | 'style' | 'completion' | 'rewrite';
@@ -36,7 +30,6 @@ interface AISuggestion {
   reason: string;
   alternatives?: string[];
 }
-
 interface EditorState {
   content: string;
   selection: {
@@ -53,7 +46,6 @@ interface EditorState {
     resolution: 'pending' | 'accepted' | 'rejected';
   }>;
 }
-
 interface CollaborativeTextEditorProps {
   roomId: string;
   userId: string;
@@ -66,7 +58,6 @@ interface CollaborativeTextEditorProps {
   onSave?: (content: string) => void;
   onExport?: (content: string, format: 'txt' | 'md' | 'html') => void;
 }
-
 export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = ({
   roomId,
   userId,
@@ -83,7 +74,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
     enableTracking: true,
     enableUserBehaviorTracking: true
   });
-
   const [editorState, setEditorState] = useState<EditorState>({
     content: initialContent,
     selection: { start: 0, end: 0, text: '' },
@@ -92,15 +82,12 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
     suggestions: [],
     conflicts: []
   });
-
   const [showSuggestions] = useState(true);
   const [showCollaborators, setShowCollaborators] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
-
   const editorRef = useRef<HTMLTextAreaElement>(null);
   const collaborationRef = useRef<HTMLDivElement>(null);
-
   // Initialize real-time collaboration
   const collaboration = useRealTimeCollaboration({
     roomId,
@@ -113,14 +100,12 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
     conflictResolution: 'client',
     messageRetention: 1000
   });
-
   // Handle text changes
   const handleTextChange = useCallback((event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newContent = event.target.value;
     const selectionStart = event.target.selectionStart;
     const selectionEnd = event.target.selectionEnd;
     const selectedText = newContent.slice(selectionStart, selectionEnd);
-
     setEditorState(prev => {
       const change: TextChange = {
         id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -132,7 +117,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
         userId,
         version: prev.version + 1
       };
-
       return {
         ...prev,
         content: newContent,
@@ -141,7 +125,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
         changes: [...prev.changes, change]
       };
     });
-
     // Sync with other collaborators
     if (enableCollaboration && collaboration.isConnected) {
       collaboration.syncTextChange({
@@ -151,52 +134,40 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
         version: editorState.version + 1
       });
     }
-
     // Track text change
     trackEvent('editor', 'text_changed', 'content_modified', newContent.length);
   }, [enableCollaboration, collaboration, editorState.version, trackEvent]);
-
   // Handle selection change
   const handleSelectionChange = useCallback((event: React.SyntheticEvent<HTMLTextAreaElement>) => {
     const target = event.target as HTMLTextAreaElement;
     const start = target.selectionStart;
     const end = target.selectionEnd;
     const text = target.value.slice(start, end);
-
     setEditorState(prev => ({
       ...prev,
       selection: { start, end, text }
     }));
-
     // Sync selection with collaborators
     if (enableCollaboration && collaboration.isConnected) {
       collaboration.updateSelection(start, end, text);
     }
   }, [enableCollaboration, collaboration]);
-
   // Handle cursor movement
   const handleCursorMove = useCallback((event: React.MouseEvent<HTMLTextAreaElement>) => {
     if (!enableCollaboration || !collaboration.isConnected) return;
-
     const rect = event.currentTarget.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
-
     collaboration.updateCursor(x, y, 'editor');
   }, [enableCollaboration, collaboration]);
-
   // Generate AI suggestions
   const generateAISuggestions = useCallback(async () => {
     if (!enableAI || !editorState.content.trim()) return;
-
     setIsProcessing(true);
-
     try {
       // Simulate AI processing - in production, this would call an AI service
       await new Promise(resolve => setTimeout(resolve, 2000));
-
       const suggestions: AISuggestion[] = [];
-
       // Grammar suggestions
       if (editorState.content.includes('its')) {
         suggestions.push({
@@ -210,7 +181,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
           alternatives: ["it's", "it is"]
         });
       }
-
       // Style suggestions
       if (editorState.content.includes('very')) {
         suggestions.push({
@@ -224,7 +194,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
           alternatives: ["extremely", "highly", "remarkably", "exceptionally"]
         });
       }
-
       // Completion suggestions
       if (editorState.content.endsWith('The main benefits')) {
         suggestions.push({
@@ -242,14 +211,11 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
           ]
         });
       }
-
       setEditorState(prev => ({
         ...prev,
         suggestions: [...prev.suggestions, ...suggestions]
       }));
-
       trackEvent('editor', 'ai_suggestions_generated', 'suggestions_created', suggestions.length);
-
     } catch (error) {
       console.error('Failed to generate AI suggestions:', error);
       trackEvent('editor', 'ai_suggestions_failed', 'generation_error', undefined, { 
@@ -259,12 +225,10 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
       setIsProcessing(false);
     }
   }, [enableAI, editorState.content, trackEvent]);
-
   // Apply AI suggestion
   const applySuggestion = useCallback((suggestion: AISuggestion) => {
     setEditorState(prev => {
       let newContent = prev.content;
-
       if (suggestion.type === 'completion') {
         newContent = newContent.slice(0, suggestion.position) + suggestion.text + newContent.slice(suggestion.position);
       } else if (suggestion.type === 'grammar' || suggestion.type === 'style') {
@@ -272,41 +236,34 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
         const searchText = editorState.content.slice(suggestion.position, suggestion.position + suggestion.length);
         newContent = newContent.replace(searchText, suggestion.text);
       }
-
       return {
         ...prev,
         content: newContent,
         suggestions: prev.suggestions.filter(s => s.id !== suggestion.id)
       };
     });
-
     // Focus editor and set cursor position
     if (editorRef.current) {
       editorRef.current.focus();
       const newPosition = suggestion.position + suggestion.text.length;
       editorRef.current.setSelectionRange(newPosition, newPosition);
     }
-
     trackEvent('editor', 'ai_suggestion_applied', suggestion.type, undefined, { suggestionId: suggestion.id });
   }, [editorState.content, trackEvent]);
-
   // Save content
   const handleSave = useCallback(() => {
     onSave?.(editorState.content);
     setLastSaved(new Date());
     trackEvent('editor', 'content_saved', 'save_completed');
   }, [editorState.content, onSave, trackEvent]);
-
   // Export content
   const handleExport = useCallback((format: 'txt' | 'md' | 'html') => {
     let exportContent = editorState.content;
-
     if (format === 'html') {
       exportContent = `<html><body><pre>${editorState.content}</pre></body></html>`;
     } else if (format === 'md') {
       exportContent = `# Document\n\n${editorState.content}`;
     }
-
     if (onExport) {
       onExport(exportContent, format);
     } else {
@@ -319,15 +276,12 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
       a.click();
       window.URL.revokeObjectURL(url);
     }
-
     trackEvent('editor', 'content_exported', format, undefined, { format });
   }, [editorState.content, onExport, trackEvent]);
-
   // Handle collaboration text changes
   useEffect(() => {
     const handleCollaborationTextChange = (event: CustomEvent) => {
       const { message } = event.detail;
-      
       if (message.type === 'text_change' && message.userId !== userId) {
         // Handle incoming text changes from other users
         setEditorState(prev => {
@@ -338,47 +292,37 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
             version: Math.max(prev.version, message.payload.version)
           };
         });
-
         trackEvent('editor', 'collaboration_sync', 'text_synced', undefined, { 
           userId: message.userId,
           version: message.payload.version 
         });
       }
     };
-
     window.addEventListener('collaborationTextChange', handleCollaborationTextChange as EventListener);
-    
     return () => {
       window.removeEventListener('collaborationTextChange', handleCollaborationTextChange as EventListener);
     };
   }, [userId, trackEvent]);
-
   // Auto-save functionality
   useEffect(() => {
     if (!enableVersioning) return;
-
     const autoSaveInterval = setInterval(() => {
       if (editorState.content !== initialContent) {
         handleSave();
       }
     }, 30000); // Auto-save every 30 seconds
-
     return () => clearInterval(autoSaveInterval);
   }, [editorState.content, initialContent, enableVersioning, handleSave]);
-
   // Generate suggestions when content changes significantly
   useEffect(() => {
     if (!enableAI) return;
-
     const debounceTimer = setTimeout(() => {
       if (editorState.content.length > 100) {
         generateAISuggestions();
       }
     }, 3000);
-
     return () => clearTimeout(debounceTimer);
   }, [editorState.content, enableAI, generateAISuggestions]);
-
   return (
     <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header */}
@@ -394,7 +338,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
               </div>
             )}
           </h3>
-          
           <div className="flex items-center gap-2">
             {/* Collaboration Status */}
             {enableCollaboration && (
@@ -406,7 +349,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
                 {collaboration.onlineUsers.length}
               </button>
             )}
-            
             {/* AI Suggestions */}
             {enableAI && (
               <button
@@ -422,7 +364,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
                 AI
               </button>
             )}
-            
             {/* Save Button */}
             <button
               onClick={handleSave}
@@ -434,7 +375,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
           </div>
         </div>
       </div>
-
       {/* Main Editor Area */}
       <div className="flex h-96">
         {/* Editor */}
@@ -448,7 +388,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
             placeholder="Start typing your document..."
             className="w-full h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"
           />
-          
           {/* Status Bar */}
           <div className="flex items-center justify-between mt-2 text-xs text-gray-500">
             <span>
@@ -460,7 +399,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
             </span>
           </div>
         </div>
-
         {/* Sidebar */}
         <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">
           {/* AI Suggestions */}
@@ -470,7 +408,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
                 <Sparkles className="w-4 h-4" />
                 AI Suggestions
               </h4>
-              
               <div className="space-y-3">
                 {editorState.suggestions.map(suggestion => (
                   <motion.div
@@ -491,15 +428,12 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
                         {Math.round(suggestion.confidence * 100)}%
                       </span>
                     </div>
-                    
                     <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
                       {suggestion.reason}
                     </p>
-                    
                     <div className="text-sm font-medium text-gray-900 dark:text-white mb-2">
                       {suggestion.text}
                     </div>
-                    
                     <button
                       onClick={() => applySuggestion(suggestion)}
                       className="w-full px-2 py-1 bg-blue-500 hover:bg-blue-600 text-white text-xs rounded transition-colors"
@@ -508,7 +442,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
                     </button>
                   </motion.div>
                 ))}
-                
                 {editorState.suggestions.length === 0 && (
                   <p className="text-sm text-gray-500 text-center py-4">
                     No suggestions yet. Start typing to get AI-powered recommendations.
@@ -517,7 +450,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
               </div>
             </div>
           )}
-
           {/* Collaborators */}
           {enableCollaboration && showCollaborators && (
             <div className="p-4 border-b border-gray-200 dark:border-gray-600">
@@ -525,7 +457,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
                 <Users className="w-4 h-4" />
                 Collaborators ({collaboration.onlineUsers.length})
               </h4>
-              
               <div className="space-y-2">
                 {collaboration.onlineUsers.map(user => (
                   <div key={user.id} className="flex items-center gap-2 p-2 bg-white dark:bg-gray-600 rounded-lg">
@@ -539,7 +470,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   </div>
                 ))}
-                
                 {collaboration.offlineUsers.map(user => (
                   <div key={user.id} className="flex items-center gap-2 p-2 bg-gray-100 dark:bg-gray-700 rounded-lg opacity-60">
                     <div 
@@ -557,11 +487,9 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
               </div>
             </div>
           )}
-
           {/* Actions */}
           <div className="p-4">
             <h4 className="font-medium text-gray-900 dark:text-white mb-3">Actions</h4>
-            
             <div className="space-y-2">
               <button
                 onClick={() => handleExport('txt')}
@@ -570,7 +498,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
                 <Download className="w-4 h-4" />
                 Export as TXT
               </button>
-              
               <button
                 onClick={() => handleExport('md')}
                 className="w-full px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2"
@@ -578,7 +505,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
                 <Download className="w-4 h-4" />
                 Export as MD
               </button>
-              
               <button
                 onClick={() => handleExport('html')}
                 className="w-full px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2"
@@ -590,7 +516,6 @@ export const CollaborativeTextEditor: React.FC<CollaborativeTextEditorProps> = (
           </div>
         </div>
       </div>
-
       {/* Collaboration Cursors Overlay */}
       {enableCollaboration && (
         <div

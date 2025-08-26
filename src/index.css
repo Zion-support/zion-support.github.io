@@ -1,44 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-<<<<<<< HEAD
-@layer base {
-  :root {
-    --font-sans: 'Orbitron', system-ui, sans-serif;
-
-<<<<<<< HEAD
-.dark {
-  --background: 0 0% 7%;
-  --foreground: 142 71% 45%;
-  --card: 0 0% 7%;
-  --card-foreground: 142 71% 45%;
-  --popover: 0 0% 7%;
-  --popover-foreground: 142 71% 45%;
-  --primary: 216 84% 50%;
-  --primary-foreground: 142 71% 45%;
-  --secondary: 0 0% 68%;
-  --secondary-foreground: 0 0% 7%;
-  --muted: 0 0% 68%;
-  --muted-foreground: 215 20% 65%;
-  --accent: 228 12% 92%;
-  --accent-foreground: 0 0% 7%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 142 71% 45%;
-  --border: 0 0% 68%;
-  --input: 0 0% 68%;
-  --ring: 216 84% 53%;
-  --sidebar-background: 228 12% 92%;
-  --sidebar-foreground: 0 0% 7%;
-  --sidebar-primary: 216 84% 53%;
-  --sidebar-primary-foreground: 142 71% 45%;
-  --sidebar-accent: 0 0% 68%;
-  --sidebar-accent-foreground: 0 0% 7%;
-  --sidebar-border: 0 0% 68%;
-  --sidebar-ring: 216 84% 53%;
-}
-
-=======
 @layer base {
   :root {
     --font-sans: 'Orbitron', system-ui, sans-serif;
@@ -54,122 +16,78 @@
   --zion-orange: #f59e0b;
   --zion-red: #ef4444;
 }
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
-
     --background: 0 0% 7%;
     --foreground: 142 71% 45%;
-
     --card: 0 0% 7%;
     --card-foreground: 142 71% 45%;
-
     --popover: 0 0% 7%;
     --popover-foreground: 142 71% 45%;
-
     --primary: 216 84% 50%;
     --primary-foreground: 142 71% 45%;
-
     --secondary: 0 0% 68%;
     --secondary-foreground: 0 0% 7%;
-
     --muted: 0 0% 68%;
     --muted-foreground: 215 20% 65%;
-
     --accent: 228 12% 92%;
     --accent-foreground: 0 0% 7%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 142 71% 45%;
-
     --border: 0 0% 68%;
     --input: 0 0% 68%;
     --ring: 216 84% 53%;
-
     --radius: 0.5rem;
-
     --sidebar-background: 228 12% 92%;
-
     --sidebar-foreground: 0 0% 7%;
-
     --sidebar-primary: 216 84% 53%;
-
     --sidebar-primary-foreground: 142 71% 45%;
-
     --sidebar-accent: 0 0% 68%;
-
 =======
     --background: 0 0% 7%;
     --foreground: 142 71% 45%;
-
     --card: 0 0% 7%;
     --card-foreground: 142 71% 45%;
-
     --popover: 0 0% 7%;
     --popover-foreground: 142 71% 45%;
-
     --primary: 216 84% 50%;
     --primary-foreground: 142 71% 45%;
-
     --secondary: 0 0% 68%;
     --secondary-foreground: 0 0% 7%;
-
     --muted: 0 0% 68%;
     --muted-foreground: 215 20% 65%;
-
     --accent: 228 12% 92%;
     --accent-foreground: 0 0% 7%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 142 71% 45%;
-
     --border: 0 0% 68%;
     --input: 0 0% 68%;
     --ring: 216 84% 53%;
-
     --radius: 0.5rem;
-
     --sidebar-background: 228 12% 92%;
-
     --sidebar-foreground: 0 0% 7%;
-
     --sidebar-primary: 216 84% 53%;
-
     --sidebar-primary-foreground: 142 71% 45%;
-
     --sidebar-accent: 0 0% 68%;
-
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     --sidebar-accent-foreground: 0 0% 7%;
-
     --sidebar-border: 0 0% 68%;
-
     --sidebar-ring: 216 84% 53%;
   }
-
   .dark {
     --background: 0 0% 7%;
     --foreground: 142 71% 45%;
-
     --card: 0 0% 7%;
     --card-foreground: 142 71% 45%;
-
     --popover: 0 0% 7%;
     --popover-foreground: 142 71% 45%;
-
     --primary: 216 84% 50%;
     --primary-foreground: 142 71% 45%;
-
     --secondary: 0 0% 68%;
     --secondary-foreground: 0 0% 7%;
-
     --muted: 0 0% 68%;
     --muted-foreground: 215 20% 65%;
-
     --accent: 228 12% 92%;
     --accent-foreground: 0 0% 7%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 142 71% 45%;
-
     --border: 0 0% 68%;
     --input: 0 0% 68%;
     --ring: 216 84% 53%;
@@ -182,38 +100,27 @@
     --sidebar-border: 0 0% 68%;
     --sidebar-ring: 216 84% 53%;
   }
-
   .light {
     --background: 0 0% 100%;
     --foreground: 224 71% 4%;
-
     --card: 0 0% 100%;
     --card-foreground: 224 71% 4%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 224 71% 4%;
-
     --primary: 262 83% 58%;
     --primary-foreground: 210 40% 98%;
-
     --secondary: 210 40% 96%;
     --secondary-foreground: 222 47% 11%;
-
     --muted: 210 40% 96%;
     --muted-foreground: 215 20% 65%;
-
     --accent: 210 40% 96%;
     --accent-foreground: 224 71% 4%;
-
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214 32% 91%;
     --input: 214 32% 91%;
     --ring: 262 83% 58%;
-
     --radius: 0.5rem;
-
     --sidebar-background: 210 40% 96%;
     --sidebar-foreground: 224 71% 4%;
     --sidebar-primary: 262 83% 58%;
@@ -224,21 +131,13 @@
     --sidebar-ring: 262 83% 58%;
   }
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 @layer base {
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground font-sans;
   }
-
   @keyframes pulse {
     0%, 100% {
       opacity: 1;
@@ -247,34 +146,27 @@
       opacity: 0.5;
     }
   }
-
   .pulse {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
-
   /* Custom scrollbar for webkit browsers */
   ::-webkit-scrollbar {
     width: 10px;
   }
-
   ::-webkit-scrollbar-track {
     background: theme('colors["zion-blue"].DEFAULT');
   }
-
   ::-webkit-scrollbar-thumb {
     background: theme('colors["zion-purple"].dark');
     border-radius: 5px;
   }
-
   ::-webkit-scrollbar-thumb:hover {
     background: theme('colors["zion-purple"].DEFAULT');
   }
-
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
   }
-
   /* Futuristic animations */
   @keyframes neon-pulse {
     0%, 100% {
@@ -284,7 +176,6 @@
       box-shadow: 0 0 10px #8c15e9, 0 0 20px #8c15e9, 0 0 30px #8c15e9;
     }
   }
-
   @keyframes gradient-shift {
     0% {
       background-position: 0% 50%;
@@ -296,7 +187,6 @@
       background-position: 0% 50%;
     }
   }
-
   @keyframes float {
     0%, 100% {
       transform: translateY(0px);
@@ -305,7 +195,6 @@
       transform: translateY(-10px);
     }
   }
-
   @keyframes glow {
     0%, 100% {
       text-shadow: 0 0 5px #22ddd2, 0 0 10px #22ddd2;
@@ -314,24 +203,19 @@
       text-shadow: 0 0 20px #8c15e9, 0 0 30px #8c15e9;
     }
   }
-
   .neon-pulse {
     animation: neon-pulse 2s ease-in-out infinite;
   }
-
   .gradient-shift {
     background-size: 200% 200%;
     animation: gradient-shift 3s ease infinite;
   }
-
   .float {
     animation: float 3s ease-in-out infinite;
   }
-
   .glow {
     animation: glow 2s ease-in-out infinite;
   }
-
   /* Futuristic background patterns */
   .cyber-grid {
     background-image: 
@@ -339,7 +223,6 @@
       linear-gradient(90deg, rgba(34, 221, 210, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
   }
-
   .neon-border {
     border: 1px solid transparent;
     background: linear-gradient(45deg, theme('colors.zion-cyan'), theme('colors.zion-purple')) border-box;
@@ -349,45 +232,6 @@
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
   }
-
-<<<<<<< HEAD
-  .fade-in-up {
-    animation: fade-in-up 0.8s ease-out;
-  }
-
-  /* Hover Effects */
-  .hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .hover-lift:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(34, 221, 210, 0.3);
-  }
-
-  .hover-glow:hover {
-    box-shadow: 0 0 20px #22ddd2, 0 0 40px #22ddd2;
-  }
-
-  /* Glassmorphism */
-  .glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-<<<<<<< HEAD
-  
-  /* Large Text Mode */
-  .large-text {
-    font-size: 1.2em;
-    line-height: 1.6;
-  }
-  
-  .large-text h1 { font-size: 2.5em; }
-  .large-text h2 { font-size: 2em; }
-  .large-text h3 { font-size: 1.75em; }
-  .large-text p { font-size: 1.2em; }
-=======
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -398,7 +242,6 @@
     transform: translateX(0);
   }
 }
-
 @keyframes slideInRight {
   from {
     opacity: 0;
@@ -409,91 +252,73 @@
     transform: translateX(0);
   }
 }
-
 .fade-in {
   animation: fadeIn 0.8s ease-out;
 }
-
 .slide-in-left {
   animation: slideInLeft 0.8s ease-out;
 }
-
 .slide-in-right {
   animation: slideInRight 0.8s ease-out;
 }
-
 /* Glassmorphism Effects */
 .glass {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .glass-dark {
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 /* Hover Effects */
 .hover-lift {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .hover-lift:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
-
 /* Animation delays */
 .animation-delay-1000 {
   animation-delay: 1000ms;
 }
-
 .animation-delay-2000 {
   animation-delay: 2000ms;
 }
-
 /* Custom scrollbar for webkit browsers */
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
   background: var(--zion-blue-light);
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--zion-slate);
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: var(--zion-cyan);
 }
-
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
-
 /* Selection color */
 ::selection {
   background: rgba(6, 182, 212, 0.3);
   color: #ffffff;
 }
-
 ::-moz-selection {
   background: rgba(6, 182, 212, 0.3);
   color: #ffffff;
 }
-
 /* Focus outline */
 *:focus {
   outline: 2px solid #06b6d4;
   outline-offset: 2px;
 }
-
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
   .container {
@@ -501,95 +326,37 @@ html {
     padding-right: 1rem;
   }
 }
-
 @media (max-width: 640px) {
   .container {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
 }
-
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
   * {
     /* keep minimal reduce-motion rules */
   }
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
 }
-
 /* Zion Tech Group specific styles */
 .zion-gradient {
   background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%);
 }
-
 .zion-text-gradient {
   background: linear-gradient(135deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 .zion-border-gradient {
   border: 2px solid;
   border-image: linear-gradient(135deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%) 1;
 }
-
 /* Animation classes */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
 }
-
-<<<<<<< HEAD
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.floating-delay-1 {
-  animation: float 6s ease-in-out infinite;
-  animation-delay: 0s;
-}
-
-.floating-delay-2 {
-  animation: float 6s ease-in-out infinite;
-  animation-delay: 2s;
-}
-
-.floating-delay-3 {
-  animation: float 6s ease-in-out infinite;
-  animation-delay: 4s;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Dark mode scrollbar */
-.dark ::-webkit-scrollbar-track {
-  background: #1f2937;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: #4b5563;
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;
-=======
 =======
 =======
   .bg-glass {
@@ -597,42 +364,34 @@ html {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
-
   .glass-card {
     background: white;
     border: 1px solid #ccc;
     box-shadow: none;
   }
-  
   .neon-text {
     text-shadow: none;
     color: black;
   }
-  
   .futuristic-btn {
     background: #ccc;
     color: black;
     box-shadow: none;
   }
-
   .border-gradient {
     border: 2px solid;
     border-image: linear-gradient(45deg, #06b6d4, #8b5cf6) 1;
   }
-
   /* Responsive text sizing */
   .text-responsive {
     font-size: clamp(1rem, 4vw, 2rem);
   }
-
   .text-responsive-lg {
     font-size: clamp(1.5rem, 6vw, 3rem);
   }
-
   .text-responsive-xl {
     font-size: clamp(2rem, 8vw, 4rem);
   }
-
   /* Enhanced button styles */
   .btn-futuristic {
     position: relative;
@@ -646,7 +405,6 @@ html {
     transition: all 0.3s ease;
     cursor: pointer;
   }
-
   .btn-futuristic::before {
     content: '';
     position: absolute;
@@ -657,28 +415,23 @@ html {
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.5s;
   }
-
   .btn-futuristic:hover::before {
     left: 100%;
   }
-
   .btn-futuristic:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(34, 221, 210, 0.3);
   }
-
   /* Card hover effects */
   .card-hover {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-
   .card-hover:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 
       0 20px 40px rgba(0, 0, 0, 0.3),
       0 0 20px rgba(34, 221, 210, 0.2);
   }
-
   /* Loading spinner */
   .spinner {
     width: 40px;
@@ -688,7 +441,6 @@ html {
     border-radius: 50%;
     animation: rotate 1s linear infinite;
   }
-
   /* Typing animation */
   .typing-animation {
     overflow: hidden;
@@ -696,17 +448,14 @@ html {
     white-space: nowrap;
     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   }
-
   @keyframes typing {
     from { width: 0; }
     to { width: 100%; }
   }
-
   @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: #06b6d4; }
   }
-
   /* Futuristic Button Styles */
   .cyber-button {
     position: relative;
@@ -720,7 +469,6 @@ html {
     cursor: pointer;
     transition: all 0.3s ease;
   }
-
   .cyber-button::before {
     content: '';
     position: absolute;
@@ -731,22 +479,18 @@ html {
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.5s;
   }
-
   .cyber-button:hover::before {
     left: 100%;
   }
-
   .cyber-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(140, 21, 233, 0.4);
   }
-
   /* Animated Background Elements */
   .animated-bg {
     position: relative;
     overflow: hidden;
   }
-
   .animated-bg::before {
     content: '';
     position: absolute;
@@ -758,37 +502,31 @@ html {
     animation: rotate-slow 30s linear infinite;
     pointer-events: none;
   }
-
   /* Loading Animations */
   .loading-dots {
     display: inline-block;
   }
-
   .loading-dots::after {
     content: '';
     animation: loading-dots 1.5s infinite;
   }
-
   @keyframes loading-dots {
     0%, 20% { content: ''; }
     40% { content: '.'; }
     60% { content: '..'; }
     80%, 100% { content: '...'; }
   }
-
   /* Responsive Typography */
   @media (max-width: 768px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   /* Dark Mode Enhancements */
   .dark .glass-effect {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(140, 21, 233, 0.2);
   }
-
   .dark .holographic {
     background: linear-gradient(45deg, 
       rgba(140, 21, 233, 0.2), 
@@ -796,7 +534,6 @@ html {
       rgba(140, 21, 233, 0.2)
     );
   }
-
   /* Futuristic Animations */
   @keyframes neon-glow {
     0%, 100% {
@@ -806,7 +543,6 @@ html {
       box-shadow: 0 0 10px #22ddd2, 0 0 20px #22ddd2, 0 0 30px #22ddd2;
     }
   }
-
   @keyframes neon-pulse {
     0%, 100% {
       opacity: 1;
@@ -817,7 +553,6 @@ html {
       text-shadow: 0 0 10px #22ddd2, 0 0 20px #22ddd2;
     }
   }
-
   @keyframes gradient-shift {
     0% {
       background-position: 0% 50%;
@@ -829,7 +564,6 @@ html {
       background-position: 0% 50%;
     }
   }
-
   @keyframes float {
     0%, 100% {
       transform: translateY(0px);
@@ -838,7 +572,6 @@ html {
       transform: translateY(-10px);
     }
   }
-
   @keyframes rotate-slow {
     from {
       transform: rotate(0deg);
@@ -847,7 +580,6 @@ html {
       transform: rotate(360deg);
     }
   }
-
   @keyframes slide-in-left {
     from {
       transform: translateX(-100%);
@@ -858,7 +590,6 @@ html {
       opacity: 1;
     }
   }
-
   @keyframes slide-in-right {
     from {
       transform: translateX(100%);
@@ -869,7 +600,6 @@ html {
       opacity: 1;
     }
   }
-
   @keyframes fade-in-up {
     from {
       transform: translateY(30px);
@@ -880,65 +610,52 @@ html {
       opacity: 1;
     }
   }
-
   /* Utility Classes */
   .neon-glow {
     animation: neon-glow 2s ease-in-out infinite alternate;
   }
-
   .neon-pulse {
     animation: neon-pulse 2s ease-in-out infinite;
   }
-
   .gradient-shift {
     background-size: 200% 200%;
     animation: gradient-shift 3s ease infinite;
   }
-
   .float {
     animation: float 3s ease-in-out infinite;
   }
-
   .rotate-slow {
     animation: rotate-slow 20s linear infinite;
   }
-
   .slide-in-left {
     animation: slide-in-left 0.8s ease-out;
   }
-
   .slide-in-right {
     animation: slide-in-right 0.8s ease-out;
   }
-
   .fade-in-up {
     animation: fade-in-up 0.8s ease-out;
   }
-
   /* Hover Effects */
   .hover-neon:hover {
     box-shadow: 0 0 10px #22ddd2, 0 0 20px #22ddd2, 0 0 30px #22ddd2;
     transition: all 0.3s ease;
   }
-
   .hover-glow:hover {
     text-shadow: 0 0 10px #22ddd2, 0 0 20px #22ddd2;
     transition: all 0.3s ease;
   }
-
   /* Backdrop Blur Effects */
   .glass-effect {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
-
   .glass-effect-dark {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
-
   /* Futuristic Button Styles */
   .btn-futuristic {
     position: relative;
@@ -949,13 +666,11 @@ html {
     color: white;
     transition: all 0.3s ease;
   }
-
   .btn-futuristic:hover {
     background-position: 100% 100%;
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(139, 21, 233, 0.4);
   }
-
   .btn-futuristic::before {
     content: '';
     position: absolute;
@@ -966,11 +681,9 @@ html {
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.5s;
   }
-
   .btn-futuristic:hover::before {
     left: 100%;
   }
-
   /* Neon Text Effect */
   .text-neon {
     text-shadow: 
@@ -979,7 +692,6 @@ html {
       0 0 15px currentColor,
       0 0 20px currentColor;
   }
-
   .text-neon-cyan {
     color: #22ddd2;
     text-shadow: 
@@ -988,7 +700,6 @@ html {
       0 0 15px #22ddd2,
       0 0 20px #22ddd2;
   }
-
   .text-neon-purple {
     color: #8c15e9;
     text-shadow: 
@@ -997,22 +708,17 @@ html {
       0 0 15px #8c15e9,
       0 0 20px #8c15e9;
   }
-
   /* Glassmorphism Effect */
   .glass {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
-
   .glass-dark {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(34, 221, 210, 0.2);
   }
-
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   /* LiveKit UI overrides */
   [data-lk-theme='default'] {
     --lk-color-accent: #06B6D4;
@@ -1021,24 +727,16 @@ html {
     --lk-bg1: #0B1120;
     --lk-bg2: #0F172A;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }
 =======
-
   /* Hover Card Effects */
   .card-hover {
     transition: all 0.3s ease;
   }
-
   .card-hover:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 20px 40px rgba(139, 21, 233, 0.3);
   }
-
   /* Loading Spinner */
   .spinner {
     width: 40px;
@@ -1048,67 +746,54 @@ html {
     border-radius: 50%;
     animation: rotate-slow 1s linear infinite;
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -1116,33 +801,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -1151,67 +831,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -1219,33 +886,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -1254,67 +916,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -1322,33 +971,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -1357,67 +1001,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -1425,33 +1056,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -1460,67 +1086,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -1528,33 +1141,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -1563,67 +1171,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -1631,33 +1226,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -1666,67 +1256,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -1734,33 +1311,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -1769,67 +1341,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -1837,33 +1396,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -1872,67 +1426,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -1940,33 +1481,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -1975,67 +1511,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -2043,33 +1566,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -2078,67 +1596,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -2146,33 +1651,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -2181,67 +1681,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -2249,33 +1736,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -2284,67 +1766,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -2352,33 +1821,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -2387,67 +1851,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -2455,33 +1906,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -2490,67 +1936,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -2558,33 +1991,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -2593,67 +2021,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -2661,33 +2076,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -2696,67 +2106,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -2764,33 +2161,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -2799,67 +2191,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -2867,33 +2246,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -2902,67 +2276,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -2970,33 +2331,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -3005,67 +2361,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -3073,33 +2416,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -3108,67 +2446,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -3176,33 +2501,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -3211,67 +2531,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -3279,33 +2586,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -3314,67 +2616,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -3382,33 +2671,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -3417,67 +2701,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -3485,33 +2756,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -3520,67 +2786,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -3588,33 +2841,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -3623,67 +2871,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -3691,33 +2926,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -3726,67 +2956,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -3794,33 +3011,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -3829,67 +3041,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -3897,33 +3096,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -3932,67 +3126,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -4000,33 +3181,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -4035,67 +3211,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -4103,33 +3266,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -4138,67 +3296,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -4206,33 +3351,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -4241,67 +3381,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -4309,33 +3436,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -4344,67 +3466,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -4412,33 +3521,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -4447,67 +3551,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -4515,33 +3606,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -4550,67 +3636,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -4618,33 +3691,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -4653,67 +3721,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -4721,33 +3776,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -4756,67 +3806,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -4824,33 +3861,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -4859,67 +3891,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -4927,33 +3946,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -4962,67 +3976,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -5030,33 +4031,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -5065,67 +4061,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -5133,33 +4116,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -5168,67 +4146,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -5236,33 +4201,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -5271,67 +4231,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -5339,33 +4286,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -5374,67 +4316,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -5442,33 +4371,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -5477,67 +4401,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -5545,33 +4456,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -5580,67 +4486,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -5648,33 +4541,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -5683,67 +4571,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -5751,33 +4626,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -5786,67 +4656,54 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-purple {
     @apply bg-gradient-to-r from-zion-purple to-zion-cyan bg-clip-text text-transparent;
   }
-
   /* Button utilities */
   .btn-neon {
     @apply relative overflow-hidden bg-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-zion-purple-light hover:scale-105;
   }
-
   .btn-neon::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 transition-opacity duration-300;
   }
-
   .btn-neon:hover::before {
     @apply opacity-20;
   }
-
   /* Card utilities */
   .card-glass {
     @apply bg-zion-blue-dark/80 backdrop-blur-sm border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300;
   }
-
   .card-hover {
     @apply hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20;
   }
-
   /* Responsive Design Enhancements */
   @media (max-width: 768px) {
     .mobile-optimized {
@@ -5854,33 +4711,28 @@ html {
       line-height: 1.4;
     }
   }
-
   @media (max-width: 480px) {
     .mobile-optimized {
       font-size: 0.8rem;
       line-height: 1.3;
     }
   }
-
   /* Accessibility Improvements */
   .focus-visible:focus-visible {
     outline: 2px solid rgba(34, 221, 210, 0.8);
     outline-offset: 2px;
   }
-
   /* High Contrast Mode Support */
   @media (prefers-contrast: high) {
     .neon-border {
       border-width: 2px;
     }
-    
     .neon-text {
       text-shadow: 
         0 0 8px currentColor,
         0 0 16px currentColor;
     }
   }
-
   /* Reduced Motion Support */
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -5889,36 +4741,29 @@ html {
       transition-duration: 0.01ms !important;
     }
   }
-
   /* Responsive Typography */
   @media (max-width: 640px) {
     .text-responsive {
       font-size: clamp(1rem, 4vw, 1.5rem);
     }
   }
-
   @media (min-width: 641px) and (max-width: 1024px) {
     .text-responsive {
       font-size: clamp(1.5rem, 3vw, 2.5rem);
     }
   }
-
   @media (min-width: 1025px) {
     .text-responsive {
       font-size: clamp(2.5rem, 2.5vw, 4rem);
     }
   }
-
   /* Responsive utilities */
   .container-responsive {
     @apply container mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   /* Text utilities */
   .text-gradient {
     @apply bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent;
   }
-
   .text-gradient-cyan {
     @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1

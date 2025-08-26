@@ -1,28 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 import { 
   Mail, Phone, MapPin, Clock, Globe, Users,
   MessageSquare, Calendar, Video, PhoneCall
 } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d4f3
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
-
 export default function ContactPage() {
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <Head>
-        <title>Contact Us — Zion Tech Group | Get In Touch</title>
-        <meta name="description" content="Contact Zion Tech Group for cutting-edge AI, quantum computing, and technology solutions. Get expert consultation and start your transformation journey today." />
-        <meta property="og:title" content="Contact Us — Zion Tech Group" />
-        <meta property="og:description" content="Get in touch with our technology experts. We're here to help you transform your business with cutting-edge AI and quantum solutions." />
-        <meta name="twitter:card" content="summary_large_image" />
-=======
   const contactMethods = [
     {
       icon: Mail,
@@ -61,7 +47,6 @@ export default function ContactPage() {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const officeLocations = [
     {
       city: "Delaware, USA",
@@ -80,7 +65,6 @@ export default function ContactPage() {
       color: "from-green-500 to-emerald-500"
     }
   ];
-
   const faqs = [
     {
       question: "What industries do you serve?",
@@ -99,7 +83,6 @@ export default function ContactPage() {
       answer: "We implement enterprise-grade security including quantum-resistant encryption, zero-trust architecture, and regular security audits to protect your data."
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -108,15 +91,9 @@ export default function ContactPage() {
         <meta property="og:title" content="Contact Zion Tech Group" />
         <meta property="og:description" content="Get in touch with AI and quantum technology experts." />
         <meta name="keywords" content="contact, support, consultation, AI experts, quantum technology" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d4f3
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Head>
-
       <EnhancedNavigation />
-<<<<<<< HEAD
-      <EnhancedContactForm />
-=======
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
@@ -135,7 +112,6 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Methods Grid */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
@@ -151,7 +127,6 @@ export default function ContactPage() {
               Choose the communication method that works best for you. We&apos;re here to help 24/7.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactMethods.map((method, index) => (
               <motion.div
@@ -179,7 +154,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
       {/* Office Locations */}
       <section className="py-20 px-6 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
@@ -195,7 +169,6 @@ export default function ContactPage() {
               Strategically located to serve our global client base with local expertise and 24/7 support.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {officeLocations.map((office, index) => (
               <motion.div
@@ -220,7 +193,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
@@ -236,7 +208,6 @@ export default function ContactPage() {
               Quick answers to common questions about our services and support.
             </p>
           </motion.div>
-
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <motion.div
@@ -254,10 +225,8 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
       {/* Contact Form Section */}
       <EnhancedContactForm />
-
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -290,8 +259,6 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d4f3
       <EnhancedFooter />
     </div>
   );

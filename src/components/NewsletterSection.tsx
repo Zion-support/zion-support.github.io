@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, TrendingUp, X, Gift, Star, Award } from 'lucide-react';
-
 const benefits = [
   {
     icon: <Bell className="w-6 h-6" />,
@@ -28,33 +23,19 @@ const benefits = [
     description: "Join our network of tech professionals and innovators"
   }
 ];
-
 const stats = [
   { value: "50K+", label: "Subscribers" },
   { value: "95%", label: "Satisfaction" },
   { value: "24/7", label: "Support" },
   { value: "100%", label: "Free" }
 ];
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 export function NewsletterSection() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [isLoading, setIsLoading] = useState(false);
-  const [showBenefits, setShowBenefits] = useState(false);
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
   const [isLoading, setIsLoading] = useState(false);
   const [showBenefits, setShowBenefits] = useState(false);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the email to your newsletter service
@@ -62,16 +43,10 @@ export function NewsletterSection() {
     setIsSubscribed(true);
     setEmail('');
   };
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const handleUnsubscribe = () => {
     setIsSubscribed(false);
     setEmail('');
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">
       {/* Enhanced background pattern */}
@@ -81,7 +56,6 @@ export function NewsletterSection() {
           backgroundSize: '50px 50px'
         }} />
       </div>
-
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
         <motion.div 
@@ -100,7 +74,6 @@ export function NewsletterSection() {
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="text-center max-w-5xl mx-auto"
@@ -113,7 +86,6 @@ export function NewsletterSection() {
           <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-zion-cyan to-zion-blue mb-8 shadow-lg">
             <Mail className="w-12 h-12 text-white" />
           </div>
-          
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Stay <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Connected</span>
           </h2>
@@ -121,7 +93,6 @@ export function NewsletterSection() {
             Get the latest updates on new services, tech insights, and exclusive offers delivered straight to your inbox. 
             Join thousands of professionals staying ahead of the curve.
           </p>
-
           {/* Stats section */}
           <motion.div 
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto"
@@ -144,7 +115,6 @@ export function NewsletterSection() {
               </motion.div>
             ))}
           </motion.div>
-          
           {/* Benefits toggle */}
           <motion.div 
             className="mb-8"
@@ -168,7 +138,6 @@ export function NewsletterSection() {
               </motion.div>
             </button>
           </motion.div>
-
           {/* Benefits grid */}
           <AnimatePresence>
             {showBenefits && (
@@ -199,7 +168,6 @@ export function NewsletterSection() {
               </motion.div>
             )}
           </AnimatePresence>
-          
           {/* Subscription form or success message */}
           {!isSubscribed ? (
             <motion.div
@@ -238,7 +206,6 @@ export function NewsletterSection() {
                   )}
                 </button>
               </form>
-
               {/* Special offer */}
               <motion.div 
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan px-6 py-3 rounded-xl mb-6"
@@ -271,7 +238,6 @@ export function NewsletterSection() {
               </button>
             </motion.div>
           )}
-          
           {/* Privacy notice */}
           <motion.div 
             className="text-center"
@@ -283,7 +249,6 @@ export function NewsletterSection() {
             <p className="text-zion-slate-light/70 text-sm mb-4">
               No spam, unsubscribe at any time. We respect your privacy.
             </p>
-            
             {/* Trust indicators */}
             <div className="flex items-center justify-center gap-6 text-zion-slate-light/50 text-xs">
               <div className="flex items-center gap-2">
@@ -298,11 +263,6 @@ export function NewsletterSection() {
                 <Award className="w-4 h-4" />
                 <span>Industry Leader</span>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </motion.div>
-=======
   if (isSubscribed) {
     return (
       <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
@@ -326,7 +286,6 @@ export function NewsletterSection() {
       </section>
     );
   }
-
   return (
     <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -336,7 +295,6 @@ export function NewsletterSection() {
         <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
           Get the latest insights on AI trends, technology updates, and industry best practices delivered to your inbox.
         </p>
-        
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
           <div className="flex flex-col sm:flex-row gap-4">
             <input
@@ -355,11 +313,9 @@ export function NewsletterSection() {
             </button>
           </div>
         </form>
-        
         <p className="text-sm text-blue-200 mt-4">
           We respect your privacy. Unsubscribe at any time.
         </p>
-        
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           <div>
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -370,7 +326,6 @@ export function NewsletterSection() {
             <h3 className="font-semibold mb-2">Weekly Updates</h3>
             <p className="text-sm text-blue-200">Stay current with industry trends</p>
           </div>
-          
           <div>
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -380,20 +335,17 @@ export function NewsletterSection() {
             <h3 className="font-semibold mb-2">Expert Insights</h3>
             <p className="text-sm text-blue-200">Learn from our technology experts</p>
           </div>
-          
           <div>
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
             <h3 className="font-semibold mb-2">Early Access</h3>
             <p className="text-sm text-blue-200">Be first to know about new features</p>
           </div>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       </div>
     </section>
   );

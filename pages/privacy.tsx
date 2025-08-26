@@ -1,24 +1,5 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-
-export default function PrivacyPage() {
-	return (
-		<div className="container mx-auto px-4 py-12">
-			<Head>
-				<title>Privacy Policy - Zion Tech Solutions</title>
-				<meta name="description" content="Privacy Policy for Zion Tech Solutions." />
-			</Head>
-			<h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
-			<p className="text-gray-700 leading-7">
-				We value your privacy. This page outlines how we collect, use, and safeguard your
-				information. For questions, please contact us via the Contact page.
-			</p>
-		</div>
-	);
-=======
 import React from 'react';
 import Head from 'next/head';
-
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -26,7 +7,6 @@ export default function Privacy() {
         <title>Privacy Policy - Zion App</title>
         <meta name="description" content="Privacy policy and data protection information" />
       </Head>
-
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -40,7 +20,6 @@ export default function Privacy() {
               Last updated: January 17, 2025
             </p>
           </div>
-
           <div className="space-y-12">
             <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl font-semibold text-white mb-6">
@@ -59,7 +38,6 @@ export default function Privacy() {
                 </ul>
               </div>
             </section>
-
             <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl font-semibold text-white mb-6">
                 How We Use Your Information
@@ -78,7 +56,6 @@ export default function Privacy() {
                 </ul>
               </div>
             </section>
-
             <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl font-semibold text-white mb-6">
                 Information Sharing
@@ -96,7 +73,6 @@ export default function Privacy() {
                 </ul>
               </div>
             </section>
-
             <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl font-semibold text-white mb-6">
                 Data Security
@@ -112,7 +88,6 @@ export default function Privacy() {
                 </p>
               </div>
             </section>
-
             <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl font-semibold text-white mb-6">
                 Your Rights
@@ -130,7 +105,6 @@ export default function Privacy() {
                 </ul>
               </div>
             </section>
-
             <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl font-semibold text-white mb-6">
                 Contact Us
@@ -152,5 +126,4 @@ export default function Privacy() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 }

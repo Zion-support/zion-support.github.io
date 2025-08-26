@@ -1,20 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import SEO from '../components/SEO';
-
-const ext = (url: string) => (
-	<a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace('https://', '')}</a>
-);
-
-export default function ServicesAdvertisingPage() {
-	return (
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-			<Head>
-				<title>Services Advertising | Zion Tech Group</title>
-				<meta name="description" content="Features, benefits, and market references for Zion Tech Group services" />
-				<link rel="canonical" href="https://ziontechgroup.com/services-advertising" />
-			</Head>
-=======
 			<SEO title="Services Advertising | Zion Tech Group" description="Features, benefits, and market references for Zion Tech Group services" canonical="https://ziontechgroup.com/services-advertising/" />
 			<div className="max-w-6xl mx-auto space-y-10">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
@@ -23,7 +7,6 @@ import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
-
 export default function ServicesAdvertisingPage() {
   const contact = {
     mobile: '+1 302 464 0950',
@@ -31,8 +14,6 @@ export default function ServicesAdvertisingPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-
   const benefits = [
     '1000% ROI target with measurable KPIs',
     'Transparent pricing with market references',
@@ -41,7 +22,6 @@ export default function ServicesAdvertisingPage() {
     '24/7 support with SLAs',
     'Proven architectures and reference implementations'
   ];
-
   const anchors = [
     { title: 'AI & Data', href: '/services#ai' },
     { title: 'Cloud & FinOps', href: '/services#cloud' },
@@ -49,7 +29,6 @@ export default function ServicesAdvertisingPage() {
     { title: 'Developer Tools', href: '/services#developer-tools' },
     { title: 'Quality & Monitoring', href: '/services#quality' }
   ];
-
   const pricingRefs = [
     {
       title: 'AI Platforms',
@@ -119,7 +98,6 @@ export default function ServicesAdvertisingPage() {
       note: 'SMB: $100–$2,000/mo based on ingest and hosts.'
     }
   ];
-
   return (
     <UltraAdvancedFuturisticBackground 
       intensity="high" 
@@ -134,7 +112,6 @@ export default function ServicesAdvertisingPage() {
         <meta name="description" content="Explore our AI, IT, and micro SaaS services with features, capabilities, benefits, pricing references, and easy contact options." />
         <link rel="canonical" href="https://ziontechgroup.com/services-advertising" />
       </Head>
-
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-12">
           <header className="text-center">
@@ -151,7 +128,6 @@ export default function ServicesAdvertisingPage() {
               </Button>
             </div>
           </header>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -165,7 +141,6 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Featured Offerings</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -188,7 +163,6 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New in Q2 2025</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -212,7 +186,6 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Practical Micro SaaS Additions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -232,7 +205,6 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Benchmark With Market Pricing</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -252,7 +224,6 @@ export default function ServicesAdvertisingPage() {
               <Button href="/market-pricing" variant="secondary" className="px-8 py-4">Full Market Pricing</Button>
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Explore by Category</h2>
             <div className="flex flex-wrap items-center justify-center gap-3">
@@ -263,7 +234,6 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Contact Us</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

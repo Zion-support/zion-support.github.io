@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
-
 interface CheckboxProps {
   checked: boolean;
   onChange: (checked: boolean) => void;
@@ -11,7 +6,6 @@ interface CheckboxProps {
   disabled?: boolean;
   className?: string;
 }
-
 export function Checkbox({ checked, onChange, label, disabled = false, className = '' }: CheckboxProps) {
   return (
     <label className={`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>
@@ -26,7 +20,6 @@ export function Checkbox({ checked, onChange, label, disabled = false, className
     </label>
 =======
 import { cn } from '@/lib/utils';
-
 interface CheckboxProps {
   checked: boolean;
   onCheckedChange?: (checked: boolean) => void;
@@ -34,7 +27,6 @@ interface CheckboxProps {
   className?: string;
   disabled?: boolean;
 }
-
 export function Checkbox({ checked, onCheckedChange, onChange, className = '', disabled = false }: CheckboxProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (onCheckedChange) {
@@ -44,7 +36,6 @@ export function Checkbox({ checked, onCheckedChange, onChange, className = '', d
       onChange();
     }
   };
-
   return (
     <input
       type="checkbox"
@@ -56,6 +47,5 @@ export function Checkbox({ checked, onCheckedChange, onChange, className = '', d
         className
       )}
     />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   );
 }

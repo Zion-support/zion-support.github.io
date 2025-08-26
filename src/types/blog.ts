@@ -12,10 +12,6 @@ export interface BlogPost {
   image: string;
   readTime: number;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 export const generateRandomBlogPost = (): BlogPost => {
   const titles = [
     'The Future of AI in Business',
@@ -24,16 +20,13 @@ export const generateRandomBlogPost = (): BlogPost => {
     'Cloud Computing Trends',
     'Digital Transformation Strategies',
   ];
-
   const authors = [
     { name: 'John Doe', avatar: '/avatars/john.jpg' },
     { name: 'Jane Smith', avatar: '/avatars/jane.jpg' },
     { name: 'Mike Johnson', avatar: '/avatars/mike.jpg' },
   ];
-
   const randomTitle = titles[Math.floor(Math.random() * titles.length)];
   const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
-
   return {
     id: Math.random().toString(36).substr(2, 9),
     title: randomTitle,
@@ -46,7 +39,6 @@ export const generateRandomBlogPost = (): BlogPost => {
     readTime: Math.floor(Math.random() * 10) + 5,
   };
 };
-
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: '1',
@@ -71,6 +63,4 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 12,
   },
 ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

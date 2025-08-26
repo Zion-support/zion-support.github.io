@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -10,7 +6,6 @@ import { Badge } from '@/components/ui/badge';
 import { Check, X, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
 import { SEO } from '@/components/SEO';
-
 export default function ServicesPricingPage() {
   // Group services by category for pricing table
   const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
@@ -20,7 +15,6 @@ export default function ServicesPricingPage() {
     }
     return acc;
   }, {} as Record<string, typeof COMPREHENSIVE_SERVICES>);
-
   return (
     <div className="min-h-screen bg-zion-blue-dark">
       <SEO 
@@ -29,7 +23,6 @@ export default function ServicesPricingPage() {
         keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group"
         url="https://ziontechgroup.com/services-pricing"
       />
-
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
         <div className="container mx-auto text-center">
@@ -52,8 +45,6 @@ export default function ServicesPricingPage() {
                 View All Services
               </Button>
             </Link>
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -92,7 +83,6 @@ import Target from 'lucide-react/dist/esm/icons/target';
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import Wifi from 'lucide-react/dist/esm/icons/wifi';
 import { SEO } from '@/components/SEO';
-
 const categoryIcons = {
   "AI & Machine Learning": Brain,
   "Cybersecurity": ShieldIcon,
@@ -102,7 +92,6 @@ const categoryIcons = {
   "IoT & Smart Solutions": Wifi,
   "Blockchain & Web3": Link
 };
-
 const pricingTiers = [
   {
     name: "Starter",
@@ -141,22 +130,18 @@ const pricingTiers = [
     ]
   }
 ];
-
 export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
   const getServicesByCategory = (category: string) => {
     if (category === 'all') return ENHANCED_SERVICES;
     return ENHANCED_SERVICES.filter(service => service.category === category);
   };
-
   const formatPrice = (price: number) => {
     if (price >= 1000) {
       return `$${(price / 1000).toFixed(1)}k`;
     }
     return `$${price}`;
   };
-
   const getPricingModelColor = (model: string) => {
     switch (model) {
       case 'subscription': return 'bg-blue-100 text-blue-800';
@@ -166,7 +151,6 @@ export default function ServicesPricingPage() {
       default: return 'bg-gray-100 text-gray-800';
     }
   };
-
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -175,7 +159,6 @@ export default function ServicesPricingPage() {
         keywords="IT services pricing, AI services cost, cybersecurity pricing, cloud solutions pricing, digital transformation cost"
         canonical="https://ziontechgroup.com/services-pricing"
       />
-
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -194,17 +177,10 @@ export default function ServicesPricingPage() {
               <Mail className="mr-2 h-5 w-5" />
               Contact Sales
             </Button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Contact Information */}
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
@@ -227,8 +203,6 @@ export default function ServicesPricingPage() {
                 ziontechgroup.com
               </a>
             </div>
-<<<<<<< HEAD
-=======
       {/* Contact Banner */}
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-white">
@@ -245,17 +219,10 @@ export default function ServicesPricingPage() {
               <Mail className="h-4 w-4 text-zion-cyan" />
               <span>kleber@ziontechgroup.com</span>
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Pricing Tiers */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -265,8 +232,6 @@ export default function ServicesPricingPage() {
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
               Flexible pricing tiers designed to scale with your business needs
-<<<<<<< HEAD
-=======
       {/* Pricing Tiers Overview */}
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -276,17 +241,10 @@ export default function ServicesPricingPage() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Flexible pricing options designed to scale with your business needs
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             {Object.entries(PRICING_TIERS).map(([tierName, tier], index) => (
               <Card key={tierName} className={`bg-zion-blue border-zion-blue-light ${
                 index === 1 ? 'ring-2 ring-zion-cyan scale-105' : ''
@@ -317,11 +275,8 @@ export default function ServicesPricingPage() {
                       <span className="text-white text-sm">Maintenance & updates</span>
                     </li>
                   </ul>
-                  
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                     <Phone className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-=======
             {pricingTiers.map((tier, index) => (
               <Card key={tier.name} className={`relative ${index === 1 ? 'border-2 border-zion-blue shadow-xl scale-105' : ''}`}>
                 {index === 1 && (
@@ -344,9 +299,7 @@ export default function ServicesPricingPage() {
                     ))}
                   </ul>
                   <Button className="w-full mt-6" variant={index === 1 ? "default" : "outline"}>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                     Get Started
                   </Button>
                 </CardContent>
@@ -355,11 +308,6 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Service-Specific Pricing */}
       <div className="bg-zion-blue-dark py-16 px-4">
         <div className="container mx-auto">
@@ -371,7 +319,6 @@ export default function ServicesPricingPage() {
               Detailed pricing for individual services and solutions
             </p>
           </div>
-
           <div className="space-y-8">
             {Object.entries(servicesByCategory).map(([category, services]) => (
               <div key={category} className="bg-zion-blue rounded-lg p-6">
@@ -408,7 +355,6 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-
       {/* Why Choose Zion Tech Group */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -420,7 +366,6 @@ export default function ServicesPricingPage() {
               We deliver exceptional value through expertise, innovation, and proven results
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
@@ -452,8 +397,6 @@ export default function ServicesPricingPage() {
                 <p className="text-zion-slate-light text-sm">{feature.description}</p>
               </div>
             ))}
-<<<<<<< HEAD
-=======
       {/* Services by Category Pricing */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -465,7 +408,6 @@ export default function ServicesPricingPage() {
               Explore pricing for each service category with detailed feature breakdowns
             </p>
           </div>
-
           <Tabs defaultValue="all" className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-8 mb-8">
               <TabsTrigger value="all" className="flex items-center gap-2">
@@ -486,7 +428,6 @@ export default function ServicesPricingPage() {
                 );
               })}
             </TabsList>
-
             <TabsContent value="all" className="space-y-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {ENHANCED_SERVICES.map((service) => (
@@ -505,7 +446,6 @@ export default function ServicesPricingPage() {
                         {service.description}
                       </CardDescription>
                     </CardHeader>
-
                     <CardContent className="space-y-4">
                       {/* Pricing */}
                       <div className="bg-gray-50 rounded-lg p-4">
@@ -528,7 +468,6 @@ export default function ServicesPricingPage() {
                           </div>
                         </div>
                       </div>
-
                       {/* Key Features */}
                       <div>
                         <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
@@ -543,7 +482,6 @@ export default function ServicesPricingPage() {
                           ))}
                         </div>
                       </div>
-
                       {/* Benefits */}
                       <div>
                         <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
@@ -559,7 +497,6 @@ export default function ServicesPricingPage() {
                           ))}
                         </ul>
                       </div>
-
                       {/* Service Metrics */}
                       <div className="grid grid-cols-3 gap-2 text-center text-xs bg-gray-50 rounded-lg p-3">
                         <div className="flex items-center gap-1 justify-center">
@@ -575,7 +512,6 @@ export default function ServicesPricingPage() {
                           <span>{service.deliveryTime}</span>
                         </div>
                       </div>
-
                       {/* Action Buttons */}
                       <div className="grid grid-cols-2 gap-3">
                         <Button className="w-full" size="sm">
@@ -592,7 +528,6 @@ export default function ServicesPricingPage() {
                 ))}
               </div>
             </TabsContent>
-
             {SERVICE_CATEGORIES.map((category) => {
               const services = getServicesByCategory(category);
               return (
@@ -613,7 +548,6 @@ export default function ServicesPricingPage() {
                       {category === "Blockchain & Web3" && "Embrace the future with blockchain innovation"}
                     </p>
                   </div>
-
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {services.map((service) => (
                       <Card key={service.id} className="h-full hover:shadow-lg transition-shadow duration-300">
@@ -631,7 +565,6 @@ export default function ServicesPricingPage() {
                             {service.description}
                           </CardDescription>
                         </CardHeader>
-
                         <CardContent className="space-y-4">
                           {/* Pricing */}
                           <div className="bg-gray-50 rounded-lg p-4">
@@ -654,7 +587,6 @@ export default function ServicesPricingPage() {
                               </div>
                             </div>
                           </div>
-
                           {/* Key Features */}
                           <div>
                             <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
@@ -669,7 +601,6 @@ export default function ServicesPricingPage() {
                               ))}
                             </div>
                           </div>
-
                           {/* Benefits */}
                           <div>
                             <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
@@ -685,7 +616,6 @@ export default function ServicesPricingPage() {
                               ))}
                             </ul>
                           </div>
-
                           {/* Service Metrics */}
                           <div className="grid grid-cols-3 gap-2 text-center text-xs bg-gray-50 rounded-lg p-3">
                             <div className="flex items-center gap-1 justify-center">
@@ -701,7 +631,6 @@ export default function ServicesPricingPage() {
                               <span>{service.deliveryTime}</span>
                             </div>
                           </div>
-
                           {/* Action Buttons */}
                           <div className="grid grid-cols-2 gap-3">
                             <Button className="w-full" size="sm">
@@ -723,7 +652,6 @@ export default function ServicesPricingPage() {
           </Tabs>
         </div>
       </div>
-
       {/* Pricing FAQ */}
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -735,7 +663,6 @@ export default function ServicesPricingPage() {
               Common questions about our pricing and service delivery
             </p>
           </div>
-
           <div className="max-w-4xl mx-auto space-y-6">
             <Card>
               <CardHeader>
@@ -748,7 +675,6 @@ export default function ServicesPricingPage() {
                 </p>
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">What's included in the pricing?</CardTitle>
@@ -760,7 +686,6 @@ export default function ServicesPricingPage() {
                 </p>
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Can I customize the services?</CardTitle>
@@ -772,7 +697,6 @@ export default function ServicesPricingPage() {
                 </p>
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">What payment terms do you offer?</CardTitle>
@@ -784,17 +708,10 @@ export default function ServicesPricingPage() {
                 </p>
               </CardContent>
             </Card>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
@@ -811,8 +728,6 @@ export default function ServicesPricingPage() {
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <Mail className="w-5 h-5 mr-2" />
-<<<<<<< HEAD
-=======
       {/* Contact CTA Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple py-20 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -822,7 +737,6 @@ export default function ServicesPricingPage() {
           <p className="text-xl text-zion-slate-light mb-12 max-w-3xl mx-auto">
             Contact our team to discuss your specific needs and get a customized quote
           </p>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
             <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
               <Phone className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
@@ -830,14 +744,12 @@ export default function ServicesPricingPage() {
               <p className="text-zion-slate-light mb-4">Speak with our experts</p>
               <div className="text-2xl font-bold">+1 302 464 0950</div>
             </div>
-
             <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
               <Mail className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
               <p className="text-zion-slate-light mb-4">Get detailed pricing</p>
               <div className="text-lg font-semibold">kleber@ziontechgroup.com</div>
             </div>
-
             <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
               <Target className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
@@ -845,7 +757,6 @@ export default function ServicesPricingPage() {
               <div className="text-sm font-semibold">Middletown, DE 19709</div>
             </div>
           </div>
-
           <div className="flex flex-wrap justify-center gap-6">
             <Button size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light text-lg px-8 py-6">
               <Rocket className="mr-3 h-6 w-6" />
@@ -853,9 +764,7 @@ export default function ServicesPricingPage() {
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue text-lg px-8 py-6">
               <Phone className="mr-3 h-6 w-6" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               Schedule Consultation
             </Button>
           </div>

@@ -8,25 +8,15 @@ import {
   Shield, Zap, Brain, Atom,
   Rocket, Target, Microscope
 } from 'lucide-react';
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
-=======
 const UltraFuturisticFooter2034: React.FC = () => {
   const currentYear = new Date().getFullYear();
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
   const serviceCategories = [
     {
       title: '🧠 AI & Consciousness',
@@ -73,7 +63,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
       ]
     }
   ];
-
   const quickLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
@@ -84,14 +73,12 @@ const UltraFuturisticFooter2034: React.FC = () => {
     { name: 'Contact', href: '/contact' },
     { name: 'Support', href: '/support' }
   ];
-
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   return (
     <footer className="relative bg-black border-t border-cyan-500/30 overflow-hidden">
       {/* Background Effects */}
@@ -101,7 +88,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
         <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-6 gap-8 mb-12">
@@ -130,7 +116,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Leading the future with revolutionary AI consciousness, quantum computing, emerging technologies, and innovative micro SAAS solutions that transform businesses worldwide.
               </p>
-              
               {/* Contact Information */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-300 transition-colors duration-300">
@@ -158,7 +143,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
               </div>
             </motion.div>
           </div>
-
           {/* Service Categories */}
           {serviceCategories.map((section, index) => (
             <motion.div
@@ -188,7 +172,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Middle Section - Quick Links & Social */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -216,7 +199,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4">Resources</h4>
                   <ul className="space-y-2">
@@ -236,7 +218,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Enhanced Contact Information */}
           <div className="col-span-full lg:col-span-3">
             <div className="space-y-6">
@@ -260,7 +241,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-3 group">
                     <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Mail className="w-5 h-5 text-white" />
@@ -275,7 +255,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-3 group">
                     <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <MapPin className="w-5 h-5 text-white" />
@@ -287,7 +266,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  
                   <div className="flex items-center space-x-3 group">
                     <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Globe className="w-5 h-5 text-white" />
@@ -306,7 +284,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
               {/* Quick Contact Form */}
               <div className="mt-6">
                 <h4 className="text-lg font-semibold text-white mb-3">Get Started Today</h4>
@@ -323,7 +300,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Enhanced Service Categories */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {serviceCategories.map((section, index) => (
@@ -347,7 +323,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Solutions Section */}
           <div className="mb-16">
             <h3 className="text-2xl font-bold text-center text-white mb-12">
@@ -366,7 +341,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
               ))}
             </div>
           </motion.div>
-
           {/* Social & Newsletter */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -392,7 +366,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Social Links */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -417,7 +390,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Newsletter */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -444,7 +416,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
             </div>
           </motion.div>
         </div>
-
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-cyan-500/20">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
@@ -458,7 +429,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
                 © {currentYear} Zion Tech Group. All rights reserved. Leading the future of technology.
               </p>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -478,7 +448,6 @@ const UltraFuturisticFooter2034: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Floating Action Button */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}

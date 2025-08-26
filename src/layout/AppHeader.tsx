@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MainNavigation } from './MainNavigation';
-
 export function AppHeader() {
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
@@ -21,27 +16,17 @@ export function AppHeader() {
       </div>
     </header>
   );
-<<<<<<< HEAD
-}
-=======
-
 import { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
 import { Logo } from '@/components/header/Logo';
 import { ModeToggle } from '@/components/ModeToggle';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Menu, X, PanelLeft } from 'lucide-react';
-=======
 import Menu from 'lucide-react/dist/esm/icons/menu';
 import X from 'lucide-react/dist/esm/icons/x';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 import { Sidebar } from '@/components/Sidebar';
-
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -52,14 +37,11 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 import { useAuth } from '@/hooks/useAuth';
 import { Link } from 'react-router-dom';
-
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
->>>>>>> origin/cursor/website-audit-and-enhancement-24ce
   const isMobile = useIsMobile();
   const { user, logout } = useAuth();
-  
   // Try to access the messaging context, but provide a fallback value if it's not available
   let unreadCount = 0;
   try {
@@ -68,7 +50,6 @@ export function AppHeader() {
   } catch (error) {
     console.warn('Messaging context not available');
   }
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -76,7 +57,6 @@ export function AppHeader() {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
-  
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md">
@@ -89,9 +69,7 @@ export function AppHeader() {
           >
             <PanelLeft className="h-5 w-5" />
           </button>
-          
           <Logo />
-          
           {/* Search Bar - Hidden on mobile */}
           <div className="hidden md:flex ml-6 flex-1 max-w-md">
             <form onSubmit={handleSearch} className="relative w-full">
@@ -110,11 +88,9 @@ export function AppHeader() {
               </button>
             </form>
           </div>
-
           <div className="ml-6 flex-1 hidden lg:block">
             <MainNavigation unreadCount={unreadCount} />
           </div>
-          
           {/* Right side actions */}
           <div className="flex items-center space-x-2 ml-auto">
             {/* Notifications */}
@@ -131,7 +107,6 @@ export function AppHeader() {
                 )}
               </Link>
             )}
-
             {/* User Menu */}
             {user ? (
               <div className="relative group">
@@ -139,7 +114,6 @@ export function AppHeader() {
                   <User className="h-5 w-5" />
                   <span className="hidden sm:block text-sm font-medium">{user.name || user.email}</span>
                 </button>
-                
                 {/* Dropdown Menu */}
                 <div className="absolute right-0 top-full mt-2 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
@@ -187,7 +161,6 @@ export function AppHeader() {
                 </Link>
               </div>
             )}
-
             {/* Mobile menu button */}
             <div className="lg:hidden ml-2">
               <button
@@ -204,15 +177,12 @@ export function AppHeader() {
                 )}
               </button>
             </div>
-            
             <ModeToggle />
           </div>
         </div>
       </header>
-      
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-40 pt-16">
@@ -222,9 +192,6 @@ export function AppHeader() {
             aria-hidden="true"
           />
           <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-<<<<<<< HEAD
-            <MobileMenu />
-=======
             {/* Mobile Search */}
             <div className="p-4 border-b border-zion-purple/20">
               <form onSubmit={handleSearch} className="relative">
@@ -243,22 +210,17 @@ export function AppHeader() {
                 </button>
               </form>
             </div>
-            
             <MobileMenu 
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)} 
             />
->>>>>>> origin/cursor/website-audit-and-enhancement-24ce
           </div>
         </div>
       )}
-
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

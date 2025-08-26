@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
-
 export function BlogSection() {
   const blogPosts = [
     {
@@ -22,7 +17,6 @@ export function BlogSection() {
       readTime: '12 min read'
     }
   ];
-
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
@@ -52,17 +46,13 @@ export function BlogSection() {
     </section>
   );
 }
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { BLOG_POSTS } from '@/types/blog';
-
 export const BlogSection: React.FC = () => {
   const featuredPosts = BLOG_POSTS.slice(0, 3);
-
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,7 +64,6 @@ export const BlogSection: React.FC = () => {
             Stay informed with our latest articles on AI, technology trends, and business innovation
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredPosts.map((post) => (
             <Card key={post.id} className="hover:shadow-lg transition-shadow">
@@ -99,7 +88,6 @@ export const BlogSection: React.FC = () => {
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
-                
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                   <div className="flex items-center space-x-2">
                     <img
@@ -120,7 +108,6 @@ export const BlogSection: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <Link
                   href={`/blog/${post.id}`}
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
@@ -132,7 +119,6 @@ export const BlogSection: React.FC = () => {
             </Card>
           ))}
         </div>
-        
         <div className="text-center">
           <Link
             href="/blog"
@@ -146,6 +132,4 @@ export const BlogSection: React.FC = () => {
     </section>
   );
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

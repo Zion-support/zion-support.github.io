@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -11,7 +6,6 @@ import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost } from "@/types/community";
-
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
@@ -73,7 +67,6 @@ const featuredPosts: ForumPost[] = [
     authorRole: "Verified Talent"
   }
 ];
-
 // Mock data for recent posts
 const recentPosts: ForumPost[] = [
   {
@@ -164,18 +157,13 @@ const recentPosts: ForumPost[] = [
     authorRole: "Freelancer"
   }
 ];
-
 export default function CommunityPage() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
-  
   return (
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, MessageCircle, Calendar, BookOpen, Award, Globe, Lightbulb, Rocket, Heart, Star, Zap, Target } from 'lucide-react';
-
 export default function CommunityPage() {
   const communityFeatures = [
     {
@@ -215,7 +203,6 @@ export default function CommunityPage() {
       color: 'from-red-500 to-pink-500'
     }
   ];
-
   const upcomingEvents = [
     {
       title: 'AI Ethics & Responsible Development',
@@ -242,37 +229,14 @@ export default function CommunityPage() {
       icon: Target
     }
   ];
-
   const communityStats = [
     { label: 'Active Members', value: '2,847', icon: Users },
     { label: 'Discussions', value: '1,234', icon: MessageCircle },
     { label: 'Resources Shared', value: '567', icon: BookOpen },
     { label: 'Events Hosted', value: '89', icon: Calendar }
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      <div className="container mx-auto px-4 py-20">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Community</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Connect with like-minded professionals, share knowledge, and stay ahead of the latest technology trends in our vibrant community.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
-              Join Community
-            </button>
-            <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-              Learn More
-            </button>
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <>
       <SEO
         title="Community Forum | Zion AI Marketplace"
@@ -280,7 +244,6 @@ export default function CommunityPage() {
         keywords="community, forum, discussion, AI marketplace, questions, answers"
         canonical="https://ziontechgroup.com/community"
       />
-      
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
           <div>
@@ -288,26 +251,18 @@ export default function CommunityPage() {
             <p className="text-muted-foreground mt-2">
               Join the conversation, ask questions, and share your knowledge
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
-          
           <CreatePostButton />
         </div>
-        
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
           <TabsList className="mb-6">
             <TabsTrigger value="categories">Categories</TabsTrigger>
             <TabsTrigger value="featured">Featured</TabsTrigger>
             <TabsTrigger value="recent">Recent</TabsTrigger>
           </TabsList>
-          
           <TabsContent value="categories">
             <ForumCategories />
           </TabsContent>
-          
           <TabsContent value="featured">
             <div className="space-y-4">
               {featuredPosts.map((post) => (
@@ -315,7 +270,6 @@ export default function CommunityPage() {
               ))}
             </div>
           </TabsContent>
-          
           <TabsContent value="recent">
             <div className="space-y-4">
               {recentPosts.map((post) => (
@@ -326,12 +280,8 @@ export default function CommunityPage() {
         </Tabs>
       </div>
     </>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
           </div>
         </div>
-
         {/* Community Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {communityStats.map((stat, index) => {
@@ -347,7 +297,6 @@ export default function CommunityPage() {
             );
           })}
         </div>
-
         {/* Community Features */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -368,7 +317,6 @@ export default function CommunityPage() {
             })}
           </div>
         </div>
-
         {/* Upcoming Events */}
         <div className="mb-16">
           <div className="flex items-center justify-between mb-8">
@@ -411,7 +359,6 @@ export default function CommunityPage() {
             })}
           </div>
         </div>
-
         {/* Community Guidelines */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -462,7 +409,6 @@ export default function CommunityPage() {
             </div>
           </div>
         </div>
-
         {/* Get Involved */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -487,8 +433,6 @@ export default function CommunityPage() {
         </div>
       </div>
     </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 }

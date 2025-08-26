@@ -33,64 +33,20 @@ import {
   Cube,
   Sparkles
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025 } from '@/data/innovativeNewServices2025';
-
-export default function InnovativeServicesShowcase() {
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import SEOHead from '../components/SEOHead';
-
 // Import all service data
 import { ADVANCED_AI_SERVICES } from '../data/advancedAIServices';
 import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from '../data/innovativeITInfrastructure';
 import { IOT_EDGE_COMPUTING_SERVICES } from '../data/iotEdgeComputingServices';
 import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
-
 const InnovativeServicesShowcase: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
   const [priceRange, setPriceRange] = useState<string>('all');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-  const filteredServices = useMemo(() => {
-    return INNOVATIVE_SERVICES_2025.filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-      
-      const matchesPrice = priceRange === 'all' || 
-        (priceRange === 'low' && service.price < 10000) ||
-        (priceRange === 'medium' && service.price >= 10000 && service.price < 25000) ||
-        (priceRange === 'high' && service.price >= 25000);
-      
-      return matchesSearch && matchesCategory && matchesSubcategory && matchesPrice;
-    });
-  }, [searchTerm, selectedCategory, selectedSubcategory, priceRange]);
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // SEO configuration
   const seoConfig = {
     title: "Innovative Services 2025 - Zion Tech Group",
@@ -98,7 +54,6 @@ const InnovativeServicesShowcase: React.FC = () => {
     keywords: "AI services, IT infrastructure, micro SaaS, innovative technology, business solutions",
     url: "https://ziontechgroup.com/innovative-services"
   };
-
   // Combine all services
   const allServices = [
     ...ADVANCED_AI_SERVICES,
@@ -106,19 +61,11 @@ const InnovativeServicesShowcase: React.FC = () => {
     ...IOT_EDGE_COMPUTING_SERVICES,
     ...INNOVATIVE_MICRO_SAAS_SERVICES
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
   const getSubcategoriesForCategory = (category: string) => {
     if (category === 'all') return [];
     return INNOVATIVE_SERVICE_SUBCATEGORIES_2025[category as keyof typeof INNOVATIVE_SERVICE_SUBCATEGORIES_2025] || [];
   };
-
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
       'AI & Analytics': <Brain className="h-5 w-5" />,
@@ -132,13 +79,11 @@ const InnovativeServicesShowcase: React.FC = () => {
     };
     return categoryIcons[category] || <Zap className="h-5 w-5" />;
   };
-
   const getPriceRange = (price: number) => {
     if (price < 10000) return 'starter';
     if (price < 25000) return 'professional';
     return 'enterprise';
   };
-
   const getPriceRangeColor = (range: string) => {
     switch (range) {
       case 'starter': return 'bg-green-100 text-green-800 border-green-200';
@@ -147,85 +92,10 @@ const InnovativeServicesShowcase: React.FC = () => {
       default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
-
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Innovative Services 2025 - Zion Tech Group" 
-        description="Discover cutting-edge AI, quantum computing, blockchain, and emerging technology solutions. Transform your business with our innovative micro SAAS services and IT solutions."
-        keywords="AI services, quantum computing, blockchain, Web3, IoT, cybersecurity, metaverse, green tech, digital twin, innovative technology solutions"
-        canonical="https://ziontechgroup.com/innovative-services-2025"
-      />
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 md:py-32 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>
-          <div className="absolute top-1/3 right-1/3 w-3 h-3 rounded-full bg-zion-cyan opacity-30 animate-pulse"></div>
-          <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse"></div>
-        </div>
-        
-        <div className="container relative z-10 px-4 mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Innovative Services 2025
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto">
-            Experience the future of technology with our cutting-edge AI, quantum computing, blockchain, and emerging tech solutions. 
-            Transform your business with intelligent, innovative, and diversified micro SAAS services.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-zion-cyan">8+</div>
-              <div className="text-sm text-zion-cyan-light">Technology Categories</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-zion-purple">Global</div>
-              <div className="text-sm text-zion-cyan-light">Deployment</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-zion-cyan">24/7</div>
-              <div className="text-sm text-zion-cyan-light">Expert Support</div>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white">
-              <Link to="/contact">Get Started Today</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-zion-blue">
-              <Link to="/request-quote">Request Custom Quote</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information Banner */}
-      <section className="bg-zion-slate-dark py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
-            <div className="flex items-center gap-3">
-              <Phone className="h-5 w-5 text-zion-cyan" />
-              <span className="text-white">+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-zion-cyan" />
-              <span className="text-white">kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Globe className="h-5 w-5 text-zion-cyan" />
-              <span className="text-white">https://ziontechgroup.com</span>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <SEOHead config={seoConfig} />
-      
       {/* Header Section */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -249,18 +119,11 @@ const InnovativeServicesShowcase: React.FC = () => {
                 <Globe className="w-5 h-5 mr-2" />
                 <span>Global Support</span>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-12 bg-zion-slate-light">
         <div className="container mx-auto px-4">
@@ -275,7 +138,6 @@ const InnovativeServicesShowcase: React.FC = () => {
                   className="pl-10"
                 />
               </div>
-              
               <select
                 value={selectedCategory}
                 onChange={(e) => {
@@ -289,7 +151,6 @@ const InnovativeServicesShowcase: React.FC = () => {
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
-              
               <select
                 value={selectedSubcategory}
                 onChange={(e) => setSelectedSubcategory(e.target.value)}
@@ -300,7 +161,6 @@ const InnovativeServicesShowcase: React.FC = () => {
                   <option key={subcategory} value={subcategory}>{subcategory}</option>
                 ))}
               </select>
-              
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
@@ -315,12 +175,7 @@ const InnovativeServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {sortedServices.length === 0 ? (
           <div className="text-center py-12">
@@ -352,15 +207,12 @@ const InnovativeServicesShowcase: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                     {service.title}
                   </h3>
-                  
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {service.description}
                   </p>
-
                   <div className="flex items-center justify-between text-sm text-gray-500">
                     <span className="flex items-center">
                       <Clock className="w-4 h-4 mr-1" />
@@ -372,7 +224,6 @@ const InnovativeServicesShowcase: React.FC = () => {
                     </span>
                   </div>
                 </div>
-
                 {/* Service Features */}
                 <div className="p-6 border-b border-gray-100">
                   <h4 className="font-medium text-gray-900 mb-3">Key Features</h4>
@@ -390,7 +241,6 @@ const InnovativeServicesShowcase: React.FC = () => {
                     )}
                   </div>
                 </div>
-
                 {/* Service Benefits */}
                 <div className="p-6 border-b border-gray-100">
                   <h4 className="font-medium text-gray-900 mb-3">Benefits</h4>
@@ -403,7 +253,6 @@ const InnovativeServicesShowcase: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Service Footer */}
                 <div className="p-6 bg-gray-50">
                   <div className="flex items-center justify-between mb-4">
@@ -418,7 +267,6 @@ const InnovativeServicesShowcase: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   <div className="flex space-x-3">
                     <Link
                       to={'link' in service ? service.link : '#'}
@@ -448,7 +296,6 @@ const InnovativeServicesShowcase: React.FC = () => {
           </div>
         )}
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
@@ -479,8 +326,6 @@ const InnovativeServicesShowcase: React.FC = () => {
             <p className="text-sm">
               <MapPin className="w-4 h-4 inline mr-2" />
               364 E Main St STE 1008, Middletown DE 19709
-<<<<<<< HEAD
-=======
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -490,12 +335,9 @@ const InnovativeServicesShowcase: React.FC = () => {
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
               Discover our comprehensive portfolio of innovative services designed to future-proof your business 
               and drive digital transformation across all industries.
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </p>
           </div>
-
           {filteredServices.length === 0 ? (
             <div className="text-center py-20">
               <h3 className="text-2xl font-semibold text-zion-slate mb-4">No services found</h3>
@@ -536,16 +378,13 @@ const InnovativeServicesShowcase: React.FC = () => {
                         </Badge>
                       )}
                     </div>
-                    
                     <CardTitle className="text-xl text-zion-blue-dark group-hover:text-zion-purple transition-colors">
                       {service.title}
                     </CardTitle>
-                    
                     <CardDescription className="text-zion-slate line-clamp-3">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
-                  
                   <CardContent className="space-y-4">
                     {/* Key Features */}
                     <div>
@@ -567,7 +406,6 @@ const InnovativeServicesShowcase: React.FC = () => {
                         )}
                       </ul>
                     </div>
-
                     {/* Benefits */}
                     <div>
                       <h4 className="font-semibold text-zion-blue-dark mb-2 flex items-center gap-2">
@@ -583,7 +421,6 @@ const InnovativeServicesShowcase: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-
                     {/* Pricing & Details */}
                     <div className="pt-4 border-t border-zion-slate-light">
                       <div className="flex items-center justify-between mb-3">
@@ -594,7 +431,6 @@ const InnovativeServicesShowcase: React.FC = () => {
                           {service.pricingModel}
                         </Badge>
                       </div>
-                      
                       <div className="flex items-center justify-between text-sm text-zion-slate-light mb-4">
                         <span className="flex items-center gap-1">
                           <Clock className="h-4 w-4" />
@@ -605,7 +441,6 @@ const InnovativeServicesShowcase: React.FC = () => {
                           {service.supportLevel}
                         </span>
                       </div>
-
                       {/* Rating */}
                       {service.rating && (
                         <div className="flex items-center gap-2 mb-4">
@@ -622,19 +457,16 @@ const InnovativeServicesShowcase: React.FC = () => {
                           </span>
                         </div>
                       )}
-
                       {/* Market Price */}
                       <div className="mb-4 p-3 bg-zion-slate-light rounded-lg">
                         <div className="text-sm text-zion-slate-light mb-1">Market Price Range</div>
                         <div className="font-semibold text-zion-blue-dark">{service.marketPrice}</div>
                       </div>
-
                       {/* ROI */}
                       <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg">
                         <div className="text-sm text-green-700 mb-1">Expected ROI</div>
                         <div className="font-semibold text-green-800">{service.roi}</div>
                       </div>
-
                       {/* Action Buttons */}
                       <div className="flex gap-2">
                         <Button asChild className="flex-1 bg-zion-blue hover:bg-zion-blue-dark">
@@ -647,7 +479,6 @@ const InnovativeServicesShowcase: React.FC = () => {
                           <Link to="/request-quote">Quote</Link>
                         </Button>
                       </div>
-
                       {/* Contact Info */}
                       <div className="mt-4 pt-4 border-t border-zion-slate-light">
                         <div className="text-sm text-zion-slate-light mb-2">Ready to transform your business?</div>
@@ -668,7 +499,6 @@ const InnovativeServicesShowcase: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple">
         <div className="container mx-auto px-4 text-center">
@@ -679,7 +509,6 @@ const InnovativeServicesShowcase: React.FC = () => {
             Join the technology revolution with Zion Tech Group. Our innovative solutions are designed to 
             drive growth, efficiency, and competitive advantage in the digital age.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light">
               <Link to="/contact">Schedule a Consultation</Link>
@@ -688,7 +517,6 @@ const InnovativeServicesShowcase: React.FC = () => {
               <Link to="/request-quote">Get Custom Quote</Link>
             </Button>
           </div>
-
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">

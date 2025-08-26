@@ -1,128 +1,55 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "target": "ES2020",
-=======
-    "target": "ES2024",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-<<<<<<< HEAD
-      "@/pages/*": ["./src/pages/*", "./pages/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/api/*": ["./src/api/*"],
-      "@/types/*": ["./src/types/*", "./types/*"],
-=======
-      "@/pages/*": ["./src/pages/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/api/*": ["./src/api/*"],
-      "@/types/*": ["./src/types/*"],
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
-      "@/utils/*": ["./src/utils/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/context/*": ["./src/context/*"],
-      "@/services/*": ["./src/services/*"],
-<<<<<<< HEAD
-      "react-router-dom": ["./src/stubs/react-router-dom.tsx"],
-      "react-router": ["./src/stubs/react-router-dom.tsx"],
-      "next-cloudinary": ["./types/next-cloudinary.d.ts"],
-      "types/*": ["./types/*"]
-=======
-      "axios": ["./src/lib/axios.ts"],
-      "notistack": ["./src/stubs/notistack.ts"],
-      "@sentry/browser": ["./src/stubs/sentry.ts"]
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
+      "@/*": ["./src/*"]
     },
-    "typeRoots": ["./node_modules/@types", "./types"],
-    "types": ["node"],
-    "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-<<<<<<< HEAD
-    "jsx": "preserve",
-=======
-    "jsx": "react-jsx",
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
-    "strict": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
+    "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-=======
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es6"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-<<<<<<< HEAD
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowJs": true,
-<<<<<<< HEAD
-    "incremental": true,
-    "plugins": [{ "name": "next" }]
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-=======
-    "incremental": true
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
   "include": [
     "src/main.tsx",
     "src/App.tsx",
-    "src/index.css",
-    "vite-env.d.ts"
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-c1d1
+    "vite.config.ts"
   ],
   "exclude": [
-    "src/**",
-    "node_modules"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "node_modules",
+    "dist",
+    "build",
+    ".next",
+    "out",
+    "src/pages",
+    "src/components",
+    "src/data",
+    "src/types",
+    "src/utils",
+    "src/hooks",
+    "src/context",
+    "src/layout",
+    "src/integrations",
+    "src/lib",
+    "src/routes",
+    "src/store",
+    "src/i18n",
+    "src_disabled",
+    "broken_files_backup",
+    "components_backup",
+    "tests.disabled",
+    "automation",
+    "pages",
+    "data"
+  ]
 }

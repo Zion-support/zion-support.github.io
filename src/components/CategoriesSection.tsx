@@ -1,30 +1,13 @@
-
 import { GradientHeading } from "./GradientHeading";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
-import { motion } from "framer-motion";
-<<<<<<< HEAD
-=======
 import Link from "next/link";
 import { Briefcase, HardDrive, Lightbulb, Users, Brain } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 const categories = [
   {
     title: "Comprehensive Services",
     description: "Micro SAAS, IT services, and AI solutions",
     icon: <Briefcase className="w-10 h-10" />,
-<<<<<<< HEAD
-    link: "/services",
-    color: "from-zion-purple to-zion-purple-dark",
-    gradient: "from-zion-purple/20 to-zion-purple-dark/20",
-    features: ["24/7 Support", "Expert Team", "Custom Solutions"],
-    stats: "500+ Services"
-=======
     link: "/comprehensive-services",
     color: "from-purple-500 to-indigo-600",
   },
@@ -34,48 +17,22 @@ const categories = [
     icon: <Brain className="w-10 h-10" />,
     link: "/ai-solutions",
     color: "from-pink-500 to-rose-600",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
   {
     title: "Talents",
     description: "Connect with AI experts, developers, and tech specialists",
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
-<<<<<<< HEAD
-    color: "from-zion-cyan to-zion-blue",
-    gradient: "from-zion-cyan/20 to-zion-blue/20",
-    features: ["AI Experts", "Global Network", "Verified Profiles"],
-    stats: "10K+ Experts"
-=======
     color: "from-cyan-500 to-blue-600",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
   {
     title: "Equipment",
     description: "Rent or buy specialized hardware, servers, and devices",
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
-<<<<<<< HEAD
-    color: "from-zion-cyan-light to-zion-cyan",
-    gradient: "from-zion-cyan-light/20 to-zion-cyan/20",
-    features: ["High-Performance", "Flexible Rental", "24/7 Monitoring"],
-    stats: "1000+ Devices"
-  },
-  {
-    title: "Innovation",
-    description: "Discover cutting-edge solutions and tech breakthroughs",
-    icon: <Lightbulb className="w-10 h-10" />,
-    link: "/category/innovation",
-    color: "from-zion-purple-light to-zion-purple",
-    gradient: "from-zion-purple-light/20 to-zion-purple/20",
-    features: ["Latest Tech", "AI Solutions", "Future-Ready"],
-    stats: "100+ Innovations"
-=======
     color: "from-amber-500 to-orange-600",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
 ];
-
 const specialServices = [
   {
     title: "Enhanced AI & IT Services",
@@ -83,29 +40,6 @@ const specialServices = [
   },
   {
     title: "IT Onsite Services",
-<<<<<<< HEAD
-    link: "/it-onsite-services",
-    icon: <Shield className="w-5 h-5" />,
-    description: "Professional on-site technical support"
-  },
-  {
-    title: "Comprehensive Services",
-    link: "/comprehensive-services",
-    icon: <Rocket className="w-5 h-5" />,
-    description: "End-to-end technology solutions"
-  },
-  {
-    title: "AI Integration",
-    link: "/ai-integration",
-    icon: <Sparkles className="w-5 h-5" />,
-    description: "Seamless AI implementation"
-  },
-  {
-    title: "Cloud Solutions",
-    link: "/cloud-solutions",
-    icon: <Zap className="w-5 h-5" />,
-    description: "Scalable cloud infrastructure"
-=======
     link: "/it-onsite-services"
   },
   {
@@ -119,19 +53,12 @@ const specialServices = [
   {
     title: "Cybersecurity",
     link: "/cybersecurity"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   }
 ];
-
 interface CategoriesSectionProps {
   showTitle?: boolean;
 }
-
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -142,7 +69,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
@@ -154,7 +80,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       }
     }
   };
-
   const cardVariants = {
     hidden: { scale: 0.95, opacity: 0 },
     visible: {
@@ -166,7 +91,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       }
     }
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
@@ -175,7 +99,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
           <motion.div 
@@ -192,7 +115,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </p>
           </motion.div>
         )}
-        
         <motion.div 
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
@@ -220,7 +142,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                       {category.icon}
                     </div>
                   </div>
-
                   {/* Title and description */}
                   <h3 className="text-white text-2xl font-bold mb-3 group-hover:text-zion-cyan transition-colors">
                     {category.title}
@@ -228,7 +149,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                   <p className="text-zion-slate-light mb-6 leading-relaxed">
                     {category.description}
                   </p>
-
                   {/* Features list */}
                   <div className="space-y-2 mb-6">
                     {category.features.map((feature, idx) => (
@@ -238,12 +158,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                       </div>
                     ))}
                   </div>
-
                   {/* Stats */}
                   <div className="text-zion-cyan font-semibold text-sm mb-4">
                     {category.stats}
                   </div>
-
                   {/* CTA arrow */}
                   <div className="flex items-center justify-between">
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
@@ -256,7 +174,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </motion.div>
           ))}
         </motion.div>
-        
         {/* Enhanced featured services section */}
         <motion.div 
           className="mt-16"
@@ -292,7 +209,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               </motion.div>
             ))}
           </div>
-          
           {/* View all services button */}
           <motion.div 
             className="text-center mt-8"
@@ -324,7 +240,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </p>
           </div>
         )}
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {categories.map((category, index) => (
             <div
@@ -352,7 +267,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </div>
           ))}
         </div>
-        
         <div className="text-center">
           <h3 className="text-2xl font-bold text-white mb-8">
             Specialized Services
@@ -368,7 +282,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               </Link>
             ))}
           </div>
-          
           <Link
             href="/services"
             className="inline-flex items-center px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -379,7 +292,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </svg>
           </Link>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       </div>
     </section>
   );

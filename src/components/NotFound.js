@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import Link from 'next/link';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-const NotFound = () => {
-    const router = useRouter();
-    const path = router.asPath || '';
-    const title = path && path !== '/' ? `404 – ${path} not found` : '404 – Page Not Found';
-    const description = `The page at ${path || 'this URL'} could not be found.`;
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || '';
-    const canonical = baseUrl && path ? `${baseUrl}${path}` : undefined;
-    return (_jsxs(_Fragment, { children: [_jsxs(Head, { children: [_jsx("title", { children: title }), _jsx("meta", { name: "description", content: description }), _jsx("meta", { property: "og:title", content: title }), _jsx("meta", { property: "og:description", content: description }), canonical && _jsx("meta", { property: "og:url", content: canonical })] }), _jsx("div", { className: "flex flex-1 items-center justify-center bg-gray-100", children: _jsxs("div", { className: "text-center p-6", children: [_jsx("h1", { className: "text-4xl font-bold mb-4 text-gray-800", children: "404" }), _jsx("p", { className: "text-xl text-gray-700 mb-4", children: "Oops! Page not found" }), _jsx("p", { className: "text-lg text-gray-600 mb-4", children: "Did you forget your password? You can reset it here:" }), _jsx(Link, { href: "/forgot-password", className: "text-blue-600 hover:text-blue-800 underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded", children: "Reset Password" }), _jsx("p", { className: "mt-4", children: _jsx(Link, { href: "/", className: "text-sm text-gray-500 hover:text-gray-700 underline", children: "Or return to Home" }) })] }) })] }));
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -39,7 +25,6 @@ const NotFound = () => {
             <AlertTriangle className="w-16 h-16 text-white"/>
           </div>
         </motion.div>
-
         {/* Main Message */}
         <h1 className="text-6xl md:text-8xl font-bold text-white mb-4">
           404
@@ -51,7 +36,6 @@ const NotFound = () => {
           The page you're looking for doesn't exist or has been moved. 
           Let us help you find what you need.
         </p>
-
         {/* Search Section */}
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
           <div className="max-w-md mx-auto relative">
@@ -59,7 +43,6 @@ const NotFound = () => {
             <input type="text" placeholder="Search our website..." className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"/>
           </div>
         </motion.div>
-
         {/* Popular Pages */}
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
           <h3 className="text-2xl font-semibold text-white mb-6">Popular Pages</h3>
@@ -79,7 +62,6 @@ const NotFound = () => {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Service Pages */}
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
           <h3 className="text-2xl font-semibold text-white mb-6">Our Services</h3>
@@ -99,7 +81,6 @@ const NotFound = () => {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* CTA Buttons */}
         <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}>
           <Link to="/" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
@@ -111,7 +92,6 @@ const NotFound = () => {
             <ArrowRight className="w-5 h-5"/>
           </Link>
         </motion.div>
-
         {/* Help Text */}
         <motion.p className="text-gray-400 mt-8 text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}>
           Can't find what you're looking for?{' '}
@@ -125,6 +105,5 @@ const NotFound = () => {
         </motion.p>
       </motion.div>
     </div>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 };
 export default NotFound;

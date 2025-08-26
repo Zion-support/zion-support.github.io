@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useState } from 'react';
-import { Button } from '@/components/ui/Button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/Tabs';
-import { Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp } from 'lucide-react';
-import { SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
-const ServiceCard = ({ service }) => {
-    const [isExpanded, setIsExpanded] = useState(false);
-    const getPricingDisplay = (service) => {
-        switch (service.pricingModel) {
-            case 'one-time':
-                return `${service.currency}${service.price.toLocaleString()}`;
-            case 'monthly':
-                return `${service.currency}${service.price.toLocaleString()}/month`;
-            case 'yearly':
-                return `${service.currency}${service.price.toLocaleString()}/year`;
-            case 'per-user':
-                return `${service.currency}${service.price.toLocaleString()}/user`;
-            case 'per-project':
-                return `${service.currency}${service.price.toLocaleString()}/project`;
-            default:
-                return `${service.currency}${service.price.toLocaleString()}`;
-        }
-    };
-    const getSupportLevelColor = (level) => {
-        switch (level) {
-            case 'basic': return 'bg-gray-100 text-gray-800';
-            case 'standard': return 'bg-blue-100 text-blue-800';
-            case 'premium': return 'bg-purple-100 text-purple-800';
-            case 'enterprise': return 'bg-orange-100 text-orange-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
-    };
-    return (_jsxs(Card, { className: "h-full border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300", children: [_jsxs(CardHeader, { className: "pb-4", children: [_jsxs("div", { className: "flex items-start justify-between mb-2", children: [_jsx(Badge, { variant: "secondary", className: "bg-zion-purple/20 text-zion-cyan border-zion-purple/30", children: service.subcategory }), _jsx(Badge, { className: getSupportLevelColor(service.supportLevel), children: service.supportLevel })] }), _jsx(CardTitle, { className: "text-white text-lg leading-tight mb-2", children: service.title }), _jsx(CardDescription, { className: "text-zion-slate-light text-sm leading-relaxed", children: service.description })] }), _jsx(CardContent, { className: "pt-0", children: _jsxs("div", { className: "space-y-4", children: [_jsxs("div", { className: "bg-zion-blue-light/10 rounded-lg p-3 border border-zion-blue-light/20", children: [_jsxs("div", { className: "flex items-center justify-between", children: [_jsx("span", { className: "text-zion-slate-light text-sm", children: "Starting at" }), _jsx("span", { className: "text-zion-cyan font-bold text-lg", children: getPricingDisplay(service) })] }), _jsxs("div", { className: "text-zion-slate-light text-xs mt-1", children: ["Market range: ", service.marketPrice] })] }), _jsxs("div", { children: [_jsxs("h4", { className: "text-white font-semibold text-sm mb-2 flex items-center gap-2", children: [_jsx(CheckCircle, { className: "h-4 w-4 text-zion-cyan" }), "Key Features"] }), _jsxs("div", { className: "grid grid-cols-1 gap-1", children: [service.features.slice(0, 3).map((feature, index) => (_jsxs("div", { className: "text-zion-slate-light text-xs flex items-start gap-2", children: [_jsx("div", { className: "w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0" }), _jsx("span", { children: feature })] }, index))), service.features.length > 3 && (_jsx(Button, { variant: "ghost", size: "sm", className: "text-zion-cyan hover:text-zion-cyan-light text-xs p-0 h-auto", onClick: () => setIsExpanded(!isExpanded), children: isExpanded ? 'Show less' : `+${service.features.length - 3} more features` }))] }), isExpanded && (_jsx("div", { className: "mt-2 space-y-1", children: service.features.slice(3).map((feature, index) => (_jsxs("div", { className: "text-zion-slate-light text-xs flex items-start gap-2", children: [_jsx("div", { className: "w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0" }), _jsx("span", { children: feature })] }, index))) }))] }), _jsxs("div", { children: [_jsxs("h4", { className: "text-white font-semibold text-sm mb-2 flex items-center gap-2", children: [_jsx(TrendingUp, { className: "h-4 w-4 text-zion-cyan" }), "Benefits"] }), _jsx("div", { className: "grid grid-cols-1 gap-1", children: service.benefits.slice(0, 3).map((benefit, index) => (_jsxs("div", { className: "text-zion-slate-light text-xs flex items-start gap-2", children: [_jsx("div", { className: "w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0" }), _jsx("span", { children: benefit })] }, index))) })] }), _jsxs("div", { className: "grid grid-cols-2 gap-3 text-xs", children: [_jsxs("div", { className: "flex items-center gap-2 text-zion-slate-light", children: [_jsx(Clock, { className: "h-3 w-3 text-zion-cyan" }), _jsx("span", { children: service.estimatedDelivery })] }), _jsxs("div", { className: "flex items-center gap-2 text-zion-slate-light", children: [_jsx(Users, { className: "h-3 w-3 text-zion-cyan" }), _jsxs("span", { children: [service.targetAudience.length, " target audiences"] })] })] }), _jsx("div", { className: "flex flex-wrap gap-1", children: service.tags.slice(0, 3).map((tag, index) => (_jsx(Badge, { variant: "outline", className: "text-xs border-zion-blue-light/30 text-zion-slate-light", children: tag }, index))) }), _jsxs("div", { className: "bg-zion-blue-light/5 rounded-lg p-3 border border-zion-blue-light/10", children: [_jsx("h4", { className: "text-white font-semibold text-sm mb-2", children: "Get Started" }), _jsxs("div", { className: "space-y-2 text-xs", children: [_jsxs("div", { className: "flex items-center gap-2 text-zion-slate-light", children: [_jsx(Phone, { className: "h-3 w-3 text-zion-cyan" }), _jsx("a", { href: `tel:${service.contactInfo.phone}`, className: "text-zion-cyan hover:text-zion-cyan-light", children: service.contactInfo.phone })] }), _jsxs("div", { className: "flex items-center gap-2 text-zion-slate-light", children: [_jsx(Mail, { className: "h-3 w-3 text-zion-cyan" }), _jsx("a", { href: `mailto:${service.contactInfo.email}`, className: "text-zion-cyan hover:text-zion-cyan-light", children: service.contactInfo.email })] }), _jsxs("div", { className: "flex items-center gap-2 text-zion-slate-light", children: [_jsx(Globe, { className: "h-3 w-3 text-zion-cyan" }), _jsx("a", { href: service.contactInfo.website, target: "_blank", rel: "noopener noreferrer", className: "text-zion-cyan hover:text-zion-cyan-light", children: "Visit Website" })] })] })] })] }) })] }));
-};
-export const ComprehensiveServicesShowcase = () => {
-    const [selectedCategory, setSelectedCategory] = useState(SERVICE_CATEGORIES[0].name);
-    return (_jsx("section", { className: "py-20 bg-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsxs("h2", { className: "text-4xl md:text-5xl font-bold text-white mb-6", children: ["Comprehensive ", _jsx("span", { className: "text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple", children: "Tech Solutions" })] }), _jsx("p", { className: "text-zion-slate-light text-lg max-w-3xl mx-auto", children: "Discover our extensive portfolio of professional technology services designed to accelerate your business growth, enhance security, and drive innovation across all aspects of your organization." })] }), _jsxs(Tabs, { value: selectedCategory, onValueChange: setSelectedCategory, className: "w-full", children: [_jsx(TabsList, { className: "grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-8 bg-zion-blue-dark border border-zion-blue-light", children: SERVICE_CATEGORIES.map((category) => (_jsxs(TabsTrigger, { value: category.name, className: "text-zion-slate-light data-[state=active]:bg-zion-purple data-[state=active]:text-white data-[state=active]:border-zion-purple", children: [_jsx("span", { className: "hidden md:block", children: category.icon }), _jsx("span", { className: "text-xs md:text-sm", children: category.name.split(' ')[0] })] }, category.name))) }), SERVICE_CATEGORIES.map((category) => (_jsxs(TabsContent, { value: category.name, className: "mt-8", children: [_jsxs("div", { className: "text-center mb-8", children: [_jsxs("h3", { className: "text-2xl font-bold text-white mb-4", children: [category.icon, " ", category.name] }), _jsx("p", { className: "text-zion-slate-light max-w-2xl mx-auto", children: category.description })] }), _jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6", children: category.services.map((service) => (_jsx(ServiceCard, { service: service }, service.id))) })] }, category.name)))] }), _jsx("div", { className: "mt-16 text-center", children: _jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 max-w-4xl mx-auto", children: [_jsx("h3", { className: "text-2xl font-bold text-white mb-4", children: "Ready to Transform Your Business?" }), _jsx("p", { className: "text-zion-slate-light mb-6", children: "Our expert team is ready to help you implement the perfect technology solutions. Get in touch today for a personalized consultation and quote." }), _jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [_jsxs(Button, { className: "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white", children: [_jsx(Phone, { className: "h-4 w-4 mr-2" }), "Call +1 302 464 0950"] }), _jsxs(Button, { variant: "outline", className: "border-zion-purple text-zion-cyan hover:bg-zion-purple/10", children: [_jsx(Mail, { className: "h-4 w-4 mr-2" }), "Email kleber@ziontechgroup.com"] }), _jsxs(Button, { variant: "outline", className: "border-zion-purple text-zion-cyan hover:bg-zion-purple/10", children: [_jsx(Globe, { className: "h-4 w-4 mr-2" }), "Visit ziontechgroup.com"] })] }), _jsx("div", { className: "mt-6 text-zion-slate-light text-sm", children: _jsx("p", { children: "Address: 364 E Main St STE 1008, Middletown DE 19709" }) })] }) })] }) }));
-=======
 import { motion } from 'framer-motion';
 import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
 import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
@@ -172,7 +130,6 @@ const ComprehensiveServicesShowcase = () => {
           </div>
         </motion.div>
       </section>
-
       {/* Category Filter */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -183,7 +140,6 @@ const ComprehensiveServicesShowcase = () => {
                 {category.icon} {category.name}
               </TabsTrigger>))}
           </TabsList>
-
 import {Brain,
             Shield,
             Cloud,
@@ -202,10 +158,8 @@ import {Brain,
             CheckCircle,
             Star,
             Award} from 'lucide-react';
-
 export const ComprehensiveServicesShowcase: React.FC = () => {}
   const [activeCategory, setActiveCategory] = useState('all');
-
   const serviceCategories = [
     {id}: 'all', name: 'All Services', icon: Star },
     {id}: 'ai', name: 'AI & ML', icon: Brain },
@@ -218,7 +172,6 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
     {id}: 'space', name: 'Space Tech', icon: Rocket },
     {id}: 'saas', name: 'MicroSAAS', icon: Package }
   ];
-
   const services = [
     {id}: 'ai-solutions',
       title: 'AI Solutions',
@@ -311,7 +264,6 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       href: '/services/microsaas'
     }
   ];
-
   const solutions = [
     {id}: 'ai-autonomous-business',
       title: 'AI Autonomous Business',
@@ -370,15 +322,12 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       href: '/solutions/ai-business-intelligence'
     }
   ];
-
   const filteredServices = activeCategory === 'all' 
     ? services 
     : services.filter(service => service.category === activeCategory);
-
   const filteredSolutions = activeCategory === 'all' 
     ? solutions 
     : solutions.filter(solution => solution.category === activeCategory);
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -396,7 +345,6 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
             designed to transform your business and drive innovation.
           </p>
         </div>
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {serviceCategories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-300 ${activeCategory === category.id
@@ -406,7 +354,6 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
               {category.name}
             </button>))}
         </div>
-
         {/* Services Section */}
         <div className="mb-20">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">
@@ -417,15 +364,12 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>
-                
                 <h4 className="text-xl font-semibold text-white mb-3 text-center">
                   {service.title}
                 </h4>
-                
                 <p className="text-gray-300 mb-4 text-center text-sm">
                   {service.description}
                 </p>
-                
                 <div className="mb-4">
                   <h5 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h5>
                   <ul className="space-y-1">
@@ -446,7 +390,6 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
                       Popular
                     </span>
                   </div>)}
-                
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl`}>
                     {service.icon}
@@ -459,7 +402,6 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
                   </div>
                   <p className="text-xs text-gray-400 mb-4">{service.category}</p>
                 </div>
-
                 <div className="space-y-3 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (<div key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 flex-shrink-0"></div>
@@ -469,12 +411,10 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
                       <span className="text-xs text-blue-400">+{service.features.length - 4} more features</span>
                     </div>)}
                 </div>
-
                 <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
                   <span>⭐ {service.rating} ({service.reviews})</span>
                   <span>👥 {service.customers} customers</span>
                 </div>
-
                 <div className="text-center">
                   <span className="text-xs text-gray-400">
                     {service.trialDays} days free trial • Setup: {service.setupTime}
@@ -484,7 +424,6 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
           </div>
         </div>
       </section>
-
       {/* Service Details Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -505,12 +444,10 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
                   </svg>
                 </button>
               </div>
-
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Service Overview</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">{selectedService.description}</p>
-                  
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -520,7 +457,6 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
                         </div>))}
                     </div>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Technology Stack</h4>
                     <div className="flex flex-wrap gap-2">
@@ -530,7 +466,6 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
                     </div>
                   </div>
                 </div>
-
                 <div>
                   <div className="bg-white/10 rounded-xl p-6 mb-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Pricing & Details</h4>
@@ -557,17 +492,14 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
                       </div>
                     </div>
                   </div>
-
                   <div className="bg-white/10 rounded-xl p-6 mb-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Market Position</h4>
                     <p className="text-gray-300 text-sm leading-relaxed">{selectedService.marketPosition}</p>
                   </div>
-
                   <div className="bg-white/10 rounded-xl p-6 mb-6">
                     <h4 className="text-lg font-semibold text-white mb-4">ROI & Benefits</h4>
                     <p className="text-gray-300 text-sm leading-relaxed">{selectedService.roi}</p>
                   </div>
-
                   <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl p-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Get Started</h4>
                     <div className="space-y-3 text-sm">
@@ -596,7 +528,6 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
             </div>
           </motion.div>
         </div>)}
-
       {/* Contact CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -626,11 +557,9 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       </></div>
     </div>))};
 }
-
 interface ServiceCardProps {service}: any;
   getCategoryIcon: (category: string) => React.ReactNode;
 }
-
 function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
   return (
     <Card className="group hover:scale-105 transition-all duration-300 bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover:border-cyan-500/50">
@@ -651,7 +580,6 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
           </div>
         </div>
       </div>
-      
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-2">
@@ -672,14 +600,12 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
           {service.description}
         </CardDescription>
       </CardHeader>
-      
       <CardContent className="pt-0">
         <div className="flex flex-wrap gap-2 mb-4">
           {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs border-slate-600 text-slate-300">
               {tag}
             </Badge>))}
         </div>
-        
         <div className="flex items-center justify-between text-sm text-slate-400 mb-4">
           <div className="flex items-center gap-1">
             <Clock className="w-3 h-3"/>
@@ -690,7 +616,6 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
             {service.location}
           </div>
         </div>
-        
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-full overflow-hidden">
@@ -701,7 +626,6 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
               <div className="text-slate-400 text-xs">{service.author.email}</div>
             </div>
           </div>
-          
           <Button size="sm" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
             <ArrowRight className="w-3 h-3 mr-1"/>
             Learn More
@@ -712,7 +636,6 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
   );
 }
                 </div>
-                
                 <div className="mb-4">
                   <h5 className="text-sm font-semibold text-green-400 mb-2">Benefits:</h5>
                   <ul className="space-y-1">
@@ -722,7 +645,6 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
                       </li>))}
                   </ul>
                 </div>
-                
                 <a href={service.href} className="w-full flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group-hover:shadow-lg">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"/>
@@ -762,17 +684,14 @@ import {Search,
             Monitor,
             Server} from 'lucide-react';
 import {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
-
 interface ServiceCardProps {service}: InnovativeMicroSaasService;
   index: number;
   viewMode: 'grid' | 'list';
   onServiceClick: (service: InnovativeMicroSaasService) => void;
 }
-
 const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onServiceClick}) => {}
   const [isHovered, setIsHovered] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
-
   const getCategoryIcon = useCallback((category: string) => {}
     const iconMap: {[key]}: string]: React.ReactNode } = {'AI & Business Intelligence'}: <Brain className="w-5 h-5"/>,
       'Cybersecurity': <Shield className="w-5 h-5"/>,
@@ -789,7 +708,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
     };
     return iconMap[category] || <Star className="w-5 h-5"/>;
   }, []);
-
   const getCategoryColor = useCallback((category: string) => {}
     const colorMap: {[key]}: string]: string } = {'AI & Business Intelligence'}: 'from-purple-500 to-pink-500',
       'Cybersecurity': 'from-red-500 to-orange-500',
@@ -806,11 +724,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
     };
     return colorMap[category] || 'from-blue-500 to-purple-500';
   }, []);
-
   const handleLike = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
     setIsLiked(!isLiked);
   }, [isLiked]);
-
   const handleShare = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
     if (navigator.share) {navigator.share({
             title: service.title,
@@ -820,7 +736,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
     } else {navigator.clipboard.writeText(service.websiteUrl)};
     }
   }, [service]);
-
   if (viewMode === 'grid') {}
     return (
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ y: -5, scale: 1.02 }} onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 relative overflow-hidden">
@@ -828,7 +743,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
         <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 transform rotate-12 scale-150"></div>
         </div>
-
         {/* Service Header */}
         <div className="relative z-10 flex items-start justify-between mb-4">
           <div className="flex items-center gap-3">
@@ -851,12 +765,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
             </button>
           </div>
         </div>
-
         {/* Description */}
         <p className="relative z-10 text-gray-300 text-sm mb-4 line-clamp-3">
           {service.description}
         </p>
-
         {/* Stats Grid */}
         <div className="relative z-10 grid grid-cols-2 gap-3 mb-4 text-sm">
           <div className="flex items-center gap-2 text-gray-400">
@@ -876,7 +788,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
             <span>{service.estimatedDelivery}</span>
           </div>
         </div>
-
         {/* Features Preview */}
         <div className="relative z-10 mb-4">
           <h4 className="text-sm font-medium text-gray-300 mb-2">Key Features:</h4>
@@ -887,7 +798,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
               </div>))}
           </div>
         </div>
-
         {/* Action Buttons */}
         <div className="relative z-10 flex gap-2">
           <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-medium transition-all duration-300 transform hover:scale-105" aria-label={`Learn more about ${service.title}`}>
@@ -898,7 +808,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
             <Share2 className="w-4 h-4 text-gray-400"/>
           </button>
         </div>
-
         {/* Hover Overlay */}
         <AnimatePresence>
           {isHovered && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-2xl"/>)}
@@ -906,7 +815,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
       </motion.div>
     );
   }
-
   // List View
   return (
     <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ x: 5 }} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
@@ -933,9 +841,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
               <div className="text-sm text-gray-400">{service.pricingModel}</div>
             </div>
           </div>
-
           <p className="text-gray-300 mb-4">{service.description}</p>
-
           {/* Stats Row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
             <div className="text-center">
@@ -955,7 +861,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
               <div className="text-xs text-gray-400">Delivery</div>
             </div>
           </div>
-
           {/* Features */}
           <div className="mb-4">
             <h4 className="text-sm font-medium text-gray-300 mb-2">Key Features:</h4>
@@ -967,7 +872,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="lg:w-48 flex flex-col justify-between">
           <div className="space-y-3 mb-4">
@@ -984,7 +888,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
               <div className="text-lg font-bold text-blue-400">{service.timeToValue}</div>
             </div>
           </div>
-          
           <div className="flex gap-2">
             <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-medium transition-all duration-300 transform hover:scale-105" aria-label={`Get started with ${service.title}`}>
               Get Started
@@ -999,7 +902,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
     </motion.div>
   );
 };
-
 const ComprehensiveServicesShowcase: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -1007,10 +909,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
   const [viewMode, setViewMode] = useState< />'grid' | 'list'>('grid');
   const [selectedService, setSelectedService] = useState<InnovativeMicroSaasService /> | null>(null);
   const [showFilters, setShowFilters] = useState(false);
-
   // Memoized filtered services for better performance
   const filteredServices = useMemo(() => {let} filtered = INNOVATIVE_MICRO_SAAS_SERVICES;
-
     // Filter by search term
     if (searchTerm) {}
       const searchLower = searchTerm.toLowerCase();
@@ -1021,11 +921,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
         service.category.toLowerCase().includes(searchLower)
       );
     }
-
     // Filter by category
     if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)};
     }
-
     // Sort services
     filtered.sort((a, b) => {}
       switch (sortBy) {}
@@ -1041,31 +939,25 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
           return 0;
       }
     });
-
     return filtered;
   }, [searchTerm, selectedCategory, sortBy]);
-
   const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {setSelectedService(service)};
     // You can add navigation logic here
     console.log('Service clicked:', service);
   }, []);
-
   const clearFilters = useCallback(() => {setSearchTerm('')};
     setSelectedCategory('all');
     setSortBy('rating');
   }, []);
-
   // Keyboard navigation support
   useEffect(() => {}
     const handleKeyDown = (e: KeyboardEvent) => {}
       if (e.key === 'Escape') {setSelectedService(null)};
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -1093,7 +985,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
             </span>
           </div>
         </motion.div>
-
         {/* Search and Filter Section */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-gray-700/50">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -1102,13 +993,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>
               <input type="text" placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" aria-label="Search services"/>
             </div>
-
             {/* Category Filter */}
             <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" aria-label="Filter by category">
               <option value="all">All Categories</option>
               {INNOVATIVE_SERVICE_CATEGORIES.map(category => (<option key={category} value={category}>{category}</option>))}
             </select>
-
             {/* Sort By */}
             <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" aria-label="Sort services by">
               <option value="rating">Sort by Rating</option>
@@ -1116,7 +1005,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
               <option value="aiScore">Sort by AI Score</option>
               <option value="name">Sort by Name</option>
             </select>
-
             {/* View Mode */}
             <div className="flex gap-2">
               <button onClick={() => setViewMode('grid')} className={`px-4 py-3 rounded-lg transition-all duration-300 ${viewMode === 'grid'
@@ -1131,7 +1019,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
               </button>
             </div>
           </div>
-
           {/* Clear Filters */}
           {(searchTerm || selectedCategory !== 'all') && (<div className="mt-4 flex items-center justify-between">
               <div className="text-sm text-gray-400">
@@ -1142,7 +1029,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
               </button>
             </div>)}
         </motion.div>
-
         {/* Services Grid/List */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
           {filteredServices.length > 0 ? (viewMode === 'grid' ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1158,7 +1044,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
               </button>
             </motion.div>)}
         </motion.div>
-
         {/* CTA Section */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="text-center mt-20">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -1183,8 +1068,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
     </div>
   );
 };
-
 export default ComprehensiveServicesShowcase;
     </></></></></></></></>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 };

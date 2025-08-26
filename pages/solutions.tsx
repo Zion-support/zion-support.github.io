@@ -2,16 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Building2, Factory, Car, Heart, GraduationCap, 
-  Shield, Globe, Zap, Brain, Rocket, Users, BarChart3
-=======
   Building, Car, Heart, DollarSign, GraduationCap, 
   Shield, Factory, Globe, Brain, Atom, Rocket,
   ArrowRight, CheckCircle, Star, Users, Zap
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 } from 'lucide-react';
-
 export default function SolutionsPage() {
   const industrySolutions = [
     {
@@ -87,7 +81,6 @@ export default function SolutionsPage() {
       ]
     }
   ];
-
   const technologySolutions = [
     {
       name: 'AI & Machine Learning',
@@ -138,7 +131,6 @@ export default function SolutionsPage() {
       ]
     }
   ];
-
   const useCaseSolutions = [
     {
       title: 'Digital Transformation',
@@ -189,7 +181,6 @@ export default function SolutionsPage() {
       ]
     }
   ];
-
   return (
     <>
       <Head>
@@ -199,7 +190,6 @@ export default function SolutionsPage() {
         <meta property="og:description" content="Discover Zion Tech Group's comprehensive technology solutions for various industries including AI, quantum computing, cloud, and cybersecurity." />
         <link rel="canonical" href="https://ziontechgroup.com/solutions" />
       </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20">
@@ -237,7 +227,6 @@ export default function SolutionsPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Industry Solutions */}
         <section className="py-20">
           <div className="container mx-auto px-6">
@@ -255,7 +244,6 @@ export default function SolutionsPage() {
                 Tailored technology solutions designed specifically for your industry's unique challenges and opportunities.
               </p>
             </motion.div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industrySolutions.map((industry, index) => (
                 <motion.div
@@ -271,7 +259,6 @@ export default function SolutionsPage() {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white text-center">{industry.name}</h3>
                   <p className="text-white/70 mb-4 text-center">{industry.description}</p>
-                  
                   <div className="mb-4">
                     <h4 className="text-white font-semibold mb-2">Solutions:</h4>
                     <ul className="space-y-1">
@@ -283,7 +270,6 @@ export default function SolutionsPage() {
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="text-center">
                     <a href="/contact" className="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 hover:border-cyan-400/50">
                       Learn More
@@ -294,7 +280,6 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Technology Solutions */}
         <section className="py-20">
           <div className="container mx-auto px-6">
@@ -312,7 +297,6 @@ export default function SolutionsPage() {
                 Cutting-edge technology solutions that power modern businesses and drive innovation.
               </p>
             </motion.div>
-            
             <div className="grid lg:grid-cols-2 gap-8">
               {technologySolutions.map((tech, index) => (
                 <motion.div
@@ -332,7 +316,6 @@ export default function SolutionsPage() {
                       <p className="text-white/70">{tech.description}</p>
                     </div>
                   </div>
-                  
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -344,7 +327,6 @@ export default function SolutionsPage() {
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="text-center">
                     <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
                       Explore Solution
@@ -355,7 +337,6 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Use Case Solutions */}
         <section className="py-20">
           <div className="container mx-auto px-6">
@@ -373,7 +354,6 @@ export default function SolutionsPage() {
                 Proven solutions for common business challenges and opportunities.
               </p>
             </motion.div>
-            
             <div className="grid md:grid-cols-2 gap-8">
               {useCaseSolutions.map((useCase, index) => (
                 <motion.div
@@ -393,7 +373,6 @@ export default function SolutionsPage() {
                       <p className="text-white/70">{useCase.description}</p>
                     </div>
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="text-white font-semibold mb-2">Benefits:</h4>
                     <ul className="space-y-1">
@@ -405,7 +384,6 @@ export default function SolutionsPage() {
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="text-center">
                     <a href="/contact" className="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 hover:border-cyan-400/50">
                       Get Solution
@@ -416,7 +394,6 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-6 text-center">

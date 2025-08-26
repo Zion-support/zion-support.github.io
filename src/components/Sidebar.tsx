@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import { 
   X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
   Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
@@ -10,7 +6,6 @@ import {
   TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, 
   LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone
 =======
-
 import React from 'react';
 import { motion } from 'framer-motion';
 =======
@@ -30,150 +25,8 @@ import { cn } from '@/lib/utils';
 import { 
   Home, 
 import React, { useState } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link, useLocation } from 'react-router-dom';
 import { 
-<<<<<<< HEAD
-  X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
-  Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
-  Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, 
-  Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, 
-  TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, 
-  LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone, Github, Youtube
-} from 'lucide-react';
-
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
-
-  // Close sidebar when route changes
-  useEffect(() => {
-    onClose();
-  }, [location.pathname, onClose]);
-
-  const toggleSection = (sectionTitle: string) => {
-    setExpandedSections(prev => 
-      prev.includes(sectionTitle) 
-        ? prev.filter(title => title !== sectionTitle)
-        : [...prev, sectionTitle]
-    );
-  };
-
-  const navigationItems = [
-    {
-      title: 'Main Navigation',
-      items: [
-        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
-        { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Rocket, description: 'Industry solutions' },
-        { name: 'Pricing', path: '/pricing', icon: DollarSign, description: 'Service plans and pricing' },
-        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' },
-        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
-      ]
-    },
-    {
-      title: 'AI & Autonomous Systems',
-      items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain, description: 'Advanced AI solutions' },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain, description: 'AI-powered research' },
-        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Brain, description: 'Autonomous business management' },
-        { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', icon: Brain, description: 'Complete business platform' },
-        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Code, description: 'Automated code review' },
-        { name: 'AI Creative Director', path: '/ai-autonomous-creative-director', icon: Palette, description: 'AI creative solutions' },
-        { name: 'AI Data Management', path: '/ai-autonomous-data', icon: Database, description: 'Intelligent data handling' },
-        { name: 'AI Decision Engine', path: '/ai-autonomous-decision-engine', icon: Brain, description: 'Smart decision making' },
-        { name: 'AI DevOps', path: '/ai-autonomous-devops', icon: Server, description: 'Automated DevOps' },
-        { name: 'AI Education', path: '/ai-autonomous-education-professor', icon: Users, description: 'AI learning systems' },
-        { name: 'AI Healthcare', path: '/ai-autonomous-healthcare-physician', icon: Heart, description: 'Medical AI solutions' },
-        { name: 'AI Learning System', path: '/ai-autonomous-learning-system', icon: Lightbulb, description: 'Adaptive learning' },
-        { name: 'AI Legal Counsel', path: '/ai-autonomous-legal-counsel', icon: Shield, description: 'Legal AI assistance' },
-        { name: 'AI Logistics', path: '/ai-autonomous-logistics', icon: Truck, description: 'Smart logistics' },
-        { name: 'AI Manufacturing', path: '/ai-autonomous-manufacturing', icon: Building2, description: 'Smart manufacturing' },
-        { name: 'AI Research', path: '/ai-autonomous-research', icon: Brain, description: 'Research automation' },
-        { name: 'AI Robotics', path: '/ai-autonomous-robotics', icon: Cpu, description: 'Autonomous robotics' },
-        { name: 'AI Security', path: '/ai-autonomous-security', icon: Shield, description: 'Intelligent security' },
-        { name: 'AI Testing', path: '/ai-autonomous-testing', icon: Code, description: 'Automated testing' },
-        { name: 'AI Vehicles', path: '/ai-autonomous-vehicle', icon: Car, description: 'Autonomous vehicles' },
-        { name: 'AI Venture Capital', path: '/ai-autonomous-venture-capitalist', icon: TrendingUp, description: 'AI investment' }
-      ]
-    },
-    {
-      title: 'Core Services',
-      items: [
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Atom, description: 'Quantum computing' },
-        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Rocket, description: 'Business automation' },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database, description: 'IT asset management' },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'Security solutions' },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield, description: 'Compliance automation' },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Atom, description: 'Quantum solutions' },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server, description: 'Infrastructure services' },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network, description: '5G technology' },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe, description: 'SAAS platforms' },
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud, description: 'Cloud solutions' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Zap, description: 'Workflow optimization' },
-        { name: 'Blockchain Solutions', path: '/blockchain-enterprise-solutions', icon: Lock, description: 'Blockchain technology' },
-        { name: 'IoT Data Analytics', path: '/iot-data-analytics', icon: Database, description: 'IoT solutions' },
-        { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe, description: 'Digital strategy' },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase, description: 'Industry-specific' }
-      ]
-    },
-    {
-      title: 'Industry Solutions',
-      items: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building, description: 'Enterprise technology' },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart, description: 'Medical technology' },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign, description: 'Fintech solutions' },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Building2, description: 'Industry 4.0' },
-        { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart, description: 'Retail technology' },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Shield, description: 'Public sector tech' },
-        { name: 'Education Solutions', path: '/solutions/education', icon: Users, description: 'Educational technology' },
-        { name: 'Energy Solutions', path: '/solutions/energy', icon: Zap, description: 'Energy technology' },
-        { name: 'Transportation Solutions', path: '/solutions/transportation', icon: Truck, description: 'Mobility solutions' }
-      ]
-    },
-    {
-      title: 'Company & Resources',
-      items: [
-        { name: 'About Us', path: '/about', icon: Users, description: 'Our story' },
-        { name: 'Our Team', path: '/team', icon: Users, description: 'Meet the team' },
-        { name: 'Partners', path: '/partners', icon: Handshake, description: 'Partnerships' },
-        { name: 'Case Studies', path: '/case-studies', icon: FileText, description: 'Success stories' },
-        { name: 'News & Updates', path: '/news', icon: Newspaper, description: 'Latest news' },
-        { name: 'Blog', path: '/blog', icon: FileText, description: 'Insights & articles' },
-        { name: 'Events', path: '/events', icon: Calendar, description: 'Upcoming events' },
-        { name: 'Webinars', path: '/webinars', icon: Video, description: 'Educational content' },
-        { name: 'White Papers', path: '/white-papers', icon: FileText, description: 'Research papers' },
-        { name: 'Testimonials', path: '/testimonials', icon: Quote, description: 'Client feedback' },
-        { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' }
-      ]
-    },
-    {
-      title: 'Support & Help',
-      items: [
-        { name: 'Help Center', path: '/help', icon: HelpCircle, description: 'Get help' },
-        { name: 'Documentation', path: '/docs', icon: FileText, description: 'Technical docs' },
-        { name: 'Contact Support', path: '/support', icon: Phone, description: 'Support team' },
-        { name: 'FAQ', path: '/faq', icon: HelpCircle, description: 'Frequently asked' },
-        { name: 'Status Page', path: '/status', icon: Monitor, description: 'System status' },
-        { name: 'Training', path: '/training', icon: Users, description: 'Training programs' },
-        { name: 'Tutorials', path: '/tutorials', icon: FileText, description: 'Learning guides' }
-      ]
-    },
-    {
-      title: 'Legal & Compliance',
-      items: [
-        { name: 'Privacy Policy', path: '/privacy', icon: Shield, description: 'Privacy information' },
-        { name: 'Terms of Service', path: '/terms', icon: FileText, description: 'Terms and conditions' },
-        { name: 'Cookie Policy', path: '/cookies', icon: Shield, description: 'Cookie usage' },
-        { name: 'Data Protection', path: '/data-protection', icon: Lock, description: 'Data security' },
-        { name: 'Security', path: '/security', icon: Shield, description: 'Security measures' },
-        { name: 'Compliance', path: '/compliance', icon: CheckCircle, description: 'Regulatory compliance' }
-=======
   Home, 
   Briefcase, 
   Users, 
@@ -226,17 +79,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   Calendar,
   Clock,
   Mail,
-<<<<<<< HEAD
-  Phone,
-  MapPin,
-  Globe2,
-  Heart,
-  ThumbsUp,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  ExternalLink
-=======
   MapPin
 } from 'lucide-react';
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Database, Network, Zap, Target, Rocket, Cloud, Github } from 'lucide-react';
@@ -279,7 +121,6 @@ import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitte
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Atom, Server, Database, Package, Building, Rocket } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
-
 export default function Sidebar() {
   const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
 =======
@@ -306,7 +147,6 @@ import { cn } from '@/lib/utils';
   Building,
   Leaf
 } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -1493,7 +1333,6 @@ interface SidebarProps {
 =======
   className?: string;
 }
-
 export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
   const location = useLocation();
 =======
@@ -1509,28 +1348,23 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
   ChevronRight,
   Menu,
   X
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
-
 interface SidebarProps {
   isOpen: boolean;
   onToggle: () => void;
   className?: string;
 }
-
 export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-
   const navigationItems = [
     {
       title: 'Main',
       items: [
     onClose();
   }, [location.pathname, onClose]);
-
   const navigationItems = [
     {
       title: 'AI Services',
@@ -1690,7 +1524,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       ]
     }
   ];
-
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
@@ -1698,7 +1531,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
     { icon: Youtube, href: 'https://youtube.com/@ziontechgroup', label: 'YouTube' }
   ];
-
   const sidebarVariants = {
     closed: {
       x: '-100%',
@@ -1717,12 +1549,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       }
     }
   };
-
   const overlayVariants = {
     closed: { opacity: 0 },
     open: { opacity: 1 }
   };
-
   // Fixed contact information
   const contactInfo = [
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
@@ -1735,7 +1565,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
-
   // Fixed social media links with proper URLs
   const socialLinks = [
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
@@ -1784,7 +1613,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
   ];
-
   const sidebarVariants = {
     closed: {
       x: '-100%',
@@ -1803,7 +1631,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       }
     }
   };
-
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
@@ -1824,7 +1651,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       }
     }
   };
-
 =======
   return (
   return (
@@ -1839,7 +1665,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             onClick={onClose}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
           />
-          
           {/* Sidebar */}
 =======
     <>
@@ -1847,7 +1672,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
             onClick={() => setIsSidebarOpen(false)}
           />
-
       {/* Sidebar */}
       <AnimatePresence>
         {isSidebarOpen && (
@@ -1867,7 +1691,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
             onClick={onClose}
           />
-
           {/* Sidebar */}
           <motion.aside
 =======
@@ -1878,7 +1701,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             onClick={onClose}
           />
-
           {/* Sidebar */}
           <motion.aside
 =======
@@ -1901,7 +1723,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
             onClick={onClose}
           />
-
       {/* Sidebar */}
       <AnimatePresence>
         {isOpen && (
@@ -1912,13 +1733,11 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
           />
         )}
       </AnimatePresence>
-
       {/* Sidebar */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
 =======
-
           {/* Sidebar */}
           <motion.aside
             variants={sidebarVariants}
@@ -1952,7 +1771,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               exit="closed"
               onClick={onClose}
             />
-
             {/* Sidebar */}
             <motion.aside
               className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-black to-blue-900 text-white z-50 shadow-2xl border-r border-cyan-500/30"
@@ -2013,7 +1831,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="w-6 h-6" />
               </button>
             </div>
-
   const overlayVariants = {
     closed: { opacity: 0 },
     open: { opacity: 1 }
@@ -2025,7 +1842,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       console.error(`Failed to open ${social.label}:`, error);
     }
   };
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -2038,7 +1854,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 z-40"
             onClick={onClose}
           />
-          
           {/* Sidebar */}
           <motion.div
             initial="closed"
@@ -2062,7 +1877,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="w-6 h-6" />
               </button>
             </div>
-
                     <button
                       onClick={() => toggleSection(section.title)}
                       className="flex items-center justify-between w-full text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text hover:bg-white/10 rounded-lg p-2 transition-colors"
@@ -2074,13 +1888,11 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         <ChevronRight className="w-4 h-4" />
                       )}
                     </button>
-                    
                     {expandedSections.includes(section.title) && (
                       <div className="space-y-1 ml-4">
                         {section.items.map((item) => {
                           const Icon = item.icon;
                           const isActive = location.pathname === item.path;
-                          
                           return (
                             <Link
                               key={item.name}
@@ -2134,7 +1946,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   </div>
                 ))}
               </nav>
-
               {/* Contact Information */}
               <div className="mt-12 pt-8 border-t border-border">
                 <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
@@ -2201,7 +2012,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     </Link>
 =======
             </div>
-
             {/* Navigation Items */}
             <div className="p-4 space-y-6">
               {navigationItems.map((section, sectionIndex) => (
@@ -2246,7 +2056,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 />
               </div>
             </div>
-
             {/* Navigation Content */}
             <div className="p-6 space-y-8">
               {navigationItems.map((section, sectionIndex) => (
@@ -2341,7 +2150,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             {/* Futuristic Background */}
             <div className="absolute inset-0 futuristic-bg opacity-80"></div>
             <div className="absolute inset-0 cyber-grid-bg opacity-30"></div>
-            
             {/* Neural Network Lines */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="neural-line" style={{ top: '20%', width: '60%', left: '20%', animationDelay: '0s' }}></div>
@@ -2349,7 +2157,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               <div className="neural-line" style={{ top: '60%', width: '70%', left: '15%', animationDelay: '2s' }}></div>
               <div className="neural-line" style={{ top: '80%', width: '50%', left: '25%', animationDelay: '3s' }}></div>
             </div>
-
             {/* Floating Quantum Elements */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="quantum-particle" style={{ top: '15%', left: '80%', animationDelay: '0s' }}></div>
@@ -2357,7 +2164,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               <div className="quantum-particle" style={{ top: '55%', left: '90%', animationDelay: '2s' }}></div>
               <div className="quantum-particle" style={{ top: '75%', left: '88%', animationDelay: '3s' }}></div>
             </div>
-
             <div className="relative h-full flex flex-col">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-zion-cyan/30">
@@ -2380,7 +2186,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   <X className="w-5 h-5 text-zion-slate-light group-hover:neon-text transition-colors" />
                 </button>
               </div>
-
               {/* Navigation Content */}
               <div className="flex-1 overflow-y-auto p-6 space-y-6">
                 {/* Main Navigation */}
@@ -2394,7 +2199,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         const Icon = item.icon;
                         const isActive = location.pathname === item.path;
                         const isFeatured = item.featured;
-                        
                         return (
                           <Link
                             key={item.name}
@@ -2425,7 +2229,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   ))}
                 </nav>
               </div>
-
               {/* Social Links */}
               <div className="flex space-x-3">
                 {socialLinks.map((social, index) => (
@@ -2446,13 +2249,11 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="w-5 h-5" />
               </button>
             </div>
-
             {/* Navigation */}
             <div className="p-6 space-y-6">
               {navigationItems.map((section) => {
                 const Icon = section.icon;
                 const isExpanded = expandedSections.includes(section.title);
-                
                 return (
                   <div key={section.title} className="space-y-3">
                     <button
@@ -2473,7 +2274,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         }`} 
                       />
                     </button>
-                    
                     {isExpanded && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
@@ -2485,7 +2285,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         {section.items.map((item) => {
                           const ItemIcon = item.icon;
                           const isActive = location.pathname === item.path;
-                          
                           return (
                             <Link
                               key={item.path}
@@ -2516,7 +2315,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 );
               })}
             </div>
-
             {/* Contact & Social */}
             <div className="p-6 border-t border-gray-800/50 space-y-6">
               {/* Contact Info */}
@@ -2576,7 +2374,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   </div>
                 </div>
               ))}
-
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
                   Follow Us
@@ -2611,7 +2408,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   ))}
 =======
               </div>
-
               {/* Footer */}
               <div className="border-t border-gray-700/50 p-6 space-y-6">
                 {/* Contact Info */}
@@ -2635,7 +2431,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="h-5 w-5" />
               </button>
             </div>
-
             {/* Navigation */}
             <nav className="p-6 space-y-8">
               {navigationItems.map((section) => (
@@ -2649,7 +2444,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       const isActive = location.pathname === item.path;
 =======
 =======
-
                 {/* Quick Actions */}
                 <div className="space-y-3">
                   <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
@@ -2665,7 +2459,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   </div>
                 </div>
               </div>
-
               {/* Footer */}
               <div className="border-t border-zion-cyan/30 p-6 space-y-4">
                 {/* Contact Info */}
@@ -2710,7 +2503,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     })}
                   </div>
                 </div>
-
                 {/* Social Links */}
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-zion-cyan neon-text">Follow Us</h4>
@@ -2732,7 +2524,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     })}
                   </div>
                 </div>
-
                 {/* Company Info */}
                 <div className="text-center pt-4 border-t border-zion-cyan/20">
                   <p className="text-xs text-zion-slate-light">
@@ -2743,7 +2534,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   </p>
                 </div>
               </div>
-
               {/* Social Links */}
               <div className="mt-6">
                 <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
@@ -2788,7 +2578,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="w-5 h-5" />
               </button>
             </div>
-
             {/* Navigation */}
             <nav className="p-6 space-y-8">
               {navigationItems.map((section, sectionIndex) => (
@@ -2819,7 +2608,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </div>
               ))}
             </nav>
-
             {/* Contact Information */}
             <div className="p-6 border-t border-gray-700 space-y-4">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
@@ -2841,7 +2629,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
             {/* Social Links */}
             <div className="p-6 border-t border-gray-700 space-y-4">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
@@ -2876,7 +2663,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </div>
               ))}
             </nav>
-
 =======
             {/* Contact Information */}
             <div className="p-6 border-t border-gray-800">
@@ -2901,8 +2687,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
-
             {/* CTA Button */}
             <div className="p-6 border-t border-gray-800">
               <Link
@@ -2936,7 +2720,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </Link>
               </div>
             </div>
-
             {/* Footer */}
             <div className="p-6 border-t border-gray-700 text-center">
               <p className="text-gray-500 text-xs">
@@ -2953,7 +2736,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     </AnimatePresence>
 =======
                 </div>
-
                 {/* Company Info */}
                 <div className="text-center pt-4 border-t border-zion-cyan/20">
                   <p className="text-xs text-zion-slate-light">
@@ -2966,7 +2748,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
 =======
               ))}
             </div>
-
             {/* Contact Information */}
             <div className="p-4 border-t border-cyan-500/30 mt-6">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide mb-3 px-3">
@@ -2985,7 +2766,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
             {/* Social Links */}
             <div className="p-4 border-t border-cyan-500/30">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide mb-3 px-3">
@@ -3006,7 +2786,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
             {/* Quick Actions */}
             <div className="p-4 border-t border-cyan-500/30">
               <div className="space-y-2">
@@ -3065,7 +2844,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
             {/* Newsletter Signup */}
             <div className="p-6 border-t border-gray-700">
               <h3 className="text-lg font-semibold text-cyan-400 mb-4">Stay Updated</h3>
@@ -3095,7 +2873,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     { name: 'Request Demo', href: '/request-quote', icon: Video, color: 'from-zion-purple to-zion-cyan' },
     { name: 'Support Chat', href: '/support', icon: MessageSquare, color: 'from-green-400 to-emerald-400' }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: {
@@ -3106,12 +2883,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, x: -10 },
     visible: { opacity: 1, x: 0 }
   };
-
   return (
     <motion.aside 
       className={cn("w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 min-h-screen overflow-y-auto", className)}
@@ -3135,7 +2910,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             <p className="text-zion-cyan/70 text-xs font-medium">Innovation • Intelligence • Impact</p>
           </div>
         </div>
-
         {/* Quick Actions */}
         <div className="space-y-2">
           {quickActions.map((action) => (
@@ -3157,7 +2931,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     </aside>
   );
 }
-
 // Add missing icons
 const Database = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -3166,7 +2939,6 @@ const Database = ({ className }: { className?: string }) => (
     <path d="M12 12c-4.42 0-8-1.79-8-4V6.5c2.21 1.86 5.74 2.5 8 2.5s5.79-.64 8-2.5V8c0 2.21-3.58 4-8 4z"/>
   </svg>
 );
-
 const CheckCircle = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -3185,7 +2957,6 @@ const CheckCircle = ({ className }: { className?: string }) => (
   ChevronRight,
   ChevronDown
 } from 'lucide-react';
-
 interface SidebarItem {
   name: string;
   path: string;
@@ -3194,11 +2965,9 @@ interface SidebarItem {
   badge?: string;
   external?: boolean;
 }
-
 export function Sidebar() {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
   const location = useLocation();
-
   const sidebarItems: SidebarItem[] = [
     {
       name: 'Dashboard',
@@ -3210,16 +2979,6 @@ export function Sidebar() {
       path: '/services',
       icon: Briefcase,
       children: [
-<<<<<<< HEAD
-        { name: 'AI Solutions', path: '/services/ai-solutions', icon: Brain },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
-        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap },
-        { name: 'Green IT', path: '/green-it', icon: Leaf },
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
-        { name: 'Space Tech', path: '/space-tech', icon: Rocket },
-=======
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
         { name: 'Space Technology', path: '/space-tech', icon: Rocket },
@@ -3228,7 +2987,6 @@ export function Sidebar() {
         { name: 'IT Infrastructure', path: '/services/infrastructure', icon: Server },
         { name: 'Digital Transformation', path: '/services/transformation', icon: Zap },
         { name: 'Green IT', path: '/green-it', icon: Leaf },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         { name: 'Mobile Solutions', path: '/mobile', icon: Smartphone },
         { name: 'Financial Solutions', path: '/financial-solutions', icon: DollarSign },
         { name: 'Micro SaaS Services', path: '/micro-saas-services', icon: Building }
@@ -3276,15 +3034,8 @@ export function Sidebar() {
       icon: FileText,
       children: [
         { name: 'Blog & Insights', path: '/blog', icon: BookOpen },
-<<<<<<< HEAD
-        { name: 'Tutorials', path: '/tutorials', icon: Code },
-        { name: 'Webinars', path: '/webinars', icon: Video },
-        { name: 'White Papers', path: '/white-papers', icon: FileSearch },
-        { name: 'Case Studies', path: '/case-studies', icon: Target },
-=======
         { name: 'Case Studies', path: '/case-studies', icon: Target },
         { name: 'White Papers', path: '/white-papers', icon: FileSearch },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         { name: 'Documentation', path: '/documentation', icon: Code },
         { name: 'API Reference', path: '/api', icon: Code },
         { name: 'Developer Portal', path: '/developer', icon: Code }
@@ -3295,16 +3046,9 @@ export function Sidebar() {
       path: '/support',
       icon: HelpCircle,
       children: [
-<<<<<<< HEAD
-        { name: 'Help Center', path: '/help-center', icon: HelpCircle },
-        { name: 'FAQ', path: '/faq', icon: HelpCircle },
-        { name: 'Contact Support', path: '/contact', icon: MessageSquare },
-        { name: 'Live Chat', path: '/chat', icon: MessageSquare },
-=======
         { name: 'Help Center', path: '/help', icon: HelpCircle },
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Contact Support', path: '/contact', icon: MessageSquare },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         { name: 'Status', path: '/status', icon: BarChart3 },
         { name: 'Request Quote', path: '/request-quote', icon: MessageSquare }
       ]
@@ -3316,12 +3060,7 @@ export function Sidebar() {
       children: [
         { name: 'Enterprise Solutions', path: '/solutions', icon: Target },
         { name: 'Custom Solutions', path: '/solutions', icon: Target },
-<<<<<<< HEAD
-        { name: 'Community', path: '/community', icon: Users2 },
-        { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart }
-=======
         { name: 'Community', path: '/community', icon: Users2 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       ]
     },
     {
@@ -3332,169 +3071,10 @@ export function Sidebar() {
         { name: 'Performance Metrics', path: '/analytics/performance', icon: Activity },
         { name: 'User Analytics', path: '/analytics/users', icon: Users },
         { name: 'Business Intelligence', path: '/analytics/bi', icon: PieChart },
-<<<<<<< HEAD
-        { name: 'Reports', path: '/analytics/reports', icon: BarChart }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
         { name: 'Reports', path: '/reports', icon: BarChart }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       ]
     }
   ];
-
-<<<<<<< HEAD
-  const socialLinks = [
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
-    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', url: 'https://github.com/Zion-Holdings', icon: Github },
-    { name: 'YouTube', url: 'https://www.youtube.com/@ziontechgroup', icon: Youtube },
-    { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram }
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
-  return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-40"
-            onClick={onClose}
-          />
-          
-          {/* Sidebar */}
-          <motion.div
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-zion-blue-light/30 z-50 overflow-y-auto"
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-zion-blue-light/30">
-              <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                  <span className="text-xl">🤖</span>
-                </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                  ZION
-                </span>
-              </div>
-              <button
-                onClick={onClose}
-                className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Navigation */}
-            <div className="p-4 space-y-2">
-              {navigationItems.map((section) => (
-                <div key={section.title} className="space-y-1">
-                  <button
-                    onClick={() => toggleSection(section.title)}
-                    className="flex items-center justify-between w-full p-3 text-left text-white hover:text-zion-cyan hover:bg-zion-slate-light/10 rounded-lg transition-all duration-200"
-                  >
-                    <span className="font-medium">{section.title}</span>
-                    <ChevronDown 
-                      className={`w-4 h-4 transition-transform duration-200 ${
-                        expandedSections.includes(section.title) ? 'rotate-180' : ''
-                      }`} 
-                    />
-                  </button>
-                  
-                  <AnimatePresence>
-                    {expandedSections.includes(section.title) && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="ml-4 space-y-1"
-                      >
-                        {section.items.map((item) => (
-                          <Link
-                            key={item.path}
-                            to={item.path}
-                            className="flex items-center space-x-3 p-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-light/5 rounded-lg transition-all duration-200"
-                            onClick={onClose}
-                          >
-                            <item.icon className="w-4 h-4 flex-shrink-0" />
-                            <div className="flex-1 min-w-0">
-                              <div className="text-sm font-medium">{item.name}</div>
-                              {item.description && (
-                                <div className="text-xs text-zion-slate-light/70 truncate">
-                                  {item.description}
-                                </div>
-                              )}
-                            </div>
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-            </div>
-
-            {/* Contact Info */}
-            <div className="p-4 border-t border-zion-blue-light/30">
-              <h3 className="text-white font-medium mb-3">Contact Information</h3>
-              <div className="space-y-2 text-sm text-zion-slate-light">
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4 text-zion-cyan" />
-                  <a href={`tel:${contactInfo.phone}`} className="hover:text-zion-cyan transition-colors">
-                    {contactInfo.phone}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 text-zion-cyan" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-zion-cyan transition-colors">
-                    {contactInfo.email}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-zion-cyan" />
-                  <span>{contactInfo.address}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="p-4 border-t border-zion-blue-light/30">
-              <h3 className="text-white font-medium mb-3">Follow Us</h3>
-              <div className="flex space-x-2">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 bg-zion-slate-light/20 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-light/30 transition-all duration-300"
-                    title={social.name}
-                  >
-                    <social.icon className="w-4 h-4" />
-                  </a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
-  );
-}
-=======
   const toggleItem = (itemName: string) => {
     setExpandedItems(prev => 
       prev.includes(itemName)
@@ -3502,14 +3082,11 @@ export function Sidebar() {
         : [...prev, itemName]
     );
   };
-
   const isActive = (path: string) => location.pathname === path;
-
   const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
     const hasChildren = item.children && item.children.length > 0;
     const isExpanded = expandedItems.includes(item.name);
     const isItemActive = isActive(item.path);
-
     return (
       <div key={item.name}>
         <div className={`flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${
@@ -3529,7 +3106,6 @@ export function Sidebar() {
               </span>
             )}
           </Link>
-          
           {hasChildren && (
             <button
               onClick={() => toggleItem(item.name)}
@@ -3547,7 +3123,6 @@ export function Sidebar() {
             </button>
           )}
         </div>
-        
         {hasChildren && isExpanded && (
           <div className="ml-4 mt-2 space-y-1">
             {item.children.map(child => renderSidebarItem(child, level + 1))}
@@ -3556,7 +3131,6 @@ export function Sidebar() {
       </div>
     );
   };
-
   return (
     <aside className="w-64 bg-white border-r border-gray-200 h-screen overflow-y-auto shadow-lg">
       <div className="p-4">
@@ -3569,12 +3143,10 @@ export function Sidebar() {
             <span className="text-xl font-bold text-gray-900">Zion Tech</span>
           </Link>
         </div>
-
         {/* Navigation */}
         <nav className="space-y-2">
           {sidebarItems.map(item => renderSidebarItem(item))}
         </nav>
-
         {/* Quick Actions */}
         <div className="mt-8 pt-6 border-t border-gray-200">
           <h3 className="text-sm font-semibold text-gray-600 mb-3">Quick Actions</h3>
@@ -3586,7 +3158,6 @@ export function Sidebar() {
               <MessageSquare className="h-5 w-5" />
               <span className="font-medium">Request Quote</span>
             </Link>
-            
             <Link
               to="/contact"
               className="flex items-center space-x-3 px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
@@ -3594,7 +3165,6 @@ export function Sidebar() {
               <HelpCircle className="h-5 w-5" />
               <span className="font-medium">Get Help</span>
             </Link>
-
             <Link
               to="/pricing"
               className="flex items-center space-x-3 px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
@@ -3604,7 +3174,6 @@ export function Sidebar() {
             </Link>
           </div>
         </div>
-
         {/* Contact Info */}
         <div className="mt-8 pt-6 border-t border-gray-200">
           <h3 className="text-sm font-semibold text-gray-600 mb-3">Contact</h3>
@@ -3627,10 +3196,4 @@ export function Sidebar() {
     </aside>
   );
 }
-
-<<<<<<< HEAD
 export default Sidebar;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-export default Sidebar;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

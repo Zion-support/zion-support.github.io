@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { ForumCategoryInfo } from '@/types/community';
-
 export default function ForumCategories() {
   const categories: ForumCategoryInfo[] = [
     {
@@ -34,7 +29,6 @@ export default function ForumCategories() {
       }
     }
   ];
-
   return (
     <div className="space-y-4">
       {categories.map((category) => (
@@ -47,7 +41,6 @@ export default function ForumCategories() {
               <span>Last: {category.lastPost.title} by {category.lastPost.author}</span>
             )}
 =======
-
 interface ForumCategoriesProps {
   categories: Array<{
     id: string;
@@ -56,7 +49,6 @@ interface ForumCategoriesProps {
     postCount: number;
   }>;
 }
-
 const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -68,20 +60,12 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
             <span className="text-sm text-zion-slate-light">
               {category.postCount} posts
             </span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
           </div>
         </div>
       ))}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 };
-
 export default ForumCategories;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

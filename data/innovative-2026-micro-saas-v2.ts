@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Innovative2026MicroSaasV2Service {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Innovative2026MicroSaasV2Service {
   rating: number;
   reviews: number;
 }
-
 export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service[] = [
   // AI-Powered Content Creation Suite
   {
@@ -94,7 +92,6 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
     rating: 4.8,
     reviews: 890
   },
-
   // Smart Email Marketing Automation
   {
     id: 'smart-email-marketing-automation-2026',
@@ -147,7 +144,6 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
     rating: 4.9,
     reviews: 650
   },
-
   // AI Customer Support Platform
   {
     id: 'ai-customer-support-platform-2026',
@@ -200,7 +196,6 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
     rating: 4.7,
     reviews: 420
   },
-
   // Smart Project Management AI
   {
     id: 'smart-project-management-ai-2026',
@@ -253,7 +248,6 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
     rating: 4.6,
     reviews: 280
   },
-
   // AI Social Media Manager
   {
     id: 'ai-social-media-manager-2026',
@@ -306,7 +300,6 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
     rating: 4.8,
     reviews: 1100
   },
-
   // Smart Analytics Dashboard
   {
     id: 'smart-analytics-dashboard-2026',
@@ -359,7 +352,6 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
     rating: 4.7,
     reviews: 320
   },
-
   // AI SEO Optimizer
   {
     id: 'ai-seo-optimizer-2026',
@@ -412,7 +404,6 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
     rating: 4.8,
     reviews: 580
   },
-
   // Smart Invoice & Billing AI
   {
     id: 'smart-invoice-billing-ai-2026',
@@ -465,7 +456,6 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
     rating: 4.6,
     reviews: 380
   },
-
   // AI Meeting Transcriber & Analyzer
   {
     id: 'ai-meeting-transcriber-analyzer-2026',
@@ -519,23 +509,3 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
     reviews: 290
   }
 ];
-<<<<<<< HEAD
-
-export const getPopularServices = () => {
-  return innovative2026MicroSaasV2Services.filter(service => service.popular);
-};
-
-export const getServicesByCategory = (category: string) => {
-  return innovative2026MicroSaasV2Services.filter(service => 
-    service.category.toLowerCase().includes(category.toLowerCase())
-  );
-};
-
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return innovative2026MicroSaasV2Services.filter(service => {
-    const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

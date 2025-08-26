@@ -1,23 +1,5 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-
-export default function TermsPage() {
-	return (
-		<div className="container mx-auto px-4 py-12">
-			<Head>
-				<title>Terms of Service - Zion Tech Solutions</title>
-				<meta name="description" content="Terms of Service for Zion Tech Solutions." />
-			</Head>
-			<h1 className="text-3xl font-bold mb-6">Terms of Service</h1>
-			<p className="text-gray-700 leading-7">
-				These terms govern your use of our website and services. By accessing or using our
-				site, you agree to these terms. For more details, please reach out via the Contact page.
-			</p>
-		</div>
-	);
-=======
 import Link from 'next/link';
-
 export default function TermsPage() {
   return (
     <>
@@ -27,7 +9,6 @@ export default function TermsPage() {
         <meta property="og:title" content="Terms of Service — Zion Tech Group" />
         <meta property="og:description" content="Terms of Service and legal agreements for Zion Tech Group services." />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           {/* Header */}
@@ -39,7 +20,6 @@ export default function TermsPage() {
             <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
             <p className="text-xl text-white/80">Last updated: January 17, 2025</p>
           </div>
-
           {/* Terms Content */}
           <div className="prose prose-invert max-w-4xl mx-auto">
             <section className="mb-8">
@@ -48,7 +28,6 @@ export default function TermsPage() {
                 By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provision of this agreement.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">2. Description of Service</h2>
               <p className="text-white/80 mb-4">
@@ -62,7 +41,6 @@ export default function TermsPage() {
                 <li>Performance optimization services</li>
               </ul>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">3. User Responsibilities</h2>
               <p className="text-white/80 mb-4">
@@ -75,49 +53,42 @@ export default function TermsPage() {
                 <li>Not interfering with our services or systems</li>
               </ul>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">4. Intellectual Property</h2>
               <p className="text-white/80 mb-4">
                 All content, features, and functionality of our services are owned by Zion Tech Group and are protected by international copyright, trademark, and other intellectual property laws.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">5. Privacy and Data Protection</h2>
               <p className="text-white/80 mb-4">
                 Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">6. Limitation of Liability</h2>
               <p className="text-white/80 mb-4">
                 Zion Tech Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">7. Termination</h2>
               <p className="text-white/80 mb-4">
                 We may terminate or suspend your access to our services immediately, without prior notice, for any reason whatsoever.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">8. Changes to Terms</h2>
               <p className="text-white/80 mb-4">
                 We reserve the right to modify these terms at any time. We will notify users of any material changes via email or through our services.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">9. Governing Law</h2>
               <p className="text-white/80 mb-4">
                 These terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Zion Tech Group operates.
               </p>
             </section>
-
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-cyan-400">10. Contact Information</h2>
               <p className="text-white/80 mb-4">
@@ -130,7 +101,6 @@ export default function TermsPage() {
               </div>
             </section>
           </div>
-
           {/* Navigation */}
           <div className="mt-12 text-center">
             <Link href="/contact" className="px-6 py-3 bg-cyan-400 hover:bg-cyan-300 text-black font-semibold rounded-lg transition-colors mr-4">
@@ -144,5 +114,4 @@ export default function TermsPage() {
       </div>
     </>
   );
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 }

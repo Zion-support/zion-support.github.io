@@ -15,9 +15,7 @@ const EQUIPMENT_FILTERS = [
   { label: "AI", value: "AI" },
   { label: "Robotics", value: "Robotics" },
 ];
-
 const EQUIPMENT_CACHE_KEY = 'equipmentCache';
-
 export async function fetchEquipment(): Promise<ProductListing[]> {
   // Added a try-catch block for better error handling during API call
   try {
@@ -52,14 +50,12 @@ export async function fetchEquipment(): Promise<ProductListing[]> {
     throw error;
   }
 }
-
 export default function EquipmentPage() {
   // Initialize with undefined or null to better distinguish between empty data and loading states
   const [equipment, setEquipment] = useState<ProductListing[] | undefined>(undefined);
   const { user } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-
   const {
     data: fetchedEquipment,
     error: equipmentError,
@@ -82,7 +78,6 @@ export default function EquipmentPage() {
     },
   });
   const delayedError = useDelayedError(equipmentError);
-
   useEffect(() => {
     if (fetchedEquipment) {
       setEquipment(fetchedEquipment);
@@ -90,7 +85,6 @@ export default function EquipmentPage() {
     // Added equipmentError to dependency array for useEffect,
     // so if an error occurs, we can potentially clear existing equipment or handle error state.
   }, [fetchedEquipment, equipmentError]);
-
   const {
     trigger: fetchRecommendations,
     isMutating: isFetchingRecommendations,
@@ -112,7 +106,6 @@ export default function EquipmentPage() {
       return res.json();
     }
   );
-
   // Interval for adding random equipment
   // useEffect(() => {
   //   // Only set interval if equipment is already loaded/exists to prevent adding to undefined
@@ -124,7 +117,6 @@ export default function EquipmentPage() {
   //   }
   // }, [equipment]); // Added equipment to dependency array
   // Removed the random equipment generation interval to rely on API data.
-
   const handleRecommendations = async () => {
     if (!user) {
       navigate('/login?next=/equipment&reco=1');
@@ -140,7 +132,6 @@ export default function EquipmentPage() {
       toast({ title: err.message || 'Failed to load recommendations', variant: 'destructive' });
     }
   };
-
   // Make sure handleRecommendations is memoized or stable if it's a dependency elsewhere, though not strictly required here.
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -150,7 +141,6 @@ export default function EquipmentPage() {
     // Added handleRecommendations to dependency array, ensure it's stable (e.g. via useCallback if it were passed down)
     // For now, this is okay as it's defined in the same scope.
   }, [user, location.search, handleRecommendations]);
-
   // Updated loading condition to specifically check for equipment being undefined
   if (isLoadingEquipment && equipment === undefined) {
     return (
@@ -175,7 +165,6 @@ export default function EquipmentPage() {
     </CardContent>
   </Card>
 );
-
 // Filter controls
 const EquipmentFilterControls = ({
   sortBy,
@@ -280,7 +269,6 @@ const EquipmentFilterControls = ({
     </Button>
   </div>
 );
-
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing; onViewDetails: () => void }) => (
   <Card className="h-full hover:shadow-lg transition-shadow">
@@ -320,14 +308,12 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
     </CardContent>
   </Card>
 );
-
 // Loading grid
 const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>
 );
-
 // Main component
 export default function EquipmentPage() {
   const router = useRouter();
@@ -339,49 +325,36 @@ export default function EquipmentPage() {
   const [minRating, setMinRating] = useState(0);
   const [showRecommended, setShowRecommended] = useState(false);
   const [totalGenerated, setTotalGenerated] = useState(0);
-
   const fetchEquipment = useCallback(async (page: number, limit: number) => {
     await new Promise(resolve => setTimeout(resolve, 400));
-
     let allEquipment: ProductListing[] = [];
-    
     if (page === 1) {
       allEquipment = [...INITIAL_EQUIPMENT];
     }
-    
     const startId = INITIAL_EQUIPMENT.length + (page - 1) * limit + totalGenerated;
     const newEquipment = generateDatacenterEquipment(limit, startId);
     setTotalGenerated(prev => prev + newEquipment.length);
-    
     allEquipment = [...allEquipment, ...newEquipment];
-    
     let filteredEquipment = allEquipment;
-
     if (filterCategory) {
       filteredEquipment = filteredEquipment.filter(e => e.category === filterCategory);
     }
-
     if (filterBrand) {
       filteredEquipment = filteredEquipment.filter(e => e.brand === filterBrand);
     }
-
     if (filterAvailability) {
       filteredEquipment = filteredEquipment.filter(e => e.availability === filterAvailability);
     }
-
     filteredEquipment = filteredEquipment.filter(e => {
       const price = e.price || 0;
       return price >= priceRange[0] && price <= priceRange[1];
     });
-
     if (minRating > 0) {
       filteredEquipment = filteredEquipment.filter(e => (e.rating || 0) >= minRating);
     }
-
     if (showRecommended) {
       filteredEquipment = getRecommendedEquipment(filteredEquipment);
     }
-    
     filteredEquipment.sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
@@ -394,18 +367,15 @@ export default function EquipmentPage() {
           return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
       }
     });
-    
     const startIndex = (page - 1) * limit;
     const endIndex = startIndex + limit;
     const items = filteredEquipment.slice(startIndex, endIndex);
-    
     return {
       items,
       hasMore: endIndex < filteredEquipment.length || page < 10,
       total: filteredEquipment.length
     };
   }, [sortBy, filterCategory, filterBrand, filterAvailability, priceRange, minRating, showRecommended, totalGenerated]);
-
   const {
     items: equipment,
     loading,
@@ -417,29 +387,23 @@ export default function EquipmentPage() {
     refresh,
     scrollToTop
   } = useInfiniteScrollPagination(fetchEquipment, 12);
-
   useEffect(() => {
     refresh();
     setTotalGenerated(0);
   }, [sortBy, filterCategory, filterBrand, filterAvailability, priceRange, minRating, showRecommended]);
-
   const marketStats = useMemo(() => {
     if (equipment.length === 0) return null;
     return getEquipmentMarketStats(equipment);
   }, [equipment]);
-
   const categories = useMemo(() => {
     return Array.from(new Set(equipment.map(e => e.category).filter(Boolean)));
   }, [equipment]);
-
   const brandOptions = useMemo(() => {
     return Array.from(new Set(equipment.map(e => e.brand).filter(Boolean)));
   }, [equipment]);
-
   const availabilityOptions = useMemo(() => {
     return Array.from(new Set(equipment.map(e => e.availability).filter(Boolean)));
   }, [equipment]);
-
   useEffect(() => {
     if (equipment.length > 0 && priceRange[0] === 0 && priceRange[1] === 200000) {
       const prices = equipment.map(e => e.price || 0);
@@ -448,19 +412,13 @@ export default function EquipmentPage() {
       setPriceRange([min, max]);
     }
   }, [equipment]);
-
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   return (
-<<<<<<< HEAD
-    
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
       <DynamicListingPage
         title="Datacenter Equipment"
         description="Browse professional hardware for modern datacenter and network deployments."
@@ -470,9 +428,5 @@ export default function EquipmentPage() {
         initialPrice={{ min: 400, max: 50000 }}
         detailBasePath="/equipment"
       />
-<<<<<<< HEAD
-    
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
   );
 }

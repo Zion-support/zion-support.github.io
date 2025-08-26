@@ -4,11 +4,7 @@ import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackgr
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
@@ -21,42 +17,8 @@ import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
 import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-<<<<<<< HEAD
-// import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-// import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
-// import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
-// import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
-// import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-// import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realQ4Services2025, } from '../../data/real-2025-q4-additions';
-import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
-// import { realMarketServicesExtended } from '../../data/real-market-services-extended';
-// import { real2026Additions } from '../../data/real-2026-additions';
-import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
-// import { added2026Q2Services } from '../../data/added-2026-q2-services';
-import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
-import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
-import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
-import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
-import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
-import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
-import { real2027Q4Additions } from '../../data/real-2027-q4-additions';
-
-type Service = typeof ultimateInnovativeServices2026[number];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-
-const contactInfo = {
-	mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'
-};
-
-<<<<<<< HEAD
-=======
 function getAllServices(): Service[] {
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
@@ -87,11 +49,6 @@ function getAllServices(): Service[] {
 		.concat(real2027Q2Additions as unknown as Service[])
 		.concat(real2027Q3Additions as unknown as Service[])
 		.concat(real2027Q4Additions as unknown as Service[]);
-<<<<<<< HEAD
-}
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 =======
 import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
 import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
@@ -99,7 +56,6 @@ import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
 import { real2025Q3Additions } from '../../data/real-2025-q3-additions';
-
 // Simplified service data structure
 interface SimpleService {
   id: string;
@@ -113,7 +69,6 @@ interface SimpleService {
   link: string;
   category: string;
 }
-
 // Mock service data for now to fix build issues
 const mockService: SimpleService = {
   id: 'default-service',
@@ -127,7 +82,6 @@ const mockService: SimpleService = {
   link: '/contact',
   category: 'General'
 };
-
 		.concat(realEnterpriseServices2025 as unknown as Service[])
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
 		.concat(realMarketAugmentations2025 as unknown as Service[])
@@ -137,12 +91,9 @@ const mockService: SimpleService = {
 		.concat(realServicesQ22025 as unknown as Service[])
 		.concat(real2025Q3Additions as unknown as Service[]);
 }
-
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 function toSlug(value: string): string {
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
-
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
 		const url = new URL(link);
@@ -150,181 +101,16 @@ function extractServiceSlugFromLink(link: string): string | null {
 		if (path.startsWith('services/')) {
 			return path.substring('services/'.length);
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
-		return path;
+		return null;
 =======
 		return null;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-		return null;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 	} catch {
 		return null;
 	}
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function ServiceSlugPage({ params }: { params?: { slug: string } }) {
-	const slug = params?.slug || 'default-service';
-	
-	// Placeholder service data - replace with actual data
-	const service = {
-		name: 'Service Name',
-		tagline: 'Service description and tagline',
-		features: ['Feature 1', 'Feature 2', 'Feature 3'],
-		price: '$99/month',
-		rating: '4.8',
-		customers: '100+',
-		description: 'Detailed service description goes here...',
-		link: '#'
-	};
-
-	return (
-		<>
-			<Head>
-				<title>{service.name} — Zion Tech Group</title>
-				<meta name="description" content={service.tagline} />
-			</Head>
-			
-			<div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-				<main className="container mx-auto px-6 py-12">
-					{/* Hero Section */}
-					<section className="text-center mb-16">
-						<h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-							{service.name}
-						</h1>
-						<p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-							{service.tagline}
-						</p>
-						<div className="flex flex-wrap justify-center gap-4">
-							<a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-								Get Started
-							</a>
-							<a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300">
-								View All Services
-							</a>
-						</div>
-					</section>
-
-					{/* Service Details */}
-					<section className="mb-16">
-						<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-							{/* Main Content */}
-							<div className="lg:col-span-2">
-								<div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8">
-									<h2 className="text-2xl font-bold mb-6 text-cyan-400">About This Service</h2>
-									<p className="text-white/80 mb-6">
-										{service.description}
-									</p>
-									
-									<h3 className="text-xl font-semibold mb-4 text-white">Key Features</h3>
-									<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-										{service.features.map((feature, index) => (
-											<div key={index} className="flex items-center gap-3">
-												<Check className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-												<span className="text-white/80">{feature}</span>
-											</div>
-										))}
-									</div>
-
-									<div className="flex flex-wrap gap-4">
-										<div className="text-center">
-											<div className="text-3xl font-bold text-cyan-400 mb-1">{service.rating}</div>
-											<div className="text-white/70 text-sm">Rating</div>
-										</div>
-										<div className="text-center">
-											<div className="text-3xl font-bold text-purple-400 mb-1">{service.customers}</div>
-											<div className="text-white/70 text-sm">Customers</div>
-										</div>
-										<div className="text-center">
-											<div className="text-3xl font-bold text-green-400 mb-1">{service.price}</div>
-											<div className="text-white/70 text-sm">Starting Price</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							{/* Sidebar */}
-							<div className="space-y-6">
-								{/* Contact Card */}
-								<div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-6">
-									<h3 className="text-xl font-bold mb-4 text-cyan-400">Get In Touch</h3>
-									<div className="space-y-4">
-										<div className="flex items-center gap-3">
-											<Phone className="w-5 h-5 text-cyan-400" />
-											<span className="text-white/80">{contactInfo.mobile}</span>
-										</div>
-										<div className="flex items-center gap-3">
-											<Mail className="w-5 h-5 text-cyan-400" />
-											<span className="text-white/80">{contactInfo.email}</span>
-										</div>
-										<div className="flex items-center gap-3">
-											<MapPin className="w-5 h-5 text-cyan-400" />
-											<span className="text-white/80">{contactInfo.address}</span>
-										</div>
-									</div>
-									
-									<a
-										href="/contact"
-										className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 mt-6"
-									>
-										Contact Us
-									</a>
-								</div>
-
-								{/* Quick Actions */}
-								<div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-6">
-									<h3 className="text-xl font-bold mb-4 text-purple-400">Quick Actions</h3>
-									<div className="space-y-3">
-										<a
-											href="/case-studies"
-											className="block w-full text-center bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2 rounded-lg font-medium transition-all duration-300"
-										>
-											View Case Studies
-										</a>
-										<a
-											href="/services"
-											className="block w-full text-center bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2 rounded-lg font-medium transition-all duration-300"
-										>
-											Browse Services
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-
-					{/* CTA Section */}
-					<section className="text-center">
-						<h2 className="text-3xl font-bold mb-6 text-white">Ready to Get Started?</h2>
-						<p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-							Join hundreds of companies that have already transformed their business with our cutting-edge solutions.
-						</p>
-						<div className="flex flex-wrap justify-center gap-4">
-							<a
-								href="/contact"
-								className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-lg"
-							>
-								Start Your Project
-							</a>
-							<a
-								href="/case-studies"
-								className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 text-lg"
-							>
-								View Case Studies
-							</a>
-						</div>
-					</section>
-				</main>
-			</div>
-		</>
-=======
 export async function getStaticPaths() {
 	const services = getAllServices();
 	const slugs = new Set<string>();
-
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available
 		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
@@ -336,36 +122,29 @@ export async function getStaticPaths() {
 		if (s.id) slugs.add(toSlug(s.id));
 		else if (s.name) slugs.add(toSlug(s.name));
 	}
-
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
 	};
 }
-
 	export async function getStaticProps({ params }: { params: { slug: string } }) {
 	const services = getAllServices();
 	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
-
 	let service: Service | undefined = services.find((s) => {
 		if (!s.link) return false;
 		const fromLink = extractServiceSlugFromLink(s.link);
 		return fromLink === incomingSlug;
 	});
-
 	if (!service) {
 		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
 	}
-
 	if (!service) {
 		return { notFound: true };
 	}
-
 	return {
 		props: { service }
 	};
 }
-
 export default function ServiceDetailPage({ service }: { service: Service }) {
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">
@@ -401,7 +180,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						}}
 				/>
 			</Head>
-
 			<div className="container mx-auto px-4 py-16">
 				<div className="text-center mb-10">
 					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
@@ -409,14 +187,12 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 					</h1>
 					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
 				</div>
-
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
 					<div className="lg:col-span-2 space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
 							<p className="text-gray-300 leading-relaxed">{service.description}</p>
 						</Card>
-
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
@@ -428,7 +204,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								))}
 							</ul>
 						</Card>
-
 						{/* Use Cases & Integrations */}
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Use Cases & Integrations</h3>
@@ -452,7 +227,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 							</div>
 						</Card>
 					</div>
-
 					<div className="space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>
@@ -463,7 +237,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								<Button href={service.link} variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
 							</div>
 						</Card>
-
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white font-semibold mb-3">Contact</h3>
 							<div className="space-y-3 text-sm">
@@ -472,7 +245,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								<div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</a></div>
 							</div>
 						</Card>
-
 						{/* Market Position & ROI */}
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white font-semibold mb-3">Market & ROI</h3>
@@ -489,14 +261,12 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 	);
 }
 =======
 export async function getStaticPaths() {
 	const services = getAllServices();
 	const slugs = new Set<string>();
-
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available
 		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
@@ -508,7 +278,6 @@ export async function getStaticPaths() {
 		if (s.id) slugs.add(toSlug(s.id));
 		else if (s.name) slugs.add(toSlug(s.name));
 	}
-
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
@@ -520,7 +289,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export async function getStaticPaths() {
   // Return empty paths for now to fix build
   return {
@@ -528,7 +296,6 @@ export async function getStaticPaths() {
     fallback: 'blocking'
   };
 }
-
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   // For now, return mock data to fix build
   return {
@@ -538,7 +305,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     }
   };
 }
-
 export default function ServiceDetailPage({ service, slug }: { service: SimpleService; slug: string }) {
   return (
     <Layout>
@@ -547,7 +313,6 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
         <meta name="description" content={service.description} />
         <link rel="canonical" href={`https://ziontechgroup.com/services/${slug}`} />
       </Head>
-
       <div className="container mx-auto px-4 py-16">
         {/* Back Navigation */}
         <div className="mb-8">
@@ -559,7 +324,6 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
             Back to Services
           </Link>
         </div>
-
 }
 =======
         <div className="text-center mb-10">
@@ -568,7 +332,6 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
           </h1>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.description}</p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
           <div className="lg:col-span-2 space-y-6">
             {/* Overview Card */}
@@ -576,7 +339,6 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
               <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
               <p className="text-gray-300 leading-relaxed">{service.description}</p>
             </div>
-
             {/* Features Card */}
             <div className="p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm">
               <h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
@@ -589,7 +351,6 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
                 ))}
               </ul>
             </div>
-
             {/* Use Cases & Integrations */}
             <div className="p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm">
               <h3 className="text-white text-lg font-semibold mb-4">Use Cases & Integrations</h3>
@@ -615,7 +376,6 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
               </div>
             </div>
           </div>
-
           <div className="space-y-6">
             {/* Pricing Card */}
             <div className="p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm">
@@ -643,7 +403,6 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
                 </Link>
               </div>
             </div>
-
             {/* Contact Card */}
             <div className="p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm">
               <h3 className="text-white font-semibold mb-3">Contact</h3>
@@ -673,7 +432,6 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
                 </div>
               </div>
             </div>
-
             {/* Category & Info */}
             <div className="p-6 bg-black/40 border border-gray-700/50 rounded-2xl backdrop-blur-sm">
               <h3 className="text-white font-semibold mb-3">Service Information</h3>
@@ -698,4 +456,3 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
     </Layout>
   );
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

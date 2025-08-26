@@ -1,66 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface PracticalMicroSaasService2027 {
+export interface PracticalMicroSaas2027 {
 =======
 export interface PracticalMicroSaas2027 {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-export interface PracticalMicroSaas2027 {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   id: string;
   name: string;
   tagline: string;
   price: string;
   features: string[];
-<<<<<<< HEAD
-=======
   category: string;
   technology: string[];
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }
-
 export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
   {
-<<<<<<< HEAD
-    id: 'practical-saas-2027-1',
-    name: 'Practical Micro SAAS 2027 1',
-    tagline: 'Practical 2027 micro SAAS',
-    price: '$1499',
-    features: ['Practical features', '2027 micro SAAS', 'Business solutions']
-=======
-<<<<<<< HEAD
-    id: 'ai-customer-success-automation',
-    name: 'AI Customer Success Automation',
-    tagline: 'Intelligent customer success automation platform',
-    price: '$299',
-    period: '/month',
-    description: 'AI-powered platform for automating customer success processes and improving customer satisfaction.',
-    features: [
-      'Customer behavior analysis',
-      'Automated outreach',
-      'Success metrics tracking',
-      'Predictive analytics',
-      'Integration capabilities'
-    ],
-    category: 'Customer Success',
-    technology: ['AI/ML', 'Automation', 'Analytics', 'Integration']
-  },
-  {
-    id: 'automated-content-marketing',
-    name: 'Automated Content Marketing',
-    tagline: 'AI-driven content marketing automation',
-    price: '$199',
-    period: '/month',
-    description: 'Comprehensive content marketing automation platform with AI-powered optimization.',
-    features: [
-      'Content generation',
-      'Automated publishing',
-      'Performance analytics',
-      'SEO optimization',
-      'Multi-channel management'
-    ],
-    category: 'Content Marketing',
-    technology: ['AI/ML', 'Content Management', 'SEO', 'Automation']
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  }
-];

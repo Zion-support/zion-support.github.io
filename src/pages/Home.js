@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-=======
 import React from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -15,10 +11,6 @@ import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { FloatingCTA } from "@/components/FloatingCTA";
-<<<<<<< HEAD
-export default function Home() {
-    return (_jsxs("div", { className: "min-h-screen bg-background", children: [_jsx(SEO, { title: "Zion - The Tech & AI Marketplace", description: "Discover top AI and tech talent, services, and equipment in one place.", keywords: "AI, technology, marketplace, services, talent", canonical: "https://app.ziontechgroup.com/" }), _jsx(ITServiceRequestHero, {}), _jsx(HeroSection, {}), _jsx(QuickAccess, {}), _jsx(FeatureCTAs, {}), _jsx(FeatureHighlights, {}), _jsx(CategoriesSection, {}), _jsx(BenefitsSection, {}), _jsx(HowItWorksSection, {}), _jsx(FeaturedListingsSection, {}), _jsx(NewsletterSection, {}), _jsx(FloatingCTA, {})] }));
-=======
 import { PricingSection } from "@/components/PricingSection";
 import { TechSolutionsSection } from "@/components/TechSolutionsSection";
 import { CaseStudiesSection } from "@/components/CaseStudiesSection";
@@ -33,7 +25,6 @@ import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 export default function Home() {
     return (<>
       <SEO title="Zion Tech Group - Leading AI & Technology Solutions" description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem." canonical="/" url="https://ziontechgroup.com"/>
-      
       <HeroSection />
       <QuickAccess />
       <AIServicesShowcase />
@@ -57,5 +48,4 @@ export default function Home() {
       <ITServiceRequestHero />
       <FloatingCTA />
     </>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

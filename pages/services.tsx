@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-<<<<<<< HEAD
-import { Brain, Shield, Cpu, Cloud, Zap, Database, Users, Target, CheckCircle, ArrowRight } from 'lucide-react';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-
 export default function ServicesPage() {
   return (
     <>
@@ -16,7 +8,6 @@ export default function ServicesPage() {
         <meta property="og:description" content="AI development, automation, and technology consulting services." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
@@ -26,7 +17,6 @@ export default function ServicesPage() {
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Comprehensive AI and automation solutions designed to transform your business and drive innovation
             </p>
-            
             {/* Navigation Links */}
             <div className="flex flex-wrap justify-center gap-4 mt-8">
               <a href="/about" className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
@@ -43,7 +33,6 @@ export default function ServicesPage() {
               </a>
             </div>
           </section>
-
           <section className="mx-auto max-w-6xl">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
@@ -59,7 +48,6 @@ export default function ServicesPage() {
                   <li>• Predictive Analytics</li>
                 </ul>
               </div>
-
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-2xl font-bold mb-4 text-fuchsia-400">Automation Systems</h3>
@@ -73,7 +61,6 @@ export default function ServicesPage() {
                   <li>• Smart Workflows</li>
                 </ul>
               </div>
-
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
                 <div className="text-4xl mb-4">☁️</div>
                 <h3 className="text-2xl font-bold mb-4 text-green-400">Cloud Infrastructure</h3>
@@ -87,7 +74,6 @@ export default function ServicesPage() {
                   <li>• Security Hardening</li>
                 </ul>
               </div>
-
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
                 <div className="text-4xl mb-4">🔧</div>
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">DevOps & CI/CD</h3>
@@ -101,7 +87,6 @@ export default function ServicesPage() {
                   <li>• Monitoring & Alerting</li>
                 </ul>
               </div>
-
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
                 <div className="text-4xl mb-4">📊</div>
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">Data Analytics</h3>
@@ -115,7 +100,6 @@ export default function ServicesPage() {
                   <li>• Real-time Dashboards</li>
                 </ul>
               </div>
-
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
                 <div className="text-4xl mb-4">💡</div>
                 <h3 className="text-2xl font-bold mb-4 text-yellow-400">Technology Consulting</h3>
@@ -130,7 +114,6 @@ export default function ServicesPage() {
                 </ul>
               </div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Why Choose Our Services?</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -148,7 +131,6 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
-
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
               <h2 className="text-3xl font-bold mb-6 text-blue-400">Service Delivery Process</h2>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -174,7 +156,6 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
-
             {/* Industry Solutions Section */}
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Industry Solutions</h2>
@@ -191,7 +172,6 @@ export default function ServicesPage() {
                     <li>• Automated Scheduling</li>
                   </ul>
                 </div>
-
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                   <div className="text-3xl mb-3">🏦</div>
                   <h3 className="text-xl font-semibold mb-3 text-green-400">Finance</h3>
@@ -204,7 +184,6 @@ export default function ServicesPage() {
                     <li>• Automated Trading</li>
                   </ul>
                 </div>
-
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                   <div className="text-3xl mb-3">🏭</div>
                   <h3 className="text-xl font-semibold mb-3 text-blue-400">Manufacturing</h3>
@@ -217,7 +196,6 @@ export default function ServicesPage() {
                     <li>• Supply Chain Optimization</li>
                   </ul>
                 </div>
-
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                   <div className="text-3xl mb-3">🛒</div>
                   <h3 className="text-xl font-semibold mb-3 text-purple-400">E-commerce</h3>
@@ -230,7 +208,6 @@ export default function ServicesPage() {
                     <li>• Customer Service Bots</li>
                   </ul>
                 </div>
-
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                   <div className="text-3xl mb-3">🚗</div>
                   <h3 className="text-xl font-semibold mb-3 text-yellow-400">Transportation</h3>
@@ -243,7 +220,6 @@ export default function ServicesPage() {
                     <li>• Traffic Prediction</li>
                   </ul>
                 </div>
-
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                   <div className="text-3xl mb-3">🎓</div>
                   <h3 className="text-xl font-semibold mb-3 text-cyan-400">Education</h3>
@@ -258,7 +234,6 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
-
             {/* Technology Partners Section */}
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Technology Partners</h2>
@@ -284,7 +259,6 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
-
             {/* Pricing Tiers Section */}
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Service Tiers</h2>
@@ -304,7 +278,6 @@ export default function ServicesPage() {
                     <p className="text-2xl font-bold text-cyan-400">Custom Pricing</p>
                   </div>
                 </div>
-
                 <div className="bg-gradient-to-br from-fuchsia-500/20 to-purple-500/20 rounded-xl p-6 border border-fuchsia-400/30">
                   <h3 className="text-xl font-semibold mb-4 text-fuchsia-400 text-center">Professional</h3>
                   <p className="text-white/70 text-sm mb-4 text-center">
@@ -321,7 +294,6 @@ export default function ServicesPage() {
                     <p className="text-2xl font-bold text-fuchsia-400">Custom Pricing</p>
                   </div>
                 </div>
-
                 <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-400/30">
                   <h3 className="text-xl font-semibold mb-4 text-green-400 text-center">Enterprise</h3>
                   <p className="text-white/70 text-sm mb-4 text-center">
@@ -341,7 +313,6 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
-
             {/* 2026 Services Preview Section */}
             <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl p-12 border border-purple-500/20 text-center mb-12">
               <h2 className="text-3xl font-bold mb-6 text-white">🚀 2026 Services Portfolio</h2>
@@ -375,7 +346,6 @@ export default function ServicesPage() {
                 </a>
               </div>
             </div>
-
             {/* Call to Action Section */}
             <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-12 border border-cyan-500/20 text-center">
               <h2 className="text-3xl font-bold mb-6 text-white">Ready to Get Started?</h2>
@@ -438,12 +408,10 @@ import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
-
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('name');
-
   // Combine all services
   const allServices = [
     ...innovativeMicroSaasServices,
@@ -500,7 +468,6 @@ export default function ServicesPage() {
     ...enterpriseIT2026ServicesV4,
     ...innovative2026AIServicesV4
   ];
-
   // Categories for filtering
   const categories = [
     { id: 'all', name: 'All Services', icon: <Monitor className="w-5 h-5" />, count: allServices.length },
@@ -532,13 +499,11 @@ import { additionalEnhancedServices } from '../data/additional-real-services';
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { advancedAIServices } from '../data/advanced-ai-services';
 import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech-services';
-
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
-
   // Combine all services
   const allServices = useMemo(() => [
     ...enhancedRealMicroSaasServices,
@@ -548,13 +513,11 @@ export default function ServicesPage() {
     ...advancedAIServices,
     ...blockchainEmergingTechServices
   ], []);
-
   // Get unique categories
   const categories = useMemo(() => {
     const cats = [...new Set(allServices.map(service => service.category))];
     return ['all', ...cats.sort()];
   }, [allServices]);
-
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: innovativeAIServices.length + nextGenAIServices.length },
@@ -562,16 +525,13 @@ export default function ServicesPage() {
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length + comprehensiveEnterpriseITServices.length },
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: enhancedRealMicroSaasServices.length + innovativeMicroSaasSolutions.length }
   ];
-
   // Get all categories
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
     Array.isArray(s.category) ? s.category[0] : s.category
   )))];
-
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices;
-
     // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(service =>
@@ -581,12 +541,10 @@ export default function ServicesPage() {
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
-
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -604,17 +562,14 @@ export default function ServicesPage() {
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       }
     });
-
     return filtered;
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   return (
     <div className="min-h-screen bg-black text-white">
       <Head>
@@ -622,7 +577,6 @@ export default function ServicesPage() {
         <meta name="description" content="Discover our comprehensive portfolio of innovative micro SAAS services including AI, quantum computing, cybersecurity, and more. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="micro SAAS services, AI solutions, quantum computing, cybersecurity, DevOps, healthcare AI, metaverse platform" />
       </Head>
-
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -640,7 +594,6 @@ export default function ServicesPage() {
             <span>💰 Competitive Pricing</span>
           </div>
         </div>
-
         {/* Filters and Search */}
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-12">
           <div className="grid md:grid-cols-4 gap-6">
@@ -657,7 +610,6 @@ export default function ServicesPage() {
                 ))}
               </select>
             </div>
-
             {/* Search */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Search</label>
@@ -669,7 +621,6 @@ export default function ServicesPage() {
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
-
             {/* Price Range */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
@@ -686,7 +637,6 @@ export default function ServicesPage() {
                 <option value="1000-0">Over $1000/month</option>
               </select>
             </div>
-
             {/* Sort By */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
@@ -703,7 +653,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-
         {/* Results Count */}
         <div className="mb-8">
           <p className="text-gray-600">
@@ -713,7 +662,6 @@ export default function ServicesPage() {
             {priceRange !== 'all' && ` in ${getPriceRangeLabel(priceRange)}`}
           </p>
         </div>
-
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => (
@@ -729,17 +677,14 @@ export default function ServicesPage() {
                   </span>
                 )}
               </div>
-
               {/* Service Content */}
               <div className="p-6">
                 <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
-                
                 {/* Price */}
                 <div className="mb-4">
                   <span className="text-2xl font-bold text-gray-900">{service.price}</span>
                   <span className="text-gray-500">{service.period}</span>
                 </div>
-
                 {/* Key Features */}
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Features:</h4>
@@ -757,7 +702,6 @@ export default function ServicesPage() {
                     )}
                   </ul>
                 </div>
-
                 {/* Technology Stack */}
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">Technology:</h4>
@@ -774,7 +718,6 @@ export default function ServicesPage() {
                     )}
                   </div>
                 </div>
-
                 {/* Market Info */}
                 <div className="mb-4 text-sm text-gray-600">
                   <div className="flex justify-between mb-1">
@@ -790,7 +733,6 @@ export default function ServicesPage() {
                     <span className="font-medium text-blue-600">{service.roi}</span>
                   </div>
                 </div>
-
                 {/* Trial & Setup */}
                 <div className="mb-4 text-sm text-gray-600">
                   <div className="flex justify-between">
@@ -802,7 +744,6 @@ export default function ServicesPage() {
                     <span className="font-medium">{service.setupTime}</span>
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex gap-3">
                   <a
@@ -822,7 +763,6 @@ export default function ServicesPage() {
             </div>
           ))}
         </div>
-
         {/* No Results */}
         {filteredServices.length === 0 && (
           <div className="text-center py-16">
@@ -844,7 +784,6 @@ export default function ServicesPage() {
             </button>
           </div>
         )}
-
         {/* Call to Action */}
         <div className="mt-20 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
@@ -874,14 +813,12 @@ export default function ServicesPage() {
     </div>
   );
 };
-
 export default Services;
 =======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Brain, Cloud, Code, Shield, Globe, Zap, Database, Lock, Cpu, Network, BarChart3, Smartphone } from 'lucide-react';
-
 const ServicesPage = () => {
   const services = [
     {
@@ -1125,7 +1062,6 @@ const ServicesPage = () => {
       href: '/services/mobile-development'
     }
   ];
-
   const process = [
     {
       step: '01',
@@ -1148,7 +1084,6 @@ const ServicesPage = () => {
       description: 'We deploy your solution and provide ongoing support and maintenance to ensure optimal performance.'
     }
   ];
-
   return (
     <>
       <Head>
@@ -1156,7 +1091,6 @@ const ServicesPage = () => {
         <meta name="description" content="Explore our comprehensive range of technology services including AI development, cloud architecture, web development, cybersecurity, and more." />
         <meta name="keywords" content="technology services, AI development, cloud architecture, web development, cybersecurity, digital transformation" />
       </Head>
-      
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-blue-900">
         <div className="container mx-auto px-4 text-center">
@@ -1169,7 +1103,6 @@ const ServicesPage = () => {
           </p>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
@@ -1182,7 +1115,6 @@ const ServicesPage = () => {
               solutions that transform businesses and drive measurable results.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div 
@@ -1194,7 +1126,6 @@ const ServicesPage = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-400 mb-4 leading-relaxed">{service.description}</p>
-                
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-white mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -1206,7 +1137,6 @@ const ServicesPage = () => {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-white mb-2">Benefits:</h4>
                   <ul className="space-y-1">
@@ -1218,7 +1148,6 @@ const ServicesPage = () => {
                     ))}
                   </ul>
                 </div>
-                
                 <Link 
                   href={service.href}
                   className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium group-hover:translate-x-1 transition-transform"
@@ -1247,7 +1176,6 @@ const ServicesPage = () => {
               blockchain technology, and revolutionary innovations.
             </p>
           </motion.div>
-
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1274,7 +1202,6 @@ const ServicesPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Filters and Search */}
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -1299,7 +1226,6 @@ const ServicesPage = () => {
                   />
                 </div>
               </div>
-
               {/* Category Filter */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
@@ -1315,7 +1241,6 @@ const ServicesPage = () => {
                   ))}
                 </select>
               </div>
-
               {/* Sort By */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
@@ -1330,7 +1255,6 @@ const ServicesPage = () => {
                   <option value="rating">Highest Rated</option>
                 </select>
               </div>
-
               {/* View Mode */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
@@ -1353,7 +1277,6 @@ const ServicesPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Services Grid/List */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
@@ -1369,7 +1292,6 @@ const ServicesPage = () => {
               {selectedCategory !== 'all' && ` in ${selectedCategory}`}
             </p>
           </motion.div>
-
           {/* Services Display */}
           {viewMode === 'grid' ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -1396,7 +1318,6 @@ const ServicesPage = () => {
                           )}
                         </div>
                       </div>
-
                       {/* Service Features */}
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
@@ -1409,7 +1330,6 @@ const ServicesPage = () => {
                           ))}
                         </ul>
                       </div>
-
                       {/* Service Stats */}
                       <div className="mb-4 space-y-2">
                         <div className="flex justify-between text-xs">
@@ -1425,7 +1345,6 @@ const ServicesPage = () => {
                           <span className="text-green-400">{service.trialDays} days</span>
                         </div>
                       </div>
-
                       {/* Action Buttons */}
                       <div className="flex gap-2">
                         <Button
@@ -1485,7 +1404,6 @@ const ServicesPage = () => {
                             </div>
                           </div>
                         </div>
-
                         {/* Price and Popular Badge */}
                         <div className="flex flex-col items-end gap-3">
                           <div className="text-right">
@@ -1497,7 +1415,6 @@ const ServicesPage = () => {
                             )}
                           </div>
                         </div>
-
                         {/* Action Buttons */}
                         <div className="flex flex-col gap-2 min-w-[120px]">
                           <Button
@@ -1517,7 +1434,6 @@ const ServicesPage = () => {
                           </Button>
                         </div>
                       </div>
-
                       {/* Service Description and Features */}
                       <div className="mt-6 pt-6 border-t border-cyan-500/20">
                         <p className="text-gray-300 mb-4">{service.description}</p>
@@ -1551,7 +1467,6 @@ const ServicesPage = () => {
               ))}
             </div>
           )}
-
           {/* No Results */}
           {filteredServices.length === 0 && (
             <motion.div
@@ -1577,7 +1492,6 @@ const ServicesPage = () => {
           )}
         </div>
       </section>
-
       {/* Our Process */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-black">
         <div className="container mx-auto px-4">
@@ -1590,7 +1504,6 @@ const ServicesPage = () => {
               for your investment.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step, index) => (
               <div key={index} className="text-center">
@@ -1604,7 +1517,6 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 }
@@ -1635,16 +1547,7 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     </>
   );
-<<<<<<< HEAD
-};
-
-export default ServicesPage;
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

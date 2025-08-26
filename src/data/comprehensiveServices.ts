@@ -1,12 +1,6 @@
 import { ProductListing } from "@/types/listings";
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // Comprehensive Micro SAAS Services, IT Services, and AI Services
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services
   {
@@ -21,31 +15,19 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-<<<<<<< HEAD
-<<<<<<< HEAD
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
-    },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-=======
       email: "kleber@ziontechgroup.com",
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1633412802999-5ea7c61b2107?auto=format&fit=crop&w=800&h=500"],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 156,
     featured: true,
     location: "Global",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     availability: "2-3 Weeks",
     aiScore: 95,
     pricingTier: "Professional"
@@ -164,8 +146,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.8,
-<<<<<<< HEAD
-=======
     availability: "4-6 Weeks",
     aiScore: 96
   },
@@ -214,7 +194,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 94
   },
-
   // IT Infrastructure Services
   {
     id: "cloud-migration-consulting",
@@ -233,17 +212,11 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-10T11:45:00.000Z",
     rating: 4.9,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     reviewCount: 134,
     featured: true,
     location: "Global",
     availability: "3-4 Weeks",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     aiScore: 94,
     pricingTier: "Professional"
   },
@@ -453,8 +426,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 3800,
     currency: "$",
     tags: ["Education", "AI", "LMS", "Personalized Learning", "Assessment"],
-<<<<<<< HEAD
-=======
     aiScore: 91
   },
   {
@@ -502,7 +473,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 89
   },
-
   // Micro SAAS Solutions
   {
     id: "inventory-management-saas",
@@ -513,19 +483,13 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 199,
     currency: "$",
     tags: ["Inventory Management", "Barcode Scanning", "Automated Reordering", "Analytics"],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.8,
@@ -545,8 +509,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 6500,
     currency: "$",
     tags: ["VR", "AR", "Training", "Simulation", "Immersive"],
-<<<<<<< HEAD
-=======
     images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-30T10:30:00.000Z",
     rating: 4.6,
@@ -564,19 +526,12 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 299,
     currency: "$",
     tags: ["Project Management", "Task Automation", "Resource Optimization", "Risk Assessment"],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-15T10:00:00.000Z",
-=======
     images: ["https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-10T15:45:00.000Z",
     rating: 4.8,
@@ -608,7 +563,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 90
   },
-
   // Advanced AI Solutions
   {
     id: "computer-vision-api",
@@ -626,25 +580,18 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-15T09:30:00.000Z",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
     images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     rating: 4.9,
     reviewCount: 78,
     featured: true,
     location: "Global",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     availability: "6-10 Weeks",
     aiScore: 97,
     pricingTier: "Enterprise"
   }
 ];
-
 export const SERVICE_CATEGORIES = [
   "AI Services",
   "IT Services", 
@@ -656,7 +603,6 @@ export const SERVICE_CATEGORIES = [
   "IoT Solutions",
   "Education"
 ];
-
 export const SERVICE_SUBCATEGORIES = {
   "AI Services": ["Chatbots & Virtual Assistants", "Content Generation", "Business Intelligence", "Computer Vision", "Natural Language Processing"],
   "IT Services": ["Cloud Services", "Cybersecurity", "DevOps", "Infrastructure", "Data Management"],
@@ -668,14 +614,11 @@ export const SERVICE_SUBCATEGORIES = {
   "IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],
   "Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"]
 };
-
 export const PRICING_TIERS = {
   "Starter": { min: 500, max: 2000, label: "Starter ($500 - $2,000)" },
   "Professional": { min: 2000, max: 5000, label: "Professional ($2,000 - $5,000)" },
   "Enterprise": { min: 5000, max: 10000, label: "Enterprise ($5,000 - $10,000)" }
 };
-<<<<<<< HEAD
-=======
     availability: "1-2 Weeks",
     aiScore: 95
   },
@@ -724,7 +667,6 @@ export const PRICING_TIERS = {
     availability: "3-4 Weeks",
     aiScore: 96
   },
-
   // IT Consulting & Strategy
   {
     id: "digital-transformation-strategy",
@@ -772,7 +714,6 @@ export const PRICING_TIERS = {
     availability: "3-4 Weeks",
     aiScore: 88
   },
-
   // Specialized Micro SAAS
   {
     id: "hr-automation-platform",
@@ -843,7 +784,6 @@ export const PRICING_TIERS = {
     aiScore: 90
   }
 ];
-
 // Service Categories for better organization
 export const SERVICE_CATEGORIES = [
   {
@@ -871,7 +811,6 @@ export const SERVICE_CATEGORIES = [
     services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS")
   }
 ];
-
 // Pricing Tiers for different service levels
 export const PRICING_TIERS = [
   {
@@ -914,7 +853,6 @@ export const PRICING_TIERS = [
     ]
   }
 ];
-
 // Contact Information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",
@@ -924,6 +862,4 @@ export const CONTACT_INFO = {
   businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
   responseTime: "24-48 hours for initial response"
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

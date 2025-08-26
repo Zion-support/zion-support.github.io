@@ -54,14 +54,12 @@ import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-servi
 import { revolutionary2026ITServices } from '../data/revolutionary-2026-it-services';
 import { revolutionary2026EmergingTechServices } from '../data/revolutionary-2026-emerging-tech';
 import { revolutionary2026MicroSaasServices } from '../data/revolutionary-2026-micro-saas';
-
 const heroStats = [
   { label: 'Revolutionary Services', value: '600+', icon: <Star className="w-5 h-5" /> },
   { label: 'Happy Clients', value: '1500+', icon: <Users className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> },
   { label: 'ROI Average', value: '400%', icon: <TrendingUp className="w-5 h-5" /> }
 ];
-
   // Combine all services for comprehensive showcase
   const allServices = [
     ...enhancedRealMicroSaasServices,
@@ -106,13 +104,6 @@ const heroStats = [
     ...revolutionary2026EmergingTechServices,
     ...revolutionary2026MicroSaasServices
   ];
-
-<<<<<<< HEAD
-  // Get new 2029 services for enhanced showcase
-  const cuttingEdge2029Services = cuttingEdgeInnovations2029;
-  const emergingTech2029Services = emergingTechServices2029;
-  const practicalBusiness2029Services = practicalBusinessSolutions2029;
-=======
   const services = [
     {
       title: "AI Business Intelligence",
@@ -169,10 +160,7 @@ const heroStats = [
       features: ["Churn prediction", "Success automation", "Retention optimization"]
     }
   ];
->>>>>>> origin/cursor/expand-services-and-deploy-updates-ffb8
-
   const featuredOffers = professionalServices.slice(0, 3);
-
   // Service statistics
   const serviceStats = {
     totalServices: allServices.length,
@@ -185,7 +173,6 @@ const heroStats = [
     blockchainServices: enterpriseIT2026Services.filter(s => s.category.includes('Blockchain')).length,
     spaceTech: quantumSpaceServices.filter(s => s.category.includes('Space')).length
   };
-
   // Get featured services for the hero section
   const featuredServices = [
     ...innovativeAIServices2029.filter(s => s.popular),
@@ -193,12 +180,10 @@ const heroStats = [
     ...enterpriseITInnovations2029.filter(s => s.popular),
     ...innovativeMicroSaas2029.filter(s => s.popular)
   ].slice(0, 6);
-
   return (
       <UltraFuturisticBackground2028>
         {/* Ultra Advanced Navigation */}
         <UltraAdvancedNavigation2026V2 />
-
         {/* Enhanced Hero Section 2026 */}
         <UltraAdvancedHero2026V2 />
 =======
@@ -209,24 +194,20 @@ const heroStats = [
         <meta name="keywords" content="AI consciousness, quantum computing, space mining, biotechnology, 2029 technology, revolutionary services, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        
         {/* Open Graph */}
         <meta property="og:title" content="Zion Tech Group - 2029 Revolutionary Technology Services" />
         <meta property="og:description" content="Leading provider of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Zion Tech Group - 2029 Revolutionary Technology Services" />
         <meta name="twitter:description" content="Leading provider of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-        
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />
         <link rel="canonical" href="https://ziontechgroup.com" />
-        
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -253,14 +234,11 @@ const heroStats = [
           })}
         </script>
       </Head>
-
       <UltraFuturisticBackground2029>
         {/* Navigation */}
         <UltraFuturisticNavigation2029 />
-
         {/* Hero Section */}
         <UltraFuturisticHero2029 />
-
       {/* Main Content */}
       <main id="main-content" className="min-h-screen bg-black text-white">
         {/* Hero Section with Enhanced Background */}
@@ -284,7 +262,6 @@ const heroStats = [
                   <br />
                   <span className="text-neon-green animate-neural-wave">2029</span>
                 </h1>
-
                 {/* Enhanced Subtitle */}
                 <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                   Leading the future with <span className="text-neon-cyan">AI consciousness</span>,{' '}
@@ -292,7 +269,6 @@ const heroStats = [
                   <span className="text-neon-pink">space mining</span>, and{' '}
                   <span className="text-neon-green">500+ revolutionary services</span>
                 </p>
-
                 {/* Enhanced Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                   <motion.div
@@ -306,7 +282,6 @@ const heroStats = [
                     </div>
                     <div className="text-sm text-gray-400">Innovative Services</div>
                   </motion.div>
-
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -318,13 +293,10 @@ const heroStats = [
                     </div>
                     <div className="text-sm text-gray-400">Technology Categories</div>
                   </motion.div>
-
         {/* Ultra Futuristic 2030 Services Showcase */}
         <UltraFuturisticServiceShowcase2030 />
-
         {/* Revolutionary 2026 Services Showcase */}
         <Revolutionary2026ServiceShowcase />
-
         {/* Enhanced Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -349,7 +321,6 @@ const heroStats = [
               </Link>
             </motion.div>
           </div>
-
           {/* Scroll Indicator */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -366,14 +337,12 @@ const heroStats = [
             </div>
           </motion.div>
         </section>
-
         {/* Enhanced Service Showcase */}
         <EnhancedServiceShowcase
           services={allServices}
           title="Comprehensive Technology Services"
           subtitle="Explore our complete portfolio of innovative solutions"
         />
-
         {/* 2029 Cutting Edge Innovations */}
         <EnhancedServiceShowcase
           services={cuttingEdge2029Services}
@@ -381,7 +350,6 @@ const heroStats = [
           subtitle="Beyond the future of technology - Revolutionary AI consciousness, quantum time manipulation, and autonomous AI civilizations"
           showStats={false}
         />
-
         {/* 2029 Emerging Technology Services */}
         <EnhancedServiceShowcase
           services={emergingTech2029Services}
@@ -389,7 +357,6 @@ const heroStats = [
           subtitle="Quantum biotech synthesis, autonomous space mining, and quantum internet protocols"
           showStats={false}
         />
-
         {/* 2029 Practical Business Solutions */}
         <EnhancedServiceShowcase
           services={practicalBusiness2029Services}
@@ -397,7 +364,6 @@ const heroStats = [
           subtitle="AI-powered automation for customer success, content marketing, inventory management, and sales optimization"
           showStats={false}
         />
-
         {/* Latest Innovations Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
@@ -418,7 +384,6 @@ const heroStats = [
                 Discover our most revolutionary and cutting-edge technology services that are already operational and delivering results
               </p>
             </motion.div>
-
             {/* Featured Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
@@ -444,7 +409,6 @@ const heroStats = [
                 </motion.div>
               ))}
             </div>
-
             {/* Enhanced Service Showcase Components */}
             <Enhanced2026ServicesShowcase />
             <Revolutionary2026ServiceShowcase />
@@ -452,7 +416,6 @@ const heroStats = [
             <Enhanced2029ServicesShowcase />
           </div>
         </section>
-
         {/* Service Categories Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -472,7 +435,6 @@ const heroStats = [
                 Explore our extensive range of revolutionary technology services across all major categories
               </p>
             </motion.div>
-
             {/* Service Categories Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {Object.entries(servicesByCategory).slice(0, 9).map(([category, services], index) => (
@@ -500,7 +462,6 @@ const heroStats = [
             </div>
           </div>
         </section>
-
         {/* Why Choose Zion Tech Group Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-900/10 to-purple-900/10"></div>
@@ -521,7 +482,6 @@ const heroStats = [
                 We're not just another technology company. We're the architects of tomorrow, building solutions that will define the next decade of innovation.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -581,7 +541,6 @@ const heroStats = [
             </div>
           </div>
         </section>
-
         {/* Call to Action Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -598,7 +557,6 @@ const heroStats = [
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team of technology experts to discuss how our revolutionary 2029 services can transform your business and propel you into the future.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Link href="/contact">
                   <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105">
@@ -614,7 +572,6 @@ const heroStats = [
                 </Link>
               </div>
             </motion.div>
-
               {/* Contact Information */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
                 <div className="flex items-center justify-center space-x-2">
@@ -634,7 +591,6 @@ const heroStats = [
           </div>
         </section>
       </main>
-
       {/* Enhanced Footer */}
       <UltraFuturisticFooter2031 />
     </>

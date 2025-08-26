@@ -1,31 +1,6 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-
-const Index: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index blog post" />
-      </Head>
-      
-      <main>
-        <h1>Index</h1>
-        <p>Blog content coming soon...</p>
-        <Link href="/blog">Back to Blog</Link>
-      </main>
-    </div>
-  );
-};
-
-export default Index;
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function BlogPage() {
   return (
     <>
@@ -33,7 +8,6 @@ export default function BlogPage() {
         <title>Blog — Zion Tech Group</title>
         <meta name="description" content="Latest insights, trends, and updates from Zion Tech Group's autonomous technology experts." />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-6xl mx-auto">
@@ -46,7 +20,6 @@ export default function BlogPage() {
                 automation trends, and industry developments.
               </p>
             </section>
-
             {/* Featured Article */}
             <section className="mb-16">
               <div className="bg-white/10 rounded-3xl p-8 border border-white/20">
@@ -80,11 +53,9 @@ export default function BlogPage() {
                 </div>
               </div>
             </section>
-
             {/* Article Categories */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Browse by Category</h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <Link href="/blog/category/automation" className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all group">
                   <div className="text-4xl mb-4">🤖</div>
@@ -94,7 +65,6 @@ export default function BlogPage() {
                   </p>
                   <span className="text-cyan-400 group-hover:text-cyan-300">Explore →</span>
                 </Link>
-                
                 <Link href="/blog/category/technology" className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all group">
                   <div className="text-4xl mb-4">💻</div>
                   <h3 className="text-xl font-bold mb-2 text-fuchsia-400">Technology</h3>
@@ -103,7 +73,6 @@ export default function BlogPage() {
                   </p>
                   <span className="text-fuchsia-400 group-hover:text-fuchsia-300">Explore →</span>
                 </Link>
-                
                 <Link href="/blog/category/industry" className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-green-400/30 transition-all group">
                   <div className="text-4xl mb-4">🏭</div>
                   <h3 className="text-xl font-bold mb-2 text-green-400">Industry</h3>
@@ -114,11 +83,9 @@ export default function BlogPage() {
                 </Link>
               </div>
             </section>
-
             {/* Latest Articles */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Latest Articles</h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <article className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all">
                   <div className="text-3xl mb-4">🔒</div>
@@ -136,7 +103,6 @@ export default function BlogPage() {
                     <span>5 min read</span>
                   </div>
                 </article>
-                
                 <article className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all">
                   <div className="text-3xl mb-4">📊</div>
                   <h3 className="text-xl font-bold mb-3 text-fuchsia-400">
@@ -153,7 +119,6 @@ export default function BlogPage() {
                     <span>6 min read</span>
                   </div>
                 </article>
-                
                 <article className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-green-400/30 transition-all">
                   <div className="text-3xl mb-4">🌐</div>
                   <h3 className="text-xl font-bold mb-3 text-green-400">
@@ -170,7 +135,6 @@ export default function BlogPage() {
                     <span>7 min read</span>
                   </div>
                 </article>
-                
                 <article className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-yellow-400/30 transition-all">
                   <div className="text-3xl mb-4">🚀</div>
                   <h3 className="text-xl font-bold mb-3 text-yellow-400">
@@ -187,7 +151,6 @@ export default function BlogPage() {
                     <span>9 min read</span>
                   </div>
                 </article>
-                
                 <article className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-blue-400/30 transition-all">
                   <div className="text-3xl mb-4">🔍</div>
                   <h3 className="text-xl font-bold mb-3 text-blue-400">
@@ -204,7 +167,6 @@ export default function BlogPage() {
                     <span>6 min read</span>
                   </div>
                 </article>
-                
                 <article className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-purple-400/30 transition-all">
                   <div className="text-3xl mb-4">📈</div>
                   <h3 className="text-xl font-bold mb-3 text-purple-400">
@@ -223,7 +185,6 @@ export default function BlogPage() {
                 </article>
               </div>
             </section>
-
             {/* Newsletter Signup */}
             <section className="mb-16">
               <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 rounded-3xl p-8 border border-white/20 text-center">
@@ -244,7 +205,6 @@ export default function BlogPage() {
                 </div>
               </div>
             </section>
-
             {/* Call to Action */}
             <section className="text-center">
               <h2 className="text-3xl font-bold mb-6 text-purple-400">Have a Story to Share?</h2>
@@ -262,4 +222,3 @@ export default function BlogPage() {
     </>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

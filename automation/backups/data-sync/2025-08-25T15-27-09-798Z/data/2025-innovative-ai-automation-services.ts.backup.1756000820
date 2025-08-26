@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface InnovativeAIAutomationService {
   id: string;
   name: string;
@@ -40,14 +39,12 @@ export interface InnovativeAIAutomationService {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
   {
     id: 'ai-autonomous-code-review',
@@ -130,9 +127,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     competitors: ['Zendesk, Intercom, Freshdesk, Help Scout, Zoho Desk'],
     marketSize: '$15B customer service software market',
     growthRate: '22% annual growth',
-<<<<<<< HEAD
-    variant: 'ai-autonomous',
-=======
     variant: 'default',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -140,7 +134,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
->>>>>>> origin/cursor/website-audit-and-enhancement-5ec7
     technology: ['Python, Selenium, Playwright, OpenAI, TensorFlow, Docker'],
     integrations: ['Jenkins, GitHub Actions, GitLab CI, Azure DevOps, Jira'],
     useCases: ['Automated testing, CI/CD integration, Quality assurance, Regression testing'],
@@ -297,7 +290,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     rating: 4.8,
     reviews: 156
   },
-
   // Autonomous Data Analytics Platform
   {
     id: 'autonomous-data-analytics',
