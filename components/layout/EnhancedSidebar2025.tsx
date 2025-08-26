@@ -205,6 +205,7 @@ const sidebarSections = [
     icon: Users,
     color: 'from-green-500 to-emerald-600',
     items: [
+<<<<<<< HEAD
       {
         name: 'About Us',
         href: '/about',
@@ -243,6 +244,98 @@ const sidebarSections = [
           { name: 'Knowledge Base', href: '/knowledge-base' }
         ]
       }
+=======
+      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', badge: 'New' },
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', badge: 'New' },
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', badge: 'New' },
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', badge: 'New' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform', badge: 'New' },
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform' },
+      { name: 'Zero Trust Security', href: '/zero-trust-security-platform' },
+      { name: 'Quantum Networking', href: '/quantum-networking' },
+      { name: 'Quantum Data Center', href: '/quantum-data-center' },
+      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
+      { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' }
+    ]
+  },
+  {
+    title: 'Micro SAAS',
+    icon: <Rocket className="w-5 h-5" />,
+    color: 'text-emerald-400',
+    items: [
+      { name: 'AI Customer Success', href: '/services/ai-customer-success-platform', badge: 'New' },
+      { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', badge: 'New' },
+      { name: 'Financial Planning AI', href: '/services/ai-financial-planning-platform', badge: 'New' },
+      { name: 'HR Analytics Platform', href: '/ai-hr-analytics-platform', badge: 'New' },
+      { name: 'Sales Intelligence AI', href: '/services/ai-sales-intelligence-platform', badge: 'New' },
+      { name: 'AI Decision Engine', href: '/services/ai-powered-decision-engine' },
+      { name: 'Content Automation', href: '/services/intelligent-content-automation-platform' },
+      { name: 'Smart CRM Suite', href: '/services/smart-crm-intelligence-suite' },
+      { name: 'Financial Analytics', href: '/automated-financial-analytics-platform' },
+      { name: 'Project Management', href: '/intelligent-project-management-suite' },
+      { name: 'Business Intelligence', href: '/ai-business-intelligence' },
+      { name: 'Marketing Automation', href: '/ai-marketing-automation' },
+      { name: 'Customer Service AI', href: '/ai-customer-service' },
+      { name: 'HR & Recruitment', href: '/ai-hr-recruitment' },
+      { name: 'Legal Contract Analysis', href: '/ai-legal-contract-analyzer' }
+    ]
+  },
+  {
+    title: 'Solutions',
+    icon: <Target className="w-5 h-5" />,
+    color: 'text-orange-400',
+    items: [
+      { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
+      { name: 'Financial Services', href: '/financial-solutions' },
+      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' },
+      { name: 'Retail Technology', href: '/retail-technology-solutions' },
+      { name: 'Education Technology', href: '/education-technology-solutions' },
+      { name: 'Government Solutions', href: '/government-technology-solutions' },
+      { name: 'Energy & Utilities', href: '/energy-utilities-solutions' },
+      { name: 'Transportation & Logistics', href: '/transportation-logistics-solutions' },
+      { name: 'Real Estate Technology', href: '/real-estate-technology-solutions' },
+      { name: 'Entertainment & Media', href: '/entertainment-media-solutions' },
+      { name: 'Space Technology', href: '/space-technology' },
+      { name: 'Biotech & Healthcare', href: '/biotech-ai' }
+    ]
+  },
+  {
+    title: 'Resources',
+    icon: <BookOpen className="w-5 h-5" />,
+    color: 'text-cyan-400',
+    items: [
+      { name: 'Documentation', href: '/docs' },
+      { name: 'API Reference', href: '/api-documentation' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Blog & News', href: '/blog' },
+      { name: 'Support Center', href: '/support' },
+      { name: 'Training & Certification', href: '/training' },
+      { name: 'Community Forum', href: '/community' },
+      { name: 'Developer Resources', href: '/developer-resources' },
+      { name: 'Research & Development', href: '/research-development' },
+      { name: 'White Papers', href: '/white-papers' },
+      { name: 'Performance Reports', href: '/reports' },
+      { name: 'Market Analysis', href: '/market-pricing' }
+    ]
+  },
+  {
+    title: 'Company',
+    icon: <Users className="w-5 h-5" />,
+    color: 'text-pink-400',
+    items: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Leadership Team', href: '/leadership' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'News & Press', href: '/news' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Investors', href: '/investors' },
+      { name: 'Contact Us', href: '/contact' },
+      { name: 'Locations', href: '/locations' },
+      { name: 'Sustainability', href: '/sustainability' },
+      { name: 'Diversity & Inclusion', href: '/diversity-inclusion' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Privacy Policy', href: '/privacy' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-757c
     ]
   }
 ];

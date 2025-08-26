@@ -125,11 +125,21 @@ const navigationItems: NavigationItem[] = [
     badge: 'Enterprise',
     color: 'from-blue-500 to-cyan-600',
     children: [
+<<<<<<< HEAD
       { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Quantum-enhanced cloud computing' },
       { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Edge processing optimization' },
       { name: 'Zero Trust Security Platform', href: '/zero-trust-security', description: 'Advanced cybersecurity' },
       { name: 'Blockchain Enterprise Platform', href: '/blockchain-enterprise', description: 'Enterprise blockchain solutions' },
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops', description: 'Intelligent development automation' },
+=======
+      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', description: 'Future-proof cloud security' },
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', description: 'Self-healing IT infrastructure' },
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Edge processing optimization' },
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform', description: 'Intelligent development automation' },
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform', description: 'Quantum-enhanced cloud computing' },
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform', description: 'Advanced cybersecurity' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-757c
       { name: 'Quantum Networking', href: '/quantum-networking', description: 'Quantum communication protocols' },
       { name: 'Autonomous IT Operations', href: '/autonomous-it-operations', description: 'Self-managing IT systems' },
       { name: 'Quantum Data Center', href: '/quantum-data-center', description: 'Next-gen data centers' },
