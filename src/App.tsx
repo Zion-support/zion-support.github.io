@@ -24,6 +24,8 @@ const Solutions = React.lazy(() => import('./pages/Solutions'));
 const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
 const News = React.lazy(() => import('./pages/News'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const EnhancedInnovativeServices2026 = React.lazy(() => import('./pages/EnhancedInnovativeServices2026'));
+const ComprehensiveServicesMarketing2026 = React.lazy(() => import('./pages/ComprehensiveServicesMarketing2026'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -66,6 +68,8 @@ function App() {
               <Route path="/research-development" element={<ResearchDevelopment />} />
               <Route path="/news" element={<News />} />
               <Route path="/request-quote" element={<RequestQuote />} />
+              <Route path="/enhanced-innovative-services-2026" element={<EnhancedInnovativeServices2026 />} />
+              <Route path="/comprehensive-services-marketing-2026" element={<ComprehensiveServicesMarketing2026 />} />
             </Routes>
           </Suspense>
         </main>
