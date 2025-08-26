@@ -40,8 +40,8 @@ const specialServices = [
     link: "/it-onsite-services"
   },
   {
-    title: "Micro SAAS Services",
-    link: "/micro-saas-services"
+    title: "View All Services",
+    link: "/comprehensive-services"
   }
 ];
 
@@ -97,18 +97,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </div>
         </div>
         
-        <div className="mt-12 flex justify-center gap-6">
+        <div className="mt-12 flex justify-center">
           <Link 
             to="/categories" 
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             View All Categories →
-          </Link>
-          <Link 
-            to="/pricing" 
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
-          >
-            View Pricing →
           </Link>
         </div>
       </div>
