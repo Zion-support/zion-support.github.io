@@ -10,10 +10,28 @@ export default function App({ Component, pageProps }: any) {
 	const baseUrl = 'https://ziontechgroup.com';
 	const canonical = `${baseUrl}${router.asPath === '/' ? '' : router.asPath}`.replace(/\/$/, '/');
 	return (
-		<SiteLayout>
-			<Script strategy="afterInteractive" data-domain="ziontechgroup.com" src="https://plausible.io/js/script.js" />
-			<SEO canonical={canonical} url={canonical} />
-			<Component {...pageProps} />
-		</SiteLayout>
+		<SEOContext.Consumer>
+			{(ctx) => {
+				const alreadyRendered = ctx?.renderedRef?.current;
+				if (alreadyRendered) return null;
+				if (!renderedRef.current) renderedRef.current = true;
+				return <SEO />;
+			}}
+		</SEOContext.Consumer>
+	);
+}
+
+export default function App({ Component, pageProps }: AppProps) {
+	const renderedRef = useRef(false);
+	return (
+		<SEOContext.Provider value={{ renderedRef }}>
+			<Analytics />
+			<div className={inter.className}>
+				<Layout>
+					<Component {...pageProps} />
+				</Layout>
+			</div>
+			<DefaultSEO />
+		</SEOContext.Provider>
 	);
 }
