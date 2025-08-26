@@ -1,189 +1,43 @@
-import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const FeaturesPage: React.FC = () => {
-  const features = [
-    {
-      title: "Autonomous Cloud Automations",
-      description: "227+ automated workflows that run continuously to maintain, optimize, and improve your application.",
-      icon: "🤖",
-      benefits: [
-        "Zero-downtime deployments",
-        "Automatic performance optimization",
-        "Continuous security monitoring",
-        "Self-healing infrastructure"
-      ]
-    },
-    {
-      title: "AI-Powered Content Generation",
-      description: "Advanced AI systems that create, optimize, and manage content automatically.",
-      icon: "🧠",
-      benefits: [
-        "SEO-optimized content creation",
-        "Automatic image optimization",
-        "Smart content scheduling",
-        "Performance analytics"
-      ]
-    },
-    {
-      title: "Advanced Monitoring & Analytics",
-      description: "Comprehensive monitoring with real-time insights and automated alerting.",
-      icon: "📊",
-      benefits: [
-        "Real-time performance metrics",
-        "Automated health checks",
-        "Security vulnerability scanning",
-        "Predictive maintenance"
-      ]
-    },
-    {
-      title: "Enterprise-Grade Security",
-      description: "Multi-layered security with automated threat detection and response.",
-      icon: "🔒",
-      benefits: [
-        "Automated security scanning",
-        "Vulnerability management",
-        "Compliance monitoring",
-        "Incident response automation"
-      ]
-    },
-    {
-      title: "Performance Optimization",
-      description: "Continuous performance monitoring and optimization for optimal user experience.",
-      icon: "⚡",
-      benefits: [
-        "Lighthouse score optimization",
-        "Image and asset optimization",
-        "Caching strategies",
-        "CDN integration"
-      ]
-    },
-    {
-      title: "Developer Experience",
-      description: "Streamlined development workflow with automated testing and deployment.",
-      icon: "👨‍💻",
-      benefits: [
-        "Automated testing suite",
-        "CI/CD pipeline",
-        "Code quality checks",
-        "Automated documentation"
-      ]
-    }
-  ];
-
+export default function FeaturesPage() {
   return (
-    <>
+    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
-        <title>Features - Zion App</title>
-        <meta name="description" content="Discover the powerful features of Zion App - autonomous cloud automations, AI-powered content generation, and advanced monitoring." />
-        <meta name="keywords" content="features, automation, AI, monitoring, security, performance" />
+        <title>Features — Zion</title>
+        <meta name="description" content="Explore Zion features in a futuristic, animated showcase." />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-        {/* Header */}
-        <header className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Powerful Features
-              </h1>
-              <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-                Experience the future of web applications with our cutting-edge features powered by AI and autonomous automation.
-              </p>
-            </div>
-          </div>
-        </header>
-
-        {/* Features Grid */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-blue-200 mb-6">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-blue-100">
-                      <span className="text-green-400 mr-2">✓</span>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Impressive Numbers
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">227+</div>
-                <div className="text-blue-200">Automations</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">2,960+</div>
-                <div className="text-blue-200">Pages</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-                <div className="text-blue-200">Uptime</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-yellow-400 mb-2">95+</div>
-                <div className="text-blue-200">Lighthouse Score</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-blue-200 mb-8">
-              Join thousands of developers building the future with Zion App.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="/automation"
-                className="bg-transparent border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-              >
-                View Automations
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="border-t border-white/20 mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="text-center text-blue-200">
-              <p>&copy; 2025 Zion App. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
+        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
+        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />
+        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid" />
+        <div className="absolute inset-0 bg-aurora opacity-[0.18]" />
+        <div className="absolute inset-0 beams opacity-[0.06]" />
       </div>
-    </>
-  );
-};
 
-export default FeaturesPage;
+      <main className="mx-auto max-w-7xl px-6 py-14">
+        <h1 className="text-4xl font-extrabold tracking-tight">Features</h1>
+        <p className="mt-2 max-w-2xl text-white/75">A curated, high-signal list of the core features that power Zion's autonomous cloud automations.</p>
+
+        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            { title: 'Autonomous Agents', desc: 'Self-improving systems that plan, apply, and validate changes.' },
+            { title: 'Repo Sync to Main', desc: 'Conservative edits committed and pushed continuously.' },
+            { title: 'Zero-Ops Cloud', desc: 'Fully managed cloud execution with safety guardrails.' },
+            { title: 'Observability', desc: 'Reports, dashboards, and health checks built-in.' },
+            { title: 'Scalable Factories', desc: 'Domain-specific automation factories on demand.' },
+            { title: 'Security & Safety', desc: 'Layered controls to minimize regressions.' },
+          ].map((f) => (
+            <article key={f.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+              <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+              <h2 className="text-lg font-semibold">{f.title}</h2>
+              <p className="mt-1 text-sm text-white/75">{f.desc}</p>
+            </article>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
