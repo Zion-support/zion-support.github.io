@@ -9,7 +9,18 @@ import {
   ArrowRight,
   CheckCircle,
   Star,
-  TrendingUp
+  TrendingUp,
+  Brain,
+  Cpu,
+  Database,
+  Lock,
+  Cloud,
+  Zap,
+  Rocket,
+  Leaf,
+  Eye,
+  Bot,
+  Globe2
 } from 'lucide-react';
 
 export default function Home() {
@@ -40,30 +51,100 @@ export default function Home() {
     }
   ];
 
-  const services = [
+  const coreServices = [
     {
       title: "AI Solutions",
       description: "Cutting-edge artificial intelligence services",
+      icon: Brain,
+      link: "/services",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Quantum Computing",
+      description: "Next-generation quantum solutions",
+      icon: Cpu,
+      link: "/services",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Blockchain Solutions",
+      description: "Decentralized and secure applications",
+      icon: Lock,
+      link: "/services",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "IoT & Edge Computing",
+      description: "Connected world solutions",
+      icon: Globe2,
+      link: "/services",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const innovativeServices = [
+    {
+      title: "FinTech Solutions",
+      description: "Digital banking, payments, and wealth management",
+      icon: "💰",
+      category: "Financial Technology"
+    },
+    {
+      title: "HealthTech Solutions",
+      description: "Telemedicine, AI diagnostics, and health monitoring",
+      icon: "🏥",
+      category: "Healthcare Technology"
+    },
+    {
+      title: "EdTech Solutions",
+      description: "AI-powered learning and virtual classrooms",
+      icon: "🎓",
+      category: "Educational Technology"
+    },
+    {
+      title: "GreenTech Solutions",
+      description: "Sustainability and energy management",
+      icon: "🌱",
+      category: "Environmental Technology"
+    },
+    {
+      title: "SpaceTech Solutions",
+      description: "Satellite data and space mission planning",
+      icon: "🚀",
+      category: "Space Technology"
+    },
+    {
+      title: "Robotics & Automation",
+      description: "Industrial and service robotics",
       icon: "🤖",
-      link: "/services"
+      category: "Automation Technology"
+    }
+  ];
+
+  const microSaasServices = [
+    {
+      title: "AI Content Generator",
+      description: "Advanced AI-powered content creation",
+      price: "From $79/month",
+      features: ["Multi-language support", "SEO optimization", "Brand consistency"]
     },
     {
-      title: "Tech Talent",
-      description: "Expert developers and engineers",
-      icon: "👨‍💻",
-      link: "/talent"
+      title: "Smart Social Media Scheduler",
+      description: "AI-powered social media management",
+      price: "From $49/month",
+      features: ["Multi-platform posting", "Optimal timing", "Analytics dashboard"]
     },
     {
-      title: "Equipment",
-      description: "High-performance tech infrastructure",
-      icon: "🖥️",
-      link: "/equipment"
+      title: "Invoice Automation Suite",
+      description: "Automated invoice processing",
+      price: "From $89/month",
+      features: ["OCR scanning", "Approval workflows", "Payment tracking"]
     },
     {
-      title: "Consulting",
-      description: "Strategic technology guidance",
-      icon: "💡",
-      link: "/consulting"
+      title: "AI Project Management",
+      description: "Intelligent project management",
+      price: "From $129/month",
+      features: ["Task prioritization", "Resource optimization", "Risk prediction"]
     }
   ];
 
@@ -82,7 +163,7 @@ export default function Home() {
               Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services
+              Pioneering the future with AI-powered solutions, quantum technology, blockchain, IoT, and innovative IT services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -127,20 +208,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Core Services Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Our Core Services
+              Our Core Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions to drive your business forward
+              Leading-edge technology solutions that drive innovation and transformation
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+            {coreServices.map((service, index) => (
+              <motion.div
+                key={index}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-400 mb-4">{service.description}</p>
+                <Link 
+                  to={service.link}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                >
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Innovative Solutions Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Innovative Industry Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Specialized technology solutions for emerging industries and cutting-edge applications
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {innovativeServices.map((service, index) => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
@@ -152,8 +272,48 @@ export default function Home() {
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-400 mb-4">{service.description}</p>
+                <div className="text-sm text-cyan-400 font-medium">{service.category}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Micro SaaS Showcase */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Micro SaaS Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Ready-to-deploy SaaS solutions that scale with your business needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {microSaasServices.map((service, index) => (
+              <motion.div
+                key={index}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-400 mb-4">{service.description}</p>
+                <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="text-sm text-gray-300 flex items-center">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
                 <Link 
-                  to={service.link}
+                  to="/services"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -173,13 +333,22 @@ export default function Home() {
           <p className="text-xl text-gray-300 mb-8">
             Join hundreds of companies already leveraging our cutting-edge technology solutions
           </p>
-          <Link 
-            to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-          >
-            Start Your Journey
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/services"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore All Services
+              <ArrowRight className="w-5 h-5 ml-2 inline" />
+            </Link>
+            <Link 
+              to="/contact"
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2 inline" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>
