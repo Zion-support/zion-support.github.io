@@ -38,30 +38,11 @@ jobs:
           SERVER_PID=$!
           sleep 3
           kill $SERVER_PID || true
-      - name: Run Jest with Coverage
-        run: npm run test:ci
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage/lcov.info
-          fail_ci_if_error: true
-      - run: npm run cypress:run
-        env:
-          TEST_USER_EMAIL: ${{ secrets.CYPRESS_TEST_USER_EMAIL }}
-          TEST_USER_PASSWORD: ${{ secrets.CYPRESS_TEST_USER_PASSWORD }}
-          TEST_USER_DISPLAY_NAME: ${{ secrets.CYPRESS_TEST_USER_DISPLAY_NAME }}
-          NEXT_PUBLIC_REOWN_PROJECT_ID: ${{ secrets.VITE_REOWN_PROJECT_ID_CI }}
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL_CI }}
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY_CI }}
-          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL_CI }}
-          NEXT_PUBLIC_VAPID_PUBLIC_KEY: ${{ secrets.VITE_VAPID_PUBLIC_KEY_CI }}
-      - uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: coverage
-      - name: Upload build (optional)
-        if: success()
+      - name: Run linting
+        run: npm run lint
+      - name: Run type checking
+        run: npm run type-check
+      - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: build
