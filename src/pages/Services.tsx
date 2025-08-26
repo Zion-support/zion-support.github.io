@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -99,51 +98,27 @@ export default function Services() {
       icon: Network,
       color: "from-teal-500 to-green-500",
       services: [
-        "IoT Platform Development",
+        "IoT Device Management",
         "Edge Computing Solutions",
-        "Sensor Integration",
-        "Device Management",
-        "Real-time Monitoring",
+        "Sensor Networks",
+        "Real-time Data Processing",
+        "IoT Security",
         "Smart City Solutions"
       ]
     }
   ];
 
-  const featuredServices = [
-    {
-      title: "AI Autonomous Business Platform",
-      description: "Complete AI-powered business automation platform",
-      icon: Rocket,
-      features: ["Process Automation", "Decision Intelligence", "Predictive Analytics", "24/7 Operations"],
-      link: "/services/ai-autonomous-business"
-    },
-    {
-      title: "Quantum Computing Solutions",
-      description: "Next-generation quantum computing services",
-      icon: Cpu,
-      features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Research & Development"],
-      link: "/services/quantum-computing"
-    },
-    {
-      title: "Advanced Cybersecurity Suite",
-      description: "Comprehensive security and compliance platform",
-      icon: Lock,
-      features: ["Threat Intelligence", "Automated Response", "Compliance Management", "Security Training"],
-      link: "/services/cybersecurity-suite"
-    }
-  ];
-
   const stats = [
-    { value: "500+", label: "Projects Delivered", description: "Successfully completed" },
-    { value: "99.9%", label: "Uptime", description: "Reliable service" },
-    { value: "24/7", label: "Support", description: "Round-the-clock assistance" },
-    { value: "50+", label: "Technologies", description: "Cutting-edge solutions" }
+    { value: "500+", label: "Projects Delivered", description: "Successful implementations", icon: "🚀" },
+    { value: "50+", label: "Expert Team", description: "Certified professionals", icon: "👥" },
+    { value: "99.9%", label: "Uptime", description: "Reliable infrastructure", icon: "⚡" },
+    { value: "24/7", label: "Support", description: "Always available", icon: "🛡️" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="pt-24 pb-20">
+      <section className="relative py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -151,66 +126,13 @@ export default function Services() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Our Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and technology solutions to transform your business
-            </p>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              From artificial intelligence to cybersecurity, cloud infrastructure to quantum computing, 
-              we provide cutting-edge solutions that drive innovation and growth.
+              Comprehensive technology solutions designed to drive your business forward
             </p>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Featured Services */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our flagship services that deliver exceptional value and results
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
-              <motion.div
-                key={index}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="inline-flex p-4 rounded-full mb-6 bg-gradient-to-r from-cyan-500 to-blue-600">
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                
-                <div className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-gray-400">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                
-                <Link 
-                  to={service.link}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
-                >
-                  Learn More →
-                </Link>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
