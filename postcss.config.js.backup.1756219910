@@ -1,11 +1,6 @@
-module.exports = {
+export default {
   plugins: {
-<<<<<<< HEAD
-    tailwindcss: {},
-=======
-    "@tailwindcss/postcss": {},
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e367
-    autoprefixer: {},
+    'tailwindcss': {},
+    'autoprefixer': {},
   },
-}
-
+};
