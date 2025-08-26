@@ -3,11 +3,19 @@ import react from '@vitejs/plugin-react';
 import path from 'node:path';
 
 export default defineConfig({
-	plugins: [react()],
+	plugins: [
+		react({
+			// Handle JSX in .js files
+			include: '**/*.{jsx,js,ts,tsx}',
+			// Fast refresh
+			fastRefresh: true,
+		})
+	],
 	resolve: {
 		alias: {
 			'@': path.resolve(__dirname, './src')
-		}
+		},
+		extensions: ['.js', '.jsx', '.ts', '.tsx']
 	},
 	build: {
 		target: 'esnext',
@@ -92,7 +100,12 @@ export default defineConfig({
 		__DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
 		__PROD__: JSON.stringify(process.env.NODE_ENV === 'production')
 	},
-	esbuild: { drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [] },
+	esbuild: { 
+		drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+		loader: 'jsx',
+		include: /src\/.*\.[tj]sx?$/,
+		exclude: []
+	},
 	worker: { format: 'es' },
 	envPrefix: ['VITE_', 'ZION_']
 });
