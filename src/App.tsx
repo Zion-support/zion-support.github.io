@@ -7,6 +7,8 @@ import { Footer } from './components/Footer';
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+const InnovativeServicesShowcase2026 = React.lazy(() => import('./pages/InnovativeServicesShowcase2026'));
+const ServicesOverview2026 = React.lazy(() => import('./pages/ServicesOverview2026'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -31,6 +33,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/innovative-services-2026" element={<InnovativeServicesShowcase2026 />} />
+              <Route path="/services-overview-2026" element={<ServicesOverview2026 />} />
             </Routes>
           </Suspense>
         </main>

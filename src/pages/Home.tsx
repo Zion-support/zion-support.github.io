@@ -45,7 +45,7 @@ export default function Home() {
       title: "AI Solutions",
       description: "Cutting-edge artificial intelligence services",
       icon: "🤖",
-      link: "/services"
+      link: "/innovative-services-2026"
     },
     {
       title: "Tech Talent",
@@ -160,6 +160,26 @@ export default function Home() {
                 </Link>
               </motion.div>
             ))}
+          </div>
+          
+          {/* New Services CTA */}
+          <div className="text-center mt-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/innovative-services-2026"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Explore All Innovative Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link 
+                to="/services-overview-2026"
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                View Services Overview
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
