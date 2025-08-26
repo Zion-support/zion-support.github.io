@@ -113,7 +113,4 @@ export default defineConfig({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     'process.env.VITE_APP_TITLE': JSON.stringify(process.env.VITE_APP_TITLE),
   },
-  esbuild: {
-    jsxInject: `import React from 'react'`,
-  },
 })

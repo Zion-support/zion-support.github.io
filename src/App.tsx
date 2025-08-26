@@ -26,7 +26,7 @@ const AISolutions = lazy(() => import('./pages/AISolutions'));
 const ServicesShowcase = lazy(() => import('./pages/ServicesShowcase'));
 const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
-const TalentsPage = lazy(() => import('./pages/TalentsPage'));
+const TalentsPage = lazy(() => import('./pages/Talents.js.jsx'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
 
 // New pages
@@ -81,10 +81,8 @@ const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
 // Additional missing pages from existing structure
-const Partners = React.lazy(() => import('./pages/Partners'));
-const Documentation = React.lazy(() => import('./pages/Documentation'));
-const Cookies = React.lazy(() => import('./pages/Cookies'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Documentation = lazy(() => import('./pages/Documentation'));
+const Cookies = lazy(() => import('./pages/Cookies'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -182,7 +180,6 @@ function App() {
               <Route path="/new-services" element={<NewServices />} />
 
               {/* Additional Routes */}
-              <Route path="/partners" element={<Partners />} />
               <Route path="/documentation" element={<Documentation />} />
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/sitemap" element={<Sitemap />} />

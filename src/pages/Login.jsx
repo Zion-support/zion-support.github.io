@@ -20,12 +20,8 @@ export default function Login() {
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
     // It runs when component mounts or location.search changes
-<<<<<<< HEAD
-    const params = new URLSearchParams(location.search);
-=======
     const queryString = location.search;
     const params = new URLSearchParams(queryString);
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
     const token = params.get('token');
     if (token) {
       safeStorage.setItem('zion_token', token);
@@ -39,17 +35,10 @@ export default function Login() {
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
-<<<<<<< HEAD
-      const next = new URLSearchParams(location.search).get('next') || '/dashboard';
-      navigate(next, { replace: true });
-    }
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
-=======
       const next = location.state?.from || '/dashboard';
       navigate(next, { replace: true });
     }
   }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
