@@ -1,18 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="/favicon.ico" />
-		<title>Zion Tech Group</title>
-		<script type="module" crossorigin src="/js/index-B7Pt_DTW.js"></script>
-		<link rel="modulepreload" crossorigin href="/js/react-vendor-DWHoJWbB.js">
-		<link rel="modulepreload" crossorigin href="/js/ui-vendor-BaIUalnj.js">
-		<link rel="modulepreload" crossorigin href="/js/animation-vendor-OjOi1Wja.js">
-		<link rel="modulepreload" crossorigin href="/js/icons-vendor-BD7CRG-o.js">
-		<link rel="stylesheet" crossorigin href="/css/index-DFnZGncG.css">
-	</head>
-	<body>
-		<div id="root"></div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Zion Tech Group - Innovative IT Solutions and Services" />
+    <meta name="keywords" content="IT services, technology solutions, digital transformation, AI, cloud computing" />
+    <meta name="author" content="Zion Tech Group" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ziontechgroup.com/" />
+    <meta property="og:title" content="Zion Tech Group - Innovative IT Solutions" />
+    <meta property="og:description" content="Leading provider of IT services, digital transformation, and innovative technology solutions." />
+    <meta property="og:image" content="/og-image.svg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ziontechgroup.com/" />
+    <meta property="twitter:title" content="Zion Tech Group - Innovative IT Solutions" />
+    <meta property="twitter:description" content="Leading provider of IT services, digital transformation, and innovative technology solutions." />
+    <meta property="twitter:image" content="/og-image.svg" />
+    
+    <title>Zion Tech Group - Innovative IT Solutions and Services</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="data:text/javascript;base64,Y29uc29sZS5sb2coIm1haW4udHN4OiBTdGFydCIpOwppbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnOwppbXBvcnQgeyBjcmVhdGVSb290LCBoeWRyYXRlUm9vdCB9IGZyb20gJ3JlYWN0LWRvbS9jbGllbnQnOwppbXBvcnQgQXBwIGZyb20gJy4vQXBwLmpzJzsKaW1wb3J0ICcuL2luZGV4LmNzcyc7Ci8vIGltcG9ydCB7IEhlbG1ldFByb3ZpZGVyIH0gZnJvbSAncmVhY3QtaGVsbWV0LWFzeW5jJzsKaW1wb3J0IHsgQnJvd3NlclJvdXRlciBhcyBSb3V0ZXIgfSBmcm9tICdyZWFjdC1yb3V0ZXItZG9tJzsKLy8gaW1wb3J0IHsgUXVlcnlDbGllbnQsIFF1ZXJ5Q2xpZW50UHJvdmlkZXIgfSBmcm9tICdAdGFuc3RhY2svcmVhY3QtcXVlcnknOwovLyBpbXBvcnQgJy4vdXRpbHMvZ2xvYmFsRmV0Y2hJbnRlcmNlcHRvcic7Ci8vIGltcG9ydCAnLi91dGlscy9jb25zb2xlRXJyb3JUb2FzdCc7Ci8vIEltcG9ydCBpMThuIGNvbmZpZ3VyYXRpb24KLy8gaW1wb3J0ICcuL2kxOG4nOwovLyBpbXBvcnQgeyBMYW5ndWFnZVByb3ZpZGVyIH0gZnJvbSAnQC9jb250ZXh0L0xhbmd1YWdlQ29udGV4dCc7Ci8vIGltcG9ydCB7IExhbmd1YWdlRGV0ZWN0aW9uUG9wdXAgfSBmcm9tICcuL2NvbXBvbmVudHMvTGFuZ3VhZ2VEZXRlY3Rpb25Qb3B1cCc7Ci8vIGltcG9ydCB7IFdoaXRlbGFiZWxQcm92aWRlciB9IGZyb20gJ0AvY29udGV4dC9XaGl0ZWxhYmVsQ29udGV4dCc7Ci8vIGltcG9ydCB7IEFwcExheW91dCB9IGZyb20gJ0AvbGF5b3V0L0FwcExheW91dCc7Ci8vIEltcG9ydCBhdXRoIGFuZCBub3RpZmljYXRpb24gcHJvdmlkZXJzCi8vIGltcG9ydCB7IEF1dGhQcm92aWRlciB9IGZyb20gJy4vY29udGV4dC9hdXRoL0F1dGhQcm92aWRlcic7Ci8vIGltcG9ydCB7IE5vdGlmaWNhdGlvblByb3ZpZGVyIH0gZnJvbSAnLi9jb250ZXh0L25vdGlmaWNhdGlvbnMvTm90aWZpY2F0aW9uQ29udGV4dCc7Ci8vIEltcG9ydCBhbmFseXRpY3MgcHJvdmlkZXIKLy8gaW1wb3J0IHsgQW5hbHl0aWNzUHJvdmlkZXIgfSBmcm9tICcuL2NvbnRleHQvQW5hbHl0aWNzQ29udGV4dCc7Ci8vIGltcG9ydCB7IFZpZXdNb2RlUHJvdmlkZXIgfSBmcm9tICcuL2NvbnRleHQvVmlld01vZGVDb250ZXh0JzsKLy8gSW5pdGlhbGl6ZSBhIFJlYWN0IFF1ZXJ5IGNsaWVudCB3aXRoIGdsb2JhbCBlcnJvciBoYW5kbGluZwpjb25zdCBxdWVyeUNsaWVudCA9IG5ldyBRdWVyeUNsaWVudCh7CiAgICBkZWZhdWx0T3B0aW9uczogewogICAgICAgIHF1ZXJpZXM6IHsKICAgICAgICAgICAgcmV0cnk6IDEsCiAgICAgICAgICAgIHJlZmV0Y2hPbldpbmRvd0ZvY3VzOiBmYWxzZSwKICAgICAgICB9LAogICAgfSwKfSk7CmNvbnN0IHJvb3RFbGVtZW50ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKTsKZnVuY3Rpb24gcmVuZGVyQXBwKCkgewogICAgY29uc3QgYXBwID0gUmVhY3QuY3JlYXRlRWxlbWVudChSZWFjdC5TdHJpY3RNb2RlLCBudWxsLAogICAgICAgIFJlYWN0LmNyZWF0ZUVsZW1lbnQoUm91dGVyLCBudWxsLAogICAgICAgICAgICBSZWFjdC5jcmVhdGVFbGVtZW50KEFwcCwgbnVsbCkKICAgICAgICApCiAgICApOwogICAgaWYgKHJvb3RFbGVtZW50Py5oYXNDaGlsZE5vZGVzKCkpIHsKICAgICAgICBoeWRyYXRlUm9vdChyb290RWxlbWVudCwgYXBwKTsKICAgIH0KICAgIGVsc2UgaWYgKHJvb3RFbGVtZW50KSB7CiAgICAgICAgY3JlYXRlUm9vdChyb290RWxlbWVudCkucmVuZGVyKGFwcCk7CiAgICB9Cn0KZnVuY3Rpb24gZGlzcGxheUZhdGFsRXJyb3IobWVzc2FnZSkgewogICAgaWYgKHJvb3RFbGVtZW50KSB7CiAgICAgICAgcm9vdEVsZW1lbnQuaW5uZXJIVE1MID0gYAogICAgICA8ZGl2IHN0eWxlPSJwYWRkaW5nOjIwcHg7dGV4dC1hbGlnbjpjZW50ZXI7Zm9udC1mYW1pbHk6c2Fucy1zZXJpZjsiPgogICAgICAgIDxoMT5BcHBsaWNhdGlvbiBFcnJvcjwvaDE+CiAgICAgICAgPHA+JHttZXNzYWdlfTwvcD4KICAgICAgPC9kaXY+YDsKICAgIH0KfQp0cnkgewogICAgcmVuZGVyQXBwKCk7Cn0KY2F0Y2ggKGVycm9yKSB7CiAgICBjb25zb2xlLmVycm9yKCdHbG9iYWwgZXJyb3IgY2F1Z2h0IGluIG1haW4udHN4OicsIGVycm9yKTsKICAgIGRpc3BsYXlGYXRhbEVycm9yKGVycm9yLm1lc3NhZ2UpOwp9CndpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdlcnJvcicsIChlKSA9PiB7CiAgICBjb25zb2xlLmVycm9yKCdVbmhhbmRsZWQgZXJyb3I6JywgZS5lcnJvciB8fCBlLm1lc3NhZ2UpOwogICAgZGlzcGxheUZhdGFsRXJyb3IoZS5tZXNzYWdlKTsKfSk7Ci8vIFJlbmRlciB0aGUgYXBwIHdpdGggcHJvcGVyIHByb3ZpZGVyIHN0cnVjdHVyZQovLyBOb3RlOiBUaGlzIHNlY3Rpb24gd2FzIGNvbW1lbnRlZCBvdXQgYXMgaXQgd2FzIGNhdXNpbmcgZHVwbGljYXRlIHJlbmRlcmluZwovLyBUaGUgbWFpbiByZW5kZXIgZnVuY3Rpb24gYWJvdmUgaGFuZGxlcyB0aGUgYXBwIHJlbmRlcmluZwo=" as="script" />
+    
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Theme color -->
+    <meta name="theme-color" content="#0f172a" />
+    <script type="module" crossorigin src="/js/index-D4Bd14hM.js"></script>
+    <link rel="modulepreload" crossorigin href="/js/react-vendor-Cw4sjrTC.js">
+    <link rel="modulepreload" crossorigin href="/js/ui-vendor-g283TRn-.js">
+    <link rel="modulepreload" crossorigin href="/js/utils-vendor-BkLtITBR.js">
+    <link rel="modulepreload" crossorigin href="/js/icons-vendor-BGhtKnbn.js">
+    <link rel="modulepreload" crossorigin href="/js/animation-vendor-DnafI8Q5.js">
+    <link rel="stylesheet" crossorigin href="/css/index-D-dgUFof.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
