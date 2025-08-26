@@ -27,33 +27,7 @@ import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
 import { realMarketServicesExtended } from '../../data/real-market-services-extended';
 import { real2026Additions } from '../../data/real-2026-additions';
 import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
-import { added2026Q2Services } from '../../data/added-2026-q2-services';
-import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
-import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
-import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
-import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
-import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
-import { real2028ServiceExpansions } from '../../data/real-2028-service-expansions';
-
-import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
-import { realMarketServices } from '../../data/real-market-services';
-import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
-import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
-import { real2030Q1Additions } from '../../data/real-2030-q1-additions';
-import { enterpriseITSolutions } from '../../data/2034-enterprise-it-solutions';
-import { innovativeMicroSaasSolutions } from '../../data/2034-innovative-micro-saas-solutions';
-import { cuttingEdgeAIServices } from '../../data/2034-cutting-edge-ai-services';
-import { real2031MicroSaasAdditions } from '../../data/real-2031-micro-saas-additions';
-import { real2031ITServicesAdditions } from '../../data/real-2031-it-services-additions';
-import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-additions';
-import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
-import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
-import { aiAutonomousEcosystemServices2029 } from '../../data/2029-ai-autonomous-ecosystem';
-import { emergingTechBreakthroughServices2029 } from '../../data/2029-emerging-tech-breakthroughs';
-import { practicalBusinessSolutionServices2029 } from '../../data/2029-practical-business-solutions';
-import { professionalServices } from '../../data/professional-services';
-import { real2032ServiceExpansions } from '../../data/real-2032-service-expansions';
-import { real2026Q2VerifiedAdditions } from '../../data/real-2026-q2-verified-additions';
+import { real2026Q2Additions } from '../../data/real-2026-q2-additions';
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
@@ -86,31 +60,8 @@ function getAllServices(): Service[] {
 		.concat(real2025Q4Additions as unknown as Service[])
 		.concat(realMarketServicesExtended as unknown as Service[])
 		.concat(real2026Q1Additions as unknown as Service[])
-		.concat(real2026Additions as unknown as Service[])
-		.concat(added2026Q2Services as unknown as Service[])
-		.concat(real2026Q3Additions as unknown as Service[])
-		.concat(real2026Q4Additions as unknown as Service[])
-		.concat(real2026Q4NewServices as unknown as Service[])
-		.concat(real2027Q1Additions as unknown as Service[])
-		.concat(real2027Q2Additions as unknown as Service[])
-		.concat(real2028ServiceExpansions as unknown as Service[])
-		.concat(real2029Q1Additions as unknown as Service[])
-		.concat(realMarketServices as unknown as Service[])
-		.concat(real2029Q2Additions as unknown as Service[])
-		.concat(real2029Q3Additions as unknown as Service[])
-		.concat(real2030Q1Additions as unknown as Service[])
-		.concat(real2030Q2Additions as unknown as Service[])
-		.concat(real2031MicroSaasAdditions as unknown as Service[])
-		.concat(real2031ITServicesAdditions as unknown as Service[])
-		.concat(real2031AIServicesAdditions as unknown as Service[])
-		.concat(real2027Q3Additions as unknown as Service[])
-		// 2029 showcase/pricing arrays to ensure matching /services/* pages are generated
-		.concat(aiAutonomousEcosystemServices2029 as unknown as Service[])
-		.concat(emergingTechBreakthroughServices2029 as unknown as Service[])
-		.concat(practicalBusinessSolutionServices2029 as unknown as Service[])
-		.concat(professionalServices as unknown as Service[])
-		.concat(real2032ServiceExpansions as unknown as Service[])
-		.concat(real2026Q2VerifiedAdditions as unknown as Service[]);
+		.concat(real2026Q2Additions as unknown as Service[])
+		.concat(real2026Additions as unknown as Service[]);
 }
 
 function toSlug(value: string): string {
@@ -181,7 +132,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline || service.description} />
-				<link rel="canonical" href={service.link || `https://ziontechgroup.com/services/${(service.id || service.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} />
+				<link rel="canonical" href={service.link} />
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
