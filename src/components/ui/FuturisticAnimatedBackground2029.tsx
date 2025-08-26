@@ -5,46 +5,29 @@ interface FuturisticAnimatedBackground2029Props {
   children?: React.ReactNode;
   className?: string;
   intensity?: number;
-  theme?: string;
+  theme?: 'cyberpunk' | 'holographic' | 'quantum';
 }
 
 export const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({ 
   children, 
   className = '',
-  intensity = 1,
-  theme = 'default'
-}) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-interface FuturisticAnimatedBackground2029Props {
-  intensity?: number;
-  theme?: 'cyberpunk' | 'holographic' | 'quantum';
-}
-
-const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({
   intensity = 0.8,
   theme = 'cyberpunk'
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
-=======
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    let animationFrameId: number;
-    let particles: Array<{
     if (!canvas) return;
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const particles: Array<{
-=======
       x: number;
       y: number;
       vx: number;
@@ -52,45 +35,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       size: number;
       opacity: number;
       color: string;
-      type: 'particle' | 'energy' | 'data';
-    }> = [];
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    const createParticles = () => {
-      particles = [];
-      const particleCount = Math.floor((canvas.width * canvas.height) / 15000);
-      
-      for (let i = 0; i < particleCount; i++) {
-        const type = Math.random() > 0.7 ? 'energy' : Math.random() > 0.5 ? 'data' : 'particle';
-        let color: string;
-        
-        switch (type) {
-          case 'energy':
-            color = `hsl(${Math.random() * 60 + 180}, 80%, 70%)`;
-            break;
-          case 'data':
-            color = `hsl(${Math.random() * 60 + 280}, 70%, 60%)`;
-            break;
-          default:
-            color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`;
-        }
-        
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.8 * intensity,
-          vy: (Math.random() - 0.5) * 0.8 * intensity,
-          size: Math.random() * 3 + 1,
-          opacity: Math.random() * 0.6 + 0.2,
-          color,
-          type
-        });
-      }
-    };
       type: 'particle' | 'wave' | 'grid';
     }> = [];
 
@@ -115,7 +59,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         type: Math.random() > 0.7 ? 'wave' : Math.random() > 0.5 ? 'grid' : 'particle'
       });
     }
-=======
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -141,7 +84,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-=======
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
@@ -153,42 +95,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
 
-        // Draw particle based on type
-        ctx.beginPath();
-        if (particle.type === 'energy') {
-          // Draw energy particle as a star
-          const spikes = 5;
-          const outerRadius = particle.size;
-          const innerRadius = particle.size * 0.5;
-          
-          for (let i = 0; i < spikes * 2; i++) {
-            const angle = (i * Math.PI) / spikes;
-            const radius = i % 2 === 0 ? outerRadius : innerRadius;
-            const x = particle.x + Math.cos(angle) * radius;
-            const y = particle.y + Math.sin(angle) * radius;
-            
-            if (i === 0) {
-              ctx.moveTo(x, y);
-            } else {
-              ctx.lineTo(x, y);
-            }
-          }
-          ctx.closePath();
-        } else if (particle.type === 'data') {
-          // Draw data particle as a square
-          const size = particle.size;
-          ctx.rect(particle.x - size/2, particle.y - size/2, size, size);
-        } else {
-          // Draw regular particle as a circle
-          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        }
-        
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
-        ctx.fill();
-
-        // Draw connecting lines for nearby particles
-        particles.slice(index + 1).forEach(otherParticle => {
         // Draw based on type
         if (particle.type === 'particle') {
           ctx.beginPath();
@@ -213,28 +119,10 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         particles.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
           
-=======
           const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) + 
             Math.pow(particle.y - otherParticle.y, 2)
           );
-          
-          if (distance < 120) {
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-            
-            let lineColor: string;
-            if (particle.type === 'energy' || otherParticle.type === 'energy') {
-              lineColor = `rgba(100, 200, 255, ${0.15 * (1 - distance / 120) * intensity})`;
-            } else if (particle.type === 'data' || otherParticle.type === 'data') {
-              lineColor = `rgba(200, 100, 255, ${0.12 * (1 - distance / 120) * intensity})`;
-            } else {
-              lineColor = `rgba(100, 150, 255, ${0.1 * (1 - distance / 120) * intensity})`;
-            }
-            
-            ctx.strokeStyle = lineColor;
-            ctx.lineWidth = 0.8;
 
           if (distance < 200) {
             ctx.beginPath();
@@ -242,7 +130,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 200) * 0.2 * 255).toString(16).padStart(2, '0')}`;
             ctx.lineWidth = 0.5;
-=======
             ctx.stroke();
           }
         });
@@ -351,22 +238,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         ctx.restore();
       });
 
-      animationFrameId = requestAnimationFrame(animate);
-    };
-
-    resizeCanvas();
-    createParticles();
-    animate();
-
-    window.addEventListener('resize', () => {
-      resizeCanvas();
-      createParticles();
-    });
-
-    return () => {
-      if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId);
-      }
       // Add theme-specific effects
       if (theme === 'cyberpunk') {
         ctx.save();
@@ -446,7 +317,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         cancelAnimationFrame(animationRef.current);
       }
       window.removeEventListener('resize', handleResize);
-=======
     };
   }, [intensity, theme]);
 
@@ -523,15 +393,6 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         }}
       />
     </div>
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0"
-      style={{
-        opacity: intensity,
-        filter: theme === 'cyberpunk' ? 'blur(0.3px)' : 'none'
-      }}
-    />
-=======
   );
 };
 
