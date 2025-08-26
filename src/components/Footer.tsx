@@ -56,11 +56,11 @@ const footerNavigation = {
   marketplace: {
     title: 'Marketplace',
     items: [
-      { name: 'Products', href: '/marketplace' },
+      { name: 'Products', href: '/marketplace/products' },
       { name: 'Services', href: '/services' },
       { name: 'Talent', href: '/talent' },
       { name: 'Equipment', href: '/equipment' },
-      { name: 'Categories', href: '/categories' },
+      { name: 'Categories', href: '/marketplace' },
       { name: 'Green IT', href: '/green-it' },
       { name: 'IT Onsite Services', href: '/it-onsite-services' },
     ],
