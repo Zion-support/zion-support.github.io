@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2025-08-26T13:33:15.499Z",
+  "functions": [
+    {
+      "name": "osv_dependency_audit",
+      "path": "/.netlify/functions/osv_dependency_audit"
+    },
+    {
+      "name": "external_link_audit",
+      "path": "/.netlify/functions/external_link_audit"
+    },
+    {
+      "name": "automation_summary",
+      "path": "/.netlify/functions/automation_summary"
+    },
+    {
+      "name": "readme_badges_updater",
+      "path": "/.netlify/functions/readme_badges_updater"
+    }
+  ]
+}
