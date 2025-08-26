@@ -7,17 +7,17 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import Blog from './pages/Blog';
+import NotFound from './pages/NotFound';
 import Careers from './pages/Careers';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
-import NotFound from './pages/NotFound';
 
-// Service Pages
-import AISolutions from './pages/services/AI';
-import CloudDevOps from './pages/services/Cloud';
+// Service Detail Pages
+import AISolutions from './pages/services/AISolutions';
+import CloudDevOps from './pages/services/CloudDevOps';
 import Cybersecurity from './pages/services/Cybersecurity';
-import Infrastructure from './pages/services/Infrastructure';
-import DigitalTransformation from './pages/services/Transformation';
+import ITInfrastructure from './pages/services/ITInfrastructure';
+import DigitalTransformation from './pages/services/DigitalTransformation';
 import Consulting from './pages/services/Consulting';
 
 function App() {
@@ -36,11 +36,11 @@ function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             
-            {/* Service Routes */}
+            {/* Service Detail Routes */}
             <Route path="/services/ai" element={<AISolutions />} />
             <Route path="/services/cloud" element={<CloudDevOps />} />
             <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-            <Route path="/services/infrastructure" element={<Infrastructure />} />
+            <Route path="/services/infrastructure" element={<ITInfrastructure />} />
             <Route path="/services/transformation" element={<DigitalTransformation />} />
             <Route path="/services/consulting" element={<Consulting />} />
             

@@ -2,50 +2,50 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const Consulting: React.FC = () => {
-  const consultingServices = [
+const CloudDevOps: React.FC = () => {
+  const cloudServices = [
     {
-      title: "Technology Assessment",
-      description: "Comprehensive evaluation of your current technology landscape and capabilities",
-      features: ["Infrastructure Review", "Technology Stack Analysis", "Gap Identification", "Recommendations"],
-      icon: "🔍"
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud platforms with minimal downtime",
+      features: ["AWS Migration", "Azure Migration", "Google Cloud Migration", "Multi-cloud Strategy"],
+      icon: "☁️"
     },
     {
-      title: "Strategic Planning",
-      description: "Develop long-term technology strategy aligned with business objectives",
-      features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
-      icon: "📋"
+      title: "DevOps Automation",
+      description: "Streamline development and operations with automated pipelines",
+      features: ["CI/CD Pipelines", "Infrastructure as Code", "Automated Testing", "Deployment Automation"],
+      icon: "⚡"
     },
     {
-      title: "Vendor Selection",
-      description: "Expert guidance in selecting the right technology partners and solutions",
-      features: ["Requirements Analysis", "Vendor Evaluation", "Contract Negotiation", "Implementation Support"],
-      icon: "🤝"
+      title: "Container Orchestration",
+      description: "Manage and scale containerized applications efficiently",
+      features: ["Kubernetes", "Docker", "Service Mesh", "Microservices Architecture"],
+      icon: "📦"
     },
     {
-      title: "Project Management",
-      description: "Professional project management for successful technology implementations",
-      features: ["Project Planning", "Team Coordination", "Timeline Management", "Quality Assurance"],
-      icon: "📊"
+      title: "Infrastructure as Code",
+      description: "Version-controlled infrastructure management and deployment",
+      features: ["Terraform", "CloudFormation", "Ansible", "Infrastructure Automation"],
+      icon: "🏗️"
     }
   ];
 
-  const consultingApproach = [
-    { step: "Discovery", icon: "🔍", description: "Understand your business needs and challenges" },
-    { step: "Analysis", icon: "📊", description: "Analyze current state and identify opportunities" },
-    { step: "Strategy", icon: "🎯", description: "Develop comprehensive recommendations" },
-    { step: "Implementation", icon: "🚀", description: "Execute strategy with ongoing support" }
+  const cloudPlatforms = [
+    { name: "Amazon Web Services", icon: "🔶", description: "Enterprise-grade cloud solutions" },
+    { name: "Microsoft Azure", icon: "🔷", description: "Hybrid cloud and enterprise integration" },
+    { name: "Google Cloud Platform", icon: "🔸", description: "AI-first cloud infrastructure" },
+    { name: "Multi-Cloud", icon: "🌈", description: "Best-of-breed cloud strategy" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Consulting — Zion Tech Group | Technology Strategy & Advisory</title>
-        <meta name="description" content="Get expert technology consulting from Zion Tech Group. Technology assessment, strategic planning, vendor selection, and project management services." />
-        <meta property="og:title" content="Consulting — Zion Tech Group" />
-        <meta property="og:description" content="Leading technology consulting services including strategic planning, vendor selection, and project management." />
-        <meta property="og:url" content="https://ziontechgroup.com/services/consulting" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/consulting" />
+        <title>Cloud & DevOps — Zion Tech Group | Cloud Migration & DevOps Services</title>
+        <meta name="description" content="Transform your infrastructure with Zion Tech Group's cloud migration and DevOps automation services. AWS, Azure, GCP, and container orchestration." />
+        <meta property="og:title" content="Cloud & DevOps — Zion Tech Group" />
+        <meta property="og:description" content="Leading cloud migration, DevOps automation, and infrastructure as code services." />
+        <meta property="og:url" content="https://ziontechgroup.com/services/cloud" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/cloud" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
@@ -53,21 +53,21 @@ const Consulting: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Technology
+              Cloud &
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Consulting
+                {" "}DevOps
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Make informed technology decisions with expert guidance. Our consulting services 
-              help you navigate complex technology choices and maximize your technology investment.
+              Accelerate your digital transformation with modern cloud infrastructure, 
+              automated DevOps practices, and scalable solutions that grow with your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
-                Get Consultation
+                Get Cloud Consultation
               </Link>
               <Link
                 to="/services"
@@ -79,47 +79,47 @@ const Consulting: React.FC = () => {
           </div>
         </section>
 
-        {/* Consulting Approach */}
+        {/* Cloud Platforms */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Consulting Approach
+                Cloud Platform Expertise
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                A proven methodology for delivering strategic technology guidance
+                Certified experts across all major cloud platforms
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {consultingApproach.map((step, index) => (
+              {cloudPlatforms.map((platform, index) => (
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center"
                 >
-                  <div className="text-4xl mb-4">{step.icon}</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{step.step}</h3>
-                  <p className="text-sm text-gray-300">{step.description}</p>
+                  <div className="text-4xl mb-4">{platform.icon}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{platform.name}</h3>
+                  <p className="text-sm text-gray-300">{platform.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Consulting Services Grid */}
+        {/* Cloud Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Consulting Services
+                Our Cloud & DevOps Services
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive consulting solutions to guide your technology decisions
+                Comprehensive solutions to modernize your infrastructure and accelerate delivery
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {consultingServices.map((service, index) => (
+              {cloudServices.map((service, index) => (
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
@@ -150,10 +150,10 @@ const Consulting: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Consulting Services?
+                Why Choose Our Cloud & DevOps Solutions?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Proven expertise and methodologies to maximize your technology success
+                Proven expertise and best practices to maximize your cloud investment
               </p>
             </div>
             
@@ -161,11 +161,11 @@ const Consulting: React.FC = () => {
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Expert Guidance</h3>
-                <p className="text-gray-300">Seasoned consultants with deep industry expertise</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Faster Deployment</h3>
+                <p className="text-gray-300">Automated pipelines reduce deployment time from days to minutes</p>
               </div>
               
               <div className="text-center">
@@ -174,18 +174,18 @@ const Consulting: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Cost Savings</h3>
-                <p className="text-gray-300">Avoid costly mistakes and optimize technology investments</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Cost Optimization</h3>
+                <p className="text-gray-300">Right-size resources and implement cost management strategies</p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
-                <p className="text-gray-300">Track record of successful technology implementations</p>
+                <h3 className="text-xl font-semibold text-white mb-3">Reliability</h3>
+                <p className="text-gray-300">High availability and disaster recovery for business continuity</p>
               </div>
             </div>
           </div>
@@ -195,16 +195,16 @@ const Consulting: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready for Expert Technology Guidance?
+              Ready to Scale Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our consulting services can help optimize your technology strategy
+              Let's discuss how our cloud and DevOps solutions can accelerate your digital transformation
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
-              Get Expert Consultation
+              Start Your Cloud Journey
             </Link>
           </div>
         </section>
@@ -213,4 +213,4 @@ const Consulting: React.FC = () => {
   );
 };
 
-export default Consulting;
+export default CloudDevOps;

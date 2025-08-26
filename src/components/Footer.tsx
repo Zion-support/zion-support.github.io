@@ -3,24 +3,24 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const services = [
-    { name: "AI Solutions", path: "/services/ai" },
-    { name: "Cloud & DevOps", path: "/services/cloud" },
-    { name: "Cybersecurity", path: "/services/cybersecurity" },
-    { name: "IT Infrastructure", path: "/services/infrastructure" },
-    { name: "Digital Transformation", path: "/services/transformation" },
-    { name: "Consulting", path: "/services/consulting" }
+    { name: 'AI Solutions', href: '/services/ai' },
+    { name: 'Cloud & DevOps', href: '/services/cloud' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'IT Infrastructure', href: '/services/infrastructure' },
+    { name: 'Digital Transformation', href: '/services/transformation' },
+    { name: 'Consulting', href: '/services/consulting' }
   ];
 
   const company = [
-    { name: "About Us", path: "/about" },
-    { name: "Careers", path: "/careers" },
-    { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/contact" }
+    { name: 'About Us', href: '/about' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   const legal = [
-    { name: "Privacy Policy", path: "/privacy" },
-    { name: "Terms of Service", path: "/terms" }
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' }
   ];
 
   const socialLinks = [
@@ -61,7 +61,8 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. We help businesses thrive in the digital age.
+              Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. 
+              We help businesses navigate the future of technology with confidence.
             </p>
             
             {/* Social Links */}
@@ -86,9 +87,9 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
               {services.map((service) => (
-                <li key={service.path}>
+                <li key={service.name}>
                   <Link 
-                    to={service.path} 
+                    to={service.href} 
                     className="text-gray-300 hover:text-white transition-colors duration-300"
                   >
                     {service.name}
@@ -103,9 +104,9 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               {company.map((item) => (
-                <li key={item.path}>
+                <li key={item.name}>
                   <Link 
-                    to={item.path} 
+                    to={item.href} 
                     className="text-gray-300 hover:text-white transition-colors duration-300"
                   >
                     {item.name}
@@ -120,9 +121,9 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Legal</h4>
             <ul className="space-y-2">
               {legal.map((item) => (
-                <li key={item.path}>
+                <li key={item.name}>
                   <Link 
-                    to={item.path} 
+                    to={item.href} 
                     className="text-gray-300 hover:text-white transition-colors duration-300"
                   >
                     {item.name}
@@ -157,12 +158,18 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
+              © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <span className="text-gray-400 text-sm">
-                Made with ❤️ in San Francisco
-              </span>
+              {legal.map((item) => (
+                <Link 
+                  key={item.name}
+                  to={item.href} 
+                  className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
