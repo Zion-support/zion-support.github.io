@@ -4,12 +4,13 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Zap, Users, Brain, Sparkles, Star, TrendingUp, Shield } from "lucide-react";
-import { useRef } from "react";
+import { ArrowRight, Zap, Users, Brain, Sparkles, Star, TrendingUp, Shield, Cloud } from "lucide-react";
+import { useRef, useEffect, useState } from "react";
 
 export function HeroSection() {
   const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"]
@@ -17,6 +18,10 @@ export function HeroSection() {
   
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -78,15 +83,20 @@ export function HeroSection() {
   };
 
   return (
-    <section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
+    <section 
+      ref={containerRef} 
+      className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center"
+      aria-label="Hero section - Zion Tech Group introduction"
+    >
       {/* Enhanced background with parallax effect */}
       <motion.div 
         className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"
         style={{ y, opacity }}
+        aria-hidden="true"
       />
       
       {/* Animated floating particles with better positioning and variety */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" aria-hidden="true">
         <motion.div 
           className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-purple-light opacity-60"
           variants={floatingVariants}
@@ -98,104 +108,103 @@ export function HeroSection() {
           animate="animate"
         />
         <motion.div 
-          className="absolute bottom-1/4 left-1/3 w-3 h-3 rounded-full bg-zion-cyan-light opacity-70"
+          className="absolute bottom-1/3 left-1/3 w-3 h-3 rounded-full bg-zion-blue-light opacity-70"
           variants={particleVariants}
           animate="animate"
         />
         <motion.div 
-          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-purple opacity-40"
-          variants={floatingVariants}
+          className="absolute top-2/3 right-1/4 w-5 h-5 rounded-full bg-zion-purple opacity-40"
+          variants={pulseVariants}
           animate="animate"
         />
       </div>
 
-      {/* Main content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
-          className="text-center max-w-5xl mx-auto"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {/* Main heading with enhanced typography */}
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
-            variants={itemVariants}
-          >
-            <span className="bg-gradient-to-r from-white via-zion-cyan to-zion-purple-light bg-clip-text text-transparent">
-              {t("hero.title", "Transform Your Business with AI")}
+      {/* Main content container */}
+      <motion.div 
+        className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+      >
+        {/* Enhanced heading with better typography */}
+        <motion.div variants={itemVariants} className="mb-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
+              Zion Tech Group
             </span>
-          </motion.h1>
-
-          {/* Subtitle with better readability */}
-          <motion.p 
-            className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed"
-            variants={itemVariants}
-          >
-            {t("hero.subtitle", "Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Accelerate your growth with Zion Tech Group.")}
-          </motion.p>
-
-          {/* Enhanced CTA buttons */}
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-            variants={itemVariants}
-          >
-            <Button 
-              asChild
-              size="lg"
-              className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              <Link to="/contact">
-                <Zap className="mr-2 h-5 w-5" />
-                {t("hero.get_started", "Get Started")}
-              </Link>
-            </Button>
-            
-            <Button 
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
-            >
-              <Link to="/services">
-                <Users className="mr-2 h-5 w-5" />
-                {t("hero.explore_services", "Explore Services")}
-              </Link>
-            </Button>
-          </motion.div>
-
-          {/* Trust indicators */}
-          <motion.div 
-            className="flex flex-wrap justify-center items-center gap-8 text-zion-slate-light"
-            variants={itemVariants}
-          >
-            <div className="flex items-center gap-2">
-              <Star className="h-5 w-5 text-zion-cyan" />
-              <span className="text-sm font-medium">500+ Clients Served</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5 text-zion-purple" />
-              <span className="text-sm font-medium">99.9% Uptime</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Shield className="h-5 w-5 text-zion-cyan-light" />
-              <span className="text-sm font-medium">Enterprise Security</span>
-            </div>
-          </motion.div>
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 mb-6 max-w-4xl mx-auto leading-relaxed">
+            Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services
+          </p>
         </motion.div>
-      </div>
+
+        {/* Enhanced CTA buttons with better accessibility */}
+        <motion.div 
+          variants={itemVariants}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+        >
+          <Link 
+            to="/services" 
+            className="group relative px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg font-semibold text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-slate"
+            aria-label="Explore our comprehensive technology services"
+          >
+            <span className="flex items-center gap-2">
+              Explore Our Services
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </span>
+          </Link>
+          
+          <Link 
+            to="/contact" 
+            className="group relative px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-slate"
+            aria-label="Get started with Zion Tech Group"
+          >
+            <span className="flex items-center gap-2">
+              Get Started
+              <Zap className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+            </span>
+          </Link>
+        </motion.div>
+
+        {/* Enhanced feature highlights */}
+        <motion.div 
+          variants={itemVariants}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
+        >
+          {[
+            { icon: Brain, label: "AI & Machine Learning", description: "Cutting-edge AI solutions" },
+            { icon: Shield, label: "Cybersecurity", description: "Advanced security protocols" },
+            { icon: Cloud, label: "Cloud & DevOps", description: "Scalable cloud infrastructure" },
+            { icon: Zap, label: "Innovation", description: "Future-ready technology" }
+          ].map((feature, index) => (
+            <motion.div
+              key={index}
+              className="text-center group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan/20 rounded-full mb-4 group-hover:bg-zion-cyan/30 transition-colors duration-300">
+                <feature.icon className="w-8 h-8 text-zion-cyan" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">{feature.label}</h3>
+              <p className="text-sm text-white/70">{feature.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
 
       {/* Scroll indicator */}
       <motion.div 
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.8 }}
       >
         <div className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center">
-          <motion.div 
+          <motion.div
             className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
             animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            transition={{ duration: 1.5, repeat: Infinity }}
           />
         </div>
       </motion.div>
