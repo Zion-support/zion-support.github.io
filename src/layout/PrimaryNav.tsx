@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { Link } from 'react-router-dom';
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import { UserMenu } from '@/components/header/UserMenu';
@@ -32,7 +31,6 @@ export function PrimaryNav() {
   const isLoggedIn = !!user;
   const isMobile = useIsMobile();
   const { t } = useTranslation();
-  const router = useRouter();
   const [query, setQuery] = useState('');
   const suggestions = generateSearchSuggestions();
 
@@ -51,8 +49,6 @@ export function PrimaryNav() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
-      console.log('PrimaryNav search submit:', query);
-      router.push(`/search/${slugify(query)}`);
       setQuery('');
     }
   };
@@ -81,31 +77,7 @@ export function PrimaryNav() {
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-                  console.log('PrimaryNav search suggestion selected:', sugg);
-                  // Handle different suggestion types with proper navigation
-                  if (sugg.id) {
-                    // Product listings with IDs go to product detail page
-                    router.push(`/marketplace/listing/${sugg.id}`);
-                  } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
-                    // Documentation suggestions navigate directly to their path
-                    router.push(sugg.slug);
-                  } else if (sugg.type === 'blog' && sugg.slug) {
-                    // Blog posts navigate to blog detail page
-                    router.push(`/blog/${sugg.slug}`);
-                  } else {
-                    // Default: search results page with slug
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
-                  }
                   setQuery('');
-                  
-                  // Track analytics event
-                  if (typeof window !== 'undefined' && window.gtag) {
-                    window.gtag('event', 'search_suggestion_click', {
-                      search_term: sugg.text,
-                      suggestion_type: sugg.type,
-                      suggestion_id: sugg.id || sugg.slug
-                    });
-                  }
                 }}
                 searchSuggestions={suggestions}
               />
@@ -130,7 +102,7 @@ export function PrimaryNav() {
                 </PopoverTrigger>
                 <PopoverContent className="w-56" align="end">
                   <MiniCartPreview />
-                  <Link href="/cart" className="mt-2 block text-sm text-primary hover:underline">
+                  <Link to="/cart" className="mt-2 block text-sm text-primary hover:underline">
                     {t('cart.view_cart', 'View Cart')}
                   </Link>
                 </PopoverContent>
@@ -148,29 +120,27 @@ export function PrimaryNav() {
               {!isLoggedIn && (
                 <>
                   <Link
-                    href="/auth/login"
+                    to="/auth/login"
                     className="text-sm hover:text-primary whitespace-nowrap"
                     data-testid="login-link"
                   >
                     {t('auth.login')}
                   </Link>
                   <Link
-                    href="/signup"
+                    to="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
                   >
                     {t('auth.signup')}
                   </Link>
                 </>
               )}
-            </Link>
-            <LanguageSelector />
-            <ModeToggle />
+            </div>
             {!isLoggedIn && (
               <>
-                <Link href="/login" className="text-sm hover:text-primary" data-testid="login-link">
+                <Link to="/login" className="text-sm hover:text-primary" data-testid="login-link">
                   {t('login', 'Login')}
                 </Link>
-                <Link href="/signup" className="ml-2 text-sm hover:text-primary">
+                <Link to="/signup" className="ml-2 text-sm hover:text-primary">
                   {t('signup', 'Sign up')}
                 </Link>
               </>

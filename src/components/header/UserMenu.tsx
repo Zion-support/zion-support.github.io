@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react';
+import { User } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
 export const UserMenu: React.FC = () => {
@@ -41,25 +41,15 @@ export const UserMenu: React.FC = () => {
         <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
           <User className="w-4 h-4 text-black" />
         </div>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem asChild>
-          <Link to="/dashboard">Dashboard</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link to="/profile">Profile</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link to="/saved-talents">Saved Talents</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link to="/wallet">Wallet</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem asChild>
-          <Link to="/orders">Order History</Link>
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+      </button>
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-lg z-50">
+          <Link to="/dashboard" className="block px-4 py-2 hover:bg-gray-100">Dashboard</Link>
+          <Link to="/profile" className="block px-4 py-2 hover:bg-gray-100">Profile</Link>
+          <Link to="/orders" className="block px-4 py-2 hover:bg-gray-100">Orders</Link>
+          <button onClick={handleLogout} className="w-full text-left px-4 py-2 hover:bg-gray-100">Sign Out</button>
+        </div>
+      )}
+    </div>
   );
 };
