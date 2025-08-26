@@ -6,11 +6,11 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
-    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
-    { name: "GitHub", url: "https://github.com/ziontechgroup", icon: "💻", color: "hover:bg-gray-600/20" },
-    { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
-    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
+    { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20", status: "active" },
+    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20", status: "active" },
+    { name: "GitHub", url: "https://github.com/ziontechgroup", icon: "💻", color: "hover:bg-gray-600/20", status: "active" },
+    { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20", status: "active" },
+    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20", status: "active" }
   ];
 
   const footerSections = [
@@ -23,6 +23,17 @@ const Footer: React.FC = () => {
         { label: "IT Infrastructure", path: "/services/infrastructure" },
         { label: "Digital Transformation", path: "/services/transformation" },
         { label: "Micro SAAS", path: "/services-showcase" }
+      ]
+    },
+    {
+      title: "Platforms",
+      links: [
+        { label: "Quantum Neural Network", path: "/quantum-neural-network-platform" },
+        { label: "Autonomous Business Ops", path: "/autonomous-business-operations-platform" },
+        { label: "IT Asset Management", path: "/ai-powered-it-asset-management" },
+        { label: "AI Business Intelligence", path: "/ai-business-intelligence" },
+        { label: "AI Content Generation", path: "/ai-content-generator" },
+        { label: "AI Code Review", path: "/ai-code-review" }
       ]
     },
     {
@@ -66,7 +77,7 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">

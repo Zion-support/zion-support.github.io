@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onMenuToggle: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
@@ -52,10 +56,10 @@ const Header: React.FC = () => {
                 <div
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
-                  className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl"
+                  className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl"
                 >
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 gap-2">
+                  <div className="p-6">
+                    <div className="grid grid-cols-2 gap-4">
                       {services.map((service) => (
                         <Link
                           key={service.name}
@@ -76,6 +80,32 @@ const Header: React.FC = () => {
                         </Link>
                       ))}
                     </div>
+                    
+                    {/* Featured Services */}
+                    <div className="mt-6 pt-6 border-t border-white/10">
+                      <h4 className="text-sm font-semibold text-gray-300 mb-3">Featured Platforms</h4>
+                      <div className="space-y-2">
+                        <Link
+                          to="/quantum-neural-network-platform"
+                          className="flex items-center p-2 rounded-lg hover:bg-white/10 transition-all duration-200 text-sm text-gray-300 hover:text-blue-400"
+                        >
+                          <span>🧠 Quantum Neural Network Platform</span>
+                        </Link>
+                        <Link
+                          to="/autonomous-business-operations-platform"
+                          className="flex items-center p-2 rounded-lg hover:bg-white/10 transition-all duration-200 text-sm text-gray-300 hover:text-blue-400"
+                        >
+                          <span>🤖 Autonomous Business Operations</span>
+                        </Link>
+                        <Link
+                          to="/ai-powered-it-asset-management"
+                          className="flex items-center p-2 rounded-lg hover:bg-white/10 transition-all duration-200 text-sm text-gray-300 hover:text-blue-400"
+                        >
+                          <span>💻 AI-Powered IT Asset Management</span>
+                        </Link>
+                      </div>
+                    </div>
+                    
                     <div className="mt-4 pt-4 border-t border-white/10">
                       <Link
                         to="/services"
@@ -87,6 +117,20 @@ const Header: React.FC = () => {
                   </div>
                 </div>
               )}
+            </div>
+            
+            {/* Solutions Dropdown */}
+            <div className="relative group">
+              <button
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+                className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center"
+              >
+                Solutions
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
             </div>
             
             <Link
@@ -130,6 +174,16 @@ const Header: React.FC = () => {
               Get Started
             </Link>
           </div>
+
+          {/* Sidebar toggle button */}
+          <button
+            onClick={onMenuToggle}
+            className="lg:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none mr-2"
+          >
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
 
           {/* Mobile menu button */}
           <button
