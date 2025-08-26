@@ -3350,7 +3350,575 @@ export const ALL_INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   ...EDUCATIONAL_TECHNOLOGY_SERVICES,
   ...REAL_ESTATE_TECH_SERVICES,
   ...SUPPLY_CHAIN_LOGISTICS_AI_SERVICES,
-  ...ADVANCED_CUSTOMER_SUPPORT_SERVICES
+  ...ADVANCED_CUSTOMER_SUPPORT_SERVICES,
+  // Add new innovative services after the existing ones
+  {
+    id: "quantum-cybersecurity-suite",
+    title: "Quantum Cybersecurity Suite",
+    description: "Next-generation cybersecurity platform leveraging quantum-resistant algorithms and AI-powered threat detection to protect against emerging cyber threats and quantum attacks.",
+    category: "Cybersecurity",
+    subcategory: "Quantum Security",
+    price: 4999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Quantum-resistant encryption algorithms",
+      "AI-powered threat detection",
+      "Zero-trust architecture",
+      "Real-time threat intelligence",
+      "Automated incident response",
+      "Compliance monitoring (SOC 2, ISO 27001)",
+      "Penetration testing automation",
+      "Security awareness training",
+      "24/7 security operations center",
+      "Threat hunting capabilities"
+    ],
+    benefits: [
+      "Future-proof against quantum attacks",
+      "Reduce security incidents by 90%",
+      "Automated compliance management",
+      "Real-time threat protection",
+      "Scalable security infrastructure"
+    ],
+    useCases: [
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies",
+      "Critical infrastructure",
+      "Enterprise businesses"
+    ],
+    targetAudience: [
+      "CISOs",
+      "Security teams",
+      "Compliance officers",
+      "IT managers",
+      "Risk managers"
+    ],
+    tags: ["Cybersecurity", "Quantum Computing", "AI", "Compliance", "Threat Detection"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,999 - $15,999/month",
+    roi: "300-500%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-cybersecurity"
+    },
+    technicalSpecs: {
+      technology: ["Post-quantum cryptography", "Machine Learning", "Blockchain", "Zero-trust networking"],
+      integrations: ["SIEM systems", "EDR solutions", "IAM platforms", "Cloud providers"],
+      apiEndpoints: 200,
+      uptime: "99.99%",
+      security: ["SOC 2 Type II", "ISO 27001", "NIST Cybersecurity Framework", "Zero-trust architecture"]
+    },
+    competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Fortinet"],
+    marketSize: "$45.2 billion by 2025"
+  },
+  {
+    id: "metaverse-commerce-platform",
+    title: "Metaverse Commerce Platform",
+    description: "Complete e-commerce solution for the metaverse, enabling businesses to create virtual stores, host virtual events, and sell digital and physical products in immersive 3D environments.",
+    category: "E-commerce",
+    subcategory: "Metaverse Solutions",
+    price: 1999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "3D virtual store builder",
+      "VR/AR product visualization",
+      "Virtual event hosting",
+      "Digital asset marketplace",
+      "Cryptocurrency payments",
+      "NFT integration",
+      "Social commerce features",
+      "Analytics and insights",
+      "Multi-platform support",
+      "Custom branding tools"
+    ],
+    benefits: [
+      "Tap into $800B metaverse economy",
+      "Enhanced customer engagement",
+      "Global reach without borders",
+      "Innovative shopping experiences",
+      "Future-proof business model"
+    ],
+    useCases: [
+      "Fashion and retail",
+      "Real estate",
+      "Entertainment",
+      "Education",
+      "Healthcare"
+    ],
+    targetAudience: [
+      "E-commerce businesses",
+      "Retail brands",
+      "Event organizers",
+      "Content creators",
+      "Digital marketers"
+    ],
+    tags: ["Metaverse", "E-commerce", "VR/AR", "NFT", "Digital Commerce"],
+    estimatedDelivery: "10-14 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,999 - $5,999/month",
+    roi: "200-400%",
+    innovationLevel: "Emerging",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/metaverse-commerce"
+    },
+    technicalSpecs: {
+      technology: ["Unity3D", "WebGL", "WebXR", "Blockchain", "Cloud computing"],
+      integrations: ["Shopify", "WooCommerce", "Stripe", "Meta", "VR platforms"],
+      apiEndpoints: 100,
+      uptime: "99.5%",
+      security: ["SSL encryption", "GDPR compliance", "Secure payments", "Content moderation"]
+    },
+    competitors: ["Decentraland", "The Sandbox", "Roblox", "Meta"],
+    marketSize: "$800 billion by 2025"
+  },
+  {
+    id: "ai-powered-supply-chain-optimizer",
+    title: "AI-Powered Supply Chain Optimizer",
+    description: "Intelligent supply chain management platform that uses AI to predict demand, optimize inventory, reduce costs, and improve efficiency across the entire supply chain.",
+    category: "Supply Chain",
+    subcategory: "AI Optimization",
+    price: 3499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Demand forecasting with AI",
+      "Inventory optimization",
+      "Route optimization",
+      "Supplier performance tracking",
+      "Risk assessment and mitigation",
+      "Real-time visibility",
+      "Automated reordering",
+      "Cost analysis and optimization",
+      "Sustainability tracking",
+      "Integration with ERP systems"
+    ],
+    benefits: [
+      "Reduce inventory costs by 25%",
+      "Improve delivery times by 40%",
+      "Minimize supply chain disruptions",
+      "Increase customer satisfaction",
+      "Sustainable operations"
+    ],
+    useCases: [
+      "Manufacturing",
+      "Retail",
+      "Logistics",
+      "Healthcare",
+      "Food and beverage"
+    ],
+    targetAudience: [
+      "Supply chain managers",
+      "Operations directors",
+      "Logistics coordinators",
+      "Procurement teams",
+      "Business analysts"
+    ],
+    tags: ["Supply Chain", "AI", "Logistics", "Inventory", "Optimization"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,499 - $9,999/month",
+    roi: "250-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/supply-chain-optimizer"
+    },
+    technicalSpecs: {
+      technology: ["Machine Learning", "Predictive Analytics", "IoT", "Cloud computing", "API-first"],
+      integrations: ["SAP", "Oracle", "Microsoft Dynamics", "WMS", "TMS"],
+      apiEndpoints: 120,
+      uptime: "99.8%",
+      security: ["SOC 2", "GDPR", "Data encryption", "Access controls"]
+    },
+    competitors: ["Oracle SCM", "SAP SCM", "Manhattan Associates", "JDA Software"],
+    marketSize: "$37.4 billion by 2025"
+  },
+  {
+    id: "blockchain-identity-management",
+    title: "Blockchain Identity Management Platform",
+    description: "Decentralized identity management solution that gives users complete control over their digital identity while ensuring security, privacy, and compliance with regulations.",
+    category: "Identity Management",
+    subcategory: "Blockchain Solutions",
+    price: 2499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Self-sovereign identity (SSI)",
+      "Decentralized identifiers (DIDs)",
+      "Verifiable credentials",
+      "Zero-knowledge proofs",
+      "Multi-factor authentication",
+      "Biometric integration",
+      "Compliance frameworks",
+      "API access",
+      "Mobile app",
+      "Developer SDK"
+    ],
+    benefits: [
+      "Eliminate identity theft",
+      "Reduce compliance costs",
+      "Improve user privacy",
+      "Streamline verification processes",
+      "Global identity portability"
+    ],
+    useCases: [
+      "Financial services",
+      "Healthcare",
+      "Government",
+      "Education",
+      "Travel and hospitality"
+    ],
+    targetAudience: [
+      "Identity managers",
+      "Security teams",
+      "Compliance officers",
+      "Developers",
+      "Product managers"
+    ],
+    tags: ["Blockchain", "Identity", "Security", "Privacy", "Compliance"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,499 - $6,999/month",
+    roi: "200-350%",
+    innovationLevel: "Emerging",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/blockchain-identity"
+    },
+    technicalSpecs: {
+      technology: ["Hyperledger", "Ethereum", "IPFS", "Zero-knowledge proofs", "Cryptography"],
+      integrations: ["OAuth 2.0", "SAML", "Active Directory", "LDAP", "OIDC"],
+      apiEndpoints: 80,
+      uptime: "99.9%",
+      security: ["End-to-end encryption", "GDPR", "CCPA", "SOC 2", "Zero-trust"]
+    },
+    competitors: ["Microsoft Entra", "Okta", "Auth0", "ForgeRock"],
+    marketSize: "$28.2 billion by 2025"
+  },
+  {
+    id: "iot-edge-computing-platform",
+    title: "IoT Edge Computing Platform",
+    description: "Comprehensive IoT platform that processes data at the edge, reducing latency, improving security, and enabling real-time decision making for connected devices and smart systems.",
+    category: "IoT",
+    subcategory: "Edge Computing",
+    price: 3999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Edge data processing",
+      "Device management",
+      "Real-time analytics",
+      "Predictive maintenance",
+      "Security and encryption",
+      "Scalable infrastructure",
+      "API management",
+      "Dashboard and visualization",
+      "Alert system",
+      "Integration capabilities"
+    ],
+    benefits: [
+      "Reduce latency by 90%",
+      "Lower bandwidth costs",
+      "Improve data security",
+      "Enable real-time decisions",
+      "Scalable IoT deployments"
+    ],
+    useCases: [
+      "Smart cities",
+      "Industrial IoT",
+      "Connected vehicles",
+      "Smart buildings",
+      "Healthcare monitoring"
+    ],
+    targetAudience: [
+      "IoT engineers",
+      "System architects",
+      "Operations managers",
+      "Data scientists",
+      "Product managers"
+    ],
+    tags: ["IoT", "Edge Computing", "Real-time", "Analytics", "Smart Systems"],
+    estimatedDelivery: "14-18 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,999 - $12,999/month",
+    roi: "300-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/iot-edge-platform"
+    },
+    technicalSpecs: {
+      technology: ["Kubernetes", "Docker", "MQTT", "OPC UA", "Time-series databases"],
+      integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Industrial protocols"],
+      apiEndpoints: 150,
+      uptime: "99.9%",
+      security: ["TLS encryption", "Device authentication", "Secure boot", "Over-the-air updates"]
+    },
+    competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "PTC ThingWorx"],
+    marketSize: "$65.8 billion by 2025"
+  },
+  {
+    id: "ai-powered-customer-success-platform",
+    title: "AI-Powered Customer Success Platform",
+    description: "Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement to maximize lifetime value and reduce churn.",
+    category: "Customer Success",
+    subcategory: "AI Automation",
+    price: 1799,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Churn prediction with AI",
+      "Automated engagement workflows",
+      "Customer health scoring",
+      "Upsell opportunity identification",
+      "Personalized onboarding",
+      "Success metrics tracking",
+      "Integration with CRM",
+      "Reporting and analytics",
+      "Mobile app",
+      "API access"
+    ],
+    benefits: [
+      "Reduce churn by 30%",
+      "Increase upsell revenue by 40%",
+      "Improve customer satisfaction",
+      "Automate routine tasks",
+      "Data-driven decisions"
+    ],
+    useCases: [
+      "SaaS companies",
+      "Subscription businesses",
+      "E-commerce",
+      "Financial services",
+      "Healthcare"
+    ],
+    targetAudience: [
+      "Customer success managers",
+      "Account managers",
+      "Sales teams",
+      "Product managers",
+      "Business analysts"
+    ],
+    tags: ["Customer Success", "AI", "Churn Prevention", "Upselling", "Automation"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,799 - $4,999/month",
+    roi: "250-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/customer-success-platform"
+    },
+    technicalSpecs: {
+      technology: ["Machine Learning", "Predictive Analytics", "Workflow Automation", "API-first"],
+      integrations: ["Salesforce", "HubSpot", "Intercom", "Zendesk", "Slack"],
+      apiEndpoints: 90,
+      uptime: "99.8%",
+      security: ["SOC 2", "GDPR", "Data encryption", "Role-based access"]
+    },
+    competitors: ["Gainsight", "Totango", "ClientSuccess", "ChurnZero"],
+    marketSize: "$1.5 billion by 2025"
+  },
+  {
+    id: "sustainable-tech-consulting-platform",
+    title: "Sustainable Tech Consulting Platform",
+    description: "Comprehensive platform for businesses to assess, implement, and track sustainability initiatives using AI-powered analytics and best practices for green technology adoption.",
+    category: "Sustainability",
+    subcategory: "Green Technology",
+    price: 2999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Sustainability assessment tools",
+      "Carbon footprint tracking",
+      "Green technology recommendations",
+      "Compliance monitoring",
+      "ROI calculations",
+      "Best practices library",
+      "Expert consultation access",
+      "Progress reporting",
+      "Integration with existing systems",
+      "Mobile dashboard"
+    ],
+    benefits: [
+      "Reduce carbon footprint by 40%",
+      "Achieve sustainability goals",
+      "Improve brand reputation",
+      "Comply with regulations",
+      "Cost savings through efficiency"
+    ],
+    useCases: [
+      "Manufacturing",
+      "Retail",
+      "Technology companies",
+      "Financial services",
+      "Healthcare"
+    ],
+    targetAudience: [
+      "Sustainability officers",
+      "Environmental managers",
+      "Operations directors",
+      "Compliance teams",
+      "Executive leadership"
+    ],
+    tags: ["Sustainability", "Green Tech", "ESG", "Compliance", "Analytics"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,999 - $8,999/month",
+    roi: "200-350%",
+    innovationLevel: "Emerging",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/sustainable-tech"
+    },
+    technicalSpecs: {
+      technology: ["AI Analytics", "IoT sensors", "Cloud computing", "Data visualization"],
+      integrations: ["ERP systems", "Energy management", "Supply chain", "Reporting tools"],
+      apiEndpoints: 70,
+      uptime: "99.5%",
+      security: ["SOC 2", "ISO 14001", "Data privacy", "Secure reporting"]
+    },
+    competitors: ["Sphera", "EcoVadis", "Sustainalytics", "MSCI"],
+    marketSize: "$8.5 billion by 2025"
+  },
+  {
+    id: "ai-powered-hr-analytics-platform",
+    title: "AI-Powered HR Analytics Platform",
+    description: "Intelligent HR analytics platform that uses AI to predict employee turnover, optimize recruitment, improve performance management, and enhance workplace culture through data-driven insights.",
+    category: "Human Resources",
+    subcategory: "AI Analytics",
+    price: 2199,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Employee turnover prediction",
+      "Recruitment optimization",
+      "Performance analytics",
+      "Culture assessment tools",
+      "Diversity and inclusion metrics",
+      "Compensation analysis",
+      "Workforce planning",
+      "Employee engagement tracking",
+      "Predictive analytics",
+      "Custom reporting"
+    ],
+    benefits: [
+      "Reduce turnover by 25%",
+      "Improve hiring success by 40%",
+      "Enhance employee satisfaction",
+      "Optimize workforce planning",
+      "Data-driven HR decisions"
+    ],
+    useCases: [
+      "Large enterprises",
+      "Growing companies",
+      "Remote teams",
+      "Diverse organizations",
+      "High-turnover industries"
+    ],
+    targetAudience: [
+      "HR directors",
+      "Talent acquisition teams",
+      "People operations",
+      "Business leaders",
+      "Data analysts"
+    ],
+    tags: ["HR Analytics", "AI", "Talent Management", "Workforce Planning", "Predictive Analytics"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,199 - $5,999/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/hr-analytics"
+    },
+    technicalSpecs: {
+      technology: ["Machine Learning", "Predictive Analytics", "Data visualization", "API-first"],
+      integrations: ["Workday", "BambooHR", "Greenhouse", "Slack", "Microsoft Teams"],
+      apiEndpoints: 100,
+      uptime: "99.8%",
+      security: ["SOC 2", "GDPR", "Data privacy", "Role-based access"]
+    },
+    competitors: ["Visier", "Tableau", "Power BI", "Workday Analytics"],
+    marketSize: "$3.2 billion by 2025"
+  },
+  {
+    id: "quantum-machine-learning-platform",
+    title: "Quantum Machine Learning Platform",
+    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems in drug discovery, financial modeling, optimization, and scientific research.",
+    category: "AI & Quantum",
+    subcategory: "Quantum ML",
+    price: 9999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Quantum algorithm library",
+      "Hybrid quantum-classical ML",
+      "Drug discovery simulations",
+      "Financial modeling tools",
+      "Optimization algorithms",
+      "Scientific computing",
+      "API access",
+      "Cloud quantum computing",
+      "Expert consultation",
+      "Training and support"
+    ],
+    benefits: [
+      "Solve previously impossible problems",
+      "Accelerate research and development",
+      "Improve accuracy in complex models",
+      "Competitive advantage",
+      "Future-proof technology"
+    ],
+    useCases: [
+      "Pharmaceutical research",
+      "Financial services",
+      "Materials science",
+      "Climate modeling",
+      "Cryptography"
+    ],
+    targetAudience: [
+      "Research scientists",
+      "Data scientists",
+      "Quantitative analysts",
+      "R&D teams",
+      "Academic institutions"
+    ],
+    tags: ["Quantum Computing", "Machine Learning", "Research", "Innovation", "Scientific Computing"],
+    estimatedDelivery: "16-20 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$9,999 - $25,999/month",
+    roi: "400-800%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-ml"
+    },
+    technicalSpecs: {
+      technology: ["Quantum algorithms", "Qiskit", "TensorFlow", "PyTorch", "Cloud quantum"],
+      integrations: ["IBM Quantum", "Google Quantum", "Azure Quantum", "AWS Braket"],
+      apiEndpoints: 50,
+      uptime: "99.5%",
+      security: ["Quantum-safe encryption", "Secure access", "Data privacy", "Research compliance"]
+    },
+    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
+    marketSize: "$2.5 billion by 2025"
+  }
 ];
 
 export default ALL_INNOVATIVE_SERVICES;
