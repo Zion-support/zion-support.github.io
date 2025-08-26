@@ -188,15 +188,164 @@ export default function InnovativeServicesShowcase() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-zion-blue-dark mb-6">
-              Cutting-Edge Technology Solutions
-            </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Discover our comprehensive portfolio of innovative services designed to future-proof your business 
-              and drive digital transformation across all industries.
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {sortedServices.length === 0 ? (
+          <div className="text-center py-12">
+            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-lg font-medium text-gray-900 mb-2">No services found</h3>
+            <p className="text-gray-600">Try adjusting your search criteria or filters.</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sortedServices.map((service) => (
+              <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden group">
+                {/* Service Header */}
+                <div className="p-6 border-b border-gray-100">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      {getCategoryIcon(service.category)}
+                      <div>
+                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getPriceRangeColor(service.price)}`}>
+                          {getPriceRangeLabel(service.price)}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-gray-900">
+                        {service.currency}{service.price.toLocaleString()}
+                      </div>
+                      <div className="text-sm text-gray-500 capitalize">
+                        per {service.pricingModel}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                    {service.description}
+                  </p>
+
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <span className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {service.estimatedDelivery}
+                    </span>
+                    <span className="flex items-center">
+                      <ShieldCheck className="w-4 h-4 mr-1" />
+                      {service.supportLevel}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Service Features */}
+                <div className="p-6 border-b border-gray-100">
+                  <h4 className="font-medium text-gray-900 mb-3">Key Features</h4>
+                  <div className="space-y-2">
+                    {service.features.slice(0, 4).map((feature, index) => (
+                      <div key={index} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                    {service.features.length > 4 && (
+                      <div className="text-sm text-blue-600 font-medium">
+                        +{service.features.length - 4} more features
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Service Benefits */}
+                <div className="p-6 border-b border-gray-100">
+                  <h4 className="font-medium text-gray-900 mb-3">Benefits</h4>
+                  <div className="space-y-2">
+                    {service.benefits.slice(0, 3).map((benefit, index) => (
+                      <div key={index} className="flex items-center text-sm text-gray-600">
+                        <TrendingUp className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                        <span>{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Service Footer */}
+                <div className="p-6 bg-gray-50">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-sm text-gray-600">
+                      Market Price: <span className="font-medium">{service.marketPrice}</span>
+                    </div>
+                    <div className="flex space-x-2">
+                      {service.tags.slice(0, 3).map((tag, index) => (
+                        <span key={index} className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-blue-100 text-blue-800">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex space-x-3">
+                    <Link
+                      to={'link' in service ? service.link : '#'}
+                      className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors flex items-center justify-center"
+                    >
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                    <a
+                      href={`tel:${service.contactInfo.phone}`}
+                      className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center"
+                      title="Call us"
+                    >
+                      <Phone className="w-4 h-4" />
+                    </a>
+                    <a
+                      href={`mailto:${service.contactInfo.email}`}
+                      className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center"
+                      title="Email us"
+                    >
+                      <Mail className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Our innovative services are designed to help you stay ahead of the competition. 
+            Get in touch with our experts to discuss your specific needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center"
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Email Us
+            </a>
+          </div>
+          <div className="mt-8 text-blue-100">
+            <p className="text-sm">
+              <MapPin className="w-4 h-4 inline mr-2" />
+              364 E Main St STE 1008, Middletown DE 19709
             </p>
           </div>
 
