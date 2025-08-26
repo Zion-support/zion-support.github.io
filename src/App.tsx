@@ -19,6 +19,15 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 
+// Service pages
+const ServicesPage = React.lazy(() => import('./pages/services'));
+const AIAnalyticsPage = React.lazy(() => import('./pages/services/ai-analytics'));
+const CybersecurityPage = React.lazy(() => import('./pages/services/cybersecurity'));
+const CloudDevOpsPage = React.lazy(() => import('./pages/services/cloud-devops'));
+
+// Additional pages
+const SolutionsPage = React.lazy(() => import('./pages/solutions'));
+
 // Enhanced loading component with skeleton
 const LoadingFallback = () => (
   <div className="min-h-screen bg-background flex items-center justify-center">
@@ -52,6 +61,15 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
+              
+              {/* Service routes */}
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/ai-analytics" element={<AIAnalyticsPage />} />
+              <Route path="/services/cybersecurity" element={<CybersecurityPage />} />
+              <Route path="/services/cloud-devops" element={<CloudDevOpsPage />} />
+              
+              {/* Additional routes */}
+              <Route path="/solutions" element={<SolutionsPage />} />
             </Routes>
           </Suspense>
         </main>
