@@ -8,7 +8,6 @@
     "npm": ">=8.0.0"
   },
   "scripts": {
-<<<<<<< HEAD
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
     "prebuild": "echo 'skip prebuild health-check'",
@@ -29,14 +28,6 @@
     "clean": "rm -rf dist node_modules/.cache",
     "preview": "vite preview",
     "analyze": "vite-bundle-analyzer"
-=======
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --max-warnings 0",
-    "preview": "vite preview",
-    "test": "vitest run",
-    "test:watch": "vitest"
->>>>>>> 5710eb810fd86fc204c985be940e367fed700d50
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -83,11 +74,7 @@
     "react-day-picker": "^8.9.1",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^6.0.0",
-<<<<<<< HEAD
     "react-helmet-async": "^2.0.5",
-=======
-    "react-helmet-async": "^2.0.4",
->>>>>>> 5710eb810fd86fc204c985be940e367fed700d50
     "react-hook-form": "^7.47.0",
     "react-hot-toast": "^2.6.0",
     "react-redux": "^9.0.4",
