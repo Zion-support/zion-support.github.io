@@ -1,8 +1,4 @@
-
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Cloud, 
@@ -12,9 +8,11 @@ import {
   Users, 
   ArrowRight,
   CheckCircle,
-  Star
+  Star,
+  Phone,
+  Mail,
+  MapPin
 } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   const services = [
@@ -79,14 +77,15 @@ const Home = () => {
     }
   ];
 
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Expert Consultants" },
+    { number: "99.9%", label: "Uptime Guarantee" },
+    { number: "24/7", label: "Support Available" }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <SEO 
-        title="Zion Tech Group - Leading Technology Solutions"
-        description="Transform your business with cutting-edge AI, cloud, cybersecurity, and data analytics solutions. Expert consulting and development services."
-        canonical="https://ziontechgroup.com"
-      />
-      
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32 pb-20">
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -99,15 +98,27 @@ const Home = () => {
             Transforming businesses through cutting-edge technology solutions. 
             AI, Cloud, Cybersecurity, and Data Analytics expertise.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg">
-              <Link to="/services">
-                Explore Services <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 text-lg">
-              <Link to="/contact">Get Started</Link>
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link to="/services" className="btn-primary inline-flex items-center">
+              Explore Services <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link to="/contact" className="btn-secondary">
+              Get Started
+            </Link>
+          </div>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300 text-sm md:text-base">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -123,17 +134,13 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="bg-slate-800/50 border-slate-700 text-white hover:bg-slate-800/70 transition-all duration-300">
-                <CardHeader className="text-center">
-                  <div className="mx-auto mb-4">
-                    {feature.icon}
-                  </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-blue-200">{feature.description}</p>
-                </CardContent>
-              </Card>
+              <div key={index} className="card text-center">
+                <div className="mx-auto mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-blue-200">{feature.description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -150,34 +157,57 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="bg-slate-800/50 border-slate-700 text-white hover:bg-slate-800/70 transition-all duration-300 group">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-4">
-                    {service.icon}
-                    <div>
-                      <CardTitle className="text-2xl">{service.title}</CardTitle>
-                      <p className="text-blue-400 font-semibold">{service.price}</p>
+              <div key={index} className="card group">
+                <div className="flex items-center gap-4 mb-4">
+                  {service.icon}
+                  <div>
+                    <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
+                    <p className="text-blue-400 font-semibold">{service.price}</p>
+                  </div>
+                </div>
+                <p className="text-blue-200 mb-4">{service.description}</p>
+                <div className="grid grid-cols-2 gap-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span>{feature}</span>
                     </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-blue-200 mb-4">{service.description}</p>
-                  <div className="grid grid-cols-2 gap-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-2 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Button asChild className={`w-full bg-gradient-to-r ${service.color} hover:opacity-90 transition-all duration-300`}>
-                    <Link to={service.link}>
-                      Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
+                  ))}
+                </div>
+                <Link to={service.link} className={`w-full btn-primary bg-gradient-to-r ${service.color} hover:opacity-90 transition-all duration-300 inline-flex items-center justify-center`}>
+                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Get In Touch</h2>
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              Ready to transform your business? Let's discuss your technology needs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="card text-center">
+              <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+              <p className="text-blue-200">+1 (302) 464-0950</p>
+            </div>
+            <div className="card text-center">
+              <Mail className="w-8 h-8 text-green-400 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+              <p className="text-blue-200">kleber@ziontechgroup.com</p>
+            </div>
+            <div className="card text-center">
+              <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+              <p className="text-blue-200">364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
           </div>
         </div>
       </section>
@@ -192,12 +222,12 @@ const Home = () => {
             Let's discuss how our technology solutions can drive your success
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary" className="px-8 py-4 text-lg">
-              <Link to="/contact">Schedule Consultation</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg">
-              <Link to="/services">View All Services</Link>
-            </Button>
+            <Link to="/contact" className="btn-secondary px-8 py-4 text-lg">
+              Schedule Consultation
+            </Link>
+            <Link to="/services" className="btn-secondary border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg">
+              View All Services
+            </Link>
           </div>
         </div>
       </section>
