@@ -3,14 +3,14 @@ import React, { Suspense, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CategoriesSection } from "@/components/CategoriesSection";
-import BenefitsSection from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection.jsx";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
-
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { FloatingCTA } from "@/components/FloatingCTA";
@@ -25,9 +25,6 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
-import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
-import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
-import { UltimateServicesShowcase2027 } from "@/components/UltimateServicesShowcase2027";
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -440,19 +437,11 @@ export default function Home() {
       {/* Enhanced Quick Access Section */}
       <QuickAccess />
 
-
+      {/* Enhanced Feature CTAs */}
+      <FeatureCTAs />
 
       {/* Enhanced Categories Section */}
       <CategoriesSection />
-
-      {/* Enhanced Innovative Services Showcase */}
-      <EnhancedInnovativeServicesShowcase />
-
-      {/* Ultimate Services Showcase 2027 */}
-      <UltimateServicesShowcase2027 />
-
-      {/* Enhanced Pricing Comparison */}
-      <EnhancedPricingComparison />
 
       {/* Enhanced Benefits Section */}
       <BenefitsSection />
