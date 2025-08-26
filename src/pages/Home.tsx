@@ -579,48 +579,7 @@ const Home: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Enhanced CTA Section */}
-      <motion.section 
-        className="py-24"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div variants={itemVariants}>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Ready to <span className="gradient-text bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">Transform</span> Your Business?
-            </h2>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-3xl mx-auto leading-relaxed">
-              Let's discuss how our innovative technology solutions can drive your business forward
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
-                to="/contact"
-                className="btn-primary text-xl py-6 px-12 transform hover:scale-105 transition-all duration-300 shadow-2xl"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="text-2xl">🚀</span>
-                  <span className="font-semibold">Get Started Today</span>
-                  <span className="text-xl">→</span>
-                </span>
-              </Link>
-              <Link
-                to="/services"
-                className="btn-secondary text-xl py-6 px-12 transform hover:scale-105 transition-all duration-300 shadow-xl"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="text-2xl">🔍</span>
-                  <span className="font-semibold">View All Services</span>
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* Website Health Monitor */}
+      {/* Advanced Services Showcase */}
       <motion.section 
         className="py-20 bg-white/5 backdrop-blur-sm"
         variants={containerVariants}
@@ -628,36 +587,49 @@ const Home: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={itemVariants}>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Website <span className="gradient-text">Health Monitor</span>
+              Advanced <span className="gradient-text">Real Services</span> 2025
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We continuously monitor our website to ensure all links and services are working properly
+              Discover our comprehensive collection of 20+ advanced real micro SAAS, IT, and AI services. 
+              Market-ready solutions with proven ROI and competitive pricing.
             </p>
           </motion.div>
           
-          <motion.div variants={itemVariants}>
-            <LinkHealthChecker 
-              links={[
-                { url: '/', label: 'Home Page' },
-                { url: '/services', label: 'Services Page' },
-                { url: '/about', label: 'About Page' },
-                { url: '/contact', label: 'Contact Page' },
-                { url: '/blog', label: 'Blog Page' },
-                { url: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn Profile' },
-                { url: 'https://twitter.com/ziontechgroup', label: 'Twitter Profile' },
-                { url: 'https://github.com/ziontechgroup', label: 'GitHub Profile' },
-                { url: 'tel:+13024640950', label: 'Phone Number' },
-                { url: 'mailto:kleber@ziontechgroup.com', label: 'Email Address' }
-              ]}
-            />
+          <motion.div className="text-center mb-12" variants={itemVariants}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-6 border border-blue-500/30">
+                <div className="text-3xl mb-2">🤖</div>
+                <h3 className="text-lg font-semibold text-white mb-2">AI & Machine Learning</h3>
+                <p className="text-sm text-gray-300">Advanced AI services with proven ROI and competitive pricing</p>
+              </div>
+              <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-500/30">
+                <div className="text-3xl mb-2">🔐</div>
+                <h3 className="text-lg font-semibold text-white mb-2">Cybersecurity</h3>
+                <p className="text-sm text-gray-300">Quantum-safe security solutions for future-proof protection</p>
+              </div>
+              <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl p-6 border border-green-500/30">
+                <div className="text-3xl mb-2">🌐</div>
+                <h3 className="text-lg font-semibold text-white mb-2">Edge Computing</h3>
+                <p className="text-sm text-gray-300">Intelligent edge computing for IoT and real-time processing</p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div className="text-center" variants={itemVariants}>
+            <Link
+              to="/advanced-real-services-showcase-2025"
+              className="btn-primary text-lg px-8 py-4"
+            >
+              🚀 Explore All Advanced Services
+            </Link>
           </motion.div>
         </div>
       </motion.section>
 
-      {/* Performance Monitor */}
+      {/* CTA Section */}
       <motion.section 
         className="py-20"
         variants={containerVariants}

@@ -48,8 +48,7 @@ const AdvancedServices2025 = React.lazy(() => import('./pages/AdvancedServices20
 const AdvancedServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedServicesShowcase2025'));
 const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025'));
 const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
-const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
-const CuttingEdgeServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const AdvancedRealServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedServicesShowcase2025'));
 
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
@@ -154,8 +153,7 @@ const routes = [
   { path: '/advanced-services-showcase-2025', element: <AdvancedServicesShowcase2025 /> },
   { path: '/comprehensive-pricing-2025', element: <ComprehensivePricing2025 /> },
   { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
-  { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
-  { path: '/cutting-edge-services-2025', element: <CuttingEdgeServicesShowcase2025 /> },
+  { path: '/advanced-real-services-showcase-2025', element: <AdvancedRealServicesShowcase2025 /> },
   
   // Other routes
   { path: '/match', element: <AIMatcherPage /> },
