@@ -87,6 +87,16 @@ const navigationItems: NavigationItem[] = [
     description: 'Enterprise solutions and infrastructure',
     color: 'from-green-500 to-emerald-500',
     children: [
+<<<<<<< HEAD
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Next-gen cloud with quantum capabilities' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-automation', description: 'Intelligent development automation' },
+      { name: 'Quantum Networking', href: '/quantum-networking-solutions', description: 'Quantum communication protocols' },
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', description: 'Self-managing IT systems' },
+      { name: 'Quantum Data Center', href: '/quantum-data-center-platform', description: 'Next-gen data centers' },
+      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-suite', description: 'Quantum security solutions' },
+      { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration', description: 'Intelligent migration platform' },
+      { name: '5G Private Network Solutions', href: '/5g-private-network-solutions', description: 'Advanced 5G infrastructure' }
+=======
       { name: 'Zero Trust Security', href: '/zero-trust-security-platform', description: 'Next-generation security architecture' },
       { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Quantum-enhanced cloud computing' },
       { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', description: 'Self-managing IT infrastructure' },
@@ -95,6 +105,7 @@ const navigationItems: NavigationItem[] = [
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform', description: 'Intelligent development operations' },
       { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-services', description: 'Next-gen quantum security' },
       { name: 'AI-Powered Cybersecurity', href: '/ai-powered-cybersecurity', description: 'Intelligent threat detection' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-757c
     ]
   },
   {

@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -145,6 +147,7 @@ const socialLinks = [
   { name: 'Discord', href: 'https://discord.gg/ziontechgroup', icon: MessageCircle },
   { name: 'Slack', href: 'https://ziontechgroup.slack.com', icon: MessageSquare }
 ];
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-757c
 
 export default function UltraFuturisticFooter2034() {
 	return (

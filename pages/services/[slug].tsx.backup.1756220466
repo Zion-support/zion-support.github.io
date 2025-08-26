@@ -5,6 +5,37 @@ import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+import { enhancedRealMicroSaasServices as extraServices } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as additionalEnhancedServices } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as newlyAddedServices } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as curatedMarketServices } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as new2025Services } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as marketValidatedServices } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as moreRealServices2025 } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as verified2025Additions } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as realServicesQ12025 } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as realEnterpriseServices2025 } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as verifiedRealServices2025Batch2 } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as realMarketAugmentations2025 } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as additionalLiveServices2025 } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as real2025Q2Additions } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as augmentedServicesBatch3 } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as realServicesQ22025 } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as realServicesQ32025 } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as realQ4Services2025 } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as real2025Q4Additions } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as realMarketServicesExtended } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as real2026Additions } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as real2026Q1Additions } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as added2026Q2Services } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as real2026Q3Additions } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as real2026Q4Additions } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as real2026Q4NewServices } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as real2027Q1Additions } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as real2027Q2Additions } from '../../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as real2027Q3Additions } from '../../data/enhanced-real-micro-saas-services';
+=======
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
 import { newlyAddedServices } from '../../data/newly-added-services';
@@ -23,6 +54,7 @@ import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 import { realServicesQ42025 } from '../../data/real-services-q4-2025';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-757c
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
@@ -51,7 +83,22 @@ function getAllServices(): Service[] {
 		.concat(augmentedServicesBatch3 as unknown as Service[])
 		.concat(realServicesQ22025 as unknown as Service[])
 		.concat(realServicesQ32025 as unknown as Service[])
+<<<<<<< HEAD
+		.concat(realQ4Services2025 as unknown as Service[])
+		.concat(real2025Q4Additions as unknown as Service[])
+		.concat(realMarketServicesExtended as unknown as Service[])
+		.concat(real2026Q1Additions as unknown as Service[])
+		.concat(real2026Additions as unknown as Service[])
+		.concat(added2026Q2Services as unknown as Service[])
+		.concat(real2026Q3Additions as unknown as Service[])
+		.concat(real2026Q4Additions as unknown as Service[])
+		.concat(real2026Q4NewServices as unknown as Service[])
+		.concat(real2027Q1Additions as unknown as Service[])
+		.concat(real2027Q2Additions as unknown as Service[])
+		.concat(real2027Q3Additions as unknown as Service[]);
+=======
 		.concat(realServicesQ42025 as unknown as Service[]);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-757c
 }
 
 function toSlug(value: string): string {
