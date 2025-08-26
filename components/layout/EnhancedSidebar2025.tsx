@@ -21,15 +21,10 @@ import {
 interface SidebarItem {
   name: string;
   href: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   description?: string;
   children?: SidebarItem[];
   badge?: string;
-  color?: string;
-  isNew?: boolean;
-  isHot?: boolean;
-  isPremium?: boolean;
-  category?: string;
 }
 
 const navigationItems = [
@@ -74,368 +69,264 @@ const navigationItems = [
       { name: 'Edge Computing Orchestrator Pro', href: '/edge-computing-orchestrator-pro', description: 'Advanced edge computing' },
       { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform', description: 'Comprehensive zero trust security' },
       { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform', description: 'Intelligent DevOps automation' },
-      { name: 'Quantum Data Center Platform', href: '/quantum-data-center-platform', description: 'Quantum data center solutions' },
-      { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' }
+      { name: 'Quantum Network Security', href: '/quantum-network-security', description: 'Quantum-secured networking' },
+      { name: 'Enterprise AI Platform', href: '/enterprise-ai-platform', description: 'Enterprise AI solutions' }
     ]
   },
   {
-    title: 'Micro SAAS',
-    icon: <Rocket className="w-5 h-5 text-purple-400" />,
+    title: 'Micro SAAS Solutions',
+    icon: <Code className="w-5 h-5 text-purple-400" />,
     color: 'from-teal-500 to-emerald-600',
-    description: 'Innovative business solutions for modern enterprises',
-    badge: 'Popular',
+    description: 'Specialized software solutions for specific business needs',
+    badge: 'Specialized',
     children: [
-      { name: 'AI Content Factory Enterprise', href: '/ai-content-factory-enterprise', description: 'Enterprise AI content generation' },
-      { name: 'Quantum CRM Suite Enterprise', href: '/quantum-crm-suite-enterprise', description: 'Quantum-enhanced CRM platform' },
-      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'Autonomous decision making' },
-      { name: 'AI Healthcare Diagnostics Pro', href: '/ai-healthcare-diagnostics-pro', description: 'Advanced medical AI diagnostics' },
-      { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal AI analysis platform' },
-      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' }
+      { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'AI-powered business analytics' },
+      { name: 'Customer Experience Platform', href: '/customer-experience-platform', description: 'Customer engagement solutions' },
+      { name: 'Supply Chain Optimization', href: '/supply-chain-optimization', description: 'Supply chain management' },
+      { name: 'HR & Talent Management', href: '/hr-talent-management', description: 'Human resources platform' },
+      { name: 'Content Creation Studio', href: '/content-creation-studio', description: 'AI content generation' },
+      { name: 'Financial Analytics Platform', href: '/financial-analytics-platform', description: 'Financial data analysis' }
     ]
   },
   {
-    title: 'Financial Technology',
-    icon: <DollarSign className="w-5 h-5 text-emerald-400" />,
-    color: 'from-green-500 to-emerald-600',
-    description: 'Advanced AI-powered financial solutions',
-    badge: 'Hot',
+    title: 'Sustainability & Green Tech',
+    icon: <Target className="w-5 h-5 text-emerald-400" />,
+    color: 'from-emerald-500 to-green-600',
+    description: 'Environmental technology and sustainable business solutions',
+    badge: 'Green',
     children: [
-      { name: 'Neural Finance AI', href: '/neural-finance-ai', description: 'AI-powered financial analysis' },
-      { name: 'Quantum Risk Financial Manager', href: '/quantum-risk-financial-manager', description: 'Quantum risk management' },
-      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' },
-      { name: 'Autonomous Trading System', href: '/autonomous-quantum-trading-system', description: 'AI-powered trading' },
-      { name: 'Financial Compliance AI', href: '/financial-compliance-ai', description: 'Regulatory compliance automation' },
-      { name: 'Cryptocurrency Analytics', href: '/cryptocurrency-analytics-platform', description: 'Crypto market analysis' }
-    ]
-  },
-  {
-    title: 'Healthcare & Biotech',
-    icon: <Microscope className="w-5 h-5 text-red-400" />,
-    color: 'from-red-500 to-pink-600',
-    description: 'Advanced healthcare and biotechnology solutions',
-    badge: 'New',
-    children: [
-      { name: 'AI Healthcare Diagnostics Pro', href: '/ai-healthcare-diagnostics-pro', description: 'Advanced medical AI diagnostics' },
-      { name: 'Biotech AI Research Platform', href: '/biotech-ai-research-platform', description: 'AI-powered research platform' },
-      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform', description: 'Quantum molecular simulation' },
-      { name: 'Neural Interface Development', href: '/brain-computer-interface-platform', description: 'Brain-computer interfaces' },
-      { name: 'Personalized Medicine AI', href: '/personalized-medicine-ai', description: 'AI-powered personalized medicine' },
-      { name: 'Medical Imaging AI', href: '/medical-imaging-ai', description: 'Advanced medical imaging analysis' }
-    ]
-  },
-  {
-    title: 'Space & Metaverse',
-    icon: <Globe className="w-5 h-5 text-pink-400" />,
-    color: 'from-pink-500 to-rose-600',
-    description: 'Space exploration and virtual reality solutions',
-    badge: 'Future',
-    children: [
-      { name: 'Space Mining Platform', href: '/space-mining-platform', description: 'Autonomous space mining' },
-      { name: 'Metaverse AI Development', href: '/metaverse-ai-development-platform', description: 'AI-powered metaverse' },
-      { name: 'Satellite Operations', href: '/satellite-operations-platform', description: 'Satellite management systems' },
-      { name: 'Virtual Reality AI', href: '/virtual-reality-ai-platform', description: 'AI-enhanced VR experiences' },
-      { name: 'Space Debris Management', href: '/space-debris-management', description: 'Orbital debris tracking' },
-      { name: 'Holographic Events Platform', href: '/holographic-events-platform', description: '3D holographic experiences' }
+      { name: 'Carbon Footprint Tracker', href: '/carbon-footprint-tracker', description: 'Environmental impact monitoring' },
+      { name: 'Renewable Energy Platform', href: '/renewable-energy-platform', description: 'Clean energy solutions' },
+      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain management' },
+      { name: 'Green Building Analytics', href: '/green-building-analytics', description: 'Sustainable construction' },
+      { name: 'Climate Prediction Engine', href: '/climate-prediction-engine', description: 'Climate modeling platform' },
+      { name: 'ESG Reporting Platform', href: '/esg-reporting-platform', description: 'Environmental reporting' }
     ]
   }
 ];
 
-const quickActions = [
-  { name: 'Get Quote', href: '/quote', icon: <DollarSign className="w-4 h-4" />, color: 'from-green-500 to-emerald-600' },
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" />, color: 'from-blue-500 to-cyan-600' },
-  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" />, color: 'from-purple-500 to-pink-600' },
-  { name: 'Contact Support', href: '/support', icon: <HelpCircle className="w-4 h-4" />, color: 'from-orange-500 to-red-600' }
-];
-
-const resourceLinks = [
-  { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" />, description: 'Technical guides and API docs' },
-  { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" />, description: 'Success stories and implementations' },
-  { name: 'Video Tutorials', href: '/tutorials', icon: <Video className="w-4 h-4" />, description: 'Step-by-step video guides' },
-  { name: 'Webinars', href: '/webinars', icon: <Headphones className="w-4 h-4" />, description: 'Live and recorded sessions' }
-];
-
-export default function EnhancedSidebar2025() {
+export function EnhancedSidebar2025() {
   const [isOpen, setIsOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
 
-  const toggleItem = (title: string) => {
-    const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(title)) {
-      newExpanded.delete(title);
-    } else {
-      newExpanded.add(title);
-    }
-    setExpandedItems(newExpanded);
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setIsOpen(false);
+      setActiveDropdown(null);
+    };
+
+    router.events.on('routeChangeStart', handleRouteChange);
+    return () => router.events.off('routeChangeStart', handleRouteChange);
+  }, [router]);
+
+  const toggleDropdown = (title: string) => {
+    setActiveDropdown(activeDropdown === title ? null : title);
   };
 
   const filteredItems = navigationItems.filter(item =>
     item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     item.children?.some(child => 
       child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      child.description.toLowerCase().includes(searchQuery.toLowerCase())
+      child.description?.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
 
-  // Close sidebar on escape key
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsOpen(false);
-    };
-    document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape);
-  }, []);
-
-  // Close sidebar on outside click
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      const target = e.target as Element;
-      if (isOpen && !target.closest('.sidebar') && !target.closest('.sidebar-toggle')) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isOpen]);
-
   return (
     <>
-  const toggleCategory = (categoryTitle: string) => {
-    setExpandedCategories(prev => 
-      prev.includes(categoryTitle) 
-        ? prev.filter(cat => cat !== categoryTitle)
-        : [...prev, categoryTitle]
-    );
-  };
-
-  const toggleSidebar = () => setIsOpen(!isOpen);
-
-  return (
-    <>
-      {/* Mobile Menu Button */}
-      <button
-        onClick={toggleSidebar}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-black/80 backdrop-blur-sm border border-white/20 rounded-lg text-white hover:bg-white/10 transition-all duration-200"
-=======
-      {/* Sidebar Toggle Button */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="sidebar-toggle fixed top-4 left-4 z-40 lg:hidden p-3 bg-black/80 backdrop-blur-lg border border-cyan-500/30 rounded-lg text-cyan-400 hover:text-white hover:bg-cyan-500/20 transition-all duration-200"
-      >
-        <Menu className="w-6 h-6" />
-      </button>
-
-      {/* Overlay */}
+      {/* Mobile Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             onClick={() => setIsOpen(false)}
           />
         )}
       </AnimatePresence>
 
       {/* Sidebar */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.aside
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="sidebar fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/30 z-50 overflow-y-auto"
-          >
-            {/* Header */}
-            <div className="p-6 border-b border-cyan-500/30">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                      <Zap className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl blur-lg opacity-50" />
-                  </div>
-                  <div>
-                    <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                      Zion Tech Group
-                    </h2>
-                    <p className="text-xs text-gray-400">Future Technology Solutions</p>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="p-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors duration-200"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-
-              {/* Search */}
+      <motion.aside
+        initial={{ x: -300 }}
+        animate={{ x: isOpen ? 0 : -300 }}
+        transition={{ type: "spring", damping: 25, stiffness: 300 }}
+        className={`fixed left-0 top-0 h-full w-80 bg-zinc-900/95 backdrop-blur-xl border-r border-zinc-800/50 z-50 overflow-y-auto`}
+      >
+        <div className="p-6">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-8">
+            <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Sparkles className="w-6 h-6 text-white" />
                 </div>
-                <div className="absolute -inset-1 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-20 -z-10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
               </div>
-              <div>
-                <h2 className="text-xl font-bold text-white">Zion Tech</h2>
-                <p className="text-cyan-400 text-xs">Revolutionary Solutions</p>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold neon-cyan">ZION</span>
+                <span className="text-xs text-zinc-400 -mt-1">TECH GROUP</span>
               </div>
-            </div>
+            </Link>
             <button
-              onClick={toggleSidebar}
-              className="lg:hidden p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+              onClick={() => setIsOpen(false)}
+              className="lg:hidden p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
 
-            {/* Quick Actions */}
-            <div className="p-6 border-b border-cyan-500/30">
-              <h3 className="text-sm font-semibold text-gray-300 mb-3 flex items-center space-x-2">
-                <Sparkles className="w-4 h-4 text-cyan-400" />
-                <span>Quick Actions</span>
-              </h3>
-              <div className="grid grid-cols-2 gap-2">
-                {quickActions.map((action) => (
-                  <Link
-                    key={action.name}
-                    href={action.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`flex items-center justify-center space-x-2 px-3 py-2 text-xs font-medium text-white rounded-lg bg-gradient-to-r ${action.color} hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl`}
-                  >
-                    {action.icon}
-                    <span>{action.name}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Navigation Items */}
-            <div className="flex-1 overflow-y-auto">
-              <nav className="p-6 space-y-2">
-                {filteredItems.map((item) => (
-                  <div key={item.title} className="space-y-1">
-                    <button
-                      onClick={() => toggleItem(item.title)}
-                      className="w-full flex items-center justify-between p-3 text-left text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200 group"
-                    >
-                      <div className="flex items-center space-x-3">
-                        {item.icon}
-                        <div className="text-left">
-                          <div className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-200">
-                            {item.title}
-                          </div>
-                          <div className="text-xs text-gray-400">{item.description}</div>
-                        </div>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        {item.badge && (
-                          <span className={`px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${item.color} text-white`}>
-                            {item.badge}
-                          </span>
-                        )}
-                        <ChevronDown 
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            expandedItems.has(item.title) ? 'rotate-180' : ''
-                          }`} 
-                        />
-                      </div>
-                    </button>
-
-                    <AnimatePresence>
-                      {expandedItems.has(item.title) && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.2 }}
-                          className="ml-8 space-y-1"
-                        >
-                          {item.children?.map((child) => (
-                            <Link
-                              key={child.name}
-                              href={child.href}
-                              onClick={() => setIsOpen(false)}
-                              className="block p-2 text-gray-400 hover:text-cyan-400 rounded transition-colors duration-200 hover:bg-white/5 group"
-                            >
-                              <div className="flex items-center space-x-2">
-                                <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200" />
-                                <div>
-                                  <p className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-200">
-                                    {child.name}
-                                  </p>
-                                  <p className="text-xs text-gray-500">{child.description}</p>
-                                </div>
-                              </div>
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ))}
-              </nav>
+          {/* Search */}
+          <div className="mb-6">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-2 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
             </div>
           </div>
 
-            {/* Resources */}
-            <div className="p-6 border-t border-cyan-500/30">
-              <h3 className="text-sm font-semibold text-gray-300 mb-3 flex items-center space-x-2">
-                <BookOpen className="w-4 h-4 text-cyan-400" />
-                <span>Resources</span>
-              </h3>
-              <div className="space-y-2">
-                {resourceLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="flex items-center space-x-3 p-2 text-gray-400 hover:text-cyan-400 rounded transition-colors duration-200 hover:bg-white/5 group"
-                  >
-                    {link.icon}
-                    <div>
-                      <p className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-200">
-                        {link.name}
-                      </p>
-                      <p className="text-xs text-gray-500">{link.description}</p>
+          {/* Navigation */}
+          <nav className="space-y-2">
+            {filteredItems.map((item) => (
+              <div key={item.title}>
+                <button
+                  onClick={() => toggleDropdown(item.title)}
+                  className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-200 group"
+                >
+                  <div className="flex items-center space-x-3">
+                    <div className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center`}>
+                      {item.icon}
                     </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
+                    <div className="text-left">
+                      <div className="flex items-center space-x-2">
+                        <span className="font-medium text-white">{item.title}</span>
+                        {item.badge && (
+                          <span className="px-2 py-1 text-xs bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-full">
+                            {item.badge}
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs text-zinc-400">{item.description}</p>
+                    </div>
+                  </div>
+                  <ChevronDown className={`w-4 h-4 text-zinc-400 transition-transform duration-200 ${
+                    activeDropdown === item.title ? 'rotate-180' : ''
+                  }`} />
+                </button>
 
-            {/* Contact Info */}
-            <div className="p-6 border-t border-cyan-500/30">
-              <h3 className="text-sm font-semibold text-gray-300 mb-3 flex items-center space-x-2">
-                <MessageCircle className="w-4 h-4 text-cyan-400" />
-                <span>Contact Info</span>
-              </h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-200">
-                    {contactInfo.mobile}
-                  </a>
+                {/* Dropdown Items */}
+                <AnimatePresence>
+                  {activeDropdown === item.title && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="ml-8 mt-2 space-y-1"
+                    >
+                      {item.children?.map((child) => (
+                        <Link
+                          key={child.name}
+                          href={child.href}
+                          className="block p-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-200 group"
+                        >
+                          <div className="flex items-center space-x-3">
+                            <div className="w-6 h-6 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                              <ArrowRight className="w-3 h-3 text-white" />
+                            </div>
+                            <div>
+                              <span className="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors duration-200">
+                                {child.name}
+                              </span>
+                              <p className="text-xs text-zinc-500 group-hover:text-zinc-400 transition-colors duration-200">
+                                {child.description}
+                              </p>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </nav>
+
+          {/* Quick Actions */}
+          <div className="mt-8 pt-6 border-t border-zinc-800/50">
+            <h3 className="text-sm font-semibold text-zinc-300 mb-4">Quick Actions</h3>
+            <div className="space-y-2">
+              <Link
+                href="/contact"
+                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-200 group"
+              >
+                <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
+                  <MessageCircle className="w-4 h-4 text-white" />
                 </div>
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">
-                    {contactInfo.email}
-                  </a>
+                <span className="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors duration-200">
+                  Get Quote
+                </span>
+              </Link>
+              <Link
+                href="/demo"
+                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-200 group"
+              >
+                <div className="w-8 h-8 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center">
+                  <Video className="w-4 h-4 text-white" />
                 </div>
-                <div className="flex items-start space-x-2 text-gray-400">
-                  <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
-                  <span className="text-xs">{contactInfo.address}</span>
+                <span className="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors duration-200">
+                  Book Demo
+                </span>
+              </Link>
+              <Link
+                href="/support"
+                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-200 group"
+              >
+                <div className="w-8 h-8 bg-gradient-to-br from-zion-green to-zion-cyan rounded-lg flex items-center justify-center">
+                  <Headphones className="w-4 h-4 text-white" />
                 </div>
+                <span className="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors duration-200">
+                  Support
+                </span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="mt-8 pt-6 border-t border-zinc-800/50">
+            <h3 className="text-sm font-semibold text-zinc-300 mb-4">Contact Info</h3>
+            <div className="space-y-3 text-sm text-zinc-400">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-zion-cyan" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-4 h-4 text-zion-cyan" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-4 h-4 text-zion-cyan" />
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
-          </motion.aside>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      </motion.aside>
+
+      {/* Mobile Toggle Button */}
+      <button
+        onClick={() => setIsOpen(true)}
+        className="fixed top-4 left-4 z-30 lg:hidden p-2 bg-zinc-900/90 backdrop-blur-sm border border-zinc-800/50 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800/90 transition-all duration-200"
+      >
+        <Menu className="w-5 h-5" />
+      </button>
     </>
   );
 }
