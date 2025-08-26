@@ -1,35 +1,37 @@
 import React from 'react';
 import { cuttingEdgeInnovations2025 } from '../data/2025-cutting-edge-innovations';
 import { specializedIndustrySolutions2025 } from '../data/2025-specialized-industry-solutions';
-
-const InnovationServicesMarketing: React.FC = () => {
-  const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
-  
-  const categories = Array.from(new Set(allServices.map(service => service.category)));
-  const industries = Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)));
-
-  const formatPrice = (price: number, model: string) => {
-    if (model === 'percentage of revenue') {
-      return `${price}% of revenue`;
-    } else if (model === 'per device per day') {
-      return `$${price.toFixed(2)}/device/day`;
-    } else if (model === 'per kWh managed') {
-      return `$${price.toFixed(3)}/kWh`;
-    } else if (model === 'per acre') {
-      return `$${price.toFixed(2)}/acre/month`;
-    } else if (model === 'per inference') {
-      return `$${price.toFixed(3)}/inference`;
-    } else if (model === 'monthly per student') {
-      return `$${price}/student/month`;
-    } else if (model === 'monthly per attorney') {
-      return `$${price}/attorney/month`;
-    } else {
-      return `$${price}/${model}`;
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-32">
+const InnovationServicesMarketing = () => {
+    const allServices = [...cuttingEdgeInnovations2025, ...specializedIndustrySolutions2025];
+    const categories = Array.from(new Set(allServices.map(service => service.category)));
+    const industries = Array.from(new Set(specializedIndustrySolutions2025.map(service => service.industry)));
+    const formatPrice = (price, model) => {
+        if (model === 'percentage of revenue') {
+            return `${price}% of revenue`;
+        }
+        else if (model === 'per device per day') {
+            return `$${price.toFixed(2)}/device/day`;
+        }
+        else if (model === 'per kWh managed') {
+            return `$${price.toFixed(3)}/kWh`;
+        }
+        else if (model === 'per acre') {
+            return `$${price.toFixed(2)}/acre/month`;
+        }
+        else if (model === 'per inference') {
+            return `$${price.toFixed(3)}/inference`;
+        }
+        else if (model === 'monthly per student') {
+            return `$${price}/student/month`;
+        }
+        else if (model === 'monthly per attorney') {
+            return `$${price}/attorney/month`;
+        }
+        else {
+            return `$${price}/${model}`;
+        }
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Hero Section */}
         <div className="text-center mb-20">
@@ -68,7 +70,7 @@ const InnovationServicesMarketing: React.FC = () => {
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                   </svg>
                 </div>
                 <h3 className="text-white font-bold mb-2 text-lg">Phone</h3>
@@ -78,7 +80,7 @@ const InnovationServicesMarketing: React.FC = () => {
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
                 </div>
                 <h3 className="text-white font-bold mb-2 text-lg">Email</h3>
@@ -88,8 +90,8 @@ const InnovationServicesMarketing: React.FC = () => {
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                   </svg>
                 </div>
                 <h3 className="text-white font-bold mb-2 text-lg">Address</h3>
@@ -105,11 +107,9 @@ const InnovationServicesMarketing: React.FC = () => {
           <h2 className="text-4xl font-bold text-white text-center mb-12">Service Categories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category) => {
-              const categoryServices = allServices.filter(service => service.category === category);
-              const avgPrice = categoryServices.reduce((sum, service) => sum + service.price, 0) / categoryServices.length;
-              
-              return (
-                <div key={category} className="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
+            const categoryServices = allServices.filter(service => service.category === category);
+            const avgPrice = categoryServices.reduce((sum, service) => sum + service.price, 0) / categoryServices.length;
+            return (<div key={category} className="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
                   <h3 className="text-2xl font-bold text-white mb-4">{category}</h3>
                   <p className="text-gray-300 mb-4">
                     {categoryServices.length} innovative services
@@ -118,23 +118,18 @@ const InnovationServicesMarketing: React.FC = () => {
                     From ${Math.round(avgPrice)}/month
                   </div>
                   <div className="space-y-2">
-                    {categoryServices.slice(0, 3).map((service) => (
-                      <div key={service.id} className="flex items-center text-gray-300 text-sm">
+                    {categoryServices.slice(0, 3).map((service) => (<div key={service.id} className="flex items-center text-gray-300 text-sm">
                         <svg className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                         </svg>
                         {service.name}
-                      </div>
-                    ))}
-                    {categoryServices.length > 3 && (
-                      <div className="text-gray-400 text-sm">
+                      </div>))}
+                    {categoryServices.length > 3 && (<div className="text-gray-400 text-sm">
                         +{categoryServices.length - 3} more services
-                      </div>
-                    )}
+                      </div>)}
                   </div>
-                </div>
-              );
-            })}
+                </div>);
+        })}
           </div>
         </div>
 
@@ -143,11 +138,9 @@ const InnovationServicesMarketing: React.FC = () => {
           <h2 className="text-4xl font-bold text-white text-center mb-12">Industry-Specific Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry) => {
-              const industryServices = specializedIndustrySolutions2025.filter(service => service.industry === industry);
-              const avgPrice = industryServices.reduce((sum, service) => sum + service.price, 0) / industryServices.length;
-              
-              return (
-                <div key={industry} className="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
+            const industryServices = specializedIndustrySolutions2025.filter(service => service.industry === industry);
+            const avgPrice = industryServices.reduce((sum, service) => sum + service.price, 0) / industryServices.length;
+            return (<div key={industry} className="bg-slate-800/50 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
                   <h3 className="text-2xl font-bold text-white mb-4">{industry}</h3>
                   <p className="text-gray-300 mb-4">
                     Tailored solutions for {industry.toLowerCase()} industry
@@ -156,18 +149,15 @@ const InnovationServicesMarketing: React.FC = () => {
                     From ${Math.round(avgPrice)}/month
                   </div>
                   <div className="space-y-2">
-                    {industryServices.slice(0, 3).map((service) => (
-                      <div key={service.id} className="flex items-center text-gray-300 text-sm">
+                    {industryServices.slice(0, 3).map((service) => (<div key={service.id} className="flex items-center text-gray-300 text-sm">
                         <svg className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                         {service.name}
-                      </div>
-                    ))}
+                      </div>))}
                   </div>
-                </div>
-              );
-            })}
+                </div>);
+        })}
           </div>
         </div>
 
@@ -175,15 +165,12 @@ const InnovationServicesMarketing: React.FC = () => {
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Featured Innovation Services</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {allServices.slice(0, 6).map((service) => (
-              <div key={service.id} className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-300">
+            {allServices.slice(0, 6).map((service) => (<div key={service.id} className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 hover:border-white/20 transition-all duration-300">
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-blue-400 font-medium">{service.category}</p>
-                    {'industry' in service && (
-                      <p className="text-green-400 text-sm">{service.industry}</p>
-                    )}
+                    {'industry' in service && (<p className="text-green-400 text-sm">{service.industry}</p>)}
                   </div>
                   <div className="text-right">
                     <div className="text-3xl font-bold text-white">
@@ -201,27 +188,23 @@ const InnovationServicesMarketing: React.FC = () => {
                   <div>
                     <h4 className="text-white font-semibold mb-3">Key Features</h4>
                     <ul className="space-y-2">
-                      {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-start text-gray-300 text-sm">
+                      {service.features.slice(0, 4).map((feature, idx) => (<li key={idx} className="flex items-start text-gray-300 text-sm">
                           <svg className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                           </svg>
                           {feature}
-                        </li>
-                      ))}
+                        </li>))}
                     </ul>
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-3">Benefits</h4>
                     <ul className="space-y-2">
-                      {service.benefits.slice(0, 4).map((benefit, idx) => (
-                        <li key={idx} className="flex items-start text-gray-300 text-sm">
+                      {service.benefits.slice(0, 4).map((benefit, idx) => (<li key={idx} className="flex items-start text-gray-300 text-sm">
                           <svg className="w-4 h-4 text-blue-400 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
                           </svg>
                           {benefit}
-                        </li>
-                      ))}
+                        </li>))}
                     </ul>
                   </div>
                 </div>
@@ -242,15 +225,11 @@ const InnovationServicesMarketing: React.FC = () => {
                 </div>
 
                 <div className="text-center">
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
-                    className="inline-block w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200"
-                  >
+                  <a href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`} className="inline-block w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200">
                     Get Started with {service.name}
                   </a>
                 </div>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
 
@@ -309,16 +288,10 @@ const InnovationServicesMarketing: React.FC = () => {
               innovation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Innovation Services Consultation"
-                className="px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 text-xl"
-              >
+              <a href="mailto:kleber@ziontechgroup.com?subject=Innovation Services Consultation" className="px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 text-xl">
                 Schedule a Consultation
               </a>
-              <a
-                href="tel:+13024640950"
-                className="px-10 py-5 bg-slate-700/50 border border-white/20 text-white font-bold rounded-lg hover:bg-slate-700/70 transition-all duration-200 text-xl"
-              >
+              <a href="tel:+13024640950" className="px-10 py-5 bg-slate-700/50 border border-white/20 text-white font-bold rounded-lg hover:bg-slate-700/70 transition-all duration-200 text-xl">
                 Call Now: +1 302 464 0950
               </a>
             </div>
@@ -328,8 +301,6 @@ const InnovationServicesMarketing: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>);
 };
-
 export default InnovationServicesMarketing;

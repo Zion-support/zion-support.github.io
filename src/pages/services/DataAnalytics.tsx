@@ -1,177 +1,166 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import Link from 'next/link';
-import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Globe, Target, PieChart, LineChart, Activity } from 'lucide-react';
-
+import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target } from 'lucide-react';
 export default function DataAnalyticsServices() {
-  const analyticsServices = [
-    {
-      icon: BarChart3,
-      title: 'Business Intelligence & Reporting',
-      description: 'Transform raw data into actionable insights with interactive dashboards and automated reporting.',
-      price: 'From $3,500/month',
-      marketPrice: '$2,500 - $8,000/month',
-      features: [
-        'Interactive dashboards with real-time data',
-        'Automated report generation and distribution',
-        'Custom KPI tracking and alerts',
-        'Multi-source data integration',
-        'Role-based access control',
-        'Mobile-responsive design'
-      ],
-      benefits: [
-        'Faster decision-making with real-time insights',
-        'Reduced manual reporting time by 80%',
-        'Improved data accuracy and consistency',
-        'Enhanced stakeholder communication'
-      ]
-    },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Analytics & Forecasting',
-      description: 'Leverage machine learning to predict future trends and make data-driven decisions.',
-      price: 'From $5,000/month',
-      marketPrice: '$4,000 - $12,000/month',
-      features: [
-        'Advanced statistical modeling',
-        'Machine learning algorithms',
-        'Scenario planning and what-if analysis',
-        'Automated forecasting models',
-        'Confidence interval reporting',
-        'Model performance monitoring'
-      ],
-      benefits: [
-        'Proactive business planning',
-        'Risk mitigation and opportunity identification',
-        'Improved resource allocation',
-        'Competitive advantage through foresight'
-      ]
-    },
-    {
-      icon: Database,
-      title: 'Data Engineering & ETL',
-      description: 'Build robust data pipelines and warehouses for scalable analytics infrastructure.',
-      price: 'From $4,500/month',
-      marketPrice: '$3,500 - $10,000/month',
-      features: [
-        'Data pipeline development and maintenance',
-        'ETL/ELT process optimization',
-        'Data quality monitoring and validation',
-        'Real-time data streaming',
-        'Cloud-native data warehousing',
-        'Data governance and compliance'
-      ],
-      benefits: [
-        'Centralized data access and management',
-        'Improved data quality and reliability',
-        'Faster data processing and delivery',
-        'Reduced data silos and duplication'
-      ]
-    },
-    {
-      icon: Users,
-      title: 'Customer Analytics & Segmentation',
-      description: 'Understand customer behavior and create targeted marketing strategies.',
-      price: 'From $3,800/month',
-      marketPrice: '$3,000 - $9,000/month',
-      features: [
-        'Customer journey mapping and analysis',
-        'Behavioral segmentation and clustering',
-        'Churn prediction and prevention',
-        'Customer lifetime value analysis',
-        'A/B testing and optimization',
-        'Personalization engine integration'
-      ],
-      benefits: [
-        'Improved customer retention and loyalty',
-        'Higher marketing ROI through targeting',
-        'Better product-market fit',
-        'Enhanced customer experience'
-      ]
-    },
-    {
-      icon: Shield,
-      title: 'Data Governance & Compliance',
-      description: 'Ensure data security, privacy, and regulatory compliance across your analytics platform.',
-      price: 'From $4,200/month',
-      marketPrice: '$3,500 - $8,500/month',
-      features: [
-        'GDPR, CCPA, and HIPAA compliance',
-        'Data privacy and security controls',
-        'Audit trails and data lineage',
-        'Access control and encryption',
-        'Compliance reporting and monitoring',
-        'Data retention and deletion policies'
-      ],
-      benefits: [
-        'Reduced compliance risks and penalties',
-        'Enhanced data security and trust',
-        'Streamlined audit processes',
-        'Protection of sensitive information'
-      ]
-    },
-    {
-      icon: Zap,
-      title: 'Real-Time Analytics & Monitoring',
-      description: 'Monitor business performance in real-time with instant alerts and notifications.',
-      price: 'From $4,800/month',
-      marketPrice: '$4,000 - $11,000/month',
-      features: [
-        'Real-time data streaming and processing',
-        'Instant alerting and notifications',
-        'Performance monitoring dashboards',
-        'Anomaly detection and alerting',
-        'Mobile push notifications',
-        'Integration with incident management'
-      ],
-      benefits: [
-        'Immediate issue identification and response',
-        'Improved operational efficiency',
-        'Better customer experience',
-        'Reduced downtime and losses'
-      ]
-    }
-  ];
-
-  const industries = [
-    'Financial Services & Banking',
-    'Healthcare & Life Sciences',
-    'Retail & E-commerce',
-    'Manufacturing & Supply Chain',
-    'Energy & Utilities',
-    'Telecommunications',
-    'Transportation & Logistics',
-    'Government & Public Sector'
-  ];
-
-  const technologies = [
-    'Tableau & Power BI',
-    'Python & R for Analytics',
-    'Apache Spark & Kafka',
-    'Snowflake & BigQuery',
-    'AWS Redshift & Azure Synapse',
-    'Databricks & Dataiku',
-    'Alteryx & KNIME',
-    'TensorFlow & PyTorch'
-  ];
-
-  const benefits = [
-    'Data-driven decision making and strategy',
-    'Improved operational efficiency and cost reduction',
-    'Enhanced customer understanding and engagement',
-    'Competitive advantage through insights',
-    'Risk mitigation and compliance',
-    'Scalable analytics infrastructure'
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Data Analytics & Business Intelligence Services - Zion Tech Group" 
-        description="Comprehensive data analytics, business intelligence, and predictive analytics solutions to transform your business with data-driven insights."
-        keywords="data analytics, business intelligence, predictive analytics, data engineering, ETL, data visualization, reporting"
-        canonical="https://ziontechgroup.com/services/data-analytics"
-      />
+    const analyticsServices = [
+        {
+            icon: BarChart3,
+            title: 'Business Intelligence & Reporting',
+            description: 'Transform raw data into actionable insights with interactive dashboards and automated reporting.',
+            price: 'From $3,500/month',
+            marketPrice: '$2,500 - $8,000/month',
+            features: [
+                'Interactive dashboards with real-time data',
+                'Automated report generation and distribution',
+                'Custom KPI tracking and alerts',
+                'Multi-source data integration',
+                'Role-based access control',
+                'Mobile-responsive design'
+            ],
+            benefits: [
+                'Faster decision-making with real-time insights',
+                'Reduced manual reporting time by 80%',
+                'Improved data accuracy and consistency',
+                'Enhanced stakeholder communication'
+            ]
+        },
+        {
+            icon: TrendingUp,
+            title: 'Predictive Analytics & Forecasting',
+            description: 'Leverage machine learning to predict future trends and make data-driven decisions.',
+            price: 'From $5,000/month',
+            marketPrice: '$4,000 - $12,000/month',
+            features: [
+                'Advanced statistical modeling',
+                'Machine learning algorithms',
+                'Scenario planning and what-if analysis',
+                'Automated forecasting models',
+                'Confidence interval reporting',
+                'Model performance monitoring'
+            ],
+            benefits: [
+                'Proactive business planning',
+                'Risk mitigation and opportunity identification',
+                'Improved resource allocation',
+                'Competitive advantage through foresight'
+            ]
+        },
+        {
+            icon: Database,
+            title: 'Data Engineering & ETL',
+            description: 'Build robust data pipelines and warehouses for scalable analytics infrastructure.',
+            price: 'From $4,500/month',
+            marketPrice: '$3,500 - $10,000/month',
+            features: [
+                'Data pipeline development and maintenance',
+                'ETL/ELT process optimization',
+                'Data quality monitoring and validation',
+                'Real-time data streaming',
+                'Cloud-native data warehousing',
+                'Data governance and compliance'
+            ],
+            benefits: [
+                'Centralized data access and management',
+                'Improved data quality and reliability',
+                'Faster data processing and delivery',
+                'Reduced data silos and duplication'
+            ]
+        },
+        {
+            icon: Users,
+            title: 'Customer Analytics & Segmentation',
+            description: 'Understand customer behavior and create targeted marketing strategies.',
+            price: 'From $3,800/month',
+            marketPrice: '$3,000 - $9,000/month',
+            features: [
+                'Customer journey mapping and analysis',
+                'Behavioral segmentation and clustering',
+                'Churn prediction and prevention',
+                'Customer lifetime value analysis',
+                'A/B testing and optimization',
+                'Personalization engine integration'
+            ],
+            benefits: [
+                'Improved customer retention and loyalty',
+                'Higher marketing ROI through targeting',
+                'Better product-market fit',
+                'Enhanced customer experience'
+            ]
+        },
+        {
+            icon: Shield,
+            title: 'Data Governance & Compliance',
+            description: 'Ensure data security, privacy, and regulatory compliance across your analytics platform.',
+            price: 'From $4,200/month',
+            marketPrice: '$3,500 - $8,500/month',
+            features: [
+                'GDPR, CCPA, and HIPAA compliance',
+                'Data privacy and security controls',
+                'Audit trails and data lineage',
+                'Access control and encryption',
+                'Compliance reporting and monitoring',
+                'Data retention and deletion policies'
+            ],
+            benefits: [
+                'Reduced compliance risks and penalties',
+                'Enhanced data security and trust',
+                'Streamlined audit processes',
+                'Protection of sensitive information'
+            ]
+        },
+        {
+            icon: Zap,
+            title: 'Real-Time Analytics & Monitoring',
+            description: 'Monitor business performance in real-time with instant alerts and notifications.',
+            price: 'From $4,800/month',
+            marketPrice: '$4,000 - $11,000/month',
+            features: [
+                'Real-time data streaming and processing',
+                'Instant alerting and notifications',
+                'Performance monitoring dashboards',
+                'Anomaly detection and alerting',
+                'Mobile push notifications',
+                'Integration with incident management'
+            ],
+            benefits: [
+                'Immediate issue identification and response',
+                'Improved operational efficiency',
+                'Better customer experience',
+                'Reduced downtime and losses'
+            ]
+        }
+    ];
+    const industries = [
+        'Financial Services & Banking',
+        'Healthcare & Life Sciences',
+        'Retail & E-commerce',
+        'Manufacturing & Supply Chain',
+        'Energy & Utilities',
+        'Telecommunications',
+        'Transportation & Logistics',
+        'Government & Public Sector'
+    ];
+    const technologies = [
+        'Tableau & Power BI',
+        'Python & R for Analytics',
+        'Apache Spark & Kafka',
+        'Snowflake & BigQuery',
+        'AWS Redshift & Azure Synapse',
+        'Databricks & Dataiku',
+        'Alteryx & KNIME',
+        'TensorFlow & PyTorch'
+    ];
+    const benefits = [
+        'Data-driven decision making and strategy',
+        'Improved operational efficiency and cost reduction',
+        'Enhanced customer understanding and engagement',
+        'Competitive advantage through insights',
+        'Risk mitigation and compliance',
+        'Scalable analytics infrastructure'
+    ];
+    return (<div className="min-h-screen bg-background">
+      <SEO title="Data Analytics & Business Intelligence Services - Zion Tech Group" description="Comprehensive data analytics, business intelligence, and predictive analytics solutions to transform your business with data-driven insights." keywords="data analytics, business intelligence, predictive analytics, data engineering, ETL, data visualization, reporting" canonical="https://ziontechgroup.com/services/data-analytics"/>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">
@@ -199,10 +188,9 @@ export default function DataAnalyticsServices() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {analyticsServices.map((service, index) => (
-              <div key={service.title} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
+            {analyticsServices.map((service, index) => (<div key={service.title} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
                 <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-blue-600" />
+                  <service.icon className="w-8 h-8 text-blue-600"/>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
@@ -211,22 +199,17 @@ export default function DataAnalyticsServices() {
                   <p className="text-sm text-gray-500">Market: {service.marketPrice}</p>
                 </div>
                 <ul className="space-y-2 mb-4">
-                  {service.features.slice(0, 4).map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
                       {feature}
-                    </li>
-                  ))}
+                    </li>))}
                 </ul>
                 <div className="space-y-2">
-                  {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="text-sm text-gray-600">
+                  {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (<div key={benefitIndex} className="text-sm text-gray-600">
                       <span className="font-medium">✓</span> {benefit}
-                    </div>
-                  ))}
+                    </div>))}
                 </div>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -245,12 +228,10 @@ export default function DataAnalyticsServices() {
               </p>
               
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start">
-                    <Check className="w-6 h-6 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
+                {benefits.map((benefit, index) => (<div key={index} className="flex items-start">
+                    <Check className="w-6 h-6 text-blue-500 mr-3 mt-0.5 flex-shrink-0"/>
                     <span className="text-gray-700">{benefit}</span>
-                  </div>
-                ))}
+                  </div>))}
               </div>
             </div>
 
@@ -270,10 +251,7 @@ export default function DataAnalyticsServices() {
                   <span className="font-semibold text-green-600">FREE</span>
                 </div>
               </div>
-              <Link
-                to="/contact"
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block w-full text-center"
-              >
+              <Link to="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block w-full text-center">
                 Schedule Assessment
               </Link>
             </div>
@@ -293,14 +271,12 @@ export default function DataAnalyticsServices() {
           </div>
 
           <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {industries.map((industry, index) => (
-              <div key={industry} className="bg-gray-50 rounded-xl p-6 text-center hover:bg-blue-50 transition-colors border border-gray-200">
+            {industries.map((industry, index) => (<div key={industry} className="bg-gray-50 rounded-xl p-6 text-center hover:bg-blue-50 transition-colors border border-gray-200">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-blue-600" />
+                  <Target className="w-8 h-8 text-blue-600"/>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -317,11 +293,9 @@ export default function DataAnalyticsServices() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {technologies.map((tech, index) => (
-              <div key={tech} className="bg-white rounded-lg p-4 text-center hover:bg-blue-50 transition-colors border border-gray-200">
+            {technologies.map((tech, index) => (<div key={tech} className="bg-white rounded-lg p-4 text-center hover:bg-blue-50 transition-colors border border-gray-200">
                 <span className="text-gray-700 font-medium text-sm">{tech}</span>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -411,21 +385,14 @@ export default function DataAnalyticsServices() {
             that drive business growth and competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
+            <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Start Your Analytics Journey
             </Link>
-            <Link 
-              to="/services" 
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
+            <Link to="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               Explore All Services
             </Link>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 }

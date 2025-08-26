@@ -1,64 +1,32 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Clock, 
-  Users, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Zap, 
-  Network, 
-  Smartphone, 
-  CreditCard, 
-  CheckCircle, 
-  ArrowRight, 
-  ExternalLink,
-  Send,
-  Building,
-  Award,
-  TrendingUp,
-  Star,
-  MessageSquare,
-  Calendar,
-  FileText
-} from 'lucide-react';
-import { ENHANCED_SERVICES, SERVICE_CATEGORIES } from '@/data/enhancedServices';
-
+import { Phone, Mail, MapPin, Globe, Users, Shield, CheckCircle, ExternalLink, Send, Building, Award, TrendingUp, Star, MessageSquare, Calendar, FileText } from 'lucide-react';
+import { SERVICE_CATEGORIES } from '@/data/enhancedServices';
 export default function ComprehensiveContact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
     });
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Handle form submission
+        console.log('Form submitted:', formData);
+    };
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -92,65 +60,28 @@ export default function ComprehensiveContact() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="name" className="text-white">Full Name *</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light"
-                        placeholder="Enter your full name"
-                      />
+                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter your full name"/>
                     </div>
                     <div>
                       <Label htmlFor="email" className="text-white">Email Address *</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light"
-                        placeholder="Enter your email"
-                      />
+                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter your email"/>
                     </div>
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="company" className="text-white">Company</Label>
-                      <Input
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light"
-                        placeholder="Enter company name"
-                      />
+                      <Input id="company" name="company" value={formData.company} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter company name"/>
                     </div>
                     <div>
                       <Label htmlFor="phone" className="text-white">Phone Number</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light"
-                        placeholder="Enter phone number"
-                      />
+                      <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Enter phone number"/>
                     </div>
                   </div>
 
                   <div>
                     <Label htmlFor="service" className="text-white">Service Interest</Label>
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      className="w-full p-3 rounded-md bg-white/10 border border-zion-cyan/30 text-white"
-                    >
+                    <select id="service" name="service" value={formData.service} onChange={handleChange} className="w-full p-3 rounded-md bg-white/10 border border-zion-cyan/30 text-white">
                       <option value="">Select a service</option>
                       <option value="ai-automation">AI & Automation</option>
                       <option value="cybersecurity">Cybersecurity</option>
@@ -166,20 +97,11 @@ export default function ComprehensiveContact() {
 
                   <div>
                     <Label htmlFor="message" className="text-white">Message *</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light"
-                      placeholder="Tell us about your project or requirements..."
-                    />
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={5} className="bg-white/10 border-zion-cyan/30 text-white placeholder:text-zion-cyan-light" placeholder="Tell us about your project or requirements..."/>
                   </div>
 
                   <Button type="submit" className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white py-3">
-                    <Send className="mr-2 h-5 w-5" />
+                    <Send className="mr-2 h-5 w-5"/>
                     Send Message
                   </Button>
                 </form>
@@ -193,7 +115,7 @@ export default function ComprehensiveContact() {
               <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <Phone className="h-6 w-6 text-zion-cyan mt-1" />
+                  <Phone className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>
                     <h3 className="font-semibold text-white">Phone</h3>
                     <p className="text-zion-cyan-light">+1 302 464 0950</p>
@@ -202,7 +124,7 @@ export default function ComprehensiveContact() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <Mail className="h-6 w-6 text-zion-cyan mt-1" />
+                  <Mail className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>
                     <h3 className="font-semibold text-white">Email</h3>
                     <p className="text-zion-cyan-light">kleber@ziontechgroup.com</p>
@@ -211,7 +133,7 @@ export default function ComprehensiveContact() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <MapPin className="h-6 w-6 text-zion-cyan mt-1" />
+                  <MapPin className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>
                     <h3 className="font-semibold text-white">Address</h3>
                     <p className="text-zion-cyan-light">364 E Main St STE 1008</p>
@@ -220,15 +142,10 @@ export default function ComprehensiveContact() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <Globe className="h-6 w-6 text-zion-cyan mt-1" />
+                  <Globe className="h-6 w-6 text-zion-cyan mt-1"/>
                   <div>
                     <h3 className="font-semibold text-white">Website</h3>
-                    <a 
-                      href="https://ziontechgroup.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-zion-cyan hover:text-zion-cyan-light underline"
-                    >
+                    <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-light underline">
                       ziontechgroup.com
                     </a>
                   </div>
@@ -241,15 +158,15 @@ export default function ComprehensiveContact() {
               <h3 className="text-xl font-semibold text-white mb-4">Quick Actions</h3>
               <div className="space-y-3">
                 <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                  <Calendar className="mr-2 h-4 w-4" />
+                  <Calendar className="mr-2 h-4 w-4"/>
                   Schedule a Consultation
                 </Button>
                 <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                  <FileText className="mr-2 h-4 w-4" />
+                  <FileText className="mr-2 h-4 w-4"/>
                   Request a Quote
                 </Button>
                 <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                  <MessageSquare className="mr-2 h-4 w-4" />
+                  <MessageSquare className="mr-2 h-4 w-4"/>
                   Live Chat Support
                 </Button>
               </div>
@@ -269,8 +186,7 @@ export default function ComprehensiveContact() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SERVICE_CATEGORIES.map((category) => (
-              <Card key={category.id} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
+            {SERVICE_CATEGORIES.map((category) => (<Card key={category.id} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
                 <CardHeader className="text-center">
                   <div className="text-4xl mb-4">{category.icon}</div>
                   <CardTitle className="text-white">{category.name}</CardTitle>
@@ -280,19 +196,16 @@ export default function ComprehensiveContact() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    {category.services.slice(0, 3).map((service) => (
-                      <div key={service.id} className="flex items-center gap-2 text-sm">
-                        <CheckCircle className="h-3 w-3 text-green-400" />
+                    {category.services.slice(0, 3).map((service) => (<div key={service.id} className="flex items-center gap-2 text-sm">
+                        <CheckCircle className="h-3 w-3 text-green-400"/>
                         <span className="text-zion-cyan-light">{service.title}</span>
-                      </div>
-                    ))}
+                      </div>))}
                   </div>
                   <Button variant="outline" className="w-full mt-4 border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
                     View Services
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </div>
@@ -309,7 +222,7 @@ export default function ComprehensiveContact() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
-              <Award className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <Award className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
               <h3 className="text-2xl font-bold text-white mb-4">Proven Expertise</h3>
               <p className="text-zion-cyan-light">
                 Years of experience delivering successful technology solutions across industries.
@@ -319,7 +232,7 @@ export default function ComprehensiveContact() {
 
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
-              <Shield className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <Shield className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
               <h3 className="text-2xl font-bold text-white mb-4">Custom Solutions</h3>
               <p className="text-zion-cyan-light">
                 Tailored approaches that address your specific business challenges and goals.
@@ -329,7 +242,7 @@ export default function ComprehensiveContact() {
 
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
-              <TrendingUp className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <TrendingUp className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
               <h3 className="text-2xl font-bold text-white mb-4">Measurable Results</h3>
               <p className="text-zion-cyan-light">
                 Trackable outcomes and ROI that demonstrate the value of our solutions.
@@ -339,7 +252,7 @@ export default function ComprehensiveContact() {
 
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
-              <Users className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <Users className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
               <h3 className="text-2xl font-bold text-white mb-4">Dedicated Support</h3>
               <p className="text-zion-cyan-light">
                 24/7 support and ongoing partnership to ensure your success.
@@ -349,7 +262,7 @@ export default function ComprehensiveContact() {
 
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
-              <Building className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <Building className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Ready</h3>
               <p className="text-zion-cyan-light">
                 Solutions that scale with your business and meet enterprise standards.
@@ -359,7 +272,7 @@ export default function ComprehensiveContact() {
 
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
-              <Star className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <Star className="h-16 w-16 mx-auto mb-4 text-zion-cyan"/>
               <h3 className="text-2xl font-bold text-white mb-4">Quality Assured</h3>
               <p className="text-zion-cyan-light">
                 Rigorous testing and quality assurance processes for reliable solutions.
@@ -380,11 +293,11 @@ export default function ComprehensiveContact() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan px-8 py-3">
-              <Phone className="mr-2 h-5 w-5" />
+              <Phone className="mr-2 h-5 w-5"/>
               Call Now: +1 302 464 0950
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3">
-              <Mail className="mr-2 h-5 w-5" />
+              <Mail className="mr-2 h-5 w-5"/>
               Email: kleber@ziontechgroup.com
             </Button>
           </div>
@@ -422,17 +335,12 @@ export default function ComprehensiveContact() {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
               <div className="space-y-2">
-                <a 
-                  href="https://ziontechgroup.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-zion-cyan hover:text-zion-cyan-light"
-                >
-                  <Globe className="h-4 w-4 mr-2" />
+                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-zion-cyan hover:text-zion-cyan-light">
+                  <Globe className="h-4 w-4 mr-2"/>
                   Website
                 </a>
                 <Button variant="outline" size="sm" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                  <ExternalLink className="h-4 w-4 mr-2" />
+                  <ExternalLink className="h-4 w-4 mr-2"/>
                   View All Services
                 </Button>
               </div>
@@ -443,6 +351,5 @@ export default function ComprehensiveContact() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
 }

@@ -1,58 +1,43 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-
 export default function Profile() {
-  const { user, isLoading, logout } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!isLoading && !user) {
-      toast.error("Please log in to view your profile");
-      navigate("/login?redirect=/profile");
-    }
-  }, [user, isLoading, navigate]);
-
-  if (isLoading) {
-    return (
-      <>
+    const { user, isLoading, logout } = useAuth();
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (!isLoading && !user) {
+            toast.error("Please log in to view your profile");
+            navigate("/login?redirect=/profile");
+        }
+    }, [user, isLoading, navigate]);
+    if (isLoading) {
+        return (<>
         
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="animate-pulse text-white">Loading profile...</div>
         </div>
         
-      </>
-    );
-  }
-
-  if (!user) {
-    return (
-      <>
+      </>);
+    }
+    if (!user) {
+        return (<>
         
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
             <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
             <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>
-            <Button 
-              onClick={() => navigate("/login?redirect=/profile")}
-              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-            >
+            <Button onClick={() => navigate("/login?redirect=/profile")} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
               Go to Login
             </Button>
           </div>
         </div>
         
-      </>
-    );
-  }
-
-  return (
-    <>
+      </>);
+    }
+    return (<>
       
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-8">
@@ -67,14 +52,10 @@ export default function Profile() {
               <div className="md:w-2/3">
                 <h2 className="text-xl font-bold text-white">{user.displayName || "User"}</h2>
                 <p className="text-zion-slate-light mb-4">{user.email}</p>
-                <Button
-                  onClick={() => {
-                    logout();
-                    navigate("/");
-                  }}
-                  variant="outline"
-                  className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-                >
+                <Button onClick={() => {
+            logout();
+            navigate("/");
+        }} variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
                   Logout
                 </Button>
               </div>
@@ -83,32 +64,7 @@ export default function Profile() {
         </div>
       </div>
       
-const Profile: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Profile - Zion Tech Group</title>
-        <meta name="description" content="Manage your Zion Tech Group profile. Update your information, preferences, and account settings." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Profile</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Manage your account information, preferences, and settings in one place.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <p className="text-gray-600 text-center">
-              Profile management coming soon. We're building comprehensive profile features.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
+    </>);
+}
+;
 export default Profile;

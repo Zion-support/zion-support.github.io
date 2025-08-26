@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousCreativity: React.FC = () => {
-  return (
-    <>
+const AIAutonomousCreativity = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Creativity Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous creativity platform that continuously generates ideas, creates content, and produces innovative solutions with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI creativity, autonomous creativity, content generation, idea creation, autonomous operations, AI creativity platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-creativity" />
+        <meta name="description" content="Revolutionary AI autonomous creativity platform that continuously generates ideas, creates content, and produces innovative solutions with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI creativity, autonomous creativity, content generation, idea creation, autonomous operations, AI creativity platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-creativity"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-fuchsia-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousCreativity: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Creativity Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Content Creation', 'Design Generation', 'Story Writing', 'Music Composition', 'Art Creation', 'Concept Development', 'Brand Creation', 'Campaign Design'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Content Creation', 'Design Generation', 'Story Writing', 'Music Composition', 'Art Creation', 'Concept Development', 'Brand Creation', 'Campaign Design'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousCreativity: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousCreativity;

@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousNetworkSecurity: React.FC = () => {
-  return (
-    <>
+const AIAutonomousNetworkSecurity = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Network Security Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous network security platform that continuously monitors networks, detects threats, and protects infrastructure with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI network security, autonomous network security, network monitoring, threat detection, autonomous operations, AI network security platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-network-security" />
+        <meta name="description" content="Revolutionary AI autonomous network security platform that continuously monitors networks, detects threats, and protects infrastructure with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI network security, autonomous network security, network monitoring, threat detection, autonomous operations, AI network security platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-network-security"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousNetworkSecurity: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Network Security Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Firewall Security', 'Intrusion Detection', 'Network Monitoring', 'Traffic Analysis', 'Access Control', 'VPN Security', 'Wireless Security', 'Endpoint Security'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Firewall Security', 'Intrusion Detection', 'Network Monitoring', 'Traffic Analysis', 'Access Control', 'VPN Security', 'Wireless Security', 'Endpoint Security'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousNetworkSecurity: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousNetworkSecurity;

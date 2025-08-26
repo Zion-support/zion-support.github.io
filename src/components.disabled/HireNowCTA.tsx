@@ -3,22 +3,8 @@ import { Button } from '../ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { MessageCircle, Calendar, Star } from 'lucide-react';
-
-interface HireNowCTAProps {
-  hourlyRate: number;
-  availability: string;
-  rating: number;
-  reviewCount: number;
-}
-
-export const HireNowCTA: React.FC<HireNowCTAProps> = ({
-  hourlyRate,
-  availability,
-  rating,
-  reviewCount,
-}) => {
-  return (
-    <Card className="sticky top-4">
+export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount, }) => {
+    return (<Card className="sticky top-4">
       <CardHeader>
         <CardTitle className="text-xl">Hire This Talent</CardTitle>
       </CardHeader>
@@ -34,7 +20,7 @@ export const HireNowCTA: React.FC<HireNowCTAProps> = ({
           <div className="flex items-center justify-between">
             <span className="text-gray-600">Rating</span>
             <div className="flex items-center space-x-1">
-              <Star className="w-4 h-4 text-yellow-400 fill-current" />
+              <Star className="w-4 h-4 text-yellow-400 fill-current"/>
               <span className="font-medium">{rating}</span>
               <span className="text-gray-500">({reviewCount})</span>
             </div>
@@ -42,10 +28,7 @@ export const HireNowCTA: React.FC<HireNowCTAProps> = ({
           
           <div className="flex items-center justify-between">
             <span className="text-gray-600">Availability</span>
-            <Badge 
-              variant={availability === 'available' ? 'default' : 'secondary'}
-              className={availability === 'available' ? 'bg-green-100 text-green-800' : ''}
-            >
+            <Badge variant={availability === 'available' ? 'default' : 'secondary'} className={availability === 'available' ? 'bg-green-100 text-green-800' : ''}>
               {availability}
             </Badge>
           </div>
@@ -53,12 +36,12 @@ export const HireNowCTA: React.FC<HireNowCTAProps> = ({
         
         <div className="space-y-3">
           <Button className="w-full bg-blue-600 hover:bg-blue-700">
-            <MessageCircle className="w-4 h-4 mr-2" />
+            <MessageCircle className="w-4 h-4 mr-2"/>
             Send Message
           </Button>
           
           <Button variant="outline" className="w-full">
-            <Calendar className="w-4 h-4 mr-2" />
+            <Calendar className="w-4 h-4 mr-2"/>
             Schedule Call
           </Button>
         </div>
@@ -68,6 +51,5 @@ export const HireNowCTA: React.FC<HireNowCTAProps> = ({
           <p>Available for new projects</p>
         </div>
       </CardContent>
-    </Card>
-  );
+    </Card>);
 };

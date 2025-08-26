@@ -1,5 +1,3 @@
-import {logErrorToProduction} from '@/utils/productionLogger';
-
 // In-memory storage for fallback with optimizations
 const inMemoryStore: Record<string, string> = {};
 let localStorageAvailable: boolean | null = null; // Cache the availability check
@@ -9,7 +7,7 @@ const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max
 // Recursion prevention for error logging
 let isLoggingError = false;
 
-function isLocalStorageAvailable(): boolean {
+function checkLocalStorageAvailability(): boolean {
   const now = Date.now();
   
   // Use cached result if checked recently
@@ -44,7 +42,7 @@ function safeConsoleError(message: string, error?: any) {
   isLoggingError = true;
   try {
     if (env === 'development') {
-      logErrorToProduction(message, error);
+      console.error(message, error);
     }
   } catch {
     // Silent fail if console.error causes recursion
@@ -98,25 +96,60 @@ export const safeStorage = {
     }
   },
   clear: () => {
-    if (typeof window === 'undefined') {
-      for (const key in inMemoryStore) {
-        delete inMemoryStore[key];
-      }
-      return;
-    }
+    if (typeof window === 'undefined') return;
+    
     try {
       localStorage.clear();
     } catch (e) {
       safeConsoleError('safeStorage.clear: Error clearing localStorage. Falling back to in-memory.', e);
-      for (const key in inMemoryStore) {
-        delete inMemoryStore[key];
-      }
+    }
+    
+    // Clear in-memory store as well
+    Object.keys(inMemoryStore).forEach(key => {
+      delete inMemoryStore[key];
+    });
+  },
+  key: (index: number): string | null => {
+    if (typeof window === 'undefined') return null;
+    
+    try {
+      return localStorage.key(index);
+    } catch (e) {
+      safeConsoleError(`safeStorage.key: Error accessing localStorage key at index ${index}.`, e);
+      return null;
     }
   },
-  get isAvailable(): boolean {
-    return isLocalStorageAvailable();
+  get length(): number {
+    if (typeof window === 'undefined') return 0;
+    
+    try {
+      return localStorage.length;
+    } catch (e) {
+      safeConsoleError('safeStorage.length: Error accessing localStorage length.', e);
+      return Object.keys(inMemoryStore).length;
+    }
   }
 };
+
+// Export a function to check if localStorage is available
+export const isLocalStorageAvailable = checkLocalStorageAvailability;
+
+// Export the in-memory store for debugging purposes
+export const getInMemoryStore = () => ({ ...inMemoryStore });
+
+// Export a function to manually clear the in-memory store
+export const clearInMemoryStore = () => {
+  Object.keys(inMemoryStore).forEach(key => {
+    delete inMemoryStore[key];
+  });
+};
+
+// Export a function to get the current storage status
+export const getStorageStatus = () => ({
+  localStorageAvailable: checkLocalStorageAvailability(),
+  inMemoryStoreSize: Object.keys(inMemoryStore).length,
+  lastAvailabilityCheck
+});
 
 // Simplified session storage without excessive logging
 const sessionMemoryStore: Record<string, string> = {};
