@@ -16,11 +16,11 @@ const Footer: React.FC = () => {
     {
       title: "Services",
       links: [
-        { label: "AI Solutions", path: "/services" },
-        { label: "Cloud & DevOps", path: "/services" },
-        { label: "Cybersecurity", path: "/services" },
-        { label: "Quantum Computing", path: "/services" },
-        { label: "Blockchain & Web3", path: "/services" },
+        { label: "AI Solutions", path: "/services#ai" },
+        { label: "Cloud & DevOps", path: "/services#cloud" },
+        { label: "Cybersecurity", path: "/services#cybersecurity" },
+        { label: "Quantum Computing", path: "/services#quantum" },
+        { label: "Blockchain & Web3", path: "/services#blockchain" },
         { label: "Micro SAAS", path: "/micro-saas" }
       ]
     },
@@ -28,11 +28,11 @@ const Footer: React.FC = () => {
       title: "Company",
       links: [
         { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
+        { label: "Our Team", path: "/about#team" },
         { label: "Careers", path: "/careers" },
         { label: "News & Updates", path: "/blog" },
         { label: "Case Studies", path: "/case-studies" },
-        { label: "Partners", path: "/partners" }
+        { label: "Partners", path: "/about#partners" }
       ]
     },
     {
