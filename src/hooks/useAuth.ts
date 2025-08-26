@@ -16,9 +16,12 @@ interface AuthState {
   isLoading: boolean;
 }
 
-export function useAuth() {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+export const useAuth = () => {
+  const [authState, setAuthState] = useState<AuthState>({
+    user: null,
+    isAuthenticated: false,
+    isLoading: true,
+  });
 
   useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
@@ -26,33 +29,57 @@ export function useAuth() {
       const storedUser = localStorage.getItem('zion_user');
       if (storedUser) {
         try {
-          setUser(JSON.parse(storedUser));
+          const user = JSON.parse(storedUser);
+          setAuthState({
+            user,
+            isAuthenticated: true,
+            isLoading: false,
+          });
         } catch (error) {
           console.error('Error parsing stored user:', error);
+          setAuthState({
+            user: null,
+            isAuthenticated: false,
+            isLoading: false,
+          });
         }
+      } else {
+        setAuthState({
+          user: null,
+          isAuthenticated: false,
+          isLoading: false,
+        });
       }
-      setLoading(false);
     };
 
     checkAuth();
   }, []);
 
-  const login = async (email: string, password: string) => {
-    // Implement actual login logic here
+  const login = async (email: string, _password: string) => {
+    // In a real app, you would make an API call to your backend
     const mockUser: User = {
       id: '1',
       email,
-      name: 'User',
-      role: 'user'
+      name: 'John Doe',
+      role: 'user',
+      userType: 'creator',
     };
     
-    setUser(mockUser);
+    setAuthState({
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false,
+    });
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     return mockUser;
   };
 
   const logout = () => {
-    setUser(null);
+    setAuthState({
+      user: null,
+      isAuthenticated: false,
+      isLoading: false,
+    });
     localStorage.removeItem('zion_user');
   };
 
@@ -62,21 +89,25 @@ export function useAuth() {
       id: '1',
       email,
       name,
-      role: 'user'
+      role: 'user',
+      userType: 'creator',
     };
     
-    setUser(mockUser);
+    setAuthState({
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false,
+    });
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     return mockUser;
   };
 
   return {
-    user,
-    loading,
+    user: authState.user,
+    isAuthenticated: authState.isAuthenticated,
+    isLoading: authState.isLoading,
     login,
     logout,
     register,
-    isAuthenticated: !!user,
-    isAdmin: user?.role === 'admin'
   };
-}
+};

@@ -159,8 +159,20 @@ export const servicesCatalog: ServiceCategory[] = [
 				category: 'AI Solutions',
 				price: 'From $499/month',
 				billing: 'month',
-				features: ['On-device inference', 'Model drift alerts', 'No internet required'],
-				ctaLabel: 'Book Demo',
+				features: ['Real-time detection', 'Active learning', 'Edge deployment'],
+				ctaLabel: 'Deploy Vision AI',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'ai-autonomous-business',
+				title: 'AI Autonomous Business Platform',
+				description: 'End-to-end AI automation for business operations and decision making.',
+				category: 'AI Solutions',
+				price: 'From $1,999/month',
+				billing: 'month',
+				features: ['Process automation', 'Predictive analytics', 'Autonomous decision making'],
+				ctaLabel: 'Transform Business',
 				href: 'https://ziontechgroup.com',
 				external: true
 			},
@@ -231,36 +243,36 @@ export const servicesCatalog: ServiceCategory[] = [
 		slug: 'it-services',
 		items: [
 			{
-				id: 'msp-care',
-				title: 'Managed IT Care',
-				description: 'Proactive monitoring, patching, and helpdesk with SLAs.',
+				id: 'digital-transformation',
+				title: 'Digital Transformation',
+				description: 'End-to-end modernization of legacy systems and processes.',
 				category: 'IT Services',
-				price: 'From $80/user/month',
-				billing: 'month',
-				features: ['24/7 monitoring', 'Remote & onsite support', 'Asset inventory'],
-				ctaLabel: 'Talk to Sales',
-				href: '/contact'
-			},
-			{
-				id: 'migrations-cloud',
-				title: 'Cloud Migration Factory',
-				description: 'Lift-and-shift or re-platform to AWS/Azure/GCP with IaC.',
-				category: 'IT Services',
-				price: 'From $8,000/project',
+				price: 'From $50,000/project',
 				billing: 'project',
-				features: ['Landing zone design', 'IaC (Terraform)', 'Cost optimization'],
-				ctaLabel: 'Get Estimate',
+				features: ['Legacy assessment', 'Cloud migration', 'Process optimization'],
+				ctaLabel: 'Transform Now',
 				href: '/contact'
 			},
 			{
-				id: 'vcio',
-				title: 'vCIO Advisory',
-				description: 'Quarterly roadmap, security posture, and vendor governance.',
+				id: 'tech-talent',
+				title: 'Tech Talent Solutions',
+				description: 'Expert developers, engineers, and IT professionals for your projects.',
 				category: 'IT Services',
-				price: 'From $150/hour',
+				price: 'From $80/hour',
 				billing: 'hour',
-				features: ['IT roadmap', 'Budget planning', 'Compliance alignment'],
-				ctaLabel: 'Book Session',
+				features: ['Full-stack developers', 'DevOps engineers', 'Data scientists', 'UI/UX designers'],
+				ctaLabel: 'Find Talent',
+				href: '/contact'
+			},
+			{
+				id: 'equipment-solutions',
+				title: 'High-Performance Equipment',
+				description: 'Advanced tech infrastructure and hardware solutions.',
+				category: 'IT Services',
+				price: 'From $5,000/project',
+				billing: 'project',
+				features: ['Cloud infrastructure', 'High-performance computing', 'Network solutions'],
+				ctaLabel: 'Get Equipment',
 				href: '/contact'
 			},
 			{
@@ -925,6 +937,426 @@ export const servicesCatalog: ServiceCategory[] = [
 				features: ['Demand forecasting', 'Inventory optimization', 'Analytics', 'Integration'],
 				ctaLabel: 'Optimize Inventory',
 				href: '/contact'
+			}
+		]
+	},
+	{
+		name: 'Quantum Computing',
+		slug: 'quantum-computing',
+		items: [
+			{
+				id: 'quantum-algorithms',
+				title: 'Quantum Algorithm Development',
+				description: 'Custom quantum algorithms for optimization, cryptography, and research.',
+				category: 'Quantum Computing',
+				price: 'From $25,000/project',
+				billing: 'project',
+				features: ['Algorithm design', 'Quantum simulation', 'Performance optimization'],
+				ctaLabel: 'Explore Quantum',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'quantum-cryptography',
+				title: 'Quantum Cryptography Solutions',
+				description: 'Post-quantum cryptography and quantum key distribution systems.',
+				category: 'Quantum Computing',
+				price: 'From $15,000/project',
+				billing: 'project',
+				features: ['QKD implementation', 'Post-quantum algorithms', 'Security assessment'],
+				ctaLabel: 'Secure with Quantum',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'Blockchain Solutions',
+		slug: 'blockchain-solutions',
+		items: [
+			{
+				id: 'defi-platform',
+				title: 'DeFi Platform Development',
+				description: 'Decentralized finance platforms with smart contracts and liquidity management.',
+				category: 'Blockchain Solutions',
+				price: 'From $30,000/project',
+				billing: 'project',
+				features: ['Smart contracts', 'Liquidity pools', 'Yield farming', 'Security audits'],
+				ctaLabel: 'Build DeFi',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'nft-marketplace',
+				title: 'NFT Marketplace Platform',
+				description: 'Complete NFT marketplace with minting, trading, and royalty systems.',
+				category: 'Blockchain Solutions',
+				price: 'From $20,000/project',
+				billing: 'project',
+				features: ['NFT minting', 'Marketplace trading', 'Royalty distribution', 'Multi-chain support'],
+				ctaLabel: 'Launch NFT Platform',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'IoT & Edge Computing',
+		slug: 'iot-edge-computing',
+		items: [
+			{
+				id: 'smart-city-platform',
+				title: 'Smart City IoT Platform',
+				description: 'Comprehensive IoT solution for urban infrastructure monitoring and management.',
+				category: 'IoT & Edge Computing',
+				price: 'From $50,000/project',
+				billing: 'project',
+				features: ['Sensor networks', 'Real-time monitoring', 'Data analytics', 'Edge processing'],
+				ctaLabel: 'Build Smart City',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'industrial-iot',
+				title: 'Industrial IoT Solutions',
+				description: 'IoT platforms for manufacturing, energy, and industrial automation.',
+				category: 'IoT & Edge Computing',
+				price: 'From $35,000/project',
+				billing: 'project',
+				features: ['Predictive maintenance', 'Asset tracking', 'Energy optimization', 'Safety monitoring'],
+				ctaLabel: 'Industrial IoT',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'FinTech Solutions',
+		slug: 'fintech-solutions',
+		items: [
+			{
+				id: 'digital-banking',
+				title: 'Digital Banking Platform',
+				description: 'Modern digital banking solutions with mobile apps and core banking systems.',
+				category: 'FinTech Solutions',
+				price: 'From $100,000/project',
+				billing: 'project',
+				features: ['Mobile banking', 'Core banking', 'Payment processing', 'Compliance'],
+				ctaLabel: 'Digital Banking',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'payment-gateway',
+				title: 'Payment Gateway & Processing',
+				description: 'Secure payment processing with multiple payment methods and fraud detection.',
+				category: 'FinTech Solutions',
+				price: 'From $25,000/project',
+				billing: 'project',
+				features: ['Multi-payment methods', 'Fraud detection', 'PCI compliance', 'Analytics'],
+				ctaLabel: 'Payment Solutions',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'HealthTech Solutions',
+		slug: 'healthtech-solutions',
+		items: [
+			{
+				id: 'telemedicine-platform',
+				title: 'Telemedicine Platform',
+				description: 'Complete telehealth solution with video consultations and patient management.',
+				category: 'HealthTech Solutions',
+				price: 'From $40,000/project',
+				billing: 'project',
+				features: ['Video consultations', 'Patient portal', 'EHR integration', 'HIPAA compliance'],
+				ctaLabel: 'Telemedicine Platform',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'ai-diagnostics',
+				title: 'AI-Powered Diagnostics',
+				description: 'Machine learning solutions for medical imaging and diagnostic assistance.',
+				category: 'HealthTech Solutions',
+				price: 'From $60,000/project',
+				billing: 'project',
+				features: ['Medical imaging AI', 'Diagnostic assistance', 'Clinical validation', 'Regulatory compliance'],
+				ctaLabel: 'AI Diagnostics',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'EdTech Solutions',
+		slug: 'edtech-solutions',
+		items: [
+			{
+				id: 'learning-management',
+				title: 'Learning Management System',
+				description: 'Comprehensive LMS with course creation, student tracking, and analytics.',
+				category: 'EdTech Solutions',
+				price: 'From $30,000/project',
+				billing: 'project',
+				features: ['Course creation', 'Student tracking', 'Analytics dashboard', 'Mobile learning'],
+				ctaLabel: 'LMS Platform',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'virtual-classroom',
+				title: 'Virtual Classroom Platform',
+				description: 'Interactive virtual learning environment with real-time collaboration tools.',
+				category: 'EdTech Solutions',
+				price: 'From $25,000/project',
+				billing: 'project',
+				features: ['Video conferencing', 'Interactive whiteboard', 'Screen sharing', 'Recording'],
+				ctaLabel: 'Virtual Classroom',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'GreenTech Solutions',
+		slug: 'greentech-solutions',
+		items: [
+			{
+				id: 'energy-management',
+				title: 'Smart Energy Management',
+				description: 'IoT-based energy monitoring and optimization for buildings and facilities.',
+				category: 'GreenTech Solutions',
+				price: 'From $35,000/project',
+				billing: 'project',
+				features: ['Energy monitoring', 'Smart controls', 'Optimization algorithms', 'Sustainability reporting'],
+				ctaLabel: 'Energy Management',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'carbon-tracking',
+				title: 'Carbon Footprint Tracking',
+				description: 'Comprehensive carbon accounting and reduction planning platform.',
+				category: 'GreenTech Solutions',
+				price: 'From $20,000/project',
+				billing: 'project',
+				features: ['Carbon accounting', 'Reduction planning', 'Compliance reporting', 'Sustainability dashboard'],
+				ctaLabel: 'Track Carbon',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'SpaceTech Solutions',
+		slug: 'spacetech-solutions',
+		items: [
+			{
+				id: 'satellite-data',
+				title: 'Satellite Data Analytics',
+				description: 'Earth observation data processing and analytics for various industries.',
+				category: 'SpaceTech Solutions',
+				price: 'From $45,000/project',
+				billing: 'project',
+				features: ['Satellite imagery', 'Data processing', 'Analytics platform', 'Industry applications'],
+				ctaLabel: 'Satellite Analytics',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'mission-planning',
+				title: 'Space Mission Planning',
+				description: 'AI-powered mission planning and optimization for space operations.',
+				category: 'SpaceTech Solutions',
+				price: 'From $80,000/project',
+				billing: 'project',
+				features: ['Mission optimization', 'Risk assessment', 'Resource planning', 'Simulation tools'],
+				ctaLabel: 'Mission Planning',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'Robotics & Automation',
+		slug: 'robotics-automation',
+		items: [
+			{
+				id: 'industrial-robotics',
+				title: 'Industrial Robotics Solutions',
+				description: 'Advanced robotics systems for manufacturing and industrial automation.',
+				category: 'Robotics & Automation',
+				price: 'From $75,000/project',
+				billing: 'project',
+				features: ['Robot programming', 'Safety systems', 'Integration services', 'Maintenance support'],
+				ctaLabel: 'Industrial Robotics',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'service-robotics',
+				title: 'Service Robotics Platform',
+				description: 'Autonomous service robots for hospitality, healthcare, and retail applications.',
+				category: 'Robotics & Automation',
+				price: 'From $50,000/project',
+				billing: 'project',
+				features: ['Autonomous navigation', 'Task automation', 'Human interaction', 'Safety protocols'],
+				ctaLabel: 'Service Robots',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'AR/VR Solutions',
+		slug: 'ar-vr-solutions',
+		items: [
+			{
+				id: 'enterprise-ar',
+				title: 'Enterprise AR Solutions',
+				description: 'Augmented reality applications for training, maintenance, and remote assistance.',
+				category: 'AR/VR Solutions',
+				price: 'From $40,000/project',
+				billing: 'project',
+				features: ['AR training', 'Remote assistance', '3D visualization', 'Integration services'],
+				ctaLabel: 'Enterprise AR',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'vr-simulation',
+				title: 'VR Simulation & Training',
+				description: 'Virtual reality training simulations for high-risk and complex scenarios.',
+				category: 'AR/VR Solutions',
+				price: 'From $35,000/project',
+				billing: 'project',
+				features: ['VR simulations', 'Training scenarios', 'Progress tracking', 'Analytics'],
+				ctaLabel: 'VR Training',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'Biotech Solutions',
+		slug: 'biotech-solutions',
+		items: [
+			{
+				id: 'drug-discovery',
+				title: 'AI-Powered Drug Discovery',
+				description: 'Machine learning platforms for pharmaceutical research and drug development.',
+				category: 'Biotech Solutions',
+				price: 'From $100,000/project',
+				billing: 'project',
+				features: ['Molecular modeling', 'Drug screening', 'Clinical trial optimization', 'Regulatory support'],
+				ctaLabel: 'Drug Discovery',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'genomics-platform',
+				title: 'Genomics Data Platform',
+				description: 'Comprehensive platform for genomic data analysis and interpretation.',
+				category: 'Biotech Solutions',
+				price: 'From $60,000/project',
+				billing: 'project',
+				features: ['DNA sequencing', 'Data analysis', 'Variant calling', 'Clinical interpretation'],
+				ctaLabel: 'Genomics Platform',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'LegalTech Solutions',
+		slug: 'legaltech-solutions',
+		items: [
+			{
+				id: 'contract-analysis',
+				title: 'AI Contract Analysis',
+				description: 'Intelligent contract review and analysis with risk assessment.',
+				category: 'LegalTech Solutions',
+				price: 'From $25,000/project',
+				billing: 'project',
+				features: ['Contract review', 'Risk assessment', 'Compliance checking', 'Automated workflows'],
+				ctaLabel: 'Contract Analysis',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'legal-research',
+				title: 'Legal Research Platform',
+				description: 'AI-powered legal research and case law analysis platform.',
+				category: 'LegalTech Solutions',
+				price: 'From $20,000/project',
+				billing: 'project',
+				features: ['Case law search', 'Legal analysis', 'Citation tracking', 'Research automation'],
+				ctaLabel: 'Legal Research',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'Real Estate Tech',
+		slug: 'real-estate-tech',
+		items: [
+			{
+				id: 'property-management',
+				title: 'Smart Property Management',
+				description: 'IoT-enabled property management with predictive maintenance and tenant services.',
+				category: 'Real Estate Tech',
+				price: 'From $30,000/project',
+				billing: 'project',
+				features: ['IoT monitoring', 'Predictive maintenance', 'Tenant portal', 'Analytics dashboard'],
+				ctaLabel: 'Property Management',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'virtual-tours',
+				title: 'Virtual Tour Platform',
+				description: 'Immersive virtual tours and 3D property visualization solutions.',
+				category: 'Real Estate Tech',
+				price: 'From $15,000/project',
+				billing: 'project',
+				features: ['3D scanning', 'Virtual tours', 'Interactive features', 'Mobile optimization'],
+				ctaLabel: 'Virtual Tours',
+				href: 'https://ziontechgroup.com',
+				external: true
+			}
+		]
+	},
+	{
+		name: 'Supply Chain Solutions',
+		slug: 'supply-chain-solutions',
+		items: [
+			{
+				id: 'supply-chain-visibility',
+				title: 'Supply Chain Visibility Platform',
+				description: 'End-to-end supply chain tracking and optimization with real-time analytics.',
+				category: 'Supply Chain Solutions',
+				price: 'From $40,000/project',
+				billing: 'project',
+				features: ['Real-time tracking', 'Predictive analytics', 'Risk management', 'Optimization tools'],
+				ctaLabel: 'Supply Chain Visibility',
+				href: 'https://ziontechgroup.com',
+				external: true
+			},
+			{
+				id: 'inventory-optimization',
+				title: 'AI Inventory Optimization',
+				description: 'Intelligent inventory management with demand forecasting and optimization.',
+				category: 'Supply Chain Solutions',
+				price: 'From $25,000/project',
+				billing: 'project',
+				features: ['Demand forecasting', 'Inventory optimization', 'Automated ordering', 'Cost analysis'],
+				ctaLabel: 'Optimize Inventory',
+				href: 'https://ziontechgroup.com',
+				external: true
 			}
 		]
 	}

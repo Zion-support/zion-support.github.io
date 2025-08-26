@@ -1,5 +1,7 @@
 import { toast as hotToast } from 'react-hot-toast';
 
+export const toast = hotToast;
+
 export const useToast = () => {
   const toast = (message, options) => {
     hotToast(message, options);
