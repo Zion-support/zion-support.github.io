@@ -27,6 +27,8 @@ const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const RevolutionaryServicesShowcase2025 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2025'));
+const ServicesMarketingPage = React.lazy(() => import('./pages/ServicesMarketingPage'));
 const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
 const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
 const Analytics = React.lazy(() => import('./pages/Analytics'));
@@ -53,6 +55,8 @@ const baseRoutes = [
   { path: '/talents', element: <TalentsPage /> },
   { path: '/services', element: <ServicesPage /> },
   { path: '/comprehensive-services-2025', element: <ComprehensiveServicesShowcase2025 /> },
+  { path: '/revolutionary-services-2025', element: <RevolutionaryServicesShowcase2025 /> },
+  { path: '/services-marketing', element: <ServicesMarketingPage /> },
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/categories', element: <Categories /> },
   { path: '/equipment', element: <EquipmentPage /> },

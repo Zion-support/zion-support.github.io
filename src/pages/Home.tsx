@@ -36,6 +36,12 @@ export default function Home() {
               >
                 Explore Services
               </Link>
+              <Link
+                to="/revolutionary-services-2025"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                Revolutionary Services 2025
+              </Link>
             </div>
             <div className="flex items-center justify-center space-x-8 text-sm text-gray-400">
               <div className="flex items-center">
