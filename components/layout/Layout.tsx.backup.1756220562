@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import UltraFuturisticNavigation2035 from './UltraFuturisticNavigation2035';
+import UltraFuturisticFooter2035 from './UltraFuturisticFooter2035';
+import EnhancedSidebar2025 from './EnhancedSidebar2025';
+import UltraFuturisticBackground2025 from '../backgrounds/UltraFuturisticBackground2025';
+=======
 import React from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import UltraAdvancedNavigation from './UltraAdvancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 import UltraAdvancedFuturisticBackground from '../ui/UltraAdvancedFuturisticBackground';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
 import TopContactBar from './TopContactBar';
 
 type LayoutProps = {
@@ -12,9 +21,14 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<div className="min-h-screen bg-black text-white">
+<<<<<<< HEAD
+			<UltraAdvancedFuturisticBackground variant="fusion">
+				<QuantumHolographicNavbar />
+=======
 			<UltraAdvancedFuturisticBackground variant="quantum-holographic" intensity={0.85}>
 				<TopContactBar />
 				<UltraAdvancedNavigation />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
 				<main className="pt-24 lg:pt-28">
 					{children}
 				</main>

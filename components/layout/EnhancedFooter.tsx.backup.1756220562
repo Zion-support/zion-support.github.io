@@ -48,6 +48,9 @@ const EnhancedFooter: React.FC = () => {
 	);
 };
 
+<<<<<<< HEAD
+export default EnhancedFooter;
+=======
 const serviceCategories = [
   {
     title: 'Next-Generation AI',
@@ -336,3 +339,4 @@ export default function EnhancedFooter() {
     </footer>
   );
 }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d

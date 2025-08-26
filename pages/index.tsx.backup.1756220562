@@ -217,6 +217,62 @@ const serviceCategories = [
     >
       <div className="min-h-screen">
         <Head>
+<<<<<<< HEAD
+        <title>Zion Tech Group - Revolutionary AI, Quantum & IT Services | 500+ Solutions</title>
+        <meta name="description" content="Zion Tech Group offers 500+ revolutionary AI, quantum computing, and IT services. Achieve 1000% ROI with our cutting-edge solutions. Contact: +1 302 464 0950" />
+        <meta name="keywords" content="AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Zion Tech Group - Revolutionary AI, Quantum & IT Services" />
+        <meta property="og:description" content="500+ cutting-edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Revolutionary Micro SaaS Services" />
+        <meta name="twitter:description" content="500+ revolutionary micro SaaS services with 1000% ROI guarantee." />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+              Revolutionary Micro SaaS Services
+            </h1>
+            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Discover <span className="text-cyan-400 font-semibold">500+ cutting-edge services</span> that will transform your business with 
+              <span className="text-purple-400 font-semibold"> 1000% ROI guarantee</span> and 
+              <span className="text-pink-400 font-semibold"> quantum AI technology</span>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button 
+                href="/services" 
+                variant="primary" 
+                size="lg"
+                className="text-lg px-8 py-4"
+              >
+                <Rocket className="w-5 h-5 mr-2" />
+                Explore Services
+              </Button>
+              <Button 
+                href="/contact" 
+                variant="secondary" 
+                size="lg"
+                className="text-lg px-8 py-4"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Contact Sales
+              </Button>
+            </div>
+          </motion.div>
+=======
           <title>Zion Tech Group - Revolutionary AI, Quantum & IT Services | 800+ Solutions</title>
           <meta name="description" content="Zion Tech Group offers 800+ revolutionary AI, quantum computing, and IT services. Achieve high ROI with our cutting-edge solutions. Contact: +1 302 464 0950" />
           <meta name="keywords" content="AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet, blockchain, metaverse, IoT, edge computing" />
@@ -268,6 +324,7 @@ const serviceCategories = [
             </motion.div>
           </div>
         </section>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
 
         {/* Latest Innovative Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
