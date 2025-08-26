@@ -1,21 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-	variant?: 'solid' | 'outline'
-	className?: string
-	href?: string
-	children: React.ReactNode
+interface UIButtonProps extends React.HTMLAttributes<HTMLAnchorElement> {
+	href?: string;
+	variant?: 'default' | 'outline';
+	className?: string;
+	children: React.ReactNode;
 }
 
-export default function UIButton({ variant = 'solid', className = '', href = '#', children, ...rest }: ButtonProps) {
-	const base = 'inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors'
-	const styles =
-		variant === 'outline'
-			? 'bg-transparent border border-white/20 text-white hover:border-cyan-400/50 hover:text-cyan-200'
-			: 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500'
+export default function UIButton({ href = '#', variant = 'default', className = '', children, ...rest }: UIButtonProps) {
+	const base = 'inline-flex items-center justify-center px-4 py-2 rounded transition-colors duration-200';
+	const style = variant === 'outline'
+		? 'border border-gray-600 text-gray-200 hover:bg-gray-800'
+		: 'bg-cyan-600 text-white hover:bg-cyan-500';
 	return (
-		<a href={href} className={`${base} ${styles} ${className}`} {...rest}>
+		<a href={href} className={`${base} ${style} ${className}`} {...rest}>
 			{children}
 		</a>
-	)
+	);
 }

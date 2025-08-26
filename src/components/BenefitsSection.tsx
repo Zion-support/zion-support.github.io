@@ -54,21 +54,13 @@ export function BenefitsSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <div key={index} className="group">
-              <div className="bg-gray-50 rounded-xl p-6 h-full border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
-                <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  {benefit.icon}
-                </div>
-                
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  {benefit.title}
-                </h3>
-                
-                <p className="text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            </div>
+            <FeatureCard
+              key={index}
+              title={benefit.title}
+              description={benefit.description}
+              icon={benefit.icon}
+              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-500 hover:shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-105"
+            />
           ))}
         </div>
         

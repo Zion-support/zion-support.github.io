@@ -13,7 +13,7 @@ import {
   Settings,
   X
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from '../ui/button';
 
 // Accessibility Context
 interface AccessibilityContextType {

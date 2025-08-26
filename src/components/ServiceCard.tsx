@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 interface ServiceCardProps {
   title: string;
@@ -8,10 +8,14 @@ interface ServiceCardProps {
   icon: string;
   price: string;
   category: string;
-  features?: string[];
+  features: string[];
   isPopular?: boolean;
   isNew?: boolean;
+  isPopular?: boolean;
   href?: string;
+  rating?: number;
+  customers?: number;
+  setupTime?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -20,10 +24,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   icon,
   price,
   category,
-  features = [],
+  features,
   isPopular = false,
   isNew = false,
-  href = "/services"
+  href = '/services'
 }) => {
   const cardVariants: Variants = {
     hidden: { opacity: 0, y: 20, scale: 0.95 },
@@ -32,12 +36,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         ease: "easeOut"
       }
     },
     hover: {
-      y: -8,
+      y: -12,
       scale: 1.02,
       transition: {
         duration: 0.3,
@@ -47,23 +51,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   };
 
   const iconVariants: Variants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    },
     hover: {
-      scale: 1.15,
-      rotate: [0, -5, 5, 0],
+      scale: 1.2,
+      rotate: [0, -10, 10, 0],
       transition: {
         duration: 0.6,
         ease: "easeInOut"
-      }
-    }
-  };
-
-  const badgeVariants: Variants = {
-    hover: {
-      scale: 1.1,
-      y: -2,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut"
       }
     }
   };
@@ -72,101 +74,110 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     hover: {
       x: 5,
       transition: {
-        duration: 0.2,
+        duration: 0.3,
         ease: "easeOut"
+      }
+    }
+  };
+
+  const badgeVariants: Variants = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        ease: "backOut"
       }
     }
   };
 
   return (
     <motion.div
-      className={`relative group cursor-pointer ${isPopular ? 'ring-2 ring-zion-cyan ring-opacity-50' : ''}`}
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
       whileHover="hover"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true }}
+      className="group relative h-full"
     >
-      {/* Popular Badge */}
+      {/* Enhanced Popular Badge */}
       {isPopular && (
         <motion.div 
           className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10"
-          variants={badgeVariants}
-          whileHover="hover"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.2, type: "spring", stiffness: 300 }}
         >
-          <div className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg border border-zion-cyan/30">
-            <span className="flex items-center gap-1">
-              <span className="animate-pulse">⭐</span>
-              Most Popular
-            </span>
+          <div className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">
+            ⭐ Most Popular
           </div>
         </motion.div>
       )}
 
-      {/* New Badge */}
+      {/* Enhanced New Badge */}
       {isNew && (
         <motion.div 
           className="absolute -top-3 right-4 z-10"
-          variants={badgeVariants}
-          whileHover="hover"
+          initial={{ scale: 0, rotate: -180 }}
+          animate={{ scale: 1, rotate: 0 }}
+          transition={{ delay: 0.3, type: "spring", stiffness: 300 }}
         >
-          <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg border border-zion-purple/30">
-            <span className="flex items-center gap-1">
-              <span className="animate-pulse">🆕</span>
-              New
-            </span>
+          <div className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-bounce">
+            🆕 New
           </div>
         </motion.div>
       )}
 
-      <div className="relative h-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-zion-cyan/40 transition-all duration-300 overflow-hidden group-hover:shadow-2xl group-hover:shadow-zion-cyan/25">
+      <div className="relative h-full bg-gradient-to-br from-white/10 via-white/5 to-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-zion-cyan/40 transition-all duration-500 overflow-hidden group-hover:shadow-zion-glow">
         {/* Enhanced Background Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(34,221,210,0.05)_25%,rgba(34,221,210,0.05)_50%,transparent_50%,transparent_75%,rgba(34,221,210,0.05)_75%)] bg-[size:20px_20px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(34,221,210,0.05)_25%,rgba(34,221,210,0.05)_50%,transparent_50%,transparent_75%,rgba(34,221,210,0.05)_75%)] bg-[size:20px_20px] opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-pulse" />
         
-        {/* Animated Background Elements */}
-        <div className="absolute top-4 right-4 w-2 h-2 bg-zion-cyan/30 rounded-full animate-pulse" />
-        <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-zion-blue/30 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-        
-        {/* Icon with Enhanced Animation */}
+        {/* Enhanced Icon with Floating Animation */}
         <motion.div 
-          className="relative z-10 text-6xl mb-6 text-center group-hover:drop-shadow-lg group-hover:drop-shadow-zion-cyan/50"
+          className="relative z-10 text-6xl mb-6 text-center"
           variants={iconVariants}
           whileHover="hover"
+          animate={{ y: [0, -5, 0] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         >
           {icon}
         </motion.div>
 
         {/* Content */}
         <div className="relative z-10">
-          {/* Category with Enhanced Styling */}
+          {/* Enhanced Category */}
           <div className="text-center mb-4">
-            <span className="inline-block px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 text-zion-cyan text-xs font-semibold rounded-full border border-zion-cyan/30 hover:border-zion-cyan/50 transition-all duration-300">
+            <motion.span 
+              className="inline-block px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 text-zion-cyan text-xs font-medium rounded-full border border-zion-cyan/30 hover:from-zion-cyan/30 hover:to-zion-purple/30 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+            >
               {category}
-            </span>
+            </motion.span>
           </div>
 
-          {/* Title with Enhanced Typography */}
-          <h3 className="text-xl font-bold text-white mb-4 text-center group-hover:text-zion-cyan transition-colors duration-300 leading-tight">
+          {/* Enhanced Title */}
+          <h3 className="text-xl font-bold text-white mb-4 text-center group-hover:text-zion-cyan transition-all duration-300 group-hover:scale-105">
             {title}
           </h3>
 
-          {/* Description with Better Readability */}
-          <p className="text-zion-slate-light text-sm leading-relaxed mb-6 text-center">
+          {/* Enhanced Description */}
+          <p className="text-zion-slate-light text-sm leading-relaxed mb-6 text-center group-hover:text-white transition-colors duration-300">
             {description}
           </p>
 
-          {/* Enhanced Features List */}
+          {/* Enhanced Features */}
           {features.length > 0 && (
             <div className="mb-6">
               <ul className="space-y-3">
                 {features.slice(0, 3).map((feature, index) => (
                   <motion.li 
                     key={index} 
-                    className="flex items-center gap-3 text-sm text-zion-slate-light group-hover:text-zion-slate-light/80 transition-colors duration-300"
+                    className="flex items-center gap-3 text-sm text-zion-slate-light group-hover:text-white transition-colors duration-300"
                     variants={featureVariants}
                     whileHover="hover"
                   >
-                    <span className="w-2 h-2 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex-shrink-0 animate-pulse" style={{ animationDelay: `${index * 0.2}s` }} />
+                    <span className="w-2 h-2 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex-shrink-0 group-hover:scale-125 transition-transform duration-300" />
                     {feature}
                   </motion.li>
                 ))}
@@ -174,50 +185,51 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             </div>
           )}
 
-          {/* Enhanced Price Display */}
+          {/* Enhanced Price */}
           <div className="text-center mb-6">
-            <div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent mb-1">
+            <motion.div 
+              className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-2"
+              whileHover={{ scale: 1.1 }}
+            >
               {price}
-            </div>
-            <div className="text-xs text-zion-slate-light opacity-80">Starting Price</div>
+            </motion.div>
+            <div className="text-xs text-zion-slate-light group-hover:text-zion-cyan transition-colors duration-300">Starting Price</div>
           </div>
 
           {/* Enhanced CTA Button */}
           <div className="text-center">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <Link
+              to={href}
+              className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zion-cyan/20 via-zion-blue/20 to-zion-purple/20 text-zion-cyan border border-zion-cyan/30 rounded-xl text-sm font-medium hover:from-zion-cyan/30 hover:via-zion-blue/30 hover:to-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 group-hover:shadow-zion-glow hover:scale-105"
             >
-              <Link
-                to={href}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 text-zion-cyan border border-zion-cyan/30 rounded-xl text-sm font-semibold hover:from-zion-cyan/30 hover:to-zion-blue/30 hover:border-zion-cyan/50 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-zion-cyan/25 hover:bg-gradient-to-r hover:from-zion-cyan/30 hover:to-zion-blue/30"
+              <span>Learn More</span>
+              <motion.span 
+                className="group-hover:translate-x-2 transition-transform duration-300"
+                animate={{ x: [0, 5, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
               >
-                <span>Learn More</span>
-                <motion.span 
-                  className="group-hover:translate-x-1 transition-transform duration-300"
-                  animate={{ x: [0, 2, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  →
-                </motion.span>
-              </Link>
-            </motion.div>
+                →
+              </motion.span>
+            </Link>
           </div>
         </div>
 
         {/* Enhanced Hover Effect Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 via-zion-blue/5 to-zion-purple/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl" />
         
-        {/* Corner Accents */}
-        <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-zion-cyan/10 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-zion-blue/10 to-transparent rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        {/* Animated Border Glow */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/20 to-zion-cyan/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-pulse" />
       </div>
 
       {/* Enhanced Glow Effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-blue/20 to-zion-purple/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/30 via-zion-blue/20 to-zion-purple/30 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 -z-10 group-hover:scale-110" />
       
-      {/* Additional Glow Layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-2xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-20" />
+      {/* Floating Particles Effect */}
+      <div className="absolute inset-0 overflow-hidden rounded-2xl">
+        <div className="absolute top-4 right-4 w-2 h-2 bg-zion-cyan/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500" />
+        <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-zion-purple/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-200" />
+        <div className="absolute top-1/2 left-2 w-1 h-1 bg-zion-blue/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-400" />
+      </div>
     </motion.div>
   );
 };

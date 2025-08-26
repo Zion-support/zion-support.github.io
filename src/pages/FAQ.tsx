@@ -1,195 +1,165 @@
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Search, MessageCircle, Users, Shield, CreditCard, Zap } from "lucide-react";
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function FAQ() {
+const FAQ: React.FC = () => {
+  const [openItems, setOpenItems] = useState<number[]>([]);
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(item => item !== index)
+        : [...prev, index]
+    );
+  };
+
   const faqData = [
     {
-      category: "General",
-      icon: Search,
-      questions: [
-        {
-          question: "What is Zion Tech Group?",
-          answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect businesses with top AI and tech talent, services, and equipment in one comprehensive platform."
-        },
-        {
-          question: "How does Zion work?",
-          answer: "Zion operates as a two-sided marketplace where businesses can find and hire AI/tech professionals, purchase services, and acquire equipment. Talented individuals can showcase their skills, offer services, and find opportunities."
-        },
-        {
-          question: "Is Zion really free to use?",
-          answer: "Yes! Zion is completely free for both businesses and talent. We believe in democratizing access to AI and tech resources, so there are no subscription fees or hidden costs."
-        }
-      ]
+      question: "What services does Zion Tech Group offer?",
+      answer: "We offer comprehensive technology solutions including AI and machine learning, cloud computing and DevOps, cybersecurity, IT infrastructure management, digital transformation consulting, and enterprise software development. Our services are tailored to help businesses of all sizes leverage cutting-edge technology for growth and efficiency."
     },
     {
-      category: "For Businesses",
-      icon: Users,
-      questions: [
-        {
-          question: "How do I find the right talent for my project?",
-          answer: "You can browse our talent directory, use our AI-powered matching system, or post a job listing. Our platform includes detailed profiles, portfolios, and reviews to help you make informed decisions."
-        },
-        {
-          question: "What types of services can I find on Zion?",
-          answer: "Zion offers a wide range of services including AI development, software engineering, data science, IT consulting, equipment sales, and specialized tech solutions across various industries."
-        },
-        {
-          question: "How do I ensure quality when hiring through Zion?",
-          answer: "All talent on Zion undergoes verification processes. You can review portfolios, check ratings and reviews, conduct interviews, and use our milestone-based payment system for added security."
-        }
-      ]
+      question: "How does Zion Tech Group's AI implementation process work?",
+      answer: "Our AI implementation follows a structured approach: 1) Initial consultation and needs assessment, 2) Data analysis and strategy development, 3) Custom solution design and prototyping, 4) Implementation and integration, 5) Testing and optimization, 6) Training and deployment support. We ensure seamless integration with your existing systems and provide ongoing maintenance and updates."
     },
     {
-      category: "For Talent",
-      icon: Zap,
-      questions: [
-        {
-          question: "How do I create a profile on Zion?",
-          answer: "Sign up for free and complete your profile with your skills, experience, portfolio, and rates. You can also add certifications, previous work samples, and professional references."
-        },
-        {
-          question: "What are the payment terms?",
-          answer: "Zion uses milestone-based payments to ensure both parties are protected. Payments are released upon project completion or milestone approval, with secure escrow services available."
-        },
-        {
-          question: "Can I work with international clients?",
-          answer: "Yes! Zion is a global platform. You can work with clients from anywhere in the world, and our platform handles currency conversion and international payment processing."
-        }
-      ]
+      question: "What industries do you serve?",
+      answer: "We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, transportation, and professional services. Our solutions are adaptable to any industry that can benefit from digital transformation, AI implementation, or improved IT infrastructure."
     },
     {
-      category: "Security & Trust",
-      icon: Shield,
-      questions: [
-        {
-          question: "How does Zion protect my data?",
-          answer: "We use enterprise-grade security measures including end-to-end encryption, secure payment processing, and strict data protection policies. Your information is never shared without consent."
-        },
-        {
-          question: "What happens if there's a dispute?",
-          answer: "Zion has a comprehensive dispute resolution system. Our support team mediates conflicts, and we offer arbitration services for complex cases to ensure fair outcomes for all parties."
-        },
-        {
-          question: "Is my payment information secure?",
-          answer: "Absolutely. We use industry-standard SSL encryption and PCI DSS compliance for all payment processing. We never store your full payment details on our servers."
-        }
-      ]
+      question: "How long does a typical project take to complete?",
+      answer: "Project timelines vary depending on complexity and scope. Small AI implementations can take 4-8 weeks, while large-scale digital transformations may take 6-12 months. We provide detailed project timelines during the initial consultation and maintain transparent communication throughout the process."
     },
     {
-      category: "Billing & Payments",
-      icon: CreditCard,
-      questions: [
-        {
-          question: "What payment methods does Zion accept?",
-          answer: "We accept major credit cards, bank transfers, and digital wallets. For enterprise clients, we also offer invoicing and payment terms."
-        },
-        {
-          question: "Are there any transaction fees?",
-          answer: "Zion charges a small percentage fee on completed transactions to maintain our platform. This fee is transparent and clearly displayed before any transaction."
-        },
-        {
-          question: "How quickly do I receive payments?",
-          answer: "Payments are typically processed within 1-3 business days after project completion or milestone approval, depending on your chosen payment method."
-        }
-      ]
+      question: "Do you provide ongoing support after project completion?",
+      answer: "Yes, we offer comprehensive post-implementation support including 24/7 monitoring, regular maintenance, updates, and technical support. We also provide training for your team and can scale our support based on your needs."
     },
     {
-      category: "Support",
-      icon: MessageCircle,
-      questions: [
-        {
-          question: "How can I get help if I need support?",
-          answer: "Our support team is available 24/7 through live chat, email at support@ziontechgroup.com, and phone support. We also have an extensive help center with tutorials and guides."
-        },
-        {
-          question: "Does Zion offer training or onboarding?",
-          answer: "Yes! We provide comprehensive onboarding for new users, including video tutorials, best practices guides, and one-on-one sessions with our success team."
-        },
-        {
-          question: "Can I schedule a demo of Zion's features?",
-          answer: "Absolutely! We offer personalized demos for businesses and talent. Contact our sales team to schedule a walkthrough of our platform's capabilities."
-        }
-      ]
+      question: "What cybersecurity measures do you implement?",
+      answer: "Our cybersecurity approach includes comprehensive threat detection, vulnerability assessments, compliance frameworks (SOC 2, ISO 27001, GDPR), real-time monitoring, incident response planning, and regular security audits. We ensure your data and systems remain protected against evolving threats."
+    },
+    {
+      question: "How do you ensure data privacy and compliance?",
+      answer: "We strictly adhere to international privacy standards including GDPR, CCPA, and industry-specific regulations. Our solutions include data encryption, access controls, audit trails, and privacy-by-design principles. We also provide compliance documentation and regular privacy assessments."
+    },
+    {
+      question: "What is your pricing model?",
+      answer: "We offer flexible pricing models including project-based pricing, subscription services, and managed services agreements. Pricing depends on project scope, complexity, and ongoing support requirements. We provide detailed proposals with transparent pricing during the consultation phase."
+    },
+    {
+      question: "Do you work with small businesses or only enterprise clients?",
+      answer: "We work with businesses of all sizes, from startups to Fortune 500 companies. Our solutions are scalable and we customize our approach based on your business size, budget, and specific needs. We believe every business deserves access to cutting-edge technology solutions."
+    },
+    {
+      question: "How do I get started with Zion Tech Group?",
+      answer: "Getting started is easy! Simply contact us through our website, email us at contact@ziontechgroup.com, or call us at +1-302-464-0950. We'll schedule a free consultation to discuss your needs and provide a customized proposal. No obligation required."
     }
   ];
 
-  return (
-    <>
-      <SEO
-        title="Frequently Asked Questions | Zion Tech Group"
-        description="Find answers to common questions about Zion Tech Group, the world's first free AI and tech marketplace."
-        keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services"
-        canonical="https://ziontechgroup.com/faq"
-      />
-      
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <GradientHeading>Frequently Asked Questions</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Everything you need to know about Zion Tech Group, the world's premier AI and tech marketplace
-            </p>
-          </div>
+  const filteredFAQ = faqData.filter(item => {
+    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+    const matchesSearch = item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         item.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
 
-          {/* FAQ Categories */}
-          <div className="space-y-12">
-            {faqData.map((category, categoryIndex) => (
-              <Card key={categoryIndex} className="bg-zion-blue-dark border-zion-blue-light">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-zion-cyan">
-                    <category.icon className="h-6 w-6" />
-                    {category.category}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <Accordion type="single" collapsible className="w-full">
-                    {category.questions.map((item, itemIndex) => (
-                      <AccordionItem key={itemIndex} value={`item-${categoryIndex}-${itemIndex}`}>
-                        <AccordionTrigger className="text-left text-white hover:text-zion-cyan">
-                          {item.question}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-zion-slate-light">
-                          {item.answer}
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </CardContent>
-              </Card>
+  const toggleItem = (id: number) => {
+    const newExpanded = new Set(expandedItems);
+    if (newExpanded.has(id)) {
+      newExpanded.delete(id);
+    } else {
+      newExpanded.add(id);
+    }
+    setExpandedItems(newExpanded);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Helmet>
+        <title>FAQ - Zion Tech Group</title>
+        <meta name="description" content="Frequently asked questions about Zion Tech Group's services, AI solutions, cybersecurity, and digital transformation expertise. Get answers to common questions about working with us." />
+        <meta name="keywords" content="FAQ, frequently asked questions, Zion Tech Group, AI services, cybersecurity, digital transformation" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Find answers to common questions about our services, processes, and how we can help transform your business
+          </p>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-4">
+            {faqData.map((item, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-lg border border-white/10 overflow-hidden">
+                <button
+                  onClick={() => toggleItem(index)}
+                  className="w-full px-6 py-4 text-left flex items-center justify-between text-white hover:bg-slate-700/50 transition-colors duration-300"
+                >
+                  <span className="text-lg font-medium">{item.question}</span>
+                  <svg
+                    className={`w-5 h-5 transition-transform duration-300 ${
+                      openItems.includes(index) ? 'rotate-180' : ''
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {openItems.includes(index) && (
+                  <div className="px-6 pb-4">
+                    <p className="text-gray-300 leading-relaxed">{item.answer}</p>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Contact Support */}
-          <div className="mt-16 text-center">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>
-              <p className="text-zion-slate-light mb-6">
-                Our support team is here to help you get the most out of Zion Tech Group
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:support@ziontechgroup.com"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple hover:bg-zion-purple-light text-white font-medium rounded-lg transition-colors"
-                >
-                  <MessageCircle className="h-4 w-4 mr-2" />
-                  Email Support
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple hover:bg-zion-purple/10 font-medium rounded-lg transition-colors"
-                >
-                  Contact Us
-                </a>
-              </div>
-            </div>
+      {/* Contact CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Still Have Questions?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Can't find the answer you're looking for? Our team is here to help. 
+            Contact us for personalized assistance.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:contact@ziontechgroup.com"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center justify-center"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Email Us
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call Us
+            </a>
           </div>
         </div>
-      </main>
-    </>
+      </section>
+    </div>
   );
-}
+};
+
+export default FAQ;

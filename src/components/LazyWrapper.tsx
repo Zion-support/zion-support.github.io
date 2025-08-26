@@ -1,21 +1,23 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import EnhancedLoading from './EnhancedLoading';
+import { EnhancedLoading } from './EnhancedLoading';
 
 interface LazyWrapperProps {
   children: React.ReactNode;
   threshold?: number;
   className?: string;
-  loadingVariant?: 'spinner' | 'dots' | 'pulse' | 'bars';
+  loadingVariant?: 'default' | 'tech' | 'minimal' | 'futuristic';
   loadingText?: string;
+  loadingSize?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
 const LazyWrapper: React.FC<LazyWrapperProps> = ({
   children,
   threshold = 0.1,
   className = '',
-  loadingVariant = 'spinner',
-  loadingText = 'Loading...'
+  loadingVariant = 'default',
+  loadingText = 'Loading...',
+  loadingSize = 'md'
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -36,7 +38,11 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({
   if (!isInView) {
     return (
       <div ref={ref} className={`min-h-[200px] ${className}`}>
-        <EnhancedLoading variant={loadingVariant} text={loadingText} />
+        <EnhancedLoading 
+          variant={loadingVariant} 
+          text={loadingText}
+          size={loadingSize}
+        />
       </div>
     );
   }
@@ -44,7 +50,11 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({
   if (!isLoaded) {
     return (
       <div className={`min-h-[200px] ${className}`}>
-        <EnhancedLoading variant={loadingVariant} text={loadingText} />
+        <EnhancedLoading 
+          variant={loadingVariant} 
+          text={loadingText}
+          size={loadingSize}
+        />
       </div>
     );
   }
