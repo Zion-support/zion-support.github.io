@@ -18,46 +18,41 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   const navigationItems = [
     {
-      title: 'Main',
+      title: 'Main Navigation',
       items: [
         { name: 'Home', path: '/', icon: Home },
-        { name: 'Services', path: '/services', icon: Briefcase },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
+        { name: 'Services Overview', path: '/services', icon: Briefcase },
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Briefcase },
+        { name: 'Enterprise Solutions', path: '/enterprise-solutions', icon: Briefcase },
         { name: 'Pricing', path: '/pricing', icon: Briefcase },
-        { name: 'About', path: '/about', icon: Users },
+        { name: 'About Us', path: '/about', icon: Users },
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },
     {
-      title: 'Services',
+      title: 'Core Services',
       items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
-        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Briefcase },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
-        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Briefcase },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
-        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
-        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
+        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Briefcase },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Briefcase }
       ]
     },
     {
-      title: 'AI Solutions',
+      title: 'Advanced AI Solutions',
       items: [
-        { name: 'AI Autonomous Data', path: '/ai-autonomous-data', icon: Briefcase },
-        { name: 'AI Autonomous Decision Engine', path: '/ai-autonomous-decision-engine', icon: Briefcase },
-        { name: 'AI Autonomous Research', path: '/ai-autonomous-research-assistant', icon: Briefcase },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Briefcase }
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Briefcase },
+        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield }
       ]
     },
     {
@@ -71,12 +66,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       ]
     },
     {
-      title: 'Support',
+      title: 'Resources & Support',
       items: [
         { name: 'Help Center', path: '/help', icon: Users },
         { name: 'Documentation', path: '/docs', icon: Globe },
         { name: 'Contact Support', path: '/support', icon: Phone },
-        { name: 'Status Page', path: '/status', icon: Globe }
+        { name: 'FAQ', path: '/faq', icon: Globe },
+        { name: 'Blog', path: '/blog', icon: Globe },
+        { name: 'Events & Webinars', path: '/events', icon: Globe },
+        { name: 'Testimonials', path: '/testimonials', icon: Users }
       ]
     }
   ];

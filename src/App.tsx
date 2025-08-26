@@ -1,10 +1,10 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Footer from './components/Footer';
+import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -12,7 +12,7 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import PerformanceOptimizer from './components/PerformanceOptimizer.tsx';
 import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
@@ -70,6 +70,36 @@ const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
 // Additional missing pages
+const AIAutonomousBusinessManager = lazy(() => import('./pages/ai-autonomous-business-manager'));
+const AIAutonomousBusinessPlatform = lazy(() => import('./pages/ai-autonomous-business-platform'));
+const AIAutonomousResearch = lazy(() => import('./pages/ai-autonomous-research'));
+const AIAutonomousSystemsPlatform = lazy(() => import('./pages/ai-autonomous-systems-platform'));
+const AIAutonomousCodeReview = lazy(() => import('./pages/ai-autonomous-code-review'));
+const AIAutonomousCreativeDirector = lazy(() => import('./pages/ai-autonomous-creative-director'));
+const AIAutonomousData = lazy(() => import('./pages/ai-autonomous-data'));
+const AIAutonomousDecisionEngine = lazy(() => import('./pages/ai-autonomous-decision-engine'));
+const AIAutonomousDecisionPlatform = lazy(() => import('./pages/ai-autonomous-decision-platform'));
+const AIAutonomousDevOps = lazy(() => import('./pages/ai-autonomous-devops'));
+const AIAutonomousEducationProfessor = lazy(() => import('./pages/ai-autonomous-education-professor'));
+const AIAutonomousHealthcarePhysician = lazy(() => import('./pages/ai-autonomous-healthcare-physician'));
+const AIAutonomousLearningSystem = lazy(() => import('./pages/ai-autonomous-learning-system'));
+const AIAutonomousLegalCounsel = lazy(() => import('./pages/ai-autonomous-legal-counsel'));
+const AIAutonomousLogistics = lazy(() => import('./pages/ai-autonomous-logistics'));
+const AIAutonomousManufacturing = lazy(() => import('./pages/ai-autonomous-manufacturing'));
+const AIAutonomousRobotics = lazy(() => import('./pages/ai-autonomous-robotics'));
+const AIAutonomousScientificResearcher = lazy(() => import('./pages/ai-autonomous-scientific-researcher'));
+const AIAutonomousSecurity = lazy(() => import('./pages/ai-autonomous-security'));
+const AIAutonomousTesting = lazy(() => import('./pages/ai-autonomous-testing'));
+const AIAutonomousVehicle = lazy(() => import('./pages/ai-autonomous-vehicle'));
+const AIAutonomousVehiclePlatform = lazy(() => import('./pages/ai-autonomous-vehicle-platform'));
+const AIAutonomousVehicles = lazy(() => import('./pages/ai-autonomous-vehicles'));
+const AIAutonomousVehiclesPlatform = lazy(() => import('./pages/ai-autonomous-vehicles-platform'));
+const AIAutonomousVentureCapitalist = lazy(() => import('./pages/ai-autonomous-venture-capitalist'));
+const AIContentGenerationAutomation = lazy(() => import('./pages/services/AIContentGenerationAutomation'));
+const AIContentGenerationPro = lazy(() => import('./pages/services/AIContentGenerationPro'));
+const AIConsciousnessEvolution = lazy(() => import('./pages/services/AIConsciousnessEvolution'));
+const AIBusinessIntelligenceElite = lazy(() => import('./pages/services/AIBusinessIntelligenceElite'));
+const AIBusinessIntelligenceSuite = lazy(() => import('./pages/services/AIBusinessIntelligenceSuite'));
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -98,11 +128,7 @@ const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveSe
 const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
 const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
 
-// Solutions pages
-const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
-const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
-
-// Additional missing pages to fix broken links
+// Additional pages
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Cookies = lazy(() => import('./pages/Cookies'));
@@ -111,46 +137,12 @@ const Events = lazy(() => import('./pages/Events'));
 const Webinars = lazy(() => import('./pages/Webinars'));
 const WhitePapers = lazy(() => import('./pages/WhitePapers'));
 const Testimonials = lazy(() => import('./pages/Testimonials'));
-const Support = lazy(() => import('./pages/HelpCenter'));
-const Docs = lazy(() => import('./pages/HelpCenter'));
+const Support = lazy(() => import('./pages/Support'));
+const Docs = lazy(() => import('./pages/Documentation'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
-const Community = lazy(() => import('./pages/CommunityPage'));
-
-// AI Autonomous Service pages
-const AIAutonomousBusinessManager = lazy(() => import('./pages/services/AIAutonomousBusinessManager'));
-const AIAutonomousBusinessPlatform = lazy(() => import('./pages/services/AIAutonomousBusinessPlatform'));
-const AIAutonomousCodeReview = lazy(() => import('./pages/services/AIAutonomousCodeReview'));
-const AIAutonomousCreativeDirector = lazy(() => import('./pages/services/AIAutonomousCreativeDirector'));
-const AIAutonomousData = lazy(() => import('./pages/services/AIAutonomousData'));
-const AIAutonomousDecisionEngine = lazy(() => import('./pages/services/AIAutonomousDecisionEngine'));
-const AIAutonomousDecisionPlatform = lazy(() => import('./pages/services/AIAutonomousDecisionPlatform'));
-const AIAutonomousDevOps = lazy(() => import('./pages/services/AIAutonomousDevOps'));
-const AIAutonomousEducationProfessor = lazy(() => import('./pages/services/AIAutonomousEducationProfessor'));
-const AIAutonomousHealthcarePhysician = lazy(() => import('./pages/services/AIAutonomousHealthcarePhysician'));
-const AIAutonomousLearningSystem = lazy(() => import('./pages/services/AIAutonomousLearningSystem'));
-const AIAutonomousLegalCounsel = lazy(() => import('./pages/services/AIAutonomousLegalCounsel'));
-const AIAutonomousLogistics = lazy(() => import('./pages/services/AIAutonomousLogistics'));
-const AIAutonomousManufacturing = lazy(() => import('./pages/services/AIAutonomousManufacturing'));
-const AIAutonomousResearch = lazy(() => import('./pages/services/AIAutonomousResearch'));
-const AIAutonomousRobotics = lazy(() => import('./pages/services/AIAutonomousRobotics'));
-const AIAutonomousScientificResearcher = lazy(() => import('./pages/services/AIAutonomousScientificResearcher'));
-const AIAutonomousSecurity = lazy(() => import('./pages/services/AIAutonomousSecurity'));
-const AIAutonomousSystemsPlatform = lazy(() => import('./pages/services/AIAutonomousSystemsPlatform'));
-const AIAutonomousTesting = lazy(() => import('./pages/services/AIAutonomousTesting'));
-const AIAutonomousVehiclePlatform = lazy(() => import('./pages/services/AIAutonomousVehiclePlatform'));
-const AIAutonomousVehicle = lazy(() => import('./pages/services/AIAutonomousVehicle'));
-const AIAutonomousVehiclesPlatform = lazy(() => import('./pages/services/AIAutonomousVehiclesPlatform'));
-const AIAutonomousVehicles = lazy(() => import('./pages/services/AIAutonomousVehicles'));
-const AIAutonomousVentureCapitalist = lazy(() => import('./pages/services/AIAutonomousVentureCapitalist'));
-
-// AI Content Generation pages
-const AIContentGenerationAutomation = lazy(() => import('./pages/services/AIContentGenerationAutomation'));
-const AIContentGenerationPro = lazy(() => import('./pages/services/AIContentGenerationPro'));
-const AIConsciousnessEvolution = lazy(() => import('./pages/services/AIConsciousnessEvolution'));
-
-// Enhanced AI service pages
-const AIBusinessIntelligenceElite = lazy(() => import('./pages/services/AIBusinessIntelligenceElite'));
-const AIBusinessIntelligenceSuite = lazy(() => import('./pages/services/AIBusinessIntelligenceSuite'));
+const Community = lazy(() => import('./pages/Community'));
+const EnterpriseSolutions = lazy(() => import('./pages/EnterpriseSolutions'));
+const HealthcareSolutions = lazy(() => import('./pages/HealthcareSolutions'));
 
 // Loading spinner component
 const LoadingSpinner = () => (
@@ -170,24 +162,17 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer
-              enableMonitoring={true}
-              enableOptimizations={true}
-              showMetrics={import.meta.env.DEV}
-            >
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <PerformanceOptimizer />
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
-                  seoData={{
-                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
-                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
-                    keywords: ["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"],
-                    canonicalUrl: "https://ziontechgroup.com",
-                    ogImage: "https://ziontechgroup.com/og-image.jpg",
-                    ogType: "website",
-                    twitterCard: "summary_large_image"
-                  }}
-                  pageType="home"
+                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                  type="website"
+                  url="/"
+                  image="https://ziontechgroup.com/og-image.jpg"
+                  canonicalUrl="https://ziontechgroup.com"
                 />
                 
                 <Header />
@@ -355,96 +340,77 @@ const App: React.FC = () => {
                 <Footer />
                 <SonnerToaster />
               </div>
-            </PerformanceOptimizer>
-                
-                {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility 
-                  position="bottom-right" 
-                  showOnLoad={false}
-                  enableKeyboardShortcuts={true}
-                  enableVoiceCommands={import.meta.env.DEV}
+              
+              {/* Enhanced Accessibility Controls */}
+            <EnhancedAccessibility />
+            
+            {/* Website Improvement Tools */}
+            <ContentQualityEnhancer />
+            <BrokenLinkFixer />
+            <WebsiteImprovementDashboard />
+            
+            {/* AI Chatbot - Always Available */}
+            <AIChatbot />
+            
+            {/* Collaborative Text Editor - Development Mode */}
+            {import.meta.env.DEV && (
+              <div className="fixed bottom-24 left-6 z-40 w-96">
+                <CollaborativeTextEditor
+                  roomId="dev-editor"
+                  userId="dev-user"
+                  userName="Developer"
+                  initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
+                  enableAI={true}
+                  enableCollaboration={true}
+                  enableVersioning={true}
                 />
-                
-                {/* Website Improvement Tools */}
-                <ContentQualityEnhancer />
-                <BrokenLinkFixer />
-                <WebsiteImprovementDashboard />
-                
-                {/* AI Chatbot - Always Available */}
-                <AIChatbot />
-                
-                {/* Collaborative Text Editor - Development Mode */}
-                {import.meta.env.DEV && (
-                  <div className="fixed bottom-24 left-6 z-40 w-96">
-                    <CollaborativeTextEditor
-                      roomId="dev-editor"
-                      userId="dev-user"
-                      userName="Developer"
-                      initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
-                      enableAI={true}
-                      enableCollaboration={true}
-                      enableVersioning={true}
-                    />
-                  </div>
-                )}
-                
-                {/* AI Code Generator - Development Mode */}
-                {import.meta.env.DEV && (
-                  <div className="fixed bottom-24 right-6 z-40 w-96">
-                    <AICodeGenerator />
-                  </div>
-                )}
-                
-                {/* Development Dashboards */}
-                {import.meta.env.DEV && (
-                  <>
-                    {/* Performance Dashboard */}
-                    <div className="fixed top-4 left-4 z-40">
-                      <PerformanceDashboard />
-                    </div>
-                    
-                    {/* Analytics Dashboard */}
-                    <div className="fixed top-4 right-4 z-40">
-                      <AnalyticsDashboard />
-                    </div>
-                    
-                    {/* Enterprise Dashboard */}
-                    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
-                      <EnterpriseDashboard />
-                    </div>
-                    
-                    {/* Security & Compliance Dashboard */}
-                    <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
-                      <SecurityComplianceDashboard />
-                    </div>
-                    
-                    {/* Machine Learning Dashboard */}
-                    <div className="fixed top-4 right-4 z-40">
-                      <MachineLearningDashboard />
-                    </div>
-                  </>
-                )}
-                
-                {/* Enhanced Performance Monitor - Always Available */}
-                <PerformanceMonitor />
-                
-                {/* Link Health Monitor - Development Mode */}
-                {import.meta.env.DEV && (
-                  <LinkHealthMonitor
-                    links={[
-                      'https://ziontechgroup.com',
-                      'https://www.linkedin.com/company/ziontechgroup',
-                      'https://twitter.com/ziontechgroup',
-                      'https://github.com/ziontechgroup',
-                      'https://www.youtube.com/@ziontechgroup'
-                    ]}
-                    autoCheck={true}
-                    checkInterval={600000} // 10 minutes
-                    timeout={5000} // 5 seconds
-                  />
-                )}
               </div>
-            </PerformanceOptimizer>
+            )}
+            
+            {/* AI Code Generator - Development Mode */}
+            {import.meta.env.DEV && (
+              <div className="fixed bottom-24 right-6 z-40 w-96">
+                <AICodeGenerator />
+              </div>
+            )}
+            
+            {/* Development Dashboards */}
+            {import.meta.env.DEV && (
+              <>
+                {/* Performance Dashboard */}
+                <div className="fixed top-4 left-4 z-40">
+                  <PerformanceDashboard />
+                </div>
+                
+                {/* Analytics Dashboard */}
+                <div className="fixed top-4 right-4 z-40">
+                  <AnalyticsDashboard />
+                </div>
+                
+                {/* Enterprise Dashboard */}
+                <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
+                  <EnterpriseDashboard />
+                </div>
+                
+                {/* Security & Compliance Dashboard */}
+                <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
+                  <SecurityComplianceDashboard />
+                </div>
+                
+                {/* Machine Learning Dashboard */}
+                <div className="fixed top-4 right-4 z-40">
+                  <MachineLearningDashboard />
+                </div>
+              </>
+            )}
+            
+            {/* Enhanced Performance Monitor - Always Available */}
+            <PerformanceMonitor />
+            
+            {/* Link Health Monitor - Development Mode */}
+            {import.meta.env.DEV && (
+              <LinkHealthMonitor />
+            )}
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>

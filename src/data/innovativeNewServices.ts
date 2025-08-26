@@ -15,6 +15,8 @@ export interface InnovativeNewService {
   estimatedDelivery: string;
   supportLevel: string;
   marketPrice: string;
+  roi?: string;
+  innovationLevel?: string;
   contactInfo: {
     phone: string;
     email: string;
