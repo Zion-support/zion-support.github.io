@@ -43,7 +43,11 @@ export default async function handler(
 		};
 
 		return res.status(200).json(productWithStats);
+<<<<<<< HEAD
+	} catch (e: any) {
+=======
 	} catch (e) {
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-5c64
 		console.error(e);
 		return res.status(500).json({ error: 'Internal server error.' });
 	} finally {

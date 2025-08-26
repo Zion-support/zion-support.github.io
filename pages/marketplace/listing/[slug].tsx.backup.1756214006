@@ -3,6 +3,10 @@ import type { GetStaticPaths, GetStaticProps } from 'next';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
 import type { ProductListing } from '@/types/listings';
 
+<<<<<<< HEAD
+interface ListingProps {
+  listing: ProductListing | null;
+=======
 // Alias the Prisma generated Product model type.
 type ProductModel = Prisma.Product;
 // Define ProductWithReviewStats here or import from a shared types file
@@ -22,6 +26,7 @@ export type ProductWithReviewStats = ProductModel & {
 interface RatingStarsProps {
   value: number;
   count?: number;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-5c64
 }
 
 const MarketplaceListing: React.FC<ListingProps> = ({ listing }) => {
