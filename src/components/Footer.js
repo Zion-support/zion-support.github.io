@@ -20,20 +20,20 @@ export function Footer() {
         {
             title: 'Services',
             links: [
-                { name: 'IT Solutions', path: '/services/it-solutions' },
-                { name: 'AI Services', path: '/services/ai-services' },
+                { name: 'AI Services', path: '/services/ai' },
+                { name: 'Cloud', path: '/services/cloud' },
                 { name: 'Cybersecurity', path: '/services/cybersecurity' },
-                { name: 'Green IT', path: '/green-it' },
-                { name: 'On-Site Support', path: '/it-onsite-services' },
+                { name: 'Infrastructure', path: '/services/infrastructure' },
+                { name: 'Consulting', path: '/services/consulting' },
             ]
         },
         {
             title: 'Talent',
             links: [
                 { name: 'Browse Talents', path: '/talents' },
-                { name: 'Talent Directory', path: '/talent-directory' },
-                { name: 'AI Matcher', path: '/ai-matcher' },
-                { name: 'Hire Now', path: '/hire-now' },
+                { name: 'Talent Directory', path: '/talent' },
+                { name: 'AI Matcher', path: '/match' },
+                { name: 'Hire Now', path: '/contact' },
                 { name: 'Post a Job', path: '/post-job' },
             ]
         },
@@ -41,7 +41,7 @@ export function Footer() {
             title: 'Resources',
             links: [
                 { name: 'Blog', path: '/blog' },
-                { name: 'Help Center', path: '/help-center' },
+                { name: 'Help Center', path: '/help' },
                 { name: 'FAQ', path: '/faq' },
                 { name: 'Documentation', path: '/docs' },
                 { name: 'API Reference', path: '/api' },

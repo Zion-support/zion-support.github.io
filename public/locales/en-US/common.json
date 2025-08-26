@@ -21,14 +21,7 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
-<<<<<<< HEAD:public/locales/en-US/common.json
-    "micro-saas": "Micro SAAS",
-    "categories": "Categories",
     "services": "Services",
-    "micro-saas": "Micro SAAS",
-=======
-    "services": "Services",
->>>>>>> origin/cursor/website-audit-and-enhancement-39b5:src/i18n/locales/en/translation.json
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
@@ -38,10 +31,6 @@
     "messages": "Messages",
     "post_job": "Post Job",
     "analytics": "Analytics",
-<<<<<<< HEAD:public/locales/en-US/common.json
-    "faq": "FAQ",
-    "help": "Help Center"
-=======
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",
@@ -52,7 +41,6 @@
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
     "sitemap": "Sitemap"
->>>>>>> origin/cursor/website-audit-and-enhancement-39b5:src/i18n/locales/en/translation.json
   },
   "auth": {
     "login": "Login",
@@ -106,21 +94,6 @@
     "country": "Country",
     "subtotal": "Subtotal",
     "pay": "Pay with Stripe (test)"
-  },
-  "jobs": {
-    "post_job_title": "Post a Job",
-    "post_job_description": "Fill out the form below to post your job and find the perfect talent",
-    "job_title": "Job Title",
-    "job_description": "Job Description",
-    "skills_required": "Skills Required",
-    "budget": "Budget",
-    "deadline": "Deadline",
-    "job_posted": "Job posted successfully",
-    "title_placeholder": "Enter job title",
-    "description_placeholder": "Describe the job in detail",
-    "requirements_placeholder": "List required skills and qualifications",
-    "submitting": "Submitting...",
-    "post_job_button": "Post Job"
   },
   "language": {
     "en": "English",

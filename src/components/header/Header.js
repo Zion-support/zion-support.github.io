@@ -29,8 +29,8 @@ export function Header() {
         { name: 'Blog', path: '/blog' },
     ];
     const serviceDropdownItems = [
-        { name: 'IT Solutions', path: '/services/it-solutions' },
-        { name: 'AI Services', path: '/services/ai-services' },
+        { name: 'IT Solutions', path: '/services' },
+        { name: 'AI Services', path: '/services/ai' },
         { name: 'Cybersecurity', path: '/services/cybersecurity' },
         { name: 'Green IT', path: '/green-it' },
         { name: 'On-Site Support', path: '/it-onsite-services' },

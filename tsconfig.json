@@ -33,16 +33,10 @@
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "incremental": true
   },
   "include": [
-    "src",
-    ".next/types/**/*.ts"
+    "src"
   ],
   "exclude": [
     "node_modules",
@@ -52,6 +46,7 @@
     "zion_academy/**",
     "zion-os/**",
     "automation/**",
-    "typechain-types/**"
+    "typechain-types/**",
+    ".next/**"
   ]
 }

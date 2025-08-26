@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
@@ -10,7 +10,7 @@ const About = React.lazy(() => import('./pages/About'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const News = React.lazy(() => import('./pages/News'));
 const Press = React.lazy(() => import('./pages/Press'));
-// const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
@@ -34,10 +34,10 @@ const PracticalMicroSaas2027 = lazy(() => import('./pages/PracticalMicroSaas2027
 const AllServices2027 = lazy(() => import('./pages/AllServices2027'));
 
 // Service pages
-const AIServices = lazy(() => import('./pages/AIServices'));
-const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
-const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
-const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
+const AIServices = lazy(() => import('./pages/services/AIServices'));
+const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
+const EnterpriseSolutionsPage = lazy(() => import('./pages/services/EnterpriseIT'));
+const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 
@@ -109,8 +109,10 @@ const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovati
 // Other pages from existing structure
 const Login = React.lazy(() => import('./pages/Login'));
 const Signup = React.lazy(() => import('./pages/Signup'));
+
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
+// const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
 const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
 const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
 const Analytics = React.lazy(() => import('./pages/Analytics'));
@@ -120,15 +122,23 @@ const Categories = React.lazy(() => import('./pages/Categories'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const PartnersPage = React.lazy(() => import('./pages/Partners'));
+// const Login = React.lazy(() => import('./pages/Login'));
+// const Signup = React.lazy(() => import('./pages/Signup'));
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
+// const About = React.lazy(() => import('./pages/About'));
 const Team = React.lazy(() => import('./pages/Team'));
+// const Careers = React.lazy(() => import('./pages/Careers'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
-const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+// const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+const GDPR = React.lazy(() => import('./pages/GDPR'));
+const API = React.lazy(() => import('./pages/API'));
+const Status = React.lazy(() => import('./pages/Status'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -166,9 +176,6 @@ const baseRoutes = [
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
   { path: '/pricing', element: <PricingPage /> },
   { path: '/emerging-tech', element: <EmergingTech /> },
-  
-  // Revolutionary Services 2025 (maps to EnhancedServicesPage)
-  { path: '/revolutionary-services-2025', element: <EnhancedServicesPage /> },
   
   // 2027 Innovation Routes
   { path: '/cutting-edge-innovations-2027', element: <CuttingEdgeInnovations2027 /> },
@@ -230,6 +237,10 @@ const baseRoutes = [
   { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
+  { path: '/accessibility', element: <Accessibility /> },
+  { path: '/gdpr', element: <GDPR /> },
+  { path: '/api', element: <API /> },
+  { path: '/status', element: <Status /> },
 ];
 
 // Enhanced loading component with skeleton
@@ -265,6 +276,10 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/gdpr" element={<GDPR />} />
+              <Route path="/api" element={<API />} />
+              <Route path="/status" element={<Status />} />
             </Routes>
           </Suspense>
         </main>

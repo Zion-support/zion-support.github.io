@@ -9,6 +9,8 @@ import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { showApiError } from '@/utils/apiErrorHandler';
+import './utils/globalFetchInterceptor';
+import './utils/consoleErrorToast';
 import ToastProvider from './components/ToastProvider';
 
 // Import i18n configuration
@@ -19,10 +21,10 @@ import { AppLayout } from '@/layout/AppLayout';
 
 // Import auth and notification providers
 import { AuthProvider } from './context/auth/AuthProvider';
-// import { NotificationProvider } from './context/notifications/NotificationContext';
+import { NotificationProvider } from './components/ui/notification';
 
-// Import analytics provider
-import { ViewModeProvider } from './context/ViewModeContext';
+// Providers trimmed for build
+// import { AnalyticsProvider } from './context/AnalyticsContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
@@ -45,14 +47,15 @@ function renderApp() {
           <WhitelabelProvider>
             <Router>
               <AuthProvider>
-                <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                  <ViewModeProvider>
+                <NotificationProvider>
+                  
+                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                     <AppLayout>
                       <App />
                     </AppLayout>
-                  </ViewModeProvider>
-                  {/* LanguageDetectionPopup removed */}
-                </LanguageProvider>
+                  </LanguageProvider>
+                  
+                </NotificationProvider>
               </AuthProvider>
             </Router>
           </WhitelabelProvider>
@@ -89,3 +92,28 @@ window.addEventListener('error', (e) => {
   console.error('Unhandled error:', e.error || e.message);
   displayFatalError(e.message);
 });
+
+// Render the app with proper provider structure
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <WhitelabelProvider>
+          <Router>
+            <AuthProvider>
+              <NotificationProvider>
+                
+                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                    <AppLayout>
+                      <App />
+                    </AppLayout>
+                  </LanguageProvider>
+                
+              </NotificationProvider>
+            </AuthProvider>
+          </Router>
+        </WhitelabelProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  </React.StrictMode>,
+);
