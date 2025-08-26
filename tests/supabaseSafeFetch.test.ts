@@ -1,4 +1,6 @@
-import * as client from '@/integrations/supabase/client';
+import * as supabaseClient from '@/integrations/supabase/client';
+const { checkOnline, safeFetch } = supabaseClient;
+import { vi } from 'vitest';
 
 // Test that checkOnline returns false when navigator is offline
 it('checkOnline returns false when navigator is offline', async () => {
@@ -25,10 +27,7 @@ it('safeFetch throws when fetch rejects', async () => {
     value: { onLine: true },
     writable: true,
   });
-  // ensure the online check succeeds so safeFetch proceeds to call fetch
-  const fetchSpy = vi.spyOn(globalThis, 'fetch');
-  fetchSpy.mockResolvedValueOnce(new Response());
-  // subsequent fetch call for the actual request will reject
-  fetchSpy.mockRejectedValueOnce(new Error('Network error'));
+  vi.spyOn(supabaseClient, 'checkOnline').mockResolvedValue(true);
+  vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error'));
   await expect(safeFetch('https://example.com')).rejects.toThrow('Failed to connect to Supabase');
 });
