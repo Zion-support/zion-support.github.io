@@ -1,5 +1,4 @@
-import React from 'react';
-import { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
@@ -68,12 +67,20 @@ const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServices
 const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
 
+// Ultimate Zion Services 2025
+const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025'));
+
 // Additional innovative micro SAAS services
 const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
 const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTrading'));
 const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AICustomerServiceAutomation = lazy(() => import('./pages/services/AICustomerServiceAutomation'));
+
+// Ultimate innovative services showcase 2025
+const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025'));
+const UltimatePricing2025 = lazy(() => import('./pages/UltimatePricing2025'));
+const UltimateHomepage2025 = lazy(() => import('./pages/UltimateHomepage2025'));
 
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
@@ -209,12 +216,19 @@ const baseRoutes = [
   { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
   { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
   { path: '/services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ultimate-services-showcase-2025', element: <UltimateServicesShowcase2025 /> },
+  { path: '/ultimate-pricing-2025', element: <UltimatePricing2025 /> },
+  { path: '/ultimate-homepage-2025', element: <UltimateHomepage2025 /> },
   
   // Ultimate Innovative Services 2026
   { path: '/ultimate-services-showcase-2026', element: <UltimateServicesShowcase2026 /> },
   { path: '/ultimate-services-2026', element: <UltimateServicesShowcase2026 /> },
   { path: '/comprehensive-pricing-2026', element: <ComprehensivePricing2026 /> },
   { path: '/pricing-2026', element: <ComprehensivePricing2026 /> },
+  
+  // Ultimate Zion Services 2025
+  { path: '/ultimate-services-showcase-2025', element: <UltimateServicesShowcase2025 /> },
+  { path: '/ultimate-services-2025', element: <UltimateServicesShowcase2025 /> },
   
   // Other routes
   { path: '/match', element: <AIMatcherPage /> },
