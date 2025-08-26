@@ -1,215 +1,230 @@
 #!/usr/bin/env node
 
-const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { spawn } = require('child_process');
 
-class AllAutomationLauncher {
+class AutomationLauncher {
   constructor() {
     this.processes = new Map();
-    this.logDir = path.join(__dirname, 'logs');
-    this.ensureLogDir();
+    this.logFile = path.join(__dirname, 'logs', 'automation-launcher.log');
+    this.ensureLogDirectory();
   }
 
-  ensureLogDir() {
-    if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
-  async start() {
-    console.log('🚀 Starting all Zion automation systems...');
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+
+  async startSystem(name, scriptPath, options = {}) {
+    try {
+      this.log(`🚀 Starting ${name}...`);
+      
+      const process = spawn('node', [scriptPath], {
+        stdio: 'pipe',
+        detached: false,
+        ...options
+      });
+
+      process.stdout.on('data', (data) => {
+        this.log(`[${name}] ${data.toString().trim()}`);
+      });
+
+      process.stderr.on('data', (data) => {
+        this.log(`[${name}] ERROR: ${data.toString().trim()}`);
+      });
+
+      process.on('close', (code) => {
+        this.log(`[${name}] Process exited with code ${code}`);
+        this.processes.delete(name);
+      });
+
+      process.on('error', (error) => {
+        this.log(`[${name}] Process error: ${error.message}`);
+        this.processes.delete(name);
+      });
+
+      this.processes.set(name, process);
+      this.log(`✅ ${name} started successfully`);
+      
+      return process;
+    } catch (error) {
+      this.log(`❌ Failed to start ${name}: ${error.message}`);
+      return null;
+    }
+  }
+
+  async startAllSystems() {
+    this.log('🚀 Starting all automation systems...');
     
     const systems = [
-      { name: 'enhanced-autonomous', script: 'launch-enhanced-autonomous-system.cjs', args: ['start'] },
-      { name: 'ml-link-intelligence', script: 'ml-link-intelligence.cjs' },
-      { name: 'link-health-scheduler', script: 'link-health-scheduler.cjs' },
-      { name: 'performance-monitor', script: 'real-time-performance-monitor.cjs' },
-      { name: 'autonomous-manager', script: 'autonomous-system-manager.cjs', args: ['start'] }
+      { name: 'intelligent-orchestrator', script: 'intelligent-orchestrator.cjs', args: ['continuous'] },
+      { name: 'automation-dashboard', script: 'automation-dashboard.cjs', args: ['start'] },
+      { name: 'lint-monitor', script: 'lint-monitor.cjs', args: ['start'] },
+      { name: 'code-quality', script: 'code-quality-monitor.cjs' },
+      { name: 'performance', script: 'performance-optimizer.cjs' },
+      { name: 'security-scanner', script: 'security-scanner.cjs' },
+      { name: 'seo-optimizer', script: 'seo-optimizer.cjs' },
+      { name: 'test-generator', script: 'test-generator.cjs' }
     ];
 
     for (const system of systems) {
-      await this.startSystem(system);
-      // Small delay between starts
-      await new Promise(resolve => setTimeout(resolve, 1000));
-    }
-
-    console.log('✅ All automation systems started!');
-    console.log('📊 Check status with: npm run automation:status');
-  }
-
-  async startSystem(system) {
-    try {
       const scriptPath = path.join(__dirname, system.script);
-      const args = system.args || [];
-      
-      console.log(`🔄 Starting ${system.name}...`);
-      
-      const child = spawn('node', [scriptPath, ...args], {
-        stdio: ['pipe', 'pipe', 'pipe'],
-        detached: true
-      });
-
-      const logFile = path.join(this.logDir, `${system.name}.log`);
-      const logStream = fs.createWriteStream(logFile, { flags: 'a' });
-
-      child.stdout.pipe(logStream);
-      child.stderr.pipe(logStream);
-
-      this.processes.set(system.name, {
-        process: child,
-        logStream,
-        startTime: new Date()
-      });
-
-      console.log(`✅ ${system.name} started (PID: ${child.pid})`);
-    } catch (error) {
-      console.error(`❌ Failed to start ${system.name}:`, error.message);
+      if (fs.existsSync(scriptPath)) {
+        await this.startSystem(system.name, scriptPath, {
+          args: system.args || []
+        });
+        
+        // Add delay between starts
+        await this.sleep(2000);
+      } else {
+        this.log(`⚠️ Script not found: ${system.script}`);
+      }
     }
+
+    this.log(`📊 Started ${this.processes.size} automation systems`);
   }
 
-  async stop() {
-    console.log('🛑 Stopping all automation systems...');
+  async stopAllSystems() {
+    this.log('🛑 Stopping all automation systems...');
     
-    for (const [name, info] of this.processes) {
-      try {
-        console.log(`🔄 Stopping ${name}...`);
-        info.process.kill('SIGTERM');
-        info.logStream.end();
-        console.log(`✅ ${name} stopped`);
-      } catch (error) {
-        console.error(`❌ Failed to stop ${name}:`, error.message);
-      }
+    for (const [name, process] of this.processes) {
+      this.log(`🛑 Stopping ${name}...`);
+      process.kill('SIGTERM');
     }
     
     this.processes.clear();
-    console.log('✅ All automation systems stopped!');
+    this.log('✅ All systems stopped');
   }
 
-  async status() {
-    console.log('🔍 Checking automation systems status...');
+  getStatus() {
+    const status = {
+      running: this.processes.size,
+      systems: Array.from(this.processes.keys()),
+      totalSystems: this.processes.size
+    };
     
-    if (this.processes.size === 0) {
-      console.log('📊 No automation systems are currently running');
-      return;
-    }
+    this.log(`📊 Status: ${status.running} systems running`);
+    this.log(`📊 Systems: ${status.systems.join(', ')}`);
+    
+    return status;
+  }
 
-    for (const [name, info] of this.processes) {
-      const uptime = Date.now() - info.startTime.getTime();
-      const uptimeStr = this.formatUptime(uptime);
-      
-      try {
-        // Check if process is still alive
-        const isAlive = info.process.exitCode === null;
-        const status = isAlive ? '🟢 Running' : '🔴 Stopped';
-        
-        console.log(`${status} ${name}`);
-        console.log(`   PID: ${info.process.pid}`);
-        console.log(`   Uptime: ${uptimeStr}`);
-        console.log(`   Log: ${path.join(this.logDir, `${name}.log`)}`);
-        console.log('');
-      } catch (error) {
-        console.log(`❌ ${name} - Error checking status: ${error.message}`);
-      }
+  async restartSystem(name) {
+    const process = this.processes.get(name);
+    if (process) {
+      this.log(`🔄 Restarting ${name}...`);
+      process.kill('SIGTERM');
+      await this.sleep(1000);
+    }
+    
+    const scriptPath = path.join(__dirname, `${name}.cjs`);
+    if (fs.existsSync(scriptPath)) {
+      await this.startSystem(name, scriptPath);
     }
   }
 
-  async report() {
-    console.log('📊 Generating automation systems report...');
-    
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      systems: [],
-      summary: {
-        total: 0,
-        running: 0,
-        stopped: 0
-      }
+      runningSystems: Array.from(this.processes.keys()),
+      totalSystems: this.processes.size,
+      uptime: this.getUptime()
     };
 
-    for (const [name, info] of this.processes) {
-      const uptime = Date.now() - info.startTime.getTime();
-      const isAlive = info.process.exitCode === null;
-      
-      report.systems.push({
-        name,
-        pid: info.process.pid,
-        status: isAlive ? 'running' : 'stopped',
-        uptime: uptime,
-        startTime: info.startTime.toISOString()
-      });
-
-      report.summary.total++;
-      if (isAlive) {
-        report.summary.running++;
-      } else {
-        report.summary.stopped++;
-      }
-    }
-
-    console.log('📋 Automation Systems Report');
-    console.log('============================');
-    console.log(`Total Systems: ${report.summary.total}`);
-    console.log(`Running: ${report.summary.running}`);
-    console.log(`Stopped: ${report.summary.stopped}`);
-    console.log('');
+    const reportPath = path.join(__dirname, 'logs', 'automation-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    for (const system of report.systems) {
-      const status = system.status === 'running' ? '🟢' : '🔴';
-      const uptime = this.formatUptime(system.uptime);
-      console.log(`${status} ${system.name} (PID: ${system.pid}) - ${uptime}`);
-    }
-
-    // Save report to file
-    const reportFile = path.join(this.logDir, 'automation-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    console.log(`\n📄 Full report saved to: ${reportFile}`);
+    this.log(`📊 Report generated: ${reportPath}`);
+    return report;
   }
 
-  formatUptime(ms) {
-    const seconds = Math.floor(ms / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
-    const days = Math.floor(hours / 24);
+  getUptime() {
+    // Simple uptime calculation
+    return Date.now() - this.startTime;
+  }
 
-    if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`;
-    if (hours > 0) return `${hours}h ${minutes % 60}m`;
-    if (minutes > 0) return `${minutes}m ${seconds % 60}s`;
-    return `${seconds}s`;
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async monitor() {
+    this.log('👀 Starting automation monitoring...');
+    
+    setInterval(() => {
+      this.log(`📊 Monitoring: ${this.processes.size} systems running`);
+      
+      for (const [name, process] of this.processes) {
+        if (process.killed) {
+          this.log(`⚠️ ${name} has stopped, restarting...`);
+          this.restartSystem(name);
+        }
+      }
+    }, 30000); // Check every 30 seconds
   }
 }
 
 // CLI handling
-async function main() {
-  const launcher = new AllAutomationLauncher();
-  const command = process.argv[2] || 'start';
+const launcher = new AutomationLauncher();
+const command = process.argv[2];
 
-  try {
-    switch (command) {
-      case 'start':
-        await launcher.start();
-        break;
-      case 'stop':
-        await launcher.stop();
-        break;
-      case 'status':
-        await launcher.status();
-        break;
-      case 'report':
-        await launcher.report();
-        break;
-      default:
-        console.log('Usage: node launch-all-automation.cjs [start|stop|status|report]');
-        process.exit(1);
+switch (command) {
+  case 'start':
+    launcher.startAllSystems();
+    break;
+  case 'stop':
+    launcher.stopAllSystems();
+    process.exit(0);
+    break;
+  case 'status':
+    launcher.getStatus();
+    process.exit(0);
+    break;
+  case 'restart':
+    const systemName = process.argv[3];
+    if (systemName) {
+      launcher.restartSystem(systemName);
+    } else {
+      console.log('Usage: node launch-all-automation.cjs restart <system-name>');
     }
-  } catch (error) {
-    console.error('❌ Error:', error.message);
+    break;
+  case 'report':
+    launcher.generateReport();
+    process.exit(0);
+    break;
+  case 'monitor':
+    launcher.monitor();
+    break;
+  default:
+    console.log('Usage: node launch-all-automation.cjs [start|stop|status|restart|report|monitor] [system-name]');
+    console.log('\nCommands:');
+    console.log('  start     - Start all automation systems');
+    console.log('  stop      - Stop all automation systems');
+    console.log('  status    - Show current status');
+    console.log('  restart   - Restart a specific system');
+    console.log('  report    - Generate automation report');
+    console.log('  monitor   - Start monitoring mode');
     process.exit(1);
-  }
 }
 
-if (require.main === module) {
-  main();
-}
+// Graceful shutdown
+process.on('SIGINT', async () => {
+  console.log('\n🛑 Shutting down automation launcher...');
+  await launcher.stopAllSystems();
+  process.exit(0);
+});
 
-module.exports = AllAutomationLauncher;
+process.on('SIGTERM', async () => {
+  console.log('\n🛑 Shutting down automation launcher...');
+  await launcher.stopAllSystems();
+  process.exit(0);
+});

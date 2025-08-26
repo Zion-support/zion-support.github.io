@@ -4,13 +4,17 @@
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-145a
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-
+<<<<<<< HEAD
 # Autonomous scheduled functions
 [[scheduled.functions]]
   function = "auto_repo_sync"
@@ -95,3 +99,7 @@
 [[scheduled.functions]]
   function = "readme_badges_updater"
   cron = "0 */6 * * *" 
+=======
+[[plugins]]
+  package = "netlify-plugin-cloudinary" 
+>>>>>>> origin/cursor/website-audit-and-enhancement-145a

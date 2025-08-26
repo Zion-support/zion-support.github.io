@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+<<<<<<< HEAD
 import React, { useRef } from 'react';
 import '../styles/globals.css';
 import { SEOContext } from '../components/SEOContext';
@@ -16,3 +17,15 @@ export default function App({ Component, pageProps }: AppProps) {
 		</SEOContext.Provider>
 	);
 }
+=======
+import '../styles/globals.css';
+import SiteLayout from '../components/layout/SiteLayout';
+
+export default function App({ Component, pageProps }: AppProps) {
+	return (
+		<SiteLayout>
+			<Component {...pageProps} />
+		</SiteLayout>
+	);
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-145a

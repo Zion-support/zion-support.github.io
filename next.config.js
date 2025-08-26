@@ -1,49 +1,6 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-import os from 'os';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Configure CDN asset prefix when running in production
-const isProd = process.env.NODE_ENV === 'production';
-const isNetlify = process.env.NETLIFY === 'true';
-const isPreviewBuild = process.env.CONTEXT !== 'production';
-
-// Only use CDN if:
-// 1. In production mode
-// 2. CDN URL is provided and not a placeholder
-// 3. Not a Netlify preview build (unless it's the main domain)
-// 4. CDN URL is a valid HTTPS URL
-const cdnUrl = process.env.NEXT_PUBLIC_CDN_URL;
-const isValidCDN =
-  cdnUrl &&
-  cdnUrl.startsWith('https://') &&
-  !cdnUrl.includes('yourdomain.com') &&
-  !cdnUrl.includes('example.com') &&
-  !cdnUrl.includes('localhost');
-
-const shouldUseCDN = isProd && isValidCDN && (!isNetlify || !isPreviewBuild);
-
-const assetPrefix = shouldUseCDN ? cdnUrl : '';
-
-// Log configuration for debugging
-if (process.env.NODE_ENV === 'development') {
-  console.log('Next.js Configuration:', {
-    isProd,
-    isNetlify,
-    isPreviewBuild,
-    cdnUrl: cdnUrl || 'Not set',
-    isValidCDN,
-    shouldUseCDN,
-    assetPrefix: assetPrefix || 'Disabled (serving from origin)',
-    imageOptimization: !(isNetlify && isPreviewBuild)
-      ? 'Enabled'
-      : 'Disabled for Netlify preview',
-  });
-}
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
@@ -76,7 +33,18 @@ const nextConfig = {
   },
 
   // Skip ESLint during build for faster deployment
+=======
+  reactStrictMode: true,
+  images: {
+    domains: ["localhost"],
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+>>>>>>> origin/cursor/website-audit-and-enhancement-145a
   eslint: {
     ignoreDuringBuilds: true,
   },
 };
+
+export default nextConfig;
