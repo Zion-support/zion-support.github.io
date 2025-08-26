@@ -1,4 +1,8 @@
+<<<<<<< HEAD:automation/backups/data-sync/2025-08-25T15-27-09-798Z/data/2025-emerging-tech-services.ts
+import { MicroSaasService } from './enhanced-real-micro-saas-services';
+=======
 import { enhancedRealMicroSaasServices } from './enhanced-real-micro-saas-services';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2ab8:data/2025-emerging-tech-services.ts
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -7,7 +11,11 @@ const contact = {
   website: 'https://ziontechgroup.com'
 };
 
+<<<<<<< HEAD:automation/backups/data-sync/2025-08-25T15-27-09-798Z/data/2025-emerging-tech-services.ts
+export const emergingTechServices2025: MicroSaasService[] = [
+=======
 export const emergingTechServices2025 = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2ab8:data/2025-emerging-tech-services.ts
   // Quantum Computing Services
   {
     id: 'quantum-computing-as-a-service',

@@ -52,6 +52,13 @@
     "node_modules",
     "zion.app/recovered-content/**",
     "contracts/**",
+<<<<<<< HEAD
+    "typechain-types/**",
+    "cypress/**",
+    "data/2025-cutting-edge-enterprise-solutions.ts",
+    "data/2025-cutting-edge-it-infrastructure-innovations.ts",
+    "data/2025-emerging-tech-services.ts"
+=======
     "dao/**",
     "zion-os/**",
     "zion_academy/**",
@@ -59,5 +66,6 @@
     "data/2025-innovative-ai-automation-services.ts",
     "data/2025-innovative-ai-services-enhanced.ts",
     "data/2025-innovative-ai-services-expansion-v2.ts"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2ab8
   ]
 }

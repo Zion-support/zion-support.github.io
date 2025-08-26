@@ -2,7 +2,12 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+  ArrowRight, Brain, Shield, Rocket, 
+  CheckCircle, Users, ExternalLink
+=======
   ArrowRight, Brain, Shield, Rocket, Users, CheckCircle, ExternalLink
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2ab8
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
@@ -17,6 +22,11 @@ export default function HomePage() {
     setIsVisible(true);
   }, []);
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2ab8
   const services = [
     {
       title: "AI Business Intelligence",
