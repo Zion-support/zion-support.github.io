@@ -27,6 +27,9 @@ const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 
+// Revolutionary 2025 Services pages
+const Revolutionary2025ServicesShowcase = React.lazy(() => import('./pages/Revolutionary2025ServicesShowcase'));
+
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -84,6 +87,10 @@ function App() {
               {/* IT Services Routes */}
               <Route path="/it-services" element={<ITServicesPage />} />
               <Route path="/it-services/:service" element={<ITServicesPage />} />
+              
+              {/* Revolutionary 2025 Services Routes */}
+              <Route path="/revolutionary-2025-services" element={<Revolutionary2025ServicesShowcase />} />
+              <Route path="/revolutionary-services-2025" element={<Revolutionary2025ServicesShowcase />} />
               
               {/* Emerging Tech Routes */}
               <Route path="/emerging-tech" element={<GreenIT />} />
