@@ -8,6 +8,7 @@ export default function Header() {
     main: [
       { name: 'Solutions', href: '/solutions' },
       { name: 'Services', href: '/services' },
+      { name: 'Innovative Services 2025', href: '/innovative-services-2025' },
       { name: 'Pricing', href: '/pricing' },
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'About', href: '/about' },
