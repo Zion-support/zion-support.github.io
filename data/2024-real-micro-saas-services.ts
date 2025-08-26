@@ -11,23 +11,13 @@ export interface RealMicroSaasService2024 {
 
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
   {
-    id: 'ai-content-generator-2024',
-    name: 'AI Content Generator 2024',
-    tagline: 'Generate high-quality content with AI',
-    price: '$99',
+    id: 'ai-automation-2024',
+    name: 'AI Automation Platform 2024',
+    tagline: 'Intelligent automation for modern businesses',
+    price: '$299',
     variant: 'ai',
-    features: ['AI-powered content creation', 'SEO optimization', 'Multi-language support'],
+    features: ['AI-powered workflows', 'Process automation', 'Smart decision making'],
     rating: 4.8,
     customers: '500+'
-  },
-  {
-    id: 'quantum-security-2024',
-    name: 'Quantum Security Platform 2024',
-    tagline: 'Next-generation quantum security',
-    price: '$299',
-    variant: 'security',
-    features: ['Quantum encryption', 'Advanced threat detection', 'Compliance tools'],
-    rating: 4.9,
-    customers: '200+'
   }
 ];

@@ -536,3 +536,6 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
     return price >= minPrice && price <= maxPrice;
   });
 };
+
+// Add the missing export alias that pages are looking for
+export const innovative2026MicroSaasServicesV2 = innovative2026MicroSaasV2Services;

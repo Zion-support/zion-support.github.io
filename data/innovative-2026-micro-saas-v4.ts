@@ -572,3 +572,6 @@ export const innovative2026MicroSaasV4Services: Innovative2026MicroSaasV4Service
     reviews: 14
   }
 ];
+
+// Add the missing export alias that pages are looking for
+export const innovative2026MicroSaasServicesV4 = innovative2026MicroSaasV4Services;

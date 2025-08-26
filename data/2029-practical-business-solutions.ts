@@ -40,3 +40,5 @@ export const practicalBusinessSolutionServices2029 = [
     launchDate: '2029-03-15'
   }
 ];
+
+export const practicalBusinessSolutionServices2029 = practicalBusiness2029Solutions;
