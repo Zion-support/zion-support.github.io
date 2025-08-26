@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import { EnhancedHeader } from './components/header/EnhancedHeader';
+import { EnhancedFooter } from './components/EnhancedFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 
 // Lazy load pages
-const Home = React.lazy(() => import('./pages/Home'));
+const Home = React.lazy(() => import('./pages/Index'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
@@ -18,6 +18,11 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+
+// New 2027 Services Pages
+const UltimateInnovativeServices2027 = React.lazy(() => import('./pages/UltimateInnovativeServices2027'));
+const UltimatePricing2027 = React.lazy(() => import('./pages/UltimatePricing2027'));
+const AllServices2027 = React.lazy(() => import('./pages/AllServices2027'));
 
 const APIDocs = React.lazy(() => import('./pages/APIDocs'));
 
@@ -139,7 +144,7 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-        <AppHeader />
+        <EnhancedHeader />
         
         <main className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
@@ -157,11 +162,16 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
+              
+              {/* New 2027 Services Routes */}
+              <Route path="/ultimate-innovative-services-2027" element={<UltimateInnovativeServices2027 />} />
+              <Route path="/ultimate-pricing-2027" element={<UltimatePricing2027 />} />
+              <Route path="/all-services-2027" element={<AllServices2027 />} />
             </Routes>
           </Suspense>
         </main>
         
-        <Footer />
+        <EnhancedFooter />
         <ChatAssistant />
       </div>
     </Router>
