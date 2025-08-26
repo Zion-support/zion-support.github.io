@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './components/theme-provider';
-import { WhitelabelProvider } from './components/whitelabel-provider';
+import { ThemeProvider } from './components/ThemeProvider';
+import { WhitelabelProvider } from './context/WhitelabelContext';
 import { Toaster } from './components/ui/toaster';
-import { SonnerToaster } from './components/ui/sonner';
+import { Toaster as SonnerToaster } from './components/ui/sonner';
 import Footer from './components/Footer';
 
 // Lazy load all pages
@@ -33,7 +33,7 @@ const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensiveP
 const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
 // Other pages
-const AIMatcherPage = React.lazy(() => import('./pages/AIMatcherPage'));
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const Login = React.lazy(() => import('./pages/Login'));
 const Signup = React.lazy(() => import('./pages/Signup'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
@@ -47,8 +47,8 @@ const Analytics = React.lazy(() => import('./pages/Analytics'));
 const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
-const ContactPage = React.lazy(() => import('./pages/ContactPage'));
-const PartnersPage = React.lazy(() => import('./pages/PartnersPage'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const PartnersPage = React.lazy(() => import('./pages/Partners'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const Blog = React.lazy(() => import('./pages/Blog'));
