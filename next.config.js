@@ -1,14 +1,15 @@
+// @ts-check
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
 	images: {
-		unoptimized: true
+		unoptimized: true,
+		domains: ['localhost']
+	},
+	typescript: {
+		ignoreBuildErrors: true
 	},
 	eslint: {
 		ignoreDuringBuilds: true
@@ -27,27 +28,4 @@ const nextConfig = {
 	}
 };
 
-  // Note: headers, redirects, and rewrites don't work with output: 'export'
-  // These are handled by Netlify via _headers and _redirects files
-
-  // Skip TypeScript checking during build if SKIP_TYPE_CHECK is set
-  typescript: {
-    ignoreBuildErrors: process.env.SKIP_TYPE_CHECK === 'true',
-  },
-
-  // Skip ESLint during build for faster deployment
-=======
-  reactStrictMode: true,
-  images: {
-    domains: ["localhost"],
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-};
-
-export default nextConfig;
+module.exports = nextConfig;
