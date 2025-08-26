@@ -80,9 +80,15 @@ import { real2029Q3Additions } from '../data/real-2029-q3-additions';
     };
 
     let filtered = allServices.filter(service => {
+<<<<<<< HEAD
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           (Array.isArray(service.category) ? service.category.some(cat => cat.toLowerCase().includes(searchTerm.toLowerCase())) : service.category.toLowerCase().includes(searchTerm.toLowerCase()));
+=======
               const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                              service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                              service.category.toLowerCase().includes(searchTerm.toLowerCase());
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a889
       
       const matchesCategory = selectedCategory === 'all' || 
                              (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||
@@ -113,7 +119,14 @@ import { real2029Q3Additions } from '../data/real-2029-q3-additions';
       case 'price-high':
         filtered.sort((a, b) => parsePriceToNumber((b as any).price) - parsePriceToNumber((a as any).price));
         break;
+<<<<<<< HEAD
+      case 'rating':
+        // Rating sorting not available for all service types
+        break;
+      case 'customers':
+=======
       case 'roi':
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a889
         filtered.sort((a, b) => {
           const aRoi = parseInt((a.roi || '0').replace(/[^0-9]/g, '')) || 0;
           const bRoi = parseInt((b.roi || '0').replace(/[^0-9]/g, '')) || 0;
@@ -555,6 +568,9 @@ export default function Services() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.05 }}
                 >
+<<<<<<< HEAD
+                  <EnhancedServiceCard service={service} />
+=======
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/30 h-full relative overflow-hidden">
                     {/* Background Glow Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -629,6 +645,7 @@ export default function Services() {
                       </a>
                     </div>
                   </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a889
                 </motion.div>
               ))}
             </div>

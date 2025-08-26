@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export interface CuttingEdgeInnovation2027 {
+=======
 export interface CuttingEdgeInnovation2027 {
 =======
 export interface CuttingEdgeInnovation2027 {
@@ -482,5 +485,6 @@ export const cuttingEdge2027Innovations: Service[] = [
     roi: '800% within 12 months',
     link: 'https://ziontechgroup.com/services/quantum-internet-protocol',
     tags: ['Quantum Computing', 'Internet Protocol', 'Communications', 'Encryption', 'Global']
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a889
   }
 ];

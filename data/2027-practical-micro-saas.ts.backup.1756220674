@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export interface PracticalMicroSaas2027 {
+=======
 export interface PracticalMicroSaas2027 {
 =======
 export interface PracticalMicroSaas2027 {
@@ -481,5 +484,6 @@ export const practicalMicroSaas2027: Service[] = [
     roi: '400% within 6 months',
     link: 'https://ziontechgroup.com/services/ai-quality-control',
     tags: ['Quality Control', 'AI', 'Computer Vision', 'Manufacturing', 'Automation']
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a889
   }
 ];
