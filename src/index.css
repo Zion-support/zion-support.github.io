@@ -128,11 +128,13 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
   @keyframes pulse {
@@ -154,16 +156,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: theme('colors["zion-blue"].DEFAULT');
+    background: #2e73ea;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: theme('colors["zion-purple"].dark');
+    background: #530c8b;
     border-radius: 5px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: theme('colors["zion-purple"].DEFAULT');
+    background: #8c15e9;
   }
 
   /* Smooth scrolling */
@@ -238,7 +240,7 @@
 
   .neon-border {
     border: 1px solid transparent;
-    background: linear-gradient(45deg, theme('colors.zion-cyan'), theme('colors.zion-purple')) border-box;
+    background: linear-gradient(45deg, #22ddd2, #8c15e9) border-box;
     -webkit-mask: 
       linear-gradient(#fff 0 0) padding-box, 
       linear-gradient(#fff 0 0);
