@@ -22,6 +22,14 @@ const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 
+// Additional pages
+const Services = React.lazy(() => import('./pages/Services'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfService = React.lazy(() => import('./pages/TermsOfService'));
+
 // New service pages
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
@@ -63,12 +71,18 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
