@@ -1,31 +1,33 @@
-name: Test
+name: Deploy
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  main:
-    name: Main Job
+  deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    environment: production
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
+
       - name: Install dependencies
         run: npm ci
+
       - name: Build project
         run: npm run build
+
       - name: Verify build output
         run: |
           if [ ! -d dist ]; then
@@ -34,35 +36,47 @@ jobs:
           fi
           echo "Build successful! Found dist folder with:"
           ls -la dist/
-      - name: Verify asset paths
-        run: |
+          
+          # Check for essential files
           if [ -f dist/index.html ]; then
             echo "✓ index.html found"
           else
             echo "✗ index.html not found"
             exit 1
           fi
+          
           if [ -f dist/css/index-*.css ]; then
             echo "✓ CSS files found"
           else
             echo "✗ CSS files not found"
             exit 1
           fi
+          
           if [ -f dist/js/index-*.js ]; then
             echo "✓ JavaScript files found"
           else
             echo "✗ JavaScript files not found"
             exit 1
           fi
-      - name: Run tests (if available)
-        run: npm test --if-present
-        continue-on-error: true
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: build
+          name: production-build
           path: dist
+          retention-days: 30
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+      - name: Deploy to production
+        run: |
+          echo "🚀 Deploying to production..."
+          echo "Build completed successfully at $(date)"
+          echo "Ready for deployment to your hosting platform"
+          
+          # Add your deployment commands here
+          # Examples:
+          # - AWS S3: aws s3 sync dist/ s3://your-bucket-name/
+          # - Netlify: npx netlify-cli deploy --prod --dir=dist
+          # - Vercel: npx vercel --prod --cwd=dist
+          # - Custom script: ./scripts/deploy.sh
+          
+          echo "✅ Deployment workflow completed"

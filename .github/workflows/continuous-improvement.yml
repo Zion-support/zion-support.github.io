@@ -20,26 +20,29 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 20
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Run continuous improvement
+      - name: Build project
+        run: npm run build
+      - name: Run code quality checks
         run: |
-          npm run automation:improvement || true
-          npm run diversify || true
+          npm run lint -- --fix || true
+          npm run type-check || true
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(improvement): continuous improvement + diversity results"
-          title: "chore(improvement): apply continuous improvement and diversity results"
+          commit-message: "chore(improvement): continuous improvement and code quality updates"
+          title: "chore(improvement): apply continuous improvement and code quality updates"
           body: |
-            Automated improvement and diversity loop.
+            Automated improvement and code quality loop.
 
-            - Runs automation:improvement orchestration
-            - Runs diversification orchestrator
+            - Runs linting with auto-fix
+            - Runs type checking
+            - Builds project to ensure everything works
           branch: automation/continuous-improvement
           delete-branch: true
           signoff: false

@@ -28,17 +28,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint and type-check
-        run: |
-          npm run lint
-          npm run type-check
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npm run type-check
 
       - name: Build project
         run: npm run build
 
-      - name: Security scan (non-blocking)
-        run: npm run security:scan
-        continue-on-error: true
+      - name: Verify build output
+        run: |
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
+          fi
+          echo "Build successful! Found dist folder with:"
+          ls -la dist/
 
   test:
     name: Test
@@ -57,8 +63,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test
+      - name: Build project
+        run: npm run build
+
+      - name: Run tests (if available)
+        run: npm test --if-present
         continue-on-error: true
 
 

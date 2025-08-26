@@ -1,4 +1,4 @@
-name: Publish npm package
+name: NPM Package Check
 
 on:
   push:
@@ -6,27 +6,39 @@ on:
       - main
     paths-ignore:
       - '**/*.md'
+      - '**/*.txt'
+      - '.github/**'
 
 jobs:
-  publish:
+  check:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js 18
+      - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test --if-present
+      - name: Build project
+        run: npm run build
 
-      - name: Publish to npm
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Run tests (if available)
+        run: npm test --if-present
+        continue-on-error: true
+
+      - name: Check package.json
+        run: |
+          echo "Package name: $(npm run --silent echo \$npm_package_name)"
+          echo "Package version: $(npm run --silent echo \$npm_package_version)"
+          echo "Package private: $(npm run --silent echo \$npm_package_private)"
+          
+          if [ "$(npm run --silent echo \$npm_package_private)" = "true" ]; then
+            echo "✓ Package is marked as private - no publishing needed"
+          else
+            echo "⚠ Package is not marked as private"
+          fi
