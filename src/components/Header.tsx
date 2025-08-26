@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -18,6 +19,15 @@ const Header: React.FC = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   const isActive = (path: string) => location.pathname === path;
+
+  const services = [
+    { name: 'AI Solutions', path: '/services/ai', description: 'Machine learning and AI solutions' },
+    { name: 'Cloud & DevOps', path: '/services/cloud', description: 'Cloud infrastructure and automation' },
+    { name: 'Cybersecurity', path: '/services/cybersecurity', description: 'Security and threat protection' },
+    { name: 'IT Infrastructure', path: '/services/infrastructure', description: 'Infrastructure management' },
+    { name: 'Digital Transformation', path: '/services/transformation', description: 'Business transformation' },
+    { name: 'Consulting', path: '/services/consulting', description: 'Technology consulting' }
+  ];
 
   return (
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
@@ -35,7 +45,7 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
               className={`transition-colors duration-300 ${
@@ -46,16 +56,58 @@ const Header: React.FC = () => {
             >
               Home
             </Link>
-            <Link
-              to="/services"
-              className={`transition-colors duration-300 ${
-                isActive('/services') 
-                  ? 'text-blue-400 font-semibold' 
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              Services
-            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button
+                className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                Services
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {/* Services Dropdown Menu */}
+              {isServicesOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg border border-white/20 shadow-xl"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <div className="p-4">
+                    <div className="grid grid-cols-1 gap-2">
+                      {services.map((service) => (
+                        <Link
+                          key={service.path}
+                          to={service.path}
+                          className="flex items-start p-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                        >
+                          <div className="flex-1">
+                            <div className="text-white font-medium">{service.name}</div>
+                            <div className="text-sm text-gray-400">{service.description}</div>
+                          </div>
+                          <svg className="h-4 w-4 text-gray-400 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-white/20">
+                      <Link
+                        to="/services"
+                        className="block text-center text-blue-400 hover:text-blue-300 font-medium transition-colors duration-200"
+                      >
+                        View All Services →
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+            
             <Link
               to="/about"
               className={`transition-colors duration-300 ${
@@ -77,6 +129,12 @@ const Header: React.FC = () => {
               Blog
             </Link>
             <Link
+              to="/careers"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              Careers
+            </Link>
+            <Link
               to="/contact"
               className={`transition-colors duration-300 ${
                 isActive('/contact') 
@@ -89,7 +147,7 @@ const Header: React.FC = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
@@ -101,7 +159,7 @@ const Header: React.FC = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200"
+            className="lg:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200"
             aria-label="Toggle mobile menu"
             aria-expanded={isMenuOpen}
           >
@@ -116,7 +174,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${
+        <div className={`lg:hidden transition-all duration-300 ease-in-out ${
           isMenuOpen 
             ? 'max-h-96 opacity-100' 
             : 'max-h-0 opacity-0 overflow-hidden'
@@ -133,17 +191,31 @@ const Header: React.FC = () => {
             >
               Home
             </Link>
-            <Link
-              to="/services"
-              className={`block px-3 py-2 rounded-md transition-all duration-200 ${
-                isActive('/services')
-                  ? 'text-blue-400 bg-blue-600/20 font-semibold'
-                  : 'text-gray-300 hover:text-white hover:bg-gray-700'
-              }`}
-              onClick={closeMenu}
-            >
-              Services
-            </Link>
+            
+            {/* Mobile Services Menu */}
+            <div className="px-3 py-2">
+              <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
+              <div className="space-y-1 ml-4">
+                {services.map((service) => (
+                  <Link
+                    key={service.path}
+                    to={service.path}
+                    className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md text-sm"
+                    onClick={closeMenu}
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+                <Link
+                  to="/services"
+                  className="block px-3 py-2 text-blue-400 hover:text-blue-300 hover:bg-gray-700 rounded-md text-sm"
+                  onClick={closeMenu}
+                >
+                  View All Services →
+                </Link>
+              </div>
+            </div>
+            
             <Link
               to="/about"
               className={`block px-3 py-2 rounded-md transition-all duration-200 ${
@@ -165,6 +237,13 @@ const Header: React.FC = () => {
               onClick={closeMenu}
             >
               Blog
+            </Link>
+            <Link
+              to="/careers"
+              className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+              onClick={closeMenu}
+            >
+              Careers
             </Link>
             <Link
               to="/contact"
