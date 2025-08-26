@@ -38,12 +38,81 @@ export function AppHeader() {
       label: 'Services',
       hasDropdown: true,
       dropdownItems: [
-        { path: '/services#ai', label: 'AI & Analytics' },
-        { path: '/services#cybersecurity', label: 'Cybersecurity' },
-        { path: '/services#cloud', label: 'Cloud Solutions' },
-        { path: '/services#consulting', label: 'IT Consulting' }
+        { path: '/services/ai-business-solutions', label: 'AI & Business Solutions' },
+        { path: '/services/cybersecurity-suite', label: 'Cybersecurity Suite' },
+        { path: '/services/cloud-infrastructure', label: 'Cloud Infrastructure' },
+        { path: '/services/digital-marketing', label: 'Digital Marketing' },
+        { path: '/services/financial-solutions', label: 'Financial Solutions' },
+        { path: '/services/manufacturing-solutions', label: 'Manufacturing Solutions' },
+        { path: '/services/iot-services', label: 'IoT Services' },
+        { path: '/services/blockchain-services', label: 'Blockchain Services' },
+        { path: '/services/quantum-technology', label: 'Quantum Technology' },
+        { path: '/services/5g-enterprise-solutions', label: '5G Enterprise Solutions' },
+        { path: '/services/green-it', label: 'Green IT' },
+        { path: '/services/enterprise-it', label: 'Enterprise IT' },
+        { path: '/services/micro-saas', label: 'Micro SaaS Services' },
+        { path: '/services/onsite-it', label: 'Onsite IT Services' },
+        { path: '/services/dispute-management', label: 'Dispute Management' }
       ]
     },
+    { 
+      path: '/products', 
+      label: 'Products',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/products', label: 'All Products' },
+        { path: '/products/new', label: 'New Products' },
+        { path: '/equipment', label: 'Equipment' },
+        { path: '/portfolio-builder', label: 'Portfolio Builder' },
+        { path: '/zion-hire-ai', label: 'Zion Hire AI' },
+        { path: '/ai-research-assistant', label: 'AI Research Assistant' },
+        { path: '/ai-content-generator', label: 'AI Content Generator' },
+        { path: '/ai-code-review', label: 'AI Code Review' },
+        { path: '/cloud-cost-optimizer', label: 'Cloud Cost Optimizer' },
+        { path: '/service-description-generator', label: 'Service Description Generator' }
+      ]
+    },
+    { 
+      path: '/business-solutions', 
+      label: 'Business',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/business-solutions', label: 'Business Solutions' },
+        { path: '/enterprise', label: 'Enterprise Admin' },
+        { path: '/enterprise/billing', label: 'Enterprise Billing' },
+        { path: '/enterprise/demo', label: 'Enterprise Demo' },
+        { path: '/enterprise/plans', label: 'Enterprise Plans' },
+        { path: '/digital-transformation', label: 'Digital Transformation' },
+        { path: '/autonomous-business-platform', label: 'Autonomous Business Platform' }
+      ]
+    },
+    { 
+      path: '/pricing', 
+      label: 'Pricing',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/pricing', label: 'Main Pricing' },
+        { path: '/pricing-guide', label: 'Pricing Guide' },
+        { path: '/services-pricing', label: 'Services Pricing' },
+        { path: '/services-comparison', label: 'Services Comparison' }
+      ]
+    },
+    { 
+      path: '/community', 
+      label: 'Community',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/partners', label: 'Partners' },
+        { path: '/events', label: 'Events' },
+        { path: '/news', label: 'News' },
+        { path: '/blog', label: 'Blog' },
+        { path: '/forum/create', label: 'Create Post' },
+        { path: '/jobs/post', label: 'Post Job' },
+        { path: '/hiring-tracker', label: 'Hiring Tracker' },
+        { path: '/talent-onboarding', label: 'Talent Onboarding' }
+      ]
+    },
+    { path: '/faq', label: 'FAQ' },
     { path: '/contact', label: 'Contact' }
   ];
 

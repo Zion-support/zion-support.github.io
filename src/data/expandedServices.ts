@@ -1,7 +1,7 @@
 import { ProductListing } from "@/types/listings";
 
 // Real, market-competitive micro SAAS services and IT solutions
-export const EXPANDED_SERVICES: ProductListing[] = [
+export const EXPANDED_SERVICES = [
   // AI & Machine Learning Services
   {
     id: "ai-chatbot-enterprise",

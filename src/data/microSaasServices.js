@@ -423,25 +423,11 @@ export const MICRO_SAAS_SERVICES = [
             "Sentiment analysis",
             "Customer satisfaction tracking",
             "Multi-channel support",
-            "Knowledge base",
-            pricing, {
-                monthly: number,
-                yearly: number,
-                currency: string,
-                features: string[]
-            }
-        ],
-        features: string[],
-        benefits: string[],
-        useCases: string[],
-        targetAudience: string[],
-        integration: string[],
-        support: string[],
-        link: string,
-        badge: string,
-        icon: string
+            "Knowledge base"
+        ]
     }
 ];
+
 export const MICRO_SAAS_SERVICES = [
     {
         id: "ai-content-generator",

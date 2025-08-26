@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from '../ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Badge } from '../ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { 
   Phone, 
   Mail, 
@@ -110,7 +110,7 @@ export default function EnhancedServicesShowcase() {
           >
             All Services
           </Button>
-          {categories.map((category: string) => (
+                      {categories.map((category) => (
             <Button
               key={category}
               variant={selectedCategory === category ? 'default' : 'outline'}
@@ -247,7 +247,7 @@ export default function EnhancedServicesShowcase() {
 }
 
 // Service Card Component
-function ServiceCard({ service }: { service: any }) {
+function ServiceCard({ service }) {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
@@ -296,7 +296,7 @@ function ServiceCard({ service }: { service: any }) {
 
           {/* Tags */}
           <div className="flex flex-wrap gap-2">
-            {service.tags.slice(0, 3).map((tag: string) => (
+                          {service.tags.slice(0, 3).map((tag) => (
               <Badge key={tag} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan-light">
                 {tag}
               </Badge>
@@ -334,14 +334,14 @@ function ServiceCard({ service }: { service: any }) {
                   <AccordionContent className="text-zion-cyan-light">
                     <div className="space-y-2">
                       <h4 className="font-semibold text-white mb-2">Features:</h4>
-                      {service.features.map((feature: string, index: number) => (
+                                              {service.features.map((feature, index) => (
                         <div key={index} className="flex items-center gap-2">
                           <CheckCircle className="h-4 w-4 text-green-400" />
                           <span>{feature}</span>
                         </div>
                       ))}
                       <h4 className="font-semibold text-white mb-2 mt-4">Benefits:</h4>
-                      {service.benefits.map((benefit: string, index: number) => (
+                                              {service.benefits.map((benefit, index) => (
                         <div key={index} className="flex items-center gap-2">
                           <CheckCircle className="h-4 w-4 text-green-400" />
                           <span>{benefit}</span>

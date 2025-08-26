@@ -14,12 +14,10 @@ import { Link } from "react-router-dom";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
 import { SocialShareSection } from "@/components/SocialShareSection";
-import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
 import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone } from "lucide-react";
 export default function Index() {
-    const { t } = useTranslation();
-    const { isRTL } = useLanguage();
+    const { t, isRTL } = useLanguage();
     // Tools and features showcase
     const toolsFeatures = [
         {

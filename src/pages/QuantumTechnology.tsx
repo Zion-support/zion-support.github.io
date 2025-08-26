@@ -1,8 +1,6 @@
-import { SEO } from "@/components/SEO";
-import { Atom, Cpu, Globe, Shield, Zap, Target, Users, BarChart3, Rocket, Brain } from 'lucide-react';
-=======
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { SEO } from "@/components/SEO";
 import { 
   Atom, 
   Zap, 
@@ -68,7 +66,6 @@ export default function QuantumTechnology() {
     { id: 'benefits', label: 'Benefits', icon: Star }
   ];
 
-const QuantumTechnology: React.FC = () => {
   const quantumServices = [
     {
       icon: Atom,
@@ -323,6 +320,4 @@ const QuantumTechnology: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default QuantumTechnology;
+}

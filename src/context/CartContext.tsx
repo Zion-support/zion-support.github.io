@@ -1,14 +1,11 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
-import { CartContextType, CartItem, CartAction } from '@/types/cart';
 import { safeStorage } from '@/utils/safeStorage';
 import { useAuth } from '@/hooks/useAuth';
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
 
-interface CartState { items: CartItem[]; }
+const initialState = { items: [] };
 
-const initialState: CartState = { items: [] };
-
-function cartReducer(state: CartState, action: CartAction): CartState {
+function cartReducer(state, action) {
   switch (action.type) {
     case 'ADD_ITEM': {
       const existing = state.items.find(i => i.id === action.payload.id);
@@ -33,25 +30,25 @@ function cartReducer(state: CartState, action: CartAction): CartState {
   }
 }
 
-const CartContext = createContext<CartContextType | undefined>(undefined);
+const CartContext = createContext(undefined);
 
-export function useCart(): CartContextType {
-  const ctx = useContext(CartContext) as CartContextType;
+export function useCart() {
+  const ctx = useContext(CartContext);
   if (!ctx) throw new Error('useCart must be used within a CartProvider');
   return ctx;
 }
 
-export function CartProvider({ children }: { children: React.ReactNode }) {
+export function CartProvider({ children }) {
   const { user } = useAuth();
   const [state, dispatch] = useReducer(cartReducer, initialState);
   const cartKey = getCartKey(user?.id);
 
   useEffect(() => {
-    let items: CartItem[] = [];
+    let items = [];
     const stored = safeStorage.getItem(cartKey);
     if (stored) {
       try {
-        items = JSON.parse(stored) as CartItem[];
+        items = JSON.parse(stored);
       } catch {
         items = [];
       }
@@ -62,7 +59,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       const guestStored = safeStorage.getItem(getCartKey());
       if (guestStored) {
         try {
-          const guestItems = JSON.parse(guestStored) as CartItem[];
+          const guestItems = JSON.parse(guestStored);
           items = mergeCartItems(items, guestItems);
         } catch {
           /* ignore */
@@ -78,7 +75,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     safeStorage.setItem(cartKey, JSON.stringify(state.items));
   }, [state.items, cartKey]);
 
-  const value: CartContextType = {
+  const value = {
     items: state.items,
     dispatch,
   };

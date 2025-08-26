@@ -1,17 +1,6 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext } from 'react';
 
-type ContactInfo = { phone: string; email: string; address: string };
-export type WhitelabelConfig = {
-	companyName: string;
-	logo: string;
-	primaryColor: string;
-	secondaryColor: string;
-	domain: string;
-	isWhitelabel: boolean;
-	contactInfo: ContactInfo;
-};
-
-const defaultConfig: WhitelabelConfig = {
+const defaultConfig = {
 	companyName: 'Zion Tech Group',
 	logo: '/logo.svg',
 	primaryColor: '#1e40af',
@@ -25,10 +14,10 @@ const defaultConfig: WhitelabelConfig = {
 	},
 };
 
-const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig);
+const WhitelabelContext = createContext(defaultConfig);
 export const useWhitelabel = () => useContext(WhitelabelContext);
 
-export function WhitelabelProvider({ children, config = {} as Partial<WhitelabelConfig> }: { children: ReactNode; config?: Partial<WhitelabelConfig> }) {
-	const mergedConfig: WhitelabelConfig = { ...defaultConfig, ...config, contactInfo: { ...defaultConfig.contactInfo, ...config.contactInfo } } as WhitelabelConfig;
+export function WhitelabelProvider({ children, config = {} }) {
+	const mergedConfig = { ...defaultConfig, ...config, contactInfo: { ...defaultConfig.contactInfo, ...config.contactInfo } };
 	return <WhitelabelContext.Provider value={mergedConfig}>{children}</WhitelabelContext.Provider>;
 }
