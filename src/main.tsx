@@ -3,25 +3,22 @@ import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
-import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n'; // Adjust the path if your i18n.js is elsewhere
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { showApiError } from '@/utils/apiErrorHandler';
 import ToastProvider from './components/ToastProvider';
 
-// Import i18n configuration
-import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
+import { store } from '@/store';
+import { Provider as ReduxProvider } from 'react-redux';
 
-// Import auth and notification providers
+// Import auth provider
 import { AuthProvider } from './context/auth/AuthProvider';
-// import { NotificationProvider } from './context/notifications/NotificationContext';
 
-// Import analytics provider
+// Import analytics/view mode provider
 import { ViewModeProvider } from './context/ViewModeContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
@@ -44,16 +41,17 @@ function renderApp() {
         <QueryClientProvider client={queryClient}>
           <WhitelabelProvider>
             <Router>
-              <AuthProvider>
-                <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                  <ViewModeProvider>
-                    <AppLayout>
-                      <App />
-                    </AppLayout>
-                  </ViewModeProvider>
-                  {/* LanguageDetectionPopup removed */}
-                </LanguageProvider>
-              </AuthProvider>
+              <ReduxProvider store={store}>
+                <AuthProvider>
+                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                    <ViewModeProvider>
+                      <AppLayout>
+                        <App />
+                      </AppLayout>
+                    </ViewModeProvider>
+                  </LanguageProvider>
+                </AuthProvider>
+              </ReduxProvider>
             </Router>
           </WhitelabelProvider>
         </QueryClientProvider>

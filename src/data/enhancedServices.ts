@@ -523,6 +523,214 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 96
+  },
+  {
+    id: "ai-website-personalization",
+    title: "AI Website Personalization",
+    description: "Dynamic on-site personalization that adapts content, offers, and CTAs per visitor segment using first-party data and ML scoring.",
+    category: "Growth & CRO",
+    price: 1299,
+    currency: "$",
+    tags: ["Personalization", "CRO", "A/B Testing", "Segmentation"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-05T09:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 76,
+    location: "Global",
+    availability: "1-2 Weeks",
+    aiScore: 90
+  },
+  {
+    id: "managed-help-desk",
+    title: "Managed Help Desk (24/7)",
+    description: "End-user IT support with SLA-backed response times, onboarding, remote assistance, and monthly reporting.",
+    category: "Managed IT",
+    price: 49,
+    currency: "$",
+    tags: ["Help Desk", "SLA", "Support", "ITSM"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-07T10:30:00.000Z",
+    rating: 4.8,
+    reviewCount: 142,
+    location: "USA & Remote",
+    availability: "Immediate",
+    aiScore: 85
+  },
+  {
+    id: "managed-endpoint-security",
+    title: "Managed Endpoint Security (NGAV/EDR)",
+    description: "Next-gen antivirus and endpoint detection and response with central monitoring, threat hunting, and automated quarantine.",
+    category: "Cybersecurity",
+    price: 7,
+    currency: "$",
+    tags: ["EDR", "AV", "Threat Hunting", "Monitoring"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-09T12:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 98,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 88
+  },
+  {
+    id: "review-responder-ai",
+    title: "ReviewResponder.ai",
+    description: "Auto-generate professional responses to customer reviews across Google, Yelp, and Facebook with tone controls and approvals.",
+    category: "Micro SaaS",
+    price: 19,
+    currency: "$",
+    tags: ["Reputation", "Social", "Automation", "AI Copy"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-11T08:45:00.000Z",
+    rating: 4.6,
+    reviewCount: 211,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 87
+  },
+  {
+    id: "invoice-sync",
+    title: "InvoiceSync (AI for AP)",
+    description: "AI-assisted invoice capture, reconciliation, duplicate detection, and auto-reminders integrated with QuickBooks and Xero.",
+    category: "Micro SaaS",
+    price: 15,
+    currency: "$",
+    tags: ["AP", "OCR", "Accounting", "Automation"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-13T09:10:00.000Z",
+    rating: 4.5,
+    reviewCount: 67,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 86
+  },
+  {
+    id: "uptime-pulse",
+    title: "UptimePulse (Monitoring)",
+    description: "Global uptime, SSL, DNS, and performance monitoring with Core Web Vitals and public status pages.",
+    category: "Micro SaaS",
+    price: 9,
+    currency: "$",
+    tags: ["Monitoring", "Uptime", "Status Page", "Alerts"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-15T11:25:00.000Z",
+    rating: 4.6,
+    reviewCount: 83,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: 84
+  },
+  {
+    id: "data-quality-observability",
+    title: "Data Quality & Observability",
+    description: "End-to-end data quality monitoring with anomaly detection, lineage, SLAs, and incident workflows for modern data stacks.",
+    category: "Data Platform",
+    price: 2799,
+    currency: "$",
+    tags: ["Data Quality", "Lineage", "SLAs", "Observability"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-17T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 51,
+    location: "Global",
+    availability: "2-4 Weeks",
+    aiScore: 92
+  },
+  {
+    id: "genai-rag-starter",
+    title: "GenAI RAG Starter Kit",
+    description: "Production-ready retrieval-augmented generation blueprint with evals, grounding, safety, and observability.",
+    category: "AI Platform",
+    price: 4999,
+    currency: "$",
+    tags: ["RAG", "LLM", "Evals", "Observability"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-19T09:40:00.000Z",
+    rating: 4.9,
+    reviewCount: 37,
+    featured: true,
+    location: "Global",
+    availability: "2-3 Weeks",
+    aiScore: 97
+  },
+  {
+    id: "soc2-managed-service",
+    title: "SOC 2 Managed Service",
+    description: "Hands-on evidence collection, continuous control monitoring, and audit readiness with mapped tasks and dashboards.",
+    category: "Security & Compliance",
+    price: 2999,
+    currency: "$",
+    tags: ["SOC 2", "Compliance", "Audit", "GRC"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: [
+      "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2024-04-21T08:20:00.000Z",
+    rating: 4.8,
+    reviewCount: 44,
+    location: "Global",
+    availability: "3-5 Weeks",
+    aiScore: 91
   }
 ];
 
