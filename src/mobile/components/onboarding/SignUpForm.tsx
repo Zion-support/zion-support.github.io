@@ -34,9 +34,7 @@ export function SignUpForm() {
     
     try {
       if (signupMode) {
-        const { error } = await signup(formData.email, formData.password, {
-          name: formData.name,
-        });
+        const result = await signup(formData.name, formData.email, formData.password);
         
         if (error) {
           throw new Error(error);

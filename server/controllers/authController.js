@@ -32,25 +32,27 @@ exports.loginUser = async function (req, res) {
   }
 };
 
-// Maintain backwards compatibility if other modules still call `login`
-exports.login = exports.loginUser;
-
-exports.registerUser = async function (req, res) {
+// Register a new user and return a JWT token
+exports.registerUser = async function(req, res) {
   try {
     const { name, email, password } = req.body;
-    const existing = await User.findOne({ email: email.toLowerCase().trim() });
+    const normalizedEmail = email.toLowerCase().trim();
+
+    // Prevent duplicate registrations
+    const existing = await User.findOne({ email: normalizedEmail });
     if (existing) {
       return res.status(409).json({ message: 'Email already registered' });
     }
 
-    const user = new User({ name, email });
+    const user = new User({ name, email: normalizedEmail });
     await user.setPassword(password);
-    await user.save();
+    const savedUser = await user.save();
 
-    const token = jwt.sign({ id: user._id }, jwtSecret, { expiresIn: '7d' });
+    const token = jwt.sign({ id: savedUser._id }, jwtSecret, { expiresIn: '7d' });
+
     res.status(201).json({
       token,
-      user: { id: user._id, email: user.email, name: user.name },
+      user: { id: savedUser._id, email: savedUser.email, name: savedUser.name },
     });
   } catch (err) {
     console.error(err);

@@ -111,21 +111,15 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   // Wrapper for signup to match the AuthContextType interface
-  const signup = async (email: string, password: string, userData?: any) => {
-    const result = await signupImpl({ email, password, display_name: userData });
-
-    if (!result?.error) {
-      const loginResult = await login(email, password);
-      if (!loginResult.error) {
-        const firstName = (userData?.name || userData || '').split(' ')[0];
-        toast({ title: `Welcome, ${firstName}!` });
-        const params = new URLSearchParams(location.search);
-        const next = params.get('redirectTo') || params.get('next') || '/dashboard';
-        navigate(next, { replace: true });
-      }
+  const signup = async (name: string, email: string, password: string) => {
+    const { res, data } = await registerUser(name, email, password);
+    if (res.ok && data.token && data.user) {
+      safeStorage.setItem('authToken', data.token);
+      setUser(data.user);
+      setTokens({ accessToken: data.token });
+      return { error: null };
     }
-
-    return result;
+    return { error: data?.message || 'Signup failed' };
   };
 
   useEffect(() => {
