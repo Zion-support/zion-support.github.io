@@ -6,14 +6,14 @@ const Header: React.FC = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const services = [
-    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: '50+ Cutting-edge Micro SAAS Solutions' },
-    { name: 'Quantum AI & Research', href: '/services/quantum-ai', description: 'Next-generation Quantum Computing' },
-    { name: 'Edge AI & IoT', href: '/services/edge-ai', description: 'Intelligent Edge Computing Solutions' },
-    { name: 'Blockchain & Web3', href: '/services/blockchain', description: 'Decentralized AI & Web3 Services' },
-    { name: 'Healthcare AI', href: '/services/healthcare-ai', description: 'AI-powered Medical Solutions' },
-    { name: 'Financial AI', href: '/services/financial-ai', description: 'AI-driven Financial Intelligence' },
-    { name: 'Industry Solutions', href: '/services/industry', description: 'Specialized Industry Platforms' },
-    { name: 'Emerging Tech', href: '/services/emerging-tech', description: 'Future Technology Services' }
+    { name: 'Comprehensive Services 2025', href: '/comprehensive-services-showcase-2025', description: '100+ Cutting-edge Technology Solutions' },
+    { name: 'AI & Machine Learning', href: '/services/ai', description: 'Advanced AI Solutions & Platforms' },
+    { name: 'Quantum Computing', href: '/services/quantum', description: 'Quantum AI & Research Platforms' },
+    { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Enterprise Infrastructure Solutions' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced Security & Zero-Trust' },
+    { name: 'Edge Computing', href: '/services/edge', description: 'IoT & Edge AI Solutions' },
+    { name: 'Emerging Technologies', href: '/innovative-services-2025', description: 'Space Tech, Green Tech & More' },
+    { name: 'Industry Solutions', href: '/services/industry', description: 'Specialized Industry Platforms' }
   ];
 
   return (
