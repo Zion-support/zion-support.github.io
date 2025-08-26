@@ -350,7 +350,7 @@ export default function HomePage() {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <Link href="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Explore Redundancy Systems →
                 </Link>
               </div>
@@ -378,10 +378,49 @@ export default function HomePage() {
                   <li>• Performance Optimization</li>
                   <li>• Quality Assurance</li>
                 </ul>
-                <Link href="/services" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/resources" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Explore Build Systems →
                 </Link>
               </div>
+            </div>
+          </section>
+
+          {/* Quick Links to Key Pages */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🧭 Quick Links</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/about" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">About</h3>
+                <p className="text-white/70 text-sm">Who we are and our mission</p>
+              </Link>
+              <Link href="/services" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Services</h3>
+                <p className="text-white/70 text-sm">AI-powered solutions for growth</p>
+              </Link>
+              <Link href="/resources" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-blue-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-blue-400 mb-2">Resources</h3>
+                <p className="text-white/70 text-sm">Guides, tools, and best practices</p>
+              </Link>
+              <Link href="/case-studies" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-yellow-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Case Studies</h3>
+                <p className="text-white/70 text-sm">Success stories and outcomes</p>
+              </Link>
+              <Link href="/blog" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-purple-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-purple-400 mb-2">Blog</h3>
+                <p className="text-white/70 text-sm">Latest thinking and insights</p>
+              </Link>
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-green-400 mb-2">Privacy</h3>
+                <p className="text-white/70 text-sm">Our stance on data and security</p>
+              </Link>
+              <Link href="/contact" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-emerald-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-emerald-400 mb-2">Contact</h3>
+                <p className="text-white/70 text-sm">Talk to our team</p>
+              </Link>
+              <Link href="/reports/updates/update-2025-08-15-0406" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-rose-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-rose-400 mb-2">Reports</h3>
+                <p className="text-white/70 text-sm">Latest autonomous updates</p>
+              </Link>
             </div>
           </section>
 
@@ -701,6 +740,28 @@ export default function HomePage() {
             </div>
           </section>
 
+          {/* Latest From The Blog */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📝 Latest From The Blog</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/blog/ai-automation-trends-2025" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">AI Automation Trends 2025</h3>
+                <p className="text-white/70 text-sm">Top trends shaping autonomous systems</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/blog/autonomous-content-generation" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Autonomous Content Generation</h3>
+                <p className="text-white/70 text-sm">How AI builds content engines</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-fuchsia-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
+              <Link href="/blog/performance-optimization" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-green-400 mb-2">Performance Optimization</h3>
+                <p className="text-white/70 text-sm">Reliability, scale, and speed</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-green-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
+            </div>
+          </section>
+
           {/* Advanced Features Showcase */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
             <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🌟 Advanced Features & Capabilities</h2>
@@ -742,9 +803,7 @@ export default function HomePage() {
                   <li>• Analytics dashboard</li>
                   <li>• Predictive maintenance</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Performance Guide →
-                </a>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/performance-weekly-report.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">View Performance Report →</a>
               </div>
             </div>
           </section>
