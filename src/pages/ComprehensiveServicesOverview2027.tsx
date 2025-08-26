@@ -5,7 +5,7 @@ import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
 import { INNOVATIVE_IT_SERVICES_2027 } from '@/data/innovativeITServices2027';
 import { INNOVATIVE_AI_SERVICES_2027 } from '@/data/innovativeAIServices2027';
-import { COMPREHENSIVE_PRICING_GUIDE_2027 } from '@/data/comprehensivePricingGuide2027';
+// import { COMPREHENSIVE_PRICING_GUIDE_2027 } from '@/data/comprehensivePricingGuide2027';
 
 const ComprehensiveServicesOverview2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
