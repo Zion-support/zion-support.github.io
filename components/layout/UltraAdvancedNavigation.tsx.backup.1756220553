@@ -62,7 +62,11 @@ const serviceCategories = [
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
+<<<<<<< HEAD
+  { name: 'Careers', href: '/careers' },
+=======
   { name: '2026 Services', href: '/2026-innovative-services-showcase' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-87b2
   { name: 'News', href: '/news' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
