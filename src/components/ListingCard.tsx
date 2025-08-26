@@ -43,8 +43,9 @@ export function ListingCard({
         <div className="h-48 w-full overflow-hidden">
           <img
             src={image}
-            alt={`Image of ${title}`}
+            alt={title}
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
           />
         </div>
       )}
@@ -70,7 +71,7 @@ export function ListingCard({
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {authorImage ? (
-              <img src={authorImage} alt={`Avatar of ${author}`} className="h-8 w-8 rounded-full mr-2" />
+              <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" loading="lazy" />
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}

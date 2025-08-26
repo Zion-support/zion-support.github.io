@@ -57,8 +57,9 @@ export function TalentCard({
               {talent.profile_picture_url ? (
                 <img
                   src={talent.profile_picture_url}
-                  alt={`Avatar of ${talent.full_name}`}
+                  alt={talent.full_name}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">

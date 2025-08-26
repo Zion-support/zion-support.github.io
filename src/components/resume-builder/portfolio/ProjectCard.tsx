@@ -29,8 +29,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         {project.image_url ? (
           <img
             src={project.image_url}
-            alt={`Screenshot of ${project.title}`}
+            alt={project.title}
             className="w-full h-full object-cover"
+            loading="lazy"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">

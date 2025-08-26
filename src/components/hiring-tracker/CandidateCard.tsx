@@ -78,7 +78,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                     {application.talent_profile?.profile_picture_url ? (
                       <img
                         src={application.talent_profile.profile_picture_url}
-                        alt={`Avatar of ${application.talent_profile.full_name || "Candidate"}`}
+                        alt={application.talent_profile.full_name || "Candidate"}
+                        loading="lazy"
                       />
                     ) : (
                       <User className="h-4 w-4" />
