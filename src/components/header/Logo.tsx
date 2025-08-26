@@ -1,29 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-export const Logo: React.FC = () => {
+export function Logo() {
   return (
-    <Link to="/" className="flex items-center group">
-      <div className="flex items-center space-x-2">
-        {/* Icon */}
-        <div className="relative">
-          <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan via-zion-purple-light to-zion-purple rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-            <span className="text-white font-bold text-sm">Z</span>
-          </div>
-          <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
+    <Link to="/" className="flex items-center space-x-3 group">
+      <motion.div
+        className="relative"
+        whileHover={{ scale: 1.05 }}
+        transition={{ type: "spring", stiffness: 400 }}
+      >
+        {/* Logo Icon */}
+        <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center shadow-lg">
+          <span className="text-white text-xl font-bold">Z</span>
         </div>
         
-        {/* Text */}
-        <div className="flex flex-col">
-          <div className="text-xl font-bold text-white leading-tight">
-            {isWhitelabel ? brandName : 'ZION'}
-          </div>
-          <div className="text-xs text-zion-cyan font-medium leading-tight">
-            TECH GROUP
-          </div>
-        </div>
+        {/* Glow effect */}
+        <div className="absolute inset-0 bg-zion-cyan rounded-xl opacity-20 blur-md group-hover:opacity-40 transition-opacity duration-300" />
+      </motion.div>
+      
+      {/* Company Name */}
+      <div className="hidden sm:block">
+        <h1 className="text-xl font-bold text-white">
+          Zion Tech Group
+        </h1>
+        <p className="text-xs text-zion-cyan font-medium">
+          AI & Technology Solutions
+        </p>
       </div>
-      <div className="text-xs lg:text-sm text-gray-300 font-medium">Group</div>
     </Link>
   );
-};
+}

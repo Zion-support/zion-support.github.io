@@ -1,108 +1,84 @@
 
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
-import { useCart } from "@/context/CartContext";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { useFavorites } from "@/hooks/useFavorites";
-import { useCart } from "@/context";
-import {
-  Home,
-  Search,
-  MessageCircle,
-  Heart,
-  MessageSquare,
-  ShoppingCart,
-  User,
-} from "lucide-react";
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Home, Search, Briefcase, User, Menu } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-interface MobileBottomNavProps {
-  unreadCount?: number;
-}
-
-export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+export function MobileBottomNav() {
   const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { count: favoritesCount } = useFavorites();
-  const { items } = useCart();
-  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
 
-  const navItems = [
+  const navigationItems = [
     {
-      name: "Home",
-      href: "/",
+      name: 'Home',
+      href: '/',
       icon: Home,
-      matches: (path: string) => path === "/"
+      active: location.pathname === '/'
     },
     {
-      name: "Browse",
-      href: "/talent",
+      name: 'Services',
+      href: '/services',
+      icon: Briefcase,
+      active: location.pathname.startsWith('/services')
+    },
+    {
+      name: 'Search',
+      href: '/search',
       icon: Search,
-      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
+      active: location.pathname.startsWith('/search')
     },
     {
-      name: "Community",
-      href: "/community",
-      icon: MessageCircle,
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
-    },
-    {
-      name: "Messages",
-      href: "/messages",
-      icon: MessageSquare,
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
-      badge: unreadCount,
-      authRequired: true
-    },
-    {
-      name: "Cart",
-      href: "/cart",
-      icon: ShoppingCart,
-      matches: (path: string) => path.startsWith("/cart"),
-      badge: cartCount
-    },
-    {
-      name: "Dashboard",
-      href: "/dashboard",
+      name: 'Profile',
+      href: '/profile',
       icon: User,
-      matches: (path: string) => path.startsWith("/dashboard"),
-      authRequired: true
+      active: location.pathname.startsWith('/profile')
     }
   ];
 
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(item => 
-    !item.authRequired || (item.authRequired && isAuthenticated)
-  );
-
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">
-      <div className="flex justify-around items-center h-16">
-        {visibleItems.map(item => (
-          <Link
-            key={item.name}
-            to={item.href}
-            className={cn(
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1",
-              item.matches(location.pathname)
-                ? "text-zion-cyan"
-                : "text-white/70 hover:text-white"
-            )}
-          >
-            <div className="relative">
-              <item.icon className="h-5 w-5 mb-1" />
-              {item.badge && item.badge > 0 && (
-                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>
-              )}
-            </div>
-            <span className="text-xs font-medium">{item.name}</span>
-          </Link>
-        ))}
+    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark border-t border-zion-purple/20 backdrop-blur-md">
+      <div className="flex items-center justify-around px-2 py-2">
+        {navigationItems.map((item) => {
+          const Icon = item.icon;
+          return (
+            <Link
+              key={item.name}
+              to={item.href}
+              className="flex flex-col items-center justify-center p-2 rounded-lg transition-all duration-200 group"
+            >
+              <motion.div
+                className={`relative p-2 rounded-lg transition-colors ${
+                  item.active
+                    ? 'bg-zion-cyan/20 text-zion-cyan'
+                    : 'text-white/70 hover:text-white hover:bg-zion-purple/10'
+                }`}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <Icon className="h-5 w-5" />
+                
+                {/* Active indicator */}
+                {item.active && (
+                  <motion.div
+                    className="absolute -top-1 -right-1 w-2 h-2 bg-zion-cyan rounded-full"
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                  />
+                )}
+              </motion.div>
+              
+              <span className={`text-xs mt-1 transition-colors ${
+                item.active ? 'text-zion-cyan' : 'text-white/70'
+              }`}>
+                {item.name}
+              </span>
+            </Link>
+          );
+        })}
       </div>
+      
+      {/* Safe area for devices with home indicators */}
+      <div className="h-safe-area-inset-bottom bg-zion-blue-dark" />
     </nav>
   );
 }
