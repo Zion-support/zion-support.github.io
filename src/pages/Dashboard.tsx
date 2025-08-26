@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { CommunityDiscussion } from "@/components/CommunityDiscussion";
@@ -8,40 +7,29 @@ import { createTestNotification, createOnboardingNotification, createSystemNotif
 import { NotificationCenter } from "@/components/NotificationCenter";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
-
 export default function Dashboard() {
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-
-  if (!user) return null;
-
-  const handleTestNotification = async () => {
-    const result = await createTestNotification(user.id);
-    if (result.success) {
-      toast({
-        title: "Test notification created",
-        description: "Check your notification center",
-      });
-    } else {
-      toast({
-        title: "Error creating test notification",
-        description: "Something went wrong",
-        variant: "destructive",
-      });
-    }
-  };
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
-const Dashboard: React.FC = () => {
-  return (
-    <>
-<<<<<<< HEAD
+    const { user, logout } = useAuth();
+    const { toast } = useToast();
+    if (!user)
+        return null;
+    const handleTestNotification = async () => {
+        const result = await createTestNotification(user.id);
+        if (result.success) {
+            toast({
+                title: "Test notification created",
+                description: "Check your notification center",
+            });
+        }
+        else {
+            toast({
+                title: "Error creating test notification",
+                description: "Something went wrong",
+                variant: "destructive",
+            });
+        }
+    };
+    const Dashboard = () => {
+        return (<>
       
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-8">
@@ -56,17 +44,12 @@ const Dashboard: React.FC = () => {
                   <h2 className="text-xl font-bold text-white">{user.displayName}</h2>
                   <p className="text-zion-slate-light mb-2">{user.email}</p>
                   
-                  <Badge 
-                    className="bg-zion-purple text-white mb-4"
-                  >
+                  <Badge className="bg-zion-purple text-white mb-4">
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
                   </Badge>
                   
-                  <Button 
-                    className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    onClick={() => window.location.href = "/profile"}
-                  >
-                    <UserCheck size={16} />
+                  <Button className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick={() => window.location.href = "/profile"}>
+                    <UserCheck size={16}/>
                     Edit Profile
                   </Button>
                 </div>
@@ -102,52 +85,40 @@ const Dashboard: React.FC = () => {
                   
                   {/* Test notification buttons */}
                   <div className="flex flex-col gap-2 mt-4">
-                    <Button 
-                      className="w-full flex items-center justify-center gap-2"
-                      variant="outline"
-                      onClick={handleTestNotification}
-                    >
-                      <Send size={16} className="text-zion-cyan" />
+                    <Button className="w-full flex items-center justify-center gap-2" variant="outline" onClick={handleTestNotification}>
+                      <Send size={16} className="text-zion-cyan"/>
                       Send Test Notification
                     </Button>
 
-                    <Button 
-                      className="w-full flex items-center justify-center gap-2"
-                      variant="outline"
-                      onClick={async () => {
-                        await createOnboardingNotification({
-                          userId: user.id,
-                          missingMilestone: 'profile_completed',
-                          userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
-                        });
-                        toast({
-                          title: "Onboarding notification sent",
-                          description: "Check your notification center"
-                        });
-                      }}
-                    >
-                      <Settings size={16} className="text-zion-purple" />
+                    <Button className="w-full flex items-center justify-center gap-2" variant="outline" onClick={async () => {
+                await createOnboardingNotification({
+                    userId: user.id,
+                    missingMilestone: 'profile_completed',
+                    userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
+                });
+                toast({
+                    title: "Onboarding notification sent",
+                    description: "Check your notification center"
+                });
+            }}>
+                      <Settings size={16} className="text-zion-purple"/>
                       Send Onboarding Nudge
                     </Button>
 
-                    <Button 
-                      className="w-full flex items-center justify-center gap-2"
-                      variant="outline"
-                      onClick={async () => {
-                        await createSystemNotification({
-                          userId: user.id,
-                          title: "New Feature Available!",
-                          message: "We've added a new notification center to help you stay updated with important information.",
-                          actionUrl: "/notifications",
-                          actionText: "Explore Now"
-                        });
-                        toast({
-                          title: "System notification sent",
-                          description: "Check your notification center"
-                        });
-                      }}
-                    >
-                      <Bell size={16} className="text-yellow-500" />
+                    <Button className="w-full flex items-center justify-center gap-2" variant="outline" onClick={async () => {
+                await createSystemNotification({
+                    userId: user.id,
+                    title: "New Feature Available!",
+                    message: "We've added a new notification center to help you stay updated with important information.",
+                    actionUrl: "/notifications",
+                    actionText: "Explore Now"
+                });
+                toast({
+                    title: "System notification sent",
+                    description: "Check your notification center"
+                });
+            }}>
+                      <Bell size={16} className="text-yellow-500"/>
                       Send System Alert
                     </Button>
                   </div>
@@ -157,13 +128,13 @@ const Dashboard: React.FC = () => {
               {/* Notifications */}
               <div className="bg-zion-blue-dark rounded-xl p-6">
                 <h3 className="text-lg font-bold text-white mb-4 flex items-center">
-                  <Bell size={18} className="mr-2 text-zion-cyan" />
+                  <Bell size={18} className="mr-2 text-zion-cyan"/>
                   Recent Notifications
                 </h3>
                 <div className="space-y-4">
                   <Link to="/notifications" className="block">
                     <Button variant="outline" className="w-full">
-                      <Bell className="mr-2 h-4 w-4" />
+                      <Bell className="mr-2 h-4 w-4"/>
                       View All Notifications
                     </Button>
                   </Link>
@@ -178,12 +149,8 @@ const Dashboard: React.FC = () => {
                   <h2 className="text-2xl font-bold text-white">Dashboard</h2>
                   <div className="flex items-center gap-2">
                     <NotificationCenter />
-                    <Button 
-                      variant="outline" 
-                      className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white"
-                      onClick={logout}
-                    >
-                      <LogOut size={16} className="mr-2" />
+                    <Button variant="outline" className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white" onClick={logout}>
+                      <LogOut size={16} className="mr-2"/>
                       Logout
                     </Button>
                   </div>
@@ -206,19 +173,19 @@ const Dashboard: React.FC = () => {
                   <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
                     <div className="flex flex-col items-center">
                       <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2">
-                        <UserCheck size={24} className="text-white" />
+                        <UserCheck size={24} className="text-white"/>
                       </div>
                       <span className="text-xs text-center text-zion-slate-light">Newcomer</span>
                     </div>
                     <div className="flex flex-col items-center">
                       <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-purple-light flex items-center justify-center mb-2">
-                        <MessageSquare size={24} className="text-white" />
+                        <MessageSquare size={24} className="text-white"/>
                       </div>
                       <span className="text-xs text-center text-zion-slate-light">First Post</span>
                     </div>
                     <div className="flex flex-col items-center opacity-40">
                       <div className="w-16 h-16 rounded-full bg-zion-blue-light flex items-center justify-center mb-2">
-                        <Bell size={24} className="text-zion-slate-light" />
+                        <Bell size={24} className="text-zion-slate-light"/>
                       </div>
                       <span className="text-xs text-center text-zion-slate-light">Locked</span>
                     </div>
@@ -242,31 +209,7 @@ const Dashboard: React.FC = () => {
         </div>
       </div>
       
-=======
-      <Helmet>
-        <title>Dashboard - Zion Tech Group</title>
-        <meta name="description" content="Access your Zion Tech Group dashboard. Monitor projects, manage services, and track your technology solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Dashboard</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Monitor your projects, manage services, and track your technology solutions in one comprehensive dashboard.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <p className="text-gray-600 text-center">
-              Dashboard coming soon. We're building a comprehensive client dashboard.
-            </p>
-          </div>
-        </div>
-      </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-    </>
-  );
-};
-
-export default Dashboard;
+    </>);
+    };
+    export default Dashboard;
+}
