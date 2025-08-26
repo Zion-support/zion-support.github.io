@@ -30,12 +30,14 @@ const footerNavigation = {
   services: {
     title: 'Services',
     items: [
+      { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Brain },
+      { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Rocket },
+      { name: 'Blockchain Web3 Platform', href: '/services/blockchain-web3-platform', icon: Code },
       { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
       { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
       { name: 'IoT & Edge', href: '/services/iot-edge', icon: Zap },
       { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
-      { name: 'Blockchain', href: '/services/blockchain', icon: Code },
       { name: 'Digital Twin', href: '/services/digital-twin', icon: Building },
       { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
     ],

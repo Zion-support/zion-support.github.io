@@ -250,31 +250,31 @@ export default function Home() {
           </motion.div>
           
           <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+            className="grid grid-cols-1 lg:grid-cols-3 gap-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
           >
-            {/* AI-Powered Solutions */}
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="group">
+            {/* AI Workflow Automation */}
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="group">
               <div className="bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 backdrop-blur-md p-8 rounded-3xl border border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                     <span className="text-2xl">🤖</span>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white">AI-Powered Solutions</h3>
+                    <h3 className="text-xl font-bold text-white">AI Workflow Automation</h3>
                     <p className="text-zion-cyan text-sm font-medium">Most Popular</p>
                   </div>
                 </div>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">
-                  Leverage cutting-edge artificial intelligence to automate processes, gain insights, and transform your business operations with our comprehensive AI solutions.
+                  Transform your business operations with intelligent, AI-driven workflow automation. Reduce manual tasks by up to 80%.
                 </p>
                 <Link 
-                  to="/ai-solutions" 
+                  to="/services/ai-workflow-automation" 
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 group-hover:scale-105"
                 >
-                  Explore AI Solutions
+                  Explore AI Automation
                   <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -282,26 +282,53 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Cloud & DevOps */}
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="group">
-              <div className="bg-gradient-to-br from-zion-blue/20 to-zion-purple/20 backdrop-blur-md p-8 rounded-3xl border border-zion-blue/30 hover:border-zion-blue/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-blue/25">
+            {/* Quantum AI Platform */}
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="group">
+              <div className="bg-gradient-to-br from-zion-purple/20 to-zion-blue/20 backdrop-blur-md p-8 rounded-3xl border border-zion-purple/30 hover:border-zion-purple/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-purple/25">
                 <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">☁️</span>
+                  <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-blue rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">⚛️</span>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white">Cloud & DevOps</h3>
-                    <p className="text-zion-blue text-sm font-medium">Enterprise Ready</p>
+                    <h3 className="text-xl font-bold text-white">Quantum AI Platform</h3>
+                    <p className="text-zion-purple text-sm font-medium">Cutting-Edge</p>
                   </div>
                 </div>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">
-                  Build, deploy, and scale your applications with our enterprise-grade cloud infrastructure and automated DevOps practices.
+                  Experience the future of AI with quantum computing. Solve previously impossible problems with exponential speedup.
                 </p>
                 <Link 
-                  to="/services/cloud" 
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-blue to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-blue/25 transition-all duration-300 group-hover:scale-105"
+                  to="/services/quantum-ai-platform" 
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-purple/25 transition-all duration-300 group-hover:scale-105"
                 >
-                  Explore Cloud Services
+                  Explore Quantum AI
+                  <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Blockchain Web3 Platform */}
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="group">
+              <div className="bg-gradient-to-br from-zion-blue/20 to-zion-cyan/20 backdrop-blur-md p-8 rounded-3xl border border-zion-blue/30 hover:border-zion-blue/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-blue/25">
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-cyan rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">⛓️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Blockchain Web3</h3>
+                    <p className="text-zion-blue text-sm font-medium">Decentralized</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light mb-6 leading-relaxed">
+                  Build the future of decentralized applications with our comprehensive Web3 platform. DeFi, NFTs, DAOs, and more.
+                </p>
+                <Link 
+                  to="/services/blockchain-web3-platform" 
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-blue/25 transition-all duration-300 group-hover:scale-105"
+                >
+                  Explore Web3 Platform
                   <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>

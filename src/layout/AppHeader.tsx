@@ -71,12 +71,14 @@ export function AppHeader() {
       href: '/services',
       icon: Zap,
       dropdown: [
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Brain },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Rocket },
+        { name: 'Blockchain Web3 Platform', href: '/services/blockchain-web3-platform', icon: Lock },
         { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
         { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
-        { name: 'Blockchain', href: '/services/blockchain', icon: Lock },
         { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe },
         { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
       ]

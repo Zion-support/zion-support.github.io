@@ -93,6 +93,15 @@ module.exports = {
         orbit: "orbit 20s linear infinite",
         "pulse-neon": "pulse-neon 1.5s ease-in-out infinite",
         wave: "wave 2s ease-in-out infinite",
+        "quantum-float": "quantum-float 8s ease-in-out infinite",
+        "blockchain-pulse": "blockchain-pulse 4s ease-in-out infinite",
+        "ai-glow": "ai-glow 3s ease-in-out infinite alternate",
+        "cyber-shimmer": "cyber-shimmer 5s linear infinite",
+        "neon-flicker": "neon-flicker 0.5s ease-in-out infinite",
+        "hologram-rotate": "hologram-rotate 10s linear infinite",
+        "particle-explosion": "particle-explosion 2s ease-out infinite",
+        "quantum-entangle": "quantum-entangle 6s ease-in-out infinite",
+        "blockchain-connect": "blockchain-connect 3s ease-in-out infinite",
       },
       keyframes: {
         float: {
@@ -213,6 +222,48 @@ module.exports = {
         wave: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
+        },
+        "quantum-float": {
+          "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
+          "25%": { transform: "translateY(-20px) rotate(90deg)" },
+          "50%": { transform: "translateY(-40px) rotate(180deg)" },
+          "75%": { transform: "translateY(-20px) rotate(270deg)" },
+        },
+        "blockchain-pulse": {
+          "0%, 100%": { transform: "scale(1) opacity(1)" },
+          "50%": { transform: "scale(1.1) opacity(0.8)" },
+        },
+        "ai-glow": {
+          "0%": { boxShadow: "0 0 20px rgba(34, 221, 210, 0.5)" },
+          "100%": { boxShadow: "0 0 40px rgba(34, 221, 210, 1)" },
+        },
+        "cyber-shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "neon-flicker": {
+          "0%, 100%": { opacity: 1 },
+          "50%": { opacity: 0.8 },
+        },
+        "hologram-rotate": {
+          "0%": { transform: "rotateY(0deg)" },
+          "100%": { transform: "rotateY(360deg)" },
+        },
+        "particle-explosion": {
+          "0%": { transform: "scale(0) rotate(0deg)" },
+          "50%": { transform: "scale(1.2) rotate(180deg)" },
+          "100%": { transform: "scale(0) rotate(360deg)" },
+        },
+        "quantum-entangle": {
+          "0%, 100%": { transform: "translateX(0px) translateY(0px)" },
+          "25%": { transform: "translateX(10px) translateY(-10px)" },
+          "50%": { transform: "translateX(0px) translateY(-20px)" },
+          "75%": { transform: "translateX(-10px) translateY(-10px)" },
+        },
+        "blockchain-connect": {
+          "0%": { transform: "scale(1) rotate(0deg)" },
+          "50%": { transform: "scale(1.1) rotate(180deg)" },
+          "100%": { transform: "scale(1) rotate(360deg)" },
         },
       },
       backgroundImage: {
