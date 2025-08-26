@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
-import { Search, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail, ChevronDown, ChevronRight } from 'lucide-react';
+import React from 'react';
+import SEO from '../SEO';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
+import { Search, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function HelpCenter() {

@@ -1,11 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
+import SEO from './components/SEO';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
 import Services from './pages/Services';
 import Blog from './pages/Blog';
 import NotFound from './pages/NotFound';
@@ -76,65 +78,38 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <main>
-          <Routes>
-            {/* Main Routes */}
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/pricing" element={<ComprehensivePricing />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/support" element={<Support />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/webinars" element={<Webinars />} />
-            <Route path="/white-papers" element={<WhitePapers />} />
-            <Route path="/tutorials" element={<Tutorials />} />
-            <Route path="/research-development" element={<ResearchDevelopment />} />
-            <Route path="/space-tech" element={<SpaceTech />} />
-            <Route path="/quantum-technology" element={<QuantumTechnology />} />
-            <Route path="/green-it" element={<GreenIT />} />
-            <Route path="/get-started" element={<GetStarted />} />
-            <Route path="/help-center" element={<HelpCenter />} />
-            <Route path="/service-comparison" element={<ServiceComparison />} />
-            <Route path="/service-portfolio" element={<ServicePortfolioDashboard />} />
-            <Route path="/service-recommendations" element={<ServiceRecommendations />} />
-            <Route path="/service-innovation-hub" element={<ServiceInnovationHub />} />
-            <Route path="/services-showcase" element={<ServicesShowcase />} />
-            <Route path="/sitemap" element={<Sitemap />} />
-
-            {/* Service Routes */}
-            <Route path="/services/ai" element={<AI />} />
-            <Route path="/services/cloud" element={<Cloud />} />
-            <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-            <Route path="/services/infrastructure" element={<Infrastructure />} />
-            <Route path="/services/transformation" element={<Transformation />} />
-            <Route path="/services/consulting" element={<Consulting />} />
-
-            {/* Solution Routes */}
-            <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
-            <Route path="/solutions/financial" element={<FinancialSolutions />} />
-            <Route path="/solutions/government" element={<GovernmentSolutions />} />
-            <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
-            <Route path="/solutions/manufacturing" element={<ManufacturingSolutions />} />
-            <Route path="/solutions/retail" element={<RetailSolutions />} />
-
-            {/* Catch-all route */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
-        <ScrollToTop />
-      </div>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <div className="App">
+          <SEO />
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              
+              {/* Service Routes */}
+              <Route path="/services/ai" element={<AISolutions />} />
+              <Route path="/services/cloud" element={<CloudDevOps />} />
+              <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+              <Route path="/services/infrastructure" element={<Infrastructure />} />
+              <Route path="/services/transformation" element={<DigitalTransformation />} />
+              <Route path="/services/consulting" element={<Consulting />} />
+              
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 

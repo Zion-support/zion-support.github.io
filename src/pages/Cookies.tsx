@@ -1,21 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-const Cookies: React.FC = () => {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
+import SEO from '../SEO';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Shield, CircleDot, Settings, Eye, Lock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
   const cookieTypes = [
     {

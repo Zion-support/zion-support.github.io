@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Volume2, VolumeX, Eye, EyeOff, Keyboard, MousePointer } from 'lucide-react';
+import { Button } from '../ui/button';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;

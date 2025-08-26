@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { SEO } from '@/components/SEO';
-import { DisputeDashboard } from '@/components/DisputeDashboard';
+import SEO from '../SEO';
+import { DisputeDashboard } from '../DisputeDashboard';
 
 export default function DisputeManagement() {
   const [activeTab, setActiveTab] = useState<'overview' | 'disputes' | 'resolutions' | 'settings'>('overview');
