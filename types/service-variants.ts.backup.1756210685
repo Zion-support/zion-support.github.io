@@ -6,6 +6,8 @@ export type ServiceVariant =
   | 'neural'
   | 'quantum-holographic'
   | 'quantum-advanced'
+<<<<<<< HEAD
+=======
   | 'quantum-ai-advanced'
   | 'quantum-ai-enterprise'
   | 'quantum-ai'
@@ -157,8 +159,11 @@ export type ServiceVariant =
   | 'ai-education-enterprise'
   
   // Holographic variants
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e071
   | 'holographic-advanced'
   | 'neural-quantum'
+<<<<<<< HEAD
+=======
   | 'neural-quantum-advanced'
   | 'neural-quantum-cyberpunk'
   | 'neural-revolutionary'
@@ -357,6 +362,7 @@ export type ServiceVariant =
   | 'quantum-consciousness'
   | 'quantum-creativity'
   | 'quantum-creativity-futuristic'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e071
   | 'quantum-cyberpunk'
   | 'holographic-neural'
   | 'quantum-holographic-advanced'

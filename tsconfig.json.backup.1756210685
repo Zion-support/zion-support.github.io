@@ -53,9 +53,18 @@
     "zion.app/recovered-content/**",
     "contracts/**",
     "dao/**",
+<<<<<<< HEAD
+    "zion-os/**",
+    "zion_academy/**",
+    "cypress/**",
+    "data/2025-innovative-ai-automation-services.ts",
+    "data/2025-innovative-ai-services-enhanced.ts",
+    "data/2025-innovative-ai-services-expansion-v2.ts"
+=======
     "token/**",
     "hardhat.config.*",
     "cypress.config.*",
     "cypress/**"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e071
   ]
 }

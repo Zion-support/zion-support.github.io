@@ -1,4 +1,8 @@
+<<<<<<< HEAD:automation/backups/data-sync/2025-08-25T15-27-09-798Z/data/2025-enterprise-it-solutions.ts
+import { enhancedRealMicroSaasServices } from './enhanced-real-micro-saas-services';
+=======
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e071:data/2025-enterprise-it-solutions.ts
 
 const contact = {
 	mobile: '+1 302 464 0950',
@@ -7,7 +11,11 @@ const contact = {
 	website: 'https://ziontechgroup.com'
 };
 
+<<<<<<< HEAD:automation/backups/data-sync/2025-08-25T15-27-09-798Z/data/2025-enterprise-it-solutions.ts
+export const enterpriseITSolutions = [
+=======
 export const enterpriseITSolutions: MicroSaasService[] = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e071:data/2025-enterprise-it-solutions.ts
 	{
 		id: 'enterprise-data-governance-automation',
 		name: 'Enterprise Data Governance Automation',
