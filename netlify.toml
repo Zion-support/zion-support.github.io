@@ -42,35 +42,27 @@
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
-    X-DNS-Prefetch-Control = "on"
-    Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Resource-Policy = "same-origin"
-    X-Permitted-Cross-Domain-Policies = "none"
-    Origin-Agent-Cluster = "?1"
+# Scheduled Functions (new automations replacing some GitHub Actions cadence)
+[[scheduled.functions]]
+  name = "homepage_advertiser"
+  schedule = "*/1 * * * *" # every minute
 
 [[headers]]
   for = "/_next/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-[build.processing.html]
-  pretty_urls = true
+[[scheduled.functions]]
+  name = "front-enhancer"
+  schedule = "*/1 * * * *" # every minute
 
-# Deploy contexts for different environments
+[[scheduled.functions]]
+  name = "frontpage-enhancer"
+  schedule = "*/1 * * * *" # every minute
 
-# Headers for security and performance
-[[headers]]
-  for = "/images/*"
-  [headers.values]
+[[scheduled.functions]]
+  name = "marketing-and-features-promo"
+  schedule = "*/15 * * * *" # every 15 minutes
 
 [[redirects]]
   from = "/services/ai-customer-success-platform"
@@ -86,12 +78,6 @@
 
 [[scheduled.functions]]
   name = "fast-front-promoter"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-[[scheduled.functions]]
-  name = "front-index-curator"
-  schedule = "*/12 * * * *" # every 12 minutes
-=======
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
@@ -110,3 +96,9 @@
   status = 301
   force = true
   conditions = {Host = ["www.ziontechgroup.com"]}
+=======
+  schedule = "*/1 * * * *" # every minute
+
+[[scheduled.functions]]
+  name = "hyper-front-runner"
+  schedule = "*/1 * * * *" # every minute
