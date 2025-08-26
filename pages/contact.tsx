@@ -1,38 +1,103 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
 
+interface FormData {
+	name: string
+	email: string
+	company: string
+	service: string
+	message: string
+}
+
+interface FormErrors {
+	name?: string
+	email?: string
+	message?: string
+}
+
 export default function Contact() {
-	const [formData, setFormData] = useState({
+	const [formData, setFormData] = useState<FormData>({
 		name: '',
 		email: '',
 		company: '',
 		service: '',
 		message: ''
 	})
+	const [errors, setErrors] = useState<FormErrors>({})
 	const [isSubmitting, setIsSubmitting] = useState(false)
 	const [isSubmitted, setIsSubmitted] = useState(false)
 
+	const services = [
+		'AI Systems & Automation',
+		'Cloud Migration & Infrastructure',
+		'Cybersecurity & Compliance',
+		'Micro SaaS Development',
+		'Data Analytics & BI',
+		'DevOps & CI/CD',
+		'Other'
+	]
+
+	const validateForm = (): boolean => {
+		const newErrors: FormErrors = {}
+
+		if (!formData.name.trim()) {
+			newErrors.name = 'Name is required'
+		}
+
+		if (!formData.email.trim()) {
+			newErrors.email = 'Email is required'
+		} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+			newErrors.email = 'Please enter a valid email address'
+		}
+
+		if (!formData.message.trim()) {
+			newErrors.message = 'Message is required'
+		} else if (formData.message.trim().length < 10) {
+			newErrors.message = 'Message must be at least 10 characters long'
+		}
+
+		setErrors(newErrors)
+		return Object.keys(newErrors).length === 0
+	}
+
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault()
+		
+		if (!validateForm()) {
+			return
+		}
+
 		setIsSubmitting(true)
 		
-		// Simulate form submission
-		await new Promise(resolve => setTimeout(resolve, 1000))
-		
-		setIsSubmitted(true)
-		setIsSubmitting(false)
+		try {
+			// Simulate form submission
+			await new Promise(resolve => setTimeout(resolve, 1500))
+			
+			setIsSubmitted(true)
+			setIsSubmitting(false)
+		} catch (error) {
+			console.error('Form submission error:', error)
+			setIsSubmitting(false)
+		}
 	}
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-		setFormData({
-			...formData,
-			[e.target.name]: e.target.value
-		})
-	}
+		const { name, value } = e.target
+		setFormData(prev => ({
+			...prev,
+			[name]: value
+		}))
 
-	const isFormValid = formData.name.trim() && formData.email.trim() && formData.message.trim()
+		// Clear error when user starts typing
+		if (errors[name as keyof FormErrors]) {
+			setErrors(prev => ({
+				...prev,
+				[name]: undefined
+			}))
+		}
+	}
 
 	if (isSubmitted) {
 		return (
@@ -98,8 +163,8 @@ export default function Contact() {
 							<form onSubmit={handleSubmit} className="space-y-6">
 								<div className="grid gap-6 sm:grid-cols-2">
 									<div>
-										<label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-											Name *
+										<label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+											Full Name *
 										</label>
 										<input
 											type="text"
@@ -107,14 +172,21 @@ export default function Contact() {
 											name="name"
 											value={formData.name}
 											onChange={handleChange}
-											required
-											className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-											placeholder="Your name"
+											className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+												errors.name ? 'border-red-300 focus:ring-red-500' : 'border-gray-300'
+											}`}
+											placeholder="Your full name"
 										/>
+										{errors.name && (
+											<div className="flex items-center mt-2 text-sm text-red-600">
+												<AlertCircle className="h-4 w-4 mr-1" />
+												{errors.name}
+											</div>
+										)}
 									</div>
 									<div>
-										<label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-											Email *
+										<label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+											Email Address *
 										</label>
 										<input
 											type="email"
@@ -122,194 +194,169 @@ export default function Contact() {
 											name="email"
 											value={formData.email}
 											onChange={handleChange}
-											required
-											className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+											className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+												errors.email ? 'border-red-300 focus:ring-red-500' : 'border-gray-300'
+											}`}
 											placeholder="your.email@company.com"
 										/>
+										{errors.email && (
+											<div className="flex items-center mt-2 text-sm text-red-600">
+												<AlertCircle className="h-4 w-4 mr-1" />
+												{errors.email}
+											</div>
+										)}
 									</div>
 								</div>
-								<div>
-									<label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-										Company
-									</label>
-									<input
-										type="text"
-										id="company"
-										name="company"
-										value={formData.company}
-										onChange={handleChange}
-										className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-										placeholder="Your company (optional)"
-									/>
+
+								<div className="grid gap-6 sm:grid-cols-2">
+									<div>
+										<label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+											Company
+										</label>
+										<input
+											type="text"
+											id="company"
+											name="company"
+											value={formData.company}
+											onChange={handleChange}
+											className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+											placeholder="Your company name"
+										/>
+									</div>
+									<div>
+										<label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+											Service Interest
+										</label>
+										<select
+											id="service"
+											name="service"
+											value={formData.service}
+											onChange={handleChange}
+											className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+										>
+											<option value="">Select a service</option>
+											{services.map((service) => (
+												<option key={service} value={service}>
+													{service}
+												</option>
+											))}
+										</select>
+									</div>
 								</div>
+
 								<div>
-									<label htmlFor="service" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-										Service of Interest
-									</label>
-									<select
-										id="service"
-										name="service"
-										value={formData.service}
-										onChange={handleChange}
-										className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-									>
-										<option value="">Select a service</option>
-										<option value="ai">AI Autonomous Systems</option>
-										<option value="cloud">Cloud Platforms</option>
-										<option value="cybersecurity">Cybersecurity</option>
-										<option value="consulting">Consulting</option>
-										<option value="other">Other</option>
-									</select>
-								</div>
-								<div>
-									<label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+									<label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
 										Message *
 									</label>
 									<textarea
 										id="message"
 										name="message"
-										rows={4}
+										rows={6}
 										value={formData.message}
 										onChange={handleChange}
-										required
-										className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none"
-										placeholder="Tell us about your project or how we can help..."
+										className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
+											errors.message ? 'border-red-300 focus:ring-red-500' : 'border-gray-300'
+										}`}
+										placeholder="Tell us about your project and how we can help..."
 									/>
-								</div>
-								<button
-									type="submit"
-									disabled={!isFormValid || isSubmitting}
-									className={`w-full flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
-										isFormValid && !isSubmitting
-											? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
-											: 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed'
-									}`}
-								>
-									{isSubmitting ? (
-										<>
-											<div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-											Sending...
-										</>
-									) : (
-										<>
-											<Send className="w-4 h-4 mr-2" />
-											Send Message
-										</>
+									{errors.message && (
+										<div className="flex items-center mt-2 text-sm text-red-600">
+											<AlertCircle className="h-4 w-4 mr-1" />
+											{errors.message}
+										</div>
 									)}
-								</button>
+								</div>
+
+								<div>
+									<button
+										type="submit"
+										disabled={isSubmitting}
+										className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+									>
+										{isSubmitting ? (
+											<div className="flex items-center justify-center">
+												<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+												Sending...
+											</div>
+										) : (
+											<div className="flex items-center justify-center">
+												<Send className="h-5 w-5 mr-2" />
+												Send Message
+											</div>
+										)}
+									</button>
+								</div>
 							</form>
 						</div>
 
 						{/* Contact Information */}
-						<div>
+						<div className="lg:pl-8">
 							<h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-8">
-								Contact Information
+								Get in touch
 							</h2>
-							<div className="space-y-8">
-								<div className="flex items-start gap-4">
-									<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-										<Mail className="h-5 w-5 text-white" />
-									</div>
-									<div>
-										<h3 className="text-lg font-semibold text-gray-900">Email</h3>
-										<p className="text-gray-600">
-											<a 
-												href="mailto:contact@ziontechgroup.com" 
-												className="text-blue-600 hover:text-blue-500 transition-colors"
-											>
-												contact@ziontechgroup.com
-											</a>
-										</p>
-										<p className="text-sm text-gray-500 mt-1">
-											We typically respond within one business day
-										</p>
-									</div>
-								</div>
-
-								<div className="flex items-start gap-4">
-									<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-										<Phone className="h-5 w-5 text-white" />
+							<div className="space-y-6">
+								<div className="flex items-start space-x-4">
+									<div className="flex-shrink-0">
+										<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
+											<Phone className="h-5 w-5 text-white" />
+										</div>
 									</div>
 									<div>
 										<h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-										<p className="text-gray-600">
-											<a 
-												href="tel:+1-555-123-4567" 
-												className="text-blue-600 hover:text-blue-500 transition-colors"
-											>
-												+1 (555) 123-4567
-											</a>
-										</p>
-										<p className="text-sm text-gray-500 mt-1">
-											Available Monday-Friday, 9 AM - 6 PM EST
-										</p>
+										<p className="text-gray-600">+1 302 464 0950</p>
+										<p className="text-sm text-gray-500">Mon-Fri 9AM-6PM EST</p>
 									</div>
 								</div>
 
-								<div className="flex items-start gap-4">
-									<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
-										<MapPin className="h-5 w-5 text-white" />
+								<div className="flex items-start space-x-4">
+									<div className="flex-shrink-0">
+										<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
+											<Mail className="h-5 w-5 text-white" />
+										</div>
+									</div>
+									<div>
+										<h3 className="text-lg font-semibold text-gray-900">Email</h3>
+										<p className="text-gray-600">kleber@ziontechgroup.com</p>
+										<p className="text-sm text-gray-500">We'll respond within 24 hours</p>
+									</div>
+								</div>
+
+								<div className="flex items-start space-x-4">
+									<div className="flex-shrink-0">
+										<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+											<MapPin className="h-5 w-5 text-white" />
+										</div>
 									</div>
 									<div>
 										<h3 className="text-lg font-semibold text-gray-900">Office</h3>
-										<p className="text-gray-600">
-											123 Tech Street<br />
-											Innovation District<br />
-											San Francisco, CA 94105
-										</p>
-										<p className="text-sm text-gray-500 mt-1">
-											By appointment only
-										</p>
+										<p className="text-gray-600">364 E Main St STE 1008</p>
+										<p className="text-gray-600">Middletown, DE 19709</p>
 									</div>
 								</div>
 							</div>
 
 							{/* Additional Info */}
 							<div className="mt-12 p-6 bg-gray-50 rounded-lg">
-								<h3 className="text-lg font-semibold text-gray-900 mb-4">
-									Why choose Zion Tech Group?
-								</h3>
+								<h3 className="text-lg font-semibold text-gray-900 mb-3">Why choose Zion Tech Group?</h3>
 								<ul className="space-y-2 text-sm text-gray-600">
-									<li className="flex items-center gap-2">
-										<CheckCircle className="h-4 w-4 text-green-600" />
-										Proven track record with 50+ successful projects
+									<li className="flex items-center">
+										<CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+										Expert AI and cloud solutions
 									</li>
-									<li className="flex items-center gap-2">
-										<CheckCircle className="h-4 w-4 text-green-600" />
-										Expert team with deep industry knowledge
+									<li className="flex items-center">
+										<CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+										Proven track record with 200+ clients
 									</li>
-									<li className="flex items-center gap-2">
-										<CheckCircle className="h-4 w-4 text-green-600" />
-										End-to-end solution delivery
+									<li className="flex items-center">
+										<CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+										Enterprise-grade security standards
 									</li>
-									<li className="flex items-center gap-2">
-										<CheckCircle className="h-4 w-4 text-green-600" />
-										Ongoing support and maintenance
+									<li className="flex items-center">
+										<CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+										24/7 support and maintenance
 									</li>
 								</ul>
 							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			{/* CTA Section */}
-			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
-						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-							Ready to get started?
-						</h2>
-						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
-							Don't wait to transform your business. Contact us today to discuss your project.
-						</p>
-						<div className="mt-10 flex items-center justify-center gap-x-6">
-							<Link
-								to="/services"
-								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
-							>
-								View Services
-							</Link>
 						</div>
 					</div>
 				</div>
