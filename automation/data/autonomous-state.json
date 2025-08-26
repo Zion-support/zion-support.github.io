@@ -1,0 +1,40 @@
+{
+  "lastUpdated": "2025-08-26T03:41:42.112Z",
+  "services": {
+    "autonomous-system-manager": {
+      "status": "stopped",
+      "stopTime": 1756175175803,
+      "uptime": 64099
+    },
+    "ml-link-intelligence": {
+      "status": "stopped",
+      "stopTime": 1756175175803,
+      "uptime": 63085
+    },
+    "link-health-scheduler": {
+      "status": "stopped",
+      "stopTime": 1756175175804,
+      "uptime": 62077
+    },
+    "real-time-performance-monitor": {
+      "status": "stopped",
+      "stopTime": 1756175175804,
+      "uptime": 61068
+    }
+  },
+  "systemHealth": {
+    "overall": 100,
+    "cpu": 100,
+    "memory": 100,
+    "disk": 100,
+    "network": 100
+  },
+  "alerts": [],
+  "decisions": [],
+  "performance": {
+    "totalRequests": 0,
+    "successfulRequests": 0,
+    "failedRequests": 0,
+    "averageResponseTime": 0
+  }
+}

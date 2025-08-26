@@ -1,0 +1,221 @@
+// src/context/WalletContext.tsx
+import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';
+import { ethers } from 'ethers';
+import { captureException } from '@/utils/sentry';
+import { ZION_TOKEN_NETWORK_ID } from '@/config/governanceConfig';
+import { createAppKit, useAppKit } from '@reown/appkit/react';
+import { EthersAdapter } from '@reown/appkit-adapter-ethers';
+import { mainnet, polygon, goerli, optimism, arbitrum, base } from '@reown/appkit/networks'; // Import necessary chain objects
+
+// Minimal interface describing the AppKit object used in this context.  The
+// real package types are unavailable in the repository, so we declare only the
+// members that WalletContext interacts with.
+interface ReownAppKit {
+  open: () => Promise<void>;
+  close: () => Promise<void>;
+  disconnect: () => Promise<void>;
+  getState: () => { isConnected?: boolean };
+  getAddress: () => string | null | undefined;
+  getChainId: () => string | number | null | undefined;
+  getWalletProvider: () => unknown;
+  subscribeProvider: (cb: () => void) => () => void;
+}
+
+// Define the shape of the wallet state and context
+interface WalletState {
+  provider: ethers.BrowserProvider | null; // Updated to BrowserProvider for ethers v6
+  signer: ethers.Signer | null;
+  address: string | null;
+  chainId: number | null;
+  isConnected: boolean;
+}
+
+interface WalletContextType extends WalletState {
+  connectWallet: () => Promise<void>;
+  disconnectWallet: () => Promise<void>; // disconnect can be async
+  displayAddress: string | null; // Shortened address for display
+  appKit: ReownAppKit | null; // To access modal.open, etc.
+}
+
+const initialWalletState: WalletState = {
+  provider: null,
+  signer: null,
+  address: null,
+  chainId: null,
+  isConnected: false,
+};
+
+const WalletContext = createContext<WalletContextType | undefined>(undefined);
+
+// --- Reown AppKit Configuration ---
+
+// The project ID is provided via Vite environment variables. Set
+// VITE_REOWN_PROJECT_ID in your `.env` file with the value from
+// cloud.reown.com. If the ID is missing, the SDK will throw an error
+// like "Origin <your-domain> not found on Allowlist".
+
+const projectId = import.meta.env.VITE_REOWN_PROJECT_ID || 'YOUR_PROJECT_ID';
+
+const metadata = {
+  name: 'Zion', // Replace with your project's name
+  description: 'Zion Finance Platform', // Replace with your project's description
+  url: typeof window !== 'undefined' ? window.location.origin : 'https://example.com', // Dynamic URL or placeholder
+  icons: ['https://avatars.githubusercontent.com/u/37784886'], // Replace with your project's icon URLs
+};
+
+const ZION_CHAIN_MAP: Record<number, any> = {
+    1: mainnet,
+    5: goerli, // Common testnet, assuming ZION_TOKEN_NETWORK_ID might be this
+    137: polygon,
+    // Add other chains supported by your ZION_TOKEN_NETWORK_ID or dApp
+    // Example:
+    // 10: optimism,
+    // 42161: arbitrum,
+    // 8453: base,
+};
+
+const targetNetwork = ZION_CHAIN_MAP[ZION_TOKEN_NETWORK_ID] || mainnet;
+
+const appKitInstance: ReownAppKit | null = typeof window !== 'undefined'
+  ? (createAppKit({
+      adapters: [
+        new EthersAdapter(),
+      ],
+      networks: [targetNetwork], // Configure with the network ZION_TOKEN_NETWORK_ID maps to
+      defaultNetwork: targetNetwork,
+      projectId,
+      metadata,
+      features: {
+        analytics: true, // Optional: enable analytics
+        // ... other features like swaps, onramp if needed
+      },
+    }) as unknown as ReownAppKit)
+  : null;
+// --- End Reown AppKit Configuration ---
+
+export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [wallet, setWallet] = useState<WalletState>(initialWalletState);
+  // `useAppKit` returns an object controlling the wallet modal.  Its full type
+  // definitions are not available offline, so cast to our minimal interface.
+  const appKit = useAppKit() as unknown as ReownAppKit | null; // Hook to interact with AppKit
+
+  const updateWalletState = useCallback(async () => {
+    if (appKitInstance?.getState().isConnected && appKit?.getAddress()) {
+      const currentAddress = appKit.getAddress();
+      const currentChainId = appKit.getChainId();
+      const currentProvider = appKit.getWalletProvider();
+
+      if (currentAddress && currentChainId && currentProvider) {
+        const ethersProvider = new ethers.BrowserProvider(currentProvider as any);
+        const ethersSigner = await ethersProvider.getSigner();
+        setWallet({
+          provider: ethersProvider,
+          signer: ethersSigner,
+          address: currentAddress,
+          chainId: Number(currentChainId), // Ensure chainId is a number
+          isConnected: true,
+        });
+      } else {
+        setWallet(initialWalletState);
+      }
+    } else {
+      setWallet(initialWalletState);
+    }
+  }, [appKit]);
+
+
+  useEffect(() => {
+    if (appKit) {
+      // Initial state update
+      updateWalletState();
+
+      // Subscribe to AppKit state changes if the method exists. Older
+      // versions of the SDK exposed `subscribeProvider`, but in some
+      // environments this function is missing. Guard against calling a
+      // non-existent method to prevent runtime errors.
+      const maybeSubscribe = (appKit as Partial<ReownAppKit>).subscribeProvider;
+      let unsubscribe: (() => void) | undefined;
+
+      if (typeof maybeSubscribe === 'function') {
+        unsubscribe = maybeSubscribe(updateWalletState);
+      } else {
+        // Fallback: if the provider supports event listeners, listen for
+        // `accountsChanged` and `chainChanged` events.
+        try {
+          const provider = appKit.getWalletProvider?.() as
+            | (ethers.Eip1193Provider & {
+                removeListener?: (
+                  eventName: string,
+                  listener: (...args: any[]) => void
+                ) => void;
+              })
+            | undefined;
+          provider?.on?.('accountsChanged', updateWalletState);
+          provider?.on?.('chainChanged', updateWalletState);
+          unsubscribe = () => {
+            provider?.removeListener?.('accountsChanged', updateWalletState);
+            provider?.removeListener?.('chainChanged', updateWalletState);
+          };
+        } catch {
+          // noop - if provider is unavailable just skip subscription
+        }
+      }
+
+      return () => {
+        if (typeof unsubscribe === 'function') unsubscribe();
+      }; // Cleanup subscription
+    }
+  }, [appKit, updateWalletState]);
+
+
+  const connectWallet = useCallback(async () => {
+    if (!appKit) {
+      captureException(new Error('AppKit not initialized in connectWallet'));
+      return;
+    }
+
+    try {
+      await appKit.open(); // Opens the modal
+      // State update will be handled by the subscription
+    } catch (error: any) {
+      captureException(error);
+      if (
+        error instanceof Error &&
+        /Coinbase Wallet SDK/i.test(error.message)
+      ) {
+        console.warn(
+          'Failed to load Coinbase Wallet. Please ensure the SDK is available or try a different wallet provider.'
+        );
+      }
+    }
+  }, [appKit]);
+
+  const disconnectWallet = useCallback(async () => {
+    if (appKitInstance?.getState().isConnected) {
+      try {
+        await appKitInstance.disconnect();
+        // State update will be handled by the subscription
+      } catch (error) {
+        captureException(error);
+      }
+    }
+  }, [appKit]);
+
+  const displayAddress = wallet.address
+    ? `${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length - 4)}`
+    : null;
+
+  return (
+    <WalletContext.Provider value={{ ...wallet, connectWallet, disconnectWallet, displayAddress, appKit: appKitInstance }}>
+      {children}
+    </WalletContext.Provider>
+  );
+};
+
+export const useWallet = (): WalletContextType => {
+  const context = useContext(WalletContext);
+  if (context === undefined) {
+    throw new Error('useWallet must be used within a WalletProvider');
+  }
+  return context;
+};

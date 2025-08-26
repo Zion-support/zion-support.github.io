@@ -1,0 +1,1139 @@
+[2025-08-25 12:00:02] Starting error recovery process...
+[2025-08-25 12:00:02] Checking for crashed automation processes...
+[2025-08-25 12:00:03] Checking memory usage...
+[2025-08-25 12:00:04] Checking log file sizes...
+[2025-08-25 12:00:04] Error recovery process completed
+[2025-08-25 12:02:01] Starting error recovery process...
+[2025-08-25 12:02:01] Checking for crashed automation processes...
+[2025-08-25 12:02:01] Checking memory usage...
+[2025-08-25 12:02:02] High memory usage detected (641.961 MB), restarting services...
+[2025-08-25T15:02:07.603Z] Starting Autonomous System Manager
+[2025-08-25T15:02:07.768Z] Starting all enabled services...
+[2025-08-25T15:02:07.768Z] Starting service: autonomous-system-manager
+[2025-08-25T15:02:07.768Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-25T15:02:08.770Z] Starting service: ml-link-intelligence
+[2025-08-25T15:02:08.775Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-25T15:02:09.848Z] Starting service: link-health-scheduler
+[2025-08-25T15:02:09.849Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-25T15:02:10.561Z] Starting ML Link Intelligence worker
+[2025-08-25T15:02:10.680Z] Added https://github.com to analysis queue
+[2025-08-25T15:02:10.681Z] Added https://stackoverflow.com to analysis queue
+[2025-08-25T15:02:10.681Z] Added https://medium.com to analysis queue
+[2025-08-25T15:02:10.681Z] Added https://dev.to to analysis queue
+[2025-08-25T15:02:10.682Z] Added https://wikipedia.org to analysis queue
+[2025-08-25T15:02:10.682Z] Processing queue with 5 links
+[2025-08-25T15:02:10.682Z] Analyzing link: https://github.com
+[2025-08-25T15:02:10.850Z] Starting service: real-time-performance-monitor
+[2025-08-25T15:02:10.851Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-25T15:02:10.873Z] Analysis complete for https://github.com: good (200)
+[2025-08-25T15:02:11.857Z] Started 0/4 services successfully
+[2025-08-25T15:02:11.860Z] Autonomous System Manager is now running
+[2025-08-25T15:02:11.875Z] Analyzing link: https://stackoverflow.com
+[2025-08-25T15:02:11.945Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-25T15:02:12.779Z] Starting Link Health Scheduler
+[2025-08-25T15:02:12.934Z] Starting Link Health Scheduler
+[2025-08-25T15:02:13.079Z] Scheduled check for homepage at Mon Aug 25 2025 12:07:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:02:13.080Z] Scheduled check for services at Mon Aug 25 2025 12:17:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:02:13.082Z] Analyzing link: https://medium.com
+[2025-08-25T15:02:13.081Z] Scheduled check for about at Mon Aug 25 2025 13:02:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:02:13.091Z] Scheduled check for contact at Mon Aug 25 2025 12:17:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:02:13.091Z] Scheduled 4 links for health checks
+[2025-08-25T15:02:13.214Z] Analysis complete for https://medium.com: good (200)
+[2025-08-25T15:02:14.217Z] Analyzing link: https://dev.to
+[2025-08-25T15:02:14.266Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-25 12:02:14] Checking log file sizes...
+[2025-08-25T15:02:14.576Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:02:14.691Z] Starting real-time performance monitoring
+[2025-08-25 12:02:14] Error recovery process completed
+[2025-08-25T15:02:15.267Z] Analyzing link: https://wikipedia.org
+[2025-08-25T15:02:15.324Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-25T15:02:16.325Z] Queue processing complete
+[2025-08-25 12:02:32] Starting error recovery process...
+[2025-08-25 12:02:32] Checking for crashed automation processes...
+[2025-08-25 12:02:32] Checking memory usage...
+[2025-08-25 12:02:34] High memory usage detected (673.734 MB), restarting services...
+[2025-08-25T15:02:34.634Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-25T15:02:34.634Z] Stopping all services...
+[2025-08-25T15:02:34.634Z] Stopped 0 services
+[2025-08-25T15:02:34.737Z] Stopping ML Link Intelligence...
+[2025-08-25T15:02:34.896Z] Stopping Link Health Scheduler...
+[2025-08-25T15:02:34.897Z] Stopping Link Health Scheduler
+[2025-08-25T15:02:34.899Z] All scheduled jobs cleared
+[2025-08-25T15:02:35.002Z] Stopping Real-Time Performance Monitor...
+[2025-08-25T15:02:35.016Z] Stopping performance monitoring
+[2025-08-25T15:02:40.132Z] Starting Autonomous System Manager
+[2025-08-25T15:02:40.136Z] Starting all enabled services...
+[2025-08-25T15:02:40.137Z] Starting service: autonomous-system-manager
+[2025-08-25T15:02:40.138Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-25T15:02:41.143Z] Starting service: ml-link-intelligence
+[2025-08-25T15:02:41.146Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-25T15:02:42.148Z] Starting service: link-health-scheduler
+[2025-08-25T15:02:42.149Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-25T15:02:43.150Z] Starting service: real-time-performance-monitor
+[2025-08-25T15:02:43.150Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-25T15:02:43.174Z] Starting ML Link Intelligence worker
+[2025-08-25T15:02:43.180Z] Added https://github.com to analysis queue
+[2025-08-25T15:02:43.180Z] Added https://stackoverflow.com to analysis queue
+[2025-08-25T15:02:43.181Z] Added https://medium.com to analysis queue
+[2025-08-25T15:02:43.181Z] Added https://dev.to to analysis queue
+[2025-08-25T15:02:43.181Z] Added https://wikipedia.org to analysis queue
+[2025-08-25T15:02:43.182Z] Processing queue with 5 links
+[2025-08-25T15:02:43.182Z] Analyzing link: https://github.com
+[2025-08-25T15:02:43.411Z] Analysis complete for https://github.com: good (200)
+[2025-08-25T15:02:44.152Z] Started 0/4 services successfully
+[2025-08-25T15:02:44.153Z] Autonomous System Manager is now running
+[2025-08-25T15:02:44.412Z] Analyzing link: https://stackoverflow.com
+[2025-08-25T15:02:44.477Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-25T15:02:45.258Z] Starting Link Health Scheduler
+[2025-08-25T15:02:45.263Z] Starting Link Health Scheduler
+[2025-08-25T15:02:45.264Z] Scheduled check for homepage at Mon Aug 25 2025 12:07:45 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:02:45.265Z] Scheduled check for services at Mon Aug 25 2025 12:17:45 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:02:45.265Z] Scheduled check for about at Mon Aug 25 2025 13:02:45 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:02:45.265Z] Scheduled check for contact at Mon Aug 25 2025 12:17:45 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:02:45.266Z] Scheduled 4 links for health checks
+[2025-08-25T15:02:45.478Z] Analyzing link: https://medium.com
+[2025-08-25T15:02:45.586Z] Analysis complete for https://medium.com: good (200)
+[2025-08-25T15:02:46.587Z] Analyzing link: https://dev.to
+[2025-08-25T15:02:46.647Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-25 12:02:47] Checking log file sizes...
+[2025-08-25T15:02:47.253Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:02:47.259Z] Starting real-time performance monitoring
+[2025-08-25 12:02:47] Error recovery process completed
+[2025-08-25T15:02:47.647Z] Analyzing link: https://wikipedia.org
+[2025-08-25T15:02:47.703Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-25T15:02:48.705Z] Queue processing complete
+[2025-08-25T15:03:05.270Z] Status: 4 jobs scheduled, 0 active
+[2025-08-25T15:03:17.265Z] CRITICAL MEMORY ALERT: Memory usage critical: 97.94% - Memory pressure detected
+[2025-08-25T15:03:17.265Z] ALERT [CRITICAL] Memory usage critical: 97.94%
+[2025-08-25T15:03:17.266Z] metrics rss=30.16 MB heapUsed=4.26 MB cpuLoad=55.93 memUsage=97.94%
+[2025-08-25T15:03:47.265Z] CRITICAL MEMORY ALERT: Memory usage critical: 97.12% - Memory pressure detected
+[2025-08-25T15:03:47.265Z] ALERT [CRITICAL] Memory usage critical: 97.12%
+[2025-08-25T15:03:47.266Z] metrics rss=30.38 MB heapUsed=4.33 MB cpuLoad=47.02 memUsage=97.12%
+[2025-08-25 12:04:01] Starting error recovery process...
+[2025-08-25 12:04:02] Checking for crashed automation processes...
+[2025-08-25 12:04:02] Checking memory usage...
+[2025-08-25 12:04:03] High memory usage detected (644.668 MB), restarting services...
+[2025-08-25T15:04:03.372Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-25T15:04:03.372Z] Stopping all services...
+[2025-08-25T15:04:03.374Z] Stopped 0 services
+[2025-08-25T15:04:03.495Z] Stopping ML Link Intelligence...
+[2025-08-25T15:04:03.495Z] Stopping ML Link Intelligence...
+[2025-08-25T15:04:03.603Z] Stopping Link Health Scheduler...
+[2025-08-25T15:04:03.604Z] Stopping Link Health Scheduler
+[2025-08-25T15:04:03.606Z] All scheduled jobs cleared
+[2025-08-25T15:04:03.704Z] Stopping Real-Time Performance Monitor...
+[2025-08-25T15:04:03.705Z] Stopping performance monitoring
+[2025-08-25T15:04:09.066Z] Starting Autonomous System Manager
+[2025-08-25T15:04:09.249Z] Starting all enabled services...
+[2025-08-25T15:04:09.250Z] Starting service: autonomous-system-manager
+[2025-08-25T15:04:09.250Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-25T15:04:10.254Z] Starting service: ml-link-intelligence
+[2025-08-25T15:04:10.254Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-25T15:04:11.262Z] Starting service: link-health-scheduler
+[2025-08-25T15:04:11.274Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-25T15:04:12.014Z] Starting ML Link Intelligence worker
+[2025-08-25T15:04:12.179Z] Added https://github.com to analysis queue
+[2025-08-25T15:04:12.179Z] Added https://stackoverflow.com to analysis queue
+[2025-08-25T15:04:12.180Z] Added https://medium.com to analysis queue
+[2025-08-25T15:04:12.180Z] Added https://dev.to to analysis queue
+[2025-08-25T15:04:12.181Z] Added https://wikipedia.org to analysis queue
+[2025-08-25T15:04:12.185Z] Processing queue with 5 links
+[2025-08-25T15:04:12.186Z] Analyzing link: https://github.com
+[2025-08-25T15:04:12.277Z] Starting service: real-time-performance-monitor
+[2025-08-25T15:04:12.278Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-25T15:04:12.445Z] Analysis complete for https://github.com: good (200)
+[2025-08-25T15:04:13.298Z] Started 0/4 services successfully
+[2025-08-25T15:04:13.301Z] Autonomous System Manager is now running
+[2025-08-25T15:04:13.456Z] Analyzing link: https://stackoverflow.com
+[2025-08-25T15:04:13.538Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-25T15:04:14.003Z] Starting Link Health Scheduler
+[2025-08-25T15:04:14.166Z] Starting Link Health Scheduler
+[2025-08-25T15:04:14.167Z] Scheduled check for homepage at Mon Aug 25 2025 12:09:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:04:14.167Z] Scheduled check for services at Mon Aug 25 2025 12:19:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:04:14.168Z] Scheduled check for about at Mon Aug 25 2025 13:04:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:04:14.168Z] Scheduled check for contact at Mon Aug 25 2025 12:19:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:04:14.168Z] Scheduled 4 links for health checks
+[2025-08-25T15:04:14.540Z] Analyzing link: https://medium.com
+[2025-08-25T15:04:14.640Z] Analysis complete for https://medium.com: good (200)
+[2025-08-25T15:04:15.641Z] Analyzing link: https://dev.to
+[2025-08-25T15:04:15.746Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-25 12:04:15] Checking log file sizes...
+[2025-08-25T15:04:15.999Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:04:16.183Z] Starting real-time performance monitoring
+[2025-08-25 12:04:16] Error recovery process completed
+[2025-08-25T15:04:16.747Z] Analyzing link: https://wikipedia.org
+[2025-08-25T15:04:16.798Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-25T15:04:17.878Z] Queue processing complete
+[2025-08-25T15:04:46.190Z] ALERT [WARNING] CPU load warning: 75.35
+[2025-08-25T15:04:46.190Z] CRITICAL MEMORY ALERT: Memory usage critical: 98.52% - Memory pressure detected
+[2025-08-25T15:04:46.190Z] ALERT [CRITICAL] Memory usage critical: 98.52%
+[2025-08-25T15:04:46.191Z] metrics rss=30.60 MB heapUsed=4.25 MB cpuLoad=75.35 memUsage=98.52%
+[2025-08-25T15:05:04.175Z] Status: 4 jobs scheduled, 0 active
+[2025-08-25T15:05:13.304Z] Periodic status check - all systems operational
+[2025-08-25T15:05:16.188Z] ALERT [WARNING] Memory usage warning: 93.24%
+[2025-08-25T15:05:16.189Z] metrics rss=30.82 MB heapUsed=4.32 MB cpuLoad=48.42 memUsage=93.24%
+
+=== Performance Monitor Summary ===
+Timestamp: 2025-08-25T15:05:16.186Z
+System Uptime: 1 hours
+Hostname: MacBook-Pro-de-Kleber.local
+
+Current Status:
+  CPU Load: 48.42
+  Memory Usage: 93.24%
+  Memory Free: 2.16 GB
+  Process Memory: 30.82 MB
+  Process Uptime: 1 minutes
+
+Alerts:
+  Total: 3
+  Critical: 1 🔴
+  Warning: 2 🟡
+
+===================================
+
+[2025-08-25T15:05:46.190Z] ALERT [WARNING] Memory usage warning: 94.46%
+[2025-08-25T15:05:46.190Z] metrics rss=31.01 MB heapUsed=4.45 MB cpuLoad=37.70 memUsage=94.46%
+[2025-08-25 12:06:01] Starting error recovery process...
+[2025-08-25 12:06:01] Checking for crashed automation processes...
+[2025-08-25 12:06:01] Checking memory usage...
+[2025-08-25 12:06:02] High memory usage detected (611.238 MB), restarting services...
+[2025-08-25T15:06:02.905Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-25T15:06:02.906Z] Stopping all services...
+[2025-08-25T15:06:02.906Z] Stopped 0 services
+[2025-08-25T15:06:03.044Z] Stopping ML Link Intelligence...
+[2025-08-25T15:06:03.165Z] Stopping Link Health Scheduler...
+[2025-08-25T15:06:03.166Z] Stopping Link Health Scheduler
+[2025-08-25T15:06:03.167Z] All scheduled jobs cleared
+[2025-08-25T15:06:03.447Z] Stopping Real-Time Performance Monitor...
+[2025-08-25T15:06:03.450Z] Stopping performance monitoring
+[2025-08-25T15:06:08.749Z] Starting Autonomous System Manager
+[2025-08-25T15:06:08.984Z] Starting all enabled services...
+[2025-08-25T15:06:08.985Z] Starting service: autonomous-system-manager
+[2025-08-25T15:06:08.989Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-25T15:06:09.998Z] Starting service: ml-link-intelligence
+[2025-08-25T15:06:09.999Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-25T15:06:11.002Z] Starting service: link-health-scheduler
+[2025-08-25T15:06:11.002Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-25T15:06:11.721Z] Starting ML Link Intelligence worker
+[2025-08-25T15:06:11.896Z] Added https://github.com to analysis queue
+[2025-08-25T15:06:11.897Z] Added https://stackoverflow.com to analysis queue
+[2025-08-25T15:06:11.897Z] Added https://medium.com to analysis queue
+[2025-08-25T15:06:11.897Z] Added https://dev.to to analysis queue
+[2025-08-25T15:06:11.898Z] Added https://wikipedia.org to analysis queue
+[2025-08-25T15:06:11.898Z] Processing queue with 5 links
+[2025-08-25T15:06:11.898Z] Analyzing link: https://github.com
+[2025-08-25T15:06:12.008Z] Starting service: real-time-performance-monitor
+[2025-08-25T15:06:12.009Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-25T15:06:12.149Z] Analysis complete for https://github.com: good (200)
+[2025-08-25T15:06:13.011Z] Started 0/4 services successfully
+[2025-08-25T15:06:13.012Z] Autonomous System Manager is now running
+[2025-08-25T15:06:13.149Z] Analyzing link: https://stackoverflow.com
+[2025-08-25T15:06:13.293Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-25T15:06:13.780Z] Starting Link Health Scheduler
+[2025-08-25T15:06:14.043Z] Starting Link Health Scheduler
+[2025-08-25T15:06:14.049Z] Scheduled check for homepage at Mon Aug 25 2025 12:11:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:06:14.056Z] Scheduled check for services at Mon Aug 25 2025 12:21:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:06:14.057Z] Scheduled check for about at Mon Aug 25 2025 13:06:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:06:14.057Z] Scheduled check for contact at Mon Aug 25 2025 12:21:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:06:14.057Z] Scheduled 4 links for health checks
+[2025-08-25T15:06:14.294Z] Analyzing link: https://medium.com
+[2025-08-25T15:06:14.516Z] Analysis complete for https://medium.com: good (200)
+[2025-08-25T15:06:15.518Z] Analyzing link: https://dev.to
+[2025-08-25 12:06:15] Checking log file sizes...
+[2025-08-25T15:06:15.615Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-25T15:06:15.897Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:06:16.127Z] Starting real-time performance monitoring
+[2025-08-25T15:06:16.617Z] Analyzing link: https://wikipedia.org
+[2025-08-25T15:06:16.760Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-25 12:06:16] Error recovery process completed
+[2025-08-25T15:06:17.762Z] Queue processing complete
+[2025-08-25T15:06:46.161Z] CRITICAL MEMORY ALERT: Memory usage critical: 97.94% - Memory pressure detected
+[2025-08-25T15:06:46.162Z] ALERT [CRITICAL] Memory usage critical: 97.94%
+[2025-08-25T15:06:46.162Z] metrics rss=30.83 MB heapUsed=4.26 MB cpuLoad=50.42 memUsage=97.94%
+[2025-08-25T15:07:04.169Z] Status: 4 jobs scheduled, 0 active
+[2025-08-25T15:07:16.214Z] CRITICAL MEMORY ALERT: Memory usage critical: 98.31% - Memory pressure detected
+[2025-08-25T15:07:16.215Z] ALERT [CRITICAL] Memory usage critical: 98.31%
+[2025-08-25T15:07:16.215Z] metrics rss=31.05 MB heapUsed=4.33 MB cpuLoad=55.69 memUsage=98.31%
+[2025-08-25T15:07:46.185Z] ALERT [WARNING] CPU load warning: 73.50
+[2025-08-25T15:07:46.189Z] CRITICAL MEMORY ALERT: Memory usage critical: 98.38% - Memory pressure detected
+[2025-08-25T15:07:46.190Z] ALERT [CRITICAL] Memory usage critical: 98.38%
+[2025-08-25T15:07:46.190Z] metrics rss=31.10 MB heapUsed=4.37 MB cpuLoad=73.50 memUsage=98.38%
+[2025-08-25 12:08:02] Starting error recovery process...
+[2025-08-25 12:08:02] Checking for crashed automation processes...
+[2025-08-25 12:08:03] Checking memory usage...
+[2025-08-25T15:08:04.318Z] Status: 4 jobs scheduled, 0 active
+[2025-08-25 12:08:04] High memory usage detected (612.547 MB), restarting services...
+[2025-08-25T15:08:05.123Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-25T15:08:05.124Z] Stopping all services...
+[2025-08-25T15:08:05.124Z] Stopped 0 services
+[2025-08-25T15:08:05.369Z] Stopping ML Link Intelligence...
+[2025-08-25T15:08:05.589Z] Stopping Link Health Scheduler...
+[2025-08-25T15:08:05.705Z] Stopping Link Health Scheduler
+[2025-08-25T15:08:05.706Z] All scheduled jobs cleared
+[2025-08-25T15:08:05.739Z] Stopping Real-Time Performance Monitor...
+[2025-08-25T15:08:05.740Z] Stopping performance monitoring
+[2025-08-25T15:08:11.223Z] Starting Autonomous System Manager
+[2025-08-25T15:08:11.482Z] Starting all enabled services...
+[2025-08-25T15:08:11.483Z] Starting service: autonomous-system-manager
+[2025-08-25T15:08:11.484Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-25T15:08:12.486Z] Starting service: ml-link-intelligence
+[2025-08-25T15:08:12.486Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-25T15:08:13.488Z] Starting service: link-health-scheduler
+[2025-08-25T15:08:13.489Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-25T15:08:14.495Z] Starting service: real-time-performance-monitor
+[2025-08-25T15:08:14.497Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-25T15:08:14.509Z] Starting ML Link Intelligence worker
+[2025-08-25T15:08:14.765Z] Added https://github.com to analysis queue
+[2025-08-25T15:08:14.766Z] Added https://stackoverflow.com to analysis queue
+[2025-08-25T15:08:14.767Z] Added https://medium.com to analysis queue
+[2025-08-25T15:08:14.767Z] Added https://dev.to to analysis queue
+[2025-08-25T15:08:14.768Z] Added https://wikipedia.org to analysis queue
+[2025-08-25T15:08:14.769Z] Processing queue with 5 links
+[2025-08-25T15:08:14.769Z] Analyzing link: https://github.com
+[2025-08-25T15:08:15.141Z] Analysis complete for https://github.com: good (200)
+[2025-08-25T15:08:15.497Z] Started 0/4 services successfully
+[2025-08-25T15:08:15.498Z] Autonomous System Manager is now running
+[2025-08-25T15:08:16.145Z] Analyzing link: https://stackoverflow.com
+[2025-08-25T15:08:16.237Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-25T15:08:16.599Z] Starting Link Health Scheduler
+[2025-08-25T15:08:16.863Z] Starting Link Health Scheduler
+[2025-08-25T15:08:16.864Z] Scheduled check for homepage at Mon Aug 25 2025 12:13:16 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:08:16.864Z] Scheduled check for services at Mon Aug 25 2025 12:23:16 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:08:16.865Z] Scheduled check for about at Mon Aug 25 2025 13:08:16 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:08:16.865Z] Scheduled check for contact at Mon Aug 25 2025 12:23:16 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:08:16.865Z] Scheduled 4 links for health checks
+[2025-08-25T15:08:17.266Z] Analyzing link: https://medium.com
+[2025-08-25T15:08:17.509Z] Analysis complete for https://medium.com: good (200)
+[2025-08-25 12:08:18] Checking log file sizes...
+[2025-08-25T15:08:18.516Z] Analyzing link: https://dev.to
+[2025-08-25T15:08:18.658Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-25T15:08:18.548Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:08:18.989Z] Starting real-time performance monitoring
+[2025-08-25T15:08:19.659Z] Analyzing link: https://wikipedia.org
+[2025-08-25T15:08:19.779Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-25 12:08:20] Error recovery process completed
+[2025-08-25T15:08:20.780Z] Queue processing complete
+[2025-08-25T15:08:48.998Z] CRITICAL CPU ALERT: CPU load critical: 187.34 - Consider restarting or scaling
+[2025-08-25T15:08:48.998Z] ALERT [CRITICAL] CPU load critical: 187.34
+[2025-08-25T15:08:48.999Z] CRITICAL MEMORY ALERT: Memory usage critical: 98.92% - Memory pressure detected
+[2025-08-25T15:08:48.999Z] ALERT [CRITICAL] Memory usage critical: 98.92%
+[2025-08-25T15:08:48.999Z] metrics rss=30.73 MB heapUsed=4.26 MB cpuLoad=187.34 memUsage=98.92%
+[2025-08-25T15:09:06.927Z] Status: 4 jobs scheduled, 0 active
+[2025-08-25T15:09:18.997Z] CRITICAL CPU ALERT: CPU load critical: 198.57 - Consider restarting or scaling
+[2025-08-25T15:09:18.998Z] ALERT [CRITICAL] CPU load critical: 198.57
+[2025-08-25T15:09:18.999Z] CRITICAL MEMORY ALERT: Memory usage critical: 99.93% - Memory pressure detected
+[2025-08-25T15:09:18.999Z] ALERT [CRITICAL] Memory usage critical: 99.93%
+[2025-08-25T15:09:18.999Z] metrics rss=30.96 MB heapUsed=4.33 MB cpuLoad=198.57 memUsage=99.93%
+[2025-08-25T15:09:48.999Z] CRITICAL CPU ALERT: CPU load critical: 172.35 - Consider restarting or scaling
+[2025-08-25T15:09:49.000Z] ALERT [CRITICAL] CPU load critical: 172.35
+[2025-08-25T15:09:49.000Z] CRITICAL MEMORY ALERT: Memory usage critical: 96.84% - Memory pressure detected
+[2025-08-25T15:09:49.000Z] ALERT [CRITICAL] Memory usage critical: 96.84%
+[2025-08-25T15:09:49.000Z] metrics rss=31.04 MB heapUsed=4.40 MB cpuLoad=172.35 memUsage=96.84%
+[2025-08-25 12:10:01] Starting error recovery process...
+[2025-08-25 12:10:02] Checking for crashed automation processes...
+[2025-08-25 12:10:02] Checking memory usage...
+[2025-08-25T15:14:12.424Z] Starting Link Health Scheduler
+[2025-08-25T15:14:12.555Z] Starting Link Health Scheduler
+[2025-08-25T15:14:12.556Z] Scheduled check for homepage at Mon Aug 25 2025 12:19:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:14:12.557Z] Scheduled check for services at Mon Aug 25 2025 12:29:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:14:12.557Z] Scheduled check for about at Mon Aug 25 2025 13:14:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:14:12.557Z] Scheduled check for contact at Mon Aug 25 2025 12:29:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:14:12.557Z] Scheduled 4 links for health checks
+[2025-08-25 12:14:14] Checking log file sizes...
+[2025-08-25T15:14:14.405Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:14:14.531Z] Starting real-time performance monitoring
+[2025-08-25 12:14:14] Error recovery process completed
+[2025-08-25T15:14:44.538Z] CRITICAL CPU ALERT: CPU load critical: 98.47 - Consider restarting or scaling
+[2025-08-25T15:14:44.539Z] ALERT [CRITICAL] CPU load critical: 98.47
+[2025-08-25T15:14:44.541Z] ALERT [WARNING] Memory usage warning: 81.61%
+[2025-08-25T15:14:44.541Z] metrics rss=30.34 MB heapUsed=4.26 MB cpuLoad=98.47 memUsage=81.61%
+[2025-08-25T15:15:02.566Z] Status: 4 jobs scheduled, 0 active
+
+=== Performance Monitor Summary ===
+Timestamp: 2025-08-25T15:14:44.534Z
+System Uptime: 1 hours
+Hostname: MacBook-Pro-de-Kleber.local
+
+Current Status:
+  CPU Load: 98.47
+  Memory Usage: 81.61%
+  Memory Free: 5.89 GB
+  Process Memory: 30.34 MB
+  Process Uptime: 0 minutes
+
+Alerts:
+  Total: 2
+  Critical: 1 🔴
+  Warning: 1 🟡
+
+===================================
+
+[2025-08-25T15:15:14.539Z] metrics rss=30.79 MB heapUsed=4.42 MB cpuLoad=61.75 memUsage=78.46%
+[2025-08-25T15:15:44.540Z] metrics rss=30.82 MB heapUsed=4.46 MB cpuLoad=41.40 memUsage=78.33%
+[2025-08-25 12:16:01] Starting error recovery process...
+[2025-08-25 12:16:01] Checking for crashed automation processes...
+[2025-08-25 12:16:01] Checking memory usage...
+[2025-08-25 12:16:01] High memory usage detected (554.355 MB), restarting services...
+[2025-08-25T15:16:02.016Z] Stopping Link Health Scheduler...
+[2025-08-25T15:16:02.017Z] Stopping Link Health Scheduler
+[2025-08-25T15:16:02.018Z] All scheduled jobs cleared
+[2025-08-25T15:16:02.063Z] Stopping Real-Time Performance Monitor...
+[2025-08-25T15:16:02.064Z] Stopping performance monitoring
+[2025-08-25T15:16:07.156Z] Starting Autonomous System Manager
+[2025-08-25T15:16:07.241Z] Starting all enabled services...
+[2025-08-25T15:16:07.242Z] Starting service: autonomous-system-manager
+[2025-08-25T15:16:07.242Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-25T15:16:08.243Z] Starting service: ml-link-intelligence
+[2025-08-25T15:16:08.244Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-25T15:16:09.244Z] Starting service: link-health-scheduler
+[2025-08-25T15:16:09.245Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-25T15:16:10.159Z] Starting ML Link Intelligence worker
+[2025-08-25T15:16:10.245Z] Added https://github.com to analysis queue
+[2025-08-25T15:16:10.246Z] Added https://stackoverflow.com to analysis queue
+[2025-08-25T15:16:10.246Z] Starting service: real-time-performance-monitor
+[2025-08-25T15:16:10.246Z] Added https://medium.com to analysis queue
+[2025-08-25T15:16:10.246Z] Added https://dev.to to analysis queue
+[2025-08-25T15:16:10.246Z] Added https://wikipedia.org to analysis queue
+[2025-08-25T15:16:10.247Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-25T15:16:10.247Z] Processing queue with 5 links
+[2025-08-25T15:16:10.247Z] Analyzing link: https://github.com
+[2025-08-25T15:16:10.399Z] Analysis complete for https://github.com: good (200)
+[2025-08-25T15:16:11.252Z] Started 0/4 services successfully
+[2025-08-25T15:16:11.252Z] Autonomous System Manager is now running
+[2025-08-25T15:16:11.399Z] Analyzing link: https://stackoverflow.com
+[2025-08-25T15:16:11.465Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-25T15:16:12.159Z] Starting Link Health Scheduler
+[2025-08-25T15:16:12.244Z] Starting Link Health Scheduler
+[2025-08-25T15:16:12.245Z] Scheduled check for homepage at Mon Aug 25 2025 12:21:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:16:12.245Z] Scheduled check for services at Mon Aug 25 2025 12:31:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:16:12.245Z] Scheduled check for about at Mon Aug 25 2025 13:16:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:16:12.245Z] Scheduled check for contact at Mon Aug 25 2025 12:31:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:16:12.245Z] Scheduled 4 links for health checks
+[2025-08-25T15:16:12.466Z] Analyzing link: https://medium.com
+[2025-08-25T15:16:12.562Z] Analysis complete for https://medium.com: good (200)
+[2025-08-25T15:16:13.564Z] Analyzing link: https://dev.to
+[2025-08-25T15:16:13.624Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-25 12:16:14] Checking log file sizes...
+[2025-08-25T15:16:14.175Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:16:14.280Z] Starting real-time performance monitoring
+[2025-08-25 12:16:14] Error recovery process completed
+[2025-08-25T15:16:14.626Z] Analyzing link: https://wikipedia.org
+[2025-08-25T15:16:14.675Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-25T15:16:15.675Z] Queue processing complete
+[2025-08-25T15:16:44.284Z] metrics rss=30.74 MB heapUsed=4.26 MB cpuLoad=20.15 memUsage=79.68%
+[2025-08-25T15:17:02.250Z] Status: 4 jobs scheduled, 0 active
+[2025-08-25T15:17:14.286Z] ALERT [WARNING] Memory usage warning: 80.11%
+[2025-08-25T15:17:14.286Z] metrics rss=30.95 MB heapUsed=4.32 MB cpuLoad=14.64 memUsage=80.11%
+[2025-08-25T15:17:44.288Z] ALERT [WARNING] Memory usage warning: 80.44%
+[2025-08-25T15:17:44.289Z] metrics rss=31.00 MB heapUsed=4.36 MB cpuLoad=10.92 memUsage=80.44%
+[2025-08-25 12:18:01] Starting error recovery process...
+[2025-08-25 12:18:01] Checking for crashed automation processes...
+[2025-08-25 12:18:01] Checking memory usage...
+[2025-08-25 12:18:01] High memory usage detected (553.207 MB), restarting services...
+[2025-08-25T15:18:01.927Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-25T15:18:01.929Z] Stopping all services...
+[2025-08-25T15:18:01.929Z] Stopped 0 services
+[2025-08-25T15:18:01.974Z] Stopping ML Link Intelligence...
+[2025-08-25T15:18:02.018Z] Stopping Link Health Scheduler...
+[2025-08-25T15:18:02.020Z] Stopping Link Health Scheduler
+[2025-08-25T15:18:02.021Z] All scheduled jobs cleared
+[2025-08-25T15:18:02.067Z] Stopping Real-Time Performance Monitor...
+[2025-08-25T15:18:02.068Z] Stopping performance monitoring
+[2025-08-25T15:18:07.189Z] Starting Autonomous System Manager
+[2025-08-25T15:18:07.295Z] Starting all enabled services...
+[2025-08-25T15:18:07.296Z] Starting service: autonomous-system-manager
+[2025-08-25T15:18:07.296Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-25T15:18:08.297Z] Starting service: ml-link-intelligence
+[2025-08-25T15:18:08.298Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-25T15:18:09.299Z] Starting service: link-health-scheduler
+[2025-08-25T15:18:09.300Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-25T15:18:10.300Z] Starting service: real-time-performance-monitor
+[2025-08-25T15:18:10.301Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-25T15:18:10.282Z] Starting ML Link Intelligence worker
+[2025-08-25T15:18:10.412Z] Added https://github.com to analysis queue
+[2025-08-25T15:18:10.413Z] Added https://stackoverflow.com to analysis queue
+[2025-08-25T15:18:10.413Z] Added https://medium.com to analysis queue
+[2025-08-25T15:18:10.413Z] Added https://dev.to to analysis queue
+[2025-08-25T15:18:10.413Z] Added https://wikipedia.org to analysis queue
+[2025-08-25T15:18:10.413Z] Processing queue with 5 links
+[2025-08-25T15:18:10.414Z] Analyzing link: https://github.com
+[2025-08-25T15:18:10.629Z] Analysis complete for https://github.com: good (200)
+[2025-08-25T15:18:11.304Z] Started 0/4 services successfully
+[2025-08-25T15:18:11.304Z] Autonomous System Manager is now running
+[2025-08-25T15:18:11.631Z] Analyzing link: https://stackoverflow.com
+[2025-08-25T15:18:11.720Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-25T15:18:12.197Z] Starting Link Health Scheduler
+[2025-08-25T15:18:12.352Z] Starting Link Health Scheduler
+[2025-08-25T15:18:12.353Z] Scheduled check for homepage at Mon Aug 25 2025 12:23:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:18:12.354Z] Scheduled check for services at Mon Aug 25 2025 12:33:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:18:12.355Z] Scheduled check for about at Mon Aug 25 2025 13:18:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:18:12.356Z] Scheduled check for contact at Mon Aug 25 2025 12:33:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:18:12.359Z] Scheduled 4 links for health checks
+[2025-08-25T15:18:12.722Z] Analyzing link: https://medium.com
+[2025-08-25T15:18:12.804Z] Analysis complete for https://medium.com: good (200)
+[2025-08-25T15:18:13.891Z] Analyzing link: https://dev.to
+[2025-08-25T15:18:13.944Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-25 12:18:14] Checking log file sizes...
+[2025-08-25T15:18:14.250Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:18:14.376Z] Starting real-time performance monitoring
+[2025-08-25 12:18:14] Error recovery process completed
+[2025-08-25T15:18:14.952Z] Analyzing link: https://wikipedia.org
+[2025-08-25T15:18:15.011Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-25T15:18:16.011Z] Queue processing complete
+[2025-08-25T15:18:44.381Z] ALERT [WARNING] Memory usage warning: 81.10%
+[2025-08-25T15:18:44.381Z] metrics rss=30.62 MB heapUsed=4.26 MB cpuLoad=10.59 memUsage=81.10%
+[2025-08-25T15:19:02.366Z] Status: 4 jobs scheduled, 0 active
+[2025-08-25T15:19:14.440Z] ALERT [WARNING] Memory usage warning: 81.34%
+[2025-08-25T15:19:14.440Z] metrics rss=30.85 MB heapUsed=4.32 MB cpuLoad=9.90 memUsage=81.34%
+[2025-08-25T15:19:44.381Z] ALERT [WARNING] Memory usage warning: 82.40%
+[2025-08-25T15:19:44.381Z] metrics rss=30.92 MB heapUsed=4.36 MB cpuLoad=11.18 memUsage=82.40%
+[2025-08-25 12:20:01] Starting error recovery process...
+[2025-08-25 12:20:01] Checking for crashed automation processes...
+[2025-08-25 12:20:01] Checking memory usage...
+[2025-08-25 12:20:02] High memory usage detected (554.012 MB), restarting services...
+[2025-08-25T15:20:02.165Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-25T15:20:02.166Z] Stopping all services...
+[2025-08-25T15:20:02.166Z] Stopped 0 services
+[2025-08-25T15:20:02.225Z] Stopping ML Link Intelligence...
+[2025-08-25T15:20:02.296Z] Stopping Link Health Scheduler...
+[2025-08-25T15:20:02.357Z] Stopping Link Health Scheduler
+[2025-08-25T15:20:02.357Z] All scheduled jobs cleared
+[2025-08-25T15:20:02.364Z] Stopping Real-Time Performance Monitor...
+[2025-08-25T15:20:02.416Z] Stopping performance monitoring
+[2025-08-25T15:20:07.488Z] Starting Autonomous System Manager
+[2025-08-25T15:20:07.604Z] Starting all enabled services...
+[2025-08-25T15:20:07.604Z] Starting service: autonomous-system-manager
+[2025-08-25T15:20:07.605Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-25T15:20:08.606Z] Starting service: ml-link-intelligence
+[2025-08-25T15:20:08.607Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-25T15:20:09.607Z] Starting service: link-health-scheduler
+[2025-08-25T15:20:09.622Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-25T15:20:10.674Z] Starting service: real-time-performance-monitor
+[2025-08-25T15:20:10.679Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-25T15:20:10.772Z] Starting ML Link Intelligence worker
+[2025-08-25T15:20:10.917Z] Added https://github.com to analysis queue
+[2025-08-25T15:20:10.918Z] Added https://stackoverflow.com to analysis queue
+[2025-08-25T15:20:10.918Z] Added https://medium.com to analysis queue
+[2025-08-25T15:20:10.918Z] Added https://dev.to to analysis queue
+[2025-08-25T15:20:10.919Z] Added https://wikipedia.org to analysis queue
+[2025-08-25T15:20:10.920Z] Processing queue with 5 links
+[2025-08-25T15:20:10.924Z] Analyzing link: https://github.com
+[2025-08-25T15:20:11.146Z] Analysis complete for https://github.com: good (200)
+[2025-08-25T15:20:11.864Z] Started 0/4 services successfully
+[2025-08-25T15:20:11.866Z] Autonomous System Manager is now running
+[2025-08-25T15:20:12.150Z] Analyzing link: https://stackoverflow.com
+[2025-08-25T15:20:12.279Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-25T15:20:12.709Z] Starting Link Health Scheduler
+[2025-08-25T15:20:12.880Z] Starting Link Health Scheduler
+[2025-08-25T15:20:12.881Z] Scheduled check for homepage at Mon Aug 25 2025 12:25:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:20:12.884Z] Scheduled check for services at Mon Aug 25 2025 12:35:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:20:12.884Z] Scheduled check for about at Mon Aug 25 2025 13:20:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:20:12.885Z] Scheduled check for contact at Mon Aug 25 2025 12:35:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:20:12.885Z] Scheduled 4 links for health checks
+[2025-08-25T15:20:13.279Z] Analyzing link: https://medium.com
+[2025-08-25T15:20:13.389Z] Analysis complete for https://medium.com: good (200)
+[2025-08-25T15:20:14.391Z] Analyzing link: https://dev.to
+[2025-08-25T15:20:14.485Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-25 12:20:14] Checking log file sizes...
+[2025-08-25T15:20:14.671Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:20:14.824Z] Starting real-time performance monitoring
+No metrics available
+[2025-08-25 12:20:15] Error recovery process completed
+[2025-08-25T15:20:15.486Z] Analyzing link: https://wikipedia.org
+[2025-08-25T15:20:15.642Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-25T15:20:16.645Z] Queue processing complete
+[2025-08-25T15:20:16.646Z] Health Report: Score 90, Links 5, Issues 3
+[2025-08-25T15:20:44.839Z] ALERT [WARNING] Memory usage warning: 84.39%
+[2025-08-25T15:20:44.843Z] metrics rss=30.78 MB heapUsed=4.27 MB cpuLoad=14.10 memUsage=84.39%
+[2025-08-25T15:21:02.915Z] Status: 4 jobs scheduled, 0 active
+[2025-08-25T15:21:14.830Z] ALERT [WARNING] Memory usage warning: 81.92%
+[2025-08-25T15:21:14.831Z] metrics rss=31.00 MB heapUsed=4.34 MB cpuLoad=43.75 memUsage=81.92%
+[2025-08-25T15:21:44.831Z] ALERT [WARNING] Memory usage warning: 82.61%
+[2025-08-25T15:21:44.831Z] metrics rss=31.03 MB heapUsed=4.37 MB cpuLoad=30.28 memUsage=82.61%
+[2025-08-25 12:22:01] Starting error recovery process...
+[2025-08-25 12:22:01] Checking for crashed automation processes...
+[2025-08-25 12:22:01] Checking memory usage...
+[2025-08-25 12:22:02] High memory usage detected (554.664 MB), restarting services...
+[2025-08-25T15:22:02.172Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-25T15:22:02.173Z] Stopping all services...
+[2025-08-25T15:22:02.174Z] Stopped 0 services
+[2025-08-25T15:22:02.233Z] Stopping ML Link Intelligence...
+[2025-08-25T15:22:02.292Z] Stopping Link Health Scheduler...
+[2025-08-25T15:22:02.354Z] Stopping Link Health Scheduler
+[2025-08-25T15:22:02.355Z] All scheduled jobs cleared
+[2025-08-25T15:22:02.366Z] Stopping Real-Time Performance Monitor...
+[2025-08-25T15:22:02.368Z] Stopping performance monitoring
+[2025-08-25T15:22:07.493Z] Starting Autonomous System Manager
+[2025-08-25T15:22:07.619Z] Starting all enabled services...
+[2025-08-25T15:22:07.620Z] Starting service: autonomous-system-manager
+[2025-08-25T15:22:07.621Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-25T15:22:08.622Z] Starting service: ml-link-intelligence
+[2025-08-25T15:22:08.624Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-25T15:22:09.625Z] Starting service: link-health-scheduler
+[2025-08-25T15:22:09.626Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-25T15:22:10.641Z] Starting service: real-time-performance-monitor
+[2025-08-25T15:22:10.642Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-25T15:22:10.775Z] Starting ML Link Intelligence worker
+[2025-08-25T15:22:10.949Z] Added https://github.com to analysis queue
+[2025-08-25T15:22:10.950Z] Added https://stackoverflow.com to analysis queue
+[2025-08-25T15:22:10.950Z] Added https://medium.com to analysis queue
+[2025-08-25T15:22:10.950Z] Added https://dev.to to analysis queue
+[2025-08-25T15:22:10.951Z] Added https://wikipedia.org to analysis queue
+[2025-08-25T15:22:10.951Z] Processing queue with 5 links
+[2025-08-25T15:22:10.951Z] Analyzing link: https://github.com
+[2025-08-25T15:22:11.222Z] Analysis complete for https://github.com: good (200)
+[2025-08-25T15:22:11.643Z] Started 0/4 services successfully
+[2025-08-25T15:22:11.644Z] Autonomous System Manager is now running
+[2025-08-25T15:22:12.223Z] Analyzing link: https://stackoverflow.com
+[2025-08-25T15:22:12.284Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-25T15:22:12.673Z] Starting Link Health Scheduler
+[2025-08-25T15:22:12.809Z] Starting Link Health Scheduler
+[2025-08-25T15:22:12.810Z] Scheduled check for homepage at Mon Aug 25 2025 12:27:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:22:12.810Z] Scheduled check for services at Mon Aug 25 2025 12:37:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:22:12.810Z] Scheduled check for about at Mon Aug 25 2025 13:22:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:22:12.810Z] Scheduled check for contact at Mon Aug 25 2025 12:37:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:22:12.811Z] Scheduled 4 links for health checks
+[2025-08-25T15:22:13.284Z] Analyzing link: https://medium.com
+[2025-08-25T15:22:13.377Z] Analysis complete for https://medium.com: good (200)
+[2025-08-25T15:22:14.377Z] Analyzing link: https://dev.to
+[2025-08-25T15:22:14.425Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-25 12:22:14] Checking log file sizes...
+[2025-08-25T15:22:14.632Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:22:14.765Z] Starting real-time performance monitoring
+[2025-08-25 12:22:14] Error recovery process completed
+[2025-08-25T15:22:15.426Z] Analyzing link: https://wikipedia.org
+[2025-08-25T15:22:15.473Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-25T15:22:16.524Z] Queue processing complete
+[2025-08-25T15:22:44.792Z] ALERT [WARNING] Memory usage warning: 85.99%
+[2025-08-25T15:22:44.795Z] metrics rss=30.08 MB heapUsed=4.26 MB cpuLoad=20.41 memUsage=85.99%
+[2025-08-25T15:23:02.817Z] Status: 4 jobs scheduled, 0 active
+[2025-08-25T15:23:14.774Z] ALERT [WARNING] Memory usage warning: 84.26%
+[2025-08-25T15:23:14.775Z] metrics rss=30.30 MB heapUsed=4.32 MB cpuLoad=24.66 memUsage=84.26%
+[2025-08-25T15:23:44.774Z] ALERT [WARNING] Memory usage warning: 82.92%
+[2025-08-25T15:23:44.775Z] metrics rss=30.34 MB heapUsed=4.36 MB cpuLoad=19.87 memUsage=82.92%
+[2025-08-25 12:24:01] Starting error recovery process...
+[2025-08-25 12:24:01] Checking for crashed automation processes...
+[2025-08-25 12:24:01] Checking memory usage...
+[2025-08-25 12:24:01] High memory usage detected (555.773 MB), restarting services...
+[2025-08-25T15:24:02.015Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-25T15:24:02.015Z] Stopping all services...
+[2025-08-25T15:24:02.016Z] Stopped 0 services
+[2025-08-25T15:24:02.060Z] Stopping ML Link Intelligence...
+[2025-08-25T15:24:02.105Z] Stopping Link Health Scheduler...
+[2025-08-25T15:24:02.107Z] Stopping Link Health Scheduler
+[2025-08-25T15:24:02.107Z] All scheduled jobs cleared
+[2025-08-25T15:24:02.152Z] Stopping Real-Time Performance Monitor...
+[2025-08-25T15:24:02.153Z] Stopping performance monitoring
+[2025-08-25T15:24:07.264Z] Starting Autonomous System Manager
+[2025-08-25T15:24:07.368Z] Starting all enabled services...
+[2025-08-25T15:24:07.370Z] Starting service: autonomous-system-manager
+[2025-08-25T15:24:07.370Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-25T15:24:08.371Z] Starting service: ml-link-intelligence
+[2025-08-25T15:24:08.372Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-25T15:24:09.376Z] Starting service: link-health-scheduler
+[2025-08-25T15:24:09.377Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-25T15:24:10.452Z] Starting service: real-time-performance-monitor
+[2025-08-25T15:24:10.454Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-25T15:24:10.259Z] Starting ML Link Intelligence worker
+[2025-08-25T15:24:10.608Z] Added https://github.com to analysis queue
+[2025-08-25T15:24:10.609Z] Added https://stackoverflow.com to analysis queue
+[2025-08-25T15:24:10.609Z] Added https://medium.com to analysis queue
+[2025-08-25T15:24:10.610Z] Added https://dev.to to analysis queue
+[2025-08-25T15:24:10.663Z] Added https://wikipedia.org to analysis queue
+[2025-08-25T15:24:10.672Z] Processing queue with 5 links
+[2025-08-25T15:24:10.673Z] Analyzing link: https://github.com
+[2025-08-25T15:24:10.964Z] Analysis complete for https://github.com: good (200)
+[2025-08-25T15:24:11.456Z] Started 0/4 services successfully
+[2025-08-25T15:24:11.527Z] Autonomous System Manager is now running
+[2025-08-25T15:24:11.965Z] Analyzing link: https://stackoverflow.com
+[2025-08-25T15:24:12.107Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-25T15:24:12.263Z] Starting Link Health Scheduler
+[2025-08-25T15:24:12.362Z] Starting Link Health Scheduler
+[2025-08-25T15:24:12.363Z] Scheduled check for homepage at Mon Aug 25 2025 12:29:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:24:12.363Z] Scheduled check for services at Mon Aug 25 2025 12:39:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:24:12.363Z] Scheduled check for about at Mon Aug 25 2025 13:24:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:24:12.363Z] Scheduled check for contact at Mon Aug 25 2025 12:39:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:24:12.363Z] Scheduled 4 links for health checks
+[2025-08-25T15:24:13.107Z] Analyzing link: https://medium.com
+[2025-08-25T15:24:13.210Z] Analysis complete for https://medium.com: good (200)
+[2025-08-25 12:24:14] Checking log file sizes...
+[2025-08-25T15:24:14.212Z] Analyzing link: https://dev.to
+[2025-08-25T15:24:14.291Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-25T15:24:14.331Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:24:14.468Z] Starting real-time performance monitoring
+[2025-08-25 12:24:14] Error recovery process completed
+[2025-08-25T15:24:15.294Z] Analyzing link: https://wikipedia.org
+[2025-08-25T15:24:15.373Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-25T15:24:16.373Z] Queue processing complete
+[2025-08-25 12:26:01] Starting error recovery process...
+[2025-08-25 12:26:01] Checking for crashed automation processes...
+[2025-08-25 12:26:01] Checking memory usage...
+[2025-08-25 12:26:02] High memory usage detected (558.215 MB), restarting services...
+[2025-08-25 12:28:02] Starting error recovery process...
+[2025-08-25 12:28:02] Checking for crashed automation processes...
+[2025-08-25 12:28:02] Checking memory usage...
+[2025-08-25 12:28:03] High memory usage detected (557.887 MB), restarting services...
+[2025-08-25T15:28:09.342Z] Starting Autonomous System Manager
+[2025-08-25T15:28:09.573Z] Starting all enabled services...
+[2025-08-25T15:28:09.574Z] Starting service: autonomous-system-manager
+[2025-08-25T15:28:09.574Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-25T15:28:10.575Z] Starting service: ml-link-intelligence
+[2025-08-25T15:28:10.576Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-25T15:28:11.578Z] Starting service: link-health-scheduler
+[2025-08-25T15:28:11.578Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-25T15:28:12.345Z] Starting ML Link Intelligence worker
+[2025-08-25T15:28:12.511Z] Added https://github.com to analysis queue
+[2025-08-25T15:28:12.511Z] Added https://stackoverflow.com to analysis queue
+[2025-08-25T15:28:12.511Z] Added https://medium.com to analysis queue
+[2025-08-25T15:28:12.512Z] Added https://dev.to to analysis queue
+[2025-08-25T15:28:12.512Z] Added https://wikipedia.org to analysis queue
+[2025-08-25T15:28:12.512Z] Processing queue with 5 links
+[2025-08-25T15:28:12.513Z] Analyzing link: https://github.com
+[2025-08-25T15:28:12.581Z] Starting service: real-time-performance-monitor
+[2025-08-25T15:28:12.581Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-25T15:28:12.965Z] Analysis complete for https://github.com: good (200)
+[2025-08-25T15:28:13.585Z] Started 0/4 services successfully
+[2025-08-25T15:28:13.586Z] Autonomous System Manager is now running
+[2025-08-25T15:28:13.967Z] Analyzing link: https://stackoverflow.com
+[2025-08-25T15:28:14.040Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-25T15:28:14.514Z] Starting Link Health Scheduler
+[2025-08-25T15:28:14.670Z] Starting Link Health Scheduler
+[2025-08-25T15:28:14.671Z] Scheduled check for homepage at Mon Aug 25 2025 12:33:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:28:14.672Z] Scheduled check for services at Mon Aug 25 2025 12:43:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:28:14.672Z] Scheduled check for about at Mon Aug 25 2025 13:28:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:28:14.672Z] Scheduled check for contact at Mon Aug 25 2025 12:43:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:28:14.672Z] Scheduled 4 links for health checks
+[2025-08-25T15:28:15.042Z] Analyzing link: https://medium.com
+[2025-08-25T15:28:15.150Z] Analysis complete for https://medium.com: good (200)
+[2025-08-25T15:28:16.152Z] Analyzing link: https://dev.to
+[2025-08-25T15:28:16.211Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-25 12:28:16] Checking log file sizes...
+[2025-08-25T15:28:16.462Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:28:16.634Z] Starting real-time performance monitoring
+[2025-08-25 12:28:17] Error recovery process completed
+[2025-08-25T15:28:17.213Z] Analyzing link: https://wikipedia.org
+[2025-08-25T15:28:17.277Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-25T15:28:18.297Z] Queue processing complete
+[2025-08-25T15:28:46.641Z] ALERT [WARNING] Memory usage warning: 86.98%
+[2025-08-25T15:28:46.641Z] metrics rss=30.34 MB heapUsed=4.26 MB cpuLoad=30.84 memUsage=86.98%
+[2025-08-25T15:29:04.680Z] Status: 4 jobs scheduled, 0 active
+[2025-08-25T15:29:16.641Z] ALERT [WARNING] Memory usage warning: 86.02%
+[2025-08-25T15:29:16.641Z] metrics rss=30.55 MB heapUsed=4.32 MB cpuLoad=30.39 memUsage=86.02%
+[2025-08-25T15:29:46.642Z] ALERT [WARNING] Memory usage warning: 86.82%
+[2025-08-25T15:29:46.642Z] metrics rss=30.59 MB heapUsed=4.36 MB cpuLoad=23.53 memUsage=86.82%
+[2025-08-25 12:30:02] Starting error recovery process...
+[2025-08-25 12:30:02] Checking for crashed automation processes...
+[2025-08-25 12:30:02] Checking memory usage...
+[2025-08-25 12:30:03] High memory usage detected (557.711 MB), restarting services...
+[2025-08-25T15:30:03.874Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-25T15:30:03.874Z] Stopping all services...
+[2025-08-25T15:30:03.874Z] Stopped 0 services
+[2025-08-25T15:30:04.020Z] Stopping ML Link Intelligence...
+[2025-08-25T15:30:04.149Z] Stopping Link Health Scheduler...
+[2025-08-25T15:30:04.151Z] Stopping Link Health Scheduler
+[2025-08-25T15:30:04.152Z] All scheduled jobs cleared
+[2025-08-25T15:30:04.306Z] Stopping Real-Time Performance Monitor...
+[2025-08-25T15:30:04.309Z] Stopping performance monitoring
+[2025-08-25T15:30:09.615Z] Starting Autonomous System Manager
+[2025-08-25T15:30:09.875Z] Starting all enabled services...
+[2025-08-25T15:30:09.878Z] Starting service: autonomous-system-manager
+[2025-08-25T15:30:09.879Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-25T15:30:10.881Z] Starting service: ml-link-intelligence
+[2025-08-25T15:30:10.881Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-25T15:30:11.882Z] Starting service: link-health-scheduler
+[2025-08-25T15:30:11.882Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-25T15:30:12.636Z] Starting ML Link Intelligence worker
+[2025-08-25T15:30:12.815Z] Added https://github.com to analysis queue
+[2025-08-25T15:30:12.823Z] Added https://stackoverflow.com to analysis queue
+[2025-08-25T15:30:12.824Z] Added https://medium.com to analysis queue
+[2025-08-25T15:30:12.824Z] Added https://dev.to to analysis queue
+[2025-08-25T15:30:12.825Z] Added https://wikipedia.org to analysis queue
+[2025-08-25T15:30:12.825Z] Processing queue with 5 links
+[2025-08-25T15:30:12.827Z] Analyzing link: https://github.com
+[2025-08-25T15:30:12.884Z] Starting service: real-time-performance-monitor
+[2025-08-25T15:30:12.885Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-25T15:30:13.091Z] Analysis complete for https://github.com: good (200)
+[2025-08-25T15:30:13.887Z] Started 0/4 services successfully
+[2025-08-25T15:30:13.887Z] Autonomous System Manager is now running
+[2025-08-25T15:30:14.174Z] Analyzing link: https://stackoverflow.com
+[2025-08-25T15:30:14.347Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-25T15:30:14.775Z] Starting Link Health Scheduler
+[2025-08-25T15:30:14.948Z] Starting Link Health Scheduler
+[2025-08-25T15:30:14.948Z] Scheduled check for homepage at Mon Aug 25 2025 12:35:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:30:14.948Z] Scheduled check for services at Mon Aug 25 2025 12:45:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:30:14.949Z] Scheduled check for about at Mon Aug 25 2025 13:30:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:30:14.949Z] Scheduled check for contact at Mon Aug 25 2025 12:45:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-25T15:30:14.950Z] Scheduled 4 links for health checks
+[2025-08-25T15:30:15.349Z] Analyzing link: https://medium.com
+[2025-08-25T15:30:15.446Z] Analysis complete for https://medium.com: good (200)
+[2025-08-25T15:30:16.459Z] Analyzing link: https://dev.to
+[2025-08-25T15:30:16.521Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-25 12:30:16] Checking log file sizes...
+[2025-08-25T15:30:17.142Z] Starting Real-Time Performance Monitor
+[2025-08-25T15:30:17.337Z] Starting real-time performance monitoring
+No metrics available
+[2025-08-25T15:30:17.601Z] Analyzing link: https://wikipedia.org
+[2025-08-25T15:30:17.665Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-25 12:30:18] Error recovery process completed
+[2025-08-25T15:30:18.666Z] Queue processing complete
+[2025-08-25T15:30:18.667Z] Health Report: Score 90, Links 5, Issues 3
+[2025-08-25T15:30:47.344Z] CRITICAL CPU ALERT: CPU load critical: 103.36 - Consider restarting or scaling
+[2025-08-25T15:30:47.344Z] ALERT [CRITICAL] CPU load critical: 103.36
+[2025-08-25T15:30:47.345Z] ALERT [WARNING] Memory usage warning: 92.47%
+[2025-08-25T15:30:47.345Z] metrics rss=30.44 MB heapUsed=4.28 MB cpuLoad=103.36 memUsage=92.47%
+[2025-08-25T15:31:05.144Z] Status: 4 jobs scheduled, 0 active
+[2025-08-25T15:31:17.344Z] ALERT [WARNING] CPU load warning: 87.65
+[2025-08-25T15:31:17.345Z] ALERT [WARNING] Memory usage warning: 91.59%
+[2025-08-25T15:31:17.346Z] metrics rss=30.66 MB heapUsed=4.35 MB cpuLoad=87.65 memUsage=91.59%
+[2025-08-25T15:31:47.345Z] ALERT [WARNING] CPU load warning: 84.13
+[2025-08-25T15:31:47.345Z] ALERT [WARNING] Memory usage warning: 91.40%
+[2025-08-25T15:31:47.346Z] metrics rss=30.74 MB heapUsed=4.42 MB cpuLoad=84.13 memUsage=91.40%
+[2025-08-25 12:32:02] Starting error recovery process...
+[2025-08-25 12:32:02] Checking for crashed automation processes...
+[2025-08-25 12:32:03] Checking memory usage...
+[2025-08-26T03:30:13.620Z] Starting Link Health Scheduler
+[2025-08-26T03:30:13.792Z] Starting Link Health Scheduler
+[2025-08-26T03:30:13.795Z] Scheduled check for homepage at Tue Aug 26 2025 00:35:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:30:13.795Z] Scheduled check for services at Tue Aug 26 2025 00:45:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:30:13.796Z] Scheduled check for about at Tue Aug 26 2025 01:30:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:30:13.796Z] Scheduled check for contact at Tue Aug 26 2025 00:45:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:30:13.796Z] Scheduled 4 links for health checks
+[2025-08-26 00:30:15] Checking log file sizes...
+[2025-08-26T03:30:15.764Z] Starting Real-Time Performance Monitor
+[2025-08-26T03:30:15.922Z] Starting real-time performance monitoring
+No metrics available
+[2025-08-26 00:30:16] Error recovery process completed
+[2025-08-26T03:30:45.946Z] metrics rss=30.79 MB heapUsed=4.28 MB cpuLoad=22.36 memUsage=75.22%
+[2025-08-26T03:31:03.828Z] Status: 4 jobs scheduled, 0 active
+[2025-08-26T03:31:15.932Z] metrics rss=31.00 MB heapUsed=4.34 MB cpuLoad=18.27 memUsage=77.57%
+[2025-08-26T03:31:45.935Z] metrics rss=31.03 MB heapUsed=4.36 MB cpuLoad=15.51 memUsage=73.05%
+[2025-08-26 00:32:01] Starting error recovery process...
+[2025-08-26 00:32:01] Checking for crashed automation processes...
+[2025-08-26 00:32:01] Checking memory usage...
+[2025-08-26 00:32:01] High memory usage detected (611.023 MB), restarting services...
+[2025-08-26T03:32:02.114Z] Stopping Link Health Scheduler...
+[2025-08-26T03:32:02.118Z] Stopping Link Health Scheduler
+[2025-08-26T03:32:02.122Z] All scheduled jobs cleared
+[2025-08-26T03:32:02.179Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T03:32:02.179Z] Stopping performance monitoring
+[2025-08-26T03:32:07.610Z] Starting Autonomous System Manager
+[2025-08-26T03:32:07.774Z] Starting all enabled services...
+[2025-08-26T03:32:07.775Z] Starting service: autonomous-system-manager
+[2025-08-26T03:32:07.775Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-26T03:32:08.776Z] Starting service: ml-link-intelligence
+[2025-08-26T03:32:08.777Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-26T03:32:09.778Z] Starting service: link-health-scheduler
+[2025-08-26T03:32:09.779Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-26T03:32:10.562Z] Starting ML Link Intelligence worker
+[2025-08-26T03:32:10.706Z] Added https://github.com to analysis queue
+[2025-08-26T03:32:10.707Z] Added https://stackoverflow.com to analysis queue
+[2025-08-26T03:32:10.707Z] Added https://medium.com to analysis queue
+[2025-08-26T03:32:10.707Z] Added https://dev.to to analysis queue
+[2025-08-26T03:32:10.707Z] Added https://wikipedia.org to analysis queue
+[2025-08-26T03:32:10.708Z] Processing queue with 5 links
+[2025-08-26T03:32:10.708Z] Analyzing link: https://github.com
+[2025-08-26T03:32:10.782Z] Starting service: real-time-performance-monitor
+[2025-08-26T03:32:10.783Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-26T03:32:10.875Z] Analysis complete for https://github.com: good (200)
+[2025-08-26T03:32:11.794Z] Started 0/4 services successfully
+[2025-08-26T03:32:11.794Z] Autonomous System Manager is now running
+[2025-08-26T03:32:11.886Z] Analyzing link: https://stackoverflow.com
+[2025-08-26T03:32:12.000Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-26T03:32:12.679Z] Starting Link Health Scheduler
+[2025-08-26T03:32:12.894Z] Starting Link Health Scheduler
+[2025-08-26T03:32:12.946Z] Scheduled check for homepage at Tue Aug 26 2025 00:37:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:32:12.946Z] Scheduled check for services at Tue Aug 26 2025 00:47:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:32:12.963Z] Scheduled check for about at Tue Aug 26 2025 01:32:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:32:12.976Z] Scheduled check for contact at Tue Aug 26 2025 00:47:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:32:12.977Z] Scheduled 4 links for health checks
+[2025-08-26T03:32:13.008Z] Analyzing link: https://medium.com
+[2025-08-26T03:32:13.108Z] Analysis complete for https://medium.com: good (200)
+[2025-08-26T03:32:14.111Z] Analyzing link: https://dev.to
+[2025-08-26T03:32:14.163Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-26 00:32:14] Checking log file sizes...
+[2025-08-26T03:32:14.698Z] Starting Real-Time Performance Monitor
+[2025-08-26T03:32:14.873Z] Starting real-time performance monitoring
+[2025-08-26 00:32:15] Error recovery process completed
+[2025-08-26T03:32:15.165Z] Analyzing link: https://wikipedia.org
+[2025-08-26T03:32:15.216Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-26T03:32:16.218Z] Queue processing complete
+[2025-08-26T03:32:44.931Z] metrics rss=30.66 MB heapUsed=4.26 MB cpuLoad=12.03 memUsage=71.71%
+[2025-08-26T03:33:03.008Z] Status: 4 jobs scheduled, 0 active
+[2025-08-26T03:33:14.923Z] metrics rss=30.85 MB heapUsed=4.31 MB cpuLoad=11.66 memUsage=71.74%
+[2025-08-26T03:33:44.920Z] metrics rss=30.88 MB heapUsed=4.34 MB cpuLoad=9.43 memUsage=72.40%
+[2025-08-26 00:34:01] Starting error recovery process...
+[2025-08-26 00:34:01] Checking for crashed automation processes...
+[2025-08-26 00:34:01] Checking memory usage...
+[2025-08-26 00:34:02] High memory usage detected (608.191 MB), restarting services...
+[2025-08-26T03:34:02.317Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-26T03:34:02.320Z] Stopping all services...
+[2025-08-26T03:34:02.326Z] Stopped 0 services
+[2025-08-26T03:34:02.391Z] Stopping ML Link Intelligence...
+[2025-08-26T03:34:02.489Z] Stopping Link Health Scheduler...
+[2025-08-26T03:34:02.549Z] Stopping Link Health Scheduler
+[2025-08-26T03:34:02.549Z] All scheduled jobs cleared
+[2025-08-26T03:34:02.561Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T03:34:02.634Z] Stopping performance monitoring
+[2025-08-26T03:34:08.057Z] Starting Autonomous System Manager
+[2025-08-26T03:34:08.191Z] Starting all enabled services...
+[2025-08-26T03:34:08.192Z] Starting service: autonomous-system-manager
+[2025-08-26T03:34:08.192Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-26T03:34:09.195Z] Starting service: ml-link-intelligence
+[2025-08-26T03:34:09.195Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-26T03:34:10.197Z] Starting service: link-health-scheduler
+[2025-08-26T03:34:10.198Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-26T03:34:10.863Z] Starting ML Link Intelligence worker
+[2025-08-26T03:34:10.973Z] Added https://github.com to analysis queue
+[2025-08-26T03:34:10.974Z] Added https://stackoverflow.com to analysis queue
+[2025-08-26T03:34:10.974Z] Added https://medium.com to analysis queue
+[2025-08-26T03:34:10.974Z] Added https://dev.to to analysis queue
+[2025-08-26T03:34:10.974Z] Added https://wikipedia.org to analysis queue
+[2025-08-26T03:34:10.975Z] Processing queue with 5 links
+[2025-08-26T03:34:10.975Z] Analyzing link: https://github.com
+[2025-08-26T03:34:11.152Z] Analysis complete for https://github.com: good (200)
+[2025-08-26T03:34:11.199Z] Starting service: real-time-performance-monitor
+[2025-08-26T03:34:11.200Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-26T03:34:12.153Z] Analyzing link: https://stackoverflow.com
+[2025-08-26T03:34:12.204Z] Started 0/4 services successfully
+[2025-08-26T03:34:12.207Z] Autonomous System Manager is now running
+[2025-08-26T03:34:12.223Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-26T03:34:13.225Z] Analyzing link: https://medium.com
+[2025-08-26T03:34:13.324Z] Analysis complete for https://medium.com: good (200)
+[2025-08-26T03:34:13.215Z] Starting Link Health Scheduler
+[2025-08-26T03:34:13.344Z] Starting Link Health Scheduler
+[2025-08-26T03:34:13.344Z] Scheduled check for homepage at Tue Aug 26 2025 00:39:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:34:13.344Z] Scheduled check for services at Tue Aug 26 2025 00:49:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:34:13.345Z] Scheduled check for about at Tue Aug 26 2025 01:34:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:34:13.345Z] Scheduled check for contact at Tue Aug 26 2025 00:49:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:34:13.345Z] Scheduled 4 links for health checks
+[2025-08-26T03:34:14.337Z] Analyzing link: https://dev.to
+[2025-08-26T03:34:14.518Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-26 00:34:15] Checking log file sizes...
+[2025-08-26T03:34:15.573Z] Analyzing link: https://wikipedia.org
+[2025-08-26T03:34:15.382Z] Starting Real-Time Performance Monitor
+[2025-08-26T03:34:15.575Z] Starting real-time performance monitoring
+[2025-08-26T03:34:15.628Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-26 00:34:16] Error recovery process completed
+[2025-08-26T03:34:16.690Z] Queue processing complete
+[2025-08-26T03:34:45.581Z] ALERT [WARNING] Memory usage warning: 81.13%
+[2025-08-26T03:34:45.582Z] metrics rss=30.59 MB heapUsed=4.26 MB cpuLoad=31.83 memUsage=81.13%
+[2025-08-26T03:35:03.403Z] Status: 4 jobs scheduled, 0 active
+[2025-08-26T03:35:12.260Z] Periodic status check - all systems operational
+
+=== Performance Monitor Summary ===
+Timestamp: 2025-08-26T03:34:45.577Z
+System Uptime: 0 hours
+Hostname: MacBook-Pro-de-Kleber.local
+
+Current Status:
+  CPU Load: 31.83
+  Memory Usage: 81.13%
+  Memory Free: 6.04 GB
+  Process Memory: 30.59 MB
+  Process Uptime: 0 minutes
+
+Alerts:
+  Total: 1
+  Critical: 0 🔴
+  Warning: 1 🟡
+
+===================================
+
+[2025-08-26T03:35:15.581Z] ALERT [WARNING] Memory usage warning: 83.67%
+[2025-08-26T03:35:15.582Z] metrics rss=30.95 MB heapUsed=4.42 MB cpuLoad=46.40 memUsage=83.67%
+[2025-08-26T03:35:45.582Z] metrics rss=31.01 MB heapUsed=4.45 MB cpuLoad=47.78 memUsage=73.31%
+[2025-08-26 00:36:00] Starting error recovery process...
+[2025-08-26 00:36:00] Checking for crashed automation processes...
+[2025-08-26 00:36:01] Checking memory usage...
+[2025-08-26 00:36:01] High memory usage detected (610.227 MB), restarting services...
+[2025-08-26T03:36:01.237Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-26T03:36:01.239Z] Stopping all services...
+[2025-08-26T03:36:01.239Z] Stopped 0 services
+[2025-08-26T03:36:01.291Z] Stopping ML Link Intelligence...
+[2025-08-26T03:36:01.332Z] Stopping Link Health Scheduler...
+[2025-08-26T03:36:01.338Z] Stopping Link Health Scheduler
+[2025-08-26T03:36:01.340Z] All scheduled jobs cleared
+[2025-08-26T03:36:01.387Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T03:36:01.387Z] Stopping performance monitoring
+[2025-08-26T03:36:06.589Z] Starting Autonomous System Manager
+[2025-08-26T03:36:06.743Z] Starting all enabled services...
+[2025-08-26T03:36:06.753Z] Starting service: autonomous-system-manager
+[2025-08-26T03:36:06.754Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-26T03:36:07.760Z] Starting service: ml-link-intelligence
+[2025-08-26T03:36:07.760Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-26T03:36:08.764Z] Starting service: link-health-scheduler
+[2025-08-26T03:36:08.765Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-26T03:36:09.770Z] Starting service: real-time-performance-monitor
+[2025-08-26T03:36:09.777Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-26T03:36:09.751Z] Starting ML Link Intelligence worker
+[2025-08-26T03:36:09.887Z] Added https://github.com to analysis queue
+[2025-08-26T03:36:09.889Z] Added https://stackoverflow.com to analysis queue
+[2025-08-26T03:36:09.891Z] Added https://medium.com to analysis queue
+[2025-08-26T03:36:09.893Z] Added https://dev.to to analysis queue
+[2025-08-26T03:36:09.893Z] Added https://wikipedia.org to analysis queue
+[2025-08-26T03:36:09.894Z] Processing queue with 5 links
+[2025-08-26T03:36:09.894Z] Analyzing link: https://github.com
+[2025-08-26T03:36:10.185Z] Analysis complete for https://github.com: good (200)
+[2025-08-26T03:36:10.794Z] Started 0/4 services successfully
+[2025-08-26T03:36:10.869Z] Autonomous System Manager is now running
+[2025-08-26T03:36:11.188Z] Analyzing link: https://stackoverflow.com
+[2025-08-26T03:36:11.368Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-26T03:36:11.967Z] Starting Link Health Scheduler
+[2025-08-26T03:36:12.125Z] Starting Link Health Scheduler
+[2025-08-26T03:36:12.126Z] Scheduled check for homepage at Tue Aug 26 2025 00:41:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:36:12.126Z] Scheduled check for services at Tue Aug 26 2025 00:51:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:36:12.127Z] Scheduled check for about at Tue Aug 26 2025 01:36:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:36:12.127Z] Scheduled check for contact at Tue Aug 26 2025 00:51:12 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:36:12.127Z] Scheduled 4 links for health checks
+[2025-08-26T03:36:12.371Z] Analyzing link: https://medium.com
+[2025-08-26T03:36:12.445Z] Analysis complete for https://medium.com: good (200)
+[2025-08-26T03:36:13.451Z] Analyzing link: https://dev.to
+[2025-08-26T03:36:13.524Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-26 00:36:13] Checking log file sizes...
+[2025-08-26T03:36:14.052Z] Starting Real-Time Performance Monitor
+[2025-08-26T03:36:14.186Z] Starting real-time performance monitoring
+[2025-08-26T03:36:14.525Z] Analyzing link: https://wikipedia.org
+[2025-08-26T03:36:14.572Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-26 00:36:14] Error recovery process completed
+[2025-08-26T03:36:15.575Z] Queue processing complete
+[2025-08-26T03:36:44.193Z] metrics rss=30.73 MB heapUsed=4.25 MB cpuLoad=25.75 memUsage=78.25%
+[2025-08-26T03:37:02.150Z] Status: 4 jobs scheduled, 0 active
+[2025-08-26T03:37:14.192Z] metrics rss=30.93 MB heapUsed=4.31 MB cpuLoad=20.33 memUsage=77.78%
+[2025-08-26T03:37:44.192Z] metrics rss=30.96 MB heapUsed=4.34 MB cpuLoad=19.09 memUsage=76.58%
+[2025-08-26T03:38:02.190Z] Status: 4 jobs scheduled, 0 active
+[2025-08-26 00:38:02] Starting error recovery process...
+[2025-08-26 00:38:02] Checking for crashed automation processes...
+[2025-08-26 00:38:03] Checking memory usage...
+[2025-08-26 00:38:03] High memory usage detected (609.109 MB), restarting services...
+[2025-08-26T03:38:03.354Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-26T03:38:03.356Z] Stopping all services...
+[2025-08-26T03:38:03.356Z] Stopped 0 services
+[2025-08-26T03:38:03.468Z] Stopping Link Health Scheduler...
+[2025-08-26T03:38:03.470Z] Stopping Link Health Scheduler
+[2025-08-26T03:38:03.471Z] All scheduled jobs cleared
+[2025-08-26T03:38:03.413Z] Stopping ML Link Intelligence...
+[2025-08-26T03:38:03.745Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T03:38:03.745Z] Stopping performance monitoring
+[2025-08-26T03:38:09.064Z] Starting Autonomous System Manager
+[2025-08-26T03:38:09.206Z] Starting all enabled services...
+[2025-08-26T03:38:09.206Z] Starting service: autonomous-system-manager
+[2025-08-26T03:38:09.207Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-26T03:38:10.208Z] Starting service: ml-link-intelligence
+[2025-08-26T03:38:10.209Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-26T03:38:11.210Z] Starting service: link-health-scheduler
+[2025-08-26T03:38:11.210Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-26T03:38:12.212Z] Starting service: real-time-performance-monitor
+[2025-08-26T03:38:12.213Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-26T03:38:12.262Z] Starting ML Link Intelligence worker
+[2025-08-26T03:38:12.390Z] Added https://github.com to analysis queue
+[2025-08-26T03:38:12.391Z] Added https://stackoverflow.com to analysis queue
+[2025-08-26T03:38:12.391Z] Added https://medium.com to analysis queue
+[2025-08-26T03:38:12.391Z] Added https://dev.to to analysis queue
+[2025-08-26T03:38:12.392Z] Added https://wikipedia.org to analysis queue
+[2025-08-26T03:38:12.392Z] Processing queue with 5 links
+[2025-08-26T03:38:12.392Z] Analyzing link: https://github.com
+[2025-08-26T03:38:12.643Z] Analysis complete for https://github.com: good (200)
+[2025-08-26T03:38:13.224Z] Started 0/4 services successfully
+[2025-08-26T03:38:13.224Z] Autonomous System Manager is now running
+[2025-08-26T03:38:13.646Z] Analyzing link: https://stackoverflow.com
+[2025-08-26T03:38:13.746Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-26T03:38:14.231Z] Starting Link Health Scheduler
+[2025-08-26T03:38:14.358Z] Starting Link Health Scheduler
+[2025-08-26T03:38:14.359Z] Scheduled check for homepage at Tue Aug 26 2025 00:43:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:38:14.359Z] Scheduled check for services at Tue Aug 26 2025 00:53:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:38:14.359Z] Scheduled check for about at Tue Aug 26 2025 01:38:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:38:14.359Z] Scheduled check for contact at Tue Aug 26 2025 00:53:14 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:38:14.359Z] Scheduled 4 links for health checks
+[2025-08-26T03:38:14.747Z] Analyzing link: https://medium.com
+[2025-08-26T03:38:14.839Z] Analysis complete for https://medium.com: good (200)
+[2025-08-26T03:38:15.840Z] Analyzing link: https://dev.to
+[2025-08-26T03:38:15.910Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-26 00:38:16] Checking log file sizes...
+[2025-08-26T03:38:16.344Z] Starting Real-Time Performance Monitor
+[2025-08-26T03:38:16.488Z] Starting real-time performance monitoring
+[2025-08-26T03:38:16.911Z] Analyzing link: https://wikipedia.org
+[2025-08-26T03:38:16.978Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-26 00:38:17] Error recovery process completed
+[2025-08-26T03:38:17.980Z] Queue processing complete
+[2025-08-26T03:38:46.494Z] ALERT [WARNING] Memory usage warning: 81.83%
+[2025-08-26T03:38:46.494Z] metrics rss=30.29 MB heapUsed=4.25 MB cpuLoad=40.70 memUsage=81.83%
+[2025-08-26T03:39:04.375Z] Status: 4 jobs scheduled, 0 active
+[2025-08-26T03:39:16.492Z] ALERT [WARNING] Memory usage warning: 80.48%
+[2025-08-26T03:39:16.493Z] metrics rss=30.51 MB heapUsed=4.31 MB cpuLoad=36.18 memUsage=80.48%
+[2025-08-26T03:39:46.495Z] ALERT [WARNING] Memory usage warning: 81.78%
+[2025-08-26T03:39:46.496Z] metrics rss=30.55 MB heapUsed=4.35 MB cpuLoad=37.56 memUsage=81.78%
+[2025-08-26 00:40:01] Starting error recovery process...
+[2025-08-26 00:40:01] Checking for crashed automation processes...
+[2025-08-26 00:40:01] Checking memory usage...
+[2025-08-26 00:40:02] High memory usage detected (610.73 MB), restarting services...
+[2025-08-26T03:40:02.254Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-26T03:40:02.255Z] Stopping all services...
+[2025-08-26T03:40:02.255Z] Stopped 0 services
+[2025-08-26T03:40:02.312Z] Stopping ML Link Intelligence...
+[2025-08-26T03:40:02.373Z] Stopping Link Health Scheduler...
+[2025-08-26T03:40:02.374Z] Stopping Link Health Scheduler
+[2025-08-26T03:40:02.375Z] All scheduled jobs cleared
+[2025-08-26T03:40:02.436Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T03:40:02.438Z] Stopping performance monitoring
+[2025-08-26T03:40:07.758Z] Starting Autonomous System Manager
+[2025-08-26T03:40:07.968Z] Starting all enabled services...
+[2025-08-26T03:40:07.970Z] Starting service: autonomous-system-manager
+[2025-08-26T03:40:07.970Z] Error starting autonomous-system-manager: Cannot access 'process' before initialization
+[2025-08-26T03:40:08.971Z] Starting service: ml-link-intelligence
+[2025-08-26T03:40:08.972Z] Error starting ml-link-intelligence: Cannot access 'process' before initialization
+[2025-08-26T03:40:09.973Z] Starting service: link-health-scheduler
+[2025-08-26T03:40:09.974Z] Error starting link-health-scheduler: Cannot access 'process' before initialization
+[2025-08-26T03:40:10.976Z] Starting service: real-time-performance-monitor
+[2025-08-26T03:40:10.977Z] Error starting real-time-performance-monitor: Cannot access 'process' before initialization
+[2025-08-26T03:40:10.888Z] Starting ML Link Intelligence worker
+[2025-08-26T03:40:11.058Z] Added https://github.com to analysis queue
+[2025-08-26T03:40:11.058Z] Added https://stackoverflow.com to analysis queue
+[2025-08-26T03:40:11.059Z] Added https://medium.com to analysis queue
+[2025-08-26T03:40:11.059Z] Added https://dev.to to analysis queue
+[2025-08-26T03:40:11.059Z] Added https://wikipedia.org to analysis queue
+[2025-08-26T03:40:11.060Z] Processing queue with 5 links
+[2025-08-26T03:40:11.060Z] Analyzing link: https://github.com
+[2025-08-26T03:40:11.226Z] Analysis complete for https://github.com: good (200)
+[2025-08-26T03:40:12.009Z] Started 0/4 services successfully
+[2025-08-26T03:40:12.010Z] Autonomous System Manager is now running
+[2025-08-26T03:40:12.227Z] Analyzing link: https://stackoverflow.com
+[2025-08-26T03:40:12.309Z] Analysis complete for https://stackoverflow.com: poor (403)
+[2025-08-26T03:40:12.926Z] Starting Link Health Scheduler
+[2025-08-26T03:40:13.087Z] Starting Link Health Scheduler
+[2025-08-26T03:40:13.090Z] Scheduled check for homepage at Tue Aug 26 2025 00:45:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:40:13.113Z] Scheduled check for services at Tue Aug 26 2025 00:55:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:40:13.113Z] Scheduled check for about at Tue Aug 26 2025 01:40:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:40:13.114Z] Scheduled check for contact at Tue Aug 26 2025 00:55:13 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:40:13.115Z] Scheduled 4 links for health checks
+[2025-08-26T03:40:13.324Z] Analyzing link: https://medium.com
+[2025-08-26T03:40:13.485Z] Analysis complete for https://medium.com: good (200)
+[2025-08-26T03:40:14.485Z] Analyzing link: https://dev.to
+[2025-08-26T03:40:14.657Z] Analysis complete for https://dev.to: poor (403)
+[2025-08-26 00:40:15] Checking log file sizes...
+[2025-08-26T03:40:15.220Z] Starting Real-Time Performance Monitor
+[2025-08-26T03:40:15.373Z] Starting real-time performance monitoring
+No metrics available
+[2025-08-26T03:40:15.660Z] Analyzing link: https://wikipedia.org
+[2025-08-26T03:40:15.801Z] Analysis complete for https://wikipedia.org: poor (403)
+[2025-08-26 00:40:16] Error recovery process completed
+[2025-08-26T03:40:16.805Z] Queue processing complete
+[2025-08-26T03:40:16.817Z] Health Report: Score 90, Links 5, Issues 3
+[2025-08-26T03:40:45.378Z] ALERT [WARNING] Memory usage warning: 81.63%
+[2025-08-26T03:40:45.379Z] metrics rss=30.51 MB heapUsed=4.28 MB cpuLoad=64.04 memUsage=81.63%
+[2025-08-26T03:41:03.140Z] Status: 4 jobs scheduled, 0 active
+[2025-08-26T03:41:15.396Z] metrics rss=30.73 MB heapUsed=4.34 MB cpuLoad=46.50 memUsage=79.84%
+[2025-08-26T03:41:45.394Z] metrics rss=30.75 MB heapUsed=4.37 MB cpuLoad=37.20 memUsage=78.19%
+[2025-08-26 00:42:01] Starting error recovery process...
+[2025-08-26 00:42:01] Checking for crashed automation processes...
+[2025-08-26 00:42:01] Checking memory usage...
+[2025-08-26 00:42:02] High memory usage detected (609.984 MB), restarting services...
+[2025-08-26T03:42:02.327Z] Shutting down Autonomous System Manager gracefully...
+[2025-08-26T03:42:02.328Z] Stopping all services...
+[2025-08-26T03:42:02.328Z] Stopped 0 services
+[2025-08-26T03:42:02.500Z] Stopping ML Link Intelligence...
+[2025-08-26T03:42:02.558Z] Stopping Link Health Scheduler...
+[2025-08-26T03:42:02.559Z] Stopping Link Health Scheduler
+[2025-08-26T03:42:02.560Z] All scheduled jobs cleared
+[2025-08-26T03:42:02.627Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T03:42:02.628Z] Stopping performance monitoring

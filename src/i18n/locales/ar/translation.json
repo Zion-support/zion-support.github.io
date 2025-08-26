@@ -1,0 +1,121 @@
+
+{
+  "general": {
+    "app_name": "سوق زيون للذكاء الاصطناعي",
+    "loading": "جاري التحميل...",
+    "search": "البحث",
+    "select_language": "اختر اللغة",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "submit": "إرسال",
+    "yes": "نعم",
+    "no": "لا",
+    "success": "نجاح",
+    "error": "خطأ",
+    "open_main_menu": "افتح القائمة الرئيسية",
+    "toggle_mobile_menu": "تبديل قائمة الجوال",
+    "greeting_user": "مرحباً، {{name}}!",
+    "status_page": "صفحة الحالة",
+    "check_status_page": "يمكنك محاولة تحديث الصفحة أو زيارة",
+    "back_to_top": "العودة للأعلى"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "marketplace": "السوق",
+    "services": "الخدمات",
+    "categories": "الفئات",
+    "talent": "المواهب",
+    "equipment": "المعدات",
+    "community": "المجتمع",
+    "dashboard": "لوحة التحكم",
+    "messages": "الرسائل",
+    "post_job": "نشر وظيفة",
+    "analytics": "تحليلات",
+    "faq": "الأسئلة الشائعة",
+    "help": "مركز المساعدة"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "signup": "إنشاء حساب",
+    "logout": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "forgot_password": "نسيت كلمة المرور؟",
+    "remember_me": "تذكرني",
+    "login_success": "تم تسجيل الدخول بنجاح",
+    "logout_success": "تم تسجيل الخروج بنجاح"
+  },
+  "cart": {
+    "title": "سلة التسوق",
+    "empty": "سلة التسوق فارغة",
+    "empty_alt": "صورة توضيحية لسلة تسوق فارغة",
+    "empty_preview": "السلة فارغة",
+    "continue_shopping": "متابعة التسوق",
+    "subtotal": "المجموع الفرعي",
+    "processing": "جار المعالجة...",
+    "checkout": "إتمام الشراء",
+    "view_cart": "عرض السلة"
+  },
+  "home": {
+    "hero_title": "مستقبل سوق التكنولوجيا والذكاء الاصطناعي",
+    "hero_subtitle": "أول سوق مجاني مخصص للتكنولوجيا المتطورة والذكاء الاصطناعي",
+    "browse_marketplace": "تصفح السوق",
+    "create_profile": "إنشاء ملف شخصي",
+    "explore_tools": "استكشاف أدواتنا",
+    "tools_description": "كل ما تحتاجه للتواصل مع نظام الذكاء الاصطناعي والتكنولوجيا"
+  },
+  "jobs": {
+    "post_job_title": "نشر وظيفة",
+    "post_job_description": "املأ النموذج أدناه لنشر وظيفتك والعثور على المواهب المناسبة",
+    "job_title": "عنوان الوظيفة",
+    "job_description": "وصف الوظيفة",
+    "skills_required": "المهارات المطلوبة",
+    "budget": "الميزانية",
+    "deadline": "الموعد النهائي",
+    "job_posted": "تم نشر الوظيفة بنجاح"
+  },
+  "onboarding": {
+    "title": "ما الذي جلبك إلى زيون؟",
+    "subtitle": "اختر كيفية استخدامك لمنصتنا",
+    "talent_title": "أقدم خدمات",
+    "talent_desc": "ابحث عن عمل واعرض مهاراتك",
+    "client_title": "أقوم بالتوظيف",
+    "client_desc": "انشر الوظائف وابحث عن محترفين موهوبين"
+  },
+  "language": {
+    "en": "English",
+    "es": "Español",
+    "pt": "Português",
+    "ar": "العربية",
+    "language_changed": "تم تغيير اللغة إلى {{language}}",
+    "switch_to_detected": "التبديل إلى {{language}}؟"
+  },
+  "error_boundary": {
+    "message": "حدث خطأ ما.",
+    "retry": "إعادة المحاولة"
+  }
+,
+  "errors": {
+    "page_not_found": "عفوًا! الصفحة غير موجودة",
+    "return_home": "العودة إلى الرئيسية",
+    "forgot_password_prompt": "هل نسيت كلمة المرور؟ يمكنك إعادة تعيينها هنا:",
+    "reset_password": "إعادة تعيين كلمة المرور",
+    "or_return_home": "أو العودة إلى الرئيسية",
+    "access_denied": "تم رفض الوصول",
+    "no_permission": "ليس لديك الصلاحية للوصول إلى هذه الصفحة. قد يكون ذلك بسبب عدم امتلاك حسابك للأذونات المطلوبة أو أنك بحاجة إلى إكمال ملفك الشخصي.",
+    "login_different_account": "تسجيل الدخول بحساب مختلف",
+    "payment_success_title": "تم الدفع بنجاح!",
+    "payment_success_message": "تمت معالجة دفعتك بنجاح. لديك الآن إمكانية الوصول إلى جميع الميزات المميزة.",
+    "go_to_dashboard": "الانتقال إلى لوحة التحكم",
+    "go_back": "عودة",
+    "page_not_found_details": "يبدو أن الصفحة التي تبحث عنها اختفت في الفراغ الرقمي. لنعُد إلى المسار لاستكشاف مستقبل الذكاء الاصطناعي والتكنولوجيا.",
+    "explore_marketplace": "استكشف سوقنا",
+    "browse_marketplace": "تصفح السوق",
+    "find_talent": "ابحث عن المواهب",
+    "browse_categories": "تصفح الفئات",
+    "get_help": "الحصول على مساعدة",
+    "error_help_intro": "إذا كنت تعتقد أن هذا خطأ، يرجى",
+    "error_help_contact": "التواصل مع فريق الدعم لدينا",
+    "error_help_or": "أو التحقق من"
+  }
+}

@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+export const added2026Q2Services = [
+  {
+    id: 'quantum-neural-network-platform',
+    name: 'Quantum Neural Network Platform',
+    description: 'Revolutionary neural network platform leveraging quantum computing',
+    category: 'Quantum AI',
+    pricing: {
+      starter: 1299,
+      professional: 3999,
+      enterprise: 9999
+    },
+    features: [
+      'Quantum Neural Networks',
+      'Advanced Training',
+      'Real-time Processing',
+      'Scalable Architecture',
+      'Research Tools'
+    ],
+    targetAudience: 'AI Researchers & Enterprises',
+    technology: ['Quantum Computing', 'Python', 'React', 'Advanced ML'],
+    status: 'Live',
+    launchDate: '2026-04-20'
+=======
+export interface Added2026Q2Service {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+}
+
+export const added2026Q2Services: Added2026Q2Service[] = [
+  {
+    id: 'q2-2026-service-1',
+    name: 'Q2 2026 Service 1',
+    tagline: 'Second quarter 2026 service',
+    price: '$799',
+    features: ['2026 Q2 features', 'Advanced capabilities', 'Enhanced performance']
+>>>>>>> bca4af5f58518c326a99091d5c8fdc6d47b68566
+  }
+];

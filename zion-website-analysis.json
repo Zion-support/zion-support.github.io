@@ -1,0 +1,329 @@
+{
+  "timestamp": "2025-08-26T12:13:31.046Z",
+  "baseUrl": "https://ziontechgroup.com",
+  "summary": {
+    "totalPages": 18,
+    "brokenLinks": 0,
+    "missingPages": 0,
+    "externalLinks": 0,
+    "images": 0,
+    "scripts": 36,
+    "stylesheets": 36
+  },
+  "workingLinks": [
+    "https://ziontechgroup.com/",
+    "https://ziontechgroup.com/about",
+    "https://ziontechgroup.com/contact",
+    "https://ziontechgroup.com/careers",
+    "https://ziontechgroup.com/solutions",
+    "https://ziontechgroup.com/research-development",
+    "https://ziontechgroup.com/case-studies",
+    "https://ziontechgroup.com/news",
+    "https://ziontechgroup.com/events",
+    "https://ziontechgroup.com/services",
+    "https://ziontechgroup.com/services/ai",
+    "https://ziontechgroup.com/services/cloud",
+    "https://ziontechgroup.com/services/cybersecurity",
+    "https://ziontechgroup.com/services/infrastructure",
+    "https://ziontechgroup.com/services/transformation",
+    "https://ziontechgroup.com/services/consulting",
+    "https://ziontechgroup.com/privacy",
+    "https://ziontechgroup.com/terms"
+  ],
+  "brokenLinks": [],
+  "missingPages": [],
+  "externalLinks": [],
+  "images": [],
+  "scripts": [
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/about"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/about"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/contact"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/contact"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/careers"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/careers"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/solutions"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/solutions"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/research-development"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/research-development"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/case-studies"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/case-studies"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/news"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/news"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/events"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/events"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/services"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/services"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/services/ai"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/services/ai"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/services/cloud"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/services/cloud"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/services/cybersecurity"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/services/cybersecurity"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/services/infrastructure"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/services/infrastructure"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/services/transformation"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/services/transformation"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/services/consulting"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/services/consulting"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/privacy"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/privacy"
+    },
+    {
+      "url": "https://ziontechgroup.com/js/index-DO19w6ME.js",
+      "page": "https://ziontechgroup.com/terms"
+    },
+    {
+      "url": "https://cdn.gpteng.co/gptengineer.js",
+      "page": "https://ziontechgroup.com/terms"
+    }
+  ],
+  "stylesheets": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/about"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/about"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/contact"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/contact"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/careers"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/careers"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/solutions"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/solutions"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/research-development"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/research-development"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/case-studies"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/case-studies"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/news"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/news"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/events"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/events"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/services"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/services"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/services/ai"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/services/ai"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/services/cloud"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/services/cloud"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/services/cybersecurity"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/services/cybersecurity"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/services/infrastructure"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/services/infrastructure"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/services/transformation"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/services/transformation"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/services/consulting"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/services/consulting"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/privacy"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/privacy"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap",
+      "page": "https://ziontechgroup.com/terms"
+    },
+    {
+      "url": "https://ziontechgroup.com/css/index-Dzy7DNdO.css",
+      "page": "https://ziontechgroup.com/terms"
+    }
+  ]
+}
