@@ -1,10 +1,6 @@
 import React from 'react';
-<<<<<<<< HEAD:src/pages/ResearchDevelopment.tsx.cleanup-backup.1756208769
 import Link from 'next/link';
 
-========
-import { Link } from 'react-router-dom';
->>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896:broken_files_backup/ResearchDevelopment.tsx
 const ResearchDevelopment: React.FC = () => {
   const researchAreas = [
     {
@@ -75,6 +71,7 @@ const ResearchDevelopment: React.FC = () => {
       ]
     }
   ];
+
   const publications = [
     {
       title: "Autonomous AI Systems: A Comprehensive Framework",
@@ -117,6 +114,7 @@ const ResearchDevelopment: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-67e4
     }
   ];
+
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-20">
@@ -131,12 +129,13 @@ const ResearchDevelopment: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Pushing the boundaries of technology through innovative research, cutting-edge development,
+              Pushing the boundaries of technology through innovative research, cutting-edge development, 
               and breakthrough discoveries that shape the future of AI and computing.
             </p>
           </div>
         </div>
       </section>
+
       {/* Research Areas */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,9 +145,10 @@ const ResearchDevelopment: React.FC = () => {
               Our multidisciplinary research spans the most exciting frontiers of technology
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchAreas.map((area, index) => (
-              <div
+              <div 
                 key={index}
                 className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -168,6 +168,7 @@ const ResearchDevelopment: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Publications */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -177,9 +178,10 @@ const ResearchDevelopment: React.FC = () => {
               Our research contributions to the global scientific community
             </p>
           </div>
+          
           <div className="space-y-6">
             {publications.map((pub, index) => (
-              <div
+              <div 
                 key={index}
                 className="bg-slate-700/30 p-6 rounded-lg border border-white/10 hover:border-blue-400/30 transition-all duration-300"
               >
@@ -193,6 +195,7 @@ const ResearchDevelopment: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Research Facilities */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -202,6 +205,7 @@ const ResearchDevelopment: React.FC = () => {
               State-of-the-art laboratories and computing infrastructure
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
@@ -219,6 +223,7 @@ const ResearchDevelopment: React.FC = () => {
                 <li>• Specialized AI Training Infrastructure</li>
               </ul>
             </div>
+            
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -238,6 +243,7 @@ const ResearchDevelopment: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -318,4 +324,5 @@ const ResearchDevelopment: React.FC = () => {
     </div>
   );
 };
+
 export default ResearchDevelopment;

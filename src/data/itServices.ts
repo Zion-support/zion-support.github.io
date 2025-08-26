@@ -30,6 +30,7 @@ export interface ITService {
   responseTime: string;
   createdAt: string;
 }
+
 export const IT_SERVICES: ITService[] = [
   {
     id: "ai-development-integration",
@@ -350,15 +351,18 @@ export const IT_SERVICES: ITService[] = [
     createdAt: "2024-01-22T15:30:00.000Z"
   }
 ];
+
 export const getITServicesByCategory = (category: string) => {
   return IT_SERVICES.filter(service => service.category === category);
 };
+
 export const getITServicesBySubcategory = (subcategory: string) => {
   return IT_SERVICES.filter(service => service.subcategory === subcategory);
 };
+
 export const searchITServices = (query: string) => {
   const lowercaseQuery = query.toLowerCase();
-  return IT_SERVICES.filter(service =>
+  return IT_SERVICES.filter(service => 
     service.title.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))

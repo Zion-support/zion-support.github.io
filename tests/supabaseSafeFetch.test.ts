@@ -1,6 +1,4 @@
-import * as supabaseClient from '@/integrations/supabase/client';
-const { checkOnline, safeFetch } = supabaseClient;
-import { vi } from 'vitest';
+import * as client from '@/integrations/supabase/client';
 
 // Test that checkOnline returns false when navigator is offline
 it('checkOnline returns false when navigator is offline', async () => {
@@ -27,7 +25,24 @@ it('safeFetch throws when fetch rejects', async () => {
     value: { onLine: true },
     writable: true,
   });
-  vi.spyOn(supabaseClient, 'checkOnline').mockResolvedValue(true);
-  vi.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error'));
-  await expect(safeFetch('https://example.com')).rejects.toThrow('Failed to connect to Supabase');
+  jest.spyOn(client, 'checkOnline').mockResolvedValue(true);
+  jest.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error'));
+  await expect(client.safeFetch('https://example.com')).rejects.toThrow('Failed to connect to Supabase');
+});
+
+// Test that safeFetch preserves headers passed as a Headers object
+it('safeFetch preserves Headers object values', async () => {
+  Object.defineProperty(window, 'navigator', {
+    value: { onLine: true },
+    writable: true,
+  });
+  const headers = new Headers({ apikey: 'test-key' });
+  const fetchSpy = jest.fn().mockResolvedValue({ ok: true, status: 200 } as Response);
+  jest.spyOn(client, 'checkOnline').mockResolvedValue(true);
+  (global as any).fetch = fetchSpy;
+
+  await client.safeFetch('https://example.com', { headers });
+
+  const calledHeaders = fetchSpy.mock.calls[0][1]?.headers as Headers;
+  expect(calledHeaders.get('apikey')).toBe('test-key');
 });

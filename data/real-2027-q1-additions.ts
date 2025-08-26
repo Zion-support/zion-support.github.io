@@ -1,23 +1,33 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 export const real2027Q1Additions = [
   {
-<<<<<<< HEAD
     id: 'q1-2027-service-1',
     name: 'Q1 2027 Service',
     tagline: 'Q1 2027 service solutions',
     price: '$499',
     category: 'Q1 2027 Services'
-  }
-];
 =======
-    id: '2027-q1-001',
-    title: 'Q1 2027 Future Platform',
-    description: 'Future platform for Q1 2027',
-    category: 'Future',
-    pricing: { starter: 239, professional: 699, enterprise: 1799 },
-    features: ['Q1 2027 features', 'Future tools', 'Next-gen capabilities'],
-    slug: 'q1-2027-future-platform'
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+export interface Real2027Q1Addition {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+}
+
+export const real2027Q1Additions: Real2027Q1Addition[] = [
+  {
+    id: 'q1-2027-addition-1',
+    name: 'Q1 2027 Addition 1',
+    tagline: 'First quarter 2027 addition',
+    price: '$1199',
+    features: ['Q1 2027 features', 'Future innovations', 'Next-gen solutions']
+<<<<<<< HEAD
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];
-
-export default real2027Q1Additions;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7

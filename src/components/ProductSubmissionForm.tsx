@@ -222,21 +222,6 @@ export function ProductSubmissionForm() {
           throw new Error(updateError.message);
         }
       }
-
-      // Send listing to moderation service
-      try {
-        await supabase.functions.invoke('moderate-listing', {
-          body: {
-            listingId: productRecord.id,
-            listingType: 'product',
-            description: values.description,
-            images: values.image ? [publicUrlData.publicUrl] : [],
-            sellerId: user.id,
-          }
-        });
-      } catch (err) {
-        console.error('Error invoking moderation:', err);
-      }
       
       // Show success message
       toast({

@@ -34,6 +34,7 @@ export interface SpecializedIndustrySolution2025 {
   demoUrl?: string;
   caseStudies?: string[];
 }
+
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution2025[] = [
   // Healthcare & Life Sciences
   {
@@ -101,6 +102,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     demoUrl: "https://ziontechgroup.com/demo/ai-healthcare-diagnostics",
     caseStudies: ["Hospital 40% faster diagnosis", "Clinic 95% accuracy improvement"]
   },
+
   // Financial Services & Banking
   {
     id: "ai-fraud-detection-suite",
@@ -166,6 +168,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["FICO", "LexisNexis", "Experian", "TransUnion"],
     demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection"
   },
+
   // Manufacturing & Industry 4.0
   {
     id: "smart-manufacturing-platform",
@@ -231,6 +234,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Siemens", "GE Digital", "Rockwell Automation", "ABB"],
     demoUrl: "https://ziontechgroup.com/demo/smart-manufacturing"
   },
+
   // Retail & E-commerce
   {
     id: "ai-retail-optimization-platform",
@@ -296,6 +300,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce", "Oracle Commerce"],
     demoUrl: "https://ziontechgroup.com/demo/ai-retail-optimization"
   },
+
   // Transportation & Logistics
   {
     id: "autonomous-logistics-platform",
@@ -361,6 +366,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Manhattan Associates", "Oracle Transportation", "SAP Transportation", "JDA Software"],
     demoUrl: "https://ziontechgroup.com/demo/autonomous-logistics"
   },
+
   // Energy & Utilities
   {
     id: "smart-energy-management-platform",
@@ -426,6 +432,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
     demoUrl: "https://ziontechgroup.com/demo/smart-energy-management"
   },
+
   // Education & EdTech
   {
     id: "ai-education-platform",
@@ -491,6 +498,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Blackboard", "Canvas", "Moodle", "Google Classroom"],
     demoUrl: "https://ziontechgroup.com/demo/ai-education-platform"
   },
+
   // Real Estate & Property Management
   {
     id: "smart-property-management-platform",
@@ -556,6 +564,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Yardi", "RealPage", "AppFolio", "Buildium"],
     demoUrl: "https://ziontechgroup.com/demo/smart-property-management"
   },
+
   // Legal & Compliance
   {
     id: "ai-legal-compliance-platform",

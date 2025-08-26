@@ -21,6 +21,7 @@ export interface IndustrySolution {
     website: string;
   };
 }
+
 export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
   // Healthcare AI Platform
   {
@@ -71,6 +72,7 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // Financial Services Platform
   {
     id: "financial-services-platform",
@@ -120,6 +122,7 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // Manufacturing IoT Platform
   {
     id: "manufacturing-iot-platform",
@@ -169,6 +172,7 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // Retail Analytics Platform
   {
     id: "retail-analytics-platform",
@@ -218,6 +222,7 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // Education Technology Platform
   {
     id: "education-technology-platform",

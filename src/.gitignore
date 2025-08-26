@@ -1,8 +1,0 @@
-# Ignore TypeScript declaration files
-*.d.ts
-
-# Ignore compiled JavaScript files
-*.js
-# Allow PWA event type declarations
-!types/pwa.d.ts
-!types/shoplocket.d.ts

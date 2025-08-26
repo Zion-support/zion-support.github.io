@@ -1,8 +1,11 @@
 {
   "name": "project",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=20.18.1",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next dev",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
@@ -13,7 +16,6 @@
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
-    "@heroicons/react": "^2.2.0",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
@@ -23,27 +25,25 @@
     "@supabase/supabase-js": "^2.39.0",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
-    "chalk": "^5.5.0",
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
     "cron-parser": "^5.3.0",
-    "dotenv": "^17.2.1",
     "events": "^3.3.0",
-    "framer-motion": "^6.5.1",
+    "framer-motion": "^12.23.12",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^10.4.5",
     "js-yaml": "^4.1.0",
     "jsdom": "^24.1.0",
     "lucide-react": "^0.536.0",
-    "next": "^14.2.32",
+    "next": "^11.1.4",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "postcss": "^8.4.32",
-    "react": "18.2.0",
+    "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.3.1",
     "uuid": "^11.1.0"
   },
   "devDependencies": {

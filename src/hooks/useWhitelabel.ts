@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+
 interface Tenant {
   id: string;
   name: string;
   domain: string;
 }
+
 interface WhitelabelConfig {
   companyName: string;
   logo: string;
@@ -11,23 +13,27 @@ interface WhitelabelConfig {
   secondaryColor: string;
   theme: 'light' | 'dark';
 }
+
 interface WhitelabelState {
   config: WhitelabelConfig | null;
   tenant: Tenant | null;
   isLoading: boolean;
 }
+
 export const useWhitelabel = (): WhitelabelState => {
   const [state, setState] = useState<WhitelabelState>({
     config: null,
     tenant: null,
     isLoading: true,
   });
+
   useEffect(() => {
     // In a real app, you would fetch whitelabel configuration
     const fetchWhitelabelConfig = async () => {
       try {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 100));
+        
         setState({
           config: {
             companyName: 'Zion Tech Group',
@@ -51,7 +57,9 @@ export const useWhitelabel = (): WhitelabelState => {
         });
       }
     };
+
     fetchWhitelabelConfig();
   }, []);
+
   return state;
 };

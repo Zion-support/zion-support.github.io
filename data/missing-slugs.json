@@ -1,7 +1,7 @@
+<<<<<<< HEAD
 [
-  "ai-autonomous-business-intelligence",
 =======
-  "advanced-solutions",
+  "ai-autonomous-business-intelligence",
   "ai-autonomous-business-process-automation",
   "ai-autonomous-customer-success",
   "ai-autonomous-ecosystem",
@@ -37,6 +37,7 @@
   "blockchain-enterprise-platform",
   "customer-intelligence-platform",
   "industrial-automation-ai",
+  "industry-solutions",
   "intelligent-project-management-suite",
   "marketing-ai-platform",
   "metaverse-development-studio-pro",
@@ -70,39 +71,11 @@
   "quantum-supply-chain-optimizer",
   "quantum-threat-detection",
   "real-estate-technology-solutions",
-  "services/ai-consciousness-collaboration-platform",
-  "services/ai-consciousness-evolution-platform",
-  "services/ai-consciousness-monitoring-system",
-  "services/ai-powered-business-intelligence-suite",
-  "services/ai-powered-devops-automation",
-  "services/ai-powered-hr-analytics-platform",
-  "services/ai-powered-marketing-automation",
-  "services/autonomous-creative-ai-studio",
-  "services/autonomous-customer-service-ai",
-  "services/autonomous-cybersecurity-orchestrator",
-  "services/autonomous-innovation-ai",
-  "services/autonomous-logistics-optimization",
-  "services/autonomous-network-optimization",
-  "services/autonomous-research-ai-assistant",
-  "services/blockchain-supply-chain-tracking",
-  "services/predictive-maintenance-iot-platform",
-  "services/quantum-blockchain-infrastructure",
-  "services/quantum-cloud-infrastructure-platform",
-  "services/quantum-data-center-solutions",
-  "services/quantum-edge-computing-platform",
-  "services/quantum-emotional-healing-ai",
-  "services/quantum-emotional-intelligence-engine",
-  "services/quantum-memory-consolidation-ai",
-  "services/quantum-predictive-analytics-engine",
-  "services/quantum-storage-solutions",
+  "services/data-contracts-hub",
+  "services/serverless-lakehouse-starter",
   "space-colonization-services",
   "space-mining-platform"
 ]
 =======
 []
-=======
-  "entertainment-media-solutions",
-  "leadership",
-  "real-estate-technology-solutions",
-  "transportation-logistics-solutions"
-]
+>>>>>>> a8e698aa2a3f65846644470f902bc566286f2743

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { AppProps } from 'next/app';
 import '../src/index.css';
 import { AppLayout } from '@/layout/AppLayout';

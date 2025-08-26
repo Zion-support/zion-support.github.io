@@ -1,23 +1,33 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 export const real2026Q3Additions = [
   {
-<<<<<<< HEAD
     id: 'q3-2026-service-1',
     name: 'Q3 2026 Service',
     tagline: 'Q3 2026 service solutions',
     price: '$399',
     category: 'Q3 2026 Services'
-  }
-];
 =======
-    id: '2026-q3-001',
-    title: 'Q3 2026 Innovation Platform',
-    description: 'Innovation platform for Q3 2026',
-    category: 'Innovation',
-    pricing: { starter: 179, professional: 529, enterprise: 1399 },
-    features: ['Q3 features', 'Innovation tools', 'Advanced capabilities'],
-    slug: 'q3-2026-innovation-platform'
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+export interface Real2026Q3Addition {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+}
+
+export const real2026Q3Additions: Real2026Q3Addition[] = [
+  {
+    id: 'q3-2026-addition-1',
+    name: 'Q3 2026 Addition 1',
+    tagline: 'Third quarter 2026 addition',
+    price: '$899',
+    features: ['Q3 2026 features', 'Latest innovations', 'Advanced solutions']
+<<<<<<< HEAD
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];
-
-export default real2026Q3Additions;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7

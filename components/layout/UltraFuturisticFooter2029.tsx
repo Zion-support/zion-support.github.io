@@ -77,13 +77,11 @@ const companyLinks = [
 
 const supportLinks = [
   { name: 'Documentation', href: '/docs' },
-  { name: 'API Reference', href: '/api-documentation' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'White Papers', href: '/white-papers' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'News', href: '/news' },
-  { name: 'Events', href: '/news' },
-  { name: 'Webinars', href: '/news' }
+  { name: 'API Reference', href: '/api' },
+  { name: 'Support Center', href: '/support' },
+  { name: 'Contact Sales', href: '/contact' },
+  { name: 'Training & Certification', href: '/training' },
+  { name: 'Community Forum', href: '/community' }
 ];
 
 const legalLinks = [

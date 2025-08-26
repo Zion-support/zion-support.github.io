@@ -48,6 +48,7 @@ import Target from 'lucide-react/dist/esm/icons/target';
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import Wifi from 'lucide-react/dist/esm/icons/wifi';
 import { SEO } from '@/components/SEO';
+
 const categoryIcons = {
   "AI & Machine Learning": Brain,
   "Cybersecurity": ShieldIcon,
@@ -57,6 +58,7 @@ const categoryIcons = {
   "IoT & Smart Solutions": Wifi,
   "Blockchain & Web3": Link
 };
+
 const pricingTiers = [
   {
     name: "Starter",
@@ -95,18 +97,22 @@ const pricingTiers = [
     ]
   }
 ];
+
 export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
   const getServicesByCategory = (category: string) => {
     if (category === 'all') return ENHANCED_SERVICES;
     return ENHANCED_SERVICES.filter(service => service.category === category);
   };
+
   const formatPrice = (price: number) => {
     if (price >= 1000) {
       return `$${(price / 1000).toFixed(1)}k`;
     }
     return `$${price}`;
   };
+
   const getPricingModelColor = (model: string) => {
     switch (model) {
       case 'subscription': return 'bg-blue-100 text-blue-800';
@@ -116,6 +122,7 @@ export default function ServicesPricingPage() {
       default: return 'bg-gray-100 text-gray-800';
     }
   };
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -124,6 +131,7 @@ export default function ServicesPricingPage() {
         keywords="IT services pricing, AI services cost, cybersecurity pricing, cloud solutions pricing, digital transformation cost"
         canonical="https://ziontechgroup.com/services-pricing"
       />
+
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -145,6 +153,7 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
+
       {/* Contact Banner */}
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-white">
@@ -164,6 +173,7 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
+
       {/* Pricing Tiers Overview */}
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -175,6 +185,7 @@ export default function ServicesPricingPage() {
               Flexible pricing options designed to scale with your business needs
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index) => (
               <Card key={tier.name} className={`relative ${index === 1 ? 'border-2 border-zion-blue shadow-xl scale-105' : ''}`}>
@@ -206,6 +217,7 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
+
       {/* Services by Category Pricing */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -217,6 +229,7 @@ export default function ServicesPricingPage() {
               Explore pricing for each service category with detailed feature breakdowns
             </p>
           </div>
+
           <Tabs defaultValue="all" className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-8 mb-8">
               <TabsTrigger value="all" className="flex items-center gap-2">
@@ -237,6 +250,7 @@ export default function ServicesPricingPage() {
                 );
               })}
             </TabsList>
+
             <TabsContent value="all" className="space-y-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {ENHANCED_SERVICES.map((service) => (
@@ -255,6 +269,7 @@ export default function ServicesPricingPage() {
                         {service.description}
                       </CardDescription>
                     </CardHeader>
+
                     <CardContent className="space-y-4">
                       {/* Pricing */}
                       <div className="bg-gray-50 rounded-lg p-4">
@@ -277,6 +292,7 @@ export default function ServicesPricingPage() {
                           </div>
                         </div>
                       </div>
+
                       {/* Key Features */}
                       <div>
                         <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
@@ -291,6 +307,7 @@ export default function ServicesPricingPage() {
                           ))}
                         </div>
                       </div>
+
                       {/* Benefits */}
                       <div>
                         <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
@@ -306,6 +323,7 @@ export default function ServicesPricingPage() {
                           ))}
                         </ul>
                       </div>
+
                       {/* Service Metrics */}
                       <div className="grid grid-cols-3 gap-2 text-center text-xs bg-gray-50 rounded-lg p-3">
                         <div className="flex items-center gap-1 justify-center">
@@ -321,6 +339,7 @@ export default function ServicesPricingPage() {
                           <span>{service.deliveryTime}</span>
                         </div>
                       </div>
+
                       {/* Action Buttons */}
                       <div className="grid grid-cols-2 gap-3">
                         <Button className="w-full" size="sm">
@@ -337,6 +356,7 @@ export default function ServicesPricingPage() {
                 ))}
               </div>
             </TabsContent>
+
             {SERVICE_CATEGORIES.map((category) => {
               const services = getServicesByCategory(category);
               return (
@@ -357,6 +377,7 @@ export default function ServicesPricingPage() {
                       {category === "Blockchain & Web3" && "Embrace the future with blockchain innovation"}
                     </p>
                   </div>
+
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {services.map((service) => (
                       <Card key={service.id} className="h-full hover:shadow-lg transition-shadow duration-300">
@@ -374,6 +395,7 @@ export default function ServicesPricingPage() {
                             {service.description}
                           </CardDescription>
                         </CardHeader>
+
                         <CardContent className="space-y-4">
                           {/* Pricing */}
                           <div className="bg-gray-50 rounded-lg p-4">
@@ -396,6 +418,7 @@ export default function ServicesPricingPage() {
                               </div>
                             </div>
                           </div>
+
                           {/* Key Features */}
                           <div>
                             <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
@@ -410,6 +433,7 @@ export default function ServicesPricingPage() {
                               ))}
                             </div>
                           </div>
+
                           {/* Benefits */}
                           <div>
                             <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
@@ -425,6 +449,7 @@ export default function ServicesPricingPage() {
                               ))}
                             </ul>
                           </div>
+
                           {/* Service Metrics */}
                           <div className="grid grid-cols-3 gap-2 text-center text-xs bg-gray-50 rounded-lg p-3">
                             <div className="flex items-center gap-1 justify-center">
@@ -440,6 +465,7 @@ export default function ServicesPricingPage() {
                               <span>{service.deliveryTime}</span>
                             </div>
                           </div>
+
                           {/* Action Buttons */}
                           <div className="grid grid-cols-2 gap-3">
                             <Button className="w-full" size="sm">
@@ -461,6 +487,7 @@ export default function ServicesPricingPage() {
           </Tabs>
         </div>
       </div>
+
       {/* Pricing FAQ */}
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -472,6 +499,7 @@ export default function ServicesPricingPage() {
               Common questions about our pricing and service delivery
             </p>
           </div>
+
           <div className="max-w-4xl mx-auto space-y-6">
             <Card>
               <CardHeader>
@@ -484,6 +512,7 @@ export default function ServicesPricingPage() {
                 </p>
               </CardContent>
             </Card>
+
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">What's included in the pricing?</CardTitle>
@@ -495,6 +524,7 @@ export default function ServicesPricingPage() {
                 </p>
               </CardContent>
             </Card>
+
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Can I customize the services?</CardTitle>
@@ -506,6 +536,7 @@ export default function ServicesPricingPage() {
                 </p>
               </CardContent>
             </Card>
+
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">What payment terms do you offer?</CardTitle>
@@ -520,6 +551,7 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
+
       {/* Contact CTA Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple py-20 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -529,6 +561,7 @@ export default function ServicesPricingPage() {
           <p className="text-xl text-zion-slate-light mb-12 max-w-3xl mx-auto">
             Contact our team to discuss your specific needs and get a customized quote
           </p>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
             <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
               <Phone className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
@@ -536,12 +569,14 @@ export default function ServicesPricingPage() {
               <p className="text-zion-slate-light mb-4">Speak with our experts</p>
               <div className="text-2xl font-bold">+1 302 464 0950</div>
             </div>
+
             <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
               <Mail className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
               <p className="text-zion-slate-light mb-4">Get detailed pricing</p>
               <div className="text-lg font-semibold">kleber@ziontechgroup.com</div>
             </div>
+
             <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
               <Target className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
@@ -549,6 +584,7 @@ export default function ServicesPricingPage() {
               <div className="text-sm font-semibold">Middletown, DE 19709</div>
             </div>
           </div>
+
           <div className="flex flex-wrap justify-center gap-6">
             <Button size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light text-lg px-8 py-6">
               <Rocket className="mr-3 h-6 w-6" />

@@ -2,13 +2,15 @@ import React from 'react';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import { Button } from '../ui/button';
 import { AlertCircle, RefreshCw } from 'lucide-react';
+
 interface ProfileErrorStateProps {
   error?: string;
   onRetry?: () => void;
 }
-export const ProfileErrorState: React.FC<ProfileErrorStateProps> = ({
-  error = 'Failed to load profile',
-  onRetry
+
+export const ProfileErrorState: React.FC<ProfileErrorStateProps> = ({ 
+  error = 'Failed to load profile', 
+  onRetry 
 }) => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
@@ -29,6 +31,7 @@ export const ProfileErrorState: React.FC<ProfileErrorStateProps> = ({
             <p className="text-sm text-gray-500">
               We're having trouble loading this profile. Please try again or contact support if the problem persists.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {onRetry && (
                 <Button onClick={onRetry} className="flex items-center space-x-2">
@@ -36,6 +39,7 @@ export const ProfileErrorState: React.FC<ProfileErrorStateProps> = ({
                   <span>Try Again</span>
                 </Button>
               )}
+              
               <Button variant="outline" onClick={() => window.location.href = '/'}>
                 Go Home
               </Button>

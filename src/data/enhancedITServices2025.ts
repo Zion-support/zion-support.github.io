@@ -4,6 +4,7 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
+
 export interface ITService {
   id: number;
   name: string;
@@ -38,6 +39,7 @@ export interface ITService {
   monitoringTools: boolean;
   reportingCapabilities: boolean;
 }
+
 // Enhanced IT Services for 2025
 export const enhancedITServices2025: ITService[] = [
   {
@@ -591,4 +593,5 @@ export const enhancedITServices2025: ITService[] = [
     reportingCapabilities: true
   }
 ];
+
 export default enhancedITServices2025;

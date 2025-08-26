@@ -1,7 +1,6 @@
 
 import { useState } from 'react';
-import { Footer } from '@/components/Footer';
-import { NextSeo } from '@/components/NextSeo';
+import { SEO } from '@/components/SEO';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';
@@ -12,7 +11,7 @@ function PortfolioBuilderContent() {
   
   return (
     <>
-      <NextSeo 
+      <SEO 
         title="Portfolio Builder | Zion AI Marketplace" 
         description="Create and customize your resume and portfolio to showcase your skills and experience." 
       />

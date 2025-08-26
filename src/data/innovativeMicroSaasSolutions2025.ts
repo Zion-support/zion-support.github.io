@@ -24,6 +24,7 @@ export interface InnovativeMicroSaasSolution2025 {
   demoUrl?: string;
   documentationUrl?: string;
 }
+
 export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution2025[] = [
   // AI-Powered Content Generation Suite
   {
@@ -77,6 +78,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     },
     websiteUrl: "https://ziontechgroup.com/ai-content-generation"
   },
+
   // Blockchain DeFi Analytics Platform
   {
     id: "blockchain-defi-analytics-platform",
@@ -129,6 +131,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     },
     websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics"
   },
+
   // IoT Smart Home Management Platform
   {
     id: "iot-smart-home-management",
@@ -181,6 +184,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     },
     websiteUrl: "https://ziontechgroup.com/iot-smart-home"
   },
+
   // AI-Powered Customer Service Automation
   {
     id: "ai-customer-service-automation",
@@ -233,6 +237,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
     },
     websiteUrl: "https://ziontechgroup.com/ai-customer-service"
   },
+
   // Quantum-Ready Cybersecurity Suite
   {
     id: "quantum-ready-cybersecurity-suite",

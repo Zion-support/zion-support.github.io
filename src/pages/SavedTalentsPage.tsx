@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Footer } from "@/components/Footer";
-import { NextSeo } from "@/components/NextSeo";
+import { SEO } from "@/components/SEO";
 import { TalentCard } from "@/components/talent/TalentCard";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -11,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function SavedTalentsPage() {
   const { user } = useAuth();
-  const [savedTalents, setSavedTalents] = useState([] as TalentProfile[]);
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -158,7 +157,7 @@ export default function SavedTalentsPage() {
 
   return (
     <>
-      <NextSeo
+      <SEO
         title="Saved Talents | Zion AI Marketplace"
         description="View and manage your saved talents in the Zion AI Marketplace"
       />

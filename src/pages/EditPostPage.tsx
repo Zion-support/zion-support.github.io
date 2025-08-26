@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { NextSeo } from "@/components/NextSeo";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
@@ -36,7 +36,6 @@ const mockPost: ForumPost = {
 };
 
 export default function EditPostPage() {
-  // Cast to specify the expected route param type since useParams may be untyped
   const { postId } = useParams() as { postId?: string };
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -122,12 +121,11 @@ export default function EditPostPage() {
   };
 
   return (
-    <>
-      <NextSeo
+    
+      <SEO 
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
-        canonical={`https://app.ziontechgroup.com/community/edit/${postId}`}
       />
       
       <div className="container py-8">

@@ -1,25 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  Download, 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
-  TrendingUp,
-  BarChart3,
-  Brain,
-  Atom,
-  Globe,
-  Shield,
-  Zap,
-  Eye,
-  Clock,
-  Award
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Link from 'next/link';
 
 export default function ReportsPage() {
   const reportCategories = [
@@ -75,52 +56,22 @@ export default function ReportsPage() {
   ];
 
   return (
-    <UltraAdvancedFuturisticBackground>
-      <div className="min-h-screen">
-        <Head>
-          <title>Research Reports - Zion Tech Group | Industry Analysis & Technology Insights</title>
-          <meta name="description" content="Access Zion Tech Group's comprehensive research reports, whitepapers, and industry analysis covering AI, quantum computing, cybersecurity, and emerging technologies." />
-        </Head>
-
-        <QuickNavigation />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((category) => (
-            <Link 
-              key={category.name}
-              href={category.href}
-              className="group bg-slate-900/50 border border-white/10 rounded-lg p-8 hover:border-cyan-400/50 transition-all hover:scale-105"
-            >
-              Research Reports
-            </motion.h1>
-            <motion.p 
-              className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
-            </motion.p>
-            
-            <motion.div
-              className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <span className="flex items-center space-x-2">
-                <FileText className="w-5 h-5" />
-                <span>{reports.length} Reports Available</span>
-              </span>
-              <span className="flex items-center space-x-2">
-                <Download className="w-5 h-5" />
-                <span>{formatNumber(reports.reduce((sum, r) => sum + r.downloads, 0))} Downloads</span>
-              </span>
-              <span className="flex items-center space-x-2">
-                <Eye className="w-5 h-5" />
-                <span>{formatNumber(reports.reduce((sum, r) => sum + r.views, 0))} Views</span>
-              </span>
-            </motion.div>
+    <>
+      <Head>
+        <title>Reports | Zion - System Analytics & Insights</title>
+        <meta name="description" content="Access comprehensive reports on automation health, performance metrics, and system analytics." />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              System Reports
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+              Comprehensive insights into your autonomous systems, performance metrics, and operational health
+            </p>
           </div>
         </div>
 
@@ -170,41 +121,20 @@ export default function ReportsPage() {
             </div>
           </div>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Need Custom Research?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2"
-                >
-                  <span>Request Custom Research</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a
-                  href="/services"
-                  className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200"
-                >
-                  View Research Services
-                </a>
-              </div>
-            </motion.div>
+          {/* Quick Actions */}
+          <div className="mt-20 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Quick Actions</h2>
+            <div className="space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                Generate New Report
+              </button>
+              <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-8 rounded-lg transition-colors">
+                Export All Reports
+              </button>
+            </div>
           </div>
-        </section>
+        </div>
       </div>
-    </UltraAdvancedFuturisticBackground>
+    </>
   );
 }
