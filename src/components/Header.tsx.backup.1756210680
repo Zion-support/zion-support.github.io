@@ -136,6 +136,12 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
+<<<<<<< HEAD
+          <Link to="/" className="flex items-center">
+            <span className="text-2xl font-bold text-white">
+              Zion Tech Group
+            </span>
+=======
           <Link 
             to="/" 
             className="flex items-center space-x-2"
@@ -145,6 +151,7 @@ const Header: React.FC = () => {
               <span className="text-white font-bold text-xl" aria-hidden="true">Z</span>
             </div>
             <span className="text-white font-bold text-xl lg:text-2xl">Zion Tech Group</span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3daf
           </Link>
 
           {/* Desktop Navigation */}

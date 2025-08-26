@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Heart, Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { motion, Variants } from 'framer-motion';
+=======
 import { motion } from 'framer-motion';
 import { ArrowUp as ArrowUpIcon, Phone as PhoneIcon, Mail as EnvelopeIcon, MapPin as MapPinIcon } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3daf
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

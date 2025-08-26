@@ -116,9 +116,15 @@ const InnovativeMicroSaasServices: React.FC = () => {
   });
 
   // Combine all services
+<<<<<<< HEAD:src/pages/InnovativeMicroSaasServices.tsx.backup.1756164657
+  const allServices: (EmergingTechService | AdvancedMicroSaasService)[] = [
+    ...ADVANCED_MICRO_SAAS_SERVICES,
+    ...EMERGING_TECH_SERVICES
+=======
   const allServices: Service[] = [
     ...ADVANCED_MICRO_SAAS_SERVICES.map(adaptAdvancedService),
     ...EMERGING_TECH_SERVICES.map(adaptEmergingService)
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3daf:src/pages/InnovativeMicroSaasServices.tsx
   ];
 
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];

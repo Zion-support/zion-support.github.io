@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+=======
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
@@ -15,11 +21,36 @@ import { SecurityComplianceDashboard } from './components/SecurityComplianceDash
 // import { MachineLearningDashboard } from './components/MachineLearningDashboard';
 // import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { LinkHealthMonitor } from './components/LinkHealthMonitor';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3daf
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
+<<<<<<< HEAD
+import {
+  AuthRoutes,
+  DashboardRoutes,
+  MarketplaceRoutes,
+  TalentRoutes,
+  AdminRoutes,
+  MobileAppRoutes,
+  ContentRoutes,
+  ErrorRoutes,
+  EnterpriseRoutes,
+  CommunityRoutes,
+  DeveloperRoutes
+} from './routes';
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const News = React.lazy(() => import('./pages/News'));
+const Press = React.lazy(() => import('./pages/Press'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+=======
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
@@ -29,6 +60,7 @@ import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
 import { BrokenLinkFixer } from './components/BrokenLinkFixer';
 import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
 import { SiteHealthDashboard } from './components/SiteHealthDashboard';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3daf
 
 // Enhanced lazy loading with preloading hints from incoming branch
 const Services = lazy(() => import('./pages/Services'));
@@ -253,6 +285,30 @@ const App = () => {
   // Ensure each navigation starts at the top of the page
   useScrollToTop();
   return (
+<<<<<<< HEAD
+    <WhitelabelProvider>
+      <ThemeProvider defaultTheme="dark">
+        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+          <Routes>
+            {baseRoutes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+            <Route path="/auth/*" element={<AuthRoutes />} />
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+            <Route path="/talent/*" element={<TalentRoutes />} />
+            <Route path="/admin/*" element={<AdminRoutes />} />
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />
+            <Route path="/content/*" element={<ContentRoutes />} />
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+            <Route path="/community/*" element={<CommunityRoutes />} />
+            <Route path="/developers/*" element={<DeveloperRoutes />} />
+            <Route path="*" element={<ErrorRoutes />} />
+          </Routes>
+        </Suspense>
+        <Toaster />
+        <SonnerToaster position="top-right" />
+=======
     <EnhancedErrorBoundary>
       <EnhancedAccessibility />
       <PerformanceMonitor />
@@ -518,6 +574,7 @@ const App = () => {
             {/* </PerformanceOptimizer> */}
           </Router>
         </WhitelabelProvider>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3daf
       </ThemeProvider>
     </WhitelabelProvider>
   );

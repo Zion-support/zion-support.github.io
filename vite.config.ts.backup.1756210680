@@ -79,6 +79,9 @@ export default defineConfig({
   build: {
     target: 'esnext',
     minify: 'terser',
+<<<<<<< HEAD
+    sourcemap: false,
+=======
     terserOptions: {
       compress: {
         drop_console: true,
@@ -93,6 +96,7 @@ export default defineConfig({
         comments: false,
       },
     },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3daf
     rollupOptions: {
       output: {
         manualChunks: {
@@ -163,10 +167,13 @@ export default defineConfig({
       },
     },
     chunkSizeWarningLimit: 1000,
+<<<<<<< HEAD
+=======
     sourcemap: false,
     assetsInlineLimit: 4096,
     cssCodeSplit: true,
     reportCompressedSize: false,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3daf
   },
   optimizeDeps: {
     include: [
