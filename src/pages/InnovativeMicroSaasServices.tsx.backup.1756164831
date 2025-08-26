@@ -70,26 +70,20 @@ const InnovativeMicroSaasServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
-<<<<<<< HEAD
-  // Combine all services - temporarily using only compatible services
-  const allServices: Service[] = [
-    ...ADVANCED_MICRO_SAAS_SERVICES
-=======
   // Combine all services
   const allServices = [
     ...ADVANCED_MICRO_SAAS_SERVICES,
     ...EMERGING_TECH_SERVICES
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8cbb
+  ];
   ];
 
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const serviceTitle = 'title' in service ? service.title : service.name;
-    const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = ('title' in service ? service.title : service.name).toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         ('tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         (('tags' in service && service.tags) ? service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())) : false);
     return matchesCategory && matchesSearch;
   });
 
@@ -264,17 +258,27 @@ const InnovativeMicroSaasServices: React.FC = () => {
                     </span>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-cyan-400">
+<<<<<<< HEAD:src/pages/InnovativeMicroSaasServices.tsx.backup.1756164831
                         {typeof service.price === 'number' 
                           ? formatPrice(service.price, 'currency' in service ? (service.currency as string) : '$')
                           : formatPrice(service.price.monthly || 0, service.price.currency || '$')
                         }
                       </div>
                       <div className="text-gray-400 text-sm">per {'pricingModel' in service ? service.pricingModel : 'month'}</div>
+=======
+                        {formatPrice(typeof service.price === 'number' ? service.price : service.price.monthly || 0, typeof service.price === 'number' ? (service as any).currency : service.price.currency)}
+                      </div>
+                      <div className="text-gray-400 text-sm">per {typeof service.price === 'number' ? (service as any).pricingModel : service.price.pricingModel}</div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d077:src/pages/InnovativeMicroSaasServices.tsx
                     </div>
                   </div>
 
                   {/* Tags */}
+<<<<<<< HEAD:src/pages/InnovativeMicroSaasServices.tsx.backup.1756164831
                   {'tags' in service && service.tags && (
+=======
+                  {('tags' in service && service.tags) && (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d077:src/pages/InnovativeMicroSaasServices.tsx
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, index) => (
                         <span
@@ -293,7 +297,11 @@ const InnovativeMicroSaasServices: React.FC = () => {
                   )}
 
                   {/* Support Level */}
+<<<<<<< HEAD:src/pages/InnovativeMicroSaasServices.tsx.backup.1756164831
                   {'supportLevel' in service && (
+=======
+                  {('supportLevel' in service) && (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d077:src/pages/InnovativeMicroSaasServices.tsx
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-sm text-gray-400">Support Level:</span>
                       <span className={`px-2 py-1 text-xs text-white rounded ${getSupportLevelColor(service.supportLevel)}`}>
@@ -304,10 +312,19 @@ const InnovativeMicroSaasServices: React.FC = () => {
 
                   {/* Quick Info */}
                   <div className="grid grid-cols-2 gap-4 text-sm">
+<<<<<<< HEAD:src/pages/InnovativeMicroSaasServices.tsx.backup.1756164831
                     <div className="flex items-center text-gray-400">
                       <Clock size={16} className="mr-2" />
                       {'estimatedDelivery' in service ? service.estimatedDelivery : 'Contact for details'}
                     </div>
+=======
+                    {('estimatedDelivery' in service) && (
+                      <div className="flex items-center text-gray-400">
+                        <Clock size={16} className="mr-2" />
+                        {service.estimatedDelivery}
+                      </div>
+                    )}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d077:src/pages/InnovativeMicroSaasServices.tsx
                     <div className="flex items-center text-gray-400">
                       <Users size={16} className="mr-2" />
                       {service.targetAudience.length} audiences
@@ -373,7 +390,20 @@ const InnovativeMicroSaasServices: React.FC = () => {
                         </div>
                       </div>
 
+<<<<<<< HEAD:src/pages/InnovativeMicroSaasServices.tsx.backup.1756164831
 
+=======
+                      {/* Innovation Level */}
+                      {('innovationLevel' in service && service.innovationLevel) && (
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                            <Lightbulb size={20} className="mr-2 text-yellow-400" />
+                            Innovation Level
+                          </h4>
+                          <p className="text-gray-300 text-sm">{service.innovationLevel as string}</p>
+                        </div>
+                      )}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d077:src/pages/InnovativeMicroSaasServices.tsx
 
                       {/* CTA */}
                       <div className="pt-4 border-t border-gray-700">
