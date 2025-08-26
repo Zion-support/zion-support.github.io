@@ -102,6 +102,7 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/search" element={<SearchPage />} />
               <Route path="/help-center" element={<HelpCenter />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/services-advertising" element={<ServicesAdvertising />} />
               <Route path="/solutions" element={<Solutions />} />

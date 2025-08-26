@@ -1,251 +1,262 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  User, 
+  BarChart3, 
+  TrendingUp, 
+  Users, 
+  DollarSign, 
   Settings, 
   Bell, 
-  Search, 
-  Plus, 
-  TrendingUp, 
-  TrendingDown, 
-  Eye, 
-  Edit, 
-  Trash2, 
-  Star, 
-  MessageCircle, 
-  Calendar, 
-  Clock, 
-  MapPin, 
-  DollarSign,
-  Users,
-  Code,
-  Shield,
-  Cloud,
-  Brain,
-  Rocket,
-  Zap,
-  Heart,
-  Building,
-  Cpu,
-  Lock,
-  Globe,
-  Award,
+  Search,
+  Plus,
+  Calendar,
+  Clock,
   CheckCircle,
-  X,
-  ArrowRight,
-  BarChart3,
-  PieChart,
+  AlertCircle,
+  XCircle,
+  ArrowUpRight,
+  ArrowDownRight,
   Activity,
   Target,
-  Zap as Lightning,
-  BookOpen,
-  FileText,
-  ShoppingCart,
+  Award,
   Briefcase,
-  CreditCard,
+  Globe,
+  Shield,
+  Zap,
+  Star,
+  Eye,
   Download,
-  Upload,
   Filter,
   MoreHorizontal
 } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
 
-interface DashboardStats {
-  totalServices: number;
-  activeProjects: number;
-  totalRevenue: number;
-  customerSatisfaction: number;
-  pendingRequests: number;
-  completedProjects: number;
-}
-
-interface RecentActivity {
-  id: string;
-  type: 'service' | 'project' | 'message' | 'payment';
+interface StatCard {
   title: string;
-  description: string;
-  timestamp: Date;
-  status: 'pending' | 'active' | 'completed' | 'cancelled';
+  value: string;
+  change: number;
   icon: any;
   color: string;
+  trend: 'up' | 'down';
+}
+
+interface ActivityItem {
+  id: string;
+  type: 'service' | 'payment' | 'support' | 'update';
+  title: string;
+  description: string;
+  timestamp: string;
+  status: 'completed' | 'pending' | 'failed';
+  priority: 'low' | 'medium' | 'high';
 }
 
 interface QuickAction {
-  name: string;
+  title: string;
   description: string;
   icon: any;
-  path: string;
+  action: string;
   color: string;
-  count?: number;
 }
 
-const mockStats: DashboardStats = {
-  totalServices: 24,
-  activeProjects: 8,
-  totalRevenue: 125000,
-  customerSatisfaction: 4.8,
-  pendingRequests: 3,
-  completedProjects: 156
-};
+const statCards: StatCard[] = [
+  {
+    title: 'Total Revenue',
+    value: '$124,563.00',
+    change: 12.5,
+    icon: DollarSign,
+    color: 'from-green-500 to-emerald-600',
+    trend: 'up'
+  },
+  {
+    title: 'Active Services',
+    value: '47',
+    change: 8.2,
+    icon: Briefcase,
+    color: 'from-blue-500 to-cyan-600',
+    trend: 'up'
+  },
+  {
+    title: 'Total Customers',
+    value: '1,234',
+    change: -2.1,
+    icon: Users,
+    color: 'from-purple-500 to-pink-600',
+    trend: 'down'
+  },
+  {
+    title: 'Success Rate',
+    value: '98.7%',
+    change: 1.3,
+    icon: Target,
+    color: 'from-orange-500 to-red-600',
+    trend: 'up'
+  }
+];
 
-const mockRecentActivity: RecentActivity[] = [
+const recentActivities: ActivityItem[] = [
   {
     id: '1',
     type: 'service',
-    title: 'AI Analytics Platform',
-    description: 'New service request received from TechCorp Solutions',
-    timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago
-    status: 'pending',
-    icon: Brain,
-    color: 'text-purple-500'
+    title: 'AI Analytics Service Deployed',
+    description: 'Successfully deployed AI analytics solution for Client Corp',
+    timestamp: '2 hours ago',
+    status: 'completed',
+    priority: 'high'
   },
   {
     id: '2',
-    type: 'project',
-    title: 'Cloud Migration',
-    description: 'Project "Digital Transformation" completed successfully',
-    timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000), // 1 day ago
+    type: 'payment',
+    title: 'Payment Received',
+    description: 'Payment of $15,000 received from Tech Solutions Inc',
+    timestamp: '4 hours ago',
     status: 'completed',
-    icon: Cloud,
-    color: 'text-blue-500'
+    priority: 'medium'
   },
   {
     id: '3',
-    type: 'message',
-    title: 'Customer Inquiry',
-    description: 'New message from Sarah Johnson regarding cybersecurity services',
-    timestamp: new Date(Date.now() - 3 * 60 * 60 * 1000), // 3 hours ago
-    status: 'active',
-    icon: MessageCircle,
-    color: 'text-green-500'
+    type: 'support',
+    title: 'Support Ticket Resolved',
+    description: 'Resolved critical issue with cloud infrastructure',
+    timestamp: '6 hours ago',
+    status: 'completed',
+    priority: 'high'
   },
   {
     id: '4',
-    type: 'payment',
-    title: 'Payment Received',
-    description: 'Payment of $5,000 received for AI Business Intelligence service',
-    timestamp: new Date(Date.now() - 12 * 60 * 60 * 1000), // 12 hours ago
+    type: 'update',
+    title: 'System Update Completed',
+    description: 'Security patches and performance updates applied',
+    timestamp: '1 day ago',
     status: 'completed',
-    icon: DollarSign,
-    color: 'text-green-500'
+    priority: 'low'
+  },
+  {
+    id: '5',
+    type: 'service',
+    title: 'New Service Request',
+    description: 'Cybersecurity assessment requested by StartupXYZ',
+    timestamp: '1 day ago',
+    status: 'pending',
+    priority: 'medium'
   }
 ];
 
 const quickActions: QuickAction[] = [
   {
-    name: 'Add New Service',
-    description: 'Create and publish a new service offering',
+    title: 'Add New Service',
+    description: 'Create and deploy a new service',
     icon: Plus,
-    path: '/services/new',
-    color: 'from-blue-500 to-cyan-500',
-    count: 0
+    action: 'Create',
+    color: 'from-blue-500 to-cyan-600'
   },
   {
-    name: 'View Projects',
-    description: 'Monitor active and completed projects',
-    icon: Briefcase,
-    path: '/projects',
-    color: 'from-purple-500 to-pink-500',
-    count: mockStats.activeProjects
-  },
-  {
-    name: 'Customer Messages',
-    description: 'Respond to customer inquiries and requests',
-    icon: MessageCircle,
-    path: '/messages',
-    color: 'from-green-500 to-teal-500',
-    count: 5
-  },
-  {
-    name: 'Analytics',
-    description: 'View detailed performance metrics and insights',
+    title: 'View Analytics',
+    description: 'Check detailed performance metrics',
     icon: BarChart3,
-    path: '/analytics',
-    color: 'from-orange-500 to-red-500',
-    count: 0
+    action: 'View',
+    color: 'from-green-500 to-emerald-600'
   },
   {
-    name: 'Billing',
-    description: 'Manage invoices and payment methods',
-    icon: CreditCard,
-    path: '/billing',
-    color: 'from-indigo-500 to-purple-500',
-    count: 0
+    title: 'Manage Users',
+    description: 'Add or remove team members',
+    icon: Users,
+    action: 'Manage',
+    color: 'from-purple-500 to-pink-600'
   },
   {
-    name: 'Settings',
-    description: 'Configure account and service preferences',
+    title: 'System Settings',
+    description: 'Configure system preferences',
     icon: Settings,
-    path: '/settings',
-    color: 'from-gray-500 to-slate-500',
-    count: 0
+    action: 'Configure',
+    color: 'from-orange-500 to-red-600'
   }
 ];
 
-const chartData = {
-  revenue: [12000, 19000, 15000, 25000, 22000, 30000, 28000],
-  services: [8, 12, 15, 18, 22, 24, 24],
-  customers: [45, 52, 58, 65, 72, 78, 82]
+const getStatusIcon = (status: string) => {
+  switch (status) {
+    case 'completed':
+      return <CheckCircle className="h-4 w-4 text-green-500" />;
+    case 'pending':
+      return <Clock className="h-4 w-4 text-yellow-500" />;
+    case 'failed':
+      return <XCircle className="h-4 w-4 text-red-500" />;
+    default:
+      return <AlertCircle className="h-4 w-4 text-gray-500" />;
+  }
+};
+
+const getPriorityColor = (priority: string) => {
+  switch (priority) {
+    case 'high':
+      return 'bg-red-100 text-red-800 border-red-200';
+    case 'medium':
+      return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+    case 'low':
+      return 'bg-green-100 text-green-800 border-green-200';
+    default:
+      return 'bg-gray-100 text-gray-800 border-gray-200';
+  }
+};
+
+const getTypeIcon = (type: string) => {
+  switch (type) {
+    case 'service':
+      return <Briefcase className="h-4 w-4" />;
+    case 'payment':
+      return <DollarSign className="h-4 w-4" />;
+    case 'support':
+      return <Shield className="h-4 w-4" />;
+    case 'update':
+      return <Zap className="h-4 w-4" />;
+    default:
+      return <Activity className="h-4 w-4" />;
+  }
 };
 
 export default function Dashboard() {
-  const { user } = useAuth();
-  const [selectedPeriod, setSelectedPeriod] = useState('7d');
-  const [isLoading, setIsLoading] = useState(false);
+  const [user, setUser] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading
-    setIsLoading(true);
-    setTimeout(() => setIsLoading(false), 1000);
+    // Simulate user authentication check
+    const checkAuth = () => {
+      const storedUser = localStorage.getItem('zion_user');
+      if (storedUser) {
+        try {
+          const userData = JSON.parse(storedUser);
+          setUser(userData);
+        } catch (error) {
+          console.error('Failed to parse stored user:', error);
+        }
+      }
+      setIsLoading(false);
+    };
+
+    checkAuth();
   }, []);
 
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    }).format(amount);
-  };
-
-  const formatTimestamp = (timestamp: Date) => {
-    const now = new Date();
-    const diff = now.getTime() - timestamp.getTime();
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const days = Math.floor(hours / 24);
-
-    if (days > 0) {
-      return `${days} day${days > 1 ? 's' : ''} ago`;
-    } else if (hours > 0) {
-      return `${hours} hour${hours > 1 ? 's' : ''} ago`;
-    } else {
-      return 'Just now';
-    }
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'pending': return 'bg-yellow-500/20 text-yellow-500';
-      case 'active': return 'bg-blue-500/20 text-blue-500';
-      case 'completed': return 'bg-green-500/20 text-green-500';
-      case 'cancelled': return 'bg-red-500/20 text-red-500';
-      default: return 'bg-gray-500/20 text-gray-500';
-    }
-  };
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-zion-slate-light">Loading dashboard...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!user) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
-        <div className="container-responsive text-center">
-          <h1 className="text-3xl font-bold text-white mb-4">Access Denied</h1>
-          <p className="text-zion-slate-light mb-8">Please log in to access your dashboard.</p>
-          <Link
-            to="/login"
-            className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
-          >
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Shield className="w-12 h-12 text-zion-cyan" />
+          </div>
+          <h2 className="text-2xl font-bold text-white mb-4">Access Denied</h2>
+          <p className="text-zion-slate-light mb-6">Please log in to access the dashboard.</p>
+          <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300">
             Go to Login
-          </Link>
+          </button>
         </div>
       </div>
     );
@@ -254,7 +265,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
       <div className="container-responsive">
-        {/* Dashboard Header */}
+        {/* Header */}
         <motion.div 
           className="mb-8"
           initial={{ opacity: 0, y: 20 }}
@@ -263,284 +274,253 @@ export default function Dashboard() {
         >
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             <div>
-              <h1 className="text-3xl font-bold text-white mb-2">Welcome back, {user.name}!</h1>
-              <p className="text-zion-slate-light">Here's what's happening with your business today.</p>
+              <h1 className="text-3xl font-bold text-white mb-2">
+                Welcome back, {user.name || 'User'}! 👋
+              </h1>
+              <p className="text-zion-slate-light">
+                Here's what's happening with your Zion Tech Group services today.
+              </p>
             </div>
-            
-            <div className="flex items-center gap-4">
-              <div className="relative">
-                <button className="relative p-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-xl transition-all duration-300">
-                  <Bell className="h-5 w-5" />
-                  <span className="absolute top-1 right-1 w-3 h-3 bg-red-500 rounded-full"></span>
-                </button>
-              </div>
-              
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
-                  <span className="text-white font-semibold">{user.name.charAt(0)}</span>
-                </div>
-                <div className="hidden sm:block">
-                  <div className="text-white font-medium">{user.name}</div>
-                  <div className="text-zion-slate-light text-sm">{user.role}</div>
-                </div>
-              </div>
+            <div className="flex items-center gap-3">
+              <button className="relative p-3 bg-white/10 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:bg-white/20 transition-all duration-300">
+                <Bell className="h-5 w-5 text-zion-cyan" />
+                <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+              </button>
+              <button className="p-3 bg-white/10 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:bg-white/20 transition-all duration-300">
+                <Settings className="h-5 w-5 text-zion-cyan" />
+              </button>
             </div>
           </div>
         </motion.div>
 
-        {/* Stats Overview */}
+        {/* Stats Cards */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                <Code className="h-6 w-6 text-white" />
+          {statCards.map((stat, index) => (
+            <motion.div
+              key={stat.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
+              className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className={`w-12 h-12 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center`}>
+                  <stat.icon className="h-6 w-6 text-white" />
+                </div>
+                <div className={`flex items-center gap-1 text-sm font-medium ${
+                  stat.trend === 'up' ? 'text-green-500' : 'text-red-500'
+                }`}>
+                  {stat.trend === 'up' ? (
+                    <ArrowUpRight className="h-4 w-4" />
+                  ) : (
+                    <ArrowDownRight className="h-4 w-4" />
+                  )}
+                  {stat.change}%
+                </div>
               </div>
-              <TrendingUp className="h-5 w-5 text-green-400" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">{mockStats.totalServices}</div>
-            <div className="text-zion-slate-light text-sm">Total Services</div>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                <Briefcase className="h-6 w-6 text-white" />
-              </div>
-              <TrendingUp className="h-5 w-5 text-green-400" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">{mockStats.activeProjects}</div>
-            <div className="text-zion-slate-light text-sm">Active Projects</div>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center">
-                <DollarSign className="h-6 w-6 text-white" />
-              </div>
-              <TrendingUp className="h-5 w-5 text-green-400" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">{formatCurrency(mockStats.totalRevenue)}</div>
-            <div className="text-zion-slate-light text-sm">Total Revenue</div>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center">
-                <Star className="h-6 w-6 text-white" />
-              </div>
-              <TrendingUp className="h-5 w-5 text-green-400" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">{mockStats.customerSatisfaction}</div>
-            <div className="text-zion-slate-light text-sm">Customer Rating</div>
-          </div>
+              <h3 className="text-zion-slate-light text-sm font-medium mb-1">{stat.title}</h3>
+              <p className="text-2xl font-bold text-white">{stat.value}</p>
+            </motion.div>
+          ))}
         </motion.div>
 
-        {/* Quick Actions */}
-        <motion.div 
-          className="mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <h2 className="text-2xl font-bold text-white mb-6">Quick Actions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {quickActions.map((action, index) => (
-              <motion.div
-                key={action.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-              >
-                <Link
-                  to={action.path}
-                  className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${action.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Left Column - Quick Actions & Recent Activity */}
+          <div className="lg:col-span-2 space-y-8">
+            {/* Quick Actions */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <h2 className="text-xl font-bold text-white mb-6">Quick Actions</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {quickActions.map((action, index) => (
+                  <motion.div
+                    key={action.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                    className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group"
+                  >
+                    <div className={`w-12 h-12 bg-gradient-to-br ${action.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                       <action.icon className="h-6 w-6 text-white" />
                     </div>
-                    {action.count !== undefined && action.count > 0 && (
-                      <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
-                        {action.count}
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-zion-cyan transition-colors">
-                    {action.name}
-                  </h3>
-                  <p className="text-zion-slate-light text-sm mb-4">
-                    {action.description}
-                  </p>
-                  <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
-                    <span className="text-sm font-medium">Get Started</span>
-                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+                    <h3 className="text-white font-semibold text-lg mb-2">{action.title}</h3>
+                    <p className="text-zion-slate-light text-sm mb-4">{action.description}</p>
+                    <button className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300">
+                      {action.action}
+                    </button>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
 
-        {/* Recent Activity and Charts */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Recent Activity */}
-          <motion.div 
-            className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            {/* Recent Activity */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-bold text-white">Recent Activity</h2>
+                <button className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors">
+                  View All
+                </button>
+              </div>
+              <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden">
+                <div className="p-6">
+                  <div className="space-y-4">
+                    {recentActivities.map((activity, index) => (
+                      <motion.div
+                        key={activity.id}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                        className="flex items-start gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300"
+                      >
+                        <div className="w-10 h-10 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                          {getTypeIcon(activity.type)}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-start justify-between mb-2">
+                            <h4 className="text-white font-medium text-sm">{activity.title}</h4>
+                            <div className="flex items-center gap-2">
+                              {getStatusIcon(activity.status)}
+                              <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getPriorityColor(activity.priority)}`}>
+                                {activity.priority}
+                              </span>
+                            </div>
+                          </div>
+                          <p className="text-zion-slate-light text-sm mb-2">{activity.description}</p>
+                          <div className="flex items-center gap-2 text-xs text-zion-slate-light">
+                            <Clock className="h-3 w-3" />
+                            {activity.timestamp}
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Right Column - Performance Chart */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="space-y-8"
           >
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-semibold text-white">Recent Activity</h3>
-              <Link to="/activity" className="text-zion-cyan hover:text-zion-cyan-light text-sm transition-colors">
-                View All
-              </Link>
-            </div>
-            
-            <div className="space-y-4">
-              {mockRecentActivity.map((activity, index) => (
-                <motion.div
-                  key={activity.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                  className="flex items-start gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors duration-200"
-                >
-                  <div className={`w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center flex-shrink-0`}>
-                    <activity.icon className={`h-5 w-5 ${activity.color}`} />
+            {/* Performance Overview */}
+            <div>
+              <h2 className="text-xl font-bold text-white mb-6">Performance Overview</h2>
+              <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
+                <div className="flex items-center justify-between mb-6">
+                  <div>
+                    <h3 className="text-white font-semibold text-lg">Service Performance</h3>
+                    <p className="text-zion-slate-light text-sm">Last 30 days</p>
+                  </div>
+                  <button className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
+                    <MoreHorizontal className="h-4 w-4 text-zion-cyan" />
+                  </button>
+                </div>
+                
+                {/* Mock Chart */}
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light text-sm">AI Services</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-24 h-2 bg-zion-slate rounded-full overflow-hidden">
+                        <div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full" style={{ width: '85%' }}></div>
+                      </div>
+                      <span className="text-white text-sm font-medium">85%</span>
+                    </div>
                   </div>
                   
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between mb-1">
-                      <h4 className="text-white font-medium">{activity.title}</h4>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(activity.status)}`}>
-                        {activity.status}
-                      </span>
-                    </div>
-                    <p className="text-zion-slate-light text-sm mb-2">{activity.description}</p>
-                    <div className="flex items-center gap-4 text-xs text-zion-slate-light">
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
-                        {formatTimestamp(activity.timestamp)}
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light text-sm">Cloud Solutions</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-24 h-2 bg-zion-slate rounded-full overflow-hidden">
+                        <div className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full" style={{ width: '92%' }}></div>
                       </div>
+                      <span className="text-white text-sm font-medium">92%</span>
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Performance Chart */}
-          <motion.div 
-            className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-semibold text-white">Performance Overview</h3>
-              <select
-                value={selectedPeriod}
-                onChange={(e) => setSelectedPeriod(e.target.value)}
-                className="bg-white/10 border border-zion-cyan/20 rounded-lg px-3 py-1 text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-              >
-                <option value="7d">Last 7 days</option>
-                <option value="30d">Last 30 days</option>
-                <option value="90d">Last 90 days</option>
-              </select>
-            </div>
-            
-            <div className="space-y-6">
-              {/* Revenue Chart */}
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-zion-slate-light text-sm">Revenue</span>
-                  <span className="text-white font-semibold">{formatCurrency(chartData.revenue[chartData.revenue.length - 1])}</span>
-                </div>
-                <div className="flex items-end gap-1 h-20">
-                  {chartData.revenue.map((value, index) => (
-                    <div
-                      key={index}
-                      className="flex-1 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-sm"
-                      style={{ height: `${(value / Math.max(...chartData.revenue)) * 100}%` }}
-                    />
-                  ))}
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light text-sm">Cybersecurity</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-24 h-2 bg-zion-slate rounded-full overflow-hidden">
+                        <div className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" style={{ width: '78%' }}></div>
+                      </div>
+                      <span className="text-white text-sm font-medium">78%</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light text-sm">IoT Services</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-24 h-2 bg-zion-slate rounded-full overflow-hidden">
+                        <div className="h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full" style={{ width: '88%' }}></div>
+                      </div>
+                      <span className="text-white text-sm font-medium">88%</span>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              {/* Services Chart */}
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-zion-slate-light text-sm">Active Services</span>
-                  <span className="text-white font-semibold">{chartData.services[chartData.services.length - 1]}</span>
+            {/* Quick Stats */}
+            <div>
+              <h2 className="text-xl font-bold text-white mb-6">Quick Stats</h2>
+              <div className="space-y-4">
+                <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-zion-slate-light text-sm">Uptime</p>
+                      <p className="text-white font-semibold text-lg">99.9%</p>
+                    </div>
+                    <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center">
+                      <CheckCircle className="h-6 w-6 text-green-500" />
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-end gap-1 h-20">
-                  {chartData.services.map((value, index) => (
-                    <div
-                      key={index}
-                      className="flex-1 bg-gradient-to-t from-zion-purple to-zion-blue rounded-t-sm"
-                      style={{ height: `${(value / Math.max(...chartData.services)) * 100}%` }}
-                    />
-                  ))}
+                
+                <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-zion-slate-light text-sm">Response Time</p>
+                      <p className="text-white font-semibold text-lg">45ms</p>
+                    </div>
+                    <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                      <Zap className="h-6 w-6 text-blue-500" />
+                    </div>
+                  </div>
                 </div>
-              </div>
-
-              {/* Customers Chart */}
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-zion-slate-light text-sm">Total Customers</span>
-                  <span className="text-white font-semibold">{chartData.customers[chartData.customers.length - 1]}</span>
-                </div>
-                <div className="flex items-end gap-1 h-20">
-                  {chartData.customers.map((value, index) => (
-                    <div
-                      key={index}
-                      className="flex-1 bg-gradient-to-t from-zion-blue to-zion-cyan rounded-t-sm"
-                      style={{ height: `${(value / Math.max(...chartData.customers)) * 100}%` }}
-                    />
-                  ))}
+                
+                <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-zion-slate-light text-sm">Customer Rating</p>
+                      <p className="text-white font-semibold text-lg">4.9/5.0</p>
+                    </div>
+                    <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center">
+                      <Star className="h-6 w-6 text-yellow-500" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Bottom Stats */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Clock className="h-8 w-8 text-white" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-2">{mockStats.pendingRequests}</div>
-            <div className="text-zion-slate-light">Pending Requests</div>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <CheckCircle className="h-8 w-8 text-white" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-2">{mockStats.completedProjects}</div>
-            <div className="text-zion-slate-light">Completed Projects</div>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Target className="h-8 w-8 text-white" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-2">98%</div>
-            <div className="text-zion-slate-light">Success Rate</div>
-          </div>
-        </motion.div>
       </div>
     </div>
   );
