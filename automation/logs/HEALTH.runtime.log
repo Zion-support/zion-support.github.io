@@ -254,3 +254,35 @@
 [2025-08-26T10:59:46.820Z] [HEALTH] All services healthy
 [2025-08-26T11:01:16.824Z] [HEALTH] All services healthy
 [2025-08-26T11:01:46.826Z] [HEALTH] All services healthy
+[2025-08-26T11:03:46.830Z] [HEALTH] All services healthy
+[2025-08-26T11:04:16.832Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running
+[2025-08-26T11:04:46.833Z] [HEALTH] All services healthy
+[2025-08-26T11:05:16.835Z] [HEALTH] All services healthy
+[2025-08-26T11:05:46.836Z] [HEALTH] All services healthy
+[2025-08-26T11:06:16.838Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running, Service real-time-performance-monitor is enabled but not running
+[2025-08-26T11:11:58.376Z] [HEALTH] Health check issues found: Service ml-link-intelligence is enabled but not running
+[2025-08-26T11:12:28.386Z] [HEALTH] All services healthy
+[2025-08-26T11:36:52.149Z] [HEALTH] All services healthy
+[2025-08-26T11:37:22.152Z] [HEALTH] All services healthy
+[2025-08-26T11:51:40.508Z] [HEALTH] All services healthy
+[2025-08-26T11:52:10.532Z] [HEALTH] Health check issues found: Service ml-link-intelligence is enabled but not running
+[2025-08-26T11:52:40.537Z] [HEALTH] All services healthy
+[2025-08-26T11:53:10.540Z] [HEALTH] All services healthy
+[2025-08-26T11:53:40.541Z] [HEALTH] All services healthy
+[2025-08-26T11:54:10.543Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running
+[2025-08-26T11:54:40.544Z] [HEALTH] All services healthy
+[2025-08-26T11:55:10.549Z] [HEALTH] All services healthy
+[2025-08-26T11:55:40.552Z] [HEALTH] All services healthy
+[2025-08-26T11:56:10.556Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running
+[2025-08-26T11:56:40.557Z] [HEALTH] Health check issues found: Service ml-link-intelligence is enabled but not running
+[2025-08-26T12:18:17.905Z] [HEALTH] All services healthy
+[2025-08-26T12:18:47.903Z] [HEALTH] All services healthy
+[2025-08-26T12:19:17.901Z] [HEALTH] All services healthy
+[2025-08-26T12:19:47.900Z] [HEALTH] All services healthy
+[2025-08-26T12:20:17.898Z] [HEALTH] Health check issues found: Service ml-link-intelligence is enabled but not running, Service link-health-scheduler is enabled but not running
+[2025-08-26T12:20:47.897Z] [HEALTH] All services healthy
+[2025-08-26T12:21:17.896Z] [HEALTH] All services healthy
+[2025-08-26T12:21:47.895Z] [HEALTH] All services healthy
+[2025-08-26T12:22:17.892Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running
+[2025-08-26T12:22:47.892Z] [HEALTH] All services healthy
+[2025-08-26T12:23:17.890Z] [HEALTH] All services healthy

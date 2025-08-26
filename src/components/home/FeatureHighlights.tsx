@@ -1,8 +1,7 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
-import { Check, ArrowRight, Sparkles, Users, Building, Rocket, Brain, Shield, Cpu, Globe, Zap, Target, Lightbulb, Code, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Building, Check, Code, Rocket, Sparkles } from 'lucide-react';
 
 export const FeatureHighlights = () => {
   const highlightsData = [
@@ -75,19 +74,11 @@ export const FeatureHighlights = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { 
       opacity: 1, 
-      y: 0, 
-      transition: { 
-        duration: 0.6, 
-        ease: "easeOut" 
-      } 
+      y: 0
     },
     hover: { 
       y: -5, 
-      scale: 1.02, 
-      transition: { 
-        duration: 0.3, 
-        ease: "easeInOut" 
-      } 
+      scale: 1.02
     }
   };
 

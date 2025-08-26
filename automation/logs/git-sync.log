@@ -4519,3 +4519,1254 @@ fatal: could not read Username for 'https://github.com': Device not configured
 [2025-08-26T11:02:00.658Z] Checking for remote updates...
 [2025-08-26T11:02:02.448Z] Behind remote by 10 commits
 [2025-08-26T11:02:02.448Z] Staging all changes...
+[2025-08-26T11:04:00.580Z] Starting advanced git sync process...
+[2025-08-26T11:04:00.582Z] Checking git status...
+[2025-08-26T11:04:00.748Z] Changes detected: 12 files modified
+[2025-08-26T11:04:00.749Z] Checking for remote updates...
+[2025-08-26T11:04:02.221Z] Behind remote by 4 commits
+[2025-08-26T11:04:02.221Z] Staging all changes...
+[2025-08-26T11:04:02.421Z] Attempting auto-commit...
+[2025-08-26T11:04:48.601Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T11:04:02.469Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+src/components/home/FeatureHighlights.tsx(112,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(124,15): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(171,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/pages/News.tsx(136,24): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(137,22): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(149,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(150,32): error TS2339: Property 'icon' does not exist on type 'string'.
+src/pages/News.tsx(154,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(155,32): error TS2339: Property 'name' does not exist on type 'string'.
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T11:04:48.602Z] Attempting auto-pull...
+[2025-08-26T11:04:48.656Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T11:04:48.657Z] Checking for merge conflicts...
+[2025-08-26T11:04:48.757Z] Attempting auto-push...
+[2025-08-26T11:04:49.157Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T11:04:49.158Z] Advanced git sync process completed
+[2025-08-26T11:06:00.274Z] Starting advanced git sync process...
+[2025-08-26T11:06:00.279Z] Checking git status...
+[2025-08-26T11:06:00.466Z] Changes detected: 28 files modified
+[2025-08-26T11:06:00.466Z] Checking for remote updates...
+[2025-08-26T11:06:02.251Z] Behind remote by 4 commits
+[2025-08-26T11:06:02.251Z] Staging all changes...
+[2025-08-26T11:06:02.614Z] Attempting auto-commit...
+[2025-08-26T11:11:58.503Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T11:06:02.667Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+src/components/home/FeatureHighlights.tsx(112,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(124,15): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(171,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T11:11:58.504Z] Attempting auto-pull...
+[2025-08-26T11:11:58.544Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T11:11:58.544Z] Checking for merge conflicts...
+[2025-08-26T11:11:58.609Z] Attempting auto-push...
+[2025-08-26T11:11:59.227Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T11:11:59.227Z] Advanced git sync process completed
+[2025-08-26T11:11:59.305Z] Starting advanced git sync process...
+[2025-08-26T11:11:59.307Z] Checking git status...
+[2025-08-26T11:11:59.478Z] Changes detected: 29 files modified
+[2025-08-26T11:11:59.478Z] Checking for remote updates...
+[2025-08-26T11:12:00.555Z] Starting advanced git sync process...
+[2025-08-26T11:12:00.557Z] Checking git status...
+[2025-08-26T11:12:00.672Z] Changes detected: 30 files modified
+[2025-08-26T11:12:00.672Z] Checking for remote updates...
+[2025-08-26T11:12:01.253Z] Behind remote by 6 commits
+[2025-08-26T11:12:01.253Z] Staging all changes...
+[2025-08-26T11:12:01.523Z] Attempting auto-commit...
+[2025-08-26T11:12:02.021Z] Behind remote by 6 commits
+[2025-08-26T11:12:02.022Z] Staging all changes...
+[2025-08-26T11:12:02.171Z] Attempting auto-commit...
+[2025-08-26T11:37:16.831Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T11:12:01.577Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 prebuild
+> npm run build:health-check && npm run netlify:manifest
+
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 build:health-check
+> node automation/pre-build-health-check.cjs
+
+[pre-build-health-check] Node: v22.16.0
+[pre-build-health-check] OK
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 netlify:manifest
+> node scripts/generate-netlify-functions-manifest.cjs
+
+[netlify:manifest] Wrote placeholder manifest to /Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/automation/netlify-functions-manifest.json
+
+> bolt.new.zion.app@0.1.0 build
+> NODE_OPTIONS="--max-old-space-size=6144 --openssl-legacy-provider" next build
+
+sh: next: command not found
+❌ Build failed. Please fix the issues before committing.
+
+[2025-08-26T11:37:16.832Z] Attempting auto-pull...
+[2025-08-26T11:37:16.966Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T11:37:16.967Z] Checking for merge conflicts...
+[2025-08-26T11:37:17.199Z] Attempting auto-push...
+[2025-08-26T11:37:18.025Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T11:37:18.026Z] Advanced git sync process completed
+[2025-08-26T11:37:20.589Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T11:12:02.214Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 prebuild
+> npm run build:health-check && npm run netlify:manifest
+
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 build:health-check
+> node automation/pre-build-health-check.cjs
+
+[pre-build-health-check] Node: v22.16.0
+[pre-build-health-check] OK
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 netlify:manifest
+> node scripts/generate-netlify-functions-manifest.cjs
+
+[netlify:manifest] Wrote placeholder manifest to /Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/automation/netlify-functions-manifest.json
+
+> bolt.new.zion.app@0.1.0 build
+> NODE_OPTIONS="--max-old-space-size=6144 --openssl-legacy-provider" next build
+
+sh: next: command not found
+❌ Build failed. Please fix the issues before committing.
+
+[2025-08-26T11:37:20.591Z] Attempting auto-pull...
+[2025-08-26T11:37:20.752Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T11:37:20.753Z] Checking for merge conflicts...
+[2025-08-26T11:37:20.968Z] Attempting auto-push...
+[2025-08-26T11:37:21.713Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T11:37:21.713Z] Advanced git sync process completed
+[2025-08-26T11:54:00.300Z] Starting advanced git sync process...
+[2025-08-26T11:54:00.302Z] Checking git status...
+[2025-08-26T11:54:00.466Z] Changes detected: 32 files modified
+[2025-08-26T11:54:00.467Z] Checking for remote updates...
+[2025-08-26T11:54:03.203Z] Behind remote by 266 commits
+[2025-08-26T11:54:03.203Z] Staging all changes...
+[2025-08-26T11:54:03.409Z] Attempting auto-commit...
+[2025-08-26T11:54:44.712Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T11:54:03.457Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 prebuild
+> npm run build:health-check && npm run netlify:manifest
+
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 build:health-check
+> node automation/pre-build-health-check.cjs
+
+[pre-build-health-check] Node: v22.16.0
+[pre-build-health-check] OK
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 netlify:manifest
+> node scripts/generate-netlify-functions-manifest.cjs
+
+[netlify:manifest] Wrote placeholder manifest to /Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/automation/netlify-functions-manifest.json
+
+> bolt.new.zion.app@0.1.0 build
+> NODE_OPTIONS="--max-old-space-size=6144 --openssl-legacy-provider" next build
+
+sh: next: command not found
+❌ Build failed. Please fix the issues before committing.
+
+[2025-08-26T11:54:44.712Z] Attempting auto-pull...
+[2025-08-26T11:54:44.754Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T11:54:44.754Z] Checking for merge conflicts...
+[2025-08-26T11:54:44.827Z] Attempting auto-push...
+[2025-08-26T11:54:45.209Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T11:54:45.210Z] Advanced git sync process completed
+[2025-08-26T11:56:00.230Z] Starting advanced git sync process...
+[2025-08-26T11:56:00.233Z] Checking git status...
+[2025-08-26T11:56:00.391Z] Changes detected: 32 files modified
+[2025-08-26T11:56:00.391Z] Checking for remote updates...
+[2025-08-26T11:56:02.796Z] Behind remote by 270 commits
+[2025-08-26T11:56:02.796Z] Staging all changes...
+[2025-08-26T11:56:02.994Z] Attempting auto-commit...
+[2025-08-26T11:56:44.884Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T11:56:03.043Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 prebuild
+> npm run build:health-check && npm run netlify:manifest
+
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 build:health-check
+> node automation/pre-build-health-check.cjs
+
+[pre-build-health-check] Node: v22.16.0
+[pre-build-health-check] OK
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 netlify:manifest
+> node scripts/generate-netlify-functions-manifest.cjs
+
+[netlify:manifest] Wrote placeholder manifest to /Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/automation/netlify-functions-manifest.json
+
+> bolt.new.zion.app@0.1.0 build
+> NODE_OPTIONS="--max-old-space-size=6144 --openssl-legacy-provider" next build
+
+sh: next: command not found
+❌ Build failed. Please fix the issues before committing.
+
+[2025-08-26T11:56:44.884Z] Attempting auto-pull...
+[2025-08-26T11:56:44.934Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T11:56:44.935Z] Checking for merge conflicts...
+[2025-08-26T11:56:45.023Z] Attempting auto-push...
+[2025-08-26T11:56:45.465Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T11:56:45.465Z] Advanced git sync process completed
+[2025-08-26T12:20:01.001Z] Starting advanced git sync process...
+[2025-08-26T12:20:01.004Z] Checking git status...
+[2025-08-26T12:20:01.253Z] Changes detected: 32 files modified
+[2025-08-26T12:20:01.254Z] Checking for remote updates...
+[2025-08-26T12:20:07.230Z] Behind remote by 923 commits
+[2025-08-26T12:20:07.231Z] Staging all changes...
+[2025-08-26T12:20:07.456Z] Attempting auto-commit...
+[2025-08-26T12:21:31.968Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T12:20:07.508Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 prebuild
+> npm run build:health-check && npm run netlify:manifest
+
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 build:health-check
+> node automation/pre-build-health-check.cjs
+
+[pre-build-health-check] Node: v22.16.0
+[pre-build-health-check] OK
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 netlify:manifest
+> node scripts/generate-netlify-functions-manifest.cjs
+
+[netlify:manifest] Wrote placeholder manifest to /Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/automation/netlify-functions-manifest.json
+
+> bolt.new.zion.app@0.1.0 build
+> NODE_OPTIONS="--max-old-space-size=6144 --openssl-legacy-provider" next build
+
+  ▲ Next.js 14.2.32
+  - Environments: .env
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./pages/services-2024.tsx
+Module not found: Can't resolve '../data/2024-real-micro-saas-services'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./pages/services-2024.tsx
+Module not found: Can't resolve '../data/2024-innovative-it-services'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./pages/services-2024.tsx
+Module not found: Can't resolve '../components/backgrounds/UltraFuturisticBackground2034'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./pages/services/[slug].tsx
+Module not found: Can't resolve '../../data/real-market-augmentations-2025'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./pages/services/[slug].tsx
+Module not found: Can't resolve '../../data/additional-live-services-2025'
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+> Build failed because of webpack errors
+❌ Build failed. Please fix the issues before committing.
+
+[2025-08-26T12:21:31.968Z] Attempting auto-pull...
+[2025-08-26T12:21:32.032Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T12:21:32.033Z] Checking for merge conflicts...
+[2025-08-26T12:21:32.132Z] Attempting auto-push...
+[2025-08-26T12:21:32.537Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T12:21:32.538Z] Advanced git sync process completed
+[2025-08-26T12:22:00.707Z] Starting advanced git sync process...
+[2025-08-26T12:22:00.709Z] Checking git status...
+[2025-08-26T12:22:00.876Z] Changes detected: 34 files modified
+[2025-08-26T12:22:00.876Z] Checking for remote updates...
+[2025-08-26T12:22:02.845Z] Behind remote by 923 commits
+[2025-08-26T12:22:02.846Z] Staging all changes...
+[2025-08-26T12:22:03.054Z] Attempting auto-commit...
+[2025-08-26T12:22:46.302Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T12:22:03.105Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+src/api/services.ts(1,34): error TS2339: Property 'VITE_API_URL' does not exist on type 'ImportMetaEnv'.
+src/App.tsx(2,56): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/AboutSection.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/Accessibility.tsx(196,19): error TS2322: Type '{ children: Element; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/Accessibility.tsx(214,21): error TS2322: Type '{ children: Element; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/Accessibility.tsx(230,21): error TS2322: Type '{ children: Element; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/Accessibility.tsx(246,25): error TS2322: Type '{ children: string; key: "small" | "large" | "medium"; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/Accessibility.tsx(264,25): error TS2322: Type '{ children: string; key: "none" | "protanopia" | "deuteranopia" | "tritanopia"; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AccessibilityEnhancer.tsx(188,21): error TS2322: Type '{ children: string; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AccessibilityEnhancer.tsx(203,21): error TS2322: Type '{ children: string; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AccessibilityEnhancer.tsx(218,21): error TS2322: Type '{ children: string; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AccessibilityEnhancer.tsx(233,21): error TS2322: Type '{ children: Element; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AccessibilityEnhancer.tsx(248,21): error TS2322: Type '{ children: Element; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AccessibilityEnhancer.tsx(263,21): error TS2322: Type '{ children: Element; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AccessibilityEnhancer.tsx(276,19): error TS2322: Type '{ children: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AccessibilityPanel.tsx(14,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/AccessibilityPanel.tsx(231,28): error TS2322: Type '{ children: Element; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/AdvancedAnalyticsDashboard.tsx(192,17): error TS2322: Type '{ children: "7d" | "30d" | "90d" | "1y"; key: "7d" | "30d" | "90d" | "1y"; variant: string; size: string; onClick: () => void; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedAnalyticsDashboard.tsx(439,15): error TS2322: Type '{ children: (string | Element)[]; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedServiceComparison.tsx(265,17): error TS2322: Type '{ children: Element; variant: string; size: string; onClick: () => void; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedServiceComparison.tsx(272,17): error TS2322: Type '{ children: Element; variant: string; size: string; onClick: () => void; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedServiceComparison.tsx(279,17): error TS2322: Type '{ children: Element; variant: string; size: string; onClick: () => void; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedServiceComparison.tsx(322,21): error TS2322: Type '{ children: Element; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedServiceComparison.tsx(469,15): error TS2322: Type '{ children: (string | Element)[]; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedServiceInnovationHub.tsx(304,17): error TS2322: Type '{ children: (string | Element)[]; key: "insights" | "trends" | "roadmap"; variant: string; size: string; onClick: () => void; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedServiceInnovationHub.tsx(752,15): error TS2322: Type '{ children: (string | Element)[]; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedServicePortfolioDashboard.tsx(262,17): error TS2322: Type '{ children: (string | Element)[]; key: "analytics" | "overview" | "detailed"; variant: string; size: string; onClick: () => void; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedServicePortfolioDashboard.tsx(445,15): error TS2322: Type '{ children: (string | Element)[]; variant: string; className: string; onClick: () => void; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedServicePortfolioDashboard.tsx(475,23): error TS2322: Type '{ children: (string | Element)[]; variant: string; size: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedServicePortfolioDashboard.tsx(686,15): error TS2322: Type '{ children: (string | Element)[]; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AdvancedServiceRecommendation.tsx(581,19): error TS2322: Type '{ children: (string | Element)[]; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/AICodeGenerator.tsx(230,26): error TS2322: Type '{ children: Element[]; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/BlockchainWeb3Dashboard.tsx(231,26): error TS2322: Type '{ children: Element[]; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/BlogSection.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/CategoriesSection.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/conflicted/utils.ts(2,25): error TS2307: Cannot find module 'tailwind-merge' or its corresponding type declarations.
+src/components/ContactInfo.tsx(5,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/ContactInfo.tsx(151,27): error TS2322: Type '{ children: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ContactInfo.tsx(157,27): error TS2322: Type '{ children: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ContactInfo.tsx(221,25): error TS2322: Type '{ children: string; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ContactInfo.tsx(226,25): error TS2322: Type '{ children: string; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ContactSection.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/EnhancedHero.tsx(104,28): error TS2322: Type '{ children: Element; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/EnhancedScrollToTop.tsx(3,31): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/EnhancedSEO.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/components/EnhancedServicesShowcase.tsx(215,15): error TS2322: Type '{ children: string; size: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(222,15): error TS2322: Type '{ children: string; size: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(307,15): error TS2322: Type '{ children: string; size: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(314,15): error TS2322: Type '{ children: string; size: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(397,15): error TS2322: Type '{ children: string; size: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(404,15): error TS2322: Type '{ children: string; size: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(489,15): error TS2322: Type '{ children: string; size: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(496,15): error TS2322: Type '{ children: string; size: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(585,15): error TS2322: Type '{ children: string; size: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(592,15): error TS2322: Type '{ children: string; size: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(681,15): error TS2322: Type '{ children: string; size: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(688,15): error TS2322: Type '{ children: string; size: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(777,15): error TS2322: Type '{ children: string; size: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(784,15): error TS2322: Type '{ children: string; size: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(921,17): error TS2322: Type '{ children: (string | Element)[]; size: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnhancedServicesShowcase.tsx(929,17): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/EnterpriseDashboard.tsx(393,26): error TS2322: Type '{ children: Element[]; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/ErrorPage.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/ErrorPage.tsx(26,19): error TS2322: Type '{ children: Element; variant: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/FeaturedListingsSection.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/FloatingActionButton.tsx(3,87): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/FloatingActionButton.tsx(4,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/FloatingActionButton.tsx(84,26): error TS2322: Type '{ children: Element; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/Footer.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/Header.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/header/Logo.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/header/MainNavigation.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/header/MainNavigation.tsx(5,25): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/header/MobileMenu.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/header/MobileMenu.tsx(3,29): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/header/MobileMenu.tsx(8,32): error TS2307: Cannot find module 'react-i18next' or its corresponding type declarations.
+src/components/header/MobileMenu.tsx(117,17): error TS2322: Type '{ children: Element; variant: string; size: string; onClick: () => void; "aria-label": string; title: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/header/UserMenu.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/HeroSection.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/home/EnhancedServicesOverview.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/home/EnhancedServicesOverview.tsx(114,23): error TS2322: Type '{ children: (string | Element)[]; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/home/EnhancedServicesOverview.tsx(119,21): error TS2322: Type '{ children: string; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/home/EnhancedServicesOverview.tsx(250,23): error TS2322: Type '{ children: string; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/home/EnhancedServicesOverview.tsx(253,23): error TS2322: Type '{ children: string; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/home/FeatureCTAs.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/home/ITServiceRequestHero.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/home/MicroSaasServicesSection.tsx(5,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/home/MicroSaasServicesSection.tsx(70,15): error TS2322: Type '{ children: Element; size: string; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/home/MicroSaasServicesSection.tsx(80,15): error TS2322: Type '{ children: Element; variant: string; size: string; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/home/MicroSaasServicesSection.tsx(159,19): error TS2322: Type '{ children: Element; className: string; size: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/home/MicroSaasServicesSection.tsx(203,17): error TS2322: Type '{ children: Element; size: string; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/home/MicroSaasServicesSection.tsx(212,17): error TS2322: Type '{ children: Element; variant: string; size: string; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/home/QuickAccess.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/home/ServicesShowcase.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/HomepagePromotion.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/InteractiveServiceShowcase.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/InteractiveServiceShowcase.tsx(179,28): error TS2322: Type '{ children: Element[]; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/ITServiceRequestHero.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/layout/MainSidebar.tsx(2,35): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/MachineLearningDashboard.tsx(246,26): error TS2322: Type '{ children: Element[]; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/MainNavigation.tsx(2,35): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/MetaTags.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/components/MicroSaasShowcase.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/ModernUIEnhancer.tsx(314,28): error TS2322: Type '{ children: Element[]; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/Navigation.tsx(2,35): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/NotFound.tsx(2,35): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/NotFound.tsx(84,13): error TS2322: Type '{ children: (string | Element)[]; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/PerformanceOptimizedHero.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/profile/HireNowCTA.tsx(145,17): error TS2322: Type '{ children: string; type: "button"; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ScrollToTop.tsx(3,31): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/SecurityComplianceDashboard.tsx(237,26): error TS2322: Type '{ children: Element[]; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/SEO.tsx(3,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/components/SEOEnhancer.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/components/SEOHead.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/components/SEOHead.tsx(3,29): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/ServiceCard.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/ServiceShowcase.tsx(132,13): error TS2322: Type '{ children: string; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ServicesShowcase.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/Sidebar.tsx(2,35): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/TestimonialsSection.tsx(3,61): error TS2307: Cannot find module '@heroicons/react/24/solid' or its corresponding type declarations.
+src/components/TestimonialsSection.tsx(113,28): error TS2322: Type '{ children: Element; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/ThemeToggle.tsx(2,35): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/ui/3d-card-gallery.tsx(244,17): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/3d-card-gallery.tsx(253,17): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/3d-card-gallery.tsx(276,13): error TS2322: Type '{ children: string; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/3d-card-gallery.tsx(304,15): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/3d-card-gallery.tsx(314,15): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/3d-card-gallery.tsx(327,17): error TS2322: Type '{ children: string; key: string; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/3d-card-gallery.tsx(410,21): error TS2322: Type '{ children: (string | Element)[]; key: number; size: string; variant: "outline" | "default" | "ghost"; onClick: (e: MouseEvent<HTMLButtonElement, MouseEvent>) => void; disabled: boolean; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/3d-card-gallery.tsx(493,19): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/3d-card-gallery.tsx(576,29): error TS2322: Type '{ children: (string | Element)[]; key: number; size: string; variant: "outline" | "default" | "ghost"; onClick: () => void; disabled: boolean; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/3d-card-gallery.tsx(733,17): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: (e: MouseEvent<Element, MouseEvent>) => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/3d-card-gallery.tsx(744,17): error TS2322: Type '{ children: Element; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/3d-card-gallery.tsx(752,17): error TS2322: Type '{ children: Element; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility-menu.tsx(110,19): error TS2322: Type '{ children: string; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility-menu.tsx(129,23): error TS2322: Type '{ children: "small" | "large" | "medium"; key: "small" | "large" | "medium"; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility-menu.tsx(151,19): error TS2322: Type '{ children: string; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility-menu.tsx(171,19): error TS2322: Type '{ children: string; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility-menu.tsx(195,19): error TS2322: Type '{ children: string; variant: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility.tsx(212,21): error TS2322: Type '{ children: string; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility.tsx(228,21): error TS2322: Type '{ children: string; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility.tsx(245,23): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; disabled: boolean; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility.tsx(254,23): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; disabled: boolean; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility.tsx(294,21): error TS2322: Type '{ children: string; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility.tsx(318,21): error TS2322: Type '{ children: string; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility.tsx(333,21): error TS2322: Type '{ children: string; size: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accessibility.tsx(346,19): error TS2322: Type '{ children: string; onClick: () => void; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/accordion.tsx(4,37): error TS2307: Cannot find module '@radix-ui/react-accordion' or its corresponding type declarations.
+src/components/ui/ai-chat-assistant.tsx(246,21): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/ai-chat-assistant.tsx(254,21): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/ai-chat-assistant.tsx(262,21): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/ai-chat-assistant.tsx(286,27): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/ai-chat-assistant.tsx(297,27): error TS2322: Type '{ children: string; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/ai-chat-assistant.tsx(408,23): error TS2322: Type '{ children: Element; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/ai-chat-assistant.tsx(415,23): error TS2322: Type '{ children: Element; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/ai-chat-assistant.tsx(442,23): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/ai-search.tsx(338,13): error TS2322: Type '{ children: Element; onClick: () => void; disabled: boolean; className: string; size: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/ai-search.tsx(391,19): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/ai-search.tsx(399,19): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/ai-search.tsx(607,19): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/ai-search.tsx(617,19): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/analytics-dashboard.tsx(103,13): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/analytics-dashboard.tsx(111,13): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => Promise<void>; disabled: boolean; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/analytics-dashboard.tsx(120,13): error TS2322: Type '{ children: Element; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/button.tsx(2,22): error TS2307: Cannot find module '@radix-ui/react-slot' or its corresponding type declarations.
+src/components/ui/button.tsx(3,40): error TS2307: Cannot find module 'class-variance-authority' or its corresponding type declarations.
+src/components/ui/button.tsx(42,17): error TS2339: Property 'variant' does not exist on type 'ButtonProps'.
+src/components/ui/button.tsx(42,26): error TS2339: Property 'size' does not exist on type 'ButtonProps'.
+src/components/ui/FuturisticServicesShowcase.tsx(151,28): error TS2322: Type '{ children: Element[]; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/ui/interactive-timeline.tsx(245,15): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/interactive-timeline.tsx(254,15): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/interactive-timeline.tsx(277,15): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/interactive-timeline.tsx(286,15): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/interactive-timeline.tsx(297,13): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/interactive-timeline.tsx(307,13): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/interactive-timeline.tsx(321,11): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/interactive-timeline.tsx(594,29): error TS2322: Type '{ children: (string | Element)[]; key: number; size: string; variant: "outline" | "default" | "ghost"; onClick: (e: MouseEvent<HTMLButtonElement, MouseEvent>) => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/interactive-timeline.tsx(714,19): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/notification.tsx(142,13): error TS2322: Type '{ children: string; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/notification.tsx(154,26): error TS2322: Type '{ children: Element[]; mode: string; }' is not assignable to type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+  Property 'mode' does not exist on type 'IntrinsicAttributes & AnimatePresenceProps & { children?: ReactNode; }'.
+src/components/ui/notification.tsx(262,17): error TS2322: Type '{ children: string; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/performance-monitor.tsx(291,11): error TS2322: Type '{ children: Element[]; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/performance-monitor.tsx(328,15): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/performance-monitor.tsx(337,15): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/performance-monitor.tsx(346,15): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/performance-monitor.tsx(506,19): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/performance-monitor.tsx(545,17): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/performance-monitor.tsx(560,17): error TS2322: Type '{ children: Element; size: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/components/ui/sonner.tsx(4,35): error TS2307: Cannot find module 'sonner' or its corresponding type declarations.
+src/components/unused/BrokenLinkFixer.tsx(14,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/unused/ContentQualityEnhancer.tsx(15,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/unused/CTASection.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/unused/CTASection.tsx(9,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/unused/Docs.tsx(10,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/unused/Enhanced404Page.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/unused/Enhanced404Page.tsx(9,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/unused/EnhancedAccessibility.tsx(15,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/unused/EnhancedErrorBoundary.tsx(9,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/unused/FeaturesSection.tsx(10,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/unused/Marketplace.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/unused/ServicesShowcase.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/components/unused/ServicesShowcase.tsx(11,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/components/unused/TestimonialsSection.tsx(3,26): error TS2307: Cannot find module '@heroicons/react/24/solid' or its corresponding type declarations.
+src/components/unused/WebsiteImprovementDashboard.tsx(18,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/hooks/useScrollToTop.ts(2,29): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/lib/utils.ts(2,25): error TS2307: Cannot find module 'tailwind-merge' or its corresponding type declarations.
+src/main.tsx(3,31): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/main.tsx(4,32): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/404.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/5g-enterprise-solutions.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/About.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/accessibility-auditor.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/advanced-cybersecurity-suite.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AdvancedCybersecuritySuite.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AdvancedServices2025.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AdvancedServicesShowcase2025.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/affiliate-attribution-hub.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AgenticRagHelpdesk.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ai-powered-it-asset-management.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIAgentOrchestrator.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAnalyticsCopilot.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousAnalytics.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousAPISecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousApplicationSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousArchitecture.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousAudit.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousAutomation.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousBusinessOperations.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIAutonomousBusinessPlatform2029.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIAutonomousBusinessProcessAutomation.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIAutonomousCloudSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousCodeReview.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousCompliance.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousComplianceSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousContainerSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousCreativeDirector.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousCreativity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousCustomerService.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousData.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousDatabaseSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousDataSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousDecisionEngine.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousDecisionPlatform.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousDesign.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousDevelopment.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousDevOps.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousDevOpsSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousDiscovery.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousEdgeSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousEducationProfessor.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousEngineering.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousFinance.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousForensics.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousGovernance.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousHealthcarePhysician.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousHybridSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousIdentitySecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousIncidentResponse.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousInfrastructureSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousInnovation.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousIntegration.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousInvention.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousIOTSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousLearning.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousLearningSystem.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousLegalCounsel.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousLegalResearchAssistant.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIAutonomousLogistics.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousMalwareAnalysis.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousManagement.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousManufacturing.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousMarketing.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousMicroserviceSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousMobileSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousMonitoring.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousMonitoringSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousNetworkSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousOptimization.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousOrchestration.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousPenetrationTesting.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousPlanning.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousPrediction.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousQualityAssurance.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousReasoning.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousRecommendation.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousResearch.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousResearchAssistant.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousRiskManagement.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousRobotics.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousScientificResearcher.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousServerlessSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousSoftwareEngineer.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousSpeech.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousSynthesis.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousSystemsPlatform.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousTesting.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousThreatDetection.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousThreatIntelligence.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousTrading.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousTranslation.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousVirtualAssistant.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousVision.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousVulnerabilityAssessment.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousWebSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousWorkflow.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousWriting.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIAutonomousZeroTrustSecurity.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIBusinessIntelligence.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIBusinessSolutions.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIConsumerWillingnessToTry.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIConsumerWillingnessToUse.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIPoweredITAssetManagement.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/AIResearchAssistant.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousBusinessManager.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousBusinessPlatform.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousCodeReview.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousCreativeDirector.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousData.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousDecisionPlatform.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousDevOps.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousEducationProfessor.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousHealthcarePhysician.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousLearningSystem.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousLegalCounsel.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousLogistics.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousManufacturing.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousResearch.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousRobotics.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousScientificResearcher.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousSecurity.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousSystemsPlatform.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousTesting.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousVehiclePlatform.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousVehicles.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIAutonomousVentureCapitalist.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIBiomedicalResearch.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIBiotechDrugDiscovery.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIBlockchainGovernance.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIBrainComputerInterface.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIBrainInterface.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIBusinessIntelligenceElite.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIBusinessIntelligencePro.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIBusinessIntelligenceSuite.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIClimatePrediction.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIClimatePredictionEngine.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIClimatePredictionPlatform.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AICodeGenerationEnterprise.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIComplianceAutomation.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIComputerVisionPlatform.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIConsciousnessEvolutionPlatform.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIConsciousnessSimulation.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIConsciousnessSimulationPlatform.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIConsciousnessSimulator.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIContentCreation.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIContentCreationRevolution.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIContentFactory.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIContentGenerationAutomation.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AIServices/AIContentGenerationPro.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/autonomous-business-operations-platform.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/AutonomousBusinessOperationsPlatform.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/BlockchainServicesPage.tsx(5,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/BlockchainServicesPage.tsx(217,25): error TS2322: Type '{ children: string; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/BlockchainServicesPage.tsx(222,25): error TS2322: Type '{ children: string; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/BlockchainServicesPage.tsx(363,25): error TS2322: Type '{ children: string; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/BlockchainServicesPage.tsx(368,25): error TS2322: Type '{ children: string; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/BusinessSolutionsPage.tsx(5,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/BusinessSolutionsPage.tsx(226,21): error TS2322: Type '{ children: (string | Element)[]; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/BusinessSolutionsPage.tsx(230,21): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/BusinessSolutionsPage.tsx(244,15): error TS2322: Type '{ children: (string | Element)[]; key: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/BusinessSolutionsPage.tsx(314,21): error TS2322: Type '{ children: (string | Element)[]; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/BusinessSolutionsPage.tsx(318,21): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/Careers.tsx(10,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/pages/CaseStudies.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/CaseStudies.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/CloudInfrastructure.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Community.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/CommunityPage.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ComprehensivePricing.tsx(209,19): error TS2322: Type '{ children: string; size: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ComprehensivePricing.tsx(216,19): error TS2322: Type '{ children: string; size: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ComprehensivePricing.tsx(315,19): error TS2322: Type '{ children: string; size: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ComprehensivePricing.tsx(322,19): error TS2322: Type '{ children: string; size: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ComprehensivePricing.tsx(417,19): error TS2322: Type '{ children: string; size: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ComprehensivePricing.tsx(424,19): error TS2322: Type '{ children: string; size: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ComprehensivePricing.tsx(553,15): error TS2322: Type '{ children: (string | Element)[]; size: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ComprehensivePricing.tsx(561,15): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ComprehensiveServicesLanding2025.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ComprehensiveServicesOverview2025.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ComprehensiveServicesShowcase2025.tsx(24,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Cookies.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Cybersecurity.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/DeveloperPortal.tsx(22,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/DeveloperPortal.tsx(148,29): error TS2322: Type '{ children: Element; asChild: true; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/DeveloperPortal.tsx(154,29): error TS2322: Type '{ children: Element; asChild: true; variant: string; size: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/DeveloperPortal.tsx(184,37): error TS2322: Type '{ children: Element; asChild: true; variant: string; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/DeveloperPortal.tsx(213,27): error TS2322: Type '{ children: string; variant: string; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/DeveloperPortal.tsx(243,37): error TS2322: Type '{ children: Element; asChild: true; variant: string; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/DeveloperPortal.tsx(283,31): error TS2322: Type '{ children: Element; asChild: true; variant: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/DeveloperPortal.tsx(309,31): error TS2322: Type '{ children: Element; asChild: true; variant: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/DigitalMarketingServicesPage.tsx(5,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/DigitalMarketingServicesPage.tsx(219,21): error TS2322: Type '{ children: (string | Element)[]; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/DigitalMarketingServicesPage.tsx(223,21): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/DigitalMarketingServicesPage.tsx(237,15): error TS2322: Type '{ children: (string | Element)[]; key: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/DigitalMarketingServicesPage.tsx(307,21): error TS2322: Type '{ children: (string | Element)[]; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/DigitalMarketingServicesPage.tsx(311,21): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/DigitalTransformation.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Documentation.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/EnhancedServicesShowcase.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/EnhancedServicesShowcase.tsx(56,21): error TS2322: Type '{ children: (string | Element)[]; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/EnhancedServicesShowcase.tsx(60,21): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/EnhancedServicesShowcase.tsx(107,13): error TS2322: Type '{ children: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/EnhancedServicesShowcase.tsx(116,15): error TS2322: Type '{ children: string; key: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/EnhancedServicesShowcase.tsx(187,21): error TS2322: Type '{ children: (string | Element)[]; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/EnhancedServicesShowcase.tsx(191,21): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/EnhancedServicesShowcase.tsx(233,25): error TS2322: Type '{ children: (string | Element)[]; variant: string; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/EnhancedServicesShowcase.tsx(320,21): error TS2322: Type '{ children: (string | Element)[]; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/EnhancedServicesShowcase2025.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/EnterpriseIT.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ErrorRoutes.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ErrorRoutes.tsx(3,44): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Events.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/FinancialSolutions.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/FiveGNetworkOptimization.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/ForgotPassword.tsx(7,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/GetStarted.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/HelpCenter.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/HelpCenter.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Home.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/InnovativeNewServices2025.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/IoTServicesPage.tsx(5,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/IoTServicesPage.tsx(217,25): error TS2322: Type '{ children: string; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/IoTServicesPage.tsx(222,25): error TS2322: Type '{ children: string; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/IoTServicesPage.tsx(363,25): error TS2322: Type '{ children: string; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/IoTServicesPage.tsx(368,25): error TS2322: Type '{ children: string; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/Leadership.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ManufacturingSolutions.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/MicroSAAS.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/MicroSAASServicesPage.tsx(417,21): error TS2322: Type '{ children: (string | Element)[]; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/MicroSAASServicesPage.tsx(421,21): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/MicroSAASServicesPage.tsx(456,17): error TS2322: Type '{ children: string; key: string; variant: string; onClick: () => void; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/MicroSAASServicesPage.tsx(562,21): error TS2322: Type '{ children: (string | Element)[]; size: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/MicroSAASServicesPage.tsx(566,21): error TS2322: Type '{ children: (string | Element)[]; size: string; variant: string; className: string; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'size' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/News.tsx(6,8): error TS2307: Cannot find module '@heroicons/react/24/outline' or its corresponding type declarations.
+src/pages/NewServicesOverview.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/NextGenServicesShowcase2025.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/NotFound.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Press.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/Press.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Pricing.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Pricing.tsx(3,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/Privacy.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/quantum-neural-network-platform.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/QuantumEdgeComputingPlatform.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/QuantumNeuralNetworkPlatform.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/QuantumTechnology.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ResearchDevelopment.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ServiceComparison.tsx(82,17): error TS2322: Type '{ children: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ServiceComparison.tsx(226,17): error TS2322: Type '{ children: (string | Element)[]; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ServiceInnovationHub.tsx(135,17): error TS2322: Type '{ children: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ServiceInnovationHub.tsx(319,17): error TS2322: Type '{ children: (string | Element)[]; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ServicePortfolioDashboard.tsx(119,17): error TS2322: Type '{ children: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ServicePortfolioDashboard.tsx(316,17): error TS2322: Type '{ children: (string | Element)[]; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ServiceRecommendations.tsx(116,17): error TS2322: Type '{ children: string; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/ServiceRecommendations.tsx(310,17): error TS2322: Type '{ children: (string | Element)[]; variant: string; className: string; onClick: () => Window; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+  Property 'variant' does not exist on type 'IntrinsicAttributes & ButtonProps & RefAttributes<HTMLButtonElement>'.
+src/pages/Services.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/services/AIServices.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/services/AISolutions.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/services/BlockchainWeb3.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/services/Cloud.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/services/Consulting.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/services/Cybersecurity.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/services/DataAnalytics.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/services/DevOpsCloud.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/services/Infrastructure.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/services/IoTEdgeComputing.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/services/ITSolutions.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/services/quantum-ai.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/services/Transformation.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ServicesOverview.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ServicesPage.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ServicesPricingPage.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Sitemap.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/Sitemap.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/soc2-compliance-automation.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/Solutions.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/solutions/Enterprise.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/solutions/EnterpriseSolutions.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/solutions/GovernmentSolutions.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/solutions/Healthcare.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/solutions/HealthcareSolutions.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/SpaceTech.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Status.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Support.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/TalentDirectory.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Terms.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Training.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/Training.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Tutorials.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/Webinars.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/WhitePapers.tsx(2,24): error TS2307: Cannot find module 'react-helmet-async' or its corresponding type declarations.
+src/pages/WhitePapers.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/pages/ZeroTrustNetworkArchitecture.tsx(2,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/routes/AuthRoutes.tsx(2,31): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/routes/CommunityRoutes.tsx(2,23): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/routes/DeveloperRoutes.tsx(2,23): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/routes/EnterpriseRoutes.tsx(2,23): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/routes/ErrorRoutes.tsx(2,23): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/routes/MobileAppRoutes.tsx(2,23): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/routes/TalentRoutes.tsx(2,23): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+src/store/hooks.ts(1,64): error TS2307: Cannot find module 'react-redux' or its corresponding type declarations.
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T12:22:46.304Z] Attempting auto-pull...
+[2025-08-26T12:22:46.351Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T12:22:46.352Z] Checking for merge conflicts...
+[2025-08-26T12:22:46.428Z] Attempting auto-push...
+[2025-08-26T12:22:46.848Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T12:22:46.848Z] Advanced git sync process completed

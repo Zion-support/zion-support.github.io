@@ -1,8 +1,8 @@
 {
-  "timestamp": "2025-08-26T10:20:05Z",
+  "timestamp": "2025-08-26T12:20:05Z",
   "system": {
-    "cpu_usage": "14.88%",
-    "memory_usage": "92.00%",
+    "cpu_usage": "23.41%",
+    "memory_usage": "97.00%",
     "disk_usage": "8%"
   },
   "services": {
@@ -13,6 +13,6 @@
   },
   "alerts": {
     "offline_services":        0,
-    "zombie_processes": 18
+    "zombie_processes": 21
   }
 }

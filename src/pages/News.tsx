@@ -1,13 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  CalendarIcon,
-  ClockIcon,
-  UserIcon,
-  TagIcon,
-  ArrowRightIcon,
-  NewspaperIcon
+import {
+    ArrowRightIcon,
+    ClockIcon,
+    NewspaperIcon,
+    UserIcon
 } from '@heroicons/react/24/outline';
+import { motion } from 'framer-motion';
+import React from 'react';
 
 const News: React.FC = () => {
   const breakingNews = [
@@ -120,17 +118,24 @@ const News: React.FC = () => {
   ];
 
   const categories = [
-    'All News',
-    'Company News',
-    'Partnerships',
-    'Research & Development',
-    'Awards & Recognition',
-    'Business Expansion',
-    'AI Ethics',
-    'Quantum Technology',
-    'Healthcare AI',
-    'Financial Results',
-    'Corporate Governance'
+    { id: 'all', name: 'All News', icon: NewspaperIcon },
+    { id: 'company', name: 'Company News', icon: NewspaperIcon },
+    { id: 'partnerships', name: 'Partnerships', icon: NewspaperIcon },
+    { id: 'research', name: 'Research & Development', icon: NewspaperIcon },
+    { id: 'awards', name: 'Awards & Recognition', icon: NewspaperIcon },
+    { id: 'expansion', name: 'Business Expansion', icon: NewspaperIcon },
+    { id: 'ethics', name: 'AI Ethics', icon: NewspaperIcon },
+    { id: 'quantum', name: 'Quantum Technology', icon: NewspaperIcon },
+    { id: 'healthcare', name: 'Healthcare AI', icon: NewspaperIcon },
+    { id: 'financial', name: 'Financial Results', icon: NewspaperIcon },
+    { id: 'governance', name: 'Corporate Governance', icon: NewspaperIcon }
+  ];
+
+  // Combine all news articles and add featured property
+  const newsArticles = [
+    ...breakingNews.map(article => ({ ...article, featured: true })),
+    ...latestNews.map(article => ({ ...article, featured: false })),
+    ...pressReleases.map(article => ({ ...article, featured: false }))
   ];
 
   const featuredNews = newsArticles.filter(article => article.featured);
@@ -196,14 +201,14 @@ const News: React.FC = () => {
           >
             {categories.map((category, index) => (
               <button
-                key={category}
+                key={category.id}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   index === 0
                     ? 'bg-purple-600 text-white'
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                {category}
+                {category.name}
               </button>
             ))}
           </motion.div>
