@@ -374,7 +374,6 @@
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
     "@types/react-datepicker": "^6.2.0",
-    "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
     "chalk": "^5.5.0",
     "cheerio": "^1.1.2",
@@ -386,17 +385,14 @@
     "framer-motion": "^6.5.1",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
-    "glob": "^11.0.3",
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
     "js-yaml": "^4.1.0",
-    "jsdom": "^24.1.0",
     "lucide-react": "^0.536.0",
     "next": "^14.2.32",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
-    "postcss": "^8.4.32",
     "react": "18.2.0",
     "react-datepicker": "^8.4.0",
     "react-dom": "18.2.0",
@@ -437,11 +433,9 @@
   },
   "overrides": {
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
-    "glob": "^10.3.10",
     "rimraf": "^5.0.5"
   },
   "resolutions": {
-    "glob": "^10.4.5",
     "rimraf": "^5.0.5",
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0"
   }
