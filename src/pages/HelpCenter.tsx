@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import SEO from '../SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
-import { Search, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail } from 'lucide-react';
-=======
 import React, { useState } from 'react';
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-67e4
 import { Link } from 'react-router-dom';
 import { 
   Search, 
@@ -33,83 +16,6 @@ import {
 } from 'lucide-react';
 
 const HelpCenter: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const helpCategories = [
-    {
-      id: 'getting-started',
-      name: 'Getting Started',
-      description: 'Learn the basics and get up and running quickly',
-      icon: '🚀',
-      articles: [
-        { title: 'Welcome to Zion Tech Group', path: '/help/welcome' },
-        { title: 'Setting Up Your Account', path: '/help/setup' },
-        { title: 'First Steps Guide', path: '/help/first-steps' },
-        { title: 'Platform Overview', path: '/help/platform-overview' }
-      ]
-    },
-    {
-      id: 'services',
-      name: 'Services',
-      description: 'Understanding our technology solutions and services',
-      icon: '🔧',
-      articles: [
-        { title: 'AI Solutions Guide', path: '/help/ai-solutions' },
-        { title: 'Cloud & DevOps Setup', path: '/help/cloud-devops' },
-        { title: 'Cybersecurity Best Practices', path: '/help/cybersecurity' },
-        { title: 'Digital Transformation Process', path: '/help/digital-transformation' }
-      ]
-    },
-    {
-      id: 'account-billing',
-      name: 'Account & Billing',
-      description: 'Manage your account, billing, and subscriptions',
-      icon: '💳',
-      articles: [
-        { title: 'Account Settings', path: '/help/account-settings' },
-        { title: 'Billing & Invoices', path: '/help/billing' },
-        { title: 'Subscription Management', path: '/help/subscriptions' },
-        { title: 'Payment Methods', path: '/help/payment-methods' }
-      ]
-    },
-    {
-      id: 'technical-support',
-      name: 'Technical Support',
-      description: 'Get help with technical issues and troubleshooting',
-      icon: '🛠️',
-      articles: [
-        { title: 'Common Issues & Solutions', path: '/help/common-issues' },
-        { title: 'API Documentation', path: '/help/api-docs' },
-        { title: 'Integration Guides', path: '/help/integrations' },
-        { title: 'Performance Optimization', path: '/help/performance' }
-      ]
-    },
-    {
-      id: 'security-privacy',
-      name: 'Security & Privacy',
-      description: 'Learn about our security measures and privacy policies',
-      icon: '🔒',
-      articles: [
-        { title: 'Security Features', path: '/help/security-features' },
-        { title: 'Data Privacy', path: '/help/data-privacy' },
-        { title: 'Compliance Information', path: '/help/compliance' },
-        { title: 'Security Best Practices', path: '/help/security-best-practices' }
-      ]
-    },
-    {
-      id: 'training-resources',
-      name: 'Training & Resources',
-      description: 'Educational materials and learning resources',
-      icon: '📚',
-      articles: [
-        { title: 'Video Tutorials', path: '/help/video-tutorials' },
-        { title: 'Webinar Recordings', path: '/help/webinars' },
-        { title: 'White Papers', path: '/help/white-papers' },
-        { title: 'Training Programs', path: '/help/training' }
-=======
   const faqCategories = [
     {
       title: "Getting Started",
@@ -151,8 +57,6 @@ const HelpCenter: React.FC = () => {
           question: "How quickly do you respond to support requests?",
           answer: "We prioritize support requests based on severity. Critical issues receive immediate attention, while standard requests are typically addressed within 4-8 hours during business hours."
         }
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
-=======
   const helpCategories = [
     {
       title: "Getting Started",
@@ -192,35 +96,10 @@ const HelpCenter: React.FC = () => {
         "Upgrading Your Plan",
         "Payment Methods",
         "Invoice Management"
->>>>>>> origin/cursor/website-audit-and-enhancement-67e4
       ]
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const popularArticles = [
-    { title: 'How to Get Started with AI Solutions', category: 'Services', path: '/help/ai-solutions' },
-    { title: 'Understanding Cloud Migration', category: 'Services', path: '/help/cloud-migration' },
-    { title: 'Cybersecurity Best Practices', category: 'Security & Privacy', path: '/help/cybersecurity' },
-    { title: 'Billing and Payment FAQ', category: 'Account & Billing', path: '/help/billing-faq' },
-    { title: 'API Integration Guide', category: 'Technical Support', path: '/help/api-integration' }
-  ];
-
-  const filteredCategories = selectedCategory === 'all' 
-    ? helpCategories 
-    : helpCategories.filter(cat => cat.id === selectedCategory);
-
-  const filteredArticles = helpCategories.flatMap(cat => cat.articles)
-    .filter(article => 
-      article.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Help Center
           </h1>
@@ -242,7 +121,6 @@ const HelpCenter: React.FC = () => {
             />
             <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">
               🔍
-=======
   const supportChannels = [
     {
       title: "Phone Support",
@@ -301,7 +179,6 @@ const HelpCenter: React.FC = () => {
     }
   ];
 
-=======
   const popularArticles = [
     {
       title: "How to Train Your First AI Model",
@@ -329,23 +206,10 @@ const HelpCenter: React.FC = () => {
     }
   ];
 
->>>>>>> origin/cursor/website-audit-and-enhancement-67e4
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              How Can We
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Help You?
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Find answers to your questions, get technical support, and access helpful resources to make the most of our services.
-=======
 import React from 'react';
 import { AppHeader } from '@/layout/AppHeader';
 import { Footer } from '@/components/Footer';
@@ -499,65 +363,13 @@ export default function HelpCenter() {
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Find answers, tutorials, and support resources to help you make the most of Zion Tech Group
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
             </p>
             
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
-<<<<<<< HEAD
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search for help articles, tutorials, or contact information..."
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
-            </div>
           </div>
 
-<<<<<<< HEAD
-        {/* Quick Actions */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 p-6 rounded-xl text-white text-center hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-          >
-            <div className="text-3xl mb-3">📞</div>
-            <h3 className="text-lg font-semibold mb-2">Contact Support</h3>
-            <p className="text-sm opacity-90">Get direct help from our team</p>
-          </Link>
-          
-          <Link
-            to="/status"
-            className="bg-slate-800/50 p-6 rounded-xl text-white text-center border border-white/10 hover:border-blue-500/30 transition-all duration-300"
-          >
-            <div className="text-3xl mb-3">📊</div>
-            <h3 className="text-lg font-semibold mb-2">Service Status</h3>
-            <p className="text-sm text-gray-300">Check system status and updates</p>
-          </Link>
-          
-          <Link
-            to="/faq"
-            className="bg-slate-800/50 p-6 rounded-xl text-white text-center border border-white/10 hover:border-blue-500/30 transition-all duration-300"
-          >
-            <div className="text-3xl mb-3">❓</div>
-            <h3 className="text-lg font-semibold mb-2">FAQ</h3>
-            <p className="text-sm text-gray-300">Frequently asked questions</p>
-          </Link>
-        </div>
-
-        {/* Popular Articles */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-white mb-8">Popular Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {popularArticles.map((article, index) => (
-              <Link
-                key={index}
-                to={article.path}
-                className="bg-slate-800/50 p-6 rounded-xl border border-white/10 hover:border-blue-500/30 transition-all duration-300 group"
-              >
                 <div className="flex items-start justify-between mb-3">
                   <span className="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full">
                     {article.category}
@@ -574,7 +386,6 @@ export default function HelpCenter() {
                 </div>
               </Link>
             ))}
-=======
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 
@@ -587,7 +398,6 @@ const $page: React.FC = () => {
             <div className="p-3 bg-blue-600/20 rounded-full">
               <CogIcon className="h-12 w-12 text-blue-400" />
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             $page
@@ -602,10 +412,6 @@ const $page: React.FC = () => {
             Contact Us for More Information
           </Link>
         </div>
-<<<<<<< HEAD
-
-        {/* Help Categories */}
-        <div className="mb-16">
           <h2 className="text-2xl font-bold text-white mb-8">Browse by Category</h2>
           
           {/* Category Filter */}
@@ -714,7 +520,6 @@ const $page: React.FC = () => {
               >
                 Support Portal
               </Link>
-=======
           {/* Support Channels */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Get Support</h2>
@@ -736,7 +541,6 @@ const $page: React.FC = () => {
                   </div>
                 );
               })}
-=======
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -866,7 +670,6 @@ export default function HelpCenter() {
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-zion-slate-light text-sm">{category.description}</p>
-=======
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-6 h-6" />
                 <input
                   type="text"
@@ -931,117 +734,11 @@ export default function HelpCenter() {
                       View All Articles
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
                   </CardContent>
                 </Card>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-
-          {/* Quick Actions */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-white mb-8 text-center">Quick Actions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple h-16 text-lg">
-                <Link to="/contact">
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  Contact Support
-                </Link>
-              </Button>
-              <Button asChild className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light h-16 text-lg">
-                <Link to="/community">
-                  <Users className="mr-2 h-5 w-5" />
-                  Ask Community
-                </Link>
-              </Button>
-              <Button asChild className="bg-gradient-to-r from-zion-green to-zion-green-dark hover:from-zion-green-light hover:to-zion-green h-16 text-lg">
-                <Link to="/sitemap">
-                  <HelpCircle className="mr-2 h-5 w-5" />
-                  Browse All Pages
-                </Link>
-              </Button>
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
-            </div>
-          </div>
-
-          {/* FAQ Section */}
-          <div className="mb-16">
-<<<<<<< HEAD
-            <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-            <div className="space-y-8">
-              {faqCategories.map((category) => {
-                const IconComponent = category.icon;
-                return (
-                  <div key={category.title} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                    <div className="flex items-center mb-6">
-                      <IconComponent className="w-8 h-8 text-blue-400 mr-3" />
-                      <h3 className="text-2xl font-semibold">{category.title}</h3>
-                    </div>
-                    <div className="space-y-4">
-                      {category.questions.map((item, index) => (
-                        <div key={index} className="bg-white/5 rounded-lg p-4">
-                          <h4 className="font-semibold mb-2 text-blue-300">{item.question}</h4>
-                          <p className="text-gray-300 text-sm">{item.answer}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Resources Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Helpful Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {resources.map((resource) => {
-                const IconComponent = resource.icon;
-                return (
-                  <Link
-                    key={resource.title}
-                    to={resource.link}
-                    className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <IconComponent className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">{resource.title}</h3>
-                    <p className="text-gray-300 text-sm mb-3">{resource.description}</p>
-                    <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
-                      {resource.category}
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Contact CTA */}
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-xl p-8 border border-blue-500/30">
-              <Lightbulb className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Still Need Help?</h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Can't find what you're looking for? Our expert team is here to help you with any questions or technical issues you may have.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
-                  Contact Support
-                </Link>
-                <a
-                  href="mailto:support@ziontechgroup.com"
-                  className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/20 transition-all duration-300"
-                >
-                  Email Support
-                </a>
-              </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
-=======
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Help
@@ -1146,23 +843,15 @@ export default function HelpCenter() {
                   View Documentation
                 </Link>
               </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-67e4
             </div>
           </div>
         </div>
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
       </section>
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default HelpCenter;
-=======
 export default $page;
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
-=======
             <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
@@ -1201,8 +890,6 @@ export default $page;
     </AppLayout>
   );
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
-=======
         </section>
 
         {/* Additional Resources */}
@@ -1285,4 +972,3 @@ export default $page;
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b

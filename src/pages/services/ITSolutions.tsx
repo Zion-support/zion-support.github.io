@@ -1,7 +1,7 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { Settings, Monitor, Database, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
+import { SEO } from "@/components/SEO";
+import Link from 'next/link';
+import { Check, Server, Shield, Cloud, Database, Network, Monitor, Zap } from 'lucide-react';
 
 const ITSolutions: React.FC = () => {
   const features = [

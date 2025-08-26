@@ -1,5 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { 
+  Shield, 
+  Lock, 
+  Eye, 
+  AlertTriangle, 
+  BarChart3, 
+  Users, 
+  Globe,
+  Zap,
+  Target,
+  Award,
+  ArrowRight,
+  Shield as Security,
+  Monitor,
+  Smartphone,
+  Server,
+  Database,
+  Network,
+  Code,
+  Brain,
+  Cpu,
+  Building,
+  CheckCircle,
+  Cloud
+} from 'lucide-react';
 
 const AdvancedCybersecuritySuite: React.FC = () => {
   const features = [

@@ -1,1 +1,17 @@
-export const practicalMicroSaas2027 = [] as any[];
+export interface PracticalMicroSaas2027 {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+}
+
+export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
+  {
+    id: 'practical-saas-2027-1',
+    name: 'Practical Micro SAAS 2027 1',
+    tagline: 'Practical 2027 micro SAAS',
+    price: '$1499',
+    features: ['Practical features', '2027 micro SAAS', 'Business solutions']
+  }
+];

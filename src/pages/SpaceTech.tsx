@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Rocket, Satellite, Globe, Zap, Users, Shield, ArrowRight } from 'lucide-react';
 
 const SpaceTech: React.FC = () => {
   const spaceTechnologies = [

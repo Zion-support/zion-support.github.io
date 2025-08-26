@@ -1,5 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { 
+  BarChart3, 
+  TrendingUp, 
+  Users, 
+  Globe,
+  Zap,
+  Target,
+  Award,
+  ArrowRight,
+  PieChart,
+  DollarSign,
+  Link as LinkIcon,
+  Share2,
+  BarChart3 as Analytics,
+  Monitor,
+  Smartphone,
+  CheckCircle,
+  Brain,
+  Cpu,
+  Building,
+  Eye,
+  MousePointer,
+  AlertTriangle
+} from 'lucide-react';
 
 const AffiliateAttributionHub: React.FC = () => {
   const features = [

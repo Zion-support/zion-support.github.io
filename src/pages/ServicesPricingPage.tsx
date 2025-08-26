@@ -1,13 +1,36 @@
 import React, { useState } from 'react';
-import { ENHANCED_SERVICES, SERVICE_CATEGORIES } from '@/data/enhancedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {
-  CheckCircle, XCircle, Star, Zap, Clock, Users, Shield, TrendingUp,
-  Phone, Mail, Globe, Award, DollarSign, Calendar, ArrowRight,
-  Lightbulb, Brain, Cloud, BarChart3, Shield as ShieldIcon, RefreshCw, Link
+import Link from 'next/link';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Database, 
+  Network, 
+  Code, 
+  BarChart3, 
+  Target, 
+  Lightbulb, 
+  Rocket, 
+  Zap, 
+  Globe, 
+  Lock, 
+  Cpu, 
+  Sparkles,
+  ShieldCheck,
+  Globe2,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  DollarSign,
+  Clock,
+  Users,
+  TrendingUp,
+  Award,
+  Zap as Lightning
 } from 'lucide-react';
 import Target from 'lucide-react/dist/esm/icons/target';
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
