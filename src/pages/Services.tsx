@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 
 const Services: React.FC = () => {
   const services = [
@@ -49,6 +50,7 @@ const Services: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -100,6 +102,12 @@ const Services: React.FC = () => {
         </div>
       </section>
 
+      {/* Enhanced Services Showcase */}
+      <EnhancedServicesShowcase 
+        title="Comprehensive Technology Solutions"
+        subtitle="Discover our cutting-edge micro SAAS, AI, and IT services designed to transform your business"
+      />
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -109,12 +117,22 @@ const Services: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our services can help transform your business
           </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-          >
-            Contact Us Today
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Contact Us Today
+            </Link>
+            <a
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+            >
+              Visit Our Website
+            </a>
+          </div>
         </div>
       </section>
     </div>

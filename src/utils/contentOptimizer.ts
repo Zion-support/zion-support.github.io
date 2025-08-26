@@ -127,7 +127,7 @@ export class ContentOptimizer {
     
     // Check for images with alt text
     const images = content.match(/<img[^>]*>/gi) || [];
-    const imagesWithAlt = images.filter(img => img.includes('alt='));
+    const imagesWithAlt = (images as string[]).filter(img => img.includes('alt='));
     if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;
     
     // Check for internal links
