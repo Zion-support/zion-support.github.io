@@ -533,7 +533,7 @@ export default function MainFrontIndex() {
               </article>
             ))}
           </div>
-        </motion.section>
+        </section>
 
         {/* Features */}
         <section className="mx-auto max-w-7xl px-6 pb-14">
