@@ -7,6 +7,9 @@ import { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
 import { Logo } from '@/components/header/Logo';
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { CurrencySelector } from '@/components/header/CurrencySelector';
+import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -131,8 +134,9 @@ export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
               </AnimatePresence>
             </motion.button>
           </div>
-          <CartIcon className="mx-4" />
-          <ModeToggle />
+
+          <CurrencySelector />
+          <LanguageSelector />
         </div>
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       

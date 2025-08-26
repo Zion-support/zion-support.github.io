@@ -18,8 +18,11 @@ import { ToastInitializer } from '@/hooks/use-toast';
 
 // Import i18n configuration
 import './i18n';
-import { LanguageProvider } from './context/LanguageContext';
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup.tsx';
+import { LanguageProvider } from '@/context/LanguageContext';
+import { CurrencyProvider } from '@/context/CurrencyContext';
+import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
+import { WhitelabelProvider } from '@/context/WhitelabelContext';
+import { AppLayout } from '@/layout/AppLayout';
 
 // Import auth and notification providers
 import { AuthProvider } from '@/context/auth/AuthProvider';
@@ -72,22 +75,19 @@ try {
             <Router>
               <AuthProvider>
                 <NotificationProvider>
-                  <FeatureFlagProvider>
-                    <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ErrorBoundary FallbackComponent={GlobalErrorFallback}>
+                  <AnalyticsProvider>
+                    <CurrencyProvider>
+                      <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                         <ViewModeProvider>
                           <CartProvider>
-                            <ReferralMiddleware>
-                              <AppLayout>
-                                <App />
-                              </AppLayout>
-                            </ReferralMiddleware>
+                            <AppLayout>
+                              <App />
+                            </AppLayout>
                           </CartProvider>
                         </ViewModeProvider>
                         <LanguageDetectionPopup />
-                      </ErrorBoundary>
-                    </LanguageProvider>
+                      </LanguageProvider>
+                    </CurrencyProvider>
                   </AnalyticsProvider>
                   </FeatureFlagProvider>
                 </NotificationProvider>

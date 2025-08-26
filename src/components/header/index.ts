@@ -6,3 +6,4 @@ export { UserMenu } from './UserMenu';
 export { default as UserProfileDropdown } from './UserProfileDropdown';
 export { AvatarMenu } from './AvatarMenu';
 export { MainNavigation } from './MainNavigation';
+export { CurrencySelector } from './CurrencySelector';
