@@ -1,43 +1,109 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Services from './pages/Services';
-import ServicesShowcase from './pages/ServicesShowcase';
-import InnovativeServices2025 from './pages/InnovativeServices2025';
-import AdvancedServices2025 from './pages/AdvancedServices2025';
-import UltimatePricing2025 from './pages/UltimatePricing2025';
-import Blog from './pages/Blog';
-import NotFound from './pages/NotFound';
+import { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { useScrollToTop } from "./hooks";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import Footer from "./components/Footer";
+import {
+  AuthRoutes,
+  DashboardRoutes,
+  MarketplaceRoutes,
+  TalentRoutes,
+  AdminRoutes,
+  MobileAppRoutes,
+  ContentRoutes,
+  ErrorRoutes,
+  EnterpriseRoutes,
+  CommunityRoutes,
+  DeveloperRoutes
+} from './routes';
+const Home = React.lazy(() => import('./pages/Home'));
+const AISolutions = React.lazy(() => import('./pages/AISolutions'));
+const QuantumTechnology = React.lazy(() => import('./pages/QuantumTechnology'));
+const Cybersecurity = React.lazy(() => import('./pages/Cybersecurity'));
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
+const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
+const Analytics = React.lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
+const Categories = React.lazy(() => import('./pages/Categories'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PartnersPage = React.lazy(() => import('./pages/Partners'));
+const Login = React.lazy(() => import('./pages/Login'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 
-function App() {
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/ai-solutions', element: <AISolutions /> },
+  { path: '/quantum-technology', element: <QuantumTechnology /> },
+  { path: '/cybersecurity', element: <Cybersecurity /> },
+  { path: '/match', element: <AIMatcherPage /> },
+  { path: '/login', element: <Login /> },
+  { path: '/signup', element: <Signup /> },
+  { path: '/talent', element: <TalentDirectory /> },
+  { path: '/talents', element: <TalentsPage /> },
+  { path: '/services', element: <ServicesPage /> },
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/categories', element: <Categories /> },
+  { path: '/equipment', element: <EquipmentPage /> },
+  { path: '/equipment/:id', element: <EquipmentDetail /> },
+  { path: '/analytics', element: <Analytics /> },
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },
+  { path: '/open-app', element: <OpenAppRedirect /> },
+  { path: '/community', element: <CommunityPage /> },
+  { path: '/contact', element: <ContactPage /> },
+  { path: '/partners', element: <PartnersPage /> },
+  { path: '/zion-hire-ai', element: <ZionHireAI /> },
+  { path: '/hire-ai', element: <ZionHireAI /> },
+  { path: '/request-quote', element: <RequestQuotePage /> },
+  { path: '/blog', element: <Blog /> },
+  { path: '/blog/:slug', element: <BlogPost /> },
+];
+
+const App = () => {
+  // Ensure each navigation starts at the top of the page
+  useScrollToTop();
   return (
-    <Router>
-      <div className="App min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1 pt-16 lg:pt-20">
+    <WhitelabelProvider>
+      <ThemeProvider defaultTheme="dark">
+        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services-showcase" element={<ServicesShowcase />} />
-            <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
-            <Route path="/advanced-services-2025" element={<AdvancedServices2025 />} />
-            <Route path="/ultimate-pricing-2025" element={<UltimatePricing2025 />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="*" element={<NotFound />} />
+            {baseRoutes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+            <Route path="/auth/*" element={<AuthRoutes />} />
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+            <Route path="/talent/*" element={<TalentRoutes />} />
+            <Route path="/admin/*" element={<AdminRoutes />} />
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />
+            <Route path="/content/*" element={<ContentRoutes />} />
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+            <Route path="/community/*" element={<CommunityRoutes />} />
+            <Route path="/developers/*" element={<DeveloperRoutes />} />
+            <Route path="*" element={<ErrorRoutes />} />
           </Routes>
-        </main>
+        </Suspense>
         <Footer />
-        <ScrollToTop />
-      </div>
-    </Router>
+        <Toaster />
+        <SonnerToaster position="top-right" />
+      </ThemeProvider>
+    </WhitelabelProvider>
   );
-}
+};
 
 export default App;
