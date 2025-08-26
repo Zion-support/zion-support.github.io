@@ -1,12 +1,18 @@
-<<<<<<< HEAD
-import type { AppProps } from 'next/app';
-import '../src/index.css';
-import { AppLayout } from '@/layout/AppLayout';
+import type { AppProps } from 'next/app'
+import Head from 'next/head'
+import React from 'react'
+import '../src/index.css'
+import { AppLayout } from '@/layout/AppLayout'
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<AppLayout>
-			<Component {...pageProps} />
-		</AppLayout>
-	);
+		<>
+			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</Head>
+			<AppLayout>
+				<Component {...pageProps} />
+			</AppLayout>
+		</>
+	)
 }

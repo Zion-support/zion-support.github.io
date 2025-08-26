@@ -28,12 +28,10 @@
       "react-router-dom": ["./src/stubs/react-router-dom.tsx"],
       "react-router": ["./src/stubs/react-router-dom.tsx"],
       "next-cloudinary": ["./types/next-cloudinary.d.ts"],
-      "types/*": ["./types/*"],
-      "axios": ["./src/lib/axios.ts"],
-      "notistack": ["./src/stubs/notistack.ts"],
-      "@sentry/browser": ["./src/stubs/sentry.ts"]
+      "types/*": ["./types/*"]
     },
-    "typeRoots": ["./node_modules/@types", "./types", "./src/types"],
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["node"],
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,

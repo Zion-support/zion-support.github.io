@@ -123,18 +123,22 @@ export default function UltraAdvancedNavigation2026V2() {
                 <div className="text-xs text-gray-400">Innovation 2026</div>
               </div>
             </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
-                  {item.dropdown ? (
-                    <button
-                      onMouseEnter={() => setActiveDropdown(item.name)}
-                      onMouseLeave={() => setActiveDropdown(null)}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
-                    >
-                      {item.icon}
+          </div>
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigationItems.map((item, index) => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="relative"
+                onMouseEnter={() => setActiveDropdown(item.name)}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                {item.dropdown ? (
+                  <div className="relative">
+                    <button className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors py-2">
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                     </button>
