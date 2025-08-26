@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,9 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
 =======
+=======
+import { AppLayout } from "@/layout/AppLayout";
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 import { SEO } from "@/components/SEO";
 import TermsOfService from "@/legal/TermsOfService";
 import { AppLayout } from "@/layout";
@@ -17,6 +21,7 @@ import { AppLayout } from "@/layout";
 
 const Terms: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -1084,6 +1089,8 @@ const Terms: React.FC = () => {
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-56af
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
     <AppLayout>
       <SEO
 <<<<<<< HEAD
@@ -1093,9 +1100,12 @@ const Terms: React.FC = () => {
         title="Terms of Service"
         description="The terms and conditions for using the Zion platform."
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
         canonical="https://ziontechgroup.com/terms"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -1104,7 +1114,10 @@ const Terms: React.FC = () => {
         </div>
       </main>
     </AppLayout>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-50d5
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
   );
 };
 

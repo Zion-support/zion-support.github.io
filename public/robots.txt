@@ -3,8 +3,14 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 
 # Allow all crawlers
 Allow: /about

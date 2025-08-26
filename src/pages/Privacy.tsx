@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,9 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/website-audit-and-enhancement-98df
 =======
+=======
+import { AppLayout } from "@/layout/AppLayout";
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { AppLayout } from "@/layout";
@@ -18,6 +22,7 @@ import { AppLayout } from "@/layout";
 
 const Privacy: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -52,6 +57,8 @@ const Privacy: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
     <AppLayout>
       <SEO
         title="Privacy Policy | Zion Tech Group"
@@ -130,6 +137,7 @@ const Privacy: React.FC = () => {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </section>
 
@@ -1292,6 +1300,10 @@ const Privacy: React.FC = () => {
       </main>
     </AppLayout>
 >>>>>>> origin/cursor/website-audit-and-enhancement-50d5
+=======
+      </main>
+    </AppLayout>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
   );
 };
 

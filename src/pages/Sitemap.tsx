@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -192,6 +193,9 @@ const Sitemap: React.FC = () => {
     }
   ];
 =======
+=======
+import { AppLayout } from "@/layout/AppLayout";
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 import { SEO } from "@/components/SEO";
 import { completeSitemap } from "@/config/sitemap";
 import { Link } from "react-router-dom";
@@ -199,6 +203,7 @@ import { AppLayout } from "@/layout";
 >>>>>>> origin/cursor/website-audit-and-enhancement-50d5
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 pt-20">
@@ -729,6 +734,8 @@ const Sitemap: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-56af
     </div>
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
     <AppLayout>
       <SEO
 <<<<<<< HEAD
@@ -740,9 +747,12 @@ const Sitemap: React.FC = () => {
         description="Human readable sitemap for all public routes"
         keywords="sitemap, navigation"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
         canonical="https://ziontechgroup.com/sitemap"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -803,7 +813,10 @@ const Sitemap: React.FC = () => {
         </div>
       </main>
     </AppLayout>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-50d5
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
   );
 };
 
