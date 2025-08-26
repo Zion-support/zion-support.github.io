@@ -13,15 +13,26 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import EnhancedServicesShowcase from './components/EnhancedServicesShowcase';
 
-// Service Detail Pages
-import AISolutions from './pages/services/AISolutions';
-import CloudDevOps from './pages/services/CloudDevOps';
-import Cybersecurity from './pages/services/Cybersecurity';
-import ITInfrastructure from './pages/services/ITInfrastructure';
-import DigitalTransformation from './pages/services/DigitalTransformation';
-import Consulting from './pages/services/Consulting';
-import AICodeReviewAssistant from './pages/services/AICodeReviewAssistant';
-import IncidentResponsePlatform from './pages/services/IncidentResponsePlatform';
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Services = lazy(() => import('./pages/Services'));
+const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
+const AdvancedServices2025 = lazy(() => import('./pages/AdvancedServices2025'));
+const AdvancedServicesShowcase2025 = lazy(() => import('./pages/AdvancedServicesShowcase2025'));
+const ComprehensivePricing2025 = lazy(() => import('./pages/ComprehensivePricing2025'));
+const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const ComprehensiveServicesOverview2025 = lazy(() => import('./pages/ComprehensiveServicesOverview2025'));
+const Blog = lazy(() => import('./pages/Blog'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+
+// Loading spinner component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
+  </div>
+);
 
 function App() {
   // Performance optimization: Preload critical routes
@@ -53,41 +64,23 @@ function App() {
     <Router>
       <div className="App min-h-screen flex flex-col">
         <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/enhanced-services" element={<EnhancedServicesShowcase />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-            
-            {/* Service Detail Routes */}
-            <Route path="/services/ai" element={<AISolutions />} />
-            <Route path="/services/cloud" element={<CloudDevOps />} />
-            <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-            <Route path="/services/infrastructure" element={<ITInfrastructure />} />
-            <Route path="/services/transformation" element={<DigitalTransformation />} />
-            <Route path="/services/consulting" element={<Consulting />} />
-            <Route path="/services/ai-code-review-assistant" element={<AICodeReviewAssistant />} />
-            <Route path="/services/incident-response-platform" element={<IncidentResponsePlatform />} />
-            <Route path="/services/invoice-management" element={<div>Invoice Management Service - Coming Soon</div>} />
-            <Route path="/services/customer-success-automation" element={<div>Customer Success Automation - Coming Soon</div>} />
-            <Route path="/services/analytics-dashboard" element={<div>Analytics Dashboard - Coming Soon</div>} />
-            <Route path="/services/network-security-monitoring" element={<div>Network Security Monitoring - Coming Soon</div>} />
-            <Route path="/services/backup-recovery" element={<div>Backup & Recovery - Coming Soon</div>} />
-            <Route path="/services/asset-management" element={<div>IT Asset Management - Coming Soon</div>} />
-            <Route path="/services/ai-chatbot" element={<div>AI Chatbot Development - Coming Soon</div>} />
-            <Route path="/services/predictive-analytics" element={<div>Predictive Analytics - Coming Soon</div>} />
-            <Route path="/services/computer-vision" element={<div>Computer Vision Solutions - Coming Soon</div>} />
-            <Route path="/services/quantum-computing" element={<div>Quantum Computing - Coming Soon</div>} />
-            <Route path="/services/blockchain-web3" element={<div>Blockchain & Web3 - Coming Soon</div>} />
-            
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+        <main className="flex-1 pt-16"> {/* Add padding-top to account for fixed header */}
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
+              <Route path="/advanced-services-2025" element={<AdvancedServices2025 />} />
+              <Route path="/advanced-services-showcase-2025" element={<AdvancedServicesShowcase2025 />} />
+              <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricing2025 />} />
+              <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+              <Route path="/comprehensive-services-overview-2025" element={<ComprehensiveServicesOverview2025 />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
         <FloatingActionButton />
