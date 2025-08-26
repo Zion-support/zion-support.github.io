@@ -1,11 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { MainNavigation } from '../components/header/MainNavigation';
 
-=======
-import { MainNavigation } from './MainNavigation.jsx';
->>>>>>> origin/main
 export function AppHeader() {
   return (
     <header className="bg-gradient-to-r from-zion-slate-dark via-zion-slate to-zion-slate-dark shadow-lg border-b border-zion-blue-light/20 fixed top-0 left-0 right-0 z-50">
