@@ -43,6 +43,8 @@ const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 
+const InnovativeNewServices2025 = React.lazy(() => import('./pages/InnovativeNewServices2025'));
+
 const baseRoutes = [
   { path: '/', element: <Home /> },
   { path: '/match', element: <AIMatcherPage /> },
@@ -66,6 +68,7 @@ const baseRoutes = [
   { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
+  { path: '/innovative-new-services-2025', element: <InnovativeNewServices2025 /> },
 ];
 
 const App = () => {
