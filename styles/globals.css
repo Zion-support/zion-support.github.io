@@ -1128,83 +1128,48 @@ h3 {
   }
 }
 
-/* Enhanced animations for better performance */
+/* Neon glow utilities */
+.glow {
+	text-shadow: 0 0 12px rgba(34, 211, 238, 0.55), 0 0 24px rgba(139, 92, 246, 0.35);
+}
+.shadow-glow {
+	box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.25), 0 8px 30px rgba(56, 189, 248, 0.25);
+}
+.shadow-glow-lg {
+	box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.35), 0 12px 50px rgba(99, 102, 241, 0.35);
+}
+
+/* Accessibility and Contrast Tweaks */
+@media (prefers-contrast: more) {
+  a, button {
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+  }
+}
+
+/* Improve focus visibility */
+:focus-visible {
+	outline: 2px solid rgba(34, 211, 238, 0.8);
+	outline-offset: 2px;
+}
+
+/* Responsive typography clamps */
+.h1, h1 { font-size: clamp(2rem, 4vw + 1rem, 3.75rem); }
+.h2, h2 { font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem); }
+.h3, h3 { font-size: clamp(1.25rem, 2vw + 0.5rem, 2rem); }
+
+/* Reduced Motion Preferences */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }
 
-/* Enhanced Print Styles */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  .btn-futuristic {
-    border-width: 3px;
-  }
-}
-
-/* Enhanced Reduced Motion Support */
-@media (prefers-reduced-motion: reduce) {
-  .service-card-quantum,
-  .service-card-holographic,
-  .service-card-cyberpunk,
-  .service-card-neural,
-  .service-card-quantum-holographic,
-  .service-card-quantum-advanced,
-  .service-card-holographic-advanced,
-  .service-card-neural-quantum,
-  .service-card-quantum-cyberpunk,
-  .service-card-holographic-neural,
-  .service-card-quantum-holographic-advanced,
-  .service-card-quantum-matrix,
-  .service-card-neural-cyberpunk,
-  .service-card-holographic-quantum,
-  .service-card-quantum-neural-advanced,
-  .service-card-cyberpunk-holographic,
-  .service-card-quantum-space,
-  .service-card-ai-futuristic,
-  .service-card-quantum-entanglement,
-  .service-card-holographic-matrix,
-  .service-card-neural-quantum-cyberpunk,
-  .service-card-space-futuristic,
-  .service-card-biotech-futuristic {
-    animation: none;
-  }
-}
-
-/* Enhanced High Contrast Mode */
-@media (prefers-contrast: high) {
-  :root {
-    --accent-cyan: 0, 255, 255;
-    --accent-blue: 0, 0, 255;
-    --accent-purple: 128, 0, 128;
-  }
-}
-
-/* Enhanced Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-start-rgb: 10, 15, 30;
-    --background-end-rgb: 20, 25, 40;
-  }
-}
-
-/* Enhanced Reduced Motion Support */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 
 /* Responsive container padding adjustments */
 @media (max-width: 640px) {
