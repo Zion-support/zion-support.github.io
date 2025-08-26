@@ -65,6 +65,7 @@ const navigationItems: NavigationItem[] = [
       { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Medical AI solutions' },
       { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' },
       { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' },
+<<<<<<< HEAD
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Human-AI emotional collaboration' },
       { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' },
       { name: 'AI Sales Automation', href: '/ai-sales-automation-platform', description: 'Intelligent sales process automation' },
@@ -83,6 +84,15 @@ const navigationItems: NavigationItem[] = [
       { name: 'AI Meeting Transcriber', href: '/ai-meeting-transcriber-pro', description: 'Meeting transcription' },
       { name: 'AI IoT Platform', href: '/ai-iot-platform', description: 'Intelligent IoT management' },
       { name: 'AI Market Research', href: '/ai-market-research', description: 'Competitive intelligence' }
+=======
+      { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' },
+      { name: 'AI Autonomous Code Generation', href: '/ai-autonomous-code-generation', description: 'AI that writes code' },
+      { name: 'AI Autonomous Marketing', href: '/ai-autonomous-marketing-platform', description: 'Autonomous marketing AI' },
+      { name: 'AI Autonomous Sales', href: '/ai-autonomous-sales-platform', description: 'AI that closes deals' },
+      { name: 'AI Autonomous Customer Service', href: '/ai-autonomous-customer-service', description: 'Autonomous support AI' },
+      { name: 'AI Autonomous HR', href: '/ai-autonomous-hr-platform', description: 'Autonomous HR management' },
+      { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
     ]
   },
   {
@@ -138,6 +148,7 @@ const navigationItems: NavigationItem[] = [
       { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform', description: 'Intelligent development automation' },
       { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform', description: 'Quantum-enhanced cloud computing' },
+<<<<<<< HEAD
       { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform', description: 'Advanced cybersecurity' },
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-757c
       { name: 'Quantum Networking', href: '/quantum-networking', description: 'Quantum communication protocols' },
@@ -155,6 +166,14 @@ const navigationItems: NavigationItem[] = [
       { name: 'Quantum Automation', href: '/quantum-automation-platform', description: 'Intelligent automation' },
       { name: 'Quantum Governance', href: '/quantum-governance-platform', description: 'IT governance' },
       { name: 'Quantum Risk Management', href: '/quantum-risk-management', description: 'Risk assessment' }
+=======
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-architecture-platform', description: 'Advanced cybersecurity' },
+      { name: 'Quantum Networking', href: '/quantum-networking-infrastructure', description: 'Quantum communication protocols' },
+      { name: 'Autonomous Data Center', href: '/autonomous-data-center-platform', description: 'AI-managed data centers' },
+      { name: 'AI Infrastructure Management', href: '/ai-powered-infrastructure-management', description: 'Intelligent infrastructure' },
+      { name: 'Hybrid Cloud Orchestration', href: '/hybrid-cloud-orchestration-platform', description: 'Multi-cloud management' },
+      { name: 'Advanced IT Infrastructure', href: '/advanced-it-infrastructure-services', description: 'Quantum computing, edge computing, zero-trust security, and autonomous data centers' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
     ]
   },
   {
@@ -166,6 +185,7 @@ const navigationItems: NavigationItem[] = [
       { name: 'AI Decision Engine', href: '/ai-powered-decision-engine', description: 'Intelligent decision making' },
       { name: 'Content Automation', href: '/intelligent-content-automation-platform', description: 'AI content creation' },
       { name: 'Smart CRM Suite', href: '/smart-crm-intelligence-suite', description: 'AI-enhanced CRM' },
+<<<<<<< HEAD
       { name: 'Financial Analytics', href: '/automated-financial-analytics-platform', description: 'AI financial analysis' },
       { name: 'Project Management', href: '/intelligent-project-management-suite', description: 'AI project optimization' },
       { name: 'Business Intelligence', href: '/ai-business-intelligence', description: 'Advanced analytics' },
@@ -184,6 +204,47 @@ const navigationItems: NavigationItem[] = [
       { name: 'Website Personalization', href: '/ai-website-personalization-platform', description: 'Dynamic content' },
       { name: 'Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Data insights' },
       { name: 'Content Generation Platform', href: '/ai-content-generation-platform', description: 'AI content creation' }
+=======
+      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights' },
+      { name: 'AI Marketing Automation', href: '/ai-marketing-automation-platform', description: 'Intelligent marketing' },
+      { name: 'AI Customer Service', href: '/ai-customer-service-platform', description: 'Automated support' },
+      { name: 'AI HR & Recruitment', href: '/ai-hr-recruitment-platform', description: 'AI talent management' },
+      { name: 'AI Project Management', href: '/ai-project-management-suite', description: 'Intelligent project management' },
+      { name: 'AI Financial Analytics', href: '/ai-financial-analytics-platform', description: 'Financial intelligence' },
+      { name: 'Innovative Business Solutions', href: '/innovative-business-solutions', description: 'AI-powered business intelligence, marketing, sales, customer service, and HR solutions' }
+    ]
+  },
+  {
+    name: 'AI Automation',
+    href: '/advanced-ai-automation-services',
+    icon: <Brain className="w-5 h-5" />,
+    description: 'AI automation for development and operations',
+    badge: 'New',
+    children: [
+      { name: 'AI Code Review', href: '/ai-code-review-assistant', description: 'Intelligent code analysis' },
+      { name: 'AI Testing Automation', href: '/ai-testing-automation-platform', description: 'Intelligent test automation' },
+      { name: 'AI DevOps Intelligence', href: '/ai-devops-intelligence-platform', description: 'Intelligent DevOps' },
+      { name: 'AI Security Automation', href: '/ai-security-automation-platform', description: 'Intelligent security' },
+      { name: 'AI Data Pipeline', href: '/ai-data-pipeline-automation', description: 'Intelligent data management' },
+      { name: 'AI Infrastructure', href: '/ai-infrastructure-automation', description: 'Intelligent infrastructure' },
+      { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' }
+    ]
+  },
+  {
+    name: 'Space & Metaverse',
+    href: '/space-tech',
+    icon: <Rocket className="w-5 h-5" />,
+    description: 'Space technology and metaverse solutions',
+    children: [
+      { name: 'Space Mining Platform', href: '/space-resource-mining-platform', description: 'Asteroid mining operations' },
+      { name: 'Space Technology AI', href: '/space-technology-ai-platform', description: 'AI space solutions' },
+      { name: 'Metaverse Development', href: '/metaverse-ai-development-platform', description: 'Metaverse platforms' },
+      { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events' },
+      { name: 'Space Logistics', href: '/space-logistics-platform', description: 'Space transportation' },
+      { name: 'Satellite Technology', href: '/satellite-technology-platform', description: 'Satellite solutions' },
+      { name: 'Space Research', href: '/space-research-platform', description: 'Space exploration tools' },
+      { name: 'Space Mining Analytics', href: '/space-mining-analytics', description: 'Mining data analysis' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
     ]
   },
   {
