@@ -423,23 +423,41 @@ export const MICRO_SAAS_SERVICES = [
             "Sentiment analysis",
             "Customer satisfaction tracking",
             "Multi-channel support",
-            "Knowledge base",
-            pricing, {
-                monthly: number,
-                yearly: number,
-                currency: string,
-                features: string[]
-            }
+            "Knowledge base"
         ],
-        features: string[],
-        benefits: string[],
-        useCases: string[],
-        targetAudience: string[],
-        integration: string[],
-        support: string[],
-        link: string,
-        badge: string,
-        icon: string
+        pricing: {
+            monthly: 49,
+            yearly: 490,
+            currency: "$",
+            features: ["Unlimited projects", "Team collaboration", "Advanced analytics", "Priority support"]
+        },
+        features: [
+            "Project templates",
+            "Time tracking",
+            "Resource allocation",
+            "Progress monitoring",
+            "Team communication",
+            "File sharing"
+        ],
+        benefits: [
+            "Improve project delivery by 30%",
+            "Reduce communication overhead",
+            "Better resource utilization",
+            "Enhanced team productivity"
+        ],
+        useCases: [
+            "Software development",
+            "Marketing campaigns",
+            "Event planning",
+            "Product launches",
+            "Client projects"
+        ],
+        targetAudience: ["Project managers", "Development teams", "Marketing agencies", "Consulting firms"],
+        integration: ["Slack", "Microsoft Teams", "Jira", "Trello", "Asana"],
+        support: ["Email support", "Live chat", "Video tutorials", "Community forum"],
+        link: "https://ziontechgroup.com/project-collaboration-hub",
+        badge: "Featured",
+        icon: "🚀"
     }
 ];
 export const MICRO_SAAS_SERVICES = [

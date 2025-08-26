@@ -1176,21 +1176,6 @@ export const getFeaturedEmergingTechServices = () => {
     return EMERGING_TECH_SERVICES.slice(0, 8);
 };
 export const getServicesByInnovationScore = (minScore) => {
-    technology: ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],
-        integrations;
-    ["Display hardware", "Content management systems", "Streaming platforms", "Mobile apps"],
-        compliance;
-    ["Content standards", "Accessibility guidelines", "Industry regulations"],
-        roi;
-    "400% within 12 months",
-        competitors;
-    ["Magic Leap", "Microsoft HoloLens", "RealView", "Looking Glass"],
-        marketTrend;
-    "Growing market with increasing demand for immersive experiences",
-        innovationLevel;
-    "Advanced holographic platform for commercial applications",
-        uniqueValue;
-    "First comprehensive platform for creating and distributing holographic content across multiple display types";
+    return EMERGING_TECH_SERVICES.filter(service => service.innovationScore >= minScore);
 };
-;
 export default EMERGING_TECH_SERVICES;
