@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
@@ -19,6 +19,7 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const CuttingEdgeInnovativeServices2025 = lazy(() => import('./pages/CuttingEdgeInnovativeServices2025'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -56,6 +57,7 @@ function App() {
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/cutting-edge-innovative-services-2025" element={<CuttingEdgeInnovativeServices2025 />} />
             </Routes>
           </Suspense>
         </main>
