@@ -14,6 +14,7 @@ import { generateRandomListing } from "@/utils/generateRandomListing";
 import { toast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { SearchSuggestion } from "@/types/search";
+import { ListingView } from "@/types/listings";
 
 export default function Marketplace() {
   const navigate = useNavigate();
