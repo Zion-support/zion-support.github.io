@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2025-08-26T11:30:22.758Z",
-=======
-  "generatedAt": "2025-08-26T11:34:29.974Z",
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-a8d7
+  "generatedAt": "2025-08-26T11:43:38.592Z",
   "functions": [],
   "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
 }
