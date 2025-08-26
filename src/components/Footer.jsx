@@ -99,6 +99,8 @@ export function Footer() {
     {
       title: "Services",
       links: [
+        { label: "All Services", path: "/services" },
+        { label: "Enhanced Services", path: "/enhanced-services" },
         { label: "AI & Analytics", path: "/services#ai" },
         { label: "Cybersecurity", path: "/services#cybersecurity" },
         { label: "Cloud Solutions", path: "/services#cloud" },

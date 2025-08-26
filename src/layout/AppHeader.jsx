@@ -38,6 +38,8 @@ export function AppHeader() {
       label: 'Services',
       hasDropdown: true,
       dropdownItems: [
+        { path: '/services', label: 'All Services' },
+        { path: '/enhanced-services', label: 'Enhanced Services' },
         { path: '/services#ai', label: 'AI & Analytics' },
         { path: '/services#cybersecurity', label: 'Cybersecurity' },
         { path: '/services#cloud', label: 'Cloud Solutions' },
