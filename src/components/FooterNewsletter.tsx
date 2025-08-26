@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/build-and-fix-errors-e276
-=======
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 import React, { useState } from 'react';
 import { Mail, ArrowRight, CheckCircle } from 'lucide-react';
-=======
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 export const FooterNewsletter = () => {
 =======

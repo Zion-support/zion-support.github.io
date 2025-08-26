@@ -3,13 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
-import React from "react";
-import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
->>>>>>> origin/cursor/build-and-fix-errors-e276
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -17,12 +10,6 @@ interface LoadingSpinnerProps {
   variant?: 'default' | 'primary' | 'secondary' | 'white';
   className?: string;
   text?: string;
-<<<<<<< HEAD
-=======
-  className?: string;
-  text?: string;
-  variant?: 'default' | 'pulse' | 'dots';
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 }
 
 export function LoadingSpinner({ 
@@ -31,11 +18,6 @@ export function LoadingSpinner({
   variant = 'default',
   className = '',
   text
-=======
-  className, 
-  text,
-  variant = 'default' 
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-4 h-4',

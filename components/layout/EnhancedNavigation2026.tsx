@@ -1,7 +1,99 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin } from 'lucide-react';
+import { 
+  Menu, X, ChevronDown, Rocket, Phone, Mail, MapPin,
+  Brain, Cpu, Shield, Zap, Star, Users, TrendingUp,
+  Globe, Database, Cloud, Lock, Palette, Target,
+  Layers, Sparkles, Atom, Microscope, Satellite,
+  Search, Bell, User, Settings, LogOut, SparklesIcon
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+const serviceCategories = [
+  {
+    title: 'AI & Machine Learning 2026',
+    icon: Brain,
+    color: 'from-purple-600 to-pink-600',
+    services: [
+      { name: 'AI Business Intelligence Elite 2026', href: '/ai-business-intelligence-elite-2026', description: 'Next-generation AI-powered business analytics', price: '$299/month' },
+      { name: 'Autonomous AI Agents Platform 2026', href: '/autonomous-ai-agents-platform-2026', description: 'Create and manage autonomous AI agents', price: '$199/month' },
+      { name: 'AI Healthcare Companion 2026', href: '/ai-healthcare-companion-2026', description: 'Revolutionary AI-powered healthcare assistance', price: '$399/month' },
+      { name: 'AI Creative Studio Platform', href: '/ai-creative-studio-platform', description: 'Unlimited AI-powered creativity', price: 'Custom pricing' }
+    ]
+  },
+  {
+    title: 'Quantum Computing & Security',
+    icon: Atom,
+    color: 'from-blue-600 to-cyan-600',
+    services: [
+      { name: 'Quantum Cybersecurity Suite 2026', href: '/quantum-cybersecurity-suite-2026', description: 'Quantum-resistant cybersecurity', price: '$599/month' },
+      { name: 'Quantum Internet Security Platform 2026', href: '/quantum-internet-security-platform-2026', description: 'Secure the future of the internet', price: '$799/month' },
+      { name: 'Quantum Financial Trading Platform 2026', href: '/quantum-financial-trading-platform-2026', description: 'Quantum-powered financial trading', price: '$1,299/month' },
+      { name: 'Quantum-Secure Communication', href: '/quantum-secure-communication', description: 'Unbreakable encryption for the quantum era', price: '$599/month' }
+    ]
+  },
+  {
+    title: 'Emerging Technologies 2026',
+    icon: Sparkles,
+    color: 'from-green-600 to-emerald-600',
+    services: [
+      { name: 'Neuromorphic Computing Platform 2026', href: '/neuromorphic-computing-platform-2026', description: 'Brain-inspired computing for next-generation AI', price: '$2,499/month' },
+      { name: 'DNA Computing Platform 2026', href: '/dna-computing-platform-2026', description: 'Molecular computing for complex problem solving', price: '$3,999/month' },
+      { name: 'Photonic Computing Platform 2026', href: '/photonic-computing-platform-2026', description: 'Light-speed computing with photonic processors', price: '$1,999/month' },
+      { name: 'Holographic Display Platform 2026', href: '/holographic-display-platform-2026', description: 'Next-generation 3D holographic visualization', price: '$899/month' }
+    ]
+  },
+  {
+    title: 'Enterprise IT Solutions 2026',
+    icon: Shield,
+    color: 'from-red-600 to-orange-600',
+    services: [
+      { name: 'Zero Trust Network Architecture 2026', href: '/zero-trust-network-architecture-2026', description: 'Next-generation network security', price: 'Custom pricing' },
+      { name: 'Edge Computing Orchestration 2026', href: '/edge-computing-orchestration-2026', description: 'Intelligent edge computing management', price: 'Custom pricing' },
+      { name: '5G Private Network Solutions 2026', href: '/5g-private-network-solutions-2026', description: 'Enterprise-grade 5G private networks', price: 'Custom pricing' },
+      { name: 'Blockchain Infrastructure Platform 2026', href: '/blockchain-infrastructure-platform-2026', description: 'Enterprise blockchain infrastructure', price: 'Custom pricing' }
+    ]
+  },
+  {
+    title: 'Autonomous Systems & Robotics',
+    icon: Target,
+    color: 'from-indigo-600 to-purple-600',
+    services: [
+      { name: 'Swarm Robotics Platform 2026', href: '/swarm-robotics-platform-2026', description: 'Coordinated multi-robot systems', price: '$1,299/month' },
+      { name: 'AI Autonomous Business Platform 2026', href: '/ai-autonomous-business-platform-2026', description: 'Run your business with autonomous AI', price: 'Custom pricing' },
+      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai', description: 'AI-powered manufacturing automation', price: '$599/month' },
+      { name: 'Autonomous Supply Chain Optimization', href: '/autonomous-supply-chain-optimization', description: 'AI-powered supply chain management', price: '$399/month' }
+    ]
+  },
+  {
+    title: 'Space Technology & Innovation',
+    icon: Satellite,
+    color: 'from-yellow-600 to-orange-600',
+    services: [
+      { name: 'Space Technology AI Platform', href: '/space-technology-ai-platform', description: 'AI-powered space exploration', price: '$3,999/month' },
+      { name: 'Quantum Space Mining Platform', href: '/quantum-space-mining-platform', description: 'Revolutionary space resource exploration', price: '$1,299/month' },
+      { name: 'Satellite Operations AI', href: '/satellite-operations-ai', description: 'Intelligent satellite management', price: '$2,999/month' },
+      { name: 'Space Debris Tracking System', href: '/space-debris-tracking-system', description: 'Advanced space debris monitoring', price: '$1,999/month' }
+    ]
+  }
+];
+
+const companyLinks = [
+  { name: 'About Us', href: '/about' },
+  { name: '2026 Services', href: '/2026-services-showcase' },
+  { name: '2026 Innovations', href: '/2026-innovations-showcase' },
+  { name: 'News & Updates', href: '/news' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Blog & Resources', href: '/blog' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Contact', href: '/contact' }
+];
 
 export default function EnhancedNavigation2026() {
   const [isOpen, setIsOpen] = useState(false);

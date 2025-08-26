@@ -44,14 +44,11 @@ const navigationItems: NavigationItem[] = [
     description: 'Complete portfolio of all technology services',
     badge: 'New 2025',
     children: [
-      { name: 'New Services Showcase 2025', href: '/comprehensive-new-services-showcase-2025', description: 'Latest innovative services portfolio' },
-      { name: 'Micro SAAS Services', href: '/comprehensive-new-services-showcase-2025#services', description: 'New business solutions' },
-      { name: 'AI Services', href: '/comprehensive-new-services-showcase-2025#services', description: 'Cutting-edge AI solutions' },
-      { name: 'IT Services', href: '/comprehensive-new-services-showcase-2025#services', description: 'Next-gen infrastructure' },
-      { name: 'Business Solutions', href: '/comprehensive-new-services-showcase-2025#services', description: 'AI-powered business tools' },
-      { name: 'Service Categories', href: '/comprehensive-new-services-showcase-2025#services', description: 'Browse by category' },
-      { name: 'Pricing & Plans', href: '/comprehensive-new-services-showcase-2025#services', description: 'Service pricing' },
-      { name: 'Contact & Support', href: '/comprehensive-new-services-showcase-2025#contact', description: 'Get in touch' }
+      { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
+      { name: 'Cutting-Edge 2025', href: '/cutting-edge-services-2025', description: 'Latest revolutionary services', badge: 'New' },
+      { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' },
+      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' },
+      { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' }
     ]
   },
   {
@@ -63,11 +60,17 @@ const navigationItems: NavigationItem[] = [
     color: 'from-violet-500 to-purple-600',
     isHot: true,
     children: [
-      { name: 'AI Consciousness Evolution Pro', href: '/ai-consciousness-evolution-pro', description: 'Advanced AI consciousness development', isNew: true },
-      { name: 'Quantum AI Fusion Platform', href: '/quantum-ai-fusion-platform', description: 'Quantum-AI hybrid computing', isHot: true },
+      { name: 'AI Content Intelligence Platform', href: '/ai-content-intelligence-platform', description: 'AI-powered content optimization and analytics' },
+      { name: 'AI Healthcare Diagnostics Platform', href: '/ai-healthcare-diagnostics-platform', description: 'Revolutionary medical diagnostics with AI' },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution', description: 'Emotional intelligence and self-awareness' },
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem', description: 'Self-managing AI systems' },
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance', description: 'Ethical AI frameworks' },
-      { name: 'AI Creativity Studio Pro', href: '/ai-creativity-studio-pro', description: 'AI-powered creative platform', isNew: true }
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
+      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized AI learning' },
+      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' },
+      { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' },
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Human-AI emotional collaboration' },
+      { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' }
     ]
   },
   {
@@ -79,11 +82,16 @@ const navigationItems: NavigationItem[] = [
     color: 'from-indigo-500 to-blue-600',
     isPremium: true,
     children: [
-      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform', description: 'Unhackable quantum-secured internet', isPremium: true },
-      { name: 'Quantum Bio-Computing Platform', href: '/quantum-bio-computing-platform', description: 'Quantum molecular simulation', isNew: true },
-      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Neural interface development', isHot: true },
-      { name: 'Space Mining Platform', href: '/space-mining-platform', description: 'Autonomous space mining operations', isPremium: true },
-      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Quantum energy optimization', isNew: true }
+      { name: 'Quantum-Secure Communication Network', href: '/quantum-secure-communication-network', description: 'Unbreakable quantum encryption' },
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading systems' },
+      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform', description: 'Next-gen quantum internet security' },
+      { name: 'Quantum Robotics Platform', href: '/quantum-robotics-platform', description: 'Quantum-enhanced robotics' },
+      { name: 'Quantum Materials Discovery Platform', href: '/quantum-materials-discovery-platform', description: 'Accelerate materials science' },
+      { name: 'Space Mining Operations Platform', href: '/space-mining-operations-platform', description: 'Asteroid mining and space resources' },
+      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Direct neural interface' },
+      { name: 'Autonomous Vehicle AI Platform', href: '/autonomous-vehicle-ai-platform', description: 'Next-gen self-driving AI' },
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing', description: 'Quantum-biological hybrid processing' },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' }
     ]
   },
   {
@@ -94,11 +102,16 @@ const navigationItems: NavigationItem[] = [
     badge: 'Enterprise',
     color: 'from-blue-500 to-cyan-600',
     children: [
-      { name: 'Quantum Cloud Infrastructure Pro', href: '/quantum-cloud-infrastructure-pro', description: 'Quantum-enhanced cloud computing', isNew: true },
-      { name: 'Edge Computing Orchestrator Pro', href: '/edge-computing-orchestrator-pro', description: 'Advanced edge computing platform', isHot: true },
-      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform', description: 'Comprehensive zero trust security', isNew: true },
-      { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform', description: 'Intelligent DevOps automation', isNew: true },
-      { name: 'Quantum Data Center Platform', href: '/quantum-data-center-platform', description: 'Quantum data center management', isPremium: true }
+      { name: 'Autonomous AI Operations Center', href: '/autonomous-ai-operations-center', description: 'Self-managing AI infrastructure' },
+      { name: 'Edge Computing Orchestration Platform', href: '/edge-computing-orchestration-platform', description: 'Intelligent edge computing management' },
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Quantum-enhanced cloud computing' },
+      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Edge processing optimization' },
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture', description: 'Advanced cybersecurity' },
+      { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops', description: 'Intelligent development automation' },
+      { name: 'Quantum Networking', href: '/quantum-networking', description: 'Quantum communication protocols' },
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations', description: 'Self-managing IT systems' },
+      { name: 'Quantum Data Center', href: '/quantum-data-center', description: 'Next-gen data centers' }
     ]
   },
   {
@@ -106,14 +119,17 @@ const navigationItems: NavigationItem[] = [
     href: '/micro-saas',
     icon: <Rocket className="w-5 h-5" />,
     description: 'Innovative business solutions for modern enterprises',
-    badge: 'Popular',
-    color: 'from-teal-500 to-emerald-600',
     children: [
-      { name: 'AI Content Factory Enterprise', href: '/ai-content-factory-enterprise', description: 'Enterprise AI content generation', isNew: true },
-      { name: 'Quantum CRM Suite Enterprise', href: '/quantum-crm-suite-enterprise', description: 'Quantum-enhanced CRM platform', isHot: true },
-      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'Autonomous AI decision making', isNew: true },
-      { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'AI-powered legal analysis', isNew: true },
-      { name: 'AI Healthcare Diagnostics Pro', href: '/ai-healthcare-diagnostics-pro', description: 'Advanced medical AI diagnostics', isPremium: true }
+      { name: 'AI Content Intelligence Platform', href: '/ai-content-intelligence-platform', description: 'AI-powered content optimization' },
+      { name: 'Blockchain Supply Chain Intelligence', href: '/blockchain-supply-chain-intelligence', description: 'Transparent supply chain management' },
+      { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive 3D worlds' },
+      { name: 'AI Autonomous Content Factory', href: '/ai-autonomous-content-factory', description: 'Automated content creation' },
+      { name: 'Quantum CRM Intelligence', href: '/quantum-crm-intelligence', description: 'AI-powered customer insights' },
+      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'Smart business decisions' },
+      { name: 'AI Creativity Studio Pro', href: '/ai-creativity-studio-pro', description: 'AI-powered design tools' },
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading', description: 'Advanced trading platform' },
+      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Medical AI solutions' },
+      { name: 'Quantum Cybersecurity Platform', href: '/quantum-cybersecurity-platform', description: 'Unbreakable security' }
     ]
   },
   {

@@ -2391,21 +2391,4 @@ body {
   box-shadow: 
     0 0 20px rgba(245, 158, 11, 0.5),
     inset 0 0 20px rgba(245, 158, 11, 0.2);
-=======
->>>>>>> origin/cursor/build-and-fix-errors-e276
-=======
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-
-/* Loading fallback styles */
-.loading-fallback {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
-  font-size: 1.1rem;
-  color: #64748b;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 }

@@ -112,8 +112,7 @@ const ReportsPage: React.FC = () => {
             >
               Research Reports
             </motion.h1>
-            <motion.p 
-              className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
+            <motion.p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -121,8 +120,7 @@ const ReportsPage: React.FC = () => {
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
             </motion.p>
             
-            <motion.div
-              className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
+            <motion.div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -146,8 +144,7 @@ const ReportsPage: React.FC = () => {
         {/* Featured Report */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div 
-              className="text-center mb-16"
+            <motion.div className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -160,8 +157,7 @@ const ReportsPage: React.FC = () => {
 
             {reports.filter(report => report.featured).map((report, index) => (
               <motion.div
-                key={index}
-                className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
+                key={index} className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -231,8 +227,7 @@ const ReportsPage: React.FC = () => {
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
-            <motion.div 
-              className="text-center mb-16"
+            <motion.div className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -247,8 +242,7 @@ const ReportsPage: React.FC = () => {
             </motion.div>
 
             {/* Category Pills */}
-            <motion.div 
-              className="flex flex-wrap justify-center gap-4 mb-12"
+            <motion.div className="flex flex-wrap justify-center gap-4 mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -272,8 +266,7 @@ const ReportsPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {reports.filter(report => !report.featured).map((report, index) => (
                 <motion.article
-                  key={index}
-                  className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
+                  key={index} className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -326,8 +319,7 @@ const ReportsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
+            <motion.div className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -341,16 +333,12 @@ const ReportsPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2"
-                >
+                  href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2">
                   <span>Request Custom Research</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
                 <a
-                  href="/services"
-                  className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200"
-                >
+                  href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200">
                   View Research Services
                 </a>
               </div>

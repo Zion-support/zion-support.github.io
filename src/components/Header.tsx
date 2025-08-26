@@ -1,13 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Search, Brain, Users, BarChart3, Code, Palette, Target, Shield, Heart, Database, Building, Cpu, Network, Cloud, Clock, Rocket, Globe, Lock, ArrowRight } from 'lucide-react';
-import { ThemeToggle } from './ThemeToggle';
-
-export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
 import Sidebar from './Sidebar';
 =======
 import React, { useState, useEffect } from 'react';
@@ -154,9 +146,6 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-=======
       setIsScrolled(window.scrollY > 50);
     };
 
@@ -164,86 +153,61 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-=======
-  const navigation = [
-    { name: 'Home', href: '/' },
+  const navigationItems = [
     { 
       name: 'Services', 
       href: '/services',
       dropdown: [
         { name: 'AI Solutions', href: '/ai-solutions', description: 'Advanced AI and machine learning services' },
-        { name: 'Cybersecurity', href: '/cybersecurity', description: 'Comprehensive security solutions' },
+        { name: 'AI Agent Orchestrator', href: '/ai-agent-orchestrator', description: 'Coordinate multiple AI agents seamlessly' },
+        { name: 'AI Analytics Copilot', href: '/ai-analytics-copilot', description: 'Transform data into actionable insights' },
+        { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-generation quantum computing' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Comprehensive security solutions' },
+        { name: 'Advanced Cybersecurity Suite', href: '/advanced-cybersecurity-suite', description: 'Enterprise security solutions' },
+        { name: '5G Solutions', href: '/5g-enterprise-solutions', description: '5G network and optimization services' },
+        { name: '5G Network Optimization', href: '/5g-network-optimization', description: 'Maximize 5G performance' },
         { name: 'Cloud & DevOps', href: '/cloud-devops', description: 'Scalable cloud infrastructure' },
-        { name: 'Data Analytics', href: '/data-analytics', description: 'Transform data into insights' },
-        { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-generation computing' },
-        { name: 'Enterprise Solutions', href: '/enterprise-solutions', description: 'Large-scale business solutions' }
+        { name: 'Enterprise Solutions', href: '/enterprise-solutions', description: 'Large-scale business solutions' },
+        { name: 'Micro SAAS', href: '/micro-saas', description: 'Scalable software solutions' }
       ]
     },
     { 
       name: 'Solutions', 
-  const navigationItems = [
-    { 
-      path: '/', 
-      label: 'Home', 
-      icon: '🏠',
-      description: 'Welcome to Zion Tech Group'
-    },
-    { 
-      path: '/services', 
-      label: 'Services', 
-      icon: '🤖',
-      description: 'Explore our comprehensive service offerings',
-      hasDropdown: true
-    },
-    { 
-      path: '/solutions/enterprise', 
-      label: 'Solutions', 
-      icon: '💼',
-      description: 'Industry-specific solutions',
-      hasDropdown: true
-    },
-    { 
-      path: '/pricing', 
-      label: 'Pricing', 
-      icon: '💰',
-      description: 'Transparent pricing plans'
-    },
-    { 
-      path: '/about', 
-      label: 'About', 
-      icon: 'ℹ️',
-      description: 'Learn about our company'
-    },
-    { 
-      path: '/careers', 
-      label: 'Careers', 
-      icon: '🚀',
-      description: 'Join our team'
-    },
-    { 
-      path: '/blog', 
-      label: 'Blog', 
-      icon: '📝',
-      description: 'Latest insights and news'
-    },
-    { 
-      path: '/contact', 
-      label: 'Contact', 
-      icon: '📞',
-      description: 'Get in touch with us'
-    }
-  ];
-
-=======
       href: '/solutions',
       dropdown: [
         { name: 'Healthcare', href: '/solutions/healthcare', description: 'AI-powered healthcare solutions' },
         { name: 'Finance', href: '/solutions/finance', description: 'Financial technology innovations' },
         { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Smart manufacturing systems' },
-        { name: 'Retail', href: '/solutions/retail', description: 'Digital retail transformation' }
+        { name: 'Retail', href: '/solutions/retail', description: 'Digital retail transformation' },
+        { name: 'Education', href: '/solutions/education', description: 'Educational technology solutions' },
+        { name: 'Government', href: '/solutions/government', description: 'Public sector innovations' }
       ]
     },
-    { name: 'About', href: '/about' },
+    { 
+      name: 'Company', 
+      href: '/about',
+      dropdown: [
+        { name: 'About Us', href: '/about', description: 'Learn about our mission and values' },
+        { name: 'Our Team', href: '/team', description: 'Meet our leadership and experts' },
+        { name: 'Mission', href: '/mission', description: 'Our vision and mission' },
+        { name: 'Careers', href: '/careers', description: 'Join our innovative team' },
+        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
+        { name: 'News & Blog', href: '/news', description: 'Latest updates and insights' },
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories and results' }
+      ]
+    },
+    { 
+      name: 'Resources', 
+      href: '/resources',
+      dropdown: [
+        { name: 'Documentation', href: '/docs', description: 'Technical guides and APIs' },
+        { name: 'Help Center', href: '/help', description: 'Support and troubleshooting' },
+        { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
+        { name: 'White Papers', href: '/white-papers', description: 'Industry insights' },
+        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+        { name: 'Support', href: '/support', description: 'Technical support' }
+      ]
+    },
     { name: 'Contact', href: '/contact' }
   ];
 

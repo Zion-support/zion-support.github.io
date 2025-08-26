@@ -83,56 +83,6 @@ const Step = React.forwardRef<HTMLDivElement, StepProps>(
 )
 Step.displayName = "Step"
 
-export { Steps, Step }
-=======
-import React from 'react'
-
-interface StepsProps {
-  children: React.ReactNode
-  className?: string
-}
-
-interface StepProps {
-  children: React.ReactNode
-  className?: string
-  isActive?: boolean
-  isCompleted?: boolean
-}
-
-<<<<<<< HEAD
-const Steps = ({ children, className = "" }: StepsProps) => (
-  <div className={`flex items-center ${className}`}>
-    {children}
-  </div>
-)
-=======
-export const Steps: React.FC<StepsProps> = ({ children, className, currentStep = 0 }) => {
-  return (
-    <div className={cn("flex items-center space-x-2", className)}>
-      {React.Children.map(children, (child, index) => {
-        if (React.isValidElement(child)) {
-          const childProps = child.props || {};
-          const isActive = index === currentStep;
-          const isCompleted = index < currentStep;
-          
-          // Only pass props if the child component accepts them
-          const propsToPass: any = {};
-          if ('isActive' in childProps || child.type === Step) {
-            propsToPass.isActive = isActive;
-          }
-          if ('isCompleted' in childProps || child.type === Step) {
-            propsToPass.isCompleted = isCompleted;
-          }
-          
-          return React.cloneElement(child, propsToPass);
-        }
-        return child;
-      })}
-    </div>
-  );
-};
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
-
 const Step = ({ children, className = "", isActive = false, isCompleted = false }: StepProps) => (
   <div className={`flex items-center ${className}`}>
     <div

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 import React from 'react';
 =======
 >>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
@@ -25,16 +17,11 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
-=======
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
   size?: 'default' | 'sm' | 'lg' | 'icon';
   asChild?: boolean;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const Button: React.FC<ButtonProps> = ({ 
   children, 
   className = '', 
@@ -112,7 +99,6 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
-<<<<<<< HEAD
 
 export { Button };
 =======

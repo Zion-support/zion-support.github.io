@@ -2,580 +2,414 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-
-export function ServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  
-  // Get featured services from the comprehensive services data
-  const featuredServices = COMPREHENSIVE_SERVICES.filter(service => service.featured).slice(0, 8);
-
-  const getCategoryColor = (category: string) => {
-    const colors: { [key: string]: string } = {
-      "AI & Machine Learning": "from-purple-500 to-indigo-600",
-      "Cloud & DevOps": "from-blue-500 to-cyan-600",
-      "Cybersecurity": "from-red-500 to-pink-600",
-      "Data & Analytics": "from-green-500 to-emerald-600",
-      "Micro SAAS": "from-emerald-500 to-teal-600",
-      "Enterprise Solutions": "from-slate-600 to-gray-700"
-    };
-    return colors[category] || "from-gray-500 to-gray-600";
-  };
-
-  const getCategoryIcon = (category: string) => {
-    const icons: { [key: string]: string } = {
-      "AI & Machine Learning": "🤖",
-      "Cloud & DevOps": "☁️",
-      "Cybersecurity": "🔒",
-      "Data & Analytics": "📊",
-      "Micro SAAS": "💻",
-      "Enterprise Solutions": "🏢"
-    };
-    return icons[category] || "💼";
-  };
-
-  const getPriceDisplay = (service: any) => {
-    if (service.priceType === 'monthly') {
-      return `$${service.price}/month`;
-    } else if (service.priceType === 'yearly') {
-      return `$${service.price}/year`;
-    } else if (service.priceType === 'per-user') {
-      return `$${service.price}/user`;
-    } else {
-      return `$${service.price.toLocaleString()}`;
-    }
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const categoryVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <motion.div 
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl font-bold text-zion-blue mb-4">Featured Services</h2>
-          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-            Discover our most popular and highly-rated services that are helping businesses transform and grow.
-          </p>
-        </motion.div>
-
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {featuredServices.map((service, index) => (
-            <motion.div 
-              key={service.id} 
-              className="bg-white rounded-lg shadow-lg overflow-hidden border border-zion-slate/10 hover:shadow-xl transition-all duration-300 cursor-pointer group"
-              variants={itemVariants}
-              whileHover={{ 
-                y: -8, 
-                scale: 1.02,
-                transition: { duration: 0.2 }
-              }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <div className={`h-2 bg-gradient-to-r ${getCategoryColor(service.category)}`}></div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <motion.span 
-                      className="text-lg"
-                      animate={{ rotate: [0, 10, -10, 0] }}
-                      transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                    >
-                      {getCategoryIcon(service.category)}
-                    </motion.span>
-                    <span className="text-xs font-medium text-zion-slate bg-zion-slate/10 px-2 py-1 rounded-full">
-                      {service.category}
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <motion.span 
-                      className="text-yellow-500 text-sm"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    >
-                      ★
-                    </motion.span>
-                    <span className="text-sm text-zion-slate ml-1">{service.rating}</span>
-                    <span className="text-xs text-zion-slate-light ml-1">({service.reviewCount})</span>
-                  </div>
-                </div>
-
-                <h3 className="text-lg font-semibold text-zion-blue mb-2 group-hover:text-zion-purple transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-zion-slate-light text-sm mb-4 line-clamp-2">{service.description}</p>
-
-                {/* Key Features Preview */}
-                <div className="mb-4">
-                  <div className="flex flex-wrap gap-1">
-                    {service.features.slice(0, 2).map((feature, index) => (
-                      <motion.span 
-                        key={index} 
-                        className="text-xs bg-zion-slate/10 text-zion-slate px-2 py-1 rounded-full"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        {feature}
-                      </motion.span>
-                    ))}
-                    {service.features.length > 2 && (
-                      <span className="text-xs text-zion-slate-light">
-                        +{service.features.length - 2} more
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-zion-purple">{getPriceDisplay(service)}</span>
-                  <motion.div
-                    whileHover={{ x: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Link
-                      to={`/comprehensive-services?service=${service.id}`}
-                      className="text-zion-cyan hover:text-zion-cyan-dark font-medium text-sm transition-colors"
-                    >
-                      View Details →
-                    </Link>
-                  </motion.div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        <motion.div 
-          className="text-center mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link
-              to="/comprehensive-services"
-              className="inline-block bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Explore All Services
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        {/* Service Categories Overview */}
-        <motion.div 
-          className="mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <h3 className="text-2xl font-bold text-zion-blue text-center mb-8">Service Categories</h3>
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {[
-              {
-                title: "AI & Machine Learning",
-                description: "Cutting-edge AI solutions for business automation and insights",
-                icon: "🤖",
-                color: "from-purple-500 to-indigo-600",
-                link: "/ai-services",
-                serviceCount: COMPREHENSIVE_SERVICES.filter(s => s.category === "AI & Machine Learning").length
-              },
-              {
-                title: "Cloud & DevOps",
-                description: "Scalable cloud infrastructure and automation solutions",
-                icon: "☁️",
-                color: "from-blue-500 to-cyan-600",
-                link: "/comprehensive-services",
-                serviceCount: COMPREHENSIVE_SERVICES.filter(s => s.category === "Cloud & DevOps").length
-              },
-              {
-                title: "Cybersecurity",
-                description: "Comprehensive security and compliance solutions",
-                icon: "🔒",
-                color: "from-red-500 to-pink-600",
-                link: "/comprehensive-services",
-                serviceCount: COMPREHENSIVE_SERVICES.filter(s => s.category === "Cybersecurity").length
-              },
-              {
-                title: "Data & Analytics",
-                description: "Data-driven insights and business intelligence",
-                icon: "📊",
-                color: "from-green-500 to-emerald-600",
-                link: "/comprehensive-services",
-                serviceCount: COMPREHENSIVE_SERVICES.filter(s => s.category === "Data & Analytics").length
-              },
-              {
-                title: "Micro SAAS",
-                description: "Scalable software solutions for growing businesses",
-                icon: "💻",
-                color: "from-emerald-500 to-teal-600",
-                link: "/micro-saas",
-                serviceCount: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS").length
-              },
-              {
-                title: "Enterprise Solutions",
-                description: "Large-scale transformation and enterprise systems",
-                icon: "🏢",
-                color: "from-slate-600 to-gray-700",
-                link: "/enterprise-solutions",
-                serviceCount: COMPREHENSIVE_SERVICES.filter(s => s.category === "Enterprise Solutions").length
-              }
-            ].map((category, index) => (
-              <motion.div
-                key={index}
-                variants={categoryVariants}
-                whileHover={{ 
-                  y: -8, 
-                  scale: 1.02,
-                  transition: { duration: 0.2 }
-                }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Link
-                  to={category.link}
-                  className="group block"
-                >
-                  <div className={`rounded-lg overflow-hidden h-full border border-zion-slate/10 bg-white p-6 transition-all duration-300 hover:border-zion-purple/50 hover:shadow-lg`}>
-                    <motion.div 
-                      className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <div className="text-white text-2xl">
-                        {category.icon}
-                      </div>
-                    </motion.div>
-                    <h3 className="text-xl font-bold text-zion-blue mb-2 group-hover:text-zion-purple transition-colors">{category.title}</h3>
-                    <p className="text-zion-slate-light mb-4">{category.description}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-zion-slate-light">{category.serviceCount} services</span>
-                      <motion.span 
-                        className="text-zion-cyan group-hover:text-zion-cyan-dark transition-colors"
-                        whileHover={{ x: 5 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        Learn More →
-                      </motion.span>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
-=======
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-=======
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
 import { 
   Brain, 
-  Cloud, 
   Shield, 
-<<<<<<< HEAD
+  BarChart3, 
+  Cloud, 
   Globe, 
-  Smartphone, 
-  Database, 
+  Network, 
+  Video, 
+  TrendingUp, 
+  Eye, 
+  Key, 
+  Server, 
+  MessageSquare, 
   Zap,
   ArrowRight,
+  Check,
   Star,
-  DollarSign,
-  Clock
-} from "lucide-react";
-import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices";
-
-export function ServicesShowcase() {
-  // Get featured services for showcase
-  const featuredServices = COMPREHENSIVE_SERVICES.filter(service => service.featured).slice(0, 6);
-
-  const getServiceIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-      'AI Development': <Brain className="h-8 w-8" />,
-      'AI Services': <Zap className="h-8 w-8" />,
-      'Cloud Services': <Cloud className="h-8 w-8" />,
-      'Cybersecurity': <Shield className="h-8 w-8" />,
-      'Web Development': <Globe className="h-8 w-8" />,
-      'Mobile Development': <Smartphone className="h-8 w-8" />,
-      'Data Services': <Database className="h-8 w-8" />,
-      'Enterprise Solutions': <Globe className="h-8 w-8" />
-    };
-    return iconMap[category] || <Zap className="h-8 w-8" />;
-  };
-
-  return (
-    <section className="py-20 bg-zion-blue">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Premium Services
-          </h2>
-          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-            Discover our most popular and innovative solutions that are transforming businesses worldwide
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredServices.map((service) => (
-            <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
-              <CardHeader className="pb-4">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-lg flex items-center justify-center">
-                    <div className="text-white">
-                      {getServiceIcon(service.category)}
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-1 text-yellow-400">
-                    <Star className="h-4 w-4 fill-current" />
-                    <span className="text-sm font-medium">{service.rating}</span>
-                  </div>
-                </div>
-                <CardTitle className="text-white text-lg">{service.title}</CardTitle>
-                <CardDescription className="text-zion-slate-light text-sm">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2 text-zion-cyan">
-                    <DollarSign className="h-4 w-4" />
-                    <span className="font-bold text-lg">{service.price?.toLocaleString()}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-zion-slate-light">
-                    <Clock className="h-4 w-4" />
-                    <span className="text-xs">{service.availability}</span>
-                  </div>
-                </div>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {service.tags.slice(0, 3).map((tag) => (
-                    <Badge key={tag} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-full bg-zion-purple/20 flex items-center justify-center">
-                      <Brain className="h-3 w-3 text-zion-purple" />
-                    </div>
-                    <span className="text-xs text-zion-slate-light">AI Score: {service.aiScore}</span>
-                  </div>
-                  <Link to={`/services?service=${service.id}`}>
-                    <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white">
-                      Learn More
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { getFeaturedServices } from '@/data/microSaasServices';
-import { 
-  Brain, 
-  Cloud, 
-  Zap, 
-  Star, 
-  CheckCircle, 
-  ArrowRight,
-  Mail,
-  Phone
+  Lightbulb,
+  Building
 } from 'lucide-react';
 
-const categoryIcons = {
-  'AI Services': <Brain className="w-6 h-6" />,
-  'IT Services': <Cloud className="w-6 h-6" />,
-  'Innovative Solutions': <Zap className="w-6 h-6" />
-};
-
-const categoryColors = {
-  'AI Services': 'from-purple-500 to-indigo-600',
-  'IT Services': 'from-blue-500 to-cyan-600',
-  'Innovative Solutions': 'from-green-500 to-emerald-600'
-};
-
 export function ServicesShowcase() {
-  const featuredServices = getFeaturedServices();
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Zap, count: 0 },
+    { id: 'ai', name: 'AI & ML', icon: Brain, count: 0 },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 0 },
+    { id: 'security', name: 'Security', icon: Shield, count: 0 },
+    { id: 'data', name: 'Data & Analytics', icon: BarChart3, count: 0 },
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: Globe, count: 0 },
+    { id: 'iot', name: 'IoT & Edge', icon: Network, count: 0 },
+    { id: 'enterprise', name: 'Enterprise', icon: Building, count: 0 }
+  ];
+
+  const services = [
+    // AI & Machine Learning Services
+    {
+      id: 'ai-content-generator',
+      title: 'AI Content Generator',
+      description: 'Generate high-quality content, code, and documentation using advanced AI models.',
+      category: 'ai',
+      icon: Brain,
+      price: '$29/month',
+      features: ['Blog posts & articles', 'Technical documentation', 'Marketing copy', 'Code snippets', 'Multi-language support'],
+      badge: 'Hot',
+      link: '/ai-content-generator',
+      popular: true
+    },
+    {
+      id: 'ai-model-training',
+      title: 'AI Model Training',
+      description: 'Custom AI model development and training for your specific business use cases.',
+      category: 'ai',
+      icon: Brain,
+      price: '$5,000+',
+      features: ['Data preparation', 'Model architecture design', 'Training & optimization', 'Deployment support', 'Ongoing maintenance'],
+      badge: 'Premium',
+      link: '/ai-model-training',
+      popular: false
+    },
+    {
+      id: 'ai-chatbot-platform',
+      title: 'AI Chatbot Platform',
+      description: 'Build intelligent chatbots and virtual assistants for customer support and engagement.',
+      category: 'ai',
+      icon: MessageSquare,
+      price: '$49/month',
+      features: ['Natural language processing', 'Multi-channel support', 'Analytics dashboard', 'Custom integrations', '24/7 availability'],
+      badge: 'Popular',
+      link: '/ai-chatbot',
+      popular: false
+    },
+    {
+      id: 'video-analytics-ai',
+      title: 'Video Analytics AI',
+      description: 'AI-powered video analysis for security, retail analytics, and content optimization.',
+      category: 'ai',
+      icon: Video,
+      price: '$89/month',
+      features: ['Object detection', 'Behavior tracking', 'Content analysis', 'Real-time processing', 'Custom algorithms'],
+      badge: 'New',
+      link: '/video-analytics',
+      popular: false
+    },
+
+    // Cloud & DevOps Services
+    {
+      id: 'cloud-migration-service',
+      title: 'Cloud Migration Service',
+      description: 'Seamlessly migrate your applications and infrastructure to modern cloud platforms.',
+      category: 'cloud',
+      icon: Cloud,
+      price: '$2,500+',
+      features: ['AWS, Azure, GCP support', 'Zero-downtime migration', 'Cost optimization', 'Security compliance', 'Performance tuning'],
+      badge: 'Featured',
+      link: '/cloud-migration',
+      popular: true
+    },
+    {
+      id: 'devops-automation',
+      title: 'DevOps Automation',
+      description: 'Streamline your development workflow with automated CI/CD pipelines and infrastructure management.',
+      category: 'cloud',
+      icon: Zap,
+      price: '$89/month',
+      features: ['CI/CD pipelines', 'Infrastructure as Code', 'Monitoring & alerting', 'Security scanning', 'Performance optimization'],
+      badge: 'Popular',
+      link: '/devops-automation',
+      popular: false
+    },
+    {
+      id: 'serverless-functions',
+      title: 'Serverless Functions',
+      description: 'Deploy and manage serverless functions for scalable, cost-effective application development.',
+      category: 'cloud',
+      icon: Server,
+      price: '$19/month',
+      features: ['Auto-scaling', 'Pay-per-use pricing', 'Multi-cloud support', 'Monitoring & logging', 'Security & compliance'],
+      badge: 'Budget',
+      link: '/serverless',
+      popular: false
+    },
+
+    // Security Services
+    {
+      id: 'cybersecurity-assessment',
+      title: 'Cybersecurity Assessment',
+      description: 'Comprehensive security audits and vulnerability assessments for your digital infrastructure.',
+      category: 'security',
+      icon: Shield,
+      price: '$299/assessment',
+      features: ['Vulnerability scanning', 'Penetration testing', 'Security audit report', 'Remediation guidance', 'Compliance check'],
+      badge: 'Essential',
+      link: '/cybersecurity-assessment',
+      popular: true
+    },
+    {
+      id: 'network-security',
+      title: 'Network Security',
+      description: 'Advanced network security solutions including firewalls, VPNs, and threat detection.',
+      category: 'security',
+      icon: Shield,
+      price: '$199/month',
+      features: ['Next-gen firewalls', 'VPN solutions', 'Threat detection', '24/7 monitoring', 'Incident response'],
+      badge: 'Enterprise',
+      link: '/network-security',
+      popular: false
+    },
+    {
+      id: 'biometric-authentication',
+      title: 'Biometric Authentication',
+      description: 'Secure authentication using fingerprint, facial recognition, and voice biometrics.',
+      category: 'security',
+      icon: Key,
+      price: '$99/month',
+      features: ['Multi-factor authentication', 'Biometric verification', 'Secure storage', 'API integration', 'Compliance ready'],
+      badge: 'Advanced',
+      link: '/biometric-auth',
+      popular: false
+    },
+
+    // Data & Analytics Services
+    {
+      id: 'data-analytics-dashboard',
+      title: 'Data Analytics Dashboard',
+      description: 'Transform raw data into actionable insights with interactive visualizations and real-time reporting.',
+      category: 'data',
+      icon: BarChart3,
+      price: '$79/month',
+      features: ['Data connectors', 'Custom dashboards', 'Real-time updates', 'Collaboration tools', 'Export capabilities'],
+      badge: 'Popular',
+      link: '/data-analytics',
+      popular: true
+    },
+    {
+      id: 'user-behavior-analytics',
+      title: 'User Behavior Analytics',
+      description: 'Understand user behavior patterns and optimize conversion rates with advanced analytics.',
+      category: 'data',
+      icon: Eye,
+      price: '$79/month',
+      features: ['Heatmaps', 'Session recordings', 'Funnel analysis', 'A/B testing', 'Conversion optimization'],
+      badge: 'Growth',
+      link: '/user-analytics',
+      popular: false
+    },
+    {
+      id: 'performance-monitoring',
+      title: 'Performance Monitoring',
+      description: 'Real-time performance monitoring and optimization for web and mobile applications.',
+      category: 'data',
+      icon: TrendingUp,
+      price: '$69/month',
+      features: ['Page load monitoring', 'API performance', 'User experience metrics', 'Alerting system', 'Performance reports'],
+      badge: 'Essential',
+      link: '/performance-monitoring',
+      popular: false
+    },
+
+    // Blockchain & Web3 Services
+    {
+      id: 'blockchain-development',
+      title: 'Blockchain Development',
+      description: 'Smart contract development, DeFi applications, and blockchain infrastructure solutions.',
+      category: 'blockchain',
+      icon: Globe,
+      price: '$8,000+',
+      features: ['Smart contracts', 'DeFi protocols', 'Token development', 'DApp creation', 'Blockchain consulting'],
+      badge: 'Premium',
+      link: '/blockchain-development',
+      popular: false
+    },
+
+    // IoT & Edge Services
+    {
+      id: 'iot-platform',
+      title: 'IoT Platform',
+      description: 'End-to-end IoT solution for device management, data collection, and analytics.',
+      category: 'iot',
+      icon: Network,
+      price: '$149/month',
+      features: ['Device management', 'Data collection', 'Real-time analytics', 'Predictive maintenance', 'Scalable infrastructure'],
+      badge: 'Industrial',
+      link: '/iot-platform',
+      popular: false
+    },
+
+    // Enterprise Services
+    {
+      id: 'enterprise-solutions',
+      title: 'Enterprise Solutions',
+      description: 'Custom-branded hiring portal, dedicated talent pool, and powerful admin controls for your organization.',
+      category: 'enterprise',
+      icon: Building,
+      price: '$999/month',
+      features: ['White-label solution', 'Dedicated support', 'Custom integrations', 'Advanced analytics', 'SLA guarantees'],
+      badge: 'Enterprise',
+      link: '/enterprise',
+      popular: true
+    },
+    {
+      id: 'compliance-management',
+      title: 'Compliance Management',
+      description: 'Automated compliance monitoring and reporting for GDPR, HIPAA, SOX, and other regulations.',
+      category: 'enterprise',
+      icon: Shield,
+      price: '$129/month',
+      features: ['Automated audits', 'Policy management', 'Regulatory reporting', 'Risk assessment', 'Compliance dashboard'],
+      badge: 'Compliance',
+      link: '/compliance',
+      popular: false
+    }
+  ];
+
+  // Calculate category counts
+  categories.forEach(category => {
+    category.count = services.filter(service => 
+      selectedCategory === 'all' || service.category === category.id
+    ).length;
+  });
+
+  const filteredServices = services.filter(service => 
+    selectedCategory === 'all' || service.category === selectedCategory
+  );
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
-      <div className="container mx-auto px-4">
-        {/* Header */}
+    <section className="py-20 bg-gradient-to-b from-zion-blue-dark to-zion-slate relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Section Header */}
         <div className="text-center mb-16">
+          <Badge className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30 px-4 py-2 text-sm font-medium mb-4">
+            <Zap className="h-3 w-3 mr-2" />
+            Micro SAAS Services
+          </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Featured Technology Services
+            Professional Technology Services
           </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Discover our cutting-edge AI services, IT solutions, and innovative technology services 
-            designed to accelerate your business growth and digital transformation.
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Choose from our comprehensive suite of micro SAAS services designed to accelerate your digital transformation journey.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/micro-saas-services">
-              <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark">
-                View All Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">
-              <Mail className="w-5 h-5 mr-2" />
-              Get Free Quote
-            </Button>
-          </div>
+        </div>
+
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 ${
+                selectedCategory === category.id
+                  ? 'bg-zion-cyan text-zion-blue-dark border-zion-cyan'
+                  : 'bg-transparent text-zion-slate-light border-zion-slate-light/30 hover:border-zion-cyan/50 hover:text-zion-cyan'
+              }`}
+            >
+              <category.icon className="h-4 w-4" />
+              <span>{category.name}</span>
+              <span className="bg-zion-slate-light/20 px-2 py-1 rounded-full text-xs">
+                {category.count}
+              </span>
+            </button>
+          ))}
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {featuredServices.map((service) => (
-            <Card key={service.id} className="h-full bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <CardHeader className="pb-4">
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${categoryColors[service.category as keyof typeof categoryColors]} flex items-center justify-center`}>
-                    <div className="text-white">
-                      {categoryIcons[service.category as keyof typeof categoryIcons]}
-                    </div>
-                  </div>
-                  <Badge variant="secondary" className="bg-zion-purple/10 text-zion-purple border-zion-purple/20">
-                    {service.category}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service) => (
+            <Card 
+              key={service.id} 
+              className={`relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+                service.popular ? 'ring-2 ring-zion-cyan' : ''
+              }`}
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-zion-cyan text-zion-blue-dark">
+                    <Star className="h-3 w-3 mr-1" />
+                    Popular
                   </Badge>
                 </div>
-                
-                <CardTitle className="text-xl mb-3 text-gray-900">{service.title}</CardTitle>
-                <CardDescription className="text-gray-600 line-clamp-3">
+              )}
+
+              {/* Service Badge */}
+              <div className="absolute top-4 left-4">
+                <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple-light">
+                  {service.badge}
+                </Badge>
+              </div>
+
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
+                    <service.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="text-xl text-white">{service.title}</CardTitle>
+                    <div className="text-2xl font-bold text-zion-cyan">{service.price}</div>
+                  </div>
+                </div>
+                <CardDescription className="text-zion-slate-light text-base leading-relaxed">
                   {service.description}
                 </CardDescription>
               </CardHeader>
 
-              <CardContent className="pt-0">
-                {/* Pricing */}
-                <div className="mb-4">
-                  <div className="text-2xl font-bold text-zion-purple">
-                    ${service.price}
-                    {service.pricingModel === 'monthly' && '/month'}
-                    {service.pricingModel === 'yearly' && '/year'}
-                  </div>
-                  {service.freeTrial && (
-                    <div className="text-sm text-green-600 flex items-center gap-1">
-                      <CheckCircle className="w-4 h-4" />
-                      {service.freeTrialDays}-day free trial
+              <CardContent className="space-y-4">
+                {/* Features List */}
+                <div className="space-y-2">
+                  {service.features.slice(0, 3).map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-2 text-sm text-zion-slate-light">
+                      <Check className="h-4 w-4 text-zion-cyan flex-shrink-0" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                  {service.features.length > 3 && (
+                    <div className="text-xs text-zion-slate-light/70">
+                      +{service.features.length - 3} more features
                     </div>
                   )}
                 </div>
 
-                {/* Key Benefits */}
-                <div className="mb-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Key Benefits:</h4>
-                  <div className="space-y-1">
-                    {service.benefits.slice(0, 2).map((benefit, index) => (
-                      <div key={index} className="text-sm text-gray-600 flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        {benefit}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                    <span className="text-sm font-medium">{service.rating}</span>
-                    <span className="text-sm text-gray-500">({service.reviewCount} reviews)</span>
-                  </div>
-                </div>
-
-                {/* Actions */}
-                <div className="space-y-2">
-                  <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
-                    Get Started
-                  </Button>
-                  <Link to={`/micro-saas-services#${service.id}`}>
-                    <Button variant="outline" size="sm" className="w-full">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
-                    </Button>
+                {/* CTA Button */}
+                <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group">
+                  <Link to={service.link}>
+                    <span>Get Started</span>
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                </div>
+                </Button>
               </CardContent>
             </Card>
           ))}
         </div>
-<<<<<<< HEAD
-        
-        <div className="text-center mt-12">
-          <Link to="/comprehensive-services">
-            <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white px-8 py-3">
-              View All Services
-              <ArrowRight className="h-5 w-5 ml-2" />
-            </Button>
-          </Link>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <div className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-purple/30 rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Need a Custom Solution?
+            </h3>
+            <p className="text-zion-slate-light mb-6">
+              Our expert team can build tailored solutions that perfectly fit your business requirements.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white">
+                <Link to="/contact">
+                  <Lightbulb className="h-5 w-5 mr-2" />
+                  Request Custom Quote
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark">
+                <Link to="/enterprise">
+                  <Building className="h-5 w-5 mr-2" />
+                  Enterprise Solutions
+                </Link>
+              </Button>
+            </div>
+          </div>
         </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
       </div>
     </section>
   );

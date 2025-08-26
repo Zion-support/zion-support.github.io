@@ -1,13 +1,9 @@
+import React, { useState, useRef, useEffect } from 'react';
 import { Search, X } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { Input } from '@/components/ui/Input';
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 
 interface SearchSuggestion {
   id: string;
   text: string;
-<<<<<<< HEAD
   type: string;
 =======
   type: 'talent' | 'service' | 'equipment' | 'category';
@@ -91,7 +87,6 @@ export function EnhancedSearchInput({
 
   const handleSuggestionClick = (suggestion: SearchSuggestion) => {
     onSelectSuggestion(suggestion.text);
-<<<<<<< HEAD
     setShowSuggestions(false);
   };
 

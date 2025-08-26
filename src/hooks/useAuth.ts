@@ -12,9 +12,6 @@ interface User {
   name: string;
   role: 'user' | 'admin';
   userType: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin';
-=======
-  name?: string;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 }
 
 export function useAuth() {
@@ -22,7 +19,6 @@ export function useAuth() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-<<<<<<< HEAD
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
     const checkAuth = () => {
       const token = localStorage.getItem('authToken');
@@ -59,7 +55,6 @@ export function useAuth() {
     return () => clearTimeout(timer);
   }, []);
 
-<<<<<<< HEAD
   const login = async (email: string, _password: string) => {
     // In a real app, you would make an API call to your backend
     setAuthState({
@@ -78,58 +73,11 @@ export function useAuth() {
 =======
 import { useState } from 'react'
 
-interface User {
-  id: string
-  email: string
-  name: string
-}
-
-interface AuthState {
-  user: User | null
-  isAuthenticated: boolean
-  isLoading: boolean
-}
-
-export function useAuth() {
-  const [authState, setAuthState] = useState<AuthState>({
-    user: null,
-    isAuthenticated: false,
-    isLoading: false,
-  })
-
-  const login = async (email: string, password: string) => {
-    setAuthState({ ...authState, isLoading: true })
-    
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      const user: User = {
-        id: '1',
-        email,
-        name: 'User',
-      }
-      
-      setAuthState({
-        user,
-        isAuthenticated: true,
-        isLoading: false,
-      })
-      
-      return { success: true }
-    } catch (error) {
-      setAuthState({ ...authState, isLoading: false })
-      return { success: false, error: 'Login failed' }
-    }
-  }
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-
   const logout = () => {
     setAuthState({
       user: null,
       isAuthenticated: false,
       isLoading: false,
-<<<<<<< HEAD
     });
     localStorage.removeItem('authToken');
   };
@@ -168,7 +116,6 @@ export function useAuth() {
     ...authState,
     login,
     logout,
-<<<<<<< HEAD
   };
 };
 =======

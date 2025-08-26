@@ -1,34 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-import React from 'react';
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
-import { GradientHeading } from "./GradientHeading";
-import { FeatureCard } from "./FeatureCard";
-<<<<<<< HEAD
-import { Bot, Clock, Globe, TrendingDown, Zap, Shield, Users, Award } from "lucide-react";
-=======
-import { GradientHeading } from "./GradientHeading";
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
-=======
-import React from 'react';
-import { GradientHeading } from "./GradientHeading";
-import { FeatureCard } from "./FeatureCard";
-import { Bot, Clock, Globe, TrendingDown, Sparkles, Shield, Zap, Users, CheckCircle, Star, Award, Rocket } from "lucide-react";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
-import { motion } from "framer-motion";
-<<<<<<< HEAD
-import React from "react";
-=======
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
-=======
-import { Bot, Clock, Globe, TrendingDown, Shield, Zap, Users, Award } from "lucide-react";
-import { motion } from "framer-motion";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
+import { motion } from 'framer-motion';
+import { CheckCircle, Zap, Shield, Users, Clock, TrendingUp } from 'lucide-react';
 
 const benefits = [
   {
@@ -493,69 +464,6 @@ export function BenefitsSection() {
                 <benefit.icon className="w-8 h-8 text-white" />
 >>>>>>> origin/cursor/build-and-fix-errors-e276
               </div>
-            </motion.div>
-          ))}
-<<<<<<< HEAD
-        </motion.div>
-
-        {/* Additional features */}
-=======
-          <GradientHeading className="mb-4">Why Choose Zion?</GradientHeading>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
-            Experience the next generation of tech marketplace with features designed to maximize efficiency, 
-            value, and success in your tech endeavors
-          </p>
-        </motion.div>
-        
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {benefits.map((benefit, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <div className={`rounded-xl overflow-hidden h-full border border-zion-blue-light/30 ${benefit.bgColor} p-8 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20`}>
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${benefit.color} flex items-center justify-center mb-6 shadow-lg`}>
-                  <div className="text-white">
-                    {benefit.icon}
-                  </div>
-                </div>
-                <h3 className="text-white text-xl font-bold mb-4">{benefit.title}</h3>
-                <p className="text-zion-slate-light mb-6 leading-relaxed">{benefit.description}</p>
-                
-                {/* Feature highlights */}
-                <div className="space-y-2">
-                  {benefit.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm">
-                      <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
-                      <span className="text-zion-slate-light font-medium">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-=======
-                {/* Feature highlights */}
-                <div className="mb-6 space-y-2">
-                  {benefit.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm text-zion-cyan-light">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-zion-cyan font-semibold bg-zion-cyan/15 px-4 py-2 rounded-full border border-zion-cyan/30">
-                    {benefit.stats}
-                  </span>
-                  <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center group-hover:bg-zion-purple/40 transition-colors duration-300">
-                    <Zap className="w-5 h-5 text-zion-purple" />
-                  </div>
-                </div>
-              </motion.div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
             </motion.div>
           ))}
         </motion.div>

@@ -1,42 +1,3 @@
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building } from "lucide-react";
-import { Link } from "react-router-dom";
-=======
-import { FooterNewsletter } from "@/components/FooterNewsletter";
-import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin, Sparkles, Zap, Shield, Brain, Code, Database, BarChart3, Link as LinkIcon, UserCheck } from "lucide-react";
-import Workflow from "lucide-react/dist/esm/icons/workflow";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Zap, Brain, Cloud, Shield, Users, Code, Building, Globe } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin } from "lucide-react";
-=======
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
-=======
-import { Link } from 'react-router-dom';
-=======
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Phone, 
@@ -82,100 +43,60 @@ import {
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const footerSections = [
+    {
       title: "AI & Technology Services",
       icon: Brain,
       links: [
-        { label: "AI Content Hub Pro", path: "/services/ai-content-hub-pro" },
-        { label: "AI Customer Service Automation", path: "/services/ai-customer-service-automation" },
-        { label: "AI Sales Intelligence Platform", path: "/services/ai-sales-intelligence-platform" },
-        { label: "AI Fintech Platform", path: "/services/ai-fintech-platform" },
-        { label: "AI Healthcare Technology", path: "/services/ai-healthcare-tech-platform" },
-        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
-        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
-        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
-        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "Machine Learning Solutions", path: "/services/ai-machine-learning" },
-        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" }
+        { name: "AI Solutions", href: "/ai-solutions" },
+        { name: "AI Agent Orchestrator", href: "/ai-agent-orchestrator" },
+        { name: "AI Analytics Copilot", href: "/ai-analytics-copilot" },
+        { name: "Quantum Technology", href: "/quantum-technology" },
+        { name: "Quantum Neural Network Platform", href: "/quantum-neural-network-platform" },
+        { name: "Cloud & DevOps", href: "/cloud-devops" },
+        { name: "Enterprise Solutions", href: "/enterprise-solutions" },
+        { name: "Micro SAAS", href: "/micro-saas" }
       ]
     },
     {
       title: "Specialized IT Services",
       links: [
-        { label: "Cloud Cost Optimization", path: "/services/cloud-cost-optimization-finops" },
-        { label: "DevOps Automation Platform", path: "/services/devops-automation-cicd-platform" },
-        { label: "Data Analytics Platform", path: "/services/data-analytics-business-intelligence" },
-        { label: "IoT & Edge Computing", path: "/services/iot-edge-computing-platform" },
-        { label: "API Management Platform", path: "/services/api-management-integration-platform" },
-        { label: "Advanced Cybersecurity", path: "/services/advanced-cybersecurity-platform" },
-        { label: "5G Enterprise Networks", path: "/services/5g-enterprise-network-solutions" }
-      ]
-    },
-    {
-      title: "Industry Solutions",
-      icon: Building,
-      links: [
-        { label: "Enterprise Solutions", path: "/solutions/enterprise" },
-        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
-        { label: "Financial Solutions", path: "/solutions/financial" },
-        { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
-        { label: "Retail Solutions", path: "/solutions/retail" },
-        { label: "Government Solutions", path: "/solutions/government" },
-  const footerSections = [
-    {
-      title: "Marketplace",
-      links: [
-        { label: "AI & ML Services", href: "/micro-saas-services" },
-        { label: "IT Services", href: "/services" },
-        { label: "Cloud Solutions", href: "/services" },
-        { label: "Cybersecurity", href: "/services" },
-        { label: "DevOps Automation", href: "/services" },
-        { label: "Data Analytics", href: "/services" },
-      ]
-    },
-    {
-      title: "Talent & Resources",
-      links: [
-        { label: "AI Engineers", href: "/talent" },
-        { label: "Data Scientists", href: "/talent" },
-        { label: "DevOps Specialists", href: "/talent" },
-        { label: "Full-Stack Developers", href: "/talent" },
-        { label: "Equipment & Tools", href: "/equipment" },
-        { label: "Learning Resources", href: "/blog" },
-      ]
-    },
-    {
-      title: "Enterprise",
-      links: [
-        { label: "Custom Solutions", href: "/enterprise" },
-        { label: "White-Label Platform", href: "/enterprise" },
-        { label: "API Access", href: "/developers" },
-        { label: "Dedicated Support", href: "/enterprise" },
-        { label: "Security & Compliance", href: "/services" },
-        { label: "Migration Services", href: "/services" },
+        { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "Advanced Cybersecurity Suite", href: "/advanced-cybersecurity-suite" },
+        { name: "SOC2 Compliance Automation", href: "/soc2-compliance-automation" },
+        { name: "5G Enterprise Solutions", href: "/5g-enterprise-solutions" },
+        { name: "5G Network Optimization", href: "/5g-network-optimization" },
+        { name: "IT Infrastructure", href: "/services/it-infrastructure" },
+        { name: "AI-Powered IT Asset Management", href: "/ai-powered-it-asset-management" },
+        { name: "Network Infrastructure", href: "/services/network-infrastructure" }
       ]
     },
     {
       title: "Company",
-=======
-        { label: "Digital Transformation", path: "/digital-transformation" },
-        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" }
+      icon: Building,
+      links: [
+        { name: "About Us", href: "/about" },
+        { name: "Our Team", href: "/team" },
+        { name: "Mission", href: "/mission" },
+        { name: "Careers", href: "/careers" },
+        { name: "Partners", href: "/partners" },
+        { name: "News & Blog", href: "/news" },
+        { name: "Case Studies", href: "/case-studies" },
+        { name: "Contact", href: "/contact" }
       ]
     },
     {
-      title: "Company & Resources",
+      title: "Resources & Support",
       icon: Users,
       links: [
-        { label: "Help Center", path: "/help" },
-        { label: "Documentation", path: "/docs" },
-        { label: "Support Center", path: "/support" }
-=======
-        { label: "Careers", path: "/careers" },
-        { label: "Partners", path: "/partners" },
-        { label: "Blog", path: "/blog" },
-        { label: "Case Studies", path: "/case-studies" },
-        { label: "Help Center", path: "/help" }
+        { name: "Documentation", href: "/docs" },
+        { name: "Help Center", href: "/help" },
+        { name: "Community", href: "/community" },
+        { name: "Webinars", href: "/webinars" },
+        { name: "White Papers", href: "/white-papers" },
+        { name: "FAQ", href: "/faq" },
+        { name: "Support", href: "/support" },
+        { name: "Events", href: "/events" }
       ]
     }
   ];
@@ -184,7 +105,7 @@ export function Footer() {
   const socialLinks = [
     { 
       name: 'LinkedIn', 
-      url: 'https://www.linkedin.com/company/ziontechgroup', 
+      url: 'https://linkedin.com/company/ziontechgroup', 
       icon: Linkedin,
       fallback: 'https://linkedin.com'
     },
@@ -196,7 +117,7 @@ export function Footer() {
     },
     { 
       name: 'GitHub', 
-      url: 'https://github.com/ziontechgroup', 
+      url: 'https://github.com/Zion-Holdings', 
       icon: Github,
       fallback: 'https://github.com'
     },
@@ -2172,136 +2093,3 @@ const Footer: React.FC = () => {
     </footer>
   );
 }
-
-export default Footer;
-=======
-    { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/company/zion-tech-group", color: "hover:text-blue-400" },
-    { name: "Twitter", icon: Twitter, url: "https://twitter.com/ziontechgroup", color: "hover:text-blue-400" },
-    { name: "Facebook", icon: Facebook, url: "https://facebook.com/ziontechgroup", color: "hover:text-blue-600" },
-    { name: "Instagram", icon: Instagram, url: "https://instagram.com/ziontechgroup", color: "hover:text-pink-400" },
-    { name: "GitHub", icon: Github, url: "https://github.com/zion-tech-group", color: "hover:text-gray-400" },
-    { name: "YouTube", icon: Youtube, url: "https://youtube.com/@ziontechgroup", color: "hover:text-red-400" }
-  ];
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  return (
-    <footer className="futuristic-bg relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse opacity-60"></div>
-        <div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse opacity-40"></div>
-        <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse opacity-50"></div>
-        <div className="absolute bottom-20 right-10 w-2.5 h-2.5 bg-pink-400 rounded-full animate-pulse opacity-30"></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
-            {footerSections.map((section, idx) => (
-              <div key={idx} className="space-y-4">
-                <h3 className="text-lg font-semibold text-white neon-text-cyan">
-                  {section.title}
-                </h3>
-                <p className="text-sm text-gray-400 leading-relaxed">
-                  {section.description}
-                </p>
-                <ul className="space-y-2">
-                  {section.items.map((item, itemIdx) => (
-                    <li key={itemIdx}>
-                      <Link
-                        to={item.path}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
-                      >
-                        <item.icon className="w-4 h-4 text-cyan-500/60 group-hover:text-cyan-400 transition-colors duration-200" />
-                        <span className="text-sm">{item.name}</span>
-                        <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Contact & Social Section */}
-        <div className="border-t border-cyan-500/20 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Contact Information */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white neon-text-cyan">
-                Get In Touch
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-5 h-5 text-cyan-400" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-5 h-5 text-cyan-400" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-start space-x-3 text-gray-300">
-                  <MapPin className="w-5 h-5 text-cyan-400 mt-0.5" />
-                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white neon-text-cyan">
-                Follow Us
-              </h3>
-              <div className="flex flex-wrap gap-4">
-                {socialLinks.map((social, idx) => (
-                  <a
-                    key={idx}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-10 h-10 bg-black/30 border border-cyan-500/20 rounded-lg flex items-center justify-center text-gray-400 transition-all duration-200 hover:border-cyan-500/50 hover:bg-cyan-500/10 ${social.color}`}
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Section */}
-        <div className="border-t border-cyan-500/20 py-6">
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-white font-semibold">Zion Tech Group</span>
-            </div>
-            
-            <div className="text-sm text-gray-400 text-center lg:text-left">
-              © {new Date().getFullYear()} Zion Tech Group. All rights reserved. 
-              <span className="hidden sm:inline"> Innovation • Intelligence • Impact</span>
-            </div>
-
-            <button
-              onClick={scrollToTop}
-              className="p-2 bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/30 hover:border-cyan-500/50 transition-all duration-200"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-# Zion Tech Group - Comprehensive Tech & AI Marketplace
-=======
 # Zion Tech Group - Revolutionary Micro SAAS Services & AI Solutions
 
 ## 🚀 About Zion Tech Group
@@ -864,7 +860,3 @@ For support, questions, or business inquiries:
 ---
 
 *Transform your business with Zion Tech Group's revolutionary micro SAAS services and AI solutions. Experience the future of technology today.*
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

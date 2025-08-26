@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-import { cn } from '@/lib/utils';
-=======
-import React, { createContext, useContext, useState } from 'react';
->>>>>>> origin/cursor/build-and-fix-errors-e276
-
-<<<<<<< HEAD
-interface TabsContextType {
-  value: string;
-  onValueChange: (value: string) => void;
-}
-
-const TabsContext = createContext<TabsContextType | null>(null);
 
 interface TabsProps {
 =======
@@ -100,20 +85,9 @@ export const Tabs: React.FC<TabsProps> = ({
       </div>
     </TabsContext.Provider>
   );
-<<<<<<< HEAD
 };
 
-<<<<<<< HEAD
-interface TabsListProps {
-=======
-}
-
-interface TabsListProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export function TabsList({ children, className = '' }: TabsListProps) {
+const TabsList: React.FC<TabsProps> = ({ children, className = '' }) => {
   return (
     <div className={`inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground ${className}`}>
       {children}
@@ -235,92 +209,6 @@ export const TabsContent: React.FC<TabsContentProps> = ({ value, children, class
       {children}
     </div>
   );
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
 
 export { Tabs, TabsList, TabsTrigger, TabsContent };
-=======
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-=======
-}
->>>>>>> origin/cursor/build-and-fix-errors-e276
-=======
-import * as React from "react"
-import * as TabsPrimitive from "@radix-ui/react-tabs"
-import { cn } from "@/lib/utils"
-
-const Tabs = TabsPrimitive.Root
-
-const TabsList = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.List>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
->(({ className, ...props }, ref) => (
-  <TabsPrimitive.List
-    ref={ref}
-    className={cn(
-      "inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground",
-      className
-    )}
-    {...props}
-  />
-))
-TabsList.displayName = TabsPrimitive.List.displayName
-
-const TabsTrigger = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
->(({ className, ...props }, ref) => (
-  <TabsPrimitive.Trigger
-    ref={ref}
-    className={cn(
-      "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm",
-      className
-    )}
-    {...props}
-  />
-))
-TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
-
-const TabsContent = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
->(({ className, ...props }, ref) => (
-  <TabsPrimitive.Content
-    ref={ref}
-    className={cn(
-      "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-      className
-    )}
-    {...props}
-  />
-))
-TabsContent.displayName = TabsPrimitive.Content.displayName
-
-export { Tabs, TabsList, TabsTrigger, TabsContent }
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
-=======
-export function TabsList({ children, className }: TabsListProps) {
-  return (
-    <div className={`flex border-b border-zion-slate ${className}`}>
-      {children}
-    </div>
-  );
-}
-
-export function TabsTrigger({ value, children, className }: TabsTriggerProps) {
-  return (
-    <button className={`px-4 py-2 text-sm font-medium border-b-2 border-transparent hover:border-zion-cyan focus:outline-none ${className}`}>
-      {children}
-    </button>
-  );
-}
-
-export function TabsContent({ value, children }: TabsContentProps) {
-  return (
-    <div className="mt-4">
-      {children}
-    </div>
-  );
-}
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

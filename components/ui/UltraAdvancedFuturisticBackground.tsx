@@ -19,7 +19,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    let particles: Array<{
+    const particles: Array<{
       x: number;
       y: number;
       vx: number;
@@ -195,7 +195,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [variant]);
+  }, [variant, intensity]);
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -299,7 +299,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       )}
 
       {/* Content */}
-      <div className="relative z-30">
+      <div className="relative z-10">
         {children}
       </div>
       
