@@ -15,6 +15,12 @@ const AdvancedServices2025 = lazy(() => import('./pages/AdvancedServices2025'));
 const Blog = lazy(() => import('./pages/Blog'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
+// New pages for missing content
+import Pricing from './pages/Pricing';
+import ITSolutions from './pages/services/ITSolutions';
+import AIServices from './pages/services/AIServices';
+import TalentDirectory from './pages/TalentDirectory';
+
 // Loading spinner component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
@@ -37,6 +43,15 @@ function App() {
               <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
               <Route path="/advanced-services-2025" element={<AdvancedServices2025 />} />
               <Route path="/blog" element={<Blog />} />
+              
+
+              
+              {/* New routes for missing pages */}
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/services/it-solutions" element={<ITSolutions />} />
+              <Route path="/services/ai-services" element={<AIServices />} />
+              <Route path="/talent" element={<TalentDirectory />} />
+              
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
