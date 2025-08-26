@@ -29,10 +29,10 @@ import {
   Car,
   Building2
 } from 'lucide-react';
-import { INNOVATIVE_SERVICES_2027, InnovativeService2027 } from '../data/innovativeServices2027';
+import { innovativeServices2027, InnovativeService2027 } from '../data/innovativeServices2027';
 
 const InnovativeServicesShowcase2027: React.FC = () => {
-  const [services, setServices] = useState<InnovativeService2027[]>(INNOVATIVE_SERVICES_2027);
+  const [services, setServices] = useState<InnovativeService2027[]>(innovativeServices2027);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');

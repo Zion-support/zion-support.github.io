@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { FuturisticNavigation } from './components/FuturisticNavigation';
-import { FuturisticFooter } from './components/FuturisticFooter';
+import { EnhancedFuturisticNavigation } from './components/EnhancedFuturisticNavigation';
+import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { ChatAssistant } from './components/ChatAssistant';
 
@@ -56,7 +56,7 @@ function App() {
         <FuturisticAnimatedBackground />
         
         {/* Navigation */}
-        <FuturisticNavigation />
+        <EnhancedFuturisticNavigation />
         
         <main className="flex-1 relative z-10">
           <Suspense fallback={<EnhancedLoadingSpinner />}>
@@ -112,7 +112,7 @@ function App() {
         </main>
         
         {/* Footer */}
-        <FuturisticFooter />
+        <EnhancedFuturisticFooter />
         
         {/* Chat Assistant */}
         <ChatAssistant />
