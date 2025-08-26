@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
 const nav = [
+  { href: '/solutions', label: 'Solutions' },
   { href: '/services', label: 'Services' },
-  { href: '/ai-solutions', label: 'AI Solutions' },
-  { href: '/pricing', label: 'Pricing' },
   { href: '/case-studies', label: 'Case Studies' },
-  { href: '/partners', label: 'Partners' },
+  { href: '/news', label: 'News' },
+  { href: '/events', label: 'Events' },
   { href: '/careers', label: 'Careers' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
