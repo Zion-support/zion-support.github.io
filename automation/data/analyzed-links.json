@@ -1,28 +1,11 @@
 {
   "links": [
     {
-      "url": "https://wikipedia.org",
-      "statusCode": 403,
-      "responseTime": 67,
-      "health": "poor",
-      "timestamp": "2025-08-26T03:34:33.179Z",
-      "headers": {
-        "content-type": "text/plain",
-        "server": "HAProxy"
-      },
-      "intelligence": {
-        "domainAuthority": 70,
-        "securityScore": 90,
-        "performanceScore": 100,
-        "seoScore": 60
-      }
-    },
-    {
       "url": "https://github.com",
       "statusCode": 200,
-      "responseTime": 85,
+      "responseTime": 295,
       "health": "good",
-      "timestamp": "2025-08-26T03:35:59.098Z",
+      "timestamp": "2025-08-26T03:39:00.943Z",
       "headers": {
         "content-type": "text/html; charset=utf-8",
         "server": "github.com"
@@ -37,9 +20,9 @@
     {
       "url": "https://stackoverflow.com",
       "statusCode": 403,
-      "responseTime": 58,
+      "responseTime": 213,
       "health": "poor",
-      "timestamp": "2025-08-26T03:36:00.161Z",
+      "timestamp": "2025-08-26T03:39:02.205Z",
       "headers": {
         "content-type": "text/html; charset=UTF-8",
         "server": "cloudflare"
@@ -54,9 +37,9 @@
     {
       "url": "https://medium.com",
       "statusCode": 200,
-      "responseTime": 95,
+      "responseTime": 129,
       "health": "good",
-      "timestamp": "2025-08-26T03:36:01.259Z",
+      "timestamp": "2025-08-26T03:39:03.428Z",
       "headers": {
         "content-type": "text/html; charset=utf-8",
         "server": "cloudflare"
@@ -71,9 +54,9 @@
     {
       "url": "https://dev.to",
       "statusCode": 403,
-      "responseTime": 65,
+      "responseTime": 172,
       "health": "poor",
-      "timestamp": "2025-08-26T03:36:02.326Z",
+      "timestamp": "2025-08-26T03:39:04.604Z",
       "headers": {
         "content-type": "unknown",
         "server": "Varnish"
@@ -84,9 +67,26 @@
         "performanceScore": 100,
         "seoScore": 60
       }
+    },
+    {
+      "url": "https://wikipedia.org",
+      "statusCode": 403,
+      "responseTime": 60,
+      "health": "poor",
+      "timestamp": "2025-08-26T03:39:05.772Z",
+      "headers": {
+        "content-type": "text/plain",
+        "server": "HAProxy"
+      },
+      "intelligence": {
+        "domainAuthority": 70,
+        "securityScore": 90,
+        "performanceScore": 100,
+        "seoScore": 60
+      }
     }
   ],
-  "lastUpdated": "2025-08-26T03:36:02.326Z",
+  "lastUpdated": "2025-08-26T03:39:05.772Z",
   "totalAnalyzed": 5,
   "healthScore": 90
 }

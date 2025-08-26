@@ -97,13 +97,11 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
                   Budget Range
                 </label>
                 <Input
-                  id="budget"
                   name="budget"
                   value={formData.budget}
                   onChange={handleChange}
                   placeholder="e.g., $1000-5000"
                   className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
-                  required
                 />
               </div>
 
@@ -112,13 +110,11 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
                   Start Date
                 </label>
                 <Input
-                  id="startDate"
                   name="startDate"
                   type="date"
                   value={formData.startDate}
                   onChange={handleChange}
                   className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan"
-                  required
                 />
               </div>
             </div>
