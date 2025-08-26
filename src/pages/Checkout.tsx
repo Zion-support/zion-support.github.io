@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -31,8 +32,7 @@ interface CheckoutForm {
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const sku = searchParams.get('sku');
+  const { t } = useTranslation();
   const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({
     defaultValues: { name: '', email: '', address: '', city: '', country: '' },
@@ -84,13 +84,13 @@ export default function CheckoutPage() {
 
   return (
     <div className="container max-w-2xl py-10">
-      <h1 className="text-3xl font-bold mb-6">Checkout</h1>
+      <h1 className="text-3xl font-bold mb-6">{t('checkout.title')}</h1>
       <div className="grid gap-6">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField name="name" control={form.control} render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>{t('checkout.name')}</FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
@@ -99,7 +99,7 @@ export default function CheckoutPage() {
             )} />
             <FormField name="email" control={form.control} render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>{t('checkout.email')}</FormLabel>
                 <FormControl>
                   <Input type="email" {...field} />
                 </FormControl>
@@ -108,7 +108,7 @@ export default function CheckoutPage() {
             )} />
             <FormField name="address" control={form.control} render={({ field }) => (
               <FormItem>
-                <FormLabel>Address</FormLabel>
+                <FormLabel>{t('checkout.address')}</FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
@@ -117,7 +117,7 @@ export default function CheckoutPage() {
             )} />
             <FormField name="city" control={form.control} render={({ field }) => (
               <FormItem>
-                <FormLabel>City</FormLabel>
+                <FormLabel>{t('checkout.city')}</FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
@@ -126,7 +126,7 @@ export default function CheckoutPage() {
             )} />
             <FormField name="country" control={form.control} render={({ field }) => (
               <FormItem>
-                <FormLabel>Country</FormLabel>
+                <FormLabel>{t('checkout.country')}</FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
@@ -135,11 +135,11 @@ export default function CheckoutPage() {
             )} />
             <div className="border-t pt-4">
               <div className="flex justify-between font-semibold mb-4">
-                <span>Subtotal</span>
+                <span>{t('checkout.subtotal')}</span>
                 <span>${subtotal.toFixed(2)}</span>
               </div>
               <Button className="w-full" type="submit">
-                Pay with Stripe (test)
+                {t('checkout.pay')}
               </Button>
             </div>
           </form>

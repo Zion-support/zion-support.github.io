@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { EnhancedCategoriesSection } from "@/components/EnhancedCategoriesSection";
+import { useTranslation } from 'react-i18next';
+import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
@@ -28,10 +29,6 @@ import { ServicesOverview } from "@/components/home/ServicesOverview";
 =======
 import { FloatingCTA } from "@/components/FloatingCTA";
 
-  return (
-    <div className="min-h-screen bg-background">
-      <HomePageSEO />
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 cyber-grid opacity-10"></div>
@@ -286,6 +283,16 @@ export default function Home() {
         description="Discover cutting-edge AI services, innovative IT solutions, and transformative business tools. Zion Tech Group - Where innovation meets excellence."
         keywords="AI services, IT solutions, business automation, cloud services, cybersecurity, micro SAAS, Zion Tech Group"
         canonical="https://ziontechgroup.com/"
+=======
+export default function Home() {
+  const { t } = useTranslation();
+  return (
+    <div className="min-h-screen bg-background">
+      <SEO
+        title={t('home.seo_title')}
+        description={t('home.seo_description')}
+        keywords="AI, technology, marketplace, services, talent"
+        canonical="https://app.ziontechgroup.com/"
       />
 
       {/* Animated Background */}
