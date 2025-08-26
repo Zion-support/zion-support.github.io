@@ -28,3 +28,7 @@ const Badge: React.FC<BadgeProps> = ({
 };
 
 export { Badge };
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f64f

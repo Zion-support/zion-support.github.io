@@ -455,6 +455,13 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     link: "/services/data-warehouse-solution",
     category: "Data & Analytics",
     realImplementation: true,
+<<<<<<< HEAD
+    contactInfo: {
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+=======
     implementationDetails: 'SaaS analyzer with exporters for Terraform/Helm and alerting.',
     launchDate: '2025-01-15',
     customers: 90,
@@ -1830,5 +1837,6 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     customers: 22,
     rating: 4.3,
     reviews: 13
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f64f
   }
 ];
