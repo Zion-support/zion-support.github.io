@@ -1,0 +1,2 @@
+import Layout from '../components/Layout'
+export default function About(){return (<Layout title="About" description="About Zion Tech Group"><h1>About Zion Tech Group</h1><p>We build AI, cloud, and cybersecurity solutions for enterprises.</p></Layout>);}

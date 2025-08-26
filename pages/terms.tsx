@@ -1,0 +1,2 @@
+import Layout from '../components/Layout'
+export default function Terms(){return (<Layout title="Terms of Service" description="Usage terms"><h1>Terms of Service</h1><p>Terms of service will be published here.</p></Layout>);}

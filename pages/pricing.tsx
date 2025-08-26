@@ -1,0 +1,2 @@
+import Layout from '../components/Layout'
+export default function Pricing(){return (<Layout title="Pricing" description="Plans and quotes"><h1>Pricing</h1><p>Contact us for a tailored quote. See <a href="/quote" style={{color:'#2563eb'}}>Request a Quote</a>.</p></Layout>);}

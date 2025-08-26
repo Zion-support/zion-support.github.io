@@ -1,0 +1,2 @@
+import Layout from '../components/Layout'
+export default function Privacy(){return (<Layout title="Privacy Policy" description="Our commitment to privacy"><h1>Privacy Policy</h1><p>We respect your privacy. This page will be updated with full policy details.</p></Layout>);}
