@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from "lucide-react";
@@ -31,7 +32,7 @@ const loginSchema = z.object({
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 export function LoginForm() {
-  const { isLoading } = useAuth();
+  const { login, isLoading } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -49,18 +50,12 @@ export function LoginForm() {
 
     try {
       setIsSubmitting(true);
-      const { res, data: resData } = await loginUser(data.email, data.password);
-      if (!res.ok) {
-        toast.error(resData?.error || "Invalid credentials");
-        return;
+      const { error } = await login(data.email, data.password);
+      if (error) {
+        form.setError("root", { message: error });
+      } else {
+        navigate("/");
       }
-      toast.success("Logged in successfully");
-      if (resData?.token) {
-        document.cookie = `token=${resData.token}; path=/`;
-      }
-      navigate("/");
-    } catch (err) {
-      toast.error("Unable to login. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -68,21 +63,16 @@ export function LoginForm() {
 
   return (
     <Form {...form}>
-      {form.formState.errors.root && (
-        <Alert variant="destructive" className="mb-4">
-          <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
-        </Alert>
-      )}
       <form
-        onSubmit={form.handleSubmit(onSubmit, (errors) => {
-          const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
-          if (firstError) {
-            form.setFocus(firstError);
-          }
-        })}
+        onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-6"
         autoComplete="off" // Disable browser autofill
       >
+        {form.formState.errors.root && (
+          <p className="text-red-400 text-sm" role="alert">
+            {form.formState.errors.root.message}
+          </p>
+        )}
         <FormField
           control={form.control}
           name="email"
@@ -93,9 +83,7 @@ export function LoginForm() {
                 <div className="relative">
                   <Input
                     placeholder="you@example.com"
-                    aria-label="Email address"
-                    aria-invalid={!!form.formState.errors.email}
-                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
+                    className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                     {...field}
                     autoComplete="off" // Disable browser autofill
                   />
@@ -117,10 +105,8 @@ export function LoginForm() {
                 <div className="relative">
                   <Input
                     type={showPassword ? "text" : "password"}
-                    placeholder="Enter password"
-                    aria-label="Password"
-                    aria-invalid={!!form.formState.errors.password}
-                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
+                    placeholder="••••••••"
+                    className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
                     {...field}
                     autoComplete="off" // Disable browser autofill
                   />

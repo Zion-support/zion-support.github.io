@@ -46,7 +46,7 @@ const signupSchema = z
 type SignupFormValues = z.infer<typeof signupSchema>;
 
 export default function Signup() {
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isAuthenticated, user } = useAuth();
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -79,7 +79,18 @@ export default function Signup() {
         data.password
       );
       if (error) {
-        throw new Error(error);
+        form.setError("root", { message: error });
+        toast({
+          variant: "destructive",
+          title: "Registration failed",
+          description: error,
+        });
+      } else {
+        toast({
+          title: "Account created",
+          description: "Check your email to verify your account.",
+        });
+        navigate("/login");
       }
 
       toast.success("Account created");
@@ -145,9 +156,7 @@ export default function Signup() {
                           <div className="relative">
                             <Input
                               placeholder="John Doe"
-                              aria-label="Full name"
-                              aria-invalid={!!form.formState.errors.displayName}
-                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               {...field}
                               aria-autocomplete="none"
                               autoComplete="off"
@@ -170,9 +179,7 @@ export default function Signup() {
                           <div className="relative">
                             <Input
                               placeholder="you@example.com"
-                              aria-label="Email address"
-                              aria-invalid={!!form.formState.errors.email}
-                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               {...field}
                               autoComplete="off"
                               aria-autocomplete="none"
@@ -196,10 +203,8 @@ export default function Signup() {
                           <div className="relative">
                             <Input
                               type={showPassword ? "text" : "password"}
-                              placeholder="Enter password"
-                              aria-label="Password"
-                              aria-invalid={!!form.formState.errors.password}
-                              className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple"
+                              placeholder="••••••••"
+                              className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
                               {...field}
                               autoComplete="new-password"
                             />
@@ -237,10 +242,8 @@ export default function Signup() {
                           <div className="relative">
                             <Input
                               type={showConfirmPassword ? "text" : "password"}
-                              placeholder="Enter password"
-                              aria-label="Confirm password"
-                              aria-invalid={!!form.formState.errors.confirmPassword}
-                              className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple"
+                              placeholder="••••••••"
+                              className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
                               value={confirmPasswordValue}
                               onChange={(e) => {
                                 field.onChange(e)
