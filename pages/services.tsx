@@ -185,9 +185,17 @@ const categories = [
 export default function ServicesPage() {
 =======
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { newRealServices } from '../data/new-real-services';
 import { industryRealServices } from '../data/industry-real-services';
+=======
+<<<<<<< HEAD
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { newRealServices } from '../data/new-real-services';
+import { added2025Services } from '../data/added-2025-services';
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7d74
 import { professionalServices } from '../data/professional-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
@@ -195,6 +203,7 @@ import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2'
 import { marketValidatedServices } from '../data/market-validated-services';
 import { emergingTechnologyServices } from '../data/emerging-technology-services';
 import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
+<<<<<<< HEAD
 import { curatedMarketServices } from '../data/curated-market-services';
 import { realMarketServices } from '../data/real-market-services';
 import { new2025Services } from '../data/new-2025-services';
@@ -222,6 +231,9 @@ import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-se
 import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
 import { ultimate2026Services } from '../data/ultimate-2026-services';
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7d74
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -234,18 +246,27 @@ export default function ServicesPage() {
     ...quantumSpaceServices,
     ...enterpriseITServices,
     ...enhancedRealMicroSaasServices,
+<<<<<<< HEAD
     ...additionalEnhancedServices,
     ...extraServices,
     ...newlyAddedServices,
     ...newRealServices,
     ...moreRealServices2025,
     ...industryRealServices,
+=======
+<<<<<<< HEAD
+    ...additionalEnhancedServices,
+    ...newRealServices,
+    ...added2025Services
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7d74
     ...professionalServices,
     ...nextGenerationAIServices,
     ...cuttingEdgeITServices,
     ...innovativeMicroSaasV2Services,
     ...marketValidatedServices,
     ...emergingTechnologyServices,
+<<<<<<< HEAD
     ...comprehensiveITSolutions,
     ...curatedMarketServices,
     ...realMarketServices,
@@ -271,6 +292,10 @@ export default function ServicesPage() {
     ...metaverseDigitalRealityServices2026,
     ...ultimate2026Services,
     ...revolutionary2026Innovations
+=======
+    ...comprehensiveITSolutions
+>>>>>>> origin/main
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7d74
   ];
 
   // Dynamic category counts mapped to the same filter logic below
