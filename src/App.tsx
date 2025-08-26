@@ -7,6 +7,7 @@ import LoadingSpinner from './components/LoadingSpinner'
 const Index = lazy(() => import('../pages/index'))
 const Services = lazy(() => import('../pages/services'))
 const Contact = lazy(() => import('../pages/contact'))
+const Innovative2026Showcase = lazy(() => import('../pages/services/innovative-2026-showcase'))
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services/innovative-2026-showcase" element={<Innovative2026Showcase />} />
         </Routes>
       </Suspense>
     </Layout>
