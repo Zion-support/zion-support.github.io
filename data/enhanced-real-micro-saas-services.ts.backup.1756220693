@@ -22,6 +22,32 @@ export interface EnhancedRealMicroSaasService {
 
 export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
   {
+<<<<<<< HEAD
+    id: "ai-content-generator",
+    name: "AI Content Generator Pro",
+    tagline: "Generate high-quality content in seconds with AI",
+    price: "$29/month",
+    description: "Advanced AI-powered content generation platform that creates engaging articles, blog posts, and marketing copy.",
+    features: [
+      "AI-powered content generation",
+      "Multiple content types support",
+      "SEO optimization",
+      "Plagiarism detection",
+      "Content analytics"
+    ],
+    link: "/services/ai-content-generator",
+    marketPosition: "Leading AI content generation platform",
+    targetAudience: "Content creators, marketers, businesses",
+    roi: "300% average return on investment",
+    competitors: ["Jasper", "Copy.ai", "Writesonic"],
+    marketSize: "$1.2B",
+    growthRate: "25% annually",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+=======
     id: 'ai-content-generator-elite',
     name: 'AI Content Generator Elite',
     tagline: 'Professional AI-powered content creation at scale',
@@ -5180,6 +5206,7 @@ export const getServicesByROI = (minROI: number): EnhancedRealMicroSaasService[]
     if (roiMatch) {
       const roi = parseInt(roiMatch[1]);
       return roi >= minROI;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-acbf
     }
   },
   {
