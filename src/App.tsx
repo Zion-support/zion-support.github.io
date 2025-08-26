@@ -20,10 +20,6 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
-const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
-const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
-const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
-=======
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 =======
@@ -51,6 +47,31 @@ import Sitemap from './pages/Sitemap';
 import PartnersPage from './pages/Partners';
 import Login from './pages/Login';
   { path: '/micro-saas-services', element: <MicroSaasServices /> },
+=======
+const Home = React.lazy(() => import('./pages/Home'));
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
+const Analytics = React.lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
+const Categories = React.lazy(() => import('./pages/Categories'));
+const Login = React.lazy(() => import('./pages/Login'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/match', element: <AIMatcherPage /> },
+  { path: '/login', element: <Login /> },
+  { path: '/signup', element: <Signup /> },
+  { path: '/talent', element: <TalentDirectory /> },
+  { path: '/talents', element: <TalentsPage /> },
+  { path: '/services', element: <ServicesPage /> },
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/categories', element: <Categories /> },
   { path: '/equipment', element: <EquipmentPage /> },
@@ -62,16 +83,6 @@ import Login from './pages/Login';
   { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
   { path: '/contact', element: <ContactPage /> },
-  { path: '/comprehensive-contact', element: <ComprehensiveContact /> },
-  { path: '/partners', element: <PartnersPage /> },
-  { path: '/zion-hire-ai', element: <ZionHireAI /> },
-  { path: '/hire-ai', element: <ZionHireAI /> },
-  { path: '/request-quote', element: <RequestQuotePage /> },
-// New AI Service pages to fix broken links
-const AIAutonomousBusinessManager = lazy(() => import('./pages/ai-services/AIAutonomousBusinessManager'));
-const AIAutonomousBusinessPlatform = lazy(() => import('./pages/ai-services/AIAutonomousBusinessPlatform'));
-const AIAutonomousCodeReview = lazy(() => import('./pages/ai-services/AIAutonomousCodeReview'));
-=======
   { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
   { path: '/ai-services', element: <AIServicesPage /> },
   { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
@@ -82,6 +93,7 @@ const AIAutonomousCodeReview = lazy(() => import('./pages/ai-services/AIAutonomo
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/cart', element: <CartPage /> },
   { path: '/checkout', element: <Checkout /> },
+=======
 ];
 
 // Loading Component
