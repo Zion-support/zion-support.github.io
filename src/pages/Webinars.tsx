@@ -1,97 +1,79 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { 
-  Video, 
-  Calendar, 
-  Clock, 
-  Users, 
-  Play, 
-  ExternalLink, 
-  Search,
-  Filter,
-  Eye,
-  Download,
-  Share2,
-  Bookmark,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Cpu,
-  Shield,
-  Zap,
-  Rocket,
-  Globe,
-  Building
-} from 'lucide-react';
-
-export default function Webinars() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedStatus, setSelectedStatus] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All Topics', icon: Video },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },
-    { id: 'quantum', name: 'Quantum Technology', icon: Cpu },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Zap },
-    { id: 'business', name: 'Business Solutions', icon: Building },
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: Rocket }
-  ];
-
-  const statuses = [
-    { id: 'all', name: 'All Webinars' },
-    { id: 'upcoming', name: 'Upcoming' },
-    { id: 'live', name: 'Live Now' },
-    { id: 'recorded', name: 'Recorded' }
-  ];
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Webinars: React.FC = () => {
   const webinars = [
     {
-      title: "AI-Powered Business Transformation",
-      date: "March 25, 2024",
-      duration: "60 minutes",
+      title: "AI-Powered Cybersecurity: Next-Gen Threat Detection",
+      category: "Cybersecurity",
+      date: "January 20, 2025",
+      duration: "90 minutes",
       speaker: "Dr. Sarah Chen",
-      description: "Learn how AI is revolutionizing business operations and creating new opportunities for growth.",
-      category: "AI & Business"
+      description: "Learn about advanced AI algorithms for detecting and preventing sophisticated cyber threats in real-time."
     },
     {
-      title: "Cybersecurity Best Practices 2024",
-      date: "April 10, 2024",
-      duration: "45 minutes",
-      speaker: "Michael Rodriguez",
-      description: "Essential cybersecurity strategies to protect your business from evolving threats.",
-      category: "Security"
-    },
-    {
-      title: "Cloud Migration Strategies",
-      date: "April 25, 2024",
+      title: "Cloud-Native Architecture: Best Practices for 2025",
+      category: "Cloud Computing",
+      date: "January 25, 2025",
       duration: "75 minutes",
+      speaker: "Marcus Rodriguez",
+      description: "Discover the latest patterns and practices for building scalable, resilient cloud-native applications."
+    },
+    {
+      title: "Digital Transformation: From Strategy to Execution",
+      category: "Digital Strategy",
+      date: "February 1, 2025",
+      duration: "60 minutes",
+      speaker: "Lisa Thompson",
+      description: "Practical insights on implementing successful digital transformation initiatives across your organization."
+    },
+    {
+      title: "Quantum Computing: Business Applications & Opportunities",
+      category: "Emerging Tech",
+      date: "February 8, 2025",
+      duration: "120 minutes",
+      speaker: "Dr. James Wilson",
+      description: "Explore how quantum computing will revolutionize industries and create new business opportunities."
+    },
+    {
+      title: "DevOps Excellence: Automation & Continuous Delivery",
+      category: "DevOps",
+      date: "February 15, 2025",
+      duration: "90 minutes",
       speaker: "David Kim",
-      description: "Step-by-step guide to successful cloud migration and optimization.",
-      category: "Cloud & DevOps"
+      description: "Master the art of DevOps automation and implement robust continuous delivery pipelines."
+    },
+    {
+      title: "Data Privacy & Compliance in the AI Era",
+      category: "Compliance",
+      date: "February 22, 2025",
+      duration: "75 minutes",
+      speaker: "Alex Thompson",
+      description: "Navigate the complex landscape of data privacy regulations while leveraging AI technologies."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Tech
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Webinars
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Join industry experts for in-depth discussions on technology trends, 
+            best practices, and innovative solutions
+          </p>
+        </div>
+      </section>
+
+      {/* Webinars Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Expert
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Webinars
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join industry experts for in-depth discussions on technology trends, 
-              best practices, and innovative solutions
-            </p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {webinars.map((webinar, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
@@ -150,35 +132,30 @@ const Webinars: React.FC = () => {
               </Link>
             </div>
           </div>
-=======
-import { CogIcon } from '@heroicons/react/24/outline';
+        </div>
+      </section>
 
-const $page: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400" />
-            </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            $page
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under development. Contact us for more information.
+      {/* Newsletter Signup */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-6">Get Early Access</h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Be the first to know about upcoming webinars, exclusive content, and special events.
           </p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-          >
-            Contact Us for More Information
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+            />
+            <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
+              Subscribe
+            </button>
+          </div>
         </div>
       </section>
     </div>
   );
 };
 
-export default $page;
+export default Webinars;

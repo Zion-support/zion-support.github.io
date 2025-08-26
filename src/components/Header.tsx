@@ -195,10 +195,10 @@ const Header: React.FC = () => {
                   </Link>
                 )}
               </div>
-              <span className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
-                Zion Tech Group
-              </span>
-            </Link>
+            ))}
+          </nav>
+        </div>
+      </div>
 
           {/* Mobile Menu Button */}
           <button

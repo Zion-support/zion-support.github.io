@@ -18,7 +18,7 @@ import {
   Clock,
   Shield
 } from 'lucide-react';
-import { practicalMicroSaasServices2027 } from '../data/2027-practical-micro-saas';
+import { practicalMicroSaasServices2027 } from '../../data/2027-practical-micro-saas';
 
 const PracticalMicroSaas2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

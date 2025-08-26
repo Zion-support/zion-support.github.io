@@ -100,7 +100,7 @@ export function HowItWorksSection() {
         delayChildren: 0.1
       }
     }
-  ];
+  };
 
   const statsVariants = {
     hidden: { opacity: 0, scale: 0.8 },

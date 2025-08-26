@@ -21,14 +21,9 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
-<<<<<<< HEAD:public/locales/en-US/common.json
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
     "services": "Services",
-    "micro-saas": "Micro SAAS",
-=======
-    "services": "Services",
->>>>>>> origin/cursor/website-audit-and-enhancement-39b5:src/i18n/locales/en/translation.json
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
@@ -38,10 +33,6 @@
     "messages": "Messages",
     "post_job": "Post Job",
     "analytics": "Analytics",
-<<<<<<< HEAD:public/locales/en-US/common.json
-    "faq": "FAQ",
-    "help": "Help Center"
-=======
     "about": "About Us",
     "careers": "Careers",
     "partners": "Partners",
@@ -52,7 +43,6 @@
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
     "sitemap": "Sitemap"
->>>>>>> origin/cursor/website-audit-and-enhancement-39b5:src/i18n/locales/en/translation.json
   },
   "auth": {
     "login": "Login",

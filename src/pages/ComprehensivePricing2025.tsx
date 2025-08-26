@@ -114,21 +114,12 @@ const ComprehensivePricing2025: React.FC = () => {
                     : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'
                 }`}
               >
-                <Download className="w-5 h-5" />
-                Download Pricing Guide
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
-                <Play className="w-5 h-5" />
-                Schedule Demo
-              </motion.button>
-            </div>
-          </motion.div>
+                {category.name}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-green-800 to-blue-800 py-6">
@@ -146,7 +137,7 @@ const ComprehensivePricing2025: React.FC = () => {
               <MapPin className="w-5 h-5 text-green-300" />
               <span className="font-semibold">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -422,10 +413,9 @@ const ComprehensivePricing2025: React.FC = () => {
             >
               <Phone className="w-5 h-5 inline mr-2" />
               Call +1 302 464 0950
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </a>
+            <a
+              href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-900 transition-all duration-300"
             >
               Schedule Consultation

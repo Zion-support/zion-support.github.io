@@ -15,14 +15,14 @@ import ToastProvider from './components/ToastProvider';
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
-import { AppLayout } from '@/layout/AppLayout';
+// import { AppLayout } from '@/layout/AppLayout';
 
 // Import auth and notification providers
 import { AuthProvider } from './context/auth/AuthProvider';
 // import { NotificationProvider } from './context/notifications/NotificationContext';
 
 // Import analytics provider
-import { ViewModeProvider } from './context/ViewModeContext';
+// import { ViewModeProvider } from './context/ViewModeContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
@@ -46,11 +46,7 @@ function renderApp() {
             <Router>
               <AuthProvider>
                 <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                  <ViewModeProvider>
-                    <AppLayout>
-                      <App />
-                    </AppLayout>
-                  </ViewModeProvider>
+                  <App />
                   {/* LanguageDetectionPopup removed */}
                 </LanguageProvider>
               </AuthProvider>

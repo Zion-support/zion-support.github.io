@@ -289,7 +289,7 @@ const Team: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Values Section */}
       <section className="py-20">

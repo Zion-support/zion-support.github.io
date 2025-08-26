@@ -42,7 +42,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedIndustry, setSelectedIndustry] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState('');
 
   const allServices = [...CUTTING_EDGE_SERVICES_2025, ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025];
   
@@ -403,7 +402,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             </motion.button>
           </div>
         </div>
-      </motion.section>
+      </div>
     </div>
   );
 };
