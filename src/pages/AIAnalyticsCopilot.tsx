@@ -1,289 +1,156 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BarChart3, Brain, Zap, Users, Target, Shield, Cpu, Globe, Rocket, Star, ArrowRight, CheckCircle, Play, BookOpen, Code, Database, Cloud, Lock, TrendingUp, PieChart, Activity, FileText, Smartphone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { BarChart3, TrendingUp, Brain, ArrowRight, CheckCircle, Zap, Shield, Database } from 'lucide-react';
 
-export default function AIAnalyticsCopilot() {
-  const features = [
-    {
-      icon: Brain,
-      title: 'Intelligent Data Analysis',
-      description: 'AI-powered insights that automatically identify patterns, trends, and anomalies in your data'
-    },
-    {
-      icon: BarChart3,
-      title: 'Advanced Visualization',
-      description: 'Create stunning, interactive charts and dashboards with natural language commands'
-    },
-    {
-      icon: Zap,
-      title: 'Real-time Processing',
-      description: 'Analyze streaming data in real-time with instant insights and alerts'
-    },
-    {
-      icon: Users,
-      title: 'Natural Language Queries',
-      description: 'Ask questions in plain English and get instant analytical insights'
-    },
-    {
-      icon: Target,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and outcomes using advanced machine learning models'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with role-based access control and data encryption'
-    }
-  ];
-
-  const capabilities = [
-    {
-      title: 'Data Integration',
-      description: 'Connect to 100+ data sources including databases, APIs, and cloud services',
-      icon: Database
-    },
-    {
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically with customizable templates',
-      icon: FileText
-    },
-    {
-      title: 'Collaborative Analytics',
-      description: 'Share insights and collaborate with team members in real-time',
-      icon: Users
-    },
-    {
-      title: 'Mobile Analytics',
-      description: 'Access your analytics anywhere with our mobile-optimized interface',
-      icon: Smartphone
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'Business Intelligence',
-      description: 'Transform raw data into actionable business insights and strategic recommendations',
-      icon: TrendingUp
-    },
-    {
-      title: 'Customer Analytics',
-      description: 'Understand customer behavior, preferences, and lifetime value',
-      icon: Users
-    },
-    {
-      title: 'Financial Analysis',
-      description: 'Monitor financial performance, detect fraud, and optimize cash flow',
-      icon: BarChart3
-    },
-    {
-      title: 'Operational Analytics',
-      description: 'Optimize business processes and identify efficiency improvements',
-      icon: Activity
-    }
-  ];
-
-  const benefits = [
-    'Reduce time to insights by 80%',
-    'Increase data accuracy by 95%',
-    'Enable self-service analytics for all users',
-    'Provide real-time monitoring and alerts',
-    'Scale from small teams to enterprise',
-    'Reduce analytics costs by 60%'
-  ];
-
+const AIAnalyticsCopilot: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-6">
-              <BarChart3 className="w-8 h-8 text-cyan-400" />
-              <span className="text-cyan-400 font-semibold">AI Analytics Copilot</span>
+    <>
+      <Helmet>
+        <title>AI Analytics Copilot - Zion Tech Group</title>
+        <meta name="description" content="Intelligent analytics copilot that transforms raw data into actionable insights with AI-powered analysis and visualization." />
+        <meta name="keywords" content="AI analytics, data insights, business intelligence, analytics copilot, data visualization" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-32 pb-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-800/20 to-purple-800/20"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-blue-500/20 rounded-full px-6 py-3 mb-6">
+                <BarChart3 className="w-5 h-5 text-blue-400" />
+                <span className="text-blue-300 font-medium">AI Analytics Copilot</span>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                Transform Data Into
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block">
+                  Actionable Insights
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Your intelligent analytics companion that understands your data, identifies patterns, 
+                and delivers insights that drive business decisions with confidence.
+              </p>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Your AI-Powered
-              <br />
-              <span className="text-white">Analytics Partner</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform data into insights with AI that understands your business. 
-              Ask questions in plain English and get instant, intelligent answers.
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Copilot Features</h2>
+              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                Advanced AI capabilities that work alongside your team to unlock data insights
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {[
+                {
+                  icon: Brain,
+                  title: "Natural Language Queries",
+                  description: "Ask questions about your data in plain English and get instant, accurate answers"
+                },
+                {
+                  icon: TrendingUp,
+                  title: "Predictive Analytics",
+                  description: "Forecast trends and identify opportunities with advanced machine learning models"
+                },
+                {
+                  icon: Database,
+                  title: "Multi-Source Integration",
+                  description: "Connect and analyze data from multiple sources with seamless data harmonization"
+                },
+                {
+                  icon: Shield,
+                  title: "Data Security",
+                  description: "Enterprise-grade security with encryption, access controls, and compliance features"
+                },
+                {
+                  icon: Zap,
+                  title: "Real-time Insights",
+                  description: "Get instant insights with real-time data processing and automated anomaly detection"
+                },
+                {
+                  icon: CheckCircle,
+                  title: "Automated Reporting",
+                  description: "Generate comprehensive reports and dashboards automatically based on your requirements"
+                }
+              ].map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-colors">
+                  <feature.icon className="w-12 h-12 text-blue-400 mb-6" />
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Business Benefits</h2>
+              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                Accelerate decision-making and drive growth with AI-powered analytics
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  title: "10x Faster Analysis",
+                  description: "Reduce analysis time from days to minutes with automated insights"
+                },
+                {
+                  title: "95% Accuracy",
+                  description: "Achieve high accuracy in predictions and pattern recognition"
+                },
+                {
+                  title: "24/7 Monitoring",
+                  description: "Continuous monitoring and alerting for critical business metrics"
+                },
+                {
+                  title: "Cost Reduction",
+                  description: "Reduce analytics costs by up to 60% with automated processes"
+                }
+              ].map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 mb-4">
+                    <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>
+                  </div>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Analytics?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Start using AI Analytics Copilot today and unlock the full potential of your data.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
-                <Play className="w-5 h-5 inline mr-2" />
-                Try Demo
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center gap-2 justify-center">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
-                <BookOpen className="w-5 h-5 inline mr-2" />
-                Learn More
+              <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500/10 transition-all">
+                View Demo
               </button>
             </div>
           </div>
-        </div>
-        
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Intelligent Analytics Features
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Experience the future of analytics with AI that thinks, learns, and adapts to your needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-gray-400">{feature.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Enterprise-Grade Capabilities
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Built for scale, security, and collaboration across your entire organization
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => {
-              const Icon = capability.icon;
-              return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-3">{capability.title}</h3>
-                      <p className="text-gray-400">{capability.description}</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Transform Every Business Function
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              From marketing to operations, AI Analytics Copilot delivers insights across your organization
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => {
-              const Icon = useCase.icon;
-              return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-3">{useCase.title}</h3>
-                      <p className="text-gray-400">{useCase.description}</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Measurable Business Impact
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              See real results with our AI-powered analytics platform
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                  <span className="text-lg text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                  <span className="text-lg text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Analytics?
-          </h2>
-          <p className="text-xl text-gray-400 mb-8">
-            Join thousands of businesses using AI Analytics Copilot to make better decisions faster
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 inline-flex items-center"
-            >
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/case-studies"
-              className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-            >
-              View Success Stories
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
-}
+};
+
+export default AIAnalyticsCopilot;
