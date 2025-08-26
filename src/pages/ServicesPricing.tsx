@@ -624,6 +624,281 @@ const SERVICE_CATEGORIES = [
         link: "https://ziontechgroup.com/ai-learning-platform"
       }
     ]
+  },
+  {
+    name: "Managed IT & Support",
+    description: "Comprehensive IT services for SMBs and enterprises",
+    icon: Users,
+    services: [
+      {
+        name: "Managed Help Desk",
+        price: 49,
+        period: "user/month",
+        description: "24/7 end-user IT support with SLA-backed response times",
+        features: [
+          "Unlimited tickets",
+          "Remote assistance",
+          "Onboarding support",
+          "Asset tracking",
+          "Monthly reporting",
+          "SLA-backed"
+        ],
+        popular: true,
+        link: "https://ziontechgroup.com/managed-help-desk"
+      },
+      {
+        name: "Managed Endpoint Security",
+        price: 7,
+        period: "device/month",
+        description: "Next-gen AV/EDR with centralized monitoring and response",
+        features: [
+          "NGAV/EDR",
+          "Policy management",
+          "Threat hunting",
+          "Automated quarantine",
+          "Patch enforcement",
+          "Compliance reports"
+        ],
+        popular: false,
+        link: "https://ziontechgroup.com/managed-endpoint-security"
+      },
+      {
+        name: "IT Infrastructure Management",
+        price: 999,
+        period: "month",
+        description: "Proactive management of servers, networks, and cloud workloads",
+        features: [
+          "24/7 monitoring",
+          "Backup & DR",
+          "Capacity planning",
+          "Change management",
+          "Config baseline",
+          "Security hardening"
+        ],
+        popular: false,
+        link: "https://ziontechgroup.com/it-infrastructure-management"
+      }
+    ]
+  },
+  {
+    name: "Micro SaaS Suite",
+    description: "Practical, focused SaaS tools to automate everyday workflows",
+    icon: Zap,
+    services: [
+      {
+        name: "ReviewResponder.ai",
+        price: 19,
+        period: "month",
+        description: "Auto-generate professional responses to customer reviews across platforms",
+        features: [
+          "GMB + Yelp + Facebook",
+          "Tone presets",
+          "Multilingual",
+          "Bulk replies",
+          "Approval workflow",
+          "Analytics"
+        ],
+        popular: true,
+        link: "https://ziontechgroup.com/review-responder"
+      },
+      {
+        name: "InvoiceSync",
+        price: 15,
+        period: "user/month",
+        description: "Generate and reconcile invoices with QuickBooks/Xero via AI",
+        features: [
+          "OCR extraction",
+          "Duplicate detection",
+          "Vendor matching",
+          "Auto reminders",
+          "Export to CSV",
+          "APIs"
+        ],
+        popular: false,
+        link: "https://ziontechgroup.com/invoice-sync"
+      },
+      {
+        name: "UptimePulse",
+        price: 9,
+        period: "site/month",
+        description: "Global uptime, SSL, DNS, and performance monitoring with alerts",
+        features: [
+          "30+ locations",
+          "SMS/Email/Slack alerts",
+          "Lighthouse audits",
+          "Core Web Vitals",
+          "Status page",
+          "Public API"
+        ],
+        popular: false,
+        link: "https://ziontechgroup.com/uptime-pulse"
+      }
+    ]
+  },
+  {
+    name: "Compliance & Governance",
+    description: "Automated compliance and audit readiness for regulated industries",
+    icon: Shield,
+    services: [
+      {
+        name: "SOC 2 Readiness Automation",
+        price: 799,
+        period: "month",
+        description: "Map controls, gather evidence, and track remediation to pass audits",
+        features: [
+          "Control mapping",
+          "Evidence collection",
+          "Policy templates",
+          "Risk register",
+          "Vendor reviews",
+          "Audit workspace"
+        ],
+        popular: true,
+        link: "https://ziontechgroup.com/soc2-readiness"
+      },
+      {
+        name: "HIPAA Compliance Toolkit",
+        price: 499,
+        period: "month",
+        description: "Safeguards, BAAs, and assessments tailored for healthcare organizations",
+        features: [
+          "Security rule mapping",
+          "Gap assessments",
+          "PHI worksheets",
+          "BAA templates",
+          "Training modules",
+          "Audit logs"
+        ],
+        popular: false,
+        link: "https://ziontechgroup.com/hipaa-toolkit"
+      },
+      {
+        name: "GDPR/CCPA Data Requests",
+        price: 149,
+        period: "month",
+        description: "Automate DSAR intake, identity verification, fulfillment, and logging",
+        features: [
+          "Secure portal",
+          "Identity checks",
+          "Workflow automation",
+          "Deadline tracking",
+          "Redaction tools",
+          "Export evidence"
+        ],
+        popular: false,
+        link: "https://ziontechgroup.com/privacy-requests"
+      }
+    ]
+  },
+  {
+    name: "AI Services for SMBs",
+    description: "Ready-to-use AI solutions tailored for small and medium businesses",
+    icon: Brain,
+    services: [
+      {
+        name: "AI Sales Copilot",
+        price: 39,
+        period: "user/month",
+        description: "Draft emails, qualify leads, and summarize calls from your CRM",
+        features: [
+          "CRM integrations",
+          "Call summaries",
+          "Lead scoring",
+          "Opportunity insights",
+          "Playbooks",
+          "Admin console"
+        ],
+        popular: true,
+        link: "https://ziontechgroup.com/ai-sales-copilot"
+      },
+      {
+        name: "AI Customer Support Bot",
+        price: 29,
+        period: "agent/month",
+        description: "Multichannel chatbot trained on your docs with seamless handoffs",
+        features: [
+          "Website + WhatsApp + Messenger",
+          "Docs ingestion",
+          "Intent detection",
+          "Live agent handoff",
+          "CSAT tracking",
+          "No-code flows"
+        ],
+        popular: false,
+        link: "https://ziontechgroup.com/ai-support-bot"
+      },
+      {
+        name: "AI Website Personalization",
+        price: 59,
+        period: "month",
+        description: "Boost conversions with dynamic content tailored to each visitor",
+        features: [
+          "Segmentation",
+          "Rules + ML",
+          "A/B testing",
+          "Banner & CTA variants",
+          "Geo/UTM targeting",
+          "Analytics"
+        ],
+        popular: false,
+        link: "https://ziontechgroup.com/ai-personalization"
+      }
+    ]
+  },
+  {
+    name: "Data & Analytics Services",
+    description: "Hands-on analytics implementation and managed reporting",
+    icon: BarChart3,
+    services: [
+      {
+        name: "BI Dashboard Implementation",
+        price: 3500,
+        period: "one-time",
+        description: "End-to-end KPI dashboard setup in Power BI/Tableau/Looker",
+        features: [
+          "KPI workshop",
+          "Data modeling",
+          "Dashboards & alerts",
+          "Source integrations",
+          "Training",
+          "Handover docs"
+        ],
+        popular: true,
+        link: "https://ziontechgroup.com/bi-dashboard-implementation"
+      },
+      {
+        name: "Analytics as a Service",
+        price: 1499,
+        period: "month",
+        description: "Ongoing analysis, reporting, and data engineering on retainer",
+        features: [
+          "Monthly roadmap",
+          "Ad-hoc analysis",
+          "ELT pipelines",
+          "Quality checks",
+          "Stakeholder reviews",
+          "Priority SLA"
+        ],
+        popular: false,
+        link: "https://ziontechgroup.com/analytics-as-a-service"
+      },
+      {
+        name: "Marketing Attribution Setup",
+        price: 2500,
+        period: "one-time",
+        description: "Server-side tracking and MMM to recover lost signal",
+        features: [
+          "Server-side GTM",
+          "Channel mapping",
+          "Attribution model",
+          "Privacy compliance",
+          "Lift tests",
+          "Executive report"
+        ],
+        popular: false,
+        link: "https://ziontechgroup.com/marketing-attribution"
+      }
+    ]
   }
 ];
 
