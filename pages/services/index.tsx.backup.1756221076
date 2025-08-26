@@ -36,6 +36,8 @@ import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
 import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
 import { real2028ServiceExpansions } from '../../data/real-2028-service-expansions';
 import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
+<<<<<<< HEAD
+=======
 import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
 import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
 import { real2030Q1Additions } from '../../data/real-2030-q1-additions';
@@ -55,6 +57,7 @@ import { real2026Q4ExpansionsV3 } from '../../data/real-2026-q4-expansions-v3';
 import { real2036InnovativeServices } from '../../data/real-2036-innovative-services';
 import { real2036ITServices } from '../../data/real-2036-it-services';
 import { real2036AIServices } from '../../data/real-2036-ai-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -159,6 +162,10 @@ export default function ServicesIndexPage() {
       real2027Q1Additions as unknown[],
       real2027Q2Additions as unknown[],
       real2028ServiceExpansions as unknown[],
+<<<<<<< HEAD
+      real2029Q1Additions as unknown[]
+    );
+=======
       real2029Q1Additions as unknown[],
       real2029Q2Additions as unknown[],
       real2029Q3Additions as unknown[],
@@ -179,6 +186,7 @@ export default function ServicesIndexPage() {
       real2036AIServices as unknown[]
     )
     .concat(real2036ServiceExpansions as unknown[]);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fee1
   const byCategory: Record<string, unknown[]> = {};
   for (const c of categories) byCategory[c] = [];
   // Normalize various category labels into our main buckets
