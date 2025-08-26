@@ -1,7 +1,6 @@
-
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
   Users, 
   Globe, 
@@ -14,12 +13,6 @@ import {
 } from 'lucide-react';
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   const stats = [
     {
       icon: Users,
@@ -51,43 +44,39 @@ export default function Home() {
     {
       title: "AI Solutions",
       description: "Cutting-edge artificial intelligence services",
-      icon: TrendingUp,
-      link: "/services/ai"
+      icon: "🤖",
+      link: "/services"
     },
     {
-      title: "Cloud Services",
-      description: "Scalable cloud infrastructure solutions",
-      icon: Globe,
-      link: "/services/cloud"
+      title: "Tech Talent",
+      description: "Expert developers and engineers",
+      icon: "👨‍💻",
+      link: "/talent"
     },
     {
-      title: "Cybersecurity",
-      description: "Advanced security and compliance",
-      icon: Shield,
-      link: "/services/cybersecurity"
+      title: "Equipment",
+      description: "High-performance tech infrastructure",
+      icon: "🖥️",
+      link: "/equipment"
     },
     {
-      title: "Digital Transformation",
-      description: "Modernize your business operations",
-      icon: ArrowRight,
-      link: "/services/transformation"
+      title: "Consulting",
+      description: "Strategic technology guidance",
+      icon: "💡",
+      link: "/consulting"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-center opacity-10"></div>
-        
-        {/* Hero Content */}
-        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="container mx-auto px-4 text-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="space-y-8"
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Zion Tech Group
@@ -111,29 +100,6 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-
-        {/* Floating Elements */}
-        <motion.div 
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 3, repeat: Infinity }}
-          className="absolute top-20 left-10"
-        >
-          <div className="w-4 h-4 bg-cyan-400 rounded-full opacity-60"></div>
-        </motion.div>
-        <motion.div 
-          animate={{ y: [0, -15, 0] }}
-          transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-          className="absolute top-40 right-20"
-        >
-          <div className="w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
-        </motion.div>
-        <motion.div 
-          animate={{ y: [0, -25, 0] }}
-          transition={{ duration: 5, repeat: Infinity, delay: 2 }}
-          className="absolute bottom-40 left-20"
-        >
-          <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60"></div>
-        </motion.div>
       </section>
 
       {/* Stats Section */}
@@ -177,20 +143,18 @@ export default function Home() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-slate-800/50 p-6 rounded-lg border border-slate-700 hover:border-cyan-500 transition-all duration-300 group"
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-400 mb-4">{service.description}</p>
                 <Link 
                   to={service.link}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
@@ -201,28 +165,21 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Let's discuss how Zion Tech Group can help you achieve your technology goals
+          <p className="text-xl text-gray-300 mb-8">
+            Join hundreds of companies already leveraging our cutting-edge technology solutions
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started Today
-            </Link>
-            <Link 
-              to="/services" 
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
-              View All Services
-            </Link>
-          </div>
+          <Link 
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+          >
+            Start Your Journey
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </section>
     </div>
