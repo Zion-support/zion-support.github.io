@@ -3,7 +3,7 @@ import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import NextHead from '@/components/NextHead';
 import ProductReviews from '@/components/ProductReviews';
-import type { Product } from '@/types/prisma'; // Base product type
+import type { Product } from '@/types/product';
 
 interface ListingProps {
   listing: ProductListing | null;
