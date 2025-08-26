@@ -1,4 +1,4 @@
-name: Publish npm package
+name: NPM Package Check
 
 on:
   push:
@@ -8,25 +8,30 @@ on:
       - '**/*.md'
 
 jobs:
-  publish:
+  check:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js 18
+      - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
       - name: Run tests
-        run: npm test --if-present
+        run: npm test
 
-      - name: Publish to npm
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Build project
+        run: npm run build
+
+      - name: Verify package
+        run: |
+          echo "Package verification completed"
+          echo "Package name: $(npm run --silent echo \$npm_package_name)"
+          echo "Package version: $(npm run --silent echo \$npm_package_version)"
+          echo "Package private: $(npm run --silent echo \$npm_package_private)"

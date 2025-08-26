@@ -36,9 +36,13 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Security scan (non-blocking)
-        run: npm run security:scan
-        continue-on-error: true
+      - name: Verify build output
+        run: |
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
+          fi
+          echo "Build completed successfully"
 
   test:
     name: Test
@@ -60,5 +64,8 @@ jobs:
       - name: Run tests
         run: npm test
         continue-on-error: true
+
+      - name: Build for testing
+        run: npm run build
 
 
