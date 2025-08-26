@@ -1,0 +1,16 @@
+M automation/data/analyzed-links.json
+ M automation/data/autonomous-state.json
+ M automation/data/performance-alerts.json
+ M automation/data/performance-metrics.json
+ M automation/enhanced-git-sync.cjs
+ M automation/logs/HEALTH.runtime.log
+ M automation/logs/SYSTEM.runtime.log
+ M automation/logs/continuous-improvement.log
+ M automation/logs/enhanced-git-sync.log
+ M automation/logs/error-recovery.log
+ M automation/logs/link-health-scheduler-coordinated.log
+ M automation/logs/link-health-scheduler.runtime.log
+ M automation/logs/master-coordinator.log
+ M automation/logs/ml-link-intelligence.runtime.log
+ M automation/logs/performance-monitor-coordinated.log
+ M automation/logs/real-time-performance-monitor.runtime.log

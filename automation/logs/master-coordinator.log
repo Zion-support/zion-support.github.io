@@ -1313,3 +1313,6 @@
 [2025-08-26T12:22:47.892Z] enhanced-autonomous healthy - uptime: 8563s
 [2025-08-26T12:22:49.612Z] performance-monitor started successfully
 [2025-08-26T12:23:17.890Z] enhanced-autonomous healthy - uptime: 8593s
+[2025-08-26T12:41:24.904Z] ml-link-intelligence exited: code=0, signal=null
+[2025-08-26T12:41:24.905Z] Auto-restarting ml-link-intelligence (attempt 1)
+[2025-08-26T12:41:32.910Z] ml-link-intelligence started successfully

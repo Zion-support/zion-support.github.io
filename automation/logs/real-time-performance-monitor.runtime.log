@@ -3046,3 +3046,11 @@ Alerts:
 [2025-08-26T12:23:14.095Z] metrics rss=30.88 MB heapUsed=4.32 MB cpuLoad=7.93 memUsage=89.19%
 [2025-08-26T12:23:16.686Z] ALERT [WARNING] Memory usage warning: 89.11%
 [2025-08-26T12:23:16.686Z] metrics rss=30.35 MB heapUsed=4.28 MB cpuLoad=7.70 memUsage=89.11%
+[2025-08-26T12:41:32.804Z] ALERT [WARNING] Memory usage warning: 94.66%
+[2025-08-26T12:41:32.813Z] metrics rss=30.68 MB heapUsed=4.37 MB cpuLoad=7.13 memUsage=94.66%
+[2025-08-26T12:41:39.435Z] ALERT [WARNING] Memory usage warning: 94.76%
+[2025-08-26T12:41:39.437Z] metrics rss=30.49 MB heapUsed=4.28 MB cpuLoad=7.20 memUsage=94.76%
+[2025-08-26T12:41:39.439Z] [real-time-performance-monitor] [2025-08-26T12:41:39.435Z] ALERT [WARNING] Memory usage warning: 94.76%
+[2025-08-26T12:41:39.441Z] [real-time-performance-monitor] [2025-08-26T12:41:39.437Z] metrics rss=30.49 MB heapUsed=4.28 MB cpuLoad=7.20 memUsage=94.76%
+[2025-08-26T12:41:44.056Z] ALERT [WARNING] Memory usage warning: 94.74%
+[2025-08-26T12:41:44.067Z] metrics rss=30.55 MB heapUsed=4.38 MB cpuLoad=8.71 memUsage=94.74%
