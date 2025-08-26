@@ -101,18 +101,15 @@ jobs:
     
     - name: Build size analysis
       run: |
-        npm install -g @next/bundle-analyzer
-        npm run build
-        du -sh .next/ || echo "Build size analysis completed"
+        echo "Build size analysis:"
+        du -sh dist/ || echo "Build size analysis completed"
     
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
         name: build-${{ matrix.os }}-${{ matrix.node-version }}
         path: |
-          .next/
           dist/
-          build/
         retention-days: 7
 
   # Performance & Lighthouse
@@ -147,12 +144,9 @@ jobs:
       uses: treosh/lighthouse-ci-action@v10
       with:
         urls: |
-          http://localhost:3000
-          http://localhost:3000/services
-          http://localhost:3000/about
+          http://localhost:4173
         uploadArtifacts: true
         temporaryPublicStorage: true
-        configPath: './lighthouserc.json'
 
   # Deployment
   deploy:

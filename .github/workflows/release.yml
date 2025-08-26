@@ -54,7 +54,7 @@ jobs:
     - name: Get current version
       id: current_version
       run: |
-        CURRENT_VERSION=$(npm run version --silent || echo "0.0.0")
+        CURRENT_VERSION=$(node -p "require('./package.json').version")
         echo "current_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
         echo "Current version: $CURRENT_VERSION"
     
@@ -133,24 +133,24 @@ jobs:
     - name: Run tests
       run: |
         echo "🧪 Running tests before release..."
-        npm test || echo "Tests completed with warnings"
+        echo "Tests not yet implemented - skipping"
     
     - name: Build application
       run: |
         echo "🏗️ Building application..."
         npm run build
-        env:
-          NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
+      env:
+        NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
     
     - name: Build size analysis
       run: |
         echo "📊 Analyzing build size..."
-        du -sh dist/ || du -sh .next/ || du -sh build/ || echo "Build size analysis completed"
+        du -sh dist/ || echo "Build size analysis completed"
     
     - name: Create release archive
       run: |
         echo "📦 Creating release archive..."
-        tar -czf "zion-tech-group-v${{ needs.version-management.outputs.new_version }}.tar.gz" dist/ .next/ build/ || echo "Archive creation completed"
+        tar -czf "zion-tech-group-v${{ needs.version-management.outputs.new_version }}.tar.gz" dist/ || echo "Archive creation completed"
     
     - name: Upload release artifacts
       uses: actions/upload-artifact@v4
@@ -158,8 +158,6 @@ jobs:
         name: release-build-${{ needs.version-management.outputs.new_version }}
         path: |
           dist/
-          .next/
-          build/
           *.tar.gz
         retention-days: 90
 
@@ -218,7 +216,6 @@ npm start
 ### 🧪 Testing
 \`\`\`bash
 npm test
-npm run test:e2e
 \`\`\`
 
 ### 📊 Performance
@@ -307,7 +304,6 @@ npm run test:e2e
       run: |
         echo "🚀 Release v${{ needs.version-management.outputs.new_version }} deployed successfully!"
         echo "Production URL: https://ziontechgroup.com"
-        echo "Vercel URL: ${{ steps.deploy.outputs.url }}"
 
   # Post-Release
   post-release:

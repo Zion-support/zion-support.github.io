@@ -74,8 +74,6 @@ jobs:
       uses: trufflesecurity/trufflehog@main
       with:
         path: ./
-        base: ${{ github.event.before || 'HEAD~1' }}
-        head: ${{ github.sha }}
         extra_args: --only-verified --fail
     
     - name: Run Semgrep (code security)

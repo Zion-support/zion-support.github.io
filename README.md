@@ -1,6 +1,11 @@
 
 # Zion Tech Group - Comprehensive IT & AI Services Platform
 
+[![CI/CD Pipeline](https://github.com/your-username/zion-tech-group/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/your-username/zion-tech-group/actions/workflows/ci-cd.yml)
+[![Testing](https://github.com/your-username/zion-tech-group/actions/workflows/testing.yml/badge.svg)](https://github.com/your-username/zion-tech-group/actions/workflows/testing.yml)
+[![Security](https://github.com/your-username/zion-tech-group/actions/workflows/security.yml/badge.svg)](https://github.com/your-username/zion-tech-group/actions/workflows/security.yml)
+[![Release](https://github.com/your-username/zion-tech-group/actions/workflows/release.yml/badge.svg)](https://github.com/your-username/zion-tech-group/actions/workflows/release.yml)
+
 ## 🚀 About Zion Tech Group
 
 Zion Tech Group is a leading technology solutions provider offering comprehensive AI, cybersecurity, cloud, and digital transformation services. Our platform serves businesses worldwide with cutting-edge technology solutions designed to drive innovation and growth.

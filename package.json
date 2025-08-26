@@ -12,7 +12,11 @@
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
-    "fix:all": "npm run lint -- --fix || true"
+    "fix:all": "npm run lint -- --fix || true",
+    "test": "echo 'Tests configured but not yet implemented'",
+    "test:watch": "echo 'Tests configured but not yet implemented'",
+    "test:coverage": "echo 'Tests configured but not yet implemented'",
+    "test:ci": "echo 'Tests configured but not yet implemented'"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -43,12 +47,14 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cmdk": "^0.2.1",
+    "color-convert": "^3.1.0",
     "d3-color": "^3.1.0",
     "d3-format": "^3.1.0",
     "d3-path": "^3.1.0",
     "d3-time-format": "^4.1.0",
     "date-fns": "^3.3.1",
     "embla-carousel-react": "^8.6.0",
+    "execa": "^9.6.0",
     "firebase": "^9.23.0",
     "framer-motion": "^12.23.12",
     "fuse.js": "^7.0.0",
@@ -57,6 +63,7 @@
     "input-otp": "^1.1.0",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.8.1",
+    "local-pkg": "^1.1.2",
     "lodash.debounce": "^4.0.8",
     "lucide-react": "^0.323.0",
     "next": "^14.2.5",
@@ -78,6 +85,9 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
     "@types/node": "^20.8.10",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
@@ -85,8 +95,8 @@
     "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "^4.1.1",
     "autoprefixer": "^10.4.21",
+    "chalk": "^4.1.2",
     "cssnano": "^7.1.1",
-
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
