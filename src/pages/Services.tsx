@@ -4213,6 +4213,7 @@ export default Services;
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Emerging Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -4298,6 +4299,30 @@ export default Services;
                 </Link>
               </div>
             </div>
+=======
+      {/* Innovative Services 2025 Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/50 to-pink-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Discover Our Latest Innovations
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Explore our comprehensive portfolio of cutting-edge micro SAAS solutions, AI services, and next-generation technologies for 2025
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/innovative-services-showcase-2025"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+            >
+              View Innovative Services 2025
+            </Link>
+            <Link
+              to="/comprehensive-pricing-2025"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
+            >
+              View Pricing
+            </Link>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
           </div>
         </div>
       </section>
