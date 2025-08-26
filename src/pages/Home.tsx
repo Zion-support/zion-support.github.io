@@ -14,7 +14,8 @@ const Home: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise
+            Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. 
+            Visit us at <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 underline">ziontechgroup.com</a>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -51,6 +52,7 @@ const Home: React.FC = () => {
               <p className="text-gray-300 mb-4">
                 Cutting-edge artificial intelligence and machine learning solutions
               </p>
+              <div className="text-sm text-green-400 mb-3">Starting at $2,500/month</div>
               <Link to="/services" className="text-blue-400 hover:text-blue-300">
                 Learn More →
               </Link>
@@ -61,6 +63,7 @@ const Home: React.FC = () => {
               <p className="text-gray-300 mb-4">
                 Scalable cloud infrastructure and automated development operations
               </p>
+              <div className="text-sm text-green-400 mb-3">Starting at $1,800/month</div>
               <Link to="/services" className="text-blue-400 hover:text-blue-300">
                 Learn More →
               </Link>
@@ -71,9 +74,83 @@ const Home: React.FC = () => {
               <p className="text-gray-300 mb-4">
                 Enterprise-grade security solutions and threat protection
               </p>
+              <div className="text-sm text-green-400 mb-3">Starting at $3,000/month</div>
               <Link to="/services" className="text-blue-400 hover:text-blue-300">
                 Learn More →
               </Link>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-3">Micro SAAS Services</h3>
+              <p className="text-gray-300 mb-4">
+                AI-powered content generation, smart invoice management, and more
+              </p>
+              <div className="text-sm text-green-400 mb-3">Starting at $79/month</div>
+              <Link to="/services" className="text-blue-400 hover:text-blue-300">
+                Learn More →
+              </Link>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-3">IT Services</h3>
+              <p className="text-gray-300 mb-4">
+                Network security, data backup, asset management, and performance monitoring
+              </p>
+              <div className="text-sm text-green-400 mb-3">Starting at $299/month</div>
+              <Link to="/services" className="text-blue-400 hover:text-blue-300">
+                Learn More →
+              </Link>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-3">Digital Transformation</h3>
+              <p className="text-gray-300 mb-4">
+                End-to-end digital transformation consulting and implementation
+              </p>
+              <div className="text-sm text-green-400 mb-3">Starting at $5,000/month</div>
+              <Link to="/services" className="text-blue-400 hover:text-blue-300">
+                Learn More →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              We deliver innovative solutions that drive real business results
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>
+              <p className="text-gray-300">Cutting-edge AI and emerging technologies</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Fast Delivery</h3>
+              <p className="text-gray-300">Rapid implementation and deployment</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Enterprise Security</h3>
+              <p className="text-gray-300">Bank-level security and compliance</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
+              <p className="text-gray-300">Measurable ROI and business impact</p>
             </div>
           </div>
         </div>
@@ -88,12 +165,25 @@ const Home: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our technology solutions can drive your success
           </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-          >
-            Contact Us Today
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Contact Us Today
+            </Link>
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+            >
+              Call: +1 302 464 0950
+            </a>
+          </div>
+          <div className="text-sm text-gray-400 space-y-1">
+            <p>📧 Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a></p>
+            <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">ziontechgroup.com</a></p>
+            <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
         </div>
       </section>
     </div>
