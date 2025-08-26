@@ -15,6 +15,11 @@ const AdvancedServices2025 = lazy(() => import('./pages/AdvancedServices2025'));
 const AdvancedServicesShowcase2025 = lazy(() => import('./pages/AdvancedServicesShowcase2025'));
 const ComprehensivePricing2025 = lazy(() => import('./pages/ComprehensivePricing2025'));
 const Blog = lazy(() => import('./pages/Blog'));
+const Careers = lazy(() => import('./pages/Careers'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Cookies = lazy(() => import('./pages/Cookies'));
+const News = lazy(() => import('./pages/News'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Loading spinner component
@@ -41,6 +46,11 @@ function App() {
               <Route path="/advanced-services-showcase-2025" element={<AdvancedServicesShowcase2025 />} />
               <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricing2025 />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/news" element={<News />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

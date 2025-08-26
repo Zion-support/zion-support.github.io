@@ -6,12 +6,12 @@ const Header: React.FC = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const services = [
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & AI Services' },
-    { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Cloud Migration & Automation' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Threat Protection' },
-    { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Network & System Management' },
-    { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Process Optimization' },
-    { name: 'Consulting', href: '/services/consulting', description: 'Technology Strategy & Advisory' }
+    { name: 'AI Solutions', href: '/services', description: 'Machine Learning & AI Services' },
+    { name: 'Cloud & DevOps', href: '/services', description: 'Cloud Migration & Automation' },
+    { name: 'Cybersecurity', href: '/services', description: 'Security & Threat Protection' },
+    { name: 'IT Infrastructure', href: '/services', description: 'Network & System Management' },
+    { name: 'Digital Transformation', href: '/services', description: 'Business Process Optimization' },
+    { name: 'Consulting', href: '/services', description: 'Technology Strategy & Advisory' }
   ];
 
   return (
@@ -94,6 +94,12 @@ const Header: React.FC = () => {
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
               About
+            </Link>
+            <Link
+              to="/news"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              News
             </Link>
             <Link
               to="/blog"
@@ -182,6 +188,13 @@ const Header: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
+              </Link>
+              <Link
+                to="/news"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                News
               </Link>
               <Link
                 to="/blog"

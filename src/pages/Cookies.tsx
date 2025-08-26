@@ -1,280 +1,395 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Shield, CircleDot, Settings, Eye, Lock } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-export default function Cookies() {
+const Cookies: React.FC = () => {
+  const lastUpdated = 'January 15, 2025';
+
   const cookieTypes = [
     {
-      title: 'Essential Cookies',
-      icon: Shield,
-      description: 'These cookies are necessary for the website to function properly.',
-      examples: ['Authentication cookies', 'Security cookies', 'Session management'],
-      necessary: true
+      category: 'Essential Cookies',
+      description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
+      examples: ['Authentication cookies', 'Security cookies', 'Load balancing cookies'],
+      purpose: 'Website functionality and security'
     },
     {
-      title: 'Performance Cookies',
-      icon: Settings,
+      category: 'Analytics Cookies',
       description: 'These cookies help us understand how visitors interact with our website.',
-      examples: ['Analytics cookies', 'Performance monitoring', 'Error tracking'],
-      necessary: false
+      examples: ['Google Analytics', 'Page view tracking', 'User behavior analysis'],
+      purpose: 'Website performance and user experience improvement'
     },
     {
-      title: 'Functional Cookies',
-      icon: Eye,
-      description: 'These cookies enable enhanced functionality and personalization.',
-      examples: ['Language preferences', 'User settings', 'Feature preferences'],
-      necessary: false
+      category: 'Marketing Cookies',
+      description: 'These cookies are used to deliver relevant advertisements and track marketing campaigns.',
+      examples: ['Social media pixels', 'Advertising networks', 'Retargeting cookies'],
+      purpose: 'Personalized marketing and advertising'
     },
     {
-      title: 'Marketing Cookies',
-      icon: CircleDot,
-      description: 'These cookies are used to deliver relevant advertisements.',
-      examples: ['Advertising cookies', 'Social media cookies', 'Tracking cookies'],
-      necessary: false
+      category: 'Preference Cookies',
+      description: 'These cookies remember your preferences and settings for a better user experience.',
+      examples: ['Language preferences', 'Theme settings', 'Form data storage'],
+      purpose: 'Personalized user experience'
     }
   ];
 
-  const cookieTable = [
+  const thirdPartyServices = [
     {
-      name: 'session_id',
-      purpose: 'Maintains your session while using the website',
-      duration: 'Session',
-      type: 'Essential'
+      name: 'Google Analytics',
+      purpose: 'Website analytics and performance monitoring',
+      cookies: ['_ga', '_gid', '_gat'],
+      duration: 'Up to 2 years'
     },
     {
-      name: 'auth_token',
-      purpose: 'Keeps you logged in securely',
-      duration: '30 days',
-      type: 'Essential'
+      name: 'LinkedIn',
+      purpose: 'Social media integration and advertising',
+      cookies: ['li_gc', 'li_sugr', 'UserMatchHistory'],
+      duration: 'Up to 1 year'
     },
     {
-      name: '_ga',
-      purpose: 'Google Analytics - tracks website usage',
-      duration: '2 years',
-      type: 'Performance'
-    },
-    {
-      name: '_fbp',
-      purpose: 'Facebook Pixel - tracks conversions',
-      duration: '3 months',
-      type: 'Marketing'
-    },
-    {
-      name: 'language',
-      purpose: 'Remembers your language preference',
-      duration: '1 year',
-      type: 'Functional'
+      name: 'Twitter',
+      purpose: 'Social media integration and content sharing',
+      cookies: ['auth_token', 'ct0', 'twid'],
+      duration: 'Up to 2 years'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Cookie Policy | Zion Tech Group" 
-        description="Learn about how Zion Tech Group uses cookies and similar technologies to improve your experience on our website."
-        keywords="cookie policy, privacy, data protection, Zion Tech Group"
-        canonical="https://ziontechgroup.com/cookies"
-      />
-
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex justify-center mb-4">
-            <CircleDot className="h-16 w-16 text-zion-cyan" />
-          </div>
-          <h1 className="text-4xl font-bold text-white mb-4">Cookie Policy</h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            This Cookie Policy explains how Zion Tech Group uses cookies and similar technologies 
-            to recognize you when you visit our website and how we use them to improve your experience.
-          </p>
-          <p className="text-zion-slate-light mt-4">
-            Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-6xl font-bold mb-6"
+          >
+            Cookie Policy
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto mb-4"
+          >
+            Learn how we use cookies to enhance your browsing experience.
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-lg text-blue-100"
+          >
+            Last updated: {lastUpdated}
+          </motion.p>
         </div>
+      </section>
 
-        {/* What are Cookies Section */}
-        <Card className="mb-8 border-zion-blue-light">
-          <CardHeader>
-            <CardTitle className="text-white text-2xl flex items-center">
-              <CircleDot className="h-6 w-6 mr-2 text-zion-cyan" />
+      {/* Main Content */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Introduction */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-sm mb-8"
+          >
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
               What Are Cookies?
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-zion-slate-light">
-              Cookies are small text files that are placed on your computer or mobile device when you visit a website. 
-              They are widely used to make websites work more efficiently and provide useful information to website owners.
+            </h2>
+            <p className="text-slate-700 mb-4">
+              Cookies are small text files that are stored on your device when you visit our website. 
+              They help us provide you with a better browsing experience by remembering your preferences, 
+              analyzing website traffic, and personalizing content.
             </p>
-            <p className="text-zion-slate-light">
-              Cookies do not contain any information that personally identifies you, but personal information that we 
-              store about you may be linked to the information stored in and obtained from cookies.
+            <p className="text-slate-700">
+              This Cookie Policy explains how Zion Tech Group uses cookies and similar technologies 
+              on our website and how you can manage your cookie preferences.
             </p>
-          </CardContent>
-        </Card>
+          </motion.div>
 
-        {/* Cookie Types */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">Types of Cookies We Use</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {cookieTypes.map((type) => {
-              const IconComponent = type.icon;
-              return (
-                <Card key={type.title} className="border-zion-blue-light">
-                  <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <IconComponent className="h-6 w-6 text-zion-cyan" />
-                      <CardTitle className="text-white text-lg">{type.title}</CardTitle>
-                      {type.necessary && (
-                        <span className="px-2 py-1 bg-zion-purple text-white text-xs rounded-full">
-                          Necessary
-                        </span>
-                      )}
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-zion-slate-light mb-3">
-                      {type.description}
-                    </CardDescription>
-                    <ul className="space-y-1">
-                      {type.examples.map((example, index) => (
-                        <li key={index} className="text-zion-slate-light text-sm flex items-center">
-                          <span className="w-2 h-2 bg-zion-cyan rounded-full mr-2"></span>
+          {/* Cookie Types */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-sm mb-8"
+          >
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">
+              Types of Cookies We Use
+            </h2>
+            <div className="space-y-6">
+              {cookieTypes.map((type, index) => (
+                <div key={type.category} className="border-l-4 border-blue-600 pl-6">
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                    {type.category}
+                  </h3>
+                  <p className="text-slate-700 mb-3">{type.description}</p>
+                  <div className="mb-3">
+                    <span className="text-sm font-medium text-slate-600">Examples:</span>
+                    <ul className="mt-1 space-y-1">
+                      {type.examples.map((example, exampleIndex) => (
+                        <li key={exampleIndex} className="text-sm text-slate-600 flex items-center">
+                          <span className="text-blue-600 mr-2">•</span>
                           {example}
                         </li>
                       ))}
                     </ul>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                  </div>
+                  <div>
+                    <span className="text-sm font-medium text-slate-600">Purpose:</span>
+                    <p className="text-sm text-slate-600 mt-1">{type.purpose}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Third Party Services */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-sm mb-8"
+          >
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">
+              Third-Party Cookies
+            </h2>
+            <p className="text-slate-700 mb-6">
+              We use third-party services that may place cookies on your device. These services help 
+              us provide better functionality and analyze website performance.
+            </p>
+            <div className="space-y-4">
+              {thirdPartyServices.map((service, index) => (
+                <div key={service.name} className="border border-slate-200 rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                    {service.name}
+                  </h3>
+                  <p className="text-slate-700 mb-3">{service.purpose}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <span className="font-medium text-slate-600">Cookies:</span>
+                      <p className="text-slate-600 mt-1">{service.cookies.join(', ')}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-slate-600">Duration:</span>
+                      <p className="text-slate-600 mt-1">{service.duration}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Cookie Management */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-sm mb-8"
+          >
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              Managing Your Cookie Preferences
+            </h2>
+            <p className="text-slate-700 mb-4">
+              You have several options for managing cookies on our website:
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <span className="text-blue-600 mr-3 mt-1 text-lg">•</span>
+                <div>
+                  <h4 className="font-medium text-slate-900">Browser Settings</h4>
+                  <p className="text-slate-700 text-sm">
+                    Most web browsers allow you to control cookies through their settings. You can 
+                    delete existing cookies and choose whether to accept new ones.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="text-blue-600 mr-3 mt-1 text-lg">•</span>
+                <div>
+                  <h4 className="font-medium text-slate-900">Cookie Consent</h4>
+                  <p className="text-slate-700 text-sm">
+                    When you first visit our website, you'll see a cookie consent banner. You can 
+                    choose which types of cookies to accept or reject.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="text-blue-600 mr-3 mt-1 text-lg">•</span>
+                <div>
+                  <h4 className="font-medium text-slate-900">Opt-Out Tools</h4>
+                  <p className="text-slate-700 text-sm">
+                    You can opt out of certain third-party cookies through their respective opt-out 
+                    mechanisms (e.g., Google Analytics opt-out browser add-on).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Cookie Duration */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-sm mb-8"
+          >
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              How Long Do Cookies Last?
+            </h2>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <span className="text-blue-600 mr-3 mt-1 text-lg">•</span>
+                <div>
+                  <h4 className="font-medium text-slate-900">Session Cookies</h4>
+                  <p className="text-slate-700 text-sm">
+                    These cookies are deleted when you close your browser and are used for temporary 
+                    session management.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="text-blue-600 mr-3 mt-1 text-lg">•</span>
+                <div>
+                  <h4 className="font-medium text-slate-900">Persistent Cookies</h4>
+                  <p className="text-slate-700 text-sm">
+                    These cookies remain on your device for a set period (usually up to 2 years) 
+                    and are used to remember your preferences.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <span className="text-blue-600 mr-3 mt-1 text-lg">•</span>
+                <div>
+                  <h4 className="font-medium text-slate-900">Third-Party Cookies</h4>
+                  <p className="text-slate-700 text-sm">
+                    The duration of third-party cookies is determined by the respective service providers 
+                    and may vary.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Impact of Disabling */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-sm mb-8"
+          >
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              What Happens If You Disable Cookies?
+            </h2>
+            <p className="text-slate-700 mb-4">
+              While you can disable cookies, please note that some features of our website may not 
+              function properly:
+            </p>
+            <ul className="space-y-2 text-slate-700">
+              <li className="flex items-start">
+                <span className="text-red-500 mr-3 mt-1">⚠</span>
+                Some website functionality may be limited
+              </li>
+              <li className="flex items-start">
+                <span className="text-red-500 mr-3 mt-1">⚠</span>
+                Personalized content and recommendations may not work
+              </li>
+              <li className="flex items-start">
+                <span className="text-red-500 mr-3 mt-1">⚠</span>
+                Analytics data may be incomplete
+              </li>
+              <li className="flex items-start">
+                <span className="text-red-500 mr-3 mt-1">⚠</span>
+                You may need to re-enter information on return visits
+              </li>
+            </ul>
+          </motion.div>
+
+          {/* Updates to Policy */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-sm mb-8"
+          >
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              Updates to This Cookie Policy
+            </h2>
+            <p className="text-slate-700 mb-4">
+              We may update this Cookie Policy from time to time to reflect changes in our practices, 
+              technology, or legal requirements. When we make changes, we will update the "Last Updated" 
+              date at the top of this policy.
+            </p>
+            <p className="text-slate-700">
+              We encourage you to review this Cookie Policy periodically to stay informed about how 
+              we use cookies and similar technologies.
+            </p>
+          </motion.div>
+
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-8 rounded-xl shadow-sm mb-8"
+          >
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              Contact Us
+            </h2>
+            <p className="text-slate-700 mb-4">
+              If you have any questions about this Cookie Policy or our use of cookies, please contact us:
+            </p>
+            <div className="space-y-2 text-slate-700">
+              <p><strong>Email:</strong> privacy@ziontechgroup.com</p>
+              <p><strong>Phone:</strong> +1 (302) 464-0950</p>
+              <p><strong>Address:</strong> Zion Tech Group, Wilmington, DE</p>
+            </div>
+            <p className="text-slate-700 mt-4">
+              We will respond to your inquiry as soon as possible.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Questions About Cookies?
+          </h2>
+          <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
+            We're committed to transparency about how we use cookies. If you have any questions 
+            or need help managing your preferences, we're here to help.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Contact Us
+            </Link>
+            <Link
+              to="/privacy"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
+            >
+              Privacy Policy
+            </Link>
           </div>
         </div>
-
-        {/* Cookie Table */}
-        <Card className="mb-8 border-zion-blue-light">
-          <CardHeader>
-            <CardTitle className="text-white text-2xl">Specific Cookies We Use</CardTitle>
-            <CardDescription className="text-zion-slate-light">
-              Below is a list of the specific cookies we use and their purposes.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-zion-blue-light">
-                    <th className="text-left py-3 px-4 text-white font-semibold">Cookie Name</th>
-                    <th className="text-left py-3 px-4 text-white font-semibold">Purpose</th>
-                    <th className="text-left py-3 px-4 text-white font-semibold">Duration</th>
-                    <th className="text-left py-3 px-4 text-white font-semibold">Type</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {cookieTable.map((cookie, index) => (
-                    <tr key={index} className="border-b border-zion-blue-light/30">
-                      <td className="py-3 px-4 text-zion-cyan font-mono">{cookie.name}</td>
-                      <td className="py-3 px-4 text-zion-slate-light">{cookie.purpose}</td>
-                      <td className="py-3 px-4 text-zion-slate-light">{cookie.duration}</td>
-                      <td className="py-3 px-4">
-                        <span className={`px-2 py-1 rounded-full text-xs ${
-                          cookie.type === 'Essential' 
-                            ? 'bg-zion-purple text-white' 
-                            : 'bg-zion-blue-light text-zion-slate-light'
-                        }`}>
-                          {cookie.type}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Managing Cookies */}
-        <Card className="mb-8 border-zion-blue-light">
-          <CardHeader>
-            <CardTitle className="text-white text-2xl flex items-center">
-              <Settings className="h-6 w-6 mr-2 text-zion-cyan" />
-              Managing Your Cookie Preferences
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-zion-slate-light">
-              You can control and manage cookies in various ways. Please note that removing or blocking cookies 
-              can impact your user experience and parts of our website may no longer be fully accessible.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h4 className="text-white font-semibold mb-2">Browser Settings</h4>
-                <p className="text-zion-slate-light text-sm">
-                  Most browsers allow you to refuse to accept cookies and to delete cookies. 
-                  The methods for doing so vary from browser to browser.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-white font-semibold mb-2">Cookie Consent</h4>
-                <p className="text-zion-slate-light text-sm">
-                  When you first visit our website, you'll see a cookie consent banner where 
-                  you can choose which types of cookies to accept.
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Third-Party Cookies */}
-        <Card className="mb-8 border-zion-blue-light">
-          <CardHeader>
-            <CardTitle className="text-white text-2xl flex items-center">
-              <Lock className="h-6 w-6 mr-2 text-zion-cyan" />
-              Third-Party Cookies
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-zion-slate-light">
-              In addition to our own cookies, we may also use various third-party cookies to report usage 
-              statistics of the website, deliver advertisements on and through the website, and so on.
-            </p>
-            <p className="text-zion-slate-light">
-              These third-party cookies are not under our control and are subject to the third party's 
-              privacy policy. We recommend that you review the privacy policies of these third parties.
-            </p>
-          </CardContent>
-        </Card>
-
-        {/* Contact Information */}
-        <Card className="border-zion-blue-light bg-zion-blue-dark/50">
-          <CardHeader>
-            <CardTitle className="text-white text-2xl">Questions About Cookies?</CardTitle>
-            <CardDescription className="text-zion-slate-light">
-              If you have any questions about our use of cookies, please contact us.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple/90 transition-colors"
-              >
-                Contact Us
-              </Link>
-              <a
-                href="mailto:privacy@ziontechgroup.com"
-                className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light text-white font-medium rounded-lg hover:bg-zion-blue-light/20 transition-colors"
-              >
-                Email Privacy Team
-              </a>
-            </div>
-            <p className="text-center text-zion-slate-light mt-4">
-              You can also read our full <Link to="/privacy" className="text-zion-cyan hover:underline">Privacy Policy</Link> for more information.
-            </p>
-          </CardContent>
-        </Card>
-      </div>
+      </section>
     </div>
   );
-}
+};
+
+export default Cookies;

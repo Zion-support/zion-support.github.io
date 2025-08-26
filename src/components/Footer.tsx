@@ -17,25 +17,23 @@ const Footer: React.FC = () => {
     { name: 'About Us', path: '/about' },
     { name: 'Our Team', path: '/about' },
     { name: 'Careers', path: '/careers' },
-    { name: 'Blog', path: '/blog' },
     { name: 'News', path: '/news' },
-    { name: 'Press Kit', path: '/press' }
+    { name: 'Blog', path: '/blog' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   const resources = [
-    { name: "Case Studies", path: "/case-studies" },
-    { name: "White Papers", path: "/white-papers" },
-    { name: "Webinars", path: "/webinars" },
-    { name: "Documentation", path: "/docs" }
+    { name: "Case Studies", path: "/services" },
+    { name: "White Papers", path: "/services" },
+    { name: "Webinars", path: "/services" },
+    { name: "Documentation", path: "/services" }
   ];
 
   const legal = [
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Terms of Service', path: '/terms' },
     { name: 'Cookie Policy', path: '/cookies' },
-    { name: 'GDPR Compliance', path: '/gdpr' },
-    { name: 'Security', path: '/security' },
-    { name: 'Compliance', path: '/compliance' }
+    { name: 'Contact', path: '/contact' }
   ];
 
   const socialLinks = [
@@ -100,13 +98,17 @@ const Footer: React.FC = () => {
                 <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                +1 (302) 464-0950
+                <a href="tel:+13024640950" className="hover:text-white transition-colors duration-300">
+                  +1 (302) 464-0950
+                </a>
               </div>
               <div className="flex items-center">
                 <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                info@ziontechgroup.com
+                <a href="mailto:info@ziontechgroup.com" className="hover:text-white transition-colors duration-300">
+                  info@ziontechgroup.com
+                </a>
               </div>
               <div className="flex items-center">
                 <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -207,7 +209,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2025 Zion Tech Group. All rights reserved.
+              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center">
