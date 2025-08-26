@@ -1,0 +1,153 @@
+export const innovativeITServices2024 = [
+  {
+    id: 'quantum-cloud-infrastructure',
+    name: 'Quantum Cloud Infrastructure',
+    description: 'Next-generation cloud infrastructure powered by quantum computing principles',
+    category: 'Cloud & Infrastructure',
+    pricing: {
+      starter: 299,
+      professional: 899,
+      enterprise: 2499
+    },
+    features: [
+      'Quantum-Inspired Load Balancing',
+      'Advanced Auto-scaling',
+      'Global CDN Network',
+      'Real-time Monitoring',
+      'API Gateway'
+    ],
+    targetAudience: 'Enterprise & Large Scale Businesses',
+    technology: ['Kubernetes', 'Docker', 'Terraform', 'Prometheus'],
+    status: 'Live',
+    launchDate: '2024-02-15'
+  },
+  {
+    id: 'ai-powered-devops-automation',
+    name: 'AI-Powered DevOps Automation',
+    description: 'Intelligent DevOps automation with machine learning capabilities',
+    category: 'DevOps & Automation',
+    pricing: {
+      starter: 199,
+      professional: 599,
+      enterprise: 1799
+    },
+    features: [
+      'Intelligent CI/CD Pipelines',
+      'Automated Testing',
+      'Performance Optimization',
+      'Security Scanning',
+      'Deployment Automation'
+    ],
+    targetAudience: 'Development Teams & DevOps Engineers',
+    technology: ['Jenkins', 'GitLab CI', 'Ansible', 'Python'],
+    status: 'Live',
+    launchDate: '2024-03-20'
+  },
+  {
+    id: 'zero-trust-security-platform',
+    name: 'Zero Trust Security Platform',
+    description: 'Comprehensive zero trust security implementation for modern enterprises',
+    category: 'Security & Compliance',
+    pricing: {
+      starter: 399,
+      professional: 1199,
+      enterprise: 2999
+    },
+    features: [
+      'Identity Verification',
+      'Network Segmentation',
+      'Threat Detection',
+      'Compliance Monitoring',
+      'Incident Response'
+    ],
+    targetAudience: 'Security-Conscious Enterprises',
+    technology: ['OAuth 2.0', 'JWT', 'Machine Learning', 'Elasticsearch'],
+    status: 'Live',
+    launchDate: '2024-01-30'
+  },
+  {
+    id: 'edge-computing-orchestration',
+    name: 'Edge Computing Orchestration',
+    description: 'Intelligent orchestration of edge computing resources',
+    category: 'Edge Computing',
+    pricing: {
+      starter: 249,
+      professional: 749,
+      enterprise: 1999
+    },
+    features: [
+      'Edge Node Management',
+      'Load Distribution',
+      'Data Processing',
+      'Real-time Analytics',
+      'Mobile Integration'
+    ],
+    targetAudience: 'IoT & Edge Computing Businesses',
+    technology: ['Node.js', 'MQTT', 'Redis', 'React Native'],
+    status: 'Live',
+    launchDate: '2024-04-10'
+  },
+  {
+    id: 'data-governance-platform',
+    name: 'Data Governance Platform',
+    description: 'Comprehensive data governance and compliance management',
+    category: 'Data Management',
+    pricing: {
+      starter: 179,
+      professional: 549,
+      enterprise: 1499
+    },
+    features: [
+      'Data Classification',
+      'Privacy Controls',
+      'Audit Trails',
+      'Compliance Reporting',
+      'Data Lineage'
+    ],
+    targetAudience: 'Data-Driven Enterprises',
+    technology: ['Apache Atlas', 'Apache Ranger', 'PostgreSQL', 'React'],
+    status: 'Live',
+    launchDate: '2024-05-05'
+  }
+];
+
+export const itServiceCategories2024 = [
+  {
+    name: 'Cloud & Infrastructure',
+    count: 1,
+    description: 'Advanced cloud and infrastructure solutions',
+    icon: '☁️'
+  },
+  {
+    name: 'DevOps & Automation',
+    count: 1,
+    description: 'Intelligent DevOps automation platforms',
+    icon: '⚙️'
+  },
+  {
+    name: 'Security & Compliance',
+    count: 1,
+    description: 'Zero trust security implementations',
+    icon: '🛡️'
+  },
+  {
+    name: 'Edge Computing',
+    count: 1,
+    description: 'Edge computing orchestration platforms',
+    icon: '🌐'
+  },
+  {
+    name: 'Data Management',
+    count: 1,
+    description: 'Data governance and compliance platforms',
+    icon: '📊'
+  }
+];
+
+export const itServiceStats2024 = {
+  totalServices: 5,
+  totalRevenue: 185000,
+  activeUsers: 3200,
+  countries: 18,
+  satisfactionRate: 4.9
+};
