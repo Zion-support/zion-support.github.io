@@ -21,7 +21,6 @@ import {
   Code,
   Lock,
   Cloud,
-  Microchip,
   Settings,
   Monitor,
   AlertTriangle,
@@ -264,7 +263,7 @@ const AIAutonomousSystems: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {technologies.map((tech, index) => (
                 <div key={index} className="flex items-center text-gray-300">
-                  <Microchip className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  <Cpu className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                   {tech}
                 </div>
               ))}

@@ -32,7 +32,6 @@ import {
   Heart,
   Target as TargetIcon,
   Bot,
-  Microchip,
   Globe2,
   BarChart,
   ShieldCheck,
@@ -185,7 +184,7 @@ const Home: React.FC = () => {
     {
       title: "Quantum Technology",
       description: "Next-generation computing solutions",
-      icon: Microchip,
+      icon: Cpu,
       path: "/services/quantum-technology",
       features: ["Quantum Computing", "Quantum Security", "Quantum Algorithms"]
     },

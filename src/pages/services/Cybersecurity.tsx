@@ -31,8 +31,7 @@ import {
   ShieldCheck,
   Globe2,
   BarChart,
-  Zap,
-  Microchip
+  Zap
 } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
 
@@ -318,7 +317,7 @@ const Cybersecurity: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {technologies.map((tech, index) => (
                 <div key={index} className="flex items-center text-gray-300">
-                  <Microchip className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
+                  <Cpu className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                   {tech}
                 </div>
               ))}

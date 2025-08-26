@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Microchip, 
+  Cpu, 
   Atom, 
   Zap, 
   Shield, 
-  Cpu, 
   Database, 
   Network, 
   ArrowRight,
@@ -153,7 +152,7 @@ const QuantumTechnology: React.FC = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6">
-              <Microchip className="w-4 h-4 mr-2" />
+              <Cpu className="w-4 h-4 mr-2" />
               Quantum Technology
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -318,7 +317,7 @@ const QuantumTechnology: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {technologies.map((tech, index) => (
                 <div key={index} className="flex items-center text-gray-300">
-                  <Microchip className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                  <Cpu className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
                   {tech}
                 </div>
               ))}
