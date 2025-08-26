@@ -1,11 +1,13 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Home, Phone, Mail, MapPin, Zap, Shield, Users } from 'lucide-react';
 
 export default function GenericPage() {
-  const { slug } = useParams();
-  const slugParts = slug ? slug.split('/').filter(Boolean) : [];
+  const router = useRouter();
+  const { slug } = router.query;
+  const slugParts = Array.isArray(slug) ? slug : slug ? [slug] : [];
   const path = '/' + slugParts.join('/');
   const title = slugParts.length === 0 ? 'Page' : slugParts.map(s => s.replace(/-/g, ' ')).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' / ');
   const canonical = `https://ziontechgroup.com${path.endsWith('/') ? path : path + '/'}`;
@@ -34,14 +36,14 @@ export default function GenericPage() {
       <header className="bg-black/95 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link to="/" className="text-white text-xl font-bold hover:text-zion-cyan transition-colors">
+            <Link href="/" className="text-white text-xl font-bold hover:text-zion-cyan transition-colors">
               Zion Tech Group
             </Link>
             <nav className="hidden md:flex space-x-8">
-              <Link to="/services" className="text-white hover:text-zion-cyan transition-colors">Services</Link>
-              <Link to="/solutions" className="text-white hover:text-zion-cyan transition-colors">Solutions</Link>
-              <Link to="/about" className="text-white hover:text-zion-cyan transition-colors">About</Link>
-              <Link to="/contact" className="text-white hover:text-zion-cyan transition-colors">Contact</Link>
+              <Link href="/services" className="text-white hover:text-zion-cyan transition-colors">Services</Link>
+              <Link href="/solutions" className="text-white hover:text-zion-cyan transition-colors">Solutions</Link>
+              <Link href="/about" className="text-white hover:text-zion-cyan transition-colors">About</Link>
+              <Link href="/contact" className="text-white hover:text-zion-cyan transition-colors">Contact</Link>
             </nav>
           </div>
         </div>
@@ -55,7 +57,7 @@ export default function GenericPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Link to="/" className="flex items-center space-x-1 hover:text-zion-cyan transition-colors">
+          <Link href="/" className="flex items-center space-x-1 hover:text-zion-cyan transition-colors">
             <Home className="w-4 h-4" />
             <span>Home</span>
           </Link>
@@ -98,66 +100,45 @@ export default function GenericPage() {
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 whileHover={{ y: -5 }}
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-dark/60 mb-4">
+                <div className="flex justify-center mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+                <h3 className="text-lg font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-zion-slate-light text-sm">{service.description}</p>
               </motion.div>
             ))}
           </div>
-          
-          <div className="text-center mt-8">
-            <p className="text-zion-slate-light mb-4">
-              Have questions about {title.toLowerCase()}? 
-            </p>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
-            >
-              Contact Us
-            </Link>
-          </div>
         </motion.section>
 
-        {/* Contact Information */}
+        {/* Contact CTA */}
         <motion.div
-          className="text-center p-8 rounded-2xl bg-zion-blue-dark/20 border border-zion-blue-light/20"
+          className="text-center p-8 rounded-2xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-cyan/30"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors">
-              <Phone className="w-5 h-5" />
-              <a href="tel:+13024640950" className="hover:text-white">+1 (302) 464-0950</a>
-            </div>
-            <div className="flex items-center justify-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors">
-              <Mail className="w-5 h-5" />
-              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white">kleber@ziontechgroup.com</a>
-            </div>
-            <div className="flex items-center justify-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors">
-              <MapPin className="w-5 h-5" />
-              <span>Middletown, DE</span>
-            </div>
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Need Help with Something Specific?
+          </h2>
+          <p className="text-zion-slate-light mb-6">
+            Contact us and we'll help you find the right solution for your needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-6 py-3 bg-zion-cyan text-black font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+            >
+              <Mail className="w-4 h-4 mr-2" />
+              Contact Us
+            </Link>
+            <Link
+              href="tel:+13024640950"
+              className="inline-flex items-center px-6 py-3 bg-zion-purple text-white font-semibold rounded-lg hover:bg-zion-purple-light transition-colors"
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              Call Now
+            </Link>
           </div>
-        </motion.div>
-
-        {/* Back to Home */}
-        <motion.div
-          className="text-center mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <Link 
-            to="/" 
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-zion-blue-dark/40 hover:bg-zion-blue-dark/60 text-white font-medium rounded-xl border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            <span>Back to Home</span>
-          </Link>
         </motion.div>
       </main>
     </div>
