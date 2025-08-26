@@ -1,283 +1,255 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
 
-export default function ResearchDevelopment() {
+const ResearchDevelopment: React.FC = () => {
+  const researchAreas = [
+    {
+      title: "Artificial Intelligence & Machine Learning",
+      description: "Cutting-edge research in neural networks, deep learning, and autonomous systems",
+      icon: "🧠",
+      projects: [
+        "Autonomous AI Systems",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Reinforcement Learning"
+      ]
+    },
+    {
+      title: "Quantum Computing",
+      description: "Exploring the frontiers of quantum algorithms and quantum machine learning",
+      icon: "⚛️",
+      projects: [
+        "Quantum Neural Networks",
+        "Quantum Cryptography",
+        "Quantum Optimization",
+        "Quantum Error Correction"
+      ]
+    },
+    {
+      title: "Cybersecurity & Privacy",
+      description: "Advanced security research for the digital age",
+      icon: "🔒",
+      projects: [
+        "Zero-Trust Security",
+        "AI-Powered Threat Detection",
+        "Privacy-Preserving AI",
+        "Blockchain Security"
+      ]
+    },
+    {
+      title: "Edge Computing & IoT",
+      description: "Next-generation computing at the network edge",
+      icon: "🌐",
+      projects: [
+        "Edge AI Processing",
+        "IoT Security",
+        "5G Integration",
+        "Autonomous Edge Systems"
+      ]
+    },
+    {
+      title: "Sustainable Technology",
+      description: "Green computing and energy-efficient AI solutions",
+      icon: "🌱",
+      projects: [
+        "Energy-Efficient AI",
+        "Green Data Centers",
+        "Sustainable Algorithms",
+        "Climate AI Models"
+      ]
+    },
+    {
+      title: "Human-AI Collaboration",
+      description: "Researching the future of human-AI partnership",
+      icon: "🤝",
+      projects: [
+        "Augmented Intelligence",
+        "Human-AI Interfaces",
+        "Collaborative Robotics",
+        "AI Ethics & Governance"
+      ]
+    }
+  ];
+
+  const publications = [
+    {
+      title: "Autonomous AI Systems: A Comprehensive Framework",
+      authors: "Zion Tech Group Research Team",
+      year: "2024",
+      journal: "AI Systems Journal",
+      doi: "10.1000/ai-systems-2024-001"
+    },
+    {
+      title: "Quantum Machine Learning for Cybersecurity",
+      authors: "Dr. Sarah Chen, Dr. Michael Rodriguez",
+      year: "2024",
+      journal: "Quantum Computing Review",
+      doi: "10.1000/quantum-2024-015"
+    },
+    {
+      title: "Edge AI: Optimizing Intelligence at the Network Edge",
+      authors: "Zion Tech Group Edge Computing Lab",
+      year: "2024",
+      journal: "Edge Computing Today",
+      doi: "10.1000/edge-2024-008"
+    }
+  ];
+
   return (
-    <>
-      <SEO 
-        title="Research & Development - Zion Tech Group"
-        description="Explore our cutting-edge research in AI, quantum computing, and emerging technologies that drive innovation."
-        canonical="/research-development"
-        url="https://ziontechgroup.com/research-development"
-      />
-      
-      <main className="min-h-screen bg-futuristic text-white">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-cyan-900/50 to-blue-900/50">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
-              Research & Development
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-20">
+      {/* Hero Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Research &
+              <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Development
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-              Pioneering the future through cutting-edge research in AI, quantum computing, and emerging technologies
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Pushing the boundaries of technology through innovative research, cutting-edge development, 
+              and breakthrough discoveries that shape the future of AI and computing.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Research Areas */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                Our Research Focus Areas
-              </h2>
-              <p className="text-gray-300 text-lg">
-                We explore emerging technologies and translate them into practical solutions
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Research */}
-              <div className="bg-black/30 p-8 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">AI & Machine Learning</h3>
-                <p className="text-gray-300 mb-6">
-                  Advanced neural networks, autonomous systems, and next-generation AI architectures that push the boundaries of what's possible.
-                </p>
-                <ul className="text-gray-300 text-sm space-y-2 mb-6">
-                  <li>• Neural architecture optimization</li>
-                  <li>• Autonomous decision-making systems</li>
-                  <li>• AI ethics and responsible development</li>
-                  <li>• Multi-agent coordination</li>
-                </ul>
-              </div>
-
-              {/* Quantum Computing */}
-              <div className="bg-black/30 p-8 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Quantum Computing</h3>
-                <p className="text-gray-300 mb-6">
-                  Exploring quantum algorithms, quantum machine learning, and the intersection of quantum and classical computing.
-                </p>
-                <ul className="text-gray-300 text-sm space-y-2 mb-6">
-                  <li>• Quantum algorithm development</li>
-                  <li>• Quantum machine learning</li>
-                  <li>• Quantum error correction</li>
-                  <li>• Hybrid quantum-classical systems</li>
-                </ul>
-              </div>
-
-              {/* Cybersecurity Research */}
-              <div className="bg-black/30 p-8 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cybersecurity</h3>
-                <p className="text-gray-300 mb-6">
-                  Next-generation security protocols, threat detection, and zero-trust architectures for the modern digital landscape.
-                </p>
-                <ul className="text-gray-300 text-sm space-y-2 mb-6">
-                  <li>• Zero-trust security frameworks</li>
-                  <li>• AI-powered threat detection</li>
-                  <li>• Quantum-resistant cryptography</li>
-                  <li>• Behavioral analysis systems</li>
-                </ul>
-              </div>
-
-              {/* Edge Computing */}
-              <div className="bg-black/30 p-8 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Edge Computing</h3>
-                <p className="text-gray-300 mb-6">
-                  Distributed computing architectures, IoT optimization, and real-time processing at the network edge.
-                </p>
-                <ul className="text-gray-300 text-sm space-y-2 mb-6">
-                  <li>• Distributed AI systems</li>
-                  <li>• IoT optimization</li>
-                  <li>• Real-time processing</li>
-                  <li>• Edge-cloud coordination</li>
-                </ul>
-              </div>
-
-              {/* Data Science */}
-              <div className="bg-black/30 p-8 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Data Science</h3>
-                <p className="text-gray-300 mb-6">
-                  Advanced analytics, predictive modeling, and data-driven insights that transform business intelligence.
-                </p>
-                <ul className="text-gray-300 text-sm space-y-2 mb-6">
-                  <li>• Predictive analytics</li>
-                  <li>• Big data processing</li>
-                  <li>• Statistical modeling</li>
-                  <li>• Data visualization</li>
-                </ul>
-              </div>
-
-              {/* Emerging Technologies */}
-              <div className="bg-black/30 p-8 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Emerging Tech</h3>
-                <p className="text-gray-300 mb-6">
-                  Exploring blockchain, AR/VR, and other cutting-edge technologies that will shape the future.
-                </p>
-                <ul className="text-gray-300 text-sm space-y-2 mb-6">
-                  <li>• Blockchain applications</li>
-                  <li>• AR/VR experiences</li>
-                  <li>• Internet of Things</li>
-                  <li>• 5G/6G technologies</li>
-                </ul>
-              </div>
-            </div>
+      {/* Research Areas */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Research Areas</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our multidisciplinary research spans the most exciting frontiers of technology
+            </p>
           </div>
-        </section>
-
-        {/* Research Process */}
-        <section className="py-20 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                Our Research Process
-              </h2>
-              <p className="text-gray-300 text-lg">
-                From ideation to implementation, we follow a systematic approach to innovation
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">1</span>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {researchAreas.map((area, index) => (
+              <div 
+                key={index}
+                className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="text-4xl mb-4">{area.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{area.title}</h3>
+                <p className="text-gray-300 mb-6">{area.description}</p>
+                <div className="space-y-2">
+                  {area.projects.map((project, projectIndex) => (
+                    <div key={projectIndex} className="flex items-center text-sm text-gray-400">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                      {project}
+                    </div>
+                  ))}
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-cyan-400">Discovery</h3>
-                <p className="text-gray-300 text-sm">
-                  Identify emerging trends and research opportunities through market analysis and technology scanning
-                </p>
               </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">2</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-cyan-400">Research</h3>
-                <p className="text-gray-300 text-sm">
-                  Conduct deep technical research, develop prototypes, and validate concepts through experimentation
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">3</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-cyan-400">Development</h3>
-                <p className="text-gray-300 text-sm">
-                  Transform research findings into practical solutions and scalable implementations
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">4</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-cyan-400">Implementation</h3>
-                <p className="text-gray-300 text-sm">
-                  Deploy solutions in real-world environments and continuously iterate based on feedback
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Publications & Resources */}
-        <section className="py-20">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                Publications & Resources
-              </h2>
-              <p className="text-gray-300 text-lg">
-                Access our research papers, technical publications, and educational resources
-              </p>
-            </div>
+      {/* Publications */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Recent Publications</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our research contributions to the global scientific community
+            </p>
+          </div>
+          
+          <div className="space-y-6">
+            {publications.map((pub, index) => (
+              <div 
+                key={index}
+                className="bg-slate-700/30 p-6 rounded-lg border border-white/10 hover:border-blue-400/30 transition-all duration-300"
+              >
+                <h3 className="text-lg font-semibold text-white mb-2">{pub.title}</h3>
+                <div className="text-gray-300 text-sm mb-3">
+                  <span className="font-medium">{pub.authors}</span> • {pub.year} • {pub.journal}
+                </div>
+                <div className="text-blue-400 text-sm font-mono">{pub.doi}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="bg-black/30 p-12 rounded-lg border border-cyan-500/20 text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      {/* Research Facilities */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Research Facilities</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              State-of-the-art laboratories and computing infrastructure
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-cyan-400">Research Library Coming Soon</h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                We're building a comprehensive library of research papers, technical publications, and educational resources. 
-                Check back soon to access our latest findings and insights.
+              <h3 className="text-xl font-semibold text-white mb-4">AI Research Lab</h3>
+              <p className="text-gray-300 mb-4">
+                Advanced computing clusters, GPU farms, and specialized hardware for AI research and development.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact" 
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                >
-                  Contact Research Team
-                </Link>
-                <Link 
-                  to="/services" 
-                  className="px-6 py-3 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                >
-                  Our Services
-                </Link>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li>• NVIDIA DGX A100 Systems</li>
+                <li>• High-Performance Computing Clusters</li>
+                <li>• Specialized AI Training Infrastructure</li>
+              </ul>
+            </div>
+            
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
               </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Cybersecurity Lab</h3>
+              <p className="text-gray-300 mb-4">
+                Isolated testing environments for security research, threat analysis, and vulnerability assessment.
+              </p>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li>• Isolated Network Environments</li>
+                <li>• Advanced Threat Simulation</li>
+                <li>• Security Testing Infrastructure</li>
+              </ul>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
-          <div className="max-w-4xl mx-auto text-center px-6">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Partner with Our Research
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Collaborate with our research team to explore cutting-edge technologies and drive innovation together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Collaboration
-              </Link>
-              <Link 
-                to="/request-quote" 
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                Get Research Quote
-              </Link>
-            </div>
+      {/* CTA Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Join Our Research Team
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Collaborate with leading researchers and contribute to groundbreaking discoveries in AI and technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/careers"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              View Research Positions
+            </Link>
+            <Link
+              to="/contact"
+              className="border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+            >
+              Contact Research Team
+            </Link>
           </div>
-        </section>
-      </main>
-    </>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default ResearchDevelopment;

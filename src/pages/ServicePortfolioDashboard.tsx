@@ -116,6 +116,7 @@ const ServicePortfolioDashboard: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button 
+                variant="outline"
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
                 onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Strategy Consultation', '_blank')}
               >
@@ -312,6 +313,7 @@ const ServicePortfolioDashboard: React.FC = () => {
                 Get Portfolio Strategy
               </Button>
               <Button 
+                variant="outline"
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
                 onClick={() => window.open('tel:+13024640950', '_blank')}
               >

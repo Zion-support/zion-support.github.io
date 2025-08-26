@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
 import { 
   Brain, 

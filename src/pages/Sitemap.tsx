@@ -1,221 +1,277 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  ExternalLink, 
-  Home, 
-  Users, 
-  Briefcase, 
-  FileText, 
-  HelpCircle,
-  Globe,
-  Shield,
-  Settings
-} from 'lucide-react';
 
-export default function Sitemap() {
-  const sitemapSections = [
+const Sitemap: React.FC = () => {
+  const sitemapStructure = [
     {
       title: "Main Pages",
-      icon: Home,
-      links: [
+      pages: [
         { name: "Home", path: "/", description: "Main landing page" },
-        { name: "About Us", path: "/about", description: "Company information and mission" },
+        { name: "About", path: "/about", description: "Company information and team" },
         { name: "Contact", path: "/contact", description: "Get in touch with us" },
-        { name: "Blog", path: "/blog", description: "Latest news and insights" }
+        { name: "Careers", path: "/careers", description: "Job opportunities" }
       ]
     },
     {
       title: "Services",
-      icon: Briefcase,
-      links: [
-        { name: "AI Solutions", path: "/services/ai-solutions", description: "Artificial intelligence services" },
-        { name: "Cloud Services", path: "/services/cloud", description: "Cloud computing solutions" },
-        { name: "Cybersecurity", path: "/services/cybersecurity", description: "Security and compliance" },
-        { name: "Digital Transformation", path: "/services/digital-transformation", description: "Business transformation" },
-        { name: "IT Infrastructure", path: "/services/it-infrastructure", description: "Infrastructure solutions" },
-        { name: "Consulting", path: "/services/consulting", description: "Strategic consulting services" }
-      ]
-    },
-    {
-      title: "Marketplace",
-      icon: Globe,
-      links: [
-        { name: "Find Talent", path: "/talent", description: "Browse AI and tech professionals" },
-        { name: "Browse Services", path: "/services", description: "Explore available services" },
-        { name: "Equipment Rental", path: "/equipment", description: "Rent tech equipment" },
-        { name: "Green IT", path: "/green-it", description: "Sustainable technology solutions" },
-        { name: "IT Onsite Services", path: "/it-onsite-services", description: "On-site IT support" }
-      ]
-    },
-    {
-      title: "Company",
-      icon: Users,
-      links: [
-        { name: "Partners", path: "/partners", description: "Strategic partnerships" },
-        { name: "Careers", path: "/careers", description: "Job opportunities" },
-        { name: "News", path: "/news", description: "Company updates" },
-        { name: "Press", path: "/press", description: "Press releases and media" }
+      pages: [
+        { name: "Services Overview", path: "/services", description: "All our services" },
+        { name: "AI Solutions", path: "/services/ai", description: "Artificial Intelligence services" },
+        { name: "Cloud & DevOps", path: "/services/cloud", description: "Cloud infrastructure and automation" },
+        { name: "Cybersecurity", path: "/services/cybersecurity", description: "Security and threat protection" },
+        { name: "IT Infrastructure", path: "/services/infrastructure", description: "Infrastructure management" },
+        { name: "Digital Transformation", path: "/services/transformation", description: "Business transformation" },
+        { name: "Consulting", path: "/services/consulting", description: "Technology consulting" },
+        { name: "Micro SAAS", path: "/services-showcase", description: "Software as a Service solutions" }
       ]
     },
     {
       title: "Resources",
-      icon: FileText,
-      links: [
-        { name: "Help Center", path: "/help", description: "Support and documentation" },
+      pages: [
+        { name: "Blog", path: "/blog", description: "Latest insights and articles" },
+        { name: "Case Studies", path: "/case-studies", description: "Success stories and examples" },
+        { name: "Partners", path: "/partners", description: "Strategic partnerships" },
+        { name: "Documentation", path: "/docs", description: "Technical documentation and guides" },
+        { name: "White Papers", path: "/white-papers", description: "In-depth research papers" },
+        { name: "Webinars", path: "/webinars", description: "Educational webinars" },
+        { name: "Events", path: "/events", description: "Upcoming events and conferences" },
+        { name: "Research & Development", path: "/research-development", description: "R&D initiatives" }
+      ]
+    },
+    {
+      title: "Support & Legal",
+      pages: [
+        { name: "Help Center", path: "/help", description: "Support and assistance" },
+        { name: "Support Portal", path: "/support", description: "Technical support" },
+        { name: "Training", path: "/training", description: "Training programs" },
         { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
-        { name: "Documentation", path: "/docs", description: "Technical documentation" },
-        { name: "White Papers", path: "/white-papers", description: "Industry insights" },
-        { name: "Webinars", path: "/webinars", description: "Educational content" },
-        { name: "Training", path: "/training", description: "Learning resources" }
-      ]
-    },
-    {
-      title: "Support",
-      icon: HelpCircle,
-      links: [
-        { name: "Contact Support", path: "/support", description: "Get help from our team" },
-        { name: "System Status", path: "/status", description: "Platform status updates" },
-        { name: "Report Issue", path: "/report-issue", description: "Report bugs or problems" },
-        { name: "Feature Request", path: "/feature-request", description: "Suggest new features" }
-      ]
-    },
-    {
-      title: "Legal",
-      icon: Shield,
-      links: [
         { name: "Privacy Policy", path: "/privacy", description: "Data protection and privacy" },
         { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
-        { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" },
-        { name: "Accessibility", path: "/accessibility", description: "Accessibility statement" }
+        { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" }
       ]
     },
     {
-      title: "Settings",
-      icon: Settings,
-      links: [
-        { name: "Account Settings", path: "/account", description: "Manage your account" },
-        { name: "Profile", path: "/profile", description: "Update your profile" },
-        { name: "Preferences", path: "/preferences", description: "Customize your experience" },
-        { name: "Security", path: "/security", description: "Security settings" }
+      title: "Specialized Solutions",
+      pages: [
+        { name: "Quantum Technology", path: "/quantum-technology", description: "Quantum computing solutions" },
+        { name: "Space Tech", path: "/space-tech", description: "Space technology innovations" },
+        { name: "Green IT", path: "/green-it", description: "Sustainable technology solutions" },
+        { name: "Financial Solutions", path: "/financial-solutions", description: "Fintech and financial services" },
+        { name: "Mobile Solutions", path: "/mobile", description: "Mobile app development" }
       ]
     }
   ];
 
   const quickLinks = [
-    { name: "Get Started", path: "/contact", color: "from-zion-cyan to-zion-purple" },
-    { name: "View Services", path: "/services", color: "from-zion-blue-light to-zion-blue" },
-    { name: "Find Talent", path: "/talent", color: "from-zion-purple to-zion-purple-dark" },
-    { name: "About Us", path: "/about", color: "from-zion-slate to-zion-slate-dark" }
+    { name: "Get Started", path: "/contact", category: "Action" },
+    { name: "Request Quote", path: "/request-quote", category: "Business" },
+    { name: "View Pricing", path: "/pricing", category: "Business" },
+    { name: "Latest News", path: "/news", category: "Information" },
+    { name: "Join Our Team", path: "/careers", category: "Career" },
+    { name: "Partner With Us", path: "/partners", category: "Business" }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Site <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Map</span>
+    <>
+      <Helmet>
+        <title>Sitemap - Zion Tech Group</title>
+        <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category for easy navigation." />
+        <meta name="keywords" content="sitemap, website navigation, Zion Tech Group, site structure" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Complete
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Sitemap</span>
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-              Navigate through all our pages and services. Find everything you need about Zion Tech Group's 
-              technology solutions, resources, and company information.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Navigate our website easily with this comprehensive sitemap. Find all pages, services, 
+              and resources organized by category for your convenience.
             </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="bg-white/10 backdrop-blur-lg rounded-lg px-6 py-3">
+                <span className="text-white font-semibold">Organized by Category</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-lg px-6 py-3">
+                <span className="text-white font-semibold">Easy Navigation</span>
+              </div>
+              <div className="bg-white/10 backdrop-blur-lg rounded-lg px-6 py-3">
+                <span className="text-white font-semibold">Complete Coverage</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Sitemap Sections */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {sitemapSections.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="bg-zion-blue-light/10 rounded-xl p-6 border border-zion-blue-light/20">
-                <div className="flex items-center gap-3 mb-6 border-b border-zion-blue-light/20 pb-3">
-                  <div className="w-8 h-8 bg-zion-cyan/20 rounded-lg flex items-center justify-center">
-                    <section.icon className="w-4 h-4 text-zion-cyan" />
+        {/* Quick Links */}
+        <section className="pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Quick Links
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-6 hover:bg-white/10 transition-all duration-300 group"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${
+                      link.category === 'Action' ? 'text-green-400 bg-green-400/10' :
+                      link.category === 'Business' ? 'text-blue-400 bg-blue-400/10' :
+                      link.category === 'Information' ? 'text-yellow-400 bg-yellow-400/10' :
+                      'text-purple-400 bg-purple-400/10'
+                    }`}>
+                      {link.category}
+                    </span>
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </div>
-                  <h2 className="text-2xl font-bold text-white">{section.title}</h2>
-                </div>
-                <div className="space-y-4">
-                  {section.links.map((link, linkIndex) => (
-                    <div key={linkIndex} className="group">
+                  <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                    {link.name}
+                  </h3>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Main Sitemap */}
+        <section className="pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Complete Site Structure
+            </h2>
+            <div className="space-y-12">
+              {sitemapStructure.map((section) => (
+                <div key={section.title} className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-8">
+                  <h3 className="text-2xl font-bold text-white mb-6 border-b border-white/10 pb-4">
+                    {section.title}
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {section.pages.map((page) => (
                       <Link
-                        to={link.path}
-                        className="block p-4 rounded-lg bg-zion-blue-light/5 hover:bg-zion-blue-light/10 transition-all duration-300 border border-transparent hover:border-zion-cyan/30"
+                        key={page.path}
+                        to={page.path}
+                        className="group p-4 rounded-lg hover:bg-white/10 transition-all duration-300 border border-transparent hover:border-white/20"
                       >
-                        <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors duration-300 mb-2">
-                          {link.name}
-                        </h3>
-                        <p className="text-sm text-zion-slate-light group-hover:text-zion-slate-light/80 transition-colors duration-300">
-                          {link.description}
+                        <h4 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
+                          {page.name}
+                        </h4>
+                        <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                          {page.description}
                         </p>
-                        <div className="mt-3 flex items-center text-zion-cyan text-sm font-medium">
-                          Visit Page
-                          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                        <div className="flex items-center mt-3 text-blue-400 group-hover:text-blue-300 transition-colors">
+                          <span className="text-sm">Visit Page</span>
+                          <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
                         </div>
                       </Link>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Resources */}
+        <section className="pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Additional Resources
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-8">
+                <h3 className="text-xl font-bold text-white mb-4">XML Sitemap</h3>
+                <p className="text-gray-400 mb-4">
+                  For search engines and developers, we provide an XML sitemap with all our pages.
+                </p>
+                <a
+                  href="/sitemap.xml"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  View XML Sitemap
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+              <div className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-8">
+                <h3 className="text-xl font-bold text-white mb-4">Search Functionality</h3>
+                <p className="text-gray-400 mb-4">
+                  Can't find what you're looking for? Use our search feature to locate specific content.
+                </p>
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Search our website..."
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"
+                  />
+                  <button className="absolute right-3 top-3 text-gray-400 hover:text-white">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </button>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Quick Links Section */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Quick Navigation</h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Get to the most important pages quickly with these direct links.
+        {/* CTA Section */}
+        <section className="pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-2xl border border-white/10 p-12">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Need Help Finding Something?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                If you can't find what you're looking for in our sitemap, our team is here to help. 
+                Contact us for assistance or to learn more about our services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Contact Us
+                </Link>
+                <Link
+                  to="/help"
+                  className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+                >
+                  Help Center
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Last Updated */}
+        <section className="pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-gray-400">
+              <strong>Last Updated:</strong> {new Date().toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              })}
+            </p>
+            <p className="text-gray-400 mt-2">
+              This sitemap is regularly updated to reflect the current structure of our website.
             </p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {quickLinks.map((link, index) => (
-              <Link
-                key={index}
-                to={link.path}
-                className={`text-center p-4 bg-gradient-to-r ${link.color} rounded-lg text-white font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Resources */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Need Help Finding Something?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Can't find what you're looking for? Our team is here to help you navigate 
-            our platform and find the information you need.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
-            >
-              Contact Support
-            </Link>
-            <Link
-              to="/help"
-              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-medium"
-            >
-              Visit Help Center
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
-}
+};
+
+export default Sitemap;

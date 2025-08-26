@@ -18,7 +18,7 @@ import {
   Cpu,
   Database
 } from 'lucide-react';
-import SEO from '../SEO';
+import { SEO } from '@/components/SEO';
 
 const features = [
   {
