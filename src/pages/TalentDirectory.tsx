@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { Users, Search, Filter, Star, MapPin, Briefcase, GraduationCap, Zap } from 'lucide-react';
+import React, { useState } from 'react';
+import { SEO } from "@/components/SEO";
+import Link from 'next/link';
+import { Search, Filter, MapPin, Briefcase, Star, Users, Zap, Building } from 'lucide-react';
 
 const TalentDirectory: React.FC = () => {
   const talents = [

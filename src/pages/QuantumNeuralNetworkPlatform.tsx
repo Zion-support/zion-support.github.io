@@ -1,21 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Cpu, 
-  Target, 
-  TrendingUp, 
-  Shield, 
-  Globe, 
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Download,
-  BookOpen,
-  MessageSquare
-} from 'lucide-react';
+import Head from 'next/head';
+import { Brain, Cpu, Zap, Shield, TrendingUp, Users, ArrowRight } from 'lucide-react';
 
 const QuantumNeuralNetworkPlatform: React.FC = () => {
   const features = [

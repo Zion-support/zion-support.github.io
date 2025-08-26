@@ -1,5 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Shield, 
+  CheckCircle, 
+  Zap, 
+  BarChart3, 
+  FileText, 
+  Users,
+  Settings,
+  Workflow,
+  Target,
+  Rocket,
+  Lock,
+  AlertTriangle
+} from 'lucide-react';
 
 const Soc2ComplianceAutomation: React.FC = () => {
   const features = [

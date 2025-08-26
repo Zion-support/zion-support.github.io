@@ -1,1 +1,33 @@
-export const realMicroSaasServices2024 = [] as any[];
+export interface RealMicroSaasService2024 {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  variant: string;
+  features: string[];
+  rating: number;
+  customers: string;
+}
+
+export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
+  {
+    id: 'ai-content-generator-2024',
+    name: 'AI Content Generator 2024',
+    tagline: 'Generate high-quality content with AI',
+    price: '$99',
+    variant: 'ai',
+    features: ['AI-powered content creation', 'SEO optimization', 'Multi-language support'],
+    rating: 4.8,
+    customers: '500+'
+  },
+  {
+    id: 'quantum-security-2024',
+    name: 'Quantum Security Platform 2024',
+    tagline: 'Next-generation quantum security',
+    price: '$299',
+    variant: 'security',
+    features: ['Quantum encryption', 'Advanced threat detection', 'Compliance tools'],
+    rating: 4.9,
+    customers: '200+'
+  }
+];

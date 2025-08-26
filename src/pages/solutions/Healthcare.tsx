@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Heart, Brain, Shield, Users, Activity, Stethoscope, Microscope, Pill } from 'lucide-react';
 
 const HealthcareSolutions = () => {
