@@ -23,46 +23,27 @@ import {
   ExternalLink,
   Search
 } from 'lucide-react';
-import ultimateInnovativeServices2025 from '../../data/2025-ultimate-innovative-services-expansion';
+import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
 
 export default function UltimateServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const categories = [
-    'all',
-    'Financial Technology',
-    'Research & Development',
-    'IoT & Cybersecurity',
-    'Supply Chain & Logistics',
-    'Quantum Computing',
-    'Business Operations',
-    'Healthcare',
-    'Marketing',
-    'Cloud Infrastructure',
-    'Legal Technology'
-  ];
+  const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)];
 
-  const filteredServices = ultimateInnovativeServices2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
   const getCategoryIcon = (category: string) => {
-    if (category.includes('Financial')) return <TrendingUp className="w-6 h-6" />;
-    if (category.includes('Research')) return <Brain className="w-6 h-6" />;
-    if (category.includes('IoT')) return <Shield className="w-6 h-6" />;
-    if (category.includes('Supply Chain')) return <Database className="w-6 h-6" />;
-    if (category.includes('Quantum')) return <Zap className="w-6 h-6" />;
-    if (category.includes('Business')) return <Briefcase className="w-6 h-6" />;
-    if (category.includes('Healthcare')) return <Users className="w-6 h-6" />;
-    if (category.includes('Marketing')) return <Globe className="w-6 h-6" />;
-    if (category.includes('Cloud')) return <Cloud className="w-6 h-6" />;
-    if (category.includes('Legal')) return <Scale className="w-6 h-6" />;
-    return <Rocket className="w-6 h-6" />;
+    if (category === 'all') return <Rocket className="w-6 h-6" />;
+    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
+      <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
+      <Rocket className="w-6 h-6" />;
   };
 
   return (
@@ -183,6 +164,91 @@ export default function UltimateServicesShowcase2025() {
         </div>
       </div>
 
+      {/* Contact Information Banner */}
+      <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600/20 rounded-full mb-4">
+                <Phone className="w-8 h-8 text-blue-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+              <p className="text-gray-300">{ULTIMATE_CONTACT_INFO_2025.phone}</p>
+            </div>
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-600/20 rounded-full mb-4">
+                <Mail className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+              <p className="text-gray-300">{ULTIMATE_CONTACT_INFO_2025.email}</p>
+            </div>
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-600/20 rounded-full mb-4">
+                <MapPin className="w-8 h-8 text-green-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+              <p className="text-gray-300 text-sm">{ULTIMATE_CONTACT_INFO_2025.address}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Service Guarantees */}
+      <div className="bg-gradient-to-r from-slate-800/50 to-slate-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Our Service Guarantees</h2>
+            <p className="text-xl text-gray-300">We stand behind every solution with comprehensive guarantees</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {Object.entries(ULTIMATE_SERVICE_GUARANTEES_2025).map(([key, value]) => (
+              <div key={key} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600/20 rounded-lg mb-4">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2 capitalize">
+                  {key.replace(/([A-Z])/g, ' $1').trim()}
+                </h3>
+                <p className="text-gray-300 text-sm">{value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Pricing Tiers */}
+      <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Pricing Tiers</h2>
+            <p className="text-xl text-gray-300">Choose the perfect solution for your business needs</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {Object.entries(ULTIMATE_PRICING_TIERS_2025).map(([tier, details]) => (
+              <div key={tier} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-2">{tier}</h3>
+                <p className="text-3xl font-bold text-blue-400 mb-4">{details.range}</p>
+                <p className="text-gray-300 mb-6">{details.description}</p>
+                <ul className="space-y-3 mb-8">
+                  {details.features.map((feature, index) => (
+                    <li key={index} className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/contact"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                >
+                  Get Started
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -194,120 +260,90 @@ export default function UltimateServicesShowcase2025() {
               {/* Service Header */}
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center space-x-3">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${service.color}`}>
-                    <span className="text-2xl">{service.icon}</span>
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600">
+                    <span className="text-2xl">🚀</span>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                      {service.name}
+                      {service.title}
                     </h3>
                     <p className="text-sm text-gray-400">{service.category}</p>
                   </div>
                 </div>
-                {service.popular && (
+                {service.featured && (
                   <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-semibold rounded-full">
-                    Popular
+                    Featured
                   </span>
                 )}
               </div>
 
-              {/* Tagline */}
-              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                {service.tagline}
-              </p>
-
               {/* Description */}
-              <p className="text-gray-400 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed">
                 {service.description}
               </p>
 
-              {/* Key Features */}
+              {/* Tags */}
               <div className="mb-6">
-                <h4 className="text-white font-semibold mb-3 flex items-center">
-                  <Star className="w-4 h-4 mr-2 text-yellow-400" />
-                  Key Features
-                </h4>
-                <ul className="space-y-2">
-                  {service.features.slice(0, 4).map((feature, index) => (
-                    <li key={index} className="flex items-start space-x-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-gray-300">{feature}</span>
-                    </li>
+                <div className="flex flex-wrap gap-2">
+                  {service.tags.slice(0, 4).map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-md border border-blue-400/30"
+                    >
+                      {tag}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
 
               {/* Pricing and ROI */}
               <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-2xl font-bold text-white">{service.price}</span>
-                  <span className="text-gray-400">{service.period}</span>
+                  <span className="text-2xl font-bold text-white">${service.price.toLocaleString()}</span>
+                  <span className="text-gray-400">One-time</span>
                 </div>
+                <p className="text-sm text-gray-300 mb-2">
+                  <strong>Market Price:</strong> {service.marketPrice}
+                </p>
                 <p className="text-sm text-gray-300 mb-2">
                   <strong>ROI:</strong> {service.roi}
                 </p>
                 <p className="text-xs text-gray-400">
-                  <strong>Market Size:</strong> {service.marketSize} | <strong>Growth:</strong> {service.growthRate}
+                  <strong>Setup Time:</strong> {service.setupTime}
                 </p>
               </div>
 
-              {/* Technology Stack */}
+              {/* Integrations */}
               <div className="mb-6">
-                <h4 className="text-white font-semibold mb-3">Technology Stack</h4>
+                <h4 className="text-white font-semibold mb-3">Integrations</h4>
                 <div className="flex flex-wrap gap-2">
-                  {service.technology.slice(0, 4).map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-md border border-blue-400/30"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Special Features */}
-              <div className="mb-6">
-                <h4 className="text-white font-semibold mb-3">Special Features</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.specialFeatures.slice(0, 3).map((feature, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-md border border-purple-400/30"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Industry Focus */}
-              <div className="mb-6">
-                <h4 className="text-white font-semibold mb-3">Industry Focus</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.industryFocus.slice(0, 3).map((industry, index) => (
+                  {service.integrations.slice(0, 4).map((integration, index) => (
                     <span
                       key={index}
                       className="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded-md border border-green-400/30"
                     >
-                      {industry}
+                      {integration}
                     </span>
                   ))}
                 </div>
               </div>
 
-              {/* Compliance */}
-              <div className="mb-6">
-                <h4 className="text-white font-semibold mb-3">Compliance & Security</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.compliance.slice(0, 3).map((compliance, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 bg-red-500/20 text-red-300 text-xs rounded-md border border-red-400/30"
-                    >
-                      {compliance}
-                    </span>
-                  ))}
+              {/* Contact Information */}
+              <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
+                <h4 className="text-white font-semibold mb-3">Contact Information</h4>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-4 h-4 text-blue-400" />
+                    <span>{service.contactInfo.phone}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Mail className="w-4 h-4 text-blue-400" />
+                    <span>{service.contactInfo.email}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <MapPin className="w-4 h-4 text-blue-400" />
+                    <span className="text-xs">{service.contactInfo.address}</span>
+                  </div>
                 </div>
               </div>
 
@@ -321,7 +357,7 @@ export default function UltimateServicesShowcase2025() {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href={service.link}
+                  href={service.contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-4 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
@@ -401,6 +437,70 @@ export default function UltimateServicesShowcase2025() {
                 <Phone className="w-5 h-5 mr-2" />
                 Speak with an Expert
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Comprehensive Footer */}
+      <div className="bg-gradient-to-r from-slate-900 to-slate-800 border-t border-blue-400/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Company Info */}
+            <div className="lg:col-span-2">
+              <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
+              <p className="text-gray-300 mb-6 max-w-md">
+                Leading provider of innovative AI, cybersecurity, and digital transformation solutions. 
+                We help businesses thrive in the digital age with cutting-edge technology and expert guidance.
+              </p>
+              <div className="flex space-x-4">
+                <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  <ExternalLink className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link></li>
+                <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Services</Link></li>
+                <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
+                <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+
+            {/* Contact Information */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
+              <div className="space-y-2 text-sm text-gray-300">
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-4 h-4 text-blue-400" />
+                  <span>{ULTIMATE_CONTACT_INFO_2025.phone}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4 text-blue-400" />
+                  <span>{ULTIMATE_CONTACT_INFO_2025.email}</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <MapPin className="w-4 h-4 text-blue-400" />
+                  <span className="text-xs">{ULTIMATE_CONTACT_INFO_2025.address}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="border-t border-gray-700 mt-12 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-gray-400 text-sm">
+                © 2025 Zion Tech Group. All rights reserved.
+              </p>
+              <div className="flex space-x-6 mt-4 md:mt-0">
+                <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>
+                <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</Link>
+              </div>
             </div>
           </div>
         </div>

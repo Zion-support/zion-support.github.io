@@ -49,6 +49,7 @@ import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
 
 // Lazy imports for new pages
+const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025'));
 const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
 
@@ -83,6 +84,10 @@ const baseRoutes = [
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/checkout', element: <CheckoutPage /> },
+  
+  // New 2025 service routes
+  { path: '/ultimate-services-2025', element: <UltimateServicesShowcase2025 /> },
+  { path: '/ultimate-services-showcase-2025', element: <UltimateServicesShowcase2025 /> },
   
   // New 2026 service routes
   { path: '/ultimate-services-showcase-2026', element: <UltimateServicesShowcase2026 /> },
