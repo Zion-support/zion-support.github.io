@@ -7,9 +7,6 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { ErrorBoundary } from "./components/ErrorBoundary";
-import { PageLoadingFallback } from "./components/ui/LoadingFallback";
-import { ScrollToTop } from "./components/ScrollToTop";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -44,8 +41,9 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-const ExpandedServicesPage = React.lazy(() => import('./pages/ExpandedServicesPage'));
-const PricingGuidePage = React.lazy(() => import('./pages/PricingGuidePage'));
+const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -55,8 +53,9 @@ const baseRoutes = [
   { path: '/talent', element: <TalentDirectory /> },
   { path: '/talents', element: <TalentsPage /> },
   { path: '/services', element: <ServicesPage /> },
-  { path: '/expanded-services', element: <ExpandedServicesPage /> },
-  { path: '/pricing-guide', element: <PricingGuidePage /> },
+  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
+  { path: '/ai-services', element: <AIServicesPage /> },
+  { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/categories', element: <Categories /> },
   { path: '/equipment', element: <EquipmentPage /> },
@@ -78,33 +77,30 @@ const App = () => {
   // Ensure each navigation starts at the top of the page
   useScrollToTop();
   return (
-    <ErrorBoundary>
-      <WhitelabelProvider>
-        <ThemeProvider defaultTheme="dark">
-          <Suspense fallback={<PageLoadingFallback />}>
-            <Routes>
-              {baseRoutes.map(({ path, element }) => (
-                <Route key={path} path={path} element={element} />
-              ))}
-              <Route path="/auth/*" element={<AuthRoutes />} />
-              <Route path="/dashboard/*" element={<DashboardRoutes />} />
-              <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-              <Route path="/talent/*" element={<TalentRoutes />} />
-              <Route path="/admin/*" element={<AdminRoutes />} />
-              <Route path="/mobile/*" element={<MobileAppRoutes />} />
-              <Route path="/content/*" element={<ContentRoutes />} />
-              <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-              <Route path="/community/*" element={<CommunityRoutes />} />
-              <Route path="/developers/*" element={<DeveloperRoutes />} />
-              <Route path="*" element={<ErrorRoutes />} />
-            </Routes>
-          </Suspense>
-          <ScrollToTop />
-          <Toaster />
-          <SonnerToaster position="top-right" />
-        </ThemeProvider>
-      </WhitelabelProvider>
-    </ErrorBoundary>
+    <WhitelabelProvider>
+      <ThemeProvider defaultTheme="dark">
+        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+          <Routes>
+            {baseRoutes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+            <Route path="/auth/*" element={<AuthRoutes />} />
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+            <Route path="/talent/*" element={<TalentRoutes />} />
+            <Route path="/admin/*" element={<AdminRoutes />} />
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />
+            <Route path="/content/*" element={<ContentRoutes />} />
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+            <Route path="/community/*" element={<CommunityRoutes />} />
+            <Route path="/developers/*" element={<DeveloperRoutes />} />
+            <Route path="*" element={<ErrorRoutes />} />
+          </Routes>
+        </Suspense>
+        <Toaster />
+        <SonnerToaster position="top-right" />
+      </ThemeProvider>
+    </WhitelabelProvider>
   );
 };
 

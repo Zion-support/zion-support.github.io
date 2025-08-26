@@ -4,9 +4,8 @@ import { ProductListing } from "@/types/listings";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Globe, Zap } from "lucide-react";
+import { Globe } from "lucide-react";
 import { useEffect, useState } from "react";
-import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
 
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -220,21 +219,10 @@ const SERVICE_FILTERS = [
   { label: 'Analytics', value: 'analytics' },
   { label: 'Consulting', value: 'consulting' },
   { label: 'Strategy', value: 'strategy' },
-  { label: 'AI Services', value: 'ai-services' },
-  { label: 'Business Solutions', value: 'business-solutions' },
-  { label: 'Cybersecurity', value: 'cybersecurity' },
-  { label: 'Cloud Services', value: 'cloud-services' },
-  { label: 'Data Services', value: 'data-services' },
-  { label: 'E-commerce', value: 'e-commerce' },
-  { label: 'Marketing', value: 'marketing' },
-  { label: 'Integration', value: 'integration' },
-  { label: 'Blockchain', value: 'blockchain' },
-  { label: 'IoT', value: 'iot' },
-  { label: 'Hardware', value: 'hardware' }
 ];
 
 export default function ServicesPage() {
-  const [listings, setListings] = useState<ProductListing[]>([...SERVICE_LISTINGS, ...MICRO_SAAS_SERVICES]);
+  const [listings, setListings] = useState<ProductListing[]>(SERVICE_LISTINGS);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -250,28 +238,28 @@ export default function ServicesPage() {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
           <div className="flex flex-wrap gap-2">
-            <Link to="/expanded-services">
+            <Link to="/comprehensive-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
-                View All Services
+                Comprehensive Services
               </Button>
             </Link>
-            <Link to="/pricing-guide">
+            <Link to="/ai-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
-                Pricing Guide
+                AI Services
+              </Button>
+            </Link>
+            <Link to="/cybersecurity-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                Cybersecurity
               </Button>
             </Link>
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
                 Global IT Onsite Services
-              </Button>
-            </Link>
-            <Link to="/micro-saas-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Zap className="h-4 w-4 mr-2" />
-                Micro SAAS Services
               </Button>
             </Link>
             <Link to="/request-quote">
