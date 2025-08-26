@@ -4,18 +4,17 @@ export function Select({ children, className = '', value, onValueChange }) {
       {children}
     </select>);
 }
-export function SelectItem({ children, value }) {
-    return (<div className={`
-        flex h-10 w-full items-center justify-between rounded-md border 
-        border-zion-blue-light/30 bg-zion-blue-dark/50 px-3 py-2 text-sm 
-        text-white placeholder:text-zion-slate-light/50
-        focus:outline-none focus:ring-2 focus:ring-zion-cyan 
-        focus:border-transparent transition-colors cursor-pointer
-        ${className}
-      `} {...props}>
-      {children}
-    </div>);
+export function SelectTrigger({ children, className = '', ...props }) {
+    return (
+        <button 
+            className={`flex h-10 w-full items-center justify-between rounded-md border border-zion-blue-light/30 bg-zion-blue-dark/50 px-3 py-2 text-sm text-white placeholder:text-zion-slate-light/50 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors cursor-pointer ${className}`} 
+            {...props}
+        >
+            {children}
+        </button>
+    );
 }
+
 export function SelectValue({ placeholder }) {
     return <span className="text-sm">{placeholder || 'Select an option'}</span>;
 }
