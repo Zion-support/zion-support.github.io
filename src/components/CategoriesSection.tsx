@@ -55,6 +55,22 @@ export function CategoriesSection({ showTitle = true }: { showTitle?: boolean })
     }
   ];
 
+const specialServices = [
+  {
+    title: "IT Onsite Services",
+    link: "/it-onsite-services"
+  },
+  {
+    title: "Micro SAAS Services",
+    link: "/micro-saas-services"
+  }
+];
+
+interface CategoriesSectionProps {
+  showTitle?: boolean;
+}
+
+export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
     <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
       {/* Background pattern */}

@@ -1,81 +1,73 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import SEO from './components/SEO';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import FAQ from './pages/FAQ';
-import Services from './pages/Services';
-import Blog from './pages/Blog';
-import NotFound from './pages/NotFound';
-import ComprehensivePricing from './pages/ComprehensivePricing';
-import Careers from './pages/Careers';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import FAQ from './pages/FAQ';
-import Team from './pages/Team';
-import Support from './pages/Support';
-import Events from './pages/Events';
-import Webinars from './pages/Webinars';
-import WhitePapers from './pages/WhitePapers';
-import Tutorials from './pages/Tutorials';
-import ResearchDevelopment from './pages/ResearchDevelopment';
-import SpaceTech from './pages/SpaceTech';
-import QuantumTechnology from './pages/QuantumTechnology';
-import GreenIT from './pages/GreenIT';
-import GetStarted from './pages/GetStarted';
-import HelpCenter from './pages/HelpCenter';
-import ServiceComparison from './pages/ServiceComparison';
-import ServicePortfolioDashboard from './pages/ServicePortfolioDashboard';
-import ServiceRecommendations from './pages/ServiceRecommendations';
-import ServiceInnovationHub from './pages/ServiceInnovationHub';
-import ServicesShowcase from './pages/ServicesShowcase';
-import Sitemap from './pages/Sitemap';
+import { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { useScrollToTop } from "./hooks";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import {
+  AuthRoutes,
+  DashboardRoutes,
+  MarketplaceRoutes,
+  TalentRoutes,
+  AdminRoutes,
+  MobileAppRoutes,
+  ContentRoutes,
+  ErrorRoutes,
+  EnterpriseRoutes,
+  CommunityRoutes,
+  DeveloperRoutes
+} from './routes';
+const Home = React.lazy(() => import('./pages/Home'));
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
+const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
+const Analytics = React.lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
+const Categories = React.lazy(() => import('./pages/Categories'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PartnersPage = React.lazy(() => import('./pages/Partners'));
+const Login = React.lazy(() => import('./pages/Login'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
 
-// Service pages
-import AI from './pages/services/AI';
-import Cloud from './pages/services/Cloud';
-import Cybersecurity from './pages/services/Cybersecurity';
-import Infrastructure from './pages/services/Infrastructure';
-import Transformation from './pages/services/Transformation';
-import Consulting from './pages/services/Consulting';
-
-// Solution pages
-import EnterpriseSolutions from './pages/solutions/EnterpriseSolutions';
-import FinancialSolutions from './pages/solutions/FinancialSolutions';
-import GovernmentSolutions from './pages/solutions/GovernmentSolutions';
-import HealthcareSolutions from './pages/solutions/HealthcareSolutions';
-import ManufacturingSolutions from './pages/solutions/ManufacturingSolutions';
-import RetailSolutions from './pages/solutions/RetailSolutions';
-
-function App() {
-  // Performance optimization: Preload critical routes
-  useEffect(() => {
-    const preloadCriticalRoutes = () => {
-      // Preload critical pages
-      const criticalRoutes = [
-        () => import('./pages/Services'),
-        () => import('./pages/Contact')
-      ];
-      
-      // Use requestIdleCallback for better performance
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
-          criticalRoutes.forEach(preload => preload());
-        });
-      } else {
-        // Fallback for browsers without requestIdleCallback
-        setTimeout(() => {
-          criticalRoutes.forEach(preload => preload());
-        }, 1000);
-      }
-    };
-
-    preloadCriticalRoutes();
-  }, []);
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/match', element: <AIMatcherPage /> },
+  { path: '/login', element: <Login /> },
+  { path: '/signup', element: <Signup /> },
+  { path: '/talent', element: <TalentDirectory /> },
+  { path: '/talents', element: <TalentsPage /> },
+  { path: '/services', element: <ServicesPage /> },
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/categories', element: <Categories /> },
+  { path: '/equipment', element: <EquipmentPage /> },
+  { path: '/equipment/:id', element: <EquipmentDetail /> },
+  { path: '/analytics', element: <Analytics /> },
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },
+  { path: '/open-app', element: <OpenAppRedirect /> },
+  { path: '/community', element: <CommunityPage /> },
+  { path: '/contact', element: <ContactPage /> },
+  { path: '/partners', element: <PartnersPage /> },
+  { path: '/zion-hire-ai', element: <ZionHireAI /> },
+  { path: '/hire-ai', element: <ZionHireAI /> },
+  { path: '/request-quote', element: <RequestQuotePage /> },
+  { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
+  { path: '/blog', element: <Blog /> },
+  { path: '/blog/:slug', element: <BlogPost /> },
+];
 
   return (
     <HelmetProvider>
