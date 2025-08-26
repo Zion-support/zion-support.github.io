@@ -11,6 +11,7 @@ const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Services = lazy(() => import('./pages/Services'));
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
+const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 const AdvancedServices2025 = lazy(() => import('./pages/AdvancedServices2025'));
 const AdvancedServicesShowcase2025 = lazy(() => import('./pages/AdvancedServicesShowcase2025'));
 const ComprehensivePricing2025 = lazy(() => import('./pages/ComprehensivePricing2025'));
@@ -37,6 +38,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/services" element={<Services />} />
               <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
+              <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
               <Route path="/advanced-services-2025" element={<AdvancedServices2025 />} />
               <Route path="/advanced-services-showcase-2025" element={<AdvancedServicesShowcase2025 />} />
               <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricing2025 />} />

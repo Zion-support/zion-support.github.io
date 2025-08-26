@@ -4,10 +4,11 @@ import { innovativeMicroSaasServices2025 } from '../data/2025-innovative-micro-s
 import { specializedIndustrySolutions2025 } from '../data/2025-specialized-industry-solutions';
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
 
-const ComprehensivePricing2025: React.FC = () => {
+const InnovativeServicesShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('price');
-  const [viewMode, setViewMode] = useState<'cards' | 'table'>('cards');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [sortBy, setSortBy] = useState<string>('name');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   // Combine all services
   const allServices = [
@@ -49,6 +50,11 @@ const ComprehensivePricing2025: React.FC = () => {
     .filter(service => 
       selectedCategory === 'all' || service.category === selectedCategory
     )
+    .filter(service =>
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
+    )
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -58,9 +64,8 @@ const ComprehensivePricing2025: React.FC = () => {
         case 'rating':
           return b.rating - a.rating;
         case 'name':
-          return a.name.localeCompare(b.name);
         default:
-          return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+          return a.name.localeCompare(b.name);
       }
     });
 
@@ -105,29 +110,21 @@ const ComprehensivePricing2025: React.FC = () => {
     return 'Innovative';
   };
 
-  const getPriceRange = (price: string) => {
-    const numPrice = parseFloat(price.replace('$', '').replace(',', ''));
-    if (numPrice < 100) return 'Budget';
-    if (numPrice < 500) return 'Standard';
-    if (numPrice < 2000) return 'Premium';
-    return 'Enterprise';
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Comprehensive
+            Innovative
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Pricing 2025
+              {" "}Micro SAAS Services 2025
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Transparent pricing for all our innovative micro SAAS services. 
-            Choose the perfect solution for your business needs with flexible pricing options 
-            and comprehensive feature sets.
+            Discover our cutting-edge collection of 50+ innovative micro SAAS solutions, 
+            from quantum AI research platforms to emerging technology services. 
+            Each service is designed to transform industries and drive innovation.
           </p>
           
           {/* Contact Info */}
@@ -147,39 +144,23 @@ const ComprehensivePricing2025: React.FC = () => {
         </div>
       </section>
 
-      {/* Pricing Overview */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">Budget</div>
-              <div className="text-sm text-gray-300">$89 - $299/month</div>
-              <div className="text-xs text-gray-400 mt-2">Perfect for startups and small businesses</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">Standard</div>
-              <div className="text-sm text-gray-300">$349 - $899/month</div>
-              <div className="text-xs text-gray-400 mt-2">Ideal for growing companies</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">Premium</div>
-              <div className="text-sm text-gray-300">$1,199 - $2,999/month</div>
-              <div className="text-xs text-gray-400 mt-2">For established enterprises</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">Enterprise</div>
-              <div className="text-sm text-gray-300">$3,999 - $5,999/month</div>
-              <div className="text-xs text-gray-400 mt-2">For large organizations</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Filters and Controls */}
       <section className="px-4 sm:px-6 lg:px-8 pb-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+              {/* Search */}
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Search Services</label>
+                <input
+                  type="text"
+                  placeholder="Search by name, description..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
               {/* Category Filter */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
@@ -204,8 +185,8 @@ const ComprehensivePricing2025: React.FC = () => {
                   onChange={(e) => setSortBy(e.target.value)}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  <option value="price">Price (Low to High)</option>
                   <option value="name">Name</option>
+                  <option value="price">Price</option>
                   <option value="category">Category</option>
                   <option value="rating">Rating</option>
                 </select>
@@ -216,16 +197,16 @@ const ComprehensivePricing2025: React.FC = () => {
                 <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
                 <div className="flex space-x-2">
                   <button
-                    onClick={() => setViewMode('cards')}
-                    className={`px-3 py-2 rounded-lg ${viewMode === 'cards' ? 'bg-blue-600' : 'bg-white/10'}`}
+                    onClick={() => setViewMode('grid')}
+                    className={`px-3 py-2 rounded-lg ${viewMode === 'grid' ? 'bg-blue-600' : 'bg-white/10'}`}
                   >
-                    Cards
+                    Grid
                   </button>
                   <button
-                    onClick={() => setViewMode('table')}
-                    className={`px-3 py-2 rounded-lg ${viewMode === 'table' ? 'bg-blue-600' : 'bg-white/10'}`}
+                    onClick={() => setViewMode('list')}
+                    className={`px-3 py-2 rounded-lg ${viewMode === 'list' ? 'bg-blue-600' : 'bg-white/10'}`}
                   >
-                    Table
+                    List
                   </button>
                 </div>
               </div>
@@ -241,10 +222,10 @@ const ComprehensivePricing2025: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Pricing */}
+      {/* Services Grid/List */}
       <section className="px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
-          {viewMode === 'cards' ? (
+          {viewMode === 'grid' ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredServices.map((service) => (
                 <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 overflow-hidden hover:border-blue-400 transition-all duration-300 hover:transform hover:scale-105">
@@ -252,26 +233,17 @@ const ComprehensivePricing2025: React.FC = () => {
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-2xl">{getCategoryIcon(service.category)}</div>
-                      <div className="flex flex-col items-end gap-2">
-                        <span className="px-2 py-1 bg-blue-600 text-xs font-semibold rounded-full">
-                          {getTechnologyBadge(service)}
-                        </span>
-                        <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                          getPriceRange(service.price) === 'Budget' ? 'bg-green-600' :
-                          getPriceRange(service.price) === 'Standard' ? 'bg-blue-600' :
-                          getPriceRange(service.price) === 'Premium' ? 'bg-purple-600' : 'bg-cyan-600'
-                        }`}>
-                          {getPriceRange(service.price)}
-                        </span>
-                      </div>
+                      <span className="px-2 py-1 bg-blue-600 text-xs font-semibold rounded-full">
+                        {getTechnologyBadge(service)}
+                      </span>
                     </div>
                     
                     <h3 className="text-xl font-bold mb-2 text-blue-400">{service.name}</h3>
                     <p className="text-sm text-gray-300 mb-3">{service.tagline}</p>
                     
                     {/* Price */}
-                    <div className="mb-4 text-center">
-                      <span className="text-3xl font-bold text-green-400">{service.price}</span>
+                    <div className="mb-4">
+                      <span className="text-2xl font-bold text-green-400">{service.price}</span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
 
@@ -279,7 +251,7 @@ const ComprehensivePricing2025: React.FC = () => {
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                       <ul className="text-xs text-gray-400 space-y-1">
-                        {service.features.slice(0, 4).map((feature, index) => (
+                        {service.features.slice(0, 3).map((feature, index) => (
                           <li key={index} className="flex items-center">
                             <span className="text-green-400 mr-2">✓</span>
                             {feature}
@@ -289,7 +261,7 @@ const ComprehensivePricing2025: React.FC = () => {
                     </div>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-3 gap-4 text-center text-xs mb-4">
+                    <div className="grid grid-cols-3 gap-4 text-center text-xs">
                       <div>
                         <div className="text-blue-400 font-semibold">{service.rating}</div>
                         <div className="text-gray-400">Rating</div>
@@ -302,12 +274,6 @@ const ComprehensivePricing2025: React.FC = () => {
                         <div className="text-blue-400 font-semibold">{service.trialDays}</div>
                         <div className="text-gray-400">Trial Days</div>
                       </div>
-                    </div>
-
-                    {/* ROI */}
-                    <div className="text-center mb-4">
-                      <div className="text-xs text-gray-400">ROI</div>
-                      <div className="text-sm text-green-400 font-semibold">{service.roi}</div>
                     </div>
                   </div>
 
@@ -327,76 +293,75 @@ const ComprehensivePricing2025: React.FC = () => {
               ))}
             </div>
           ) : (
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead className="bg-white/5">
-                    <tr>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Service</th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Category</th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Price</th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Rating</th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Trial</th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Technology</th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-white/10">
-                    {filteredServices.map((service) => (
-                      <tr key={service.id} className="hover:bg-white/5">
-                        <td className="px-6 py-4">
-                          <div className="flex items-center">
-                            <div className="text-2xl mr-3">{getCategoryIcon(service.category)}</div>
-                            <div>
-                              <div className="text-sm font-medium text-blue-400">{service.name}</div>
-                              <div className="text-xs text-gray-400">{service.tagline}</div>
+            <div className="space-y-4">
+              {filteredServices.map((service) => (
+                <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 p-6 hover:border-blue-400 transition-all duration-300">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    {/* Service Info */}
+                    <div className="lg:col-span-2">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="text-3xl">{getCategoryIcon(service.category)}</div>
+                        <div>
+                          <h3 className="text-xl font-bold text-blue-400 mb-2">{service.name}</h3>
+                          <p className="text-gray-300 mb-2">{service.tagline}</p>
+                          <p className="text-sm text-gray-400">{service.description}</p>
+                        </div>
+                      </div>
+                      
+                      {/* Features */}
+                      <div className="mb-4">
+                        <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                          {service.features.slice(0, 6).map((feature, index) => (
+                            <div key={index} className="flex items-center text-xs text-gray-400">
+                              <span className="text-green-400 mr-2">✓</span>
+                              {feature}
                             </div>
-                          </div>
-                        </td>
-                        <td className="px-6 py-4">
-                          <span className="text-sm text-gray-300">{service.category}</span>
-                        </td>
-                        <td className="px-6 py-4">
-                          <div className="text-sm font-medium text-green-400">{service.price}</div>
-                          <div className="text-xs text-gray-400">{service.period}</div>
-                        </td>
-                        <td className="px-6 py-4">
-                          <div className="flex items-center">
-                            <span className="text-sm text-blue-400 mr-2">{service.rating}</span>
-                            <div className="flex text-yellow-400">
-                              {[...Array(5)].map((_, i) => (
-                                <span key={i} className={i < Math.floor(service.rating) ? 'text-yellow-400' : 'text-gray-600'}>
-                                  ★
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        </td>
-                        <td className="px-6 py-4">
-                          <span className="text-sm text-gray-300">{service.trialDays} days</span>
-                        </td>
-                        <td className="px-6 py-4">
-                          <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                            getPriceRange(service.price) === 'Budget' ? 'bg-green-600' :
-                            getPriceRange(service.price) === 'Standard' ? 'bg-blue-600' :
-                            getPriceRange(service.price) === 'Premium' ? 'bg-purple-600' : 'bg-cyan-600'
-                          }`}>
-                            {getTechnologyBadge(service)}
-                          </span>
-                        </td>
-                        <td className="px-6 py-4">
-                          <Link
-                            to={`/services/${service.id}`}
-                            className="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg transition-colors duration-200"
-                          >
-                            View
-                          </Link>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Service Details */}
+                    <div className="space-y-4">
+                      {/* Price */}
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-green-400">{service.price}</div>
+                        <div className="text-gray-400">{service.period}</div>
+                      </div>
+
+                      {/* Stats */}
+                      <div className="grid grid-cols-2 gap-4 text-center text-sm">
+                        <div>
+                          <div className="text-blue-400 font-semibold">{service.rating}</div>
+                          <div className="text-gray-400">Rating</div>
+                        </div>
+                        <div>
+                          <div className="text-blue-400 font-semibold">{service.customers}</div>
+                          <div className="text-gray-400">Customers</div>
+                        </div>
+                      </div>
+
+                      {/* Technology Badge */}
+                      <div className="text-center">
+                        <span className="px-3 py-1 bg-blue-600 text-xs font-semibold rounded-full">
+                          {getTechnologyBadge(service)}
+                        </span>
+                      </div>
+
+                      {/* Action Button */}
+                      <div className="text-center">
+                        <Link
+                          to={`/services/${service.id}`}
+                          className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors duration-200"
+                        >
+                          Learn More
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           )}
         </div>
@@ -406,19 +371,19 @@ const ComprehensivePricing2025: React.FC = () => {
       <section className="px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl mb-6 text-blue-100">
-              Contact us today to discuss your specific needs and find the perfect service for your business.
+              Join thousands of companies already using our innovative micro SAAS services to drive growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200"
               >
-                Contact Sales
+                Get Started Today
               </Link>
               <Link
-                to="/innovative-services-showcase-2025"
+                to="/services"
                 className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"
               >
                 View All Services
@@ -431,4 +396,4 @@ const ComprehensivePricing2025: React.FC = () => {
   );
 };
 
-export default ComprehensivePricing2025;
+export default InnovativeServicesShowcase2025;

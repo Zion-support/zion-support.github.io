@@ -6,12 +6,14 @@ const Header: React.FC = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const services = [
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & AI Services' },
-    { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Cloud Migration & Automation' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Threat Protection' },
-    { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Network & System Management' },
-    { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Process Optimization' },
-    { name: 'Consulting', href: '/services/consulting', description: 'Technology Strategy & Advisory' }
+    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: '50+ Cutting-edge Micro SAAS Solutions' },
+    { name: 'Quantum AI & Research', href: '/services/quantum-ai', description: 'Next-generation Quantum Computing' },
+    { name: 'Edge AI & IoT', href: '/services/edge-ai', description: 'Intelligent Edge Computing Solutions' },
+    { name: 'Blockchain & Web3', href: '/services/blockchain', description: 'Decentralized AI & Web3 Services' },
+    { name: 'Healthcare AI', href: '/services/healthcare-ai', description: 'AI-powered Medical Solutions' },
+    { name: 'Financial AI', href: '/services/financial-ai', description: 'AI-driven Financial Intelligence' },
+    { name: 'Industry Solutions', href: '/services/industry', description: 'Specialized Industry Platforms' },
+    { name: 'Emerging Tech', href: '/services/emerging-tech', description: 'Future Technology Services' }
   ];
 
   return (
@@ -96,6 +98,12 @@ const Header: React.FC = () => {
               About
             </Link>
             <Link
+              to="/comprehensive-pricing-2025"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              Pricing
+            </Link>
+            <Link
               to="/blog"
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
@@ -150,6 +158,13 @@ const Header: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
+              </Link>
+              <Link
+                to="/comprehensive-pricing-2025"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Pricing
               </Link>
               
               {/* Mobile Services Section */}
