@@ -69,7 +69,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               aria-label="GitHub"
               title="GitHub"
             >
-              <Button variant="ghost" size="icon" aria-label="GitHub link">
+              <Button variant="ghost" size="icon">
                 <Github className="h-4 w-4" />
               </Button>
             </a>
@@ -83,7 +83,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               aria-label="Live demo"
               title="Live demo"
             >
-              <Button variant="ghost" size="icon" aria-label="Live demo link">
+              <Button variant="ghost" size="icon">
                 <Link className="h-4 w-4" />
               </Button>
             </a>
