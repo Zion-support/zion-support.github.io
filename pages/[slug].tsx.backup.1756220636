@@ -37,6 +37,13 @@ import path from 'path';
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
+<<<<<<< HEAD
+const contactInfo = {
+	mobile: '+1 302 464 0950',
+	email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+=======
   const service = useMemo(() => {
     if (!slug) return undefined;
     const all: any[] = ([] as any[])
@@ -241,6 +248,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths: uniqueSlugs.map((slug) => ({ params: { slug } })),
     fallback: true
   };
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9cca
 };
 
 function getAllServices(): Service[] {
