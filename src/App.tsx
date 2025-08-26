@@ -49,6 +49,7 @@ const AdvancedServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedSe
 const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025'));
 const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const CuttingEdgeInnovativeServices = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 
 // Other pages
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
@@ -117,6 +118,7 @@ const routes = [
   { path: '/comprehensive-pricing-2025', element: <ComprehensivePricing2025 /> },
   { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
   { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/cutting-edge-innovative-services', element: <CuttingEdgeInnovativeServices /> },
   
   // Other routes
   { path: '/match', element: <AIMatcherPage /> },
