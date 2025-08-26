@@ -29,6 +29,8 @@ const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
 const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const AdvancedServicesShowcase2027 = React.lazy(() => import('./pages/AdvancedServicesShowcase2027'));
+const AdvancedPricingGuide2027 = React.lazy(() => import('./pages/AdvancedPricingGuide2027'));
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -91,6 +93,8 @@ function App() {
               <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
               <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
               <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/advanced-services-showcase" element={<AdvancedServicesShowcase2027 />} />
+              <Route path="/advanced-pricing-guide" element={<AdvancedPricingGuide2027 />} />
               
               {/* Emerging Tech Routes */}
               <Route path="/emerging-tech" element={<GreenIT />} />
