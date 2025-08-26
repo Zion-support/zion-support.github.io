@@ -8,7 +8,7 @@ import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowR
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
+import { emergingTech2028Services as emergingTech2026ServicesV2 } from '../data/2028-emerging-tech-services';
 
 export default function Services2026ShowcasePage() {
   const [searchTerm, setSearchTerm] = useState('');

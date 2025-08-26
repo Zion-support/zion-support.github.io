@@ -5,7 +5,7 @@ import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackg
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
 import Enhanced2026ServicesShowcaseV4 from '../components/sections/Enhanced2026ServicesShowcaseV4';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV2 as emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v2';
+import { emergingTech2028Services as emergingTech2026ServicesV4 } from '../data/2028-emerging-tech-services';
 import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
 
 export default function ServicesShowcase2026V4() {

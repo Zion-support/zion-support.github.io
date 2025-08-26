@@ -50,8 +50,7 @@ import { innovative2026MicroSaasServices } from '../data/innovative-2026-micro-s
 import { emergingTech2026Services as emergingTech2026ServicesNew } from '../data/emerging-tech-2026-services';
 import { enterpriseIT2026Services as enterpriseIT2026ServicesNew } from '../data/enterprise-it-2026-services';
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
+import { emergingTech2028Services as emergingTech2026ServicesV2 } from '../data/2028-emerging-tech-services';
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
 import { nextGenAI2026Services } from '../data/next-gen-ai-2026-services';
 import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services';
@@ -130,7 +129,6 @@ export default function HomePage() {
     ...enterpriseIT2026ServicesNew,
     ...innovative2026MicroSaasServicesV2,
     ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesV2,
     ...revolutionary2026Innovations,
     ...nextGenAI2026Services,
     ...aiAutonomousServices2026,

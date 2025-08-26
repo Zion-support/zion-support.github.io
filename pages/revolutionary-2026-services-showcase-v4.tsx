@@ -8,7 +8,7 @@ import {
   Microscope, Phone, Mail, MapPin, Eye, Heart, Target, Award
 } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV2 as emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v2';
+import { emergingTech2028Services as emergingTech2026ServicesV4 } from '../data/2028-emerging-tech-services';
 import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
