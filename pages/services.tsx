@@ -223,6 +223,7 @@ export default function ServicesPage() {
 =======
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { newRealServices } from '../data/new-real-services';
 import { industryRealServices } from '../data/industry-real-services';
@@ -327,6 +328,11 @@ import { enterpriseITServices2029V2 } from '../data/2029-enterprise-it-services-
 import { spaceMetaverseServices2029 } from '../data/2029-space-metaverse-services';
 import { researchDevelopmentServices2029 } from '../data/2029-research-development-services';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9d55
+=======
+import { nextGenAIServices } from '../data/next-gen-ai-services';
+import { emergingTechServices } from '../data/emerging-tech-services';
+import { enterpriseBlockchainServices } from '../data/enterprise-blockchain-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a6f6
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -339,6 +345,7 @@ export default function ServicesPage() {
     ...quantumSpaceServices,
     ...enterpriseITServices,
     ...enhancedRealMicroSaasServices,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     ...additionalEnhancedServices,
@@ -424,6 +431,11 @@ export default function ServicesPage() {
     ...spaceMetaverseServices2029,
     ...researchDevelopmentServices2029
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9d55
+=======
+    ...nextGenAIServices,
+    ...emergingTechServices,
+    ...enterpriseBlockchainServices
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a6f6
   ];
 
   // Dynamic category counts mapped to the same filter logic below
@@ -435,11 +447,20 @@ export default function ServicesPage() {
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+<<<<<<< HEAD
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
     { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
     { id: 'metaverse', name: 'Metaverse & Digital Reality', icon: '🌐', count: metaverseCount }
+=======
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: innovativeAIServices.length + nextGenAIServices.length },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: enhancedRealMicroSaasServices.length },
+    { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: emergingTechServices.length },
+    { id: 'blockchain', name: 'Blockchain & DeFi', icon: '⛓️', count: enterpriseBlockchainServices.length }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a6f6
   ];
 
   const priceRanges = [
@@ -477,11 +498,20 @@ export default function ServicesPage() {
                            (Array.isArray(service.category) ? service.category.some(cat => cat.toLowerCase().includes(searchTerm.toLowerCase())) : service.category.toLowerCase().includes(searchTerm.toLowerCase()));
       
       const matchesCategory = selectedCategory === 'all' || 
+<<<<<<< HEAD
                              (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning') || service.category.includes('AI Autonomous') || service.category.includes('AI Consciousness') || service.category.includes('AI Legal') || service.category.includes('AI Scientific') || service.category.includes('AI Creative') || service.category.includes('AI Healthcare') || service.category.includes('AI Education'))) ||
                              (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space') || service.category.includes('Quantum Space'))) ||
                              (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT') || service.category.includes('Cloud') || service.category.includes('Security'))) ||
                              (selectedCategory === 'micro-saas' && service.category.includes('Micro SaaS')) ||
                              (selectedCategory === 'metaverse' && (service.category.includes('Metaverse') || service.category.includes('Digital Reality') || service.category.includes('Consciousness Interface') || service.category.includes('Holographic')));
+=======
+                             (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||
+                             (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
+                             (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
+                             (selectedCategory === 'micro-saas' && service.category.includes('Micro SaaS')) ||
+                             (selectedCategory === 'emerging' && (service.category.includes('Neural') || service.category.includes('Autonomous') || service.category.includes('Space') || service.category.includes('Biotech'))) ||
+                             (selectedCategory === 'blockchain' && (service.category.includes('Blockchain') || service.category.includes('DeFi') || service.category.includes('NFT')));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a6f6
       
       const numericPrice = parsePriceToNumber((service as any).price);
       const matchesPrice = selectedPriceRange === 'all' ||
