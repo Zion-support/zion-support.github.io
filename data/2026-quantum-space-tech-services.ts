@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const quantumSpaceTechServices2026 = [] as any[];
 =======
 export interface QuantumSpaceTechService2026 {
@@ -41,3 +42,6 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
     }
   }
 ];
+=======
+export const quantumSpaceTech2026Services: Array<Record<string, any>> = []
+>>>>>>> 5d0d9b33be30b5e0e084636034f4596aec3e9abd

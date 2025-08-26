@@ -1,11 +1,16 @@
-module.exports = {
+export default {
   plugins: {
+<<<<<<< HEAD:postcss.config.js.backup.1756219910
 <<<<<<< HEAD
     tailwindcss: {},
 =======
     "@tailwindcss/postcss": {},
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e367
     autoprefixer: {},
+=======
+    'tailwindcss': {},
+    'autoprefixer': {},
+>>>>>>> 5d0d9b33be30b5e0e084636034f4596aec3e9abd:postcss.config.js
   },
 }
 

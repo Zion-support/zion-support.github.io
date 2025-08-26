@@ -1,7 +1,11 @@
 {
+<<<<<<< HEAD
   "generatedAt": "2025-08-26T13:16:08.161Z",
 =======
   "generatedAt": "2025-08-26T12:29:05.562Z",
+=======
+  "generatedAt": "2025-08-26T12:49:30.121Z",
+>>>>>>> 5d0d9b33be30b5e0e084636034f4596aec3e9abd
   "functions": [],
   "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
 =======
