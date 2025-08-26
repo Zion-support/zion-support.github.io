@@ -1,6 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+<<<<<<< HEAD
 import { resolve } from 'path'
+=======
+import path from 'node:path'
+>>>>>>> origin/cursor/website-audit-and-enhancement-438b
 
 // https://vitejs.dev/config/
 export default defineConfig({
