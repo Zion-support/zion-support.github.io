@@ -4,11 +4,14 @@ import React from 'react'
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services'
 import { advancedITServices } from '../data/advanced-it-services'
 import { innovativeAIServices } from '../data/innovative-ai-services'
+import { addedMicroSaaS2025 } from '../data/2025-added-micro-saas'
+import { addedITServices2025 } from '../data/2025-added-it-services'
+import { addedAIServices2025 } from '../data/2025-added-ai-services'
 
 export default function Services(){
-	const microSaaS = innovativeRealMicroSaasServices2025.slice(0, 12)
-	const itServices = advancedITServices.slice(0, 12)
-	const aiServices = innovativeAIServices.slice(0, 12)
+	const microSaaS = innovativeRealMicroSaasServices2025.slice(0, 12).concat(addedMicroSaaS2025)
+	const itServices = advancedITServices.slice(0, 12).concat(addedITServices2025)
+	const aiServices = innovativeAIServices.slice(0, 12).concat(addedAIServices2025)
 
 	return (
 		<main style={{padding:20,fontFamily:'sans-serif', lineHeight:1.6}}>
