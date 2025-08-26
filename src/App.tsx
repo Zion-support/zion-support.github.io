@@ -20,6 +20,7 @@ const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 const ServicesAdvertising = React.lazy(() => import('./pages/ServicesAdvertising'));
+const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
 const Solutions = React.lazy(() => import('./pages/Solutions'));
 const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
 const News = React.lazy(() => import('./pages/News'));
@@ -62,6 +63,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/services-advertising" element={<ServicesAdvertising />} />
+              <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
               <Route path="/solutions" element={<Solutions />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
               <Route path="/news" element={<News />} />
