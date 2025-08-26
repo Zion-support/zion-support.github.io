@@ -57,7 +57,7 @@ const benefits = [
 export default function AIBiotechDrugDiscovery() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
+      <SEOHead 
         title="Biotech Drug Discovery - Zion Tech Group" 
         description="AI-powered biotech drug discovery solution that transforms your operations with intelligent automation and real-time insights."
         keywords="AI biotech drug discovery, automation, intelligent systems, business optimization"

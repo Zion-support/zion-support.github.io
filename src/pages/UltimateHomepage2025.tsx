@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -97,7 +97,7 @@ export default function UltimateHomepage2025() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO 
+      <SEOHead 
         title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025"
         description="Transform your business with our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Leading the future of technology."
         keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, innovative solutions"

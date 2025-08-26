@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -106,7 +106,7 @@ export default function CybersecuritySuite() {
         "FedRAMP (Federal Risk and Authorization Management Program)"
     ];
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
-      <SEO title="Cybersecurity Suite - Zion Tech Group" description="Comprehensive security monitoring, threat detection, and incident response for businesses of all sizes. Starting at $199/month." keywords="cybersecurity, threat detection, security monitoring, incident response, compliance, security audit" canonical="https://ziontechgroup.com/cybersecurity-suite"/>
+      <SEOHead title="Cybersecurity Suite - Zion Tech Group" description="Comprehensive security monitoring, threat detection, and incident response for businesses of all sizes. Starting at $199/month." keywords="cybersecurity, threat detection, security monitoring, incident response, compliance, security audit" canonical="https://ziontechgroup.com/cybersecurity-suite"/>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">

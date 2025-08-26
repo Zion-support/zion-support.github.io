@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import Link from 'next/link';
 import { Search, Filter, MapPin, Briefcase, Star, Users, Zap, Building } from 'lucide-react';
 
@@ -86,7 +86,7 @@ const TalentDirectory: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Talent Directory - Zion Tech Group"
         description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more."
         keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists"

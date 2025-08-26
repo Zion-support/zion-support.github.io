@@ -17,7 +17,7 @@ import {
   Globe,
   Lock
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 
 const features = [
   {
@@ -96,7 +96,7 @@ const testimonials = [
 export default function AIAutonomousBusinessManager() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
-      <SEO 
+      <SEOHead 
         title="AI Autonomous Business Manager - Zion Tech Group" 
         description="Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, real-time analytics, and automated operations."
         keywords="AI business manager, autonomous business, AI decision making, business automation, predictive analytics"

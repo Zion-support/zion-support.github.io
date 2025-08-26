@@ -106,7 +106,7 @@ export default function MicroSAASSolutions() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      <SEO 
+      <SEOHead 
         title="Micro SAAS Solutions - Zion Tech Group" 
         description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries."
         keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software"

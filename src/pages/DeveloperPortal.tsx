@@ -127,7 +127,7 @@ export default function DeveloperPortal() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Developer Portal | Zion Tech Group" 
         description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools."
         keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import Link from 'next/link';
 import { Check, Server, Shield, Cloud, Database, Network, Monitor, Zap } from 'lucide-react';
 
@@ -37,7 +37,7 @@ const ITSolutions: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="IT Solutions - Zion Tech Group"
         description="Comprehensive IT solutions to optimize your business operations and technology infrastructure."
         keywords="IT solutions, system integration, IT support, data management, IT security"

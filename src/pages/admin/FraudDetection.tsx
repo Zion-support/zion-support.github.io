@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -153,7 +153,7 @@ export default function FraudDetection() {
 
   return (
     
-      <SEO 
+      <SEOHead 
         title="Fraud Detection | Admin Dashboard" 
         description="Monitor and manage fraud detection alerts on the Zion AI Marketplace" 
       />

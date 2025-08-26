@@ -946,7 +946,7 @@ const AIHRRecruitment = () => {
           </div>
 =======
     <div className="min-h-screen bg-gradient-to-br from-black via-green-900 to-blue-900">
-      <SEO 
+      <SEOHead 
         title="AI HR & Recruitment Platform - Zion Tech Group" 
         description="Revolutionize your hiring process with AI-powered recruitment. Faster hiring, better candidates, and improved retention."
         keywords="AI recruitment, HR automation, AI hiring, candidate screening, recruitment software, HR technology"

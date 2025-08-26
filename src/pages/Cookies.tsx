@@ -161,7 +161,7 @@ const Cookies: React.FC = () => {
                   Personalize content and improve functionality
                 </p>
 =======
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -566,13 +566,13 @@ export default Cookies;
   );
 }
 =======
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { GradientHeading } from '@/components/GradientHeading';
 
 export default function Cookies() {
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Cookie Policy - Zion Tech Group" 
         description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience." 
         keywords="cookie policy, cookies, tracking, Zion Tech Group, privacy"

@@ -57,7 +57,7 @@ const benefits = [
 export default function AIAutonomousLearningSystem() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
+      <SEOHead 
         title="Autonomous Learning System - Zion Tech Group" 
         description="AI-powered autonomous learning system solution that transforms your operations with intelligent automation and real-time insights."
         keywords="AI autonomous learning system, automation, intelligent systems, business optimization"

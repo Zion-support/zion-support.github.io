@@ -57,7 +57,7 @@ const benefits = [
 export default function AIAutonomousVentureCapitalist() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
+      <SEOHead 
         title="Autonomous Venture Capitalist - Zion Tech Group" 
         description="AI-powered autonomous venture capitalist solution that transforms your operations with intelligent automation and real-time insights."
         keywords="AI autonomous venture capitalist, automation, intelligent systems, business optimization"

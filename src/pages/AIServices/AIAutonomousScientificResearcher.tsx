@@ -57,7 +57,7 @@ const benefits = [
 export default function AIAutonomousScientificResearcher() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
+      <SEOHead 
         title="Autonomous Scientific Researcher - Zion Tech Group" 
         description="AI-powered autonomous scientific researcher solution that transforms your operations with intelligent automation and real-time insights."
         keywords="AI autonomous scientific researcher, automation, intelligent systems, business optimization"

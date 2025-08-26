@@ -57,7 +57,7 @@ const benefits = [
 export default function AIAutonomousDevOps() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
+      <SEOHead 
         title="Autonomous Dev Ops - Zion Tech Group" 
         description="AI-powered autonomous dev ops solution that transforms your operations with intelligent automation and real-time insights."
         keywords="AI autonomous dev ops, automation, intelligent systems, business optimization"

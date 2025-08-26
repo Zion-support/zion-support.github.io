@@ -374,7 +374,7 @@ const HelpCenter: React.FC = () => {
 import React from 'react';
 import { AppHeader } from '@/layout/AppHeader';
 import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { 
@@ -506,7 +506,7 @@ export default function HelpCenter() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Help Center - Zion Tech Group" 
         description="Get help and support for using Zion Tech Group's AI and tech marketplace platform."
         keywords="help, support, documentation, Zion Tech Group, AI marketplace, tech services"
@@ -577,7 +577,7 @@ const $page: React.FC = () => {
                 );
               })}
 import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -662,7 +662,7 @@ export default function HelpCenter() {
 
   return (
     <AppLayout>
-      <SEO 
+      <SEOHead 
         title="Help Center - Zion Tech Group Support" 
         description="Get help and support for using the Zion AI and tech marketplace. Find answers to common questions and contact our support team." 
         keywords="help center, support, FAQ, Zion marketplace, customer service"

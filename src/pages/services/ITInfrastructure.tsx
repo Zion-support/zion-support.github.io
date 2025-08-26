@@ -45,7 +45,7 @@ const ITInfrastructure: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="IT Infrastructure - Zion Tech Group"
         description="Build a robust and scalable IT infrastructure with our expert solutions and management services."
         keywords="IT infrastructure, server management, network design, data centers, infrastructure security"

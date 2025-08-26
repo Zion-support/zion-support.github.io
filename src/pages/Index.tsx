@@ -11,7 +11,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { WaitlistSection } from "@/components/WaitlistSection";
 import { BlogSection } from "@/components/BlogSection";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { EnhancedServicesShowcase } from "@/components/EnhancedServicesShowcase";
@@ -80,7 +80,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-zion-blue text-white">
-      <SEO 
+      <SEOHead 
         title={t("home.seo_title", "Zion Tech Group - Leading AI & Technology Solutions")} 
         description={t("home.seo_description", "Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem.")} 
         keywords={t("home.seo_keywords", "AI solutions, cloud computing, cybersecurity, digital transformation, technology consulting")}

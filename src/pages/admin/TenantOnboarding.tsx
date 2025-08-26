@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -114,7 +114,7 @@ export default function TenantOnboarding() {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Tenant Onboarding - Zion AI Marketplace"
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
       />

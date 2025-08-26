@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 export default function EnterpriseDemo() {
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Enterprise Demo - Zion Tech Group" 
         description="Schedule a personalized demo of Zion's enterprise solutions for AI hiring, talent management, and marketplace services."
         keywords="enterprise demo, AI hiring demo, talent management demo, Zion enterprise"

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 export default function TalentProfilePage() {
@@ -36,7 +36,7 @@ export default function TalentProfilePage() {
     if (error || !profile)
         return <ProfileErrorState error={error || 'Profile not found'}/>;
     return (<>
-      <SEO title={profile.full_name} description={profile.bio || ''}/>
+      <SEOHead title={profile.full_name} description={profile.bio || ''}/>
       <main className="min-h-screen bg-zion-blue py-8 text-white">
         <div className="container mx-auto px-4 space-y-4">
           <h1 className="text-3xl font-bold" data-testid="profile-name">

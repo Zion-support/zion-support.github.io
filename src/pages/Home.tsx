@@ -53,71 +53,83 @@ export default function Home() {
 
   const coreServices = [
     {
+      title: "Cutting-Edge Innovations",
+      description: "Revolutionary technology solutions for 2025",
+      icon: Zap,
+      link: "/innovative-services",
+      color: "from-zion-cyan to-zion-purple"
+    },
+    {
       title: "AI Solutions",
       description: "Cutting-edge artificial intelligence services",
       icon: Brain,
-      link: "/services",
+      link: "/ai-services",
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Quantum Computing",
       description: "Next-generation quantum solutions",
       icon: Cpu,
-      link: "/services",
+      link: "/enhanced-services",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Blockchain Solutions",
-      description: "Decentralized and secure applications",
-      icon: Lock,
-      link: "/services",
+      title: "Micro SAAS Platform",
+      description: "Innovative software-as-a-service solutions",
+      icon: Code,
+      link: "/micro-saas",
       color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "IoT & Edge Computing",
-      description: "Connected world solutions",
-      icon: Globe2,
-      link: "/services",
-      color: "from-orange-500 to-red-500"
     }
   ];
 
   const innovativeServices = [
     {
-      title: "FinTech Solutions",
-      description: "Digital banking, payments, and wealth management",
-      icon: "💰",
-      category: "Financial Technology"
-    },
-    {
-      title: "HealthTech Solutions",
-      description: "Telemedicine, AI diagnostics, and health monitoring",
-      icon: "🏥",
-      category: "Healthcare Technology"
-    },
-    {
-      title: "EdTech Solutions",
-      description: "AI-powered learning and virtual classrooms",
-      icon: "🎓",
-      category: "Educational Technology"
-    },
-    {
-      title: "GreenTech Solutions",
-      description: "Sustainability and energy management",
-      icon: "🌱",
-      category: "Environmental Technology"
-    },
-    {
-      title: "SpaceTech Solutions",
-      description: "Satellite data and space mission planning",
-      icon: "🚀",
-      category: "Space Technology"
-    },
-    {
-      title: "Robotics & Automation",
-      description: "Industrial and service robotics",
+      title: "AI Business Automation Suite",
+      description: "Complete business process automation using advanced AI algorithms",
       icon: "🤖",
-      category: "Automation Technology"
+      category: "AI & Automation",
+      price: "$4,999/month",
+      link: "/innovative-services"
+    },
+    {
+      title: "Quantum Computing as a Service",
+      description: "Access to quantum computing power for complex problem solving",
+      icon: "⚛️",
+      category: "Quantum Computing",
+      price: "$15,000/month",
+      link: "/innovative-services"
+    },
+    {
+      title: "Enterprise Blockchain Platform",
+      description: "Scalable blockchain infrastructure for enterprise applications",
+      icon: "🔗",
+      category: "Blockchain",
+      price: "$8,999/month",
+      link: "/innovative-services"
+    },
+    {
+      title: "IoT Edge Computing Platform",
+      description: "Comprehensive IoT platform with edge computing capabilities",
+      icon: "🌐",
+      category: "IoT & Edge",
+      price: "$3,999/month",
+      link: "/innovative-services"
+    },
+    {
+      title: "Zero Trust Cybersecurity",
+      description: "Advanced cybersecurity with AI-powered threat detection",
+      icon: "🛡️",
+      category: "Cybersecurity",
+      price: "$6,999/month",
+      link: "/innovative-services"
+    },
+    {
+      title: "Digital Twin Technology",
+      description: "Virtual replicas for simulation and optimization",
+      icon: "👁️",
+      category: "Digital Twin",
+      price: "$12,000/month",
+      link: "/innovative-services"
     }
   ];
 
@@ -275,6 +287,68 @@ export default function Home() {
                 <div className="text-sm text-cyan-400 font-medium">{service.category}</div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cutting-Edge Innovations Showcase */}
+      <section className="py-20 bg-gradient-to-br from-slate-800/50 via-slate-900/50 to-slate-800/50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Cutting-Edge Innovations 2025
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Discover our revolutionary technology solutions that are reshaping industries and driving the future of business
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-full px-6 py-3 text-cyan-400">
+                <span className="font-semibold">9</span> Technology Categories
+              </div>
+              <div className="bg-purple-500/10 border border-purple-500/30 rounded-full px-6 py-3 text-purple-400">
+                <span className="font-semibold">99.9%</span> Uptime Guarantee
+              </div>
+              <div className="bg-green-500/10 border border-green-500/30 rounded-full px-6 py-3 text-green-400">
+                <span className="font-semibold">300-500%</span> ROI Promise
+              </div>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {innovativeServices.map((service, index) => (
+              <motion.div
+                key={index}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70 hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.title}</h3>
+                <p className="text-gray-400 mb-4">{service.description}</p>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-sm text-cyan-400 font-medium">{service.category}</div>
+                  <div className="text-lg font-bold text-green-400">{service.price}</div>
+                </div>
+                <Link 
+                  to={service.link}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:text-cyan-300"
+                >
+                  Explore Service <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/innovative-services"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            >
+              View All Cutting-Edge Innovations
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
           </div>
         </div>
       </section>

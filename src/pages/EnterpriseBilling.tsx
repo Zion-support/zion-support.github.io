@@ -3,7 +3,7 @@ import React from "react";
 import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/router";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 
 export default function EnterpriseBilling() {
@@ -23,7 +23,7 @@ export default function EnterpriseBilling() {
 
   return (
     <ProtectedRoute>
-      <SEO 
+      <SEOHead 
         title="Enterprise Billing - Zion AI Marketplace"
         description="Manage your subscription, view invoice history, and download billing statements."
       />

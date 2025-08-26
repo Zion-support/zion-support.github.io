@@ -174,6 +174,19 @@ import {
 } from 'lucide-react';
 
 const footerNavigation = {
+  cuttingEdgeInnovations: {
+    title: 'Cutting-Edge Innovations',
+    items: [
+      { name: 'AI Business Automation Suite', href: '/innovative-services#ai-automation', icon: Brain, description: 'AI-powered business process automation' },
+      { name: 'Quantum Computing as a Service', href: '/innovative-services#quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
+      { name: 'Enterprise Blockchain Platform', href: '/innovative-services#blockchain', icon: Lock, description: 'Enterprise blockchain solutions' },
+      { name: 'IoT Edge Computing Platform', href: '/innovative-services#iot-edge', icon: Wifi, description: 'IoT and edge computing platform' },
+      { name: 'Zero Trust Cybersecurity', href: '/innovative-services#cybersecurity', icon: Shield, description: 'Advanced cybersecurity platform' },
+      { name: 'Digital Twin Technology', href: '/innovative-services#digital-twin', icon: Eye, description: 'Digital twin and simulation platform' },
+      { name: 'Metaverse & VR Platform', href: '/innovative-services#metaverse', icon: Globe2, description: 'Metaverse and virtual reality platform' },
+      { name: 'Green Tech Solutions', href: '/innovative-services#green-tech', icon: Leaf, description: 'Sustainability and green technology' }
+    ],
+  },
   aiServices: {
     title: 'AI Services',
     items: [
@@ -367,7 +380,6 @@ export const FuturisticFooter: React.FC = () => {
                 className="space-y-4"
               >
                 <h4 className="text-lg font-semibold text-zion-cyan flex items-center space-x-2">
-                  <section.icon className="w-5 h-5" />
                   <span>{section.title}</span>
                 </h4>
                 <div className="space-y-2">

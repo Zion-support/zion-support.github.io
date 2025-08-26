@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Shield, Lock, Eye, AlertTriangle, Users, Globe, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
 
 const Cybersecurity: React.FC = () => {
@@ -73,7 +73,7 @@ const Cybersecurity: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background pt-20">
-      <SEO 
+      <SEOHead 
         title="Cybersecurity Solutions - Zion Tech Group" 
         description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group."
         keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection"

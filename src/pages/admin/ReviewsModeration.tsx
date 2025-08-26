@@ -1,5 +1,5 @@
 
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useState, useEffect } from "react";

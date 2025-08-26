@@ -13,7 +13,7 @@ import {
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -174,7 +174,7 @@ export default function ComprehensiveServicesPage() {
 
   return (
     <div className="min-h-screen bg-zion-blue-dark">
-              <SEO 
+              <SEOHead 
           title="Comprehensive Micro SAAS Solutions - Zion Tech Group" 
           description="Discover our extensive portfolio of innovative micro SAAS, IT, and AI services designed to transform your business operations and drive growth"
           keywords="micro SAAS, IT services, AI solutions, Zion Tech Group"
@@ -451,7 +451,7 @@ export default function ComprehensiveServicesPage() {
       </div>
     </div>
     <>
-      <SEO 
+      <SEOHead 
         title="Comprehensive Services - Zion Tech Group" 
         description="Discover our complete range of micro SAAS, IT services, and AI solutions. Transform your business with cutting-edge technology."
         keywords="micro SAAS, IT services, AI solutions, technology services, business solutions"

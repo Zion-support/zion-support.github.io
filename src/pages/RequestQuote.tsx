@@ -1,7 +1,7 @@
 
 import React from 'react';
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Request Quote - Zion Tech Group" 
         description="Get a custom quote for your AI and tech project needs from Zion Tech Group."
         keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group"
@@ -25,7 +25,7 @@ import React from 'react';
             <QuoteRequestForm />
           </div>
         </div>
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
@@ -266,7 +266,7 @@ import { Footer } from "@/components/Footer";
 export default function RequestQuote() {
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Request a Quote - Zion Tech Group"
         description="Get a customized quote for your IT services, AI solutions, or tech projects. Our team will provide you with a detailed estimate tailored to your needs."
         keywords="request quote, IT services quote, AI solutions quote, tech project estimate, custom pricing"

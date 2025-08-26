@@ -54,7 +54,7 @@ export default function ComprehensiveServicesPage() {
                 <DollarSign className="w-5 h-5 mr-2" />
                 View Pricing
 import { Search, Mail, Phone, MapPin, Star, Clock, Globe, Shield, Zap, Database, Cloud, Brain, Lock, TrendingUp } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { Link } from 'react-router-dom';
 
 export default function ComprehensiveServices() {
@@ -108,7 +108,7 @@ export default function ComprehensiveServices() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
-      <SEO 
+      <SEOHead 
         title="Comprehensive IT & AI Services - Zion Tech Group" 
         description="Discover our complete range of enterprise IT services, AI solutions, cybersecurity, cloud migration, and digital transformation services. Expert consulting and implementation worldwide."
         keywords="IT services, AI development, cybersecurity, cloud migration, digital transformation, managed services, blockchain, IoT, AR/VR"

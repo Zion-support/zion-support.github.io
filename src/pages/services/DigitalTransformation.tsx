@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, RefreshCw, Target, Users, Zap, Globe } from 'lucide-react';
 
@@ -73,7 +73,7 @@ const DigitalTransformation: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-      <SEO 
+      <SEOHead 
         title="Digital Transformation - Zion Tech Group"
         description="Transform your business for the digital age with our comprehensive digital transformation services."
         keywords="digital transformation, process automation, digital strategy, change management, performance optimization"

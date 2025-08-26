@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';
@@ -11,7 +11,7 @@ function PortfolioBuilderContent() {
   
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Portfolio Builder | Zion AI Marketplace" 
         description="Create and customize your resume and portfolio to showcase your skills and experience." 
       />

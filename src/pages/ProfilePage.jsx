@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/components/ui/use-toast";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
@@ -57,7 +57,7 @@ export default function ProfilePage() {
       </div>);
     }
     return (<>
-      <SEO title={`${profileData.full_name} | Talent Profile`} description={profileData.bio || "View the profile of this talented individual."}/>
+      <SEOHead title={`${profileData.full_name} | Talent Profile`} description={profileData.bio || "View the profile of this talented individual."}/>
       
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">

@@ -26,7 +26,7 @@ import {
   Code,
   Lock
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 
 const PricingCard: React.FC<{ service: MicroService }> = ({ service }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -120,7 +120,7 @@ import {
 import Target from 'lucide-react/dist/esm/icons/target';
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import Wifi from 'lucide-react/dist/esm/icons/wifi';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 
           <div className="flex items-center justify-center gap-2 text-zion-slate-light text-sm">
             <Clock className="w-4 h-4" />
@@ -333,7 +333,7 @@ export default function ServicesPricingPage() {
 
   return (
     <div className="min-h-screen bg-zion-blue">
-      <SEO 
+      <SEOHead 
         title="Services Pricing - Zion Tech Group" 
         description="Comprehensive pricing for all our IT and AI services. Compare features, benefits, and pricing to find the perfect solution for your business needs."
         keywords="IT services pricing, AI services cost, cybersecurity pricing, cloud services pricing, data analytics pricing, web development pricing"

@@ -19,7 +19,7 @@ import {
   Users,
   Award
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 
 export default function PricingGuidePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -51,7 +51,7 @@ export default function PricingGuidePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Service Pricing Guide - Zion Tech Group" 
         description="Complete pricing guide for all our IT and AI services. Compare prices, features, and choose the perfect solution for your business needs."
         keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost"

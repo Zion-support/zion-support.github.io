@@ -23,7 +23,7 @@ import {
   Database,
   Globe
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { ADVANCED_SERVICES, PRICING_TIERS } from '@/data/advancedServices';
 
 // Service comparison data
@@ -103,7 +103,7 @@ export default function ServicesComparisonPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Services Comparison & Pricing - Zion Tech Group" 
         description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget."
         keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services"

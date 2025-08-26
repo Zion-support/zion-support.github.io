@@ -30,7 +30,7 @@ import {
 } from 'lucide-react';
 import { EXPANDED_SERVICES, SERVICE_CATEGORIES, ExpandedService } from '@/data/expandedServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 
 export default function AllServicesLandingPage() {
   const getCategoryIcon = (category: string) => {
@@ -82,7 +82,7 @@ export default function AllServicesLandingPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" 
         description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses."
         keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group"
