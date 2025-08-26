@@ -43,8 +43,6 @@ import MoreProductsPage from './pages/MoreProductsPage';
 import Sitemap from './pages/Sitemap';
 import PartnersPage from './pages/Partners';
 import Login from './pages/Login';
-  { path: '/micro-saas-services', element: <MicroSaasServices /> },
-=======
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
@@ -76,6 +74,18 @@ const Categories = lazy(() => import('./pages/Categories'));
 const Login = lazy(() => import('./pages/Login'));
 const Signup = lazy(() => import('./pages/Signup'));
 const ITOnsiteServicesPage = lazy(() => import('./pages/ITOnsiteServicesPage'));
+=======
+import Signup from './pages/Signup';
+import SimpleSignup from './pages/SimpleSignup';
+import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
+import OpenAppRedirect from './pages/OpenAppRedirect';
+import ContactPage from './pages/Contact';
+import ZionHireAI from './pages/ZionHireAI';
+import RequestQuotePage from './pages/RequestQuote';
+import WishlistPage from './pages/Wishlist';
+import CartPage from './pages/Cart';
+import Checkout from './pages/Checkout';
+import { SupportChatbot } from './components/SupportChatbot';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },

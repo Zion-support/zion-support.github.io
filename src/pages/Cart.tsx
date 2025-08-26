@@ -6,28 +6,15 @@ import Skeleton from '@/components/ui/skeleton';
 import axios from 'axios';
 import { useAuth } from '@/hooks/useAuth';
 import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
-import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
-// CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
-// import { CartItem as CartItemType } from '@/types/cart';
-// safeStorage is no longer needed here for reading
-// import { safeStorage } from '@/utils/safeStorage';
-import { getStripe } from '@/utils/getStripe';
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react';
-import { useWishlist } from '@/hooks/useWishlist';
-import ProductCard from '@/components/ProductCard';
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { useAuth } from '@/hooks/useAuth';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 export default function CartPage() {
   const navigate = useNavigate();
   const { items, dispatch } = useCart();
   const { user } = useAuth();
-  const [loading, setLoading] = useState(false);
-  const [cartLoading, setCartLoading] = useState(true);
-  const [showEmpty, setShowEmpty] = useState(false);
+  const isAuthenticated = !!user;
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
     if (reduxItems.length > 0) {
@@ -192,14 +179,20 @@ export default function CartPage() {
         <span>Subtotal</span>
         <span>${subtotal.toFixed(2)}</span>
       </div>
-      <Button
-        className="mt-4 w-full"
-        onClick={() =>
-          user ? navigate('/checkout') : navigate('/login?next=/checkout')
-        }
-      >
-        {user ? 'Checkout' : 'Login to Checkout'}
-      </Button>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              className="mt-4 w-full"
+              onClick={() => isAuthenticated && navigate('/checkout')}
+              disabled={!isAuthenticated}
+            >
+              Checkout
+            </Button>
+          </TooltipTrigger>
+          {!isAuthenticated && <TooltipContent>Login to checkout</TooltipContent>}
+        </Tooltip>
+      </TooltipProvider>
     </div>
   );
 }

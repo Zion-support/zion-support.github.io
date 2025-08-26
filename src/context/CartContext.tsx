@@ -2,9 +2,11 @@ import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { CartContextType, CartItem, CartAction } from '@/types/cart';
 import { safeStorage } from '@/utils/safeStorage';
 import { useAuth } from '@/hooks/useAuth';
-import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
+import { mergeGuestCart } from '@/services/cartService';
 
 interface CartState { items: CartItem[]; }
+
+const GUEST_CART_KEY = 'guestCart';
 
 const initialState: CartState = { items: [] };
 
@@ -44,39 +46,42 @@ export function useCart(): CartContextType {
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const { user } = useAuth();
   const [state, dispatch] = useReducer(cartReducer, initialState);
-  const cartKey = getCartKey(user?.id);
+  const { user } = useAuth();
 
   useEffect(() => {
-    let items: CartItem[] = [];
-    const stored = safeStorage.getItem(cartKey);
-    if (stored) {
+    if (!user) {
+      const stored = safeStorage.getItem(GUEST_CART_KEY);
+      if (stored) {
+        try {
+          const items = JSON.parse(stored) as CartItem[];
+          if (items.length) {
+            dispatch({ type: 'SET_ITEMS', payload: items });
+          }
+        } catch {
+          /* ignore */
+        }
+      }
+      return;
+    }
+
+    const storedGuest = safeStorage.getItem(GUEST_CART_KEY);
+    if (storedGuest) {
       try {
-        items = JSON.parse(stored) as CartItem[];
+        const items = JSON.parse(storedGuest) as CartItem[];
+        mergeGuestCart(items).catch(err => console.error('Cart merge failed', err));
+        dispatch({ type: 'SET_ITEMS', payload: items });
+        safeStorage.removeItem(GUEST_CART_KEY);
       } catch {
         items = [];
       }
     }
-
-    // Merge guest cart when user logs in
-    if (user?.id) {
-      const guestStored = safeStorage.getItem(getCartKey());
-      if (guestStored) {
-        try {
-          const guestItems = JSON.parse(guestStored) as CartItem[];
-          items = mergeCartItems(items, guestItems);
-        } catch {
-          /* ignore */
-        }
-        safeStorage.removeItem(getCartKey());
-      }
-    }
-
-    dispatch({ type: 'SET_ITEMS', payload: items });
-  }, [cartKey]);
+  }, [user]);
 
   useEffect(() => {
-    safeStorage.setItem(cartKey, JSON.stringify(state.items));
-  }, [state.items, cartKey]);
+    if (!user) {
+      safeStorage.setItem(GUEST_CART_KEY, JSON.stringify(state.items));
+    }
+  }, [state.items, user]);
 
   const value: CartContextType = {
     items: state.items,

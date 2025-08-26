@@ -31,11 +31,12 @@ export default function WishlistPage() {
   const { items, dispatch } = useCart();
 
   const addToCart = (item: { id: string; title?: string; price?: number }) => {
-    const stored = safeStorage.getItem(getCartKey(user?.id));
-    const cart = stored ? JSON.parse(stored) : [];
-    cart.push({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });
-    safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
-    dispatch({ type: 'SET_ITEMS', payload: cart });
+    const stored = safeStorage.getItem('guestCart');
+    let cart = stored ? JSON.parse(stored) : [];
+    const existing = cart.find((c: any) => c.id === item.id);
+    if (existing) existing.quantity += 1;
+    else cart.push({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });
+    safeStorage.setItem('guestCart', JSON.stringify(cart));
   };
 
   const productMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {

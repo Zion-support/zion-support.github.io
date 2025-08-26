@@ -45,15 +45,14 @@ export default function EquipmentDetail() {
     
     // Simulate API call
     setTimeout(() => {
-      const stored = safeStorage.getItem(getCartKey(user?.id));
+      const stored = safeStorage.getItem('guestCart');
       let cart: { id: string; name: string; price: number; quantity: number }[] = [];
       if (stored) {
         try { cart = JSON.parse(stored); } catch { /* ignore */ }
       }
       const existing = cart.find(i => i.id === equipment.id);
       if (existing) existing.quantity += quantity; else cart.push({ id: equipment.id, name: equipment.name, price: equipment.price, quantity });
-      safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
-      dispatch({ type: 'SET_ITEMS', payload: cart });
+      safeStorage.setItem('guestCart', JSON.stringify(cart));
       setIsAdding(false);
       toast({
         title: "Added to cart",
