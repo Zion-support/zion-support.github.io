@@ -29,10 +29,14 @@ import {
   Phone,
   Mail,
   MapPin,
-  Globe as GlobeIcon
+  Globe as GlobeIcon,
+  Building
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { InnovativeServicesShowcase } from "@/components/InnovativeServicesShowcase";
+import { ComprehensivePricingComparison } from "@/components/ComprehensivePricingComparison";
+import { EmergingTechnologyShowcase } from "@/components/EmergingTechnologyShowcase";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -50,7 +54,10 @@ export default function ServicesPage() {
     { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
     { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
     { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
-    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' }
+    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' },
+    { id: 'emerging-technology', name: 'Emerging Technology', icon: Rocket, color: 'from-zion-purple to-zion-orange' },
+    { id: 'industry-solutions', name: 'Industry Solutions', icon: Building, color: 'from-zion-blue to-zion-green' },
+    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: Server, color: 'from-zion-cyan to-zion-blue' }
   ];
 
   const priceRanges = [
@@ -159,7 +166,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <motion.div 
                 className="text-center"
                 initial={{ opacity: 0, y: 20 }}
@@ -175,7 +182,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <div className="text-3xl font-bold text-zion-purple mb-2">10+</div>
+                <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length}</div>
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
               <motion.div 
@@ -186,6 +193,15 @@ export default function ServicesPage() {
               >
                 <div className="text-3xl font-bold text-zion-blue mb-2">99.9%</div>
                 <div className="text-zion-slate-light">Uptime Guarantee</div>
+              </motion.div>
+              <motion.div 
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
+                <div className="text-3xl font-bold text-zion-green mb-2">$2.5B+</div>
+                <div className="text-zion-slate-light">Total Market Value</div>
               </motion.div>
             </div>
           </motion.div>
@@ -394,6 +410,15 @@ export default function ServicesPage() {
           </AnimatePresence>
         </div>
       </section>
+
+      {/* Enhanced Innovative Services Showcase */}
+      <InnovativeServicesShowcase />
+
+      {/* Comprehensive Pricing Comparison */}
+      <ComprehensivePricingComparison />
+
+      {/* Emerging Technology Showcase */}
+      <EmergingTechnologyShowcase />
 
       {/* Specialized Services Section */}
       <section className="py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">

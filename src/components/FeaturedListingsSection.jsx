@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, Award } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Added missing import for Link
+
 const featuredListings = [
     {
         id: 1,
@@ -120,6 +122,19 @@ const featuredListings = [
 const categories = [
     "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
 ];
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeInOut"
+        }
+    }
+};
+
 export function FeaturedListingsSection() {
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [hoveredListing, setHoveredListing] = useState(null);
@@ -180,44 +195,45 @@ export function FeaturedListingsSection() {
         </motion.div>
         
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {filteredListings.map((listing) => (<motion.div key={listing.id} variants={itemVariants} onHoverStart={() => setHoveredListing(listing.id)} onHoverEnd={() => setHoveredListing(null)}>
+          {filteredListings.map((listing) => (
+            <motion.div 
+              key={listing.id} 
+              variants={itemVariants} 
+              onHoverStart={() => setHoveredListing(listing.id)} 
+              onHoverEnd={() => setHoveredListing(null)}
+            >
               <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
-                {/* Featured badge */}
-                {listing.featured && (<div className="absolute top-4 left-4 z-10">
-                    <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
-                      <Award className="w-3 h-3 inline mr-1"/>
+                {/* Project Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={listing.image} 
+                    alt={listing.title} 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  {listing.featured && (
+                    <div className="absolute top-4 right-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-xs font-semibold">
                       Featured
                     </div>
-                  </div>)}
-
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img src={listing.image} alt={listing.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"/>
-                  <div className="absolute top-4 right-4">
-                    <button className="p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-cyan transition-colors duration-300">
-                      <Heart className="w-4 h-4 text-white"/>
-                    </button>
-                  </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-zion-blue-dark/80 to-transparent"/>
                 </div>
-                
-                {/* Content */}
-                <div className="p-6 flex flex-col h-full">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
-                      {listing.category}
-                    </span>
+
+                {/* Project Content */}
+                <div className="p-6">
+                  {/* Category and Title */}
+                  <div className="mb-4">
+                    <span className="text-zion-cyan text-sm font-medium">{listing.category}</span>
+                    <h3 className="text-xl font-bold text-white mt-2 group-hover:text-zion-cyan transition-colors">
+                      {listing.title}
+                    </h3>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
-                    {listing.title}
-                  </h3>
-                  
-                  <p className="text-zion-slate-light text-sm mb-4 leading-relaxed flex-grow">
+
+                  {/* Description */}
+                  <p className="text-zion-slate-light text-sm leading-relaxed mb-4 line-clamp-2">
                     {listing.description}
                   </p>
-                  
-                  {/* Quick info */}
+
+                  {/* Project Details */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
                       <Clock className="w-3 h-3"/>
@@ -231,12 +247,16 @@ export function FeaturedListingsSection() {
                   
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {listing.tags.slice(0, 3).map((tag, index) => (<span key={index} className="px-2 py-1 rounded-md bg-zion-slate/30 text-zion-slate-light text-xs">
+                    {listing.tags.slice(0, 3).map((tag, index) => (
+                      <span key={index} className="px-2 py-1 rounded-md bg-zion-slate/30 text-zion-slate-light text-xs">
                         {tag}
-                      </span>))}
-                    {listing.tags.length > 3 && (<span className="text-zion-cyan/60 text-xs">
+                      </span>
+                    ))}
+                    {listing.tags.length > 3 && (
+                      <span className="text-zion-cyan/60 text-xs">
                         +{listing.tags.length - 3} more
-                      </span>)}
+                      </span>
+                    )}
                   </div>
                   
                   {/* Stats */}
@@ -271,33 +291,58 @@ export function FeaturedListingsSection() {
 
                   {/* Expanded details on hover */}
                   <AnimatePresence>
-                    {hoveredListing === listing.id && (<motion.div className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
+                    {hoveredListing === listing.id && (
+                      <motion.div 
+                        className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" 
+                        initial={{ opacity: 0, height: 0, y: 10 }} 
+                        animate={{ opacity: 1, height: "auto", y: 0 }} 
+                        exit={{ opacity: 0, height: 0, y: 10 }} 
+                        transition={{ duration: 0.3 }}
+                      >
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Highlights:</h4>
                         <div className="space-y-2 mb-4">
-                          {listing.highlights.map((highlight, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-xs" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }}>
+                          {listing.highlights.map((highlight, idx) => (
+                            <motion.div 
+                              key={idx} 
+                              className="flex items-center gap-2 text-zion-slate-light/80 text-xs" 
+                              initial={{ opacity: 0, x: -10 }} 
+                              animate={{ opacity: 1, x: 0 }} 
+                              transition={{ delay: idx * 0.1 }}
+                            >
                               <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                               <span>{highlight}</span>
-                            </motion.div>))}
+                            </motion.div>
+                          ))}
                         </div>
 
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
-                          {listing.technologies.slice(0, 4).map((tech, idx) => (<motion.span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: idx * 0.1 }}>
+                          {listing.technologies.slice(0, 4).map((tech, idx) => (
+                            <motion.span 
+                              key={idx} 
+                              className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" 
+                              initial={{ opacity: 0, scale: 0.8 }} 
+                              animate={{ opacity: 1, scale: 1 }} 
+                              transition={{ delay: idx * 0.1 }}
+                            >
                               {tech}
-                            </motion.span>))}
+                            </motion.span>
+                          ))}
                         </div>
-                      </motion.div>)}
+                      </motion.div>
+                    )}
                   </AnimatePresence>
                 </div>
               </div>
               
               <div className="px-6 pb-6">
-                <Link to={service.link} className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg">
+                <Link to={`/project/${listing.id}`} className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg">
                   Get Started
                 </Link>
               </div>
-            </div>))}
-        </></div>
+            </motion.div>
+          ))}
+        </motion.div>
         
         {/* Enhanced bottom CTA */}
         <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
@@ -313,8 +358,7 @@ export function FeaturedListingsSection() {
             </div>
           </div>
         </motion.div>
-      </div>);
-    section >
-    ;
-    ;
+      </div>
+    </section>
+  );
 }
