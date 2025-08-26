@@ -10,9 +10,9 @@
     "dev": "vite",
     "build": "NODE_ENV=production tsc && NODE_ENV=production vite build && node scripts/prerender.js",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "NODE_ENV=production vite preview",
-    "test": "vitest",
-    "test:watch": "vitest --watch",
+    "preview": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
     bplr8i-codex/fix-npm-ci-errors-and-missing-dependencies
