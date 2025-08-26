@@ -1,4 +1,5 @@
 [build]
+<<<<<<< HEAD
   # Use `npm ci` for deterministic installs
   # Generate Prisma client before building to ensure models are up to date
   command = "npm run build:netlify:prepare"
@@ -8,6 +9,10 @@
   publish = ".next"
   # Increase build timeout for 176+ pages
   command_timeout = "30m"
+=======
+  command = "chmod +x scripts/pre-build-check.sh && ./scripts/pre-build-check.sh && pnpm install --frozen-lockfile && pnpm run export"
+  publish = "out"
+>>>>>>> origin/cursor/website-audit-and-enhancement-33a4
 
 [build.environment]
   NODE_OPTIONS = "--max_old_space_size=4096"

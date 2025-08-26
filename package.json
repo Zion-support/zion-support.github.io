@@ -6,6 +6,7 @@
     "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.js"
   },
   "scripts": {
+<<<<<<< HEAD
     "dev": "vite",
     "build": "NODE_ENV=production tsc && NODE_ENV=production vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -27,6 +28,18 @@
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
+=======
+    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next dev",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
+    "start": "next start",
+    "export": "EXPORT_BUILD=true NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "prepare": "git config core.hooksPath .husky || true",
+    "fix:all": "npm run lint -- --fix || true",
+    "build:heal": "npm run build || (npm run fix:all && npm run build)",
+    "ci:heal": "npm run fix:all && (npm run type-check || true) && npm run build:heal"
+>>>>>>> origin/cursor/website-audit-and-enhancement-33a4
   },
   "dependencies": {
 <<<<<<< HEAD
