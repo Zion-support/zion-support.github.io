@@ -97,64 +97,14 @@ const navigationItems: NavigationItem[] = [
     badge: 'Popular',
     color: 'from-orange-500 to-red-500',
     children: [
-      { name: 'AI Legal Document Generator', href: '/ai-legal-document-generator', description: 'Professional legal document creation' },
-      { name: 'Quantum Financial Forecasting', href: '/quantum-financial-forecasting', description: 'Next-gen financial predictions' },
-      { name: 'AI Healthcare Diagnostic', href: '/ai-healthcare-diagnostic-assistant', description: 'AI-powered medical diagnosis' },
-      { name: 'Quantum Cybersecurity Suite', href: '/quantum-cybersecurity-suite', description: 'Quantum-resistant security' },
-      { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', description: 'Intelligent supply chain management' },
-      { name: 'Quantum Data Analytics', href: '/quantum-data-analytics-platform', description: 'Quantum-enhanced analytics' }
-    ]
-  },
-  {
-    name: 'Creative & Media',
-    href: '/creative-media',
-    icon: <Palette className="w-5 h-5" />,
-    description: 'AI-powered creative solutions',
-    color: 'from-indigo-500 to-purple-500',
-    children: [
-      { name: 'AI Content Generator Pro', href: '/ai-content-generator', description: 'Professional content creation' },
-      { name: 'AI Video Production', href: '/ai-video-production', description: 'Automated video creation' },
-      { name: 'AI Music Composer', href: '/ai-music-composer', description: 'AI-generated music' },
-      { name: 'AI Design Assistant', href: '/ai-design-assistant', description: 'Intelligent design tools' }
-    ]
-  },
-  {
-    name: 'Healthcare & Biotech',
-    href: '/healthcare-biotech',
-    icon: <Heart className="w-5 h-5" />,
-    description: 'Advanced healthcare solutions',
-    color: 'from-red-500 to-pink-500',
-    children: [
-      { name: 'AI Healthcare Diagnostic', href: '/ai-healthcare-diagnostic-assistant', description: 'AI-powered medical diagnosis' },
-      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform', description: 'Quantum-biological processing' },
-      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform', description: 'Neural interface technology' },
-      { name: 'AI Drug Discovery', href: '/ai-drug-discovery', description: 'Accelerated drug development' }
-    ]
-  },
-  {
-    name: 'Transportation & Logistics',
-    href: '/transportation-logistics',
-    icon: <Truck className="w-5 h-5" />,
-    description: 'Smart transportation solutions',
-    color: 'from-blue-500 to-cyan-500',
-    children: [
-      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform', description: 'Self-driving AI systems' },
-      { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', description: 'Intelligent supply chain management' },
-      { name: 'Smart Fleet Management', href: '/smart-fleet-management', description: 'AI-powered fleet optimization' },
-      { name: 'Logistics AI Platform', href: '/logistics-ai-platform', description: 'Intelligent logistics management' }
-    ]
-  },
-  {
-    name: 'Education & Research',
-    href: '/education-research',
-    icon: <GraduationCap className="w-5 h-5" />,
-    description: 'Learning and research platforms',
-    color: 'from-yellow-500 to-orange-500',
-    children: [
-      { name: 'AI Learning Platform', href: '/ai-learning-platform', description: 'Personalized AI education' },
-      { name: 'Research AI Assistant', href: '/research-ai-assistant', description: 'AI-powered research tools' },
-      { name: 'Virtual Lab Platform', href: '/virtual-lab-platform', description: 'Digital research environment' },
-      { name: 'Knowledge Management AI', href: '/knowledge-management-ai', description: 'Intelligent knowledge systems' }
+      { name: 'Blog', href: '/blog', description: 'Insights and updates' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Proven results' },
+      { name: 'Resources Hub', href: '/resources', description: 'Docs, SDKs, guides' },
+      { name: 'Events', href: '/events', description: 'Conferences and meetups' },
+      { name: 'Webinars', href: '/webinars', description: 'Live and on-demand sessions' },
+      { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' },
+      { name: 'Serverless Lakehouse Starter', href: '/services/serverless-lakehouse-starter', description: 'ELT + dbt + dashboards' },
+      { name: 'Data Contracts Hub', href: '/services/data-contracts-hub', description: 'Schema diffs & CI gates' }
     ]
   }
 ];

@@ -3,11 +3,13 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
-  Phone, Mail, MapPin, ChevronRight, ChevronDown, 
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
-  Award, Clock, Heart, Lightbulb, Users, FileText, 
-  HelpCircle, BookOpen, Target, TrendingUp, Star
+  X, ChevronRight, Home, Star, Users, 
+  Settings, HelpCircle, Mail, Phone, MapPin,
+  Brain, Atom, Shield, Rocket, DollarSign,
+  Globe, Cpu, Database, Lock, Zap,
+  TrendingUp, Award, CheckCircle, Clock,
+  ArrowRight, Search, Menu, X as CloseIcon,
+  Target, BookOpen, Calendar, Video
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -201,46 +203,140 @@ const sidebarSections = [
     icon: Users,
     color: 'from-green-500 to-emerald-600',
     items: [
-      {
-        name: 'About Us',
-        href: '/about',
-        icon: Users,
-        description: 'Learn about Zion Tech Group',
-        subItems: [
-          { name: 'Our Mission', href: '/mission' },
-          { name: 'Leadership Team', href: '/leadership' },
-          { name: 'Company History', href: '/history' },
-          { name: 'Careers', href: '/careers' }
-        ]
-      },
-      {
-        name: 'Resources',
-        href: '/resources',
-        icon: BookOpen,
-        description: 'Educational content and documentation',
-        subItems: [
-          { name: 'Documentation', href: '/docs' },
-          { name: 'API Reference', href: '/api-docs' },
-          { name: 'Blog & News', href: '/blog' },
-          { name: 'Case Studies', href: '/case-studies' },
-          { name: 'Whitepapers', href: '/whitepapers' },
-          { name: 'Webinars', href: '/webinars' }
-        ]
-      },
-      {
-        name: 'Support',
-        href: '/support',
-        icon: HelpCircle,
-        description: 'Get help and support',
-        subItems: [
-          { name: 'Contact Support', href: '/contact-support' },
-          { name: 'Training Programs', href: '/training' },
-          { name: 'Community Forum', href: '/community' },
-          { name: 'Knowledge Base', href: '/knowledge-base' }
-        ]
-      }
+      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', badge: 'New' },
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center', badge: 'New' },
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-platform', badge: 'New' },
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', badge: 'New' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform', badge: 'New' },
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform' },
+      { name: 'Zero Trust Security', href: '/zero-trust-security-platform' },
+      { name: 'Browser Automation Cloud', href: '/browser-automation-cloud/' },
+      { name: 'Secrets Rotation Automation', href: '/secrets-rotation-automation/' },
+      { name: 'Quantum Networking', href: '/quantum-services' },
+      { name: 'Quantum Data Center', href: '/quantum-services' },
+      { name: 'Quantum Cloud Migration', href: '/quantum-cloud-infrastructure' }
+    ]
+  },
+  {
+    title: 'Micro SAAS',
+    icon: <Rocket className="w-5 h-5" />,
+    color: 'text-emerald-400',
+    items: [
+      { name: 'AI Customer Success', href: '/ai-customer-success-platform', badge: 'New' },
+      { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', badge: 'New' },
+      { name: 'Financial Planning AI', href: '/ai-financial-planning-platform', badge: 'New' },
+      { name: 'HR Analytics Platform', href: '/ai-hr-analytics-platform', badge: 'New' },
+      { name: 'Sales Intelligence AI', href: '/ai-sales-intelligence-platform', badge: 'New' },
+      { name: 'AI Decision Engine', href: '/ai-powered-decision-engine' },
+      { name: 'Content Automation', href: '/intelligent-content-automation-platform' },
+      { name: 'Smart CRM Suite', href: '/smart-crm-intelligence-suite' },
+      { name: 'Financial Analytics', href: '/automated-financial-analytics-platform' },
+      { name: 'Project Management', href: '/intelligent-project-management-suite' },
+      { name: 'Business Intelligence', href: '/ai-business-intelligence-suite' },
+      { name: 'Marketing Automation', href: '/ai-autonomous-marketing-platform' },
+      { name: 'Customer Service AI', href: '/ai-customer-service' },
+      { name: 'HR & Recruitment', href: '/ai-hr-recruitment' },
+      { name: 'Legal Contract Analysis', href: '/ai-legal-contract-analyzer' }
+    ]
+  },
+  {
+    title: 'Solutions',
+    icon: <Target className="w-5 h-5" />,
+    color: 'text-orange-400',
+    items: [
+      { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
+      { name: 'Financial Services', href: '/financial-solutions' },
+      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' },
+      { name: 'Retail Technology', href: '/retail-technology-solutions' },
+      { name: 'Education Technology', href: '/education-technology-solutions' },
+      { name: 'Government Solutions', href: '/government-technology-solutions' },
+      { name: 'Energy & Utilities', href: '/energy-utilities-solutions' },
+      { name: 'Transportation & Logistics', href: '/transportation-logistics-solutions' },
+      { name: 'Real Estate Technology', href: '/real-estate-technology-solutions' },
+      { name: 'Entertainment & Media', href: '/entertainment-media-solutions' },
+      { name: 'Space Technology', href: '/space-technology' },
+      { name: 'Biotech & Healthcare', href: '/biotech-ai-research-platform' }
+    ]
+  },
+  {
+    title: 'Resources',
+    icon: <BookOpen className="w-5 h-5" />,
+    color: 'text-cyan-400',
+    items: [
+      { name: 'Documentation', href: '/docs' },
+      { name: 'API Reference', href: '/api-documentation' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Blog & News', href: '/blog' },
+      { name: 'Events', href: '/events' },
+      { name: 'Webinars', href: '/webinars' },
+      { name: 'Support Center', href: '/support' },
+      { name: 'Training & Certification', href: '/training' },
+      { name: 'Community Forum', href: '/community' },
+      { name: 'Developer Resources', href: '/developer-resources' },
+      { name: 'Research & Development', href: '/research-development' },
+      { name: 'White Papers', href: '/white-papers' },
+      { name: 'Performance Reports', href: '/reports' },
+      { name: 'Market Analysis', href: '/market-pricing' },
+      { name: 'Services Advertising', href: '/services-advertising' }
+    ]
+  },
+  {
+    title: 'Company',
+    icon: <Users className="w-5 h-5" />,
+    color: 'text-pink-400',
+    items: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Leadership Team', href: '/leadership' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'News & Press', href: '/news' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Investors', href: '/investors' },
+      { name: 'Contact Us', href: '/contact' },
+      { name: 'Locations', href: '/locations' },
+      { name: 'Sustainability', href: '/sustainability' },
+      { name: 'Diversity & Inclusion', href: '/diversity-inclusion' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Privacy Policy', href: '/privacy' }
     ]
   }
+];
+
+const quickLinks = [
+  { name: 'Home', href: '/', icon: <Home className="w-4 h-4" /> },
+  { name: 'All Services', href: '/comprehensive-services-showcase-2025', icon: <Star className="w-4 h-4" /> },
+  { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
+  { name: 'Market Pricing', href: '/market-pricing', icon: <DollarSign className="w-4 h-4" /> },
+  { name: 'Services Advertising', href: '/services-advertising', icon: <BookOpen className="w-4 h-4" /> },
+  { name: 'Events', href: '/events', icon: <Calendar className="w-4 h-4" /> },
+  { name: 'Webinars', href: '/webinars', icon: <Video className="w-4 h-4" /> },
+  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
+  { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> },
+  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
+];
+
+const companyLinks = [
+  { name: 'About Us', href: '/about', description: 'Our mission and vision' },
+  { name: 'Careers', href: '/careers', description: 'Join our team' },
+  { name: 'News & Updates', href: '/news', description: 'Latest company news' },
+  { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+  { name: 'Resources', href: '/resources', description: 'Whitepapers and guides' },
+  { name: 'Blog', href: '/blog', description: 'Industry insights' }
+];
+
+const supportLinks = [
+  { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
+  { name: 'Documentation', href: '/docs', description: 'Technical guides' },
+  { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' },
+  { name: 'Status Page', href: '/status-pages-slo', description: 'Service status' },
+  { name: 'Training', href: '/training', description: 'Learn our platforms' },
+  { name: 'Community', href: '/community', description: 'Connect with users' }
+];
+
+const stats = [
+  { label: 'Services Delivered', value: '500+', icon: <CheckCircle className="w-5 h-5" /> },
+  { label: 'Happy Clients', value: '200+', icon: <Users className="w-5 h-5" /> },
+  { label: 'Years Experience', value: '15+', icon: <Clock className="w-5 h-5" /> },
+  { label: 'Awards Won', value: '25+', icon: <Award className="w-5 h-5" /> }
 ];
 
 interface EnhancedSidebar2025Props {
