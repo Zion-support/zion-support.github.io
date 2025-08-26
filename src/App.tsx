@@ -4,6 +4,7 @@ import { FuturisticNavigation } from './components/FuturisticNavigation';
 import { FuturisticFooter } from './components/FuturisticFooter';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { ChatAssistant } from './components/ChatAssistant';
+import Sidebar from './components/Sidebar';
 
 
 // Lazy load pages - only import existing ones
@@ -21,6 +22,9 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
+const Help = React.lazy(() => import('./pages/Help'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Security = React.lazy(() => import('./pages/Security'));
 
 // New service pages
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
@@ -57,7 +61,10 @@ function App() {
         {/* Navigation */}
         <FuturisticNavigation />
         
-        <main className="flex-1 relative z-10">
+        {/* Sidebar and Main Content */}
+        <div className="flex">
+          <Sidebar />
+          <main className="flex-1 relative z-10">
           <Suspense fallback={<EnhancedLoadingSpinner />}>
             <Routes>
               {/* Main Routes */}
@@ -75,6 +82,9 @@ function App() {
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/enhanced-services" element={<EnhancedServices />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/status" element={<Status />} />
+              <Route path="/security" element={<Security />} />
               
               {/* AI Services Routes */}
               <Route path="/ai-services" element={<AIServicesPage />} />
@@ -103,7 +113,8 @@ function App() {
               <Route path="/marketplace/:service" element={<GreenIT />} />
             </Routes>
           </Suspense>
-        </main>
+          </main>
+        </div>
         
         {/* Footer */}
         <FuturisticFooter />
