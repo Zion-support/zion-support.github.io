@@ -4,33 +4,18 @@ import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
 import { Logo } from '@/components/header/Logo';
 import { ModeToggle } from '@/components/ModeToggle';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Menu, X, PanelLeft } from 'lucide-react';
-=======
-import Menu from 'lucide-react/dist/esm/icons/menu';
-import X from 'lucide-react/dist/esm/icons/x';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
+import { Menu, X, Search, User, Bell, PanelLeft } from 'lucide-react';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 import { Sidebar } from '@/components/Sidebar';
-
-export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-=======
-import { Menu, X, Search, User, Bell } from 'lucide-react';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 import { useAuth } from '@/hooks/useAuth';
 import { Link } from 'react-router-dom';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
->>>>>>> origin/cursor/website-audit-and-enhancement-24ce
   const isMobile = useIsMobile();
   const { user, logout } = useAuth();
   
@@ -196,9 +181,6 @@ export function AppHeader() {
             aria-hidden="true"
           />
           <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-<<<<<<< HEAD
-            <MobileMenu />
-=======
             {/* Mobile Search */}
             <div className="p-4 border-b border-zion-purple/20">
               <form onSubmit={handleSearch} className="relative">
@@ -222,7 +204,6 @@ export function AppHeader() {
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)} 
             />
->>>>>>> origin/cursor/website-audit-and-enhancement-24ce
           </div>
         </div>
       )}
