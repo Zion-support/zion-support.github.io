@@ -1,243 +1,40 @@
 import React, { useState } from 'react';
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/enhancedServices';
-import { ProductListing } from '@/types/listings';
+import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO } from '@/data/enhancedServices';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import EnhancedServicesOverview from '@/components/EnhancedServicesOverview';
 import { 
   Search, 
   Filter, 
   Star, 
   Clock, 
   Globe, 
-  Shield, 
-  TrendingUp, 
-  Zap,
-  Mail,
-  Phone,
-  MapPin,
+  Phone, 
+  Mail, 
+  MapPin, 
   ExternalLink,
-  CheckCircle,
-  DollarSign,
-  Users,
-
-  BarChart3,
+  TrendingUp,
+  Shield,
+  Cloud,
   Brain,
-  Lock,
   Database,
-  Briefcase,
-  ShoppingCart,
-  GraduationCap,
-  Truck,
-  Home,
+  Code,
+  Zap,
   Heart,
-  BookOpen,
-  Eye
+  DollarSign,
+  Link,
+  Users,
+  CheckCircle
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
-interface ServiceCardProps {
-  service: ProductListing;
-  onContact: (service: ProductListing) => void;
-}
-
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, onContact }) => {
-  const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-      'AI Automation': <Brain className="w-5 h-5" />,
-      'Content AI': <BookOpen className="w-5 h-5" />,
-      'Customer Analytics': <BarChart3 className="w-5 h-5" />,
-      'Cybersecurity': <Shield className="w-5 h-5" />,
-      'Compliance': <Lock className="w-5 h-5" />,
-      'Data Engineering': <Database className="w-5 h-5" />,
-      'IoT Analytics': <Database className="w-5 h-5" />,
-      'Business Automation': <Briefcase className="w-5 h-5" />,
-      'HR Tech': <Users className="w-5 h-5" />,
-      'Marketing AI': <TrendingUp className="w-5 h-5" />,
-      'Sales Intelligence': <TrendingUp className="w-5 h-5" />,
-      'FinTech': <DollarSign className="w-5 h-5" />,
-      'Fraud Prevention': <Eye className="w-5 h-5" />,
-      'Healthcare Tech': <Heart className="w-5 h-5" />,
-      'Life Sciences': <Zap className="w-5 h-5" />,
-      'EdTech': <GraduationCap className="w-5 h-5" />,
-      'Skills Assessment': <CheckCircle className="w-5 h-5" />,
-      'Supply Chain': <Truck className="w-5 h-5" />,
-      'Logistics': <Truck className="w-5 h-5" />,
-      'Real Estate Tech': <Home className="w-5 h-5" />,
-      'Property Management': <Home className="w-5 h-5" />,
-      'Legal Tech': <Lock className="w-5 h-5" />,
-      'IP Management': <Lock className="w-5 h-5" />,
-    };
-    return iconMap[category] || <Briefcase className="w-5 h-5" />;
-  };
-
-  const getPricingTier = (price: number) => {
-    if (price <= 299) return { tier: 'Startup', color: 'bg-green-100 text-green-800' };
-    if (price <= 799) return { tier: 'Small Business', color: 'bg-blue-100 text-blue-800' };
-    if (price <= 1999) return { tier: 'Enterprise', color: 'bg-purple-100 text-purple-800' };
-    return { tier: 'Custom', color: 'bg-orange-100 text-orange-800' };
-  };
-
-  const pricingTier = getPricingTier(service.price || 0);
-
-  return (
-    <Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light bg-zion-blue-dark">
-      <CardHeader className="pb-3">
-        <div className="flex items-start justify-between mb-2">
-          <div className="flex items-center space-x-2">
-            <div className="p-2 bg-zion-purple/20 rounded-lg">
-              {getCategoryIcon(service.category)}
-            </div>
-            <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
-              {service.category}
-            </Badge>
-          </div>
-          {service.featured && (
-            <Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
-              Featured
-            </Badge>
-          )}
-        </div>
-        <CardTitle className="text-white text-lg leading-tight">{service.title}</CardTitle>
-        <CardDescription className="text-zion-slate-light text-sm leading-relaxed">
-          {service.description}
-        </CardDescription>
-      </CardHeader>
-      
-      <CardContent className="pt-0">
-        <div className="space-y-4">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2">
-            {service.tags.slice(0, 3).map((tag) => (
-              <Badge key={tag} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
-                {tag}
-              </Badge>
-            ))}
-          </div>
-
-          {/* Metrics */}
-          <div className="flex items-center justify-between text-sm text-zion-slate-light">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-1">
-                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                <span>{service.rating}</span>
-                <span className="text-zion-slate">({service.reviewCount})</span>
-              </div>
-              <div className="flex items-center space-x-1">
-                <Brain className="w-4 h-4 text-zion-cyan" />
-                <span>AI Score: {service.aiScore}%</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-1">
-              <Clock className="w-4 h-4" />
-              <span>{service.availability}</span>
-            </div>
-          </div>
-
-          {/* Pricing */}
-          <div className="flex items-center justify-between">
-            <div className="space-y-1">
-              <div className="text-2xl font-bold text-white">
-                ${service.price?.toLocaleString()}
-                <span className="text-sm text-zion-slate-light font-normal">/month</span>
-              </div>
-              <Badge className={pricingTier.color}>
-                {pricingTier.tier}
-              </Badge>
-            </div>
-            <Button 
-              onClick={() => onContact(service)}
-              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-            >
-              Get Started
-            </Button>
-          </div>
-
-          {/* Location */}
-          <div className="flex items-center space-x-2 text-sm text-zion-slate-light">
-            <Globe className="w-4 h-4" />
-            <span>{service.location}</span>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
-
-const ContactModal: React.FC<{ service: ProductListing | null; onClose: () => void }> = ({ service, onClose }) => {
-  if (!service) return null;
-
-  return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg max-w-md w-full p-6 space-y-4">
-        <div className="text-center">
-          <h3 className="text-xl font-bold text-gray-900">Contact Zion Tech Group</h3>
-          <p className="text-gray-600 mt-2">Get started with {service.title}</p>
-        </div>
-        
-        <div className="space-y-3">
-          <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-            <Mail className="w-5 h-5 text-zion-purple" />
-            <div>
-              <p className="font-medium">Email</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-zion-purple hover:underline">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-          </div>
-          
-          <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-            <Phone className="w-5 h-5 text-zion-purple" />
-            <div>
-              <p className="font-medium">Phone</p>
-              <a href="tel:+13024640950" className="text-zion-purple hover:underline">
-                +1 302 464 0950
-              </a>
-            </div>
-          </div>
-          
-          <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-            <MapPin className="w-5 h-5 text-zion-purple" />
-            <div>
-              <p className="font-medium">Address</p>
-              <p className="text-sm text-gray-600">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex space-x-3">
-          <Button 
-            onClick={onClose}
-            variant="outline" 
-            className="flex-1"
-          >
-            Close
-          </Button>
-          <Button 
-            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
-            className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
-          >
-            Visit Website
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export default function EnhancedServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPricingTier, setSelectedPricingTier] = useState('all');
-  const [contactService, setContactService] = useState<ProductListing | null>(null);
-  const [activeTab, setActiveTab] = useState('overview');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
 
   const filteredServices = ENHANCED_SERVICES.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -247,353 +44,428 @@ export default function EnhancedServicesPage() {
     const matchesCategory = selectedCategory === 'all' || 
                            service.category.toLowerCase().includes(selectedCategory.toLowerCase());
     
-    const matchesPricing = selectedPricingTier === 'all' || 
-                           (selectedPricingTier === 'startup' && (service.price || 0) <= 299) ||
-                           (selectedPricingTier === 'smb' && (service.price || 0) > 299 && (service.price || 0) <= 799) ||
-                           (selectedPricingTier === 'enterprise' && (service.price || 0) > 799 && (service.price || 0) <= 1999) ||
-                           (selectedPricingTier === 'custom' && (service.price || 0) > 1999);
-
-    return matchesSearch && matchesCategory && matchesPricing;
+    const matchesPrice = selectedPriceRange === 'all' || 
+                        (selectedPriceRange === 'basic' && service.price <= 2000) ||
+                        (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||
+                        (selectedPriceRange === 'enterprise' && service.price > 8000);
+    
+    return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const handleContact = (service: ProductListing) => {
-    setContactService(service);
+  const getCategoryIcon = (category: string) => {
+    switch (category.toLowerCase()) {
+      case 'ai automation':
+      case 'ai & machine learning':
+        return <Brain className="w-5 h-5" />;
+      case 'cloud management':
+      case 'cloud & infrastructure':
+        return <Cloud className="w-5 h-5" />;
+      case 'cybersecurity':
+      case 'security framework':
+        return <Shield className="w-5 h-5" />;
+      case 'data engineering':
+      case 'data & analytics':
+        return <Database className="w-5 h-5" />;
+      case 'business intelligence':
+        return <TrendingUp className="w-5 h-5" />;
+      case 'developer tools':
+      case 'development & devops':
+        return <Code className="w-5 h-5" />;
+      case 'digital transformation':
+        return <Zap className="w-5 h-5" />;
+      case 'healthcare technology':
+        return <Heart className="w-5 h-5" />;
+      case 'financial technology':
+        return <DollarSign className="w-5 h-5" />;
+      case 'blockchain':
+        return <Link className="w-5 h-5" />;
+      case 'quantum computing':
+        return <Zap className="w-5 h-5" />;
+      default:
+        return <Code className="w-5 h-5" />;
+    }
+  };
+
+  const getPriceRange = (price: number) => {
+    if (price <= 2000) return 'basic';
+    if (price <= 8000) return 'professional';
+    return 'enterprise';
   };
 
   return (
-    <div className="min-h-screen bg-zion-blue">
+    <div className="min-h-screen bg-background">
       <SEO 
-        title="Enhanced Micro SAAS Services - Zion Tech Group" 
-        description="Discover our comprehensive suite of innovative micro SAAS services, AI solutions, and IT services. Transform your business with cutting-edge technology."
-        keywords="micro SAAS, AI services, IT solutions, business automation, cybersecurity, data analytics"
+        title="Enhanced IT & AI Services - Zion Tech Group" 
+        description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness."
+        keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group"
         canonical="https://ziontechgroup.com/enhanced-services"
       />
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Enhanced Micro SAAS Services
+      <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Enhanced IT & AI Services
           </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transform your business with our comprehensive suite of innovative micro SAAS solutions, 
-            AI-powered services, and cutting-edge IT solutions. From startups to enterprises, 
-            we have the tools you need to succeed.
+          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
+            Comprehensive micro SAAS solutions, IT services, and AI-powered innovations to transform your business
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
-              size="lg"
-              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-              onClick={() => handleContact(ENHANCED_SERVICES[0])}
+              size="lg" 
+              className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
+              onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Get Started Today
+              Explore Services
             </Button>
             <Button 
-              size="lg"
-              variant="outline"
-              className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
-              onClick={() => window.open('https://ziontechgroup.com', '_blank')}
+              size="lg" 
+              variant="outline" 
+              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+              onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Visit Our Website
+              Get in Touch
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Contact Info Banner */}
-      <div className="bg-zion-blue-light border-b border-zion-blue-light py-4">
+      {/* Pricing Tiers Overview */}
+      <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-center gap-6 text-zion-cyan text-sm">
-            <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4" />
-              <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4" />
-              <a href="tel:+13024640950" className="hover:underline">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span>Middletown DE 19709</span>
-            </div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Service Pricing Tiers
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {Object.entries(SERVICE_PRICING_TIERS).map(([tier, info]) => (
+              <Card key={tier} className="bg-zion-blue border-zion-blue-light">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-zion-cyan capitalize">{tier}</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    {info.range}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-white">{info.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Filters and Search */}
-      <div className="bg-zion-blue-dark py-6 px-4 border-b border-zion-blue-light">
-        <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row gap-4">
-            <div className="flex-1">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
-                <Input
-                  placeholder="Search services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light"
-                />
-              </div>
+      {/* Search and Filters */}
+      <section className="py-8 bg-zion-blue">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <Input
+                placeholder="Search services, technologies, or keywords..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light"
+              />
             </div>
-            
-            <div className="flex gap-3">
-              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                <SelectTrigger className="w-40 bg-zion-blue border-zion-blue-light text-white">
-                  <SelectValue placeholder="Category" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Categories</SelectItem>
-                  {ENHANCED_SERVICE_CATEGORIES.map((category) => (
-                    <SelectItem key={category.value} value={category.value}>
-                      {category.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-
-              <Select value={selectedPricingTier} onValueChange={setSelectedPricingTier}>
-                <SelectTrigger className="w-40 bg-zion-blue border-zion-blue-light text-white">
-                  <SelectValue placeholder="Pricing Tier" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Tiers</SelectItem>
-                  {Object.entries(PRICING_TIERS).map(([key, tier]) => (
-                    <SelectItem key={key} value={key}>
-                      {tier.label} (${tier.min}-${tier.max})
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Content with Tabs */}
-      <div className="py-12 px-4">
-        <div className="container mx-auto">
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8">
-            <TabsList className="grid w-full grid-cols-5 bg-zion-blue-dark border border-zion-blue-light">
-              <TabsTrigger value="overview" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                Overview
-              </TabsTrigger>
-              <TabsTrigger value="services" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                All Services
-              </TabsTrigger>
-              <TabsTrigger value="pricing" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                Pricing Tiers
-              </TabsTrigger>
-              <TabsTrigger value="comparison" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                Service Comparison
-              </TabsTrigger>
-              <TabsTrigger value="contact" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
-                Contact Us
-              </TabsTrigger>
-            </TabsList>
-
-            {/* Overview Tab */}
-            <TabsContent value="overview" className="space-y-8">
-              <EnhancedServicesOverview />
-            </TabsContent>
-
-            {/* Services Tab */}
-            <TabsContent value="services" className="space-y-8">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-white mb-4">
-                  {filteredServices.length} Services Available
-                </h2>
-                <p className="text-zion-slate-light">
-                  Find the perfect solution for your business needs
-                </p>
-              </div>
-
-              {filteredServices.length === 0 ? (
-                <div className="text-center py-12">
-                  <p className="text-zion-slate-light text-lg">No services match your current filters.</p>
-                  <Button 
-                    variant="outline" 
-                    onClick={() => {
-                      setSearchTerm('');
-                      setSelectedCategory('all');
-                      setSelectedPricingTier('all');
-                    }}
-                    className="mt-4 border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
-                  >
-                    Clear Filters
-                  </Button>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {filteredServices.map((service) => (
-                    <ServiceCard 
-                      key={service.id} 
-                      service={service} 
-                      onContact={handleContact}
-                    />
-                  ))}
-                </div>
-              )}
-            </TabsContent>
-
-            {/* Pricing Tiers Tab */}
-            <TabsContent value="pricing" className="space-y-8">
-              <div className="text-center">
-                <h2 className="text-3xl font-bold text-white mb-4">Pricing Tiers</h2>
-                <p className="text-zion-slate-light max-w-3xl mx-auto">
-                  Choose the pricing tier that best fits your business size and requirements. 
-                  All tiers include our core features and support.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {Object.entries(PRICING_TIERS).map(([key, tier]) => (
-                  <div key={key} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center">
-                    <h3 className="text-xl font-bold text-white mb-2">{tier.label}</h3>
-                    <p className="text-zion-slate-light mb-4">
-                      ${tier.min.toLocaleString()} - ${tier.max.toLocaleString()}/month
-                    </p>
-                    <div className="text-3xl font-bold text-zion-cyan mb-4">
-                      {ENHANCED_SERVICES.filter(service => 
-                        (service.price || 0) >= tier.min && (service.price || 0) <= tier.max
-                      ).length}
-                    </div>
-                    <div className="text-zion-slate-light mb-6">Services Available</div>
-                    <Button 
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                      onClick={() => window.open('https://ziontechgroup.com', '_blank')}
-                    >
-                      Explore {tier.label} Services
-                    </Button>
-                  </div>
+            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+              <SelectTrigger className="w-full md:w-48 bg-zion-blue-dark border-zion-blue-light text-white">
+                <SelectValue placeholder="All Categories" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Categories</SelectItem>
+                {ENHANCED_SERVICE_CATEGORIES.map(category => (
+                  <SelectItem key={category.value} value={category.value}>
+                    {category.label}
+                  </SelectItem>
                 ))}
-              </div>
-            </TabsContent>
+              </SelectContent>
+            </Select>
+            <Select value={selectedPriceRange} onValueChange={setSelectedPriceRange}>
+              <SelectTrigger className="w-full md:w-48 bg-zion-blue-dark border-zion-blue-light text-white">
+                <SelectValue placeholder="All Prices" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Prices</SelectItem>
+                <SelectItem value="basic">Basic ($500 - $2,000)</SelectItem>
+                <SelectItem value="professional">Professional ($2,000 - $8,000)</SelectItem>
+                <SelectItem value="enterprise">Enterprise ($8,000+)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+      </section>
 
-            {/* Service Comparison Tab */}
-            <TabsContent value="comparison" className="space-y-12">
-              <div className="text-center">
-                <h2 className="text-3xl font-bold text-white mb-4">Detailed Service Comparison</h2>
-                <p className="text-zion-slate-light max-w-3xl mx-auto">
-                  Compare features, capabilities, and pricing across our service categories to make an informed decision.
-                </p>
-              </div>
+      {/* Services Grid */}
+      <section id="services-grid" className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-zion-blue mb-4">
+              {filteredServices.length} Services Available
+            </h2>
+            <p className="text-zion-slate text-lg">
+              Find the perfect solution for your business needs
+            </p>
+          </div>
 
-              {ENHANCED_SERVICE_CATEGORIES.map((category) => {
-                const categoryServices = ENHANCED_SERVICES.filter(service => 
-                  service.category.toLowerCase().includes(category.value.toLowerCase())
-                );
-                
-                if (categoryServices.length === 0) return null;
-
-                return (
-                  <div key={category.value} className="space-y-6">
-                    <div className="text-center mb-8">
-                      <h3 className="text-2xl font-bold text-white mb-2">{category.label} Services Comparison</h3>
-                      <p className="text-zion-slate-light">Compare features, pricing, and capabilities</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <Card key={service.id} className="h-full hover:shadow-xl transition-shadow duration-300">
+                <CardHeader>
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      {getCategoryIcon(service.category)}
+                      <Badge variant={getPriceRange(service.price) === 'enterprise' ? 'default' : 'secondary'}>
+                        {getPriceRange(service.price)}
+                      </Badge>
                     </div>
+                    {service.featured && (
+                      <Badge variant="default" className="bg-zion-purple">
+                        Featured
+                      </Badge>
+                    )}
+                  </div>
+                  <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                  <CardDescription className="text-sm text-zion-slate">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                      <span className="text-sm font-medium">{service.rating}</span>
+                      <span className="text-sm text-zion-slate">({service.reviewCount} reviews)</span>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-zion-blue">
+                        {service.currency}{service.price?.toLocaleString()}
+                      </div>
+                      <div className="text-sm text-zion-slate">
+                        {service.availability}
+                      </div>
+                    </div>
+                  </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {categoryServices.map((service) => (
-                        <div key={service.id} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center">
-                          <h4 className="text-lg font-semibold text-white mb-2">{service.title}</h4>
-                          <div className="text-3xl font-bold text-zion-cyan mb-2">
-                            ${service.price?.toLocaleString()}/month
+                  <div className="flex flex-wrap gap-2">
+                    {service.tags.slice(0, 3).map((tag, index) => (
+                      <Badge key={index} variant="outline" className="text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between text-sm text-zion-slate">
+                    <div className="flex items-center gap-1">
+                      <Globe className="w-4 h-4" />
+                      {service.location}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <TrendingUp className="w-4 h-4" />
+                      AI Score: {service.aiScore}
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-zion-slate-light">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-zion-slate">By {service.author.name}</span>
+                      <Button 
+                        size="sm" 
+                        className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+                        onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
+                      >
+                        Get Quote
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories Tabs */}
+      <section className="py-16 bg-zion-blue">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Explore by Category
+          </h2>
+          <Tabs defaultValue="ai-ml" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-zion-blue-dark">
+              {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (
+                <TabsTrigger 
+                  key={category.value} 
+                  value={category.value}
+                  className="text-zion-slate-light data-[state=active]:text-zion-cyan"
+                >
+                  {category.label}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            
+            {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (
+              <TabsContent key={category.value} value={category.value} className="mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {ENHANCED_SERVICES
+                    .filter(service => service.category.toLowerCase().includes(category.value.toLowerCase()))
+                    .slice(0, 6)
+                    .map(service => (
+                      <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white">
+                        <CardHeader>
+                          <CardTitle className="text-lg">{service.title}</CardTitle>
+                          <CardDescription className="text-zion-slate-light">
+                            {service.description.substring(0, 100)}...
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <div className="flex items-center justify-between">
+                            <span className="text-zion-cyan font-bold">
+                              {service.currency}{service.price?.toLocaleString()}
+                            </span>
+                            <Button 
+                              size="sm" 
+                              variant="outline" 
+                              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+                            >
+                              Learn More
+                            </Button>
                           </div>
-                          <Badge className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30 mb-3">
-                            {service.category}
-                          </Badge>
-                          <div className="flex items-center justify-center space-x-1 text-sm text-zion-slate-light mb-3">
-                            <span className="w-2 h-2 bg-zion-cyan rounded-full"></span>
-                            <span>AI Score: {service.aiScore}%</span>
-                          </div>
-                          <Button 
-                            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
-                          >
-                            Get Started
-                          </Button>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-            </TabsContent>
-
-            {/* Contact Tab */}
-            <TabsContent value="contact" className="space-y-8">
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 text-center">
-                <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-                <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                  Contact our team to discuss your specific needs and find the perfect solution for your business. 
-                  We offer personalized consultations and custom implementations.
-                </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                  <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue rounded-lg">
-                    <Mail className="w-6 h-6 text-zion-cyan" />
-                    <div className="text-left">
-                      <p className="font-medium text-white">Email</p>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline text-sm">
-                        kleber@ziontechgroup.com
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue rounded-lg">
-                    <Phone className="w-6 h-6 text-zion-cyan" />
-                    <div className="text-left">
-                      <p className="font-medium text-white">Phone</p>
-                      <a href="tel:+13024640950" className="text-zion-cyan hover:underline text-sm">
-                        +1 302 464 0950
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue rounded-lg">
-                    <MapPin className="w-6 h-6 text-zion-cyan" />
-                    <div className="text-left">
-                      <p className="font-medium text-white">Address</p>
-                      <p className="text-zion-slate-light text-sm">
-                        364 E Main St STE 1008<br />
-                        Middletown DE 19709
-                      </p>
-                    </div>
-                  </div>
+                        </CardContent>
+                      </Card>
+                    ))}
                 </div>
-
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Button 
-                    size="lg"
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    onClick={() => window.open('mailto:kleber@ziontechgroup.com', '_blank')}
-                  >
-                    Send Email
-                  </Button>
-                  <Button 
-                    size="lg"
-                    variant="outline"
-                    className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
-                    onClick={() => window.open('https://ziontechgroup.com', '_blank')}
-                  >
-                    Visit Website
-                  </Button>
-                </div>
-              </div>
-            </TabsContent>
+              </TabsContent>
+            ))}
           </Tabs>
         </div>
-      </div>
+      </section>
 
-      {/* Contact Modal */}
-      <ContactModal 
-        service={contactService} 
-        onClose={() => setContactService(null)} 
-      />
+      {/* Benefits Section */}
+      <section className="py-16 bg-zion-blue-dark">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Why Choose Zion Tech Group Services?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Proven Expertise</h3>
+              <p className="text-zion-slate-light">
+                Industry-leading solutions with proven track records and customer success stories
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Innovation First</h3>
+              <p className="text-zion-slate-light">
+                Cutting-edge AI and emerging technologies to keep you ahead of the competition
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Dedicated Support</h3>
+              <p className="text-zion-slate-light">
+                Personalized service with dedicated account managers and 24/7 technical support
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">ROI Focused</h3>
+              <p className="text-zion-slate-light">
+                Measurable business outcomes and rapid return on investment for all solutions
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact-section" className="py-16 bg-zion-blue">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-12">
+              Get in touch with our experts to discuss your needs and discover how our services can drive your success
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="flex items-center justify-center gap-3 text-zion-cyan">
+                <Phone className="w-6 h-6" />
+                <div className="text-left">
+                  <div className="font-semibold">Phone</div>
+                  <div className="text-sm">{CONTACT_INFO.mobile}</div>
+                </div>
+              </div>
+              <div className="flex items-center justify-center gap-3 text-zion-cyan">
+                <Mail className="w-6 h-6" />
+                <div className="text-left">
+                  <div className="font-semibold">Email</div>
+                  <div className="text-sm">{CONTACT_INFO.email}</div>
+                </div>
+              </div>
+              <div className="flex items-center justify-center gap-3 text-zion-cyan">
+                <MapPin className="w-6 h-6" />
+                <div className="text-left">
+                  <div className="font-semibold">Address</div>
+                  <div className="text-sm">{CONTACT_INFO.address}</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
+                onClick={() => window.open(`tel:${CONTACT_INFO.mobile}`, '_self')}
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+                onClick={() => window.open(`mailto:${CONTACT_INFO.email}`, '_self')}
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Send Email
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+                onClick={() => window.open(CONTACT_INFO.website, '_blank')}
+              >
+                <ExternalLink className="w-5 h-5 mr-2" />
+                Visit Website
+              </Button>
+            </div>
+
+            <div className="mt-12 p-6 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
+              <h3 className="text-xl font-bold text-white mb-4">Special Enterprise Offerings</h3>
+              <p className="text-zion-slate-light mb-4">
+                For enterprise clients, we offer custom solution development, dedicated support teams, and comprehensive implementation services.
+              </p>
+              <Button 
+                className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+                onClick={() => window.open(`mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`, '_self')}
+              >
+                Request Enterprise Consultation
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
