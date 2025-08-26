@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, ChevronDown, Search, 
@@ -167,8 +166,6 @@ const navigationItems: NavigationItem[] = [
     ]
   }
 ];
-=======
->>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
 
 const quickActions = [
   { name: 'Get Quote', href: '/quote', icon: <DollarSign className="w-4 h-4" />, color: 'from-green-500 to-emerald-600' },
@@ -177,11 +174,9 @@ const quickActions = [
 ];
 
 export default function EnhancedNavigation2025() {
-<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
@@ -261,7 +256,7 @@ export default function EnhancedNavigation2025() {
             {navigationItems.map((item) => (
               <div key={item.name} className="relative">
                 <button
-                  onClick={() => toggleDropdown(item.name)}
+                  onClick={() => handleDropdownToggle(item.name)}
                   className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200 group-hover:bg-gradient-to-r group-hover:from-cyan-500/10 group-hover:to-blue-500/10"
                 >
                   {item.icon}
@@ -292,11 +287,11 @@ export default function EnhancedNavigation2025() {
                           <p className="text-sm text-gray-400">{item.description}</p>
                         </div>
                         <div className="space-y-1">
-                          {item.children?.map((child) => (
+                          {item.children?.map((child, index) => (
                             <Link
                               key={index}
                               href={child.href}
-                              onClick={closeDropdown}
+                              onClick={() => setActiveDropdown(null)}
                               className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
                             >
                               <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200" />
@@ -371,7 +366,7 @@ export default function EnhancedNavigation2025() {
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <button
-                    onClick={() => toggleDropdown(item.name)}
+                    onClick={() => handleDropdownToggle(item.name)}
                     className="flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white rounded-lg hover:bg-white/5 transition-colors duration-200"
                   >
                     <div className="flex items-center space-x-3">
@@ -424,11 +419,7 @@ export default function EnhancedNavigation2025() {
             </div>
           </motion.div>
         )}
-      </div>
+      </AnimatePresence>
     </nav>
   );
 };
-
-export default EnhancedNavigation2025;
-=======
->>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76

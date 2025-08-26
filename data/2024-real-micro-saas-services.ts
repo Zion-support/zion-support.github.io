@@ -1,24 +1,49 @@
 import { ServiceVariant } from '../types/service-variants';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+
 export interface RealMicroSaasService2024 {
   id: string;
   name: string;
   tagline: string;
   price: string;
-  variant: string;
+  period: string;
+  description: string;
   features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
   rating: number;
-  customers: string;
+  reviews: number;
 }
 
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
-  {
-  },
-
   // AI Customer Success Automation
   {
-=======
     id: 'ai-customer-success-automation',
     name: 'AI Customer Success Automation',
     tagline: 'Automate customer success with intelligent workflows',
@@ -439,6 +464,5 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     customers: 1900,
     rating: 4.8,
     reviews: 1050
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

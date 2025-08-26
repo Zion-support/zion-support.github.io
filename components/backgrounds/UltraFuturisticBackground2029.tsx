@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
 interface Particle {
@@ -13,6 +13,7 @@ interface Particle {
 }
 
 export default function UltraFuturisticBackground2029() {
+  const [isClient, setIsClient] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
@@ -49,31 +50,6 @@ export default function UltraFuturisticBackground2029() {
 
     // Initialize particles with enhanced variety
     const initParticles = () => {
-      particles = [];
-      for (let i = 0; i < 200; i++) {
-        const type = Math.random() > 0.7 ? 'quantum' : Math.random() > 0.5 ? 'neon' : 'hologram';
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.8,
-          vy: (Math.random() - 0.5) * 0.8,
-          size: Math.random() * 3 + 1,
-          color: type === 'quantum' ? ['#00ffff', '#ff00ff', '#ffff00'][Math.floor(Math.random() * 3)] :
-                 type === 'neon' ? ['#ff0080', '#8000ff', '#00ff80'][Math.floor(Math.random() * 3)] :
-                 ['#ffffff', '#00ffff', '#ff8000'][Math.floor(Math.random() * 3)],
-          opacity: Math.random() * 0.9 + 0.1,
-          type,
-          life: Math.random() * 100,
-          maxLife: 100
-        });
-      }
-    };
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Initialize particles
-    const initParticles = () => {
       const particles: Particle[] = [];
       const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
 
@@ -101,7 +77,16 @@ export default function UltraFuturisticBackground2029() {
       particlesRef.current = particles;
     };
 
-    initParticles();
+    const resizeCanvas = () => {
+      if (canvas) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        initParticles();
+      }
+    };
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
     // Animation loop
     const animate = () => {
