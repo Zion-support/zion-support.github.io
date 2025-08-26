@@ -19,6 +19,12 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 
+<<<<<<< HEAD
+// Loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"></div>
+=======
 const APIDocs = React.lazy(() => import('./pages/APIDocs'));
 
 const baseRoutes = [
@@ -132,6 +138,7 @@ const LoadingFallback = () => (
       <p className="text-zion-cyan text-lg font-medium">Loading Zion...</p>
       <p className="text-muted-foreground text-sm">Preparing your AI marketplace experience</p>
     </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-8de9
   </div>
 );
 
