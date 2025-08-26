@@ -1,12 +1,28 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
+const knownPrefixes = ['services'];
+
 export default function GenericPage() {
 	const params = useParams();
 	const slugParts = params['*'] ? params['*'].split('/') : [];
 	const path = '/' + slugParts.join('/');
 	const title = slugParts.length === 0 ? 'Page' : slugParts.map(s => s.replace(/-/g, ' ')).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' / ');
 	const canonical = `https://ziontechgroup.com${path.endsWith('/') ? path : path + '/'}`;
+
+	const isServiceDetail = slugParts.length === 2 && slugParts[0] === 'services';
+
+	if (isServiceDetail) {
+		// Let the statically generated services/[id] handle it by linking
+		const id = slugParts[1];
+		return (
+			<main style={{padding:20,fontFamily:'sans-serif'}}>
+				<h1>Redirecting…</h1>
+				<p>This service is available here: <Link to={`/services/${id}/`}>{`/services/${id}/`}</Link></p>
+				<p><Link to="/services/">Back to Services</Link></p>
+			</main>
+		);
+	}
 
 	return (
 		<main style={{padding:20,fontFamily:'sans-serif',lineHeight:1.6,maxWidth:900,margin:'0 auto'}}>

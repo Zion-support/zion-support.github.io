@@ -3,6 +3,97 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
 
+// Sample data for services
+const microSaaS = [
+	{
+		id: 'ai-workflow-automation',
+		icon: '🤖',
+		name: 'AI Workflow Automation',
+		tagline: 'Automate complex business processes with AI',
+		price: '$299',
+		period: '/month',
+		features: ['Process mapping', 'AI decision trees', 'Integration APIs', 'Analytics dashboard']
+	},
+	{
+		id: 'blockchain-enterprise',
+		icon: '⛓️',
+		name: 'Blockchain Enterprise Solutions',
+		tagline: 'Secure, transparent business operations',
+		price: '$499',
+		period: '/month',
+		features: ['Smart contracts', 'Supply chain tracking', 'Identity management', 'Compliance tools']
+	},
+	{
+		id: 'iot-data-analytics',
+		icon: '📊',
+		name: 'IoT Data Analytics Platform',
+		tagline: 'Real-time insights from connected devices',
+		price: '$199',
+		period: '/month',
+		features: ['Device management', 'Data visualization', 'Alert system', 'Predictive analytics']
+	}
+];
+
+const itServices = [
+	{
+		id: 'cloud-devops',
+		icon: '☁️',
+		name: 'Cloud & DevOps',
+		tagline: 'Scalable infrastructure and automation',
+		price: '$2,500',
+		period: '/month',
+		features: ['Kubernetes management', 'CI/CD pipelines', 'Monitoring & alerting', 'Cost optimization']
+	},
+	{
+		id: 'cybersecurity',
+		icon: '🛡️',
+		name: 'Cybersecurity Services',
+		tagline: 'Comprehensive security solutions',
+		price: '$3,500',
+		period: '/month',
+		features: ['Threat detection', 'Vulnerability assessment', 'Compliance management', 'Incident response']
+	},
+	{
+		id: 'enterprise-it',
+		icon: '🏢',
+		name: 'Enterprise IT Solutions',
+		tagline: 'Large-scale IT transformation',
+		price: '$8,000',
+		period: '/month',
+		features: ['Digital transformation', 'Legacy modernization', 'Change management', 'ROI tracking']
+	}
+];
+
+const aiServices = [
+	{
+		id: 'ai-autonomous-systems',
+		icon: '🧠',
+		name: 'AI Autonomous Systems',
+		tagline: 'Self-managing business operations',
+		price: '$4,500',
+		period: '/month',
+		features: ['Multi-agent systems', 'Decision automation', 'Learning algorithms', 'Performance monitoring']
+	},
+	{
+		id: 'ai-business-intelligence',
+		icon: '📈',
+		name: 'AI Business Intelligence',
+		tagline: 'Data-driven insights and predictions',
+		price: '$3,200',
+		period: '/month',
+		features: ['Predictive analytics', 'Natural language queries', 'Custom dashboards', 'Automated reporting']
+	},
+	{
+		id: 'ai-marketing-automation',
+		icon: '🎯',
+		name: 'AI Marketing Automation',
+		tagline: 'Intelligent customer engagement',
+		price: '$2,800',
+		period: '/month',
+		features: ['Customer segmentation', 'Personalized content', 'Campaign optimization', 'ROI tracking']
+	}
+];
+
 export default function Services() {
 	const title = 'Services — Zion Tech Group'
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
@@ -101,7 +192,7 @@ export default function Services() {
 									to="/contact"
 									className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors"
 								>
-									Build your cloud platform
+									Explore cloud solutions
 									<ArrowRight className="ml-2 h-4 w-4" />
 								</Link>
 							</div>
@@ -250,6 +341,74 @@ export default function Services() {
 							</div>
 						</dl>
 					</div>
+				</div>
+			</section>
+
+			{/* Expanded Catalog Sections */}
+			<section className="mt-16">
+				<h2 className="text-2xl font-semibold">Featured Micro SaaS</h2>
+				<div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+					{microSaaS.map((item) => (
+						<article key={item.id} className="rounded-lg border p-4">
+							<div className="text-lg font-semibold">{item.icon} {item.name}</div>
+							<p className="mt-1 text-sm text-gray-600">{item.tagline}</p>
+							<div className="mt-2 text-sm"><span className="font-semibold">{item.price}</span> <span className="text-gray-500">{item.period}</span></div>
+							<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+								{item.features.slice(0,3).map((f, idx) => (<li key={idx}>{f}</li>))}
+							</ul>
+							<Link to={`/services/${item.id}`} className="mt-3 inline-block text-blue-600 underline">Learn more</Link>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section className="mt-16">
+				<h2 className="text-2xl font-semibold">Advanced IT Services</h2>
+				<div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+					{itServices.map((item) => (
+						<article key={item.id} className="rounded-lg border p-4">
+							<div className="text-lg font-semibold">{item.icon} {item.name}</div>
+							<p className="mt-1 text-sm text-gray-600">{item.tagline}</p>
+							<div className="mt-2 text-sm"><span className="font-semibold">{item.price}</span> <span className="text-gray-500">{item.period}</span></div>
+							<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+								{item.features.slice(0,3).map((f, idx) => (<li key={idx}>{f}</li>))}
+							</ul>
+							<Link to={`/services/${item.id}`} className="mt-3 inline-block text-blue-600 underline">Learn more</Link>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section className="mt-16">
+				<h2 className="text-2xl font-semibold">Innovative AI Services</h2>
+				<div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+					{aiServices.map((item) => (
+						<article key={item.id} className="rounded-lg border p-4">
+							<div className="text-lg font-semibold">{item.icon} {item.name}</div>
+							<p className="mt-1 text-sm text-gray-600">{item.tagline}</p>
+							<div className="mt-2 text-sm"><span className="font-semibold">{item.price}</span> <span className="text-gray-500">{item.period}</span></div>
+							<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+								{item.features.slice(0,3).map((f, idx) => (<li key={idx}>{f}</li>))}
+							</ul>
+							<Link to={`/services/${item.id}`} className="mt-3 inline-block text-blue-600 underline">Learn more</Link>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<section className="mt-16 rounded-lg border bg-gray-50 p-6">
+				<h2 className="text-xl font-medium">Why Zion Tech Group</h2>
+				<ul className="mt-2 list-disc pl-5 text-gray-700">
+					<li>Real, battle-tested implementations (no mockups)</li>
+					<li>Transparent pricing and fast onboarding</li>
+					<li>Enterprise-grade security and compliance</li>
+					<li>ROI-focused delivery and measurable outcomes</li>
+				</ul>
+				<p className="mt-3 text-sm text-gray-700">Average market prices (monthly): Micro SaaS $99–$999, AI Services $499–$4,999, Enterprise IT $2,000–$15,000. We price competitively based on scope.</p>
+				<p className="mt-1 text-sm text-gray-700">Call <a className="text-blue-600 underline" href="tel:+13024640950">+1 302 464 0950</a>, email <a className="text-blue-600 underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>, or visit <a className="text-blue-600 underline" href="https://ziontechgroup.com">ziontechgroup.com</a>.</p>
+				<div className="mt-4 grid gap-3 sm:grid-cols-2">
+					<Link to="/pricing" className="inline-block rounded border px-4 py-2 text-blue-700 hover:bg-blue-50">See pricing guidance</Link>
+					<Link to="/request-quote" className="inline-block rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Request a custom quote</Link>
 				</div>
 			</section>
 
