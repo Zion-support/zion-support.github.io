@@ -130,15 +130,15 @@ a:hover {
 .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
 
 @media (min-width: 768px) {
-  .md\\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-  .md\\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-  .md\\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (min-width: 1024px) {
-  .lg\\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-  .lg\\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-  .lg\\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .lg\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .lg\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
 }
 
 /* Flexbox utilities */
@@ -189,26 +189,26 @@ a:hover {
 
 /* Responsive utilities */
 @media (min-width: 640px) {
-  .sm\\:text-lg { font-size: 1.125rem; }
-  .sm\\:text-xl { font-size: 1.25rem; }
-  .sm\\:text-2xl { font-size: 1.5rem; }
+  .sm\:text-lg { font-size: 1.125rem; }
+  .sm\:text-xl { font-size: 1.25rem; }
+  .sm\:text-2xl { font-size: 1.5rem; }
 }
 
 @media (min-width: 768px) {
-  .md\\:text-lg { font-size: 1.125rem; }
-  .md\\:text-xl { font-size: 1.25rem; }
-  .md\\:text-2xl { font-size: 1.5rem; }
-  .md\\:text-3xl { font-size: 1.875rem; }
-  .md\\:text-4xl { font-size: 2.25rem; }
+  .md\:text-lg { font-size: 1.125rem; }
+  .md\:text-xl { font-size: 1.25rem; }
+  .md\:text-2xl { font-size: 1.5rem; }
+  .md\:text-3xl { font-size: 1.875rem; }
+  .md\:text-4xl { font-size: 2.25rem; }
 }
 
 @media (min-width: 1024px) {
-  .lg\\:text-lg { font-size: 1.125rem; }
-  .lg\\:text-xl { font-size: 1.25rem; }
-  .lg\\:text-2xl { font-size: 1.5rem; }
-  .lg\\:text-3xl { font-size: 1.875rem; }
-  .lg\\:text-4xl { font-size: 2.25rem; }
-  .lg\\:text-5xl { font-size: 3rem; }
+  .lg\:text-lg { font-size: 1.125rem; }
+  .lg\:text-xl { font-size: 1.25rem; }
+  .lg\:text-2xl { font-size: 1.5rem; }
+  .lg\:text-3xl { font-size: 1.875rem; }
+  .lg\:text-4xl { font-size: 2.25rem; }
+  .lg\:text-5xl { font-size: 3rem; }
 }
 
 /* Animation utilities */
@@ -216,11 +216,11 @@ a:hover {
   transition: all 0.3s ease;
 }
 
-.hover\\:scale-105:hover {
+.hover\:scale-105:hover {
   transform: scale(1.05);
 }
 
-.hover\\:scale-110:hover {
+.hover\:scale-110:hover {
   transform: scale(1.1);
 }
 

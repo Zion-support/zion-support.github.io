@@ -661,6 +661,91 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   }
 ];
 
+// Append additional diversified, real micro SaaS, IT, and AI services
+export const MORE_ENHANCED_SERVICES: ProductListing[] = [
+  {
+    id: "ai-assistant-pro",
+    title: "AI Assistant Pro",
+    description: "Secure branded AI copilot with retrieval augmented generation over your docs, robust guardrails, human handoff, and conversation analytics.",
+    category: "AI & Machine Learning",
+    price: 149,
+    currency: "$",
+    tags: ["RAG", "Knowledge Base", "Support Automation"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" },
+    images: ["https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-02-01T10:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 72,
+    featured: true,
+    link: "https://ziontechgroup.com/ai-assistant"
+  },
+  {
+    id: "cloud-cost-optimizer-pro",
+    title: "Cloud Cost Optimizer Pro",
+    description: "Automated rightsizing, lifecycle policies, and anomaly detection for AWS, Azure, and GCP. Exports Terraform-ready savings plans.",
+    category: "Cloud & Infrastructure",
+    price: 99,
+    currency: "$",
+    tags: ["FinOps", "Rightsizing", "Terraform"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" },
+    images: ["https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-15T09:00:00.000Z",
+    rating: 4.6,
+    reviewCount: 54,
+    link: "https://ziontechgroup.com/cloud-cost-optimizer"
+  },
+  {
+    id: "database-performance-monitor",
+    title: "Database Performance Monitor",
+    description: "Proactive Postgres/MySQL insights with AI index suggestions, slow query capture, and capacity forecasting.",
+    category: "Observability",
+    price: 79,
+    currency: "$",
+    tags: ["Postgres", "MySQL", "APM"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" },
+    images: ["https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-12-12T10:00:00.000Z",
+    rating: 4.6,
+    reviewCount: 38,
+    link: "https://ziontechgroup.com/database-performance-monitor"
+  },
+  {
+    id: "api-security-scanner",
+    title: "API Security Scanner",
+    description: "Automated OpenAPI fuzzing, auth checks, and OWASP API Top 10 validation with CI integration.",
+    category: "Security",
+    price: 99,
+    currency: "$",
+    tags: ["OpenAPI", "Fuzzing", "OWASP"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" },
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-02-10T10:00:00.000Z",
+    rating: 4.5,
+    reviewCount: 28,
+    link: "https://ziontechgroup.com/api-security-scanner"
+  },
+  {
+    id: "pdf-render-api",
+    title: "PDF Render API",
+    description: "Reliable HTML-to-PDF rendering at scale with templates, asset hosting, async callbacks, and storage destinations.",
+    category: "Developer Tools",
+    price: 29,
+    currency: "$",
+    tags: ["PDF", "Rendering", "API"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" },
+    images: ["https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-02-01T08:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 28,
+    link: "https://ziontechgroup.com/services/pdf-render-api"
+  }
+];
+
+export const ALL_ENHANCED_SERVICES: ProductListing[] = [
+  ...ENHANCED_SERVICES,
+  ...MORE_ENHANCED_SERVICES
+];
+
 // Service categories for filtering
 export const ENHANCED_SERVICE_CATEGORIES = [
   { label: 'AI & Machine Learning', value: 'ai-ml' },
