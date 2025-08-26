@@ -1,4 +1,7 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 import path from 'node:path'
+import { SAMPLE_SERVICES } from './src/data/sampleServices'
 
 // https://vitejs.dev/config/
 export default defineConfig({
