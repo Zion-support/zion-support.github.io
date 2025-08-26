@@ -82,6 +82,18 @@ export function Footer() {
           </div>
 
           <div>
+            <h3 className="text-white font-semibold mb-4 text-lg">AI & Tech Services</h3>
+            <ul className="space-y-2">
+              <li><Link to="/ai-analytics-dashboard" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Analytics</Link></li>
+              <li><Link to="/ai-content-generator" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Content Generator</Link></li>
+              <li><Link to="/cybersecurity-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
+              <li><Link to="/cloud-migration-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud Migration</Link></li>
+              <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Onsite Services</Link></li>
+              <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Zion Hire AI</Link></li>
+            </ul>
+          </div>
+
+          <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About Us</Link></li>

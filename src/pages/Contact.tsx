@@ -120,6 +120,7 @@ export default function Contact() {
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Phone,
       title: 'Phone',
       details: '+1 (302) 464-0950',
@@ -286,6 +287,18 @@ export default function Contact() {
       description: "CRM systems, process automation, and market research",
       contact: "business@ziontechgroup.com"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
+=======
+      name: "Headquarters",
+      address: "364 E Main St STE 1008, Middletown DE 19709",
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com"
+    },
+    {
+      name: "East Coast Office",
+      address: "364 E Main St STE 1008, Middletown DE 19709",
+      phone: "+1 302 464 0950", 
+      email: "kleber@ziontechgroup.com"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
     }
   ];
 

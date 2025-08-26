@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
 
 export function HeroSection() {
   const { t } = useTranslation();
