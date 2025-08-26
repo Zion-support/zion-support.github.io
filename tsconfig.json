@@ -20,7 +20,6 @@
       "@/*": ["./src/*"]
     },
     "allowSyntheticDefaultImports": true,
-<<<<<<< HEAD
     "allowJs": true,
     "incremental": true,
     "plugins": [
@@ -44,36 +43,5 @@
     "dist/**",
     "temp_components/**",
     "zion-os/**"
-=======
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowJs": true,
-    "incremental": true
-  },
-  "include": [
-    "src",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "build",
-    "automation",
-    "scripts",
-    "fix_*.js",
-    "fix_*.cjs",
-    "*.fix.js",
-    "*.fix.cjs"
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
   ]
 }
