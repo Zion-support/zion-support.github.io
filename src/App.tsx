@@ -1,6 +1,6 @@
 import React from 'react';
 import { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
@@ -56,6 +56,13 @@ const InfrastructureServices = React.lazy(() => import('./pages/services/Infrast
 const DigitalTransformation = React.lazy(() => import('./pages/services/Transformation'));
 const ConsultingServices = React.lazy(() => import('./pages/services/Consulting'));
 
+// Additional new service pages
+const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
+const AdvancedServices2025 = React.lazy(() => import('./pages/AdvancedServices2025'));
+const AdvancedServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedServicesShowcase2025'));
+const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
+
 const baseRoutes = [
   { path: '/', element: <Home /> },
   { path: '/match', element: <AIMatcherPage /> },
@@ -90,38 +97,41 @@ const baseRoutes = [
   { path: '/services/infrastructure', element: <InfrastructureServices /> },
   { path: '/services/transformation', element: <DigitalTransformation /> },
   { path: '/services/consulting', element: <ConsultingServices /> },
+  // Additional new service routes
+  { path: '/innovative-services-2025', element: <InnovativeServices2025 /> },
+  { path: '/advanced-services-2025', element: <AdvancedServices2025 /> },
+  { path: '/advanced-services-showcase-2025', element: <AdvancedServicesShowcase2025 /> },
+  { path: '/comprehensive-pricing-2025', element: <ComprehensivePricing2025 /> },
+  { path: '*', element: <NotFound /> },
 ];
 
-const App = () => {
-  // Ensure each navigation starts at the top of the page
-  useScrollToTop();
+// Loading spinner component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
+  </div>
+);
+
+function App() {
   return (
-    <WhitelabelProvider>
-      <ThemeProvider defaultTheme="dark">
-        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-          <Routes>
-            {baseRoutes.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
-            ))}
-            <Route path="/auth/*" element={<AuthRoutes />} />
-            <Route path="/dashboard/*" element={<DashboardRoutes />} />
-            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-            <Route path="/talent/*" element={<TalentRoutes />} />
-            <Route path="/admin/*" element={<AdminRoutes />} />
-            <Route path="/mobile/*" element={<MobileAppRoutes />} />
-            <Route path="/content/*" element={<ContentRoutes />} />
-            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-            <Route path="/community/*" element={<CommunityRoutes />} />
-            <Route path="/developers/*" element={<DeveloperRoutes />} />
-            <Route path="*" element={<ErrorRoutes />} />
-          </Routes>
-        </Suspense>
-        <Footer />
-        <Toaster />
-        <SonnerToaster position="top-right" />
+    <Router>
+      <ThemeProvider>
+        <WhitelabelProvider>
+          <div className="App min-h-screen flex flex-col">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                {baseRoutes.map((route) => (
+                  <Route key={route.path} path={route.path} element={route.element} />
+                ))}
+              </Routes>
+            </Suspense>
+            <Toaster />
+            <SonnerToaster />
+          </div>
+        </WhitelabelProvider>
       </ThemeProvider>
-    </WhitelabelProvider>
+    </Router>
   );
-};
+}
 
 export default App;
