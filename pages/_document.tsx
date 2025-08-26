@@ -1,43 +1,81 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
-  // Simple theme script without complex polyfills
-  const themeScript = `(() => {
-    try {
-      var theme = localStorage.getItem('theme');
-      var isDark = theme === 'dark' || (theme === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-      var className = isDark ? 'dark' : 'light';
-      var root = document.documentElement;
-      root.classList.add(className);
-      root.setAttribute('data-theme', className);
-    } catch(e) {}
-  })();`;
-  
-  // Simple loader timeout without complex error handling
-  const loaderTimeoutScript = `setTimeout(function(){
-    var el = document.getElementById('initial-loader');
-    if (el) el.style.display = 'none';
-  }, 10000);`;
-
-	render() {
-		return (
-			<Html lang="en" dir="ltr">
-				<Head>
-					<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-					<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-					<link rel="manifest" href="/site.webmanifest" />
-					<meta name="theme-color" content="#0a0a0a" />
-					<meta name="color-scheme" content="dark light" />
-					<meta name="format-detection" content="telephone=no" />
-					<link rel="preconnect" href="https://plausible.io" crossOrigin="anonymous" />
-					<link rel="dns-prefetch" href="https://plausible.io" />
-					<script defer data-domain="ziontechgroup.com" src="https://plausible.io/js/script.js" />
-				</Head>
-				<body>
-					<Main />
-					<NextScript />
-				</body>
-			</Html>
-		);
-	}
+  return (
+    <Html lang="en">
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#0a0a0a" />
+        <link rel="icon" href="/favicon.ico" />
+        {/* Preconnect for analytics */}
+        <link rel="dns-prefetch" href="//plausible.io" />
+        <link rel="preconnect" href="https://plausible.io" crossOrigin="anonymous" />
+        <script defer data-domain="ziontechgroup.com" src="https://plausible.io/js/script.js"></script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Zion Tech Group",
+                url: "https://ziontechgroup.com",
+                logo: "https://ziontechgroup.com/logo.png",
+                sameAs: [
+                  "https://www.linkedin.com/company/zion-tech-group",
+                  "https://github.com/Zion-Holdings",
+                  "https://www.instagram.com/ziontechgroup",
+                  "https://www.youtube.com/@ziontechgroup"
+                ],
+                contactPoint: [
+                  {
+                    "@type": "ContactPoint",
+                    telephone: "+13024640950",
+                    email: "kleber@ziontechgroup.com",
+                    contactType: "customer service",
+                    areaServed: "US",
+                    availableLanguage: ["English"]
+                  }
+                ],
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "364 E Main St STE 1008",
+                  addressLocality: "Middletown",
+                  addressRegion: "DE",
+                  postalCode: "19709",
+                  addressCountry: "US"
+                }
+              },
+              null,
+              2
+            )
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "Zion Tech Group",
+                url: "https://ziontechgroup.com",
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: "https://ziontechgroup.com/services?search={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              },
+              null,
+              2
+            )
+          }}
+        />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
 }
