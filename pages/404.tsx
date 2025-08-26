@@ -1,46 +1,29 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
+import SEO from '../components/SEO';
 
-export default function Custom404() {
-  return (
-    <>
-      <Head>
-        <title>404 - Page Not Found | Zion</title>
-        <meta name="description" content="The page you're looking for doesn't exist." />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center px-4">
-        <div className="text-center text-white">
-          <div className="mb-8">
-            <h1 className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-4">
-              404
-            </h1>
-            <h2 className="text-3xl font-semibold mb-4">Page Not Found</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-md mx-auto">
-              The page you're looking for doesn't exist or has been moved.
-            </p>
-          </div>
-          
-          <div className="space-y-4">
-            <Link 
-              href="/"
-              className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Go Home
-            </Link>
-            
-            <div className="text-sm text-gray-400">
-              <p>Or try one of these pages:</p>
-              <div className="flex justify-center space-x-4 mt-2">
-                <Link href="/about" className="hover:text-blue-400 transition-colors">About</Link>
-                <Link href="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-                <Link href="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+export default function NotFoundPage() {
+	return (
+		<>
+			<SEO title="Page Not Found | Zion Tech Group" description="The page you’re looking for doesn’t exist." noindex nofollow />
+			<section className="min-h-[70vh] flex items-center justify-center bg-gradient-to-b from-black to-gray-900">
+				<div className="container mx-auto px-4 text-center">
+					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+						404 – Page Not Found
+					</h1>
+					<p className="text-gray-300 max-w-2xl mx-auto mb-8">
+						We couldn’t find the page you were looking for. Try searching our services or return to the homepage.
+					</p>
+					<div className="flex flex-col sm:flex-row gap-4 justify-center">
+						<Link href="/" className="px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
+							Go to Homepage
+						</Link>
+						<Link href="/services" className="px-6 py-3 rounded-xl font-semibold border border-gray-600 text-gray-200">
+							Explore Services
+						</Link>
+					</div>
+				</div>
+			</section>
+		</>
+	);
 }
