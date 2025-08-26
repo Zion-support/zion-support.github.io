@@ -9,7 +9,13 @@ import {
   Lock, Cloud, BarChart3, Settings,
   Eye, Code, Palette, Layers,
   Network, Server, ShieldCheck,
+<<<<<<< HEAD
+  DollarSign, Phone, ArrowRight, Mail, MapPin, Dna,
+  Heart, GraduationCap, Leaf, Pill, Coins,
+  Building2
+=======
   DollarSign, Phone, ArrowRight
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e015
 } from 'lucide-react';
 
 interface NavigationItem {

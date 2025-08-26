@@ -1,4 +1,13 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import EnhancedNavigation2025 from './EnhancedNavigation2025';
+import UltraFuturisticFooter2034 from './UltraFuturisticFooter2034';
+import EnhancedSidebar2025 from './EnhancedSidebar2025';
+import UltraAdvancedFuturisticBackground from '../ui/UltraAdvancedFuturisticBackground';
+=======
 import React, { useState } from 'react';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e015
 import TopContactBar from './TopContactBar';
 import NeoFuturisticFooter from './NeoFuturisticFooter';
 
@@ -9,6 +18,16 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<div className="min-h-screen bg-black text-white">
+<<<<<<< HEAD
+			<UltraAdvancedFuturisticBackground variant="quantum-holographic" intensity={0.85}>
+				<TopContactBar />
+				<EnhancedNavigation />
+				<main id="main" className="pt-24 lg:pt-28">
+					{children}
+				</main>
+				<NeoFuturisticFooter />
+			</UltraAdvancedFuturisticBackground>
+=======
 			<TopContactBar />
 			<header className="bg-gray-900/90 border-b border-cyan-500/20 sticky top-0 z-50">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,6 +99,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 					</div>
 				</div>
 			</footer>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e015
 		</div>
 	);
 };
