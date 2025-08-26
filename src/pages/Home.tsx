@@ -9,65 +9,61 @@ import InteractiveServiceShowcase from '../components/InteractiveServiceShowcase
 const Home: React.FC = () => {
   const featuredServices = [
     {
-      title: "QuantumEdge AI Platform",
-      description: "Revolutionary platform combining quantum computing principles with AI for ultra-fast machine learning and optimization problems",
-      icon: "🔮",
+      title: "AI Strategy Consulting",
+      description: "Comprehensive AI strategy development and implementation consulting for enterprises",
+      icon: "🤖",
       price: "From $2,500",
-      category: "Quantum AI",
-      features: ["Quantum-inspired algorithms", "Hybrid quantum-classical processing", "Real-time optimization"],
+      category: "AI & Machine Learning",
+      features: ["Strategic Planning", "Implementation Roadmap", "ROI Analysis"],
+      isPopular: true
+    },
+    {
+      title: "Quantum AI Fusion Platform",
+      description: "Revolutionary platform combining quantum computing with artificial intelligence",
+      icon: "🔮",
+      price: "From $25,000",
+      category: "Quantum Computing",
+      features: ["Quantum Algorithms", "AI Integration", "Performance Optimization"],
       isNew: true
     },
     {
-      title: "NeuromorphicAI Studio",
-      description: "Brain-inspired AI development platform that mimics biological neural networks for ultra-efficient, low-power AI applications",
+      title: "Neuromorphic Computing Platform",
+      description: "Brain-inspired computing architecture for ultra-efficient AI processing",
       icon: "🧠",
-      price: "From $1,800",
-      category: "Neuromorphic Computing",
-      features: ["Spiking neural networks", "Event-driven processing", "Low-power AI models"],
-      isPopular: true
+      price: "From $35,000",
+      category: "AI Architecture",
+      features: ["Neural Networks", "Efficient Processing", "Scalable Architecture"]
     },
     {
-      title: "Zero-Trust Network Architecture",
-      description: "Comprehensive zero-trust network architecture implementation with continuous verification and micro-segmentation",
-      icon: "🛡️",
-      price: "From $4,500",
-      category: "Network Security",
-      features: ["Continuous identity verification", "Micro-segmentation", "Real-time threat detection"],
-      isPopular: true
+      title: "Edge AI Orchestration Platform",
+      description: "Intelligent orchestration of AI workloads across distributed edge computing",
+      icon: "🌐",
+      price: "From $15,000",
+      category: "Edge Computing",
+      features: ["Edge Deployment", "Load Balancing", "Real-time Processing"]
     },
     {
-      title: "5G Private Network Solutions",
-      description: "Enterprise-grade 5G private network solutions for industrial IoT, smart manufacturing, and autonomous operations",
-      icon: "📡",
-      price: "From $2,800",
-      category: "5G Networks",
-      features: ["Private 5G core network", "Ultra-low latency", "Massive IoT support"],
-      isNew: true
+      title: "Federated Learning Platform",
+      description: "Privacy-preserving AI training across distributed data sources",
+      icon: "🔒",
+      price: "From $20,000",
+      category: "Privacy AI",
+      features: ["Data Privacy", "Distributed Training", "Secure Communication"]
     },
     {
-      title: "SpaceTech AI Platform",
-      description: "AI-powered platform for space mission planning, satellite operations, and space data analytics",
-      icon: "🚀",
-      price: "From $3,500",
-      category: "Space Technology",
-      features: ["Mission planning AI", "Satellite operations", "Space data analytics"],
-      isNew: true
-    },
-    {
-      title: "GreenTech AI Solutions",
-      description: "AI-powered sustainability platform for environmental monitoring, carbon footprint reduction, and green energy optimization",
-      icon: "🌱",
-      price: "From $1,400",
-      category: "Green Technology",
-      features: ["Environmental monitoring", "Carbon footprint tracking", "Energy optimization"],
-      isPopular: true
+      title: "AI Ethics & Governance Platform",
+      description: "Comprehensive framework for ethical AI development and governance",
+      icon: "⚖️",
+      price: "From $18,000",
+      category: "AI Governance",
+      features: ["Ethical Guidelines", "Compliance Tools", "Audit Trails"]
     }
   ];
 
   const serviceCategories = [
     {
       name: "AI & Machine Learning",
-      count: 15,
+      count: 13,
       description: "Cutting-edge artificial intelligence solutions",
       icon: "🤖",
       color: "from-zion-blue to-zion-cyan",
@@ -75,7 +71,7 @@ const Home: React.FC = () => {
     },
     {
       name: "Quantum Computing",
-      count: 3,
+      count: 1,
       description: "Revolutionary quantum computing platforms",
       icon: "🔮",
       color: "from-zion-purple to-zion-cyan",
@@ -83,35 +79,35 @@ const Home: React.FC = () => {
     },
     {
       name: "IT & Infrastructure",
-      count: 12,
+      count: 2,
       description: "Enterprise-grade IT solutions",
       icon: "🖥️",
       color: "from-zion-cyan to-zion-green",
       href: "/services/infrastructure"
     },
     {
+      name: "Data & Analytics",
+      count: 1,
+      description: "Advanced data analytics platforms",
+      icon: "📊",
+      color: "from-zion-yellow to-zion-orange",
+      href: "/services/analytics"
+    },
+    {
+      name: "Automation",
+      count: 1,
+      description: "Intelligent process automation",
+      icon: "⚡",
+      color: "from-zion-orange to-zion-red",
+      href: "/services/automation"
+    },
+    {
       name: "Cybersecurity",
-      count: 8,
+      count: 1,
       description: "Advanced security solutions",
       icon: "🛡️",
       color: "from-zion-red to-zion-purple",
-      href: "/services/cybersecurity"
-    },
-    {
-      name: "Edge Computing",
-      count: 6,
-      description: "Distributed edge computing solutions",
-      icon: "🌐",
-      color: "from-zion-orange to-zion-red",
-      href: "/services/edge"
-    },
-    {
-      name: "Emerging Technologies",
-      count: 10,
-      description: "Next-generation technology solutions",
-      icon: "⚡",
-      color: "from-zion-yellow to-zion-orange",
-      href: "/innovative-services-2025"
+      href: "/services/security"
     }
   ];
 
@@ -120,6 +116,30 @@ const Home: React.FC = () => {
     { label: "Happy Clients", value: "200+", icon: "😊" },
     { label: "Team Members", value: "50+", icon: "👥" },
     { label: "Years Experience", value: "10+", icon: "⏰" }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp Inc.",
+      content: "Zion Tech Group transformed our AI infrastructure. Their quantum computing solutions gave us a 300% performance boost.",
+      avatar: "👩‍💼",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "VP Engineering, DataFlow Systems",
+      content: "The AI strategy consulting was game-changing. We now have a clear roadmap for digital transformation.",
+      avatar: "👨‍💻",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "CEO, Innovation Labs",
+      content: "Outstanding service quality and cutting-edge technology. Zion Tech Group is our trusted partner for all AI needs.",
+      avatar: "👩‍🔬",
+      rating: 5
+    }
   ];
 
   const containerVariants: Variants = {
@@ -159,7 +179,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={itemVariants}>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our <span className="gradient-text">Service Categories</span>
+              Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Service Categories</span>
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Explore our comprehensive range of technology solutions designed to transform your business
@@ -178,9 +198,11 @@ const Home: React.FC = () => {
                 key={category.name}
                 variants={itemVariants}
                 className="group"
+                whileHover={{ y: -10 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
                 <Link to={category.href} className="block">
-                  <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover-lift group-hover:shadow-zion-glow">
+                  <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25">
                     <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                       <span className="text-2xl">{category.icon}</span>
                     </div>
@@ -217,7 +239,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={itemVariants}>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="gradient-text">Featured Services</span>
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Featured Services</span>
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Discover our most innovative and in-demand technology solutions
@@ -232,7 +254,12 @@ const Home: React.FC = () => {
             viewport={{ once: true }}
           >
             {featuredServices.map((service, index) => (
-              <motion.div key={service.title} variants={itemVariants}>
+              <motion.div 
+                key={service.title} 
+                variants={itemVariants}
+                whileHover={{ y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <ServiceCard {...service} />
               </motion.div>
             ))}
@@ -240,7 +267,7 @@ const Home: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Stats Section */}
+      {/* Testimonials Section */}
       <motion.section 
         className="py-20 bg-white/5 backdrop-blur-sm"
         variants={containerVariants}
@@ -251,7 +278,58 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-16" variants={itemVariants}>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose <span className="gradient-text">Zion Tech Group</span>
+              What Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Clients Say</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Real feedback from businesses that have transformed with our technology solutions
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.name}
+                variants={itemVariants}
+                className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25"
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="text-4xl mr-4">{testimonial.avatar}</div>
+                  <div>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
+                  </div>
+                </div>
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <span key={i} className="text-zion-yellow text-lg">⭐</span>
+                  ))}
+                </div>
+                <p className="text-zion-slate-light italic">"{testimonial.content}"</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Stats Section */}
+      <motion.section 
+        className="py-20"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Zion Tech Group</span>
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our track record speaks for itself - we deliver results that exceed expectations
@@ -269,10 +347,12 @@ const Home: React.FC = () => {
               <motion.div
                 key={stat.label}
                 variants={itemVariants}
-                className="text-center"
+                className="text-center group"
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover-lift">
-                  <div className="text-4xl mb-4">{stat.icon}</div>
+                <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">
+                  <div className="text-4xl mb-4 group-hover:animate-bounce-gentle">{stat.icon}</div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-zion-slate-light">{stat.label}</div>
                 </div>
@@ -293,24 +373,37 @@ const Home: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div variants={itemVariants}>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to <span className="gradient-text">Transform</span> Your Business?
+              Ready to <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Transform</span> Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Let's discuss how our innovative technology solutions can drive your business forward
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="btn-primary"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Get Started Today
-              </Link>
-              <Link
-                to="/services"
-                className="btn-secondary"
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 border border-zion-cyan/30 hover:border-zion-cyan/60"
+                >
+                  <span className="text-xl">🚀</span>
+                  Get Started Today
+                  <span className="text-xl">→</span>
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                View All Services
-              </Link>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white font-semibold text-lg py-4 px-8 rounded-xl border border-white/30 hover:border-zion-cyan/50 hover:bg-white/20 transition-all duration-300 shadow-lg"
+                >
+                  <span className="text-xl">🔍</span>
+                  View All Services
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         </div>

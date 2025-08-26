@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import { ThemeProvider } from './components/ThemeProvider';
 import { Toaster as SonnerToaster } from './components/ui/sonner';
@@ -34,6 +35,11 @@ const Mobile = React.lazy(() => import('./pages/Mobile'));
 const QuantumTechnology = React.lazy(() => import('./pages/QuantumTechnology'));
 const SpaceTech = React.lazy(() => import('./pages/SpaceTech'));
 
+// New missing pages from analysis
+const QuantumNeuralNetworkPlatform = React.lazy(() => import('./pages/quantum-neural-network-platform'));
+const AutonomousBusinessOperationsPlatform = React.lazy(() => import('./pages/autonomous-business-operations-platform'));
+const AIPoweredITAssetManagement = React.lazy(() => import('./pages/ai-powered-it-asset-management'));
+
 // Service pages
 const AIServices = React.lazy(() => import('./pages/services/AIServices'));
 const CloudServices = React.lazy(() => import('./pages/services/Cloud'));
@@ -41,6 +47,7 @@ const CybersecurityServices = React.lazy(() => import('./pages/services/Cybersec
 const InfrastructureServices = React.lazy(() => import('./pages/services/Infrastructure'));
 const DigitalTransformation = React.lazy(() => import('./pages/services/Transformation'));
 const ConsultingServices = React.lazy(() => import('./pages/services/Consulting'));
+const QuantumAIServices = React.lazy(() => import('./pages/services/quantum-ai'));
 
 // Additional service pages
 const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
@@ -102,6 +109,11 @@ const routes = [
   { path: '/quantum-technology', element: <QuantumTechnology /> },
   { path: '/space-tech', element: <SpaceTech /> },
   
+  // New missing page routes
+  { path: '/quantum-neural-network-platform', element: <QuantumNeuralNetworkPlatform /> },
+  { path: '/autonomous-business-operations-platform', element: <AutonomousBusinessOperationsPlatform /> },
+  { path: '/ai-powered-it-asset-management', element: <AIPoweredITAssetManagement /> },
+  
   // Service routes
   { path: '/services/ai', element: <AIServices /> },
   { path: '/services/cloud', element: <CloudServices /> },
@@ -109,6 +121,7 @@ const routes = [
   { path: '/services/infrastructure', element: <InfrastructureServices /> },
   { path: '/services/transformation', element: <DigitalTransformation /> },
   { path: '/services/consulting', element: <ConsultingServices /> },
+  { path: '/services/quantum-ai', element: <QuantumAIServices /> },
   
   // Additional service routes
   { path: '/innovative-services-2025', element: <InnovativeServices2025 /> },
@@ -117,6 +130,7 @@ const routes = [
   { path: '/comprehensive-pricing-2025', element: <ComprehensivePricing2025 /> },
   { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
   { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
   
   // Other routes
   { path: '/match', element: <AIMatcherPage /> },
@@ -156,6 +170,7 @@ function App() {
       <ThemeProvider>
         <Router>
           <div className="App min-h-screen flex flex-col">
+            <Header />
             <main className="flex-1">
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>

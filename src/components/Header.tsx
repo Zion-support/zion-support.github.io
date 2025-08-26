@@ -6,14 +6,14 @@ const Header: React.FC = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const services = [
-    { name: 'Comprehensive Services 2025', href: '/comprehensive-services-showcase-2025', description: '100+ Cutting-edge Technology Solutions' },
-    { name: 'AI & Machine Learning', href: '/services/ai', description: 'Advanced AI Solutions & Platforms' },
-    { name: 'Quantum Computing', href: '/services/quantum', description: 'Quantum AI & Research Platforms' },
-    { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Enterprise Infrastructure Solutions' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced Security & Zero-Trust' },
-    { name: 'Edge Computing', href: '/services/edge', description: 'IoT & Edge AI Solutions' },
-    { name: 'Emerging Technologies', href: '/innovative-services-2025', description: 'Space Tech, Green Tech & More' },
-    { name: 'Industry Solutions', href: '/services/industry', description: 'Specialized Industry Platforms' }
+    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', description: '50+ Cutting-edge Micro SAAS Solutions' },
+    { name: 'Quantum Neural Network Platform', href: '/quantum-neural-network-platform', description: 'Next-generation Quantum Computing' },
+    { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform', description: 'AI-powered Business Automation' },
+    { name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management', description: 'Intelligent Infrastructure Management' },
+    { name: 'AI Services', href: '/services/ai', description: 'Comprehensive AI Solutions' },
+    { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Cloud Infrastructure & Automation' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced Security Solutions' },
+    { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Process Optimization' }
   ];
 
   return (

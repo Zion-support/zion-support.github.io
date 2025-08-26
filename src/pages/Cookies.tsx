@@ -1,331 +1,317 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Shield, Settings, Eye, BarChart3, Users, Globe, Info } from 'lucide-react';
 
-const Cookies: React.FC = () => {
-  const cookieCategories = [
+export default function Cookies() {
+  const cookieTypes = [
     {
-      name: "Essential Cookies",
-      description: "These cookies are necessary for the website to function properly and cannot be disabled.",
-      examples: ["Authentication", "Security", "Basic functionality"],
-      duration: "Session to 1 year",
-      required: true
+      name: 'Essential Cookies',
+      description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
+      examples: [
+        'Authentication and security cookies',
+        'Session management cookies',
+        'Load balancing cookies',
+        'User preference cookies'
+      ],
+      icon: Shield,
+      color: 'bg-blue-500'
     },
     {
-      name: "Performance Cookies",
-      description: "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.",
-      examples: ["Analytics", "Page load times", "User behavior"],
-      duration: "1 day to 2 years",
-      required: false
+      name: 'Analytics Cookies',
+      description: 'These cookies help us understand how visitors interact with our website.',
+      examples: [
+        'Google Analytics cookies',
+        'Page view tracking',
+        'User behavior analysis',
+        'Performance monitoring'
+      ],
+      icon: BarChart3,
+      color: 'bg-green-500'
     },
     {
-      name: "Functional Cookies",
-      description: "These cookies enable enhanced functionality and personalization, such as remembering your preferences.",
-      examples: ["Language settings", "User preferences", "Customization"],
-      duration: "1 month to 1 year",
-      required: false
+      name: 'Marketing Cookies',
+      description: 'These cookies are used to deliver relevant advertisements and track marketing campaign performance.',
+      examples: [
+        'Social media cookies',
+        'Advertising cookies',
+        'Retargeting cookies',
+        'Campaign tracking cookies'
+      ],
+      icon: Users,
+      color: 'bg-purple-500'
     },
     {
-      name: "Marketing Cookies",
-      description: "These cookies are used to track visitors across websites to display relevant and engaging advertisements.",
-      examples: ["Advertising", "Social media", "Retargeting"],
-      duration: "1 month to 2 years",
-      required: false
+      name: 'Functional Cookies',
+      description: 'These cookies enable enhanced functionality and personalization.',
+      examples: [
+        'Language preference cookies',
+        'Theme selection cookies',
+        'Form auto-fill cookies',
+        'User experience cookies'
+      ],
+      icon: Settings,
+      color: 'bg-orange-500'
     }
   ];
 
-  const specificCookies = [
+  const thirdPartyCookies = [
     {
-      name: "_ga",
-      purpose: "Google Analytics - Used to distinguish unique users",
-      duration: "2 years",
-      provider: "Google"
+      service: 'Google Analytics',
+      purpose: 'Website analytics and performance monitoring',
+      data: 'Anonymous usage data, page views, user behavior',
+      retention: '2 years'
     },
     {
-      name: "_gid",
-      purpose: "Google Analytics - Used to distinguish users",
-      duration: "24 hours",
-      provider: "Google"
+      service: 'LinkedIn',
+      purpose: 'Social media integration and sharing',
+      data: 'Social sharing preferences, login status',
+      retention: '1 year'
     },
     {
-      name: "session_id",
-      purpose: "Maintains user session and authentication state",
-      duration: "Session",
-      provider: "Zion Tech Group"
+      service: 'Twitter',
+      purpose: 'Social media integration and sharing',
+      data: 'Social sharing preferences, login status',
+      retention: '1 year'
     },
     {
-      name: "preferences",
-      purpose: "Stores user preferences and settings",
-      duration: "1 year",
-      provider: "Zion Tech Group"
+      service: 'Facebook',
+      purpose: 'Social media integration and sharing',
+      data: 'Social sharing preferences, login status',
+      retention: '1 year'
     }
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Cookie Policy - Zion Tech Group</title>
-        <meta name="description" content="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience and provide personalized services." />
-        <meta name="keywords" content="cookie policy, cookies, privacy, data collection, Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Cookie
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Policy</span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      {/* Header */}
+      <div className="bg-white/5 backdrop-blur-sm border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">
+              Cookie Policy
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              This Cookie Policy explains how Zion Tech Group uses cookies and similar technologies 
-              to enhance your browsing experience and provide personalized services.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Learn about Zion Tech Group's cookie policy. Understand how we use cookies, 
+              manage preferences, and ensure transparency in our data collection practices.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-white/10 backdrop-blur-lg rounded-lg px-6 py-3">
-                <span className="text-white font-semibold">Transparent</span>
-              </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-lg px-6 py-3">
-                <span className="text-white font-semibold">User Control</span>
-              </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-lg px-6 py-3">
-                <span className="text-white font-semibold">Privacy First</span>
-              </div>
-            </div>
           </div>
-        </section>
+        </div>
+      </div>
 
-        {/* What Are Cookies */}
-        <section className="pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-8">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                What Are Cookies?
-              </h2>
-              <p className="text-gray-300 mb-6">
-                Cookies are small text files that are stored on your device (computer, tablet, or mobile) 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-2 space-y-8">
+            {/* What Are Cookies */}
+            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="flex items-center mb-6">
+                <Info className="w-8 h-8 text-blue-400 mr-3" />
+                <h2 className="text-2xl font-bold text-white">What Are Cookies?</h2>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Cookies are small text files that are stored on your device (computer, tablet, or mobile phone) 
                 when you visit our website. They help us provide you with a better experience by:
               </p>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Remembering your preferences and settings
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Analyzing how you use our website to improve our services
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Providing personalized content and recommendations
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Ensuring security and preventing fraud
-                </li>
+              <ul className="text-gray-300 space-y-2 ml-6">
+                <li>• Remembering your preferences and settings</li>
+                <li>• Analyzing how you use our website</li>
+                <li>• Personalizing content and advertisements</li>
+                <li>• Ensuring security and authentication</li>
               </ul>
-            </div>
-          </div>
-        </section>
+            </section>
 
-        {/* Cookie Categories */}
-        <section className="pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Types of Cookies We Use
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {cookieCategories.map((category) => (
-                <div key={category.name} className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300">
-                  <div className="mb-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-xl font-bold text-white">{category.name}</h3>
-                      {category.required && (
-                        <span className="text-xs text-red-400 bg-red-400/10 px-2 py-1 rounded-full">
-                          Required
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-gray-400 text-sm mb-4">{category.description}</p>
-                    <span className="text-sm text-gray-500">Duration: {category.duration}</span>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-3">Examples</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {category.examples.map((example, index) => (
-                        <span key={index} className="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded">
-                          {example}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Specific Cookies */}
-        <section className="pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Specific Cookies We Use
-            </h2>
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead className="bg-white/10">
-                    <tr>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-white">Cookie Name</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-white">Purpose</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-white">Duration</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-white">Provider</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-white/10">
-                    {specificCookies.map((cookie) => (
-                      <tr key={cookie.name} className="hover:bg-white/5">
-                        <td className="px-6 py-4 text-sm font-mono text-blue-400">{cookie.name}</td>
-                        <td className="px-6 py-4 text-sm text-gray-300">{cookie.purpose}</td>
-                        <td className="px-6 py-4 text-sm text-gray-400">{cookie.duration}</td>
-                        <td className="px-6 py-4 text-sm text-gray-400">{cookie.provider}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+            {/* How We Use Cookies */}
+            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="flex items-center mb-6">
+                <Eye className="w-8 h-8 text-green-400 mr-3" />
+                <h2 className="text-2xl font-bold text-white">How We Use Cookies</h2>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Cookie Management */}
-        <section className="pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-8">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Managing Your Cookie Preferences
-              </h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-3">Browser Settings</h3>
-                  <p className="text-gray-300 mb-4">
-                    You can control and manage cookies through your browser settings. Most browsers allow you to:
-                  </p>
-                  <ul className="space-y-2 text-gray-300 ml-6">
-                    <li>• View and delete existing cookies</li>
-                    <li>• Block cookies from specific websites</li>
-                    <li>• Block all cookies</li>
-                    <li>• Set preferences for different types of cookies</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-3">Cookie Consent</h3>
-                  <p className="text-gray-300 mb-4">
-                    When you first visit our website, you'll see a cookie consent banner that allows you to:
-                  </p>
-                  <ul className="space-y-2 text-gray-300 ml-6">
-                    <li>• Accept all cookies</li>
-                    <li>• Customize your cookie preferences</li>
-                    <li>• Reject non-essential cookies</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-3">Third-Party Cookies</h3>
-                  <p className="text-gray-300">
-                    Some cookies are set by third-party services that appear on our pages. You can manage these 
-                    through your browser settings or by visiting the third-party service's privacy policy.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Impact of Disabling Cookies */}
-        <section className="pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-8">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Impact of Disabling Cookies
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-3">If You Disable Cookies</h3>
-                  <ul className="space-y-2 text-gray-300">
-                    <li>• Some website features may not work properly</li>
-                    <li>• You may need to re-enter information each time</li>
-                    <li>• Personalized content may not be available</li>
-                    <li>• Security features may be limited</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-3">Essential Cookies</h3>
-                  <p className="text-gray-300">
-                    Essential cookies cannot be disabled as they are necessary for the website to function. 
-                    These include authentication, security, and basic functionality cookies.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Updates and Contact */}
-        <section className="pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-2xl border border-white/10 p-12 text-center">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Questions About Cookies?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                If you have any questions about our use of cookies or would like to manage your preferences, 
-                please don't hesitate to contact us.
+              <p className="text-gray-300 mb-4">
+                Zion Tech Group uses cookies for several purposes to improve your experience on our website:
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Contact Us
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h3 className="font-semibold text-white mb-2">Website Functionality</h3>
+                  <p className="text-gray-300 text-sm">Essential cookies that keep our website working properly</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h3 className="font-semibold text-white mb-2">Performance & Analytics</h3>
+                  <p className="text-gray-300 text-sm">Understanding how visitors use our website</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h3 className="font-semibold text-white mb-2">Personalization</h3>
+                  <p className="text-gray-300 text-sm">Tailoring content to your interests and preferences</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h3 className="font-semibold text-white mb-2">Marketing</h3>
+                  <p className="text-gray-300 text-sm">Delivering relevant advertisements and content</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Cookie Types */}
+            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-6">Types of Cookies We Use</h2>
+              <div className="space-y-6">
+                {cookieTypes.map((type, index) => (
+                  <div key={index} className="bg-white/5 rounded-lg p-6 border border-white/10">
+                    <div className="flex items-start mb-4">
+                      <div className={`p-3 rounded-lg ${type.color} mr-4`}>
+                        <type.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-white mb-2">{type.name}</h3>
+                        <p className="text-gray-300 mb-3">{type.description}</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                          {type.examples.map((example, idx) => (
+                            <div key={idx} className="flex items-center text-gray-300">
+                              <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                              {example}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Third-Party Cookies */}
+            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-6">Third-Party Cookies</h2>
+              <p className="text-gray-300 mb-6">
+                Some cookies on our website are set by third-party services that we use to enhance functionality:
+              </p>
+              <div className="space-y-4">
+                {thirdPartyCookies.map((service, index) => (
+                  <div key={index} className="bg-white/5 rounded-lg p-4 border border-white/10">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="font-semibold text-white">{service.service}</h3>
+                      <span className="text-sm text-gray-400">Retention: {service.retention}</span>
+                    </div>
+                    <p className="text-gray-300 text-sm mb-2"><strong>Purpose:</strong> {service.purpose}</p>
+                    <p className="text-gray-300 text-sm"><strong>Data Collected:</strong> {service.data}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Managing Cookies */}
+            <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-6">Managing Your Cookie Preferences</h2>
+              <p className="text-gray-300 mb-6">
+                You have several options for managing cookies and controlling your privacy:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                  <h3 className="text-lg font-semibold text-white mb-3">Cookie Consent Banner</h3>
+                  <ul className="text-gray-300 space-y-2 text-sm">
+                    <li>• Accept all cookies</li>
+                    <li>• Accept essential cookies only</li>
+                    <li>• Customize cookie preferences</li>
+                    <li>• Withdraw consent for specific cookies</li>
+                  </ul>
+                </div>
+                <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                  <h3 className="text-lg font-semibold text-white mb-3">Browser Settings</h3>
+                  <ul className="text-gray-300 space-y-2 text-sm">
+                    <li>• Block all cookies (not recommended)</li>
+                    <li>• Block third-party cookies only</li>
+                    <li>• Delete cookies when closing browser</li>
+                    <li>• Set cookie preferences per site</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          {/* Sidebar */}
+          <div className="space-y-6">
+            {/* Quick Navigation */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <h3 className="text-lg font-semibold text-white mb-4">Quick Navigation</h3>
+              <nav className="space-y-2">
+                <a href="#what-are-cookies" className="block text-blue-400 hover:text-white transition-colors duration-200">
+                  1. What Are Cookies?
                 </a>
-                <a
-                  href="/privacy"
-                  className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-                >
-                  Privacy Policy
+                <a href="#how-we-use" className="block text-blue-400 hover:text-white transition-colors duration-200">
+                  2. How We Use Cookies
                 </a>
+                <a href="#types-of-cookies" className="block text-blue-400 hover:text-white transition-colors duration-200">
+                  3. Types of Cookies We Use
+                </a>
+                <a href="#third-party-cookies" className="block text-blue-400 hover:text-white transition-colors duration-200">
+                  4. Third-Party Cookies
+                </a>
+                <a href="#managing-cookies" className="block text-blue-400 hover:text-white transition-colors duration-200">
+                  5. Managing Your Preferences
+                </a>
+              </nav>
+            </div>
+
+            {/* Cookie Statistics */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <h3 className="text-lg font-semibold text-white mb-4">Cookie Statistics</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Essential Cookies</span>
+                  <span className="text-green-400 font-semibold">Always Active</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Analytics Cookies</span>
+                  <span className="text-blue-400 font-semibold">Optional</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Marketing Cookies</span>
+                  <span className="text-purple-400 font-semibold">Optional</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Functional Cookies</span>
+                  <span className="text-orange-400 font-semibold">Optional</span>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* Last Updated */}
-        <section className="pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-gray-400">
-              <strong>Last Updated:</strong> {new Date().toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}
+            {/* Contact Information */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <h3 className="text-lg font-semibold text-white mb-4">Questions About Cookies?</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                If you have questions about our cookie policy or need help managing your preferences, 
+                we're here to help.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Cookie Consent Management */}
+        <section className="mt-12 bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Manage Your Cookie Preferences</h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Take control of your privacy by managing your cookie preferences. 
+              You can update these settings at any time.
             </p>
-            <p className="text-gray-400 mt-2">
-              We may update this Cookie Policy from time to time. Please check back periodically for any changes.
-            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors duration-200">
+                Accept All Cookies
+              </button>
+              <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200">
+                Essential Cookies Only
+              </button>
+              <button className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors duration-200">
+                Customize Preferences
+              </button>
+            </div>
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
-};
-
-export default Cookies;
+}
