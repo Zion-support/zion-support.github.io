@@ -4,6 +4,7 @@ import { FuturisticNavigation } from './components/FuturisticNavigation';
 import { FuturisticFooter } from './components/FuturisticFooter';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { ChatAssistant } from './components/ChatAssistant';
+import { PerformanceMonitor } from './components/PerformanceMonitor.tsx';
 
 
 // Lazy load pages - only import existing ones
@@ -110,6 +111,9 @@ function App() {
         
         {/* Chat Assistant */}
         <ChatAssistant />
+        
+        {/* Performance Monitor */}
+        <PerformanceMonitor />
       </div>
     </Router>
   );

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ThemeToggle } from './ThemeToggle.tsx';
+import { EnhancedSearch } from './EnhancedSearch.tsx';
 import { 
   Menu, 
   X, 
-  Search, 
   User, 
   Bell, 
   ChevronDown,
@@ -180,7 +181,6 @@ import {
 
 export const FuturisticNavigation: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -198,12 +198,7 @@ export const FuturisticNavigation: React.FC = () => {
     setActiveDropdown(null);
   }, [location.pathname]);
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-    }
-  };
+
 
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
@@ -391,19 +386,11 @@ export const FuturisticNavigation: React.FC = () => {
 
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
-              {/* Search */}
-              <form onSubmit={handleSearch} className="hidden md:block">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search services..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-64 px-4 py-2 pl-10 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300"
-                  />
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
-                </div>
-              </form>
+              {/* Enhanced Search */}
+              <EnhancedSearch />
+              
+              {/* Theme Toggle */}
+              <ThemeToggle />
 
               {/* User actions */}
               <div className="flex items-center space-x-2">
@@ -454,19 +441,7 @@ export const FuturisticNavigation: React.FC = () => {
               className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-xl border-t border-zion-cyan/20"
             >
               <div className="container mx-auto px-4 py-6 space-y-4">
-                {/* Mobile Search */}
-                <form onSubmit={handleSearch}>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      placeholder="Search services..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full px-4 py-3 pl-10 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50"
-                    />
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
-                  </div>
-                </form>
+                {/* Mobile Search - Enhanced Search component will be added here */}
 
                 {/* Mobile Navigation Items */}
                 <div className="space-y-2">

@@ -2,6 +2,7 @@
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
@@ -51,8 +52,8 @@
     "firebase": "^9.23.0",
     "framer-motion": "^12.23.12",
     "fuse.js": "^7.0.0",
-    "i18next": "^23.7.16",
-    "i18next-browser-languagedetector": "^7.2.0",
+    "i18next": "^25.4.1",
+    "i18next-browser-languagedetector": "^8.0.0",
     "input-otp": "^1.1.0",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.8.1",
