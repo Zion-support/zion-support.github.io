@@ -42,7 +42,11 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
+<<<<<<< HEAD:automation/backups/file-sync/2025-08-25T15-27-30-943Z/pages/talent/[id].tsx.backup.1756164983
   if (error || !profile) return <ProfileErrorState error={error} />;
+=======
+  if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2:pages/talent/[id].tsx
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">
