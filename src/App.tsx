@@ -28,6 +28,7 @@ const Help = React.lazy(() => import('./pages/Help.jsx'));
 const Security = React.lazy(() => import('./pages/Security.jsx'));
 const Status = React.lazy(() => import('./pages/Status.jsx'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap.jsx'));
+const ComprehensiveServicesShowcase2029 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2029.tsx'));
 
 const LoadingSpinner = () => (
   <div className="min-h-screen bg-futuristic flex items-center justify-center">
@@ -78,6 +79,7 @@ function App() {
               <Route path="/security" element={<Security />} />
               <Route path="/status" element={<Status />} />
               <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/services/showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
             </Routes>
           </Suspense>
         </main>
