@@ -1,79 +1,108 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+const Contact: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>Contact - Zion Tech Solutions</title>
+        <meta name="description" content="Contact page" />
+      </Head>
+      
+      <main>
+        <h1>Contact</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
+  );
+};
+
+export default Contact;
+=======
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-=======
-import Link from 'next/link';
-import { useState } from 'react';
-<<<<<<< HEAD
->>>>>>> 6d7be8fce1d5e66d749ea8dd439e0663bfd83322
 
 export default function ContactPage() {
-  const [formData, setFormData] = React.useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  });
+	return (
+		<>
+			<Head>
+				<title>Contact | Zion Tech Group</title>
+				<meta name="description" content="Contact Zion Tech Group" />
+				<link rel="canonical" href="https://ziontechgroup.com/contact" />
+			</Head>
+			<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+				<div className="container mx-auto px-6 py-16">
+					<h1 className="text-4xl font-bold mb-4">Contact</h1>
+					<p className="text-white/80 max-w-2xl">Email: kleber@ziontechgroup.com • Phone: +1 302 464 0950</p>
+				</div>
+			</main>
+		</>
+	);
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+export default function Page(){return null}
+=======
+=======
+import React from 'react';
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Send, User, Building2, MessageCircle, Clock as ClockIcon, Globe as GlobeIcon2, Shield as ShieldIcon2, Zap as ZapIcon4, Users as UsersIcon2, Rocket as RocketIcon2, Award as AwardIcon2, TrendingUp as TrendingUpIcon2, CheckCircle, AlertCircle, Info } from 'lucide-react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+export default function ContactPage() {
+  const contactInfo = [
+    {
+      icon: Mail,
+      title: "Email",
+      content: "kleber@ziontechgroup.com",
+      link: "mailto:kleber@ziontechgroup.com",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      content: "+1 (302) 464-0950",
+      link: "tel:+13024640950",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: MapPin,
+      title: "Location",
+      content: "Delaware, United States",
+      link: "#",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Clock,
+      title: "Business Hours",
+      content: "Mon-Fri: 9AM-6PM EST",
+      link: "#",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <Head>
         <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group. We're here to help you transform your business with cutting-edge technology solutions." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, quantum computing, and innovative technology services." />
+        <meta name="keywords" content="contact, Zion Tech Group, AI solutions, quantum computing, technology services" />
+        <meta property="og:title" content="Contact Us - Zion Tech Group" />
+        <meta property="og:description" content="Get in touch with Zion Tech Group for AI solutions and innovative technology services." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/contact" />
+        <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Head>
 
       <EnhancedNavigation />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Get In Touch
-            </h1>
-                          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Ready to transform your business? Let&apos;s discuss how our cutting-edge technology solutions can help you achieve your goals.
-              </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-20 px-6 bg-slate-800">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 p-8 backdrop-blur-xl"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -216,7 +245,7 @@ const Contact: NextPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Contact Us - Zion Tech Group | Get Started with Your Project</title>
         <meta name="description" content="Contact Zion Tech Group to discuss your technology needs. Get expert consultation, project estimates, and start your digital transformation journey today." />
@@ -265,15 +294,6 @@ const Contact: NextPage = () => {
           <div className="bg-white rounded-2xl shadow-lg p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Start Your Project</h2>
             
-<<<<<<< HEAD
-            {submitSuccess ? (
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-                <div className="text-green-600 text-5xl mb-4">✅</div>
-                <h3 className="text-xl font-bold text-green-800 mb-2">Thank You!</h3>
-                <p className="text-green-700">
-                  Your message has been sent successfully. We&apos;ll get back to you within 2 hours.
-                </p>
-=======
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -281,18 +301,13 @@ const Contact: NextPage = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
->>>>>>> a8f0f845e290c358af6875dc27c33d0b4e7e2446
                 <div>
-<<<<<<< HEAD
-                  <label htmlFor="name" className="block text-sm font-medium text-white/70 mb-2">
-=======
                   <h3 className="font-semibold text-gray-900">Phone</h3>
                   <a href="/tel:+13024640950" className="text-blue-600 hover:text-blue-700 text-lg">
                     +1 302 464 0950
                   </a>
                   <p className="text-gray-600 text-sm">Available Monday - Friday, 9 AM - 6 PM EST</p>
                 </div>
->>>>>>> 6d7be8fce1d5e66d749ea8dd439e0663bfd83322
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -556,171 +571,6 @@ const Contact: NextPage = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-          {/* Contact Form */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> 6d7be8fce1d5e66d749ea8dd439e0663bfd83322
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors duration-300"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-white/70 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors duration-300"
-                    placeholder="Enter your email address"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-white/70 mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors duration-300"
-                    placeholder="Enter your company name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-white/70 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors duration-300 resize-none"
-                    placeholder="Tell us about your project or how we can help"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl"
-                >
-                  Send Message
-                </button>
-              </form>
-            </motion.div>
-
-            {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-8"
-            >
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-                <p className="text-white/70 text-lg leading-relaxed mb-8">
-                  We&apos;re here to help you succeed. Reach out to us through any of the channels below, and we&apos;ll get back to you within 24 hours.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                    <p className="text-white/70">contact@ziontechgroup.com</p>
-                    <p className="text-white/50 text-sm">We&apos;ll respond within 24 hours</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                    <p className="text-white/70">+1 (555) 123-4567</p>
-                    <p className="text-white/50 text-sm">Available Monday-Friday, 9AM-6PM PST</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Office</h3>
-                    <p className="text-white/70">San Francisco, CA</p>
-                    <p className="text-white/50 text-sm">Visit by appointment only</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Response Time</h3>
-                    <p className="text-white/70">Within 24 hours</p>
-                    <p className="text-white/50 text-sm">For urgent matters, call us directly</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Additional Info */}
-              <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Why Choose Zion Tech Group?</h3>
-                <ul className="space-y-2 text-white/70">
-                  <li className="flex items-center gap-2">
-                    <span className="text-cyan-400">✓</span>
-                    Enterprise-grade security and compliance
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-cyan-400">✓</span>
-                    24/7 technical support
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-cyan-400">✓</span>
-                    Proven track record with Fortune 500 companies
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="text-cyan-400">✓</span>
-                    Custom solutions tailored to your needs
-                  </li>
-                </ul>
-              </div>
-<<<<<<< HEAD
-            </motion.div>
-=======
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
@@ -756,21 +606,7 @@ const Contact: NextPage = () => {
               <a
                 href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
->>>>>>> a8f0f845e290c358af6875dc27c33d0b4e7e2446
               >
-<<<<<<< HEAD
-                Call Now: +1 302 464 0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
-              >
-                Email Us
-              </a>
-            </div>
-          </div>
-        </section>
-=======
                 Send Message
               </button>
             </form>
@@ -781,15 +617,10 @@ const Contact: NextPage = () => {
                 <Link href="/privacy" className="text-blue-600 hover:text-blue-700">Privacy Policy</Link>
               </p>
             </div>
->>>>>>> 6d7be8fce1d5e66d749ea8dd439e0663bfd83322
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <EnhancedFooter />
-    </>
-=======
         {/* Additional Contact Options */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="text-center p-6 bg-white rounded-xl shadow-lg">
@@ -831,17 +662,129 @@ const Contact: NextPage = () => {
             </a>
           </div>
         </div>
->>>>>>> 6d7be8fce1d5e66d749ea8dd439e0663bfd83322
       </main>
 
       <Footer />
     </div>
->>>>>>> 6d7be8fce1d5e66d749ea8dd439e0663bfd83322
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default Contact;
->>>>>>> a8f0f845e290c358af6875dc27c33d0b4e7e2446
+=======
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                Get in
+                <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Touch
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Ready to transform your business with cutting-edge AI technology?
+                Let&apos;s discuss how we can help you achieve your goals.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+              {contactInfo.map((info, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center"
+                >
+                  <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${info.color} flex items-center justify-center mb-4 mx-auto`}>
+                    <info.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{info.title}</h3>
+                  {info.link !== "#" ? (
+                    <a 
+                      href={info.link}
+                      className="text-gray-300 hover:text-white transition-colors duration-300"
+                    >
+                      {info.content}
+                    </a>
+                  ) : (
+                    <p className="text-gray-300">{info.content}</p>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-white mb-6">
+                  Send Us a Message
+                </h2>
+                <p className="text-xl text-gray-300">
+                  Fill out the form below and we&apos;ll get back to you within 24 hours
+                </p>
+              </div>
+              <EnhancedContactForm />
+            </motion.div>
+          </div>
+        </section>
+      </main>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Don't wait to transform your business with revolutionary AI & quantum computing technology. 
+              Contact us today and get your free consultation.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Button
+                href="tel:+13024640950"
+                variant="primary"
+                size="lg"
+                className="text-lg px-8 py-4"
+              >
+                Call Now
+                <Phone className="ml-2 w-5 h-5" />
+              </Button>
+              <Button
+                href={`mailto:${contactInfo.email}`}
+                variant="secondary"
+                size="lg"
+                className="text-lg px-8 py-4"
+              >
+                Send Email
+                <Mail className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
+            
+            <div className="text-sm text-gray-400">
+              <p>✓ Free Consultation • ✓ 24/7 Support • ✓ &lt; 2 Hour Response • ✓ Expert Engineers</p>
+              <p className="mt-2">✓ Global Infrastructure • ✓ Enterprise Security • ✓ Custom Solutions • ✓ Ongoing Support</p>
+            </div>
+          </UltraFuturisticCard>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  );
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
