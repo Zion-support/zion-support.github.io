@@ -30,6 +30,7 @@ export interface InnovativeNewService {
     security: string[];
   };
 }
+
 export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
   // Quantum Computing & Advanced AI Services
   {
@@ -86,6 +87,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Autonomous Systems
   {
     id: "ai-autonomous-fleet-management",
@@ -141,6 +143,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // Blockchain & Web3 Services
   {
     id: "blockchain-enterprise-orchestrator",
@@ -196,6 +199,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Cybersecurity & Threat Intelligence
   {
     id: "ai-threat-intelligence-platform",
@@ -251,6 +255,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Healthcare & Medical Research
   {
     id: "ai-medical-research-platform",
@@ -306,6 +311,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Financial Services & Trading
   {
     id: "ai-financial-trading-platform",
@@ -361,6 +367,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Manufacturing & Industry 4.0
   {
     id: "ai-industry-4-0-platform",
@@ -416,6 +423,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Energy & Sustainability
   {
     id: "ai-energy-sustainability-platform",
@@ -471,6 +479,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Transportation & Smart Cities
   {
     id: "ai-smart-city-platform",
@@ -526,6 +535,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Education & Learning Analytics
   {
     id: "ai-education-analytics-platform",
@@ -581,6 +591,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Retail & E-commerce Innovation
   {
     id: "ai-retail-innovation-platform",
@@ -636,6 +647,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Legal & Compliance Automation
   {
     id: "ai-legal-compliance-platform",
@@ -691,6 +703,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Agriculture & Precision Farming
   {
     id: "ai-precision-farming-platform",
@@ -746,6 +759,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Construction & Infrastructure
   {
     id: "ai-construction-optimization",
@@ -801,6 +815,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Hospitality & Guest Experience
   {
     id: "ai-hospitality-optimization",
@@ -857,23 +872,27 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     }
   }
 ];
+
 export const getServicesByCategory = (category: string) => {
-  return INNOVATIVE_NEW_SERVICES.filter(service =>
+  return INNOVATIVE_NEW_SERVICES.filter(service => 
     service.category.toLowerCase().includes(category.toLowerCase())
   );
 };
+
 export const getServicesByPrice = (minPrice: number, maxPrice: number) => {
-  return INNOVATIVE_NEW_SERVICES.filter(service =>
+  return INNOVATIVE_NEW_SERVICES.filter(service => 
     service.price >= minPrice && service.price <= maxPrice
   );
 };
+
 export const getServicesByTechnology = (technology: string) => {
-  return INNOVATIVE_NEW_SERVICES.filter(service =>
+  return INNOVATIVE_NEW_SERVICES.filter(service => 
     service.technicalSpecs?.technology.includes(technology)
   );
 };
+
 export const getServicesBySupportLevel = (supportLevel: string) => {
-  return INNOVATIVE_NEW_SERVICES.filter(service =>
+  return INNOVATIVE_NEW_SERVICES.filter(service => 
     service.supportLevel === supportLevel
   );
 };

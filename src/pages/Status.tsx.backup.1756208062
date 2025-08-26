@@ -2,7 +2,6 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
-<<<<<<<< HEAD:src/pages/Status.tsx.backup.1756208062
 =======
 import Link from 'next/link';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
@@ -14,24 +13,16 @@ import {
   Server, 
   Database, 
   Network, 
-========
-import {
-  CheckCircle,
-  XCircle,
-  AlertTriangle,
-  Clock,
-  Server,
-  Database,
-  Network,
->>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896:broken_files_backup/Status.tsx
   Shield,
   Activity,
   BarChart3,
   RefreshCw,
   ExternalLink
 } from 'lucide-react';
+
 const Status: React.FC = () => {
   const currentTime = new Date().toLocaleString();
+  
   const services = [
     {
       name: 'Website',
@@ -141,6 +132,7 @@ const Status: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-5c03
     }
   ];
+
   const incidents = [
     {
 <<<<<<< HEAD
@@ -173,6 +165,7 @@ const Status: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-5c03
     }
   ];
+
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
@@ -192,6 +185,7 @@ const Status: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-5c03
     }
   };
+
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
@@ -216,6 +210,7 @@ const Status: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-5c03
     }
   };
+
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'low':
@@ -231,6 +226,7 @@ const Status: React.FC = () => {
         return 'bg-gray-100 text-gray-800';
     }
   };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header */}
@@ -241,12 +237,15 @@ const Status: React.FC = () => {
               <Activity className="w-4 h-4 mr-2" />
               System Status
             </div>
+            
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent">
               System Status
             </h1>
+            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Real-time status of all Zion Tech Group services and systems. Monitor uptime, performance, and incident reports.
             </p>
+            
             <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
               <span>Last updated: {currentTime}</span>
               <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -257,6 +256,7 @@ const Status: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Overall Status */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -268,6 +268,7 @@ const Status: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2 text-white">All Systems Operational</h3>
               <p className="text-gray-300">All services are running normally</p>
             </div>
+            
             <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 text-center">
               <div className="w-16 h-16 bg-blue-500/20 border border-blue-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
                 <BarChart3 className="w-8 h-8 text-blue-400" />
@@ -275,6 +276,7 @@ const Status: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2 text-white">99.98% Uptime</h3>
               <p className="text-gray-300">Last 30 days</p>
             </div>
+            
             <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 text-center">
               <div className="w-16 h-16 bg-cyan-500/20 border border-cyan-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Activity className="w-8 h-8 text-cyan-400" />
@@ -285,6 +287,7 @@ const Status: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Service Status */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
@@ -296,6 +299,7 @@ const Status: React.FC = () => {
               Current status of all core services and infrastructure components.
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <div key={index} className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6">
@@ -303,19 +307,23 @@ const Status: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   {getStatusIcon(service.status)}
                 </div>
+                
                 <div className="space-y-3">
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-400">Status:</span>
                     <span className={getStatusColor(service.status)}>Operational</span>
                   </div>
+                  
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-400">Uptime:</span>
                     <span className="text-green-400">{service.uptime}</span>
                   </div>
+                  
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-400">Response Time:</span>
                     <span className="text-cyan-400">{service.responseTime}</span>
                   </div>
+                  
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-400">Last Checked:</span>
                     <span className="text-gray-300">{service.lastChecked}</span>
@@ -326,6 +334,7 @@ const Status: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Recent Incidents */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -337,6 +346,7 @@ const Status: React.FC = () => {
               History of recent incidents and maintenance activities.
             </p>
           </div>
+          
           <div className="space-y-6">
             {incidents.map((incident) => (
               <div key={incident.id} className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6">
@@ -352,7 +362,9 @@ const Status: React.FC = () => {
                   </div>
                   <span className="text-green-400 text-sm font-medium">Resolved</span>
                 </div>
+                
                 <p className="text-gray-300 mb-4">{incident.description}</p>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                   <div>
                     <span className="text-gray-400">Start Time:</span>
@@ -365,6 +377,7 @@ const Status: React.FC = () => {
                 </div>
               </div>
             ))}
+            
             {incidents.length === 0 && (
               <div className="text-center py-12">
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -375,6 +388,7 @@ const Status: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Performance Metrics */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
@@ -386,6 +400,7 @@ const Status: React.FC = () => {
               Key performance indicators and system health metrics.
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 text-center">
               <div className="w-12 h-12 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -394,6 +409,7 @@ const Status: React.FC = () => {
               <h3 className="text-lg font-semibold text-white mb-2">Server Health</h3>
               <p className="text-2xl font-bold text-green-400">100%</p>
             </div>
+            
             <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 text-center">
               <div className="w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Database className="w-6 h-6 text-blue-400" />
@@ -401,6 +417,7 @@ const Status: React.FC = () => {
               <h3 className="text-lg font-semibold text-white mb-2">Database</h3>
               <p className="text-2xl font-bold text-blue-400">99.98%</p>
             </div>
+            
             <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 text-center">
               <div className="w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Network className="w-6 h-6 text-cyan-400" />
@@ -408,6 +425,7 @@ const Status: React.FC = () => {
               <h3 className="text-lg font-semibold text-white mb-2">Network</h3>
               <p className="text-2xl font-bold text-cyan-400">99.95%</p>
             </div>
+            
             <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 text-center">
               <div className="w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-6 h-6 text-purple-400" />
@@ -418,6 +436,7 @@ const Status: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-600/10">
         <div className="max-w-4xl mx-auto text-center">
@@ -427,6 +446,7 @@ const Status: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             If you're experiencing issues or have questions, our support team is here to help.
           </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -434,6 +454,7 @@ const Status: React.FC = () => {
             >
               Contact Support
             </Link>
+            
             <Link
               to="/help"
               className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200"
@@ -443,6 +464,7 @@ const Status: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Footer */}
       <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
         <div className="max-w-7xl mx-auto">
@@ -453,6 +475,7 @@ const Status: React.FC = () => {
                 Leading provider of AI-powered technology solutions with reliable infrastructure and 99.98% uptime.
               </p>
             </div>
+            
             <div>
               <h4 className="text-md font-semibold mb-4 text-white">Services</h4>
               <ul className="space-y-2 text-sm text-gray-400">
@@ -461,6 +484,7 @@ const Status: React.FC = () => {
                 <li><Link to="/services/quantum-technology" className="hover:text-cyan-400 transition-colors">Quantum Technology</Link></li>
               </ul>
             </div>
+            
             <div>
               <h4 className="text-md font-semibold mb-4 text-white">Support</h4>
               <ul className="space-y-2 text-sm text-gray-400">
@@ -469,6 +493,7 @@ const Status: React.FC = () => {
                 <li><Link to="/docs" className="hover:text-cyan-400 transition-colors">Documentation</Link></li>
               </ul>
             </div>
+            
             <div>
               <h4 className="text-md font-semibold mb-4 text-white">Status</h4>
               <div className="space-y-2 text-sm text-gray-400">
@@ -478,6 +503,7 @@ const Status: React.FC = () => {
               </div>
             </div>
           </div>
+          
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
             <p>&copy; 2024 Zion Tech Group. All rights reserved. | System Status Page</p>
           </div>
@@ -713,4 +739,5 @@ const Status: React.FC = () => {
     </div>
   );
 };
+
 export default Status;

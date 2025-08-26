@@ -37,6 +37,7 @@ export interface IndustrySpecificSolution {
   industryPartners: string[];
   certifications: string[];
 }
+
 export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
   {
     id: "healthcare-ai-diagnostics",

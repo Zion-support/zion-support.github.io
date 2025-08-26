@@ -1,75 +1,136 @@
-import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
+import React from 'react';
+import { NextSeo } from '@/components/NextSeo';
 import { useRouter } from 'next/router';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
-import type { TalentProfile } from '@/types/talent';
-import TalentDetails from '@/components/talent/TalentDetails';
+// Loader2 removed as TalentProfileSkeleton will be used
+import TalentProfileSkeleton from '@/components/talent/TalentProfileSkeleton';
 import NotFound from '@/components/NotFound';
-import { ErrorBoundary } from '@/components/ErrorBoundary';
+import useSWR from 'swr';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+
+interface TalentProfileBasic {
+  id: string;
+  name: string;
+  bio?: string;
+  skills?: string[];
+  portfolio?: string[];
+}
+
+// fetcher-like function for handling API responses
+const handleApiResponse = async (res: Response) => {
+  if (!res.ok) {
+    const error = new Error('An error occurred while fetching the data.');
+    // Read response body once and attempt to parse JSON
+    const raw = await res.text();
+    try {
+      (error as any).info = JSON.parse(raw);
+    } catch {
+      (error as any).info = { message: raw };
+    }
+    (error as any).status = res.status;
+    throw error;
+  }
+  return res.json();
+};
 
 const TalentPage: React.FC = () => {
   const router = useRouter();
-  const { id } = router.query;
-  const [profile, setProfile] = useState<(TalentProfile & { social?: Record<string, string> }) | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const { id } = router.query as { id?: string };
 
-  useEffect(() => {
-    if (!id) return;
-    const fetchProfile = async () => {
-      try {
-        setLoading(true);
-        const res = await fetch(`/api/talent/${id}`);
-        if (!res.ok) throw new Error('Failed to load profile');
-        const data = await res.json();
-        setProfile(data.profile);
-        setError(null);
-      } catch (err) {
-        setError((err as Error).message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchProfile();
-  }, [id]);
+  const { data, error, isLoading } = useSWR<TalentProfileBasic>(
+    id ? `/api/talent/${id}` : null,
+    (url: string) => fetch(url).then(handleApiResponse)
+  );
 
-  if (loading) {
+  if (isLoading || !router.isReady || !id) {
+    return <TalentProfileSkeleton />;
+  }
+
+  // Specific 404 error from API
+  if (error && (error as any).status === 404) {
     return (
-      <div className="p-4 space-y-2" data-testid="talent-loading">
-        <Skeleton className="h-8 w-1/3" />
-        <Skeleton className="h-4 w-full" />
-        <Skeleton className="h-4 w-2/3" />
-      </div>
+      <>
+        <NextSeo title="Talent Not Found" description="Talent profile unavailable" />
+        <NotFound />
+      </>
     );
   }
 
+  // Other errors (non-404)
   if (error) {
+    const err: any = error;
     return (
-      <div className="p-4">
-        <Alert variant="destructive">
-          <AlertTitle>Error</AlertTitle>
-          <AlertDescription>{error}</AlertDescription>
-        </Alert>
+      <div className="flex flex-col items-center justify-center py-20 text-center">
+        <h2 className="text-2xl font-semibold mb-2">Error</h2>
+        <p>Failed to load talent profile.</p>
+        {err.status && <p>Status: {err.status}</p>}
+        <p>Message: {err.info?.error || err.info?.message || err.message}</p>
       </div>
     );
   }
 
-  if (!profile) {
-    return <NotFound />;
+  // API call was successful (no error thrown) but no profile found
+  // This also implies !isLoading at this point.
+  if (!data) {
+    return (
+      <>
+        <NextSeo title="Talent Not Found" description="Talent profile unavailable" />
+        <NotFound />
+      </>
+    );
   }
 
   // If we reach here, talent data is available
   return (
     <>
-      <Head>
-        <title>{profile.full_name}</title>
-        <meta property="og:title" content={profile.full_name} />
-        {profile.profile_picture_url && (
-          <meta property="og:image" content={profile.profile_picture_url} />
-        )}
-      </Head>
-      <TalentDetails talent={profile} />
+      <NextSeo
+        title={data.name}
+        description={data.bio ?? undefined} // Ensure description is string or undefined
+        openGraph={{
+          images: undefined,
+          title: data.name,
+          description: data.bio ?? undefined // Ensure description is string or undefined
+        }}
+      />
+      <main className="min-h-screen bg-zion-blue py-8 text-white" data-testid="talent-details">
+        <div className="container mx-auto px-4 space-y-6">
+          <div className="flex items-center gap-4">
+            <Avatar className="h-20 w-20">
+              <AvatarFallback>{data.name.charAt(0)}</AvatarFallback>
+            </Avatar>
+            <div>
+              <h1 className="text-3xl font-bold" data-testid="profile-name">
+                {data.name}
+              </h1>
+              {data.bio && <p className="text-zion-slate-light">{data.bio}</p>}
+            </div>
+          </div>
+
+          {data.skills && data.skills.length > 0 && (
+            <div className="flex flex-wrap gap-2" data-testid="skills">
+              {data.skills.map((skill) => (
+                <Badge key={skill} variant="secondary">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          )}
+
+          {data.portfolio && data.portfolio.length > 0 && (
+            <div>
+              <h2 className="text-xl font-semibold mb-2">Portfolio</h2>
+              <ul className="list-disc ml-5 space-y-1">
+                {data.portfolio.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <Button className="bg-zion-purple text-white">Hire</Button>
+        </div>
+      </main>
     </>
   );
 };

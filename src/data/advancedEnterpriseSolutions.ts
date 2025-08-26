@@ -28,6 +28,7 @@ export interface AdvancedEnterpriseSolution {
   innovationLevel: string;
   marketTrend: string;
 }
+
 export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
   // AI-Powered Enterprise Platforms
   {
@@ -87,6 +88,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     innovationLevel: "Breakthrough",
     marketTrend: "Rapidly Growing"
   },
+
   // Quantum Enterprise Solutions
   {
     id: "quantum-enterprise-computing",
@@ -145,6 +147,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     innovationLevel: "Revolutionary",
     marketTrend: "Emerging"
   },
+
   // Autonomous Business Intelligence
   {
     id: "autonomous-business-intelligence",
@@ -203,6 +206,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     innovationLevel: "Advanced",
     marketTrend: "Growing"
   },
+
   // Next-Gen Cybersecurity Platform
   {
     id: "next-gen-cybersecurity",
@@ -261,6 +265,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
     innovationLevel: "Advanced",
     marketTrend: "High Growth"
   },
+
   // Digital Twin Enterprise Platform
   {
     id: "digital-twin-enterprise",

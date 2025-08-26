@@ -126,9 +126,6 @@ function CategoryContent({
     categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin");
 
   return (
-<<<<<<< HEAD
-    <AppLayout>
-=======
     <div className="container py-8">
       <div className="flex items-center gap-3 mb-6">
         <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
@@ -199,16 +196,11 @@ export default function ForumCategoryPage() {
 
   return (
     <>
->>>>>>> origin/main
       <SEO
         title={`${category.name} | Community Forum | Zion AI Marketplace`}
         description={category.description}
         keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`}
-<<<<<<< HEAD
-        canonical={`https://app.ziontechgroup.com/community/category/${category.id}`}
-=======
         canonical={`https://ziontechgroup.com/community/category/${categoryId}`}
->>>>>>> origin/main
       />
 
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>

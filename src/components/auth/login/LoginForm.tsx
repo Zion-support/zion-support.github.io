@@ -8,7 +8,7 @@ import { LogIn, User, Eye, EyeOff } from "lucide-react";
 
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
-import { auth } from "@/services/auth";
+import { loginUser } from "@/services/authService";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -20,21 +20,20 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { LoadingOverlay } from "@/components/LoadingOverlay";
 
 // Form validation schema
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters"),
-  rememberMe: z.boolean().default(false),
 });
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 export function LoginForm() {
-  const { isLoading, login } = useAuth();
+  const { login, isLoading } = useAuth();
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
@@ -46,31 +45,16 @@ export function LoginForm() {
     },
   });
 
-  const handleLogin = async (data: LoginFormValues) => {
+  const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return;
 
     try {
       setIsSubmitting(true);
-      const res = await auth.login(data.email, data.password);
-      if (res.status === 200) {
-        navigate('/dashboard');
-      } else if (res.status >= 400 && res.status < 500) {
-        toast.error(res.data?.error || 'Invalid credentials');
-      }
-
-      await login(data.email, data.password);
-
-      const next = searchParams.get('next') || '/';
-      if (next === '/checkout') {
-        const intended = sessionStorage.getItem('intendedProduct');
-        sessionStorage.removeItem('intendedProduct');
-        if (intended) {
-          navigate(`/checkout?product=${intended}`);
-        } else {
-          navigate('/checkout');
-        }
+      const { error } = await login(data.email, data.password);
+      if (error) {
+        form.setError("root", { message: error });
       } else {
-        navigate(next);
+        navigate("/");
       }
     } finally {
       setIsSubmitting(false);
@@ -80,7 +64,7 @@ export function LoginForm() {
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit(handleLogin)}
+        onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-6"
         autoComplete="off" // Disable browser autofill
       >

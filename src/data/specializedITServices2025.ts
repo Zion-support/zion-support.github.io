@@ -24,6 +24,7 @@ export interface SpecializedITService2025 {
   technologyStack: string[];
   roiMetrics: string[];
 }
+
 export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
   {
     id: "5g-enterprise-network-solutions",
@@ -128,11 +129,13 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
     roiMetrics: ["95% latency reduction", "80% bandwidth cost savings", "Millions of edge devices supported"]
   }
 ];
+
 export const getServicesByCategory = (category: string) => {
   return SPECIALIZED_IT_SERVICES_2025.filter(service => service.category === category);
 };
+
 export const getFeaturedServices = () => {
-  return SPECIALIZED_IT_SERVICES_2025.filter(service =>
+  return SPECIALIZED_IT_SERVICES_2025.filter(service => 
     service.price >= 4000 || service.category === "Network Infrastructure"
   );
 };

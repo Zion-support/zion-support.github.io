@@ -29,6 +29,7 @@ export interface SpecializedAIService2025 {
   trainingData: string;
   accuracy: string;
 }
+
 export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
   // Multimodal AI Content Studio
   {
@@ -89,6 +90,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     trainingData: "Multi-billion parameter models",
     accuracy: "95%+ content quality score"
   },
+
   // AI-Powered Predictive Healthcare Analytics
   {
     id: "ai-powered-predictive-healthcare-analytics",
@@ -148,6 +150,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     trainingData: "De-identified patient data",
     accuracy: "92% prediction accuracy"
   },
+
   // Autonomous Financial Trading AI
   {
     id: "autonomous-financial-trading-ai",
@@ -207,6 +210,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     trainingData: "Historical market data + news sentiment",
     accuracy: "87% prediction accuracy"
   },
+
   // AI-Powered Supply Chain Optimization
   {
     id: "ai-powered-supply-chain-optimization",
@@ -266,6 +270,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     trainingData: "Historical supply chain data",
     accuracy: "89% optimization accuracy"
   },
+
   // AI-Powered Legal Research Assistant
   {
     id: "ai-powered-legal-research-assistant",
@@ -325,6 +330,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     trainingData: "Legal documents + case law",
     accuracy: "94% legal accuracy"
   },
+
   // AI-Powered Educational Personalization
   {
     id: "ai-powered-educational-personalization",

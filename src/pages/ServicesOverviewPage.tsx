@@ -1,0 +1,749 @@
+import React from 'react';
+=======
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+=======
+=======
+    Server,
+  TrendingUp,
+  CheckCircle,
+  Users,
+  Settings,
+  Globe,
+  Zap,
+  Search,
+  Shield,
+  BarChart3,
+  MessageSquare,
+  FileText,
+  Mail,
+  Eye,
+  Video,
+  Cloud,
+  Database,
+  Code,
+  Smartphone,
+  HardDrive,
+  Monitor,
+  Leaf,
+  Lightbulb,
+  Building,
+  DollarSign,
+  Star,
+  ShoppingCart,
+  Phone
+} from 'lucide-react';
+
+const ServiceCategories = [
+  {
+    title: "AI Services & Solutions",
+    description: "Transform your business with cutting-edge artificial intelligence",
+    icon: <Brain className="h-16 w-16 text-zion-cyan" />,
+    link: "/ai-services",
+    badge: "New",
+    color: "from-cyan-500 to-blue-600",
+    services: [
+      "AI Strategy Consulting",
+      "Custom AI Model Development", 
+      "Computer Vision Solutions",
+      "Natural Language Processing",
+      "AI Ethics & Compliance",
+      "AI Training & Workshops"
+    ],
+    priceRange: "$500 - $50,000+",
+    features: ["Machine Learning", "Deep Learning", "AI Integration", "Model Optimization"]
+  },
+  {
+    title: "IT Services & Infrastructure",
+    description: "Build robust, scalable, and secure technology infrastructure",
+    icon: <Server className="h-16 w-16 text-zion-blue" />,
+    link: "/it-services",
+    badge: "Popular",
+    color: "from-blue-500 to-purple-600",
+    services: [
+      "Cloud Infrastructure Management",
+      "Cybersecurity Services",
+      "DevOps & CI/CD",
+      "Network Infrastructure",
+      "Data Center Services",
+      "24/7 IT Support"
+    ],
+    priceRange: "$500 - $20,000/month",
+    features: ["Cloud Migration", "Security", "Automation", "Monitoring"]
+  },
+  {
+    title: "Digital Marketing Services",
+    description: "Drive growth with data-driven marketing strategies",
+    icon: <TrendingUp className="h-16 w-16 text-zion-purple" />,
+    link: "/digital-marketing",
+    badge: "Featured",
+    color: "from-purple-500 to-pink-600",
+    services: [
+      "Search Engine Optimization (SEO)",
+      "Pay-Per-Click (PPC) Management",
+      "Social Media Marketing",
+      "Content Marketing Strategy",
+      "Email Marketing Campaigns",
+      "Marketing Analytics"
+    ],
+    priceRange: "$500 - $15,000/month",
+    features: ["SEO", "PPC", "Social Media", "Content", "Analytics"]
+  },
+  {
+    title: "Business Solutions & Consulting",
+    description: "Strategic consulting and process optimization for growth",
+          icon: <CheckCircle className="h-16 w-16 text-zion-green" />,
+    link: "/business-solutions",
+    color: "from-green-500 to-emerald-600",
+    services: [
+      "Business Strategy Consulting",
+      "Process Automation",
+      "Digital Transformation",
+      "Change Management",
+      "Financial Planning",
+      "Market Research"
+    ],
+    priceRange: "$150 - $200,000+",
+    features: ["Strategy", "Automation", "Transformation", "Consulting"]
+  },
+  {
+    title: "Talent & Recruitment",
+    description: "Connect with verified AI and tech specialists worldwide",
+    icon: <Users className="h-16 w-16 text-zion-pink" />,
+    link: "/talent",
+    badge: "Premium",
+    color: "from-pink-500 to-rose-600",
+    services: [
+      "AI Talent Matching",
+      "Talent Directory Access",
+      "Recruitment Services",
+      "Skill Assessment",
+      "Background Verification",
+      "Contract Management"
+    ],
+    priceRange: "Free - $5,000+",
+    features: ["AI Matching", "Verification", "Assessment", "Management"]
+  },
+  {
+    title: "Equipment & Hardware",
+    description: "Access cutting-edge technology and specialized equipment",
+    icon: <Settings className="h-16 w-16 text-zion-amber" />,
+    link: "/equipment",
+    color: "from-amber-500 to-orange-600",
+    services: [
+      "AI Development Hardware",
+      "GPU Clusters & Servers",
+      "Specialized Equipment",
+      "Rental Services",
+      "Maintenance Support",
+      "Technical Consultation"
+    ],
+    priceRange: "$100 - $100,000+",
+    features: ["Hardware", "Rental", "Support", "Consultation"]
+  }
+];
+
+const AdditionalServices = [
+  {
+    title: "Onsite IT Services",
+    description: "Professional IT support at your location",
+    icon: <Globe className="h-8 w-8 text-zion-cyan" />,
+    link: "/it-onsite-services",
+    price: "From $150/hour"
+  },
+  {
+    title: "Zion Hire AI",
+    description: "AI-powered recruiting assistant",
+    icon: <Brain className="h-8 w-8 text-zion-purple" />,
+    link: "/zion-hire-ai",
+    price: "From $500/month"
+  },
+  {
+    title: "Enterprise Solutions",
+    description: "Custom solutions for large organizations",
+    icon: <Building className="h-8 w-8 text-zion-blue" />,
+    link: "/enterprise",
+    price: "Custom pricing"
+  },
+  {
+    title: "Green IT Solutions",
+    description: "Sustainable technology solutions",
+    icon: <Leaf className="h-8 w-8 text-zion-green" />,
+    link: "/green-it",
+    price: "From $1,000"
+  }
+];
+
+export default function ServicesOverviewPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple-dark via-zion-purple to-zion-cyan py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Our Services & Solutions
+          </h1>
+          <p className="text-xl text-zion-cyan-light max-w-4xl mx-auto mb-8">
+            Comprehensive technology services to transform your business. From AI development to IT infrastructure, 
+            digital marketing to business consulting - we provide end-to-end solutions for the modern enterprise.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate font-semibold">
+              <Search className="h-5 w-5 mr-2" />
+              Explore All Services
+            </Button>
+            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+              <MessageSquare className="h-5 w-5 mr-2" />
+              Get Free Consultation
+  Cloud, 
+  Shield, 
+  Server, 
+  Zap, 
+  TrendingUp, 
+  Users, 
+  Globe,
+  Database,
+  Network,
+  Monitor,
+  Code,
+  Target,
+  Lightbulb,
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
+  DollarSign
+} from 'lucide-react';
+import Wifi from 'lucide-react/dist/esm/icons/wifi';
+import Target from 'lucide-react/dist/esm/icons/target';
+import Rocket from 'lucide-react/dist/esm/icons/rocket';
+import { SEO } from '@/components/SEO';
+
+const categoryIcons = {
+  "AI & Machine Learning": Brain,
+  "Cybersecurity": Shield,
+  "Cloud & DevOps": Cloud,
+  "Data & Analytics": BarChart3,
+  "Digital Transformation": RefreshCw,
+  "IoT & Smart Solutions": Wifi,
+  "Blockchain & Web3": Link
+};
+
+const categoryColors = {
+  "AI & Machine Learning": "from-purple-500 to-pink-500",
+  "Cybersecurity": "from-red-500 to-orange-500",
+  "Cloud & DevOps": "from-blue-500 to-cyan-500",
+  "Data & Analytics": "from-green-500 to-emerald-500",
+  "Digital Transformation": "from-indigo-500 to-purple-500",
+  "IoT & Smart Solutions": "from-yellow-500 to-orange-500",
+  "Blockchain & Web3": "from-gray-500 to-blue-500"
+};
+
+export default function ServicesOverviewPage() {
+  const getServicesByCategory = (category: string) => {
+    return ENHANCED_SERVICES.filter(service => service.category === category);
+  };
+
+  const formatPrice = (price: number) => {
+    if (price >= 1000) {
+      return `$${(price / 1000).toFixed(1)}k`;
+    }
+    return `$${price}`;
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEO
+        title="Complete IT & AI Services Overview - Zion Tech Group"
+        description="Explore our comprehensive suite of AI, cybersecurity, cloud, and digital transformation services. Expert solutions for every business need."
+        keywords="AI services, cybersecurity, cloud solutions, digital transformation, IT consulting, blockchain, IoT, enterprise solutions"
+        canonical="https://ziontechgroup.com/services-overview"
+      />
+
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark text-white py-24">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8">
+            Complete Technology Solutions
+          </h1>
+          <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
+            From AI-powered automation to enterprise cybersecurity, we provide comprehensive technology services
+            that transform businesses and drive innovation across all industries.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <Button size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light text-lg px-8 py-6">
+              <Phone className="mr-3 h-6 w-6" />
+              Call +1 302 464 0950
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue text-lg px-8 py-6">
+              <Mail className="mr-3 h-6 w-6" />
+              Email kleber@ziontechgroup.com
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Banner */}
+      <div className="bg-zion-blue-dark py-6 px-4 md:px-8 border-b border-zion-blue-light">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-white">
+          <div className="flex items-center gap-4">
+            <Globe className="h-6 w-6 text-zion-cyan" />
+            <span className="text-lg font-medium">Global IT Services • 24/7 Support • Enterprise Solutions</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-6 text-sm">
+            <div className="flex items-center gap-2">
+              <Phone className="h-4 w-4 text-zion-cyan" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail className="h-4 w-4 text-zion-cyan" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Target className="h-4 w-4 text-zion-cyan" />
+              <span>Middletown, DE 19709</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Overview Tabs */}
+      <div className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Our Service Categories
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our comprehensive range of technology services designed to meet every business need
+            </p>
+          </div>
+
+          <Tabs defaultValue="ai-ml" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-7 mb-8">
+              {SERVICE_CATEGORIES.map((category) => {
+                const Icon = categoryIcons[category as keyof typeof categoryIcons];
+                return (
+                  <TabsTrigger
+                    key={category}
+                    value={category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
+                    className="flex flex-col items-center gap-2 p-4 data-[state=active]:bg-zion-blue data-[state=active]:text-white"
+                  >
+                    <Icon className="h-6 w-6" />
+                    <span className="text-xs text-center">{category}</span>
+                  </TabsTrigger>
+                );
+              })}
+            </TabsList>
+
+            {SERVICE_CATEGORIES.map((category) => {
+              const services = getServicesByCategory(category);
+              const Icon = categoryIcons[category as keyof typeof categoryIcons];
+              const gradient = categoryColors[category as keyof typeof categoryColors];
+
+              return (
+                <TabsContent
+                  key={category}
+                  value={category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
+                  className="space-y-8"
+                >
+                  {/* Category Header */}
+                  <div className={`bg-gradient-to-r ${gradient} text-white rounded-2xl p-8 text-center`}>
+                    <div className="flex justify-center mb-4">
+                      <div className="bg-white/20 rounded-full p-4">
+                        <Icon className="h-12 w-12 text-white" />
+                      </div>
+                    </div>
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4">{category}</h3>
+                    <p className="text-xl text-white/90 max-w-2xl mx-auto">
+                      {category === "AI & Machine Learning" && "Transform your business with cutting-edge AI solutions that automate processes and unlock new insights."}
+                      {category === "Cybersecurity" && "Protect your digital assets with enterprise-grade security solutions and zero-trust architecture."}
+                      {category === "Cloud & DevOps" && "Accelerate development and optimize cloud infrastructure with modern DevOps practices."}
+                      {category === "Data & Analytics" && "Turn your data into actionable insights with real-time analytics and business intelligence."}
+                      {category === "Digital Transformation" && "Modernize your business processes and technology infrastructure for the digital age."}
+                      {category === "IoT & Smart Solutions" && "Connect and monitor your devices with intelligent IoT platforms and smart city solutions."}
+                      {category === "Blockchain & Web3" && "Embrace the future with blockchain solutions, DeFi applications, and Web3 innovation."}
+                    </p>
+                  </div>
+
+                  {/* Services Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {services.map((service) => (
+                      <Card key={service.id} className="h-full hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+                        <CardHeader className="pb-4">
+                          <div className="flex items-start justify-between mb-3">
+                            <Badge variant="secondary" className="text-xs">
+                              {service.subcategory}
+                            </Badge>
+                            <Badge className="bg-green-100 text-green-800 text-xs">
+                              Save {service.savings}%
+                            </Badge>
+                          </div>
+                          <CardTitle className="text-xl mb-3 leading-tight">{service.title}</CardTitle>
+                          <CardDescription className="text-sm leading-relaxed">
+                            {service.description}
+                          </CardDescription>
+                        </CardHeader>
+
+                        <CardContent className="pb-4">
+                          {/* Key Benefits */}
+                          <div className="mb-4">
+                            <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
+                              <TrendingUp className="h-4 w-4 text-green-500" />
+                              Key Benefits
+                            </h4>
+                            <ul className="text-sm text-gray-600 space-y-1">
+                              {service.benefits.slice(0, 3).map((benefit, index) => (
+                                <li key={index} className="flex items-start gap-2">
+                                  <CheckCircle className="h-3 w-3 text-green-500 mt-0.5 flex-shrink-0" />
+                                  <span>{benefit}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+
+                          {/* Use Cases */}
+                          <div className="mb-4">
+                            <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
+                              <Lightbulb className="h-4 w-4 text-yellow-500" />
+                              Use Cases
+                            </h4>
+                            <div className="flex flex-wrap gap-1">
+                              {service.useCases.slice(0, 3).map((useCase, index) => (
+                                <Badge key={index} variant="outline" className="text-xs">
+                                  {useCase}
+                                </Badge>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Target Audience */}
+                          <div className="mb-4">
+                            <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
+                              <Users className="h-4 w-4 text-blue-500" />
+                              Target Audience
+                            </h4>
+                            <div className="flex flex-wrap gap-1">
+                              {service.targetAudience.slice(0, 2).map((audience, index) => (
+                                <Badge key={index} variant="secondary" className="text-xs">
+                                  {audience}
+                                </Badge>
+                              ))}
+                            </div>
+                          </div>
+                        </CardContent>
+
+                        <CardContent className="pt-0">
+                          {/* Pricing & Metrics */}
+                          <div className="bg-gray-50 rounded-lg p-4 mb-4">
+                            <div className="flex items-center justify-between mb-3">
+                              <div className="text-center">
+                                <div className="text-2xl font-bold text-zion-blue">
+                                  {formatPrice(service.price)}
+                                </div>
+                                <div className="text-sm text-gray-500">
+                                  {service.pricingModel === 'subscription' ? '/month' : 'one-time'}
+                                </div>
+                              </div>
+                              <div className="text-right">
+                                <div className="text-sm text-gray-500 line-through">
+                                  {formatPrice(service.marketPrice)}
+                                </div>
+                                <div className="text-sm font-semibold text-green-600">
+                                  Save {service.savings}%
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="grid grid-cols-3 gap-2 text-center text-xs">
+                              <div className="flex items-center gap-1 justify-center">
+                                <Star className="h-3 w-3 text-yellow-500" />
+                                <span>{service.rating}</span>
+                              </div>
+                              <div className="flex items-center gap-1 justify-center">
+                                <Zap className="h-3 w-3 text-blue-500" />
+                                <span>{service.aiScore}</span>
+                              </div>
+                              <div className="flex items-center gap-1 justify-center">
+                                <Clock className="h-3 w-3 text-green-500" />
+                                <span>{service.deliveryTime}</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Action Buttons */}
+                          <div className="grid grid-cols-2 gap-3">
+                            <Button className="w-full" size="sm">
+                              <Phone className="mr-2 h-4 w-4" />
+                              Contact
+                            </Button>
+                            <Button variant="outline" className="w-full" size="sm">
+                              <ArrowRight className="mr-2 h-4 w-4" />
+                              Learn More
+                            </Button>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+
+                  {/* Category CTA */}
+                  <div className="text-center py-8">
+                    <Button size="lg" className="bg-zion-blue hover:bg-zion-blue-dark text-white px-8 py-6">
+                      <Rocket className="mr-3 h-6 w-6" />
+                      Get Started with {category}
+                    </Button>
+                  </div>
+                </TabsContent>
+              );
+            })}
+          </Tabs>
+        </div>
+      </div>
+
+      {/* Why Choose Zion Tech Section */}
+      <div className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We combine cutting-edge technology with proven expertise to deliver exceptional results
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <Award className="h-10 w-10 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Proven Expertise</h3>
+              <p className="text-gray-600">
+                Over 15 years of experience in delivering enterprise technology solutions across industries
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <Zap className="h-10 w-10 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">AI-Powered Solutions</h3>
+              <p className="text-gray-600">
+                Cutting-edge AI and machine learning technologies that deliver measurable business impact
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <Globe className="h-10 w-10 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Global Reach</h3>
+              <p className="text-gray-600">
+                Worldwide IT services with local expertise and 24/7 support across all time zones
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <Heart className="h-10 w-10 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Customer Success</h3>
+              <p className="text-gray-600">
+                Dedicated support teams and proven methodologies that ensure project success
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact CTA Section */}
+      <div className="bg-gradient-to-r from-zion-blue to-zion-purple py-20 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-12 max-w-3xl mx-auto">
+            Our expert team is ready to help you implement cutting-edge technology solutions that drive growth,
+            efficiency, and competitive advantage.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
+            <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
+              <Phone className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Call Us</h3>
+              <p className="text-zion-slate-light mb-4">Speak directly with our experts</p>
+              <div className="text-2xl font-bold">+1 302 464 0950</div>
+            </div>
+
+            <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
+              <Mail className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Email Us</h3>
+              <p className="text-zion-slate-light mb-4">Get detailed information</p>
+              <div className="text-lg font-semibold">kleber@ziontechgroup.com</div>
+            </div>
+
+            <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
+              <Target className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
+              <p className="text-zion-slate-light mb-4">Meet our team in person</p>
+              <div className="text-sm font-semibold">364 E Main St STE 1008<br />Middletown, DE 19709</div>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6">
+            <Button size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light text-lg px-8 py-6">
+              <Rocket className="mr-3 h-6 w-6" />
+              Start Your Project
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue text-lg px-8 py-6">
+              <Phone className="mr-3 h-6 w-6" />
+              Schedule Consultation
+=======
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Service Categories */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Core Service Categories
+          </h2>
+          <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
+            Choose from our comprehensive range of professional services designed to meet your business needs
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {ServiceCategories.map((category, index) => (
+            <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-zion-purple/20 hover:border-zion-purple/50 bg-zion-blue-dark/50 backdrop-blur-sm overflow-hidden">
+              <div className={`h-2 bg-gradient-to-r ${category.color}`}></div>
+              <CardHeader className="pb-4">
+                <div className="flex justify-between items-start mb-4">
+                  <div className="p-4 rounded-xl bg-zion-purple/10 group-hover:bg-zion-purple/20 transition-colors">
+                    {category.icon}
+                  </div>
+                  {category.badge && (
+                    <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
+                      {category.badge}
+                    </Badge>
+                  )}
+                </div>
+                <CardTitle className="text-2xl text-white group-hover:text-zion-cyan transition-colors mb-2">
+                  {category.title}
+                </CardTitle>
+                <CardDescription className="text-zion-slate-light text-lg">
+                  {category.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pb-6">
+                <div className="mb-6">
+                  <p className="text-xl font-bold text-zion-cyan mb-2">{category.priceRange}</p>
+                  <p className="text-sm text-zion-slate-light">Price range</p>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-white mb-3">Key Services:</h4>
+                  <ul className="space-y-2">
+                    {category.services.map((service, serviceIndex) => (
+                      <li key={serviceIndex} className="flex items-center text-sm text-zion-slate-light">
+                        <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
+                        {service}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-white mb-3">Features:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {category.features.map((feature, featureIndex) => (
+                      <Badge key={featureIndex} variant="outline" className="text-zion-cyan border-zion-cyan/30">
+                        {feature}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white">
+                  <Link to={category.link}>
+                    Explore {category.title}
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Additional Services */}
+        <div className="text-center mb-12">
+          <h3 className="text-3xl font-bold text-white mb-4">
+            Additional Services
+          </h3>
+          <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+            Specialized solutions and add-on services to complement your core needs
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {AdditionalServices.map((service, index) => (
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-zion-blue/20 hover:border-zion-blue/50 bg-zion-blue-dark/30 backdrop-blur-sm">
+              <CardHeader className="pb-3">
+                <div className="p-3 rounded-lg bg-zion-blue/10 group-hover:bg-zion-blue/20 transition-colors mb-3">
+                  {service.icon}
+                </div>
+                <CardTitle className="text-lg text-white group-hover:text-zion-cyan transition-colors">
+                  {service.title}
+                </CardTitle>
+                <CardDescription className="text-zion-slate-light">
+                  {service.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pb-4">
+                <p className="text-lg font-bold text-zion-cyan mb-4">{service.price}</p>
+                <Button className="w-full bg-gradient-to-r from-zion-blue to-zion-cyan hover:from-zion-blue-light hover:to-zion-cyan-light text-white">
+                  <Link to={service.link}>
+                    Learn More
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center py-16 bg-gradient-to-r from-zion-purple/20 to-zion-blue/20 rounded-2xl">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+            Our expert team is ready to help you choose the right services and create a customized solution for your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-light text-white">
+              <MessageSquare className="h-5 w-5 mr-2" />
+              Schedule Free Consultation
+            </Button>
+            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+              <FileText className="h-5 w-5 mr-2" />
+              Request Custom Quote
+            </Button>
+            <Button size="lg" variant="outline" className="border-zion-blue text-zion-blue hover:bg-zion-blue/10">
+              <Phone className="h-5 w-5 mr-2" />
+              Call Us: +1 302 464 0950
+            </Button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

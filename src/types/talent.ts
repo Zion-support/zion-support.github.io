@@ -27,6 +27,7 @@ export interface Talent {
   verified: boolean;
   featured: boolean;
 }
+
 export interface PortfolioItem {
   id: string;
   title: string;
@@ -36,6 +37,7 @@ export interface PortfolioItem {
   technologies: string[];
   completedAt: Date;
 }
+
 export interface Education {
   id: string;
   institution: string;
@@ -45,6 +47,7 @@ export interface Education {
   endDate?: Date;
   gpa?: number;
 }
+
 export interface Certification {
   id: string;
   name: string;
@@ -53,16 +56,19 @@ export interface Certification {
   expiryDate?: Date;
   credentialId?: string;
 }
+
 export interface Language {
   name: string;
   proficiency: 'basic' | 'conversational' | 'fluent' | 'native';
 }
+
 export interface SocialLinks {
   linkedin?: string;
   github?: string;
   portfolio?: string;
   twitter?: string;
 }
+
 export interface TalentFilter {
   skills?: string[];
   experienceRange?: {
@@ -81,6 +87,7 @@ export interface TalentFilter {
   sortBy?: 'rating' | 'experience' | 'hourlyRate' | 'createdAt';
   sortOrder?: 'asc' | 'desc';
 }
+
 export interface TalentSearchResult {
   talents: Talent[];
   total: number;
@@ -88,6 +95,7 @@ export interface TalentSearchResult {
   limit: number;
   hasMore: boolean;
 }
+
 export interface TalentFormData {
   name: string;
   email: string;

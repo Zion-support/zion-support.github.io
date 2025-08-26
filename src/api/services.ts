@@ -1,4 +1,5 @@
 const BASE_URL = import.meta.env.VITE_API_URL || '/api';
+
 export interface ServiceItem {
   id: string;
   title: string;
@@ -7,6 +8,7 @@ export interface ServiceItem {
   rating?: number;
   image?: string;
 }
+
 export async function fetchServices(category?: string, q?: string): Promise<ServiceItem[]> {
   const params = new URLSearchParams();
   if (category) params.append('category', category);

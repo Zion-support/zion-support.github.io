@@ -29,6 +29,7 @@ export interface InnovativeAIService {
   trainingData: string;
   accuracy: string;
 }
+
 export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
   // AI-Powered Content Generation & Marketing
   {
@@ -89,6 +90,7 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
     trainingData: "10M+ high-quality content samples",
     accuracy: "95% human-like quality"
   },
+
   // AI-Powered Video Analytics
   {
     id: "ai-video-analytics-platform",
@@ -148,6 +150,7 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
     trainingData: "5M+ video frames",
     accuracy: "98% detection accuracy"
   },
+
   // AI-Powered Financial Trading Assistant
   {
     id: "ai-financial-trading-assistant",
@@ -207,6 +210,7 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
     trainingData: "20+ years of market data",
     accuracy: "78% prediction accuracy"
   },
+
   // AI-Powered Healthcare Diagnostics
   {
     id: "ai-healthcare-diagnostics",
@@ -266,6 +270,7 @@ export const INNOVATIVE_AI_SERVICES: InnovativeAIService[] = [
     trainingData: "1M+ medical images",
     accuracy: "94% diagnostic accuracy"
   },
+
   // AI-Powered Supply Chain Optimization
   {
     id: "ai-supply-chain-optimization",

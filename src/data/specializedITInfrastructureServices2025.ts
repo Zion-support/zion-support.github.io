@@ -33,6 +33,7 @@ export interface SpecializedITInfrastructureService2025 {
   marketSize: string;
   growthPotential: string;
 }
+
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService2025[] = [
   // AI-Powered Edge Computing Platform
   {
@@ -91,6 +92,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     marketSize: "$8.6 billion (edge computing market)",
     growthPotential: "400% annual growth expected"
   },
+
   // AI-Powered Zero Trust Security Platform
   {
     id: "zero-trust-security-ai",
@@ -148,6 +150,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     marketSize: "$19.6 billion (zero trust security market)",
     growthPotential: "500% annual growth expected"
   },
+
   // AI-Powered Hybrid Cloud Management Platform
   {
     id: "hybrid-cloud-management-ai",
@@ -205,6 +208,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     marketSize: "$12.3 billion (hybrid cloud market)",
     growthPotential: "450% annual growth expected"
   },
+
   // AI-Powered Data Center Automation Platform
   {
     id: "data-center-automation-ai",
@@ -262,6 +266,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     marketSize: "$25.8 billion (data center automation market)",
     growthPotential: "600% annual growth expected"
   },
+
   // AI-Powered Network Performance Optimization Platform
   {
     id: "network-performance-optimization-ai",

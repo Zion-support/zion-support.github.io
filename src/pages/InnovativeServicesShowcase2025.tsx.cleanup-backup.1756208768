@@ -1,21 +1,21 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  Brain,
-  Cloud,
-  Shield,
-  Database,
-  Network,
-  Code,
-  BarChart3,
-  Target,
-  Lightbulb,
-  Rocket,
-  Zap,
-  Globe,
-  Lock,
-  Cpu,
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Database, 
+  Network, 
+  Code, 
+  BarChart3, 
+  Target, 
+  Lightbulb, 
+  Rocket, 
+  Zap, 
+  Globe, 
+  Lock, 
+  Cpu, 
   Sparkles,
   ShieldCheck,
   Globe2,
@@ -28,9 +28,11 @@ import {
   ExternalLink
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+
 const InnovativeServicesShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
+
   const serviceCategories = [
     { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-600 to-pink-600' },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, color: 'from-blue-600 to-cyan-600' },
@@ -43,6 +45,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
     { id: 'edge-computing', name: 'Edge Computing', icon: Cpu, color: 'from-cyan-600 to-blue-600' },
     { id: 'blockchain', name: 'Blockchain & Web3', icon: Network, color: 'from-orange-600 to-red-600' }
   ];
+
   const innovativeServices = [
     // AI & Machine Learning Services
     {
@@ -123,6 +126,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       marketSize: '$18B content creation market',
       growthRate: '35% annual growth'
     },
+
     // Cybersecurity Services
     {
       id: 'quantum-safe-cybersecurity',
@@ -176,6 +180,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       marketSize: '$45B cybersecurity market',
       growthRate: '28% annual growth'
     },
+
     // Cloud & Infrastructure Services
     {
       id: 'multi-cloud-orchestration',
@@ -229,6 +234,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       marketSize: '$8B DevOps market',
       growthRate: '28% annual growth'
     },
+
     // Quantum Technology Services
     {
       id: 'quantum-machine-learning',
@@ -282,6 +288,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       marketSize: '$1.2B quantum networking market',
       growthRate: '70% annual growth'
     },
+
     // Financial Technology Services
     {
       id: 'ai-financial-risk-management',
@@ -309,6 +316,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       marketSize: '$8.5B risk management market',
       growthRate: '25% annual growth'
     },
+
     // Blockchain & Web3 Services
     {
       id: 'blockchain-supply-chain',
@@ -336,6 +344,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       marketSize: '$3.2B blockchain supply chain market',
       growthRate: '38% annual growth'
     },
+
     // Edge Computing Services
     {
       id: 'edge-ai-computing',
@@ -363,6 +372,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       marketSize: '$12B edge AI market',
       growthRate: '42% annual growth'
     },
+
     // Advanced Computing Services
     {
       id: 'neuromorphic-computing',
@@ -391,21 +401,25 @@ const InnovativeServicesShowcase2025: React.FC = () => {
       growthRate: '65% annual growth'
     }
   ];
-  const filteredServices = selectedCategory === 'all'
-    ? innovativeServices
+
+  const filteredServices = selectedCategory === 'all' 
+    ? innovativeServices 
     : innovativeServices.filter(service => service.category === selectedCategory);
-  const selectedServiceData = selectedService
+
+  const selectedServiceData = selectedService 
     ? innovativeServices.find(service => service.id === selectedService)
     : null;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOHead
+      <SEOHead 
         config={{
           title: "Innovative Services Showcase 2025 | Zion Tech Group",
           description: "Discover our cutting-edge micro SAAS services, IT solutions, and AI platforms. From quantum computing to AI-powered healthcare diagnostics.",
           keywords: "AI services, micro SAAS, IT solutions, quantum computing, cybersecurity, healthcare AI, blockchain, edge computing"
         }}
       />
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -440,6 +454,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Contact Information Banner */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-8 px-4">
         <div className="max-w-7xl mx-auto">
@@ -520,11 +535,8 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<<< HEAD:src/pages/InnovativeServicesShowcase2025.tsx.cleanup-backup.1756208768
 
 <<<<<<< HEAD
-========
->>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896:broken_files_backup/InnovativeServicesShowcase2025.tsx
       {/* Category Filter */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
@@ -546,6 +558,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Services Grid */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
@@ -567,13 +580,17 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                     </span>
                   )}
                 </div>
+                
                 <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                 <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
+                
                 <div className="mb-4">
                   <span className="text-2xl font-bold text-white">{service.price}</span>
                   <span className="text-gray-400">{service.period}</span>
                 </div>
+                
                 <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
+                
                 <div className="space-y-2 mb-4">
                   {service.features.slice(0, 3).map((feature, index) => (
                     <div key={index} className="flex items-center gap-2 text-sm text-gray-400">
@@ -582,6 +599,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                     </div>
                   ))}
                 </div>
+                
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-400 bg-white/10 px-2 py-1 rounded">
                     {service.category.replace('-', ' ').toUpperCase()}
@@ -595,6 +613,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Service Detail Modal */}
       {selectedServiceData && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
@@ -620,10 +639,12 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                   ×
                 </button>
               </div>
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Service Overview</h3>
                   <p className="text-gray-300 mb-6">{selectedServiceData.description}</p>
+                  
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <div className="space-y-2">
@@ -635,11 +656,13 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                       ))}
                     </div>
                   </div>
+
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Target Audience</h4>
                     <p className="text-gray-300">{selectedServiceData.targetAudience}</p>
                   </div>
                 </div>
+
                 <div>
                   <div className="bg-white/10 rounded-xl p-6 mb-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Pricing & Market</h4>
@@ -662,6 +685,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
+
                   <div className="bg-white/10 rounded-xl p-6 mb-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Competitive Analysis</h4>
                     <p className="text-gray-300 mb-3">{selectedServiceData.marketPosition}</p>
@@ -676,6 +700,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
+
                   <div className="flex gap-4">
                     <a
                       href={selectedServiceData.link}
@@ -699,6 +724,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </motion.div>
         </div>
       )}
+
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -970,4 +996,5 @@ const InnovativeServicesShowcase2025: React.FC = () => {
     </div>
   );
 };
+
 export default InnovativeServicesShowcase2025;

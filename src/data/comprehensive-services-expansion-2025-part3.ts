@@ -5,6 +5,7 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
+
 export interface MicroSaasService {
   id: number;
   name: string;
@@ -27,6 +28,7 @@ export interface MicroSaasService {
   freeTier: boolean;
   trialPeriod: string;
 }
+
 export interface AIService {
   id: number;
   name: string;
@@ -48,6 +50,7 @@ export interface AIService {
   aiScore: number;
   useCases: string[];
 }
+
 // Neuromorphic Computing Services
 export const neuromorphicComputingServices2025: AIService[] = [
   {
@@ -93,6 +96,7 @@ export const neuromorphicComputingServices2025: AIService[] = [
     useCases: ["Autonomous systems", "Robotics", "Edge computing", "Cognitive computing"]
   }
 ];
+
 // Brain-Computer Interface Services
 export const brainComputerInterfaceServices2025: MicroSaasService[] = [
   {
@@ -139,6 +143,7 @@ export const brainComputerInterfaceServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
+
 // Synthetic Biology Services
 export const syntheticBiologyServices2025: AIService[] = [
   {
@@ -184,6 +189,7 @@ export const syntheticBiologyServices2025: AIService[] = [
     useCases: ["Drug development", "Biofuels", "Agriculture", "Biomaterials"]
   }
 ];
+
 // Advanced Robotics Services
 export const advancedRoboticsServices2025: MicroSaasService[] = [
   {
@@ -230,6 +236,7 @@ export const advancedRoboticsServices2025: MicroSaasService[] = [
     trialPeriod: "30 days"
   }
 ];
+
 // Advanced Materials Services
 export const advancedMaterialsServices2025: MicroSaasService[] = [
   {
@@ -276,6 +283,7 @@ export const advancedMaterialsServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
+
 // Advanced Energy Services
 export const advancedEnergyServices2025: MicroSaasService[] = [
   {
@@ -322,6 +330,7 @@ export const advancedEnergyServices2025: MicroSaasService[] = [
     trialPeriod: "60 days"
   }
 ];
+
 // Advanced Transportation Services
 export const advancedTransportationServices2025: MicroSaasService[] = [
   {
@@ -368,6 +377,7 @@ export const advancedTransportationServices2025: MicroSaasService[] = [
     trialPeriod: "45 days"
   }
 ];
+
 // Advanced Communication Services
 export const advancedCommunicationServices2025: MicroSaasService[] = [
   {
@@ -414,6 +424,7 @@ export const advancedCommunicationServices2025: MicroSaasService[] = [
     trialPeriod: "60 days"
   }
 ];
+
 // Advanced Manufacturing Services
 export const advancedManufacturingServices2025: MicroSaasService[] = [
   {
@@ -460,6 +471,7 @@ export const advancedManufacturingServices2025: MicroSaasService[] = [
     trialPeriod: "21 days"
   }
 ];
+
 // Advanced Gaming Services
 export const advancedGamingServices2025: MicroSaasService[] = [
   {
@@ -506,6 +518,7 @@ export const advancedGamingServices2025: MicroSaasService[] = [
     trialPeriod: "14 days"
   }
 ];
+
 // Export all cutting-edge services
 export const allCuttingEdgeServices2025 = {
   neuromorphic: neuromorphicComputingServices2025,
@@ -519,15 +532,18 @@ export const allCuttingEdgeServices2025 = {
   manufacturing: advancedManufacturingServices2025,
   gaming: advancedGamingServices2025
 };
+
 // Combined all services export
 export const allUltimateServices2025 = {
   ...allCuttingEdgeServices2025
 };
+
 // Helper functions for cutting-edge services
 export const getCuttingEdgeServicesByCategory = (category: string) => {
   const allServices = Object.values(allCuttingEdgeServices2025).flat();
   return allServices.filter(service => service.category === category);
 };
+
 export const getCuttingEdgeServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   const allServices = Object.values(allCuttingEdgeServices2025).flat();
   return allServices.filter(service => {
@@ -540,19 +556,22 @@ export const getCuttingEdgeServicesByPriceRange = (minPrice: number, maxPrice: n
     return false;
   });
 };
+
 export const getCuttingEdgePopularServices = (limit: number = 10) => {
   const allServices = Object.values(allCuttingEdgeServices2025).flat();
   return allServices.slice(0, limit);
 };
+
 export const searchCuttingEdgeServices = (query: string) => {
   const allServices = Object.values(allCuttingEdgeServices2025).flat();
   const searchTerm = query.toLowerCase();
-  return allServices.filter(service =>
+  return allServices.filter(service => 
     service.name.toLowerCase().includes(searchTerm) ||
     service.description.toLowerCase().includes(searchTerm) ||
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm))
   );
 };
+
 // Master export combining all services
 export const masterServicesExport = {
   cuttingEdge: allCuttingEdgeServices2025

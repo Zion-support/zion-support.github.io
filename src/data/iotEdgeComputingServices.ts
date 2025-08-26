@@ -24,6 +24,7 @@ export interface IoTEdgeComputingService {
   demoUrl?: string;
   documentationUrl?: string;
 }
+
 export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
   // Industrial IoT Platform
   {
@@ -77,6 +78,7 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/industrial-iot"
   },
+
   // Smart City IoT Solution
   {
     id: "smart-city-iot-solution",
@@ -129,6 +131,7 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/smart-city-iot"
   },
+
   // Healthcare IoT Monitoring
   {
     id: "healthcare-iot-monitoring",
@@ -181,6 +184,7 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/healthcare-iot"
   },
+
   // Retail IoT Analytics Platform
   {
     id: "retail-iot-analytics",
@@ -233,6 +237,7 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/retail-iot"
   },
+
   // Edge AI Computing Platform
   {
     id: "edge-ai-computing",

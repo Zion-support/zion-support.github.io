@@ -28,6 +28,7 @@ export interface SpecializedITInfrastructureService {
   marketTrend: string;
   innovationLevel: string;
 }
+
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructureService[] = [
   // Edge Computing Infrastructure Platform
   {
@@ -89,6 +90,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     marketTrend: "Growing market with 250% annual growth",
     innovationLevel: "Advanced edge computing with AI capabilities"
   },
+
   // Zero-Trust Security Architecture
   {
     id: "zero-trust-security-architecture",
@@ -149,6 +151,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     marketTrend: "Growing market with 300% annual growth",
     innovationLevel: "Advanced zero-trust with AI-powered threat detection"
   },
+
   // Hybrid Cloud Management Platform
   {
     id: "hybrid-cloud-management-platform",
@@ -209,6 +212,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     marketTrend: "Growing market with 200% annual growth",
     innovationLevel: "Advanced hybrid cloud with AI-powered optimization"
   },
+
   // Software-Defined Networking (SDN) Platform
   {
     id: "software-defined-networking-platform",
@@ -269,6 +273,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
     marketTrend: "Growing market with 180% annual growth",
     innovationLevel: "Advanced SDN with AI-powered traffic optimization"
   },
+
   // Container Orchestration Platform
   {
     id: "container-orchestration-platform",

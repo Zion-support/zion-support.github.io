@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/components/Sidebar.tsx.backup.1756208478
 <<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
@@ -188,8 +187,6 @@ export function Sidebar() {
         { name: 'Business Intelligence', path: '/analytics/bi', icon: PieChart },
         { name: 'Reports', path: '/analytics/reports', icon: BarChart }
 =======
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-33a4:src/components/Sidebar.tsx
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
@@ -333,15 +330,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Data Protection', path: '/data-protection', icon: Lock, description: 'Data security' },
         { name: 'Security', path: '/security', icon: Shield, description: 'Security measures' },
         { name: 'Compliance', path: '/compliance', icon: CheckCircle, description: 'Regulatory compliance' }
-<<<<<<< HEAD:src/components/Sidebar.tsx.backup.1756208478
 >>>>>>> origin/cursor/website-audit-and-enhancement-91a4
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-33a4:src/components/Sidebar.tsx
       ]
     }
   ];
 
-<<<<<<< HEAD:src/components/Sidebar.tsx.backup.1756208478
 <<<<<<< HEAD
   const toggleItem = (itemName: string) => {
     setExpandedItems(prev => 
@@ -478,8 +471,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
 export default Sidebar;
 =======
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-33a4:src/components/Sidebar.tsx
   const socialLinks = [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -631,7 +622,4 @@ export default Sidebar;
     </AnimatePresence>
   );
 }
-<<<<<<< HEAD:src/components/Sidebar.tsx.backup.1756208478
 >>>>>>> origin/cursor/website-audit-and-enhancement-91a4
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-33a4:src/components/Sidebar.tsx

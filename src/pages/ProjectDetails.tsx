@@ -4,8 +4,7 @@ import { useRouter } from 'next/router';
 import { format } from "date-fns";
 import { useAuth } from "@/hooks/useAuth";
 import { useProjects } from "@/hooks/useProjects";
-import { Footer } from "@/components/Footer";
-import { NextSeo } from "@/components/NextSeo";
+import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Project, ProjectStatus } from "@/types/projects";
 import { Button } from "@/components/ui/button";
@@ -54,14 +53,15 @@ import {
 } from "lucide-react";
 
 function ProjectDetailsContent() {
-  // Cast to specify the expected route param type since useParams may be untyped
-  const { projectId } = useParams() as { projectId?: string };
+  const router = useRouter();
+  // Get projectId from Next.js router query params
+  const { projectId } = router.query as { projectId?: string };
   const { user } = useAuth();
   const { getProjectById, updateProjectStatus } = useProjects();
   
-  const [project, setProject] = useState(null as Project | null);
+  const [project, setProject] = useState<Project | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [notes, setNotes] = useState([] as any[]);
+  const [notes, setNotes] = useState<any[]>([]);
   const [newNote, setNewNote] = useState("");
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [activeTab, setActiveTab] = useState("details");
@@ -237,7 +237,7 @@ function ProjectDetailsContent() {
   
   return (
     <>
-      <NextSeo 
+      <SEO 
         title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
         description="View and manage your project details and collaboration."
       />

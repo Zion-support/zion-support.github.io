@@ -31,12 +31,14 @@ export interface EnhancedService {
     website: string;
   };
 }
+
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
+
 export const enhancedServices2025: EnhancedService[] = [
   // MICRO SAAS SERVICES
   {
@@ -84,6 +86,7 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/ai-code-review-assistant',
     contactInfo
   },
+
   {
     id: 'intelligent-incident-response-platform',
     name: 'Intelligent Incident Response Platform',
@@ -129,6 +132,7 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/incident-response-platform',
     contactInfo
   },
+
   {
     id: 'smart-invoice-management-system',
     name: 'Smart Invoice Management System',
@@ -174,6 +178,7 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/invoice-management',
     contactInfo
   },
+
   {
     id: 'ai-customer-success-automation',
     name: 'AI Customer Success Automation',
@@ -219,6 +224,7 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/customer-success-automation',
     contactInfo
   },
+
   {
     id: 'intelligent-data-analytics-dashboard',
     name: 'Intelligent Data Analytics Dashboard',
@@ -264,6 +270,7 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/analytics-dashboard',
     contactInfo
   },
+
   // IT SERVICES
   {
     id: 'network-security-monitoring',
@@ -310,6 +317,7 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/network-security-monitoring',
     contactInfo
   },
+
   {
     id: 'data-backup-recovery-solutions',
     name: 'Data Backup & Recovery Solutions',
@@ -355,6 +363,7 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/backup-recovery',
     contactInfo
   },
+
   {
     id: 'it-asset-management-platform',
     name: 'IT Asset Management Platform',
@@ -400,6 +409,7 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/asset-management',
     contactInfo
   },
+
   // AI SERVICES
   {
     id: 'ai-chatbot-development',
@@ -446,6 +456,7 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/ai-chatbot',
     contactInfo
   },
+
   {
     id: 'predictive-analytics-platform',
     name: 'Predictive Analytics Platform',
@@ -491,6 +502,7 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/predictive-analytics',
     contactInfo
   },
+
   {
     id: 'computer-vision-solutions',
     name: 'Computer Vision Solutions',
@@ -536,6 +548,7 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/computer-vision',
     contactInfo
   },
+
   // EMERGING TECH SERVICES
   {
     id: 'quantum-computing-solutions',
@@ -582,6 +595,7 @@ export const enhancedServices2025: EnhancedService[] = [
     link: '/services/quantum-computing',
     contactInfo
   },
+
   {
     id: 'blockchain-web3-solutions',
     name: 'Blockchain & Web3 Solutions',
@@ -628,4 +642,5 @@ export const enhancedServices2025: EnhancedService[] = [
     contactInfo
   }
 ];
+
 export default enhancedServices2025;

@@ -4,6 +4,7 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
+
 export interface ITService {
   id: number;
   name: string;
@@ -23,6 +24,7 @@ export interface ITService {
   deliveryTime: string;
   support: string;
 }
+
 // Innovative IT Services for 2025
 export const innovativeITServices2025: ITService[] = [
   {

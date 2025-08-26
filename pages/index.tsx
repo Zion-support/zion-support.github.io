@@ -1,209 +1,235 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import { AnimatedBackground } from '@/components/ui/AnimatedBackground';
+import FuturisticHero from '@/components/ui/FuturisticHero';
+import InteractiveSearch from '@/components/ui/InteractiveSearch';
+import InteractiveStats from '@/components/ui/InteractiveStats';
+import { EnhancedCard } from '@/components/ui/EnhancedCard';
+import EnhancedMarketplaceCard from '@/components/ui/EnhancedMarketplaceCard';
 
 const Home: NextPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+    <div className="relative">
       <Head>
-<<<<<<< HEAD
-        <title>Zion Tech Group — AI-Powered Technology Solutions</title>
+        <title>Zion — AI‑Powered Marketplace & Automation Platform</title>
         <meta
           name="description"
-          content="Discover cutting-edge AI services, quantum computing solutions, blockchain platforms, and innovative technology services from Zion Tech Group."
+          content="Explore AI services, products, talent, automation dashboard, and expert resources. Build, scale, and automate with Zion."
         />
-=======
-        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
-        <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
-        <meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />
-        <meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-      
-        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform","url":"https://ziontechgroup.com/","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script>
->>>>>>> origin/cursor/website-audit-and-enhancement-33a4
       </Head>
       
-      <main className="container mx-auto px-6 py-12">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-            Zion Tech Group
-          </h1>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-            Autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems.
-          </p>
-          
-          {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="/about" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
-              About Us
-            </a>
-            <a href="/comprehensive-services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
-              Our Services
-            </a>
-            <a href="/innovative-services-showcase-2026" className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 border border-purple-400/50 rounded-lg transition-all duration-200">
-              🚀 2026 Services
-            </a>
-            <a href="/comprehensive-pricing-2026" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
-              Pricing
-            </a>
-            <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
-              Contact
-            </a>
-          </div>
-        </section>
-
-        {/* Services Overview */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Innovative Technology Solutions 2026
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI Business Intelligence */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-semibold mb-3 text-white">AI Business Intelligence</h3>
-              <p className="text-white/80 mb-4">
-                Advanced AI-powered business intelligence with predictive analytics, automated insights, and real-time decision support.
-              </p>
-              <div className="text-2xl font-bold text-cyan-400 mb-2">From $899/month</div>
-              <a href="/innovative-services-showcase-2026" className="inline-block px-4 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">
-                Learn More
-              </a>
-            </div>
-
-            {/* Quantum Computing */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
-              <div className="text-4xl mb-4">⚛️</div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Quantum Computing</h3>
-              <p className="text-white/80 mb-4">
-                Enterprise-grade quantum computing platform for complex optimization problems including logistics and financial modeling.
-              </p>
-              <div className="text-2xl font-bold text-purple-400 mb-2">From $2,499/month</div>
-              <a href="/innovative-services-showcase-2026" className="inline-block px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors">
-                Learn More
-              </a>
-            </div>
-
-            {/* Blockchain & Web3 */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300">
-              <div className="text-4xl mb-4">🔗</div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Blockchain & Web3</h3>
-              <p className="text-white/80 mb-4">
-                Scalable enterprise blockchain solution with smart contract automation and decentralized identity management.
-              </p>
-              <div className="text-2xl font-bold text-green-400 mb-2">From $1,799/month</div>
-              <a href="/innovative-services-showcase-2026" className="inline-block px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
-                Learn More
-              </a>
-            </div>
-
-            {/* IoT & Edge Computing */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-orange-400/50 transition-all duration-300">
-              <div className="text-4xl mb-4">🌐</div>
-              <h3 className="text-xl font-semibold mb-3 text-white">IoT & Edge Computing</h3>
-              <p className="text-white/80 mb-4">
-                Advanced IoT platform with edge computing capabilities, real-time data processing, and AI-powered analytics.
-              </p>
-              <div className="text-2xl font-bold text-orange-400 mb-2">From $699/month</div>
-              <a href="/innovative-services-showcase-2026" className="inline-block px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors">
-                Learn More
-              </a>
-            </div>
-
-            {/* Cybersecurity */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-red-400/50 transition-all duration-300">
-              <div className="text-4xl mb-4">🛡️</div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Zero Trust Security</h3>
-              <p className="text-white/80 mb-4">
-                Comprehensive zero trust security solution with continuous authentication and AI-powered threat detection.
-              </p>
-              <div className="text-2xl font-bold text-red-400 mb-2">From $1,299/month</div>
-              <a href="/innovative-services-showcase-2026" className="inline-block px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
-                Learn More
-              </a>
-            </div>
-
-            {/* Healthcare AI */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-pink-400/50 transition-all duration-300">
-              <div className="text-4xl mb-4">🏥</div>
-              <h3 className="text-xl font-semibold mb-3 text-white">Healthcare AI</h3>
-              <p className="text-white/80 mb-4">
-                Advanced healthcare analytics platform with AI-powered diagnosis assistance and patient outcome prediction.
-              </p>
-              <div className="text-2xl font-bold text-pink-400 mb-2">From $1,599/month</div>
-              <a href="/innovative-services-showcase-2026" className="inline-block px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition-colors">
-                Learn More
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <h2 className="text-3xl font-bold mb-4 text-white">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              Get in touch with our team of experts to discuss your specific needs and discover how our innovative services can drive your success.
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Zion Tech Group
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Services consultation request"
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200"
-              >
-                Get Free Consultation
+            
+            {/* Navigation Links */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <a href="/about" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
+                About Us
               </a>
-              <a
-                href="/comprehensive-pricing-2026"
-                className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-indigo-950 transition-all duration-200"
-              >
-                View Pricing
+              <a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
+                Our Services
+              </a>
+              <a href="/ai-solutions" className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 border border-purple-400/50 rounded-lg transition-all duration-200">
+                🚀 AI Solutions
+              </a>
+              <a href="/cutting-edge-innovations-2027" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 border border-cyan-400/50 rounded-lg transition-all duration-200">
+                🔬 2027 Cutting-Edge
+              </a>
+              <a href="/practical-micro-saas-2027" className="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 border border-green-400/50 rounded-lg transition-all duration-200">
+                💼 2027 Micro SAAS
+              </a>
+              <a href="/all-services-2027" className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700 border border-orange-400/50 rounded-lg transition-all duration-200">
+                🌟 All 2027 Services
+              </a>
+              <a href="/case-studies" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
+                Case Studies
+              </a>
+              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+                Contact
               </a>
             </div>
-          </div>
-        </section>
+          </section>
+        </main>
 
-        {/* Contact Information */}
-        <section className="mt-16 text-center">
-          <h3 className="text-2xl font-bold mb-6 text-white">Contact Zion Tech Group</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/5 rounded-lg p-4">
-              <div className="text-2xl mb-2">📞</div>
-              <h4 className="font-semibold mb-2 text-white">Call Us</h4>
-              <a href="tel:+13024640950" className="text-cyan-400 hover:underline">
-                +1 302 464 0950
-              </a>
+        <AnimatedBackground className="pointer-events-none" />
+
+        <div className="space-y-20">
+          {/* Hero */}
+          <FuturisticHero
+            title="Zion — The AI‑Powered Marketplace"
+            subtitle="Discover services, products, and expert talent. Automate workflows. Accelerate delivery."
+            className="bg-gradient-to-r from-indigo-700 via-fuchsia-600 to-cyan-600 text-white py-20 shadow-xl"
+          >
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-wrap justify-center gap-3">
+                <Link href="/services" className="px-6 py-3 rounded-lg bg-white text-gray-900 font-semibold shadow hover:shadow-md transition">
+                  Explore Services
+                </Link>
+                <Link href="/products" className="px-6 py-3 rounded-lg bg-white/10 text-white border border-white/30 hover:bg-white/15 transition">
+                  Browse Products
+                </Link>
+                <Link href="/talent" className="px-6 py-3 rounded-lg bg-white/10 text-white border border-white/30 hover:bg-white/15 transition">
+                  Hire Talent
+                </Link>
+                <Link href="/automation" className="px-6 py-3 rounded-lg bg-white/10 text-white border border-white/30 hover:bg-white/15 transition">
+                  Automation Dashboard
+                </Link>
+              </div>
+              <InteractiveSearch
+                placeholder="Search services, products, and resources..."
+                onSearch={(q) => {
+                  if (!q) return;
+                  // Simple client-side redirect to blog search or services for now
+                  window.location.href = `/blog`; // placeholder: central content hub
+                }}
+                className="w-full max-w-2xl"
+              />
             </div>
-            <div className="bg-white/5 rounded-lg p-4">
-              <div className="text-2xl mb-2">✉️</div>
-              <h4 className="font-semibold mb-2 text-white">Email Us</h4>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">
-                kleber@ziontechgroup.com
-              </a>
+          </FuturisticHero>
+
+          {/* Snapshot stats */}
+          <section className="container mx-auto px-4">
+            <InteractiveStats
+              stats={[
+                { label: 'Professional Services', value: '50+', description: 'AI, Cloud, Data, Security, DevOps, and more' },
+                { label: 'Expert Resources', value: '100+ ', description: 'Guides, expert chats, and insights' },
+                { label: 'Automation Ready', value: '24/7', description: 'Run workflows with the Automation Center' },
+              ]}
+            />
+          </section>
+
+          {/* Primary destinations */}
+          <section className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Primary Destinations</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <EnhancedMarketplaceCard
+                title="Services Marketplace"
+                description="Browse and book professional services across AI, cloud, security, and more."
+                href="/services"
+                icon="🚀"
+                className="bg-gradient-to-br from-blue-500 to-purple-600"
+              />
+              <EnhancedMarketplaceCard
+                title="Product Catalog"
+                description="Discover tools, templates, and solutions to accelerate your development."
+                href="/products"
+                icon="🛠️"
+                className="bg-gradient-to-br from-green-500 to-teal-600"
+              />
+              <EnhancedMarketplaceCard
+                title="Expert Talent"
+                description="Connect with verified professionals for your projects and consulting needs."
+                href="/talent"
+                icon="👥"
+                className="bg-gradient-to-br from-orange-500 to-red-600"
+              />
             </div>
-            <div className="bg-white/5 rounded-lg p-4">
-              <div className="text-2xl mb-2">🌍</div>
-              <h4 className="font-semibold mb-2 text-white">Visit Us</h4>
-              <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
-                ziontechgroup.com
-              </a>
+          </section>
+
+          {/* Automation Center */}
+          <section className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Automation Center</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <EnhancedCard>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="font-semibold">OSV Dependency Audit</div>
+                    <div className="text-gray-500">Security scan of npm deps</div>
+                  </div>
+                  <a href="/.netlify/functions/osv_dependency_audit" className="px-3 py-2 bg-gray-900 text-white rounded">Run</a>
+                </div>
+              </EnhancedCard>
+              <EnhancedCard>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="font-semibold">External Link Audit</div>
+                    <div className="text-gray-500">Checks off-site links</div>
+                  </div>
+                  <a href="/.netlify/functions/external_link_audit" className="px-3 py-2 bg-gray-900 text-white rounded">Run</a>
+                </div>
+              </EnhancedCard>
+              <EnhancedCard>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="font-semibold">Automation Summary</div>
+                    <div className="text-gray-500">Aggregated automation status</div>
+                  </div>
+                  <a href="/.netlify/functions/automation_summary" className="px-3 py-2 bg-gray-900 text-white rounded">Run</a>
+                </div>
+              </EnhancedCard>
+              <EnhancedCard>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="font-semibold">README Badges</div>
+                    <div className="text-gray-500">Updates status badges</div>
+                  </div>
+                  <a href="/.netlify/functions/readme_badges_updater" className="px-3 py-2 bg-gray-900 text-white rounded">Run</a>
+                </div>
+              </EnhancedCard>
             </div>
-          </div>
-        </section>
-      </main>
+          </section>
+
+          {/* Latest insights */}
+          <section className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Latest Insights</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link href="/blog/cybersecurity-trends-for-2024-and-beyond-chat">
+                <EnhancedCard>
+                  <h3 className="text-lg font-semibold mb-2">Cybersecurity Trends for 2024</h3>
+                  <p className="text-gray-600">Key shifts in threat models and defense strategies for modern stacks.</p>
+                </EnhancedCard>
+              </Link>
+              <Link href="/blog/cloud-native-architecture-best-practices-chat">
+                <EnhancedCard>
+                  <h3 className="text-lg font-semibold mb-2">Cloud‑Native Best Practices</h3>
+                  <p className="text-gray-600">Patterns for resilient, scalable, and maintainable cloud systems.</p>
+                </EnhancedCard>
+              </Link>
+              <Link href="/blog/machine-learning-applications-in-enterprise-software-chat">
+                <EnhancedCard>
+                  <h3 className="text-lg font-semibold mb-2">ML in Enterprise Software</h3>
+                  <p className="text-gray-600">Practical applications and adoption strategies that deliver value.</p>
+                </EnhancedCard>
+              </Link>
+            </div>
+            <div className="mt-4">
+              <Link href="/blog" className="text-indigo-700 font-semibold hover:underline">
+                Browse all insights →
+              </Link>
+            </div>
+          </section>
+
+          {/* Contact & CTA */}
+          <section className="container mx-auto px-4">
+            <div className="bg-white rounded-2xl p-8 shadow-md">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Ready to start?</h3>
+                  <p className="text-gray-600">Tell us about your goals. We'll recommend services, products, or experts to help.</p>
+                </div>
+                <div className="flex gap-3">
+                  <Link href="/contact" className="px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-700 transition">
+                    Contact Us
+                  </Link>
+                  <Link href="/about" className="px-6 py-3 rounded-lg bg-gray-100 text-gray-900 font-semibold border border-gray-200 hover:bg-gray-200 transition">
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default Home;
-=======
-import Home from '../src/pages/Home';
-
-export default function Index() {
-  return <Home />;
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2900

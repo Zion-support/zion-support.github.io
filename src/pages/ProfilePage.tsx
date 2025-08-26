@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/components/ui/use-toast";
-import { NextSeo } from "@/components/NextSeo";
-import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -21,7 +20,8 @@ import {
 } from "lucide-react";
 
 export default function ProfilePage() {
-  // Cast to specify the expected route param type since useParams may be untyped
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
   const { profileId } = useParams() as { profileId?: string };
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -79,7 +79,7 @@ export default function ProfilePage() {
 
   return (
     <>
-      <NextSeo
+      <SEO
         title={`${profileData.full_name} | Talent Profile`}
         description={profileData.bio || "View the profile of this talented individual."}
       />
@@ -193,8 +193,6 @@ export default function ProfilePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
-                    aria-label="GitHub"
-                    title="GitHub"
                   >
                     <Github className="h-6 w-6" />
                   </a>
@@ -205,8 +203,6 @@ export default function ProfilePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
-                    aria-label="Twitter"
-                    title="Twitter"
                   >
                     <Twitter className="h-6 w-6" />
                   </a>
@@ -217,8 +213,6 @@ export default function ProfilePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
-                    aria-label="LinkedIn"
-                    title="LinkedIn"
                   >
                     <Linkedin className="h-6 w-6" />
                   </a>

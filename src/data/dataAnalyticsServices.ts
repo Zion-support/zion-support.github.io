@@ -21,6 +21,7 @@ export interface DataAnalyticsService {
     website: string;
   };
 }
+
 export const DATA_ANALYTICS_SERVICES: DataAnalyticsService[] = [
   // Real-Time Data Streaming Platform
   {
@@ -71,6 +72,7 @@ export const DATA_ANALYTICS_SERVICES: DataAnalyticsService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // Predictive Analytics Platform
   {
     id: "predictive-analytics-platform",
@@ -120,6 +122,7 @@ export const DATA_ANALYTICS_SERVICES: DataAnalyticsService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // Data Governance Platform
   {
     id: "data-governance-platform",
@@ -169,6 +172,7 @@ export const DATA_ANALYTICS_SERVICES: DataAnalyticsService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // Customer Analytics Platform
   {
     id: "customer-analytics-platform",
@@ -218,6 +222,7 @@ export const DATA_ANALYTICS_SERVICES: DataAnalyticsService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // Business Intelligence Dashboard
   {
     id: "business-intelligence-dashboard",

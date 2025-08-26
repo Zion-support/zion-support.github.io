@@ -4,6 +4,7 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
+
 export interface MicroSaasService {
   id: number;
   name: string;
@@ -37,6 +38,7 @@ export interface MicroSaasService {
   uptime: string;
   securityFeatures: string[];
 }
+
 // Enhanced Micro SAAS Services for 2025
 export const enhancedMicroSaasServices2025: MicroSaasService[] = [
   {
@@ -580,6 +582,7 @@ export const enhancedMicroSaasServices2025: MicroSaasService[] = [
     securityFeatures: ["HIPAA compliance", "End-to-end encryption", "Access controls", "Audit trails"]
   }
 ];
+
 // Additional Innovative Micro SAAS Services for 2025
 export const additionalInnovativeMicroSaasServices2025: MicroSaasService[] = [
   {
@@ -1123,4 +1126,5 @@ export const additionalInnovativeMicroSaasServices2025: MicroSaasService[] = [
     securityFeatures: ["HIPAA compliance", "Data encryption", "Access control", "Audit logging"]
   }
 ];
+
 export default enhancedMicroSaasServices2025;

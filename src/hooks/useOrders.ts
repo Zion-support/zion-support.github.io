@@ -9,11 +9,11 @@ export interface Order {
 }
 
 export function useGetOrdersQuery(userId?: string) {
-  return useQuery<Order[]>({
+  return useQuery({
     queryKey: ['orders', userId],
     queryFn: async () => {
       if (!userId) return [] as Order[];
-      const res = await fetch(`/api/orders?userId=${encodeURIComponent(userId)}`);
+      const res = await fetch(`/api/orders?user_id=me`);
       if (!res.ok) {
         throw new Error('Failed to fetch orders');
       }
