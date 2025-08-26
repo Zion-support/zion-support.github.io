@@ -1,0 +1,76 @@
+name: Security
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'  # Run every Monday at 2 AM
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run security audit
+        run: npm audit --audit-level=moderate
+        continue-on-error: true
+
+      - name: Run security audit (JSON output)
+        run: npm audit --audit-level=moderate --json > security-report.json || echo '{}' > security-report.json
+
+      - name: Upload security report
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-report
+          path: security-report.json
+
+  dependency-update:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check for outdated packages
+        run: npm outdated --json > outdated-packages.json || echo '{}' > outdated-packages.json
+
+      - name: Upload outdated packages report
+        uses: actions/upload-artifact@v4
+        with:
+          name: outdated-packages
+          path: outdated-packages.json
+
+      - name: Create security issue if vulnerabilities found
+        uses: peter-evans/create-issue-from-file@v5
+        if: hashFiles('security-report.json') != ''
+        with:
+          title: "Security vulnerabilities detected"
+          content-filepath: security-report.json
+          labels: security, automated
+          assignees: ''

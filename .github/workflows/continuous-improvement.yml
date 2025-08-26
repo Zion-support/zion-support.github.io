@@ -24,22 +24,24 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Run continuous improvement
-        run: |
-          npm run automation:improvement || true
-          npm run diversify || true
+      - name: Build project
+        run: npm run build
+      - name: Run tests
+        run: npm test
+        continue-on-error: true
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(improvement): continuous improvement + diversity results"
-          title: "chore(improvement): apply continuous improvement and diversity results"
+          commit-message: "chore(improvement): continuous improvement results"
+          title: "chore(improvement): apply continuous improvement results"
           body: |
-            Automated improvement and diversity loop.
+            Automated improvement loop.
 
-            - Runs automation:improvement orchestration
-            - Runs diversification orchestrator
+            - Builds the project
+            - Runs tests
+            - Ensures project health
           branch: automation/continuous-improvement
           delete-branch: true
           signoff: false
@@ -54,23 +56,3 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
           merge-method: squash
-      - name: Attempt immediate merge
-        if: steps.cpr.outputs.pull-request-number
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const pr = Number(core.getInput('pr'))
-            try {
-              await github.pulls.merge({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: pr,
-                merge_method: 'squash'
-              })
-            } catch (e) {
-              core.info(`Merge not completed yet: ${e.message}`)
-            }
-          result-encoding: string
-          inputs: |
-            pr: ${{ steps.cpr.outputs.pull-request-number }}

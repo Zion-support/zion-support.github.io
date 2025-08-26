@@ -10,14 +10,16 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    # Only run if this is a public package
+    if: ${{ github.repository != 'Zion-Holdings/zion.app' }}
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js 18
+      - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
