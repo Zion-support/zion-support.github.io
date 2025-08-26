@@ -11,13 +11,7 @@
     "yes": "Sim",
     "no": "Não",
     "success": "Sucesso",
-    "error": "Erro",
-    "open_main_menu": "Abrir menu principal",
-    "toggle_mobile_menu": "Alternar menu móvel",
-    "greeting_user": "Olá, {{name}}!",
-    "status_page": "Página de status",
-    "check_status_page": "Você pode tentar atualizar a página ou visitar nossa",
-    "back_to_top": "Voltar ao topo"
+    "error": "Erro"
   },
   "nav": {
     "home": "Início",
@@ -63,14 +57,6 @@
     "deadline": "Prazo",
     "job_posted": "Vaga publicada com sucesso"
   },
-  "onboarding": {
-    "title": "O que te traz à Zion?",
-    "subtitle": "Escolha como deseja usar nossa plataforma",
-    "talent_title": "Estou oferecendo serviços",
-    "talent_desc": "Encontre trabalho e mostre suas habilidades",
-    "client_title": "Estou contratando",
-    "client_desc": "Publique vagas e encontre profissionais talentosos"
-  },
   "language": {
     "en": "English",
     "es": "Español",
@@ -78,6 +64,7 @@
     "ar": "العربية",
     "language_changed": "Idioma alterado para {{language}}",
     "switch_to_detected": "Mudar para {{language}}?"
+<<<<<<< HEAD
   },
   "errors": {
     "page_not_found": "Ops! Página não encontrada",
@@ -132,5 +119,10 @@
     "hire_buy_desc": "Conecte-se diretamente com provedores combinados e complete sua transação com segurança.",
     "done": "Pronto",
     "done_desc": "Desfrute de entrega sem complicações e suporte para suas soluções tecnológicas."
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 }

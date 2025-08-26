@@ -162,24 +162,68 @@ export default function ComprehensiveServicesOverview() {
           break;
       }
     }
+
+    // Support level filter
+    if (selectedSupportLevel !== 'all') {
+      filtered = filtered.filter(service => service.supportLevel === selectedSupportLevel);
+    }
+
+    return filtered;
+  }, [searchQuery, selectedCategory, priceRange, selectedSupportLevel]);
+
+  const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category))).sort();
+
+  const formatPrice = (price: any) => {
+    if (typeof price === 'number') {
+      if (price >= 1000) {
+        return `$${(price / 1000).toFixed(1)}k`;
+      }
+      return `$${price}`;
+    }
+    if (price?.monthly) {
+      if (price.monthly >= 1000) {
+        return `$${(price.monthly / 1000).toFixed(1)}k`;
+      }
+      return `$${price.monthly}`;
+    }
+    return 'Contact Us';
   };
 
   const getServicePrice = (service: any) => {
     if (typeof service.price === 'number') {
       return service.price;
     }
+    return service.price?.monthly || 0;
+  };
+
+<<<<<<<< HEAD:src/pages/ComprehensiveServicesOverview.tsx.backup.1756164650
+  const getServiceCurrency = (service: any) => {
+    if (typeof service.price === 'number') {
+      return service.currency || '$';
+    }
+    return service.price?.currency || '$';
+  };
+
+  const getServicePricingModel = (service: any) => {
+    if (typeof service.price === 'number') {
+      return service.pricingModel || 'monthly';
+    }
+    return service.price?.pricingModel || 'monthly';
   };
 
   return (
     <>
-              <EnhancedSEO
-          title="Comprehensive Services Overview | Zion Tech Group"
-          description="Explore our complete portfolio of AI-powered services, IT solutions, and innovative micro SAAS platforms. From legal tech to quantum computing, discover how we can transform your business."
-          keywords="AI services, IT solutions, micro SAAS, cybersecurity, quantum computing, legal tech, fintech, healthcare AI, supply chain, energy management, comprehensive services"
-          image="/images/comprehensive-services-overview-og.jpg"
-          url="https://ziontechgroup.com/comprehensive-services-overview"
-          type="website"
-        />
+  return (
+    <>
+>>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/ComprehensiveServicesOverview.tsx
+      <SEOHead 
+        title="Comprehensive Technology Services - Zion Tech Group"
+        description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions."
+        keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology"
+        image="/images/services-overview-og.jpg"
+        canonical="https://ziontechgroup.com/comprehensive-services-overview"
+      />
+>>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:src/pages/ComprehensiveServicesOverview.tsx.backup.1756164650
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
         {/* Animated Background */}

@@ -54,3 +54,4 @@ const CardFooter: React.FC<CardProps> = ({ children, className = '' }) => {
 };
 
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+}

@@ -1,287 +1,68 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import type { AppProps } from 'next/app';
-import { AuthProvider } from '@/context/auth/AuthProvider';
-import { Provider as ReduxProvider } from 'react-redux';
-import { store } from '@/store';
-import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
+import type { AppProps } from 'next/app'
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { Inter } from 'next/font/google'
+import '../src/index.css'
+import EnhancedNavigation2025 from '../components/layout/EnhancedNavigation2025'
+import EnhancedFooter from '../components/layout/EnhancedFooter'
 
-import { I18nextProvider } from 'react-i18next';
-import i18n from '@/i18n';
-import { LanguageProvider } from '@/context/LanguageContext';
-import { ToastContainer } from '@/components/ToastContainer';
-import GlobalErrorBoundary from '@/components/GlobalErrorBoundary';
-import { ErrorBoundary } from '@/components/ErrorBoundary';
-import RootErrorBoundary from '@/components/RootErrorBoundary';
-import { ApiErrorBoundary } from '@/components/ApiErrorBoundary';
-import { OfflineIndicator } from '@/components/OfflineIndicator';
-import { BetaBanner } from '@/components/BetaBanner';
-import { InstallPrompt } from '@/components/InstallPrompt';
-import { ThemeProvider } from '@/components/ThemeProvider';
-import { AppLayout } from '@/layout/AppLayout';
-import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
-import dynamic from 'next/dynamic';
-import { PerformanceMonitor } from '@/components/ui/performance-monitor';
-import { BundleAnalyzer } from '@/components/ui/bundle-analyzer';
-import { QuickActions } from '@/components/ui/quick-actions';
-import { logInfo, logWarn, logError } from '@/utils/productionLogger';
+const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-sans' })
 
-// Synchronously import core providers
-import { AuthProvider } from '../src/context/auth/AuthProvider';
-import { WhitelabelProvider } from '../src/context/WhitelabelContext';
-import { CartProvider } from '../src/context/CartContext';
-import { FeedbackProvider } from '../src/context/FeedbackContext';
-import { ThemeProvider } from '../src/context/ThemeContext';
-import GlobalErrorBoundary from '../src/components/GlobalErrorBoundary';
+export default function App({ Component, pageProps }: AppProps) {
+	const router = useRouter()
+	const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com'
+	const path = router.asPath || '/'
+	// Ensure absolute canonical with trailing slash behavior consistent with next.config.js
+	const canonicalUrl = `${siteUrl}${path.endsWith('/') ? path : `${path}/`}`
 
-// Dynamically load heavy components to improve initial load time
-const IntercomChat = dynamic(() => import('@/components/IntercomChat'), {
-  ssr: false,
-  loading: () => null
-});
-import { HydrationErrorBoundary } from '@/components/HydrationErrorBoundary';
-// Import Next.js fonts for optimal loading and CLS prevention
-import { Inter, Poppins } from 'next/font/google';
-import Head from 'next/head';
-// Import global Tailwind styles so they load before the app renders
-import '../src/index.css';
-import * as Sentry from '@sentry/nextjs';
-import getConfig from 'next/config';
-import { initializeGlobalErrorHandlers } from '@/utils/globalAppErrors';
-import {
-  validateProductionEnvironment,
-  initializeServices,
-} from '@/utils/environmentConfig';
-import {
-  initializePerformanceOptimizations,
-  initializePerformance,
-} from '@/utils/performance';
-import '@/utils/globalFetchInterceptor';
-import '@/utils/consoleErrorToast';
-import { initConsoleLogCapture } from '@/utils/consoleLogCapture';
-import { RouteChangeHandler } from '@/components/RouteChangeHandler';
-import { registerServiceWorker } from '@/serviceWorkerRegistration';
-import PageTransition from '@/components/PageTransition';
-import { AnimatePresence } from 'framer-motion';
+	const defaultTitle = 'Zion Tech Group — AI, Quantum, and Autonomous Systems'
+	const defaultDescription =
+		'Zion Tech Group builds AI autonomous systems, quantum infrastructure, and Micro SaaS products that drive measurable outcomes.'
+	const ogImage = `${siteUrl}/og-image.svg`
 
-// Configure fonts with optimal loading strategies
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '600', '700'],
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
-  adjustFontFallback: true,
-  variable: '--font-inter',
-  preload: true, // Enable automatic preloading
-});
+	const organizationJsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'Organization',
+		name: 'Zion Tech Group',
+		url: siteUrl,
+		logo: `${siteUrl}/favicon.svg`,
+		sameAs: [
+			'https://www.linkedin.com/company/zion-tech-group/',
+			'https://twitter.com/ZionTechGroup',
+		],
+	};
 
-const poppins = Poppins({
-  weight: ['400', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['system-ui', 'arial'],
-  adjustFontFallback: true,
-  variable: '--font-poppins',
-  preload: true, // Enable automatic preloading
-});
-const LanguageProviderWrapper: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  const { user, isAuthenticated } = useAuth();
-
-  // Prevent hydration issues by ensuring this only runs on client
-  const [isClient, setIsClient] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  // Provide safe defaults during initial render to prevent blank screens
-  const safeAuthState = React.useMemo(
-    () => ({
-      isAuthenticated: isClient ? !!isAuthenticated : false,
-      user: isClient ? user : null,
-    }),
-    [isClient, isAuthenticated, user],
-  );
-
-  return (
-    <LanguageProvider authState={safeAuthState}>{children}</LanguageProvider>
-  );
-};
-
-// If you have global CSS, import it here:
-// import '../styles/globals.css';
-
-function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-  const [queryClient] = React.useState(() => new QueryClient({
-    defaultOptions: {
-      queries: {
-        staleTime: 5 * 60 * 1000, // 5 minutes
-        gcTime: 10 * 60 * 1000, // 10 minutes
-        retry: false, // Disable retries for faster error handling
-      },
-    },
-  }));
-  const [isInitialized, setIsInitialized] = React.useState(false);
-
-  // Optimize initialization by deferring non-critical operations
-  React.useEffect(() => {
-    let isMounted = true;
-
-    const initializeApp = async () => {
-      try {
-        // Validate essential environment variables early
-        try {
-          checkEssentialEnvVars();
-        } catch (envError: any) {
-          console.error('Environment validation failed:', envError);
-          setInitializationError(envError.message);
-          setIsLoading(false);
-          return;
-        }
-        // Simulate progressive loading with realistic steps
-        const steps = [
-          { name: 'Loading Core Components', duration: 300 },
-          { name: 'Initializing Providers', duration: 400 },
-          { name: 'Setting up Analytics', duration: 200 },
-          { name: 'Configuring Theme', duration: 200 },
-          { name: 'Final Setup', duration: 300 }
-        ];
-
-        let currentProgress = 0;
-        const progressStep = 100 / steps.length;
-
-        for (let i = 0; i < steps.length; i++) {
-          const step = steps[i];
-          if (!step) continue;
-          
-          // Update progress
-          currentProgress = (i + 1) * progressStep;
-          setLoadingProgress(Math.min(currentProgress, 95));
-
-          // Simulate async work
-          await new Promise(resolve => setTimeout(resolve, step.duration));
-        }
-
-        // Critical: Initialize error handlers first
-        initializeGlobalErrorHandlers();
-
-        // Critical: Validate environment (graceful in development)
-        try {
-          validateProductionEnvironment();
-        } catch (error) {
-          logWarn('[App] Environment validation warning:', { data:  { error } });
-        }
-
-        // Defer non-critical initializations
-        setTimeout(() => {
-          if (!isMounted) return;
-
-          // Initialize services asynchronously
-          initializeServices().catch((err) =>
-            logWarn('Service initialization failed', { data:  { error: err } }),
-          );
-
-          // Initialize performance monitoring only if needed
-          if (typeof window !== 'undefined' && process.env.PERFORMANCE_MONITORING === 'true') {
-            initializePerformanceOptimizations();
-            initializePerformance();
-          }
-
-          // Initialize console log capture only in development
-          if (process.env.NODE_ENV === 'development') {
-            initConsoleLogCapture();
-          }
-        }, 100); // Defer by 100ms to improve initial render time
-
-        // Mark as initialized immediately for critical path
-        if (isMounted) {
-          setIsInitialized(true);
-        }
-      } catch (error) {
-        logError('[App] Critical initialization error:', { data:  { error } });
-
-        // Ensure isInitialized is set to true immediately in case of an error,
-        // so the app doesn't hang on the loading screen.
-        if (isMounted) {
-          setIsInitialized(true);
-        }
-
-        // Defer Sentry reporting to make it non-blocking and allow Sentry.init to potentially run first.
-        setTimeout(() => {
-          try {
-            if (process.env.NEXT_PUBLIC_SENTRY_DSN && !process.env.NEXT_PUBLIC_SENTRY_DSN.includes('dummy')) {
-              Sentry.captureException(error);
-            }
-          } catch (sentryError) {
-            logWarn('[App] Could not send error to Sentry (deferred):', { data:  { error: sentryError } });
-          }
-        }, 0);
-      }
-    };
-
-    initializeApp();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
-  // Set Sentry context for current route (optimized)
-  React.useEffect(() => {
-    if (process.env.NEXT_PUBLIC_SENTRY_DSN && !process.env.NEXT_PUBLIC_SENTRY_DSN.includes('dummy')) {
-      Sentry.setTag('route', router.pathname);
-      Sentry.setContext('query', router.query);
-    }
-  }, [router.pathname, router.query]);
-
-  // Register service worker only in production
-  React.useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      setTimeout(() => {
-        registerServiceWorker();
-      }, 2000); // Defer service worker registration
-    }
-  }, []);
-
-  // Show optimized loading screen during critical initialization
-  if (!isInitialized) {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-purple-900">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-2 border-cyan-400 border-t-transparent mx-auto mb-4"></div>
-          <p className="text-white text-lg font-medium">Initializing Zion App...</p>
-          <p className="text-blue-200 text-sm mt-2">Optimizing performance...</p>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <ProductionErrorBoundary>
-      <QueryClientProvider client={queryClient}> {/* Added QueryClientProvider */}
-        <ProviderWrapper>
-        <Head>
-          <title>Zion App - AI Marketplace & DAO Platform</title>
-        <meta name="description" content="Zion App - The ultimate AI marketplace and DAO platform for the future of work" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-             <div>
-         <Component {...pageProps} />
-       </div>
-        </ProviderWrapper>
-      </QueryClientProvider>
-    </ProductionErrorBoundary>
-  );
+	return (
+		<div className={inter.variable}>
+			<Head>
+				<title>{defaultTitle}</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.ico" />
+				<link rel="manifest" href="/manifest.json" />
+				<meta name="theme-color" content="#111827" />
+				<link rel="canonical" href={canonicalUrl} />
+				<meta name="robots" content="index,follow" />
+				<meta name="description" content={defaultDescription} />
+				<meta property="og:site_name" content="Zion Tech Group" />
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content={defaultTitle} />
+				<meta property="og:description" content={defaultDescription} />
+				<meta property="og:url" content={canonicalUrl} />
+				<meta property="og:image" content={ogImage} />
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:site" content="@ZionTechGroup" />
+				<meta name="twitter:title" content={defaultTitle} />
+				<meta name="twitter:description" content={defaultDescription} />
+				<meta name="twitter:image" content={ogImage} />
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+			</Head>
+			<div className="min-h-screen flex flex-col bg-black text-white">
+				<EnhancedNavigation2025 />
+				<main className="flex-1">
+					<Component {...pageProps} />
+				</main>
+				<EnhancedFooter />
+			</div>
+		</div>
+	)
 }
-
-// Optimize component logging
-if (process.env.NODE_ENV === 'development') {
-  logInfo('[App] MyApp component optimized and ready');
-}
-
-export default MyApp;

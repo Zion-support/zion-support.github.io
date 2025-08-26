@@ -10,7 +10,6 @@ interface AccessibilitySettings {
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicator: boolean;
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
 }
 
 interface AccessibilityPanelProps {
@@ -29,8 +28,7 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
     reducedMotion: false,
     screenReader: false,
     keyboardNavigation: false,
-    focusIndicator: true,
-    colorBlindness: 'none'
+    focusIndicator: true
   });
   const [accessibilityScore, setAccessibilityScore] = useState(85);
 
@@ -140,6 +138,7 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
     return 'Poor';
   };
 
+  if (!isOpen) return null;
   if (!isVisible) return null;
 
   return (
@@ -201,7 +200,7 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
 
             {/* Content */}
             <div className="p-4 max-h-96 overflow-y-auto">
-              <AnimatePresence mode="wait">
+              <AnimatePresence>
                 {activeTab === 'general' && (
                   <motion.div
                     key="general"

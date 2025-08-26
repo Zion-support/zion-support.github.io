@@ -1,11 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
-=======
 import React, { useEffect, useState, useCallback } from 'react';
 import { 
   Activity, 
   Zap, 
   Clock, 
-=======
   AlertTriangle,
   CheckCircle,
   BarChart3,
@@ -156,7 +153,6 @@ const PerformanceMonitor: React.FC = () => {
   si: number; // Speed Index
   tti: number; // Time to Interactive
 }
-=======
   };
 
   const formatMetric = (metric: keyof PerformanceMetrics, value: number | null): string => {
@@ -183,7 +179,6 @@ const PerformanceMonitor: React.FC = () => {
 
 interface PerformanceScore {
   overall: number;
-=======
   AlertTriangle, 
   CheckCircle, 
   TrendingUp,
@@ -288,8 +283,6 @@ const PerformanceMonitor: React.FC = () => {
     
     if (metrics.ttfb && metrics.ttfb > thresholds.ttfb.needsImprovement) score -= 20;
     else if (metrics.ttfb && metrics.ttfb > thresholds.ttfb.good) score -= 10;
-=======
-=======
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -718,7 +711,6 @@ const PerformanceMonitor: React.FC = () => {
                 />
               ))}
             </div>
-=======
         {/* Collapsed View */}
         {!isExpanded && (
           <div className="p-3">
@@ -737,7 +729,6 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
       </div>
-=======
   // Analyze performance and generate issues
   const analyzePerformance = useCallback((metrics: PerformanceMetrics): PerformanceIssue[] => {
     const newIssues: PerformanceIssue[] = [];
@@ -957,9 +948,9 @@ const PerformanceMonitor: React.FC = () => {
       >
         <Activity className="w-6 h-6" />
       </motion.button>
-=======
 import React, { useEffect, useState, useCallback } from 'react';
 import { Zap, Clock, HardDrive, Wifi, AlertTriangle } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -1523,7 +1514,6 @@ const PerformanceMonitor: React.FC = () => {
         </div>
       </motion.div>
     </AnimatePresence>
-=======
     newScore.overall = Math.round(
       (newScore.fcp + newScore.lcp + newScore.fid + newScore.cls + newScore.ttfb) / 5
     );
@@ -1714,7 +1704,6 @@ const PerformanceMonitor: React.FC = () => {
                   <div className="text-xs text-gray-600 dark:text-gray-400">Network</div>
                   <div className="text-sm font-medium">{networkInfo.effectiveType}</div>
                   <div className="text-xs text-gray-500">{networkInfo.downlink} Mbps</div>
-=======
 interface PerformanceRecommendation {
   type: 'critical' | 'warning' | 'info';
   message: string;
@@ -2118,7 +2107,6 @@ const MetricCard: React.FC<MetricCardProps> = ({ label, value, status }) => {
     <div className={`p-3 rounded-lg ${getStatusBg(status)}`}>
       <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">{label}</div>
       <div className={`font-mono font-semibold ${getStatusColor(status)}`}>{value}</div>
-=======
           </>
         ) : (
           <div className="text-center py-4">
@@ -2137,13 +2125,10 @@ const MetricCard: React.FC<MetricCardProps> = ({ label, value, status }) => {
 };
 
 export default PerformanceMonitor;
-=======
 export { PerformanceMonitor };
 export default PerformanceMonitor;
-=======
 export { PerformanceMonitor };
 export default PerformanceMonitor;
-=======
 }
 
 export const PerformanceMonitor: React.FC = () => {
@@ -2201,6 +2186,7 @@ export const PerformanceMonitor: React.FC = () => {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
 
         // Measure Time to First Byte
+        // Time to First Byte (TTFB)
         const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigationEntry) {
           setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
@@ -2350,5 +2336,6 @@ export const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-=======
+export default PerformanceMonitor;
+
 export default PerformanceMonitor;

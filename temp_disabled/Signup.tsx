@@ -163,6 +163,7 @@ export default function Signup() {
 
   return (
     <>
+      
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
@@ -431,6 +432,7 @@ export default function Signup() {
           </div>
         </div>
       </div>
+      
     </>
   );
 }

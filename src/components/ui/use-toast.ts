@@ -1,3 +1,11 @@
+import { useState } from 'react';
+
+interface Toast {
+  id: string;
+  title: string;
+  description?: string;
+  type?: 'success' | 'error' | 'warning' | 'info';
+  variant?: 'default' | 'destructive';
 import { useState, useCallback } from 'react';
 
 export interface Toast {
@@ -30,12 +38,35 @@ export function useToast() {
 
     setToasts(prev => [...prev, newToast]);
 
+    setToasts(prev => [...prev, newToast]);
+
     // Auto-remove toast after duration
     setTimeout(() => {
       setToasts(prev => prev.filter(toast => toast.id !== id));
     }, newToast.duration);
 
     return id;
+  };
+
+  const dismiss = (id: string) => {
+    setToasts(prev => prev.filter(t => t.id !== id));
+  };
+
+  const success = (title: string, description?: string) => {
+    return toast({ title, description, type: 'success' });
+  };
+
+  const error = (title: string, description?: string) => {
+    return toast({ title, description, type: 'error', variant: 'destructive' });
+  };
+
+  const warning = (title: string, description?: string) => {
+    return toast({ title, description, type: 'warning' });
+  };
+
+  const info = (title: string, description?: string) => {
+    return toast({ title, description, type: 'info' });
+  };
   }, []);
 
   const dismiss = useCallback((id: string) => {

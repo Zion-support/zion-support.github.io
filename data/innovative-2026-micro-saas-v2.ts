@@ -519,6 +519,7 @@ export const innovative2026MicroSaasV2Services: Innovative2026MicroSaasV2Service
     reviews: 290
   }
 ];
+<<<<<<< HEAD
 
 export const getPopularServices = () => {
   return innovative2026MicroSaasV2Services.filter(service => service.popular);
@@ -536,3 +537,5 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
     return price >= minPrice && price <= maxPrice;
   });
 };
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

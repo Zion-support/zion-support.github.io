@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+// Switch component replaced with checkbox
+// Label component replaced with simple label
+// Separator component replaced with simple div
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
@@ -104,6 +107,7 @@ export function AccessibilityEnhancer() {
       <Button
         onClick={() => setIsOpen(!isOpen)}
         variant="outline"
+        size="sm"
         size="icon"
         className="fixed top-4 right-4 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 hover:bg-zion-cyan/10"
         aria-label="Accessibility Settings"
@@ -122,6 +126,7 @@ export function AccessibilityEnhancer() {
               </CardTitle>
               <Button
                 variant="ghost"
+                size="sm"
                 size="icon"
                 onClick={() => setIsOpen(false)}
                 aria-label="Close accessibility settings"
@@ -177,6 +182,46 @@ export function AccessibilityEnhancer() {
             </div>
             
             <Separator />
+                <label htmlFor="high-contrast" className="text-sm">
+                  High Contrast
+                </label>
+                <input
+                  type="checkbox"
+                  id="high-contrast"
+                  checked={settings.highContrast}
+                  onChange={(e) => handleSettingChange('highContrast', e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <label htmlFor="large-text" className="text-sm">
+                  Large Text
+                </label>
+                <input
+                  type="checkbox"
+                  id="large-text"
+                  checked={settings.largeText}
+                  onChange={(e) => handleSettingChange('largeText', e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <label htmlFor="focus-indicator" className="text-sm">
+                  Enhanced Focus
+                </label>
+                <input
+                  type="checkbox"
+                  id="focus-indicator"
+                  checked={settings.focusIndicator}
+                  onChange={(e) => handleSettingChange('focusIndicator', e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+            </div>
+            
+            <div className="border-t border-border my-2" />
             
             {/* Motion and Navigation */}
             <div className="space-y-3">
@@ -209,6 +254,33 @@ export function AccessibilityEnhancer() {
             </div>
             
             <Separator />
+                <label htmlFor="reduced-motion" className="text-sm">
+                  Reduced Motion
+                </label>
+                <input
+                  type="checkbox"
+                  id="reduced-motion"
+                  checked={settings.reducedMotion}
+                  onChange={(e) => handleSettingChange('reducedMotion', e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <label htmlFor="keyboard-nav" className="text-sm">
+                  Keyboard Navigation
+                </label>
+                <input
+                  type="checkbox"
+                  id="keyboard-nav"
+                  checked={settings.keyboardNavigation}
+                  onChange={(e) => handleSettingChange('keyboardNavigation', e.target.checked)}
+                  className="ml-2"
+                />
+              </div>
+            </div>
+            
+            <div className="border-t border-border my-2" />
             
             {/* Screen Reader */}
             <div className="space-y-3">
@@ -218,6 +290,16 @@ export function AccessibilityEnhancer() {
               </h4>
               
               <div className="flex items-center justify-between">
+                <label htmlFor="screen-reader" className="text-sm">
+                  Enhanced Support
+                </label>
+                <input
+                  type="checkbox"
+                  id="screen-reader"
+                  checked={settings.screenReader}
+                  onChange={(e) => handleSettingChange('screenReader', e.target.checked)}
+                  className="ml-2"
+                />
                 <Label htmlFor="screen-reader" className="text-sm">
                   Enhanced Support
                 </Label>

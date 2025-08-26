@@ -1,349 +1,296 @@
 
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import React, { useState } from 'react';
-=======
-import { AppHeader } from "@/layout/AppHeader";
-import Footer from "@/components/Footer";
-=======
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-=======
-import { Footer } from "@/components/Footer";
-
-const RequestQuote: React.FC = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    company: '',
-    email: '',
-    phone: '',
-    service: '',
-    budget: '',
-    timeline: '',
-    description: ''
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-  };
-
-  const services = [
-    'AI Solutions',
-    'Cloud & DevOps',
-    'Cybersecurity',
-    'IT Infrastructure',
-    'Digital Transformation',
-    'Consulting',
-    'Quantum Computing',
-    'Blockchain & Web3',
-    'IoT Services',
-    'Micro SAAS',
-    'Other'
-  ];
-
-  const budgets = [
-    'Under $10,000',
-    '$10,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $500,000',
-    '$500,000+'
-  ];
-
-  const timelines = [
-    'Immediate (1-2 weeks)',
-    'Quick (1-2 months)',
-    'Standard (3-6 months)',
-    'Long-term (6+ months)',
-    'Flexible'
-  ];
-
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-2xl shadow-xl p-12 border border-slate-100">
-            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-3xl font-bold text-slate-900 mb-4">
-              Thank You!
+import React from 'react';
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Request Quote - Zion Tech Group" 
+        description="Get a custom quote for your AI and tech project needs from Zion Tech Group."
+        keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group"
+        canonical="https://ziontechgroup.com/request-quote"
+      />
+      
+      <AppHeader />
+      
+      <main className="pt-16 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Request a Custom Quote
             </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              Your quote request has been submitted successfully. Our team will review your requirements 
-              and get back to you within 24 hours with a detailed proposal.
-            </p>
-            <div className="space-y-4">
-              <Link
-                to="/contact"
-                className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Contact Us
-              </Link>
-              <Link
-                to="/"
-                className="block w-full border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-slate-400 transition-all duration-300"
-              >
-                Back to Home
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Request a Quote
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            Get a customized quote for your technology project. Our experts will analyze 
-            your requirements and provide a detailed proposal.
-          </p>
-        </div>
-      </section>
-
-      {/* Quote Form */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-slate-100">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                Project Details
-              </h2>
-              <p className="text-slate-600">
-                Fill out the form below and we'll get back to you with a customized quote.
-              </p>
-            </div>
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Personal Information */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-semibold text-slate-700 mb-2">
-                    First Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-semibold text-slate-700 mb-2">
-                    Last Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="company" className="block text-sm font-semibold text-slate-700 mb-2">
-                    Company *
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-
-              {/* Project Information */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
-                  <label htmlFor="service" className="block text-sm font-semibold text-slate-700 mb-2">
-                    Service Needed *
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    {services.map((service) => (
-                      <option key={service} value={service}>{service}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="budget" className="block text-sm font-semibold text-slate-700 mb-2">
-                    Budget Range *
-                  </label>
-                  <select
-                    id="budget"
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select budget</option>
-                    {budgets.map((budget) => (
-                      <option key={budget} value={budget}>{budget}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="timeline" className="block text-sm font-semibold text-slate-700 mb-2">
-                    Timeline *
-                  </label>
-                  <select
-                    id="timeline"
-                    name="timeline"
-                    value={formData.timeline}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select timeline</option>
-                    {timelines.map((timeline) => (
-                      <option key={timeline} value={timeline}>{timeline}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="description" className="block text-sm font-semibold text-slate-700 mb-2">
-                  Project Description *
-                </label>
-                <textarea
-                  id="description"
-                  name="description"
-                  value={formData.description}
-                  onChange={handleInputChange}
-                  required
-                  rows={6}
-                  placeholder="Please describe your project requirements, goals, and any specific challenges you're facing..."
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                />
-              </div>
-
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center"
-                >
-                  Submit Quote Request
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Need Immediate Assistance?
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Our team is available to discuss your project and answer any questions you may have.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Tell us about your project and we'll connect you with the perfect talent and services for your needs
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Call Us</h3>
-              <p className="text-slate-600">+1 (555) 123-4567</p>
-              <p className="text-slate-500 text-sm">Mon-Fri 9AM-6PM EST</p>
+          <div className="max-w-4xl mx-auto">
+            <QuoteRequestForm />
+          </div>
+        </div>
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle, Clock, Users, Zap } from "lucide-react";
+
+export default function RequestQuote() {
+  return (
+    <div className="min-h-screen bg-zion-blue">
+      <SEO
+        title="Request a Quote | Zion Tech Group"
+        description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs."
+        keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes"
+        canonical="https://ziontechgroup.com/request-quote"
+      />
+      <Header />
+      
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Get Your Custom Quote
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Whether you need AI services, IT solutions, top talent, or specialized equipment, 
+              we'll provide you with a detailed, competitive quote tailored to your specific requirements.
+            </p>
+          </div>
+
+          {/* Benefits Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
+              <CardHeader className="text-center">
+                <Zap className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+                <CardTitle className="text-lg">Fast Response</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-zion-slate-light">
+                  Get your quote within 24 hours
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
+              <CardHeader className="text-center">
+                <CheckCircle className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+                <CardTitle className="text-lg">Customized</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-zion-slate-light">
+                  Tailored to your specific needs
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
+              <CardHeader className="text-center">
+                <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+                <CardTitle className="text-lg">Expert Team</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-zion-slate-light">
+                  Reviewed by industry experts
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
+              <CardHeader className="text-center">
+                <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
+                <CardTitle className="text-lg">No Obligation</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-zion-slate-light">
+                  Free quotes with no commitment
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Services Overview */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              What We Can Quote For You
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
+                <CardHeader>
+                  <CardTitle className="text-xl text-zion-cyan">AI & Machine Learning</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    Custom AI solutions, model development, and ML infrastructure
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-zion-slate-light space-y-2">
+                    <li>• Custom AI model development</li>
+                    <li>• Machine learning consulting</li>
+                    <li>• AI infrastructure setup</li>
+                    <li>• Data science services</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
+                <CardHeader>
+                  <CardTitle className="text-xl text-zion-cyan">IT Services</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    Onsite IT support, infrastructure, and digital transformation
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-zion-slate-light space-y-2">
+                    <li>• Onsite IT support</li>
+                    <li>• Infrastructure setup</li>
+                    <li>• Cloud migration</li>
+                    <li>• Cybersecurity services</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
+                <CardHeader>
+                  <CardTitle className="text-xl text-zion-cyan">Talent & Hiring</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    AI-powered talent matching and recruitment services
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-zion-slate-light space-y-2">
+                    <li>• AI talent matching</li>
+                    <li>• Recruitment services</li>
+                    <li>• Team building</li>
+                    <li>• Skill assessment</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
+                <CardHeader>
+                  <CardTitle className="text-xl text-zion-cyan">Equipment & Hardware</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    High-tech equipment, servers, and specialized hardware
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-zion-slate-light space-y-2">
+                    <li>• AI/ML hardware</li>
+                    <li>• Server infrastructure</li>
+                    <li>• Networking equipment</li>
+                    <li>• Green IT solutions</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
+                <CardHeader>
+                  <CardTitle className="text-xl text-zion-cyan">Consulting</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    Strategic technology consulting and digital transformation
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-zion-slate-light space-y-2">
+                    <li>• Technology strategy</li>
+                    <li>• Digital transformation</li>
+                    <li>• Process optimization</li>
+                    <li>• Innovation consulting</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
+                <CardHeader>
+                  <CardTitle className="text-xl text-zion-cyan">Custom Solutions</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    Tailored solutions for unique business requirements
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-zion-slate-light space-y-2">
+                    <li>• Custom software development</li>
+                    <li>• Integration services</li>
+                    <li>• API development</li>
+                    <li>• Legacy system modernization</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Quote Form Section */}
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Request Your Quote
+              </h2>
+              <p className="text-zion-slate-light text-lg">
+                Fill out the form below and we'll get back to you with a detailed quote within 24 hours.
+              </p>
             </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Email Us</h3>
-              <p className="text-slate-600">info@ziontechgroup.com</p>
-              <p className="text-slate-500 text-sm">Response within 24 hours</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Visit Us</h3>
-              <p className="text-slate-600">123 Tech Street</p>
-              <p className="text-slate-500 text-sm">San Francisco, CA 94105</p>
+            <QuoteRequestForm />
+          </div>
+
+          {/* Additional Information */}
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl font-bold text-white mb-6">
+              Need Immediate Assistance?
+            </h3>
+            <p className="text-zion-slate-light mb-6">
+              For urgent requests or to speak with our team directly, contact us:
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="mailto:commercial@ziontechgroup.com"
+                className="inline-flex items-center px-6 py-3 bg-zion-cyan text-zion-blue-dark font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors"
+              >
+                Email Us
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 border border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/10 transition-colors"
+              >
+                Contact Page
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </main>
+      
+      <Footer />
     </div>
-  );
-};
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
-export default RequestQuote;
+export default function RequestQuote() {
+  return (
+    <>
+      <SEO 
+        title="Request a Quote - Zion Tech Group"
+        description="Get a customized quote for your IT services, AI solutions, or tech projects. Our team will provide you with a detailed estimate tailored to your needs."
+        keywords="request quote, IT services quote, AI solutions quote, tech project estimate, custom pricing"
+        canonical="https://ziontechgroup.com/request-quote"
+      />
+      <Header />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Request a Custom Quote
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Get a personalized estimate for your IT services, AI solutions, or tech projects. 
+              Our team will analyze your requirements and provide you with a detailed quote.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <QuoteRequestForm />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}

@@ -1,6 +1,9 @@
 import { Button } from '@/components/ui/button';
-import { Link, useNavigate } from 'react-router-dom';
-import { useCart } from '@/context/CartContext';
+import Link from 'next/link';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import Skeleton from '@/components/ui/skeleton';
+import axios from 'axios';
 import { useAuth } from '@/hooks/useAuth';
 import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
 
@@ -8,22 +11,15 @@ export default function CartPage() {
   const navigate = useNavigate();
   const { items, dispatch } = useCart();
   const { user } = useAuth();
-  const [hydrated, setHydrated] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [cartLoading, setCartLoading] = useState(true);
+  const [showEmpty, setShowEmpty] = useState(false);
 
   useEffect(() => {
-    const load = async () => {
-      if (user) {
-        try {
-          const res = await fetch('/api/cart');
-          if (res.ok) {
-            const data = await res.json();
-            dispatch(setItemsAction(data.items || []));
-            return;
-          }
-        } catch (err) {
-          console.error('Failed to fetch cart', err);
-        }
-      }
+    if (reduxItems.length > 0) {
+      setItems(reduxItems);
+      setCartLoading(false);
+    } else {
       const stored = safeStorage.getItem('zion_cart');
       if (stored) {
         try {
@@ -51,6 +47,17 @@ export default function CartPage() {
         console.error('Failed to update cart', err);
       }
     }
+    setCartLoading(false);
+  }, [reduxItems]);
+
+  useEffect(() => {
+    if (!cartLoading && items.length === 0) {
+      setShowEmpty(true);
+    }
+  }, [cartLoading, items]);
+
+  const updateQuantity = (id: string, qty: number) => {
+    dispatch(updateQuantityAction({ id, quantity: qty }));
   };
 
   const removeItem = (id: string) => {
@@ -76,7 +83,16 @@ export default function CartPage() {
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
   const total = subtotal - discount;
 
-  if (items.length === 0) {
+  if (cartLoading) {
+    return (
+      <div className="container py-10 space-y-4">
+        <Skeleton className="h-8 w-1/3" />
+        <Skeleton className="h-32 w-full" />
+      </div>
+    );
+  }
+
+  if (showEmpty) {
     return (
       <div className="container py-10 text-center">
         <img loading="lazy"

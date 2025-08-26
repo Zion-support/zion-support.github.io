@@ -21,8 +21,8 @@ import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 
 // Import auth and notification providers
-import { AuthProvider } from '@/context/auth/AuthProvider';
-import { NotificationProvider } from './context';
+import { AuthProvider } from './context/auth/AuthProvider';
+import { NotificationProvider } from './context/notifications/NotificationContext';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
@@ -30,6 +30,16 @@ import { ViewModeProvider } from './context/ViewModeContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { HelmetProvider } from 'react-helmet-async'
+import { BrowserRouter } from 'react-router-dom'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import App from './App'
+import { AppWrapper } from './AppWrapper'
+import './index.css'
+
+// Create a client
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -39,6 +49,18 @@ const queryClient = new QueryClient({
   },
 })
 
+// Performance monitoring setup
+if (import.meta.env.DEV) {
+  console.log('🚀 Zion Tech Group - Development Mode')
+  console.log('📊 Performance monitoring enabled')
+  console.log('🔧 Accessibility controls available')
+}
+
+// Error handling for unhandled promise rejections
+window.addEventListener('unhandledrejection', (event) => {
+  console.error('Unhandled promise rejection:', event.reason)
+  // In production, you might want to send this to an error reporting service
+})
 const rootElement = document.getElementById('root');
 
 function renderApp() {
@@ -69,39 +91,67 @@ function renderApp() {
     </React.StrictMode>
   );
 
-  if (rootElement?.hasChildNodes()) {
-    hydrateRoot(rootElement, app);
-  } else if (rootElement) {
-    createRoot(rootElement).render(app);
-  }
+// Error handling for uncaught errors
+window.addEventListener('error', (event) => {
+  console.error('Uncaught error:', event.error)
+  // In production, you might want to send this to an error reporting service
+})
+
+// Register service worker for PWA functionality
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('SW registered: ', registration)
+        
+        // Check for updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing
+          if (newWorker) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New content is available, show update prompt
+                if (confirm('New content is available! Would you like to update?')) {
+                  newWorker.postMessage({ type: 'SKIP_WAITING' })
+                  window.location.reload()
+                }
+              }
+            })
+          }
+        })
+      })
+      .catch((registrationError) => {
+        console.log('SW registration failed: ', registrationError)
+      })
+  })
 }
 
-function displayFatalError(message: string) {
-  if (rootElement) {
-    rootElement.innerHTML = `
-      <div style="padding:20px;text-align:center;font-family:sans-serif;">
-        <h1>Application Error</h1>
-        <p>${message}</p>
-      </div>`;
-  }
-}
-
-try {
-  renderApp();
-} catch (error) {
-  console.error('Global error caught in main.tsx:', error);
-  displayFatalError((error as Error).message);
-}
-
-window.addEventListener('error', (e) => {
-  console.error('Unhandled error:', e.error || e.message);
-  displayFatalError(e.message);
-});
-
-window.addEventListener('unhandledrejection', (e) => {
-  const message = (e.reason && e.reason.message) || 'Unhandled promise rejection';
-  console.error('Unhandled rejection:', e.reason);
-  displayFatalError(message);
-});
-
-registerServiceWorker();
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <WhitelabelProvider>
+          <Router>
+            <AuthProvider>
+              <NotificationProvider>
+                <AnalyticsProvider>
+                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                    <AppLayout>
+                      <App />
+                    </AppLayout>
+                    <LanguageDetectionPopup />
+                  </LanguageProvider>
+                </AnalyticsProvider>
+              </NotificationProvider>
+            </AuthProvider>
+          </Router>
+        </WhitelabelProvider>
+        <BrowserRouter>
+          <AppWrapper>
+            <App />
+          </AppWrapper>
+        </BrowserRouter>
+      </QueryClientProvider>
+    </HelmetProvider>
+  </React.StrictMode>,
+)

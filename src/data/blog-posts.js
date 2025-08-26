@@ -1,50 +1,44 @@
 export const BLOG_POSTS = [
     {
         id: '1',
-        title: 'The Future of AI in Software Development',
-        excerpt: 'Explore how artificial intelligence is revolutionizing the way we write, test, and maintain software.',
-        content: 'This is a comprehensive article about the future of AI in software development...',
-        author: 'Sarah Johnson',
-        category: 'AI & Machine Learning',
-        publishedAt: '2024-01-15T10:00:00Z',
+        title: 'The Future of AI in Technology',
+        slug: 'future-of-ai-in-technology',
+        excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape and what it means for businesses and developers.',
+        content: 'This is a comprehensive article about the future of AI in technology...',
+        author: {
+            name: 'Sarah Johnson',
+            avatar: '/avatars/sarah.jpg',
+            avatarUrl: '/avatars/sarah.jpg',
+            bio: 'AI Research Lead at Zion Tech Group',
+            title: 'AI Research Lead'
+        },
+        publishedAt: '2024-01-15',
+        publishedDate: '2024-01-15',
+        tags: ['AI', 'Technology', 'Future'],
+        category: 'Artificial Intelligence',
         readTime: 8,
-        tags: ['AI', 'software development', 'future'],
-        slug: 'future-of-ai-in-software-development'
+        featuredImage: '/blog/ai-future.jpg',
+        isFeatured: true
     },
     {
         id: '2',
-        title: 'Building Scalable Microservices Architecture',
-        excerpt: 'Learn the best practices for designing and implementing scalable microservices systems.',
-        content: 'This article covers the fundamentals of microservices architecture...',
-        author: 'Michael Chen',
-        category: 'Software Architecture',
-        publishedAt: '2024-01-10T14:30:00Z',
+        title: 'Building Scalable Web Applications',
+        slug: 'building-scalable-web-applications',
+        excerpt: 'Best practices and architectural patterns for creating web applications that can handle millions of users.',
+        content: 'This article covers the essential principles of building scalable web applications...',
+        author: {
+            name: 'Michael Chen',
+            avatar: '/avatars/michael.jpg',
+            avatarUrl: '/avatars/michael.jpg',
+            bio: 'Senior Software Engineer',
+            title: 'Senior Software Engineer'
+        },
+        publishedAt: '2024-01-10',
+        publishedDate: '2024-01-10',
+        tags: ['Web Development', 'Scalability', 'Architecture'],
+        category: 'Web Development',
         readTime: 12,
-        tags: ['microservices', 'architecture', 'scalability'],
-        slug: 'building-scalable-microservices-architecture'
-    },
-    {
-        id: '3',
-        title: 'Best Practices for React Performance Optimization',
-        excerpt: 'Discover techniques to make your React applications faster and more efficient.',
-        content: 'Learn about React performance optimization strategies...',
-        author: 'Emily Rodriguez',
-        category: 'Frontend Development',
-        publishedAt: '2024-01-05T09:15:00Z',
-        readTime: 10,
-        tags: ['React', 'performance', 'optimization'],
-        slug: 'react-performance-optimization-best-practices'
-    },
-    {
-        id: '4',
-        title: 'DevOps Trends to Watch in 2024',
-        excerpt: 'Stay ahead of the curve with the latest DevOps practices and tools.',
-        content: 'Explore the emerging trends in DevOps for 2024...',
-        author: 'David Kim',
-        category: 'DevOps & Cloud',
-        publishedAt: '2024-01-01T11:45:00Z',
-        readTime: 7,
-        tags: ['DevOps', 'trends', '2024'],
-        slug: 'devops-trends-2024'
+        featuredImage: '/blog/scalable-web.jpg',
+        isFeatured: false
     }
 ];

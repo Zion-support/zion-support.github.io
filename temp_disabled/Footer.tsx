@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { 
   Mail, Phone, MapPin, Globe, 
   Twitter, Linkedin, Github, 
-  ArrowUp, Heart, Zap
+  ArrowUp, Heart, Zap, Facebook
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -54,10 +54,9 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { name: 'X', href: 'https://x.com/ziontechgroup', icon: Twitter },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-    { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: Youtube }
+    { name: 'LinkedIn', href: '/social/linkedin/', icon: <Linkedin className="w-5 h-5" /> },
+    { name: 'Facebook', href: '/social/facebook/', icon: <Facebook className="w-5 h-5" /> },
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> },
   ];
 
   const scrollToTop = () => {

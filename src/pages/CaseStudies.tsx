@@ -29,7 +29,6 @@ import {
   Clock,
   Award
 } from 'lucide-react';
-=======
   Brain, 
   Cpu, 
   Zap, 
@@ -81,7 +80,6 @@ import {
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import React from 'react';
@@ -213,7 +211,6 @@ const CaseStudies = () => {
       author: "David Rodriguez",
       title: "Operations Manager",
       company: "Manufacturing Corporation"
-=======
   Star, 
   Users, 
   TrendingUp, 
@@ -240,7 +237,6 @@ const CaseStudies = () => {
   ShoppingCart,
   GraduationCap
 } from 'lucide-react';
-=======
 import { CASE_STUDIES } from "@/data/case-studies";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -357,7 +353,6 @@ export default function CaseStudies() {
       icon: Target,
       color: "from-orange-500 to-yellow-500",
       featured: false
-=======
   Building2, 
   Shield, 
   Brain, 
@@ -406,7 +401,6 @@ export default function CaseStudies() {
       ],
       technologies: ["Quantum Cryptography", "AI Security", "SOC2 Compliance"],
       icon: Shield,
-=======
 import React from 'react';
 import { SEOHead } from '../components/SEOHead';
 import { Link } from 'react-router-dom';
@@ -542,7 +536,6 @@ const CaseStudies = () => {
       technologies: ["Quantum Computing", "Neural Networks", "AI Research"],
       icon: Brain,
       color: "from-violet-500 to-purple-500"
-=======
       icon: Building,
       title: "Global Manufacturing Corporation",
       industry: "Manufacturing",
@@ -625,7 +618,6 @@ const CaseStudies = () => {
         "99.99% service availability"
       ],
       color: "from-teal-500 to-cyan-500"
-=======
       title: "Fortune 500 Manufacturing Transformation",
       description: "How we helped a global manufacturing company achieve 40% efficiency improvement with AI-powered automation",
       industry: "Manufacturing",
@@ -664,7 +656,6 @@ const CaseStudies = () => {
       challenge: "Disconnected customer experiences across channels",
       solution: "AI-powered omnichannel platform with predictive analytics",
       impact: "Became market leader in digital retail innovation"
-=======
   Target,
   Award,
   BarChart3,
@@ -916,9 +907,6 @@ export default function CaseStudies() {
     "Micro SAAS Solutions",
     "AI Research & Development"
   ];
-=======
-=======
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, TrendingUp, Users, DollarSign, Clock, Target } from 'lucide-react';
@@ -1118,21 +1106,18 @@ export default function CaseStudies() {
         timeframe: "30 months",
         teamSize: "50+ engineers"
       }
-=======
     { name: "Healthcare", icon: Heart, count: 12 },
     { name: "Financial Services", icon: DollarSign, count: 8 },
     { name: "Technology", icon: Cpu, count: 15 },
     { name: "Manufacturing", icon: Building, count: 6 },
     { name: "Retail", icon: ShoppingCart, count: 4 },
     { name: "Education", icon: GraduationCap, count: 3 }
-=======
     { name: "Manufacturing", count: 12, icon: Building2 },
     { name: "Financial Services", count: 8, icon: Shield },
     { name: "Healthcare", count: 15, icon: Users },
     { name: "Technology", count: 20, icon: Globe },
     { name: "Retail", count: 6, icon: TrendingUp },
     { name: "Education", count: 4, icon: Brain }
-=======
     { name: "Manufacturing", count: 15, icon: Building },
     { name: "Healthcare", count: 12, icon: Users },
     { name: "Financial Services", count: 18, icon: Shield },
@@ -1141,7 +1126,6 @@ export default function CaseStudies() {
     { name: "Government", count: 8, icon: Globe },
     { name: "Energy", count: 6, icon: Zap },
     { name: "Transportation", count: 11, icon: Network }
-=======
     "Manufacturing",
     "Financial Services",
     "Healthcare",
@@ -1152,7 +1136,6 @@ export default function CaseStudies() {
     "Government",
     "Energy",
     "Transportation"
-=======
     { name: "Healthcare", icon: Users, count: 12, color: "from-blue-500 to-cyan-500" },
     { name: "Financial Services", icon: DollarSign, count: 8, color: "from-green-500 to-emerald-500" },
     { name: "Manufacturing", icon: Target, count: 15, color: "from-orange-500 to-red-500" },
@@ -1541,7 +1524,6 @@ const CaseStudies = () => {
                   </div>
                 </div>
               ))}
-=======
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -1551,7 +1533,6 @@ const CaseStudies = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
               Discover how organizations across industries have transformed their operations 
               with Zion Tech Group's AI-powered solutions. Real results, real impact.
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -1570,7 +1551,6 @@ const CaseStudies = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Discover how leading organizations across industries have transformed their operations 
               with Zion Tech Group's AI-powered solutions. See the measurable impact and real ROI.
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -1748,7 +1728,6 @@ export default function CaseStudies() {
     'Data Analytics',
     'IoT'
   ];
-=======
   CheckCircle, 
   TrendingUp, 
   Users, 
@@ -1877,8 +1856,6 @@ const CaseStudies = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       {/* Hero Section */}
-=======
-=======
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -1894,7 +1871,6 @@ const CaseStudies = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
-=======
       title: "AI-Powered Manufacturing Transformation",
       company: "Global Manufacturing Corp",
       industry: "Manufacturing",
@@ -2013,7 +1989,6 @@ const CaseStudies = () => {
     "Robotic Process Automation"
   ];
 
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -2223,7 +2198,6 @@ export default function CaseStudies() {
               <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
                 Download Case Studies
               </button>
-=======
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Success Story
@@ -2236,9 +2210,7 @@ export default function CaseStudies() {
                 Request Demo
               </Link>
             </div>
-=======
           </motion.div>
-=======
             Discover how Zion Tech Group's innovative solutions have revolutionized businesses across industries, 
             delivering measurable results and sustainable growth.
           </motion.p>
@@ -2246,7 +2218,6 @@ export default function CaseStudies() {
       </section>
 
 import React from 'react';
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, TrendingUp, Users, DollarSign, Clock, Target, Award, CheckCircle, Lightbulb, Zap, Shield, Globe, Database, Cloud, Brain, Atom, Rocket, Wifi, Building2 } from 'lucide-react';
@@ -2409,7 +2380,6 @@ const CaseStudies = () => {
               </div>
             </div>
           </div>
-=======
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -2464,7 +2434,6 @@ const CaseStudies = () => {
                 >
                   <service.icon className="w-4 h-4" />
                   <span>{service.name}</span>
-=======
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-24">
@@ -2475,7 +2444,6 @@ const CaseStudies = () => {
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
               Discover how Zion Tech Group has transformed businesses across industries with cutting-edge technology solutions
             </p>
-=======
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -2499,7 +2467,6 @@ const CaseStudies = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
           </motion.div>
         </div>
       </section>
@@ -2533,7 +2500,6 @@ const CaseStudies = () => {
               </div>
             </div>
           </motion.div>
-=======
       title: 'Healthcare AI Transformation',
       company: 'Regional Medical Center',
       industry: 'Healthcare',
@@ -2714,7 +2680,6 @@ const CaseStudies = () => {
                     <span className="text-sm text-gray-400">{caseStudy.company}</span>
                     <span className="text-gray-500">•</span>
                     <span className="text-sm text-gray-400">{caseStudy.industry}</span>
-=======
                       </span>
                     ))}
                   </div>
@@ -2737,8 +2702,6 @@ const CaseStudies = () => {
                         <li key={index} className="flex items-center space-x-2 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-gray-300 line-clamp-1">{result}</span>
-=======
-=======
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -2779,7 +2742,6 @@ const CaseStudies = () => {
                       {study.results.map((result, index) => (
                         <li key={index} className="flex items-start gap-2 text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-=======
       {/* Industry Overview */}
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -2834,7 +2796,6 @@ const CaseStudies = () => {
                 <div className="flex items-center mb-4">
                   <div className={`w-12 h-12 bg-gradient-to-r ${study.color} rounded-lg flex items-center justify-center mr-3`}>
                     <study.icon className="w-6 h-6 text-white" />
-=======
                   </div>
                   {/* Meta Information */}
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
@@ -2872,12 +2833,9 @@ const CaseStudies = () => {
                       <li key={resultIndex} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {result}
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-=======
           <motion.div
-=======
                   <div className="pt-4 border-t border-gray-700/50">
                     <div className="grid grid-cols-3 gap-4 text-center">
                       <div>
@@ -2926,7 +2884,6 @@ const CaseStudies = () => {
               <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 20 }}
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid gap-8 md:grid-cols-2">
@@ -2950,7 +2907,6 @@ const CaseStudies = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{study.title}</h3>
                   <p className="text-zion-slate-light mb-4">{study.company}</p>
-=======
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -3040,7 +2996,6 @@ const CaseStudies = () => {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Explore our most impactful client transformations and the technologies that made them possible.
             </p>
-=======
             ))}
           </div>
           
@@ -3106,7 +3061,6 @@ const CaseStudies = () => {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
-=======
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -3136,7 +3090,6 @@ const CaseStudies = () => {
                   <ul className="space-y-1">
                     {study.results.map((result, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-400">
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredCaseStudies.map((study) => (
@@ -3174,7 +3127,6 @@ const CaseStudies = () => {
                     {study.results.map((result, index) => (
                       <li key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -3279,7 +3231,6 @@ const CaseStudies = () => {
               </motion.div>
             ))}
           </div>
-=======
               </div>
 
               <div className="mt-6 pt-4 border-t border-gray-700/50">
@@ -3420,7 +3371,6 @@ const CaseStudies = () => {
               </div>
             ))}
           </div>
-=======
 
                 <div className="pt-4 border-t border-white/10">
                   <div className="flex justify-between text-sm text-zion-slate-light">
@@ -3428,8 +3378,6 @@ const CaseStudies = () => {
                     <span>Team: {study.metrics.teamSize}</span>
                   </div>
                 </div>
-=======
-=======
               </motion.div>
             ))}
           </div>
@@ -3441,8 +3389,6 @@ const CaseStudies = () => {
               <p className="text-gray-500">Try adjusting your filters to see more results.</p>
             </div>
           )}
-=======
-=======
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
@@ -3491,8 +3437,6 @@ const CaseStudies = () => {
               </motion.div>
             ))}
           </div>
-=======
-=======
         </div>
       </section>
 
@@ -3513,7 +3457,6 @@ const CaseStudies = () => {
           <p className="text-xl text-gray-300 mb-8">
             Join the organizations that have already transformed their operations with 
             Zion Tech Group's AI-powered solutions. Let's discuss how we can help you achieve similar results.
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -3521,7 +3464,6 @@ const CaseStudies = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join the growing list of organizations that have transformed their operations with Zion Tech Group's AI solutions.
-=======
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -3529,8 +3471,6 @@ const CaseStudies = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join the ranks of industry leaders who have transformed their operations with our AI and quantum technologies.
-=======
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -3558,12 +3498,10 @@ const CaseStudies = () => {
             >
               Start Your Journey
               <ArrowRight className="ml-2 w-5 h-5" />
-=======
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Transformation
               <ArrowRight className="w-5 h-5 ml-2" />
-=======
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Schedule a Consultation
@@ -3587,7 +3525,6 @@ const CaseStudies = () => {
             >
               Explore Our Solutions
             </Link>
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -3607,12 +3544,10 @@ const CaseStudies = () => {
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>
-=======
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
             className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -3620,7 +3555,6 @@ const CaseStudies = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -3634,16 +3568,13 @@ const CaseStudies = () => {
               Ready to Write Your Success Story?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-=======
               {/* Challenge & Solution */}
               <div className="space-y-4 mb-6">
                 <div>
@@ -3962,7 +3893,6 @@ const CaseStudies = () => {
                     <div className="text-sm text-blue-300">{testimonial.company}</div>
                   </div>
                 </motion.div>
-=======
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
                 >
                   {category}
@@ -4007,9 +3937,6 @@ const CaseStudies = () => {
         </section>
       </div>
     </>
-=======
-=======
-=======
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-3xl p-12 border border-cyan-500/20"
           >
             <Award className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
@@ -4029,8 +3956,6 @@ const CaseStudies = () => {
               </button>
             </div>
           </motion.div>
-=======
-=======
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
               Get Started
@@ -4042,7 +3967,6 @@ const CaseStudies = () => {
               Explore Services
             </Link>
           </div>
-=======
               Join the ranks of successful organizations that have transformed their business with Zion Tech Group's 
               cutting-edge solutions.
             </p>
@@ -4058,7 +3982,6 @@ const CaseStudies = () => {
         </div>
       </div>
     </div>
-=======
     <>
       <SEOHead 
         title="Case Studies - Zion Tech Group"
@@ -4103,7 +4026,6 @@ const CaseStudies = () => {
             </div>
           </div>
         </section>
-=======
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -4126,7 +4048,6 @@ const CaseStudies = () => {
                 </button>
               </div>
             </div>
-=======
     { name: "Manufacturing", icon: Factory, count: "25+ projects" },
     { name: "Healthcare", icon: Hospital, count: "15+ projects" },
     { name: "Financial Services", icon: Shield, count: "20+ projects" },
@@ -4294,7 +4215,6 @@ const CaseStudies = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join hundreds of companies that have transformed their business with our AI-powered solutions.
-=======
       {/* Case Studies Grid */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
@@ -4337,7 +4257,6 @@ const CaseStudies = () => {
                         <li key={index} className="text-gray-300 text-sm flex items-center">
                           <span className="text-cyan-400 mr-2">✓</span>
                           {result}
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
@@ -4721,7 +4640,6 @@ export default function CaseStudies() {
               </Link>
             </div>
           </div>
-=======
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30 inline-flex items-center"
               >
                 Start Your Transformation
@@ -4740,11 +4658,9 @@ export default function CaseStudies() {
     </div>
   );
 }
-=======
 };
 
 export default CaseStudies;
-=======
         </div>
 
         {/* Success Metrics */}
@@ -4766,7 +4682,6 @@ export default CaseStudies;
     </>
   );
 }
-=======
         </div>
       </section>
     </div>
@@ -4774,7 +4689,6 @@ export default CaseStudies;
 };
 
 export default CaseStudies;
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudies.map((study) => (
@@ -4887,3 +4801,34 @@ export default CaseStudies;
     </div>
   );
 }
+import { Helmet } from 'react-helmet-async';
+
+const CaseStudies: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore real-world case studies and success stories from Zion Tech Group clients. See how we've helped businesses transform through technology." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Studies</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover how Zion Tech Group has helped businesses across industries achieve their digital transformation goals.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-gray-600 text-center">
+              Case studies coming soon. We're working on showcasing our client success stories.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default CaseStudies;

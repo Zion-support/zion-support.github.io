@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-import { Footer } from "@/components/Footer";
 import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection";
 import { ProfileSetup } from "@/components/onboarding/ProfileSetup";
 import { Steps, Step } from "@/components/ui/steps";
@@ -111,6 +110,7 @@ export default function Onboarding() {
 
   return (
     <>
+      
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -162,7 +162,7 @@ export default function Onboarding() {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 }
