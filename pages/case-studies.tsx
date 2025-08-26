@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useState } from 'react';
 import Navigation from '../components/layout/Navigation';
@@ -8,6 +9,11 @@ import Footer from '../components/Footer';
 const CaseStudies: NextPage = () => {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedService, setSelectedService] = useState('All');
+=======
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9071
 
   const caseStudies = [
     {
@@ -384,11 +390,22 @@ const CaseStudies: NextPage = () => {
   const featuredCaseStudies = caseStudies.filter(study => study.featured);
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <Head>
         <title>Case Studies - Zion Tech Group | Success Stories & Client Results</title>
         <meta name="description" content="Explore our successful client implementations and transformative technology solutions. See how we've helped businesses across industries achieve remarkable results with AI, cloud computing, and digital transformation." />
         <meta name="keywords" content="case studies, client success stories, AI implementation, cloud migration, digital transformation results, technology solutions" />
+=======
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>Case Studies | Zion Tech Group - Success Stories</title>
+        <meta name="description" content="Explore real-world success stories and case studies showcasing how Zion Tech Group has transformed businesses with AI-powered solutions." />
+        <meta property="og:title" content="Case Studies | Zion Tech Group" />
+        <meta property="og:description" content="Real-world success stories and transformations." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://ziontechgroup.com/case-studies" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9071
       </Head>
 
       <Navigation />
@@ -513,14 +530,108 @@ const CaseStudies: NextPage = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Results Count */}
         <div className="mb-8">
           <p className="text-gray-600">
             Showing <span className="font-semibold">{filteredCaseStudies.length}</span> case studies
             {selectedIndustry !== 'All' && ` in ${selectedIndustry}`}
             {selectedService !== 'All' && ` for ${selectedService}`}
+=======
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { number: '50+', label: 'Projects Completed', color: 'text-cyan-400' },
+              { number: '95%', label: 'Client Satisfaction', color: 'text-fuchsia-400' },
+              { number: '40%', label: 'Average Efficiency Gain', color: 'text-green-400' },
+              { number: '24/7', label: 'Support Availability', color: 'text-blue-400' },
+            ].map((metric, index) => (
+              <Card
+                key={index}
+                className="text-center group hover:border-blue-400/30"
+                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+              >
+                <div className={`text-4xl md:text-5xl font-bold mb-2 ${metric.color}`}>
+                  {metric.number}
+                </div>
+                <div className="text-gray-400 text-sm md:text-base">
+                  {metric.label}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to_gray-300 bg-clip-text text-transparent">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-400">
+              Direct feedback from the businesses we&apos;ve transformed
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {[
+              {
+                quote: "Zion Tech Group transformed our e-commerce platform with AI-powered recommendations. The results exceeded our expectations.",
+                author: "Sarah Johnson",
+                position: "CTO, TechRetail Inc.",
+                company: "TechRetail Inc."
+              },
+              {
+                quote: "Their healthcare analytics platform has revolutionized how we process patient data and make diagnostic decisions.",
+                author: "Dr. Michael Chen",
+                position: "Chief Medical Officer",
+                company: "MediTech Solutions"
+              },
+              {
+                quote: "The automation systems they built have streamlined our operations and significantly reduced costs.",
+                author: "David Rodriguez",
+                position: "Operations Director",
+                company: "FinFlow Capital"
+              }
+            ].map((testimonial, index) => (
+              <Card
+                key={index}
+                className="p-8 group hover:border-blue-400/30"
+                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+              >
+                <div className="text-4xl text-blue-400 mb-4">&quot;</div>
+                <blockquote className="text-lg text-gray-300 mb-6 italic">
+                  {testimonial.quote}
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                    {testimonial.author.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">{testimonial.author}</div>
+                    <div className="text-gray-400 text-sm">{testimonial.position}</div>
+                    <div className="text-gray-500 text-sm">{testimonial.company}</div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx_auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Create Your Success Story?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let&apos;s discuss how we can transform your business with AI-powered solutions.
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9071
           </p>
         </div>
+<<<<<<< HEAD
 
         {/* All Case Studies */}
         <section className="mb-16">
@@ -628,6 +739,10 @@ const CaseStudies: NextPage = () => {
 
       <Footer />
     </div>
+=======
+      </section>
+    </UltraAdvancedFuturisticBackground>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9071
   );
 };
 

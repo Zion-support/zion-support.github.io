@@ -1,8 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 =======
 import NextHead from 'next/head';
+=======
+import React from 'react';
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9071
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7d74
@@ -49,8 +55,13 @@ export default About;
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <NextHead>
+=======
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9071
         <title>About Zion Tech Group | Autonomous Innovation Hub</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and AI-powered solutions." />
         <meta property="og:title" content="About Zion Tech Group" />
@@ -243,7 +254,7 @@ export default About;
           </div>
         </div>
       </section>
-    </>
+    </UltraAdvancedFuturisticBackground>
   );
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7d74
