@@ -71,10 +71,16 @@ const serviceCategories = [
 const companyLinks = [
   { name: 'About Us', href: '/about' },
 <<<<<<< HEAD
+<<<<<<< HEAD
   { name: 'Careers', href: '/careers' },
 =======
   { name: '2026 Services', href: '/2026-innovative-services-showcase' },
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-87b2
+=======
+  { name: '2026 Services', href: '/2026-services-showcase' },
+  { name: 'Comprehensive Services', href: '/comprehensive-2026-services-showcase' },
+  { name: 'Pricing Guide', href: '/comprehensive-2026-pricing' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d88c
   { name: 'News', href: '/news' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
