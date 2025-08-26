@@ -219,24 +219,24 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
-            Our Services
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to transform your business and drive innovation across all industries.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-            >
-              Get Started Today
+    <>
+      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <h2 className="text-white text-lg font-medium">Featured Services</h2>
+          <div className="flex flex-wrap gap-2">
+            <Link to="/expanded-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                View All Services
+              </Button>
             </Link>
-            <Link to="/micro-saas-services">
+            <Link to="/pricing-guide">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                Pricing Guide
+              </Button>
+            </Link>
+            <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Zap className="h-4 w-4 mr-2" />
                 Micro SAAS Services
