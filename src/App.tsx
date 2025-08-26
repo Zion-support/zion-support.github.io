@@ -1,9 +1,12 @@
 import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { AppHeader } from './layout/AppHeader.jsx';
 import { Footer } from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant.jsx';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { SEO } from './components/SEO';
+import { PageLoader } from './components/LoadingSpinner';
 
 // Lazy load pages with better chunking
 const Home = React.lazy(() => import('./pages/Home.jsx'));
@@ -22,11 +25,7 @@ const LoadingSpinner = () => (
     role="status"
     aria-label="Loading page content"
   >
-    <div className="text-center">
-      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-      <p className="text-zion-cyan text-lg">Loading...</p>
-      <div className="sr-only">Loading page content, please wait...</div>
-    </div>
+    <PageLoader />
   </div>
 );
 
@@ -64,28 +63,31 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
-        <AppHeader />
-        <main className="flex-1" role="main">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
-              <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
-              <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
-            </Routes>
-          </Suspense>
-        </main>
-        <Footer />
-        <ChatAssistant />
-        <PerformanceMonitor />
-      </div>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+          <SEO />
+          <AppHeader />
+          <main className="flex-1" role="main">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
+                <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
+                <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
+              </Routes>
+            </Suspense>
+          </main>
+          <Footer />
+          <ChatAssistant />
+          <PerformanceMonitor />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 
