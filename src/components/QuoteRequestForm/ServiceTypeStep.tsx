@@ -9,19 +9,20 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { useDebounce } from "@/hooks/useDebounce";
 import { z } from "zod";
 
-const listingSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  category: z.string(),
-  image: z.string().optional(),
-});
-
-const listingsSchema = z.array(listingSchema);
-
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
+
+const serviceListSchema = z.array(
+  z.object({
+    id: z.string(),
+    title: z.string(),
+    category: z.string(),
+    image: z.string().optional(),
+    description: z.string().optional(),
+  })
+);
 
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
@@ -51,8 +52,10 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           const response = await fetch(url);
           if (!response.ok) throw new Error('Failed to fetch');
           const data = await response.json();
-          const parsed = listingsSchema.safeParse(data);
-          if (!parsed.success) throw new Error('Invalid response');
+          const parsed = serviceListSchema.safeParse(data);
+          if (!parsed.success) {
+            throw new Error('Invalid service schema');
+          }
           setListings(parsed.data);
           setError(null);
           setLoading(false);
@@ -89,9 +92,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     });
   };
   
-  const sourceListings = listings;
-
-  const filteredListings = sourceListings.filter(item => {
+  const filteredListings = listings.filter(item => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
       const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();

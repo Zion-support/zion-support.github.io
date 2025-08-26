@@ -38,16 +38,16 @@ it('shows results when searching services', async () => {
   });
 });
 
-it('renders results from api', async () => {
+it('renders services from api response', async () => {
   const data = { ...baseData };
   const updateFormData = (d: Partial<QuoteFormData>) => Object.assign(data, d);
 
   global.fetch = vi.fn().mockResolvedValue({
     ok: true,
     json: async () => [
-      { id: 's1', title: 'A', category: 'service' },
-      { id: 's2', title: 'B', category: 'service' },
-      { id: 's3', title: 'C', category: 'service' },
+      { id: '1', title: 'First', category: 'service' },
+      { id: '2', title: 'Second', category: 'service' },
+      { id: '3', title: 'Third', category: 'service' },
     ],
   }) as any;
 
