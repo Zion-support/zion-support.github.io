@@ -162,7 +162,7 @@ const Careers: React.FC = () => {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Benefits Section */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
@@ -198,7 +198,7 @@ const Careers: React.FC = () => {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Open Positions */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
@@ -249,7 +249,7 @@ const Careers: React.FC = () => {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* CTA Section */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
@@ -261,22 +261,22 @@ const Careers: React.FC = () => {
             className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-              Don't See the Right Role?
+              Ready to Make a Difference?
             </h2>
             <p className="text-gray-300 mb-8 text-lg">
-              We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our mission.
+              Join our team of innovators and help us build the future of technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
-                Send Resume
+                View All Positions
               </button>
-              <button className="px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300">
+              <button className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300">
                 Contact Recruiting
               </button>
             </div>
           </motion.div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

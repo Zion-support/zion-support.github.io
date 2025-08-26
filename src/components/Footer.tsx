@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowUp as ArrowUpIcon, Phone as PhoneIcon, Mail as EnvelopeIcon, MapPin as MapPinIcon } from 'lucide-react';
+import { ArrowUp as ArrowUpIcon, Phone as PhoneIcon, Mail as EnvelopeIcon, MapPin as MapPinIcon, Brain, Shield, Building, Users, Linkedin, Twitter, Github, Youtube, Facebook, Instagram } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -132,19 +132,19 @@ export function Footer() {
             {/* Contact Information */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-sm text-gray-300">
-                <Phone className="w-4 h-4 text-cyan-500" />
+                <PhoneIcon className="w-4 h-4 text-cyan-500" />
                 <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
                   +1 (302) 464-0950
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-sm text-gray-300">
-                <Mail className="w-4 h-4 text-cyan-500" />
+                <EnvelopeIcon className="w-4 h-4 text-cyan-500" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-start space-x-3 text-sm text-gray-300">
-                <MapPin className="w-4 h-4 text-cyan-500 mt-0.5" />
+                <MapPinIcon className="w-4 h-4 text-cyan-500 mt-0.5" />
                 <span>
                   364 E Main St STE 1008<br />
                   Middletown DE 19709

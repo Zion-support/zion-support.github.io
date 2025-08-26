@@ -75,115 +75,46 @@ const News: React.FC = () => {
       time: '5 days ago',
       category: 'AI Ethics',
       image: '/images/news/ethics-advisory-board.jpg'
-    },
-    {
-      id: 7,
-      title: 'Quantum Computing Milestone Achieved',
-      excerpt: 'Successfully demonstrated quantum advantage in complex optimization problems.',
-      author: 'Quantum Team',
-      date: '2025-01-14',
-      time: '6 days ago',
-      category: 'Quantum Technology',
-      image: '/images/news/quantum-milestone.jpg'
-    },
-    {
-      id: 8,
-      title: 'AI-Powered Healthcare Solutions Launch',
-      excerpt: 'Revolutionary diagnostic tools now available for healthcare providers.',
-      author: 'Healthcare Team',
-      date: '2025-01-13',
-      time: '1 week ago',
-      category: 'Healthcare AI',
-      image: '/images/news/healthcare-solutions.jpg'
     }
   ];
 
-  const pressReleases = [
-    {
-      id: 9,
-      title: 'Q4 2024 Financial Results Exceed Expectations',
-      excerpt: 'Strong performance driven by AI solutions adoption and market expansion.',
-      author: 'Finance Team',
-      date: '2025-01-12',
-      category: 'Financial Results',
-      type: 'Press Release'
-    },
-    {
-      id: 10,
-      title: 'New Board Member Appointment',
-      excerpt: 'Industry veteran joins board to strengthen strategic direction.',
-      author: 'Board of Directors',
-      date: '2025-01-11',
-      category: 'Corporate Governance',
-      type: 'Press Release'
-    }
-  ];
-
-  const categories = [
-    'All News',
-    'Company News',
-    'Partnerships',
-    'Research & Development',
-    'Awards & Recognition',
-    'Business Expansion',
-    'AI Ethics',
-    'Quantum Technology',
-    'Healthcare AI',
-    'Financial Results',
-    'Corporate Governance'
-  ];
-
-  const featuredNews = newsArticles.filter(article => article.featured);
-  const recentNews = newsArticles.slice(0, 3);
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
-  const getCategoryIcon = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : Newspaper;
-  };
-
-  const getCategoryName = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.name : 'General';
-  };
-
-  const toggleBookmark = (articleId: number) => {
-    // This would typically update a state or make an API call
-    console.log('Toggle bookmark for article:', articleId);
-  };
+  const categories = ['All News', 'Company News', 'Partnerships', 'Research & Development', 'Awards & Recognition', 'Business Expansion', 'AI Ethics'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header Section */}
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="flex items-center justify-center mb-6"
           >
-            Latest News & Updates
-          </motion.h1>
-          <motion.p 
+            <NewspaperIcon className="w-12 h-12 text-purple-400 mr-3" />
+            <span className="text-purple-400 font-semibold text-lg">Latest Updates</span>
+          </motion.div>
+          
+          <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-4xl md:text-6xl font-bold text-white mb-6"
+          >
+            Zion Tech Group News
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
             Stay informed about our latest developments, partnerships, innovations, 
             and the impact we're making in the world of technology.
           </motion.p>
         </div>
-      </section>
+      </div>
 
       {/* Category Filter */}
       <div className="px-4 sm:px-6 lg:px-8 pb-12">
@@ -301,34 +232,38 @@ const News: React.FC = () => {
                 transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 group"
               >
-                <div className="h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
-                  <div className="text-4xl text-purple-400/30">📰</div>
+                <div className="h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
+                  <div className="text-4xl text-blue-400/30">📰</div>
                 </div>
                 
                 <div className="p-6">
                   <div className="flex items-center space-x-2 mb-3">
-                    <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">
+                    <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
                       {news.category}
                     </span>
-                    <span className="text-gray-400 text-xs">•</span>
-                    <span className="text-gray-400 text-xs">{news.time}</span>
                   </div>
                   
-                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors duration-200 line-clamp-2">
+                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
                     {news.title}
                   </h3>
                   
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+                  <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                     {news.excerpt}
                   </p>
                   
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <span>{news.author}</span>
-                    <span>{new Date(news.date).toLocaleDateString()}</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-2 text-sm text-gray-400">
+                      <UserIcon className="h-4 w-4" />
+                      <span>{news.author}</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-sm text-gray-400">
+                      <ClockIcon className="h-4 w-4" />
+                      <span>{news.time}</span>
+                    </div>
                   </div>
                   
-                  <button className="w-full px-4 py-2 bg-white/10 border border-white/20 text-white font-medium rounded-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2">
-                    <span>Read More</span>
+                  <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+                    <span>Read Full Story</span>
                     <ArrowRightIcon className="h-4 w-4" />
                   </button>
                 </div>
@@ -336,119 +271,38 @@ const News: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Press Releases */}
+      {/* Newsletter Signup */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 
+        <div className="max-w-4xl mx-auto">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.4 }}
-            className="text-3xl font-bold text-white text-center mb-12"
-          >
-            Press Releases
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {pressReleases.map((release, index) => (
-              <motion.article
-                key={release.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <NewspaperIcon className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
-                        {release.type}
-                      </span>
-                      <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">
-                        {release.category}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">
-                      {release.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm mb-4">
-                      {release.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between text-sm text-gray-400">
-                      <span>{release.author}</span>
-                      <span>{new Date(release.date).toLocaleDateString()}</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
-                  <span>Read Press Release</span>
-                  <ArrowRightIcon className="h-4 w-4" />
-                </button>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Media Contact */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-4xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.8 }}
             className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12 text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-              Media Inquiries
+              Stay Updated
             </h2>
             <p className="text-gray-300 mb-8 text-lg">
-              For press inquiries, media interviews, or additional information about our company and services.
+              Subscribe to our newsletter for the latest news, insights, and updates from Zion Tech Group.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
-                Contact Media Relations
-              </button>
-              <button className="px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300">
-                Download Press Kit
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200"
+              />
+              <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                Subscribe
               </button>
             </div>
           </motion.div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-white">
-            Ready to Stay Ahead?
-          </h2>
-          <p className="text-xl text-gray-400 mb-8">
-            Discover how our technology solutions can keep your business at the forefront of innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
-              <Newspaper className="w-5 h-5 mr-2" />
-              Get Started
-            </Link>
-            <Link
-              to="/services"
-              className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
-            >
-              <TrendingUp className="w-5 h-5 mr-2" />
-              Explore Services
-            </Link>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
-}
+};
+
+export default News;

@@ -1,19 +1,19 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
-import Footer from './components/Footer';
+import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
 // Note: These dashboard components may need to be created or have different exports
 import PerformanceDashboard from './components/PerformanceDashboard';
-// import { AnalyticsDashboard } from './components/AnalyticsDashboard';
+import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
 import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
@@ -23,6 +23,10 @@ import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
+import { BrokenLinkFixer } from './components/BrokenLinkFixer';
+import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
+import { ScrollToTop } from './components/ScrollToTop';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -85,12 +89,10 @@ const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolution
 const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
 const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewServices'));
 const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
-// Temporarily commented out due to TypeScript errors
-// const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
-// const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
-// const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
-// const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
-// const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
+const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
+const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
+const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
+const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -145,6 +147,9 @@ const AIConsciousnessEvolution = lazy(() => import('./pages/services/AIConscious
 // Enhanced AI service pages
 const AIBusinessIntelligenceElite = lazy(() => import('./pages/services/AIBusinessIntelligenceElite'));
 const AIBusinessIntelligenceSuite = lazy(() => import('./pages/services/AIBusinessIntelligenceSuite'));
+
+// Additional missing components
+const NewServices = lazy(() => import('./pages/NewServices'));
 
 const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -242,8 +247,6 @@ const App: React.FC = () => {
                     
                     {/* Additional innovative service routes */}
                     <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                    <Route path="/iot-management-platform" element={<IoTManagementPlatform />} />
-                    <Route path="/blockchain-defi-solutions" element={<BlockchainDeFiSolutions />} />
                     
                     {/* Solutions Routes */}
                     <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
@@ -329,9 +332,6 @@ const App: React.FC = () => {
             {/* Enhanced Accessibility Controls */}
             <EnhancedAccessibility 
               position="bottom-right" 
-              showOnLoad={false}
-              enableKeyboardShortcuts={true}
-              enableVoiceCommands={import.meta.env.DEV}
             />
             
             {/* Website Improvement Tools */}

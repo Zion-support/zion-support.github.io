@@ -7,7 +7,7 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { FuturisticBackground } from "@/components/ui/FuturisticBackground";
 import { ServicesShowcase } from "@/components/home/ServicesShowcase";
-import { CategoriesSection } from "@/components/CategoriesSection";
+
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
@@ -45,7 +45,7 @@ export default function Home() {
       <ServicesShowcase />
       
       {/* Categories Section */}
-      <CategoriesSection />
+
       
       {/* Benefits Section */}
       <BenefitsSection />
