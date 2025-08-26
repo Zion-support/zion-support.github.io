@@ -1,12 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, 
-  Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, 
-  Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, 
-  Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, 
-  Youtube, ChevronRight, ChevronDown
-} from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube, DollarSign, LifeBuoy, BookOpen, Video, FileText } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
@@ -16,131 +10,64 @@ interface SidebarProps {
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const location = useLocation();
-  const [expandedSections, setExpandedSections] = React.useState<Set<string>>(new Set());
 
   // Close sidebar when route changes
   useEffect(() => {
     onClose();
   }, [location.pathname, onClose]);
 
-  const toggleSection = (sectionTitle: string) => {
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(sectionTitle)) {
-      newExpanded.delete(sectionTitle);
-    } else {
-      newExpanded.add(sectionTitle);
-    }
-    setExpandedSections(newExpanded);
-  };
-
   const navigationItems = [
     {
       title: 'Main',
       items: [
         { name: 'Home', path: '/', icon: Home },
-        { name: 'About Us', path: '/about', icon: Users },
-        { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'Mission', path: '/mission', icon: Target },
-        { name: 'Careers', path: '/careers', icon: Users },
+        { name: 'Services', path: '/services', icon: Briefcase },
+        { name: 'Pricing', path: '/pricing', icon: DollarSign },
+        { name: 'About', path: '/about', icon: Users },
+        { name: 'Support', path: '/support', icon: LifeBuoy },
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },
     {
-      title: 'Core Services',
+      title: 'AI & Technology',
       items: [
-        { name: 'AI Services', path: '/services/ai', icon: Brain },
+        { name: 'AI Solutions', path: '/services/ai', icon: Brain },
         { name: 'Cloud & DevOps', path: '/services/cloud', icon: Cloud },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
         { name: 'IT Infrastructure', path: '/services/infrastructure', icon: Server },
-        { name: 'Digital Transformation', path: '/services/transformation', icon: Zap },
-        { name: 'Consulting', path: '/services/consulting', icon: Briefcase }
+        { name: 'Digital Transformation', path: '/services/transformation', icon: Rocket },
+        { name: 'Consulting', path: '/services/consulting', icon: Handshake }
       ]
     },
     {
-      title: 'Advanced Solutions',
+      title: 'Resources',
       items: [
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Globe },
-        { name: 'Space Tech', path: '/space-tech', icon: Rocket },
-        { name: 'Green IT', path: '/green-it', icon: Palette },
-        { name: 'Mobile Solutions', path: '/mobile', icon: Smartphone },
-        { name: 'IoT Services', path: '/iot-services', icon: Network },
-        { name: 'Blockchain Services', path: '/blockchain-services', icon: Lock }
+        { name: 'Blog', path: '/blog', icon: BookOpen },
+        { name: 'Case Studies', path: '/case-studies', icon: FileText },
+        { name: 'White Papers', path: '/white-papers', icon: FileText },
+        { name: 'Webinars', path: '/webinars', icon: Video },
+        { name: 'Tutorials', path: '/tutorials', icon: Video },
+        { name: 'Documentation', path: '/docs', icon: BookOpen }
       ]
     },
     {
-      title: 'Industry Solutions',
+      title: 'Company',
       items: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Users },
-        { name: 'Financial Solutions', path: '/financial-solutions', icon: BarChart3 },
-        { name: 'Manufacturing Solutions', path: '/manufacturing-solutions', icon: Cpu },
-        { name: 'Retail Solutions', path: '/solutions/retail', icon: Smartphone },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Building }
-      ]
-    },
-    {
-      title: 'AI & Autonomous Systems',
-      items: [
-        { name: 'AI Autonomous Systems', path: '/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
-        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Brain },
-        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
-        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Brain },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Brain }
-      ]
-    },
-    {
-      title: 'Resources & Support',
-      items: [
-        { name: 'Blog', path: '/blog', icon: Globe },
-        { name: 'News', path: '/news', icon: Globe },
-        { name: 'Press', path: '/press', icon: Globe },
-        { name: 'Case Studies', path: '/case-studies', icon: Globe },
-        { name: 'White Papers', path: '/white-papers', icon: Globe },
-        { name: 'Webinars', path: '/webinars', icon: Globe },
-        { name: 'Training', path: '/training', icon: Globe },
-        { name: 'Events', path: '/events', icon: Globe }
-      ]
-    },
-    {
-      title: 'Help & Support',
-      items: [
-        { name: 'Help Center', path: '/help', icon: Users },
-        { name: 'Documentation', path: '/docs', icon: Globe },
-        { name: 'FAQ', path: '/faq', icon: Globe },
-        { name: 'Support Portal', path: '/support', icon: Users },
-        { name: 'Request Quote', path: '/request-quote', icon: Briefcase },
-        { name: 'Partners', path: '/partners', icon: Handshake }
-      ]
-    },
-    {
-      title: 'Talent & Community',
-      items: [
-        { name: 'Talent Directory', path: '/talent', icon: Users },
-        { name: 'Browse Talents', path: '/talents', icon: Users },
-        { name: 'AI Matcher', path: '/match', icon: Brain },
-        { name: 'Community', path: '/community', icon: Users },
-        { name: 'Zion Hire AI', path: '/zion-hire-ai', icon: Brain }
+        { name: 'Careers', path: '/careers', icon: Users },
+        { name: 'Partners', path: '/partners', icon: Handshake },
+        { name: 'Sitemap', path: '/sitemap', icon: MapPin },
+        { name: 'Privacy Policy', path: '/privacy', icon: Shield },
+        { name: 'Terms of Service', path: '/terms', icon: FileText }
       ]
     }
   ];
 
-  const contactInfo = [
-    { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },
-    { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
-    { icon: MapPin, text: 'Wilmington, DE, USA', href: '#' }
-  ];
-
   const socialLinks = [
-    { icon: Linkedin, name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', color: 'hover:bg-blue-600/20' },
-    { icon: Twitter, name: 'Twitter', href: 'https://twitter.com/ziontechgroup', color: 'hover:bg-sky-500/20' },
-    { icon: Github, name: 'GitHub', href: 'https://github.com/ziontechgroup', color: 'hover:bg-gray-600/20' },
-    { icon: Youtube, name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', color: 'hover:bg-red-600/20' },
-    { icon: Facebook, name: 'Facebook', href: 'https://facebook.com/ziontechgroup', color: 'hover:bg-blue-600/20' },
-    { icon: Instagram, name: 'Instagram', href: 'https://instagram.com/ziontechgroup', color: 'hover:bg-pink-600/20' }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
   ];
-
-  const isActive = (path: string) => location.pathname === path;
 
   return (
     <AnimatePresence>
@@ -151,7 +78,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
             onClick={onClose}
           />
           
@@ -161,109 +88,113 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-50 overflow-y-auto"
+            className="fixed left-0 top-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-white/10 z-50 overflow-y-auto"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-200">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
+            <div className="flex items-center justify-between p-6 border-b border-white/10">
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3">
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
-                <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+                <span className="text-xl font-bold text-white">Zion Tech Group</span>
               </div>
               <button
                 onClick={onClose}
-                className="p-2 rounded-lg text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-colors"
+                className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300"
               >
-                <X className="h-5 w-5" />
+                <X className="w-6 h-6" />
               </button>
             </div>
 
             {/* Navigation */}
-            <div className="p-4 space-y-2">
-              {navigationItems.map((section) => (
-                <div key={section.title} className="space-y-1">
-                  <button
-                    onClick={() => toggleSection(section.title)}
-                    className="w-full flex items-center justify-between p-3 text-left text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-                  >
-                    <span className="font-medium">{section.title}</span>
-                    {expandedSections.has(section.title) ? (
-                      <ChevronDown className="h-4 w-4" />
-                    ) : (
-                      <ChevronRight className="h-4 w-4" />
-                    )}
-                  </button>
-                  
-                  {expandedSections.has(section.title) && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="ml-4 space-y-1"
-                    >
-                      {section.items.map((item) => (
+            <div className="p-6 space-y-8">
+              {navigationItems.map((section, sectionIndex) => (
+                <div key={sectionIndex}>
+                  <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+                    {section.title}
+                  </h3>
+                  <div className="space-y-2">
+                    {section.items.map((item, itemIndex) => {
+                      const Icon = item.icon;
+                      const isActive = location.pathname === item.path;
+                      return (
                         <Link
-                          key={item.name}
+                          key={itemIndex}
                           to={item.path}
-                          className={`flex items-center space-x-3 p-2 rounded-lg transition-colors ${
-                            isActive(item.path)
-                              ? 'text-blue-600 bg-blue-50'
-                              : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
+                          className={`flex items-center px-3 py-3 rounded-lg transition-all duration-300 group ${
+                            isActive
+                              ? 'bg-blue-600/20 text-blue-400 border border-blue-400/20'
+                              : 'text-gray-300 hover:text-white hover:bg-white/10'
                           }`}
                         >
-                          <item.icon className="h-4 w-4" />
-                          <span className="text-sm">{item.name}</span>
+                          <Icon className={`w-5 h-5 mr-3 transition-colors duration-300 ${
+                            isActive ? 'text-blue-400' : 'text-gray-400 group-hover:text-white'
+                          }`} />
+                          <span className="font-medium">{item.name}</span>
+                          {isActive && (
+                            <div className="ml-auto w-2 h-2 bg-blue-400 rounded-full"></div>
+                          )}
                         </Link>
-                      ))}
-                    </motion.div>
-                  )}
+                      );
+                    })}
+                  </div>
                 </div>
               ))}
             </div>
 
-            {/* Contact Information */}
-            <div className="p-4 border-t border-gray-200">
-              <h3 className="font-medium text-gray-900 mb-3">Contact Information</h3>
-              <div className="space-y-2">
-                {contactInfo.map((contact, index) => (
-                  <a
-                    key={index}
-                    href={contact.href}
-                    className="flex items-center space-x-3 p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
-                  >
-                    <contact.icon className="h-4 w-4" />
-                    <span className="text-sm">{contact.text}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-
             {/* Social Links */}
-            <div className="p-4 border-t border-gray-200">
-              <h3 className="font-medium text-gray-900 mb-3">Follow Us</h3>
-              <div className="flex flex-wrap gap-2">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 ${social.color} hover:scale-110 transition-all duration-300`}
-                    aria-label={`Follow us on ${social.name}`}
-                  >
-                    <social.icon className="h-4 w-4" />
-                  </a>
-                ))}
+            <div className="p-6 border-t border-white/10">
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+                Follow Us
+              </h3>
+              <div className="flex space-x-3">
+                {socialLinks.map((social, index) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300"
+                    >
+                      <Icon className="w-5 h-5" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
 
-            {/* Footer */}
-            <div className="p-4 border-t border-gray-200 mt-auto">
-              <div className="text-center text-sm text-gray-500">
-                <p>© {new Date().getFullYear()} Zion Tech Group</p>
-                <p className="mt-1">Leading the future of technology</p>
+            {/* Contact Info */}
+            <div className="p-6 border-t border-white/10">
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+                Contact Info
+              </h3>
+              <div className="space-y-3 text-sm text-gray-300">
+                <div className="flex items-center">
+                  <Phone className="w-4 h-4 mr-3 text-blue-400" />
+                  <span>+1 (302) 464-0950</span>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="w-4 h-4 mr-3 text-blue-400" />
+                  <span>info@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="w-4 h-4 mr-3 text-blue-400" />
+                  <span>Wilmington, DE & Remote</span>
+                </div>
               </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="p-6">
+              <Link
+                to="/contact"
+                onClick={onClose}
+                className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </Link>
             </div>
           </motion.div>
         </>

@@ -5,7 +5,43 @@ import { motion, Variants } from 'framer-motion';
 function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const footerSections = [
+  const services = [
+    { name: 'AI Solutions', path: '/services' },
+    { name: 'Cloud & DevOps', path: '/services' },
+    { name: 'Cybersecurity', path: '/services' },
+    { name: 'Digital Transformation', path: '/services' },
+    { name: 'Web Development', path: '/services' },
+    { name: 'Data Analytics', path: '/services' }
+  ];
+
+  const company = [
+    { name: 'About Us', path: '/about' },
+    { name: 'Our Team', path: '/about' },
+    { name: 'Careers', path: '/careers' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Pricing', path: '/pricing' },
+    { name: 'Support', path: '/support' }
+  ];
+
+  const resources = [
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "White Papers", path: "/white-papers" },
+    { name: "Webinars", path: "/webinars" },
+    { name: "Tutorials", path: "/tutorials" },
+    { name: "Documentation", path: "/docs" },
+    { name: "Sitemap", path: "/sitemap" }
+  ];
+
+  const legal = [
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' },
+    { name: 'Cookie Policy', path: '/cookies' },
+    { name: 'GDPR Compliance', path: '/gdpr' },
+    { name: 'Security', path: '/security' },
+    { name: 'Compliance', path: '/compliance' }
+  ];
+
+  const socialLinks = [
     {
       title: 'Services',
       links: [

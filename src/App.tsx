@@ -90,7 +90,9 @@ const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
 const Analytics = React.lazy(() => import('./pages/Analytics'));
 const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
-const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const SupportPage = React.lazy(() => import('./pages/Support'));
+const PricingPage = React.lazy(() => import('./pages/Pricing'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
@@ -153,6 +155,8 @@ const routes = [
   { path: '/talent', element: <TalentDirectory /> },
   { path: '/talents', element: <TalentsPage /> },
   { path: '/services', element: <ServicesPage /> },
+  { path: '/pricing', element: <PricingPage /> },
+  { path: '/support', element: <SupportPage /> },
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/categories', element: <Categories /> },
   { path: '/equipment', element: <EquipmentPage /> },
@@ -167,8 +171,7 @@ const routes = [
   { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
-  
-  { path: '*', element: <NotFound /> }
+  { path: '/sitemap', element: <Sitemap /> },
 ];
 
 // Loading spinner component
