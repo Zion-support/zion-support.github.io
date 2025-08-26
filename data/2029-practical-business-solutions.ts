@@ -362,3 +362,30 @@ export const practicalBusiness2029Solutions: PracticalBusinessSolution[] = [
     }
   }
 ];
+
+export const practicalBusinessSolutionServices2029 = [
+  {
+    id: 'ai-business-intelligence-2029',
+    name: 'AI Business Intelligence 2029',
+    description: 'Advanced business intelligence platform powered by AI',
+    category: 'Business Intelligence',
+    pricing: {
+      starter: 399,
+      professional: 1199,
+      enterprise: 2999
+    },
+    features: [
+      'AI Analytics',
+      'Predictive Insights',
+      'Custom Dashboards',
+      'Real-time Reporting',
+      'Data Integration'
+    ],
+    targetAudience: 'Business Analysts',
+    technology: ['AI', 'Machine Learning', 'React', 'PostgreSQL'],
+    status: 'Live',
+    launchDate: '2029-03-15'
+  }
+];
+
+export const practicalBusinessSolutionServices2029 = practicalBusiness2029Solutions;

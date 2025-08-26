@@ -466,3 +466,23 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2
     reviews: 18
   }
 ];
+
+export const getPopularServices = () => {
+  return innovative2026MicroSaasV2Services.filter(service => service.popular);
+};
+
+export const getServicesByCategory = (category: string) => {
+  return innovative2026MicroSaasV2Services.filter(service => 
+    service.category.toLowerCase().includes(category.toLowerCase())
+  );
+};
+
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+  return innovative2026MicroSaasV2Services.filter(service => {
+    const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+    return price >= minPrice && price <= maxPrice;
+  });
+};
+
+// Add the missing export alias that pages are looking for
+export const innovative2026MicroSaasServicesV2 = innovative2026MicroSaasV2Services;

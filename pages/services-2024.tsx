@@ -7,40 +7,83 @@ import {
   Zap, Sparkles, Code, BarChart, Lock, Globe,
   Cpu, Database, Cloud, Eye, BarChart3
 } from 'lucide-react';
+=======
+import { enhancedMicroSaasServices2025 } from '../src/data/enhancedMicroSaasServices2025';
+import { innovativeITServices2025 } from '../src/data/innovativeITServices2025';
+import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';
+import Link from 'next/link';
 
 const Services2024Page: React.FC = () => {
-  // Placeholder services data - replace with actual data imports
-  const services = [
-    {
-      id: 1,
-      name: 'AI Business Intelligence',
-      description: 'Advanced AI-powered business intelligence solutions',
-      category: 'AI & ML',
-      price: '$5,000',
-      rating: 4.8,
-      customers: '150+',
-      features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards']
-    },
-    {
-      id: 2,
-      name: 'Quantum Cybersecurity',
-      description: 'Next-generation quantum-resistant security protocols',
-      category: 'Quantum & Security',
-      price: '$8,000',
-      rating: 4.9,
-      customers: '200+',
-      features: ['Quantum Encryption', 'Threat Detection', 'Zero Trust Architecture']
-    },
-    {
-      id: 3,
-      name: 'Enterprise IT Solutions',
-      description: 'Comprehensive IT infrastructure and management',
-      category: 'Enterprise IT',
-      price: '$12,000',
-      rating: 4.7,
-      customers: '300+',
-      features: ['Infrastructure Management', 'Cloud Migration', 'System Integration']
-    }
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'customers'>('name');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+
+  // Combine all services
+  const allServices = [...enhancedMicroSaasServices2025, ...innovativeITServices2025];
+
+  // Filter and sort services
+  const filteredServices = useMemo(() => {
+    let filtered = allServices.filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                           service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                           service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase()));
+      
+      const matchesCategory = selectedCategory === 'all' || 
+                             (selectedCategory === 'ai' && service.variant.includes('ai')) ||
+                             (selectedCategory === 'quantum' && service.variant.includes('security')) ||
+                             (selectedCategory === 'it' && service.variant.includes('it')) ||
+                             (selectedCategory === 'api' && service.variant.includes('api')) ||
+                             (selectedCategory === 'cloud' && service.variant.includes('cloud')) ||
+                             (selectedCategory === 'marketing' && service.variant.includes('marketing')) ||
+                             (selectedCategory === 'project' && service.variant.includes('project')) ||
+                             (selectedCategory === 'customer' && service.variant.includes('customer'));
+      
+      return matchesSearch && matchesCategory;
+    });
+
+    // Sort services
+    filtered.sort((a, b) => {
+      let aValue: any, bValue: any;
+      
+      switch (sortBy) {
+        case 'price':
+          aValue = parseFloat(a.price.replace(/[^0-9.]/g, ''));
+          bValue = parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          break;
+        case 'rating':
+          aValue = a.rating;
+          bValue = b.rating;
+          break;
+        case 'customers':
+          aValue = parseInt(a.customers.replace(/[^0-9]/g, ''));
+          bValue = parseInt(b.customers.replace(/[^0-9]/g, ''));
+          break;
+        default:
+          aValue = a.name.toLowerCase();
+          bValue = b.name.toLowerCase();
+      }
+      
+      if (sortOrder === 'asc') {
+        return aValue > bValue ? 1 : -1;
+      } else {
+        return aValue < bValue ? 1 : -1;
+      }
+    });
+
+    return filtered;
+  }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]);
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Sparkles, count: allServices.length },
+    { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai')).length },
+    { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security')).length },
+    { id: 'it', name: 'Enterprise IT', icon: Cpu, count: allServices.filter(s => s.variant.includes('it')).length },
+    { id: 'api', name: 'API & Development', icon: Database, count: allServices.filter(s => s.variant.includes('api')).length },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.variant.includes('cloud')).length },
+    { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing')).length },
+    { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project')).length },
+    { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer')).length }
   ];
 
   const categories = [

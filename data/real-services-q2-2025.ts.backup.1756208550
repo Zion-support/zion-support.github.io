@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+export const realServicesQ22025 = [
+  {
+    id: 'ai-autonomous-research-assistant',
+    name: 'AI Autonomous Research Assistant',
+    description: 'Intelligent research automation platform for academic and business research',
+    category: 'Research Automation',
+    pricing: {
+      starter: 299,
+      professional: 899,
+      enterprise: 2499
+    },
+    features: [
+      'Autonomous Research',
+      'Data Collection',
+      'Analysis Automation',
+      'Report Generation',
+      'Citation Management'
+    ],
+    targetAudience: 'Researchers & Analysts',
+    technology: ['Python', 'OpenAI API', 'React', 'MongoDB'],
+    status: 'Live',
+    launchDate: '2025-04-10'
+=======
+export interface RealServiceQ22025 {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+}
+
+export const realServicesQ22025: RealServiceQ22025[] = [
+  {
+    id: 'q2-service-1',
+    name: 'Q2 Service 1',
+    tagline: 'Second quarter service offering',
+    price: '$299',
+    features: ['Core features', 'Standard performance', 'Basic integration']
+>>>>>>> bca4af5f58518c326a99091d5c8fdc6d47b68566
+  }
+];

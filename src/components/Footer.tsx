@@ -259,14 +259,33 @@ const Footer: React.FC = () => {
               <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Cookies</Link>
               <Link to="/accessibility" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Accessibility</Link>
             </div>
-            <motion.div 
-              className="flex items-center space-x-2 text-zion-slate-light text-sm"
+
+            {/* Social Links */}
+            <div className="flex items-center space-x-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 bg-zion-slate-light/20 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:bg-zion-slate-light/30 transition-all duration-300"
+                  title={social.name}
+                >
+                  <social.icon className="w-4 h-4" />
+                </a>
+              ))}
+            </div>
+
+            {/* Back to Top */}
+            <motion.button
+              onClick={scrollToTop}
+              className="flex items-center space-x-2 text-zion-slate-light hover:text-zion-cyan transition-colors text-sm"
               whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-400 animate-pulse" />
-              <span>for the future of technology</span>
-            </motion.div>
+              <ArrowUpIcon className="w-4 h-4" />
+              <span>Back to Top</span>
+            </motion.button>
           </div>
         </div>
       </div>

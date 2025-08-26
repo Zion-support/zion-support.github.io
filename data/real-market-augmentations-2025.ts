@@ -1,43 +1,4 @@
-export interface RealMarketAugmentation2025 {
-  id: string;
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  technology: string[];
-  integrations: string[];
-  compliance: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  fundingTrends: string;
-=======
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
->>>>>>> origin/main
-}
-
-export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
+export const realMarketAugmentations2025 = [
   {
 <<<<<<< HEAD
     id: "ai-market-intelligence-platform",
@@ -156,10 +117,9 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
     fundingTrends: "High interest in quantum computing applications"
 =======
     id: 'market-augmentation-1',
-    name: 'Market Augmentation Service 1',
-    tagline: 'Enhance your market presence',
-    price: '$299',
-    features: ['Market analysis', 'Strategy development', 'Implementation support']
->>>>>>> origin/main
+    name: 'Market Augmentation Service 2025',
+    tagline: 'Advanced market augmentation solutions',
+    price: '$599',
+    category: 'Market Services'
   }
 ];

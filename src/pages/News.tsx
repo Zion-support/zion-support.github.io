@@ -1,5 +1,19 @@
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { 
+  CalendarIcon,
+  ClockIcon,
+  UserIcon,
+  TagIcon,
+  ArrowRightIcon,
+  NewspaperIcon,
+  TrendingUpIcon as TrendingUp,
+  LightbulbIcon,
+  StarIcon,
+  GlobeAltIcon as Globe,
+  ShieldCheckIcon as Shield,
+  BoltIcon as Zap,
+  HeartIcon
+} from '@heroicons/react/24/outline';
 
 const News: React.FC = () => {
   const fadeInUp = {
@@ -769,64 +783,69 @@ export default function News() {
   ];
 
   const categories = [
-    'All News',
-    'Product Launch',
-    'Partnership',
-    'Security',
-    'Company',
-    'Events',
-    'Research',
-    'Case Study',
-    'Awards'
+    { id: 'all', name: 'All News', icon: NewspaperIcon },
+    { id: 'company', name: 'Company News', icon: NewspaperIcon },
+    { id: 'partnerships', name: 'Partnerships', icon: UserIcon },
+    { id: 'research', name: 'Research & Development', icon: LightbulbIcon },
+    { id: 'awards', name: 'Awards & Recognition', icon: StarIcon },
+    { id: 'expansion', name: 'Business Expansion', icon: GlobeIcon },
+    { id: 'ethics', name: 'AI Ethics', icon: ShieldIcon },
+    { id: 'quantum', name: 'Quantum Technology', icon: ZapIcon },
+    { id: 'healthcare', name: 'Healthcare AI', icon: HeartIcon },
+    { id: 'financial', name: 'Financial Results', icon: CalendarIcon },
+    { id: 'governance', name: 'Corporate Governance', icon: UserIcon }
   ];
 
+  // Combine all news sources
+  const allNews = [...breakingNews, ...latestNews, ...pressReleases];
+  const featuredNews = allNews.filter(article => article.priority === 'breaking');
+  const recentNews = allNews.slice(0, 3);
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-            News & Updates
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Stay informed about our latest innovations, partnerships, and industry insights. Discover how we're shaping the future of AI and technology.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-              Subscribe to Newsletter
-            </button>
-            <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/20 transition-all duration-300">
-              RSS Feed
-            </button>
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Latest News & Updates
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Stay informed about our latest developments, product updates, industry insights, 
-              and company milestones as we continue to innovate and grow.
-            </p>
-            
-            {/* Search and Filter */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search news, updates, or topics..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
-            </div>
+    <>
+      <SEO 
+        title="News & Press - Zion Tech Group"
+        description="Stay updated with the latest news, product launches, company updates, and industry insights from Zion Tech Group."
+        keywords="news, press releases, company updates, AI news, technology news, Zion Tech Group"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          </div>
+          
+          <motion.div 
+            className="max-w-7xl mx-auto text-center relative z-10"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            {categories.map((category, index) => (
+              <button
+                key={category.id}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  index === 0
+                    ? 'bg-purple-600 text-white'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </motion.div>
+        </section>
 
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3">
