@@ -33,42 +33,41 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '../data/advancedInnovativeServices2025';
-import { NEXT_GEN_MICRO_SAAS_SERVICES_2025 } from '../data/nextGenMicroSaasServices2025';
 
-const ComprehensiveInnovativeServices2025: React.FC = () => {
+const AdvancedInnovativeServices2025: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPricing, setSelectedPricing] = useState('All');
   const [sortBy, setSortBy] = useState('name');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
-  const allServices = [...ADVANCED_INNOVATIVE_SERVICES_2025, ...NEXT_GEN_MICRO_SAAS_SERVICES_2025];
+  const services = ADVANCED_INNOVATIVE_SERVICES_2025;
   
-  const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
-  const pricingRanges = ['All', 'Under $100', '$100-$500', '$500-$1000', '$1000+'];
+  const categories = ['All', ...Array.from(new Set(services.map(service => service.category)))];
+  const pricingRanges = ['All', 'Under $1000', '$1000-$3000', '$3000-$5000', '$5000+'];
 
-  const filteredServices = allServices.filter(service => {
+  const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         ('tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     
     let matchesPricing = true;
     if (selectedPricing !== 'All') {
-      const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
+      const price = service.price;
       switch (selectedPricing) {
-        case 'Under $100':
-          matchesPricing = price < 100;
+        case 'Under $1000':
+          matchesPricing = price < 1000;
           break;
-        case '$100-$500':
-          matchesPricing = price >= 100 && price < 500;
+        case '$1000-$3000':
+          matchesPricing = price >= 1000 && price < 3000;
           break;
-        case '$500-$1000':
-          matchesPricing = price >= 500 && price < 1000;
+        case '$3000-$5000':
+          matchesPricing = price >= 3000 && price < 5000;
           break;
-        case '$1000+':
-          matchesPricing = price >= 1000;
+        case '$5000+':
+          matchesPricing = price >= 5000;
           break;
       }
     }
@@ -81,11 +80,9 @@ const ComprehensiveInnovativeServices2025: React.FC = () => {
       case 'name':
         return a.title.localeCompare(b.title);
       case 'price':
-        return (typeof a.price === 'number' ? a.price : a.price?.monthly || 0) - (typeof b.price === 'number' ? b.price : b.price?.monthly || 0);
+        return a.price - b.price;
       case 'category':
         return a.category.localeCompare(b.category);
-      case 'rating':
-        return ('rating' in b ? b.rating : 0) - ('rating' in a ? a.rating : 0);
       default:
         return 0;
     }
@@ -93,15 +90,6 @@ const ComprehensiveInnovativeServices2025: React.FC = () => {
 
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
-
-  const formatPrice = (service: any) => {
-    if (service.price?.monthly) {
-      return `$${service.price.monthly}/month`;
-    } else if (service.price) {
-      return `$${service.price}/month`;
-    }
-    return 'Contact for pricing';
   };
 
   return (
@@ -115,11 +103,11 @@ const ComprehensiveInnovativeServices2025: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Comprehensive Innovative Services 2025
+              Advanced Innovative Services 2025
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover Zion Tech Group's cutting-edge technology solutions, from AI-powered platforms to quantum-secure infrastructure. 
-              Transform your business with the latest innovations in technology.
+              Discover Zion Tech Group's cutting-edge advanced technology solutions, from AI-powered autonomous systems to quantum-secure infrastructure. 
+              Transform your business with the latest innovations in enterprise technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -250,7 +238,6 @@ const ComprehensiveInnovativeServices2025: React.FC = () => {
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
                   <option value="category">Sort by Category</option>
-                  <option value="rating">Sort by Rating</option>
                 </select>
               </div>
             </div>
@@ -297,31 +284,27 @@ const ComprehensiveInnovativeServices2025: React.FC = () => {
                     {service.description}
                   </p>
 
-                  {/* Price and Rating */}
+                  {/* Price and Market Price */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-cyan-400">
-                      {formatPrice(service)}
+                      ${service.price.toLocaleString()}/month
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                      <span className="text-white font-semibold">{('rating' in service ? service.rating : 'N/A')}</span>
-                      <span className="text-gray-400 text-sm">({'reviewCount' in service ? service.reviewCount : 0})</span>
+                    <div className="text-sm text-gray-400">
+                      Market: {service.marketPrice}
                     </div>
                   </div>
 
                   {/* Tags */}
-                  {'tags' in service && service.tags && (
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {service.tags.slice(0, 3).map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
                   {/* Expandable Content */}
                   {expandedService === service.id && (
@@ -379,17 +362,6 @@ const ComprehensiveInnovativeServices2025: React.FC = () => {
                         </div>
                       )}
 
-                      {/* Technical Specs */}
-                      {service.technicalSpecs && (
-                        <div className="mb-4">
-                          <h4 className="text-white font-semibold mb-2">Technical Specifications:</h4>
-                          <div className="grid grid-cols-2 gap-2 text-sm text-gray-300">
-                            <div>API Endpoints: {service.technicalSpecs.apiEndpoints}</div>
-                            <div>Uptime: {service.technicalSpecs.uptime}</div>
-                          </div>
-                        </div>
-                      )}
-
                       {/* Compliance Standards */}
                       {service.complianceStandards && (
                         <div className="mb-4">
@@ -415,7 +387,7 @@ const ComprehensiveInnovativeServices2025: React.FC = () => {
                       Learn More
                     </Link>
                     <a
-                      href={'website' in service ? service.website : service.contactInfo?.website || 'https://ziontechgroup.com'}
+                      href={service.contactInfo.website}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center gap-1"
@@ -459,7 +431,7 @@ const ComprehensiveInnovativeServices2025: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Get in touch with our team of experts to discuss how our innovative services can help you achieve your goals.
+              Get in touch with our team of experts to discuss how our advanced innovative services can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -515,4 +487,4 @@ const ComprehensiveInnovativeServices2025: React.FC = () => {
   );
 };
 
-export default ComprehensiveInnovativeServices2025;
+export default AdvancedInnovativeServices2025;
