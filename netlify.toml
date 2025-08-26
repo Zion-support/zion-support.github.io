@@ -82,32 +82,10 @@
   status = 301
   force = true
 
-[[redirects]]
-  from = "/services/ai-financial-planning-platform"
-  to = "/ai-financial-planning-platform/"
-  status = 301
-  force = true
+[[scheduled.functions]]
+  name = "fast-front-promoter"
+  schedule = "*/15 * * * *" # every 15 minutes
 
-[[redirects]]
-  from = "/services/ai-sales-intelligence-platform"
-  to = "/ai-sales-intelligence-platform/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/services/ai-powered-decision-engine"
-  to = "/ai-powered-decision-engine/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/services/intelligent-content-automation-platform"
-  to = "/intelligent-content-automation-platform/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/services/smart-crm-intelligence-suite"
-  to = "/smart-crm-intelligence-suite/"
-  status = 301
-  force = true
+[[scheduled.functions]]
+  name = "front-index-curator"
+  schedule = "*/12 * * * *" # every 12 minutes
