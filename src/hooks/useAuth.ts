@@ -1,300 +1,276 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
 
-interface User {
+export interface User {
   id: string;
-<<<<<<< HEAD
   email: string;
-<<<<<<< HEAD
   name: string;
-  role: 'user' | 'admin';
-  userType: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin';
-=======
-  name?: string;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+  role: 'user' | 'admin' | 'partner';
+  avatar?: string;
+  company?: string;
+  phone?: string;
+  location?: string;
+  bio?: string;
+  skills?: string[];
+  experience?: number;
+  hourlyRate?: number;
+  rating?: number;
+  reviewCount?: number;
+  isVerified?: boolean;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
-export function useAuth() {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-<<<<<<< HEAD
-    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-    const checkAuth = () => {
-      const token = localStorage.getItem('authToken');
-      if (token) {
-        // In a real app, you would validate the token with your backend
-        setAuthState({
-          user: {
-            id: '1',
-            email: 'user@example.com',
-            name: 'John Doe',
-            role: 'user',
-            userType: 'creator',
-          },
-          isAuthenticated: true,
-          isLoading: false,
-        });
-      } else {
-        setAuthState({
-          user: null,
-          isAuthenticated: false,
-          isLoading: false,
-        });
-      }
-    };
-=======
-    // Simulate auth check
-    const timer = setTimeout(() => {
-      setLoading(false);
-      // For now, no user is logged in
-      setUser(null);
-    }, 1000);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
-
-    return () => clearTimeout(timer);
-  }, []);
-
-<<<<<<< HEAD
-  const login = async (email: string, _password: string) => {
-    // In a real app, you would make an API call to your backend
-    setAuthState({
-      user: {
-        id: '1',
-        email,
-        name: 'John Doe',
-        role: 'user',
-        userType: 'creator',
-      },
-      isAuthenticated: true,
-      isLoading: false,
-    });
-    localStorage.setItem('authToken', 'dummy-token');
-  };
-=======
-import { useState } from 'react'
-
-interface User {
-  id: string
-  email: string
-  name: string
+export interface AuthState {
+  user: User | null;
+  isAuthenticated: boolean;
+  isLoading: boolean;
+  error: string | null;
 }
 
-interface AuthState {
-  user: User | null
-  isAuthenticated: boolean
-  isLoading: boolean
+export interface AuthContextType extends AuthState {
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => void;
+  register: (userData: RegisterData) => Promise<void>;
+  updateProfile: (userData: Partial<User>) => Promise<void>;
+  resetPassword: (email: string) => Promise<void>;
+  clearError: () => void;
 }
 
-export function useAuth() {
+export interface RegisterData {
+  email: string;
+  password: string;
+  name: string;
+  role?: 'user' | 'admin' | 'partner';
+  company?: string;
+  phone?: string;
+  location?: string;
+  bio?: string;
+  skills?: string[];
+  experience?: number;
+  hourlyRate?: number;
+}
+
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+export function useAuth(): AuthContextType {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
+}
+
+interface AuthProviderProps {
+  children: ReactNode;
+}
+
+export function AuthProvider({ children }: AuthProviderProps) {
   const [authState, setAuthState] = useState<AuthState>({
     user: null,
     isAuthenticated: false,
-    isLoading: false,
-  })
+    isLoading: true,
+    error: null,
+  });
 
-  const login = async (email: string, password: string) => {
-    setAuthState({ ...authState, isLoading: true })
-    
+  // Check for existing user session on mount
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const storedUser = localStorage.getItem('user');
+        if (storedUser) {
+          const user = JSON.parse(storedUser);
+          setAuthState({
+            user,
+            isAuthenticated: true,
+            isLoading: false,
+            error: null,
+          });
+        } else {
+          setAuthState(prev => ({ ...prev, isLoading: false }));
+        }
+      } catch (error) {
+        console.error('Error checking auth:', error);
+        setAuthState(prev => ({ ...prev, isLoading: false }));
+      }
+    };
+
+    checkAuth();
+  }, []);
+
+  const login = async (email: string, password: string): Promise<void> => {
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
       
-      const user: User = {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Mock user data - in a real app this would come from your API
+      const mockUser: User = {
         id: '1',
         email,
-        name: 'User',
-      }
+        name: email.split('@')[0],
+        role: 'user',
+        avatar: `https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face`,
+        company: 'Tech Corp',
+        phone: '+1 555 123 4567',
+        location: 'Middletown, DE',
+        bio: 'Passionate technology professional with expertise in software development and IT solutions.',
+        skills: ['JavaScript', 'React', 'Node.js', 'Python', 'AWS'],
+        experience: 5,
+        hourlyRate: 75,
+        rating: 4.8,
+        reviewCount: 127,
+        isVerified: true,
+        createdAt: new Date('2023-01-15'),
+        updatedAt: new Date(),
+      };
+
+      // Store user in localStorage
+      localStorage.setItem('user', JSON.stringify(mockUser));
       
       setAuthState({
-        user,
+        user: mockUser,
         isAuthenticated: true,
         isLoading: false,
-      })
-      
-      return { success: true }
+        error: null,
+      });
     } catch (error) {
-      setAuthState({ ...authState, isLoading: false })
-      return { success: false, error: 'Login failed' }
+      setAuthState(prev => ({
+        ...prev,
+        isLoading: false,
+        error: 'Invalid email or password. Please try again.',
+      }));
+      throw error;
     }
-  }
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
+  };
 
-  const logout = () => {
+  const logout = (): void => {
+    localStorage.removeItem('user');
     setAuthState({
       user: null,
       isAuthenticated: false,
       isLoading: false,
-<<<<<<< HEAD
+      error: null,
     });
-    localStorage.removeItem('authToken');
   };
-=======
-    })
-  }
 
-  const signup = async (email: string, password: string, name: string) => {
-    setAuthState({ ...authState, isLoading: true })
-    
+  const register = async (userData: RegisterData): Promise<void> => {
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
       
-      const user: User = {
-        id: '1',
-        email,
-        name,
-      }
-      
-      setAuthState({
-        user,
-        isAuthenticated: true,
-        isLoading: false,
-      })
-      
-      return { success: true }
-    } catch (error) {
-      setAuthState({ ...authState, isLoading: false })
-      return { success: false, error: 'Signup failed' }
-    }
-  }
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-
-  return {
-    ...authState,
-    login,
-    logout,
-<<<<<<< HEAD
-  };
-};
-=======
-    signup,
-  }
-}
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-=======
-  name?: string;
-  email: string;
-  avatar?: string;
-}
-
-interface AuthContextType {
-  user: User | null;
-  login: (email: string, password: string) => Promise<void>;
-  logout: () => Promise<void>;
-  signup: (email: string, password: string, name: string) => Promise<void>;
-  isLoading: boolean;
-}
-
-export function useAuth(): AuthContextType {
-  const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Check if user is logged in from localStorage or session
-    const storedUser = localStorage.getItem('zion_user');
-    if (storedUser) {
-      try {
-        setUser(JSON.parse(storedUser));
-      } catch (error) {
-        console.error('Error parsing stored user:', error);
-        localStorage.removeItem('zion_user');
-      }
-    }
-    setIsLoading(false);
-  }, []);
-
-  const login = async (email: string, password: string): Promise<void> => {
-    setIsLoading(true);
-    try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      const mockUser: User = {
-        id: '1',
-        name: 'Demo User',
-        email,
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+      // Mock user data - in a real app this would come from your API
+      const newUser: User = {
+        id: Math.random().toString(36).substr(2, 9),
+        email: userData.email,
+        name: userData.name,
+        role: userData.role || 'user',
+        avatar: `https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face`,
+        company: userData.company,
+        phone: userData.phone,
+        location: userData.location,
+        bio: userData.bio,
+        skills: userData.skills || [],
+        experience: userData.experience || 0,
+        hourlyRate: userData.hourlyRate || 0,
+        rating: 0,
+        reviewCount: 0,
+        isVerified: false,
+        createdAt: new Date(),
+        updatedAt: new Date(),
       };
+
+      // Store user in localStorage
+      localStorage.setItem('user', JSON.stringify(newUser));
       
-      setUser(mockUser);
-      localStorage.setItem('zion_user', JSON.stringify(mockUser));
+      setAuthState({
+        user: newUser,
+        isAuthenticated: true,
+        isLoading: false,
+        error: null,
+      });
     } catch (error) {
-      console.error('Login failed:', error);
+      setAuthState(prev => ({
+        ...prev,
+        isLoading: false,
+        error: 'Registration failed. Please try again.',
+      }));
       throw error;
-    } finally {
-      setIsLoading(false);
     }
   };
 
-  const logout = async (): Promise<void> => {
-    setIsLoading(true);
+  const updateProfile = async (userData: Partial<User>): Promise<void> => {
     try {
+      setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
+      
+      if (!authState.user) {
+        throw new Error('No user logged in');
+      }
+
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 500));
       
-      setUser(null);
-      localStorage.removeItem('zion_user');
+      const updatedUser: User = {
+        ...authState.user,
+        ...userData,
+        updatedAt: new Date(),
+      };
+
+      // Update localStorage
+      localStorage.setItem('user', JSON.stringify(updatedUser));
+      
+      setAuthState(prev => ({
+        ...prev,
+        user: updatedUser,
+        isLoading: false,
+        error: null,
+      }));
     } catch (error) {
-      console.error('Logout failed:', error);
+      setAuthState(prev => ({
+        ...prev,
+        isLoading: false,
+        error: 'Profile update failed. Please try again.',
+      }));
       throw error;
-    } finally {
-      setIsLoading(false);
     }
   };
 
-  const signup = async (email: string, password: string, name: string): Promise<void> => {
-    setIsLoading(true);
+  const resetPassword = async (email: string): Promise<void> => {
     try {
+      setAuthState(prev => ({ ...prev, isLoading: true, error: null }));
+      
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      const mockUser: User = {
-        id: '1',
-        name,
-        email,
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
-      };
+      // In a real app, this would send a password reset email
+      console.log(`Password reset email sent to ${email}`);
       
-      setUser(mockUser);
-      localStorage.setItem('zion_user', JSON.stringify(mockUser));
+      setAuthState(prev => ({ ...prev, isLoading: false, error: null }));
     } catch (error) {
-      console.error('Signup failed:', error);
+      setAuthState(prev => ({
+        ...prev,
+        isLoading: false,
+        error: 'Password reset failed. Please try again.',
+      }));
       throw error;
-    } finally {
-      setIsLoading(false);
     }
   };
 
-  return {
-    user,
+  const clearError = (): void => {
+    setAuthState(prev => ({ ...prev, error: null }));
+  };
+
+  const value: AuthContextType = {
+    ...authState,
     login,
     logout,
-    signup,
-    isLoading
-  };
-}
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-=======
-  const signIn = async (email: string, password: string) => {
-    // Simulate sign in
-    return { success: true };
+    register,
+    updateProfile,
+    resetPassword,
+    clearError,
   };
 
-  const signOut = async () => {
-    setUser(null);
-  };
-
-  return {
-    user,
-    loading,
-    signIn,
-    signOut,
-    isAuthenticated: !!user,
-  };
+  return value;
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
