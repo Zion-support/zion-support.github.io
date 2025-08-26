@@ -1,152 +1,173 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) {
-    const [isExpanded, setIsExpanded] = useState(false);
-    const [showScrollTop, setShowScrollTop] = useState(false);
-    useEffect(() => {
-        const handleScroll = () => {
-            setShowScrollTop(window.scrollY > 400);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-    const getPositionClasses = () => {
-        switch (position) {
-            case 'bottom-left':
-                return 'bottom-6 left-6';
-            case 'top-right':
-                return 'top-6 right-6';
-            case 'top-left':
-                return 'top-6 left-6';
-            default:
-                return 'bottom-6 right-6';
-        }
-    };
-    const getExpandedPositionClasses = () => {
-        switch (position) {
-            case 'bottom-left':
-                return 'bottom-6 left-6';
-            case 'top-right':
-                return 'top-6 right-6';
-            case 'top-left':
-                return 'top-6 left-6';
-            default:
-                return 'bottom-6 right-6';
-        }
-    };
-    if (variant === 'minimal') {
-        return (<AnimatePresence>
-        {showScrollTop && (<motion.button onClick={scrollToTop} className={`fixed ${getPositionClasses()} bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 z-40`} initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <ArrowUp className="w-5 h-5"/>
-          </motion.button>)}
-      </AnimatePresence>);
+import { 
+  MessageCircle, 
+  X, 
+  ArrowRight, 
+  Phone, 
+  Mail, 
+  Calendar,
+  Sparkles,
+  Zap
+} from 'lucide-react';
+
+export function FloatingCTA() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    // Show CTA after 3 seconds
+    const timer = setTimeout(() => setIsVisible(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClose = () => {
+    setIsVisible(false);
+    setIsExpanded(false);
+  };
+
+  const quickActions = [
+    {
+      icon: Phone,
+      label: 'Call Us',
+      description: 'Speak with an expert',
+      action: 'tel:+1-800-ZION-TECH',
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      icon: Mail,
+      label: 'Email Us',
+      description: 'Send us a message',
+      action: 'mailto:info@ziontechgroup.com',
+      color: 'from-blue-500 to-cyan-600'
+    },
+    {
+      icon: Calendar,
+      label: 'Schedule Demo',
+      description: 'Book a consultation',
+      action: '/contact',
+      color: 'from-purple-500 to-pink-600'
     }
-    if (variant === 'featured') {
-        return (<div className={`fixed ${getPositionClasses()} z-40`}>
+  ];
+
+  if (!isVisible) return null;
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8, y: 100 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.8, y: 100 }}
+        transition={{ duration: 0.5, type: "spring", stiffness: 300 }}
+        className="fixed bottom-6 right-6 z-50"
+      >
+        {/* Main CTA Button */}
+        {!isExpanded && (
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsExpanded(true)}
+            className="relative group"
+          >
+            {/* Glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            {/* Main button */}
+            <div className="relative bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-4 rounded-full shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300">
+              <MessageCircle className="w-6 h-6" />
+            </div>
+
+            {/* Pulse animation */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"
+              animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+          </motion.button>
+        )}
+
+        {/* Expanded CTA Panel */}
         <AnimatePresence>
-          {!isExpanded ? (<motion.button onClick={() => setIsExpanded(true)} className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-purple/25 transition-all duration-300 group" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-              <div className="relative">
-                <Zap className="w-6 h-6"/>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-              </div>
-            </motion.button>) : (<motion.div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-80" initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} transition={{ type: "spring", damping: 25, stiffness: 300 }}>
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900">Quick Actions</h3>
-                <button onClick={() => setIsExpanded(false)} className="text-gray-400 hover:text-gray-600 transition-colors">
-                  <X className="w-5 h-5"/>
+          {isExpanded && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.8, y: 20 }}
+              transition={{ duration: 0.3 }}
+              className="absolute bottom-0 right-0 w-80 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl border border-gray-700 shadow-2xl backdrop-blur-sm"
+            >
+              {/* Header */}
+              <div className="relative p-6 border-b border-gray-700">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <Sparkles className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white">Get Started Today</h3>
+                    <p className="text-sm text-gray-300">Transform your business with AI</p>
+                  </div>
+                </div>
+                
+                <button
+                  onClick={handleClose}
+                  className="absolute top-4 right-4 p-1 rounded-full hover:bg-gray-700 transition-colors"
+                >
+                  <X className="w-4 h-4 text-gray-400" />
                 </button>
               </div>
-              
-              <div className="space-y-3">
-                <Link to="/marketplace" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
-                  <div className="w-10 h-10 bg-zion-cyan/10 rounded-lg flex items-center justify-center group-hover:bg-zion-cyan/20 transition-colors">
-                    <Star className="w-5 h-5 text-zion-cyan"/>
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-900">Explore Marketplace</div>
-                    <div className="text-sm text-gray-500">Find AI services & talent</div>
-                  </div>
+
+              {/* Quick Actions */}
+              <div className="p-6 space-y-4">
+                <h4 className="text-sm font-semibold text-gray-300 uppercase tracking-wider">
+                  Quick Actions
+                </h4>
+                
+                {quickActions.map((action, index) => (
+                  <motion.div
+                    key={action.label}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.02 }}
+                    className="group"
+                  >
+                    <Link
+                      to={action.action}
+                      className="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-gray-600"
+                    >
+                      <div className={`w-10 h-10 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                        <action.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-medium text-white">{action.label}</div>
+                        <div className="text-sm text-gray-400">{action.description}</div>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300" />
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Main CTA */}
+              <div className="p-6 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-gray-700">
+                <Link
+                  to="/contact"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+                >
+                  <Zap className="w-4 h-4" />
+                  Start Your Project
                 </Link>
                 
-                <Link to="/contact" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
-                  <div className="w-10 h-10 bg-zion-purple/10 rounded-lg flex items-center justify-center group-hover:bg-zion-purple/20 transition-colors">
-                    <MessageCircle className="w-5 h-5 text-zion-purple"/>
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-900">Get Support</div>
-                    <div className="text-sm text-gray-500">24/7 assistance</div>
-                  </div>
-                </Link>
-                
-                <Link to="/signup" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
-                  <div className="w-10 h-10 bg-zion-cyan-light/10 rounded-lg flex items-center justify-center group-hover:bg-zion-cyan-light/20 transition-colors">
-                    <Users className="w-5 h-5 text-zion-cyan-light"/>
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-900">Join Zion</div>
-                    <div className="text-sm text-gray-500">Free account setup</div>
-                  </div>
-                </Link>
+                <p className="text-xs text-gray-400 text-center mt-3">
+                  Free consultation • No commitment required
+                </p>
               </div>
-              
-              <div className="mt-4 pt-4 border-t border-gray-100">
-                <div className="text-xs text-gray-500 text-center">
-                  Need help? <span className="text-zion-cyan cursor-pointer hover:underline">Chat with us</span>
-                </div>
-              </div>
-            </motion.div>)}
+            </motion.div>
+          )}
         </AnimatePresence>
-      </div>);
-    }
-    // Default variant
-    return (<div className={`fixed ${getPositionClasses()} z-40`}>
-      <AnimatePresence>
-        {!isExpanded ? (<motion.button onClick={() => setIsExpanded(true)} className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 group" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <div className="relative">
-              <MessageCircle className="w-6 h-6"/>
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-            </div>
-          </motion.button>) : (<motion.div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-80" initial={{ opacity: 0, scale: 0.8, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.8, y: 20 }} transition={{ type: "spring", damping: 25, stiffness: 300 }}>
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-semibold text-gray-900">How can we help?</h3>
-              <button onClick={() => setIsExpanded(false)} className="text-gray-400 hover:text-gray-600 transition-colors">
-                <X className="w-5 h-5"/>
-              </button>
-            </div>
-            
-            <div className="space-y-3">
-              <Link to="/marketplace" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
-                <div className="w-10 h-10 bg-zion-cyan/10 rounded-lg flex items-center justify-center group-hover:bg-zion-cyan/20 transition-colors">
-                  <Star className="w-5 h-5 text-zion-cyan"/>
-                </div>
-                <div>
-                  <div className="font-medium text-gray-900">Browse Services</div>
-                  <div className="text-sm text-gray-500">Find what you need</div>
-                </div>
-              </Link>
-              
-              <Link to="/contact" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
-                <div className="w-10 h-10 bg-zion-purple/10 rounded-lg flex items-center justify-center group-hover:bg-zion-purple/20 transition-colors">
-                  <MessageCircle className="w-5 h-5 text-zion-purple"/>
-                </div>
-                <div>
-                  <div className="font-medium text-gray-900">Contact Support</div>
-                  <div className="text-sm text-gray-500">Get help quickly</div>
-                </div>
-              </Link>
-            </div>
-            
-            <div className="mt-4 pt-4 border-t border-gray-100">
-              <div className="text-xs text-gray-500 text-center">
-                Or start a conversation with our AI assistant
-              </div>
-            </div>
-          </motion.div>)}
-      </AnimatePresence>
-    </div>);
+      </motion.div>
+    </AnimatePresence>
+  );
 }
