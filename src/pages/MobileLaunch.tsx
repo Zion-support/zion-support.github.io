@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const MobileLaunch: React.FC = () => {
-  return (
-    <>
+const MobileLaunch = () => {
+    return (<>
       <Helmet>
         <title>Mobile Launch - Zion Tech Group</title>
-        <meta name="description" content="Launch Zion Tech Group's mobile applications. Access our services on the go with our mobile apps." />
+        <meta name="description" content="Launch Zion Tech Group's mobile applications. Access our services on the go with our mobile apps."/>
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">
@@ -25,8 +23,6 @@ const MobileLaunch: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default MobileLaunch;

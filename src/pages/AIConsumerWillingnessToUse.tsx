@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIConsumerWillingnessToUse: React.FC = () => {
-  return (
-    <>
+const AIConsumerWillingnessToUse = () => {
+    return (<>
       <Helmet>
         <title>AI Consumer Willingness to Use Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI consumer willingness to use platform that analyzes customer usage readiness, adoption likelihood, and product utilization with advanced AI capabilities." />
-        <meta name="keywords" content="AI willingness to use, usage readiness, product adoption, AI analysis, customer usage, product utilization" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-consumer-willingness-to-use" />
+        <meta name="description" content="Revolutionary AI consumer willingness to use platform that analyzes customer usage readiness, adoption likelihood, and product utilization with advanced AI capabilities."/>
+        <meta name="keywords" content="AI willingness to use, usage readiness, product adoption, AI analysis, customer usage, product utilization"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-consumer-willingness-to-use"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -120,11 +118,9 @@ const AIConsumerWillingnessToUse: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Usage Factors</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Ease of Use', 'Feature Relevance', 'Learning Curve', 'Time Investment', 'Value Perception', 'Social Proof', 'Support Availability', 'Integration Needs'].map((factor) => (
-                <div key={factor} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Ease of Use', 'Feature Relevance', 'Learning Curve', 'Time Investment', 'Value Perception', 'Social Proof', 'Support Availability', 'Integration Needs'].map((factor) => (<div key={factor} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{factor}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -166,8 +162,6 @@ const AIConsumerWillingnessToUse: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIConsumerWillingnessToUse;

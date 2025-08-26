@@ -1,20 +1,18 @@
-
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Zap, Users, Brain, Sparkles, Star, TrendingUp, Shield } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";
 import { useRef } from "react";
 
 export function HeroSection() {
   const { t } = useTranslation();
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"]
   });
-  
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   
@@ -28,7 +26,7 @@ export function HeroSection() {
       }
     }
   };
-
+  
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
@@ -40,23 +38,11 @@ export function HeroSection() {
       }
     }
   };
-
+  
   const floatingVariants = {
     animate: {
       y: [-15, 15, -15],
       rotate: [0, 5, 0],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
-  const particleVariants = {
-    animate: {
-      y: [0, -20, 0],
-      opacity: [0.3, 0.6, 0.3],
       transition: {
         duration: 4,
         repeat: Infinity,
@@ -64,7 +50,7 @@ export function HeroSection() {
       }
     }
   };
-
+  
   const pulseVariants = {
     animate: {
       scale: [1, 1.1, 1],
@@ -76,128 +62,212 @@ export function HeroSection() {
       }
     }
   };
-
+  
   return (
     <section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
       {/* Enhanced background with parallax effect */}
       <motion.div 
-        className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"
+        className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90" 
         style={{ y, opacity }}
       />
       
       {/* Animated floating particles with better positioning and variety */}
       <div className="absolute inset-0">
         <motion.div 
-          className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-purple-light opacity-60"
-          variants={floatingVariants}
+          className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-purple-light opacity-60" 
+          variants={floatingVariants} 
           animate="animate"
         />
         <motion.div 
-          className="absolute top-1/3 right-1/3 w-6 h-6 rounded-full bg-zion-cyan opacity-50"
-          variants={floatingVariants}
-          animate="animate"
+          className="absolute top-1/3 right-1/3 w-6 h-6 rounded-full bg-zion-cyan opacity-50" 
+          variants={floatingVariants} 
+          animate="animate" 
+          style={{ animationDelay: '1s' }}
         />
         <motion.div 
-          className="absolute bottom-1/4 left-1/3 w-3 h-3 rounded-full bg-zion-cyan-light opacity-70"
-          variants={particleVariants}
-          animate="animate"
+          className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full bg-zion-purple opacity-70" 
+          variants={floatingVariants} 
+          animate="animate" 
+          style={{ animationDelay: '2s' }}
         />
         <motion.div 
-          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-purple opacity-40"
-          variants={floatingVariants}
-          animate="animate"
+          className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light" 
+          variants={pulseVariants} 
+          animate="animate" 
+          style={{ animationDelay: '0.5s' }}
+        />
+        <motion.div 
+          className="absolute top-3/4 left-1/6 w-2 h-2 rounded-full bg-zion-purple-light opacity-80" 
+          variants={floatingVariants} 
+          animate="animate" 
+          style={{ animationDelay: '1.5s' }}
+        />
+        <motion.div 
+          className="absolute top-1/6 right-1/6 w-4 h-4 rounded-full bg-zion-cyan opacity-40" 
+          variants={floatingVariants} 
+          animate="animate" 
+          style={{ animationDelay: '2.5s' }}
         />
       </div>
 
-      {/* Main content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
-          className="text-center max-w-5xl mx-auto"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+      {/* Enhanced decorative geometric shapes with animations */}
+      <motion.div 
+        className="absolute top-20 right-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" 
+        animate={{ rotate: 360 }} 
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      />
+      <motion.div 
+        className="absolute bottom-20 left-20 w-24 h-24 border border-zion-purple/20 transform rotate-45 opacity-30" 
+        animate={{ rotate: -360 }} 
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+      />
+      
+      {/* New floating elements */}
+      <motion.div 
+        className="absolute top-1/3 left-10 w-16 h-16 border border-zion-cyan/30 rounded-full opacity-20" 
+        variants={pulseVariants} 
+        animate="animate"
+      />
+      <motion.div 
+        className="absolute bottom-1/3 right-10 w-20 h-20 border border-zion-purple/30 rounded-full opacity-20" 
+        variants={pulseVariants} 
+        animate="animate" 
+        style={{ animationDelay: '1s' }}
+      />
+      
+      <motion.div 
+        className="container relative z-10 px-4 mx-auto text-center" 
+        variants={containerVariants} 
+        initial="hidden" 
+        animate="visible"
+      >
+        {/* Enhanced title with better typography and animations */}
+        <motion.div variants={itemVariants} className="mb-8">
+          <GradientHeading className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight">
+            {t('home.hero_title') || "The Future of Tech & AI"}
+          </GradientHeading>
+        </motion.div>
+
+        {/* Enhanced subtitle with better spacing and animations */}
+        <motion.p 
+          variants={itemVariants} 
+          className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-16 max-w-5xl mx-auto leading-relaxed font-light"
         >
-          {/* Main heading with enhanced typography */}
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
-            variants={itemVariants}
-          >
-            <span className="bg-gradient-to-r from-white via-zion-cyan to-zion-purple-light bg-clip-text text-transparent">
-              {t("hero.title", "Transform Your Business with AI")}
-            </span>
-          </motion.h1>
+          {t('home.hero_subtitle') || "Discover the world's most advanced AI marketplace. Connect with top tech talent, cutting-edge services, and revolutionary equipment in one seamless platform."}
+        </motion.p>
 
-          {/* Subtitle with better readability */}
-          <motion.p 
-            className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed"
-            variants={itemVariants}
-          >
-            {t("hero.subtitle", "Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Accelerate your growth with Zion Tech Group.")}
-          </motion.p>
-
-          {/* Enhanced CTA buttons */}
+        {/* Enhanced feature highlights with icons and animations */}
+        <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-8 mb-16 text-zion-slate-light">
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-            variants={itemVariants}
+            className="flex items-center gap-3 group" 
+            whileHover={{ scale: 1.05 }} 
+            transition={{ type: "spring", stiffness: 400 }}
           >
-            <Button 
-              asChild
-              size="lg"
-              className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              <Link to="/contact">
-                <Zap className="mr-2 h-5 w-5" />
-                {t("hero.get_started", "Get Started")}
-              </Link>
-            </Button>
-            
-            <Button 
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
-            >
-              <Link to="/services">
-                <Users className="mr-2 h-5 w-5" />
-                {t("hero.explore_services", "Explore Services")}
-              </Link>
-            </Button>
+            <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
+              <Sparkles className="w-6 h-6 text-zion-cyan"/>
+            </div>
+            <span className="text-lg font-medium">AI-Powered Solutions</span>
           </motion.div>
-
-          {/* Trust indicators */}
+          
           <motion.div 
-            className="flex flex-wrap justify-center items-center gap-8 text-zion-slate-light"
-            variants={itemVariants}
+            className="flex items-center gap-3 group" 
+            whileHover={{ scale: 1.05 }} 
+            transition={{ type: "spring", stiffness: 400 }}
           >
-            <div className="flex items-center gap-2">
-              <Star className="h-5 w-5 text-zion-cyan" />
-              <span className="text-sm font-medium">500+ Clients Served</span>
+            <div className="p-2 bg-zion-purple/20 rounded-full group-hover:bg-zion-purple/30 transition-colors">
+              <Zap className="w-6 h-6 text-zion-purple"/>
             </div>
-            <div className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5 text-zion-purple" />
-              <span className="text-sm font-medium">99.9% Uptime</span>
+            <span className="text-lg font-medium">Expert Talent</span>
+          </motion.div>
+          
+          <motion.div 
+            className="flex items-center gap-3 group" 
+            whileHover={{ scale: 1.05 }} 
+            transition={{ type: "spring", stiffness: 400 }}
+          >
+            <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
+              <Shield className="w-6 h-6 text-zion-cyan"/>
             </div>
-            <div className="flex items-center gap-2">
-              <Shield className="h-5 w-5 text-zion-cyan-light" />
-              <span className="text-sm font-medium">Enterprise Security</span>
-            </div>
+            <span className="text-lg font-medium">Enterprise Security</span>
           </motion.div>
         </motion.div>
-      </div>
 
-      {/* Scroll indicator */}
-      <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center">
+        {/* Enhanced CTA buttons with better styling and animations */}
+        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
+          <Button 
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group" 
+            size="lg" 
+            asChild
+          >
+            <Link to="/contact" role="button" aria-label="Get Started Today" className="flex items-center gap-2">
+              Get Started Today
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
+            </Link>
+          </Button>
+          
+          <Button 
+            variant="outline" 
+            className="border-2 border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan hover:text-white text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group" 
+            size="lg" 
+            asChild
+          >
+            <Link to="/services" role="button" aria-label="Explore Services" className="flex items-center gap-2">
+              Explore Services
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
+            </Link>
+          </Button>
+        </motion.div>
+
+        {/* Enhanced trust indicators with better animations */}
+        <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           <motion.div 
-            className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-        </div>
+            className="text-center group" 
+            whileHover={{ scale: 1.05 }} 
+            transition={{ type: "spring", stiffness: 400 }}
+          >
+            <div className="w-16 h-16 mx-auto mb-3 bg-zion-cyan/20 rounded-full flex items-center justify-center group-hover:bg-zion-cyan/30 transition-colors">
+              <Users className="w-8 h-8 text-zion-cyan"/>
+            </div>
+            <div className="text-2xl font-bold text-white mb-1">10K+</div>
+            <div className="text-zion-slate-light text-sm">Active Users</div>
+          </motion.div>
+          
+          <motion.div 
+            className="text-center group" 
+            whileHover={{ scale: 1.05 }} 
+            transition={{ type: "spring", stiffness: 400 }}
+          >
+            <div className="w-16 h-16 mx-auto mb-3 bg-zion-purple/20 rounded-full flex items-center justify-center group-hover:bg-zion-purple/30 transition-colors">
+              <TrendingUp className="w-8 h-8 text-zion-purple"/>
+            </div>
+            <div className="text-2xl font-bold text-white mb-1">95%</div>
+            <div className="text-zion-slate-light text-sm">Success Rate</div>
+          </motion.div>
+          
+          <motion.div 
+            className="text-center group" 
+            whileHover={{ scale: 1.05 }} 
+            transition={{ type: "spring", stiffness: 400 }}
+          >
+            <div className="w-16 h-16 mx-auto mb-3 bg-zion-cyan/20 rounded-full flex items-center justify-center group-hover:bg-zion-cyan/30 transition-colors">
+              <Shield className="w-8 h-8 text-zion-cyan"/>
+            </div>
+            <div className="text-2xl font-bold text-white mb-1">500+</div>
+            <div className="text-zion-slate-light text-sm">Projects</div>
+          </motion.div>
+          
+          <motion.div 
+            className="text-center group" 
+            whileHover={{ scale: 1.05 }} 
+            transition={{ type: "spring", stiffness: 400 }}
+          >
+            <div className="w-16 h-16 mx-auto mb-3 bg-zion-purple/20 rounded-full flex items-center justify-center group-hover:bg-zion-purple/30 transition-colors">
+              <Star className="w-8 h-8 text-zion-purple"/>
+            </div>
+            <div className="text-2xl font-bold text-white mb-1">4.9</div>
+            <div className="text-zion-slate-light text-sm">Rating</div>
+          </motion.div>
+        </motion.div>
       </motion.div>
     </section>
   );

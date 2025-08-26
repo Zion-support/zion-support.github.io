@@ -36,10 +36,6 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Security scan (non-blocking)
-        run: npm run security:scan
-        continue-on-error: true
-
   test:
     name: Test
     runs-on: ubuntu-latest

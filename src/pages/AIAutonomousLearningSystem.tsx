@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousLearningSystem: React.FC = () => {
-  return (
-    <>
+const AIAutonomousLearningSystem = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Learning System | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous learning system that adapts to individual learning styles, provides personalized education, and continuously improves learning outcomes." />
-        <meta name="keywords" content="AI learning system, autonomous learning, personalized education, adaptive learning, AI education platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-learning-system" />
+        <meta name="description" content="Revolutionary AI autonomous learning system that adapts to individual learning styles, provides personalized education, and continuously improves learning outcomes."/>
+        <meta name="keywords" content="AI learning system, autonomous learning, personalized education, adaptive learning, AI education platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-learning-system"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousLearningSystem: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Learning Domains</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Academic Subjects', 'Professional Skills', 'Creative Arts', 'Technical Training', 'Language Learning', 'Personal Development', 'Certification Prep', 'Hobby Skills'].map((domain) => (
-                <div key={domain} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Academic Subjects', 'Professional Skills', 'Creative Arts', 'Technical Training', 'Language Learning', 'Personal Development', 'Certification Prep', 'Hobby Skills'].map((domain) => (<div key={domain} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{domain}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousLearningSystem: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousLearningSystem;

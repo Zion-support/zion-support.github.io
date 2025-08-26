@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const API: React.FC = () => {
-  return (
-    <>
+const API = () => {
+    return (<>
       <Helmet>
         <title>API Reference - Zion Tech Group</title>
-        <meta name="description" content="Access Zion Tech Group's API documentation and integration guides for developers." />
+        <meta name="description" content="Access Zion Tech Group's API documentation and integration guides for developers."/>
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">
@@ -25,8 +23,6 @@ const API: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default API;

@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousThreatDetection: React.FC = () => {
-  return (
-    <>
+const AIAutonomousThreatDetection = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Threat Detection Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous threat detection platform that continuously detects threats, analyzes risks, and protects infrastructure with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI threat detection, autonomous threat detection, threat analysis, risk assessment, autonomous operations, AI threat detection platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-threat-detection" />
+        <meta name="description" content="Revolutionary AI autonomous threat detection platform that continuously detects threats, analyzes risks, and protects infrastructure with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI threat detection, autonomous threat detection, threat analysis, risk assessment, autonomous operations, AI threat detection platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-threat-detection"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousThreatDetection: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Threat Detection Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Malware Detection', 'Phishing Detection', 'Ransomware Detection', 'DDoS Detection', 'Intrusion Detection', 'Anomaly Detection', 'Behavior Detection', 'Pattern Detection'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Malware Detection', 'Phishing Detection', 'Ransomware Detection', 'DDoS Detection', 'Intrusion Detection', 'Anomaly Detection', 'Behavior Detection', 'Pattern Detection'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousThreatDetection: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousThreatDetection;

@@ -1,117 +1,95 @@
 import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  CheckCircle, 
-  Zap, 
-  BarChart3, 
-  FileText, 
-  Users,
-  Settings,
-  Workflow,
-  Target,
-  Rocket,
-  Lock,
-  AlertTriangle
-} from 'lucide-react';
-
-const Soc2ComplianceAutomation: React.FC = () => {
-  const features = [
-    {
-      title: "Automated Monitoring",
-      description: "Continuous monitoring of security controls and compliance status",
-      icon: "🔍"
-    },
-    {
-      title: "Evidence Collection",
-      description: "Automated collection and validation of compliance evidence",
-      icon: "📋"
-    },
-    {
-      title: "Risk Assessment",
-      description: "AI-powered risk identification and mitigation recommendations",
-      icon: "⚠️"
-    },
-    {
-      title: "Audit Preparation",
-      description: "Automated report generation and audit preparation",
-      icon: "📊"
-    }
-  ];
-
-  const soc2Criteria = [
-    {
-      principle: "Security",
-      description: "Protection against unauthorized access and security incidents",
-      controls: ["Access controls", "Network security", "Vulnerability management", "Incident response"]
-    },
-    {
-      principle: "Availability",
-      description: "System availability and business continuity",
-      controls: ["Backup and recovery", "Disaster recovery", "Performance monitoring", "Capacity planning"]
-    },
-    {
-      principle: "Processing Integrity",
-      description: "Data processing accuracy and completeness",
-      controls: ["Data validation", "Error handling", "Processing controls", "Quality assurance"]
-    },
-    {
-      principle: "Confidentiality",
-      description: "Protection of confidential information",
-      controls: ["Data classification", "Encryption", "Access controls", "Data handling"]
-    },
-    {
-      principle: "Privacy",
-      description: "Personal information protection and privacy controls",
-      controls: ["Data minimization", "Consent management", "Data retention", "Privacy by design"]
-    }
-  ];
-
-  const automationBenefits = [
-    {
-      title: "Time Savings",
-      description: "Reduce manual compliance tasks by 80%",
-      metric: "80%"
-    },
-    {
-      title: "Cost Reduction",
-      description: "Lower compliance costs and audit preparation time",
-      metric: "60%"
-    },
-    {
-      title: "Risk Mitigation",
-      description: "Proactive identification and resolution of compliance gaps",
-      metric: "90%"
-    },
-    {
-      title: "Continuous Compliance",
-      description: "24/7 monitoring and real-time compliance status",
-      metric: "24/7"
-    }
-  ];
-
-  const complianceTools = [
-    {
-      category: "Control Monitoring",
-      tools: ["Real-time dashboards", "Automated alerts", "Control testing", "Exception reporting"]
-    },
-    {
-      category: "Evidence Management",
-      tools: ["Automated collection", "Evidence validation", "Documentation management", "Audit trails"]
-    },
-    {
-      category: "Risk Management",
-      tools: ["Risk assessment", "Vulnerability scanning", "Threat modeling", "Mitigation tracking"]
-    },
-    {
-      category: "Reporting & Analytics",
-      tools: ["Compliance reports", "Trend analysis", "Gap analysis", "Executive dashboards"]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+const Soc2ComplianceAutomation = () => {
+    const features = [
+        {
+            title: "Automated Monitoring",
+            description: "Continuous monitoring of security controls and compliance status",
+            icon: "🔍"
+        },
+        {
+            title: "Evidence Collection",
+            description: "Automated collection and validation of compliance evidence",
+            icon: "📋"
+        },
+        {
+            title: "Risk Assessment",
+            description: "AI-powered risk identification and mitigation recommendations",
+            icon: "⚠️"
+        },
+        {
+            title: "Audit Preparation",
+            description: "Automated report generation and audit preparation",
+            icon: "📊"
+        }
+    ];
+    const soc2Criteria = [
+        {
+            principle: "Security",
+            description: "Protection against unauthorized access and security incidents",
+            controls: ["Access controls", "Network security", "Vulnerability management", "Incident response"]
+        },
+        {
+            principle: "Availability",
+            description: "System availability and business continuity",
+            controls: ["Backup and recovery", "Disaster recovery", "Performance monitoring", "Capacity planning"]
+        },
+        {
+            principle: "Processing Integrity",
+            description: "Data processing accuracy and completeness",
+            controls: ["Data validation", "Error handling", "Processing controls", "Quality assurance"]
+        },
+        {
+            principle: "Confidentiality",
+            description: "Protection of confidential information",
+            controls: ["Data classification", "Encryption", "Access controls", "Data handling"]
+        },
+        {
+            principle: "Privacy",
+            description: "Personal information protection and privacy controls",
+            controls: ["Data minimization", "Consent management", "Data retention", "Privacy by design"]
+        }
+    ];
+    const automationBenefits = [
+        {
+            title: "Time Savings",
+            description: "Reduce manual compliance tasks by 80%",
+            metric: "80%"
+        },
+        {
+            title: "Cost Reduction",
+            description: "Lower compliance costs and audit preparation time",
+            metric: "60%"
+        },
+        {
+            title: "Risk Mitigation",
+            description: "Proactive identification and resolution of compliance gaps",
+            metric: "90%"
+        },
+        {
+            title: "Continuous Compliance",
+            description: "24/7 monitoring and real-time compliance status",
+            metric: "24/7"
+        }
+    ];
+    const complianceTools = [
+        {
+            category: "Control Monitoring",
+            tools: ["Real-time dashboards", "Automated alerts", "Control testing", "Exception reporting"]
+        },
+        {
+            category: "Evidence Management",
+            tools: ["Automated collection", "Evidence validation", "Documentation management", "Audit trails"]
+        },
+        {
+            category: "Risk Management",
+            tools: ["Risk assessment", "Vulnerability scanning", "Threat modeling", "Mitigation tracking"]
+        },
+        {
+            category: "Reporting & Analytics",
+            tools: ["Compliance reports", "Trend analysis", "Gap analysis", "Executive dashboards"]
+        }
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -132,13 +110,11 @@ const Soc2ComplianceAutomation: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Automated Compliance Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+              {features.map((feature, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 text-sm">{feature.description}</p>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -146,22 +122,18 @@ const Soc2ComplianceAutomation: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">SOC 2 Trust Service Criteria</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {soc2Criteria.map((criteria, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+              {soc2Criteria.map((criteria, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <h3 className="text-xl font-semibold text-white mb-3">{criteria.principle}</h3>
                   <p className="text-gray-300 mb-4">{criteria.description}</p>
                   
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Controls:</h4>
-                    {criteria.controls.map((control, idx) => (
-                      <div key={idx} className="flex items-center text-gray-300">
+                    {criteria.controls.map((control, idx) => (<div key={idx} className="flex items-center text-gray-300">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {control}
-                      </div>
-                    ))}
+                      </div>))}
                   </div>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -169,13 +141,11 @@ const Soc2ComplianceAutomation: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Benefits of Automation</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {automationBenefits.map((benefit, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+              {automationBenefits.map((benefit, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.metric}</div>
                   <h3 className="text-lg font-semibold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -183,19 +153,15 @@ const Soc2ComplianceAutomation: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Compliance Tools</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {complianceTools.map((category, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              {complianceTools.map((category, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
                   <ul className="space-y-2">
-                    {category.tools.map((tool, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
+                    {category.tools.map((tool, idx) => (<li key={idx} className="flex items-center text-gray-300">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {tool}
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
           
@@ -308,16 +274,10 @@ const Soc2ComplianceAutomation: React.FC = () => {
                 continuous SOC 2 compliance with our automated platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
+                <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                   Get Compliance Assessment
                 </Link>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
+                <Link to="/services" className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                   View All Services
                 </Link>
               </div>
@@ -325,8 +285,6 @@ const Soc2ComplianceAutomation: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default Soc2ComplianceAutomation;

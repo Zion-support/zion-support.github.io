@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousAutomation: React.FC = () => {
-  return (
-    <>
+const AIAutonomousAutomation = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Automation Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous automation platform that continuously automates processes, streamlines workflows, and optimizes operations with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI automation, autonomous automation, process automation, workflow optimization, autonomous operations, AI automation platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-automation" />
+        <meta name="description" content="Revolutionary AI autonomous automation platform that continuously automates processes, streamlines workflows, and optimizes operations with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI automation, autonomous automation, process automation, workflow optimization, autonomous operations, AI automation platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-automation"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousAutomation: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Automation Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Process Automation', 'Workflow Automation', 'Task Automation', 'Data Automation', 'Testing Automation', 'Deployment Automation', 'Monitoring Automation', 'Maintenance Automation'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Process Automation', 'Workflow Automation', 'Task Automation', 'Data Automation', 'Testing Automation', 'Deployment Automation', 'Monitoring Automation', 'Maintenance Automation'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousAutomation: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousAutomation;

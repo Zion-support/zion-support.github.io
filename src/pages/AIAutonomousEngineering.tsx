@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousEngineering: React.FC = () => {
-  return (
-    <>
+const AIAutonomousEngineering = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Engineering Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous engineering platform that continuously designs solutions, solves problems, and creates technical systems with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI engineering, autonomous engineering, solution design, problem solving, autonomous operations, AI engineering platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-engineering" />
+        <meta name="description" content="Revolutionary AI autonomous engineering platform that continuously designs solutions, solves problems, and creates technical systems with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI engineering, autonomous engineering, solution design, problem solving, autonomous operations, AI engineering platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-engineering"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousEngineering: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Engineering Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Software Engineering', 'Hardware Engineering', 'Systems Engineering', 'Mechanical Engineering', 'Electrical Engineering', 'Chemical Engineering', 'Civil Engineering', 'Biomedical Engineering'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Software Engineering', 'Hardware Engineering', 'Systems Engineering', 'Mechanical Engineering', 'Electrical Engineering', 'Chemical Engineering', 'Civil Engineering', 'Biomedical Engineering'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousEngineering: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousEngineering;
