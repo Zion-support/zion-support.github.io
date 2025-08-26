@@ -36,5 +36,6 @@
     "noUncheckedIndexedAccess": false
   },
   "include": ["src"],
+  "exclude": ["src/components/unused", "src/components/unused/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
