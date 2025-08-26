@@ -1,14 +1,4 @@
 import Head from 'next/head'
-export default function Contact(){return (<main style={{padding:20,fontFamily:'sans-serif',lineHeight:1.6,maxWidth:800,margin:'0 auto'}}>
-<link rel="canonical" href="https://ziontechgroup.com/contact"/>
-<meta name="description" content="Contact Zion Tech Group for technology consulting, Micro SaaS, and applied AI solutions."/>
-<meta property="og:title" content="Contact - Zion Tech Group"/>
-<meta property="og:description" content="Reach out to discuss your project and goals."/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://ziontechgroup.com/contact"/>
-<meta property="og:image" content="/assets/og-default.jpg"/>
-<h1>Contact</h1>
-<p>We’d love to hear about your project. Reach us via any of the channels below.</p>
 
 export default function Contact() {
 	const title = 'Contact — Zion Tech Group'

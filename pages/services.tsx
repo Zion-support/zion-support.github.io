@@ -1,21 +1,8 @@
-export default function Services(){return (<main style={{padding:20,fontFamily:'sans-serif',lineHeight:1.6,maxWidth:1000,margin:'0 auto'}}>
-<link rel="canonical" href="https://ziontechgroup.com/services"/>
-<meta name="description" content="Zion Tech Group offers Micro SaaS, IT consulting, and applied AI services for startups, SMBs, and enterprises."/>
-<meta property="og:title" content="Services - Zion Tech Group"/>
-<meta property="og:description" content="End-to-end technology solutions: Micro SaaS, IT services, and applied AI."/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://ziontechgroup.com/services"/>
-<meta property="og:image" content="/assets/og-default.jpg"/>
-<h1 style={{marginBottom:10}}>Services</h1>
-<p style={{color:'#374151'}}>We deliver end-to-end technology solutions: micro SaaS products, IT consulting, and applied AI—tailored for startups, SMBs, and enterprises.</p>
+import Head from 'next/head'
 
 export default function Services() {
 	const title = 'Services — Zion Tech Group'
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
-
-	const microSaaS = innovativeRealMicroSaasServices2025.slice(0, 12).concat(addedMicroSaaS2025)
-	const itServices = advancedITServices.slice(0, 12).concat(addedITServices2025)
-	const aiServices = innovativeAIServices.slice(0, 12).concat(addedAIServices2025)
 
 	return (
 		<>
@@ -71,55 +58,45 @@ export default function Services() {
 					</a>
 				</div>
 
-				{/* Expanded Catalog Sections */}
+				{/* Featured Services */}
 				<section className="mt-16">
-					<h2 className="text-2xl font-semibold">Featured Micro SaaS</h2>
+					<h2 className="text-2xl font-semibold">Featured Services</h2>
 					<div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-						{microSaaS.map((item) => (
-							<article key={item.id} className="rounded-lg border p-4">
-								<div className="text-lg font-semibold">{item.icon} {item.name}</div>
-								<p className="mt-1 text-sm text-gray-600">{item.tagline}</p>
-								<div className="mt-2 text-sm"><span className="font-semibold">{item.price}</span> <span className="text-gray-500">{item.period}</span></div>
-								<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
-									{item.features.slice(0,3).map((f, idx) => (<li key={idx}>{f}</li>))}
-								</ul>
-								<a href={item.link} className="mt-3 inline-block text-blue-600 underline">Learn more</a>
-							</article>
-						))}
-					</div>
-				</section>
+						<article className="rounded-lg border p-4">
+							<div className="text-lg font-semibold">🚀 AI-Powered Analytics</div>
+							<p className="mt-1 text-sm text-gray-600">Intelligent insights and predictive analytics</p>
+							<div className="mt-2 text-sm"><span className="font-semibold">$499</span> <span className="text-gray-500">/month</span></div>
+							<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+								<li>Real-time data processing</li>
+								<li>Machine learning models</li>
+								<li>Custom dashboards</li>
+							</ul>
+							<a href="/services/ai" className="mt-3 inline-block text-blue-600 underline">Learn more</a>
+						</article>
 
-				<section className="mt-16">
-					<h2 className="text-2xl font-semibold">Advanced IT Services</h2>
-					<div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-						{itServices.map((item) => (
-							<article key={item.id} className="rounded-lg border p-4">
-								<div className="text-lg font-semibold">{item.icon} {item.name}</div>
-								<p className="mt-1 text-sm text-gray-600">{item.tagline}</p>
-								<div className="mt-2 text-sm"><span className="font-semibold">{item.price}</span> <span className="text-gray-500">{item.period}</span></div>
-								<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
-									{item.features.slice(0,3).map((f, idx) => (<li key={idx}>{f}</li>))}
-								</ul>
-								<a href={item.link} className="mt-3 inline-block text-blue-600 underline">Learn more</a>
-							</article>
-						))}
-					</div>
-				</section>
+						<article className="rounded-lg border p-4">
+							<div className="text-lg font-semibold">☁️ Cloud Migration</div>
+							<p className="mt-1 text-sm text-gray-600">Seamless transition to cloud infrastructure</p>
+							<div className="mt-2 text-sm"><span className="font-semibold">$2,000</span> <span className="text-gray-500">/project</span></div>
+							<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+								<li>Infrastructure assessment</li>
+								<li>Migration planning</li>
+								<li>Post-migration support</li>
+							</ul>
+							<a href="/services/cloud" className="mt-3 inline-block text-blue-600 underline">Learn more</a>
+						</article>
 
-				<section className="mt-16">
-					<h2 className="text-2xl font-semibold">Innovative AI Services</h2>
-					<div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-						{aiServices.map((item) => (
-							<article key={item.id} className="rounded-lg border p-4">
-								<div className="text-lg font-semibold">{item.icon} {item.name}</div>
-								<p className="mt-1 text-sm text-gray-600">{item.tagline}</p>
-								<div className="mt-2 text-sm"><span className="font-semibold">{item.price}</span> <span className="text-gray-500">{item.period}</span></div>
-								<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
-									{item.features.slice(0,3).map((f, idx) => (<li key={idx}>{f}</li>))}
-								</ul>
-								<a href={item.link} className="mt-3 inline-block text-blue-600 underline">Learn more</a>
-							</article>
-						))}
+						<article className="rounded-lg border p-4">
+							<div className="text-lg font-semibold">🔒 Cybersecurity Audit</div>
+							<p className="mt-1 text-sm text-gray-600">Comprehensive security assessment</p>
+							<div className="mt-2 text-sm"><span className="font-semibold">$1,500</span> <span className="text-gray-500">/audit</span></div>
+							<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+								<li>Vulnerability scanning</li>
+								<li>Penetration testing</li>
+								<li>Compliance review</li>
+							</ul>
+							<a href="/services/cybersecurity" className="mt-3 inline-block text-blue-600 underline">Learn more</a>
+						</article>
 					</div>
 				</section>
 
