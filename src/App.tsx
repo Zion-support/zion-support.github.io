@@ -19,6 +19,9 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const MicroSAAS = React.lazy(() => import('./pages/services/MicroSAAS'));
+const ServicesPricingPage = React.lazy(() => import('./pages/services/ServicesPricingPage'));
+const MicroSaasServices = React.lazy(() => import('./pages/services/MicroSaasServices'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -56,6 +59,9 @@ function App() {
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/micro-saas" element={<MicroSAAS />} />
+              <Route path="/services/pricing" element={<ServicesPricingPage />} />
+              <Route path="/services/micro-saas-services" element={<MicroSaasServices />} />
             </Routes>
           </Suspense>
         </main>
