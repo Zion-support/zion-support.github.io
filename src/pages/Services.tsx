@@ -88,6 +88,28 @@ const Services: React.FC = () => {
             Each service is designed to transform your business and drive innovation.
           </p>
           
+          {/* Navigation to Comprehensive Services */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Link
+              to="/comprehensive-services-2025"
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
+            >
+              🚀 Enhanced 2025 Services
+            </Link>
+            <Link
+              to="/enhanced-services-2025"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
+            >
+              📊 Services Showcase
+            </Link>
+            <Link
+              to="/comprehensive-services-overview-2025"
+              className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
+            >
+              🔍 Services Overview
+            </Link>
+          </div>
+          
           {/* Contact Info */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 max-w-2xl mx-auto">
             <h3 className="text-lg font-semibold text-blue-400 mb-4">Contact Information</h3>
