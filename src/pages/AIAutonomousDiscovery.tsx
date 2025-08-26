@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousDiscovery: React.FC = () => {
-  return (
-    <>
+const AIAutonomousDiscovery = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Discovery Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous discovery platform that continuously explores data, uncovers patterns, and reveals insights with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI discovery, autonomous discovery, pattern discovery, insight revelation, autonomous operations, AI discovery platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-discovery" />
+        <meta name="description" content="Revolutionary AI autonomous discovery platform that continuously explores data, uncovers patterns, and reveals insights with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI discovery, autonomous discovery, pattern discovery, insight revelation, autonomous operations, AI discovery platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-discovery"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousDiscovery: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Discovery Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Pattern Discovery', 'Anomaly Detection', 'Trend Discovery', 'Relationship Discovery', 'Insight Discovery', 'Knowledge Discovery', 'Data Discovery', 'Information Discovery'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Pattern Discovery', 'Anomaly Detection', 'Trend Discovery', 'Relationship Discovery', 'Insight Discovery', 'Knowledge Discovery', 'Data Discovery', 'Information Discovery'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousDiscovery: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousDiscovery;

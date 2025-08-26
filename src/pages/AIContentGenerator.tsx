@@ -3,203 +3,173 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
-import { 
-  PenTool, 
-  FileText, 
-  Brain, 
-  Zap, 
-  Target, 
-  Users, 
-  DollarSign,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Shield,
-  Type,
-  Image,
-  Video,
-  Mic,
-  Palette,
-  ShoppingBag,
-  Mail
-} from "lucide-react";
+import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function AIContentGenerator() {
-  const features = [
-    {
-      title: "AI Writing Assistant",
-      description: "Generate high-quality content for blogs, social media, and marketing campaigns",
-      icon: <PenTool className="h-6 w-6 text-zion-cyan" />
-    },
-    {
-      title: "Multi-Format Support",
-      description: "Create content in various formats: text, images, videos, and audio",
-      icon: <FileText className="h-6 w-6 text-zion-purple" />
-    },
-    {
-      title: "Brand Voice Consistency",
-      description: "Maintain your brand's unique voice across all content pieces",
-      icon: <Type className="h-6 w-6 text-zion-blue" />
-    },
-    {
-      title: "SEO Optimization",
-      description: "AI-powered SEO suggestions to improve content visibility and ranking",
-      icon: <Target className="h-6 w-6 text-zion-cyan" />
-    }
-  ];
-
-  const contentTypes = [
-    {
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, Brain, Zap, FileText, Globe, Users, Shield, Clock, Star } from "lucide-react";
-import { Link } from "react-router-dom";
-
-export default function AIContentGenerator() {
-  const features = [
-    "AI-powered content generation for any industry",
-    "SEO-optimized content with keyword research",
-    "Multiple content formats (blogs, social media, emails)",
-    "Brand voice customization and consistency",
-    "Plagiarism-free, original content",
-    "Real-time content optimization",
-    "Multi-language support (100+ languages)",
-    "Content calendar and scheduling",
-    "Performance analytics and insights",
-    "Team collaboration tools",
-    "API access for enterprise integration",
-    "24/7 customer support"
-      title: "Blog Posts",
-      description: "Long-form articles and blog content",
-      icon: <FileText className="h-8 w-8 text-zion-cyan" />
-    },
-    {
-      title: "Social Media",
-      description: "Posts for all major social platforms",
-      icon: <Users className="h-8 w-8 text-zion-purple" />
-    },
-    {
-      title: "Marketing Copy",
-      description: "Ads, landing pages, and promotional content",
-      icon: <Target className="h-8 w-8 text-zion-blue" />
-    },
-    {
-      title: "Product Descriptions",
-      description: "Compelling product and service descriptions",
-      icon: <ShoppingBag className="h-8 w-8 text-zion-cyan" />
-    },
-    {
-      title: "Email Campaigns",
-      description: "Newsletters and email marketing content",
-      icon: <Mail className="h-8 w-8 text-zion-purple" />
-    },
-    {
-      title: "Video Scripts",
-      description: "Scripts for video content and presentations",
-      icon: <Video className="h-8 w-8 text-zion-blue" />
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$49",
-      period: "/month",
-      description: "Perfect for individuals and small businesses",
-      features: [
-        "Up to 50 content pieces/month",
-        "Basic AI writing tools",
-        "Standard templates",
-        "Email support",
-        "Basic SEO suggestions"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Advanced content creation for growing businesses",
-      features: [
-        "Up to 200 content pieces/month",
-        "Advanced AI writing tools",
-        "Custom templates",
-        "Priority support",
-        "Advanced SEO optimization",
-        "Brand voice training",
-        "Multi-language support"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      title: "Blog Content Creation",
-      description: "Generate engaging blog posts, articles, and long-form content optimized for SEO and reader engagement.",
-      icon: <FileText className="h-8 w-8 text-zion-cyan" />
-    },
-    {
-      title: "Social Media Marketing",
-      description: "Create compelling social media posts, captions, and campaigns across all platforms.",
-      icon: <Globe className="h-8 w-8 text-zion-purple" />
-    },
-    {
-      title: "Email Marketing",
-      description: "Generate personalized email campaigns, newsletters, and automated sequences.",
-      icon: <Users className="h-8 w-8 text-zion-cyan" />
-    },
-    {
-      title: "Product Descriptions",
-      description: "Create compelling product descriptions, features, and marketing copy.",
-      icon: <Zap className="h-8 w-8 text-zion-purple" />
-      price: "$399",
-      period: "/month",
-      description: "Full-scale content creation for large organizations",
-      features: [
-        "Unlimited content pieces",
-        "Custom AI models",
-        "White-label solutions",
-        "Dedicated support",
-        "Advanced analytics",
-        "API access",
-        "Custom integrations"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Jennifer Martinez",
-      role: "Marketing Director, GrowthBrand",
-      content: "Zion's AI Content Generator increased our content output by 300% while maintaining quality. Game-changer!",
-      rating: 5
-    },
-    {
-      name: "David Kim",
-      role: "Content Creator, TechBlog",
-      content: "The AI writing assistant is incredibly intuitive. It understands context and generates engaging content.",
-      rating: 5
-    },
-    {
-      name: "Lisa Thompson",
-      role: "CEO, StartupXYZ",
-      content: "We've saved countless hours on content creation. The ROI is immediate and substantial.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-slate-dark">
-      <SEO 
-        title="AI Content Generator - Zion Tech Group" 
-        description="Create engaging, high-quality content with AI-powered writing tools. Generate blogs, social media posts, and marketing copy instantly."
-        keywords="AI content generator, content creation, AI writing, marketing copy, Zion Tech Group"
-        canonical="https://ziontechgroup.com/ai-content-generator"
-      />
+    const features = [
+        {
+            title: "AI Writing Assistant",
+            description: "Generate high-quality content for blogs, social media, and marketing campaigns",
+            icon: <PenTool className="h-6 w-6 text-zion-cyan"/>
+        },
+        {
+            title: "Multi-Format Support",
+            description: "Create content in various formats: text, images, videos, and audio",
+            icon: <FileText className="h-6 w-6 text-zion-purple"/>
+        },
+        {
+            title: "Brand Voice Consistency",
+            description: "Maintain your brand's unique voice across all content pieces",
+            icon: <Type className="h-6 w-6 text-zion-blue"/>
+        },
+        {
+            title: "SEO Optimization",
+            description: "AI-powered SEO suggestions to improve content visibility and ranking",
+            icon: <Target className="h-6 w-6 text-zion-cyan"/>
+        }
+    ];
+    const contentTypes = [
+        {
+            import: { SEO }, from, "@/components/SEO": ,
+            import: { Button }, from, "@/components/ui/button": ,
+            import: { Card, CardContent, CardDescription, CardHeader, CardTitle }, from, "@/components/ui/card": ,
+            import: { Badge }, from, "@/components/ui/badge": ,
+            import: { Check, Brain, Zap, FileText, Globe, Users, Shield, Clock, Star }, from, "lucide-react": ,
+            import: { Link }, from, "react-router-dom": ,
+            function: AIContentGenerator()
+        }, {
+            const: features = [
+                "AI-powered content generation for any industry",
+                "SEO-optimized content with keyword research",
+                "Multiple content formats (blogs, social media, emails)",
+                "Brand voice customization and consistency",
+                "Plagiarism-free, original content",
+                "Real-time content optimization",
+                "Multi-language support (100+ languages)",
+                "Content calendar and scheduling",
+                "Performance analytics and insights",
+                "Team collaboration tools",
+                "API access for enterprise integration",
+                "24/7 customer support",
+                title, "Blog Posts",
+                description, "Long-form articles and blog content",
+                icon, <FileText className="h-8 w-8 text-zion-cyan"/>
+            ]
+        },
+        {
+            title: "Social Media",
+            description: "Posts for all major social platforms",
+            icon: <Users className="h-8 w-8 text-zion-purple"/>
+        },
+        {
+            title: "Marketing Copy",
+            description: "Ads, landing pages, and promotional content",
+            icon: <Target className="h-8 w-8 text-zion-blue"/>
+        },
+        {
+            title: "Product Descriptions",
+            description: "Compelling product and service descriptions",
+            icon: <ShoppingBag className="h-8 w-8 text-zion-cyan"/>
+        },
+        {
+            title: "Email Campaigns",
+            description: "Newsletters and email marketing content",
+            icon: <Mail className="h-8 w-8 text-zion-purple"/>
+        },
+        {
+            title: "Video Scripts",
+            description: "Scripts for video content and presentations",
+            icon: <Video className="h-8 w-8 text-zion-blue"/>
+        }
+    ];
+    const pricingPlans = [
+        {
+            name: "Starter",
+            price: "$49",
+            period: "/month",
+            description: "Perfect for individuals and small businesses",
+            features: [
+                "Up to 50 content pieces/month",
+                "Basic AI writing tools",
+                "Standard templates",
+                "Email support",
+                "Basic SEO suggestions"
+            ],
+            popular: false
+        },
+        {
+            name: "Professional",
+            price: "$149",
+            period: "/month",
+            description: "Advanced content creation for growing businesses",
+            features: [
+                "Up to 200 content pieces/month",
+                "Advanced AI writing tools",
+                "Custom templates",
+                "Priority support",
+                "Advanced SEO optimization",
+                "Brand voice training",
+                "Multi-language support"
+            ],
+            popular: true
+        },
+        {
+            name: "Enterprise",
+            title: "Blog Content Creation",
+            description: "Generate engaging blog posts, articles, and long-form content optimized for SEO and reader engagement.",
+            icon: <FileText className="h-8 w-8 text-zion-cyan"/>
+        },
+        {
+            title: "Social Media Marketing",
+            description: "Create compelling social media posts, captions, and campaigns across all platforms.",
+            icon: <Globe className="h-8 w-8 text-zion-purple"/>
+        },
+        {
+            title: "Email Marketing",
+            description: "Generate personalized email campaigns, newsletters, and automated sequences.",
+            icon: <Users className="h-8 w-8 text-zion-cyan"/>
+        },
+        {
+            title: "Product Descriptions",
+            description: "Create compelling product descriptions, features, and marketing copy.",
+            icon: <Zap className="h-8 w-8 text-zion-purple"/>,
+            price: "$399",
+            period: "/month",
+            description: "Full-scale content creation for large organizations",
+            features: [
+                "Unlimited content pieces",
+                "Custom AI models",
+                "White-label solutions",
+                "Dedicated support",
+                "Advanced analytics",
+                "API access",
+                "Custom integrations"
+            ],
+            popular: false
+        }
+    ];
+    const testimonials = [
+        {
+            name: "Jennifer Martinez",
+            role: "Marketing Director, GrowthBrand",
+            content: "Zion's AI Content Generator increased our content output by 300% while maintaining quality. Game-changer!",
+            rating: 5
+        },
+        {
+            name: "David Kim",
+            role: "Content Creator, TechBlog",
+            content: "The AI writing assistant is incredibly intuitive. It understands context and generates engaging content.",
+            rating: 5
+        },
+        {
+            name: "Lisa Thompson",
+            role: "CEO, StartupXYZ",
+            content: "We've saved countless hours on content creation. The ROI is immediate and substantial.",
+            rating: 5
+        }
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-slate-dark">
+      <SEO title="AI Content Generator - Zion Tech Group" description="Create engaging, high-quality content with AI-powered writing tools. Generate blogs, social media posts, and marketing copy instantly." keywords="AI content generator, content creation, AI writing, marketing copy, Zion Tech Group" canonical="https://ziontechgroup.com/ai-content-generator"/>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
@@ -219,7 +189,7 @@ export default function AIContentGenerator() {
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"/>
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">
@@ -243,18 +213,16 @@ export default function AIContentGenerator() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <Card key={index} className="bg-zion-slate/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20">
+            {features.map((feature, index) => (<Card key={index} className="bg-zion-slate/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-zion-cyan mt-1 flex-shrink-0" />
+                    <Check className="h-5 w-5 text-zion-cyan mt-1 flex-shrink-0"/>
                     <span className="text-zion-slate-light">{feature}</span>
                   </div>
                 </CardContent>
-              </Card>
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
+              </Card>) /* Features Section */, { /* Features Section */}
+            < section, className = "py-20 px-4" >
+            <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Powerful Content Creation Features
@@ -265,8 +233,7 @@ export default function AIContentGenerator() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
+            {features.map((feature, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
                 <CardHeader className="text-center">
                   <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-16 h-16 flex items-center justify-center">
                     {feature.icon}
@@ -278,10 +245,9 @@ export default function AIContentGenerator() {
                     {feature.description}
                   </CardDescription>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
-        </div>
+        </div>)}
       </section>
 
       {/* Use Cases */}
@@ -297,8 +263,7 @@ export default function AIContentGenerator() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <Card key={index} className="bg-zion-slate/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 text-center">
+            {useCases.map((useCase, index) => (<Card key={index} className="bg-zion-slate/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 text-center">
                 <CardContent className="p-6">
                   <div className="mb-4 flex justify-center">
                     {useCase.icon}
@@ -318,8 +283,7 @@ export default function AIContentGenerator() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {contentTypes.map((type, index) => (
-              <Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 text-center">
+            {contentTypes.map((type, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 text-center">
                 <CardHeader>
                   <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-20 h-20 flex items-center justify-center">
                     {type.icon}
@@ -331,8 +295,7 @@ export default function AIContentGenerator() {
                     {type.description}
                   </CardDescription>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -350,13 +313,10 @@ export default function AIContentGenerator() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>
-                {plan.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
+            {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>
+                {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
                     Most Popular
-                  </Badge>
-                )}
+                  </Badge>)}
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-white mb-2">{plan.name}</CardTitle>
                   <div className="mb-4">
@@ -369,12 +329,10 @@ export default function AIContentGenerator() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-zion-slate-light">
-                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">
+                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
                         {feature}
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
                   <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                     <Link to="/contact">
@@ -382,8 +340,7 @@ export default function AIContentGenerator() {
                     </Link>
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -424,13 +381,10 @@ export default function AIContentGenerator() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
+            {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
                 <CardContent className="pt-6">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                    ))}
+                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-5 w-5 text-yellow-400 fill-current"/>))}
                   </div>
                   <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>
                   <div>
@@ -438,8 +392,7 @@ export default function AIContentGenerator() {
                     <p className="text-sm text-zion-slate-light">{testimonial.role}</p>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -457,7 +410,7 @@ export default function AIContentGenerator() {
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
                 Start Your Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"/>
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">
@@ -470,4 +423,5 @@ export default function AIContentGenerator() {
       </section>
     </div>
   );
+}</></></>))}</></></></></></>);
 }

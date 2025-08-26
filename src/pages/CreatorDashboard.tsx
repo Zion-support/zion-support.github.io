@@ -1,10 +1,7 @@
-
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/creator/CreatorSidebar";
-
 export default function CreatorDashboard() {
-  return (
-    <SidebarProvider>
+    return (<SidebarProvider>
       <div className="min-h-screen flex w-full bg-zion-blue">
         <AppSidebar />
         <div className="flex flex-col w-full">
@@ -18,7 +15,7 @@ export default function CreatorDashboard() {
                   <span className="bg-zion-purple/20 rounded-full p-2">
                     {/* Only use allowed Lucide icons */}
                     <span className="text-zion-purple">
-                      <svg width="28" height="28"><use href="#lucide-bar-chart" /></svg>
+                      <svg width="28" height="28"><use href="#lucide-bar-chart"/></svg>
                     </span>
                   </span>
                   <span className="text-zion-slate-light font-medium">Analytics</span>
@@ -29,7 +26,7 @@ export default function CreatorDashboard() {
                 <div className="flex items-center gap-3 mb-2">
                   <span className="bg-zion-purple/20 rounded-full p-2">
                     <span className="text-zion-purple">
-                      <svg width="28" height="28"><use href="#lucide-file-text" /></svg>
+                      <svg width="28" height="28"><use href="#lucide-file-text"/></svg>
                     </span>
                   </span>
                   <span className="text-zion-slate-light font-medium">Your Posts</span>
@@ -49,6 +46,5 @@ export default function CreatorDashboard() {
         </div>
       </div>
       <SidebarTrigger />
-    </SidebarProvider>
-  );
+    </SidebarProvider>);
 }

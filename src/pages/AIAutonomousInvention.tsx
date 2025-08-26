@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousInvention: React.FC = () => {
-  return (
-    <>
+const AIAutonomousInvention = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Invention Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous invention platform that continuously creates new technologies, develops solutions, and generates patents with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI invention, autonomous invention, technology creation, solution development, autonomous operations, AI invention platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-invention" />
+        <meta name="description" content="Revolutionary AI autonomous invention platform that continuously creates new technologies, develops solutions, and generates patents with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI invention, autonomous invention, technology creation, solution development, autonomous operations, AI invention platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-invention"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-yellow-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousInvention: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Invention Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Technology Invention', 'Product Invention', 'Process Invention', 'Method Invention', 'System Invention', 'Device Invention', 'Algorithm Invention', 'Application Invention'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Technology Invention', 'Product Invention', 'Process Invention', 'Method Invention', 'System Invention', 'Device Invention', 'Algorithm Invention', 'Application Invention'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousInvention: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousInvention;

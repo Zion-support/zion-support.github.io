@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar } from 'lucide-react';
+import { Star, Eye, Heart, ArrowRight, Clock, Users, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const featuredListings = [
   {
@@ -97,181 +98,226 @@ const featuredListings = [
     featured: false,
     technologies: ["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"],
     highlights: ["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"]
-  },
-  {
-    id: 6,
-    title: "Enterprise Data Analytics Dashboard",
-    category: "Data Analytics",
-    description: "Comprehensive business intelligence platform with advanced reporting and predictive analytics",
-    rating: 4.8,
-    reviews: 145,
-    views: 3120,
-    likes: 167,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    price: "$25,000",
-    tags: ["Data Analytics", "Business Intelligence", "Dashboard", "Predictive"],
-    duration: "4-5 months",
-    team: "6 experts",
-    location: "Remote",
-    featured: false,
-    technologies: ["Python", "Tableau", "PostgreSQL", "Apache Spark", "React"],
-    highlights: ["Real-time Dashboards", "Predictive Models", "Data Integration", "Custom Reports"]
   }
 ];
 
-const categories = [
-  "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
-];
-
-import React from 'react';
-import Link from 'next/link';
-
 export function FeaturedListingsSection() {
-  const featuredServices = [
-    {
-      title: 'AI-Powered Business Intelligence',
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-      category: 'AI Solutions',
-      rating: 4.9,
-      reviews: 127,
-      price: 'From $2,500',
-      image: '🤖',
-      link: '/services/ai',
-      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
-    },
-    {
-      title: 'Cloud Migration & Optimization',
-      description: 'Seamlessly migrate to the cloud with our proven methodology and expert guidance.',
-      category: 'Cloud & DevOps',
-      rating: 4.8,
-      reviews: 89,
-      price: 'From $5,000',
-      image: '☁️',
-      link: '/services/cloud',
-      features: ['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
-    },
-    {
-      title: 'Cybersecurity Assessment & Implementation',
-      description: 'Comprehensive security evaluation and implementation for enterprise-level protection.',
-      category: 'Cybersecurity',
-      rating: 4.9,
-      reviews: 156,
-      price: 'From $3,500',
-      image: '🔒',
-      link: '/services/cybersecurity',
-      features: ['Security Audits', 'Threat Detection', 'Incident Response']
-export function FeaturedListingsSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<number | null>(null);
-  const [showFilters, setShowFilters] = useState(false);
-
-  const filteredListings = selectedCategory === "All" 
-    ? featuredListings 
-    : featuredListings.filter(listing => listing.category === selectedCategory);
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
+        staggerChildren: 0.1,
+        delayChildren: 0.2
       }
     }
-  ];
+  };
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
-        ★
-      </span>
-    ));
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
   };
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Featured Services
+    <section className="py-20 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-slate-dark relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.03%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Featured <span className="text-zion-cyan">Projects</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Discover our most popular and highly-rated technology solutions
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Discover our most successful and innovative projects that showcase our expertise and capabilities
           </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredServices.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+        </motion.div>
+
+        {/* Featured Listings Grid */}
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {featuredListings.map((listing) => (
+            <motion.div
+              key={listing.id}
+              className="group relative bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 rounded-2xl overflow-hidden hover:border-zion-cyan/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
+              variants={itemVariants}
+              onMouseEnter={() => setHoveredListing(listing.id)}
+              onMouseLeave={() => setHoveredListing(null)}
+            >
+              {/* Featured Badge */}
+              {listing.featured && (
+                <div className="absolute top-4 left-4 z-10">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full text-white text-xs font-medium">
+                    <Award className="w-3 h-3"/>
+                    Featured
+                  </div>
+                </div>
+              )}
+
+              {/* Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={listing.image} 
+                  alt={listing.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zion-blue-dark/80 via-transparent to-transparent"></div>
+              </div>
+
+              {/* Content */}
               <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                    {service.category}
-                  </span>
-                  <div className="flex items-center space-x-1">
-                    {renderStars(service.rating)}
-                    <span className="text-sm text-gray-600 ml-1">({service.reviews})</span>
+                {/* Category and Location */}
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-zion-cyan text-sm font-medium">{listing.category}</span>
+                  <span className="text-zion-slate-light text-xs">{listing.location}</span>
+                </div>
+
+                {/* Title and Description */}
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                  {listing.title}
+                </h3>
+                <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                  {listing.description}
+                </p>
+
+                {/* Duration and Team */}
+                <div className="flex items-center gap-4 mb-4 text-zion-slate-light/80 text-xs">
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-3 h-3"/>
+                    <span>{listing.duration}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Users className="w-3 h-3"/>
+                    <span>{listing.team}</span>
                   </div>
                 </div>
                 
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {service.image}
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {listing.tags.slice(0, 3).map((tag, index) => (
+                    <span key={index} className="px-2 py-1 rounded-md bg-zion-slate/30 text-zion-slate-light text-xs">
+                      {tag}
+                    </span>
+                  ))}
+                  {listing.tags.length > 3 && (
+                    <span className="text-zion-cyan/60 text-xs">
+                      +{listing.tags.length - 3} more
+                    </span>
+                  )}
                 </div>
                 
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {service.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                {/* Stats */}
+                <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current"/>
+                    <span>{listing.rating}</span>
+                    <span>({listing.reviews})</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-1">
+                      <Eye className="w-4 h-4"/>
+                      <span>{listing.views}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Heart className="w-4 h-4"/>
+                      <span>{listing.likes}</span>
+                    </div>
+                  </div>
                 </div>
                 
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-gray-900">{service.price}</span>
-                  <Link
-                    href={service.link}
-                    className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
-                  >
-                    Learn More →
-                  </Link>
+                {/* Price and CTA */}
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="text-2xl font-bold text-zion-cyan">
+                    {listing.price}
+                  </span>
+                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                    View Details
+                    <ArrowRight className="w-4 h-4"/>
+                  </button>
                 </div>
+
+                {/* Expanded details on hover */}
+                <AnimatePresence>
+                  {hoveredListing === listing.id && (
+                    <motion.div 
+                      className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" 
+                      initial={{ opacity: 0, height: 0, y: 10 }} 
+                      animate={{ opacity: 1, height: "auto", y: 0 }} 
+                      exit={{ opacity: 0, height: 0, y: 10 }} 
+                      transition={{ duration: 0.3 }}
+                    >
+                      <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Highlights:</h4>
+                      <div className="space-y-2 mb-4">
+                        {listing.highlights.map((highlight, idx) => (
+                          <motion.div 
+                            key={idx} 
+                            className="flex items-center gap-2 text-zion-slate-light/80 text-xs" 
+                            initial={{ opacity: 0, x: -10 }} 
+                            animate={{ opacity: 1, x: 0 }} 
+                            transition={{ delay: idx * 0.1 }}
+                          >
+                            <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                            <span>{highlight}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+
+                      <h4 className="text-zion-cyan font-semibold text-sm mb-3">Technologies:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {listing.technologies.slice(0, 4).map((tech, idx) => (
+                          <motion.span 
+                            key={idx} 
+                            className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30" 
+                            initial={{ opacity: 0, scale: 0.8 }} 
+                            animate={{ opacity: 1, scale: 1 }} 
+                            transition={{ delay: idx * 0.1 }}
+                          >
+                            {tech}
+                          </motion.span>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
-              
-              <div className="px-6 pb-6">
-                <Link
-                  href={service.link}
-                  className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <Link
-            href="/services"
-            className="inline-flex items-center px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300"
-          >
-            View All Services
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </div>
+        </motion.div>
+
+        {/* Enhanced bottom CTA */}
+        <motion.div 
+          className="text-center" 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
+            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
+              <p className="text-white text-lg mb-4">
+                Ready to start your next project?
+              </p>
+              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                View All Projects
+                <ArrowRight className="w-5 h-5"/>
+              </button>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
