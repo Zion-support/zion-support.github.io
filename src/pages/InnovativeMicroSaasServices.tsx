@@ -71,7 +71,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
   // Combine all services
-  const allServices: Service[] = [
+  const allServices: any[] = [
     ...ADVANCED_MICRO_SAAS_SERVICES,
     ...EMERGING_TECH_SERVICES
   ];

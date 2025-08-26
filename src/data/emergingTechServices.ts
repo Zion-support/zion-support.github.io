@@ -11,10 +11,15 @@ export interface EmergingTechService {
     currency: string;
     pricingModel: string;
   };
+  currency?: string;
+  pricingModel?: string;
   features: string[];
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
+  tags?: string[];
+  estimatedDelivery?: string;
+  supportLevel?: string;
   marketPrice: string;
   competitiveAdvantage: string;
   contactInfo: {
@@ -77,6 +82,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
       'Logistics companies',
       'Real estate firms'
     ],
+    currency: '$',
+    pricingModel: 'subscription',
+    tags: ['Blockchain', 'Enterprise', 'Smart Contracts', 'DeFi', 'Web3'],
+    estimatedDelivery: '4-6 weeks',
+    supportLevel: '24/7 Premium Support',
     marketPrice: '$299 - $1,999/month',
     competitiveAdvantage: 'Enterprise-grade scalability, regulatory compliance, and seamless integration with existing systems',
     contactInfo: {

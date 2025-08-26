@@ -23,7 +23,7 @@ export function NewServices() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         ((service as any).tags && (service as any).tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
   });
 
@@ -246,10 +246,10 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {service.estimatedDelivery}
+                      Delivery: {(service as any).estimatedDelivery || "Contact for details"}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {service.supportLevel} support
+                      {(service as any).supportLevel || "Standard"} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
@@ -260,9 +260,9 @@ export function NewServices() {
                 </div>
 
                 {/* Tags */}
-                {service.tags && (
+                {(service as any).tags && (
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {service.tags.slice(0, 4).map((tag, index) => (
+                    {(service as any).tags.slice(0, 4).map((tag, index) => (
                       <span
                         key={index}
                         className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full"
@@ -350,10 +350,10 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {service.estimatedDelivery}
+                      Delivery: {(service as any).estimatedDelivery || "Contact for details"}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {service.supportLevel} support
+                      {(service as any).supportLevel || "Standard"} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
@@ -364,9 +364,9 @@ export function NewServices() {
                 </div>
 
                 {/* Tags */}
-                {service.tags && (
+                {(service as any).tags && (
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {service.tags.slice(0, 4).map((tag, index) => (
+                    {(service as any).tags.slice(0, 4).map((tag, index) => (
                       <span
                         key={index}
                         className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full"

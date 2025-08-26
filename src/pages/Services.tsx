@@ -4,6 +4,9 @@ import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
 import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
 import { ADVANCED_ENTERPRISE_SOLUTIONS } from '../data/advancedEnterpriseSolutions';
 import { SPECIALIZED_IT_SERVICES } from '../data/specializedITServices';
+import { NEXT_GEN_AI_SERVICES_2025 } from '../data/nextGenAIServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025 } from '../data/advancedITInfrastructureServices2025';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -34,7 +37,9 @@ import {
   TrendingUp,
   FileText,
   MessageCircle,
-  Truck
+  Truck,
+  Play,
+  Gamepad2
 } from 'lucide-react';
 
 export function Services() {
@@ -45,7 +50,10 @@ export function Services() {
     ...COMPREHENSIVE_SERVICES,
     ...INNOVATIVE_MICRO_SAAS_SERVICES,
     ...ADVANCED_ENTERPRISE_SOLUTIONS,
-    ...SPECIALIZED_IT_SERVICES
+    ...SPECIALIZED_IT_SERVICES,
+    ...NEXT_GEN_AI_SERVICES_2025,
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025
   ];
 
   const serviceCategories = [
@@ -126,7 +134,109 @@ export function Services() {
           description: 'AI-powered customer support and service automation',
           icon: MessageCircle,
           features: ['AI chatbots', 'Multi-channel support', 'Smart routing'],
-          pricing: 'Starting from $199/month'
+          pricing: 'Starting from $199/month',
+          marketPrice: '$199 - $1,999/month',
+          benefits: ['Reduce support costs by 40-60%', '24/7 customer support', 'Improve customer satisfaction']
+        },
+        {
+          name: 'AI Real Estate Investment Platform',
+          path: '/ai-real-estate-investment',
+          description: 'AI-powered real estate market analysis and investment optimization',
+          icon: Building,
+          features: ['Market analysis', 'Property valuation', 'Investment scoring', 'Portfolio optimization'],
+          pricing: 'Starting from $1,899/month',
+          marketPrice: '$1,899 - $5,999/month',
+          benefits: ['Identify undervalued properties', 'Optimize investment returns', 'Reduce investment risks']
+        },
+        {
+          name: 'AI Education Platform',
+          path: '/ai-education-platform',
+          description: 'AI-powered adaptive learning and educational analytics',
+          icon: Users,
+          features: ['Adaptive learning', 'Student tracking', 'Personalized curriculum', 'Performance analytics'],
+          pricing: 'Starting from $899/month',
+          marketPrice: '$899 - $2,999/month',
+          benefits: ['Improve student outcomes', 'Personalize learning paths', 'Enhance teacher efficiency']
+        },
+        {
+          name: 'AI Energy Management',
+          path: '/ai-energy-management',
+          description: 'AI-powered energy optimization and sustainability platform',
+          icon: Zap,
+          features: ['Energy monitoring', 'Predictive maintenance', 'Cost optimization', 'Sustainability tracking'],
+          pricing: 'Starting from $1,499/month',
+          marketPrice: '$1,499 - $4,999/month',
+          benefits: ['Reduce energy costs by 20-40%', 'Improve sustainability', 'Predictive maintenance']
+        },
+        {
+          name: 'AI Precision Agriculture',
+          path: '/ai-precision-agriculture',
+          description: 'AI-powered crop management and precision farming',
+          icon: Globe,
+          features: ['Crop monitoring', 'Soil analysis', 'Weather prediction', 'Resource optimization'],
+          pricing: 'Starting from $1,299/month',
+          marketPrice: '$1,299 - $3,999/month',
+          benefits: ['Increase crop yields by 15-30%', 'Reduce water usage', 'Improve sustainability']
+        },
+        {
+          name: 'AI Construction Management',
+          path: '/ai-construction-management',
+          description: 'AI-powered construction project management and safety',
+          icon: Building,
+          features: ['Project optimization', 'Safety monitoring', 'Resource allocation', 'Risk assessment'],
+          pricing: 'Starting from $1,699/month',
+          marketPrice: '$1,699 - $4,999/month',
+          benefits: ['Reduce project delays by 20-30%', 'Improve safety compliance', 'Optimize resource usage']
+        },
+        {
+          name: 'AI Hospitality Platform',
+          path: '/ai-hospitality-platform',
+          description: 'AI-powered hospitality management and guest experience',
+          icon: Heart,
+          features: ['Guest personalization', 'Dynamic pricing', 'Operational optimization', 'Revenue management'],
+          pricing: 'Starting from $999/month',
+          marketPrice: '$999 - $2,999/month',
+          benefits: ['Increase guest satisfaction', 'Optimize room pricing', 'Improve operational efficiency']
+        },
+        {
+          name: 'AI Insurance Platform',
+          path: '/ai-insurance-platform',
+          description: 'AI-powered insurance risk assessment and claims processing',
+          icon: Shield,
+          features: ['Risk assessment', 'Claims automation', 'Fraud detection', 'Underwriting optimization'],
+          pricing: 'Starting from $2,199/month',
+          marketPrice: '$2,199 - $6,999/month',
+          benefits: ['Reduce claims processing time', 'Improve risk assessment accuracy', 'Detect fraud effectively']
+        },
+        {
+          name: 'AI Legal Research Platform',
+          path: '/ai-legal-research',
+          description: 'AI-powered legal research and document analysis',
+          icon: FileText,
+          features: ['Document analysis', 'Case law research', 'Legal precedent analysis', 'Citation checking'],
+          pricing: 'Starting from $1,599/month',
+          marketPrice: '$1,599 - $4,999/month',
+          benefits: ['Reduce research time by 60-80%', 'Improve case preparation', 'Enhance legal writing']
+        },
+        {
+          name: 'AI Media Platform',
+          path: '/ai-media-platform',
+          description: 'AI-powered media production and content creation',
+          icon: Play,
+          features: ['Content generation', 'Video editing automation', 'Audio processing', 'Audience analytics'],
+          pricing: 'Starting from $1,299/month',
+          marketPrice: '$1,299 - $3,999/month',
+          benefits: ['Reduce production time by 40-60%', 'Increase content quality', 'Optimize audience engagement']
+        },
+        {
+          name: 'AI Gaming Platform',
+          path: '/ai-gaming-platform',
+          description: 'AI-powered gaming analytics and player experience',
+          icon: Gamepad2,
+          features: ['Player behavior analysis', 'Game balance optimization', 'Personalized experiences', 'Performance analytics'],
+          pricing: 'Starting from $1,199/month',
+          marketPrice: '$1,199 - $3,999/month',
+          benefits: ['Increase player engagement', 'Optimize game balance', 'Reduce player churn']
         }
       ]
     },
@@ -143,7 +253,9 @@ export function Services() {
           description: 'Quantum-powered neural networks for complex problems',
           icon: Brain,
           features: ['Quantum algorithms', 'Superior performance', 'Future-proof technology'],
-          pricing: 'Starting from $15,000/month'
+          pricing: 'Starting from $15,000/month',
+          marketPrice: '$15,000 - $50,000/month',
+          benefits: ['Solve complex problems 1000x faster', 'Quantum advantage', 'Future-proof technology']
         },
         {
           name: 'Quantum Computing',
@@ -151,7 +263,9 @@ export function Services() {
           description: 'Quantum computing platforms and solutions',
           icon: Cpu,
           features: ['Quantum supremacy', 'Complex simulations', 'Cryptography'],
-          pricing: 'Starting from $20,000/month'
+          pricing: 'Starting from $20,000/month',
+          marketPrice: '$20,000 - $75,000/month',
+          benefits: ['Quantum supremacy', 'Complex simulations', 'Advanced cryptography']
         }
       ]
     },
@@ -168,7 +282,9 @@ export function Services() {
           description: 'Complete security solutions for your business',
           icon: Shield,
           features: ['Threat detection', 'Vulnerability assessment', 'Incident response'],
-          pricing: 'Starting from $3,500/month'
+          pricing: 'Starting from $3,500/month',
+          marketPrice: '$3,500 - $12,000/month',
+          benefits: ['Protect against cyber threats', 'Ensure compliance', 'Reduce security risks']
         },
         {
           name: 'SOC2 Compliance Automation',
@@ -176,7 +292,19 @@ export function Services() {
           description: 'Automated compliance management and monitoring',
           icon: Lock,
           features: ['Automated audits', 'Real-time monitoring', 'Compliance reporting'],
-          pricing: 'Starting from $4,500/month'
+          pricing: 'Starting from $4,500/month',
+          marketPrice: '$4,500 - $15,000/month',
+          benefits: ['Automate compliance processes', 'Real-time monitoring', 'Reduce audit costs']
+        },
+        {
+          name: 'AI Cybersecurity Intelligence',
+          path: '/ai-cybersecurity-intelligence',
+          description: 'AI-powered threat intelligence and response platform',
+          icon: Shield,
+          features: ['AI threat detection', 'Behavioral analysis', 'Automated response'],
+          pricing: 'Starting from $2,499/month',
+          marketPrice: '$2,499 - $7,999/month',
+          benefits: ['Detect threats 10x faster', 'Reduce false positives by 80%', 'Automate security responses']
         }
       ]
     },
@@ -193,7 +321,9 @@ export function Services() {
           description: 'Cloud development and operations automation',
           icon: Cloud,
           features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting'],
-          pricing: 'Starting from $3,000/month'
+          pricing: 'Starting from $3,000/month',
+          marketPrice: '$3,000 - $10,000/month',
+          benefits: ['Accelerate deployment', 'Reduce infrastructure costs', 'Improve reliability']
         },
         {
           name: 'IT Infrastructure',
@@ -201,7 +331,9 @@ export function Services() {
           description: 'Complete IT infrastructure solutions',
           icon: Network,
           features: ['Network design', 'Hardware management', 'Performance optimization'],
-          pricing: 'Starting from $2,500/month'
+          pricing: 'Starting from $2,500/month',
+          marketPrice: '$2,500 - $8,000/month',
+          benefits: ['Optimize IT performance', 'Reduce infrastructure costs', 'Improve scalability']
         },
         {
           name: '5G Enterprise Solutions',
@@ -209,7 +341,9 @@ export function Services() {
           description: 'High-speed 5G connectivity solutions',
           icon: Network,
           features: ['Ultra-fast connectivity', 'Low latency', 'High bandwidth'],
-          pricing: 'Starting from $5,000/month'
+          pricing: 'Starting from $5,000/month',
+          marketPrice: '$5,000 - $20,000/month',
+          benefits: ['Ultra-fast connectivity', 'Low latency', 'High bandwidth for enterprise']
         }
       ]
     },
@@ -226,7 +360,9 @@ export function Services() {
           description: 'Self-operating business systems and automation',
           icon: Building,
           features: ['Process automation', 'Workflow optimization', 'Performance analytics'],
-          pricing: 'Starting from $6,000/month'
+          pricing: 'Starting from $6,000/month',
+          marketPrice: '$6,000 - $25,000/month',
+          benefits: ['Automate business processes', 'Optimize workflows', 'Improve performance']
         },
         {
           name: 'AI Asset Management',
@@ -234,7 +370,29 @@ export function Services() {
           description: 'Intelligent IT asset management and tracking',
           icon: Database,
           features: ['Asset tracking', 'Lifecycle management', 'Cost optimization'],
-          pricing: 'Starting from $2,000/month'
+          pricing: 'Starting from $2,000/month',
+          marketPrice: '$2,000 - $6,000/month',
+          benefits: ['Track IT assets efficiently', 'Optimize lifecycle management', 'Reduce costs']
+        },
+        {
+          name: 'AI Supply Chain Platform',
+          path: '/ai-supply-chain-platform',
+          description: 'AI-powered supply chain optimization and logistics',
+          icon: Truck,
+          features: ['Demand forecasting', 'Inventory optimization', 'Route optimization'],
+          pricing: 'Starting from $1,799/month',
+          marketPrice: '$1,799 - $5,999/month',
+          benefits: ['Reduce logistics costs by 20-35%', 'Improve delivery times', 'Optimize inventory']
+        },
+        {
+          name: 'AI Customer Experience Platform',
+          path: '/ai-customer-experience',
+          description: 'AI-powered customer experience and support automation',
+          icon: Users,
+          features: ['AI chatbots', 'Personalized recommendations', 'Sentiment analysis'],
+          pricing: 'Starting from $1,399/month',
+          marketPrice: '$1,399 - $4,999/month',
+          benefits: ['Improve customer satisfaction', 'Reduce support costs by 30-50%', '24/7 support']
         }
       ]
     },
@@ -251,7 +409,9 @@ export function Services() {
           description: 'Technology solutions for healthcare industry',
           icon: Heart,
           features: ['Patient management', 'Medical analytics', 'Compliance'],
-          pricing: 'Starting from $8,000/month'
+          pricing: 'Starting from $8,000/month',
+          marketPrice: '$8,000 - $25,000/month',
+          benefits: ['Improve patient care', 'Ensure compliance', 'Optimize operations']
         },
         {
           name: 'Financial Services',
@@ -259,7 +419,9 @@ export function Services() {
           description: 'Fintech solutions and financial technology',
           icon: DollarSign,
           features: ['Risk management', 'Fraud detection', 'Compliance'],
-          pricing: 'Starting from $7,000/month'
+          pricing: 'Starting from $7,000/month',
+          marketPrice: '$7,000 - $20,000/month',
+          benefits: ['Manage risks effectively', 'Detect fraud', 'Ensure compliance']
         },
         {
           name: 'Manufacturing Intelligence',
@@ -267,11 +429,32 @@ export function Services() {
           description: 'Smart manufacturing and Industry 4.0 solutions',
           icon: Cpu,
           features: ['Predictive maintenance', 'Quality control', 'Supply chain optimization'],
-          pricing: 'Starting from $6,500/month'
+          pricing: 'Starting from $6,500/month',
+          marketPrice: '$6,500 - $18,000/month',
+          benefits: ['Predictive maintenance', 'Improve quality', 'Optimize supply chain']
+        },
+        {
+          name: 'AI HR & Talent Platform',
+          path: '/ai-hr-talent-platform',
+          description: 'AI-powered HR and talent management platform',
+          icon: Users,
+          features: ['AI resume screening', 'Candidate matching', 'Performance analytics'],
+          pricing: 'Starting from $1,199/month',
+          marketPrice: '$1,199 - $3,999/month',
+          benefits: ['Reduce hiring time by 50-70%', 'Improve candidate quality', 'Increase retention']
+        },
+        {
+          name: 'AI Data Governance Platform',
+          path: '/ai-data-governance',
+          description: 'AI-powered data governance and privacy compliance',
+          icon: Database,
+          features: ['Data classification', 'Privacy compliance', 'Data quality assessment'],
+          pricing: 'Starting from $1,899/month',
+          marketPrice: '$1,899 - $6,999/month',
+          benefits: ['Ensure regulatory compliance', 'Protect sensitive data', 'Improve data quality']
         }
       ]
     }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-50ba
   ];
   
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
@@ -426,11 +609,33 @@ export function Services() {
                   </div>
                 )}
                 
-                {/* Price */}
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-white">
-                    ${service.price.toLocaleString()}
-                  </span>
+                {/* Price and Market Price */}
+                <div className="mb-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold text-white">
+                      ${service.price.toLocaleString()}
+                    </span>
+                    {service.marketPrice && (
+                      <span className="text-sm text-zion-slate-light">
+                        Market: {service.marketPrice}
+                      </span>
+                    )}
+                  </div>
+                  
+                  {/* Benefits */}
+                  {service.benefits && service.benefits.length > 0 && (
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Benefits:</h4>
+                      <ul className="space-y-1">
+                        {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-center gap-2 text-xs text-zion-slate-light">
+                            <span className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></span>
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
               
@@ -446,6 +651,89 @@ export function Services() {
               </Link>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Enhanced Services Showcase */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mb-16"
+        >
+          <div className="bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-purple/20 border border-zion-purple/30 rounded-2xl p-8 backdrop-blur-md">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                🚀 Premium AI-Powered Solutions
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Experience the future of business with our cutting-edge AI services. 
+                Transform your operations, reduce costs, and gain competitive advantages.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-cyan/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
+                  <FileText className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">AI Legal Contract Analyzer</h3>
+                <p className="text-zion-slate-light text-sm mb-4">Advanced AI platform for legal contract analysis and risk assessment.</p>
+                <div className="text-2xl font-bold text-zion-cyan mb-4">$1,299/month</div>
+                <div className="text-sm text-zion-slate-light mb-4">Market: $1,299 - $4,999/month</div>
+                <Link
+                  to="/enhanced-innovative-services"
+                  className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-medium rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-200"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              
+              <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-cyan/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-green rounded-lg flex items-center justify-center mb-4">
+                  <DollarSign className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Autonomous Financial Advisor</h3>
+                <p className="text-zion-slate-light text-sm mb-4">AI-driven financial advisory and portfolio optimization platform.</p>
+                <div className="text-2xl font-bold text-zion-cyan mb-4">$2,499/month</div>
+                <div className="text-sm text-zion-slate-light mb-4">Market: $2,499 - $7,999/month</div>
+                <Link
+                  to="/enhanced-innovative-services"
+                  className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-green text-white font-medium rounded-lg hover:from-zion-cyan/80 hover:to-zion-green/80 transition-all duration-200"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              
+              <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-cyan/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-zion-red to-zion-pink rounded-lg flex items-center justify-center mb-4">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">AI Healthcare Diagnostics</h3>
+                <p className="text-zion-slate-light text-sm mb-4">AI-powered medical image analysis and diagnostic assistance.</p>
+                <div className="text-2xl font-bold text-zion-cyan mb-4">$3,999/month</div>
+                <div className="text-sm text-zion-slate-light mb-4">Market: $3,999 - $12,999/month</div>
+                <Link
+                  to="/enhanced-innovative-services"
+                  className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-zion-red to-zion-pink text-white font-medium rounded-lg hover:from-zion-red/80 hover:to-zion-pink/80 transition-all duration-200"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Link
+                to="/enhanced-innovative-services"
+                className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-medium rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-200 transform hover:scale-105"
+              >
+                <span>View All Premium Services</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
         </motion.div>
 
         {/* CTA Section */}
@@ -486,6 +774,102 @@ export function Services() {
           </div>
         </motion.div>
 
+        {/* Pricing & Contact Information */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mb-16"
+        >
+          <div className="bg-gradient-to-r from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-cyan/30 rounded-2xl p-8 backdrop-blur-md">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                💰 Competitive Pricing & Market Analysis
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Our AI-powered solutions offer exceptional value with competitive pricing. 
+                Get enterprise-grade technology at accessible rates with proven ROI.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-cyan/30 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">🚀 Entry Level</h3>
+                <div className="text-3xl font-bold text-zion-cyan mb-2">$199 - $999</div>
+                <div className="text-zion-slate-light mb-4">per month</div>
+                <ul className="space-y-2 text-sm text-zion-slate-light">
+                  <li>• AI-powered automation</li>
+                  <li>• Basic analytics</li>
+                  <li>• Standard support</li>
+                  <li>• Cloud deployment</li>
+                </ul>
+              </div>
+              
+              <div className="bg-zion-blue-light/20 backdrop-blur-sm border border-zion-cyan/50 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">⚡ Professional</h3>
+                <div className="text-3xl font-bold text-zion-cyan mb-2">$1,000 - $4,999</div>
+                <div className="text-zion-slate-light mb-4">per month</div>
+                <ul className="space-y-2 text-sm text-zion-slate-light">
+                  <li>• Advanced AI features</li>
+                  <li>• Custom integrations</li>
+                  <li>• Priority support</li>
+                  <li>• Hybrid deployment</li>
+                </ul>
+              </div>
+              
+              <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-cyan/30 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">🏢 Enterprise</h3>
+                <div className="text-3xl font-bold text-zion-cyan mb-2">$5,000+</div>
+                <div className="text-zion-slate-light mb-4">per month</div>
+                <ul className="space-y-2 text-sm text-zion-slate-light">
+                  <li>• Full AI suite</li>
+                  <li>• Custom development</li>
+                  <li>• 24/7 dedicated support</li>
+                  <li>• On-premise options</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-zion-cyan/10 border border-zion-cyan/30 rounded-xl p-6 mb-6">
+                <h3 className="text-xl font-semibold text-white mb-4">📞 Get Your Custom Quote</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Every business is unique. Contact our team for a personalized solution and pricing that fits your needs.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+                  <div>
+                    <p className="text-sm text-zion-slate-light mb-2">📱 Call Us</p>
+                    <a href="tel:+13024640950" className="text-zion-cyan font-semibold hover:text-white transition-colors">
+                      +1 302 464 0950
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-sm text-zion-slate-light mb-2">✉️ Email Us</p>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan font-semibold hover:text-white transition-colors">
+                      kleber@ziontechgroup.com
+                    </a>
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <p className="text-sm text-zion-slate-light mb-2">📍 Visit Us</p>
+                  <p className="text-zion-cyan font-semibold">
+                    364 E Main St STE 1008<br />
+                    Middletown DE 19709
+                  </p>
+                </div>
+              </div>
+              
+              <Link
+                to="/request-quote"
+                className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-medium rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-200 transform hover:scale-105"
+              >
+                <span>Request Custom Quote</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Footer Section */}
         <div className="bg-zion-slate-dark py-12 border-t border-zion-blue-light">
           <div className="container mx-auto px-4">
@@ -520,6 +904,18 @@ export function Services() {
                 <div className="space-y-2">
                   <a href="/comprehensive-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
                     Comprehensive Services
+                  </a>
+                  <a href="/enhanced-innovative-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Premium AI Solutions
+                  </a>
+                  <a href="/ai-solutions" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    AI & Machine Learning
+                  </a>
+                  <a href="/quantum-technology" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Quantum Technology
+                  </a>
+                  <a href="/cybersecurity" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Cybersecurity
                   </a>
                   <a href="/ai-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
                     AI Services

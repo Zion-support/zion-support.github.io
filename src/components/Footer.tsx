@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowUp as ArrowUpIcon } from 'lucide-react';
+import { ArrowUp as ArrowUpIcon, Phone, Mail, MapPin } from 'lucide-react';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -151,7 +151,7 @@ function Footer() {
               <h3 className="text-white font-semibold mb-4">Contact Information</h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <PhoneIcon className="h-5 w-5 text-zion-cyan" />
+                  <Phone className="h-5 w-5 text-zion-cyan" />
                   <button 
                     onClick={() => handleContactClick('phone')}
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm"
@@ -160,7 +160,7 @@ function Footer() {
                   </button>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <EnvelopeIcon className="h-5 w-5 text-zion-cyan" />
+                  <Mail className="h-5 w-5 text-zion-cyan" />
                   <button 
                     onClick={() => handleContactClick('email')}
                     className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm"
@@ -169,7 +169,7 @@ function Footer() {
                   </button>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <MapPinIcon className="h-5 w-5 text-zion-cyan mt-0.5" />
+                  <MapPin className="h-5 w-5 text-zion-cyan mt-0.5" />
                   <span className="text-zion-slate-light text-sm">{contactInfo.address}</span>
                 </div>
               </div>

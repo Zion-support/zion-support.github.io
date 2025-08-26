@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import { Header } from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
@@ -61,6 +61,7 @@ const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'))
 
 // Next-Generation Innovative Services 2025
 const NextGenInnovativeServices2025 = lazy(() => import('./pages/NextGenInnovativeServices2025'));
+const NextGenServicesShowcase2025 = lazy(() => import('./pages/NextGenServicesShowcase2025'));
 
 // Additional innovative micro SAAS services
 const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
@@ -77,7 +78,7 @@ const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutoma
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
 const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
+const HelpCenter = lazy(() => import('./pages/FAQ'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
 // Additional missing pages
@@ -122,8 +123,8 @@ const Events = lazy(() => import('./pages/Events'));
 const Webinars = lazy(() => import('./pages/Webinars'));
 const WhitePapers = lazy(() => import('./pages/WhitePapers'));
 const Testimonials = lazy(() => import('./pages/Testimonials'));
-const Support = lazy(() => import('./pages/HelpCenter'));
-const Docs = lazy(() => import('./pages/HelpCenter'));
+const Support = lazy(() => import('./pages/FAQ'));
+const Docs = lazy(() => import('./pages/FAQ'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const Community = lazy(() => import('./pages/CommunityPage'));
 
@@ -280,6 +281,7 @@ const App: React.FC = () => {
                       
                       {/* Next-Generation Innovative Services 2025 */}
                       <Route path="/next-gen-innovative-services-2025" element={<NextGenInnovativeServices2025 />} />
+                      <Route path="/next-gen-services-showcase-2025" element={<NextGenServicesShowcase2025 />} />
                       
                       {/* Additional innovative micro SAAS service routes */}
                       <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
