@@ -14,12 +14,20 @@ import {
   Star,
   Play,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Cpu,
+  Code,
+  Rocket
 } from 'lucide-react';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const heroSlides = [
     {
@@ -309,24 +317,156 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services Showcase Section */}
+      <section className="py-20 bg-gradient-to-br from-zion-slate/50 to-zion-slate/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Technology Solutions</h2>
+            <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto">
+              From AI and quantum computing to blockchain and IoT, we offer cutting-edge solutions that drive innovation and growth.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* AI & Analytics */}
+            <div className="card-futuristic group">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-8 h-8 text-zion-cyan" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">AI & Analytics</h3>
+              <p className="text-zion-cyan/70 mb-4">Advanced artificial intelligence and machine learning solutions for data-driven decision making.</p>
+              <ul className="text-sm text-zion-cyan/60 mb-6 space-y-2">
+                <li>• Predictive Analytics</li>
+                <li>• Natural Language Processing</li>
+                <li>• Computer Vision</li>
+                <li>• Deep Learning</li>
+              </ul>
+              <Link to="/services/ai-analytics" className="text-zion-cyan hover:text-white transition-colors font-medium">
+                Explore AI Solutions →
+              </Link>
+            </div>
+
+            {/* Quantum Computing */}
+            <div className="card-futuristic group">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-purple/20 to-zion-blue/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Rocket className="w-8 h-8 text-zion-purple" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Quantum Computing</h3>
+              <p className="text-zion-cyan/70 mb-4">Revolutionary quantum computing solutions for complex optimization and cryptography.</p>
+              <ul className="text-sm text-zion-cyan/60 mb-6 space-y-2">
+                <li>• Quantum Algorithms</li>
+                <li>• Quantum Machine Learning</li>
+                <li>• Quantum Cryptography</li>
+                <li>• Quantum Internet</li>
+              </ul>
+              <Link to="/services/quantum-computing" className="text-zion-cyan hover:text-white transition-colors font-medium">
+                Discover Quantum →
+              </Link>
+            </div>
+
+            {/* Blockchain & Web3 */}
+            <div className="card-futuristic group">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-blue/20 to-zion-cyan/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Code className="w-8 h-8 text-zion-blue" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Blockchain & Web3</h3>
+              <p className="text-zion-cyan/70 mb-4">Next-generation decentralized applications and DeFi platforms.</p>
+              <ul className="text-sm text-zion-cyan/60 mb-6 space-y-2">
+                <li>• Smart Contracts</li>
+                <li>• DeFi Platforms</li>
+                <li>• NFT Marketplaces</li>
+                <li>• Web3 Development</li>
+              </ul>
+              <Link to="/services/blockchain" className="text-zion-cyan hover:text-white transition-colors font-medium">
+                Build on Blockchain →
+              </Link>
+            </div>
+
+            {/* IoT & Edge Computing */}
+            <div className="card-futuristic group">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-green/20 to-zion-cyan/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Cpu className="w-8 h-8 text-zion-green" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">IoT & Edge Computing</h3>
+              <p className="text-zion-cyan/70 mb-4">Intelligent edge computing solutions for real-time data processing.</p>
+              <ul className="text-sm text-zion-cyan/60 mb-6 space-y-2">
+                <li>• Edge AI Processing</li>
+                <li>• Smart Sensors</li>
+                <li>• Real-time Analytics</li>
+                <li>• Predictive Maintenance</li>
+              </ul>
+              <Link to="/services/iot-edge" className="text-zion-cyan hover:text-white transition-colors font-medium">
+                Connect Everything →
+              </Link>
+            </div>
+
+            {/* Cybersecurity */}
+            <div className="card-futuristic group">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-red/20 to-zion-purple/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Shield className="w-8 h-8 text-zion-red" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
+              <p className="text-zion-cyan/70 mb-4">Advanced security solutions with AI-powered threat detection.</p>
+              <ul className="text-sm text-zion-cyan/60 mb-6 space-y-2">
+                <li>• AI Threat Detection</li>
+                <li>• Zero-trust Security</li>
+                <li>• Incident Response</li>
+                <li>• Compliance Management</li>
+              </ul>
+              <Link to="/services/cybersecurity" className="text-zion-cyan hover:text-white transition-colors font-medium">
+                Secure Your Business →
+              </Link>
+            </div>
+
+            {/* Digital Twin */}
+            <div className="card-futuristic group">
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-blue/20 to-zion-purple/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Globe className="w-8 h-8 text-zion-blue" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Digital Twin</h3>
+              <p className="text-zion-cyan/70 mb-4">Virtual replicas for real-time monitoring and simulation.</p>
+              <ul className="text-sm text-zion-cyan/60 mb-6 space-y-2">
+                <li>• 3D Visualization</li>
+                <li>• Real-time Monitoring</li>
+                <li>• Predictive Analytics</li>
+                <li>• Simulation Engine</li>
+              </ul>
+              <Link to="/services/digital-twin" className="text-zion-cyan hover:text-white transition-colors font-medium">
+                Create Virtual Worlds →
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/services"
+              className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 font-medium transform hover:scale-105"
+            >
+              View All 100+ Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto">
               We combine cutting-edge technology with proven expertise to deliver exceptional results.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-zion-purple/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="card-futuristic text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-zion-purple" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-zion-slate-light">{feature.description}</p>
+                <p className="text-zion-cyan/70">{feature.description}</p>
               </div>
             ))}
           </div>

@@ -44,7 +44,7 @@ function App() {
       <div className="min-h-screen bg-futuristic">
         <AppHeader />
         
-        <main className="flex-1">
+        <main className="flex-1 pt-32">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
