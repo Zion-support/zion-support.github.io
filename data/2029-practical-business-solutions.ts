@@ -362,3 +362,5 @@ export const practicalBusiness2029Solutions: PracticalBusinessSolution[] = [
     }
   }
 ];
+
+export const practicalBusinessSolutionServices2029 = practicalBusiness2029Solutions;

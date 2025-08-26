@@ -7,3 +7,5 @@ export const cuttingEdgeInnovations2027 = [
     category: '2027 Innovations'
   }
 ];
+
+export const cuttingEdge2027Innovations = cuttingEdgeInnovations2027;

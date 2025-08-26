@@ -7,3 +7,5 @@ export const emergingTechBreakthroughs2029 = [
     category: '2029 Emerging Tech'
   }
 ];
+
+export const emergingTechBreakthroughServices2029 = emergingTechBreakthroughs2029;

@@ -7,3 +7,5 @@ export const aiAutonomousEcosystem2029 = [
     category: '2029 AI Ecosystem'
   }
 ];
+
+export const aiAutonomousEcosystemServices2029 = aiAutonomousEcosystem2029;
