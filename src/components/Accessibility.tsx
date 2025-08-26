@@ -1,302 +1,258 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Eye, 
-  EyeOff, 
   Volume2, 
   VolumeX, 
-  Keyboard, 
-  Sun, 
-  Moon, 
-  Monitor,
-  Accessibility,
-  Settings,
-  X
+  Eye, 
+  EyeOff, 
+  Contrast, 
+  Type, 
+  MousePointer,
+  Keyboard,
+  SkipForward,
+  SkipBack,
+  Play,
+  Pause
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
-// Accessibility Context
-interface AccessibilityContextType {
-  highContrast: boolean;
-  reducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-  colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-  toggleHighContrast: () => void;
-  toggleReducedMotion: () => void;
-  setFontSize: (size: 'small' | 'medium' | 'large') => void;
-  setColorBlindMode: (mode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia') => void;
+interface AccessibilityProps {
+  className?: string;
 }
 
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
-
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
-  if (!context) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
-  }
-  return context;
-};
-
-// Accessibility Provider Component
-export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const Accessibility: React.FC<AccessibilityProps> = ({ className = '' }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
   const [highContrast, setHighContrast] = useState(false);
+  const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large'>('medium');
-  const [colorBlindMode, setColorBlindMode] = useState<'none' | 'protanopia' | 'deuteranopia' | 'tritanopia'>('none');
+  const [autoPlay, setAutoPlay] = useState(true);
 
-  // Load settings from localStorage
   useEffect(() => {
-    const savedSettings = localStorage.getItem('zion-accessibility-settings');
-    if (savedSettings) {
-      const settings = JSON.parse(savedSettings);
-      setHighContrast(settings.highContrast || false);
-      setReducedMotion(settings.reducedMotion || false);
-      setFontSize(settings.fontSize || 'medium');
-      setColorBlindMode(settings.colorBlindMode || 'none');
-    }
-  }, []);
-
-  // Save settings to localStorage
-  useEffect(() => {
-    const settings = {
-      highContrast,
-      reducedMotion,
-      fontSize,
-      colorBlindMode
-    };
-    localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
-  }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-
-  // Apply accessibility settings to document
-  useEffect(() => {
-    const root = document.documentElement;
-    
-    // High contrast mode
+    // Apply accessibility preferences to document
     if (highContrast) {
-      root.classList.add('high-contrast');
+      document.documentElement.classList.add('high-contrast');
     } else {
-      root.classList.remove('high-contrast');
+      document.documentElement.classList.remove('high-contrast');
     }
 
-    // Reduced motion
+    if (largeText) {
+      document.documentElement.classList.add('large-text');
+    } else {
+      document.documentElement.classList.remove('large-text');
+    }
+
     if (reducedMotion) {
-      root.classList.add('reduced-motion');
+      document.documentElement.classList.add('reduced-motion');
     } else {
-      root.classList.remove('reduced-motion');
+      document.documentElement.classList.remove('reduced-motion');
     }
+  }, [highContrast, largeText, reducedMotion]);
 
-    // Font size
-    root.style.fontSize = fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+    // Implement audio muting logic here
+  };
 
-    // Color blind mode
-    root.style.filter = colorBlindMode === 'none' ? 'none' : 
-      colorBlindMode === 'protanopia' ? 'url(#protanopia)' :
-      colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :
-      'url(#tritanopia)';
-  }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+  const toggleHighContrast = () => {
+    setHighContrast(!highContrast);
+  };
 
-  const toggleHighContrast = () => setHighContrast(!highContrast);
-  const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
+  const toggleLargeText = () => {
+    setLargeText(!largeText);
+  };
 
-  const value: AccessibilityContextType = {
-    highContrast,
-    reducedMotion,
-    fontSize,
-    colorBlindMode,
-    toggleHighContrast,
-    toggleReducedMotion,
-    setFontSize,
-    setColorBlindMode
+  const toggleReducedMotion = () => {
+    setReducedMotion(!reducedMotion);
+  };
+
+  const toggleAutoPlay = () => {
+    setAutoPlay(!autoPlay);
+  };
+
+  const skipToContent = () => {
+    const mainContent = document.querySelector('main');
+    if (mainContent) {
+      mainContent.focus();
+      mainContent.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const skipToNavigation = () => {
+    const navigation = document.querySelector('nav, [role="navigation"]');
+    if (navigation) {
+      navigation.focus();
+      navigation.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
-    <AccessibilityContext.Provider value={value}>
-      {children}
-    </AccessibilityContext.Provider>
-  );
-};
-
-// Accessibility Panel Component
-export const AccessibilityPanel: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const {
-    highContrast,
-    reducedMotion,
-    fontSize,
-    colorBlindMode,
-    toggleHighContrast,
-    toggleReducedMotion,
-    setFontSize,
-    setColorBlindMode
-  } = useAccessibility();
-
-  // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Ctrl/Cmd + Shift + A to open accessibility panel
-      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-        event.preventDefault();
-        setIsOpen(!isOpen);
-      }
-      
-      // Ctrl/Cmd + Shift + H to toggle high contrast
-      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
-        event.preventDefault();
-        toggleHighContrast();
-      }
-      
-      // Ctrl/Cmd + Shift + M to toggle reduced motion
-      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-        event.preventDefault();
-        toggleReducedMotion();
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, toggleHighContrast, toggleReducedMotion]);
-
-  return (
     <>
-      {/* Floating Accessibility Button */}
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300"
-        aria-label="Open Accessibility Settings"
+      {/* Accessibility Toggle Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={`fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-zion-cyan/50 ${className}`}
+        aria-label="Accessibility options"
+        aria-expanded={isOpen}
+        aria-controls="accessibility-panel"
       >
-        <Accessibility className="w-6 h-6" />
-      </motion.button>
+        <Eye className="w-6 h-6 mx-auto" />
+      </button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setIsOpen(false)}
+            id="accessibility-panel"
+            className="fixed bottom-24 right-6 z-50 w-80 bg-zion-slate-dark/95 backdrop-blur-lg rounded-2xl border border-zion-cyan/20 shadow-2xl"
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            role="dialog"
+            aria-label="Accessibility options"
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                  <Accessibility className="w-5 h-5 text-zion-cyan" />
-                  Accessibility Settings
-                </h2>
-                <Button
+            <div className="p-6">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                <Eye className="w-5 h-5 mr-2 text-zion-cyan" />
+                Accessibility Options
+              </h3>
 
-                  onClick={() => setIsOpen(false)}
-                  className="text-zion-slate-light hover:text-white"
-                >
-                  <X className="w-4 h-4" />
-                </Button>
-              </div>
-
-              {/* Settings */}
-              <div className="space-y-6">
-                {/* High Contrast */}
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-white font-medium mb-1">High Contrast</h3>
-                    <p className="text-sm text-zion-slate-light">Increase contrast for better visibility</p>
+              <div className="space-y-4">
+                {/* Skip Links */}
+                <div className="space-y-2">
+                  <h4 className="text-sm font-medium text-zion-slate-light">Skip to:</h4>
+                  <div className="flex space-x-2">
+                    <button
+                      onClick={skipToNavigation}
+                      className="flex-1 px-3 py-2 text-sm bg-zion-slate-light/20 text-white rounded-lg hover:bg-zion-slate-light/30 transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                    >
+                      <SkipBack className="w-4 h-4 mr-1" />
+                      Navigation
+                    </button>
+                    <button
+                      onClick={skipToContent}
+                      className="flex-1 px-3 py-2 text-sm bg-zion-slate-light/20 text-white rounded-lg hover:bg-zion-slate-light/30 transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                    >
+                      <SkipForward className="w-4 h-4 mr-1" />
+                      Content
+                    </button>
                   </div>
-                  <Button
+                </div>
 
+                {/* Visual Options */}
+                <div className="space-y-3">
+                  <h4 className="text-sm font-medium text-zion-slate-light">Visual Options:</h4>
+                  
+                  <button
                     onClick={toggleHighContrast}
-                    className={highContrast ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
+                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
+                      highContrast 
+                        ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/40' 
+                        : 'bg-zion-slate-light/10 text-white hover:bg-zion-slate-light/20'
+                    }`}
+                    aria-pressed={highContrast}
                   >
-                    {highContrast ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
-                  </Button>
-                </div>
+                    <div className="flex items-center">
+                      <Contrast className="w-4 h-4 mr-2" />
+                      High Contrast
+                    </div>
+                    <div className={`w-4 h-4 rounded border-2 ${
+                      highContrast ? 'bg-zion-cyan border-zion-cyan' : 'border-zion-slate-light'
+                    }`} />
+                  </button>
 
-                {/* Reduced Motion */}
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-white font-medium mb-1">Reduced Motion</h3>
-                    <p className="text-sm text-zion-slate-light">Minimize animations and transitions</p>
-                  </div>
-                  <Button
+                  <button
+                    onClick={toggleLargeText}
+                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
+                      largeText 
+                        ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/40' 
+                        : 'bg-zion-slate-light/10 text-white hover:bg-zion-slate-light/20'
+                    }`}
+                    aria-pressed={largeText}
+                  >
+                    <div className="flex items-center">
+                      <Type className="w-4 h-4 mr-2" />
+                      Large Text
+                    </div>
+                    <div className={`w-4 h-4 rounded border-2 ${
+                      largeText ? 'bg-zion-cyan border-zion-cyan' : 'border-zion-slate-light'
+                    }`} />
+                  </button>
 
+                  <button
                     onClick={toggleReducedMotion}
-                    className={reducedMotion ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
+                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
+                      reducedMotion 
+                        ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/40' 
+                        : 'bg-zion-slate-light/10 text-white hover:bg-zion-slate-light/20'
+                    }`}
+                    aria-pressed={reducedMotion}
                   >
-                    {reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                  </Button>
+                    <div className="flex items-center">
+                      <MousePointer className="w-4 h-4 mr-2" />
+                      Reduced Motion
+                    </div>
+                    <div className={`w-4 h-4 rounded border-2 ${
+                      reducedMotion ? 'bg-zion-cyan border-zion-cyan' : 'border-zion-slate-light'
+                    }`} />
+                  </button>
                 </div>
 
-                {/* Font Size */}
-                <div>
-                  <h3 className="text-white font-medium mb-3">Font Size</h3>
-                  <div className="flex gap-2">
-                    {(['small', 'medium', 'large'] as const).map((size) => (
-                      <Button
-                        key={size}
+                {/* Audio Options */}
+                <div className="space-y-3">
+                  <h4 className="text-sm font-medium text-zion-slate-light">Audio Options:</h4>
+                  
+                  <button
+                    onClick={toggleMute}
+                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
+                      isMuted 
+                        ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/40' 
+                        : 'bg-zion-slate-light/10 text-white hover:bg-zion-slate-light/20'
+                    }`}
+                    aria-pressed={isMuted}
+                  >
+                    <div className="flex items-center">
+                      {isMuted ? <VolumeX className="w-4 h-4 mr-2" /> : <Volume2 className="w-4 h-4 mr-2" />}
+                      {isMuted ? 'Unmute Audio' : 'Mute Audio'}
+                    </div>
+                  </button>
 
-                        onClick={() => setFontSize(size)}
-                        className={fontSize === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
-                      >
-                        {size.charAt(0).toUpperCase() + size.slice(1)}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Color Blind Mode */}
-                <div>
-                  <h3 className="text-white font-medium mb-3">Color Blind Support</h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    {(['none', 'protanopia', 'deuteranopia', 'tritanopia'] as const).map((mode) => (
-                      <Button
-                        key={mode}
-
-                        onClick={() => setColorBlindMode(mode)}
-                        className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
-                      >
-                        {mode.charAt(0).toUpperCase() + mode.slice(1)}
-                      </Button>
-                    ))}
-                  </div>
+                  <button
+                    onClick={toggleAutoPlay}
+                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
+                      autoPlay 
+                        ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/40' 
+                        : 'bg-zion-slate-light/10 text-white hover:bg-zion-slate-light/20'
+                    }`}
+                    aria-pressed={autoPlay}
+                  >
+                    <div className="flex items-center">
+                      {autoPlay ? <Pause className="w-4 h-4 mr-2" /> : <Play className="w-4 h-4 mr-2" />}
+                      {autoPlay ? 'Disable Auto-play' : 'Enable Auto-play'}
+                    </div>
+                  </button>
                 </div>
 
                 {/* Keyboard Shortcuts */}
-                <div className="bg-zion-blue-dark/50 rounded-lg p-4">
-                  <h3 className="text-white font-medium mb-3 flex items-center gap-2">
-                    <Keyboard className="w-4 h-4 text-zion-cyan" />
-                    Keyboard Shortcuts
-                  </h3>
-                  <div className="space-y-2 text-sm text-zion-slate-light">
+                <div className="pt-3 border-t border-zion-slate-light/20">
+                  <h4 className="text-sm font-medium text-zion-slate-light mb-2">Keyboard Shortcuts:</h4>
+                  <div className="text-xs text-zion-slate-light space-y-1">
                     <div className="flex justify-between">
-                      <span>Open Panel:</span>
-                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + A</kbd>
+                      <span>Skip to navigation:</span>
+                      <kbd className="px-2 py-1 bg-zion-slate-light/20 rounded text-zion-cyan">Tab</kbd>
                     </div>
                     <div className="flex justify-between">
-                      <span>High Contrast:</span>
-                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + H</kbd>
+                      <span>Skip to content:</span>
+                      <kbd className="px-2 py-1 bg-zion-slate-light/20 rounded text-zion-cyan">Enter</kbd>
                     </div>
                     <div className="flex justify-between">
-                      <span>Reduced Motion:</span>
-                      <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>
+                      <span>Toggle accessibility:</span>
+                      <kbd className="px-2 py-1 bg-zion-slate-light/20 rounded text-zion-cyan">A</kbd>
                     </div>
                   </div>
                 </div>
               </div>
-
-              {/* Footer */}
-              <div className="mt-6 pt-4 border-t border-zion-cyan/20">
-                <p className="text-xs text-zion-slate-light text-center">
-                  These settings are saved locally and will persist across sessions.
-                </p>
-              </div>
-            </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -304,54 +260,84 @@ export const AccessibilityPanel: React.FC = () => {
   );
 };
 
-// Skip to Content Link
-export const SkipToContent: React.FC = () => (
-  <a
-    href="#main-content"
-    className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300"
-  >
-    Skip to main content
-  </a>
-);
+// Accessibility hook for keyboard navigation
+export const useKeyboardNavigation = () => {
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Accessibility toggle
+      if (event.key === 'a' || event.key === 'A') {
+        // Toggle accessibility panel
+        const accessibilityButton = document.querySelector('[aria-label="Accessibility options"]') as HTMLButtonElement;
+        if (accessibilityButton) {
+          accessibilityButton.click();
+        }
+      }
 
-// Focus Trap Hook
+      // Skip to content
+      if (event.key === 'Enter' && event.target === document.body) {
+        const mainContent = document.querySelector('main');
+        if (mainContent) {
+          mainContent.focus();
+          mainContent.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+};
+
+// Focus trap for modals
 export const useFocusTrap = (isActive: boolean) => {
   useEffect(() => {
     if (!isActive) return;
 
-    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    const container = document.activeElement?.closest('[data-focus-trap]');
+    const focusableElements = document.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
     
-    if (!container) return;
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const focusableContent = container.querySelectorAll(focusableElements);
-    const firstFocusableElement = focusableContent[0] as HTMLElement;
-    const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
-
-    const handleTabKey = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        if (e.shiftKey) {
-          if (document.activeElement === firstFocusableElement) {
-            e.preventDefault();
-            lastFocusableElement.focus();
+    const handleTabKey = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        if (event.shiftKey) {
+          if (document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
           }
         } else {
-          if (document.activeElement === lastFocusableElement) {
-            e.preventDefault();
-            firstFocusableElement.focus();
+          if (document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
           }
         }
       }
     };
 
     document.addEventListener('keydown', handleTabKey);
+    firstElement?.focus();
+
     return () => document.removeEventListener('keydown', handleTabKey);
   }, [isActive]);
 };
 
-// Screen Reader Only Text
-export const SrOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <span className="sr-only">{children}</span>
-);
+// Screen reader announcements
+export const useScreenReaderAnnouncement = () => {
+  const announce = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', priority);
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  };
 
-export default AccessibilityPanel;
+  return { announce };
+};
