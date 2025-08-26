@@ -5,6 +5,17 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
+<<<<<<< HEAD
+  const services = [
+    { name: 'Services Showcase', href: '/services-showcase', description: 'Comprehensive Service Portfolio' },
+    { name: 'AI Solutions', href: '/services/ai', description: 'Comprehensive AI Solutions' },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced Analytics & Insights' },
+    { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', description: 'Intelligent Marketing Solutions' },
+    { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Cloud Infrastructure & Automation' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced Security Solutions' },
+    { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Process Optimization' },
+    { name: 'Emerging Technologies', href: '/emerging-tech', description: 'Cutting-edge Innovation' }
+=======
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -129,6 +140,7 @@ const Header: React.FC = () => {
       icon: '📞',
       description: 'Get in touch with us'
     }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-356a
   ];
 
   return (
