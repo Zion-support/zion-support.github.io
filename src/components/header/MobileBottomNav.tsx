@@ -5,6 +5,17 @@ import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, Shoppi
 import { useCart } from "@/context/CartContext";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
+import { useFavorites } from "@/hooks/useFavorites";
+import { useCart } from "@/context";
+import {
+  Home,
+  Search,
+  MessageCircle,
+  Heart,
+  MessageSquare,
+  ShoppingCart,
+  User,
+} from "lucide-react";
 
 interface MobileBottomNavProps {
   unreadCount?: number;
@@ -14,6 +25,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+  const { count: favoritesCount } = useFavorites();
   const { items } = useCart();
   const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
 
