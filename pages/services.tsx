@@ -81,7 +81,7 @@ export default function Services() {
 								<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
 									{item.features.slice(0,3).map((f, idx) => (<li key={idx}>{f}</li>))}
 								</ul>
-								<a href={item.link} className="mt-3 inline-block text-blue-600 underline">Learn more</a>
+								<a href={`/services/${item.id}`} className="mt-3 inline-block text-blue-600 underline">Learn more</a>
 							</article>
 						))}
 					</div>
@@ -98,7 +98,7 @@ export default function Services() {
 								<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
 									{item.features.slice(0,3).map((f, idx) => (<li key={idx}>{f}</li>))}
 								</ul>
-								<a href={item.link} className="mt-3 inline-block text-blue-600 underline">Learn more</a>
+								<a href={`/services/${item.id}`} className="mt-3 inline-block text-blue-600 underline">Learn more</a>
 							</article>
 						))}
 					</div>
@@ -115,7 +115,7 @@ export default function Services() {
 								<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
 									{item.features.slice(0,3).map((f, idx) => (<li key={idx}>{f}</li>))}
 								</ul>
-								<a href={item.link} className="mt-3 inline-block text-blue-600 underline">Learn more</a>
+								<a href={`/services/${item.id}`} className="mt-3 inline-block text-blue-600 underline">Learn more</a>
 							</article>
 						))}
 					</div>
