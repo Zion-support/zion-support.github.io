@@ -1,7 +1,12 @@
 {
-  "name": "bolt.new.zion.app",
+  "name": "zion-tech-group-website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
@@ -12,7 +17,8 @@
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
-    "fix:all": "npm run lint -- --fix || true"
+    "fix:all": "npm run lint -- --fix || true",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -60,7 +66,6 @@
     "lucide-react": "^0.323.0",
     "notistack": "^3.0.0",
     "react": "^18.2.0",
-    "react-day-picker": "^8.9.1",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
@@ -69,7 +74,6 @@
     "react-i18next": "^15.7.2",
     "react-redux": "^9.2.0",
     "react-router-dom": "^6.20.0",
-    "recharts": "^2.8.0",
     "tailwind-merge": "^2.0.0",
     "terser": "^5.43.1",
     "zod": "^3.22.4"
@@ -89,7 +93,6 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
-    "terser": "^5.43.1",
     "typescript": "^5.0.0",
     "vite": "^5.4.19"
   }
