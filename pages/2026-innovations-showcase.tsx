@@ -5,9 +5,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Brain, Sparkles, Rocket, Shield, Globe, Cpu, Database, Phone, Mail, MapPin } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 
 export default function Innovations2026Showcase() {
   const contactInfo = {
@@ -17,11 +15,7 @@ export default function Innovations2026Showcase() {
     website: 'https://ziontechgroup.com'
   };
 
-  const allNewServices = [
-    ...innovative2026MicroSaasServicesV2,
-    ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesV2
-  ];
+  const allNewServices = innovativeRealMicroSaasServices2025;
 
   const categories = [
     { name: 'AI & Business Intelligence', icon: Brain, color: 'from-purple-600 to-indigo-700' },

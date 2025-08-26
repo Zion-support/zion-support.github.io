@@ -110,7 +110,7 @@ const TestimonialsSection: React.FC = () => {
         </motion.div>
 
         <div className="relative">
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             <motion.div
               key={currentIndex}
               initial={{ opacity: 0, x: 100 }}

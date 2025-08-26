@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface ErrorPageProps {
   statusCode?: number;
@@ -21,10 +21,10 @@ export const ErrorPage: React.FC<ErrorPageProps> = ({
         <p className="text-lg mb-8 max-w-md mx-auto">{message}</p>
         <div className="space-x-4">
           <Button asChild>
-            <Link to="/">Go Home</Link>
+            <Link href="/">Go Home</Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link to="/contact">Contact Support</Link>
+            <Link href="/contact">Contact Support</Link>
           </Button>
         </div>
       </div>

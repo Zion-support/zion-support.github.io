@@ -228,7 +228,7 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
           </div>
 
           {/* Tab Content */}
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             <motion.div
               key={activeTab}
               initial={{ opacity: 0, y: 20 }}

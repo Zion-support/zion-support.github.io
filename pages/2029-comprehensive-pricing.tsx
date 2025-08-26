@@ -9,10 +9,10 @@ import {
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029';
-import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
-import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import { enhancedRealMicroSaasServices as aiAutonomousEcosystemServices2029 } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as emergingTechBreakthroughServices2029 } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as practicalBusinessSolutionServices2029 } from '../data/enhanced-real-micro-saas-services';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -67,7 +67,7 @@ export default function ComprehensivePricing2029() {
 
   return (
     <div className="min-h-screen bg-black text-white relative">
-      <FuturisticAnimatedBackground2029 />
+              <UltraFuturisticBackground />
       
       <Head>
         <title>2029 Comprehensive Pricing - Zion Tech Group</title>

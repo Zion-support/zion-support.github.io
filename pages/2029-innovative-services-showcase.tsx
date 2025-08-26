@@ -8,9 +8,7 @@ import {
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
-import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -20,30 +18,26 @@ const contactInfo = {
 };
 
 export default function InnovativeServicesShowcase2029() {
-  const allServices = [
-    ...aiAutonomousEcosystemServices2029,
-    ...emergingTechBreakthroughServices2029,
-    ...practicalBusinessSolutionServices2029
-  ];
+  const allServices = innovativeRealMicroSaasServices2025;
 
   const serviceCategories = [
     {
-      title: '🚀 AI Autonomous Ecosystem',
+      title: '🚀 AI & Machine Learning',
       icon: Brain,
       color: 'from-violet-600 via-purple-600 to-indigo-600',
-      services: aiAutonomousEcosystemServices2029
+      services: allServices.filter(s => s.category?.includes('AI') || s.category?.includes('Machine Learning'))
     },
     {
-      title: '⚛️ Emerging Tech Breakthroughs',
+      title: '⚛️ Emerging Technology',
       icon: Atom,
       color: 'from-indigo-600 via-blue-600 to-cyan-600',
-      services: emergingTechBreakthroughServices2029
+      services: allServices.filter(s => s.category?.includes('Emerging') || s.category?.includes('Quantum'))
     },
     {
-      title: '🎯 Practical Business Solutions',
+      title: '🎯 Business Solutions',
       icon: Target,
       color: 'from-cyan-600 via-teal-600 to-emerald-600',
-      services: practicalBusinessSolutionServices2029
+      services: allServices.filter(s => !s.category?.includes('AI') && !s.category?.includes('Emerging') && !s.category?.includes('Quantum'))
     }
   ];
 

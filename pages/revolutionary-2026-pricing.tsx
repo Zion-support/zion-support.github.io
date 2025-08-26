@@ -8,8 +8,8 @@ import {
   Atom, Crown, Infinity, Shield, Microscope
 } from 'lucide-react';
 import Link from 'next/link';
-import { ultimate2026Services } from '../data/ultimate-2026-services';
-import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
+import { enhancedRealMicroSaasServices as ultimate2026Services } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as revolutionary2026Innovations } from '../data/enhanced-real-micro-saas-services';
 
 export default function Revolutionary2026Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');

@@ -243,7 +243,7 @@ export const MachineLearningDashboard: React.FC<MLDashboardProps> = ({ className
 
       {/* Content */}
       <div className="p-4">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {activeTab === 'overview' && (
             <motion.div
               key="overview"

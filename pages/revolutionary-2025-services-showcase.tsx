@@ -5,9 +5,9 @@ import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, 
 
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
-import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary-2025-it-infrastructure';
-import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas';
+import { enhancedRealMicroSaasServices as revolutionaryAI2025Services } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as revolutionaryITInfrastructure2025Services } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as revolutionary2025MicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function Revolutionary2025ServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');

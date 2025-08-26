@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Star, TrendingUp, Zap, Shield, Brain, Atom, Rocket, ArrowRight, CheckCircle, Users, DollarSign, Clock, Search, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Phone, Mail, MapPin } from 'lucide-react';
 
 import Layout from '../components/layout/Layout';
-import { revolutionary2026MicroSaasServices } from '../data/revolutionary-2026-micro-saas-services';
-import { revolutionary2026ITServices } from '../data/revolutionary-2026-it-services';
+import { enhancedRealMicroSaasServices as revolutionary2026MicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as revolutionary2026ITServices } from '../data/enhanced-real-micro-saas-services';
 import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-services';
 
 export default function Revolutionary2026ServicesPage() {

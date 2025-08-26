@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export function CategoriesSection({ showTitle = true }: { showTitle?: boolean }) {
   const categories = [
@@ -81,7 +81,7 @@ export function CategoriesSection({ showTitle = true }: { showTitle?: boolean })
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((category, index) => (
             <div key={category.title}>
-              <Link to={category.link} className="group block h-full">
+              <Link href={category.link} className="group block h-full">
                 <div className="rounded-2xl overflow-hidden h-full border border-blue-400/30 bg-gradient-to-br from-slate-800/50 to-slate-800 p-8 transition-all duration-500 hover:border-blue-400/60 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-blue-400/20 backdrop-blur-sm">
                   <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <div className="text-white text-3xl">
@@ -125,7 +125,7 @@ export function CategoriesSection({ showTitle = true }: { showTitle?: boolean })
             {specialServices.map((service) => (
               <Link 
                 key={service.title}
-                to={service.link}
+                href={service.link}
                 className="group flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 hover:from-blue-600/30 hover:to-cyan-600/30 border border-blue-400/30 hover:border-blue-400/50 rounded-2xl text-blue-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/20 backdrop-blur-sm"
               >
                 <span className="text-xl">{service.icon}</span>
@@ -140,7 +140,7 @@ export function CategoriesSection({ showTitle = true }: { showTitle?: boolean })
         
         <div className="mt-16 flex justify-center">
           <Link 
-            to="/services" 
+            href="/services" 
             className="group inline-flex items-center gap-3 text-blue-400 border-b-2 border-blue-400 hover:border-blue-300 transition-colors text-lg font-medium py-2"
           >
             Explore All Services

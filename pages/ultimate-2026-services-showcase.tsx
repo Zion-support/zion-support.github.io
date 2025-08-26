@@ -7,8 +7,8 @@ import {
   ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,
   ChevronDown, Sparkles
 } from 'lucide-react';
-import { ultimate2026Services } from '../data/ultimate-2026-services';
-import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
+import { enhancedRealMicroSaasServices as ultimate2026Services } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as revolutionary2026Innovations } from '../data/enhanced-real-micro-saas-services';
 
 export default function Ultimate2026ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');

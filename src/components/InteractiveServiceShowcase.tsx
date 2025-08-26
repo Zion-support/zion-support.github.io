@@ -176,7 +176,7 @@ const InteractiveServiceShowcase: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             {filteredServices.map((service) => (
               <motion.div
                 key={service.id}

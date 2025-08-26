@@ -6,9 +6,9 @@ import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSq
 
 
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
-import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
-import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
+import { enhancedRealMicroSaasServices as revolutionary2027AIServices } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as revolutionary2027ITServices } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as revolutionary2027MicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function Revolutionary2027ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');

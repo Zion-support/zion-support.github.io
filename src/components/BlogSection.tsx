@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
@@ -67,7 +67,7 @@ export const BlogSection: React.FC = () => {
                 </div>
                 
                 <Link
-                  to={`/blog/${post.id}`}
+                  href={`/blog/${post.id}`}
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
                 >
                   Read More
@@ -80,7 +80,7 @@ export const BlogSection: React.FC = () => {
         
         <div className="text-center">
           <Link
-            to="/blog"
+            href="/blog"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
           >
             View All Articles

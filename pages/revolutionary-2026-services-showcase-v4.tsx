@@ -7,10 +7,7 @@ import {
   ArrowRight, Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, Phone, Mail, MapPin, Eye, Heart, Target, Award
 } from 'lucide-react';
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
-import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
-import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import UltraQuantumHolographicBackgroundV4 from '../components/ui/UltraQuantumHolographicBackgroundV4';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
 
@@ -28,13 +25,8 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     website: 'https://ziontechgroup.com'
   };
 
-  // Combine all new services
-  const allServices = [
-    ...innovative2026MicroSaasServicesV4,
-    ...emergingTech2026ServicesV4,
-    ...enterpriseIT2026ServicesV4,
-    ...innovative2026AIServicesV4
-  ];
+  // Use the main services data
+  const allServices = innovativeRealMicroSaasServices2025;
 
   // Dynamic category counts
   const aiCount = allServices.filter(service => 

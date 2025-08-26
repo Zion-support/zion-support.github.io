@@ -14,8 +14,8 @@ import {
 import { advancedAIAutomationServices } from '../data/2027-advanced-ai-automation-services';
 import { emergingTechInnovations } from '../data/2027-emerging-tech-innovations';
 import { enterpriseSolutionsAdvanced } from '../data/2027-enterprise-solutions-advanced';
-import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
+import { enhancedRealMicroSaasServices as cuttingEdge2027Innovations } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as practicalMicroSaas2027 } from '../data/enhanced-real-micro-saas-services';
 
 export default function AdvancedServicesShowcase2027() {
   const [searchTerm, setSearchTerm] = useState('');

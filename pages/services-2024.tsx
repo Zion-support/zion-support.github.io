@@ -6,9 +6,9 @@ import {
   Brain, Atom, Cpu, Shield, Database, Cloud,
   ArrowRight, CheckCircle, Zap, Sparkles
 } from 'lucide-react';
-import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
-import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
-import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
+import { enhancedRealMicroSaasServices as realMicroSaasServices2024 } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices as innovativeITServices2024 } from '../data/enhanced-real-micro-saas-services';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 
 const Services2024Page: React.FC = () => {
@@ -117,7 +117,7 @@ const Services2024Page: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
       </Head>
 
-      <UltraFuturisticBackground2034 intensity={0.8} theme="quantum" />
+              <UltraFuturisticBackground />
 
       <div className="relative z-10 min-h-screen">
         {/* Hero Section */}

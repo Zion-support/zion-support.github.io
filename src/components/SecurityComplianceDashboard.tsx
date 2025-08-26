@@ -234,7 +234,7 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
 
       {/* Content */}
       <div className="p-4">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {activeTab === 'overview' && (
             <motion.div
               key="overview"
