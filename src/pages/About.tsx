@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-import { AppLayout } from "@/layout";
+import { AppLayout } from "@/layout/AppLayout";
 
 export default function About() {
   return (
