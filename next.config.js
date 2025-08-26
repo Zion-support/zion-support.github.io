@@ -8,7 +8,9 @@ const nextConfig = {
 	eslint: {
 		ignoreDuringBuilds: true
 	},
-	poweredByHeader: false
+	experimental: {
+		optimizePackageImports: ['lucide-react', 'framer-motion']
+	}
 };
 
 module.exports = nextConfig;

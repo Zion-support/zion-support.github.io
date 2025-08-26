@@ -1,21 +1,19 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 export default class MyDocument extends Document {
-	static async getInitialProps(ctx: any) {
-		const initialProps = await Document.getInitialProps(ctx);
-		return { ...initialProps };
-	}
-
 	render() {
 		return (
 			<Html lang="en">
 				<Head>
+					<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+					<link rel="icon" href="/favicon.ico" />
 					<meta name="theme-color" content="#0a0a0a" />
 					<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-					<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-					<link rel="preconnect" href="https://plausible.io" crossOrigin="anonymous" />
-					<meta name="format-detection" content="telephone=no" />
-					{/* Plausible loaded in _app via next/script */}
+					<meta name="color-scheme" content="dark light" />
+					<link rel="preconnect" href="https://fonts.googleapis.com" />
+					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+					<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+					<script defer data-domain="ziontechgroup.com" src="https://plausible.io/js/script.js"></script>
 					<script
 						type="application/ld+json"
 						dangerouslySetInnerHTML={{
@@ -53,8 +51,8 @@ export default class MyDocument extends Document {
 								},
 								null,
 								2
-								)
-							}}
+							)
+						}}
 					/>
 					<script
 						type="application/ld+json"
@@ -73,8 +71,8 @@ export default class MyDocument extends Document {
 								},
 								null,
 								2
-								)
-							}}
+							)
+						}}
 					/>
 				</Head>
 				<body>
@@ -82,8 +80,6 @@ export default class MyDocument extends Document {
 					<NextScript />
 				</body>
 			</Html>
-		)
+		);
 	}
 }
-
-export default ZionDocument
