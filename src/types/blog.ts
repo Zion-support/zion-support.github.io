@@ -19,8 +19,6 @@ export interface BlogPost {
   featuredImage?: string;
   isFeatured?: boolean;
 }
-<<<<<<< HEAD
-=======
 export const generateRandomBlogPost = (): BlogPost => {
   const titles = [
     'The Future of AI in Business',
@@ -72,4 +70,3 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 12,
   },
 ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896

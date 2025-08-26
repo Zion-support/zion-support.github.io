@@ -164,7 +164,6 @@ module.exports = {
         'scale-in': 'scaleIn 0.3s ease-out',
         'glow': 'glow 2s ease-in-out infinite alternate',
         'spin-slow': 'spin 8s linear infinite',
-=======
         'shimmer': 'shimmer 2s linear infinite',
         'neon-pulse': 'neonPulse 1.5s ease-in-out infinite alternate',
         'matrix-rain': 'matrixRain 20s linear infinite',

@@ -1,11 +1,6 @@
 import React from 'react';
 export default function TermsOfService() {
   return (
-<<<<<<< HEAD
-    <div className="max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold text-white mb-8">Terms of Service</h1>
-      
-=======
     <div className="max-w-4xl mx-auto space-y-8">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
@@ -13,7 +8,6 @@ export default function TermsOfService() {
           Last updated: {new Date().toLocaleDateString()}
         </p>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
       <div className="space-y-6 text-zion-slate-light">
         <section>
           <h2 className="text-xl font-semibold text-white mb-3">1. Acceptance of Terms</h2>
@@ -42,9 +36,6 @@ export default function TermsOfService() {
         <section>
           <h2 className="text-xl font-semibold text-white mb-3">5. Revisions and Errata</h2>
           <p>
-<<<<<<< HEAD
-            The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete or current.
-=======
             The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete or current. Zion Tech Group may make changes to the materials contained on its website at any time without notice.
           </p>
         </section>
@@ -73,7 +64,6 @@ export default function TermsOfService() {
             <a href="mailto:legal@ziontechgroup.com" className="text-zion-cyan hover:underline">
               legal@ziontechgroup.com
             </a>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
           </p>
         </section>
       </div>

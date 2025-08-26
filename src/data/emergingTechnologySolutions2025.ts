@@ -34,14 +34,8 @@ export interface EmergingTechnologySolution {
   customizationLevel: string;
   innovationLevel: string;
 }
-<<<<<<< HEAD
-
-export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = [
-  // Blockchain & Web3 Solutions
-=======
 export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[] = [
   // Space Technology Infrastructure Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: "blockchain-web3-enterprise-platform",
     title: "Blockchain & Web3 Enterprise Platform - Decentralized Business Solutions",
@@ -106,12 +100,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
     customizationLevel: "Custom blockchain solutions and smart contracts",
     innovationLevel: "Cutting-edge Web3 and blockchain technology"
   },
-<<<<<<< HEAD
-
-  // Quantum Computing Solutions
-=======
   // Biotechnology and Synthetic Biology Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: "quantum-computing-solutions-platform",
     title: "Quantum Computing Solutions Platform - Next-Generation Computing Power",
@@ -150,9 +139,6 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
     targetAudience: [
       "Research institutions",
       "Pharmaceutical companies",
-<<<<<<< HEAD
-      "Financial institutions",
-=======
       "Biotechnology companies",
       "Agricultural companies",
       "Research institutions",
@@ -216,7 +202,6 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
       "Advanced AI applications"
     ],
     targetAudience: [
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
       "Technology companies",
       "Government agencies"
     ],
@@ -242,12 +227,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
     customizationLevel: "Custom quantum algorithms and applications",
     innovationLevel: "Revolutionary quantum computing technology"
   },
-<<<<<<< HEAD
-
-  // Edge Computing & IoT Solutions
-=======
   // Quantum Internet Infrastructure Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: "edge-computing-iot-platform",
     title: "Edge Computing & IoT Platform - Intelligent Edge Intelligence",
@@ -378,12 +358,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
     customizationLevel: "Custom 5G solutions and network configurations",
     innovationLevel: "Cutting-edge 5G and connectivity technology"
   },
-<<<<<<< HEAD
-
-  // Augmented Reality & Virtual Reality Solutions
-=======
   // Autonomous Flying Vehicle Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: "ar-vr-enterprise-platform",
     title: "AR/VR Enterprise Platform - Immersive Business Solutions",
@@ -448,12 +423,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
     customizationLevel: "Custom AR/VR experiences and training programs",
     innovationLevel: "Advanced immersive technology solutions"
   },
-<<<<<<< HEAD
-
-  // Robotics & Automation Solutions
-=======
   // Brain-Computer Interface Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: "robotics-automation-platform",
     title: "Robotics & Automation Platform - Intelligent Automation Solutions",
@@ -483,13 +453,6 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
       "Enhance workplace safety"
     ],
     useCases: [
-<<<<<<< HEAD
-      "Manufacturing automation",
-      "Warehouse and logistics",
-      "Healthcare assistance",
-      "Quality inspection",
-      "Material handling and assembly"
-=======
       "Medical rehabilitation and therapy",
       "Assistive technology for disabled individuals",
       "Neuroscience research and studies",
@@ -560,7 +523,6 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution2025[
       "Electronics and computing",
       "Aerospace and automotive",
       "Environmental and sustainability applications"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
     ],
     targetAudience: [
       "Manufacturing companies",

@@ -35,13 +35,7 @@ export interface InnovativeService {
   competitors: string[];
   uniqueValue: string;
 }
-<<<<<<< HEAD
-
-export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
-  // AI Services
-=======
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: 'ai-autonomous-business-manager',
     title: 'AI Autonomous Business Manager',
@@ -744,29 +738,6 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
     uniqueValue: 'AI-powered autonomous code review with security and quality focus'
   }
 ];
-<<<<<<< HEAD
-
-export const getServicesByCategory = (category: string) => {
-  return INNOVATIVE_SERVICES_2025.filter(service => service.category === category);
-};
-
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return INNOVATIVE_SERVICES_2025.filter(service => 
-    (service.price.monthly && service.price.monthly >= minPrice && service.price.monthly <= maxPrice) ||
-    (service.price.yearly && service.price.yearly >= minPrice && service.price.yearly <= maxPrice)
-  );
-};
-
-export const getTopRatedServices = (limit: number = 10) => {
-  return INNOVATIVE_SERVICES_2025
-    .sort((a, b) => b.rating - a.rating)
-    .slice(0, limit);
-};
-
-export const getServicesByAIScore = (minScore: number) => {
-  return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
-};
-=======
 export const INNOVATIVE_SERVICE_CATEGORIES = [
   'AI & Automation',
   'Quantum Computing',
@@ -777,4 +748,3 @@ export const INNOVATIVE_SERVICE_CATEGORIES = [
   'Data Science',
   'Machine Learning'
 ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896

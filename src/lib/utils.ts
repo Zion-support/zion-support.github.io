@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import clsx, { type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
- 
-=======
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
-<<<<<<< HEAD
-=======
 export function formatDate(date: Date | string): string {
   const d = new Date(date);
   return d.toLocaleDateString('en-US', {
@@ -48,4 +40,3 @@ export function throttle<T extends (...args: any[]) => any>(
     }
   };
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896

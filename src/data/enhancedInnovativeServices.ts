@@ -57,13 +57,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
       "Regulatory compliance automation"
     ],
     benefits: [
-<<<<<<< HEAD
-      "Increase portfolio returns by 15-25%",
-      "Reduce investment risk through AI analysis",
-      "Automated compliance & reporting",
-      "24/7 portfolio monitoring",
-      "Personalized investment strategies"
-=======
       "Reduce contract review time by 85%",
       "Identify 95% of potential legal risks automatically",
       "Ensure 100% regulatory compliance",
@@ -131,7 +124,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
       "Automate tax optimization strategies",
       "Provide 24/7 portfolio monitoring",
       "Ensure regulatory compliance automatically"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
     ],
     useCases: [
       "Wealth management firms",
@@ -147,9 +139,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
       "High-net-worth clients",
       "Institutional investors"
     ],
-<<<<<<< HEAD
-    tags: ["AI", "Financial Advisory", "Wealth Management", "Investment", "Portfolio Optimization"],
-=======
     tags: ["AI", "FinTech", "Investment Management", "Portfolio Optimization", "Wealth Management", "Automation"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
@@ -213,7 +202,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
       "Telemedicine Providers"
     ],
     tags: ["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Deep Learning", "Telemedicine"],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
     marketPrice: "$2,999 - $8,999/month",
@@ -227,12 +215,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["Bloomberg", "Reuters", "Yahoo Finance", "Trading Platforms", "Banking APIs"],
     compliance: ["SEC", "FINRA", "GDPR", "SOC 2", "PCI DSS"]
   },
-<<<<<<< HEAD
-
-  // AI-Powered Healthcare Solutions
-=======
   // 4. Quantum-Safe Cybersecurity Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: "ai-healthcare-diagnostic-platform",
     title: "AI Healthcare Diagnostic & Patient Care Platform",
@@ -287,12 +270,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     integrations: ["Epic", "Cerner", "PACS Systems", "Lab Information Systems", "Pharmacy Systems"],
     compliance: ["HIPAA", "FDA", "SOC 2", "HITECH", "ISO 27001"]
   },
-<<<<<<< HEAD
-
-  // AI-Powered Legal Services
-=======
   // 5. Autonomous Supply Chain Optimization Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: "ai-legal-research-assistant",
     title: "AI Legal Research & Document Analysis Platform",
@@ -912,12 +890,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-<<<<<<< HEAD
-
-  // AI-Powered Education & Learning Platform
-=======
   // 6. AI-Powered Energy Management Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: "ai-education-platform",
     title: "AI-Powered Adaptive Learning & Educational Analytics Platform",
@@ -1038,12 +1011,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-<<<<<<< HEAD
-
-  // AI-Powered Agriculture & Precision Farming
-=======
   // 7. Autonomous Customer Experience Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: "ai-precision-agriculture",
     title: "AI Precision Agriculture & Crop Management Platform",
@@ -1103,12 +1071,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-<<<<<<< HEAD
-
-  // AI-Powered Construction & Project Management
-=======
   // 8. Quantum Machine Learning Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: "ai-construction-management",
     title: "AI Construction Project Management & Safety Platform",
@@ -1168,12 +1131,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-<<<<<<< HEAD
-
-  // AI-Powered Hospitality & Tourism
-=======
   // 9. Autonomous Data Governance Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: "ai-hospitality-platform",
     title: "AI Hospitality Management & Guest Experience Platform",
@@ -1294,12 +1252,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     sla: "99.9%",
     uptime: "99.95%"
   },
-<<<<<<< HEAD
-
-  // AI-Powered Legal Research & Document Analysis
-=======
   // 10. AI-Powered Talent Acquisition Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: "ai-legal-research",
     title: "AI Legal Research & Document Analysis Platform",
@@ -1787,23 +1740,6 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
     uptime: "99.99%"
   }
 ];
-<<<<<<< HEAD
-
-export const getInnovativeServiceByCategory = (category: string) => {
-  return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.category === category);
-};
-
-export const getInnovativeServiceBySubcategory = (subcategory: string) => {
-  return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.subcategory === subcategory);
-};
-
-export const getFeaturedInnovativeServices = () => {
-  return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.rating >= 4.7).slice(0, 8);
-};
-
-export const getServicesByAIScore = (minScore: number) => {
-  return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.aiScore && service.aiScore >= minScore);
-=======
 // Helper functions
 export const getServiceById = (id: string): EnhancedInnovativeService | undefined => {
   return ENHANCED_INNOVATIVE_SERVICES.find(service => service.id === id);
@@ -1826,5 +1762,4 @@ export const searchServices = (query: string): EnhancedInnovativeService[] => {
     service.description.toLowerCase().includes(lowerQuery) ||
     service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
   );
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 };

@@ -5,7 +5,6 @@ export default defineConfig({
   plugins: [
     react(),
   ],
-=======
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
@@ -116,7 +115,6 @@ export default defineConfig({
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
   },
 })
-=======
 	plugins: [react()],
 	resolve: {
 		alias: {

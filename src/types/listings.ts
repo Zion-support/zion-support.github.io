@@ -9,10 +9,6 @@ export interface Listing {
   tags: string[];
   author: {
     name: string;
-<<<<<<< HEAD
-    id: string;
-    avatarUrl?: string;
-=======
     avatar: string;
     rating: number;
     reviews: number;
@@ -46,7 +42,6 @@ export interface ListingFilter {
   priceRange?: {
     min: number;
     max: number;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   };
   images: string[];
   createdAt: string;

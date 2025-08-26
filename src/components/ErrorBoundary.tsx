@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-import React, { Component, ReactNode } from "react";
-
-interface ErrorBoundaryProps {
-  fallback: ReactNode;
-}
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-}
-
-export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError() {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error: unknown) {
-    console.error("ErrorBoundary caught an error", error);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback;
-    }
-    return this.props.children;
-=======
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
@@ -129,7 +98,6 @@ class ErrorBoundary extends Component<Props, State> {
         resetError={resetError}
       />
     );
->>>>>>> origin/main
   }
 }
 

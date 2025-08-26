@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-
-export default function Home() {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-zion-blue-dark text-white">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">Zion Tech Group</h1>
-        <p className="text-zion-slate-light">Welcome to the Tech & AI Marketplace</p>
-      </div>
-=======
 import { HeroSection } from "@/components/HeroSection";
 
 export default function Home() {
@@ -157,11 +145,9 @@ export default function Home() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2900
     </div>
   );
 }
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -498,4 +484,3 @@ const Home = () => {
 };
 
 export default Home;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896

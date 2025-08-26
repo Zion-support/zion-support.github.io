@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import { useContext } from 'react';
-import { AuthContext } from '@/context/auth/AuthContext';
-import type { AuthContextType } from '@/types/auth';
-
-export const useAuth = (): AuthContextType => {
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context as AuthContextType;
-=======
 import { useState, useEffect } from 'react';
 interface User {
   id: string;
@@ -84,5 +72,4 @@ export const useAuth = () => {
     login,
     logout,
   };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 };

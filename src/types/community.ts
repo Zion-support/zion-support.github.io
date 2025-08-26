@@ -56,8 +56,6 @@ export interface ForumCategoryInfo {
     date: string;
   };
 }
-<<<<<<< HEAD
-=======
 export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
   {
     id: 'general',
@@ -108,4 +106,3 @@ export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
     },
   },
 ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
