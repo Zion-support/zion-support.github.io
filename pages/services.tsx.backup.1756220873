@@ -25,7 +25,26 @@ import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-servi
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { newRealServices } from '../data/new-real-services';
+<<<<<<< HEAD
+import { industryRealServices } from '../data/industry-real-services';
+import { professionalServices } from '../data/professional-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
 import { marketValidatedServices } from '../data/market-validated-services';
+import { emergingTechnologyServices } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
+import { curatedMarketServices } from '../data/curated-market-services';
+import { realMarketServices } from '../data/real-market-services';
+import { new2025Services } from '../data/new-2025-services';
+import { newRealInnovations } from '../data/new-real-innovations';
+import { serviceExpansions2025 } from '../data/service-expansions-2025';
+import { newOperationalServices2025 } from '../data/new-operational-services-2025';
+import { revolutionary2025Services } from '../data/revolutionary-2025-services';
+import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
+=======
+import { marketValidatedServices } from '../data/market-validated-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d124
 
 // Import our new service data
 // Note: Removed non-existent data imports (2034 datasets) to prevent build errors.
@@ -42,7 +61,26 @@ import { real2029Q3Additions } from '../data/real-2029-q3-additions';
     ...extraServices,
     ...additionalEnhancedServices,
     ...newRealServices,
+<<<<<<< HEAD
+    ...industryRealServices,
+    ...professionalServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,
+    ...marketValidatedServices,
+    ...emergingTechnologyServices,
+    ...comprehensiveITSolutions,
+    ...curatedMarketServices,
+    ...realMarketServices,
+    ...new2025Services,
+    ...newRealInnovations,
+    ...serviceExpansions2025,
+    ...newOperationalServices2025,
+    ...revolutionary2025Services,
+    ...nextGenInnovations2025
+=======
     ...marketValidatedServices
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d124
   ];
 
   // Dynamic category counts mapped to the same filter logic below
@@ -567,6 +605,16 @@ export default function Services() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.05 }}
                 >
+<<<<<<< HEAD
+                  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/30 h-full relative overflow-hidden">
+                    {/* Background Glow Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div className="relative z-10">
+                      {/* Service Icon */}
+                      <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        🚀
+=======
                   <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 h-full">
                     {/* Service Icon */}
                     <div className="text-4xl mb-4">
@@ -587,6 +635,7 @@ export default function Services() {
                     <div className="mb-4">
                       <div className="text-2xl font-bold text-cyan-400">
                         {typeof (service as any).price === 'number' ? `$${(service as any).price.toLocaleString()}/month` : `${(service as any).price}${(service as any).period ? '' : ''}`}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d124
                       </div>
 
                       {/* Service Name */}
