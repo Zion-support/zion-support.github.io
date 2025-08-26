@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
+import { PerformanceMonitor } from './components/PerformanceOptimizer';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -64,6 +65,7 @@ function App() {
         
         <Footer />
         <ChatAssistant />
+        <PerformanceMonitor />
       </div>
     </Router>
   );
