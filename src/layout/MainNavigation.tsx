@@ -4,11 +4,7 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
-<<<<<<< HEAD
 import { useState, useRef, useEffect } from "react";
-=======
-import { useState } from "react";
->>>>>>> origin/cursor/website-audit-and-enhancement-3805
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -22,7 +18,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const location = useLocation();
   const { t } = useTranslation();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-<<<<<<< HEAD
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -35,8 +30,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3805
 
   const baseLinks = [
     {
@@ -48,6 +41,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'services',
       href: '/services',
+      name: 'Services',
       matches: (path: string) => path.startsWith('/services') || path.includes('quantum') || path.includes('ai-autonomous'),
       hasDropdown: true,
       dropdownItems: [
@@ -62,6 +56,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'solutions',
       href: '/solutions',
+      name: 'Solutions',
       matches: (path: string) => path.startsWith('/solutions'),
       hasDropdown: true,
       dropdownItems: [
@@ -79,257 +74,118 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      key: 'services',
-      href: '/services',
-=======
-      key: 'services',
-      href: '/services',
-      name: 'Services',
->>>>>>> origin/cursor/website-audit-and-enhancement-3805
-      matches: (path: string) => path.startsWith('/services')
-    },
-    {
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
       key: 'talent',
       href: '/talent',
       name: 'Talent',
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
     },
     {
-      key: 'equipment',
-      href: '/equipment',
-      name: 'Equipment',
-      matches: (path: string) => path.startsWith('/equipment')
-    },
-    {
-      key: 'community',
-      href: '/community',
-      name: 'Community',
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
-    },
-    {
-<<<<<<< HEAD
-<<<<<<< HEAD
       key: 'about',
       href: '/about',
-      matches: (path: string) => path === '/about'
+      name: 'About',
+      matches: (path: string) => path.startsWith('/about') || path === '/mission' || path === '/team'
     },
     {
       key: 'contact',
       href: '/contact',
-      matches: (path: string) => path === '/contact'
-=======
-      key: 'company',
-      href: '/about',
-      matches: (path: string) => path.startsWith('/about') || path.startsWith('/careers') || path.startsWith('/team'),
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Contact', href: '/contact' }
-      ]
->>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
-=======
-      key: 'blog',
-      href: '/blog',
-      name: 'Blog',
-      matches: (path: string) => path.startsWith('/blog')
->>>>>>> origin/cursor/website-audit-and-enhancement-3805
+      name: 'Contact',
+      matches: (path: string) => path.startsWith('/contact') || path === '/request-quote'
     }
   ];
 
-  const companyLinks = [
-    { key: 'about', href: '/about', name: 'About' },
-    { key: 'careers', href: '/careers', name: 'Careers' },
-    { key: 'partners', href: '/partners', name: 'Partners' },
-    { key: 'contact', href: '/contact', name: 'Contact' }
-  ];
-
-  const resourceLinks = [
-    { key: 'help', href: '/help', name: 'Help Center' },
-    { key: 'sitemap', href: '/sitemap', name: 'Sitemap' },
-    { key: 'green-it', href: '/green-it', name: 'Green IT' }
-  ];
-
-  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
-  
-  // Add authenticated-only links
-  if (isAuthenticated) {
-    links.push({
-      key: 'dashboard',
-      name: t('nav.dashboard'),
-      href: '/dashboard',
-      matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
-    });
-  }
-  
-  // Add admin-only links
-  if (isAdmin) {
-    links.push({
+  const adminLinks = [
+    {
+      key: 'admin-dashboard',
+      href: '/admin/dashboard',
+      name: 'Admin Dashboard',
+      matches: (path: string) => path.startsWith('/admin')
+    },
+    {
+      key: 'user-management',
+      href: '/admin/users',
+      name: 'User Management',
+      matches: (path: string) => path.startsWith('/admin/users')
+    },
+    {
       key: 'analytics',
-      name: t('nav.analytics'),
-      href: '/analytics',
-      matches: (path: string) => path.startsWith('/analytics')
-    });
-  }
+      href: '/admin/analytics',
+      name: 'Analytics',
+      matches: (path: string) => path.startsWith('/admin/analytics')
+    }
+  ];
 
-  const toggleDropdown = (key: string) => {
-    setActiveDropdown(activeDropdown === key ? null : key);
-  };
-  
-  const isActive = (path: string) => {
-    return location.pathname === path || location.pathname.startsWith(path + '/');
-  };
+  const links = isAdmin ? [...baseLinks, ...adminLinks] : baseLinks;
+
+  const isActive = (link: any) => link.matches(location.pathname);
 
   return (
-    <nav className={cn("navbar ml-6 hidden md:flex", className)} ref={dropdownRef}>
-      <ul className="flex items-center gap-1">
-        {links.map((link) => (
-          <li key={link.name} className="relative">
-            {link.hasDropdown ? (
-              <div className="relative">
-                <button
-                  onClick={() => toggleDropdown(link.key)}
-                  className={cn(
-                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
-                    link.matches(location.pathname)
-                      ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-                  )}
-                >
-                  {link.name}
-                  <ChevronDown className={cn("ml-1 w-3 h-3 transition-transform", activeDropdown === link.key && "rotate-180")} />
-                </button>
-                
-                {activeDropdown === link.key && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-zion-blue-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
-                    <div className="py-2">
-                      {link.dropdownItems?.map((item, index) => (
-                        <Link
-                          key={index}
-                          to={item.href}
-                          className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link
-                to={link.href}
+    <nav className={cn("flex items-center space-x-6", className)} ref={dropdownRef}>
+      {links.map((link) => (
+        <div key={link.key} className="relative">
+          {link.hasDropdown ? (
+            <div className="relative">
+              <button
+                onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}
                 className={cn(
-                  "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
-                  link.matches(location.pathname)
-                    ? "bg-zion-purple/20 text-zion-cyan"
-                    : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  "flex items-center space-x-1 px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                  isActive(link)
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-primary hover:bg-primary/5"
                 )}
               >
                 {link.name}
-              </Link>
-            )}
-          </li>
-        ))}
-        
-        {/* Company Dropdown */}
-        <li className="relative">
-          <button
-            onClick={() => setActiveDropdown(activeDropdown === 'company' ? null : 'company')}
-            className={cn(
-              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
-              isActive('/about') || isActive('/careers') || isActive('/partners') || isActive('/contact')
-                ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-            )}
-          >
-            Company
-            <ChevronDown className="ml-1 h-4 w-4" />
-          </button>
-          
-          {activeDropdown === 'company' && (
-            <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50">
-              {companyLinks.map((link) => (
-                <Link
-                  key={link.key}
-                  to={link.href}
-                  className={cn(
-                    "block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors",
-                    isActive(link.href) && "bg-zion-purple/20 text-zion-cyan"
-                  )}
-                  onClick={() => setActiveDropdown(null)}
-                >
-                  {link.name}
-                </Link>
-              ))}
+                <ChevronDown className={cn(
+                  "h-4 w-4 transition-transform",
+                  activeDropdown === link.key ? "rotate-180" : ""
+                )} />
+              </button>
+              
+              {activeDropdown === link.key && (
+                <div className="absolute top-full left-0 mt-1 w-56 bg-background border border-border rounded-md shadow-lg z-50">
+                  <div className="py-1">
+                    {link.dropdownItems?.map((item) => (
+                      <Link
+                        key={item.href}
+                        to={item.href}
+                        className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-          )}
-        </li>
-
-        {/* Resources Dropdown */}
-        <li className="relative">
-          <button
-            onClick={() => setActiveDropdown(activeDropdown === 'resources' ? null : 'resources')}
-            className={cn(
-              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
-              isActive('/help') || isActive('/sitemap') || isActive('/green-it')
-                ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-            )}
-          >
-            Resources
-            <ChevronDown className="ml-1 h-4 w-4" />
-          </button>
-          
-          {activeDropdown === 'resources' && (
-            <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50">
-              {resourceLinks.map((link) => (
-                <Link
-                  key={link.key}
-                  to={link.href}
-                  className={cn(
-                    "block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors",
-                    isActive(link.href) && "bg-zion-purple/20 text-zion-cyan"
-                  )}
-                  onClick={() => setActiveDropdown(null)}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          )}
-        </li>
-        
-        {/* Messages link with unread counter */}
-        {isAuthenticated && (
-          <li>
+          ) : (
             <Link
-              to="/messages"
+              to={link.href}
               className={cn(
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
-                location.pathname === "/messages" || location.pathname === "/inbox"
-                  ? "bg-zion-purple/20 text-zion-cyan"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                "px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                isActive(link)
+                  ? "text-primary bg-primary/10"
+                  : "text-muted-foreground hover:text-primary hover:bg-primary/5"
               )}
             >
-              <MessageSquare className="w-4 h-4 mr-1" />
-              {t('nav.messages')}
-              {unreadCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  {unreadCount}
-                </span>
-              )}
+              {link.name}
             </Link>
-          </li>
-        )}
-      </ul>
+          )}
+        </div>
+      ))}
+      
+      {isAuthenticated && (
+        <Link
+          to="/dashboard"
+          className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+        >
+          <MessageSquare className="h-4 w-4" />
+          {unreadCount > 0 && (
+            <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-red-600 rounded-full">
+              {unreadCount}
+            </span>
+          )}
+        </Link>
+      )}
     </nav>
   );
 }
