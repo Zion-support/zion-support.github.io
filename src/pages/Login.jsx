@@ -10,14 +10,12 @@ import { SAMPLE_EQUIPMENT } from './EquipmentDetail';
 import { toast } from '@/hooks/use-toast';
 import { useDispatch } from 'react-redux';
 import { setLoggedIn } from '@/store/authSlice';
-
 export default function Login() {
   const { isAuthenticated, user, isLoading } = useAuth();
   const router = useRouter(); // Initialized router
   // location is now router
   const { dispatch } = useCart();
   const reduxDispatch = useDispatch();
-
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
     // It runs when component mounts or router.asPath (containing query) changes
@@ -32,7 +30,6 @@ export default function Login() {
       router.replace(router.pathname, undefined, { shallow: true }); // Use router.replace with shallow routing
     }
   }, [router.asPath, router.pathname, router]); // Depend on router.asPath
-
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
@@ -40,7 +37,6 @@ export default function Login() {
       router.replace(next);
     }
   }, [isAuthenticated, isLoading, router, reduxDispatch]);
-
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
     return (
@@ -49,12 +45,10 @@ export default function Login() {
       </ErrorBoundary>
     );
   }
-
   // Optional: Render a loading indicator while isLoading is true
   if (isLoading) {
     return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
   }
-
   // If authenticated and isLoading is false, the useEffect above should have navigated.
   // Return null or a minimal layout if needed, though direct navigation is preferred.
   return null;

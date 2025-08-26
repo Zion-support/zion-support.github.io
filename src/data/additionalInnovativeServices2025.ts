@@ -31,7 +31,6 @@ export interface AdditionalInnovativeService2025 {
   uptime: string;
   securityFeatures: string[];
 }
-
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService2025[] = [
   // AI-Powered Financial Services
   {
@@ -94,7 +93,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     uptime: "99.99%",
     securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
   },
-
   // AI-Powered Healthcare Solutions
   {
     id: "ai-healthcare-diagnostic-platform",
@@ -156,7 +154,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     uptime: "99.99%",
     securityFeatures: ["HIPAA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"]
   },
-
   // AI-Powered Legal Services
   {
     id: "ai-legal-research-assistant",
@@ -218,7 +215,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     uptime: "99.9%",
     securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
   },
-
   // AI-Powered Education Platform
   {
     id: "ai-personalized-learning-platform",
@@ -280,7 +276,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     uptime: "99.9%",
     securityFeatures: ["FERPA compliance", "End-to-end encryption", "Multi-factor authentication", "Audit logging"]
   },
-
   // AI-Powered Supply Chain Management
   {
     id: "ai-supply-chain-optimization",
@@ -342,7 +337,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     uptime: "99.99%",
     securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
   },
-
   // AI-Powered Real Estate Platform
   {
     id: "ai-real-estate-analytics-platform",
@@ -404,7 +398,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     uptime: "99.9%",
     securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
   },
-
   // AI-Powered Human Resources Platform
   {
     id: "ai-hr-talent-management-platform",
@@ -466,7 +459,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     uptime: "99.9%",
     securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
   },
-
   // AI-Powered Marketing Automation
   {
     id: "ai-marketing-automation-suite",
@@ -528,7 +520,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     uptime: "99.9%",
     securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
   },
-
   // AI-Powered Customer Experience Platform
   {
     id: "ai-customer-experience-platform",
@@ -590,7 +581,6 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     uptime: "99.9%",
     securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
   },
-
   // AI-Powered Product Development Platform
   {
     id: "ai-product-development-platform",

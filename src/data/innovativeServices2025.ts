@@ -35,9 +35,13 @@ export interface InnovativeService {
   competitors: string[];
   uniqueValue: string;
 }
+<<<<<<< HEAD
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
   // AI Services
+=======
+export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   {
     id: 'ai-autonomous-business-manager',
     title: 'AI Autonomous Business Manager',
@@ -740,6 +744,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
     uniqueValue: 'AI-powered autonomous code review with security and quality focus'
   }
 ];
+<<<<<<< HEAD
 
 export const getServicesByCategory = (category: string) => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.category === category);
@@ -761,3 +766,15 @@ export const getTopRatedServices = (limit: number = 10) => {
 export const getServicesByAIScore = (minScore: number) => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
 };
+=======
+export const INNOVATIVE_SERVICE_CATEGORIES = [
+  'AI & Automation',
+  'Quantum Computing',
+  'Blockchain & DeFi',
+  'IoT & Analytics',
+  'Cybersecurity',
+  'Cloud Infrastructure',
+  'Data Science',
+  'Machine Learning'
+];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896

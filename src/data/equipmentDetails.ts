@@ -2,7 +2,6 @@ export interface EquipmentSpecification {
   name: string;
   value: string;
 }
-
 export interface EquipmentDetails {
   id: string;
   name: string;
@@ -22,7 +21,6 @@ export interface EquipmentDetails {
   warranty?: string;
   returnPolicy?: string;
 }
-
 export const EQUIPMENT_DETAILS: Record<string, EquipmentDetails> = {
   "pro-camera-x1000": {
     id: "pro-camera-x1000",

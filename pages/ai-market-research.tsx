@@ -38,13 +38,13 @@ export default function AIMarketResearchPage() {
                   <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>
                   <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
                 </div>
-                <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
+                <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{(service.rating || 4.5).toFixed(1)}</div>
               </div>
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Start a Research Sprint<ArrowRight /></a>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2 w-4 h-4 text-indigo-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-indigo-400"><Phone /><span>{"+1 (555) 123-4567"}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{"contact@ziontechgroup.com"}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{"123 Innovation Drive, Tech City, TC 12345"}</span></div>
               </div>
             </div>
           </div>

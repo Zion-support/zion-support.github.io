@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
@@ -144,5 +145,18 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </Provider>
       </QueryClientProvider>
     </HelmetProvider>
+=======
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App.tsx'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   </React.StrictMode>,
 );

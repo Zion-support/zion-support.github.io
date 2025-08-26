@@ -1,0 +1,36 @@
+import React from "react";
+import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+import { NextSeo } from "@/components/NextSeo";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function EnterpriseAdmin() {
+  const { user } = useAuth();
+  // Check if user has enterprise admin role
+  const isEnterpriseAdmin = user?.role === "enterprise_admin";
+  if (!isEnterpriseAdmin) {
+    return <Navigate to="/unauthorized" />;
+  }
+  return (
+    <ProtectedRoute>
+<<<<<<< HEAD:src/pages/EnterpriseAdmin.tsx
+      <NextSeo
+=======
+      <SEO
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896:broken_files_backup/EnterpriseAdmin.tsx
+        title="Enterprise Admin - Zion AI Marketplace"
+        description="Manage your team's access, roles, and usage on the Zion AI Marketplace."
+        openGraph={{
+          title: "Enterprise Admin - Zion AI Marketplace",
+          description:
+            "Manage your team's access, roles, and usage on the Zion AI Marketplace.",
+        }}
+      />
+      
+      <main className="min-h-screen bg-background">
+        <AdminDashboard />
+      </main>
+      
+    </ProtectedRoute>
+  );
+}

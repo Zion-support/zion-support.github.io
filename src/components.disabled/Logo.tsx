@@ -1,10 +1,7 @@
-
 import { motion } from 'framer-motion';
-
 interface LogoProps {
   className?: string;
 }
-
 export function Logo({ className = '' }: LogoProps) {
   return (
     <motion.div

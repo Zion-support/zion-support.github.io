@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+<<<<<<< HEAD
 import { AuthProvider } from '@/context/auth/AuthProvider';
 import { Provider as ReduxProvider } from 'react-redux';
 import { store } from '@/store'; // Changed to named import
@@ -340,3 +341,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     </>
   );
 }
+=======
+import '../src/App.css';
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2900
