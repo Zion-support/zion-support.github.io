@@ -57,6 +57,21 @@ export function LoginForm() {
       } else if (res.status >= 400 && res.status < 500) {
         toast.error(res.data?.error || 'Invalid credentials');
       }
+
+      await login(data.email, data.password);
+
+      const next = searchParams.get('next') || '/';
+      if (next === '/checkout') {
+        const intended = sessionStorage.getItem('intendedProduct');
+        sessionStorage.removeItem('intendedProduct');
+        if (intended) {
+          navigate(`/checkout?product=${intended}`);
+        } else {
+          navigate('/checkout');
+        }
+      } else {
+        navigate(next);
+      }
     } finally {
       setIsSubmitting(false);
     }

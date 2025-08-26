@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
 import { apiClient } from '@/utils/apiClient';
 
@@ -24,20 +24,16 @@ interface CheckoutForm {
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const location = useLocation();
   const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({
     defaultValues: { name: '', email: '', address: '', city: '', country: '' },
   });
 
   useEffect(() => {
-    const sku = searchParams.get('sku');
-    if (sku) {
-      setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
-      return;
-    }
-
-    const stored = safeStorage.getItem('guestCart');
+    const params = new URLSearchParams(location.search);
+    const productParam = params.get('product');
+    const stored = localStorage.getItem('cart');
     if (stored) {
       try {
         setItems(JSON.parse(stored) as CartItem[]);
@@ -45,22 +41,28 @@ export default function CheckoutPage() {
         setItems([]);
       }
     }
-    // Provide mock data if cart empty
-    setItems([
-      {
-        id: 'prod_mock',
-        name: 'Test Item',
-        price: 25,
-        quantity: 1,
-      },
-    ]);
-  }, [searchParams]);
+    if (productParam) {
+      setItems([
+        { id: productParam, name: 'Test Item', price: 25, quantity: 1 },
+      ]);
+    } else {
+      // Provide mock data if cart empty
+      setItems([
+        {
+          id: 'prod_mock',
+          name: 'Test Item',
+          price: 25,
+          quantity: 1,
+        },
+      ]);
+    }
+  }, [location.search]);
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
 
   const onSubmit = async (data: CheckoutForm) => {
     try {
-      const response = await apiClient('/api/checkout_sessions', {
+      const response = await fetch('/api/stripe/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: subtotal }),
