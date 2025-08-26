@@ -4,11 +4,20 @@ import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 =======
 import path from 'node:path'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-438b
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+=======
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+  ],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
