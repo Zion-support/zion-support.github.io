@@ -5,57 +5,39 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Zion Tech Group — Autonomous Innovation Hub</title>
-        <meta name="description" content="Leading-edge technology solutions and autonomous innovation systems." />
-        <meta property="og:title" content="Zion Tech Group — Autonomous Innovation Hub" />
-        <meta property="og:description" content="Leading-edge technology solutions and autonomous innovation systems." />
+        <title>Zion Tech Group — World&#39;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform</title>
+        <meta name="description" content="Experience the future of autonomous technology with 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and zero-downtime operations. The most advanced autonomous platform ever built." />
+        <meta property="og:title" content="Zion Tech Group — World&#39;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform" />
+        <meta property="og:description" content="Experience the future of autonomous technology with 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and zero-downtime operations." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
-      {/* Futuristic animated background */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        {/* Gradient Nebula Blobs */}
-        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
-        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
-        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />
-        {/* Subtle animated grid */}
-        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid" />
-        {/* Star field */}
-        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]">
-          <div className="twinkle-field absolute inset-0" />
-        </div>
-        {/* Orbital lines */}
-        <div className="orbital">
-          <div className="ring slow h-[48rem] w-[48rem]" />
-          <div className="ring fast h-[36rem] w-[36rem]" />
-          <div className="ring h-[28rem] w-[28rem]" />
-        </div>
-        {/* Scanline overlay */}
-        <div className="scanlines" />
-      </div>
-
-      {/* Header */}
-      <header className="relative z-10">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-          <div className="text-2xl font-bold tracking-wide">
-            <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
-          </div>
-          <div className="hidden gap-6 md:flex">
-            <Link href="/services"><a className="text-white/80 hover:text-white">Services</a></Link>
-            <Link href="/products"><a className="text-white/80 hover:text-white">Products</a></Link>
-            <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a></Link>
-            <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</a></Link>
-          </div>
-        </nav>
-      </header>
-
-      {/* Hero */}
-      <main className="relative z-10">
-        <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
-          <div className="text-center">
-            <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
-              Autonomous cloud systems are live and improving the app in real time
+      
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          {/* Hero Section */}
+          <section className="text-center mb-20">
+            <h1 className="text-6xl font-extrabold mb-8 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-blue-400 bg-clip-text text-transparent">
+              Zion Tech Group
+            </h1>
+            <p className="text-2xl text-white/90 max-w-4xl mx-auto mb-8">
+              The world&#39;s most advanced autonomous innovation hub delivering cutting-edge technology solutions, intelligent automation systems, and the future of cloud-native AI infrastructure.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6 mb-12">
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-cyan-400 font-bold">227+</span> Intelligent Automations
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-fuchsia-400 font-bold">2960+</span> Dynamic Pages
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-blue-400 font-bold">12</span> Core Components
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-green-400 font-bold">100%</span> Autonomous
+              </div>
+              <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
+                <span className="text-yellow-400 font-bold">99.99%</span> Uptime
+              </div>
             </div>
             <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
               <span className="gradient-text">Autonomous Cloud Automations</span>
@@ -477,32 +459,33 @@ export default function HomePage() {
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📖 Core Documentation</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300">Main README</a> - Project overview</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/DEPLOYMENT.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300">Deployment Guide</a> - Setup instructions</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300">Contributing Guide</a> - Development workflow</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300">Performance Guide</a> - Tuning & budgets</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Repository Home</a> - Project overview</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ARCHITECTURE.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Architecture Guide</a> - System design</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/API.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">API Documentation</a> - Integration guide</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/DEPLOYMENT.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Deployment Guide</a> - Setup instructions</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Contributing Guide</a> - Development workflow</li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-purple-400 mb-4 text-center">🔧 Automation Guides</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY.md" target="_blank" rel="noreferrer" className="text-purple-400 hover:text-purple-300">Ultimate Redundancy</a> - System overview</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPREHENSIVE_REDUNDANCY.md" target="_blank" rel="noreferrer" className="text-purple-400 hover:text-purple-300">Comprehensive Redundancy</a> - Advanced features</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_PM2_REDUNDANCY_COMPLETE.md" target="_blank" rel="noreferrer" className="text-purple-400 hover:text-purple-300">PM2 Redundancy</a> - Process management</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_GITHUB_ACTIONS.md" target="_blank" rel="noreferrer" className="text-purple-400 hover:text-purple-300">GitHub Actions</a> - CI/CD automation</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_CONTINUOUS_OPERATION.md" target="_blank" rel="noreferrer" className="text-purple-400 hover:text-purple-300">Continuous Operation</a> - Zero-downtime</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Ultimate Redundancy</a> - System overview</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/COMPREHENSIVE_REDUNDANCY_README.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Comprehensive Redundancy</a> - Advanced features</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/automation/README-REDUNDANCY-SYSTEM.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">PM2 Redundancy</a> - Process management</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/GITHUB_ACTIONS_IMPROVEMENTS.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">GitHub Actions</a> - CI/CD automation</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_IMPLEMENTATION_SUMMARY.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Continuous Operation</a> - Zero-downtime</li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🚀 Advanced Features</h3>
                 <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noreferrer" className="text-green-400 hover:text-green-300">Security Guide</a> - Protection measures</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noreferrer" className="text-green-400 hover:text-green-300">Testing Guide</a> - Quality assurance</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SERVICE_GENERATION_README.md" target="_blank" rel="noreferrer" className="text-green-400 hover:text-green-300">Service Generation</a> - Auto-creation</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY_AUTOMATION.md" target="_blank" rel="noreferrer" className="text-green-400 hover:text-green-300">Automation README</a> - System details</li>
-                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" target="_blank" rel="noreferrer" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Security Guide</a> - Protection measures</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Testing Guide</a> - Quality assurance</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SERVICE_GENERATION_README.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Service Generation</a> - Auto-creation</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Automation README</a> - System details</li>
+                  <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Growth Automation</a> - Scaling systems</li>
                 </ul>
               </div>
             </div>
@@ -585,20 +568,73 @@ export default function HomePage() {
    <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
    <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
-            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Hub — live agents & reports</span></a></Link>
-  
-            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>
-  
-            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>
-  
-            <a href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">GitHub Actions — live workflows</span></a>
-  
-            <a href="https://github.com/Zion-Holdings/zion.app/tree/main/docs" target="_blank" rel="noopener" className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Docs — technical notes & guides</span></a>
-  
-   </div>
-   </section>
-  {/* AUTO-GENERATED: HOME_UPDATER_END */}
- </main>
-    </div>
+          {/* Advanced Features Showcase */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🌟 Advanced Features & Capabilities</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🔐 Security & Compliance</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Automated security scanning</li>
+                  <li>• Vulnerability assessment</li>
+                  <li>• Compliance monitoring</li>
+                  <li>• Threat detection & response</li>
+                  <li>• Zero-trust architecture</li>
+                </ul>
+                <Link href="/SECURITY.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Security Guide →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🧪 Testing & Quality</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Automated testing suites</li>
+                  <li>• Quality assurance</li>
+                  <li>• Performance testing</li>
+                  <li>• Security testing</li>
+                  <li>• Continuous validation</li>
+                </ul>
+                <Link href="/TESTING.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View Testing Guide →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">📈 Performance & Monitoring</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Real-time monitoring</li>
+                  <li>• Performance optimization</li>
+                  <li>• Health checks</li>
+                  <li>• Analytics dashboard</li>
+                  <li>• Predictive maintenance</li>
+                </ul>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View Performance Guide →
+                </a>
+              </div>
+            </div>
+          </section>
+
+          {/* Revolutionary Call to Action */}
+          <section className="text-center mx-auto max-w-4xl px-6 pb-16">
+            <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-12 border border-white/20">
+              <h2 className="text-3xl font-bold text-white mb-6">Ready to Experience the Future of Autonomous Technology?</h2>
+              <p className="text-xl text-white/80 mb-8">
+                Join thousands of organizations leveraging our revolutionary AI-powered platform for unprecedented efficiency, innovation, and zero-downtime operations.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  Start Your Journey
+                </Link>
+                <Link href="/about" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 hover:border-cyan-400/50">
+                  Learn More
+                </Link>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </>
   );
 }
