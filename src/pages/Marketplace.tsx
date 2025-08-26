@@ -14,7 +14,51 @@ import { generateRandomListing } from "@/utils/generateRandomListing";
 import { toast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { SearchSuggestion } from "@/types/search";
-import { ListingView } from "@/types/listings";
+import styles from './Marketplace.module.css';
+import { useViewMode, ViewMode } from '@/context/ViewModeContext';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination';
+
+interface ProductContainerProps {
+  listings: ProductListing[];
+  onRequestQuote: (id: string) => void;
+}
+
+function ProductGrid({ listings, onRequestQuote }: ProductContainerProps) {
+  return (
+    <div className={`${styles.grid} gap-6 product-grid`}>
+      {listings.map(listing => (
+        <ProductListingCard
+          key={listing.id}
+          listing={listing}
+          onRequestQuote={onRequestQuote}
+          view="grid"
+        />
+      ))}
+    </div>
+  );
+}
+
+function ProductList({ listings, onRequestQuote }: ProductContainerProps) {
+  return (
+    <div className={`${styles.list} gap-4 product-list`}>
+      {listings.map(listing => (
+        <ProductListingCard
+          key={listing.id}
+          listing={listing}
+          onRequestQuote={onRequestQuote}
+          view="list"
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function Marketplace() {
   const navigate = useNavigate();
@@ -26,9 +70,10 @@ export default function Marketplace() {
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
   const [isLoading, setIsLoading] = useState(false);
-  const [view, setView] = useState<ListingView>(() =>
-    (localStorage.getItem('marketplaceView') as ListingView) || 'grid'
-  );
+  const { viewMode, setViewMode } = useViewMode();
+  const createViewModeHandler = <T extends ViewMode>(mode: T) => () => setViewMode(mode);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   // Automatically append a new listing every 2 minutes
   useEffect(() => {
@@ -163,18 +208,20 @@ export default function Marketplace() {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => setView('grid')}
-                aria-pressed={view === 'grid'}
-                className={view === 'grid' ? 'text-zion-purple' : 'text-zion-slate-light'}
+                onClick={createViewModeHandler('grid')}
+                aria-label="Grid view"
+                aria-pressed={viewMode === 'grid'}
+                className="text-zion-slate-light"
               >
                 <Grid3X3 className="h-4 w-4" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => setView('list')}
-                aria-pressed={view === 'list'}
-                className={view === 'list' ? 'text-zion-purple' : 'text-zion-slate-light'}
+                onClick={createViewModeHandler('list')}
+                aria-label="List view"
+                aria-pressed={viewMode === 'list'}
+                className="text-zion-slate-light"
               >
                 <ListFilter className="h-4 w-4" />
               </Button>
