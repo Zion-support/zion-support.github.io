@@ -10,41 +10,6 @@
   command_timeout = "30m"
 
 [build.environment]
-  NODE_VERSION = "22.18.0"
-  NEXT_PUBLIC_SITE_URL = "https://ziontechgroup.com"
-
-# [[plugins]]
-#   package = "@netlify/plugin-nextjs"
-
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-
-  schedule = "*/20 * * * *" # every 20 minutes
-
-[[scheduled.functions]]
-  name = "cloud_orchestrator"
-  schedule = "0 */4 * * *" # every 4 hours
-
-[[scheduled.functions]]
-  name = "front-enhancer"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "front-ads-scheduler"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "front-futurizer"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-[[scheduled.functions]]
-  name = "marketing-and-features-promo"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "homepage-updater"
-  schedule = "0 */6 * * *" # every 6 hours
-=======
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -122,3 +87,16 @@
   from = "/ai-creativity-orchestrator"
   to = "/ai-creativity-studio"
   status = 301
+=======
+  NODE_OPTIONS = "--max_old_space_size=4096"
+  NPM_FLAGS = "--prefer-offline"
+  NODE_VERSION = "20"
+  NEXT_PUBLIC_SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY" # Replace with your actual Supabase key
+  NEXT_PUBLIC_REOWN_PROJECT_ID = "VALID_PROJECT_ID_PLACEHOLDER" # IMPORTANT: Replace with your actual Reown AppKit Project ID
+  EXAMPLE_API_URL = "https://jsonplaceholder.typicode.com/todos/1"
+  # Sentry DSNs are intentionally exposed in client bundles. Exclude them from
+  # Netlify's secrets scanning to prevent false positives during deploys.
+  SECRETS_SCAN_OMIT_KEYS = "SENTRY_DSN,NEXT_PUBLIC_SENTRY_DSN"
+
+[functions.environment]
+  SENTRY_LOG_LEVEL = "debug"
