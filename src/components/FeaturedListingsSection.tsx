@@ -1,8 +1,29 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const featuredListings = [
+interface FeaturedListing {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  rating: number;
+  reviews: number;
+  views: number;
+  likes: number;
+  image: string;
+  price: string;
+  tags: string[];
+  duration: string;
+  team: string;
+  location: string;
+  featured: boolean;
+  technologies: string[];
+  highlights: string[];
+}
+
+const featuredListings: FeaturedListing[] = [
   {
     id: 1,
     title: "AI-Powered E-commerce Platform",
@@ -59,108 +80,10 @@ const featuredListings = [
     featured: true,
     technologies: ["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],
     highlights: ["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]
-  },
-  {
-    id: 4,
-    title: "Healthcare AI Diagnostic System",
-    category: "AI & Machine Learning",
-    description: "Advanced medical diagnostic platform using computer vision and machine learning for accurate disease detection",
-    rating: 4.9,
-    reviews: 203,
-    views: 4567,
-    likes: 278,
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    price: "$35,000",
-    tags: ["Python", "TensorFlow", "Computer Vision", "Healthcare"],
-    duration: "6-8 months",
-    team: "8 experts",
-    location: "Remote",
-    featured: true,
-    technologies: ["Python", "TensorFlow", "OpenCV", "Docker", "AWS"],
-    highlights: ["95% Accuracy", "Real-time Processing", "HIPAA Compliant", "API Integration"]
-  },
-  {
-    id: 5,
-    title: "Smart City IoT Platform",
-    category: "IoT Solutions",
-    description: "Comprehensive IoT platform for smart city management with real-time monitoring and analytics",
-    rating: 4.6,
-    reviews: 78,
-    views: 1890,
-    likes: 112,
-    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    price: "$28,000",
-    tags: ["IoT", "Big Data", "Analytics", "Smart Cities"],
-    duration: "5-6 months",
-    team: "7 experts",
-    location: "Hybrid",
-    featured: false,
-    technologies: ["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"],
-    highlights: ["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"]
-  },
-  {
-    id: 6,
-    title: "Enterprise Data Analytics Dashboard",
-    category: "Data Analytics",
-    description: "Comprehensive business intelligence platform with advanced reporting and predictive analytics",
-    rating: 4.8,
-    reviews: 145,
-    views: 3120,
-    likes: 167,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    price: "$25,000",
-    tags: ["Data Analytics", "Business Intelligence", "Dashboard", "Predictive"],
-    duration: "4-5 months",
-    team: "6 experts",
-    location: "Remote",
-    featured: false,
-    technologies: ["Python", "Tableau", "PostgreSQL", "Apache Spark", "React"],
-    highlights: ["Real-time Dashboards", "Predictive Models", "Data Integration", "Custom Reports"]
   }
 ];
 
-const categories = [
-  "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
-];
-
-import React from 'react';
-import Link from 'next/link';
-
-export function FeaturedListingsSection() {
-  const featuredServices = [
-    {
-      title: 'AI-Powered Business Intelligence',
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-      category: 'AI Solutions',
-      rating: 4.9,
-      reviews: 127,
-      price: 'From $2,500',
-      image: '🤖',
-      link: '/services/ai',
-      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
-    },
-    {
-      title: 'Cloud Migration & Optimization',
-      description: 'Seamlessly migrate to the cloud with our proven methodology and expert guidance.',
-      category: 'Cloud & DevOps',
-      rating: 4.8,
-      reviews: 89,
-      price: 'From $5,000',
-      image: '☁️',
-      link: '/services/cloud',
-      features: ['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
-    },
-    {
-      title: 'Cybersecurity Assessment & Implementation',
-      description: 'Comprehensive security evaluation and implementation for enterprise-level protection.',
-      category: 'Cybersecurity',
-      rating: 4.9,
-      reviews: 156,
-      price: 'From $3,500',
-      image: '🔒',
-      link: '/services/cybersecurity',
-      features: ['Security Audits', 'Threat Detection', 'Incident Response']
-export function FeaturedListingsSection() {
+export default function FeaturedListingsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<number | null>(null);
   const [showFilters, setShowFilters] = useState(false);
@@ -178,7 +101,16 @@ export function FeaturedListingsSection() {
         delayChildren: 0.1
       }
     }
-  ];
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -189,89 +121,161 @@ export function FeaturedListingsSection() {
   };
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Featured Services
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
+      <div className="container mx-auto px-4">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Services</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Discover our most popular and highly-rated technology solutions
           </p>
-        </div>
+        </motion.div>
+
+        {/* Category Filter */}
+        <motion.div 
+          className="flex flex-wrap justify-center gap-4 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          {["All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions"].map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-zion-cyan text-zion-blue-dark shadow-lg shadow-zion-cyan/25'
+                  : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredServices.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                    {service.category}
-                  </span>
-                  <div className="flex items-center space-x-1">
-                    {renderStars(service.rating)}
-                    <span className="text-sm text-gray-600 ml-1">({service.reviews})</span>
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {filteredListings.map((listing, index) => (
+            <motion.div
+              key={listing.id}
+              variants={itemVariants}
+              className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25 overflow-hidden group"
+              whileHover={{ y: -8, scale: 1.02 }}
+              onHoverStart={() => setHoveredListing(listing.id)}
+              onHoverEnd={() => setHoveredListing(null)}
+            >
+              {/* Featured Badge */}
+              {listing.featured && (
+                <div className="absolute top-4 right-4 z-10">
+                  <div className="px-3 py-1 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-xs font-semibold rounded-full">
+                    Featured
                   </div>
                 </div>
-                
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {service.image}
-                </div>
-                
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {service.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
+              )}
+
+              {/* Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={listing.image} 
+                  alt={listing.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                {/* Category and Rating */}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-gray-900">{service.price}</span>
+                  <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
+                    {listing.category}
+                  </span>
+                  <div className="flex items-center space-x-1">
+                    {renderStars(listing.rating)}
+                    <span className="text-sm text-zion-slate-light ml-1">({listing.reviews})</span>
+                  </div>
+                </div>
+
+                {/* Title and Description */}
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                  {listing.title}
+                </h3>
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  {listing.description}
+                </p>
+
+                {/* Highlights */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-medium text-white mb-2">Key Features:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {listing.highlights.slice(0, 3).map((highlight, idx) => (
+                      <span key={idx} className="px-2 py-1 bg-white/10 text-zion-slate-light text-xs rounded-md border border-white/20">
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-4 mb-4 text-center">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-zion-cyan">{listing.team}</div>
+                    <div className="text-xs text-zion-slate-light">Team Size</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-zion-cyan">{listing.duration}</div>
+                    <div className="text-xs text-zion-slate-light">Duration</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-zion-cyan">{listing.location}</div>
+                    <div className="text-xs text-zion-slate-light">Location</div>
+                  </div>
+                </div>
+
+                {/* Price and CTA */}
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-white">{listing.price}</div>
                   <Link
-                    href={service.link}
-                    className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
+                    to={`/services/${listing.id}`}
+                    className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
                   >
-                    Learn More →
+                    Get Started
                   </Link>
                 </div>
               </div>
-              
-              <div className="px-6 pb-6">
-                <Link
-                  href={service.link}
-                  className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-        
-        <div className="text-center mt-12">
+        </motion.div>
+
+        {/* View All CTA */}
+        <motion.div 
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
           <Link
-            href="/services"
-            className="inline-flex items-center px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300"
+            to="/comprehensive-services-showcase-2025"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/25"
           >
             View All Services
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            <ArrowRight className="w-5 h-5" />
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
