@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronUpIcon } from '@heroicons/react/24/outline';
+import { ChevronUp } from 'lucide-react';
 
-const ScrollToTop: React.FC = () => {
+export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const ScrollToTop: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: 'smooth'
     });
   };
 
@@ -29,20 +29,18 @@ const ScrollToTop: React.FC = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.button
-          initial={{ opacity: 0, scale: 0.8, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.8, y: 20 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-400/50"
-          aria-label="Scroll to top of page"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white rounded-full shadow-2xl hover:shadow-zion-purple/50 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-zion-purple/30"
+          initial={{ opacity: 0, scale: 0, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0, y: 20 }}
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.95 }}
+          aria-label="Scroll to top"
         >
-          <ChevronUpIcon className="w-6 h-6" />
+          <ChevronUp className="w-6 h-6 mx-auto" />
         </motion.button>
       )}
     </AnimatePresence>
   );
-};
-
-export default ScrollToTop;
+}
