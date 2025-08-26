@@ -30,6 +30,9 @@ const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/Innovati
 const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
+const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/Zion2026InnovativeServicesShowcase'));
+const Zion2026ComprehensivePricingGuide = React.lazy(() => import('./pages/Zion2026ComprehensivePricingGuide'));
+const Zion2026ServicesOverview = React.lazy(() => import('./pages/Zion2026ServicesOverview'));
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -93,6 +96,14 @@ function App() {
               <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
               <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
+              
+              {/* Zion 2026 Innovative Services Routes */}
+              <Route path="/zion-2026-innovative-services" element={<Zion2026InnovativeServicesShowcase />} />
+              <Route path="/innovative-services-2026" element={<Zion2026InnovativeServicesShowcase />} />
+              <Route path="/zion-2026-pricing-guide" element={<Zion2026ComprehensivePricingGuide />} />
+              <Route path="/pricing-guide-2026" element={<Zion2026ComprehensivePricingGuide />} />
+              <Route path="/zion-2026-services-overview" element={<Zion2026ServicesOverview />} />
+              <Route path="/services-overview-2026" element={<Zion2026ServicesOverview />} />
               
               {/* Emerging Tech Routes */}
               <Route path="/emerging-tech" element={<GreenIT />} />
