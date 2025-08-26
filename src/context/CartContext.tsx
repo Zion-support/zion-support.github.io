@@ -40,7 +40,21 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems(prev => prev.filter(i => i.id !== id));
   };
 
-  const clear = () => setItems([]);
+  // Rehydrate cart from localStorage on mount for guests
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const stored = safeStorage.getItem('zion_cart');
+      if (stored) {
+        const parsed = JSON.parse(stored) as CartItem[];
+        reduxDispatch(setItems(parsed));
+      }
+    } catch (error) {
+      console.error('[CartProvider] Failed to load cart from localStorage', error);
+    }
+  }, [reduxDispatch]);
+
+  // Persist updated items to localStorage so guests don't lose their cart
 
   return (
     <CartContext.Provider value={{ items, addItem, removeItem, clear }}>
