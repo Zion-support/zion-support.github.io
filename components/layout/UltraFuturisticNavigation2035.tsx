@@ -87,19 +87,26 @@ const navigationItems: NavigationItem[] = [
   },
   {
     name: 'All Services',
-    href: '/comprehensive-services-showcase-2025',
+    href: '/ultimate-2025-futuristic-services-showcase',
     icon: <Globe className="w-5 h-5" />,
     description: 'Complete portfolio of all technology services',
-    badge: 'Showcase',
+    badge: 'New',
     featured: true,
     children: [
+      { name: 'Ultimate 2025 Showcase', href: '/ultimate-2025-futuristic-services-showcase', description: 'Most advanced services ever created' },
       { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
+<<<<<<< HEAD
       { name: 'Ultimate 2035 Futuristic', href: '/ultimate-2035-futuristic-services-showcase', description: 'Revolutionary future technology', featured: true },
       { name: 'Ultimate 2025 Micro SAAS', href: '/ultimate-2025-micro-saas-showcase', description: 'Latest innovative services', featured: true },
       { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' },
       { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' },
       { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' },
       { name: 'Market Pricing', href: '/market-pricing', description: 'Average market prices & references' },
+=======
+      { name: 'Service Categories', href: '/ultimate-2025-futuristic-services-showcase#categories', description: 'Browse by category' },
+      { name: 'Pricing Comparison', href: '/ultimate-2025-futuristic-services-showcase#pricing', description: 'Compare service costs' },
+      { name: 'Service Search', href: '/ultimate-2025-futuristic-services-showcase#search', description: 'Find specific services' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7e85
       { name: 'Latest Innovations', href: '/revolutionary-2025-services-showcase', description: 'Cutting-edge solutions' },
       { name: '2026 Services', href: '/revolutionary-2026-services', description: 'Next generation solutions' },
       { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },

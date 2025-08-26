@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
 import UltraFuturisticNavigation from './UltraFuturisticNavigation';
 import EnhancedFooter from './EnhancedFooter';
 import UltraAdvancedFuturisticBackground from '../ui/UltraAdvancedFuturisticBackground';
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import UltraFuturisticNavigation2035 from './UltraFuturisticNavigation2035';
+import UltraFuturisticFooter2035 from './UltraFuturisticFooter2035';
+import EnhancedSidebar2025 from './EnhancedSidebar2025';
+import UltraFuturisticBackground2025 from '../backgrounds/UltraFuturisticBackground2025';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7e85
 import TopContactBar from './TopContactBar';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7cbf
 
@@ -31,5 +40,39 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 	);
 };
 
+<<<<<<< HEAD
 export default Layout;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7cbf
+=======
+  return (
+    <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
+      {/* Futuristic Background */}
+      <UltraFuturisticBackground2025 />
+      
+      {/* Layout Structure */}
+      <div className="relative z-10">
+        {/* Top Contact Bar */}
+        <TopContactBar />
+        
+        {/* Navigation */}
+        <UltraFuturisticNavigation2035 />
+        
+        {/* Sidebar and Main Content */}
+        <div className="flex">
+          <EnhancedSidebar2025 
+            isOpen={sidebarOpen} 
+            onClose={() => setSidebarOpen(false)} 
+          />
+          
+          <main id="main" className="flex-1 pt-24 lg:pt-28">
+            {children}
+          </main>
+        </div>
+        
+        {/* Footer */}
+        <UltraFuturisticFooter2035 />
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7e85
