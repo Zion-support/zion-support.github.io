@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Zap, Shield, Globe, Microscope, Atom, Cpu, Database, Lock, Eye, Code, Palette, Cloud, Server, Network, TestTube, Dna, Car, Gamepad2, ShieldCheck } from 'lucide-react';
 import { innovativeRealMicroSaasServices2025 as allData } from '../data/2025-innovative-real-micro-saas-services';
 import UltraAdvancedFuturisticBackground2026V2 from '../components/ui/UltraAdvancedFuturisticBackground2026V2';
-import UltraAdvancedNavigation2026V2 from '../components/layout/UltraAdvancedNavigation2026V2';
+// import UltraAdvancedNavigation2026V2 from '../components/layout/UltraAdvancedNavigation2026V2';
 
 export default function EnhancedServicesShowcase2026V2() {
   const [searchTerm, setSearchTerm] = useState('');

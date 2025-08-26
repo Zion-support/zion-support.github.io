@@ -21,7 +21,29 @@ const nextConfig = {
 			{ source: '/intelligent-content-automation-platform', destination: '/services/intelligent-content-automation-platform', permanent: true },
 			{ source: '/intelligent-hr-analytics-platform', destination: '/services/intelligent-hr-analytics-platform', permanent: true },
 			{ source: '/smart-crm-intelligence-suite', destination: '/services/smart-crm-intelligence-suite', permanent: true },
-			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true }
+			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true },
+
+			// Internal broken slugs -> general services
+			{ source: '/ai-customer-success-automation', destination: '/services', permanent: true },
+			{ source: '/ai-content-marketing-automation', destination: '/services', permanent: true },
+			{ source: '/ai-consciousness-evolution', destination: '/services', permanent: true },
+			{ source: '/ai-autonomous-ecosystem', destination: '/services', permanent: true },
+			{ source: '/ai-ethics-governance', destination: '/services', permanent: true },
+			{ source: '/ai-autonomous-business-process-automation', destination: '/services', permanent: true },
+			{ source: '/ai-customer-intelligence-platform', destination: '/services', permanent: true },
+			{ source: '/quantum-encryption-gateway', destination: '/services', permanent: true },
+			{ source: '/ai-financial-fraud-detection', destination: '/services', permanent: true },
+			{ source: '/quantum-threat-detection', destination: '/services', permanent: true },
+			{ source: '/quantum-identity-verification', destination: '/services', permanent: true },
+			{ source: '/quantum-compliance-automation', destination: '/services', permanent: true },
+			{ source: '/quantum-network-security', destination: '/services', permanent: true },
+			{ source: '/blockchain-enterprise-platform', destination: '/services', permanent: true },
+			{ source: '/quantum-networking', destination: '/services', permanent: true },
+			{ source: '/autonomous-it-operations', destination: '/services', permanent: true },
+			{ source: '/quantum-data-center', destination: '/services', permanent: true },
+			{ source: '/autonomous-vehicle-ai', destination: '/services', permanent: true },
+			{ source: '/quantum-materials-discovery', destination: '/services', permanent: true },
+			{ source: '/quantum-internet-security', destination: '/services', permanent: true }
 		];
 	}
 };

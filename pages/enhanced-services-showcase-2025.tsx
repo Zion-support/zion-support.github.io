@@ -9,7 +9,7 @@ import {
   Sparkles, Target, Award, Lightbulb
 } from 'lucide-react';
 import { innovativeRealMicroSaasServices2025 as allData } from '../data/2025-innovative-real-micro-saas-services';
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+// import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 
 export default function EnhancedServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
