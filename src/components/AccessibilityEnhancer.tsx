@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Switch } from '@/components/ui/switch';
-import { Label } from '@/components/ui/label';
+import * as Switch from '@radix-ui/react-switch';
+import * as Label from '@radix-ui/react-label';
 import { Separator } from '@/components/ui/separator';
 
 interface AccessibilitySettings {
@@ -143,36 +143,45 @@ export function AccessibilityEnhancer() {
               </h4>
               
               <div className="flex items-center justify-between">
-                <Label htmlFor="high-contrast" className="text-sm">
+                <Label.Root htmlFor="high-contrast" className="text-sm">
                   High Contrast
-                </Label>
-                <Switch
+                </Label.Root>
+                <Switch.Root
                   id="high-contrast"
                   checked={settings.highContrast}
                   onCheckedChange={(checked) => handleSettingChange('highContrast', checked)}
-                />
+                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
+                >
+                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
+                </Switch.Root>
               </div>
               
               <div className="flex items-center justify-between">
-                <Label htmlFor="large-text" className="text-sm">
+                <Label.Root htmlFor="large-text" className="text-sm">
                   Large Text
-                </Label>
-                <Switch
+                </Label.Root>
+                <Switch.Root
                   id="large-text"
                   checked={settings.largeText}
                   onCheckedChange={(checked) => handleSettingChange('largeText', checked)}
-                />
+                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
+                >
+                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
+                </Switch.Root>
               </div>
               
               <div className="flex items-center justify-between">
-                <Label htmlFor="focus-indicator" className="text-sm">
+                <Label.Root htmlFor="focus-indicator" className="text-sm">
                   Enhanced Focus
-                </Label>
-                <Switch
+                </Label.Root>
+                <Switch.Root
                   id="focus-indicator"
                   checked={settings.focusIndicator}
                   onCheckedChange={(checked) => handleSettingChange('focusIndicator', checked)}
-                />
+                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
+                >
+                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
+                </Switch.Root>
               </div>
             </div>
             
@@ -186,25 +195,31 @@ export function AccessibilityEnhancer() {
               </h4>
               
               <div className="flex items-center justify-between">
-                <Label htmlFor="reduced-motion" className="text-sm">
+                <Label.Root htmlFor="reduced-motion" className="text-sm">
                   Reduced Motion
-                </Label>
-                <Switch
+                </Label.Root>
+                <Switch.Root
                   id="reduced-motion"
                   checked={settings.reducedMotion}
                   onCheckedChange={(checked) => handleSettingChange('reducedMotion', checked)}
-                />
+                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
+                >
+                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
+                </Switch.Root>
               </div>
               
               <div className="flex items-center justify-between">
-                <Label htmlFor="keyboard-nav" className="text-sm">
+                <Label.Root htmlFor="keyboard-nav" className="text-sm">
                   Keyboard Navigation
-                </Label>
-                <Switch
+                </Label.Root>
+                <Switch.Root
                   id="keyboard-nav"
                   checked={settings.keyboardNavigation}
                   onCheckedChange={(checked) => handleSettingChange('keyboardNavigation', checked)}
-                />
+                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
+                >
+                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
+                </Switch.Root>
               </div>
             </div>
             
@@ -218,14 +233,17 @@ export function AccessibilityEnhancer() {
               </h4>
               
               <div className="flex items-center justify-between">
-                <Label htmlFor="screen-reader" className="text-sm">
+                <Label.Root htmlFor="screen-reader" className="text-sm">
                   Enhanced Support
-                </Label>
-                <Switch
+                </Label.Root>
+                <Switch.Root
                   id="screen-reader"
                   checked={settings.screenReader}
                   onCheckedChange={(checked) => handleSettingChange('screenReader', checked)}
-                />
+                  className="w-[42px] h-[25px] bg-zinc-900 rounded-full relative shadow-[0_2px_10px] shadow-zinc-700 focus:shadow-[0_0_0_2px] focus:shadow-zion-cyan data-[state=checked]:bg-zion-cyan outline-none cursor-default"
+                >
+                  <Switch.Thumb className="block w-[21px] h-[21px] bg-white rounded-full shadow-[0_2px_2px] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[19px]" />
+                </Switch.Root>
               </div>
             </div>
             
