@@ -1,40 +1,56 @@
 User-agent: *
 Allow: /
 
-<<<<<<< HEAD
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
-=======
-# Sitemap location
-Sitemap: https://ziontechgroup.com/sitemap.xml
-Sitemap: https://ziontechgroup.com/sitemap
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-d85a
-
-# Allow all crawlers
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /careers
-Allow: /faq
-Allow: /privacy
-Allow: /terms
 
 # Disallow admin and private areas
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /private/
+Disallow: /internal/
 
-# Crawl delay (optional)
+# Allow important pages
+Allow: /services/
+Allow: /solutions/
+Allow: /about/
+Allow: /contact/
+Allow: /careers/
+Allow: /blog/
+Allow: /news/
+
+# Crawl delay for respectful crawling
 Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block AI training bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
