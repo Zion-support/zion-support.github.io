@@ -1,10 +1,22 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { NewsletterSection } from "@/components/NewsletterSection";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { StatsSection } from "@/components/StatsSection";
+import { TestimonialsSection } from "@/components/home/TestimonialsSection";
+import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { EnhancedServicesShowcase } from "@/components/EnhancedServicesShowcase";
-import { SEO } from "@/components/SEO";
+import { QuickAccess } from "@/components/home/QuickAccess";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -16,9 +28,27 @@ const Home: React.FC = () => {
         tags={["AI", "Technology", "Digital Transformation", "Cloud Services", "Cybersecurity"]}
       />
 
+      <ITServiceRequestHero />
+
       <HeroSection />
       
       <EnhancedServicesShowcase />
+      
+      <QuickAccess />
+      
+      <FeatureCTAs />
+      
+      <FeatureHighlights />
+      
+      <StatsSection />
+      
+      <TestimonialsSection />
+      
+      <CategoriesSection />
+      <BenefitsSection />
+      <HowItWorksSection />
+      <FeaturedListingsSection />
+      <NewsletterSection />
       
       {/* Contact Information Section */}
       <section className="py-20 bg-gradient-to-br from-zion-blue-dark/30 to-zion-blue-dark/50">
@@ -71,6 +101,4 @@ const Home: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default Home;
+}
