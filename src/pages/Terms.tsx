@@ -1,196 +1,280 @@
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import TermsOfService from "@/legal/TermsOfService";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FileText, Shield, Users, Globe, Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
 
 export default function Terms() {
-  return (
-    <>
-      <SEO
-        title="Terms of Service"
-        description="The terms and conditions for using the Zion platform."
-        canonical="https://ziontechgroup.com/terms"
-      />
-      <Header />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4">
-          <TermsOfService />
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
-}
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
+  const lastUpdated = "December 2024";
 
-const Terms: React.FC = () => {
+  const contactInfo = [
+    { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
+    { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
+    { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" }
+  ];
+
   return (
-    <>
-      <SEO 
-        title="Terms of Service - Zion Tech Group" 
-        description="Read the terms and conditions governing your use of Zion Tech Group's marketplace platform." 
-        keywords="terms of service, terms and conditions, Zion Tech Group, user agreement"
-        canonical="https://ziontechgroup.com/terms"
-      />
-      
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <GradientHeading>Terms of Service</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">
+              <FileText className="h-10 w-10 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Terms of Service
+            </h1>
+            <p className="text-xl text-slate-300 mb-4 max-w-3xl mx-auto">
+              Please read these terms carefully before using our services.
+            </p>
+            <p className="text-slate-400">
+              Last updated: {lastUpdated}
             </p>
           </div>
-          
-          <div className="max-w-4xl mx-auto space-y-8">
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
-              <p className="text-zion-slate-light mb-4">
-                By accessing and using Zion Tech Group's marketplace platform ("Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
-              </p>
-            </section>
+        </div>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+        </div>
+      </section>
 
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">2. Description of Service</h2>
-              <p className="text-zion-slate-light mb-4">
-                Zion Tech Group provides a marketplace platform that connects AI and technology professionals with opportunities, services, and equipment. Our platform includes:
+      {/* Content Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 md:p-12">
+            
+            {/* Introduction */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">1. Introduction</h2>
+              <p className="text-slate-300 mb-4">
+                These Terms of Service ("Terms") govern your use of Zion Tech Group's website, services, and applications (collectively, the "Services"). 
+                By accessing or using our Services, you agree to be bound by these Terms.
               </p>
-              <ul className="list-disc list-inside text-zion-slate-light mb-4 space-y-2 ml-4">
-                <li>Talent marketplace for AI and tech professionals</li>
-                <li>Service listings and bookings</li>
-                <li>Equipment and product marketplace</li>
-                <li>Community forums and networking</li>
-                <li>AI matching and recommendation services</li>
+              <p className="text-slate-300">
+                If you do not agree to these Terms, please do not use our Services. We reserve the right to modify these Terms at any time.
+              </p>
+            </div>
+
+            {/* Services Description */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">2. Description of Services</h2>
+              <p className="text-slate-300 mb-4">
+                Zion Tech Group provides technology consulting, development, and implementation services including:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mb-6 space-y-2">
+                <li>AI and Machine Learning solutions</li>
+                <li>Cloud infrastructure and DevOps services</li>
+                <li>Cybersecurity and compliance services</li>
+                <li>Digital transformation consulting</li>
+                <li>IT infrastructure and support</li>
+                <li>Custom software development</li>
               </ul>
-            </section>
+            </div>
 
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">3. User Accounts</h2>
-              <h3 className="text-xl font-semibold text-zion-cyan mb-3">3.1 Account Creation</h3>
-              <p className="text-zion-slate-light mb-4">
-                To access certain features of our Service, you must create an account. You agree to provide accurate, current, and complete information during registration and to update such information to keep it accurate, current, and complete.
+            {/* User Accounts */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">3. User Accounts and Registration</h2>
+              <p className="text-slate-300 mb-4">
+                To access certain Services, you may be required to create an account. You agree to:
               </p>
-              
-              <h3 className="text-xl font-semibold text-zion-cyan mb-3">3.2 Account Security</h3>
-              <p className="text-zion-slate-light mb-4">
-                You are responsible for safeguarding the password and for all activities that occur under your account. You agree not to disclose your password to any third party and to take sole responsibility for any activities or actions under your account.
-              </p>
-            </section>
+              <ul className="list-disc list-inside text-slate-300 mb-6 space-y-2">
+                <li>Provide accurate and complete information</li>
+                <li>Maintain the security of your account credentials</li>
+                <li>Notify us immediately of any unauthorized use</li>
+                <li>Accept responsibility for all activities under your account</li>
+              </ul>
+            </div>
 
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">4. User Conduct</h2>
-              <p className="text-zion-slate-light mb-4">
-                You agree not to use the Service to:
+            {/* Acceptable Use */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">4. Acceptable Use Policy</h2>
+              <p className="text-slate-300 mb-4">
+                You agree not to use our Services to:
               </p>
-              <ul className="list-disc list-inside text-zion-slate-light mb-4 space-y-2 ml-4">
+              <ul className="list-disc list-inside text-slate-300 mb-6 space-y-2">
                 <li>Violate any applicable laws or regulations</li>
-                <li>Infringe upon the rights of others</li>
-                <li>Upload or transmit malicious code or content</li>
+                <li>Infringe on intellectual property rights</li>
+                <li>Transmit harmful, offensive, or inappropriate content</li>
                 <li>Attempt to gain unauthorized access to our systems</li>
-                <li>Interfere with the proper functioning of the Service</li>
-                <li>Engage in fraudulent or deceptive practices</li>
-                <li>Harass, abuse, or harm other users</li>
+                <li>Interfere with the proper functioning of our Services</li>
+                <li>Engage in any fraudulent or deceptive practices</li>
               </ul>
-            </section>
+            </div>
 
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">5. Content and Intellectual Property</h2>
-              <h3 className="text-xl font-semibold text-zion-cyan mb-3">5.1 User Content</h3>
-              <p className="text-zion-slate-light mb-4">
-                You retain ownership of content you submit to our platform. By submitting content, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and distribute your content in connection with the Service.
+            {/* Intellectual Property */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">5. Intellectual Property Rights</h2>
+              <p className="text-slate-300 mb-4">
+                Our Services and their content are protected by intellectual property laws. You retain ownership of content you submit, 
+                but grant us a license to use it for service provision.
+              </p>
+              <p className="text-slate-300">
+                We retain all rights to our proprietary technology, trademarks, and service marks.
+              </p>
+            </div>
+
+            {/* Payment Terms */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">6. Payment Terms</h2>
+              <p className="text-slate-300 mb-4">
+                For paid services, you agree to:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mb-6 space-y-2">
+                <li>Pay all fees in accordance with our pricing</li>
+                <li>Provide accurate billing information</li>
+                <li>Pay applicable taxes</li>
+                <li>Maintain valid payment methods</li>
+              </ul>
+              <p className="text-slate-300">
+                Late payments may result in service suspension or termination.
+              </p>
+            </div>
+
+            {/* Service Level Agreements */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">7. Service Level Agreements</h2>
+              <p className="text-slate-300 mb-4">
+                Our services include:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mb-6 space-y-2">
+                <li>Professional and timely service delivery</li>
+                <li>Quality assurance and testing</li>
+                <li>Ongoing support and maintenance</li>
+                <li>Documentation and training</li>
+              </ul>
+              <p className="text-slate-300">
+                Specific SLAs will be detailed in individual service agreements.
+              </p>
+            </div>
+
+            {/* Privacy and Data */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">8. Privacy and Data Protection</h2>
+              <p className="text-slate-300 mb-4">
+                Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, 
+                which is incorporated into these Terms by reference.
+              </p>
+              <p className="text-slate-300">
+                We implement appropriate security measures to protect your data and comply with applicable data protection laws.
+              </p>
+            </div>
+
+            {/* Limitation of Liability */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">9. Limitation of Liability</h2>
+              <p className="text-slate-300 mb-4">
+                To the maximum extent permitted by law, Zion Tech Group shall not be liable for:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mb-6 space-y-2">
+                <li>Indirect, incidental, or consequential damages</li>
+                <li>Loss of profits, data, or business opportunities</li>
+                <li>Service interruptions or technical issues</li>
+                <li>Third-party actions or content</li>
+              </ul>
+              <p className="text-slate-300">
+                Our total liability shall not exceed the amount paid for the specific service in question.
+              </p>
+            </div>
+
+            {/* Disclaimers */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">10. Disclaimers</h2>
+              <p className="text-slate-300 mb-4">
+                Our Services are provided "as is" and "as available" without warranties of any kind. We disclaim all warranties, 
+                including but not limited to:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mb-6 space-y-2">
+                <li>Implied warranties of merchantability</li>
+                <li>Fitness for a particular purpose</li>
+                <li>Non-infringement of third-party rights</li>
+                <li>Uninterrupted or error-free service</li>
+              </ul>
+            </div>
+
+            {/* Indemnification */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">11. Indemnification</h2>
+              <p className="text-slate-300">
+                You agree to indemnify and hold harmless Zion Tech Group from any claims, damages, or expenses arising from your use 
+                of our Services or violation of these Terms.
+              </p>
+            </div>
+
+            {/* Termination */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">12. Termination</h2>
+              <p className="text-slate-300 mb-4">
+                Either party may terminate these Terms with written notice. Upon termination:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mb-6 space-y-2">
+                <li>Your access to Services will cease</li>
+                <li>You must pay any outstanding fees</li>
+                <li>We will return or destroy your data as agreed</li>
+                <li>Surviving provisions will remain in effect</li>
+              </ul>
+            </div>
+
+            {/* Governing Law */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">13. Governing Law and Dispute Resolution</h2>
+              <p className="text-slate-300 mb-4">
+                These Terms are governed by the laws of Delaware, United States. Any disputes will be resolved through:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mb-6 space-y-2">
+                <li>Good faith negotiations</li>
+                <li>Mediation if negotiations fail</li>
+                <li>Binding arbitration as a last resort</li>
+              </ul>
+            </div>
+
+            {/* Changes to Terms */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">14. Changes to Terms</h2>
+              <p className="text-slate-300">
+                We may modify these Terms at any time. We will notify you of significant changes via email or website notice. 
+                Continued use of our Services constitutes acceptance of the modified Terms.
+              </p>
+            </div>
+
+            {/* Contact Information */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-4">15. Contact Information</h2>
+              <p className="text-slate-300 mb-6">
+                If you have questions about these Terms, please contact us:
               </p>
               
-              <h3 className="text-xl font-semibold text-zion-cyan mb-3">5.2 Platform Content</h3>
-              <p className="text-zion-slate-light mb-4">
-                The Service and its original content, features, and functionality are owned by Zion Tech Group and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">6. Marketplace Transactions</h2>
-              <h3 className="text-xl font-semibold text-zion-cyan mb-3">6.1 Service Agreements</h3>
-              <p className="text-zion-slate-light mb-4">
-                When you engage with services or talent through our platform, you enter into agreements with the respective service providers or professionals. Zion Tech Group acts as a facilitator and is not a party to these agreements.
-              </p>
-              
-              <h3 className="text-xl font-semibold text-zion-cyan mb-3">6.2 Payment and Fees</h3>
-              <p className="text-zion-slate-light mb-4">
-                All payments are processed through secure third-party payment processors. We may charge service fees for certain transactions. You agree to pay all applicable fees and taxes.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">7. Privacy and Data Protection</h2>
-              <p className="text-zion-slate-light mb-4">
-                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the Service, to understand our practices regarding the collection and use of your personal information.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">8. Disclaimers and Limitations</h2>
-              <h3 className="text-xl font-semibold text-zion-cyan mb-3">8.1 Service Availability</h3>
-              <p className="text-zion-slate-light mb-4">
-                We strive to provide a reliable and secure platform, but we do not guarantee that the Service will be uninterrupted, secure, or error-free. The Service is provided "as is" and "as available."
-              </p>
-              
-              <h3 className="text-xl font-semibold text-zion-cyan mb-3">8.2 Third-Party Content</h3>
-              <p className="text-zion-slate-light mb-4">
-                We do not endorse, verify, or guarantee the accuracy, completeness, or usefulness of any third-party content on our platform. You use such content at your own risk.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">9. Indemnification</h2>
-              <p className="text-zion-slate-light mb-4">
-                You agree to defend, indemnify, and hold harmless Zion Tech Group and its officers, directors, employees, and agents from and against any claims, damages, obligations, losses, liabilities, costs, or debt arising from your use of the Service.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">10. Termination</h2>
-              <p className="text-zion-slate-light mb-4">
-                We may terminate or suspend your account and access to the Service immediately, without prior notice, for any reason, including breach of these Terms. Upon termination, your right to use the Service will cease immediately.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">11. Governing Law</h2>
-              <p className="text-zion-slate-light mb-4">
-                These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Zion Tech Group operates, without regard to its conflict of law provisions.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">12. Changes to Terms</h2>
-              <p className="text-zion-slate-light mb-4">
-                We reserve the right to modify these Terms at any time. We will notify users of any material changes by posting the new Terms on our website. Your continued use of the Service after such modifications constitutes acceptance of the updated Terms.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">13. Contact Information</h2>
-              <p className="text-zion-slate-light mb-4">
-                If you have any questions about these Terms of Service, please contact us:
-              </p>
-              <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">
-                <p className="text-zion-slate-light mb-2">
-                  <strong>Email:</strong> legal@ziontechgroup.com
-                </p>
-                <p className="text-zion-slate-light mb-2">
-                  <strong>Address:</strong> Zion Tech Group, Legal Department
-                </p>
-                <p className="text-zion-slate-light">
-                  <strong>Phone:</strong> +1 (555) 123-4567
-                </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {contactInfo.map((contact, index) => (
+                  <div key={index} className="flex items-center space-x-3 p-4 bg-slate-700/30 rounded-lg">
+                    <contact.icon className="h-5 w-5 text-cyan-400" />
+                    <div>
+                      <span className="text-slate-400 text-sm">{contact.label}: </span>
+                      <a 
+                        href={contact.href} 
+                        className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                      >
+                        {contact.value}
+                      </a>
+                    </div>
+                  </div>
+                ))}
               </div>
-            </section>
+            </div>
+
+            {/* Back to Home */}
+            <div className="text-center pt-8 border-t border-slate-700">
+              <Link
+                to="/"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+              >
+                Back to Home
+              </Link>
+            </div>
           </div>
         </div>
-      </main>
-    </>
+      </section>
+    </div>
   );
-};
-
-export default Terms;
+}

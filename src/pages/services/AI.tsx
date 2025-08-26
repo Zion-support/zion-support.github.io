@@ -1,128 +1,114 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Shield, 
-  Lock, 
-  Eye, 
+  Brain, 
+  Cpu, 
   Zap, 
   Target, 
   Users, 
+  Shield, 
+  TrendingUp, 
   CheckCircle,
   ArrowRight,
   Play,
   Code,
   Database,
   Cloud,
+  Lock,
   BarChart3,
-  AlertTriangle,
-  Key,
-  Network,
-  Server,
-  Monitor,
-  CreditCard
+  Eye,
+  MessageSquare,
+  Heart,
+  DollarSign,
+  Factory,
+  ShoppingCart
 } from 'lucide-react';
 
-export default function CybersecurityServices() {
-  const cyberServices = [
+export default function AIServices() {
+  const aiServices = [
     {
-      name: "Security Assessment & Auditing",
-      description: "Comprehensive security evaluation and compliance auditing",
-      icon: Eye,
+      name: "AI Strategy & Consulting",
+      description: "Strategic guidance on implementing AI solutions across your organization",
+      icon: Target,
       features: [
-        "Vulnerability assessments",
-        "Penetration testing",
-        "Security audits and compliance",
-        "Risk analysis and reporting"
+        "AI readiness assessment",
+        "Technology roadmap planning",
+        "ROI analysis and business case development",
+        "Change management strategies"
       ],
-      price: "From $3,500",
-      duration: "2-6 weeks"
+      price: "From $2,500",
+      duration: "2-4 weeks"
     },
     {
-      name: "Threat Detection & Response",
-      description: "Advanced threat monitoring and incident response",
-      icon: AlertTriangle,
+      name: "Machine Learning Development",
+      description: "Custom ML models and algorithms tailored to your specific business needs",
+      icon: Brain,
       features: [
-        "24/7 security monitoring",
-        "Threat intelligence",
-        "Incident response planning",
-        "Forensic analysis"
+        "Custom model development",
+        "Data preprocessing and feature engineering",
+        "Model training and optimization",
+        "Performance monitoring and maintenance"
       ],
-      price: "From $5,000/month",
-      duration: "Ongoing"
-    },
-    {
-      name: "Identity & Access Management",
-      description: "Secure user authentication and authorization systems",
-      icon: Key,
-      features: [
-        "Single sign-on (SSO)",
-        "Multi-factor authentication",
-        "Role-based access control",
-        "Privileged access management"
-      ],
-      price: "From $4,200",
+      price: "From $5,000",
       duration: "4-8 weeks"
     },
     {
-      name: "Data Protection & Encryption",
-      description: "Comprehensive data security and encryption solutions",
-      icon: Lock,
+      name: "AI-Powered Applications",
+      description: "Intelligent automation and insights through custom AI applications",
+      icon: Zap,
       features: [
-        "Data encryption at rest and in transit",
-        "Data loss prevention",
-        "Backup and recovery",
-        "Compliance frameworks (GDPR, HIPAA, SOC2)"
+        "Chatbot and virtual assistant development",
+        "Predictive analytics applications",
+        "Computer vision solutions",
+        "Natural language processing systems"
+      ],
+      price: "From $8,500",
+      duration: "6-12 weeks"
+    },
+    {
+      name: "AI Infrastructure & MLOps",
+      description: "Scalable AI infrastructure and machine learning operations",
+      icon: Cloud,
+      features: [
+        "ML pipeline automation",
+        "Model versioning and deployment",
+        "Scalable training infrastructure",
+        "Monitoring and alerting systems"
       ],
       price: "From $6,000",
       duration: "4-10 weeks"
     }
   ];
 
-  const securityTechnologies = [
-    { name: "SIEM", description: "Security Information and Event Management", icon: Monitor },
-    { name: "EDR", description: "Endpoint Detection and Response", icon: Server },
-    { name: "NGFW", description: "Next-Generation Firewall", icon: Network },
-    { name: "WAF", description: "Web Application Firewall", icon: Shield },
-    { name: "DLP", description: "Data Loss Prevention", icon: Database },
-    { name: "IAM", description: "Identity and Access Management", icon: Key }
+  const aiTechnologies = [
+    { name: "TensorFlow", description: "Open-source ML framework", icon: Code },
+    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },
+    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },
+    { name: "Computer Vision", description: "Image and video analysis", icon: Eye },
+    { name: "NLP", description: "Natural language processing", icon: MessageSquare },
+    { name: "AutoML", description: "Automated machine learning", icon: Zap }
   ];
 
-  const complianceFrameworks = [
+  const useCases = [
     {
-      name: "SOC 2",
-      description: "Service Organization Control 2 compliance",
-      icon: Shield,
-      color: "from-green-500 to-emerald-600"
+      industry: "Healthcare",
+      applications: ["Medical image analysis", "Drug discovery", "Patient risk prediction"],
+      icon: Heart
     },
     {
-      name: "ISO 27001",
-      description: "Information Security Management System",
-      icon: Lock,
-      color: "from-blue-500 to-indigo-600"
+      industry: "Finance",
+      applications: ["Fraud detection", "Credit scoring", "Algorithmic trading"],
+      icon: DollarSign
     },
     {
-      name: "GDPR",
-      description: "General Data Protection Regulation",
-      icon: Eye,
-      color: "from-purple-500 to-violet-600"
+      industry: "Manufacturing",
+      applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"],
+      icon: Factory
     },
     {
-      name: "HIPAA",
-      description: "Health Insurance Portability and Accountability Act",
-      icon: Users,
-      color: "from-red-500 to-pink-600"
-    },
-    {
-      name: "PCI DSS",
-      description: "Payment Card Industry Data Security Standard",
-      icon: CreditCard,
-      color: "from-orange-500 to-amber-600"
-    },
-    {
-      name: "NIST",
-      description: "National Institute of Standards and Technology",
-      icon: Target,
-      color: "from-cyan-500 to-blue-600"
+      industry: "Retail",
+      applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
+      icon: ShoppingCart
     }
   ];
 
@@ -133,14 +119,14 @@ export default function CybersecurityServices() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Cybersecurity
+              AI & Machine Learning
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Solutions
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Protect your business with enterprise-grade cybersecurity solutions. From threat detection 
-              to compliance management, we secure your digital assets.
+              Transform your business with cutting-edge artificial intelligence. From strategy to implementation, 
+              we deliver AI solutions that drive real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -171,15 +157,15 @@ export default function CybersecurityServices() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Cybersecurity Services
+              Our AI Services
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Comprehensive security solutions designed to protect your business from evolving threats
+              Comprehensive AI solutions designed to accelerate your digital transformation journey
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {cyberServices.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {aiServices.map((service, index) => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -221,20 +207,20 @@ export default function CybersecurityServices() {
         </div>
       </section>
 
-      {/* Security Technologies Section */}
+      {/* Technologies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Security Technologies
+              Cutting-Edge AI Technologies
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              We leverage cutting-edge security tools and technologies to protect your infrastructure
+              We leverage the latest AI frameworks and tools to deliver exceptional results
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {securityTechnologies.map((tech, index) => (
+            {aiTechnologies.map((tech, index) => (
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
@@ -250,29 +236,36 @@ export default function CybersecurityServices() {
         </div>
       </section>
 
-      {/* Compliance Frameworks Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Compliance & Certifications
+              AI Across Industries
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Meet industry standards and regulatory requirements with our compliance solutions
+              Discover how AI is transforming various sectors and creating new opportunities
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {complianceFrameworks.map((framework, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
               >
-                <div className={`p-3 bg-gradient-to-r ${framework.color} rounded-lg w-12 h-12 mb-4 flex items-center justify-center`}>
-                  <framework.icon className="h-6 w-6 text-white" />
+                <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-12 h-12 mb-4 flex items-center justify-center">
+                  <useCase.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{framework.name}</h3>
-                <p className="text-slate-300 text-sm">{framework.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
+                <ul className="space-y-2">
+                  {useCase.applications.map((app, appIndex) => (
+                    <li key={appIndex} className="text-slate-300 text-sm flex items-center">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3" />
+                      {app}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -284,17 +277,17 @@ export default function CybersecurityServices() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Secure Your Business?
+              Ready to Harness the Power of AI?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Let's discuss how our cybersecurity solutions can protect your organization
+              Let's discuss how AI can transform your business operations and drive growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
-                Schedule Security Assessment
+                Schedule Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
