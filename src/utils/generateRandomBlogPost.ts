@@ -58,25 +58,21 @@ export function generateRandomBlogPost(): BlogPost {
   const noun = nouns[Math.floor(Math.random() * nouns.length)];
   const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)];
   
-  const title = `${adjective} ${topic} ${noun}: A Comprehensive Guide`;
-  const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const title = `${adjective} ${noun} for ${topic}`;
   
   return {
     id: Math.random().toString(36).substr(2, 9),
     title,
-    slug,
     excerpt: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}.`,
     content: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}. We'll dive deep into the fundamentals, examine real-world applications, and provide actionable insights for implementation.`,
-    author: 'Zion Tech Group',
+    author: {
+      name: 'Zion Tech Group',
+      avatar: '/images/zion-tech-group-logo.png'
+    },
     publishedAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
     tags: [topic, 'Technology', 'Innovation', 'Guide'],
-    category: 'Technology',
+    image: '/images/blog-placeholder.jpg',
     readTime: Math.floor(Math.random() * 10) + 5,
-    featured: Math.random() > 0.7,
-    views: Math.floor(Math.random() * 10000) + 100,
-    likes: Math.floor(Math.random() * 500) + 10,
-    comments: Math.floor(Math.random() * 100) + 5
   };
 }
 

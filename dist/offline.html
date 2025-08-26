@@ -4,14 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offline - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <meta name="description" content="You're currently offline. Zion Tech Group micro SAAS services will be available when you reconnect.">
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
-    <meta name="description" content="You're currently offline. Zion Tech Group micro SAAS services will be available when you reconnect.">
->>>>>>> origin/main
     <style>
         * {
             margin: 0;
@@ -21,24 +14,16 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-<<<<<<< HEAD
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: #ffffff;
-<<<<<<< HEAD
-=======
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
->>>>>>> origin/main
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #333;
+            padding: 20px;
         }
 
         .offline-container {
-<<<<<<< HEAD
             text-align: center;
             max-width: 600px;
             background: rgba(255, 255, 255, 0.05);
@@ -54,61 +39,24 @@
             height: 120px;
             margin: 0 auto 30px;
             background: linear-gradient(135deg, #10B981, #059669);
-<<<<<<< HEAD
-=======
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 3rem;
-            text-align: center;
-            max-width: 500px;
-            margin: 2rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .offline-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 2rem;
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
->>>>>>> origin/main
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
             font-size: 48px;
             animation: pulse 2s infinite;
-=======
-            color: white;
-            font-size: 2rem;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
         }
 
-        .offline-icon svg {
-            width: 40px;
-            height: 40px;
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         h1 {
             font-size: 2.5rem;
-<<<<<<< HEAD
             font-weight: 700;
             margin-bottom: 20px;
             background: linear-gradient(135deg, #10B981, #3B82F6);
-<<<<<<< HEAD
-=======
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
->>>>>>> origin/main
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -116,7 +64,6 @@
 
         .subtitle {
             font-size: 1.2rem;
-<<<<<<< HEAD
             color: #94A3B8;
             margin-bottom: 30px;
             line-height: 1.6;
@@ -203,43 +150,21 @@
             margin-bottom: 30px;
             font-size: 0.9rem;
             color: #FCA5A5;
-=======
-            color: #666;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .status-indicator {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: #f8f9fa;
-            border-radius: 25px;
-            margin-bottom: 2rem;
-            border: 1px solid #e9ecef;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
         }
 
         .status-dot {
             width: 8px;
             height: 8px;
-<<<<<<< HEAD
             background: #EF4444;
-=======
-            background: #dc3545;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
             border-radius: 50%;
-            animation: pulse 2s infinite;
+            animation: blink 1.5s infinite;
         }
 
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
         }
 
-<<<<<<< HEAD
         .cached-content {
             margin-top: 30px;
             padding: 20px;
@@ -282,145 +207,27 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #64748B;
             font-size: 0.9rem;
-<<<<<<< HEAD
-=======
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .feature {
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 15px;
-            border: 1px solid #e9ecef;
-            transition: transform 0.2s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-2px);
-        }
-
-        .feature-icon {
-            width: 40px;
-            height: 40px;
-            margin: 0 auto 1rem;
-            background: linear-gradient(135deg, #28a745, #20c997);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        .feature h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-
-        .feature p {
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.4;
-        }
-
-        .retry-button {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 1rem;
-        }
-
-        .retry-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .retry-button:active {
-            transform: translateY(0);
-        }
-
-        .footer {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid #e9ecef;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .footer a {
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
->>>>>>> origin/main
         }
 
         @media (max-width: 768px) {
             .offline-container {
-                padding: 2rem;
-                margin: 1rem;
+                padding: 30px 20px;
             }
 
             h1 {
                 font-size: 2rem;
             }
 
-<<<<<<< HEAD
             .offline-features {
-=======
-            .features {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
                 grid-template-columns: 1fr;
             }
-        }
 
-<<<<<<< HEAD
             .retry-button {
                 display: block;
                 margin: 10px 0;
             }
-=======
-        .loading {
-            display: none;
-            margin-top: 1rem;
         }
 
-<<<<<<< HEAD
-        .loading.show {
-            display: block;
-        }
-
-        .spinner {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #f3f3f3;
-            border-top: 2px solid #667eea;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-        }
-
-=======
->>>>>>> origin/main
         .loading-spinner {
             display: none;
             width: 20px;
@@ -445,23 +252,16 @@
 <body>
     <div class="offline-container">
         <div class="offline-icon">
-<<<<<<< HEAD
             📡
         </div>
 
         <div class="status-indicator">
             <div class="status-dot"></div>
             You're currently offline
-=======
-            <svg fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
-            </svg>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
         </div>
 
         <h1>Connection Lost</h1>
         <p class="subtitle">
-<<<<<<< HEAD
             Don't worry! While you're offline, you can still access some of our content and features that have been cached for you.
         </p>
 
@@ -470,45 +270,13 @@
                 <div class="feature-icon">💾</div>
                 <div class="feature-title">Cached Content</div>
                 <div class="feature-description">Access previously viewed pages and resources</div>
-=======
-            It looks like you've lost your internet connection. Don't worry - we've got you covered with offline features.
-        </p>
-
-        <div class="status-indicator">
-            <div class="status-dot"></div>
-            <span>No Internet Connection</span>
-        </div>
-
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">
-                    <svg fill="currentColor" viewBox="0 0 20 20" width="20" height="20">
-                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                </div>
-                <h3>Cached Content</h3>
-                <p>Access previously viewed pages and resources from your device cache</p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
             </div>
-
             <div class="feature">
-<<<<<<< HEAD
                 <div class="feature-icon">⚡</div>
                 <div class="feature-title">Fast Loading</div>
                 <div class="feature-description">Instant access to cached resources</div>
-=======
-                <div class="feature-icon">
-                    <svg fill="currentColor" viewBox="0 0 20 20" width="20" height="20">
-                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-                    </svg>
-                </div>
-                <h3>Offline Actions</h3>
-                <p>Queue actions to be performed when you're back online</p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
             </div>
-
             <div class="feature">
-<<<<<<< HEAD
                 <div class="feature-icon">🔄</div>
                 <div class="feature-title">Auto-Sync</div>
                 <div class="feature-description">Content will sync when you're back online</div>
@@ -537,44 +305,11 @@
         <div class="footer">
             <p>Zion Tech Group - Micro SAAS Services</p>
             <p>Your business solutions, even when offline</p>
-<<<<<<< HEAD
-=======
-                <div class="feature-icon">
-                    <svg fill="currentColor" viewBox="0 0 20 20" width="20" height="20">
-                        <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"></path>
-                    </svg>
-                </div>
-                <h3>Smart Sync</h3>
-                <p>Automatically sync your data when connection is restored</p>
-            </div>
-        </div>
-
-        <button class="retry-button" onclick="retryConnection()">
-            Try Again
-        </button>
-
-        <div class="loading" id="loading">
-            <div class="spinner"></div>
-            <p>Checking connection...</p>
-        </div>
-
-        <div class="footer">
-            <p>
-                Need help? Contact us at 
-                <a href="mailto:support@ziontechgroup.com">support@ziontechgroup.com</a>
-            </p>
-            <p>
-                Zion Tech Group - Empowering businesses with innovative technology solutions
-            </p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
->>>>>>> origin/main
         </div>
     </div>
 
     <script>
         // Check connection status
-<<<<<<< HEAD
         function updateConnectionStatus() {
             const statusIndicator = document.querySelector('.status-indicator');
             const statusDot = document.querySelector('.status-dot');
@@ -597,39 +332,6 @@
                 `;
                 statusDot.style.background = '#EF4444';
             }
-=======
-        function checkConnection() {
-            return navigator.onLine;
-        }
-
-        // Retry connection
-        function retryConnection() {
-            const loading = document.getElementById('loading');
-            const retryButton = document.querySelector('.retry-button');
-            
-            loading.classList.add('show');
-            retryButton.style.display = 'none';
-
-            // Simulate connection check
-            setTimeout(() => {
-                if (checkConnection()) {
-                    // Connection restored
-                    window.location.reload();
-                } else {
-                    // Still offline
-                    loading.classList.remove('show');
-                    retryButton.style.display = 'block';
-                    
-                    // Show notification
-                    if ('serviceWorker' in navigator && 'Notification' in window) {
-                        new Notification('Still Offline', {
-                            body: 'Your internet connection is still unavailable.',
-                            icon: '/logo192.png'
-                        });
-                    }
-                }
-            }, 2000);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
         }
 
         // Retry connection
@@ -663,34 +365,16 @@
         });
 
         // Listen for online/offline events
-<<<<<<< HEAD
-        window.addEventListener('online', () => {
-            // Connection restored
-            window.location.reload();
-        });
-
-<<<<<<< HEAD
-=======
         window.addEventListener('online', updateConnectionStatus);
         window.addEventListener('offline', updateConnectionStatus);
 
->>>>>>> origin/main
         // Check if we can access cached content
-=======
-        window.addEventListener('offline', () => {
-            // Connection lost
-            console.log('Connection lost');
-        });
-
-        // Check if we can access the service worker
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.ready.then(registration => {
                 console.log('Service Worker is ready');
             });
         }
 
-<<<<<<< HEAD
         // Initialize connection status
         updateConnectionStatus();
 
@@ -700,22 +384,6 @@
                 updateConnectionStatus();
             }
         }, 5000);
-<<<<<<< HEAD
-=======
-        // Request notification permission
-        if ('Notification' in window && Notification.permission === 'default') {
-            Notification.requestPermission();
-        }
-
-        // Auto-retry every 30 seconds
-        setInterval(() => {
-            if (checkConnection()) {
-                window.location.reload();
-            }
-        }, 30000);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
->>>>>>> origin/main
     </script>
 </body>
 </html>
