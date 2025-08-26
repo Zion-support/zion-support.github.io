@@ -33,8 +33,6 @@ import { Globe, Zap } from "lucide-react";
 =======
 import { Globe, Brain, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
-import { EXPANDED_SERVICES, FEATURED_SERVICES, NEW_SERVICES } from "@/data/expandedServices";
-=======
 import { Globe, Zap, Shield, BarChart3, Database, Code, Network } from "lucide-react";
 import { useEffect, useState } from "react";
 import { IT_SERVICES, getITServicesByCategory } from "@/data/itServices";
@@ -42,6 +40,9 @@ import { IT_SERVICES, getITServicesByCategory } from "@/data/itServices";
 import { Globe, Zap, Brain } from "lucide-react";
 import { useEffect, useState } from "react";
 import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
+=======
+import apiClient from "@/services/apiClient";
+import { toast } from "@/hooks/use-toast";
 
 // Enhanced service listings with real pricing and descriptions
 =======
@@ -762,7 +763,21 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function ServicesPage() {
-  const [listings, setListings] = useState<ProductListing[]>([...SERVICE_LISTINGS, ...MICRO_SAAS_SERVICES]);
+  const [listings, setListings] = useState<ProductListing[]>(SERVICES);
+
+  useEffect(() => {
+    async function load() {
+      try {
+        const res = await apiClient.get('/services');
+        setListings(res.data as ProductListing[]);
+      } catch (err) {
+        console.error('Failed to fetch services', err);
+        toast.error('Failed to load services. Showing sample data.');
+        setListings(SERVICES);
+      }
+    }
+    load();
+  }, []);
 
   useEffect(() => {
     // Simulate dynamic service generation
