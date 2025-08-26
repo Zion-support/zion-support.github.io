@@ -23,7 +23,8 @@ import {
   Building,
   Award,
   Clock,
-  CheckCircle
+  CheckCircle,
+  FlaskConical
 } from 'lucide-react';
 
 const footerNavigation = {
@@ -38,6 +39,28 @@ const footerNavigation = {
       { name: 'Blockchain', href: '/services/blockchain', icon: Code },
       { name: 'Digital Twin', href: '/services/digital-twin', icon: Building },
       { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
+    ],
+  },
+  solutions: {
+    title: 'Solutions',
+    items: [
+      { name: 'AI & Machine Learning', href: '/solutions#ai-ml' },
+      { name: 'Cybersecurity', href: '/solutions#cybersecurity' },
+      { name: 'Cloud Computing', href: '/solutions#cloud-computing' },
+      { name: 'Data Analytics', href: '/solutions#data-analytics' },
+      { name: 'IoT & Edge', href: '/solutions#iot-edge' },
+      { name: 'Digital Transformation', href: '/solutions#digital-transformation' }
+    ],
+  },
+  research: {
+    title: 'Research',
+    items: [
+      { name: 'Research Areas', href: '/research-development#research-areas' },
+      { name: 'Active Projects', href: '/research-development#active-projects' },
+      { name: 'Publications', href: '/research-development#publications' },
+      { name: 'Patents', href: '/research-development#patents' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Events', href: '/events' }
     ],
   },
   microSaas: {
@@ -122,7 +145,7 @@ export function Footer() {
 
       <div className="container-responsive relative z-10">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company info */}
           <div className="lg:col-span-2">
             <motion.div 
@@ -215,6 +238,8 @@ export function Footer() {
             >
               <h4 className="text-lg font-semibold text-white flex items-center gap-2">
                 {section.title === 'Services' && <Zap className="w-5 h-5 text-zion-cyan" />}
+                {section.title === 'Solutions' && <Rocket className="w-5 h-5 text-zion-cyan" />}
+                {section.title === 'Research' && <FlaskConical className="w-5 h-5 text-zion-purple" />}
                 {section.title === 'Micro SAAS' && <Code className="w-5 h-5 text-zion-purple" />}
                 {section.title === 'Marketplace' && <Building className="w-5 h-5 text-zion-blue" />}
                 {section.title === 'Company' && <Users className="w-5 h-5 text-zion-cyan" />}

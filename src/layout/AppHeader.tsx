@@ -27,7 +27,8 @@ import {
   Video,
   FileText,
   Heart,
-  PanelLeft
+  PanelLeft,
+  FlaskConical
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 
@@ -79,6 +80,32 @@ export function AppHeader() {
         { name: 'Blockchain', href: '/services/blockchain', icon: Lock },
         { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe },
         { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Rocket,
+      dropdown: [
+        { name: 'AI & Machine Learning', href: '/solutions#ai-ml' },
+        { name: 'Cybersecurity', href: '/solutions#cybersecurity' },
+        { name: 'Cloud Computing', href: '/solutions#cloud-computing' },
+        { name: 'Data Analytics', href: '/solutions#data-analytics' },
+        { name: 'IoT & Edge', href: '/solutions#iot-edge' },
+        { name: 'Digital Transformation', href: '/solutions#digital-transformation' }
+      ]
+    },
+    {
+      name: 'Research',
+      href: '/research-development',
+      icon: FlaskConical,
+      dropdown: [
+        { name: 'Research Areas', href: '/research-development#research-areas' },
+        { name: 'Active Projects', href: '/research-development#active-projects' },
+        { name: 'Publications', href: '/research-development#publications' },
+        { name: 'Patents', href: '/research-development#patents' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Events', href: '/events' }
       ]
     },
     {
