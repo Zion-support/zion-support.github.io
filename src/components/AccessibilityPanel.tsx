@@ -1,73 +1,99 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Accessibility, 
-  Eye, 
-  Type, 
-  Volume2, 
-  X,
-  Settings,
-  Contrast,
-  ZoomIn,
-  ZoomOut,
-  RotateCcw
-} from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
   fontSize: number;
   reducedMotion: boolean;
-  highContrastMode: 'default' | 'high' | 'ultra';
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+  focusIndicator: boolean;
+  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
 }
 
-export const AccessibilityPanel: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface AccessibilityPanelProps {
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
+  isOpen,
+  onToggle
+}) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     fontSize: 100,
     reducedMotion: false,
-    highContrastMode: 'default'
+    screenReader: false,
+    keyboardNavigation: false,
+    focusIndicator: true,
+    colorBlindness: 'none'
   });
+
+  const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'audio' | 'navigation'>('general');
 
   useEffect(() => {
     // Load saved settings from localStorage
-    const savedSettings = localStorage.getItem('accessibilitySettings');
+    const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
-      const parsed = JSON.parse(savedSettings);
-      setSettings(parsed);
-      applySettings(parsed);
+      try {
+        const parsed = JSON.parse(savedSettings);
+        setSettings(prev => ({ ...prev, ...parsed }));
+      } catch (error) {
+        console.error('Failed to parse accessibility settings:', error);
+      }
     }
   }, []);
+
+  useEffect(() => {
+    // Apply settings to document
+    applySettings(settings);
+    
+    // Save to localStorage
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
+  }, [settings]);
 
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
-    // Apply high contrast
+    // High contrast
     if (newSettings.highContrast) {
+      root.style.setProperty('--high-contrast', '1');
       root.classList.add('high-contrast');
-      if (newSettings.highContrastMode === 'ultra') {
-        root.classList.add('ultra-contrast');
-      }
     } else {
-      root.classList.remove('high-contrast', 'ultra-contrast');
+      root.style.setProperty('--high-contrast', '0');
+      root.classList.remove('high-contrast');
     }
     
-    // Apply font size
-    root.style.fontSize = `${newSettings.fontSize}%`;
+    // Font size
+    root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
     
-    // Apply reduced motion
+    // Reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
+    
+    // Color blindness
+    root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
+    if (newSettings.colorBlindness !== 'none') {
+      root.classList.add(newSettings.colorBlindness);
+    }
+    
+    // Focus indicator
+    if (newSettings.focusIndicator) {
+      root.classList.add('focus-visible');
+    } else {
+      root.classList.remove('focus-visible');
+    }
   };
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    applySettings(newSettings);
-    localStorage.setItem('accessibilitySettings', JSON.stringify(newSettings));
+  const updateSetting = <K extends keyof AccessibilitySettings>(
+    key: K,
+    value: AccessibilitySettings[K]
+  ) => {
+    setSettings(prev => ({ ...prev, [key]: value }));
   };
 
   const resetSettings = () => {
@@ -75,184 +101,285 @@ export const AccessibilityPanel: React.FC = () => {
       highContrast: false,
       fontSize: 100,
       reducedMotion: false,
-      highContrastMode: 'default'
+      screenReader: false,
+      keyboardNavigation: false,
+      focusIndicator: true,
+      colorBlindness: 'none'
     };
     setSettings(defaultSettings);
-    applySettings(defaultSettings);
-    localStorage.removeItem('accessibilitySettings');
   };
 
-  const increaseFontSize = () => {
-    const newSize = Math.min(settings.fontSize + 10, 200);
-    updateSetting('fontSize', newSize);
-  };
-
-  const decreaseFontSize = () => {
-    const newSize = Math.max(settings.fontSize - 10, 80);
-    updateSetting('fontSize', newSize);
-  };
+  const tabs = [
+    { id: 'general', label: 'General', icon: '⚙️' },
+    { id: 'visual', label: 'Visual', icon: '👁️' },
+    { id: 'audio', label: 'Audio', icon: '🔊' },
+    { id: 'navigation', label: 'Navigation', icon: '⌨️' }
+  ] as const;
 
   return (
     <>
-      {/* Accessibility Toggle Button */}
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 left-4 p-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 z-40"
-        aria-label="Open accessibility settings"
+      {/* Toggle Button */}
+      <button
+        onClick={onToggle}
+        className="fixed bottom-4 left-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300"
+        aria-label="Toggle accessibility panel"
+        title="Accessibility Settings"
       >
-        <Accessibility className="w-6 h-6" />
-      </motion.button>
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
+        </svg>
+      </button>
 
-      {/* Accessibility Panel */}
+      {/* Panel */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setIsOpen(false)}
+            initial={{ opacity: 0, x: -400 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -400 }}
+            className="fixed left-4 bottom-20 z-40 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 overflow-hidden"
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                  <Accessibility className="w-5 h-5 text-zion-cyan" />
-                  Accessibility Settings
-                </h2>
+            {/* Header */}
+            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4">
+              <div className="flex items-center justify-between">
+                <h2 className="text-lg font-semibold">Accessibility Settings</h2>
                 <button
-                  onClick={() => setIsOpen(false)}
-                  className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                  onClick={onToggle}
+                  className="text-white/80 hover:text-white transition-colors"
                   aria-label="Close accessibility panel"
                 >
-                  <X className="w-5 h-5" />
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </button>
               </div>
+            </div>
 
-              {/* Settings */}
-              <div className="space-y-6">
-                {/* High Contrast */}
-                <div>
-                  <label className="flex items-center gap-3 text-white font-medium mb-3">
-                    <Contrast className="w-5 h-5 text-zion-cyan" />
-                    High Contrast Mode
-                  </label>
-                  <div className="space-y-2">
-                    <label className="flex items-center gap-2 text-zion-slate-light">
+            {/* Tabs */}
+            <div className="flex border-b border-gray-200 dark:border-slate-700">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${
+                    activeTab === tab.id
+                      ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50 dark:bg-blue-900/20'
+                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                  }`}
+                >
+                  <span className="mr-2">{tab.icon}</span>
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Content */}
+            <div className="p-4 max-h-96 overflow-y-auto">
+              <AnimatePresence mode="wait">
+                {activeTab === 'general' && (
+                  <motion.div
+                    key="general"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="space-y-4"
+                  >
+                    <div>
+                      <label className="flex items-center space-x-3">
+                        <input
+                          type="checkbox"
+                          checked={settings.highContrast}
+                          onChange={(e) => updateSetting('highContrast', e.target.checked)}
+                          className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                        />
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          High Contrast Mode
+                        </span>
+                      </label>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        Increases contrast for better readability
+                      </p>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Font Size: {settings.fontSize}%
+                      </label>
                       <input
-                        type="checkbox"
-                        checked={settings.highContrast}
-                        onChange={(e) => updateSetting('highContrast', e.target.checked)}
-                        className="w-4 h-4 text-zion-cyan bg-zion-blue-light/20 border-zion-cyan/30 rounded focus:ring-zion-cyan focus:ring-2"
-                      />
-                      Enable high contrast
-                    </label>
-                    {settings.highContrast && (
-                      <div className="ml-6 space-y-2">
-                        <label className="flex items-center gap-2 text-zion-slate-light">
-                          <input
-                            type="radio"
-                            name="contrastMode"
-                            value="high"
-                            checked={settings.highContrastMode === 'high'}
-                            onChange={(e) => updateSetting('highContrastMode', e.target.value)}
-                            className="w-4 h-4 text-zion-cyan bg-zion-blue-light/20 border-zion-cyan/30 focus:ring-zion-cyan focus:ring-2"
-                          />
-                          High contrast
-                        </label>
-                        <label className="flex items-center gap-2 text-zion-slate-light">
-                          <input
-                            type="radio"
-                            name="contrastMode"
-                            value="ultra"
-                            checked={settings.highContrastMode === 'ultra'}
-                            onChange={(e) => updateSetting('highContrastMode', e.target.value)}
-                            className="w-4 h-4 text-zion-cyan bg-zion-blue-light/20 border-zion-cyan/30 focus:ring-zion-cyan focus:ring-2"
-                          />
-                          Ultra high contrast
-                        </label>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Font Size */}
-                <div>
-                  <label className="flex items-center gap-3 text-white font-medium mb-3">
-                    <Type className="w-5 h-5 text-zion-cyan" />
-                    Font Size: {settings.fontSize}%
-                  </label>
-                  <div className="flex items-center gap-3">
-                    <button
-                      onClick={decreaseFontSize}
-                      className="p-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan/20 transition-colors"
-                      aria-label="Decrease font size"
-                    >
-                      <ZoomOut className="w-4 h-4" />
-                    </button>
-                    <div className="flex-1 bg-zion-blue-light/20 rounded-lg h-2">
-                      <div
-                        className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-lg transition-all duration-300"
-                        style={{ width: `${((settings.fontSize - 80) / 120) * 100}%` }}
+                        type="range"
+                        min="50"
+                        max="200"
+                        step="10"
+                        value={settings.fontSize}
+                        onChange={(e) => updateSetting('fontSize', parseInt(e.target.value))}
+                        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                       />
                     </div>
-                    <button
-                      onClick={increaseFontSize}
-                      className="p-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan/20 transition-colors"
-                      aria-label="Increase font size"
-                    >
-                      <ZoomIn className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
 
-                {/* Reduced Motion */}
-                <div>
-                  <label className="flex items-center gap-3 text-white font-medium mb-3">
-                    <Eye className="w-5 h-5 text-zion-cyan" />
-                    Motion Preferences
-                  </label>
-                  <label className="flex items-center gap-2 text-zion-slate-light">
-                    <input
-                      type="checkbox"
-                      checked={settings.reducedMotion}
-                      onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
-                      className="w-4 h-4 text-zion-cyan bg-zion-blue-light/20 border-zion-cyan/30 rounded focus:ring-zion-cyan focus:ring-2"
-                    />
-                    Reduce motion and animations
-                  </label>
-                </div>
+                    <div>
+                      <label className="flex items-center space-x-3">
+                        <input
+                          type="checkbox"
+                          checked={settings.reducedMotion}
+                          onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
+                          className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                        />
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          Reduced Motion
+                        </span>
+                      </label>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        Reduces animations and motion effects
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
 
-                {/* Reset Button */}
-                <div className="pt-4 border-t border-zion-cyan/20">
-                  <button
-                    onClick={resetSettings}
-                    className="w-full px-4 py-2 bg-zion-blue-light/20 border border-zion-cyan/30 text-zion-cyan rounded-lg hover:bg-zion-cyan/20 transition-colors flex items-center justify-center gap-2"
+                {activeTab === 'visual' && (
+                  <motion.div
+                    key="visual"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="space-y-4"
                   >
-                    <RotateCcw className="w-4 h-4" />
-                    Reset to Default
-                  </button>
-                </div>
-              </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Color Blindness Support
+                      </label>
+                      <select
+                        value={settings.colorBlindness}
+                        onChange={(e) => updateSetting('colorBlindness', e.target.value as any)}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      >
+                        <option value="none">None</option>
+                        <option value="protanopia">Protanopia (Red-Blind)</option>
+                        <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
+                        <option value="tritanopia">Tritanopia (Blue-Blind)</option>
+                      </select>
+                    </div>
 
-              {/* Footer */}
-              <div className="mt-6 pt-4 border-t border-zion-cyan/20">
-                <p className="text-xs text-zion-slate-light text-center">
-                  These settings are saved locally and will persist across sessions.
-                </p>
+                    <div>
+                      <label className="flex items-center space-x-3">
+                        <input
+                          type="checkbox"
+                          checked={settings.focusIndicator}
+                          onChange={(e) => updateSetting('focusIndicator', e.target.checked)}
+                          className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                        />
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          Enhanced Focus Indicators
+                        </span>
+                      </label>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        Makes focus indicators more visible
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
+
+                {activeTab === 'audio' && (
+                  <motion.div
+                    key="audio"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="space-y-4"
+                  >
+                    <div>
+                      <label className="flex items-center space-x-3">
+                        <input
+                          type="checkbox"
+                          checked={settings.screenReader}
+                          onChange={(e) => updateSetting('screenReader', e.target.checked)}
+                          className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                        />
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          Screen Reader Mode
+                        </span>
+                      </label>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        Optimizes content for screen readers
+                      </p>
+                    </div>
+
+                    <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                      <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">
+                        Keyboard Shortcuts
+                      </h4>
+                      <div className="text-xs text-blue-700 dark:text-blue-300 space-y-1">
+                        <div>• Alt + A: Toggle accessibility panel</div>
+                        <div>• Tab: Navigate between elements</div>
+                        <div>• Enter/Space: Activate buttons</div>
+                        <div>• Escape: Close modals</div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+
+                {activeTab === 'navigation' && (
+                  <motion.div
+                    key="navigation"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="space-y-4"
+                  >
+                    <div>
+                      <label className="flex items-center space-x-3">
+                        <input
+                          type="checkbox"
+                          checked={settings.keyboardNavigation}
+                          onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}
+                          className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+                        />
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                          Enhanced Keyboard Navigation
+                        </span>
+                      </label>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        Improves keyboard navigation experience
+                      </p>
+                    </div>
+
+                    <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                      <h4 className="text-sm font-medium text-green-800 dark:text-green-200 mb-2">
+                        Navigation Tips
+                      </h4>
+                      <div className="text-xs text-green-700 dark:text-green-300 space-y-1">
+                        <div>• Use Tab to navigate through interactive elements</div>
+                        <div>• Use arrow keys for dropdowns and menus</div>
+                        <div>• Press Enter or Space to activate buttons</div>
+                        <div>• Use Escape to close panels and modals</div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Footer */}
+            <div className="border-t border-gray-200 dark:border-slate-700 p-4 bg-gray-50 dark:bg-slate-700/50">
+              <div className="flex space-x-2">
+                <button
+                  onClick={resetSettings}
+                  className="flex-1 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 border border-gray-300 dark:border-slate-600 rounded-md transition-colors"
+                >
+                  Reset
+                </button>
+                <button
+                  onClick={onToggle}
+                  className="flex-1 px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
+                >
+                  Close
+                </button>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
     </>
   );
 };
+
+export default AccessibilityPanel;
