@@ -175,7 +175,9 @@ import {
   Repeat1Dodecagon,
   Shuffle2Dodecagon,
   SkipBack2Dodecagon,
-  SkipForward2Dodecagon
+  SkipForward2Dodecagon,
+  Building,
+  Handshake
 } from 'lucide-react';
 
 export const FuturisticNavigation: React.FC = () => {
@@ -210,6 +212,20 @@ export const FuturisticNavigation: React.FC = () => {
   };
 
   const navigationItems = [
+    {
+      name: 'Company',
+      href: '/about',
+      icon: Building,
+      color: 'from-zion-purple to-zion-blue',
+      dropdown: [
+        { name: 'About Us', href: '/about', icon: Building, description: 'Our mission, vision, and values' },
+        { name: 'Leadership', href: '/leadership', icon: Users, description: 'Meet our executive team' },
+        { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
+        { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
+        { name: 'Blog', href: '/blog', icon: FileText, description: 'Latest insights and updates' },
+        { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with us' }
+      ]
+    },
     {
       name: 'AI Services',
       href: '/ai-services',
@@ -280,6 +296,20 @@ export const FuturisticNavigation: React.FC = () => {
         { name: 'Professional Services', href: '/marketplace/services', icon: Briefcase, description: 'Expert professional services' },
         { name: 'Talent Network', href: '/marketplace/talent', icon: Users, description: 'Skilled professionals network' },
         { name: 'Innovation Hub', href: '/marketplace/innovation', icon: Lightbulb, description: 'Innovation and R&D services' }
+      ]
+    },
+    {
+      name: 'Support',
+      href: '/help',
+      icon: HelpCircle,
+      color: 'from-zion-green to-zion-cyan',
+      dropdown: [
+        { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Comprehensive help resources' },
+        { name: 'FAQ', href: '/faq', icon: FileText, description: 'Frequently asked questions' },
+        { name: 'Security', href: '/security', icon: Shield, description: 'Security measures and protocols' },
+        { name: 'System Status', href: '/status', icon: Activity, description: 'Real-time system status' },
+        { name: 'Contact Support', href: '/contact', icon: MessageCircle, description: '24/7 customer support' },
+        { name: 'Training Resources', href: '/help/training', icon: BookOpen, description: 'Learning and training materials' }
       ]
     }
   ];

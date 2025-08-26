@@ -170,7 +170,8 @@ import {
   Repeat1Dodecagon,
   Shuffle2Dodecagon,
   SkipBack2Dodecagon,
-  SkipForward2Dodecagon
+  SkipForward2Dodecagon,
+  Cookie
 } from 'lucide-react';
 
 const footerNavigation = {
@@ -247,11 +248,21 @@ const footerNavigation = {
     title: 'Support & Resources',
     items: [
       { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Comprehensive help resources' },
+      { name: 'FAQ', href: '/faq', icon: FileText, description: 'Frequently asked questions' },
       { name: 'Contact Support', href: '/contact', icon: MessageCircle, description: '24/7 customer support' },
-      { name: 'Terms of Service', href: '/terms', icon: FileText, description: 'Legal terms and conditions' },
-      { name: 'Privacy Policy', href: '/privacy', icon: Shield, description: 'Data protection and privacy' },
       { name: 'Security', href: '/security', icon: ShieldCheck, description: 'Security measures and protocols' },
       { name: 'System Status', href: '/status', icon: Activity, description: 'Real-time system status' },
+      { name: 'Training Resources', href: '/help/training', icon: BookOpen, description: 'Learning and training materials' },
+    ],
+  },
+  legal: {
+    title: 'Legal & Compliance',
+    items: [
+      { name: 'Terms of Service', href: '/terms', icon: FileText, description: 'Legal terms and conditions' },
+      { name: 'Privacy Policy', href: '/privacy', icon: Shield, description: 'Data protection and privacy' },
+      { name: 'Cookie Policy', href: '/cookies', icon: Cookie, description: 'Cookie usage and preferences' },
+      { name: 'Accessibility', href: '/accessibility', icon: Eye, description: 'Accessibility compliance' },
+      { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation guide' },
     ],
   },
 };
@@ -290,7 +301,7 @@ export const FuturisticFooter: React.FC = () => {
       <div className="relative z-10">
         {/* Main footer content */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-8">
             {/* Company info */}
             <div className="lg:col-span-2">
               <motion.div
