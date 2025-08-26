@@ -1,6 +1,19 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Palette, GraduationCap, Leaf, Pill, Coins, Building2, Network, Database, Server, Code, ShieldCheck, ZapIcon, GlobeIcon, StarIcon, TrendingUpIcon, UsersIcon, CheckCircleIcon, ArrowRightIcon, CpuIcon } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
+import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
+import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
+import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
+=======
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
@@ -89,6 +102,7 @@ import { researchDevelopmentServices2030 } from '../data/2030-research-developme
 import { futuristicInnovations2031 } from '../data/2031-futuristic-innovations';
 import { enterpriseITSolutions2031 } from '../data/2031-enterprise-it-solutions';
 import { innovativeMicroSaas2031 } from '../data/2031-innovative-micro-saas';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e0ad
 
 export default function HomePage() {
   const heroStats = [
@@ -223,9 +237,14 @@ export default function HomePage() {
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
 
+<<<<<<< HEAD
+      {/* Futuristic Background */}
+      <UltraFuturisticBackground2029 />
+=======
       <UltraFuturisticBackground2030>
         {/* Ultra Advanced Navigation */}
         <UltraFuturisticNavigation2032 />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e0ad
 
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />
@@ -495,6 +514,12 @@ export default function HomePage() {
                 Call Now
               </motion.a>
             </div>
+<<<<<<< HEAD
+          </motion.div>
+        </div>
+      </section>
+    </Layout>
+=======
           </div>
         </section>
 
@@ -556,5 +581,6 @@ export default function HomePage() {
       <UltraFuturisticFooter2032 />
     </UltraFuturisticBackground2030>
   </>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e0ad
   );
 }
