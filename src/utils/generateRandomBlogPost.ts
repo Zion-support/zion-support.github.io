@@ -1,83 +1,89 @@
-import { BlogPost } from '@/types/blog';
+import { BlogPost } from '../types/blog';
 
-<<<<<<< HEAD
-export const generateRandomBlogPost = (): BlogPost => {
-  const titles = [
-    'The Future of Technology',
-    'AI Revolution in 2024',
-    'Digital Transformation Guide',
-    'Cybersecurity Best Practices',
-    'Cloud Computing Trends'
-  ];
-  
-  const authors = [
-    { name: 'Tech Expert', avatar: '/avatars/tech-expert.jpg' },
-    { name: 'AI Specialist', avatar: '/avatars/ai-specialist.jpg' },
-    { name: 'Security Pro', avatar: '/avatars/security-pro.jpg' }
-  ];
-  
-  return {
-    id: Math.random().toString(36).substr(2, 9),
-    title: titles[Math.floor(Math.random() * titles.length)],
-    content: 'This is a sample blog post content that demonstrates our platform capabilities...',
-    excerpt: 'This is a sample blog post excerpt...',
-    author: authors[Math.floor(Math.random() * titles.length)],
-    publishedAt: new Date().toISOString(),
-    readTime: Math.floor(Math.random() * 10) + 1,
-    tags: ['sample', 'technology', 'innovation'],
-    image: '/images/blog-placeholder.jpg'
-  };
-};
-=======
-const titles = [
-  'The Future of AI in Software Development',
-  'Building Scalable Microservices Architecture',
-  'Best Practices for React Performance Optimization',
-  'DevOps Trends to Watch in 2024',
-  'Cybersecurity Essentials for Modern Applications',
-  'Cloud-Native Development Strategies',
-  'Machine Learning in Production Systems',
-  'Modern Frontend Development Patterns'
-];
-
-const authors = [
-  'Sarah Johnson',
-  'Michael Chen',
-  'Emily Rodriguez',
-  'David Kim',
-  'Lisa Thompson',
-  'Alex Wong',
-  'Maria Garcia',
-  'James Wilson'
-];
-
-const categories = [
-  'AI & Machine Learning',
-  'Software Architecture',
-  'Frontend Development',
-  'DevOps & Cloud',
+const topics = [
+  'Artificial Intelligence',
+  'Machine Learning',
+  'Quantum Computing',
   'Cybersecurity',
-  'Backend Development',
-  'Mobile Development',
-  'Data Science'
+  'Cloud Computing',
+  'Blockchain',
+  'Internet of Things',
+  'Data Science',
+  'DevOps',
+  'Software Development'
+];
+
+const adjectives = [
+  'Revolutionary',
+  'Innovative',
+  'Cutting-edge',
+  'Advanced',
+  'Modern',
+  'Efficient',
+  'Scalable',
+  'Secure',
+  'Intelligent',
+  'Automated'
+];
+
+const nouns = [
+  'Solutions',
+  'Technologies',
+  'Platforms',
+  'Systems',
+  'Applications',
+  'Infrastructure',
+  'Architecture',
+  'Frameworks',
+  'Tools',
+  'Services'
+];
+
+const contentSnippets = [
+  'In today\'s rapidly evolving technological landscape, businesses are constantly seeking innovative solutions to stay ahead of the competition.',
+  'The integration of artificial intelligence and machine learning has transformed how organizations approach complex problem-solving.',
+  'Quantum computing represents the next frontier in computational power, offering unprecedented capabilities for scientific research and business applications.',
+  'Cybersecurity has become paramount as digital transformation accelerates across all industries.',
+  'Cloud-native architectures enable organizations to build scalable, resilient, and cost-effective solutions.',
+  'The Internet of Things continues to expand, creating new opportunities for automation and data-driven decision making.',
+  'Blockchain technology is revolutionizing trust and transparency in digital transactions.',
+  'Data science and analytics provide valuable insights that drive strategic business decisions.',
+  'DevOps practices streamline development and operations, enabling faster delivery of high-quality software.',
+  'Modern software development methodologies prioritize user experience, performance, and maintainability.'
 ];
 
 export function generateRandomBlogPost(): BlogPost {
-  const randomTitle = titles[Math.floor(Math.random() * titles.length)];
-  const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
-  const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+  const topic = topics[Math.floor(Math.random() * topics.length)];
+  const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  const noun = nouns[Math.floor(Math.random() * nouns.length)];
+  const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)];
+  
+  const title = `${adjective} ${topic} ${noun}: A Comprehensive Guide`;
+  const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   
   return {
     id: Math.random().toString(36).substr(2, 9),
-    title: randomTitle,
-    excerpt: `This is a sample excerpt for the blog post "${randomTitle}". It provides a brief overview of what readers can expect to learn from this article.`,
-    content: `This is a sample blog post content for "${randomTitle}". In a real application, this would contain the full article content with proper formatting, images, and detailed information about the topic.`,
-    author: randomAuthor,
-    category: randomCategory,
-    publishedAt: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toISOString(),
+    title,
+    slug,
+    excerpt: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}.`,
+    content: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}. We'll dive deep into the fundamentals, examine real-world applications, and provide actionable insights for implementation.`,
+    author: 'Zion Tech Group',
+    publishedAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    tags: [topic, 'Technology', 'Innovation', 'Guide'],
+    category: 'Technology',
     readTime: Math.floor(Math.random() * 10) + 5,
-    tags: ['sample', 'tech', 'development'],
-    slug: randomTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+    featured: Math.random() > 0.7,
+    views: Math.floor(Math.random() * 10000) + 100,
+    likes: Math.floor(Math.random() * 500) + 10,
+    comments: Math.floor(Math.random() * 100) + 5
   };
 }
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+
+export function generateMultipleBlogPosts(count: number): BlogPost[] {
+  const posts: BlogPost[] = [];
+  for (let i = 0; i < count; i++) {
+    posts.push(generateRandomBlogPost());
+  }
+  return posts;
+}

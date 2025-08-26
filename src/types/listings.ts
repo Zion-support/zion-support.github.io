@@ -1,69 +1,94 @@
-export interface ProductListing {
+export interface Listing {
   id: string;
   title: string;
   description: string;
-  category: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
-  subcategory?: string;
-  price: number | null;
+  price: number;
   currency: string;
+  category: string;
   tags: string[];
-<<<<<<< HEAD
-  author: {
-    name: string;
-    id: string;
-    avatarUrl?: string;
-    email?: string;
-  };
   images: string[];
-  createdAt: string;
-  rating?: number;
-  reviewCount?: number;
-  featured?: boolean;
-  aiScore?: number;
-  location?: string;
-  availability?: string;
+  seller: {
+    id: string;
+    name: string;
+    avatar: string;
+    rating: number;
+    reviews: number;
+  };
+  location: {
+    city: string;
+    country: string;
+    coordinates?: [number, number];
+  };
+  status: 'active' | 'sold' | 'expired' | 'draft';
+  createdAt: Date;
+  updatedAt: Date;
+  views: number;
+  favorites: number;
+  condition: 'new' | 'like-new' | 'good' | 'fair' | 'poor';
+  specifications?: Record<string, any>;
+  shipping?: {
+    available: boolean;
+    cost: number;
+    method: string;
+    estimatedDays: number;
+  };
+  returns?: {
+    allowed: boolean;
+    days: number;
+    cost: number;
+  };
 }
 
-export interface ServiceCategory {
-  label: string;
-  value: string;
-  description?: string;
-  icon?: string;
-<<<<<<< HEAD
-=======
-  price: number;
-  rating: number;
-  image: string;
-  features: string[];
-  addons: string[];
-  featured?: boolean;
+export interface ListingFilter {
+  category?: string;
+  priceRange?: {
+    min: number;
+    max: number;
+  };
   location?: string;
-  availability?: string;
-  created_at?: string;
+  condition?: string;
   tags?: string[];
-  author?: string;
-  images?: string[];
-  review_count?: number;
-  ai_score?: number;
-  currency?: string;
-  monthly?: boolean;
-  billing_frequency?: string;
->>>>>>> origin/cursor/build-and-fix-errors-e276
-=======
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
-=======
-  author: string;
-  images: string[];
-  created_at: string;
-  rating: number;
-  review_count: number;
-  featured: boolean;
-  location: string;
-  availability: string;
-  ai_score: number;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+  sellerRating?: number;
+  sortBy?: 'price' | 'date' | 'rating' | 'views';
+  sortOrder?: 'asc' | 'desc';
+}
+
+export interface ListingSearchResult {
+  listings: Listing[];
+  total: number;
+  page: number;
+  limit: number;
+  hasMore: boolean;
+}
+
+export interface ListingFormData {
+  title: string;
+  description: string;
+  price: number;
+  currency: string;
+  category: string;
+  tags: string[];
+  images: File[];
+  condition: string;
+  specifications: Record<string, any>;
+  shipping: {
+    available: boolean;
+    cost: number;
+    method: string;
+    estimatedDays: number;
+  };
+  returns: {
+    allowed: boolean;
+    days: number;
+    cost: number;
+  };
+}
+
+export interface ListingStats {
+  totalListings: number;
+  activeListings: number;
+  totalViews: number;
+  totalFavorites: number;
+  averagePrice: number;
+  categoryDistribution: Record<string, number>;
 }

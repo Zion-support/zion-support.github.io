@@ -1,353 +1,177 @@
-export interface LinkHealthStatus {
+export interface LinkHealthResult {
   url: string;
-<<<<<<< HEAD
-  status: 'healthy' | 'broken' | 'redirect' | 'timeout';
-=======
-  status: 'healthy' | 'broken' | 'external' | 'unknown';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8913
-  httpStatus?: number;
+  status: 'healthy' | 'unhealthy' | 'error';
+  statusCode?: number;
+  responseTime?: number;
   error?: string;
   lastChecked: Date;
-  parentPage?: string;
 }
 
-export interface LinkHealthReport {
-  totalLinks: number;
-  healthyLinks: number;
-  brokenLinks: number;
-<<<<<<< HEAD
-  redirects: number;
-  timeouts: number;
-  brokenLinksList: LinkHealthStatus[];
-=======
-  externalLinks: number;
-  unknownLinks: number;
-  details: LinkHealthStatus[];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8913
-  recommendations: string[];
+export interface LinkHealthConfig {
+  timeout?: number;
+  retries?: number;
+  userAgent?: string;
+  followRedirects?: boolean;
 }
 
 export class LinkHealthChecker {
-  private static instance: LinkHealthChecker;
-<<<<<<< HEAD
-  private linkCache: Map<string, LinkHealthStatus> = new Map();
-  private readonly timeoutMs = 10000;
-=======
-  private checkedLinks: Map<string, LinkHealthStatus> = new Map();
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8913
+  private config: Required<LinkHealthConfig>;
 
-  static getInstance(): LinkHealthChecker {
-    if (!LinkHealthChecker.instance) {
-      LinkHealthChecker.instance = new LinkHealthChecker();
-    }
-    return LinkHealthChecker.instance;
+  constructor(config: LinkHealthConfig = {}) {
+    this.config = {
+      timeout: config.timeout || 10000,
+      retries: config.retries || 3,
+      userAgent: config.userAgent || 'Zion-Tech-Group-Link-Checker/1.0',
+      followRedirects: config.followRedirects !== false
+    };
   }
 
-  async checkLink(url: string, parentPage?: string): Promise<LinkHealthStatus> {
-<<<<<<< HEAD
-    // Check cache first
-    const cached = this.linkCache.get(url);
-    if (cached && Date.now() - cached.lastChecked.getTime() < 24 * 60 * 60 * 1000) {
-      return cached;
-    }
-
+  async checkLink(url: string): Promise<LinkHealthResult> {
+    const startTime = Date.now();
+    
     try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), this.timeoutMs);
-
       const response = await fetch(url, {
         method: 'HEAD',
-        signal: controller.signal,
-        mode: 'no-cors' // Handle CORS issues
+        signal: AbortSignal.timeout(this.config.timeout),
+        headers: {
+          'User-Agent': this.config.userAgent
+        },
+        redirect: this.config.followRedirects ? 'follow' : 'manual'
       });
 
-      clearTimeout(timeoutId);
-
-      const status: LinkHealthStatus = {
-        url,
-        status: 'healthy',
-        httpStatus: response.status,
-        lastChecked: new Date(),
-        parentPage
-      };
-
-      if (response.status >= 400) {
-        status.status = 'broken';
-        status.error = `HTTP ${response.status}`;
-      } else if (response.status >= 300 && response.status < 400) {
-        status.status = 'redirect';
-      }
-
-      this.linkCache.set(url, status);
-      return status;
-
-    } catch (error) {
-      const status: LinkHealthStatus = {
-        url,
-        status: 'broken',
-        lastChecked: new Date(),
-        parentPage,
-        error: error instanceof Error ? error.message : 'Unknown error'
-      };
-
-      if (error instanceof Error && error.name === 'AbortError') {
-        status.status = 'timeout';
-        status.error = 'Request timeout';
-      }
-
-      this.linkCache.set(url, status);
-      return status;
-    }
-  }
-
-  async checkMultipleLinks(urls: string[], parentPage?: string): Promise<LinkHealthStatus[]> {
-    const promises = urls.map(url => this.checkLink(url, parentPage));
-    return Promise.all(promises);
-  }
-
-  generateReport(links: LinkHealthStatus[]): LinkHealthReport {
-    const totalLinks = links.length;
-    const healthyLinks = links.filter(l => l.status === 'healthy').length;
-    const brokenLinks = links.filter(l => l.status === 'broken').length;
-    const redirects = links.filter(l => l.status === 'redirect').length;
-    const timeouts = links.filter(l => l.status === 'timeout').length;
-
-    const recommendations: string[] = [];
-    
-    if (brokenLinks > 0) {
-      recommendations.push(`Fix ${brokenLinks} broken links to improve user experience and SEO`);
-    }
-    
-    if (redirects > 0) {
-      recommendations.push(`Consider updating ${redirects} redirect links to direct URLs for better performance`);
-    }
-    
-    if (timeouts > 0) {
-      recommendations.push(`Investigate ${timeouts} timeout issues - consider increasing timeout or optimizing server response`);
-    }
-
-    if (healthyLinks / totalLinks < 0.9) {
-      recommendations.push('Overall link health is below 90% - implement regular link monitoring');
-    }
-=======
-    // Check if we already checked this link recently
-    const existing = this.checkedLinks.get(url);
-    if (existing && this.isRecentCheck(existing.lastChecked)) {
-      return existing;
-    }
-
-    const status: LinkHealthStatus = {
-      url,
-      status: 'unknown',
-      lastChecked: new Date(),
-      parentPage
-    };
-
-    try {
-      if (this.isExternalLink(url)) {
-        status.status = 'external';
-        // For external links, we'll mark them as healthy for now
-        // In production, you might want to actually check them
-      } else if (this.isInternalLink(url)) {
-        // For internal links, check if the route exists
-        if (this.isValidInternalRoute(url)) {
-          status.status = 'healthy';
-        } else {
-          status.status = 'broken';
-          status.error = 'Route not found in application';
-        }
-      } else if (this.isSpecialProtocol(url)) {
-        // Handle tel:, mailto:, etc.
-        status.status = 'healthy';
+      const responseTime = Date.now() - startTime;
+      
+      if (response.ok || response.status < 400) {
+        return {
+          url,
+          status: 'healthy',
+          statusCode: response.status,
+          responseTime,
+          lastChecked: new Date()
+        };
       } else {
-        status.status = 'unknown';
-        status.error = 'Unrecognized link format';
+        return {
+          url,
+          status: 'unhealthy',
+          statusCode: response.status,
+          responseTime,
+          error: `HTTP ${response.status}: ${response.statusText}`,
+          lastChecked: new Date()
+        };
       }
     } catch (error) {
-      status.status = 'broken';
-      status.error = error instanceof Error ? error.message : 'Unknown error';
+      return {
+        url,
+        status: 'error',
+        error: error instanceof Error ? error.message : 'Unknown error',
+        lastChecked: new Date()
+      };
     }
-
-    this.checkedLinks.set(url, status);
-    return status;
   }
 
-  private isRecentCheck(lastChecked: Date): boolean {
-    const now = new Date();
-    const diffInHours = (now.getTime() - lastChecked.getTime()) / (1000 * 60 * 60);
-    return diffInHours < 24; // Consider checks older than 24 hours as stale
-  }
-
-  private isExternalLink(url: string): boolean {
-    return url.startsWith('http://') || url.startsWith('https://');
-  }
-
-  private isInternalLink(url: string): boolean {
-    return url.startsWith('/') || url.startsWith('#');
-  }
-
-  private isSpecialProtocol(url: string): boolean {
-    return url.startsWith('tel:') || url.startsWith('mailto:') || url.startsWith('sms:');
-  }
-
-  private isValidInternalRoute(url: string): boolean {
-    // Remove query parameters and hash
-    const cleanUrl = url.split('?')[0].split('#')[0];
+  async checkMultipleLinks(urls: string[]): Promise<LinkHealthResult[]> {
+    const results: LinkHealthResult[] = [];
     
-    // Define valid routes based on the App.tsx routing structure
-    const validRoutes = [
-      '/',
-      '/services',
-      '/ai-solutions',
-      '/services-showcase',
-      '/ai-matcher',
-      '/talent-directory',
-      '/talents',
-      '/emerging-tech',
-      '/ai-services',
-      '/cloud-devops',
-      '/enterprise-solutions',
-      '/digital-transformation',
-      '/quantum-neural-network-platform',
-      '/autonomous-business-operations-platform',
-      '/ai-powered-it-asset-management',
-      '/soc2-compliance-automation',
-      '/ai-autonomous-research-assistant',
-      '/5g-enterprise-solutions',
-      '/case-studies',
-      '/help',
-      '/about',
-      '/contact',
-      '/mission',
-      '/team',
-      '/pricing',
-      '/careers',
-      '/partners',
-      '/blog',
-      '/news',
-      '/services-overview',
-      '/services/ai-autonomous-systems',
-      '/services/quantum-technology',
-      '/services/cybersecurity',
-      '/services/it-infrastructure',
-      '/services/micro-saas-solutions',
-      '/services/industry-solutions',
-      '/services/innovative-new-services',
-      '/services/specialized-it-infrastructure',
-      '/innovative-micro-saas-services',
-      '/comprehensive-innovative-services',
-      '/services/enterprise',
-      '/solutions/healthcare'
-    ];
-
-    return validRoutes.includes(cleanUrl);
+    for (const url of urls) {
+      try {
+        const result = await this.checkLink(url);
+        results.push(result);
+      } catch (error) {
+        results.push({
+          url,
+          status: 'error',
+          error: error instanceof Error ? error.message : 'Unknown error',
+          lastChecked: new Date()
+        });
+      }
+    }
+    
+    return results;
   }
 
-  async generateReport(): Promise<LinkHealthReport> {
-    const details = Array.from(this.checkedLinks.values());
-    const totalLinks = details.length;
-    const healthyLinks = details.filter(d => d.status === 'healthy').length;
-    const brokenLinks = details.filter(d => d.status === 'broken').length;
-    const externalLinks = details.filter(d => d.status === 'external').length;
-    const unknownLinks = details.filter(d => d.status === 'unknown').length;
+  async checkLinksWithRetry(url: string): Promise<LinkHealthResult> {
+    let lastError: string | undefined;
+    
+    for (let attempt = 1; attempt <= this.config.retries; attempt++) {
+      try {
+        const result = await this.checkLink(url);
+        if (result.status === 'healthy') {
+          return result;
+        }
+        lastError = result.error;
+      } catch (error) {
+        lastError = error instanceof Error ? error.message : 'Unknown error';
+      }
+      
+      if (attempt < this.config.retries) {
+        await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+      }
+    }
+    
+    return {
+      url,
+      status: 'error',
+      error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
+      lastChecked: new Date()
+    };
+  }
 
-    const recommendations = this.generateRecommendations(details);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8913
+  getHealthSummary(results: LinkHealthResult[]): {
+    total: number;
+    healthy: number;
+    unhealthy: number;
+    errors: number;
+    averageResponseTime: number;
+  } {
+    const total = results.length;
+    const healthy = results.filter(r => r.status === 'healthy').length;
+    const unhealthy = results.filter(r => r.status === 'unhealthy').length;
+    const errors = results.filter(r => r.status === 'error').length;
+    
+    const responseTimes = results
+      .filter(r => r.responseTime !== undefined)
+      .map(r => r.responseTime!);
+    
+    const averageResponseTime = responseTimes.length > 0
+      ? responseTimes.reduce((a, b) => a + b, 0) / responseTimes.length
+      : 0;
 
     return {
-      totalLinks,
-      healthyLinks,
-      brokenLinks,
-<<<<<<< HEAD
-      redirects,
-      timeouts,
-      brokenLinksList: links.filter(l => l.status !== 'healthy'),
-=======
-      externalLinks,
-      unknownLinks,
-      details,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8913
-      recommendations
+      total,
+      healthy,
+      unhealthy,
+      errors,
+      averageResponseTime
     };
   }
 
-<<<<<<< HEAD
-  getCommonBrokenLinkPatterns(): string[] {
-    return [
-      'tel:+1 302 464 0950',
-      'mailto:kleber@ziontechgroup.com',
-      'https://linkedin.com/company/ziontechgroup',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/Zion-Holdings',
-      'https://youtube.com/@ziontechgroup',
-      'https://facebook.com/ziontechgroup',
-      'https://instagram.com/ziontechgroup',
-      'https://discord.gg/ziontechgroup',
-      'https://twitch.tv/ziontechgroup'
-    ];
-  }
-
-  suggestFixes(brokenLink: LinkHealthStatus): string[] {
-    const fixes: string[] = [];
-
-    if (brokenLink.url.startsWith('tel:')) {
-      fixes.push('Replace with clickable phone number that opens phone app');
-    } else if (brokenLink.url.startsWith('mailto:')) {
-      fixes.push('Replace with contact form or ensure email client is properly configured');
-    } else if (brokenLink.url.includes('linkedin.com')) {
-      fixes.push('Verify LinkedIn company page exists or remove link');
-    } else if (brokenLink.url.includes('twitter.com')) {
-      fixes.push('Verify Twitter/X account exists or remove link');
-    } else if (brokenLink.url.includes('github.com')) {
-      fixes.push('Verify GitHub organization exists or remove link');
-    } else if (brokenLink.httpStatus === 404) {
-      fixes.push('Page not found - check if URL has changed or page was removed');
-    } else if (brokenLink.httpStatus === 429) {
-      fixes.push('Rate limited - implement exponential backoff for API calls');
-    }
-
-    return fixes;
-  }
-}
-
-export const linkHealthChecker = LinkHealthChecker.getInstance();
-=======
-  private generateRecommendations(details: LinkHealthStatus[]): string[] {
-    const recommendations: string[] = [];
-
-    const brokenLinks = details.filter(d => d.status === 'broken');
-    if (brokenLinks.length > 0) {
-      recommendations.push(`Fix ${brokenLinks.length} broken internal links`);
-    }
-
-    const externalLinks = details.filter(d => d.status === 'external');
-    if (externalLinks.length > 0) {
-      recommendations.push(`Verify ${externalLinks.length} external links are working`);
-    }
-
-    if (brokenLinks.length > 0) {
-      recommendations.push('Implement proper error handling for broken links');
-      recommendations.push('Add redirects for moved or renamed pages');
-    }
-
-    recommendations.push('Set up automated link health monitoring');
-    recommendations.push('Implement proper 404 pages for broken routes');
-
-    return recommendations;
-  }
-
-  getBrokenLinks(): LinkHealthStatus[] {
-    return Array.from(this.checkedLinks.values()).filter(d => d.status === 'broken');
-  }
-
-  getHealthyLinks(): LinkHealthStatus[] {
-    return Array.from(this.checkedLinks.values()).filter(d => d.status === 'healthy');
-  }
-
-  clearCache(): void {
-    this.checkedLinks.clear();
+  generateReport(results: LinkHealthResult[]): string {
+    const summary = this.getHealthSummary(results);
+    const timestamp = new Date().toISOString();
+    
+    let report = `Link Health Report - ${timestamp}\n`;
+    report += `=====================================\n\n`;
+    report += `Summary:\n`;
+    report += `- Total Links: ${summary.total}\n`;
+    report += `- Healthy: ${summary.healthy}\n`;
+    report += `- Unhealthy: ${summary.unhealthy}\n`;
+    report += `- Errors: ${summary.errors}\n`;
+    report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`;
+    
+    report += `Detailed Results:\n`;
+    report += `=================\n\n`;
+    
+    results.forEach((result, index) => {
+      report += `${index + 1}. ${result.url}\n`;
+      report += `   Status: ${result.status}\n`;
+      if (result.statusCode) report += `   Status Code: ${result.statusCode}\n`;
+      if (result.responseTime) report += `   Response Time: ${result.responseTime}ms\n`;
+      if (result.error) report += `   Error: ${result.error}\n`;
+      report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`;
+    });
+    
+    return report;
   }
 }
 
 export default LinkHealthChecker;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8913

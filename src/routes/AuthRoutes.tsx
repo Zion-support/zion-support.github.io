@@ -1,53 +1,44 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Login from '@/pages/Login';
 import Signup from '@/pages/Signup';
-import ForgotPassword from '@/pages/ForgotPassword';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
 
-export default function AuthRoutes() {
+const AuthRoutes = () => {
   return (
-<<<<<<< HEAD
-    <>
-      <Route path="login" element={<Login />} />
-      <Route path="signup" element={<Signup />} />
-      <Route path="forgot-password" element={<ForgotPassword />} />
-    </>
-=======
     <Routes>
-      {/* Auth Routes */}
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/signup/talent" element={<Signup />} />
-      <Route path="/signup/client" element={<Signup />} />
-      <Route path="/forgot-password" element={<ForgotPassword />} />
-      <Route path="/update-password" element={<UpdatePassword />} />
       
-      {/* Onboarding Routes */}
-      <Route 
-        path="/onboarding" 
+      {/* Protected routes that require authentication */}
+      <Route
+        path="/profile"
         element={
           <ProtectedRoute>
-            <Onboarding />
+            <div>Profile Page</div>
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/talent-onboarding" 
+      
+      <Route
+        path="/dashboard"
         element={
           <ProtectedRoute>
-            <TalentOnboarding />
+            <div>Dashboard</div>
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/service-onboarding" 
+      
+      <Route
+        path="/settings"
         element={
           <ProtectedRoute>
-            <ServiceOnboarding />
+            <div>Settings</div>
           </ProtectedRoute>
-        } 
+        }
       />
     </Routes>
->>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
   );
-}
+};
+
+export default AuthRoutes;

@@ -1,253 +1,106 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Youtube, 
-  Facebook, 
-  Instagram,
-  Globe,
-  Shield,
-  Brain,
-  Cpu,
-  Rocket,
-  Building,
-  Users,
-  Target,
-  Zap,
-  Database,
-  Network
-} from 'lucide-react';
 
-export function Footer() {
-  const currentYear = new Date().getFullYear();
-
-  const footerSections = [
-    {
-      title: "AI & Technology Services",
-      icon: Brain,
-      links: [
-        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
-        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
-        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
-        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "Machine Learning Solutions", path: "/services/ai-machine-learning" },
-        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" }
-      ]
-    },
-    {
-      title: "Infrastructure & Security",
-      icon: Shield,
-      links: [
-        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
-        { label: "Cloud DevOps", path: "/cloud-devops" },
-        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
-        { label: "Network Infrastructure", path: "/services/network-infrastructure" },
-        { label: "Managed IT Services", path: "/services/managed-it-services" },
-        { label: "Security Assessment", path: "/services/security-assessment" }
-      ]
-    },
-    {
-      title: "Industry Solutions",
-      icon: Building,
-      links: [
-        { label: "Enterprise Solutions", path: "/solutions/enterprise" },
-        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
-        { label: "Financial Solutions", path: "/solutions/financial" },
-        { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
-        { label: "Retail Solutions", path: "/solutions/retail" },
-        { label: "Government Solutions", path: "/solutions/government" },
-        { label: "Digital Transformation", path: "/digital-transformation" },
-        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" }
-      ]
-    },
-    {
-      title: "Company & Resources",
-      icon: Users,
-      links: [
-        { label: "About Us", path: "/about" },
-        { label: "Our Mission", path: "/mission" },
-        { label: "Team", path: "/team" },
-        { label: "Careers", path: "/careers" },
-        { label: "Partners", path: "/partners" },
-        { label: "Blog", path: "/blog" },
-        { label: "Case Studies", path: "/case-studies" },
-        { label: "Help Center", path: "/help" }
-      ]
-    }
-  ];
-
-  // Fixed social media links with proper URLs
-  const socialLinks = [
-    { 
-      name: 'LinkedIn', 
-      url: 'https://www.linkedin.com/company/ziontechgroup', 
-      icon: Linkedin,
-      fallback: 'https://linkedin.com'
-    },
-    { 
-      name: 'Twitter', 
-      url: 'https://twitter.com/ziontechgroup', 
-      icon: Twitter,
-      fallback: 'https://twitter.com'
-    },
-    { 
-      name: 'GitHub', 
-      url: 'https://github.com/ziontechgroup', 
-      icon: Github,
-      fallback: 'https://github.com'
-    },
-    { 
-      name: 'YouTube', 
-      url: 'https://youtube.com/@ziontechgroup', 
-      icon: Youtube,
-      fallback: 'https://youtube.com'
-    },
-    { 
-      name: 'Facebook', 
-      url: 'https://facebook.com/ziontechgroup', 
-      icon: Facebook,
-      fallback: 'https://facebook.com'
-    },
-    { 
-      name: 'Instagram', 
-      url: 'https://instagram.com/ziontechgroup', 
-      icon: Instagram,
-      fallback: 'https://instagram.com'
-    }
-  ];
-
-  const quickLinks = [
-    { label: "Pricing", path: "/pricing" },
-    { label: "Contact", path: "/contact" },
-    { label: "Support", path: "/help" },
-    { label: "Privacy Policy", path: "/privacy" },
-    { label: "Terms of Service", path: "/terms" },
-    { label: "Cookie Policy", path: "/cookies" }
-  ];
-
+const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
-                <p className="text-sm text-gray-400">AI-Powered Innovation</p>
-              </div>
-            </div>
-            
-            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-              Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise.
             </p>
-
-            {/* Contact Information */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3 text-sm text-gray-300">
-                <Phone className="w-4 h-4 text-cyan-500" />
-                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
-                  +1 (302) 464-0950
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-sm text-gray-300">
-                <Mail className="w-4 h-4 text-cyan-500" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-start space-x-3 text-sm text-gray-300">
-                <MapPin className="w-4 h-4 text-cyan-500 mt-0.5" />
-                <span>
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-                </span>
-              </div>
-            </div>
-
-            {/* Social Media Links */}
             <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 hover:bg-cyan-600 rounded-lg flex items-center justify-center transition-all duration-200 transform hover:scale-110"
-                  title={social.name}
-                >
-                  <social.icon className="w-5 h-5 text-gray-300" />
-                </a>
-              ))}
+              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <span className="sr-only">LinkedIn</span>
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.032-3.047-1.033 0-1.191.805-1.191 2.951v5.665H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <span className="sr-only">Twitter</span>
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
             </div>
           </div>
 
-          {/* Footer Sections */}
-          {footerSections.map((section) => (
-            <div key={section.title} className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <section.icon className="w-5 h-5 text-cyan-500" />
-                <h3 className="text-lg font-semibold text-white">{section.title}</h3>
-              </div>
-              <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      to={link.path}
-                      className="text-gray-400 hover:text-cyan-400 text-sm transition-colors duration-200"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors duration-300">
+                  AI Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors duration-300">
+                  Cloud & DevOps
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors duration-300">
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors duration-300">
+                  IT Infrastructure
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors duration-300">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors duration-300">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors duration-300">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/careers" className="text-gray-300 hover:text-white transition-colors duration-300">
+                  Careers
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        {/* Quick Links Row */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-wrap justify-center gap-6">
-            {quickLinks.map((link) => (
-              <Link
-                key={link.label}
-                to={link.path}
-                className="text-gray-400 hover:text-cyan-400 text-sm transition-colors duration-200"
-              >
-                {link.label}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
+              © 2024 Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+                Privacy Policy
               </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-gray-400">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <span>Made with ❤️ in Delaware</span>
-              <span>•</span>
-              <span>AI-Powered Technology</span>
+              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
+                Terms of Service
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

@@ -1,16 +1,6 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Analytics from '@/pages/Analytics';
-
-<<<<<<< HEAD
-export default function AdminRoutes() {
-  return (
-    <>
-      <Route path="analytics" element={<Analytics />} />
-    </>
-=======
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 
 // Admin Pages
@@ -28,6 +18,8 @@ import IntegrationsPage from "@/pages/admin/IntegrationsPage";
 const AdminRoutes = () => {
   return (
     <Routes>
+      <Route path="analytics" element={<Analytics />} />
+      
       <Route
         path="/admin/quotes"
         element={
@@ -118,6 +110,7 @@ const AdminRoutes = () => {
         }
       />
     </Routes>
->>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
   );
-}
+};
+
+export default AdminRoutes;
