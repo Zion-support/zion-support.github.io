@@ -552,6 +552,10 @@ body::after {
   }
 }
 
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
 ::-webkit-scrollbar-track {
   background: rgba(15, 23, 42, 0.8);
   border-radius: 6px;
