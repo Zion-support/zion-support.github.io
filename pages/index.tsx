@@ -1,7 +1,137 @@
 import React from 'react';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
+import UltraAdvancedHeroSection2025 from '../components/sections/UltraAdvancedHeroSection2025';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { 
+  ArrowRight, Star, Zap, Brain, Rocket, Shield, 
+  Atom, Cpu, Cloud, Target, Users, Award,
+  CheckCircle, TrendingUp, Globe, Sparkles,
+  Phone, Mail, MapPin, ChevronDown,
+  ArrowUpRight, Lightbulb, Code, Database, Server,
+  Network, Palette, GraduationCap, DollarSign, Heart,
+  DollarSign as Finance, Factory as Manufacturing, Scale as Legal
+} from 'lucide-react';
 
-export default function HomePage() {
+const UltraAdvancedServicesShowcase2025 = dynamic(() => import('../components/sections/UltraAdvancedServicesShowcase2025'), {
+  ssr: false,
+  loading: () => (
+    <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <div className="container mx-auto px-4 text-center">
+        <div className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm mb-6">
+          <Sparkles className="w-4 h-4 text-cyan-400" />
+          <span className="text-gray-300">Loading services…</span>
+        </div>
+      </div>
+    </section>
+  )
+});
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+const whyChooseUs = [
+  {
+    icon: <Brain className="w-8 h-8" />,
+    title: 'AI-First Approach',
+    description: 'Leading-edge AI consciousness and emotional intelligence that adapts to your business needs.',
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    icon: <Atom className="w-8 h-8" />,
+    title: 'Quantum Innovation',
+    description: 'Breakthrough quantum computing solutions that solve previously impossible problems.',
+    color: 'from-green-500 to-emerald-500'
+  },
+  {
+    icon: <Shield className="w-8 h-8" />,
+    title: 'Enterprise Security',
+    description: 'Zero-trust architecture and quantum-secured infrastructure for maximum protection.',
+    color: 'from-blue-500 to-indigo-500'
+  },
+  {
+    icon: <Rocket className="w-8 h-8" />,
+    title: 'Rapid Deployment',
+    description: 'Micro SAAS solutions that deploy in minutes, not months, with instant ROI.',
+    color: 'from-orange-500 to-red-500'
+  }
+];
+
+const industrySolutions = [
+  {
+    name: 'Healthcare & Life Sciences',
+    icon: <Heart className="w-8 h-8" />,
+    description: 'AI-powered diagnostics, drug discovery, and patient care optimization',
+    color: 'from-blue-500 to-cyan-500',
+    services: ['Medical AI Diagnostics', 'Drug Discovery Platform', 'Patient Care Analytics']
+  },
+  {
+    name: 'Financial Services',
+    icon: <Finance className="w-8 h-8" />,
+    description: 'Quantum-enhanced trading, risk assessment, and financial intelligence',
+    color: 'from-green-500 to-emerald-500',
+    services: ['Quantum Trading Platform', 'AI Risk Assessment', 'Financial Analytics']
+  },
+  {
+    name: 'Manufacturing & Industry 4.0',
+    icon: <Manufacturing className="w-8 h-8" />,
+    description: 'Smart manufacturing, predictive maintenance, and supply chain optimization',
+    color: 'from-orange-500 to-red-500',
+    services: ['Predictive Maintenance AI', 'Supply Chain Optimization', 'Quality Control AI']
+  },
+  {
+    name: 'Creative & Media',
+    icon: <Palette className="w-8 h-8" />,
+    description: 'AI-powered content creation, video editing, and creative automation',
+    color: 'from-purple-500 to-pink-500',
+    services: ['AI Content Generation', 'Video Editing AI', 'Creative Analytics']
+  },
+  {
+    name: 'Education & Training',
+    icon: <GraduationCap className="w-8 h-8" />,
+    description: 'Personalized learning, skill assessment, and educational AI platforms',
+    color: 'from-indigo-500 to-purple-500',
+    services: ['AI Learning Platform', 'Skill Assessment AI', 'Personalized Education']
+  },
+  {
+    name: 'Legal & Compliance',
+    icon: <Legal className="w-8 h-8" />,
+    description: 'Document analysis, contract review, and regulatory compliance automation',
+    color: 'from-teal-500 to-cyan-500',
+    services: ['Legal Document AI', 'Contract Analysis', 'Compliance Automation']
+  }
+];
+
+const featuredServices = [
+  {
+    id: 'ai-autonomous-business',
+    name: 'AI-Powered Autonomous Business Operations',
+    price: '2,500',
+    description: 'Revolutionary AI platform that autonomously manages and optimizes your entire business operations.',
+    features: ['24/7 Autonomous Operations', 'Real-time Decision Making', 'Predictive Analytics', 'Process Automation']
+  },
+  {
+    id: 'quantum-secure-cloud',
+    name: 'Quantum-Secure Cloud Infrastructure',
+    price: '3,500',
+    description: 'Next-generation cloud platform with quantum encryption and advanced security protocols.',
+    features: ['Quantum Encryption', 'Zero-Trust Architecture', 'Advanced Threat Detection', 'Compliance Ready']
+  },
+  {
+    id: 'space-tech-ai',
+    name: 'AI-Powered Space Technology Platform',
+    price: '5,000',
+    description: 'Cutting-edge AI platform for space exploration, satellite management, and cosmic data analysis.',
+    features: ['Satellite AI Management', 'Space Data Analytics', 'Mission Planning AI', 'Cosmic Research Tools']
+  }
+];
+
+const Home: React.FC = () => {
   return (
     <>
       <Head>

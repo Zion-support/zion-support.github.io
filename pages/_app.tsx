@@ -1,23 +1,23 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
+import Script from 'next/script';
+import SiteLayout from '../components/layout/Layout';
 import '../styles/globals.css';
 import Layout from '../components/layout/Layout';
 import Analytics from '../components/Analytics';
 import { SEOContext } from '../components/SEOContext';
 
 export default function App({ Component, pageProps }: AppProps) {
-	const renderedRef = useRef(false);
 	return (
-		<SEOContext.Provider value={{ renderedRef }}>
-			<Head>
-				<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-			</Head>
-			<Analytics />
-			<Layout>
-				<Component {...pageProps} />
-			</Layout>
-			<Analytics />
-		</SEOContext.Provider>
+		<SiteLayout>
+			{/* Plausible Analytics */}
+			<Script
+				strategy="afterInteractive"
+				data-domain="ziontechgroup.com"
+				src="https://plausible.io/js/script.js"
+			/>
+			<SEO />
+			<Component {...pageProps} />
+		</SiteLayout>
 	);
 }

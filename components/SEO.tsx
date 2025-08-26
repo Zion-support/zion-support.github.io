@@ -6,8 +6,7 @@ interface SEOProps {
   title?: string;
   description?: string;
   canonical?: string;
-  ogImage?: string;
-  twitterImage?: string;
+  image?: string;
 }
 
 const DEFAULTS = {
@@ -15,21 +14,14 @@ const DEFAULTS = {
   description:
     "Transform your business with Zion Tech Group's revolutionary AI, quantum computing, and micro SAAS solutions. Leading-edge technology for unprecedented growth.",
   url: 'https://ziontechgroup.com',
-  image: 'https://ziontechgroup.com/og-default.png'
+  image: 'https://ziontechgroup.com/og-image.svg'
 };
 
-export default function SEO({ title, description, canonical, ogImage, twitterImage }: SEOProps) {
-  const router = useRouter();
+export default function SEO({ title, description, canonical, image }: SEOProps) {
   const pageTitle = title || DEFAULTS.title;
   const pageDescription = description || DEFAULTS.description;
-
-  const origin = DEFAULTS.url.replace(/\/$/, '');
-  const pathWithSlash = router.asPath ? (router.asPath.startsWith('/') ? router.asPath : `/${router.asPath}`) : '/';
-  const fullUrl = `${origin}${pathWithSlash}`.replace(/\/+$/, '/') as string;
-  const canonicalUrl = canonical || fullUrl;
-
-  const ogImg = ogImage || DEFAULTS.image;
-  const twImg = twitterImage || ogImg;
+  const canonicalUrl = canonical || DEFAULTS.url;
+  const imageUrl = image || DEFAULTS.image;
 
   return (
     <Head>
@@ -42,14 +34,11 @@ export default function SEO({ title, description, canonical, ogImage, twitterIma
       <meta property="og:description" content={pageDescription} />
       <meta property="og:url" content={pageUrl} />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      <meta property="og:image" content={ogImg} />
-
+      <meta property="og:image" content={imageUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
-      <meta name="twitter:image" content={twImg} />
+      <meta name="twitter:image" content={imageUrl} />
     </Head>
   );
 };
