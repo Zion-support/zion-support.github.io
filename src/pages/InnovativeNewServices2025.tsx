@@ -41,10 +41,10 @@ const InnovativeNewServices2025: React.FC = () => {
     
     // Handle different price properties for different service types
     let servicePrice = 0;
-    if ('price' in service) {
+    if ('price' in service && typeof service.price === 'number') {
       servicePrice = service.price;
-    } else if ('hourlyRate' in service) {
-      servicePrice = (service as any).hourlyRate * 160; // Convert hourly rate to monthly (160 hours/month)
+    } else if ('hourlyRate' in service && typeof service.hourlyRate === 'number') {
+      servicePrice = service.hourlyRate * 160; // Convert hourly rate to monthly (160 hours/month)
     }
     
     const priceMatch = selectedPriceRange === 'all' || 
@@ -206,11 +206,11 @@ const InnovativeNewServices2025: React.FC = () => {
                       <div className={`w-16 h-16 bg-gradient-to-br ${categoryColor} rounded-2xl flex items-center justify-center`}>
                         <IconComponent className="w-8 h-8 text-white" />
                       </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-cyan-400">
-                          {service.currency}{('price' in service ? service.price : ('hourlyRate' in service ? (service as any).hourlyRate * 160 : 0)).toLocaleString()}/mo
-                        </div>
-                        <div className="text-sm text-gray-400">{('pricingModel' in service ? service.pricingModel : 'hourly')}</div>
+                                              <div className="text-right">
+                          <div className="text-2xl font-bold text-cyan-400">
+                            {service.currency}{('price' in service && typeof service.price === 'number') ? service.price : (('hourlyRate' in service && typeof service.hourlyRate === 'number') ? service.hourlyRate * 160 : 0)}/mo
+                          </div>
+                          <div className="text-sm text-gray-400">{('pricingModel' in service ? service.pricingModel : 'hourly')}</div>
                       </div>
                     </div>
 
