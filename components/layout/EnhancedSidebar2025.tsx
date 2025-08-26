@@ -3,11 +3,15 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
-  Phone, Mail, MapPin, ChevronRight, ChevronDown, 
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
-  Award, Clock, Heart, Lightbulb, Users, FileText, 
-  HelpCircle, BookOpen, Target, TrendingUp, Star
+  X, ChevronRight, Home, Star, Users, 
+  Settings, HelpCircle, Mail, Phone, MapPin,
+  Brain, Atom, Shield, Rocket, DollarSign,
+  Globe, Cpu, Database, Lock, Zap,
+  TrendingUp, Award, CheckCircle, Clock,
+  ArrowRight, Search, Menu, X as CloseIcon,
+  Target, BookOpen, Truck, BarChart3,
+  Sparkles, Eye, Lightbulb, Palette, Code,
+  FileText, BookOpen as BookIcon, Users as UsersIcon
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -248,32 +252,27 @@ interface EnhancedSidebar2025Props {
   onClose: () => void;
 }
 
-export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+interface EnhancedSidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
 
-  const toggleSection = (sectionTitle: string) => {
+export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebarProps) {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+
+  const toggleSection = (title: string) => {
     const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(sectionTitle)) {
-      newExpanded.delete(sectionTitle);
-    } else {
-      newExpanded.add(sectionTitle);
-    }
+    if (newExpanded.has(title)) newExpanded.delete(title); else newExpanded.add(title);
     setExpandedSections(newExpanded);
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const filteredServices = sidebarItems.flatMap(item =>
     item.children?.filter(child =>
       child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       child.description?.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   );
-<<<<<<< HEAD
-=======
   const toggleItem = (itemName: string) => {
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(itemName)) {
@@ -297,206 +296,94 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
   }, [isOpen]);
 
   const isActive = (href: string) => router.pathname === href;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   return (
-    <>
-      {/* Backdrop */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-            onClick={onClose}
-          />
-        )}
-      </AnimatePresence>
-
-      {/* Sidebar */}
-      <motion.div
-        initial={{ x: '-100%' }}
-        animate={{ x: isOpen ? 0 : '-100%' }}
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-        className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}
-      >
-        {/* Header */}
-        <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6">
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-3">
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20"></div>
-              </div>
-              <div>
-                <h2 className="text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent">
-                  Zion Tech Group
-                </h2>
-                <p className="text-gray-400 text-sm">Revolutionary Technology</p>
-              </div>
+    <motion.aside
+      initial={{ x: -300, opacity: 0 }}
+      animate={{ x: isOpen ? 0 : -300, opacity: isOpen ? 1 : 0 }}
+      transition={{ duration: 0.3, ease: 'easeOut' }}
+      className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 z-40 overflow-y-auto"
+      aria-hidden={!isOpen}
+    >
+      {/* Header */}
+      <div className="sticky top-0 bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 p-4">
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+              <Zap className="w-6 h-6 text-white" />
             </div>
+            <div>
+              <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Zion Tech Group</h2>
+              <p className="text-xs text-gray-400">Navigation</p>
+            </div>
+          </div>
+          <button onClick={onClose} aria-label="Close sidebar" className="text-gray-400 hover:text-white">
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+        <div className="space-y-2 text-xs text-gray-300">
+          <div className="flex items-center space-x-2"><Phone className="w-3 h-3 text-cyan-400" /><span>{contactInfo.mobile}</span></div>
+          <div className="flex items-center space-x-2"><Mail className="w-3 h-3 text-cyan-400" /><span>{contactInfo.email}</span></div>
+          <div className="flex items-center space-x-2"><Globe className="w-3 h-3 text-cyan-400" /><span>{contactInfo.website}</span></div>
+        </div>
+      </div>
+
+      {/* Sections */}
+      <div className="p-4 space-y-2">
+        {sidebarItems.map((item) => (
+          <div key={item.name}>
             <button
-              onClick={onClose}
-              className="lg:hidden p-2 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+              onClick={() => toggleSection(item.name)}
+              className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
             >
-              <X className="w-5 h-5 text-gray-400" />
-            </button>
-          </div>
-
-          {/* Contact Bar */}
-          <div className="space-y-3">
-            <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">
-              <Phone className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm text-gray-300">{contactInfo.mobile}</span>
-            </div>
-            <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">
-              <Mail className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm text-gray-300">{contactInfo.email}</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Navigation Content */}
-        <div className="p-6 space-y-6">
-          {/* Home Link */}
-          <Link
-            href="/"
-            onClick={onClose}
-            className="flex items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover:from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group"
-          >
-            <Home className="w-5 h-5 text-cyan-400" />
-            <span className="text-white font-semibold">Home</span>
-          </Link>
-
-          {/* Service Sections */}
-          {sidebarSections.map((section, sectionIndex) => (
-            <div key={sectionIndex} className="space-y-3">
-              <button
-                onClick={() => toggleSection(section.title)}
-                className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover:bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"
-              >
-                <div className="flex items-center gap-3">
-                  <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>
-                    <section.icon className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-white font-semibold">{section.title}</span>
+              <div className="flex items-center space-x-3">
+                <div className={`w-8 h-8 bg-gradient-to-r ${item.isHot ? 'from-indigo-500 to-purple-600' : 'from-cyan-500 to-blue-600'} rounded-lg flex items-center justify-center`}>
+                  {item.icon}
                 </div>
-                <ChevronDown 
-                  className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${
-                    expandedSections.has(section.title) ? 'rotate-180' : ''
-                  }`} 
-                />
-              </button>
-
-              <AnimatePresence>
-                {expandedSections.has(section.title) && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="space-y-2 ml-6"
-                  >
-                    {section.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="space-y-2">
-                        <button
-                          onClick={() => toggleItem(item.name)}
-                          className="w-full flex items-center justify-between p-2 hover:bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"
-                        >
-                          <div className="flex items-center gap-3">
-                            <item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
-                            <div>
-                              <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium">
-                                {item.name}
-                              </span>
-                              <p className="text-gray-500 text-xs">{item.description}</p>
-                            </div>
-                          </div>
-                          {item.subItems && item.subItems.length > 0 && (
-                            <ChevronRight 
-                              className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${
-                                expandedItems.has(item.name) ? 'rotate-90' : ''
-                              }`} 
-                            />
-                          )}
-                        </button>
-
-                        {/* Sub-items */}
-                        {item.subItems && item.subItems.length > 0 && (
-                          <AnimatePresence>
-                            {expandedItems.has(item.name) && (
-                              <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
-                                transition={{ duration: 0.3 }}
-                                className="space-y-1 ml-6"
-                              >
-                                {item.subItems.map((subItem, subIndex) => (
-                                  <Link
-                                    key={subIndex}
-                                    href={subItem.href}
-                                    onClick={onClose}
-                                    className="flex items-center gap-2 p-2 hover:bg-gray-800/20 rounded-lg transition-all duration-300 group"
-                                  >
-                                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>
-                                    <span className="text-gray-400 group-hover:text-cyan-300 transition-colors duration-200 text-xs">
-                                      {subItem.name}
-                                    </span>
-                                  </Link>
-                                ))}
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        )}
-                      </div>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
-
-          {/* Quick Stats */}
-          <div className="pt-6 border-t border-gray-800/50">
-            <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Quick Stats</h4>
-            <div className="grid grid-cols-2 gap-3">
-              <div className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">
-                <div className="text-lg font-bold text-cyan-400">500+</div>
-                <div className="text-xs text-gray-400">Services</div>
+                <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
+                  {item.name}
+                </span>
               </div>
-              <div className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">
-                <div className="text-lg font-bold text-purple-400">1000+</div>
-                <div className="text-xs text-gray-400">Clients</div>
-              </div>
-            </div>
+              <ChevronRight 
+                className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+                  expandedSections.has(item.name) ? 'rotate-90' : ''
+                }`} 
+              />
+            </button>
+            
+            <AnimatePresence>
+              {expandedSections.has(item.name) && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="ml-8 mt-2 space-y-1"
+                >
+                  {item.children?.map((child) => (
+                    <Link
+                      key={child.name}
+                      href={child.href}
+                      onClick={onClose}
+                      className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 group"
+                    >
+                      <span className="text-sm text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                        {child.name}
+                      </span>
+                      {child.badge && (
+                        <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
+                          {child.badge}
+                        </span>
+                      )}
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-
-          {/* Contact CTA */}
-          <div className="pt-6 border-t border-gray-800/50">
-            <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30">
-              <h4 className="text-sm font-semibold text-white mb-2">Ready to Transform?</h4>
-              <p className="text-gray-300 text-xs mb-3">
-                Get in touch to discuss your revolutionary technology needs.
-              </p>
-              <Link
-                href="/contact"
-                onClick={onClose}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Contact Us
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </>
+        ))}
+      </div>
+    </motion.aside>
   );
 }

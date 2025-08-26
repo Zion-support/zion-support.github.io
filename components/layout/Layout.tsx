@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import EnhancedNavigation2025 from './EnhancedNavigation2025';
+import UltraFuturisticFooter2035 from './UltraFuturisticFooter2035';
+import UltraFuturisticBackground2035 from '../backgrounds/UltraFuturisticBackground2035';
+import TopContactBar from './TopContactBar';
+import EnhancedSidebar2025 from './EnhancedSidebar2025';
+import UltraFuturisticNavigation2035 from './UltraFuturisticNavigation2035';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -7,33 +13,25 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-      {/* Top Contact Bar */}
-      <TopContactBar />
-
-      {/* Navigation */}
-      <EnhancedNavigation2025 />
-
-      {/* Sidebar */}
-      <EnhancedSidebar2025 />
-
-      {/* Main Content */}
-      <main className="relative z-10 pt-32 lg:pt-36 lg:ml-80">
-        <div className="min-h-screen">{children}</div>
-      </main>
-
-      {/* Footer */}
-      <UltraFuturisticFooter2034 />
-
-      {/* Floating Elements */}
-      <>
-        <div className="fixed top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse z-50"></div>
-        <div className="fixed top-40 right-20 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000 z-50"></div>
-        <div className="fixed bottom-40 left-20 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse delay-2000 z-50"></div>
-        <div className="fixed bottom-20 right-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-3000 z-50"></div>
-      </>
+      <a href="#main" className="skip-link">Skip to main content</a>
+      <UltraFuturisticBackground2035>
+        <div className="relative z-10">
+          <TopContactBar />
+          <UltraFuturisticNavigation2035 />
+          <div className="flex">
+            <EnhancedSidebar2025 
+              isOpen={sidebarOpen} 
+              onClose={() => setSidebarOpen(false)} 
+            />
+            <main id="main" role="main" className="flex-1 pt-24 lg:pt-28">
+              {children}
+            </main>
+          </div>
+          <UltraFuturisticFooter2035 />
+        </div>
+      </UltraFuturisticBackground2035>
 
       {/* Mobile Sidebar Toggle */}
       <button
@@ -45,37 +43,46 @@ export default function Layout({ children }: LayoutProps) {
         </svg>
       </button>
 
-      {/* Mobile Sidebar Overlay */}
       {sidebarOpen && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden" onClick={() => setSidebarOpen(false)}>
-          {/* Off-canvas content would go here if needed */}
+          <motion.div
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="absolute left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="p-4">
+              <div className="pt-4 border-t border-gray-800">
+                <a
+                  href="/contact"
+                  className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  Get Started Today
+                </a>
+              </div>
+            </div>
+          </motion.div>
         </div>
       )}
     </div>
   );
 }
-=======
 import EnhancedNavigation2025 from './EnhancedNavigation2025';
-<<<<<<< HEAD
-=======
 import UltraFuturisticNavigation2034 from './UltraFuturisticNavigation2034';
 import UltraFuturisticFooter2034 from './UltraFuturisticFooter2034';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2035 from '../ui/UltraFuturisticBackground2035';
 // import TopContactBar from './TopContactBar';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
     <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
       {/* Skip to content link for accessibility */}
@@ -108,9 +115,6 @@ export default function Layout({ children }: LayoutProps) {
       </UltraFuturisticBackground2035>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
 	return (
@@ -139,3 +143,4 @@ export default function Layout({ children }: LayoutProps) {
 		</div>
 	);
 }
+=======

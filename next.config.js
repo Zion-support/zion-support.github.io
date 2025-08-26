@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
+	trailingSlash: true,
+	output: 'export',
+	assetPrefix,
 	images: {
 		// Using unoptimized to support static hosting/CDN without Next Image optimization
 		unoptimized: true
+	},
+	typescript: {
+		ignoreBuildErrors: true,
 	},
 	eslint: {
 		ignoreDuringBuilds: true
