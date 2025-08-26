@@ -1,223 +1,235 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";
 import { 
-  Phone, 
   Mail, 
+  Phone, 
   MapPin, 
   Globe, 
   Clock, 
-  Users, 
-  Shield, 
-  Zap,
-  ExternalLink
-} from "lucide-react";
+  MessageSquare,
+  Send,
+  ArrowRight,
+  CheckCircle,
+  Shield,
+  Users,
+  Zap
+} from 'lucide-react';
 
 export function ContactInfo() {
   const contactMethods = [
     {
-      title: "Phone Support",
-      description: "Speak directly with our technical experts",
-      icon: <Phone className="h-8 w-8 text-zion-cyan" />,
-      value: "+1 302 464 0950",
-      action: "tel:+13024640950",
-      badge: "24/7 Available",
-      color: "#00ffff"
-    },
-    {
-      title: "Email Support",
-      description: "Get detailed responses to your inquiries",
-      icon: <Mail className="h-8 w-8 text-zion-purple" />,
+      icon: Mail,
+      title: "Email Us",
+      description: "Get in touch via email for detailed inquiries",
       value: "kleber@ziontechgroup.com",
-      action: "mailto:kleber@ziontechgroup.com",
-      badge: "Response < 2hrs",
-      color: "#8c15e9"
+      href: "mailto:kleber@ziontechgroup.com",
+      color: "from-zion-cyan to-zion-blue",
+      responseTime: "Within 2 hours"
     },
     {
-      title: "Office Location",
-      description: "Visit our headquarters for in-person meetings",
-      icon: <MapPin className="h-8 w-8 text-zion-cyan" />,
-      value: "364 E Main St STE 1008, Middletown DE 19709",
-      action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709",
-      badge: "Open Mon-Fri",
-      color: "#00ffff"
+      icon: Phone,
+      title: "Call Us",
+      description: "Speak directly with our experts",
+      value: "+1 302 464 0950",
+      href: "tel:+13024640950",
+      color: "from-zion-purple to-zion-cyan",
+      responseTime: "Immediate"
     },
     {
-      title: "Main Website",
-      description: "Explore our complete company portfolio",
-      icon: <Globe className="h-8 w-8 text-zion-purple" />,
+      icon: MessageSquare,
+      title: "Live Chat",
+      description: "Get instant support via live chat",
+      value: "Start Chat",
+      href: "#",
+      color: "from-zion-blue to-zion-purple",
+      responseTime: "Instant"
+    },
+    {
+      icon: Globe,
+      title: "Website",
+      description: "Visit our main website for more information",
       value: "ziontechgroup.com",
-      action: "https://ziontechgroup.com",
-      badge: "Official Site",
-      color: "#8c15e9"
+      href: "https://ziontechgroup.com",
+      color: "from-zion-cyan to-zion-purple",
+      responseTime: "24/7"
     }
   ];
 
-  const companyStats = [
+  const officeInfo = [
     {
-      label: "Years Experience",
-      value: "10+",
-      icon: <Clock className="h-6 w-6 text-zion-cyan" />
+      icon: MapPin,
+      title: "Main Office",
+      value: "364 E Main St STE 1008, Middletown DE 19709",
+      color: "text-zion-cyan"
     },
     {
-      label: "Team Members",
-      value: "50+",
-      icon: <Users className="h-6 w-6 text-zion-purple" />
+      icon: Clock,
+      title: "Business Hours",
+      value: "Monday - Friday: 9:00 AM - 6:00 PM EST",
+      color: "text-zion-purple"
     },
     {
-      label: "Projects Completed",
-      value: "500+",
-      icon: <Shield className="h-6 w-6 text-zion-cyan" />
+      icon: Users,
+      title: "Support Hours",
+      value: "24/7 Technical Support Available",
+      color: "text-zion-blue"
+    }
+  ];
+
+  const whyChooseUs = [
+    {
+      icon: Shield,
+      title: "Secure Communication",
+      description: "All communications are encrypted and secure"
     },
     {
-      label: "Client Satisfaction",
-      value: "98%",
-      icon: <Zap className="h-6 w-6 text-zion-purple" />
+      icon: Zap,
+      title: "Fast Response",
+      description: "Average response time under 2 hours"
+    },
+    {
+      icon: CheckCircle,
+      title: "Expert Team",
+      description: "Direct access to certified professionals"
     }
   ];
 
   return (
-    <section className="py-20 relative">
-      {/* Background accent */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-blue-dark/10 to-transparent" />
-      
+    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 cyber-grid"></div>
+      </div>
+
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold tracking-tight mb-4">
-            <NeonText color="#00ffff" glowIntensity="high">
-              Get In Touch
-            </NeonText>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Get in Touch
+            <span className="block text-gradient"> With Our Team</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to transform your business? Our team of experts is here to help you succeed with cutting-edge technology solutions.
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
+            Ready to transform your business? Our team of experts is here to help. 
+            Reach out through any of our contact methods and let's start building the future together.
           </p>
         </div>
 
         {/* Contact Methods Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {contactMethods.map((method, index) => (
-            <FuturisticCard 
-              key={index} 
-              glowColor={method.color}
-              intensity="medium"
-              className="group hover:scale-105 transition-transform duration-300"
+            <div
+              key={index}
+              className="group relative bg-gradient-to-br from-zion-blue-dark/20 to-zion-slate-dark/20 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105 hover:shadow-glow"
             >
-              <CardHeader className="pb-4">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="p-3 rounded-lg bg-black/20 backdrop-blur-sm">
-                    {method.icon}
-                  </div>
-                  <Badge variant="secondary" className="bg-primary/20 text-primary">
-                    {method.badge}
-                  </Badge>
-                </div>
-                <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
-                  {method.title}
-                </CardTitle>
-                <CardDescription className="text-base">
-                  {method.description}
-                </CardDescription>
-              </CardHeader>
-              
-              <CardContent className="space-y-4">
-                <div className="p-4 bg-black/20 rounded-lg border border-zion-cyan/20">
-                  <p className="text-lg font-mono text-zion-cyan break-all">
-                    {method.value}
-                  </p>
-                </div>
-                
-                <Button asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                  <a href={method.action} target="_blank" rel="noopener noreferrer">
-                    <span>Contact via {method.title.split(' ')[0]}</span>
-                    <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </Button>
-              </CardContent>
-            </FuturisticCard>
+              {/* Icon */}
+              <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <method.icon className="w-8 h-8 text-white" />
+              </div>
+
+              {/* Content */}
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                {method.title}
+              </h3>
+              <p className="text-zion-slate-light mb-4 text-sm leading-relaxed">
+                {method.description}
+              </p>
+
+              {/* Contact Value */}
+              <a
+                href={method.href}
+                className="block text-zion-cyan font-medium mb-3 hover:text-zion-cyan-light transition-colors"
+              >
+                {method.value}
+              </a>
+
+              {/* Response Time */}
+              <div className="flex items-center gap-2 text-sm text-zion-slate-light">
+                <Clock className="w-4 h-4" />
+                <span>Response: {method.responseTime}</span>
+              </div>
+
+              {/* Hover Effect Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+            </div>
           ))}
         </div>
 
-        {/* Company Statistics */}
-        <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold mb-4">
-            <NeonText color="#ff00ff" glowIntensity="medium">
-              Why Choose Zion Tech Group?
-            </NeonText>
+        {/* Office Information */}
+        <div className="bg-gradient-to-r from-zion-blue-dark/30 to-zion-purple-dark/30 border border-zion-blue-light/20 rounded-2xl p-8 backdrop-blur-sm mb-16">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">
+            Office Information
           </h3>
-          <p className="text-muted-foreground">
-            Proven track record of delivering exceptional results
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {officeInfo.map((info, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <info.icon className={`w-8 h-8 ${info.color}`} />
+                </div>
+                <h4 className="text-white font-semibold mb-2">{info.title}</h4>
+                <p className="text-zion-slate-light text-sm leading-relaxed">
+                  {info.value}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {companyStats.map((stat, index) => (
-            <Card key={index} className="text-center group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
-              <CardContent className="pt-6">
-                <div className="flex justify-center mb-3">
-                  <div className="p-2 rounded-lg bg-black/20 group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
-                  </div>
-                </div>
-                <div className="text-3xl font-bold text-primary mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  {stat.label}
-                </div>
-              </CardContent>
-            </Card>
+        {/* Why Choose Us */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {whyChooseUs.map((feature, index) => (
+            <div
+              key={index}
+              className="text-center group"
+            >
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="w-10 h-10 text-zion-cyan" />
+              </div>
+              <h4 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                {feature.title}
+              </h4>
+              <p className="text-zion-slate-light leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
           ))}
         </div>
 
-        {/* Quick Contact CTA */}
+        {/* Contact Form CTA */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 rounded-2xl p-8 border border-zion-purple/20">
-            <h3 className="text-2xl font-bold mb-4">
+          <div className="bg-gradient-to-r from-zion-blue-dark/30 to-zion-purple-dark/30 border border-zion-blue-light/20 rounded-2xl p-8 backdrop-blur-sm max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Start Your Project?
             </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Whether you need a quick consultation or want to discuss a major project, 
-              our team is ready to help you achieve your goals.
+            <p className="text-zion-slate-light mb-8 text-lg max-w-2xl mx-auto">
+              Fill out our contact form and one of our experts will get back to you 
+              within 2 hours to discuss your project requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-                <Link to="/request-quote">
-                  Request Free Quote
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                <Link to="/contact">
-                  Schedule Consultation
-                </Link>
-              </Button>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/90 hover:to-zion-blue/90 text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-glow"
+              >
+                <Send className="w-5 h-5 mr-2" />
+                Contact Us Now
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105"
+              >
+                <Zap className="w-5 h-5 mr-2" />
+                Explore Services
+              </a>
             </div>
-            
-            {/* Additional contact options */}
-            <div className="mt-6 pt-6 border-t border-zion-purple/20">
-              <p className="text-sm text-muted-foreground mb-3">
-                Prefer to call? We're available 24/7 for urgent matters
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
-                <a 
-                  href="tel:+13024640950" 
-                  className="flex items-center justify-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
-                  +1 302 464 0950
-                </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="flex items-center justify-center gap-2 text-zion-purple hover:text-zion-purple-light transition-colors"
-                >
-                  <Mail className="h-4 w-4" />
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-            </div>
+          </div>
+        </div>
+
+        {/* Emergency Contact */}
+        <div className="text-center mt-12">
+          <div className="inline-flex items-center gap-3 bg-zion-cyan/10 text-zion-cyan px-6 py-3 rounded-full text-sm font-medium border border-zion-cyan/20">
+            <Shield className="w-4 h-4" />
+            <span>24/7 Emergency Support Available</span>
+            <Phone className="w-4 h-4" />
+            <span>+1 302 464 0950</span>
           </div>
         </div>
       </div>

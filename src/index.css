@@ -12,12 +12,38 @@
     --accent: 228 12% 92%;
     --border: 0 0% 68%;
     --radius: 0.5rem;
+    
+    /* Zion Custom Colors */
+    --zion-cyan: #22ddd2;
+    --zion-blue: #2e73ea;
+    --zion-purple: #8c15e9;
+    --zion-slate: #17072b;
+    --zion-slate-light: #451582;
+    --zion-slate-dark: #000000;
   }
 
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0f0f23;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #22ddd2, #8c15e9);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #1bc5bb, #7a13d1);
   }
 }
 
@@ -26,5 +52,174 @@
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-effect {
+    background: rgba(34, 221, 210, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(34, 221, 210, 0.1);
+  }
+
+  .neon-text {
+    text-shadow: 0 0 10px rgba(34, 221, 210, 0.5), 0 0 20px rgba(34, 221, 210, 0.3);
+  }
+
+  .neon-pulse {
+    animation: neon-pulse 2s ease-in-out infinite;
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(34, 221, 210, 0.2);
+  }
+
+  .hover-glow {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(34, 221, 210, 0.4);
+  }
+
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(34, 221, 210, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 221, 210, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .text-gradient {
+    background: linear-gradient(45deg, #22ddd2, #8c15e9, #2e73ea);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-mesh {
+    background: linear-gradient(45deg, #8c15e9, #22ddd2, #2e73ea, #8c15e9);
+    background-size: 400% 400%;
+    animation: gradient-shift 3s ease infinite;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-float-delay-1000 {
+    animation-delay: 1s;
+  }
+
+  .animate-float-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .animate-gradient-shift {
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  .animate-neon-pulse {
+    animation: neon-pulse 2s ease-in-out infinite;
+  }
+
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+
+  .shadow-neon {
+    box-shadow: 0 0 20px rgba(34, 221, 210, 0.5);
+  }
+
+  .shadow-neon-purple {
+    box-shadow: 0 0 20px rgba(140, 21, 233, 0.5);
+  }
+
+  .shadow-neon-blue {
+    box-shadow: 0 0 20px rgba(46, 115, 234, 0.5);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 40px rgba(34, 221, 210, 0.3);
+  }
+
+  .shadow-glow-purple {
+    box-shadow: 0 0 40px rgba(140, 21, 233, 0.3);
+  }
+
+  .shadow-glow-blue {
+    box-shadow: 0 0 40px rgba(46, 115, 234, 0.3);
+  }
+}
+
+/* Custom Animations */
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(34, 221, 210, 0.5), 0 0 20px rgba(34, 221, 210, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(34, 221, 210, 0.8), 0 0 30px rgba(34, 221, 210, 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Responsive Design Utilities */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Focus States */
+.focus-visible:focus {
+  outline: 2px solid #22ddd2;
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(34, 221, 210, 0.3);
+  color: white;
+}
+
+/* Loading States */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
   }
 }
