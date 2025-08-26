@@ -42,7 +42,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Enhanced Zion brand colors
+        // Zion brand colors
         'zion-blue-dark': '#172d67',
         'zion-blue': '#1e3a8a',
         'zion-blue-light': '#2e73ea',
@@ -60,6 +60,13 @@ module.exports = {
         'zion-red': '#ef4444',
         'zion-emerald': '#059669',
         'zion-gold': '#fbbf24',
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+        '4xl': '2rem',
+        '5xl': '2.5rem',
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -152,7 +159,37 @@ module.exports = {
         '80': '80',
         '90': '90',
         '100': '100',
->>>>>>> origin/main
+      },
+      fontFamily: {
+        'futuristic': ['Orbitron', 'monospace'],
+        'tech': ['Rajdhani', 'sans-serif'],
+      },
+      fontSize: {
+        '2xs': '0.625rem',
+        '3xl': '1.875rem',
+        '4xl': '2.25rem',
+        '5xl': '3rem',
+        '6xl': '3.75rem',
+        '7xl': '4.5rem',
+        '8xl': '6rem',
+        '9xl': '8rem',
+      },
+      lineHeight: {
+        'extra-tight': '1.1',
+        'extra-loose': '2.25',
+      },
+      borderWidth: {
+        '3': '3px',
+        '4': '4px',
+        '5': '5px',
+      },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
+      },
+      minHeight: {
+        'screen-75': '75vh',
+        'screen-90': '90vh',
       },
     },
   },

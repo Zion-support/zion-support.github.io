@@ -5,9 +5,9 @@ import { WhitelabelProvider } from './context/WhitelabelContext';
 import { Toaster } from './components/ui/toaster';
 import { Toaster as SonnerToaster } from './components/ui/sonner';
 import Footer from './components/Footer';
-import SEOHead from './components/SEOHead';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import FloatingActionButton from './components/FloatingActionButton';
+import EnhancedScrollToTop from './components/EnhancedScrollToTop';
+import { EnhancedLoading } from './components/EnhancedLoading';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -174,10 +174,16 @@ const routes = [
   { path: '/sitemap', element: <Sitemap /> },
 ];
 
-// Loading spinner component
+// Enhanced loading spinner component
 const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
+  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light flex items-center justify-center">
+    <EnhancedLoading 
+      size="xl" 
+      variant="futuristic" 
+      text="Loading Zion Tech Group"
+      showProgress={true}
+      progress={85}
+    />
   </div>
 );
 
@@ -198,57 +204,28 @@ function App() {
   }, []);
 
   return (
-    <EnhancedErrorBoundary>
-      <EnhancedAccessibility />
-      <PerformanceMonitor />
-      <ThemeProvider>
-        <Router>
-          <div className="App min-h-screen flex flex-col">
-            {/* SEO Head Component */}
-            <SEOHead />
-            
-            {/* Accessibility Enhancer */}
-            <AccessibilityEnhancer>
-              <main className="flex-1">
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    {routes.map(({ path, element }) => (
-                      <Route key={path} path={path} element={element} />
-                    ))}
-                  </Routes>
-                </Suspense>
-              </main>
-            </AccessibilityEnhancer>
-            
-            <Footer />
-            <Toaster />
-            <SonnerToaster />
-            
-            {/* Performance Monitor */}
-            <PerformanceMonitor 
-              showMetrics={showPerformanceMonitor}
-              onMetricsUpdate={(metrics) => {
-                // Log performance metrics for analytics
-                if (process.env.NODE_ENV === 'development') {
-                  console.log('Performance Metrics:', metrics);
-                }
-              }}
-            />
-            
-            {/* Performance Monitor Toggle Button (Development Only) */}
-            {process.env.NODE_ENV === 'development' && (
-              <button
-                onClick={() => setShowPerformanceMonitor(!showPerformanceMonitor)}
-                className="fixed bottom-4 left-4 z-50 p-3 bg-zion-cyan/20 border border-zion-cyan/30 text-zion-cyan rounded-full hover:bg-zion-cyan/30 transition-all duration-300"
-                title="Toggle Performance Monitor (Ctrl+Shift+P)"
-              >
-                📊
-              </button>
-            )}
-          </div>
-        </Router>
-      </ThemeProvider>
-    </EnhancedErrorBoundary>
+    <Router>
+      <div className="App min-h-screen bg-background">
+        <Header />
+        <main className="pt-16 lg:pt-20">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
+              <Route path="/advanced-services-2025" element={<AdvancedServices2025 />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+        <FloatingActionButton />
+        <EnhancedScrollToTop />
+      </div>
+    </Router>
   );
 }
 
