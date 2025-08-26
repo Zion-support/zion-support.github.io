@@ -226,6 +226,7 @@
 		-webkit-mask-composite: destination-out;
 		mask-composite: exclude;
 	}
+}
 
 @keyframes slideInLeft {
 	from {
