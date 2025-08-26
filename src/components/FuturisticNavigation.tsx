@@ -98,6 +98,7 @@ import {
   MicOff,
   Volume2,
   VolumeX,
+  Building,
   Play,
   Pause,
   Stop,
@@ -280,6 +281,21 @@ export const FuturisticNavigation: React.FC = () => {
         { name: 'Professional Services', href: '/marketplace/services', icon: Briefcase, description: 'Expert professional services' },
         { name: 'Talent Network', href: '/marketplace/talent', icon: Users, description: 'Skilled professionals network' },
         { name: 'Innovation Hub', href: '/marketplace/innovation', icon: Lightbulb, description: 'Innovation and R&D services' }
+      ]
+    },
+    {
+      name: 'Services Portfolio',
+      href: '/expanded-services-showcase-2027',
+      icon: Award,
+      color: 'from-zion-cyan to-zion-blue',
+      dropdown: [
+        { name: 'Expanded Services 2027', href: '/expanded-services-showcase-2027', icon: Award, description: 'Complete portfolio of innovative services' },
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Advanced AI and machine learning solutions' },
+        { name: 'Micro SAAS', href: '/micro-saas', icon: Code, description: 'Specialized micro SAAS platforms' },
+        { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT infrastructure solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket, description: 'Cutting-edge technology solutions' },
+        { name: 'Enterprise Solutions', href: '/enhanced-innovative-services-2027', icon: Building, description: 'Enterprise-grade innovative solutions' },
+        { name: 'Expanded Pricing Guide', href: '/expanded-pricing-guide-2027', icon: DollarSign, description: 'Complete pricing information for all services' }
       ]
     }
   ];
