@@ -12,3 +12,13 @@ automation/logs/*.log
 automation/logs/*.runtime.log
 automation/data/*.json
 !automation/data/autonomous-config.json
+
+automation/logs/**
+automation/backups/**
+dist/**
+tsconfig.tsbuildinfo
+
+automation/logs/**
+automation/backups/**
+dist/**
+tsconfig.tsbuildinfo
