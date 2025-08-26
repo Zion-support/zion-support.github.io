@@ -8,6 +8,7 @@ import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { StatsSection } from "@/components/StatsSection";
 import { SEO } from "@/components/SEO";
 import { ITServiceRequestHero } from "@/components/ITServiceRequestHero";
+import { InnovativeServicesShowcase } from "@/components/InnovativeServicesShowcase";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
       <ITServiceRequestHero />
 
       <StatsSection />
+      
+      <InnovativeServicesShowcase />
       
       <CategoriesSection />
       <BenefitsSection />
