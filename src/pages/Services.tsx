@@ -5,6 +5,7 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServi
 import { ADVANCED_ENTERPRISE_SOLUTIONS } from '../data/advancedEnterpriseSolutions';
 import { SPECIALIZED_IT_SERVICES } from '../data/specializedITServices';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 export function Services() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');

@@ -22,7 +22,8 @@ import {
   TrendingUp,
   Award,
   Globe,
-  Headphones
+  Headphones,
+  MapPin
 } from 'lucide-react';
 
 export default function Pricing() {
