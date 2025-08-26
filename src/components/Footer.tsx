@@ -61,20 +61,20 @@ const Footer: React.FC = () => {
         { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/about' },
         { name: 'Careers', href: '/careers' },
-        { name: 'Blog', href: '/blog' },
         { name: 'News', href: '/news' },
-        { name: 'Press Kit', href: '/press' }
+        { name: 'Blog', href: '/blog' },
+        { name: 'Contact', href: '/contact' }
       ]
     },
     {
       title: 'Support',
       links: [
-        { name: 'Contact Us', href: '/contact' },
         { name: 'Help Center', href: '/help' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Status Page', href: '/status' },
-        { name: 'Support Portal', href: '/support' }
+        { name: 'Contact Us', href: '/contact' },
+        { name: 'Documentation', href: '/help' },
+        { name: 'API Reference', href: '/help' },
+        { name: 'Support Portal', href: '/help' },
+        { name: 'Training', href: '/help' }
       ]
     },
     {
@@ -83,9 +83,9 @@ const Footer: React.FC = () => {
         { name: 'Privacy Policy', href: '/privacy' },
         { name: 'Terms of Service', href: '/terms' },
         { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'GDPR Compliance', href: '/gdpr' },
-        { name: 'Security', href: '/security' },
-        { name: 'Compliance', href: '/compliance' }
+        { name: 'GDPR Compliance', href: '/privacy' },
+        { name: 'Security', href: '/services' },
+        { name: 'Compliance', href: '/services' }
       ]
     }
   ];
