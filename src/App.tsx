@@ -6,7 +6,6 @@ import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBac
 import { ChatAssistant } from './components/ChatAssistant';
 import Sidebar from './components/Sidebar';
 
-
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
@@ -65,54 +64,54 @@ function App() {
         <div className="flex">
           <Sidebar />
           <main className="flex-1 relative z-10">
-          <Suspense fallback={<EnhancedLoadingSpinner />}>
-            <Routes>
-              {/* Main Routes */}
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/green-it" element={<GreenIT />} />
-              <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/enhanced-services" element={<EnhancedServices />} />
-              <Route path="/help" element={<Help />} />
-              <Route path="/status" element={<Status />} />
-              <Route path="/security" element={<Security />} />
-              
-              {/* AI Services Routes */}
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/ai-services/:service" element={<AIServicesPage />} />
-              
-              {/* Micro SAAS Routes */}
-              <Route path="/micro-saas" element={<MicroSAASServicesPage />} />
-              <Route path="/micro-saas/:service" element={<MicroSAASServicesPage />} />
-              
-              {/* IT Services Routes */}
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/it-services/:service" element={<ITServicesPage />} />
-              
-              {/* Innovative Services 2027 Routes */}
-              <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
-              <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
-              <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
-              <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
-              
-              {/* Emerging Tech Routes */}
-              <Route path="/emerging-tech" element={<GreenIT />} />
-              <Route path="/emerging-tech/:service" element={<GreenIT />} />
-              
-              {/* Marketplace Routes */}
-              <Route path="/marketplace" element={<GreenIT />} />
-              <Route path="/marketplace/:service" element={<GreenIT />} />
-            </Routes>
-          </Suspense>
+            <Suspense fallback={<EnhancedLoadingSpinner />}>
+              <Routes>
+                {/* Main Routes */}
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/green-it" element={<GreenIT />} />
+                <Route path="/partners" element={<PartnersPage />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/enhanced-services" element={<EnhancedServices />} />
+                <Route path="/help" element={<Help />} />
+                <Route path="/status" element={<Status />} />
+                <Route path="/security" element={<Security />} />
+                
+                {/* AI Services Routes */}
+                <Route path="/ai-services" element={<AIServicesPage />} />
+                <Route path="/ai-services/:service" element={<AIServicesPage />} />
+                
+                {/* Micro SAAS Routes */}
+                <Route path="/micro-saas" element={<MicroSAASServicesPage />} />
+                <Route path="/micro-saas/:service" element={<MicroSAASServicesPage />} />
+                
+                {/* IT Services Routes */}
+                <Route path="/it-services" element={<ITServicesPage />} />
+                <Route path="/it-services/:service" element={<ITServicesPage />} />
+                
+                {/* Innovative Services 2027 Routes */}
+                <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
+                <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
+                <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
+                <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
+                
+                {/* Emerging Tech Routes */}
+                <Route path="/emerging-tech" element={<GreenIT />} />
+                <Route path="/emerging-tech/:service" element={<GreenIT />} />
+                
+                {/* Marketplace Routes */}
+                <Route path="/marketplace" element={<GreenIT />} />
+                <Route path="/marketplace/:service" element={<GreenIT />} />
+              </Routes>
+            </Suspense>
           </main>
         </div>
         
