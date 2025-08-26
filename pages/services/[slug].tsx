@@ -5,6 +5,7 @@ import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
 import { newlyAddedServices } from '../../data/newly-added-services';
@@ -35,6 +36,10 @@ import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
 import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
 import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
 import { real2027Q4Additions } from '../../data/real-2027-q4-additions';
+=======
+import { innovativeMicroSaasServices2025 } from '../../src/data/innovativeMicroSaasServices2025';
+import { enhancedMicroSaasServices2025 } from '../../src/data/enhancedMicroSaasServices2025';
+>>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-a8d7
 
 type Service = typeof ultimateInnovativeServices2026[number];
 
@@ -47,6 +52,7 @@ const contactInfo = {
 
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
+<<<<<<< HEAD
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
 		.concat(curatedMarketServices as Service[])
@@ -76,6 +82,10 @@ function getAllServices(): Service[] {
 		.concat(real2027Q2Additions as unknown as Service[])
 		.concat(real2027Q3Additions as unknown as Service[])
 		.concat(real2027Q4Additions as unknown as Service[]);
+=======
+		.concat(innovativeMicroSaasServices2025 as Service[])
+		.concat(enhancedMicroSaasServices2025 as Service[]);
+>>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-a8d7
 }
 
 function toSlug(value: string): string {
