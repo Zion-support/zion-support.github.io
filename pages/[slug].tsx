@@ -4,14 +4,41 @@ import UIButton from '../components/ui/Button';
 import UICard from '../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 
-import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/2025-innovative-real-micro-saas-services';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { extraServices } from '../data/extra-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { newlyAddedServices } from '../data/newly-added-services';
+import { curatedMarketServices } from '../data/curated-market-services';
+import { new2025Services } from '../data/new-2025-services';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { moreRealServices2025 } from '../data/more-real-services-2025';
+import { verified2025Additions } from '../data/verified-2025-additions';
+import { realServicesQ12025 } from '../data/real-services-q1-2025';
+import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
+import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { quantumSpaceServices } from '../data/quantum-space-services';
 
 // Node modules will be required inside getStaticPaths to avoid client bundling
 
-type Service = typeof servicesData[number];
+type Service = typeof enhancedRealMicroSaasServices[number];
 
 function getAllServices(): Service[] {
-  return servicesData;
+  return enhancedRealMicroSaasServices
+    .concat(extraServices as Service[], additionalEnhancedServices as Service[])
+    .concat(newlyAddedServices as unknown as Service[])
+    .concat(curatedMarketServices as Service[])
+    .concat(new2025Services as unknown as Service[])
+    .concat(marketValidatedServices as unknown as Service[])
+    .concat(moreRealServices2025 as unknown as Service[])
+    .concat(verified2025Additions as unknown as Service[])
+    .concat(realServicesQ12025 as unknown as Service[])
+    .concat(realEnterpriseServices2025 as unknown as Service[])
+    .concat(verifiedRealServices2025Batch2 as unknown as Service[])
+    .concat(innovativeAIServices as unknown as Service[])
+    .concat(innovative2025Services as unknown as Service[])
+    .concat(quantumSpaceServices as unknown as Service[]);
 }
 
 function toSlug(value: string): string {
@@ -121,7 +148,7 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
             {service.name}
           </h1>
-                      <p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
