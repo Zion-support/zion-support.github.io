@@ -510,9 +510,15 @@ export default function ServicesPage() {
 
 <<<<<<< HEAD
     let filtered = allServices.filter(service => {
+<<<<<<< HEAD
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            (Array.isArray(service.category) ? service.category.some(cat => cat.toLowerCase().includes(searchTerm.toLowerCase())) : service.category.toLowerCase().includes(searchTerm.toLowerCase()));
+=======
+              const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                             service.category.toLowerCase().includes(searchTerm.toLowerCase());
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a889
       
       const matchesCategory = selectedCategory === 'all' || 
 <<<<<<< HEAD
@@ -592,13 +598,18 @@ export default function ServicesPage() {
       case 'price-high':
         filtered.sort((a, b) => parsePriceToNumber((b as any).price) - parsePriceToNumber((a as any).price));
         break;
+<<<<<<< HEAD
       case 'rating':
         // Rating sorting not available for all service types
         break;
       case 'customers':
+=======
+      case 'roi':
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a889
         filtered.sort((a, b) => {
-          const getCustomers = (s: any) => (s.customerCount ?? s.customers ?? 0) as number;
-          return getCustomers(b) - getCustomers(a);
+          const aRoi = parseInt((a.roi || '0').replace(/[^0-9]/g, '')) || 0;
+          const bRoi = parseInt((b.roi || '0').replace(/[^0-9]/g, '')) || 0;
+          return bRoi - aRoi;
         });
         break;
       default:
@@ -926,7 +937,11 @@ export default function ServicesPage() {
                     <div className="relative z-10">
                       {/* Service Icon */}
                       <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+<<<<<<< HEAD
                         {'🚀'}
+=======
+                        🚀
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a889
                       </div>
 
                       {/* Service Name */}
@@ -969,7 +984,11 @@ export default function ServicesPage() {
                       <div className="grid grid-cols-2 gap-4 mb-8 text-sm">
                         <div className="text-center p-3 bg-gradient-to-r from-gray-800/60 to-gray-700/60 rounded-xl border border-gray-600/30">
                           <div className="text-cyan-400 font-bold text-lg">
+<<<<<<< HEAD
                             {'N/A'}
+=======
+                            N/A
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a889
                           </div>
                           <div className="text-gray-400 text-xs">Rating</div>
                         </div>
