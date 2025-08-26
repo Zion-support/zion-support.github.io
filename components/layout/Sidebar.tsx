@@ -15,12 +15,6 @@ const Sidebar: React.FC = () => {
 							<Link href="/services" className="text-gray-700 hover:text-indigo-600">Services</Link>
 						</li>
 						<li>
-							<Link href="/products" className="text-gray-700 hover:text-indigo-600">Products</Link>
-						</li>
-						<li>
-							<Link href="/resources" className="text-gray-700 hover:text-indigo-600">Resources</Link>
-						</li>
-						<li>
 							<Link href="/pricing" className="text-gray-700 hover:text-indigo-600">Pricing</Link>
 						</li>
 						<li>
