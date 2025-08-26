@@ -1,18 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
-interface FuturisticAnimatedBackgroundProps {
-  className?: string;
-  intensity?: 'low' | 'medium' | 'high';
-  colorScheme?: 'blue' | 'purple' | 'green' | 'multi';
-}
-
-export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> = ({
-  className = '',
-  intensity = 'medium',
-  colorScheme = 'multi'
-}) => {
+export const FuturisticAnimatedBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -39,65 +28,99 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       size: number;
       opacity: number;
       color: string;
-      life: number;
-      maxLife: number;
     }> = [];
 
-    // Color schemes
-    const colorSchemes = {
-      blue: ['#00ffff', '#0080ff', '#0040ff', '#0000ff'],
-      purple: ['#ff00ff', '#8000ff', '#4000ff', '#0000ff'],
-      green: ['#00ff00', '#00ff80', '#00ff40', '#00ff00'],
-      multi: ['#00ffff', '#ff00ff', '#00ff00', '#ffff00', '#ff8000', '#8000ff']
+    // Initialize particles
+    const initParticles = () => {
+      particles.length = 0;
+      const particleCount = Math.min(100, Math.floor((canvas.width * canvas.height) / 10000));
+      
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 2 + 1,
+          opacity: Math.random() * 0.5 + 0.1,
+          color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`
+        });
+      }
     };
 
-    const colors = colorSchemes[colorScheme];
-    const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
+    // Geometric shapes
+    const shapes: Array<{
+      x: number;
+      y: number;
+      size: number;
+      rotation: number;
+      rotationSpeed: number;
+      opacity: number;
+      type: 'triangle' | 'square' | 'circle';
+    }> = [];
 
-    // Initialize particles
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.1,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        life: Math.random() * 100,
-        maxLife: 100
-      });
-    }
+    // Initialize shapes
+    const initShapes = () => {
+      shapes.length = 0;
+      const shapeCount = 15;
+      
+      for (let i = 0; i < shapeCount; i++) {
+        shapes.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 40 + 20,
+          rotation: Math.random() * Math.PI * 2,
+          rotationSpeed: (Math.random() - 0.5) * 0.02,
+          opacity: Math.random() * 0.1 + 0.05,
+          type: ['triangle', 'square', 'circle'][Math.floor(Math.random() * 3)] as 'triangle' | 'square' | 'circle'
+        });
+      }
+    };
 
-    // Grid lines
-    const gridSize = 50;
-    const gridOpacity = intensity === 'low' ? 0.1 : intensity === 'medium' ? 0.2 : 0.3;
+    // Draw triangle
+    const drawTriangle = (x: number, y: number, size: number, rotation: number) => {
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(rotation);
+      
+      ctx.beginPath();
+      ctx.moveTo(0, -size / 2);
+      ctx.lineTo(-size / 2, size / 2);
+      ctx.lineTo(size / 2, size / 2);
+      ctx.closePath();
+      
+      ctx.restore();
+    };
+
+    // Draw square
+    const drawSquare = (x: number, y: number, size: number, rotation: number) => {
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(rotation);
+      
+      ctx.rect(-size / 2, -size / 2, size, size);
+      
+      ctx.restore();
+    };
+
+    // Draw circle
+    const drawCircle = (x: number, y: number, size: number) => {
+      ctx.beginPath();
+      ctx.arc(x, y, size / 2, 0, Math.PI * 2);
+    };
 
     // Animation loop
     const animate = () => {
-      // Clear canvas with fade effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      // Clear canvas with gradient background
+      const gradient = ctx.createRadialGradient(
+        canvas.width / 2, canvas.height / 2, 0,
+        canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
+      );
+      gradient.addColorStop(0, 'rgba(15, 23, 42, 0.1)');
+      gradient.addColorStop(1, 'rgba(15, 23, 42, 0.05)');
+      
+      ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      // Draw grid
-      ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity})`;
-      ctx.lineWidth = 1;
-
-      // Vertical lines
-      for (let x = 0; x < canvas.width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-
-      // Horizontal lines
-      for (let y = 0; y < canvas.height; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
 
       // Update and draw particles
       particles.forEach((particle, index) => {
@@ -105,119 +128,109 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-        // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) {
-          particle.vx *= -1;
-        }
-        if (particle.y <= 0 || particle.y >= canvas.height) {
-          particle.vy *= -1;
-        }
-
-        // Update life
-        particle.life--;
-        if (particle.life <= 0) {
-          particle.life = particle.maxLife;
-          particle.x = Math.random() * canvas.width;
-          particle.y = Math.random() * canvas.height;
-        }
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
 
         // Draw particle
-        const alpha = (particle.life / particle.maxLife) * particle.opacity;
-        ctx.fillStyle = `${particle.color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`;
+        ctx.save();
+        ctx.globalAlpha = particle.opacity;
+        ctx.fillStyle = particle.color;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
+        ctx.restore();
 
-        // Draw glow effect
-        const gradient = ctx.createRadialGradient(
-          particle.x, particle.y, 0,
-          particle.x, particle.y, particle.size * 3
-        );
-        gradient.addColorStop(0, `${particle.color}${Math.floor(alpha * 100).toString(16).padStart(2, '0')}`);
-        gradient.addColorStop(1, 'transparent');
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
-        ctx.fill();
+        // Draw connections between nearby particles
+        particles.slice(index + 1).forEach(otherParticle => {
+          const dx = particle.x - otherParticle.x;
+          const dy = particle.y - otherParticle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < 100) {
+            ctx.save();
+            ctx.globalAlpha = (100 - distance) / 100 * 0.1;
+            ctx.strokeStyle = '#06b6d4';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.stroke();
+            ctx.restore();
+          }
+        });
       });
 
-      // Draw connecting lines between nearby particles
-      ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity * 0.5})`;
+      // Update and draw shapes
+      shapes.forEach(shape => {
+        // Update rotation
+        shape.rotation += shape.rotationSpeed;
+
+        // Draw shape
+        ctx.save();
+        ctx.globalAlpha = shape.opacity;
+        ctx.strokeStyle = '#06b6d4';
+        ctx.lineWidth = 1;
+        ctx.fillStyle = 'transparent';
+
+        switch (shape.type) {
+          case 'triangle':
+            drawTriangle(shape.x, shape.y, shape.size, shape.rotation);
+            break;
+          case 'square':
+            drawSquare(shape.x, shape.y, shape.size, shape.rotation);
+            break;
+          case 'circle':
+            drawCircle(shape.x, shape.y, shape.size);
+            break;
+        }
+
+        ctx.stroke();
+        ctx.restore();
+      });
+
+      // Add subtle grid effect
+      ctx.save();
+      ctx.globalAlpha = 0.02;
+      ctx.strokeStyle = '#06b6d4';
       ctx.lineWidth = 0.5;
 
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 100) {
-            const alpha = (1 - distance / 100) * gridOpacity * 0.5;
-            ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-
-      // Draw floating orbs
-      const time = Date.now() * 0.001;
-      for (let i = 0; i < 3; i++) {
-        const x = Math.sin(time * 0.5 + i) * canvas.width * 0.3 + canvas.width * 0.5;
-        const y = Math.cos(time * 0.3 + i) * canvas.height * 0.3 + canvas.height * 0.5;
-        const size = Math.sin(time + i) * 20 + 40;
-        const alpha = (Math.sin(time * 2 + i) + 1) * 0.1 + 0.05;
-
-        // Orb glow
-        const gradient = ctx.createRadialGradient(x, y, 0, x, y, size * 2);
-        gradient.addColorStop(0, `rgba(0, 255, 255, ${alpha})`);
-        gradient.addColorStop(0.5, `rgba(0, 255, 255, ${alpha * 0.5})`);
-        gradient.addColorStop(1, 'transparent');
-
-        ctx.fillStyle = gradient;
+      const gridSize = 50;
+      for (let x = 0; x < canvas.width; x += gridSize) {
         ctx.beginPath();
-        ctx.arc(x, y, size * 2, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Orb core
-        ctx.fillStyle = `rgba(0, 255, 255, ${alpha * 2})`;
-        ctx.beginPath();
-        ctx.arc(x, y, size * 0.3, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
       }
+      for (let y = 0; y < canvas.height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+      ctx.restore();
 
-      // Draw scanning line effect
-      const scanY = (time * 50) % (canvas.height + 100) - 50;
-      const scanGradient = ctx.createLinearGradient(0, scanY - 2, 0, scanY + 2);
-      scanGradient.addColorStop(0, 'transparent');
-      scanGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.3)');
-      scanGradient.addColorStop(1, 'transparent');
-
-      ctx.fillStyle = scanGradient;
-      ctx.fillRect(0, scanY - 2, canvas.width, 4);
-
-      animationRef.current = requestAnimationFrame(animate);
+      requestAnimationFrame(animate);
     };
 
+    // Initialize and start animation
+    initParticles();
+    initShapes();
     animate();
 
+    // Cleanup
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, [intensity, colorScheme]);
+  }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className={`fixed inset-0 pointer-events-none ${className}`}
-      style={{ zIndex: -1 }}
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{ background: 'transparent' }}
     />
   );
 };
-
-export default FuturisticAnimatedBackground;

@@ -1,25 +1,38 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import { HelmetProvider } from 'react-helmet-async';
+import { FuturisticNavigation } from './components/FuturisticNavigation';
+import { FuturisticFooter } from './components/FuturisticFooter';
+import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { ChatAssistant } from './components/ChatAssistant';
 
-// Lazy load essential pages only
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Login = lazy(() => import('./pages/Login'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage'));
-const Services = lazy(() => import('./pages/Services'));
+// Lazy load pages - only import existing ones
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PartnersPage = React.lazy(() => import('./pages/PartnersPage'));
+const Login = React.lazy(() => import('./pages/Login'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Services = React.lazy(() => import('./pages/Services'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-futuristic">
+// Enhanced loading component with better UX
+const EnhancedLoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
     <div className="relative">
       <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
       <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
         ZION
+      </div>
+      <div className="mt-4 text-center">
+        <div className="text-zion-cyan text-sm animate-pulse">Loading amazing experiences...</div>
       </div>
     </div>
   </div>
@@ -27,37 +40,45 @@ const LoadingSpinner = () => (
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <AppHeader />
-        <main>
-          <Suspense fallback={<LoadingSpinner />}>
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative">
+        {/* Futuristic Animated Background */}
+        <FuturisticAnimatedBackground />
+        
+        {/* Navigation */}
+        <FuturisticNavigation />
+        
+        <main className="flex-1 relative z-10">
+          <Suspense fallback={<EnhancedLoadingSpinner />}>
             <Routes>
-              {/* Essential Routes */}
+              {/* Main Routes */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/enhanced-services" element={<Services />} />
-
-              {/* Catch-all route for 404 */}
-              <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                <div className="text-center">
-                  <h1 className="text-4xl font-bold text-zion-cyan mb-4">404 - Page Not Found</h1>
-                  <p className="text-zion-slate-light mb-6">The page you're looking for doesn't exist.</p>
-                  <a href="/" className="text-zion-cyan hover:text-zion-cyan-light underline">
-                    Return to Home
-                  </a>
-                </div>
-              </div>} />
             </Routes>
           </Suspense>
         </main>
-        <Footer />
+        
+        {/* Footer */}
+        <FuturisticFooter />
+        
+        {/* Chat Assistant */}
         <ChatAssistant />
-      </div>
-    </Router>
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 
