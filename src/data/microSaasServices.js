@@ -451,6 +451,68 @@ export const getMicroSaasServiceById = (id) => {
 export const getMicroSaasServicesByCategory = (category) => {
     return MICRO_SAAS_SERVICES.filter(service => service.category === category);
 };
+
+export const MICRO_SAAS_CATEGORIES = [
+    "AI Services",
+    "IT Services",
+    "Business Solutions"
+];
+
 export const getMicroSaasCategories = () => {
-    return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
+    return MICRO_SAAS_CATEGORIES;
+};
+
+export const PRICING_TIERS = [
+    {
+        name: "Starter",
+        price: 99,
+        currency: "USD",
+        period: "month",
+        features: [
+            "Basic AI Features",
+            "Email Support",
+            "Standard Security",
+            "5GB Storage",
+            "Basic Analytics"
+        ],
+        popular: false
+    },
+    {
+        name: "Professional",
+        price: 299,
+        currency: "USD",
+        period: "month",
+        features: [
+            "Advanced AI Features",
+            "Priority Support",
+            "Enhanced Security",
+            "25GB Storage",
+            "Advanced Analytics",
+            "Custom Integrations"
+        ],
+        popular: true
+    },
+    {
+        name: "Enterprise",
+        price: 999,
+        currency: "USD",
+        period: "month",
+        features: [
+            "Full AI Suite",
+            "24/7 Dedicated Support",
+            "Enterprise Security",
+            "Unlimited Storage",
+            "Custom Analytics",
+            "White-label Solutions",
+            "Dedicated Account Manager"
+        ],
+        popular: false
+    }
+];
+
+export const CONTACT_INFO = {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709",
+    website: "https://ziontechgroup.com"
 };

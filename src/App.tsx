@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
-import { LoadingSpinner } from './components/LoadingSpinner';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
