@@ -13,6 +13,22 @@ const ComprehensivePricing = React.lazy(() => import('./pages/ComprehensivePrici
 const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const Login = React.lazy(() => import('./pages/Login.jsx'));
 
+// Additional service pages
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PartnersPage = React.lazy(() => import('./pages/PartnersPage'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Services = React.lazy(() => import('./pages/Services'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+
 const LoadingSpinner = () => (
   <div className="min-h-screen bg-futuristic flex items-center justify-center">
     <div className="text-center">
@@ -30,6 +46,7 @@ function App() {
         <main className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
+              {/* Main Routes */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<ServicesPage />} />
@@ -37,6 +54,38 @@ function App() {
               <Route path="/comprehensive-pricing" element={<ComprehensivePricing />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
+              
+              {/* Additional Routes */}
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/enhanced-services" element={<EnhancedServices />} />
+              
+              {/* AI Services Routes */}
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/ai-services/:service" element={<AIServicesPage />} />
+              
+              {/* Micro SAAS Routes */}
+              <Route path="/micro-saas" element={<MicroSAASServicesPage />} />
+              <Route path="/micro-saas/:service" element={<MicroSAASServicesPage />} />
+              
+              {/* IT Services Routes */}
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/it-services/:service" element={<ITServicesPage />} />
+              
+              {/* Emerging Tech Routes */}
+              <Route path="/emerging-tech" element={<GreenIT />} />
+              <Route path="/emerging-tech/:service" element={<GreenIT />} />
+              
+              {/* Marketplace Routes */}
+              <Route path="/marketplace" element={<GreenIT />} />
+              <Route path="/marketplace/:service" element={<GreenIT />} />
             </Routes>
           </Suspense>
         </main>
