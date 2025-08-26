@@ -1,0 +1,130 @@
+import { useState } from 'react';
+
+interface Toast {
+  id: string;
+  title: string;
+  description?: string;
+  type?: 'success' | 'error' | 'warning' | 'info';
+  variant?: 'default' | 'destructive';
+<<<<<<< HEAD
+=======
+import { useState, useCallback } from 'react';
+
+export interface Toast {
+  id: string;
+  title: string;
+  description?: string;
+  variant?: 'default' | 'destructive' | 'success';
+  duration?: number;
+}
+
+export interface ToastOptions {
+  title: string;
+  description?: string;
+  variant?: 'default' | 'destructive' | 'success';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+  duration?: number;
+}
+
+export function useToast() {
+  const [toasts, setToasts] = useState<Toast[]>([]);
+
+<<<<<<< HEAD
+  const toast = (options: Omit<Toast, 'id'>) => {
+    const id = Date.now().toString();
+<<<<<<< HEAD
+=======
+  const toast = useCallback((options: ToastOptions) => {
+    const id = Math.random().toString(36).substr(2, 9);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+    const newToast: Toast = {
+      id,
+      title: options.title,
+      description: options.description,
+      variant: options.variant || 'default',
+      duration: options.duration || 5000,
+    };
+<<<<<<< HEAD
+=======
+
+    setToasts(prev => [...prev, newToast]);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+
+    setToasts(prev => [...prev, newToast]);
+
+<<<<<<< HEAD
+    // Auto remove toast after duration
+<<<<<<< HEAD
+=======
+    // Auto-remove toast after duration
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+    setTimeout(() => {
+      setToasts(prev => prev.filter(toast => toast.id !== id));
+    }, newToast.duration);
+
+    return id;
+  };
+
+  const dismiss = (id: string) => {
+    setToasts(prev => prev.filter(t => t.id !== id));
+  };
+
+  const success = (title: string, description?: string) => {
+    return toast({ title, description, type: 'success' });
+  };
+
+  const error = (title: string, description?: string) => {
+    return toast({ title, description, type: 'error', variant: 'destructive' });
+  };
+
+  const warning = (title: string, description?: string) => {
+    return toast({ title, description, type: 'warning' });
+  };
+
+  const info = (title: string, description?: string) => {
+    return toast({ title, description, type: 'info' });
+  };
+<<<<<<< HEAD
+=======
+  }, []);
+
+  const dismiss = useCallback((id: string) => {
+    setToasts(prev => prev.filter(toast => toast.id !== id));
+  }, []);
+
+  const dismissAll = useCallback(() => {
+    setToasts([]);
+  }, []);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+
+  return {
+    toasts,
+    toast,
+    dismiss,
+    dismissAll,
+  };
+}
+
+<<<<<<< HEAD
+// Export a standalone toast function for convenience
+export const toast = (options: Omit<Toast, 'id'>) => {
+  // This is a simplified version that just logs to console
+  // In a real app, you'd want to integrate with a toast library
+<<<<<<< HEAD
+=======
+// Export a default toast function for backward compatibility
+export const toast = (options: ToastOptions) => {
+  // This is a simplified version - in a real app, you'd want to use a toast context
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+  console.log('Toast:', options);
+};
