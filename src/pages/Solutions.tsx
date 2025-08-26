@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
 
 const Solutions: React.FC = () => {
   return (
