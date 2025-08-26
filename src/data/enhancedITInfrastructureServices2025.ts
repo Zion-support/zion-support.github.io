@@ -26,7 +26,6 @@ export interface ITInfrastructureService {
   support: string;
   certifications: string[];
 }
-
 export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
   {
     id: 201,
@@ -469,5 +468,4 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     certifications: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "VMware"]
   }
 ];
-
 export default enhancedITInfrastructureServices2025;

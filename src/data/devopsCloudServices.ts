@@ -21,7 +21,6 @@ export interface DevOpsCloudService {
     website: string;
   };
 }
-
 export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
   // GitOps Platform
   {
@@ -72,7 +71,6 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Multi-Cloud Management Platform
   {
     id: "multi-cloud-management",
@@ -122,7 +120,6 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Kubernetes Management Platform
   {
     id: "kubernetes-management",
@@ -172,7 +169,6 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Observability Platform
   {
     id: "observability-platform",
@@ -222,7 +218,6 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
   // Serverless Development Platform
   {
     id: "serverless-development",

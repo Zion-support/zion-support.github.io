@@ -21,8 +21,12 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
+<<<<<<< HEAD
 <<<<<<< HEAD:public/locales/en-US/common.json
     "micro-saas": "Micro SAAS",
+=======
+    "services": "Services",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
     "categories": "Categories",
     "services": "Services",
     "micro-saas": "Micro SAAS",

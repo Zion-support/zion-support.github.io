@@ -29,7 +29,6 @@ export interface InnovativeAIService2025 {
   roiMetrics: string[];
   competitiveAdvantages: string[];
 }
-
 export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   // AI-Powered Autonomous Customer Service
   {
@@ -93,7 +92,6 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     roiMetrics: ["70% cost reduction", "90% response time improvement", "24/7 availability"],
     competitiveAdvantages: ["Fully autonomous", "Multi-language support", "Emotion detection", "Continuous learning"]
   },
-
   // AI-Powered Predictive Maintenance
   {
     id: "ai-predictive-maintenance-2025",
@@ -156,7 +154,6 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     roiMetrics: ["50% downtime reduction", "30% cost reduction", "Extended equipment life"],
     competitiveAdvantages: ["AI-powered prediction", "Real-time monitoring", "Industry expertise", "Cost optimization"]
   },
-
   // AI-Powered Content Creation Studio
   {
     id: "ai-content-creation-studio-2025",
@@ -219,7 +216,6 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     roiMetrics: ["10x faster creation", "60% cost reduction", "Brand consistency"],
     competitiveAdvantages: ["Multimedia AI", "Brand consistency", "SEO optimization", "Scalable production"]
   },
-
   // AI-Powered Financial Trading Platform
   {
     id: "ai-financial-trading-platform-2025",
@@ -282,7 +278,6 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     roiMetrics: ["Performance improvement", "Cost reduction", "Risk mitigation"],
     competitiveAdvantages: ["AI-powered trading", "Risk management", "Compliance automation", "Multi-asset support"]
   },
-
   // AI-Powered Healthcare Research Platform
   {
     id: "ai-healthcare-research-platform-2025",
@@ -345,7 +340,6 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     roiMetrics: ["Faster drug discovery", "Optimized trials", "Cost reduction"],
     competitiveAdvantages: ["Healthcare expertise", "Research focus", "Compliance automation", "Collaboration tools"]
   },
-
   // AI-Powered Energy Optimization Platform
   {
     id: "ai-energy-optimization-platform-2025",
@@ -408,7 +402,6 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     roiMetrics: ["25% cost reduction", "Energy efficiency", "Sustainability improvement"],
     competitiveAdvantages: ["Energy expertise", "AI optimization", "Sustainability focus", "Grid integration"]
   },
-
   // AI-Powered Supply Chain Risk Management
   {
     id: "ai-supply-chain-risk-management-2025",
@@ -471,7 +464,6 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     roiMetrics: ["Risk reduction", "Disruption prevention", "Cost optimization"],
     competitiveAdvantages: ["Risk expertise", "AI prediction", "Global coverage", "Compliance automation"]
   },
-
   // AI-Powered Legal Research & Analysis
   {
     id: "ai-legal-research-analysis-2025",
@@ -534,7 +526,6 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
     roiMetrics: ["80% time reduction", "Cost reduction", "Compliance improvement"],
     competitiveAdvantages: ["Legal expertise", "AI research", "Comprehensive coverage", "Collaboration tools"]
   },
-
   // AI-Powered Creative Design Studio
   {
     id: "ai-creative-design-studio-2025",
