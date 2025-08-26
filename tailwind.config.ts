@@ -82,6 +82,12 @@ const config: Config = {
           dark: "#14847e",
           glow: "#22ddd2",
         },
+        "zion-purple": {
+          DEFAULT: "#8c15e9",
+          light: "#b971f2",
+          dark: "#530c8b",
+          neon: "#b971f2",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

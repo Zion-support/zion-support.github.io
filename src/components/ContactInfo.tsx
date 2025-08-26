@@ -151,12 +151,14 @@ export function ContactInfo() {
                   </Button>
                 </Link>
                 
+                <Link to="/comprehensive-services">
                 <Link href="/comprehensive-services">
                   <Button variant="outline" className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                     View All Services
                   </Button>
                 </Link>
                 
+                <Link to="/it-onsite-services">
                 <Link href="/it-onsite-services">
                   <Button variant="outline" className="w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10">
                     IT Onsite Services

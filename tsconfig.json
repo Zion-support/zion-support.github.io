@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
@@ -21,14 +17,26 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     },
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "allowJs": true,
+    "incremental": true
   },
   "include": [
-    "src"
+    "**/*.ts",
+    "**/*.tsx",
+    "src",
+    "vite-env.d.ts"
   ],
   "exclude": [
     "node_modules",
@@ -41,15 +49,6 @@
     "fix_*.js",
     "fix_*.cjs",
     "*.fix.js",
-    "*.fix.cjs",
-    "vite.config.ts",
-    "tailwind.config.ts",
-    "**/*.backup.*",
-    "**/*.disabled/**",
-    "pages_disabled/**",
-    "pages.disabled/**",
-    "src_disabled/**",
-    "temp_components.disabled/**",
-    "tests.disabled/**"
+    "*.fix.cjs"
   ]
 }

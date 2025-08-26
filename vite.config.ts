@@ -1,32 +1,33 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'node:path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  root: '.',
-  publicDir: 'public',
-  plugins: [react()],
+  plugins: [
+    react({
+      jsxRuntime: 'automatic',
+      include: [/(\.|\/)[jt]sx?$/],
+    }),
+  ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
-    }
+      '@': resolve(__dirname, './src'),
+      '@components': resolve(__dirname, './src/components'),
+      '@pages': resolve(__dirname, './src/pages'),
+      '@utils': resolve(__dirname, './src/utils'),
+      '@hooks': resolve(__dirname, './src/hooks'),
+      '@types': resolve(__dirname, './src/types'),
+      '@styles': resolve(__dirname, './src/styles'),
+      '@assets': resolve(__dirname, './src/assets'),
+    },
   },
   build: {
     target: 'esnext',
-    minify: 'esbuild',
     sourcemap: false,
     rollupOptions: {
-      input: path.resolve(__dirname, 'public/index.html'),
       output: {
-        chunkFileNames: 'js/[name]-[hash].js',
-        entryFileNames: 'js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const name = assetInfo.name || ''
-          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]'
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]'
-          if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]'
-          return 'assets/[name]-[hash].[ext]'
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
         },
       },
       external: [],
@@ -35,27 +36,16 @@ export default defineConfig({
     outDir: 'dist',
     copyPublicDir: true,
   },
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-    ],
-  },
-  css: { devSourcemap: false },
   server: {
     port: 3000,
     host: true,
-    open: true,
+    open: false,
     cors: true,
     hmr: { overlay: false },
   },
-  preview: { port: 4173, host: true, open: true },
-  define: {
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+  preview: {
+    port: 4173,
+    host: true,
+    open: false,
   },
-  esbuild: { drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [] },
-  worker: { format: 'es' },
-  envPrefix: ['VITE_', 'ZION_'],
-})
+});
