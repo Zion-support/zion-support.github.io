@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React, { useRef } from 'react';
+import '../styles/globals.css';
+import { SEOContext } from '../components/SEOContext';
+import DefaultSEO from '../components/DefaultSEO';
+import Analytics from '../components/Analytics';
+=======
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -5,10 +12,42 @@ import '../src/index.css'
 import SiteHeader from '../components/layout/SiteHeader'
 import SiteFooter from '../components/layout/SiteFooter'
 import SiteSidebar from '../components/layout/SiteSidebar'
+>>>>>>> origin/cursor/website-audit-and-enhancement-c621
 
 export default function App({ Component, pageProps }: AppProps) {
 	const renderedRef = useRef(false);
 	return (
+<<<<<<< HEAD
+		<SEOContext.Provider value={{ renderedRef }}>
+			<a href="#main" className="skip-link">Skip to main content</a>
+			<DefaultSEO />
+			<Analytics />
+			<Component {...pageProps} />
+		</SEOContext.Provider>
+	);
+}
+import '../styles/globals.css';
+import SiteLayout from '../components/layout/SiteLayout';
+
+export default function App({ Component, pageProps }: AppProps) {
+	return (
+		<SiteLayout>
+			<Component {...pageProps} />
+		</SiteLayout>
+	);
+}
+import type { AppProps } from 'next/app'
+import Layout from '../components/layout/Layout'
+import '../styles/globals.css'
+
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  )
+}
+=======
 		<>
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -32,3 +71,4 @@ export default function App({ Component, pageProps }: AppProps) {
 		</>
 	)
 }
+>>>>>>> origin/cursor/website-audit-and-enhancement-c621
