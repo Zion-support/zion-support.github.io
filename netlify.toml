@@ -1,220 +1,13 @@
 [build]
-<<<<<<< HEAD
-  command = "npm ci && npm run build"
-<<<<<<< HEAD
-  publish = ".next"
-
-[build.environment]
-=======
-  # Use `npm ci` for deterministic installs
-  # Generate Prisma client before building to ensure models are up to date
-  command = "npm run build:netlify:prepare"
-  # Netlify UI sets `publish` to `out` which causes the Next.js plugin to fail
-  # because no exported directory exists. Explicitly publish the `.next`
-  # directory so the plugin can run correctly.
-  publish = ".next"
-  # Increase build timeout for 176+ pages
+  command = "npm run build"
+  publish = "out"
   command_timeout = "30m"
 
 [build.environment]
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-
-  NODE_OPTIONS = "--max_old_space_size=4096"
-  NPM_FLAGS = "--prefer-offline"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   NODE_VERSION = "20"
-<<<<<<< HEAD
+  NODE_OPTIONS = "--max_old_space_size=4096"
 
-<<<<<<< HEAD
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-=======
-  publish = "dist"
-
-[build.environment]
-  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-
-# SPA routing redirects for Vite
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-# Headers for static assets
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    X-DNS-Prefetch-Control = "on"
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
-    Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Resource-Policy = "same-origin"
-    X-Permitted-Cross-Domain-Policies = "none"
-    Origin-Agent-Cluster = "?1"
-
-[[redirects]]
-  from = "/ai-autonomous-ecosystem"
-  to = "/ai-autonomous-ecosystem-manager"
-  status = 301
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-
-<<<<<<< HEAD
-# Autonomous scheduled functions
-[[scheduled.functions]]
-  function = "auto_repo_sync"
-  cron = "*/15 * * * *"
-
-<<<<<<< HEAD
-[[scheduled.functions]]
-  function = "link_health"
-  cron = "*/30 * * * *"
-
-[[scheduled.functions]]
-  function = "promo_rotator"
-  cron = "*/30 * * * *"
-
-[[scheduled.functions]]
-  function = "site_index"
-  cron = "@hourly"
-
-[[scheduled.functions]]
-  function = "seo_audit"
-  cron = "0 2 * * *"
-
-[[scheduled.functions]]
-  function = "daily_status_report"
-  cron = "0 3 * * *"
-
-[[scheduled.functions]]
-  function = "issue_link_health"
-  cron = "15 3 * * *"
-
-[[scheduled.functions]]
-  function = "pagespeed_audit"
-  cron = "0 * * * *"
-
-[[scheduled.functions]]
-  function = "security_headers_audit"
-  cron = "0 * * * *"
-
-[[scheduled.functions]]
-  function = "stale_content_issues"
-  cron = "0 4 * * *"
-
-[[scheduled.functions]]
-  function = "sitemap_from_index"
-  cron = "0 */6 * * *"
-
-[[scheduled.functions]]
-  function = "og_meta_audit"
-  cron = "*/45 * * * *"
-
-[[scheduled.functions]]
-  function = "rss_generator"
-  cron = "0 */12 * * *"
-
-[[scheduled.functions]]
-  function = "broken_image_checker"
-  cron = "*/45 * * * *"
-
-[[scheduled.functions]]
-  function = "commit_changelog"
-  cron = "0 */6 * * *"
-
-[[scheduled.functions]]
-  function = "deep_link_health_from_index"
-  cron = "*/30 * * * *"
-
-[[scheduled.functions]]
-  function = "sitemap_submitter"
-  cron = "0 */6 * * *"
-
-[[scheduled.functions]]
-  function = "osv_dependency_audit"
-  cron = "0 5 * * *"
-
-[[scheduled.functions]]
-  function = "external_link_audit"
-  cron = "0 */6 * * *"
-
-[[scheduled.functions]]
-  function = "automation_summary"
-  cron = "*/30 * * * *"
-
-[[scheduled.functions]]
-  function = "readme_badges_updater"
-  cron = "0 */6 * * *" 
-=======
-[[plugins]]
-  package = "netlify-plugin-cloudinary" 
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
-=======
-[[redirects]]
-  from = "/autonomous-it-operations"
-  to = "/autonomous-it-operations-center"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-internet-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-materials-discovery"
-  to = "/quantum-materials-discovery-platform"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-vehicle-ai"
-  to = "/autonomous-vehicle-ai-platform"
-  status = 301
-
-[[redirects]]
-  from = "/ai-content-marketing-automation"
-  to = "/ai-content-generator"
-  status = 301
-
-[[redirects]]
-  from = "/ai-customer-success-automation"
-  to = "/ai-customer-success-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-networking"
-  to = "/quantum-services"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-data-center"
-  to = "/quantum-services"
-  status = 301
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-[functions.environment]
-  SENTRY_LOG_LEVEL = "debug"
-=======
-# Static redirects for exported site
+# Static redirects (since Next.js redirects are ignored on export)
 [[redirects]]
   from = "/ai-customer-success-platform"
   to = "/services/ai-customer-success-platform/"
@@ -254,4 +47,67 @@
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/ai-content-generator/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-autonomous-ecosystem"
+  to = "/ai-autonomous-ecosystem-manager/"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center/"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-vehicle-ai"
+  to = "/autonomous-vehicle-ai-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/blockchain-enterprise-platform"
+  to = "/blockchain-infrastructure-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-networking"
+  to = "/quantum-services/"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-data-center"
+  to = "/quantum-services/"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-encryption-gateway"
+  to = "/quantum-internet-security-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-threat-detection"
+  to = "/quantum-cybersecurity/"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-identity-verification"
+  to = "/quantum-cybersecurity/"
+  status = 301
+
+# Security and performance headers for static assets
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    X-Permitted-Cross-Domain-Policies = "none"

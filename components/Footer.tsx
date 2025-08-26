@@ -8,7 +8,11 @@ export default function Footer(){
           <strong>Zion Tech Group</strong>
           <div style={{color:'#6b7280',fontSize:13}}>© {new Date().getFullYear()} All rights reserved.</div>
         </div>
-        <nav style={{display:'flex',gap:16}}>
+        <nav style={{display:'flex',gap:16,flexWrap:'wrap'}}>
+          <Link href="/solutions">Solutions</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/case-studies">Case Studies</Link>
+          <Link href="/careers">Careers</Link>
           <Link href="/privacy">Privacy</Link>
           <Link href="/terms">Terms</Link>
           <Link href="/contact">Contact</Link>
