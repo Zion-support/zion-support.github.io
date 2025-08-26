@@ -1140,3 +1140,10 @@
 [2025-08-26T11:00:02.415Z] Auto-restarting autonomous-manager (attempt 1)
 [2025-08-26T11:00:02.533Z] link-health-scheduler exited: code=0, signal=null
 [2025-08-26T11:00:02.533Z] Auto-restarting link-health-scheduler (attempt 1)
+[2025-08-26T11:01:15.892Z] enhanced-autonomous healthy - uptime: 3671s
+[2025-08-26T11:01:39.869Z] ml-link-intelligence exited: code=0, signal=null
+[2025-08-26T11:01:39.869Z] Auto-restarting ml-link-intelligence (attempt 1)
+[2025-08-26T11:01:45.894Z] enhanced-autonomous healthy - uptime: 3701s
+[2025-08-26T11:01:47.873Z] ml-link-intelligence started successfully
+[2025-08-26T11:02:01.530Z] autonomous-manager exited: code=0, signal=null
+[2025-08-26T11:02:01.531Z] Auto-restarting autonomous-manager (attempt 1)

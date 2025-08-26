@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { ReactNode } from 'react'
 
-interface UltraFuturisticBackgroundProps {
-	children: React.ReactNode;
+interface Props {
+	children: ReactNode
+	variant?: 'quantum' | 'neon'
+	intensity?: 'low' | 'medium' | 'high'
 }
 
-export default function UltraFuturisticBackground({ children }: UltraFuturisticBackgroundProps) {
-	return <div className="relative min-h-screen">{children}</div>;
+export default function UltraFuturisticBackground({ children }: Props) {
+	return (
+		<div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950">
+			{children}
+		</div>
+	)
 }

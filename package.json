@@ -4,7 +4,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zion-Holdings/zion.app.git"
+    "url": "git+https://github.com/Zion-Holdings/zion.app.git"
   },
   "bugs": {
     "url": "https://github.com/Zion-Holdings/zion.app/issues"
@@ -441,5 +441,11 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
-  }
+  },
+  "description": "![Automations: 227](https://img.shields.io/badge/Automations-227-informational) ![Pages: 15+](https://img.shields.io/badge/Pages-15+-success) ![Components: 50+](https://img.shields.io/badge/Components-50+-blue) ![Blueprints: 7](https://img.shields.io/badge/Blueprints-7-purple)",
+  "main": ".eslintrc.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
 }

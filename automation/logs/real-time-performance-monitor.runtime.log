@@ -2694,3 +2694,29 @@ Alerts:
 [2025-08-26T11:00:02.577Z] [real-time-performance-monitor] [2025-08-26T11:00:02.574Z] Stopping performance monitoring
 [2025-08-26T11:00:02.573Z] Stopping Real-Time Performance Monitor...
 [2025-08-26T11:00:02.644Z] Stopping performance monitoring
+[2025-08-26T11:01:06.110Z] ALERT [WARNING] Memory usage warning: 83.73%
+[2025-08-26T11:01:06.110Z] metrics rss=30.53 MB heapUsed=4.30 MB cpuLoad=9.60 memUsage=83.73%
+[2025-08-26T11:01:15.161Z] ALERT [WARNING] Memory usage warning: 83.87%
+[2025-08-26T11:01:15.161Z] metrics rss=30.87 MB heapUsed=4.34 MB cpuLoad=8.97 memUsage=83.87%
+[2025-08-26T11:01:21.126Z] ALERT [WARNING] Memory usage warning: 83.89%
+[2025-08-26T11:01:21.127Z] metrics rss=30.17 MB heapUsed=4.30 MB cpuLoad=8.41 memUsage=83.89%
+[2025-08-26T11:01:21.127Z] [real-time-performance-monitor] [2025-08-26T11:01:21.126Z] ALERT [WARNING] Memory usage warning: 83.89%
+[2025-08-26T11:01:21.127Z] [real-time-performance-monitor] [2025-08-26T11:01:21.127Z] metrics rss=30.17 MB heapUsed=4.30 MB cpuLoad=8.41 memUsage=83.89%
+[2025-08-26T11:01:36.110Z] ALERT [WARNING] Memory usage warning: 84.07%
+[2025-08-26T11:01:36.110Z] metrics rss=30.73 MB heapUsed=4.37 MB cpuLoad=7.23 memUsage=84.07%
+[2025-08-26T11:01:45.103Z] ALERT [WARNING] Memory usage warning: 84.05%
+[2025-08-26T11:01:45.104Z] metrics rss=30.90 MB heapUsed=4.37 MB cpuLoad=6.98 memUsage=84.05%
+[2025-08-26T11:01:51.127Z] ALERT [WARNING] Memory usage warning: 86.13%
+[2025-08-26T11:01:51.127Z] metrics rss=30.35 MB heapUsed=4.36 MB cpuLoad=7.22 memUsage=86.13%
+[2025-08-26T11:01:51.127Z] [real-time-performance-monitor] [2025-08-26T11:01:51.127Z] ALERT [WARNING] Memory usage warning: 86.13%
+[2025-08-26T11:01:51.127Z] [real-time-performance-monitor] [2025-08-26T11:01:51.127Z] metrics rss=30.35 MB heapUsed=4.36 MB cpuLoad=7.22 memUsage=86.13%
+[2025-08-26T11:02:01.681Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T11:02:01.681Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T11:02:01.681Z] Monitoring is not active
+[2025-08-26T11:02:01.682Z] Stopping performance monitoring
+[2025-08-26T11:02:01.681Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T11:02:01.684Z] Stopping performance monitoring
+[2025-08-26T11:02:01.684Z] [real-time-performance-monitor] [2025-08-26T11:02:01.681Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T11:02:01.684Z] [real-time-performance-monitor] [2025-08-26T11:02:01.684Z] Stopping performance monitoring
+[2025-08-26T11:02:01.681Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T11:02:01.742Z] Stopping performance monitoring

@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function ApiDocumentationPage() {
@@ -66,7 +65,7 @@ export default function ApiDocumentationPage() {
                   <div className="bg-slate-900 rounded-lg p-4">
                     <div className="text-sm text-cyan-300 mb-2">Example Request</div>
                     <code className="text-white text-sm">
-                      curl -H "Authorization: Bearer YOUR_API_KEY" \<br/>
+                      curl -H "Authorization: Bearer YOUR_API_KEY" <br/>
                       &nbsp;&nbsp;&nbsp;&nbsp;https://api.zion.tech/v1/automations
                     </code>
                   </div>
@@ -159,8 +158,7 @@ export default function ApiDocumentationPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-white/90 mb-3">JavaScript/Node.js</h3>
                   <div className="bg-slate-900 rounded-lg p-4">
-                    <pre className="text-white text-sm overflow-x-auto">
-{`const axios = require('axios');
+                    <pre className="text-white text-sm overflow-x-auto">{`const axios = require('axios');
 
 const apiClient = axios.create({
   baseURL: 'https://api.zion.tech/v1',
@@ -188,8 +186,7 @@ const createAutomation = async (automationData) => {
   } catch (error) {
     console.error('Error creating automation:', error);
   }
-};`}
-                    </pre>
+};`}</pre>
                   </div>
                 </div>
 
@@ -197,8 +194,7 @@ const createAutomation = async (automationData) => {
                 <div>
                   <h3 className="text-lg font-semibold text-white/90 mb-3">Python</h3>
                   <div className="bg-slate-900 rounded-lg p-4">
-                    <pre className="text-white text-sm overflow-x-auto">
-{`import requests
+                    <pre className="text-white text-sm overflow-x-auto">{`import requests
 
 class ZionAPI:
     def __init__(self, api_key):
@@ -222,8 +218,7 @@ class ZionAPI:
 
 # Usage
 api = ZionAPI('YOUR_API_KEY')
-automations = api.get_automations()`}
-                    </pre>
+automations = api.get_automations()`}</pre>
                   </div>
                 </div>
 
@@ -231,22 +226,20 @@ automations = api.get_automations()`}
                 <div>
                   <h3 className="text-lg font-semibold text-white/90 mb-3">cURL Examples</h3>
                   <div className="bg-slate-900 rounded-lg p-4">
-                    <pre className="text-white text-sm overflow-x-auto">
-{`# List automations
-curl -H "Authorization: Bearer YOUR_API_KEY" \\
+                    <pre className="text-white text-sm overflow-x-auto">{`# List automations
+curl -H "Authorization: Bearer YOUR_API_KEY" \
      https://api.zion.tech/v1/automations
 
 # Create automation
-curl -X POST \\
-     -H "Authorization: Bearer YOUR_API_KEY" \\
-     -H "Content-Type: application/json" \\
-     -d '{"name": "My Automation", "type": "scheduled"}' \\
+curl -X POST \
+     -H "Authorization: Bearer YOUR_API_KEY" \
+     -H "Content-Type: application/json" \
+     -d '{"name": "My Automation", "type": "scheduled"}' \
      https://api.zion.tech/v1/automations
 
 # Get automation by ID
-curl -H "Authorization: Bearer YOUR_API_KEY" \\
-     https://api.zion.tech/v1/automations/123`}
-                    </pre>
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     https://api.zion.tech/v1/automations/123`}</pre>
                   </div>
                 </div>
               </div>
@@ -276,15 +269,13 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \\
                   <div>
                     <h3 className="text-lg font-semibold text-white/90 mb-2">Error Response Format</h3>
                     <div className="bg-slate-900 rounded-lg p-4">
-                      <pre className="text-white text-sm">
-{`{
+                      <pre className="text-white text-sm">{`{
   "error": {
     "code": "VALIDATION_ERROR",
     "message": "Invalid input data",
     "details": ["name is required"]
   }
-}`}
-                      </pre>
+}`}</pre>
                     </div>
                   </div>
                 </div>
@@ -342,99 +333,5 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \\
         </main>
       </div>
     </>
-=======
-
-export default function ApiDocumentation() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Head>
-        <title>API Documentation - Zion App</title>
-        <meta name="description" content="Comprehensive API documentation for Zion App services and integrations" />
-      </Head>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              API Documentation
-            </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive guides and references for integrating with Zion App's powerful automation and cloud services
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-4">Authentication</h3>
-              <p className="text-gray-300 mb-4">
-                Secure your API requests with JWT tokens and OAuth 2.0 integration
-              </p>
-              <div className="bg-slate-800 rounded-lg p-4">
-                <code className="text-green-400">
-                  Authorization: Bearer YOUR_JWT_TOKEN
-                </code>
-              </div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-4">Rate Limiting</h3>
-              <p className="text-gray-300 mb-4">
-                Understand our rate limiting policies and best practices
-              </p>
-              <div className="bg-slate-800 rounded-lg p-4">
-                <code className="text-yellow-400">
-                  Rate Limit: 1000 requests/hour
-                </code>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-8">
-            <h3 className="text-2xl font-semibold text-white mb-6">Core Endpoints</h3>
-            <div className="space-y-6">
-              <div>
-                <h4 className="text-lg font-medium text-white mb-2">Automation Management</h4>
-                <div className="bg-slate-800 rounded-lg p-4 mb-2">
-                  <code className="text-cyan-400">POST /api/automations</code>
-                </div>
-                <p className="text-gray-300 text-sm">Create and manage cloud automation workflows</p>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-medium text-white mb-2">Content Generation</h4>
-                <div className="bg-slate-800 rounded-lg p-4 mb-2">
-                  <code className="text-cyan-400">POST /api/content/generate</code>
-                </div>
-                <p className="text-gray-300 text-sm">Generate AI-powered content and reports</p>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-medium text-white mb-2">System Monitoring</h4>
-                <div className="bg-slate-800 rounded-lg p-4 mb-2">
-                  <code className="text-cyan-400">GET /api/health/status</code>
-                </div>
-                <p className="text-gray-300 text-sm">Monitor system health and performance metrics</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-            <h3 className="text-2xl font-semibold text-white mb-6">Getting Started</h3>
-            <div className="space-y-4">
-              <p className="text-gray-300">
-                To get started with our API, you'll need to:
-              </p>
-              <ol className="list-decimal list-inside space-y-2 text-gray-300">
-                <li>Register for an API key in your dashboard</li>
-                <li>Review our authentication documentation</li>
-                <li>Explore our interactive API playground</li>
-                <li>Check out our SDKs and examples</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
->>>>>>> origin/cursor/update-content-and-fix-links-7079
   );
 }

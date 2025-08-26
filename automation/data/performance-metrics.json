@@ -1,41 +1,41 @@
 [
   {
-    "timestamp": "2025-08-26T10:59:01.016Z",
+    "timestamp": "2025-08-26T11:01:21.124Z",
     "system": {
       "platform": "darwin",
       "arch": "x64",
       "nodeVersion": "v22.16.0",
-      "uptime": 4118,
+      "uptime": 4258,
       "hostname": "MacBook-Pro-de-Kleber.local"
     },
     "cpu": {
       "loadAverage": [
-        5.951171875,
-        5.9892578125,
-        5.80908203125
+        8.41162109375,
+        7.60400390625,
+        6.51318359375
       ],
       "usage": {
-        "user": 68181,
-        "system": 16121,
-        "total": 84302
+        "user": 62717,
+        "system": 13483,
+        "total": 76200
       },
       "cores": 12
     },
     "memory": {
       "total": 34359738368,
-      "free": 5830455296,
-      "used": 28529283072,
-      "usagePercent": 83.03114175796509,
+      "free": 5535444992,
+      "used": 28824293376,
+      "usagePercent": 83.88973474502563,
       "process": {
-        "rss": 31973376,
+        "rss": 31633408,
         "heapTotal": 5574656,
-        "heapUsed": 4493568,
-        "external": 1561738,
+        "heapUsed": 4504096,
+        "external": 1562874,
         "arrayBuffers": 10555
       }
     },
     "disk": {
-      "currentDirectory": "/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app",
+      "currentDirectory": "/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/automation",
       "available": "unknown",
       "used": "unknown",
       "total": "unknown",
@@ -88,58 +88,58 @@
       "bandwidth": "unknown"
     },
     "process": {
-      "pid": 25346,
-      "uptime": 30.040004346,
+      "pid": 28817,
+      "uptime": 30.038745379,
       "memory": {
-        "rss": 31973376,
+        "rss": 31633408,
         "heapTotal": 5574656,
-        "heapUsed": 4493568,
-        "external": 1561738,
+        "heapUsed": 4504096,
+        "external": 1562874,
         "arrayBuffers": 10555
       },
       "cpu": {
-        "user": 68181,
-        "system": 16121
+        "user": 62717,
+        "system": 13483
       }
     }
   },
   {
-    "timestamp": "2025-08-26T10:59:31.017Z",
+    "timestamp": "2025-08-26T11:01:51.125Z",
     "system": {
       "platform": "darwin",
       "arch": "x64",
       "nodeVersion": "v22.16.0",
-      "uptime": 4148,
+      "uptime": 4288,
       "hostname": "MacBook-Pro-de-Kleber.local"
     },
     "cpu": {
       "loadAverage": [
-        6.640625,
-        6.1357421875,
-        5.86669921875
+        7.2216796875,
+        7.36181640625,
+        6.4599609375
       ],
       "usage": {
-        "user": 70155,
-        "system": 17167,
-        "total": 87322
+        "user": 64593,
+        "system": 14542,
+        "total": 79135
       },
       "cores": 12
     },
     "memory": {
       "total": 34359738368,
-      "free": 5202075648,
-      "used": 29157662720,
-      "usagePercent": 84.85996723175049,
+      "free": 4767322112,
+      "used": 29592416256,
+      "usagePercent": 86.12526655197144,
       "process": {
-        "rss": 32178176,
+        "rss": 31825920,
         "heapTotal": 5574656,
-        "heapUsed": 4562184,
-        "external": 1561778,
+        "heapUsed": 4572792,
+        "external": 1562914,
         "arrayBuffers": 10555
       }
     },
     "disk": {
-      "currentDirectory": "/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app",
+      "currentDirectory": "/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/automation",
       "available": "unknown",
       "used": "unknown",
       "total": "unknown",
@@ -192,122 +192,18 @@
       "bandwidth": "unknown"
     },
     "process": {
-      "pid": 25346,
-      "uptime": 60.039190428,
+      "pid": 28817,
+      "uptime": 60.0384797,
       "memory": {
-        "rss": 32178176,
+        "rss": 31825920,
         "heapTotal": 5574656,
-        "heapUsed": 4562184,
-        "external": 1561778,
+        "heapUsed": 4572792,
+        "external": 1562914,
         "arrayBuffers": 10555
       },
       "cpu": {
-        "user": 70155,
-        "system": 17167
-      }
-    }
-  },
-  {
-    "timestamp": "2025-08-26T11:00:01.019Z",
-    "system": {
-      "platform": "darwin",
-      "arch": "x64",
-      "nodeVersion": "v22.16.0",
-      "uptime": 4178,
-      "hostname": "MacBook-Pro-de-Kleber.local"
-    },
-    "cpu": {
-      "loadAverage": [
-        6.71240234375,
-        6.1884765625,
-        5.89306640625
-      ],
-      "usage": {
-        "user": 70809,
-        "system": 18240,
-        "total": 89049
-      },
-      "cores": 12
-    },
-    "memory": {
-      "total": 34359738368,
-      "free": 5215887360,
-      "used": 29143851008,
-      "usagePercent": 84.81976985931396,
-      "process": {
-        "rss": 32215040,
-        "heapTotal": 5574656,
-        "heapUsed": 4591992,
-        "external": 1561778,
-        "arrayBuffers": 10555
-      }
-    },
-    "disk": {
-      "currentDirectory": "/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app",
-      "available": "unknown",
-      "used": "unknown",
-      "total": "unknown",
-      "usagePercent": 0
-    },
-    "network": {
-      "interfaces": {
-        "en5": {
-          "address": "fe80::aede:48ff:fe00:1122",
-          "family": "IPv6",
-          "mac": "ac:de:48:00:11:22"
-        },
-        "en0": {
-          "address": "192.168.68.56",
-          "family": "IPv4",
-          "mac": "be:77:45:94:99:b6"
-        },
-        "awdl0": {
-          "address": "fe80::dc10:fff:fed9:f16a",
-          "family": "IPv6",
-          "mac": "de:10:0f:d9:f1:6a"
-        },
-        "llw0": {
-          "address": "fe80::dc10:fff:fed9:f16a",
-          "family": "IPv6",
-          "mac": "de:10:0f:d9:f1:6a"
-        },
-        "utun0": {
-          "address": "fe80::86b8:a29e:200e:c56c",
-          "family": "IPv6",
-          "mac": "00:00:00:00:00:00"
-        },
-        "utun1": {
-          "address": "fe80::c818:c5d:dcbe:8dca",
-          "family": "IPv6",
-          "mac": "00:00:00:00:00:00"
-        },
-        "utun2": {
-          "address": "fe80::c900:6c1f:2532:429b",
-          "family": "IPv6",
-          "mac": "00:00:00:00:00:00"
-        },
-        "utun3": {
-          "address": "fe80::ce81:b1c:bd2c:69e",
-          "family": "IPv6",
-          "mac": "00:00:00:00:00:00"
-        }
-      },
-      "activeConnections": "unknown",
-      "bandwidth": "unknown"
-    },
-    "process": {
-      "pid": 25346,
-      "uptime": 90.041004885,
-      "memory": {
-        "rss": 32215040,
-        "heapTotal": 5574656,
-        "heapUsed": 4591992,
-        "external": 1561778,
-        "arrayBuffers": 10555
-      },
-      "cpu": {
-        "user": 70809,
-        "system": 18240
+        "user": 64593,
+        "system": 14542
       }
     }
   }

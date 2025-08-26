@@ -32,31 +32,28 @@ const Footer: React.FC = () => {
       title: "Company",
       links: [
         { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
+        { label: "Our Team", path: "/team" },
         { label: "Careers", path: "/careers" },
-        { label: "News & Updates", path: "/news" },
+        { label: "News", path: "/news" },
         { label: "Case Studies", path: "/case-studies" },
-        { label: "Partners", path: "/partners" }
+        { label: "Events", path: "/events" }
       ]
     },
     {
       title: "Resources",
       links: [
-        { label: "Blog", path: "/blog" },
-        { label: "Documentation", path: "/docs" },
-        { label: "White Papers", path: "/white-papers" },
-        { label: "Webinars", path: "/webinars" },
+        { label: "Solutions", path: "/solutions" },
+        { label: "Services", path: "/services" },
         { label: "Research", path: "/research-development" },
-        { label: "Events", path: "/events" },
-        { label: "Training", path: "/training" }
+        { label: "Resources", path: "/resources" },
+        { label: "Research", path: "/research-development" },
+        { label: "Privacy Policy", path: "/privacy" }
       ]
     },
     {
       title: "Support",
       links: [
         { label: "Contact Us", path: "/contact" },
-        { label: "Help Center", path: "/help" },
-        { label: "Support Portal", path: "/support" },
         { label: "FAQ", path: "/faq" },
         { label: "Consulting", path: "/services/consulting" },
         { label: "Request Quote", path: "/contact" }

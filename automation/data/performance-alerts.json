@@ -2,25 +2,17 @@
   {
     "level": "warning",
     "category": "memory",
-    "message": "Memory usage warning: 83.03%",
-    "value": 83.03114175796509,
+    "message": "Memory usage warning: 83.89%",
+    "value": 83.88973474502563,
     "threshold": 80,
-    "timestamp": "2025-08-26T10:59:01.016Z"
+    "timestamp": "2025-08-26T11:01:21.124Z"
   },
   {
     "level": "warning",
     "category": "memory",
-    "message": "Memory usage warning: 84.86%",
-    "value": 84.85996723175049,
+    "message": "Memory usage warning: 86.13%",
+    "value": 86.12526655197144,
     "threshold": 80,
-    "timestamp": "2025-08-26T10:59:31.017Z"
-  },
-  {
-    "level": "warning",
-    "category": "memory",
-    "message": "Memory usage warning: 84.82%",
-    "value": 84.81976985931396,
-    "threshold": 80,
-    "timestamp": "2025-08-26T11:00:01.019Z"
+    "timestamp": "2025-08-26T11:01:51.125Z"
   }
 ]

@@ -36,11 +36,10 @@ export function Sidebar() {
 
   const quickLinks = [
     { name: 'About Us', href: '/about' },
-    { name: 'Team', href: '/team' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'White Papers', href: '/white-papers' }
+    { name: 'News', href: '/news' }
   ];
 
   return (

@@ -16,6 +16,7 @@ class WebsiteAnalyzer {
     this.stylesheets = [];
     this.maxDepth = 5;
     this.currentDepth = 0;
+    this.sitemapUrls = [];
   }
 
   async analyze() {
@@ -23,10 +24,42 @@ class WebsiteAnalyzer {
     console.log('=' .repeat(60));
     
     try {
-      await this.crawlPage(this.baseUrl, 0);
+      await this.loadSitemap();
+      if (this.sitemapUrls.length > 0) {
+        console.log(`🗺️  Found ${this.sitemapUrls.length} URLs in sitemap.xml`);
+        for (const url of this.sitemapUrls) {
+          await this.crawlPage(url, 0);
+        }
+      } else {
+        console.log('⚠️  No sitemap URLs found; falling back to base URL crawl');
+        await this.crawlPage(this.baseUrl, 0);
+      }
       this.generateReport();
     } catch (error) {
       console.error('❌ Analysis failed:', error.message);
+    }
+  }
+
+  async loadSitemap() {
+    const sitemapUrl = new URL('/sitemap.xml', this.baseUrl).href;
+    try {
+      const response = await axios.get(sitemapUrl, {
+        timeout: 10000,
+        headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ZionTechGroup-Bot/1.0)' }
+      });
+      if (response.status !== 200 || typeof response.data !== 'string') {
+        return;
+      }
+      const locMatches = response.data.match(/<loc>(.*?)<\/loc>/g) || [];
+      const urls = locMatches
+        .map(tag => tag.replace('<loc>', '').replace('</loc>', '').trim())
+        .filter(u => u.startsWith('http'));
+      // Deduplicate and only include internal URLs
+      const base = this.baseUrl.replace(/\/$/, '');
+      this.sitemapUrls = Array.from(new Set(urls)).filter(u => u.startsWith(base));
+    } catch (err) {
+      console.warn(`⚠️  Failed to load sitemap.xml: ${err.message}`);
+      this.sitemapUrls = [];
     }
   }
 
