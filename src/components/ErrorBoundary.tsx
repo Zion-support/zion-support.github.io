@@ -1,43 +1,53 @@
-import React from 'react';
-import { AppLayout } from '@/layout/AppLayout';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
 }
 
-export class ErrorBoundary extends React.Component<React.PropsWithChildren, ErrorBoundaryState> {
-  constructor(props: React.PropsWithChildren) {
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+export class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
-    this.state = { hasError: false, error: null };
+    this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+  static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('ErrorBoundary caught an error', error, errorInfo);
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
       return (
-        <AppLayout>
-          <div className="container py-8">
+        <div className="min-h-screen flex items-center justify-center bg-zion-blue-dark text-white">
+          <div className="text-center">
             <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
-            <pre className="whitespace-pre-wrap text-red-500">
-              {this.state.error?.message}
-            </pre>
+            <p className="text-zion-slate-light mb-4">
+              We're sorry, but something unexpected happened.
+            </p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-zion-purple hover:bg-zion-purple/80 text-white px-6 py-3 rounded-lg transition-colors"
+            >
+              Reload Page
+            </button>
           </div>
-        </AppLayout>
+        </div>
       );
     }
 
     return this.props.children;
   }
-
-  return <>{children}</>;
 }
-
-export default ErrorBoundary;

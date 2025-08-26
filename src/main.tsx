@@ -42,19 +42,11 @@ const queryClient = new QueryClient({
   },
 })
 
-function GlobalErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
-  const { t } = useTranslation();
-  React.useEffect(() => {
-    captureException(error);
-  }, [error]);
-  return (
-    <div role="alert" className="p-4 text-center">
-      <p className="mb-2">{t('error_boundary.message', 'Something went wrong.')}</p>
-      <button className="rounded bg-blue-600 px-4 py-2 text-white" onClick={resetErrorBoundary}>
-        {t('error_boundary.retry', 'Retry')}
-      </button>
-    </div>
-  );
+// Performance monitoring setup
+if ((import.meta as any).env?.DEV) {
+  console.log('🚀 Zion Tech Group - Development Mode')
+  console.log('📊 Performance monitoring enabled')
+  console.log('🔧 Accessibility controls available')
 }
 
 try {

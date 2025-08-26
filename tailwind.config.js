@@ -10,17 +10,63 @@ module.exports = {
       colors: {
         // Modern color palette
         primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-          950: '#172554',
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        // Zion brand colors
+        'zion-blue-dark': '#172d67',
+        'zion-blue': '#1e3a8a',
+        'zion-blue-light': '#2e73ea',
+        'zion-purple': '#8c15e9',
+        'zion-purple-dark': '#6b21a8',
+        'zion-purple-light': '#a855f7',
+        'zion-cyan': '#22ddd2',
+        'zion-cyan-dark': '#14b8a6',
+        'zion-slate-light': '#94a3b8',
+        'zion-slate': '#64748b',
+        'zion-slate-dark': '#475569',
+      },
+      animation: {
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-slow': 'bounce 2s infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'shimmer': 'shimmer 2.5s linear infinite',
+        'gradient': 'gradient 8s ease infinite',
+        'neon-pulse': 'neon-pulse 1.5s ease-in-out infinite alternate',
+        'float-slow': 'float 8s ease-in-out infinite',
+        'float-medium': 'float 6s ease-in-out infinite',
+        'float-fast': 'float 4s ease-in-out infinite',
+        'fade-in-up': 'fadeInUp 0.6s ease-out',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
         },
         glow: {
           '0%': { boxShadow: '0 0 20px rgba(34, 221, 210, 0.5)' },
@@ -40,6 +86,16 @@ module.exports = {
           },
           '100%': { 
             textShadow: '0 0 10px rgba(34, 221, 210, 0.8), 0 0 20px rgba(34, 221, 210, 0.6), 0 0 30px rgba(34, 221, 210, 0.4)' 
+          },
+        },
+        fadeInUp: {
+          '0%': { 
+            opacity: '0',
+            transform: 'translateY(30px)'
+          },
+          '100%': { 
+            opacity: '1',
+            transform: 'translateY(0)'
           },
         },
       },
@@ -746,11 +802,40 @@ module.exports = {
         '90': '90',
         '100': '100',
       },
-      screens: {
-        'xs': '475px',
-        '3xl': '1600px',
-        '4xl': '1920px',
-        '5xl': '2560px',
+      fontFamily: {
+        'futuristic': ['Orbitron', 'monospace'],
+        'tech': ['Rajdhani', 'sans-serif'],
+      },
+      fontSize: {
+        '2xs': '0.625rem',
+        '3xl': '1.875rem',
+        '4xl': '2.25rem',
+        '5xl': '3rem',
+        '6xl': '3.75rem',
+        '7xl': '4.5rem',
+        '8xl': '6rem',
+        '9xl': '8rem',
+      },
+      lineHeight: {
+        'extra-tight': '1.1',
+        'extra-loose': '2.25',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
+      },
+      borderWidth: {
+        '3': '3px',
+        '4': '4px',
+        '5': '5px',
+      },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
+      },
+      minHeight: {
+        'screen-75': '75vh',
+        'screen-90': '90vh',
       },
     },
   },

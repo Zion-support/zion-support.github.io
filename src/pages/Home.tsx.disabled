@@ -1,0 +1,86 @@
+
+import React from 'react';
+import { SEO } from "@/components/SEO";
+import { HeroSection } from "@/components/HeroSection";
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-background relative">
+      <SEO 
+        title="Zion - The Tech & AI Marketplace" 
+        description="Discover top AI and tech talent, services, and equipment in one place."
+        keywords="AI, technology, marketplace, services, talent"
+        canonical="https://ziontechgroup.com/"
+      />
+
+      <HeroSection />
+      
+      {/* Minimal content sections for now */}
+      <section className="py-20 bg-zion-blue-dark/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-8">
+            Welcome to Zion Tech Group
+          </h2>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Your premier destination for AI services, tech talent, and innovative solutions. 
+            We connect businesses with cutting-edge technology and expert professionals.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-8">
+            Our Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="p-6 bg-zion-blue-dark/30 rounded-xl border border-zion-purple/20">
+              <h3 className="text-xl font-semibold text-white mb-4">AI Solutions</h3>
+              <p className="text-zion-slate-light">
+                Cutting-edge artificial intelligence services for modern businesses
+              </p>
+            </div>
+            <div className="p-6 bg-zion-blue-dark/30 rounded-xl border border-zion-purple/20">
+              <h3 className="text-xl font-semibold text-white mb-4">IT Services</h3>
+              <p className="text-zion-slate-light">
+                Comprehensive IT infrastructure and support solutions
+              </p>
+            </div>
+            <div className="p-6 bg-zion-blue-dark/30 rounded-xl border border-zion-purple/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Talent Network</h3>
+              <p className="text-zion-slate-light">
+                Access to verified tech professionals and experts
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-zion-blue-dark/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-8">
+            Get Started Today
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+            Ready to transform your business with cutting-edge technology? 
+            Contact us to learn more about our services.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/contact" 
+              className="bg-zion-purple hover:bg-zion-purple/80 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors"
+            >
+              Contact Us
+            </a>
+            <a 
+              href="/services" 
+              className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark px-8 py-4 text-lg font-semibold rounded-lg transition-colors"
+            >
+              Explore Services
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

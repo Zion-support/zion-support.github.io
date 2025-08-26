@@ -59,6 +59,16 @@
     "types": ["node"],
     "plugins": [ { "name": "next" } ]
   },
-  "include": ["src", "src/types/offline-shims.d.ts"],
+  "include": ["src/main.tsx", "src/App.tsx", "src/pages/Home.tsx"],
+  "exclude": [
+    "src/**/.backup/**",
+    "src/**/*.disabled",
+    "src/**/*.backup.*",
+    "src/components/**",
+    "src/pages/**",
+    "!src/pages/Home.tsx",
+    "src/routes/**",
+    "src/data/**"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

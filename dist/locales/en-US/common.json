@@ -20,30 +20,39 @@
   },
   "nav": {
     "home": "Home",
-    "services": "Services",
     "marketplace": "Marketplace",
-    "services": "Services",
+<<<<<<< HEAD:public/locales/en-US/common.json
+    "micro-saas": "Micro SAAS",
     "categories": "Categories",
     "services": "Services",
     "micro-saas": "Micro SAAS",
+=======
+    "services": "Services",
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5:src/i18n/locales/en/translation.json
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
-    "about": "About",
+    "company": "Company",
+    "blog": "Blog",
     "dashboard": "Dashboard",
     "messages": "Messages",
     "post_job": "Post Job",
     "analytics": "Analytics",
-<<<<<<< HEAD:dist/locales/en-US/common.json
+<<<<<<< HEAD:public/locales/en-US/common.json
     "faq": "FAQ",
     "help": "Help Center"
 =======
-    "ai-hiring": "AI Hiring",
+    "about": "About Us",
+    "careers": "Careers",
+    "partners": "Partners",
+    "contact": "Contact",
+    "products": "Products",
+    "green-it": "Green IT",
     "help": "Help Center",
-    "faq": "FAQ",
-    "about": "About",
-    "contact": "Contact"
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b:src/i18n/locales/en/translation.json
+    "developers": "Developer Portal",
+    "api-docs": "API Documentation",
+    "sitemap": "Sitemap"
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5:src/i18n/locales/en/translation.json
   },
   "auth": {
     "login": "Login",
