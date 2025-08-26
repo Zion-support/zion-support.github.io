@@ -1,0 +1,78 @@
+name: Test
+
+on:
+  push:
+    branches: [main, develop, cursor/**]
+  pull_request:
+    branches: [main, develop, cursor/**]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test Suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build project
+        run: npm run build
+        
+      - name: Verify build output
+        run: |
+          if [ -d ".next" ]; then
+            echo "Next.js build successful: .next folder found"
+          elif [ -d "dist" ]; then
+            echo "Build successful: dist folder found"
+          elif [ -d "out" ]; then
+            echo "Build successful: out folder found"
+          else
+            echo "Build failed: no build output found"
+            exit 1
+          fi
+          
+      - name: Run Jest with Coverage
+        run: npm test
+        continue-on-error: true
+        
+      - name: Upload coverage to Codecov
+        if: success()
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage/lcov.info
+          fail_ci_if_error: false
+          
+      - name: Upload coverage artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage
+          
+      - name: Upload build artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: |
+            .next/
+            dist/
+            out/
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true

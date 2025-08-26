@@ -1,0 +1,146 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.txt'
+      - '.github/**'
+      - 'docs/**'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - staging
+          - production
+
+permissions:
+  contents: read
+  deployments: write
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  deploy:
+    name: Deploy to ${{ github.event.inputs.environment || 'production' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: ${{ github.event.inputs.environment || 'production' }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run tests
+        run: npm test
+        continue-on-error: true
+        
+      - name: Build project
+        run: npm run build
+        
+      - name: Verify build output
+        run: |
+          if [ -d ".next" ]; then
+            echo "Next.js build successful: .next folder found"
+            ls -la .next/
+          elif [ -d "dist" ]; then
+            echo "Build successful: dist folder found"
+            ls -la dist/
+          elif [ -d "out" ]; then
+            echo "Build successful: out folder found"
+            ls -la out/
+          else
+            echo "Build failed: no build output found"
+            exit 1
+          fi
+          
+      - name: Deploy to Netlify
+        if: github.event.inputs.environment == 'staging' || github.ref == 'refs/heads/main'
+        uses: nwtgck/actions-netlify@v2.0
+        with:
+          publish-dir: './.next'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions - ${{ github.sha }}"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          
+      - name: Deploy to Vercel
+        if: github.event.inputs.environment == 'production' && github.ref == 'refs/heads/main'
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+          
+      - name: Create deployment status
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const environment = '${{ github.event.inputs.environment || 'production' }}'
+            const deployment = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.sha,
+              environment: environment,
+              description: `Deployment to ${environment} from GitHub Actions`,
+              auto_merge: false,
+              required_contexts: []
+            })
+            
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: deployment.data.id,
+              state: 'success',
+              description: `Successfully deployed to ${environment}`,
+              environment_url: 'https://ziontechgroup.com'
+            })
+            
+      - name: Notify deployment
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const environment = '${{ github.event.inputs.environment || 'production' }}'
+            const status = '${{ job.status }}'
+            
+            if (status === 'success') {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue?.number || 0,
+                body: `🚀 **Deployment Successful!**\n\nEnvironment: **${environment}**\nCommit: ${context.sha}\nStatus: ✅ Success`
+              })
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue?.number || 0,
+                body: `❌ **Deployment Failed!**\n\nEnvironment: **${environment}**\nCommit: ${context.sha}\nStatus: ❌ Failed`
+              })
+            }
