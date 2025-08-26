@@ -8,7 +8,7 @@ import type { Prisma } from '@prisma/client'; // Prisma Product type
 // Alias the Prisma generated Product model type.
 type ProductModel = Prisma.Product;
 // Define ProductWithReviewStats here or import from a shared types file
-// This should match the type returned by `/api/products/[productId]/details`
+// This should match the type returned by `/api/products/[id]/details`
 export type ProductWithReviewStats = ProductModel & {
   averageRating: number | null;
   reviewCount: number;
