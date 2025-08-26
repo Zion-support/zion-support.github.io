@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useAnalytics } from './useAnalytics';
+
 interface SecurityEvent {
   id: string;
   type: 'authentication' | 'authorization' | 'data_access' | 'system_change' | 'threat_detected' | 'compliance_violation';
@@ -14,6 +15,7 @@ interface SecurityEvent {
   status: 'new' | 'investigating' | 'resolved' | 'false_positive';
   metadata?: Record<string, any>;
 }
+
 interface ComplianceRule {
   id: string;
   name: string;
@@ -25,6 +27,7 @@ interface ComplianceRule {
   requirements: string[];
   violations: ComplianceViolation[];
 }
+
 interface ComplianceViolation {
   id: string;
   ruleId: string;
@@ -34,6 +37,7 @@ interface ComplianceViolation {
   status: 'open' | 'investigating' | 'resolved';
   remediation?: string;
 }
+
 interface SecurityMetrics {
   totalEvents: number;
   criticalEvents: number;
@@ -44,6 +48,7 @@ interface SecurityMetrics {
   averageResponseTime: number;
   falsePositiveRate: number;
 }
+
 interface SecurityConfig {
   enableRealTimeMonitoring: boolean;
   enableComplianceChecking: boolean;
@@ -56,6 +61,7 @@ interface SecurityConfig {
     complianceViolations: number;
   };
 }
+
 interface SecurityComplianceHook {
   // State
   securityEvents: SecurityEvent[];
@@ -63,6 +69,7 @@ interface SecurityComplianceHook {
   securityMetrics: SecurityMetrics;
   isMonitoring: boolean;
   isComplianceChecking: boolean;
+  
   // Actions
   startMonitoring: () => void;
   stopMonitoring: () => void;
@@ -74,11 +81,13 @@ interface SecurityComplianceHook {
   exportAuditLog: () => string;
   configureSecurity: (config: Partial<SecurityConfig>) => void;
 }
+
 export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>): SecurityComplianceHook => {
   const { trackEvent } = useAnalytics({
     enableTracking: true,
     enableUserBehaviorTracking: true
   });
+
   const [securityEvents, setSecurityEvents] = useState<SecurityEvent[]>([]);
   const [complianceRules, setComplianceRules] = useState<ComplianceRule[]>([]);
   const [securityMetrics, setSecurityMetrics] = useState<SecurityMetrics>({
@@ -92,8 +101,10 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
   });
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [isComplianceChecking, setIsComplianceChecking] = useState(false);
+
   const monitoringIntervalRef = useRef<NodeJS.Timeout>();
   const complianceCheckIntervalRef = useRef<NodeJS.Timeout>();
+
   // Default compliance rules
   const defaultComplianceRules: ComplianceRule[] = [
     {
@@ -148,17 +159,21 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
       violations: []
     }
   ];
+
   // Initialize with default rules
   useEffect(() => {
     if (complianceRules.length === 0) {
       setComplianceRules(defaultComplianceRules);
     }
   }, [complianceRules.length]);
+
   // Start real-time security monitoring
   const startMonitoring = useCallback(() => {
     if (isMonitoring) return;
+
     setIsMonitoring(true);
     trackEvent('security', 'monitoring', 'started');
+
     // Simulate real-time security monitoring
     monitoringIntervalRef.current = setInterval(() => {
       // Simulate security events
@@ -170,6 +185,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
           'system_change'
         ];
         const randomType = eventTypes[Math.floor(Math.random() * eventTypes.length)];
+        
         addSecurityEvent({
           type: randomType,
           severity: 'low',
@@ -179,15 +195,19 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
       }
     }, 30000); // Check every 30 seconds
   }, [isMonitoring, trackEvent]);
+
   // Stop security monitoring
   const stopMonitoring = useCallback(() => {
     if (!isMonitoring) return;
+
     setIsMonitoring(false);
     trackEvent('security', 'monitoring', 'stopped');
+
     if (monitoringIntervalRef.current) {
       clearInterval(monitoringIntervalRef.current);
     }
   }, [isMonitoring, trackEvent]);
+
   // Add security event
   const addSecurityEvent = useCallback((event: Omit<SecurityEvent, 'id' | 'timestamp'>) => {
     const newEvent: SecurityEvent = {
@@ -195,8 +215,10 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
       id: `event-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       timestamp: new Date()
     };
+
     setSecurityEvents(prev => [newEvent, ...prev]);
     trackEvent('security', 'event', 'created', undefined, { eventType: event.type, severity: event.severity });
+
     // Update metrics
     setSecurityMetrics(prev => ({
       ...prev,
@@ -204,20 +226,23 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
       criticalEvents: prev.criticalEvents + (event.severity === 'critical' ? 1 : 0),
       highSeverityEvents: prev.highSeverityEvents + (event.severity === 'high' ? 1 : 0)
     }));
+
     // Check if thresholds are exceeded
     if (event.severity === 'critical' || event.severity === 'high') {
       trackEvent('security', 'alert', 'threshold_exceeded', undefined, { severity: event.severity });
     }
   }, [trackEvent]);
+
   // Update event status
   const updateEventStatus = useCallback((eventId: string, status: SecurityEvent['status']) => {
-    setSecurityEvents(prev =>
-      prev.map(event =>
+    setSecurityEvents(prev => 
+      prev.map(event => 
         event.id === eventId ? { ...event, status } : event
       )
     );
     trackEvent('security', 'event', 'status_updated', undefined, { newStatus: status });
   }, [trackEvent]);
+
   // Add compliance rule
   const addComplianceRule = useCallback((rule: Omit<ComplianceRule, 'id' | 'lastChecked' | 'nextCheck'>) => {
     const newRule: ComplianceRule = {
@@ -227,27 +252,34 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
       nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // Default to 24 hours
       violations: []
     };
+
     setComplianceRules(prev => [...prev, newRule]);
     trackEvent('compliance', 'rule', 'added', undefined, { category: rule.category });
   }, [trackEvent]);
+
   // Check compliance
   const checkCompliance = useCallback(async () => {
     setIsComplianceChecking(true);
     trackEvent('compliance', 'check', 'started');
+
     try {
       // Simulate compliance checking
       await new Promise(resolve => setTimeout(resolve, 2000));
+
       // Update compliance status based on security events
-      const recentViolations = securityEvents.filter(event =>
-        event.type === 'compliance_violation' &&
+      const recentViolations = securityEvents.filter(event => 
+        event.type === 'compliance_violation' && 
         event.timestamp > new Date(Date.now() - 24 * 60 * 60 * 1000) // Last 24 hours
       );
-      setComplianceRules(prev =>
+
+      setComplianceRules(prev => 
         prev.map(rule => {
-          const ruleViolations = recentViolations.filter(violation =>
+          const ruleViolations = recentViolations.filter(violation => 
             violation.details.includes(rule.name.toLowerCase())
           );
+
           const newStatus: ComplianceRule['status'] = ruleViolations.length > 0 ? 'non_compliant' : 'compliant';
+          
           return {
             ...rule,
             status: newStatus,
@@ -264,14 +296,17 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
           };
         })
       );
+
       // Update compliance score
       const compliantRules = complianceRules.filter(rule => rule.status === 'compliant').length;
       const totalRules = complianceRules.length;
       const newScore = totalRules > 0 ? Math.round((compliantRules / totalRules) * 100) : 100;
+
       setSecurityMetrics(prev => ({
         ...prev,
         complianceScore: newScore
       }));
+
       trackEvent('compliance', 'check', 'completed', undefined, { score: newScore });
     } catch (error) {
       trackEvent('compliance', 'check', 'failed', undefined, { error: error instanceof Error ? error.message : 'Unknown error' });
@@ -279,6 +314,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
       setIsComplianceChecking(false);
     }
   }, [securityEvents, complianceRules, trackEvent]);
+
   // Generate security report
   const generateSecurityReport = useCallback(() => {
     const report = {
@@ -292,6 +328,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
       })),
       recommendations: [] as string[]
     };
+
     // Generate recommendations
     if (securityMetrics.complianceScore < 80) {
       report.recommendations.push('Immediate compliance review required');
@@ -302,9 +339,11 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
     if (securityMetrics.threatLevel === 'high' || securityMetrics.threatLevel === 'critical') {
       report.recommendations.push('Elevated threat level - implement additional security measures');
     }
+
     trackEvent('security', 'report', 'generated');
     return JSON.stringify(report, null, 2);
   }, [securityMetrics, securityEvents, complianceRules, trackEvent]);
+
   // Export audit log
   const exportAuditLog = useCallback(() => {
     const auditLog = {
@@ -323,9 +362,11 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
         status: event.status
       }))
     };
+
     trackEvent('security', 'audit', 'exported');
     return JSON.stringify(auditLog, null, 2);
   }, [securityEvents, trackEvent]);
+
   // Configure security settings
   const configureSecurity = useCallback((config: Partial<SecurityConfig>) => {
     if (config.enableRealTimeMonitoring !== undefined) {
@@ -335,11 +376,14 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
         stopMonitoring();
       }
     }
+
     if (config.complianceRules) {
       setComplianceRules(config.complianceRules);
     }
+
     trackEvent('security', 'configuration', 'updated', undefined, { configKeys: Object.keys(config) });
   }, [isMonitoring, startMonitoring, stopMonitoring, trackEvent]);
+
   // Cleanup on unmount
   useEffect(() => {
     return () => {
@@ -351,6 +395,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
       }
     };
   }, []);
+
   // Auto-compliance check every hour
   useEffect(() => {
     complianceCheckIntervalRef.current = setInterval(() => {
@@ -358,12 +403,14 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
         checkCompliance();
       }
     }, 60 * 60 * 1000); // Every hour
+
     return () => {
       if (complianceCheckIntervalRef.current) {
         clearInterval(complianceCheckIntervalRef.current);
       }
     };
   }, [isMonitoring, checkCompliance]);
+
   return {
     securityEvents,
     complianceRules,

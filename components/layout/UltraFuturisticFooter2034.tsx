@@ -12,8 +12,12 @@ import {
   Github, MessageCircle, MessageSquare
 } from 'lucide-react';
 
-export default function UltraFuturisticFooter2034() {
-  const currentYear = new Date().getFullYear();
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
 
 const serviceCategories = [
   {

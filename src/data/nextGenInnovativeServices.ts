@@ -28,6 +28,7 @@ export interface NextGenInnovativeService {
   roi: string;
   implementationTime: string;
 }
+
 export const NEXT_GEN_INNOVATIVE_SERVICES: NextGenInnovativeService[] = [
   {
     id: "ai-credit-risk-assessment",

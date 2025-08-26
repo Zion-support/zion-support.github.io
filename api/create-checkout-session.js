@@ -1,6 +1,18 @@
 import Stripe from 'stripe';
+import { withErrorLogging } from './withErrorLogging.cjs';
 
-export default async function handler(req, res) {
+const PROD_DOMAIN = 'app.ziontechgroup.com';
+
+function isProdDomain() {
+  const url = process.env.URL || '';
+  try {
+    return new URL(url).hostname === PROD_DOMAIN;
+  } catch {
+    return false;
+  }
+}
+
+async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Allow', 'POST');
@@ -16,7 +28,14 @@ export default async function handler(req, res) {
   }
 
   try {
-    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
+    const liveKey = process.env.STRIPE_SECRET_KEY || '';
+    const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey;
+
+    if (!isProdDomain() && liveKey.startsWith('sk_live') && !process.env.STRIPE_TEST_SECRET_KEY) {
+      throw new Error('Refusing to use live Stripe key on non-production domain');
+    }
+
+    const stripe = new Stripe(isProdDomain() ? liveKey : testKey, {
       apiVersion: '2023-10-16',
     });
 
@@ -36,3 +55,5 @@ export default async function handler(req, res) {
     res.json({ error: err.message });
   }
 }
+
+export default withErrorLogging(handler);

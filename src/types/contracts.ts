@@ -14,6 +14,7 @@ export interface ContractTemplate {
   rating: number;
   tags: string[];
 }
+
 export interface ContractVariable {
   name: string;
   type: 'string' | 'number' | 'date' | 'boolean';
@@ -21,6 +22,7 @@ export interface ContractVariable {
   required: boolean;
   defaultValue?: any;
 }
+
 export const CONTRACT_TEMPLATES: ContractTemplate[] = [
   {
     id: '1',

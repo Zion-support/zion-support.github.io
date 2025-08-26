@@ -24,6 +24,7 @@ export interface AdvancedITInfrastructureService {
     address: string;
   };
 }
+
 export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureService[] = [
   // Edge Computing & 5G Integration
   {

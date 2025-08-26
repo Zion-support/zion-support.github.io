@@ -15,7 +15,6 @@ const EQUIPMENT_FILTERS = [
   { label: "AI", value: "AI" },
   { label: "Robotics", value: "Robotics" },
 ];
-<<<<<<<< HEAD:src/pages/EquipmentPage.tsx.backup.1756210702
 
 const EQUIPMENT_CACHE_KEY = 'equipmentCache';
 
@@ -159,20 +158,6 @@ export default function EquipmentPage() {
         {/* Skeleton for the top button (e.g., AI Recommendations) */}
         <div className="flex justify-end mb-6">
             <Skeleton className="h-10 w-48" /> {/* Removed specific bg color, base Skeleton handles it */}
-========
-// Market insights component
-const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
-  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
-    <CardContent className="p-6">
-      <div className="flex items-center gap-2 mb-4">
-        <TrendingUp className="h-5 w-5 text-blue-400" />
-        <h3 className="text-lg font-semibold">Equipment Market Insights</h3>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice / 1000)}k</div>
-          <div className="text-sm text-muted-foreground">Avg Price</div>
->>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896:broken_files_backup/EquipmentPage.tsx
         </div>
         <div className="text-center">
           <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
@@ -190,6 +175,7 @@ const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
     </CardContent>
   </Card>
 );
+
 // Filter controls
 const EquipmentFilterControls = ({
   sortBy,
@@ -294,6 +280,7 @@ const EquipmentFilterControls = ({
     </Button>
   </div>
 );
+
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing; onViewDetails: () => void }) => (
   <Card className="h-full hover:shadow-lg transition-shadow">
@@ -333,12 +320,14 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
     </CardContent>
   </Card>
 );
+
 // Loading grid
 const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>
 );
+
 // Main component
 export default function EquipmentPage() {
   const router = useRouter();
@@ -350,36 +339,49 @@ export default function EquipmentPage() {
   const [minRating, setMinRating] = useState(0);
   const [showRecommended, setShowRecommended] = useState(false);
   const [totalGenerated, setTotalGenerated] = useState(0);
+
   const fetchEquipment = useCallback(async (page: number, limit: number) => {
     await new Promise(resolve => setTimeout(resolve, 400));
+
     let allEquipment: ProductListing[] = [];
+    
     if (page === 1) {
       allEquipment = [...INITIAL_EQUIPMENT];
     }
+    
     const startId = INITIAL_EQUIPMENT.length + (page - 1) * limit + totalGenerated;
     const newEquipment = generateDatacenterEquipment(limit, startId);
     setTotalGenerated(prev => prev + newEquipment.length);
+    
     allEquipment = [...allEquipment, ...newEquipment];
+    
     let filteredEquipment = allEquipment;
+
     if (filterCategory) {
       filteredEquipment = filteredEquipment.filter(e => e.category === filterCategory);
     }
+
     if (filterBrand) {
       filteredEquipment = filteredEquipment.filter(e => e.brand === filterBrand);
     }
+
     if (filterAvailability) {
       filteredEquipment = filteredEquipment.filter(e => e.availability === filterAvailability);
     }
+
     filteredEquipment = filteredEquipment.filter(e => {
       const price = e.price || 0;
       return price >= priceRange[0] && price <= priceRange[1];
     });
+
     if (minRating > 0) {
       filteredEquipment = filteredEquipment.filter(e => (e.rating || 0) >= minRating);
     }
+
     if (showRecommended) {
       filteredEquipment = getRecommendedEquipment(filteredEquipment);
     }
+    
     filteredEquipment.sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
@@ -392,15 +394,18 @@ export default function EquipmentPage() {
           return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
       }
     });
+    
     const startIndex = (page - 1) * limit;
     const endIndex = startIndex + limit;
     const items = filteredEquipment.slice(startIndex, endIndex);
+    
     return {
       items,
       hasMore: endIndex < filteredEquipment.length || page < 10,
       total: filteredEquipment.length
     };
   }, [sortBy, filterCategory, filterBrand, filterAvailability, priceRange, minRating, showRecommended, totalGenerated]);
+
   const {
     items: equipment,
     loading,
@@ -412,23 +417,29 @@ export default function EquipmentPage() {
     refresh,
     scrollToTop
   } = useInfiniteScrollPagination(fetchEquipment, 12);
+
   useEffect(() => {
     refresh();
     setTotalGenerated(0);
   }, [sortBy, filterCategory, filterBrand, filterAvailability, priceRange, minRating, showRecommended]);
+
   const marketStats = useMemo(() => {
     if (equipment.length === 0) return null;
     return getEquipmentMarketStats(equipment);
   }, [equipment]);
+
   const categories = useMemo(() => {
     return Array.from(new Set(equipment.map(e => e.category).filter(Boolean)));
   }, [equipment]);
+
   const brandOptions = useMemo(() => {
     return Array.from(new Set(equipment.map(e => e.brand).filter(Boolean)));
   }, [equipment]);
+
   const availabilityOptions = useMemo(() => {
     return Array.from(new Set(equipment.map(e => e.availability).filter(Boolean)));
   }, [equipment]);
+
   useEffect(() => {
     if (equipment.length > 0 && priceRange[0] === 0 && priceRange[1] === 200000) {
       const prices = equipment.map(e => e.price || 0);
@@ -437,14 +448,15 @@ export default function EquipmentPage() {
       setPriceRange([min, max]);
     }
   }, [equipment]);
+
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
-<<<<<<<< HEAD:src/pages/EquipmentPage.tsx.backup.1756210702
 <<<<<<< HEAD
     
 =======
@@ -462,76 +474,5 @@ export default function EquipmentPage() {
     
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5
-========
-    <div className="container py-8">
-      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Datacenter Equipment
-        </h1>
-        <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure and AI workloads</p>
-      </motion.div>
-      {marketStats && (
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          <EquipmentMarketInsights stats={marketStats} />
-        </motion.div>
-      )}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-        <EquipmentFilterControls
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          filterCategory={filterCategory}
-          setFilterCategory={setFilterCategory}
-          categories={categories}
-          priceRange={priceRange}
-          setPriceRange={setPriceRange}
-          filterBrand={filterBrand}
-          setFilterBrand={setFilterBrand}
-          brandOptions={brandOptions}
-          filterAvailability={filterAvailability}
-          setFilterAvailability={setFilterAvailability}
-          availabilityOptions={availabilityOptions}
-          minRating={minRating}
-          setMinRating={setMinRating}
-          showRecommended={showRecommended}
-          setShowRecommended={setShowRecommended}
-          loading={isFetching}
-        />
-      </motion.div>
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
-        <AnimatePresence mode="popLayout">
-          {equipment.map((item, index) => (
-            <motion.div
-              key={item.id} ref={index === equipment.length - 1 ? lastElementRef : null}
-              initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ delay: Math.min(index * 0.03, 0.5) }} whileHover={{ scale: 1.02 }}
-            >
-              <EquipmentCard equipment={item} onViewDetails={() => router.push(`/equipment/${item.id}`)} />
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </motion.div>
-      {(isFetching || loading) && (
-        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-          <EquipmentLoadingGrid count={4} />
-        </motion.div>
-      )}
-      {!hasMore && equipment.length > 0 && (
-        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-          <div className="text-muted-foreground text-lg mb-2">🏭 You've explored all available equipment!</div>
-          <div className="text-sm text-muted-foreground">Showing {equipment.length} datacenter equipment items</div>
-        </motion.div>
-      )}
-      <AnimatePresence>
-        {showScrollTop && (
-          <motion.button onClick={scrollToTop} className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
-            initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
-          >
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />
-          </motion.button>
-        )}
-      </AnimatePresence>
-    </div>
->>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896:broken_files_backup/EquipmentPage.tsx
   );
 }

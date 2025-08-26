@@ -1,6 +1,5 @@
 // Filename: sentry.server.config.js
 import * as Sentry from "@sentry/nextjs";
-import { Http } from "@sentry/integrations";
 
 const SENTRY_DSN = process.env.SENTRY_DSN;
 const SENTRY_LOG_LEVEL = process.env.SENTRY_LOG_LEVEL;
@@ -9,22 +8,7 @@ Sentry.init({
   dsn: SENTRY_DSN,
   // Adjust this value in production, or use tracesSampler for greater control
   tracesSampleRate: 1.0,
-  release: process.env.SENTRY_RELEASE,
-  environment: process.env.SENTRY_ENVIRONMENT,
-  integrations: [new Http({ tracing: true })],
-  beforeSend(event) {
-    // Drop events without a meaningful exception message
-    if (!event.exception?.values?.[0]?.value) {
-      return null;
-    }
-    return event;
-  },
-  initialScope: {
-    tags: {
-      SENTRY_RELEASE: process.env.SENTRY_RELEASE,
-      SENTRY_ENVIRONMENT: process.env.SENTRY_ENVIRONMENT,
-    },
-  },
+  debug: SENTRY_LOG_LEVEL === 'debug',
   // ...
   // Note: if you want to override the automatic release value, do not set a
   // `release` value here - use the environment variable `SENTRY_RELEASE`, so

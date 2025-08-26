@@ -1,39 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import type { GetStaticPaths, GetStaticProps } from 'next';
-import { SERVICES } from '@/data/servicesData';
-import { slugify } from '@/lib/slugify';
-import Custom404 from '../404';
-import type { ProductListing } from '@/types/listings';
-=======
 import Head from 'next/head';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-<<<<<<< HEAD
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../../data/extra-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025';
-import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-import { realQ4Services2025, } from '../../data/real-2025-q4-additions';
-import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
-import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
-import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
-import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
-import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
-import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
-import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
-import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
-import { real2027Q4Additions } from '../../data/real-2027-q4-additions';
->>>>>>> origin/main
-
-type Service = typeof enhancedRealMicroSaasServices[number];
 
 const contactInfo = {
 	mobile: '+1 302 464 0950',
@@ -42,53 +9,36 @@ const contactInfo = {
 	website: 'https://ziontechgroup.com'
 };
 
-function getAllServices(): Service[] {
-	return enhancedRealMicroSaasServices
-		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
-		.concat(newlyAddedServices as unknown as Service[])
-		.concat(curatedMarketServices as Service[])
-		.concat(new2025Services as unknown as Service[])
-		.concat(marketValidatedServices as unknown as Service[])
-		.concat(moreRealServices2025 as unknown as Service[])
-		.concat(verified2025Additions as unknown as Service[])
-		.concat(realServicesQ12025 as unknown as Service[])
-		.concat(realEnterpriseServices2025 as unknown as Service[])
-		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
-		.concat(realQ4Services2025 as unknown as Service[])
-		.concat(real2025Q4Additions as unknown as Service[])
-		.concat(real2026Q1Additions as unknown as Service[])
-		.concat(real2026Q3Additions as unknown as Service[])
-		.concat(real2026Q4Additions as unknown as Service[])
-		.concat(real2026Q4NewServices as unknown as Service[])
-		.concat(real2027Q1Additions as unknown as Service[])
-		.concat(real2027Q2Additions as unknown as Service[])
-		.concat(real2027Q3Additions as unknown as Service[])
-		.concat(real2027Q4Additions as unknown as Service[])
-		.concat(innovativeMicroSaasServices2025 as Service[])
-		.concat(enhancedMicroSaasServices2025 as Service[]);
-}
-
-function toSlug(value: string | undefined | null): string {
-	if (!value || typeof value !== 'string') return '';
+function toSlug(value: string): string {
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = SERVICES.map((service) => ({
-    params: {
-      slug: slugify(service.title),
-    },
-  }));
-  return { paths, fallback: 'blocking' };
-};
+function extractServiceSlugFromLink(link: string): string | null {
+	try {
+		const url = new URL(link);
+		const path = url.pathname.replace(/^\/+|\/+$/g, '');
+		if (path.startsWith('services/')) {
+			return path.substring('services/'.length);
+		}
+		return path;
+	} catch {
+		return null;
+	}
+}
 
-export const getStaticProps: GetStaticProps<ServiceProps> = async ({ params }) => {
-  const slug = params?.slug as string;
-  const service = SERVICES.find((s) => slugify(s.title) === slug) || null;
-
-	return {
-		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
-		fallback: false
+export default function ServiceSlugPage({ params }: { params?: { slug: string } }) {
+	const slug = params?.slug || 'default-service';
+	
+	// Placeholder service data - replace with actual data
+	const service = {
+		name: 'Service Name',
+		tagline: 'Service description and tagline',
+		features: ['Feature 1', 'Feature 2', 'Feature 3'],
+		price: '$99/month',
+		rating: '4.8',
+		customers: '100+',
+		description: 'Detailed service description goes here...',
+		link: '#'
 	};
 
 	return (
@@ -231,137 +181,4 @@ export const getStaticProps: GetStaticProps<ServiceProps> = async ({ params }) =
 			</div>
 		</>
 	);
-=======
-
-// Simple service interface
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  tagline?: string;
-  price?: string;
-  features?: string[];
-  link?: string;
-}
-
-// Mock services data for now
-const mockServices: Service[] = [
-  {
-    id: 'ai-solutions',
-    name: 'AI Solutions',
-    description: 'Advanced artificial intelligence solutions for modern businesses',
-    tagline: 'Transform your business with AI',
-    price: '$999/month',
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision'],
-    link: '/services/ai-solutions'
-  },
-  {
-    id: 'cloud-infrastructure',
-    name: 'Cloud Infrastructure',
-    description: 'Scalable cloud solutions for enterprise needs',
-    tagline: 'Scale with confidence',
-    price: '$499/month',
-    features: ['Auto-scaling', 'Load balancing', 'High availability'],
-    link: '/services/cloud-infrastructure'
-  }
-];
-
-export async function getStaticPaths() {
-  const paths = mockServices.map(service => ({
-    params: { slug: service.id }
-  }));
-
-  return {
-    paths,
-    fallback: false
-  };
-}
-
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const service = mockServices.find(s => s.id === params.slug);
-
-  if (!service) {
-    return { notFound: true };
-  }
-
-  return {
-    props: { service }
-  };
-}
-
-export default function ServiceDetailPage({ service }: { service: Service }) {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-      <Head>
-        <title>{service.name} | Zion Tech Group</title>
-        <meta name="description" content={service.tagline || service.description} />
-        <link rel="canonical" href={`https://ziontechgroup.com/services/${service.id}`} />
-      </Head>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-10">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
-            {service.name}
-          </h1>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            {service.tagline || service.description}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-          <div className="lg:col-span-2 space-y-6">
-            <div className="p-6 bg-gray-900/50 border border-gray-700/50 rounded-lg">
-              <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
-              <p className="text-gray-300 leading-relaxed">{service.description}</p>
-            </div>
-
-            {service.features && service.features.length > 0 && (
-              <div className="p-6 bg-gray-900/50 border border-gray-700/50 rounded-lg">
-                <h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
-                <ul className="space-y-2 text-gray-300">
-                  {service.features.slice(0, 12).map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <Check className="w-4 h-4 mt-0.5 text-emerald-400" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-
-          <div className="space-y-6">
-            <div className="p-6 bg-gray-900/50 border border-gray-700/50 rounded-lg">
-              <h3 className="text-white text-lg font-semibold mb-4">Pricing</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">
-                {service.price || 'Contact Us'}
-              </div>
-              <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
-              </button>
-            </div>
-
-            <div className="p-6 bg-gray-900/50 border border-gray-700/50 rounded-lg">
-              <h3 className="text-white text-lg font-semibold mb-4">Contact Information</h3>
-              <div className="space-y-3 text-gray-300">
-                <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-cyan-400" />
-                  <span>364 E Main St STE 1008 Middletown DE 19709</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7
 }

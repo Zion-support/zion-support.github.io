@@ -1,12 +1,12 @@
 
 import React from "react";
-import { NextSeo } from "@/components/NextSeo";
+import { SEO } from "@/components/SEO";
 import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager";
 
 const AppMetadataManager: React.FC = () => {
   return (
-    <>
-      <NextSeo
+    
+      <SEO 
         title="App Metadata Manager"
         description="Manage app store metadata for the Zion mobile application"
         // noindex removed - not supported in new SEO component

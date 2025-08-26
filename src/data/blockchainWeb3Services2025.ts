@@ -4,6 +4,7 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
+
 export interface BlockchainWeb3Service {
   id: number;
   name: string;
@@ -39,6 +40,7 @@ export interface BlockchainWeb3Service {
   smartContractSupport: boolean;
   crossChainCompatibility: boolean;
 }
+
 // Blockchain & Web3 Services for 2025
 export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
   {
@@ -378,4 +380,5 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     crossChainCompatibility: true
   }
 ];
+
 export default blockchainWeb3Services2025;

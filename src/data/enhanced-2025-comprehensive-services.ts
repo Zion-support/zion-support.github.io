@@ -32,6 +32,7 @@ export interface EnhancedService {
   uptime: string;
   securityFeatures: string[];
 }
+
 export const enhanced2025ComprehensiveServices: EnhancedService[] = [
   // AI-Powered Business Intelligence & Analytics
   {
@@ -85,6 +86,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     uptime: '99.9%',
     securityFeatures: ['End-to-end encryption', 'Multi-factor authentication', 'Role-based access control', 'Audit logging']
   },
+
   // Quantum-Safe Cybersecurity Platform
   {
     id: 'quantum-safe-cybersecurity-platform',
@@ -137,6 +139,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     uptime: '99.99%',
     securityFeatures: ['Quantum-resistant encryption', 'Multi-layer security', 'Real-time threat intelligence', 'Automated response']
   },
+
   // Autonomous DevOps Platform
   {
     id: 'autonomous-devops-platform',
@@ -189,6 +192,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     uptime: '99.95%',
     securityFeatures: ['Automated security updates', 'Access control', 'Audit logging', 'Encryption at rest']
   },
+
   // Blockchain Supply Chain Transparency Platform
   {
     id: 'blockchain-supply-chain-transparency',
@@ -241,6 +245,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     uptime: '99.8%',
     securityFeatures: ['Immutable records', 'Cryptographic verification', 'Access control', 'Audit trails']
   },
+
   // AI-Powered Healthcare Analytics Platform
   {
     id: 'ai-healthcare-analytics-platform',
@@ -293,6 +298,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     uptime: '99.99%',
     securityFeatures: ['HIPAA compliance', 'End-to-end encryption', 'Access control', 'Audit logging']
   },
+
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning-platform',
@@ -345,6 +351,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     uptime: '99.5%',
     securityFeatures: ['Quantum encryption', 'Secure access', 'Data protection', 'Research protocols']
   },
+
   // Autonomous Financial Trading Platform
   {
     id: 'autonomous-financial-trading-platform',
@@ -397,6 +404,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     uptime: '99.99%',
     securityFeatures: ['Multi-factor authentication', 'Encryption', 'Audit trails', 'Regulatory compliance']
   },
+
   // IoT Edge Computing Platform
   {
     id: 'iot-edge-computing-platform',
@@ -449,6 +457,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     uptime: '99.9%',
     securityFeatures: ['Edge encryption', 'Secure communication', 'Access control', 'Device authentication']
   },
+
   // AI-Powered Legal Research Platform
   {
     id: 'ai-legal-research-platform',
@@ -501,6 +510,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     uptime: '99.9%',
     securityFeatures: ['Client confidentiality', 'Data encryption', 'Access control', 'Audit logging']
   },
+
   // Autonomous Marketing Campaign Platform
   {
     id: 'autonomous-marketing-campaign-platform',
@@ -554,6 +564,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     securityFeatures: ['Data encryption', 'Access control', 'Compliance monitoring', 'Audit trails']
   }
 ];
+
 // Additional specialized services for different industries
 export const specializedIndustryServices: EnhancedService[] = [
   // Renewable Energy Management Platform
@@ -608,6 +619,7 @@ export const specializedIndustryServices: EnhancedService[] = [
     uptime: '99.9%',
     securityFeatures: ['Grid security', 'Data encryption', 'Access control', 'Audit logging']
   },
+
   // Autonomous Logistics Platform
   {
     id: 'autonomous-logistics-platform',
@@ -661,6 +673,7 @@ export const specializedIndustryServices: EnhancedService[] = [
     securityFeatures: ['Fleet security', 'Data encryption', 'Access control', 'Real-time monitoring']
   }
 ];
+
 // Export all services combined
 export const allEnhancedServices = [
   ...enhanced2025ComprehensiveServices,

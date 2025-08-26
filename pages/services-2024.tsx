@@ -7,6 +7,7 @@ import {
   Zap, Sparkles, Code, BarChart, Lock, Globe,
   Cpu, Database, Cloud, Eye, BarChart3
 } from 'lucide-react';
+=======
 import { enhancedMicroSaasServices2025 } from '../src/data/enhancedMicroSaasServices2025';
 import { innovativeITServices2025 } from '../src/data/innovativeITServices2025';
 import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';

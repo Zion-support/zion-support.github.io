@@ -34,6 +34,7 @@ export interface AdvancedMicroService {
   compliance?: string[];
   securityFeatures?: string[];
 }
+
 export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
   // AI-Powered Business Intelligence
   {
@@ -100,6 +101,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     compliance: ["GDPR", "SOC 2", "HIPAA"],
     securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control"]
   },
+
   // Quantum-Safe Cybersecurity Platform
   {
     id: "quantum-safe-cybersecurity",
@@ -165,6 +167,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     compliance: ["NIST", "ISO 27001", "SOC 2", "PCI DSS", "HIPAA"],
     securityFeatures: ["Post-quantum cryptography", "Behavioral analytics", "Threat intelligence sharing"]
   },
+
   // Edge Computing Orchestration Platform
   {
     id: "edge-computing-orchestration",
@@ -230,6 +233,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     compliance: ["ISO 27001", "SOC 2", "GDPR"],
     securityFeatures: ["Device authentication", "Data encryption", "Access control", "Audit logging"]
   },
+
   // Blockchain Supply Chain Transparency
   {
     id: "blockchain-supply-chain",
@@ -295,6 +299,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     compliance: ["ISO 9001", "FSMA", "GDPR", "REACH"],
     securityFeatures: ["Immutable records", "Cryptographic verification", "Access control", "Audit trails"]
   },
+
   // AI-Powered DevOps Automation
   {
     id: "ai-devops-automation",
@@ -360,6 +365,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     compliance: ["SOC 2", "ISO 27001", "GDPR"],
     securityFeatures: ["Secure code scanning", "Access control", "Audit logging", "Encryption"]
   },
+
   // Quantum Machine Learning Platform
   {
     id: "quantum-ml-platform",
@@ -425,6 +431,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     compliance: ["Research standards", "Academic protocols", "Security requirements"],
     securityFeatures: ["Quantum-safe encryption", "Secure quantum communication", "Access control"]
   },
+
   // Autonomous Data Governance Platform
   {
     id: "autonomous-data-governance",
@@ -490,6 +497,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     compliance: ["GDPR", "CCPA", "SOX", "HIPAA", "ISO 27001"],
     securityFeatures: ["Data encryption", "Access control", "Audit logging", "Privacy protection"]
   },
+
   // Intelligent API Management Platform
   {
     id: "intelligent-api-management",
@@ -555,6 +563,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
     compliance: ["SOC 2", "ISO 27001", "GDPR"],
     securityFeatures: ["OAuth 2.0", "JWT tokens", "Rate limiting", "Threat detection", "Encryption"]
   },
+
   // Hyperautomation Workflow Platform
   {
     id: "hyperautomation-workflow",

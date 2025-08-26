@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
+
 interface SearchOptions<T> {
   searchFields: (keyof T)[];
   filterFields?: (keyof T)[];
@@ -7,6 +8,7 @@ interface SearchOptions<T> {
   fuzzySearch?: boolean;
   caseSensitive?: boolean;
 }
+
 interface SearchState<T> {
   query: string;
   filters: Record<string, any>;
@@ -16,6 +18,7 @@ interface SearchState<T> {
   isLoading: boolean;
   totalResults: number;
 }
+
 export const useSearch = <T extends Record<string, any>>(
   data: T[],
   options: SearchOptions<T>
@@ -26,6 +29,7 @@ export const useSearch = <T extends Record<string, any>>(
     fuzzySearch = true,
     caseSensitive = false
   } = options;
+
   const [searchState, setSearchState] = useState<SearchState<T>>({
     query: '',
     filters: {},
@@ -35,34 +39,45 @@ export const useSearch = <T extends Record<string, any>>(
     isLoading: false,
     totalResults: data.length
   });
+
   const [debouncedQuery, setDebouncedQuery] = useState('');
+
   // Debounce search query
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedQuery(searchState.query);
     }, debounceMs);
+
     return () => clearTimeout(timer);
   }, [searchState.query, debounceMs]);
+
   // Fuzzy search algorithm
   const fuzzyMatch = useCallback((text: string, query: string): boolean => {
     if (!query) return true;
+    
     const searchText = caseSensitive ? text : text.toLowerCase();
     const searchQuery = caseSensitive ? query : query.toLowerCase();
+    
     if (!fuzzySearch) {
       return searchText.includes(searchQuery);
     }
+
     let queryIndex = 0;
     for (let i = 0; i < searchText.length && queryIndex < searchQuery.length; i++) {
       if (searchText[i] === searchQuery[queryIndex]) {
         queryIndex++;
       }
     }
+    
     return queryIndex === searchQuery.length;
   }, [fuzzySearch, caseSensitive]);
+
   // Search and filter data
   const processedData = useMemo(() => {
     setSearchState(prev => ({ ...prev, isLoading: true }));
+
     let results = data;
+
     // Apply search
     if (debouncedQuery) {
       results = results.filter(item => {
@@ -78,6 +93,7 @@ export const useSearch = <T extends Record<string, any>>(
         });
       });
     }
+
     // Apply filters
     Object.entries(searchState.filters).forEach(([key, value]) => {
       if (value !== null && value !== undefined && value !== '') {
@@ -93,12 +109,15 @@ export const useSearch = <T extends Record<string, any>>(
         });
       }
     });
+
     // Apply sorting
     if (searchState.sortBy) {
       results = [...results].sort((a, b) => {
         const aValue = a[searchState.sortBy!];
         const bValue = b[searchState.sortBy!];
+        
         if (aValue === bValue) return 0;
+        
         let comparison = 0;
         if (typeof aValue === 'string' && typeof bValue === 'string') {
           comparison = aValue.localeCompare(bValue);
@@ -107,21 +126,26 @@ export const useSearch = <T extends Record<string, any>>(
         } else {
           comparison = String(aValue).localeCompare(String(bValue));
         }
+        
         return searchState.sortOrder === 'asc' ? comparison : -comparison;
       });
     }
-    setSearchState(prev => ({
-      ...prev,
-      results,
+
+    setSearchState(prev => ({ 
+      ...prev, 
+      results, 
       totalResults: results.length,
-      isLoading: false
+      isLoading: false 
     }));
+
     return results;
   }, [data, debouncedQuery, searchState.filters, searchState.sortBy, searchState.sortOrder, searchFields, fuzzyMatch]);
+
   // Update search query
   const setQuery = useCallback((query: string) => {
     setSearchState(prev => ({ ...prev, query }));
   }, []);
+
   // Update filters
   const setFilter = useCallback((key: string, value: any) => {
     setSearchState(prev => ({
@@ -129,10 +153,12 @@ export const useSearch = <T extends Record<string, any>>(
       filters: { ...prev.filters, [key]: value }
     }));
   }, []);
+
   // Clear all filters
   const clearFilters = useCallback(() => {
     setSearchState(prev => ({ ...prev, filters: {} }));
   }, []);
+
   // Update sorting
   const setSort = useCallback((field: keyof T, order: 'asc' | 'desc' = 'asc') => {
     setSearchState(prev => ({
@@ -141,6 +167,7 @@ export const useSearch = <T extends Record<string, any>>(
       sortOrder: order
     }));
   }, []);
+
   // Clear search
   const clearSearch = useCallback(() => {
     setSearchState(prev => ({
@@ -151,10 +178,13 @@ export const useSearch = <T extends Record<string, any>>(
       sortOrder: 'asc'
     }));
   }, []);
+
   // Get search suggestions
   const getSuggestions = useCallback((query: string, maxSuggestions: number = 5): string[] => {
     if (!query || query.length < 2) return [];
+
     const suggestions = new Set<string>();
+    
     searchFields.forEach(field => {
       data.forEach(item => {
         const value = item[field];
@@ -168,8 +198,10 @@ export const useSearch = <T extends Record<string, any>>(
         }
       });
     });
+
     return Array.from(suggestions).slice(0, maxSuggestions);
   }, [data, searchFields]);
+
   // Pagination helper
   const getPaginatedResults = useCallback((page: number, pageSize: number) => {
     const startIndex = (page - 1) * pageSize;
@@ -182,6 +214,7 @@ export const useSearch = <T extends Record<string, any>>(
       hasPrevPage: page > 1
     };
   }, [searchState.results, searchState.totalResults]);
+
   return {
     ...searchState,
     setQuery,

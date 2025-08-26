@@ -45,17 +45,6 @@
     "login_success": "تم تسجيل الدخول بنجاح",
     "logout_success": "تم تسجيل الخروج بنجاح"
   },
-  "cart": {
-    "title": "سلة التسوق",
-    "empty": "سلة التسوق فارغة",
-    "empty_alt": "صورة توضيحية لسلة تسوق فارغة",
-    "empty_preview": "السلة فارغة",
-    "continue_shopping": "متابعة التسوق",
-    "subtotal": "المجموع الفرعي",
-    "processing": "جار المعالجة...",
-    "checkout": "إتمام الشراء",
-    "view_cart": "عرض السلة"
-  },
   "home": {
     "hero_title": "مستقبل سوق التكنولوجيا والذكاء الاصطناعي",
     "hero_subtitle": "أول سوق مجاني مخصص للتكنولوجيا المتطورة والذكاء الاصطناعي",
@@ -89,10 +78,6 @@
     "ar": "العربية",
     "language_changed": "تم تغيير اللغة إلى {{language}}",
     "switch_to_detected": "التبديل إلى {{language}}؟"
-  },
-  "error_boundary": {
-    "message": "حدث خطأ ما.",
-    "retry": "إعادة المحاولة"
   }
 ,
   "errors": {

@@ -30,6 +30,7 @@ export interface SpecializedAIService {
   aiModel: string[];
   trainingData: string;
 }
+
 export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
   // Large Language Model (LLM) Services
   {
@@ -91,6 +92,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     aiModel: ["GPT-4", "Claude", "LLaMA", "Custom Models", "Fine-tuned Models"],
     trainingData: "Enterprise data, industry-specific datasets, custom training data"
   },
+
   // Computer Vision AI Platform
   {
     id: "advanced-computer-vision-platform",
@@ -151,6 +153,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     aiModel: ["YOLO", "ResNet", "EfficientNet", "Custom Models", "Pre-trained Models"],
     trainingData: "Image datasets, industry-specific images, custom training data"
   },
+
   // AI-Powered Cybersecurity
   {
     id: "ai-cybersecurity-threat-detection",
@@ -211,6 +214,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     aiModel: ["Neural Networks", "Random Forests", "Gradient Boosting", "Custom Models", "Ensemble Methods"],
     trainingData: "Threat data, network logs, security incidents, malware samples"
   },
+
   // AI-Powered Predictive Analytics
   {
     id: "ai-predictive-analytics-platform",
@@ -271,6 +275,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     aiModel: ["LSTM", "Random Forests", "Gradient Boosting", "ARIMA", "Prophet Models"],
     trainingData: "Historical data, time series data, business metrics, external datasets"
   },
+
   // AI-Powered Process Automation
   {
     id: "ai-process-automation-platform",
@@ -331,6 +336,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     aiModel: ["Decision Trees", "Neural Networks", "NLP Models", "Computer Vision", "Custom Models"],
     trainingData: "Process data, workflow logs, business rules, historical processes"
   },
+
   // AI-Powered Customer Intelligence
   {
     id: "ai-customer-intelligence-platform",
@@ -391,6 +397,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     aiModel: ["Collaborative Filtering", "Content-based Filtering", "Neural Networks", "Gradient Boosting", "Custom Models"],
     trainingData: "Customer data, transaction history, behavioral data, demographic information"
   },
+
   // AI-Powered Supply Chain Optimization
   {
     id: "ai-supply-chain-optimization",
@@ -451,6 +458,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
     aiModel: ["LSTM", "Random Forests", "Linear Programming", "Genetic Algorithms", "Custom Models"],
     trainingData: "Historical demand, inventory levels, supplier data, logistics information"
   },
+
   // AI-Powered Quality Assurance
   {
     id: "ai-quality-assurance-platform",
