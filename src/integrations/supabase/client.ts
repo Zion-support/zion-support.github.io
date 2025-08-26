@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import { captureException } from '@/lib/sentry';
+import api from '@/lib/api';
 
 interface SupabaseClient {
   auth: {
@@ -42,25 +42,14 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
 
   for (let i = 0; i < maxRetries; i++) {
     try {
-      if (!(await checkOnline())) {
-        throw new Error('You must be online to connect to Supabase');
-      }
-
-      const headers =
-        options.headers instanceof Headers
-          ? options.headers
-          : new Headers(options.headers ?? {});
-
-      if (!headers.has('apikey')) {
-        headers.set('apikey', supabaseAnonKey);
-      }
-
-      const response = await fetch(url, {
-        ...options,
-        headers,
+      const response = await api({
+        url,
+        method: options.method as any,
+        data: (options as any).body,
+        headers: Object.fromEntries(headers.entries()),
       });
-      
-      if (!response.ok) {
+
+      if (response.status < 200 || response.status >= 300) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 

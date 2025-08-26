@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { toast } from "@/components/ui/use-toast";
 import { apiClient } from "@/utils/apiClient";
 import { cn } from "@/lib/utils";
+import api from '@/lib/api';
 import { ChatMessage } from "./ChatMessage";
 import { QuickReplyButton } from "./QuickReplyButton";
 import { Send, Loader2 } from "lucide-react";
@@ -114,24 +115,21 @@ export function ChatBotPanel() {
 
   const sendToAIAssistant = async (message: string) => {
     try {
-      const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
+      const response = await api.post(
+        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat",
+        {
           messages: [{ role: "user", content: message }]
-        }),
-      });
-      
-      if (!response.ok) {
+        }
+      );
+
+      if (response.status < 200 || response.status >= 300) {
         return {
           success: false,
           message: "I'm having trouble connecting to my knowledge base right now."
         };
       }
-      
-      const data = await response.json();
+
+      const data = response.data;
       return {
         success: true,
         message: data.message

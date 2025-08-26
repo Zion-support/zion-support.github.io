@@ -6,7 +6,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { SAMPLE_SERVICES } from "@/data/sampleServices";
+import api from '@/lib/api';
 
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
@@ -41,9 +41,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch(`/api/services?categoryId=${encodeURIComponent(formData.serviceType)}`);
-        if (!response.ok) throw new Error('Failed to fetch');
-        const data = await response.json();
+        const response = await api.get(
+          `/api/services?categoryId=${encodeURIComponent(formData.serviceType)}`
+        );
+        if (response.status < 200 || response.status >= 300) throw new Error('Failed to fetch');
+        const data = response.data;
         setListings(data as ListingItem[]);
       } catch (err) {
         setError('Failed to load services');

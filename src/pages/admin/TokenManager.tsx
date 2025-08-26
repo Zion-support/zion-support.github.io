@@ -8,7 +8,7 @@ import { TokenTransaction } from '@/types/tokens';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
-import { apiClient } from '@/utils/apiClient';
+import api from '@/lib/api';
 
 export default function TokenManager() {
   const { user } = useAuth();
@@ -34,19 +34,18 @@ export default function TokenManager() {
 
   const handleIssue = async (type: 'earn' | 'burn') => {
     if (!userId || amount <= 0) return;
-    const res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, amount }),
-    });
-    if (res.ok) {
+    const res = await api.post(
+      `/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`,
+      { userId, amount }
+    );
+    if (res.status >= 200 && res.status < 300) {
       toast({
         title: 'Success',
         description: 'Transaction processed'
       });
       fetchTransactions();
     } else {
-      const err = await res.json();
+      const err = res.data;
       toast({
         title: 'Error',
         description: err.error || 'Failed',
