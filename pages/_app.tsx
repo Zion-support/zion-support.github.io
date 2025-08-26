@@ -1,15 +1,21 @@
-import type { AppProps } from 'next/app'
-import Head from 'next/head'
-import SiteLayout from '../components/SiteLayout'
-import '../styles/globals.css'
+import React from 'react';
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
+import Layout from '../components/layout/Layout';
+import Analytics from '../components/Analytics';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-		<SEOContext.Provider value={{ renderedRef }}>
-			<a href="#main" className="skip-link">Skip to main content</a>
-			<DefaultSEO />
+		<>
 			<Analytics />
-			<Component {...pageProps} />
-		</SEOContext.Provider>
+			<div className={inter.className}>
+				<Layout>
+					<Component {...pageProps} />
+				</Layout>
+			</div>
+		</>
 	);
 }
