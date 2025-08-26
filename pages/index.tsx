@@ -1,24 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles } from 'lucide-react';
 import Button from '../components/ui/Button';
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
-import UltraFuturisticBackground2031 from '../components/ui/UltraFuturisticBackground2031';
-import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-import UltraFuturisticNavigation2034 from '../components/layout/UltraFuturisticNavigation2034';
-import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import EnhancedServiceShowcase from '../components/sections/EnhancedServiceShowcase';
 import Enhanced2026ServicesShowcase from '../components/sections/Enhanced2026ServicesShowcase';
 import Revolutionary2026ServiceShowcase from '../components/sections/Revolutionary2026ServiceShowcase';
 import Revolutionary2027ServicesShowcase from '../components/sections/Revolutionary2027ServicesShowcase';
 import Revolutionary2027Hero from '../components/sections/Revolutionary2027Hero';
 import EnhancedHero2026 from '../components/sections/EnhancedHero2026';
-import UltraFuturisticHero2032 from '../components/sections/UltraFuturisticHero2032';
-import UltraFuturisticServiceShowcase2032 from '../components/sections/UltraFuturisticServiceShowcase2032';
-import UltraFuturisticServiceShowcase2033 from '../components/sections/UltraFuturisticServiceShowcase2033';
+import UltraFuturisticHero2027 from '../components/sections/UltraFuturisticHero2027';
+import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';
@@ -71,94 +69,12 @@ import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-servi
 import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
 import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas';
-import { cuttingEdgeInnovations2029 } from '../data/2029-cutting-edge-innovations';
 import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-import { futuristicAIServices2029 } from '../data/2029-futuristic-ai-services';
-import { emergingTech2029Services } from '../data/2029-emerging-tech-services';
-import { enterpriseIT2029Services } from '../data/2029-enterprise-it-services';
-import { innovativeMicroSaasServices2029 } from '../data/2029-innovative-micro-saas';
-import { innovativeMicroSaasServices2029V2 } from '../data/2029-innovative-micro-saas-v2';
-import { innovativeITServices2029V2 } from '../data/2029-innovative-it-services-v2';
-import { innovativeAIServices2029V2 } from '../data/2029-innovative-ai-services-v2';
-// Import new 2029 services
-import { emergingTechBreakthroughs2029V3 } from '../data/2029-emerging-tech-breakthroughs-v3';
-import { aiAutonomousEcosystem2029V2 } from '../data/2029-ai-autonomous-ecosystem-v2';
-// Import new 2031 services
-import { futuristicAIServices2031 } from '../data/2031-futuristic-ai-services';
-import { quantumEmergingTechServices2031 } from '../data/2031-quantum-emerging-tech-services';
-import { enterpriseITServices2031 } from '../data/2031-enterprise-it-services';
-import { innovativeMicroSaasServices2031 } from '../data/2031-innovative-micro-saas-services';
-import { researchDevelopmentServices2031 } from '../data/2031-research-development-services';
-import { spaceMetaverseServices2031 } from '../data/2031-space-metaverse-services';
-// Import new 2032 services
-import { futuristicInnovations2032 } from '../data/2032-futuristic-innovations';
-import { enterpriseInnovations2032 } from '../data/2032-enterprise-innovations';
-// Import new 2033 services
-import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
-import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
-import { futuristic2034Services } from '../data/2034-futuristic-innovations';
-import { enterprise2034Services } from '../data/2034-enterprise-innovations';
-import { innovativeMicroSaas2034Services } from '../data/2034-innovative-micro-saas';
-import UltraFuturisticServiceShowcase2034 from '../components/sections/UltraFuturisticServiceShowcase2034';
-
-// Type adapter function to convert different service types to the expected Service interface
-function adaptServiceToEnhancedShowcase(service: any) {
-  // Ensure category is always a string
-  const safeCategory = typeof service.category === 'string' ? service.category : 'Technology';
-  
-  // Check if service already has the required properties
-  if (service.tagline && service.period && service.popular !== undefined && service.icon && service.color) {
-    return {
-      ...service,
-      category: safeCategory
-    };
-  }
-
-  // Create a default adapted service
-  return {
-    id: service.id || `service-${Math.random()}`,
-    name: service.name || 'Unknown Service',
-    tagline: service.tagline || service.description?.substring(0, 100) || 'Revolutionary technology solution',
-    price: service.price || '$999',
-    period: service.period || '/month',
-    description: service.description || 'Advanced technology solution for modern businesses',
-    features: service.features || ['Feature 1', 'Feature 2', 'Feature 3'],
-    popular: service.popular !== undefined ? service.popular : false,
-    icon: service.icon || '🚀',
-    color: service.color || 'from-cyan-500 to-purple-500',
-    textColor: service.textColor || 'text-cyan-400',
-    link: service.link || '/services',
-    marketPosition: service.marketPosition || 'Leading solution in the market',
-    targetAudience: service.targetAudience || 'Businesses and organizations',
-    trialDays: service.trialDays || 7,
-    setupTime: service.setupTime || '1-2 weeks',
-    category: safeCategory,
-    realService: service.realService !== undefined ? service.realService : true,
-    technology: service.technology || ['React', 'Python', 'AI'],
-    integrations: service.integrations || ['API', 'Database', 'Cloud'],
-    useCases: service.useCases || ['Business automation', 'Data analysis', 'Process optimization'],
-    roi: service.roi || '300% average ROI reported by customers',
-    competitors: service.competitors || ['Competitor A', 'Competitor B'],
-    marketSize: service.marketSize || '$10B market',
-    growthRate: service.growthRate || '200% annual growth',
-    variant: service.variant || 'standard',
-    contactInfo: service.contactInfo || {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: service.realImplementation !== undefined ? service.realImplementation : true,
-    implementationDetails: service.implementationDetails || 'Advanced implementation with comprehensive support',
-    launchDate: service.launchDate || '2024-12-01',
-    customers: service.customers || 50,
-    rating: service.rating || 4.5,
-    reviews: service.reviews || 25
-  };
-}
-
+import { cuttingEdge2029Services } from '../data/2029-cutting-edge-innovations';
+import { spaceColonization2029Services } from '../data/2029-space-colonization-services';
+import { innovative2029MicroSaasServices } from '../data/2029-innovative-micro-saas';
 
 export default function HomePage() {
   const contactInfo = {
@@ -171,15 +87,14 @@ export default function HomePage() {
   // Combine all services for comprehensive showcase
   const allServices = [
     ...enhancedRealMicroSaasServices,
-    ...extraServices,
-    ...additionalEnhancedServices,
     ...innovativeMicroSaasServices,
     ...innovativeMicroSaasServicesV3,
+    ...extraServices,
+    ...additionalEnhancedServices,
     ...innovativeAIServices,
     ...quantumSpaceServices,
     ...quantumAIServices2025,
     ...enterpriseITServices,
-    ...professionalServices,
     ...nextGenerationAIServices,
     ...emergingTechnologyServices,
     ...emergingTechServices2025,
@@ -221,93 +136,289 @@ export default function HomePage() {
     ...revolutionary2027ITServices,
     ...revolutionary2027MicroSaasServices,
     ...cuttingEdge2028MicroSaas,
-    ...cuttingEdgeInnovations2029,
     ...practicalBusinessSolutions2028,
     ...futuristic2028Services,
     ...emergingTech2028Services,
-    ...futuristicAIServices2029,
-    ...emergingTech2029Services,
-    ...enterpriseIT2029Services,
-    ...innovativeMicroSaasServices2029,
-    ...innovativeMicroSaasServices2029V2,
-    ...innovativeITServices2029V2,
-    ...innovativeAIServices2029V2,
-    ...emergingTechBreakthroughs2029V3,
-    ...aiAutonomousEcosystem2029V2,
-    ...futuristicAIServices2031,
-    ...quantumEmergingTechServices2031,
-    ...enterpriseITServices2031,
-    ...innovativeMicroSaasServices2031,
-    ...researchDevelopmentServices2031,
-    ...spaceMetaverseServices2031,
-    // Add our comprehensive 2032 services
-    ...futuristicInnovations2032,
-    ...enterpriseInnovations2032,
-    // Add our revolutionary 2033 services
-    ...cuttingEdge2033Services,
-    ...innovativeITServices2033,
-    // Add our futuristic 2034 services
-    ...futuristic2034Services,
-    ...enterprise2034Services,
-    ...innovativeMicroSaas2034Services
-
+    ...cuttingEdge2029Services,
+    ...spaceColonization2029Services,
+    ...innovative2029MicroSaasServices
   ];
 
-  // Adapt services to the expected interface
-  const adaptedServices = allServices.map(adaptServiceToEnhancedShowcase);
+  // Get featured services for hero section
+  const featuredServices = allServices
+    .filter(service => service.popular)
+    .slice(0, 6);
+
+  // Get latest 2029 services
+  const latest2029Services = [
+    ...cuttingEdge2029Services,
+    ...spaceColonization2029Services,
+    ...innovative2029MicroSaasServices
+  ].slice(0, 8);
 
   return (
-    <>
-      <UltraFuturisticBackground2034 />
+    <div className="min-h-screen bg-black text-white overflow-hidden">
       <Head>
-        <title>Zion Tech Group - 2034 Revolutionary Technology Solutions | AI Quantum Brain Interface, Quantum DNA Storage, Space Colony AI</title>
-        <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary 2034 solutions. From AI quantum brain interfaces to quantum DNA storage and autonomous space colony management." />
-        <meta name="keywords" content="AI quantum brain interface, quantum DNA storage, autonomous space colony AI, quantum emotional intelligence, quantum creativity studio, quantum zero trust security, AI autonomous DevOps, quantum blockchain infrastructure" />
+        <title>Zion Tech Group - 2029 Innovation Hub | Cutting-Edge AI, Quantum & Space Technology</title>
+        <meta name="description" content="Zion Tech Group leads 2029 innovation with AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and cutting-edge micro SAAS solutions. Transform your business with future technology." />
+        <meta name="keywords" content="AI consciousness, quantum computing, space colonization, Mars automation, micro SAAS, 2029 technology, Zion Tech Group, AI innovation, quantum technology, space technology" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Zion Tech Group - 2034 Revolutionary Technology Solutions" />
-        <meta property="og:description" content="Revolutionary AI quantum brain interfaces, quantum DNA storage, and autonomous space colony management solutions for 2034 and beyond." />
+        <meta property="og:title" content="Zion Tech Group - 2029 Innovation Hub" />
+        <meta property="og:description" content="Leading 2029 innovation with AI consciousness, quantum technology, and space colonization solutions." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - 2034 Revolutionary Technology Solutions" />
-        <meta name="twitter:description" content="Revolutionary AI quantum brain interfaces, quantum DNA storage, and space colony management solutions for 2034 and beyond." />
+        <meta name="twitter:title" content="Zion Tech Group - 2029 Innovation Hub" />
+        <meta name="twitter:description" content="Leading 2029 innovation with AI consciousness, quantum technology, and space colonization solutions." />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
 
+      {/* Futuristic Background */}
+      <UltraFuturisticBackground2029 />
+
       {/* Navigation */}
-      <UltraFuturisticNavigation2034 />
+      <UltraFuturisticNavigation2029 />
 
       {/* Hero Section */}
-      <UltraFuturisticHero2032 />
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                2029 Innovation Hub
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Leading the future with AI consciousness simulation, quantum brain-computer interfaces, 
+              Mars colonization automation, and cutting-edge micro SAAS solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25"
+              >
+                Explore 2029 Services
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                Contact Us
+              </motion.button>
+            </div>
+          </motion.div>
 
-      {/* 2032 Service Showcase */}
-      <UltraFuturisticServiceShowcase2032 />
-      
-      {/* 2033 Revolutionary Services */}
-      <UltraFuturisticServiceShowcase2033 />
+          {/* Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
+          >
+            <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-black/30 border border-cyan-500/20">
+              <Phone className="w-6 h-6 text-cyan-400" />
+              <div className="text-left">
+                <p className="text-sm text-gray-400">Phone</p>
+                <p className="font-semibold">{contactInfo.mobile}</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-black/30 border border-purple-500/20">
+              <Mail className="w-6 h-6 text-purple-400" />
+              <div className="text-left">
+                <p className="text-sm text-gray-400">Email</p>
+                <p className="font-semibold">{contactInfo.email}</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center space-x-3 p-4 rounded-lg bg-black/30 border border-pink-500/20">
+              <MapPin className="w-6 h-6 text-pink-400" />
+              <div className="text-left">
+                <p className="text-sm text-gray-400">Address</p>
+                <p className="font-semibold text-sm">{contactInfo.address}</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-      {/* 2034 Revolutionary Services */}
-      <UltraFuturisticServiceShowcase2034 />
+      {/* Latest 2029 Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                Latest 2029 Innovations
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the future with our cutting-edge 2029 services featuring AI consciousness, 
+              quantum technology, and space colonization solutions
+            </p>
+          </motion.div>
 
-      {/* Enhanced Service Showcase */}
-      <EnhancedServiceShowcase services={adaptedServices} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {latest2029Services.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative p-6 rounded-xl bg-gradient-to-br from-black/50 to-gray-900/50 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-cyan-300 transition-colors">
+                  {service.name}
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  {service.description}
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-cyan-400">
+                    {service.price}
+                  </span>
+                  <span className="text-sm text-gray-500">{service.period}</span>
+                </div>
+                <div className="flex items-center justify-between text-sm text-gray-500">
+                  <span>⭐ {service.rating}</span>
+                  <span>{service.reviews} reviews</span>
+                </div>
+                <Link
+                  href={service.link}
+                  className="mt-4 w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* Enhanced 2026 Services Showcase */}
-      <Enhanced2026ServicesShowcase />
+      {/* Featured Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-black/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                Featured Services
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our most popular and innovative solutions trusted by industry leaders worldwide
+            </p>
+          </motion.div>
 
-      {/* Revolutionary 2026 Service Showcase */}
-      <Revolutionary2026ServiceShowcase />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative p-6 rounded-xl bg-gradient-to-br from-black/50 to-gray-900/50 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                {service.popular && (
+                  <div className="absolute -top-3 left-6 px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold rounded-full">
+                    POPULAR
+                  </div>
+                )}
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-purple-300 transition-colors">
+                  {service.name}
+                </h3>
+                <p className="text-gray-400 mb-4 text-sm">
+                  {service.description}
+                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-purple-400">
+                    {service.price}
+                  </span>
+                  <span className="text-sm text-gray-500">{service.period}</span>
+                </div>
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <span>⭐ {service.rating}</span>
+                  <span>{service.reviews} reviews</span>
+                </div>
+                <Link
+                  href={service.link}
+                  className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* Revolutionary 2027 Services Showcase */}
-      <Revolutionary2027ServicesShowcase />
-
-      {/* Enhanced 2026 Services Showcase */}
-      <Enhanced2026ServicesShowcase />
+      {/* Call to Action Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                Ready to Transform Your Business?
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join the future with Zion Tech Group's cutting-edge 2029 innovations. 
+              Get in touch today to start your transformation journey.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25"
+              >
+                Contact Sales Team
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                Schedule Demo
+              </motion.button>
+            </div>
+            <div className="mt-8 text-gray-400">
+              <p>📞 {contactInfo.mobile} | ✉️ {contactInfo.email}</p>
+              <p className="mt-2">{contactInfo.address}</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Footer */}
-      <UltraFuturisticFooter2034 />
-    </>
+      <UltraFuturisticFooter2029 />
+    </div>
   );
 }
