@@ -25,6 +25,4 @@ const Badge: React.FC<BadgeProps> = ({
       {children}
     </div>
   );
-};
-
-export { Badge };
+}

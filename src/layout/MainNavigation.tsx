@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, ChevronDown, Users, Briefcase, Settings, BarChart3 } from "lucide-react";
-=======
 import { MessageSquare, ChevronDown, Brain, Shield, Cloud, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
@@ -31,6 +30,14 @@ import { useState } from "react";
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+=======
+import { useTranslation } from "react-i18next";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -51,14 +58,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
-=======
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+=======
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -88,8 +90,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'home',
       href: '/',
-      matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services') || path.startsWith('/green-it')
-=======
       key: 'about',
       href: '/about',
       matches: (path: string) => path.startsWith('/about')
@@ -167,15 +167,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/micro-saas-services',
       matches: (path: string) => path.startsWith('/micro-saas-services')
 =======
+=======
+      matches: (path: string) => path === '/'
+    },
+    {
+      key: 'marketplace',
+      href: '/marketplace',
+      matches: (path: string) => path.startsWith('/marketplace')
+    },
+    {
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
     },
     {
-      key: 'categories',
-      href: '/categories',
-      matches: (path: string) => path.startsWith('/categories')
-=======
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
@@ -212,6 +217,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
 =======
 =======
+=======
       key: 'talent',
       href: '/talent',
       key: 'ai-hiring',
@@ -222,11 +228,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
   const moreLinks = [
     {
-      key: 'categories',
-      href: '/categories',
-      icon: <FileText className="w-4 h-4" />,
-      description: 'Browse service categories'
-=======
       matches: (path: string) => path.startsWith('/equipment'),
       name: t('nav.equipment')
     },
@@ -255,14 +256,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { href: '/talents', name: 'Talent Directory' },
         { href: '/hire-ai', name: 'Hire AI' }
       ]
+=======
+      key: 'equipment',
+      href: '/equipment',
+      matches: (path: string) => path.startsWith('/equipment')
     },
     {
       key: 'community',
       href: '/community',
-      key: 'pricing',
-      href: '/pricing',
-      matches: (path: string) => path === '/pricing'
-=======
       key: 'about',
       href: '/about',
       matches: (path: string) => path === '/about'
@@ -277,14 +278,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'about',
       href: '/about',
       matches: (path: string) => path === '/about'
+=======
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
     },
     {
       key: 'blog',
       href: '/blog',
-      key: 'blog',
-      href: '/blog',
-      matches: (path: string) => path.startsWith('/blog')
-=======
       key: 'contact',
       href: '/contact',
       matches: (path: string) => path === '/contact'
@@ -318,6 +317,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'blog',
       href: '/blog',
       matches: (path: string) => path.startsWith('/blog')
+=======
 =======
       matches: (path: string) => path.startsWith('/blog')
     }
@@ -494,27 +494,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
       <ul className="flex items-center gap-1">
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative overflow-hidden group",
-                link.matches(location.pathname)
-                  ? "bg-gradient-to-r from-zion-purple/30 to-zion-cyan/30 text-zion-cyan shadow-lg shadow-zion-purple/20"
-                  : "text-white hover:text-zion-cyan"
-              )}
-            >
-              {/* Hover background effect */}
-              <div className={cn(
-                "absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md",
-                link.matches(location.pathname) && "opacity-100"
-              )} />
-              
-              {/* Glowing border effect */}
-              <div className={cn(
-                "absolute inset-0 rounded-md border border-transparent group-hover:border-zion-purple/30 transition-all duration-300",
-                link.matches(location.pathname) && "border-zion-cyan/50"
-              )} />
-              
-              <span className="relative z-10">{link.name}</span>
-            </Link>
-=======
           <li key={link.key} className="relative" onMouseLeave={handleDropdownClose}>
 =======
           <li key={link.name} className="relative">
@@ -918,6 +897,91 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </div>
             </div>
           )}
+=======
+        {links.map((link) => (
+          <li key={link.name}>
+            <Link
+              to={link.href}
+              className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+                link.matches(location.pathname)
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
+        
+        {/* Resources Dropdown */}
+        <li>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan">
+                Resources
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-48 bg-zion-blue-dark border-zion-blue-light">
+              <DropdownMenuItem asChild>
+                <Link to="/help" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                  <Settings className="h-4 w-4" />
+                  Help Center
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/faq" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                  <Briefcase className="h-4 w-4" />
+                  FAQ
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/sitemap" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                  <BarChart3 className="h-4 w-4" />
+                  Sitemap
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </li>
+        
+        {/* Company Dropdown */}
+        <li>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan">
+                Company
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-48 bg-zion-blue-dark border-zion-blue-light">
+              <DropdownMenuItem asChild>
+                <Link to="/about" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                  <Users className="h-4 w-4" />
+                  About Us
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/careers" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                  <Briefcase className="h-4 w-4" />
+                  Careers
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/partners" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                  <Users className="h-4 w-4" />
+                  Partners
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/contact" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                  <Settings className="h-4 w-4" />
+                  Contact
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </li>
         
         {/* Messages link with unread counter */}
@@ -926,17 +990,17 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to="/messages"
               className={cn(
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative",
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
-                  ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:border hover:border-zion-purple/20"
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}
               onClick={closeDropdown}
             >
               <MessageSquare className="w-4 h-4 mr-1" />
               Messages
               {unreadCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
+                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {unreadCount}
                 </span>
               )}

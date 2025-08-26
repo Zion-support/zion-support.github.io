@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-=======
 import { AppLayout } from "@/layout/AppLayout";
 =======
 import React from 'react';
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
+=======
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -130,7 +130,6 @@ export default function GreenIT() {
         title="Green IT Solutions - Sustainable Technology | Zion Tech Group"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
-=======
         canonical="https://ziontechgroup.com/green-it"
 =======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
@@ -145,6 +144,10 @@ export default function GreenIT() {
       />
       <AppHeader />
       <main className="min-h-screen bg-background pt-16 pb-20">
+=======
+        canonical="https://ziontechgroup.com/marketplace/category/green-it"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -379,8 +382,8 @@ export default function GreenIT() {
           </section>
         </div>
       </main>
-=======
       <Footer />
+=======
     </>
   );
 };
