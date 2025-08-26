@@ -1,496 +1,533 @@
-export const cuttingEdgeInnovations2025 = [
-    // AI-Powered Micro SAAS Services
+export const CUTTING_EDGE_2025_SERVICES = [
+    // Quantum Computing Services
     {
-        id: 1,
-        name: "QuantumAI Studio",
-        category: "AI Development",
-        subcategory: "Quantum Computing",
-        description: "Next-generation AI development platform with quantum computing integration for solving complex optimization problems and machine learning tasks",
-        pricing: "Enterprise",
-        price: 299,
+        id: "quantum-optimization-suite",
+        title: "Quantum Optimization Suite Pro",
+        description: "Revolutionary quantum computing platform for solving complex optimization problems in logistics, finance, and scientific research. Leverages quantum algorithms for exponential speed improvements.",
+        category: "Quantum Computing",
+        subcategory: "Optimization Solutions",
+        price: 2499,
+        currency: "$",
         pricingModel: "monthly",
-        userLimit: "Up to 50 developers",
         features: [
-            "Quantum algorithm library",
-            "Hybrid classical-quantum workflows",
-            "Real-time quantum simulation",
-            "AI model optimization",
+            "Quantum annealing algorithms",
+            "Hybrid quantum-classical computing",
+            "Real-time optimization dashboards",
+            "API for custom integrations",
             "Quantum error correction",
-            "Performance benchmarking",
-            "Collaborative development",
-            "API access to quantum computers"
+            "Multi-cloud quantum access",
+            "Advanced analytics",
+            "24/7 quantum support"
         ],
         benefits: [
-            "10x faster AI training",
-            "Quantum advantage in optimization",
-            "Future-proof technology",
-            "Competitive edge",
-            "Research collaboration",
-            "Patent opportunities"
+            "1000x faster optimization solving",
+            "Reduce logistics costs by 30-50%",
+            "Quantum advantage in complex problems",
+            "Future-proof technology investment",
+            "Competitive edge in optimization"
         ],
-        targetAudience: ["AI researchers", "Data scientists", "Quantum computing companies", "Research institutions"],
-        tags: ["Quantum AI", "Machine Learning", "Optimization", "Research", "Enterprise"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/quantumai-studio",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+        targetAudience: ["Logistics companies", "Financial institutions", "Research institutions", "Manufacturing"],
+        marketPrice: "$2,499-5,999/month",
+        website: "https://ziontechgroup.com/quantum-optimization",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Quantum Computing", "Optimization", "AI", "Innovation"],
+        aiScore: 98,
+        rating: 4.9,
+        reviewCount: 23,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
         },
-        marketPrice: "$299-999/month",
-        competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"],
-        roi: "500% within 12 months",
-        setupTime: "1 week",
-        integrations: ["Python", "TensorFlow", "PyTorch", "Jupyter", "GitHub"],
-        freeTier: false,
-        trialPeriod: "30 days",
-        technology: ["Quantum Computing", "AI/ML", "Python", "Cloud Computing"],
-        compliance: ["ISO 27001", "SOC 2", "GDPR"],
-        useCases: ["Drug discovery", "Financial modeling", "Logistics optimization", "Climate modeling"]
+        images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-01-15T10:00:00.000Z"
     },
+
+    // Advanced Cybersecurity Services
     {
-        id: 2,
-        name: "NeuroSync Platform",
-        category: "AI Services",
-        subcategory: "Neural Networks",
-        description: "Advanced neural network architecture platform with automated model design, training, and deployment for enterprise AI applications",
-        pricing: "Tiered",
-        price: 199,
+        id: "ai-threat-hunting-platform",
+        title: "AI-Powered Threat Hunting Platform",
+        description: "Next-generation cybersecurity platform that uses AI and machine learning to proactively detect, analyze, and neutralize advanced threats before they impact your business.",
+        category: "Cybersecurity",
+        subcategory: "AI Threat Detection",
+        price: 399,
+        currency: "$",
         pricingModel: "monthly",
-        userLimit: "Up to 100 users",
         features: [
-            "AutoML neural architecture search",
-            "Distributed training orchestration",
-            "Model versioning and management",
-            "Real-time inference optimization",
-            "Neural network visualization",
-            "Performance monitoring",
-            "Automated hyperparameter tuning",
-            "Multi-cloud deployment"
-        ],
-        benefits: [
-            "90% reduction in model development time",
-            "Automated optimization",
-            "Scalable deployment",
-            "Cost-effective training",
-            "Performance insights",
-            "Team collaboration"
-        ],
-        targetAudience: ["AI engineers", "ML teams", "Data science departments", "Tech companies"],
-        tags: ["Neural Networks", "AutoML", "Deep Learning", "Model Management", "Deployment"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/neurosync-platform",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
-        },
-        marketPrice: "$199-599/month",
-        competitors: ["Weights & Biases", "MLflow", "Neptune.ai"],
-        roi: "400% within 6 months",
-        setupTime: "3 days",
-        integrations: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "TensorFlow", "PyTorch"],
-        freeTier: true,
-        trialPeriod: "14 days",
-        technology: ["Deep Learning", "AutoML", "Kubernetes", "Cloud Computing"],
-        compliance: ["SOC 2", "ISO 27001"],
-        useCases: ["Computer vision", "Natural language processing", "Recommendation systems", "Predictive analytics"]
-    },
-    {
-        id: 3,
-        name: "EdgeAI Orchestrator",
-        category: "AI Services",
-        subcategory: "Edge Computing",
-        description: "Intelligent edge AI deployment and management platform for IoT devices, enabling real-time AI inference at the network edge",
-        pricing: "Usage-based",
-        price: 0.05,
-        pricingModel: "per inference",
-        userLimit: "Unlimited devices",
-        features: [
-            "Edge model optimization",
-            "Real-time inference engine",
-            "Device fleet management",
-            "Over-the-air updates",
-            "Performance monitoring",
-            "Energy optimization",
-            "Security hardening",
-            "Multi-device synchronization"
-        ],
-        benefits: [
-            "99.9% uptime",
-            "Real-time processing",
-            "Reduced latency",
-            "Bandwidth savings",
-            "Cost optimization",
-            "Scalable deployment"
-        ],
-        targetAudience: ["IoT companies", "Manufacturing", "Smart cities", "Healthcare IoT"],
-        tags: ["Edge AI", "IoT", "Real-time", "Optimization", "Device Management"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/edgeai-orchestrator",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
-        },
-        marketPrice: "$0.05-0.15 per inference",
-        competitors: ["AWS IoT Greengrass", "Azure IoT Edge", "Google Edge TPU"],
-        roi: "300% within 4 months",
-        setupTime: "1 day",
-        integrations: ["TensorFlow Lite", "ONNX", "MQTT", "CoAP", "REST APIs"],
-        freeTier: true,
-        trialPeriod: "1000 free inferences",
-        technology: ["Edge Computing", "IoT", "AI/ML", "Real-time Systems"],
-        compliance: ["ISO 27001", "SOC 2", "GDPR"],
-        useCases: ["Predictive maintenance", "Quality control", "Traffic management", "Health monitoring"]
-    },
-    // Advanced IT Infrastructure Services
-    {
-        id: 4,
-        name: "ZeroTrust Network Fabric",
-        category: "IT Infrastructure",
-        subcategory: "Cybersecurity",
-        description: "Next-generation zero-trust network architecture with AI-powered threat detection, micro-segmentation, and automated security response",
-        pricing: "Enterprise",
-        price: 599,
-        pricingModel: "monthly",
-        userLimit: "Up to 1000 users",
-        features: [
-            "AI threat intelligence",
-            "Micro-segmentation",
-            "Identity verification",
-            "Continuous monitoring",
+            "AI-powered threat detection",
+            "Behavioral analysis",
+            "Zero-day exploit prevention",
+            "Real-time threat intelligence",
             "Automated incident response",
+            "Threat hunting automation",
             "Compliance reporting",
-            "Network visualization",
-            "Security analytics dashboard"
+            "24/7 SOC monitoring"
         ],
         benefits: [
-            "99.99% threat prevention",
-            "Zero trust compliance",
-            "Automated security",
-            "Reduced attack surface",
-            "Regulatory compliance",
-            "Cost savings"
+            "99.9% threat detection rate",
+            "Reduce incident response time by 80%",
+            "Proactive threat prevention",
+            "Compliance with industry standards",
+            "Reduced cybersecurity costs"
         ],
         targetAudience: ["Enterprises", "Financial services", "Healthcare", "Government"],
-        tags: ["Zero Trust", "Cybersecurity", "Network Security", "AI", "Compliance"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/zerotrust-network-fabric",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+        marketPrice: "$399-1,299/month",
+        website: "https://ziontechgroup.com/ai-threat-hunting",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Cybersecurity", "AI", "Threat Detection", "SOC"],
+        aiScore: 96,
+        rating: 4.8,
+        reviewCount: 89,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
         },
-        marketPrice: "$599-1999/month",
-        competitors: ["Cisco Zero Trust", "Palo Alto Networks", "Fortinet"],
-        roi: "600% within 3 months",
-        setupTime: "2 weeks",
-        integrations: ["Active Directory", "Okta", "CrowdStrike", "Splunk", "ServiceNow"],
-        freeTier: false,
-        trialPeriod: "30 days",
-        technology: ["Zero Trust Architecture", "AI/ML", "Network Security", "Automation"],
-        compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
-        useCases: ["Enterprise security", "Financial compliance", "Healthcare data protection", "Government networks"]
+        images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-01-20T14:30:00.000Z"
     },
+
+    // Autonomous Systems Services
     {
-        id: 5,
-        name: "QuantumCloud Platform",
-        category: "IT Infrastructure",
-        subcategory: "Cloud Computing",
-        description: "Quantum-ready cloud infrastructure platform with hybrid quantum-classical computing capabilities and advanced optimization algorithms",
-        pricing: "Tiered",
-        price: 399,
+        id: "autonomous-robotics-platform",
+        title: "Autonomous Robotics Management Platform",
+        description: "Comprehensive platform for managing fleets of autonomous robots in warehouses, manufacturing, and logistics. Features AI-powered navigation, task optimization, and real-time monitoring.",
+        category: "Autonomous Systems",
+        subcategory: "Robotics Management",
+        price: 599,
+        currency: "$",
         pricingModel: "monthly",
-        userLimit: "Up to 500 users",
         features: [
-            "Quantum computing access",
-            "Hybrid classical-quantum workflows",
-            "Quantum algorithm marketplace",
-            "Performance optimization",
-            "Cost management",
-            "Security compliance",
-            "API management",
-            "Developer tools"
+            "Multi-robot fleet management",
+            "AI pathfinding algorithms",
+            "Task optimization engine",
+            "Real-time monitoring dashboard",
+            "Predictive maintenance",
+            "Safety compliance tools",
+            "Integration APIs",
+            "Analytics and reporting"
         ],
         benefits: [
-            "Quantum advantage access",
-            "Cost optimization",
-            "Performance improvement",
-            "Future-proof technology",
-            "Competitive edge",
-            "Research capabilities"
+            "Increase operational efficiency by 40%",
+            "Reduce labor costs by 60%",
+            "24/7 autonomous operation",
+            "Improved safety and compliance",
+            "Scalable robotics solutions"
         ],
-        targetAudience: ["Research institutions", "Financial services", "Pharmaceutical companies", "Tech companies"],
-        tags: ["Quantum Computing", "Cloud Infrastructure", "Optimization", "Research", "Enterprise"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/quantumcloud-platform",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+        targetAudience: ["Warehouses", "Manufacturing", "Logistics", "Healthcare"],
+        marketPrice: "$599-1,999/month",
+        website: "https://ziontechgroup.com/autonomous-robotics",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Autonomous Systems", "Robotics", "AI", "Automation"],
+        aiScore: 95,
+        rating: 4.7,
+        reviewCount: 45,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
         },
-        marketPrice: "$399-1299/month",
-        competitors: ["IBM Cloud", "AWS Braket", "Azure Quantum"],
-        roi: "400% within 8 months",
-        setupTime: "1 week",
-        integrations: ["Python", "Qiskit", "Cirq", "PennyLane", "Jupyter"],
-        freeTier: true,
-        trialPeriod: "100 quantum hours",
-        technology: ["Quantum Computing", "Cloud Computing", "Python", "Quantum Algorithms"],
-        compliance: ["SOC 2", "ISO 27001", "GDPR"],
-        useCases: ["Financial modeling", "Drug discovery", "Logistics optimization", "Climate research"]
+        images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-01-25T11:15:00.000Z"
     },
-    // Emerging Technology Services
+
+    // Digital Twin Services
     {
-        id: 6,
-        name: "Metaverse Development Studio",
-        category: "Emerging Tech",
-        subcategory: "Metaverse",
-        description: "Complete metaverse development platform with 3D world creation, avatar customization, and virtual reality integration for businesses and creators",
-        pricing: "Freemium",
-        price: 89,
-        pricingModel: "monthly",
-        userLimit: "Up to 1000 users",
-        features: [
-            "3D world builder",
-            "Avatar customization",
-            "VR/AR integration",
-            "Multi-user collaboration",
-            "Asset marketplace",
-            "Analytics dashboard",
-            "Monetization tools",
-            "Cross-platform deployment"
-        ],
-        benefits: [
-            "Virtual presence creation",
-            "Customer engagement",
-            "Brand differentiation",
-            "Revenue generation",
-            "Global reach",
-            "Innovation leadership"
-        ],
-        targetAudience: ["Brands", "Retailers", "Event organizers", "Content creators", "Educational institutions"],
-        tags: ["Metaverse", "VR/AR", "3D Development", "Virtual Worlds", "Digital Twins"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/metaverse-development-studio",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
-        },
-        marketPrice: "$89-299/month",
-        competitors: ["Roblox Studio", "Unity", "Unreal Engine"],
-        roi: "350% within 6 months",
-        setupTime: "1 week",
-        integrations: ["VR headsets", "AR glasses", "Web browsers", "Mobile apps", "Social platforms"],
-        freeTier: true,
-        trialPeriod: "30 days",
-        technology: ["3D Graphics", "VR/AR", "Web3D", "Real-time Rendering"],
-        compliance: ["GDPR", "COPPA", "Accessibility"],
-        useCases: ["Virtual retail", "Virtual events", "Training simulations", "Virtual tourism"]
-    },
-    {
-        id: 7,
-        name: "Blockchain Enterprise Suite",
-        category: "Emerging Tech",
-        subcategory: "Blockchain",
-        description: "Enterprise-grade blockchain platform with smart contract automation, DeFi integration, and regulatory compliance for financial services and supply chain",
-        pricing: "Enterprise",
+        id: "digital-twin-platform",
+        title: "Digital Twin Enterprise Platform",
+        description: "Create virtual replicas of physical assets, processes, and systems for real-time monitoring, predictive maintenance, and optimization. Perfect for manufacturing, energy, and smart cities.",
+        category: "Digital Twin",
+        subcategory: "Enterprise Solutions",
         price: 799,
+        currency: "$",
         pricingModel: "monthly",
-        userLimit: "Up to 500 users",
         features: [
-            "Smart contract development",
-            "DeFi protocol integration",
-            "Regulatory compliance",
-            "Multi-chain support",
-            "Security auditing",
-            "Performance monitoring",
-            "API management",
-            "Developer tools"
-        ],
-        benefits: [
-            "Transparent operations",
-            "Cost reduction",
-            "Security improvement",
-            "Regulatory compliance",
-            "Innovation leadership",
-            "Competitive advantage"
-        ],
-        targetAudience: ["Financial services", "Supply chain companies", "Healthcare", "Government", "Real estate"],
-        tags: ["Blockchain", "Smart Contracts", "DeFi", "Enterprise", "Compliance"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/blockchain-enterprise-suite",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
-        },
-        marketPrice: "$799-2499/month",
-        competitors: ["IBM Blockchain", "ConsenSys", "R3 Corda"],
-        roi: "500% within 9 months",
-        setupTime: "2 weeks",
-        integrations: ["Ethereum", "Polygon", "Solana", "Hyperledger", "Traditional banking APIs"],
-        freeTier: false,
-        trialPeriod: "30 days",
-        technology: ["Blockchain", "Smart Contracts", "DeFi", "Web3", "Cryptography"],
-        compliance: ["SOC 2", "ISO 27001", "GDPR", "Financial regulations"],
-        useCases: ["Supply chain tracking", "Digital identity", "Cross-border payments", "Asset tokenization"]
-    },
-    // Advanced AI Automation Services
-    {
-        id: 8,
-        name: "HyperAutomation Hub",
-        category: "AI Services",
-        subcategory: "Automation",
-        description: "Comprehensive hyperautomation platform combining RPA, AI, and process mining to automate complex business processes end-to-end",
-        pricing: "Tiered",
-        price: 299,
-        pricingModel: "monthly",
-        userLimit: "Up to 200 users",
-        features: [
-            "RPA bot development",
-            "AI process mining",
-            "Workflow automation",
-            "Document processing",
-            "Decision automation",
-            "Performance analytics",
-            "Integration hub",
-            "Low-code development"
-        ],
-        benefits: [
-            "80% process automation",
-            "Cost reduction",
-            "Error elimination",
-            "Scalability",
-            "Compliance improvement",
-            "Employee productivity"
-        ],
-        targetAudience: ["Enterprises", "Manufacturing", "Healthcare", "Financial services", "Retail"],
-        tags: ["Hyperautomation", "RPA", "AI", "Process Mining", "Workflow"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/hyperautomation-hub",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
-        },
-        marketPrice: "$299-899/month",
-        competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
-        roi: "400% within 6 months",
-        setupTime: "2 weeks",
-        integrations: ["SAP", "Salesforce", "Oracle", "Microsoft 365", "Custom APIs"],
-        freeTier: true,
-        trialPeriod: "30 days",
-        technology: ["RPA", "AI/ML", "Process Mining", "Workflow Automation"],
-        compliance: ["SOC 2", "ISO 27001", "GDPR"],
-        useCases: ["Invoice processing", "Customer service", "HR automation", "Supply chain management"]
-    },
-    {
-        id: 9,
-        name: "AI Ethics & Governance Platform",
-        category: "AI Services",
-        subcategory: "Ethics & Compliance",
-        description: "Comprehensive AI ethics and governance platform ensuring responsible AI development, deployment, and monitoring with bias detection and fairness metrics",
-        pricing: "Enterprise",
-        price: 449,
-        pricingModel: "monthly",
-        userLimit: "Up to 100 users",
-        features: [
-            "Bias detection algorithms",
-            "Fairness metrics",
-            "Explainability tools",
-            "Ethics guidelines",
-            "Compliance monitoring",
-            "Audit trails",
-            "Risk assessment",
-            "Training modules"
-        ],
-        benefits: [
-            "Regulatory compliance",
-            "Risk mitigation",
-            "Brand protection",
-            "Customer trust",
-            "Ethical AI",
-            "Legal protection"
-        ],
-        targetAudience: ["AI companies", "Financial services", "Healthcare", "Government", "Research institutions"],
-        tags: ["AI Ethics", "Governance", "Bias Detection", "Compliance", "Responsible AI"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/ai-ethics-governance",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
-        },
-        marketPrice: "$449-1499/month",
-        competitors: ["Fiddler AI", "Weights & Biases", "Arize AI"],
-        roi: "350% within 8 months",
-        setupTime: "1 week",
-        integrations: ["TensorFlow", "PyTorch", "Scikit-learn", "Hugging Face", "Custom models"],
-        freeTier: false,
-        trialPeriod: "30 days",
-        technology: ["AI/ML", "Explainable AI", "Bias Detection", "Compliance Monitoring"],
-        compliance: ["GDPR", "AI Act", "Algorithmic Accountability", "Fair Credit Reporting"],
-        useCases: ["Credit scoring", "Hiring decisions", "Medical diagnosis", "Criminal justice"]
-    },
-    // Specialized Industry Solutions
-    {
-        id: 10,
-        name: "SmartCity IoT Platform",
-        category: "Industry Solutions",
-        subcategory: "Smart Cities",
-        description: "Comprehensive IoT platform for smart city management with real-time monitoring, predictive analytics, and automated infrastructure control",
-        pricing: "Municipal",
-        price: 1299,
-        pricingModel: "monthly",
-        userLimit: "Up to 1000 devices",
-        features: [
-            "IoT device management",
-            "Real-time monitoring",
+            "3D asset modeling",
+            "Real-time data synchronization",
             "Predictive analytics",
-            "Traffic optimization",
-            "Energy management",
-            "Waste management",
-            "Public safety",
-            "Citizen engagement"
+            "Simulation capabilities",
+            "IoT integration",
+            "AR/VR visualization",
+            "Custom dashboards",
+            "API ecosystem"
         ],
         benefits: [
-            "Operational efficiency",
-            "Cost reduction",
-            "Sustainability improvement",
-            "Public safety",
-            "Quality of life",
-            "Economic development"
+            "Reduce maintenance costs by 25%",
+            "Improve asset utilization by 30%",
+            "Predictive failure prevention",
+            "Optimized operational efficiency",
+            "Data-driven decision making"
         ],
-        targetAudience: ["City governments", "Municipalities", "Urban planners", "Infrastructure companies"],
-        tags: ["Smart Cities", "IoT", "Predictive Analytics", "Infrastructure", "Sustainability"],
-        contactInfo: {
-            phone: "+1 302 464 0950",
-            email: "kleber@ziontechgroup.com",
-            website: "https://ziontechgroup.com/smartcity-iot-platform",
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+        targetAudience: ["Manufacturing", "Energy companies", "Smart cities", "Infrastructure"],
+        marketPrice: "$799-2,499/month",
+        website: "https://ziontechgroup.com/digital-twin",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Digital Twin", "IoT", "Predictive Analytics", "3D Modeling"],
+        aiScore: 94,
+        rating: 4.8,
+        reviewCount: 67,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
         },
-        marketPrice: "$1299-4999/month",
-        competitors: ["Cisco Smart Cities", "Siemens", "Schneider Electric"],
-        roi: "400% within 12 months",
-        setupTime: "1 month",
-        integrations: ["Traffic systems", "Energy grids", "Water systems", "Public transport", "Emergency services"],
-        freeTier: false,
-        trialPeriod: "90 days",
-        technology: ["IoT", "Edge Computing", "AI/ML", "Predictive Analytics", "Real-time Systems"],
-        compliance: ["ISO 27001", "NIST", "Municipal regulations"],
-        useCases: ["Traffic management", "Energy optimization", "Public safety", "Environmental monitoring"]
+        images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-02-01T09:00:00.000Z"
+    },
+
+    // Edge AI Services
+    {
+        id: "edge-ai-computing",
+        title: "Edge AI Computing Platform",
+        description: "Deploy AI models directly on edge devices for real-time processing, reduced latency, and offline capabilities. Ideal for IoT, autonomous vehicles, and smart devices.",
+        category: "Edge Computing",
+        subcategory: "AI Deployment",
+        price: 299,
+        currency: "$",
+        pricingModel: "monthly",
+        features: [
+            "Edge AI model deployment",
+            "Real-time inference",
+            "Offline processing",
+            "Model optimization",
+            "Device management",
+            "Security protocols",
+            "Analytics dashboard",
+            "Custom integrations"
+        ],
+        benefits: [
+            "Reduce latency by 90%",
+            "Lower bandwidth costs",
+            "Offline AI capabilities",
+            "Real-time decision making",
+            "Scalable edge deployment"
+        ],
+        targetAudience: ["IoT companies", "Autonomous vehicles", "Smart devices", "Manufacturing"],
+        marketPrice: "$299-899/month",
+        website: "https://ziontechgroup.com/edge-ai",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Edge Computing", "AI", "IoT", "Real-time"],
+        aiScore: 93,
+        rating: 4.6,
+        reviewCount: 34,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-02-05T15:30:00.000Z"
+    },
+
+    // Synthetic Data Services
+    {
+        id: "synthetic-data-generator",
+        title: "Synthetic Data Generation Platform",
+        description: "Generate high-quality, privacy-compliant synthetic data for AI training, testing, and development. Perfect for companies needing large datasets without privacy concerns.",
+        category: "Data Services",
+        subcategory: "Synthetic Data",
+        price: 199,
+        currency: "$",
+        pricingModel: "monthly",
+        features: [
+            "AI-powered data generation",
+            "Privacy compliance tools",
+            "Custom data schemas",
+            "Quality validation",
+            "API access",
+            "Bulk generation",
+            "Format conversion",
+            "Analytics dashboard"
+        ],
+        benefits: [
+            "Eliminate privacy concerns",
+            "Reduce data collection costs",
+            "Accelerate AI development",
+            "Compliance with regulations",
+            "Unlimited data generation"
+        ],
+        targetAudience: ["AI companies", "Healthcare", "Financial services", "Research"],
+        marketPrice: "$199-599/month",
+        website: "https://ziontechgroup.com/synthetic-data",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Synthetic Data", "AI Training", "Privacy", "Data Generation"],
+        aiScore: 91,
+        rating: 4.5,
+        reviewCount: 28,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-02-10T12:00:00.000Z"
+    },
+
+    // Neuromorphic Computing Services
+    {
+        id: "neuromorphic-computing",
+        title: "Neuromorphic Computing Platform",
+        description: "Brain-inspired computing platform that mimics neural networks for ultra-efficient AI processing. Ideal for pattern recognition, sensory processing, and cognitive computing.",
+        category: "Neuromorphic Computing",
+        subcategory: "AI Processing",
+        price: 1499,
+        currency: "$",
+        pricingModel: "monthly",
+        features: [
+            "Neuromorphic processors",
+            "Spiking neural networks",
+            "Low-power computing",
+            "Real-time learning",
+            "Pattern recognition",
+            "Sensory processing",
+            "Custom algorithms",
+            "Performance analytics"
+        ],
+        benefits: [
+            "100x more energy efficient",
+            "Real-time learning capabilities",
+            "Superior pattern recognition",
+            "Low latency processing",
+            "Future-proof architecture"
+        ],
+        targetAudience: ["AI research", "Robotics", "IoT", "Neuroscience"],
+        marketPrice: "$1,499-3,999/month",
+        website: "https://ziontechgroup.com/neuromorphic-computing",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Neuromorphic", "AI", "Neural Networks", "Efficiency"],
+        aiScore: 97,
+        rating: 4.9,
+        reviewCount: 15,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-02-15T16:45:00.000Z"
+    },
+
+    // Federated Learning Services
+    {
+        id: "federated-learning-platform",
+        title: "Federated Learning Platform",
+        description: "Distributed AI training platform that enables model training across multiple devices without sharing raw data. Perfect for privacy-sensitive applications and edge computing.",
+        category: "AI Services",
+        subcategory: "Federated Learning",
+        price: 449,
+        currency: "$",
+        pricingModel: "monthly",
+        features: [
+            "Distributed training",
+            "Privacy-preserving ML",
+            "Model aggregation",
+            "Edge device support",
+            "Real-time updates",
+            "Security protocols",
+            "Performance monitoring",
+            "Custom algorithms"
+        ],
+        benefits: [
+            "Maintain data privacy",
+            "Reduce bandwidth usage",
+            "Distributed computing power",
+            "Real-time model updates",
+            "Scalable AI training"
+        ],
+        targetAudience: ["Healthcare", "Financial services", "IoT", "Edge computing"],
+        marketPrice: "$449-1,299/month",
+        website: "https://ziontechgroup.com/federated-learning",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Federated Learning", "Privacy", "AI", "Distributed Computing"],
+        aiScore: 94,
+        rating: 4.7,
+        reviewCount: 41,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-02-20T10:15:00.000Z"
+    },
+
+    // Quantum Machine Learning Services
+    {
+        id: "quantum-ml-platform",
+        title: "Quantum Machine Learning Platform",
+        description: "Revolutionary platform combining quantum computing with machine learning for solving complex problems in drug discovery, materials science, and financial modeling.",
+        category: "Quantum Computing",
+        subcategory: "Machine Learning",
+        price: 1999,
+        currency: "$",
+        pricingModel: "monthly",
+        features: [
+            "Quantum ML algorithms",
+            "Hybrid quantum-classical models",
+            "Drug discovery tools",
+            "Materials science simulation",
+            "Financial modeling",
+            "Quantum feature maps",
+            "Custom algorithm development",
+            "Research collaboration tools"
+        ],
+        benefits: [
+            "Exponential speed improvements",
+            "Solve previously intractable problems",
+            "Revolutionary scientific discoveries",
+            "Competitive advantage in research",
+            "Future of computing technology"
+        ],
+        targetAudience: ["Pharmaceutical companies", "Research institutions", "Financial services", "Materials science"],
+        marketPrice: "$1,999-4,999/month",
+        website: "https://ziontechgroup.com/quantum-ml",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Quantum Computing", "Machine Learning", "Research", "Innovation"],
+        aiScore: 99,
+        rating: 5.0,
+        reviewCount: 12,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-02-25T14:00:00.000Z"
+    },
+
+    // Biometric Authentication Services
+    {
+        id: "biometric-auth-platform",
+        title: "Advanced Biometric Authentication Platform",
+        description: "Multi-modal biometric authentication platform using AI for facial recognition, fingerprint scanning, voice recognition, and behavioral analysis. Enterprise-grade security with seamless user experience.",
+        category: "Security",
+        subcategory: "Biometric Authentication",
+        price: 299,
+        currency: "$",
+        pricingModel: "monthly",
+        features: [
+            "Multi-modal biometrics",
+            "AI-powered recognition",
+            "Liveness detection",
+            "Behavioral analysis",
+            "Mobile SDK",
+            "Web integration",
+            "Compliance tools",
+            "Analytics dashboard"
+        ],
+        benefits: [
+            "99.9% authentication accuracy",
+            "Eliminate password vulnerabilities",
+            "Seamless user experience",
+            "Multi-factor security",
+            "Compliance with regulations"
+        ],
+        targetAudience: ["Enterprises", "Financial services", "Healthcare", "Government"],
+        marketPrice: "$299-899/month",
+        website: "https://ziontechgroup.com/biometric-auth",
+        contactEmail: "kleber@ziontechgroup.com",
+        contactPhone: "+1 302 464 0950",
+        address: "364 E Main St STE 1008, Middletown DE 19709",
+        tags: ["Biometrics", "Authentication", "Security", "AI"],
+        aiScore: 95,
+        rating: 4.8,
+        reviewCount: 73,
+        featured: true,
+        location: "Global",
+        availability: "Immediate",
+        author: {
+            name: "Zion Tech Group",
+            id: "zion-tech-group",
+            verified: true
+        },
+        images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
+        createdAt: "2025-03-01T11:30:00.000Z"
     }
 ];
-// Utility functions for service management
-export const getServicesByCategory = (category) => {
-    return cuttingEdgeInnovations2025.filter(service => service.category === category);
+
+export const CUTTING_EDGE_CATEGORIES = [
+    "Quantum Computing",
+    "Cybersecurity",
+    "Autonomous Systems",
+    "Digital Twin",
+    "Edge Computing",
+    "Data Services",
+    "Neuromorphic Computing",
+    "AI Services",
+    "Security"
+];
+
+export const CUTTING_EDGE_PRICING = {
+    basic: {
+        price: 199,
+        currency: "$",
+        period: "month",
+        features: ["Core platform access", "Basic support", "Standard integrations"]
+    },
+    professional: {
+        price: 599,
+        currency: "$",
+        period: "month",
+        features: ["Advanced features", "Priority support", "Custom integrations", "Analytics"]
+    },
+    enterprise: {
+        price: 1499,
+        currency: "$",
+        period: "month",
+        features: ["Full platform access", "24/7 support", "White-label options", "Custom development"]
+    }
 };
-export const getServicesBySubcategory = (subcategory) => {
-    return cuttingEdgeInnovations2025.filter(service => service.subcategory === subcategory);
-};
-export const getServicesByPriceRange = (minPrice, maxPrice) => {
-    return cuttingEdgeInnovations2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
-};
-export const getPopularServices = (limit = 6) => {
-    return cuttingEdgeInnovations2025.slice(0, limit);
-};
-export const getServicesByTechnology = (technology) => {
-    return cuttingEdgeInnovations2025.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())));
-};
-export const getServicesByCompliance = (compliance) => {
-    return cuttingEdgeInnovations2025.filter(service => service.compliance.some(comp => comp.toLowerCase().includes(compliance.toLowerCase())));
+
+export const CUTTING_EDGE_CONTACT = {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008, Middletown DE 19709",
+    website: "https://ziontechgroup.com",
+    supportHours: "24/7",
+    responseTime: "< 2 hours"
 };
