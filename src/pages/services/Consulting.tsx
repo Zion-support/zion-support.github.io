@@ -1,4 +1,12 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import { Target, Search, BarChart3, Users, Shield, Cloud, Zap, CheckCircle } from 'lucide-react';
+
+export default function Consulting() {
+  const consultingServices = [
+    {
       title: "Technology Assessment",
       description: "Comprehensive evaluation of your current technology landscape and capabilities",
       features: ["Infrastructure Review", "Technology Stack Analysis", "Gap Identification", "Recommendations"],
@@ -9,8 +17,6 @@ import React from 'react';
       description: "Develop long-term technology strategy aligned with business objectives",
       features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
       icon: "📋"
-      features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
-      icon: "📋"
     },
     {
       title: "Vendor Selection",
@@ -19,7 +25,6 @@ import React from 'react';
       icon: "🤝"
     },
     {
-      icon: Target,
       title: "Project Management",
       description: "Professional project management for successful technology implementations",
       features: ["Project Planning", "Team Coordination", "Timeline Management", "Quality Assurance"],
@@ -40,7 +45,6 @@ import React from 'react';
     { area: "Security & Compliance", solutions: ["Security assessment", "Compliance audit", "Risk management", "Security strategy"] },
     { area: "Cloud Strategy", solutions: ["Cloud assessment", "Migration planning", "Cost optimization", "Multi-cloud strategy"] }
   ];
-import Link from 'next/link';
 
   return (
     <div className="min-h-screen bg-background">
@@ -55,17 +59,32 @@ import Link from 'next/link';
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-6xl font-bold mb-6"
+            >
               Technology
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {" "}Consulting
               </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+            >
               Make informed technology decisions with expert guidance. Our consulting services 
               help you navigate complex technology choices and maximize your technology investment.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
@@ -78,32 +97,42 @@ import Link from 'next/link';
               >
                 View All Services
               </Link>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Consulting Approach */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Consulting Approach
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 A proven methodology for successful technology consulting
               </p>
-            </div>
+            </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {consultingApproach.map((step, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center p-6 bg-white/5 rounded-lg border border-white/10 hover:border-blue-400/50 transition-all duration-300"
                 >
                   <div className="text-4xl mb-4">{step.icon}</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{step.step}</h3>
-                  <p className="text-sm text-gray-300">{step.description}</p>
-                </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.step}</h3>
+                  <p className="text-gray-300">{step.description}</p>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -112,37 +141,43 @@ import Link from 'next/link';
         {/* Consulting Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Consulting Services
+                Consulting Services
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive technology consulting to drive your business success
+                Comprehensive technology consulting to drive your business forward
               </p>
-            </div>
+            </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {consultingServices.map((service, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white/5 p-8 rounded-lg border border-white/10 hover:border-blue-400/50 transition-all duration-300"
                 >
-                  <div className="text-5xl mb-6">{service.icon}</div>
+                  <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="text-sm text-gray-300 flex items-center">
-                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-blue-400 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -151,121 +186,71 @@ import Link from 'next/link';
         {/* Consulting Areas */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Consulting Areas
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Specialized expertise across key technology domains
               </p>
-            </div>
+            </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {consultingAreas.map((area, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white/5 p-8 rounded-lg border border-white/10"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
+                  <h3 className="text-2xl font-semibold text-white mb-4">{area.area}</h3>
                   <ul className="space-y-2">
-                    {area.solutions.map((solution, idx) => (
-                      <li key={idx} className="text-gray-300 flex items-center">
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                    {area.solutions.map((solution, solutionIndex) => (
+                      <li key={solutionIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-blue-400 mr-2" />
                         {solution}
                       </li>
                     ))}
                   </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Success Stories */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Success Stories
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Real results from our consulting projects
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">Financial Services Firm</h3>
-                <p className="text-gray-300 mb-4">
-                  Technology assessment and strategic planning led to 40% reduction in IT costs and improved system reliability through cloud migration and infrastructure optimization.
-                </p>
-                <div className="text-blue-400 text-sm">
-                  <strong>Results:</strong> 40% cost reduction, improved reliability
-                </div>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">Healthcare Provider</h3>
-                <p className="text-gray-300 mb-4">
-                  Security and compliance consulting resulted in successful SOC 2 certification and enhanced data protection measures, ensuring patient data security and regulatory compliance.
-                </p>
-                <div className="text-blue-400 text-sm">
-                  <strong>Results:</strong> SOC 2 certification, enhanced security
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Technology Stack */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Technology Expertise
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Deep knowledge across leading technology platforms and solutions
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                "Cloud Platforms", "Security Solutions", "Data Analytics", "AI/ML",
-                "DevOps Tools", "Enterprise Software", "Integration Platforms", "Mobile Technologies",
-                "IoT Platforms", "Blockchain", "Edge Computing", "Quantum Computing"
-              ].map((tech, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center hover:border-white/40 transition-all duration-300"
-                >
-                  <span className="text-gray-300 font-medium">{tech}</span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready for Expert Technology Guidance?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our consulting services can help optimize your technology strategy
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              Get Expert Consultation
-            </Link>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Technology?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Let our expert consultants guide you through your technology transformation journey
+              </p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
+              >
+                Start Your Consultation
+              </Link>
+            </motion.div>
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
-};
-
-export default Consulting;
+}

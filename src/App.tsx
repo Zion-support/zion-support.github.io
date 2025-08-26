@@ -4,6 +4,7 @@ import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages
@@ -71,6 +72,7 @@ function App() {
         <Footer />
         <ChatAssistant />
         <PerformanceMonitor />
+        <AccessibilityEnhancer />
       </div>
     </Router>
   );
