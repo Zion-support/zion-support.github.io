@@ -16,9 +16,9 @@ const EnhancedFooter: React.FC = () => {
 						<h3 className="text-lg font-semibold mb-4">Services</h3>
 						<ul className="text-gray-300 space-y-2">
 							<li><Link href="/services" className="hover:text-white">All Services</Link></li>
-							<li><Link href="/services/ai-model-development-chat" className="hover:text-white">AI Development</Link></li>
-							<li><Link href="/services/cloud-migration-services-chat" className="hover:text-white">Cloud Solutions</Link></li>
-							<li><Link href="/services/data-pipeline-engineering-chat" className="hover:text-white">Data Engineering</Link></li>
+							<li><Link href="/services#ai-services" className="hover:text-white">AI Services</Link></li>
+							<li><Link href="/services#it-services" className="hover:text-white">IT Services</Link></li>
+							<li><Link href="/services#micro-saas" className="hover:text-white">Micro SaaS</Link></li>
 						</ul>
 					</div>
 					<div>
