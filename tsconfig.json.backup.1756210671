@@ -49,6 +49,17 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
+<<<<<<< HEAD
+    "src/components.disabled",
+    "src/components.disabled/**/*",
+    "src/pages.disabled",
+    "src/pages.disabled/**/*"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+=======
     "node_modules",
     "zion.app/recovered-content/**",
     "contracts/**",
@@ -57,5 +68,6 @@
     "data/2025-cutting-edge-enterprise-solutions.ts",
     "data/2025-cutting-edge-it-infrastructure-innovations.ts",
     "data/2025-emerging-tech-services.ts"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
   ]
 }

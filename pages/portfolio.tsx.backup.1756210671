@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+  Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
+  Award, ExternalLink, Github, Globe, Zap, Star, CheckCircle,
+  TrendingUp, BarChart3, Cloud, Network, Filter, Search, Building
+=======
   ArrowRight, CheckCircle, Code, Github, ExternalLink as ExternalLinkIcon
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
@@ -141,8 +147,14 @@ export default function PortfolioPage() {
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Portfolio
             </h1>
+<<<<<<< HEAD
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Discover how we've transformed businesses with cutting-edge technology solutions, 
+              from AI-powered platforms to quantum-resistant security systems.
+=======
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
               Revolutionary technology solutions that are transforming industries and pushing the boundaries of what&apos;s possible
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
             </p>
           </motion.div>
         </div>
@@ -333,8 +345,14 @@ export default function PortfolioPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Start Your Project?
             </h2>
+<<<<<<< HEAD
+            <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+              Let's discuss how our cutting-edge technology solutions can transform your business 
+              and drive innovation in your industry.
+=======
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
               Let&apos;s collaborate to bring your vision to life with cutting-edge technology solutions that drive real results.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

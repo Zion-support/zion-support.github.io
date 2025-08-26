@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Comprehensive script to merge all remaining unmerged cursor branches
+# Fixed comprehensive script to merge all remaining unmerged cursor branches
 set -e
 
 echo "🚀 Starting comprehensive merge of all remaining unmerged cursor branches..."
@@ -14,9 +14,9 @@ git checkout -b "$BACKUP_BRANCH"
 git push origin "$BACKUP_BRANCH"
 git checkout main
 
-# Get all unmerged cursor branches
+# Get all unmerged cursor branches and trim whitespace
 echo "📋 Getting all unmerged cursor branches..."
-UNMERGED_BRANCHES=$(git branch -r --no-merged main | grep "origin/cursor/" | sed 's/origin\///')
+UNMERGED_BRANCHES=$(git branch -r --no-merged main | grep "origin/cursor/" | sed 's/origin\///' | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]*$//')
 
 TOTAL_BRANCHES=$(echo "$UNMERGED_BRANCHES" | wc -l)
 echo "📊 Total unmerged cursor branches: $TOTAL_BRANCHES"

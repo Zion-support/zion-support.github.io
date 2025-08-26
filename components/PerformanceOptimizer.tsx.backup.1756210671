@@ -164,6 +164,18 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
           transition={{ duration: 0.6 }}
           className="text-3xl font-bold text-gray-900 mb-4"
         >
+<<<<<<< HEAD
+          Performance Optimization
+        </motion.h2>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-gray-600"
+        >
+          Monitor and optimize website performance for the best user experience
+        </motion.p>
+=======
           {children}
         </motion.div>
       ) : (
@@ -344,6 +356,7 @@ export function VirtualList<T>({
             renderItem(item, startIndex + index)
           )}
         </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
       </div>
 
       {/* Performance Metrics */}

@@ -1,5 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+
+export default function HomePage() {
+=======
 import { motion } from 'framer-motion';
 import { 
   ArrowRight, Brain, Shield, Rocket, 
@@ -84,6 +88,7 @@ export default function HomePage() {
     { number: "24/7", label: "Support Available", icon: Clock }
   ];
 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
   return (
     <>
       <Head>

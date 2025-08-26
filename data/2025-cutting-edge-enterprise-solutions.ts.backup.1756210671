@@ -19,7 +19,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       currency: 'USD',
       trialDays: 30,
       setupTime: '2-3 weeks',
+<<<<<<< HEAD
+      enterprise: 'Custom pricing available'
+=======
       enterprise: 'Enterprise pricing available'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
     },
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',
     features: [
@@ -40,13 +44,27 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',
     marketPosition: 'Leading AI enterprise risk management platform with intelligent automation',
     targetAudience: 'Fortune 500 companies, Financial institutions, Healthcare organizations, Government agencies',
+<<<<<<< HEAD
+    category: 'Enterprise AI',
+    realService: true,
+    technology: ['AI/ML', 'Machine Learning', 'Risk Analytics', 'Compliance', 'Automation'],
+    integrations: ['ERP systems', 'GRC platforms', 'Compliance tools', 'Security systems', 'Business intelligence tools'],
+    useCases: ['Risk assessment', 'Compliance management', 'Incident response', 'Business continuity', 'Strategic planning'],
+=======
     category: 'Enterprise Solutions',
     integrations: ['ERP systems, GRC platforms, Compliance tools, Security systems, Business intelligence tools'],
     useCases: ['Risk assessment, Compliance management, Incident response, Business continuity, Strategic planning'],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
     roi: 'Reduce risk exposure by 60%. Improve compliance by 85%. Cut risk management costs by 40%.',
     competitors: ['MetricStream', 'ServiceNow', 'IBM OpenPages', 'RSA Archer', 'SAP GRC'],
     marketSize: '$12.8B enterprise risk management market',
     growthRate: '25% annual growth',
+<<<<<<< HEAD
+    customers: 45,
+    rating: 4.8,
+    reviews: 67,
+    contactInfo: contact
+=======
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -105,6 +123,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     popular: true,
     launchDate: '2025-01-15',
     reviews: 42
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
   },
   {
     id: 'autonomous-business-process-optimization',
@@ -137,9 +156,13 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-business-process-optimization',
     marketPosition: 'Leading autonomous business process optimization platform with AI intelligence',
+<<<<<<< HEAD
+    targetAudience: 'Large enterprises, Manufacturing companies, Service organizations, Government agencies',
+=======
     targetAudience: ['Large enterprises', 'Manufacturing companies', 'Service organizations', 'Government agencies'],
     trialDays: 21,
     setupTime: '2-3 weeks',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
     category: 'AI Automation',
     realService: true,
     technology: ['AI/ML', 'Machine Learning', 'Process Mining', 'Automation', 'Workflow Management'],

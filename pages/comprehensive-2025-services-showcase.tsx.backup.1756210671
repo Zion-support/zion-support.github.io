@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
+  ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom,
+  Search, Filter, ArrowRight, Award, Target, Cpu, Database
+=======
   ArrowRight, CheckCircle, ExternalLink,
   Search, Grid, List, Star as StarIcon
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
 } from 'lucide-react';
 import EnhancedNavigation from '../components/layout/EnhancedNavigation';
 import EnhancedFooter from '../components/layout/EnhancedFooter';
@@ -135,6 +141,22 @@ export default function Comprehensive2025ServicesShowcase() {
                 />
               </div>
 
+<<<<<<< HEAD
+              {/* Sort */}
+              <div className="flex items-center gap-3">
+                <span className="text-white/70">Sort by:</span>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as any)}
+                  className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-cyan-400"
+                >
+                  <option value="popularity">Popularity</option>
+                  <option value="name">Name</option>
+                  <option value="price">Price</option>
+                  <option value="rating">Rating</option>
+                </select>
+              </div>
+=======
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'popularity' | 'price' | 'rating' | 'newest')}
@@ -145,6 +167,7 @@ export default function Comprehensive2025ServicesShowcase() {
                 <option value="rating">Highest Rated</option>
                 <option value="newest">Newest First</option>
               </select>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
             </div>
           </div>
         </div>
@@ -153,6 +176,17 @@ export default function Comprehensive2025ServicesShowcase() {
       {/* Category Filter */}
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+          <div className="flex flex-wrap justify-center gap-3">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
+                  selectedCategory === category.id
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
+                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+=======
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -167,6 +201,7 @@ export default function Comprehensive2025ServicesShowcase() {
                   viewMode === 'grid' 
                     ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                     : 'p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-21bc
                 }`}
               >
                 <span>{category.icon}</span>
