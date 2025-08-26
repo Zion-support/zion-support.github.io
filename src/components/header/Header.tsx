@@ -5,6 +5,7 @@ import { Logo } from './Logo';
 import { UserMenu } from './UserMenu';
 import { LanguageSelector } from './LanguageSelector';
 import { MainNavigation } from '@/layout/MainNavigation';
+import { MobileMenu } from './MobileMenu';
 import { useAuth } from '@/hooks/useAuth';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
@@ -137,6 +138,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
         {/* Desktop Navigation */}
+<<<<<<< HEAD
         <div className="ml-6 flex-1 hidden lg:block">
           <MainNavigation />
         </div>
@@ -147,6 +149,14 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         {/* Search Bar */}
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
         <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+=======
+        <div className="ml-6 flex-1 hidden md:block">
+          <MainNavigation />
+        </div>
+
+        {/* Desktop Search */}
+        <form onSubmit={handleSubmit} className="hidden lg:block w-64 mx-4">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -159,6 +169,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         </form>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5241
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="flex items-center gap-2">
             <LanguageSelector />
@@ -193,10 +204,15 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
               Pricing
             </Link>
           </Button>
+=======
+        {/* Desktop Actions */}
+        <div className="flex items-center gap-2 hidden md:flex">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
           <LanguageSelector />
           {!hideLogin && <UserMenu />}
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Menu Button */}
         <div className="lg:hidden ml-auto">
           <Button
@@ -208,6 +224,10 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
+=======
+        {/* Mobile Menu */}
+        <MobileMenu className="md:hidden" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
       </div>
 <<<<<<< HEAD
 

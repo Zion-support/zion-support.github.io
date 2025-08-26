@@ -11,10 +11,13 @@ interface TalentProfileWithSocial extends TalentProfileType {
 <<<<<<< HEAD:automation/backups/file-sync/2025-08-25T15-27-30-943Z/pages/talent/[id].tsx.backup.1756164983
 const TalentProfilePage: React.FC = () => {
   const { id } = useParams();
+<<<<<<< HEAD:automation/backups/file-sync/2025-08-25T15-27-30-943Z/pages/talent/[id].tsx.backup.1756164983
 =======
 export default function TalentProfilePage() {
   const { id } = useParams() as { id?: string };
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be:pages/talent/[id].tsx
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa:pages/talent/[id].tsx
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -49,6 +52,7 @@ export default function TalentProfilePage() {
   if (loading) return <ProfileLoadingState />;
 <<<<<<< HEAD:automation/backups/file-sync/2025-08-25T15-27-30-943Z/pages/talent/[id].tsx.backup.1756164983
 <<<<<<< HEAD:automation/backups/file-sync/2025-08-25T15-27-30-943Z/pages/talent/[id].tsx.backup.1756164983
+<<<<<<< HEAD:automation/backups/file-sync/2025-08-25T15-27-30-943Z/pages/talent/[id].tsx.backup.1756164983
   if (error || !profile) return <ProfileErrorState error={error} />;
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
@@ -56,6 +60,9 @@ export default function TalentProfilePage() {
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be:pages/talent/[id].tsx
+=======
+  if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa:pages/talent/[id].tsx
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">
@@ -78,5 +85,12 @@ export default function TalentProfilePage() {
         )}
       </div>
     </main>
+<<<<<<< HEAD:automation/backups/file-sync/2025-08-25T15-27-30-943Z/pages/talent/[id].tsx.backup.1756164983
   );
 }
+=======
+    );
+};
+
+export default TalentProfilePage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa:pages/talent/[id].tsx
