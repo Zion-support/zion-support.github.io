@@ -8,6 +8,7 @@ import { ChatAssistant } from './components/ChatAssistant';
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+const Services = React.lazy(() => import('./pages/Services'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const PartnersPage = React.lazy(() => import('./pages/Partners'));
@@ -38,6 +39,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />

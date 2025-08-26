@@ -26,6 +26,7 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
+import { UltimateServicesShowcase } from "@/components/UltimateServicesShowcase";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
       <HeroSection />
       <QuickAccess />
       <AIServicesShowcase />
+      <UltimateServicesShowcase />
       <FeatureCTAs />
       <FeatureHighlights />
       <CategoriesSection />
