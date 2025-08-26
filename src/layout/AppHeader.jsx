@@ -38,13 +38,47 @@ export function AppHeader() {
       label: 'Services',
       hasDropdown: true,
       dropdownItems: [
-        { path: '/services#ai', label: 'AI & Analytics' },
-        { path: '/services#cybersecurity', label: 'Cybersecurity' },
-        { path: '/services#cloud', label: 'Cloud Solutions' },
-        { path: '/services#consulting', label: 'IT Consulting' }
+        { path: '/services', label: 'All Services' },
+        { path: '/services/ai', label: 'AI & Analytics' },
+        { path: '/services/cybersecurity', label: 'Cybersecurity' },
+        { path: '/services/cloud', label: 'Cloud Solutions' },
+        { path: '/services/consulting', label: 'IT Consulting' },
+        { path: '/quantum-technology', label: 'Quantum Technology' },
+        { path: '/blockchain-services', label: 'Blockchain' },
+        { path: '/digital-transformation', label: 'Digital Transformation' },
+        { path: '/micro-saas', label: 'Micro SAAS' },
+        { path: '/enterprise', label: 'Enterprise Solutions' }
       ]
     },
-    { path: '/contact', label: 'Contact' }
+    { 
+      path: '/resources', 
+      label: 'Resources',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/blog', label: 'Blog' },
+        { path: '/case-studies', label: 'Case Studies' },
+        { path: '/events', label: 'Events' },
+        { path: '/webinars', label: 'Webinars' },
+        { path: '/white-papers', label: 'White Papers' },
+        { path: '/tutorials', label: 'Tutorials' },
+        { path: '/faq', label: 'FAQ' }
+      ]
+    },
+    { 
+      path: '/company', 
+      label: 'Company',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/about', label: 'About Us' },
+        { path: '/team', label: 'Our Team' },
+        { path: '/careers', label: 'Careers' },
+        { path: '/partners', label: 'Partners' },
+        { path: '/press', label: 'Press' }
+      ]
+    },
+    { path: '/pricing', label: 'Pricing' },
+    { path: '/contact', label: 'Contact' },
+    { path: '/developers', label: 'Developers' }
   ];
 
   const isActiveRoute = (path) => {

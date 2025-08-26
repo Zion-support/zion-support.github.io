@@ -91,18 +91,24 @@ export function Footer() {
       title: "Company",
       links: [
         { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about#team" },
+        { label: "Our Team", path: "/team" },
         { label: "Careers", path: "/careers" },
+        { label: "Partners", path: "/partners" },
         { label: "Press", path: "/press" }
       ]
     },
     {
       title: "Services",
       links: [
-        { label: "AI & Analytics", path: "/services#ai" },
-        { label: "Cybersecurity", path: "/services#cybersecurity" },
-        { label: "Cloud Solutions", path: "/services#cloud" },
-        { label: "IT Consulting", path: "/services#consulting" }
+        { label: "AI & Analytics", path: "/services/ai" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "Cloud Solutions", path: "/services/cloud" },
+        { label: "IT Consulting", path: "/services/consulting" },
+        { label: "Quantum Technology", path: "/quantum-technology" },
+        { label: "Blockchain", path: "/blockchain-services" },
+        { label: "Digital Transformation", path: "/digital-transformation" },
+        { label: "Micro SAAS", path: "/micro-saas" },
+        { label: "Enterprise", path: "/enterprise" }
       ]
     },
     {
@@ -110,7 +116,12 @@ export function Footer() {
       links: [
         { label: "Blog", path: "/blog" },
         { label: "Case Studies", path: "/case-studies" },
+        { label: "Events", path: "/events" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Tutorials", path: "/tutorials" },
         { label: "Documentation", path: "/docs" },
+        { label: "FAQ", path: "/faq" },
         { label: "Support", path: "/support" }
       ]
     },
