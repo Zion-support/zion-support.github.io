@@ -27,6 +27,8 @@ export function AppHeader() {
             <Link to="/" className="text-white hover:text-zion-cyan transition-colors duration-300">Home</Link>
             <Link to="/about" className="text-white hover:text-zion-cyan transition-colors duration-300">About</Link>
             <Link to="/services" className="text-white hover:text-zion-cyan transition-colors duration-300">Services</Link>
+            <Link to="/comprehensive-services" className="text-white hover:text-zion-cyan transition-colors duration-300">All Services</Link>
+            <Link to="/comprehensive-pricing" className="text-white hover:text-zion-cyan transition-colors duration-300">Pricing</Link>
             <Link to="/contact" className="text-white hover:text-zion-cyan transition-colors duration-300">Contact</Link>
           </nav>
 
@@ -58,6 +60,8 @@ export function AppHeader() {
               <Link to="/" className="text-white hover:text-zion-cyan transition-colors duration-300">Home</Link>
               <Link to="/about" className="text-white hover:text-zion-cyan transition-colors duration-300">About</Link>
               <Link to="/services" className="text-white hover:text-zion-cyan transition-colors duration-300">Services</Link>
+              <Link to="/comprehensive-services" className="text-white hover:text-zion-cyan transition-colors duration-300">All Services</Link>
+              <Link to="/comprehensive-pricing" className="text-white hover:text-zion-cyan transition-colors duration-300">Pricing</Link>
               <Link to="/contact" className="text-white hover:text-zion-cyan transition-colors duration-300">Contact</Link>
               <div className="pt-4 border-t border-zion-cyan/20">
                 <Link to="/login" className="block text-white hover:text-zion-cyan transition-colors duration-300 font-medium mb-2">Login</Link>

@@ -13,12 +13,16 @@ export default function Home() {
             Pioneering the future with cutting-edge AI solutions, quantum technology, and innovative IT services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:scale-105 transition-transform">
-              Get Started
-            </button>
-            <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors">
-              Learn More
-            </button>
+            <Link to="/comprehensive-services">
+              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:scale-105 transition-transform">
+                View All Services
+              </button>
+            </Link>
+            <Link to="/comprehensive-pricing">
+              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors">
+                View Pricing
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -61,9 +65,11 @@ export default function Home() {
           <p className="text-white/90 mb-8">
             Contact us today to discuss your technology needs.
           </p>
-          <button className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform">
-            Contact Us
-          </button>
+          <Link to="/contact">
+            <button className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform">
+              Contact Us
+            </button>
+          </Link>
         </div>
       </section>
     </div>
