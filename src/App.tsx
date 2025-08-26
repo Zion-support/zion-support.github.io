@@ -87,9 +87,11 @@ import ContactPage from './pages/Contact';
 import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
 import Checkout from './pages/Checkout';
-import PrivacySettings from './pages/PrivacySettings';
-=======
 import PrivacyPage from './pages/PrivacyPage';
+=======
+import Rewards from './pages/Rewards';
+import { SupportChatbot } from './components/SupportChatbot';
+import PrivateRoute from './components/PrivateRoute';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -120,7 +122,8 @@ const baseRoutes = [
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/wishlist', element: <WishlistPage /> },
-  { path: '/cart', element: <CartPage /> },
+  { path: '/cart', element: <PrivateRoute><CartPage /></PrivateRoute> },
+  { path: '/rewards', element: <PrivateRoute><Rewards /></PrivateRoute> },
   { path: '/checkout', element: <Checkout /> },
   { path: '/privacy-settings', element: <PrivacySettings /> },
 =======
