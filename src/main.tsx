@@ -13,27 +13,19 @@ import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 import { Provider as ReduxProvider } from 'react-redux';
 import { store } from '@/store';
-import { AuthProvider } from './context/auth/AuthProvider';
 import { NotificationProvider } from './components/ui/notification';
+import ErrorBoundary from './components/ErrorBoundary';
 
-const queryClient = new QueryClient({
-	defaultOptions: { queries: { retry: 1, refetchOnWindowFocus: false } }
-});
+const queryClient = new QueryClient();
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-	throw new Error('Root element not found');
-}
-
-const root = createRoot(rootElement);
-root.render(
+createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
-		<HelmetProvider>
-			<QueryClientProvider client={queryClient}>
-				<ReduxProvider store={store}>
-					<WhitelabelProvider>
-						<Router>
-							<AuthProvider>
+		<ErrorBoundary>
+			<HelmetProvider>
+				<QueryClientProvider client={queryClient}>
+					<ReduxProvider store={store}>
+						<WhitelabelProvider>
+							<Router>
 								<NotificationProvider>
 									<LanguageProvider authState={{ isAuthenticated: false, user: null }}>
 										<AppLayout>
@@ -41,11 +33,11 @@ root.render(
 										</AppLayout>
 									</LanguageProvider>
 								</NotificationProvider>
-							</AuthProvider>
-						</Router>
-					</WhitelabelProvider>
-				</ReduxProvider>
-			</QueryClientProvider>
-		</HelmetProvider>
+							</Router>
+						</WhitelabelProvider>
+					</ReduxProvider>
+				</QueryClientProvider>
+			</HelmetProvider>
+		</ErrorBoundary>
 	</React.StrictMode>
 );
