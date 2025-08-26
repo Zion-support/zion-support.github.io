@@ -19,6 +19,7 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
 const ServicesAdvertising = React.lazy(() => import('./pages/ServicesAdvertising'));
 const Solutions = React.lazy(() => import('./pages/Solutions'));
 const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
@@ -47,6 +48,9 @@ const CustomerExperience = React.lazy(() => import('./pages/services/AICustomerS
 const SupplyChain = React.lazy(() => import('./pages/services/ManufacturingSolutions'));
 const ContentCreation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 const HRPlatform = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AIQuantumFinance = React.lazy(() => import('./pages/services/AIQuantumFinance'));
+const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AISmartCitySolutions = React.lazy(() => import('./pages/services/AISmartCitySolutions'));
 
 // Marketplace pages
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
@@ -99,6 +103,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services-overview" element={<ServicesOverview />} />
               <Route path="/services-advertising" element={<ServicesAdvertising />} />
               <Route path="/solutions" element={<Solutions />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
@@ -131,6 +136,9 @@ function App() {
               <Route path="/micro-saas/iot-edge" element={<IoTServices />} />
               <Route path="/micro-saas/content-creation" element={<ContentCreation />} />
               <Route path="/micro-saas/hr-platform" element={<HRPlatform />} />
+              <Route path="/micro-saas/ai-quantum-finance" element={<AIQuantumFinance />} />
+              <Route path="/micro-saas/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+              <Route path="/micro-saas/ai-smart-city-solutions" element={<AISmartCitySolutions />} />
               
               {/* IT Services Routes */}
               <Route path="/it-services" element={<ITInfrastructure />} />

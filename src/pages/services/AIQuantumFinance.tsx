@@ -2,130 +2,92 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
-  Heart, 
+  TrendingUp, 
   Shield, 
   Zap, 
   Globe, 
   BarChart3, 
   Cpu, 
   Rocket,
-  Stethoscope,
-  Activity,
+  DollarSign,
+  ChartLine,
   Lock,
   Target,
   Users,
   CheckCircle,
   ArrowRight,
-  Star,
-  Microscope,
-  Pill,
-  Monitor,
-  Database
+  Star
 } from 'lucide-react';
 
-export default function AIHealthcareAnalytics() {
+export default function AIQuantumFinance() {
   const features = [
     {
       icon: Brain,
-      title: "AI Disease Prediction",
-      description: "Advanced machine learning models that predict disease onset with 94% accuracy",
-      benefits: ["Early detection", "Risk assessment", "Preventive care", "Personalized insights"]
+      title: "Quantum AI Trading Algorithms",
+      description: "Advanced quantum computing-powered trading algorithms that process market data at unprecedented speeds",
+      benefits: ["Sub-millisecond execution", "Quantum pattern recognition", "Multi-dimensional analysis"]
     },
     {
-      icon: Heart,
-      title: "Real-time Patient Monitoring",
-      description: "Continuous health monitoring with AI-powered anomaly detection",
-      benefits: ["24/7 monitoring", "Instant alerts", "Predictive analytics", "Remote care"]
+      icon: TrendingUp,
+      title: "Predictive Market Analytics",
+      description: "AI-driven market forecasting using quantum-enhanced machine learning models",
+      benefits: ["95%+ accuracy rate", "Real-time predictions", "Risk assessment"]
     },
     {
       icon: Shield,
-      title: "HIPAA-Compliant Security",
-      description: "Enterprise-grade security with blockchain-based patient data protection",
-      benefits: ["End-to-end encryption", "Audit trails", "Compliance ready", "Data sovereignty"]
+      title: "Quantum-Secure Transactions",
+      description: "Next-generation security protocols using quantum cryptography",
+      benefits: ["Unbreakable encryption", "Quantum key distribution", "Future-proof security"]
     },
     {
       icon: Zap,
-      title: "Clinical Decision Support",
-      description: "AI-powered clinical recommendations based on evidence-based medicine",
-      benefits: ["Treatment optimization", "Drug interaction alerts", "Clinical guidelines", "Outcome prediction"]
-    }
-  ];
-
-  const solutions = [
-    {
-      icon: Microscope,
-      title: "Diagnostic Imaging AI",
-      description: "Computer vision algorithms for radiology, pathology, and medical imaging",
-      price: "$8,500/mo",
-      features: ["X-ray analysis", "MRI interpretation", "Pathology slides", "3D reconstruction"]
-    },
-    {
-      icon: Pill,
-      title: "Drug Discovery Platform",
-      description: "AI-powered pharmaceutical research and development acceleration",
-      price: "$25,000/mo",
-      features: ["Molecular modeling", "Clinical trial optimization", "Drug repurposing", "Safety prediction"]
-    },
-    {
-      icon: Monitor,
-      title: "Electronic Health Records",
-      description: "Intelligent EHR system with natural language processing",
-      price: "$12,000/mo",
-      features: ["Voice transcription", "Clinical documentation", "Interoperability", "Analytics dashboard"]
-    },
-    {
-      icon: Database,
-      title: "Population Health Analytics",
-      description: "Big data analytics for public health and epidemiology",
-      price: "$18,000/mo",
-      features: ["Disease tracking", "Outbreak prediction", "Resource optimization", "Policy insights"]
+      title: "High-Frequency Trading",
+      description: "Ultra-fast trading execution with quantum computing optimization",
+      benefits: ["Microsecond latency", "Scalable infrastructure", "Regulatory compliance"]
     }
   ];
 
   const pricing = [
     {
-      name: "Clinical",
-      price: "$12,000",
+      name: "Starter",
+      price: "$5,000",
       period: "/month",
-      description: "For hospitals and clinics",
+      description: "Perfect for small trading firms",
       features: [
-        "AI diagnostic tools",
-        "Patient monitoring",
-        "Clinical decision support",
-        "Basic analytics",
+        "Basic quantum AI algorithms",
+        "Market data feeds",
+        "Standard security protocols",
         "Email support"
       ],
       cta: "Get Started",
       popular: false
     },
     {
-      name: "Enterprise",
-      price: "$35,000",
+      name: "Professional",
+      price: "$15,000",
       period: "/month",
-      description: "For healthcare systems",
+      description: "Ideal for growing financial institutions",
       features: [
-        "Full AI suite",
-        "Custom integrations",
-        "Advanced analytics",
+        "Advanced quantum algorithms",
+        "Real-time market analytics",
+        "Quantum security suite",
         "Priority support",
-        "Training & certification",
-        "Compliance tools"
+        "Custom integrations"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Research",
-      price: "$75,000",
+      name: "Enterprise",
+      price: "$50,000",
       period: "/month",
-      description: "For research institutions",
+      description: "For large-scale financial operations",
       features: [
-        "Research-grade AI models",
+        "Full quantum computing access",
         "Custom algorithm development",
-        "Data science team",
+        "Dedicated support team",
         "White-label solutions",
-        "Publication support",
-        "Grant assistance"
+        "Regulatory compliance tools"
       ],
       cta: "Contact Sales",
       popular: false
@@ -134,33 +96,26 @@ export default function AIHealthcareAnalytics() {
 
   const testimonials = [
     {
-      name: "Dr. Sarah Johnson",
-      role: "Chief Medical Officer, Metro Health",
-      content: "ZION's AI Healthcare Analytics has transformed our diagnostic accuracy. We're catching conditions earlier and improving patient outcomes significantly.",
+      name: "Sarah Chen",
+      role: "CTO, Quantum Capital",
+      content: "ZION's AI Quantum Finance platform has revolutionized our trading operations. The quantum algorithms provide insights we never had before.",
       rating: 5,
-      company: "Metro Health"
+      company: "Quantum Capital"
     },
     {
-      name: "Dr. Michael Chen",
-      role: "Director of Research, Medical Institute",
-      content: "The drug discovery platform accelerated our research by 300%. We're bringing life-saving treatments to market faster than ever.",
+      name: "Michael Rodriguez",
+      role: "Head of Trading, Global Markets",
+      content: "The predictive analytics accuracy is incredible. We've seen a 40% improvement in our trading performance since implementation.",
       rating: 5,
-      company: "Medical Institute"
+      company: "Global Markets"
     },
     {
-      name: "Dr. Emily Rodriguez",
-      role: "Head of Radiology, City Hospital",
-      content: "The diagnostic imaging AI has reduced our reading time by 60% while maintaining 99% accuracy. It's a game-changer for our department.",
+      name: "Dr. Emily Watson",
+      role: "Quantitative Analyst, FinTech Labs",
+      content: "The quantum security features give us confidence in handling high-value transactions. Truly cutting-edge technology.",
       rating: 5,
-      company: "City Hospital"
+      company: "FinTech Labs"
     }
-  ];
-
-  const stats = [
-    { value: "94%", label: "Diagnostic Accuracy", description: "AI-powered disease detection" },
-    { value: "60%", label: "Time Reduction", description: "Faster diagnosis and treatment" },
-    { value: "300%", label: "Research Speed", description: "Accelerated drug discovery" },
-    { value: "500+", label: "Hospitals Served", description: "Trusted by healthcare leaders" }
   ];
 
   return (
@@ -184,17 +139,17 @@ export default function AIHealthcareAnalytics() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 px-4 py-2 rounded-full border border-zion-cyan/30 mb-6">
-              <Heart className="w-5 h-5 text-zion-cyan" />
-              <span className="text-zion-cyan font-medium">AI Healthcare Analytics</span>
+              <Brain className="w-5 h-5 text-zion-cyan" />
+              <span className="text-zion-cyan font-medium">AI Quantum Finance</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-              AI Healthcare Analytics
+              Quantum AI Finance
             </h1>
             
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Transform healthcare delivery with AI-powered analytics, predictive diagnostics, and intelligent clinical decision support. 
-              Improve patient outcomes while reducing costs and enhancing operational efficiency.
+              Revolutionize your financial operations with the world's first quantum AI-powered trading and analytics platform. 
+              Experience unprecedented speed, accuracy, and security in financial markets.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -212,25 +167,28 @@ export default function AIHealthcareAnalytics() {
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-zion-cyan/50 text-zion-cyan px-8 py-4 rounded-xl font-semibold text-lg hover:bg-zion-cyan/10 transition-all duration-300"
               >
-                Schedule Demo
+                Watch Demo
               </motion.button>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>
-                  <div className="text-zion-slate-light text-sm">{stat.label}</div>
-                  <div className="text-zion-slate-light text-xs mt-1">{stat.description}</div>
-                </motion.div>
-              ))}
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">99.9%</div>
+                <div className="text-zion-slate-light">Uptime</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-zion-purple mb-2">40ms</div>
+                <div className="text-zion-slate-light">Latency</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-zion-blue mb-2">95%+</div>
+                <div className="text-zion-slate-light">Accuracy</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">$2B+</div>
+                <div className="text-zion-slate-light">Traded</div>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -246,10 +204,10 @@ export default function AIHealthcareAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Revolutionary Healthcare AI
+              Revolutionary Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Experience the future of healthcare with our cutting-edge AI capabilities designed for medical professionals
+              Experience the future of financial technology with our cutting-edge quantum AI capabilities
             </p>
           </motion.div>
 
@@ -283,67 +241,6 @@ export default function AIHealthcareAnalytics() {
         </div>
       </section>
 
-      {/* Solutions Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Specialized Healthcare Solutions
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive AI solutions tailored for different healthcare domains and use cases
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {solutions.map((solution, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-zion-slate/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center flex-shrink-0">
-                    <solution.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">{solution.title}</h3>
-                    <p className="text-zion-slate-light mb-4">{solution.description}</p>
-                    
-                    <div className="text-2xl font-bold text-zion-cyan mb-4">{solution.price}</div>
-                    
-                    <ul className="space-y-2 mb-6">
-                      {solution.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center space-x-2 text-sm text-zion-slate-light">
-                          <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
-                    >
-                      Learn More
-                    </motion.button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
@@ -354,10 +251,10 @@ export default function AIHealthcareAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Healthcare-Focused Pricing
+              Transparent Pricing
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Choose the plan that fits your healthcare organization's needs and scale as you grow
+              Choose the plan that fits your financial institution's needs and scale as you grow
             </p>
           </motion.div>
 
@@ -425,10 +322,10 @@ export default function AIHealthcareAnalytics() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Trusted by Healthcare Leaders
+              Trusted by Financial Leaders
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              See what medical professionals say about our AI Healthcare Analytics platform
+              See what industry experts say about our AI Quantum Finance platform
             </p>
           </motion.div>
 
@@ -477,10 +374,10 @@ export default function AIHealthcareAnalytics() {
             className="text-center max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Ready to Transform Healthcare?
+              Ready to Transform Your Finance?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join the AI revolution in healthcare. Start your free trial today and experience the future of medical technology.
+              Join the quantum revolution in financial technology. Start your free trial today and experience the future of AI-powered finance.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -502,7 +399,7 @@ export default function AIHealthcareAnalytics() {
             </div>
 
             <div className="mt-8 text-zion-slate-light">
-              <p>Questions? Contact our healthcare team at <span className="text-zion-cyan">kleber@ziontechgroup.com</span></p>
+              <p>Questions? Contact our team at <span className="text-zion-cyan">kleber@ziontechgroup.com</span></p>
               <p>Or call us at <span className="text-zion-cyan">+1 302 464 0950</span></p>
             </div>
           </motion.div>

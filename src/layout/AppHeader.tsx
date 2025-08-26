@@ -71,6 +71,7 @@ export function AppHeader() {
       href: '/services',
       icon: Zap,
       dropdown: [
+        { name: 'All Services', href: '/services-overview', icon: Code },
         { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
@@ -93,7 +94,10 @@ export function AppHeader() {
         { name: 'Cybersecurity', href: '/micro-saas/cybersecurity' },
         { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' },
         { name: 'Content Creation', href: '/micro-saas/content-creation' },
-        { name: 'HR Platform', href: '/micro-saas/hr-platform' }
+        { name: 'HR Platform', href: '/micro-saas/hr-platform' },
+        { name: 'AI Quantum Finance', href: '/micro-saas/ai-quantum-finance' },
+        { name: 'AI Healthcare Analytics', href: '/micro-saas/ai-healthcare-analytics' },
+        { name: 'AI Smart City Solutions', href: '/micro-saas/ai-smart-city-solutions' }
       ]
     },
     {
