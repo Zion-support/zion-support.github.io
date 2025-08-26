@@ -1,282 +1,252 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const ComponentLibrary: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('buttons');
-
-  const components = {
-    buttons: [
-      { name: 'Primary Button', variant: 'primary', code: 'className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"' },
-      { name: 'Secondary Button', variant: 'secondary', code: 'className="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700"' },
-      { name: 'Success Button', variant: 'success', code: 'className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700"' },
-      { name: 'Danger Button', variant: 'danger', code: 'className="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700"' },
-      { name: 'Outline Button', variant: 'outline', code: 'className="px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"' }
-    ],
-    forms: [
-      { name: 'Text Input', type: 'text', placeholder: 'Enter text...' },
-      { name: 'Email Input', type: 'email', placeholder: 'Enter email...' },
-      { name: 'Password Input', type: 'password', placeholder: 'Enter password...' },
-      { name: 'Textarea', type: 'textarea', placeholder: 'Enter description...' },
-      { name: 'Select Dropdown', type: 'select', options: ['Option 1', 'Option 2', 'Option 3'] }
-    ],
-    cards: [
-      { title: 'Feature Card', description: 'Highlight key features with this card design', icon: '🚀' },
-      { title: 'Stats Card', description: 'Display important statistics and metrics', icon: '📊' },
-      { title: 'Testimonial Card', description: 'Show customer feedback and reviews', icon: '💬' }
-    ],
-    navigation: [
-      { name: 'Main Navigation', type: 'horizontal', items: ['Home', 'About', 'Services', 'Contact'] },
-      { name: 'Sidebar Navigation', type: 'vertical', items: ['Dashboard', 'Reports', 'Settings', 'Profile'] },
-      { name: 'Breadcrumbs', type: 'breadcrumb', items: ['Home', 'Products', 'Category', 'Item'] }
-    ]
-  };
-
-  const getButtonClasses = (variant: string) => {
-    switch (variant) {
-      case 'primary': return 'px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors';
-      case 'secondary': return 'px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors';
-      case 'success': return 'px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors';
-      case 'danger': return 'px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors';
-      case 'outline': return 'px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors';
-      default: return 'px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors';
-    }
-  };
-
+export default function ComponentLibraryPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <>
       <Head>
-        <title>Component Library - bolt.new.zion.app</title>
-        <meta name="description" content="Comprehensive component library for bolt.new.zion.app design system" />
-        <meta name="keywords" content="components, design system, UI, library, React" />
+        <title>Component Library | Zion Tech Group</title>
+        <meta name="description" content="Explore Zion Tech Group's comprehensive component library with reusable UI components and design patterns." />
+        <meta property="og:title" content="Component Library - Zion Tech Group" />
+        <meta property="og:description" content="Reusable UI components and design system." />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+      
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
               Component Library
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A comprehensive collection of reusable UI components for building consistent, 
-              beautiful interfaces across the bolt.new.zion.app platform.
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Reusable UI components and design patterns for building consistent, beautiful interfaces
             </p>
-          </div>
-
-          {/* Navigation */}
-          <nav className="mb-8">
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/" className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+            
+            {/* Navigation Links */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <a href="/" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
                 Home
-              </Link>
-              <Link href="/automation" className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors">
+              </a>
+              <a href="/automation" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
                 Automation
-              </Link>
-              <Link href="/api-documentation" className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors">
-                API Docs
-              </Link>
+              </a>
+              <a href="/automation-health" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+                Health Status
+              </a>
+              <a href="/live-dashboard" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
+                Live Dashboard
+              </a>
             </div>
-          </nav>
+          </section>
 
-          {/* Component Categories */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Component Categories</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {Object.keys(components).map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setActiveTab(category)}
-                  className={`p-4 rounded-lg border-2 transition-all ${
-                    activeTab === category
-                      ? 'border-blue-500 bg-blue-50 text-blue-700'
-                      : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
-                  }`}
-                >
-                  <div className="text-lg font-semibold capitalize">{category}</div>
-                  <div className="text-sm text-gray-500">{components[category as keyof typeof components].length} components</div>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Component Display */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 capitalize">
-              {activeTab} Components
-            </h2>
-
-            {activeTab === 'buttons' && (
-              <div className="space-y-8">
-                {components.buttons.map((button, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">{button.name}</h3>
-                    <div className="mb-4">
-                      <button className={getButtonClasses(button.variant)}>
-                        {button.name}
-                      </button>
-                    </div>
-                    <div className="bg-gray-100 p-3 rounded font-mono text-sm">
-                      {button.code}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {activeTab === 'forms' && (
-              <div className="space-y-8">
-                {components.forms.map((form, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">{form.name}</h3>
-                    <div className="mb-4">
-                      {form.type === 'textarea' ? (
-                        <textarea
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder={form.placeholder}
-                          rows={3}
-                        />
-                      ) : form.type === 'select' ? (
-                        <select className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                          {form.options?.map((option, optIndex) => (
-                            <option key={optIndex} value={option}>{option}</option>
-                          ))}
-                        </select>
-                      ) : (
-                        <input
-                          type={form.type}
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder={form.placeholder}
-                        />
-                      )}
-                    </div>
-                    <div className="bg-gray-100 p-3 rounded font-mono text-sm">
-                      {form.type === 'textarea' ? (
-                        '&lt;textarea className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"&gt;&lt;/textarea&gt;'
-                      ) : form.type === 'select' ? (
-                        '&lt;select className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"&gt;&lt;/select&gt;'
-                      ) : (
-                        '&lt;input type="' + form.type + '" className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" /&gt;'
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {activeTab === 'cards' && (
-              <div className="grid md:grid-cols-3 gap-6">
-                {components.cards.map((card, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-6">
-                    <div className="text-4xl mb-4">{card.icon}</div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{card.title}</h3>
-                    <p className="text-gray-600 mb-4">{card.description}</p>
-                    <div className="bg-gray-100 p-3 rounded font-mono text-sm">
-                      &lt;div className="border border-gray-200 rounded-lg p-6"&gt;...&lt;/div&gt;
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {activeTab === 'navigation' && (
-              <div className="space-y-8">
-                {components.navigation.map((nav, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">{nav.name}</h3>
-                    <div className="mb-4">
-                      {nav.type === 'horizontal' && (
-                        <nav className="flex space-x-4">
-                          {nav.items?.map((item, itemIndex) => (
-                            <a key={itemIndex} href="#" className="text-blue-600 hover:text-blue-800 font-medium">
-                              {item}
-                            </a>
-                          ))}
-                        </nav>
-                      )}
-                      {nav.type === 'vertical' && (
-                        <nav className="flex flex-col space-y-2">
-                          {nav.items?.map((item, itemIndex) => (
-                            <a key={itemIndex} href="#" className="text-blue-600 hover:text-blue-800 font-medium py-2">
-                              {item}
-                            </a>
-                          ))}
-                        </nav>
-                      )}
-                      {nav.type === 'breadcrumb' && (
-                        <nav className="flex items-center space-x-2 text-sm">
-                          {nav.items?.map((item, itemIndex) => (
-                            <React.Fragment key={itemIndex}>
-                              <a href="#" className="text-blue-600 hover:text-blue-800">
-                                {item}
-                              </a>
-                              {itemIndex < nav.items!.length - 1 && (
-                                <span className="text-gray-400">/</span>
-                              )}
-                            </React.Fragment>
-                          ))}
-                        </nav>
-                      )}
-                    </div>
-                    <div className="bg-gray-100 p-3 rounded font-mono text-sm">
-                      &lt;nav className="flex space-x-4"&gt;...&lt;/nav&gt;
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Usage Guidelines */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Usage Guidelines</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Consistency</h3>
-                <p className="text-gray-600">
-                  Use components consistently across your application to maintain a cohesive design language.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Accessibility</h3>
-                <p className="text-gray-600">
-                  All components are built with accessibility in mind, including proper ARIA labels and keyboard navigation.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Responsive Design</h3>
-                <p className="text-gray-600">
-                  Components automatically adapt to different screen sizes using Tailwind CSS responsive utilities.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Customization</h3>
-                <p className="text-gray-600">
-                  Modify component styles using Tailwind CSS classes or extend them with custom CSS.
-                </p>
+          <section className="mx-auto max-w-6xl">
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-8">
+              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Design System</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🎨</div>
+                  <h3 className="text-xl font-semibold mb-2">Color Palette</h3>
+                  <p className="text-white/70 text-sm">Consistent color scheme across all components</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🔤</div>
+                  <h3 className="text-xl font-semibold mb-2">Typography</h3>
+                  <p className="text-white/70 text-sm">Unified font hierarchy and spacing</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">📐</div>
+                  <h3 className="text-xl font-semibold mb-2">Spacing</h3>
+                  <p className="text-white/70 text-sm">Consistent spacing and layout system</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Get Started */}
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Ready to Get Started?</h2>
-            <p className="text-blue-700 mb-6">
-              Explore our components and start building beautiful, consistent interfaces today.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/automation" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                View Automation
-              </Link>
-              <Link href="/contact" className="px-6 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors">
-                Contact Us
-              </Link>
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-8">
+              <h2 className="text-3xl font-bold mb-6 text-purple-400">Core Components</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="border border-white/20 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-cyan-400">Buttons</h3>
+                  <div className="space-y-3 mb-4">
+                    <button className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg text-white transition-colors">
+                      Primary Button
+                    </button>
+                    <button className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
+                      Secondary Button
+                    </button>
+                    <button className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-white transition-colors">
+                      Success Button
+                    </button>
+                  </div>
+                  <p className="text-white/70 text-sm">
+                    Versatile button components with multiple variants and states
+                  </p>
+                </div>
+
+                <div className="border border-white/20 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-fuchsia-400">Cards</h3>
+                  <div className="bg-white/10 backdrop-blur-xl rounded-lg p-4 mb-4">
+                    <h4 className="font-semibold text-white mb-2">Card Title</h4>
+                    <p className="text-white/70 text-sm">Card content with backdrop blur effect</p>
+                  </div>
+                  <p className="text-white/70 text-sm">
+                    Flexible card components with various content layouts
+                  </p>
+                </div>
+
+                <div className="border border-white/20 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-green-400">Forms</h3>
+                  <div className="space-y-3 mb-4">
+                    <input 
+                      type="text" 
+                      placeholder="Enter text..." 
+                      className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-cyan-400 focus:outline-none"
+                    />
+                    <select className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:border-cyan-400 focus:outline-none">
+                      <option>Select option...</option>
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <p className="text-white/70 text-sm">
+                    Form components with consistent styling and focus states
+                  </p>
+                </div>
+
+                <div className="border border-white/20 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-blue-400">Navigation</h3>
+                  <div className="flex gap-2 mb-4">
+                    <a href="#" className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors">
+                      Home
+                    </a>
+                    <a href="#" className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors">
+                      About
+                    </a>
+                    <a href="#" className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors">
+                      Contact
+                    </a>
+                  </div>
+                  <p className="text-white/70 text-sm">
+                    Navigation components for consistent site navigation
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-8">
+              <h2 className="text-3xl font-bold mb-6 text-yellow-400">Layout Components</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="border border-white/20 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-cyan-400">Grid System</h3>
+                  <div className="grid grid-cols-3 gap-2 mb-4">
+                    <div className="h-8 bg-cyan-500/30 rounded"></div>
+                    <div className="h-8 bg-fuchsia-500/30 rounded"></div>
+                    <div className="h-8 bg-green-500/30 rounded"></div>
+                    <div className="h-8 bg-blue-500/30 rounded"></div>
+                    <div className="h-8 bg-purple-500/30 rounded"></div>
+                    <div className="h-8 bg-yellow-500/30 rounded"></div>
+                  </div>
+                  <p className="text-white/70 text-sm">
+                    Responsive grid system for consistent layouts
+                  </p>
+                </div>
+
+                <div className="border border-white/20 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-fuchsia-400">Container</h3>
+                  <div className="bg-white/5 border border-white/20 rounded-lg p-4 mb-4">
+                    <div className="text-center text-white/70">
+                      Container with max-width and centered content
+                    </div>
+                  </div>
+                  <p className="text-white/70 text-sm">
+                    Container components for content width management
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-8">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400">Interactive Components</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="border border-white/20 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-cyan-400">Modals</h3>
+                  <div className="bg-white/10 backdrop-blur-xl rounded-lg p-4 mb-4">
+                    <div className="text-center">
+                      <div className="text-2xl mb-2">📱</div>
+                      <p className="text-white/70 text-sm">Modal dialog component</p>
+                    </div>
+                  </div>
+                  <p className="text-white/70 text-sm">
+                    Modal components for overlays and dialogs
+                  </p>
+                </div>
+
+                <div className="border border-white/20 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-fuchsia-400">Tooltips</h3>
+                  <div className="relative inline-block mb-4">
+                    <button className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white">
+                      Hover me
+                    </button>
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-slate-800 text-white text-sm rounded-lg">
+                      Tooltip content
+                    </div>
+                  </div>
+                  <p className="text-white/70 text-sm">
+                    Tooltip components for additional information
+                  </p>
+                </div>
+
+                <div className="border border-white/20 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-green-400">Loading States</h3>
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-4 h-4 border-2 border-white/20 border-t-cyan-400 rounded-full animate-spin"></div>
+                    <span className="text-white/70">Loading...</span>
+                  </div>
+                  <p className="text-white/70 text-sm">
+                    Loading and skeleton components
+                  </p>
+                </div>
+
+                <div className="border border-white/20 rounded-lg p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-blue-400">Notifications</h3>
+                  <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-3 mb-4">
+                    <div className="flex items-center gap-2">
+                      <div className="text-green-400">✅</div>
+                      <span className="text-white/90 text-sm">Success notification</span>
+                    </div>
+                  </div>
+                  <p className="text-white/70 text-sm">
+                    Notification and alert components
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
+              <h2 className="text-3xl font-bold mb-6 text-purple-400">Usage Guidelines</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-cyan-400">Best Practices</h3>
+                  <ul className="space-y-2 text-white/70">
+                    <li>• Use consistent spacing and sizing</li>
+                    <li>• Maintain accessibility standards</li>
+                    <li>• Follow responsive design principles</li>
+                    <li>• Test across different devices</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-fuchsia-400">Customization</h3>
+                  <ul className="space-y-2 text-white/70">
+                    <li>• Extend base components as needed</li>
+                    <li>• Use CSS custom properties for theming</li>
+                    <li>• Maintain component API consistency</li>
+                    <li>• Document any modifications</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
-    </div>
+    </>
   );
-};
-
-export default ComponentLibrary;
+}

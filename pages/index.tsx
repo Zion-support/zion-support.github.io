@@ -14,21 +14,6 @@ export default function HomePage() {
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          {/* Navigation */}
-          <nav className="flex justify-center mb-12">
-            <div className="flex flex-wrap gap-4">
-              <a href="/about" className="text-white/80 hover:text-cyan-400 transition-colors px-4 py-2 rounded-lg hover:bg-white/10">
-                About
-              </a>
-              <a href="/blog" className="text-white/80 hover:text-cyan-400 transition-colors px-4 py-2 rounded-lg hover:bg-white/10">
-                Blog
-              </a>
-              <a href="/contact" className="text-white/80 hover:text-cyan-400 transition-colors px-4 py-2 rounded-lg hover:bg-white/10">
-                Contact
-              </a>
-            </div>
-          </nav>
-          
           <section className="text-center mb-16">
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
               Zion Tech Group
@@ -36,6 +21,25 @@ export default function HomePage() {
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems.
             </p>
+            
+            {/* Navigation Links */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
+              <a href="/about" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
+                About Us
+              </a>
+              <a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-fuchsia-400/50">
+                Our Services
+              </a>
+              <a href="/automation" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50">
+                Automation
+              </a>
+              <a href="/live-dashboard" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50">
+                Live Dashboard
+              </a>
+              <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50">
+                Contact
+              </a>
+            </div>
           </section>
 
           {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
@@ -81,27 +85,6 @@ export default function HomePage() {
             </div>
           </section>
           {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
-          
-          {/* Footer */}
-          <footer className="mt-20 pt-12 border-t border-white/10">
-            <div className="text-center">
-              <div className="flex justify-center space-x-8 mb-6">
-                <a href="/about" className="text-white/60 hover:text-cyan-400 transition-colors">
-                  About
-                </a>
-                <a href="/blog" className="text-white/60 hover:text-cyan-400 transition-colors">
-                  Blog
-                </a>
-                <a href="/contact" className="text-white/60 hover:text-cyan-400 transition-colors">
-                  Contact
-                </a>
-              </div>
-              <p className="text-white/40 text-sm">
-                © 2025 Zion Tech Group. All rights reserved. 
-                Autonomous innovation for the future.
-              </p>
-            </div>
-          </footer>
         </main>
       </div>
     </>
