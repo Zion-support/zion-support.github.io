@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader.jsx';
 import { Footer } from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant.jsx';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer.jsx';
+import { PerformanceMonitor } from './components/PerformanceMonitor.jsx';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home.jsx'));
@@ -24,8 +26,16 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+        {/* Skip Links for Accessibility */}
+        <a href="#main-content" className="skip-link sr-only focus:not-sr-only">
+          Skip to main content
+        </a>
+        <a href="#navigation" className="skip-link sr-only focus:not-sr-only">
+          Skip to navigation
+        </a>
+        
         <AppHeader />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -38,6 +48,8 @@ function App() {
         </main>
         <Footer />
         <ChatAssistant />
+        <AccessibilityEnhancer />
+        <PerformanceMonitor />
       </div>
     </Router>
   );
