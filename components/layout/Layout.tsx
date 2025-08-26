@@ -6,9 +6,13 @@ import React from 'react';
 import UltraFuturisticNavigation from './UltraFuturisticNavigation';
 =======
 import EnhancedNavigation from './EnhancedNavigation';
+<<<<<<< HEAD
 import UltraAdvancedNavigation from './UltraAdvancedNavigation';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
 import EnhancedFooter from './EnhancedFooter';
+=======
+import NeoFuturisticFooter from './NeoFuturisticFooter';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9cca
 import UltraAdvancedFuturisticBackground from '../ui/UltraAdvancedFuturisticBackground';
 =======
 import React, { useState } from 'react';
@@ -37,7 +41,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 			<UltraAdvancedFuturisticBackground intensity="high" colorScheme="quantum-fusion" particleCount={300} animationSpeed={1.5} enableHolographic={true} enableQuantumEffects={true}>
 				<TopContactBar />
 <<<<<<< HEAD
+<<<<<<< HEAD
 				<UltraFuturisticNavigation />
+=======
+				<EnhancedNavigation />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9cca
 				<main id="main" className="pt-24 lg:pt-28">
 =======
 			<UltraAdvancedFuturisticBackground variant="fusion">

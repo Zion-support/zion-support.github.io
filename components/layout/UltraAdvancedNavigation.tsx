@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
@@ -535,3 +536,5 @@ const UltraAdvancedNavigation: React.FC = () => {
 
 export default UltraAdvancedNavigation;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7d74
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9cca
