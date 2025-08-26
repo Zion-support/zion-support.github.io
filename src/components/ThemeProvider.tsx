@@ -4,7 +4,7 @@ import * as React from "react";
 
 export type Theme = "dark" | "light" | "system"
 
-type ThemeProviderProps = {
+export type ThemeProviderProps = {
   children: React.ReactNode
 }
 
