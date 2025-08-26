@@ -2,12 +2,16 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
+import { ThemeToggle } from './components/ThemeToggle';
+import { AccessibilityMenu } from './components/AccessibilityMenu';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Services = React.lazy(() => import('./pages/Services'));
+const Blog = React.lazy(() => import('./pages/Blog'));
 const InnovativeServicesShowcase2026 = React.lazy(() => import('./pages/InnovativeServicesShowcase2026'));
 const ServicesOverview2026 = React.lazy(() => import('./pages/ServicesOverview2026'));
 
@@ -35,6 +39,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/blog" element={<Blog />} />
               <Route path="/innovative-services-2026" element={<InnovativeServicesShowcase2026 />} />
               <Route path="/services-overview-2026" element={<ServicesOverview2026 />} />
             </Routes>
@@ -42,6 +47,11 @@ function App() {
         </main>
         
         <Footer />
+        
+        {/* Global Components */}
+        <ThemeToggle />
+        <AccessibilityMenu />
+        <PerformanceMonitor />
       </div>
     </Router>
   );
