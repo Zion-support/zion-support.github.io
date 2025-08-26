@@ -10,6 +10,16 @@ interface FormFieldProps {
   className?: string;
 }
 
+interface FormItemProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface FormControlProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
 interface FormLabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
   children: React.ReactNode;
   required?: boolean;
@@ -49,6 +59,22 @@ export function Form({ children, className, ...props }: FormProps) {
 export function FormField({ children, className }: FormFieldProps) {
   return (
     <div className={cn('space-y-2', className)}>
+      {children}
+    </div>
+  );
+}
+
+export function FormItem({ children, className }: FormItemProps) {
+  return (
+    <div className={cn('space-y-2', className)}>
+      {children}
+    </div>
+  );
+}
+
+export function FormControl({ children, className }: FormControlProps) {
+  return (
+    <div className={cn('space-y-1', className)}>
       {children}
     </div>
   );
