@@ -1,87 +1,35 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Send, X, Bot, User } from 'lucide-react';
+import React, { useState } from 'react';
 
-interface ChatAssistantProps {
-  isOpen?: boolean;
-  onClose?: () => void;
-  recipient?: {
-    id: string;
-    name: string;
-    avatarUrl: string;
-    role: string;
-  };
-  onSendMessage?: (message: string) => Promise<void>;
-}
-
-export function ChatAssistant({ 
-  isOpen: externalIsOpen, 
-  onClose, 
-  recipient,
-  onSendMessage 
-}: ChatAssistantProps = {}) {
-  const [internalIsOpen, setInternalIsOpen] = useState(false);
+export function ChatAssistant() {
+  const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [chatHistory, setChatHistory] = useState<Array<{ 
     type: 'user' | 'assistant'; 
     content: string;
     timestamp: Date;
-    id: string;
   }>>([]);
-  const [isTyping, setIsTyping] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
 
-  // Use external state if provided, otherwise use internal state
-  const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen;
-  const setIsOpen = externalIsOpen !== undefined ? (onClose || (() => {})) : setInternalIsOpen;
-
-  // Auto-scroll to bottom when new messages arrive
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [chatHistory]);
-
-  // Focus input when chat opens
-  useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [isOpen]);
-
-  const handleSendMessage = async () => {
+  const handleSendMessage = () => {
     if (!message.trim()) return;
 
     const userMessage = { 
       type: 'user' as const, 
       content: message,
-      timestamp: new Date(),
-      id: `user-${Date.now()}`
+      timestamp: new Date()
     };
     setChatHistory(prev => [...prev, userMessage]);
     const currentMessage = message;
     setMessage('');
 
-    if (onSendMessage) {
-      try {
-        await onSendMessage(currentMessage);
-      } catch (error) {
-        console.error('Error sending message:', error);
-      }
-    } else {
-      // Simulate assistant response with typing indicator
-      setIsTyping(true);
-      setTimeout(() => {
-        setIsTyping(false);
-        const assistantMessage = { 
-          type: 'assistant' as const, 
-          content: 'Thank you for your message! I\'m here to help you with any questions about our services, marketplace, or technical support. How can I assist you today?',
-          timestamp: new Date(),
-          id: `assistant-${Date.now()}`
-        };
-        setChatHistory(prev => [...prev, assistantMessage]);
-      }, 2000);
-    }
+    // Simulate assistant response
+    setTimeout(() => {
+      const assistantMessage = { 
+        type: 'assistant' as const, 
+        content: 'Thank you for your message! I\'m here to help you with any questions about our services. How can I assist you today?',
+        timestamp: new Date()
+      };
+      setChatHistory(prev => [...prev, assistantMessage]);
+    }, 1000);
   };
 
   const formatTime = (date: Date) => {
@@ -90,103 +38,79 @@ export function ChatAssistant({
 
   if (!isOpen) {
     return (
-      <motion.button
+      <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 z-50 group"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-4 rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 z-50 group"
       >
-        <MessageCircle className="w-6 h-6" />
-        <div className="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
-      </motion.button>
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+        </svg>
+      </button>
     );
   }
 
   return (
-    <AnimatePresence>
-      <motion.div 
-        className="fixed bottom-6 right-6 w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 overflow-hidden"
-        initial={{ opacity: 0, scale: 0.8, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.8, y: 20 }}
-        transition={{ type: "spring", damping: 25, stiffness: 300 }}
-      >
-        {/* Header */}
-        <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                <Bot className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-semibold">Zion AI Assistant</h3>
-                <p className="text-xs text-white/80">Always here to help</p>
-              </div>
-            </div>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="p-1 hover:bg-white/20 rounded transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
+    <div className="fixed bottom-6 right-6 w-80 h-96 bg-white rounded-lg shadow-2xl border border-gray-200 z-50 flex flex-col">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+        <h3 className="font-semibold">AI Assistant</h3>
+        <button
+          onClick={() => setIsOpen(false)}
+          className="text-white hover:text-gray-200 transition-colors"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
 
-        {/* Chat Messages */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4">
-          {chatHistory.map((msg) => (
-            <div
-              key={msg.id}
-              className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}
-            >
-              <div
-                className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-                  msg.type === 'user'
-                    ? 'bg-zion-cyan text-white'
-                    : 'bg-gray-100 text-gray-800'
-                }`}
-              >
-                <p className="text-sm">{msg.content}</p>
-                <p className="text-xs opacity-70 mt-1">
-                  {formatTime(msg.timestamp)}
-                </p>
-              </div>
-            </div>
-          ))}
-          {isTyping && (
-            <div className="flex justify-start">
-              <div className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg">
-                <p className="text-sm">Typing...</p>
-              </div>
-            </div>
-          )}
-          <div ref={messagesEndRef} />
-        </div>
-
-        {/* Input Area */}
-        <div className="border-t border-gray-100 p-4">
-          <div className="flex gap-2">
-            <input
-              ref={inputRef}
-              type="text"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-              placeholder="Type your message..."
-              className="flex-1 px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-            />
-            <button
-              onClick={handleSendMessage}
-              disabled={!message.trim()}
-              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            >
-              <Send className="w-4 h-4" />
-            </button>
+      {/* Chat Messages */}
+      <div className="flex-1 p-4 overflow-y-auto bg-gray-50">
+        {chatHistory.length === 0 && (
+          <div className="text-center text-gray-500 text-sm">
+            <p>👋 Hi! I'm here to help you with any questions about our services.</p>
           </div>
+        )}
+        
+        {chatHistory.map((msg, index) => (
+          <div key={index} className={`mb-4 ${msg.type === 'user' ? 'text-right' : 'text-left'}`}>
+            <div className={`inline-block max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+              msg.type === 'user' 
+                ? 'bg-cyan-500 text-white' 
+                : 'bg-white text-gray-800 border border-gray-200'
+            }`}>
+              <p className="text-sm">{msg.content}</p>
+              <p className={`text-xs mt-1 ${
+                msg.type === 'user' ? 'text-cyan-100' : 'text-gray-500'
+              }`}>
+                {formatTime(msg.timestamp)}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Input */}
+      <div className="p-4 border-t border-gray-200">
+        <div className="flex space-x-2">
+          <input
+            type="text"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+            placeholder="Type your message..."
+            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+          />
+          <button
+            onClick={handleSendMessage}
+            className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+          </button>
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    </div>
   );
 }
