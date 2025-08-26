@@ -131,6 +131,8 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     marketSize: '$15B customer service software market',
     growthRate: '22% annual growth',
     variant: 'ai-futuristic',
+<<<<<<< HEAD:data/2025-innovative-ai-automation-services.ts.backup
+=======
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -138,6 +140,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
       website: 'https://ziontechgroup.com'
     },
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f2f0:data/2025-innovative-ai-automation-services.ts
     technology: ['Python, Selenium, Playwright, OpenAI, TensorFlow, Docker'],
     integrations: ['Jenkins, GitHub Actions, GitLab CI, Azure DevOps, Jira'],
     useCases: ['Automated testing, CI/CD integration, Quality assurance, Regression testing'],

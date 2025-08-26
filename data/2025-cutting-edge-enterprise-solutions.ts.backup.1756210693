@@ -5,6 +5,8 @@ export const cuttingEdgeEnterpriseSolutions: CuttingEdgeEnterpriseSolution[] = [
     id: 'ai-powered-enterprise-risk-management',
     name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
+<<<<<<< HEAD
+=======
     price: {
       monthly: 899,
       yearly: 8990,
@@ -13,6 +15,7 @@ export const cuttingEdgeEnterpriseSolutions: CuttingEdgeEnterpriseSolution[] = [
       setupTime: '2-3 weeks',
       enterprise: 'Contact us'
     },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f2f0
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',
     category: 'Enterprise Solutions',
     price: {
@@ -56,6 +59,15 @@ export const cuttingEdgeEnterpriseSolutions: CuttingEdgeEnterpriseSolution[] = [
     link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',
     icon: '⚠️',
     color: 'from-orange-600 via-red-600 to-pink-600',
+<<<<<<< HEAD
+    popular: true,
+    launchDate: '2025-01-15',
+    customers: 45,
+    rating: 4.8,
+    reviews: 67,
+    marketSize: '$12.8B enterprise risk management market',
+    growthRate: '25% annual growth',
+=======
     link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',
     marketPosition: 'Leading AI enterprise risk management platform with intelligent automation',
     targetAudience: ['Fortune 500 companies', 'Financial institutions', 'Healthcare organizations', 'Government agencies'],
@@ -151,6 +163,7 @@ export const cuttingEdgeEnterpriseSolutions: CuttingEdgeEnterpriseSolution[] = [
     reviews: 42,
     marketSize: '$1.2T digital transformation market',
     growthRate: '23% annual growth',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f2f0
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

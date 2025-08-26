@@ -3,11 +3,24 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
 # Sitemap location
 Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-45a9
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-d85a
 
 # Allow all crawlers
 Allow: /about
@@ -23,11 +36,17 @@ Allow: /terms
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f2f0
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
+Disallow: /static/
+
+# Crawl delay (optional)
+=======
 Disallow: /temp_components/
 
 # Allow important pages
@@ -43,4 +62,5 @@ Allow: /autonomous-business-operations-platform
 Allow: /ai-powered-it-asset-management
 
 # Crawl delay
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f2f0
 Crawl-delay: 1

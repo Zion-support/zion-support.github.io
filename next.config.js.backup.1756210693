@@ -245,6 +245,8 @@ const nextConfig = {
     'lodash-es',
   ],
 
+<<<<<<< HEAD
+=======
   webpack: (config, { dev, isServer, webpack }) => {
     // Exclude contracts directory from webpack build
     config.resolve.alias = {
@@ -285,6 +287,7 @@ const nextConfig = {
         
         return entries;
       };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f2f0
 
 
   webpack: (config, { dev, isServer }) => {

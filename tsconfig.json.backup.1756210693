@@ -52,10 +52,15 @@
     "node_modules",
     "zion.app/recovered-content/**",
     "contracts/**",
+<<<<<<< HEAD
+    "contracts_backup/**",
+    "cypress/**"
+=======
     "temp_components/**",
     "zion_academy/**",
     "zion-os/**",
     "automation/**",
     "typechain-types/**"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f2f0
   ]
 }

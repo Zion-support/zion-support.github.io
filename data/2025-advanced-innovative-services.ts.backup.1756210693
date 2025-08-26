@@ -130,7 +130,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     competitors: ['IBM Quantum, Google Quantum, D-Wave, Rigetti'],
     marketSize: '$6B quantum bio-computing',
     growthRate: '58% YoY',
+<<<<<<< HEAD
+    variant: 'quantum-bio-enterprise',
+=======
     variant: 'quantum-iot',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f2f0
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Quantum algorithm implementations for biological simulations and molecular modeling.',
