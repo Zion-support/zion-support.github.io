@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-<<<<<<< HEAD
-import { Brain, Shield, Cpu, Cloud, Zap, Database, Users, Target, CheckCircle, ArrowRight } from 'lucide-react';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
 export default function ServicesPage() {
   return (
@@ -395,7 +388,6 @@ export default function ServicesPage() {
           </section>
         </main>
       </div>
-=======
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { quantumSpaceServices } from '../data/quantum-space-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
@@ -479,7 +471,6 @@ export default function ServicesPage() {
     ...innovativeAIServices,
     ...emergingTechAdvancedServices,
     ...itInfrastructureServices
-=======
     ...newOperationalServices2025,
     ...realServicesQ12025,
     ...realEnterpriseServices2025,
@@ -515,7 +506,6 @@ export default function ServicesPage() {
     { id: 'finance', name: 'Financial Technology', icon: <DollarSign className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'iot', name: 'IoT & Edge Computing', icon: <Wifi className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('IoT') || s.category.includes('Edge')).length }
   ];
-=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -876,7 +866,6 @@ export default function ServicesPage() {
 };
 
 export default Services;
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -1233,7 +1222,6 @@ const ServicesPage = () => {
               </div>
             ))}
           </div>
-=======
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1608,7 +1596,6 @@ const ServicesPage = () => {
     </div>
   );
 }
-=======
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-4 text-center">
@@ -1635,16 +1622,6 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     </>
   );
-<<<<<<< HEAD
-};
-
-export default ServicesPage;
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

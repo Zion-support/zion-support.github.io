@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     phone: '',
     company: '',
     phone: '',
@@ -10,11 +6,9 @@
     phone: '',
     service: '',
     message: ''
-=======
     message: '',
     budget: '',
     timeline: ''
-=======
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -38,7 +32,6 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-=======
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -65,7 +58,6 @@ import {
   CheckCircle,
   AlertCircle
 } from 'lucide-react';
-=======
 
 export default function Contact() {
 import React, { useState } from 'react';
@@ -77,8 +69,6 @@ import {
   Clock, 
   MessageSquare, 
   ArrowRight,
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { 
   Mail, 
@@ -88,35 +78,20 @@ import {
   MessageSquare, 
   Globe, 
   Building,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   Send,
   CheckCircle
 } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const Contact = () => {
-=======
 const Contact: React.FC = () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 const Contact = () => {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     company: '',
     phone: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   const [isSubmitted, setIsSubmitted] = useState(false);
-=======
     subject: '',
     message: ''
   });
@@ -154,7 +129,6 @@ const Contact = () => {
     }, 2000);
   };
 
-=======
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -172,10 +146,8 @@ const Contact = () => {
     }));
   };
 
-=======
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: "" }));
-=======
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
@@ -207,7 +179,6 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-=======
     setIsSubmitting(true);
     setIsSubmitting(true);
     
@@ -221,7 +192,6 @@ const Contact = () => {
     // Reset form after 3 seconds
     setTimeout(() => {
       setSubmitStatus('idle');
-=======
     setIsSubmitting(false);
     setIsSubmitted(true);
     
@@ -231,17 +201,11 @@ const Contact = () => {
       setFormData({
         firstName: '',
         lastName: '',
-=======
     setIsSubmitting(false);
     setIsSubmitted(true);
     
     // Reset form after 5 seconds
     setTimeout(() => {
-=======
-=======
-=======
-=======
-=======
     message: '',
     budget: '',
     timeline: ''
@@ -257,9 +221,6 @@ const Contact = () => {
     }));
   };
 
-=======
-<<<<<<< HEAD
-=======
     service: '',
     message: ''
   });
@@ -271,9 +232,6 @@ const Contact = () => {
     });
   };
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -294,26 +252,15 @@ const Contact = () => {
         company: '',
         phone: '',
         service: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-=======
-=======
-=======
         message: '',
         budget: '',
         timeline: ''
       });
     }, 3000);
-=======
-=======
-=======
       
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000);
     }, 2000);
-=======
   };
 
   const contactMethods = [
@@ -321,16 +268,12 @@ const Contact = () => {
       description: 'Call us directly for immediate assistance',
       action: () => window.location.href = 'tel:+13024640950',
       color: 'from-green-500 to-emerald-500'
-=======
-=======
-=======
       icon: Phone,
       title: 'Phone',
       value: '+1 302 464 0950',
       description: 'Available 24/7 for urgent inquiries',
       action: 'tel:+13024640950',
       color: 'from-zion-cyan to-zion-cyan-dark'
-=======
     },
     {
       icon: Mail,
@@ -339,8 +282,6 @@ const Contact = () => {
       address: "364 E Main St STE 1008, Middletown DE 19709",
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com"
-=======
-=======
       name: "Zion Tech Group Headquarters",
       address: "364 E Main St STE 1008, Middletown, DE 19709",
       phone: "+1 302 464 0950",
@@ -375,19 +316,14 @@ const Contact = () => {
       phone: '+44 20 7123 4567',
       email: 'london@ziontechgroup.com',
       hours: 'Mon-Fri: 9:00 AM - 6:00 PM GMT'
-=======
       value: 'kleber@ziontechgroup.com',
       description: 'Send us a detailed message',
       action: () => window.location.href = 'mailto:kleber@ziontechgroup.com',
       color: 'from-blue-500 to-cyan-500'
-=======
-=======
-=======
       value: 'kleber@ziontechgroup.com',
       description: 'Get a response within 2 hours',
       action: 'mailto:kleber@ziontechgroup.com',
       color: 'from-zion-purple to-zion-purple-dark'
-=======
     },
     {
       icon: MapPin,
@@ -396,11 +332,9 @@ const Contact = () => {
       description: 'Visit us for in-person consultations',
       action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
       color: 'from-zion-cyan to-zion-purple'
-=======
       description: 'Visit us for in-person consultations',
       action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
       color: 'from-zion-cyan to-zion-purple'
-=======
       description: 'Visit us for in-person consultations',
       action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
       color: 'from-zion-cyan to-zion-purple'
@@ -433,7 +367,6 @@ const Contact = () => {
       value: "https://ziontechgroup.com",
       link: "https://ziontechgroup.com",
       description: "Explore our services and solutions"
-=======
       icon: Mail,
       title: 'Email Us',
       value: 'kleber@ziontechgroup.com',
@@ -446,12 +379,6 @@ const Contact = () => {
       value: '+1 (302) 464-0950',
       link: 'tel:+13024640950',
       description: 'Available Monday-Friday, 9AM-6PM EST'
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         message: ''
       });
     }, 3000);
@@ -548,11 +475,6 @@ const Contact = () => {
       zip: 'EC1A 1BB',
       phone: '+44 20 7123 4567',
       email: 'london@ziontechgroup.com'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-=======
       name: "Headquarters",
       address: "123 Tech Avenue, San Francisco, CA 94105",
       phone: "+1 302 464 0950",
@@ -563,19 +485,10 @@ const Contact = () => {
       address: "456 Innovation Street, New York, NY 10001",
       phone: "+1 302 464 0950", 
       email: "commercial@ziontechgroup.com"
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     
       <SEO 
         title="Contact Zion - Get in Touch" 
@@ -672,8 +585,6 @@ const Contact = () => {
         </div>
       </div>
 
-=======
-=======
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
@@ -692,8 +603,6 @@ const Contact = () => {
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Ready to transform your business? Let's discuss how our AI-powered solutions can drive your success.
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -704,17 +613,10 @@ const Contact = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Ready to transform your business with cutting-edge technology? Let's discuss how we can help 
             you achieve your digital transformation goals.
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </p>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
@@ -734,7 +636,6 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-=======
       {/* Contact Form */}
       <section className="py-20 px-6 bg-zion-blue-dark/50">
         <div className="max-w-4xl mx-auto">
@@ -793,7 +694,6 @@ const Contact = () => {
                     required
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300"
                     placeholder="Enter your email address"
-=======
       {/* Contact Form & Info */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -982,8 +882,6 @@ const Contact = () => {
                   )}
                 </button>
               </form>
-<<<<<<< HEAD
-=======
       {/* Contact Information */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1164,44 +1062,28 @@ const Contact = () => {
                   </button>
                 </form>
               )}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
 
             {/* Office Locations */}
             <div>
               <h2 className="text-3xl font-bold mb-8 text-white">Our Offices</h2>
               <div className="space-y-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                 {officeLocations.map((office, index) => (
                   <div key={index} className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Building className="w-6 h-6 text-cyan-400" />
-<<<<<<< HEAD
-=======
                 {offices.map((office, index) => (
                   <div key={index} className="p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Building className="h-6 w-6 text-white" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-semibold text-white mb-2">
                           {office.city}, {office.country}
                         </h3>
                         <div className="space-y-2 text-gray-300">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                           <p className="flex items-center space-x-2">
                             <MapPin className="w-4 h-4 text-gray-400" />
                             <span>{office.address}, {office.city}, {office.zip}</span>
@@ -1221,8 +1103,6 @@ const Contact = () => {
                           <p className="flex items-center space-x-2">
                             <Clock className="w-4 h-4 text-gray-400" />
                             <span>{office.hours}</span>
-<<<<<<< HEAD
-=======
                           <p className="flex items-center">
                             <MapPin className="h-4 w-4 mr-2 text-blue-400" />
                             {office.address}
@@ -1234,9 +1114,6 @@ const Contact = () => {
                           <p className="flex items-center">
                             <Mail className="h-4 w-4 mr-2 text-blue-400" />
                             {office.email}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                           </p>
                         </div>
                       </div>
@@ -1245,10 +1122,6 @@ const Contact = () => {
                 ))}
               </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               {/* Social Media */}
               <div className="mt-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Follow Us</h3>
@@ -1271,7 +1144,6 @@ const Contact = () => {
                       </a>
                     );
                   })}
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactMethods.map((method, index) => (
               <div
@@ -1295,7 +1167,6 @@ const Contact = () => {
                 )}
               </div>
             ))}
-=======
                     value={formData.message}
                     onChange={handleInputChange}
                     required
@@ -1358,7 +1229,6 @@ const Contact = () => {
                         <p className="text-xs text-gray-400">{social.description}</p>
                       </div>
                     </a>
-=======
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                     placeholder="Enter company name"
@@ -1429,7 +1299,6 @@ const Contact = () => {
                 We stay ahead of technology trends, ensuring your business benefits from 
                 the latest innovations and best practices.
               </p>
-=======
                 Fill out the form below and we'll get back to you within 24 hours. 
                 Let's discuss your project requirements and how we can help.
               </p>
@@ -1472,7 +1341,6 @@ const Contact = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-zion-blue-dark mb-2">
-=======
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
@@ -1556,15 +1424,12 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-white font-medium mb-2">
-=======
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-zion-slate-light text-sm font-medium mb-2">
-=======
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-zion-slate-light text-sm font-medium mb-2">
-=======
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-zion-slate-light text-sm font-medium mb-2">
@@ -1572,19 +1437,14 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
-=======
-=======
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
-=======
                       placeholder="Enter company name"
                     />
                   </div>
                   <div>
-=======
-=======
                     <label className="block text-zion-slate-light text-sm font-medium mb-2">
                       Phone
                     </label>
@@ -1594,7 +1454,6 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
-=======
                       placeholder="Enter phone number"
                     />
                   </div>
@@ -1622,9 +1481,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-=======
-<<<<<<< HEAD
-=======
               {/* Additional Contact Options */}
               <div className="mt-8 p-6 rounded-xl bg-white/5">
                 <h3 className="text-xl font-semibold text-white mb-4">Other Ways to Connect</h3>
@@ -1654,9 +1510,6 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </div>
@@ -1688,10 +1541,6 @@ const Contact = () => {
                 retail, and technology. Our solutions are adaptable to any business sector.
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
@@ -1746,7 +1595,6 @@ const Contact = () => {
               </motion.div>
             </div>
           </motion.div>
-=======
               </div>
             </motion.form>
           )}
@@ -1794,7 +1642,6 @@ const Contact = () => {
                     <span className="text-white font-medium">{social.label}</span>
                   </a>
                 ))}
-=======
                   className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                   placeholder="Tell us about your project or inquiry..."
                 />
@@ -1954,7 +1801,6 @@ const Contact = () => {
               <Mail className="w-5 h-5" />
               <span>Send Email</span>
             </a>
-=======
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -1965,7 +1811,6 @@ const Contact = () => {
             Have a question or want to work together? We'd love to hear from you. 
             Send us a message and we'll respond as soon as possible.
           </p>
-=======
             <a 
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white hover:bg-white hover:text-zion-blue-dark px-8 py-4 rounded-lg font-semibold transition-all flex items-center"
@@ -2062,7 +1907,6 @@ const Contact = () => {
               </Button>
             </div>
           </form>
-=======
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -2086,7 +1930,6 @@ const Contact = () => {
               Call Now
             </a>
           </div>
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -2144,7 +1987,6 @@ const Contact = () => {
             <p className="text-gray-600">123 Tech Street, Innovation City</p>
           </div>
         </div>
-=======
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-2">
@@ -2230,25 +2072,15 @@ const Contact = () => {
               <h3 className="text-xl font-bold text-white mb-4">Response Time</h3>
               <p className="text-zion-slate-light mb-4">
                 We typically respond to all inquiries within 24 hours during business days.
-<<<<<<< HEAD
-=======
             <div className="bg-white/5 p-6 rounded-xl">
               <h3 className="text-xl font-semibold text-white mb-3">Do you provide ongoing support?</h3>
               <p className="text-gray-300">
                 Absolutely! We offer comprehensive support packages including 24/7 monitoring, 
                 regular maintenance, and continuous optimization of your solutions.
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </p>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-=======
 
 
 const Contact = () => {
@@ -2285,7 +2117,6 @@ const Contact = () => {
         </div>
       </div>
     </div>
-=======
     setTimeout(() => {
       setIsSubmitting(false);
       alert("Thank you for your message! We'll get back to you soon.");
@@ -2500,7 +2331,6 @@ const Contact = () => {
               <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7167!3d39.4496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7a8b8b8b8b8b8%3A0x8b8b8b8b8b8b8b8b!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus" 
-=======
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7167!3d39.4496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7a8b8b8b8b8b8%3A0x8b8b8b8b8b8b8b8!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709%2C%20USA!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
                   width="100%" 
                   height="300" 
@@ -2509,7 +2339,6 @@ const Contact = () => {
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Zion Tech Group Office Location"
-=======
                   title="Zion Tech Group Office Location"
                 ></iframe>
               </div>
@@ -2623,11 +2452,8 @@ const Contact = () => {
       </section>
 
 export default Contact;
-=======
 export default Contact;
-=======
 export default Contact;
-=======
       icon: <Phone className="h-6 w-6" />,
       title: "Phone",
       value: "+1 (302) 464-0950",
@@ -3031,13 +2857,11 @@ export default Contact;
                   Request Free Quote
                 </Link>
               </Button>
-=======
                 <a href="mailto:kleber@ziontechgroup.com">
                   <Mail className="mr-2 h-5 w-5" />
                   Email Support
                 </a>
               </Button>
-=======
                               <Button 
                   variant="outline" 
                   className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
@@ -3070,9 +2894,7 @@ export default Contact;
     
   );
 }
-=======
 export default Contact;
-=======
       <section className="relative z-10 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -3107,7 +2929,6 @@ export default Contact;
                 </Button>
               </div>
             </Card>
-=======
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -3144,7 +2965,6 @@ export default Contact;
               </a>
             </div>
           </motion.div>
-=======
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -3170,7 +2990,6 @@ export default Contact;
               <Mail className="w-5 h-5 ml-2" />
             </a>
           </div>
-=======
     <>
       <SEO
         title="Contact Zion - Get in Touch"
@@ -3378,9 +3197,6 @@ export default Contact;
     </>
   );
 }
-=======
-=======
-=======
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">
                     Message *
                   </label>
@@ -3542,9 +3358,7 @@ export default Contact;
     </div>
   );
 }
-=======
 }
-=======
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -3569,11 +3383,6 @@ export default Contact;
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </section>
     </div>
   );

@@ -1,30 +1,14 @@
 
 import { GradientHeading } from "./GradientHeading";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
-import { motion } from "framer-motion";
-<<<<<<< HEAD
-=======
 import Link from "next/link";
 import { Briefcase, HardDrive, Lightbulb, Users, Brain } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 const categories = [
   {
     title: "Comprehensive Services",
     description: "Micro SAAS, IT services, and AI solutions",
     icon: <Briefcase className="w-10 h-10" />,
-<<<<<<< HEAD
-    link: "/services",
-    color: "from-zion-purple to-zion-purple-dark",
-    gradient: "from-zion-purple/20 to-zion-purple-dark/20",
-    features: ["24/7 Support", "Expert Team", "Custom Solutions"],
-    stats: "500+ Services"
-=======
     link: "/comprehensive-services",
     color: "from-purple-500 to-indigo-600",
   },
@@ -34,45 +18,20 @@ const categories = [
     icon: <Brain className="w-10 h-10" />,
     link: "/ai-solutions",
     color: "from-pink-500 to-rose-600",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
   {
     title: "Talents",
     description: "Connect with AI experts, developers, and tech specialists",
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
-<<<<<<< HEAD
-    color: "from-zion-cyan to-zion-blue",
-    gradient: "from-zion-cyan/20 to-zion-blue/20",
-    features: ["AI Experts", "Global Network", "Verified Profiles"],
-    stats: "10K+ Experts"
-=======
     color: "from-cyan-500 to-blue-600",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
   {
     title: "Equipment",
     description: "Rent or buy specialized hardware, servers, and devices",
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
-<<<<<<< HEAD
-    color: "from-zion-cyan-light to-zion-cyan",
-    gradient: "from-zion-cyan-light/20 to-zion-cyan/20",
-    features: ["High-Performance", "Flexible Rental", "24/7 Monitoring"],
-    stats: "1000+ Devices"
-  },
-  {
-    title: "Innovation",
-    description: "Discover cutting-edge solutions and tech breakthroughs",
-    icon: <Lightbulb className="w-10 h-10" />,
-    link: "/category/innovation",
-    color: "from-zion-purple-light to-zion-purple",
-    gradient: "from-zion-purple-light/20 to-zion-purple/20",
-    features: ["Latest Tech", "AI Solutions", "Future-Ready"],
-    stats: "100+ Innovations"
-=======
     color: "from-amber-500 to-orange-600",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
 ];
 
@@ -83,29 +42,6 @@ const specialServices = [
   },
   {
     title: "IT Onsite Services",
-<<<<<<< HEAD
-    link: "/it-onsite-services",
-    icon: <Shield className="w-5 h-5" />,
-    description: "Professional on-site technical support"
-  },
-  {
-    title: "Comprehensive Services",
-    link: "/comprehensive-services",
-    icon: <Rocket className="w-5 h-5" />,
-    description: "End-to-end technology solutions"
-  },
-  {
-    title: "AI Integration",
-    link: "/ai-integration",
-    icon: <Sparkles className="w-5 h-5" />,
-    description: "Seamless AI implementation"
-  },
-  {
-    title: "Cloud Solutions",
-    link: "/cloud-solutions",
-    icon: <Zap className="w-5 h-5" />,
-    description: "Scalable cloud infrastructure"
-=======
     link: "/it-onsite-services"
   },
   {
@@ -119,7 +55,6 @@ const specialServices = [
   {
     title: "Cybersecurity",
     link: "/cybersecurity"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   }
 ];
 
@@ -128,10 +63,6 @@ interface CategoriesSectionProps {
 }
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -310,7 +241,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </Link>
           </motion.div>
         </motion.div>
-=======
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -379,7 +309,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             </svg>
           </Link>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       </div>
     </section>
   );

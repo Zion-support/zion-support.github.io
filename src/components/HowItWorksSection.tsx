@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
@@ -281,8 +277,6 @@ export function HowItWorksSection() {
                   {/* Hover indicator */}
                   <div className="mt-4 text-zion-cyan/60 text-xs">
                     {hoveredStep === index ? "Hover to see details" : "Hover for details"}
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 export function HowItWorksSection() {
@@ -352,9 +346,6 @@ export function HowItWorksSection() {
                   {/* Icon */}
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4 shadow-md border-2 border-gray-200">
                     {step.icon}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   </div>
                 </div>
                 
@@ -370,61 +361,6 @@ export function HowItWorksSection() {
           </div>
         </div>
         
-<<<<<<< HEAD
-        {/* Enhanced bottom CTA */}
-        <motion.div 
-          className="text-center mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
-            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
-              <p className="text-white text-lg mb-4">
-                Ready to start your project journey?
-              </p>
-              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-purple/25">
-                Get Started Today
-                <Rocket className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Additional features */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-cyan to-zion-purple mb-4">
-              <Zap className="w-8 h-8 text-white" />
-            </div>
-            <h4 className="text-white font-semibold mb-2">Fast Setup</h4>
-            <p className="text-zion-slate-light text-sm">Get started in minutes, not days</p>
-          </div>
-          
-          <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-purple to-zion-cyan mb-4">
-              <Shield className="w-8 h-8 text-white" />
-            </div>
-            <h4 className="text-white font-semibold mb-2">Secure & Reliable</h4>
-            <p className="text-zion-slate-light text-sm">Enterprise-grade security and uptime</p>
-          </div>
-          
-          <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-cyan-light to-zion-blue mb-4">
-              <Users className="w-8 h-8 text-white" />
-            </div>
-            <h4 className="text-white font-semibold mb-2">Expert Support</h4>
-            <p className="text-zion-slate-light text-sm">24/7 support from our team</p>
-          </div>
-        </motion.div>
-=======
         <div className="text-center mt-12">
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -449,7 +385,6 @@ export function HowItWorksSection() {
             </div>
           </div>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       </div>
     </section>
   );
