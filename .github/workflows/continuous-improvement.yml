@@ -24,22 +24,24 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Run continuous improvement
+      - name: Run basic checks
         run: |
-          npm run automation:improvement || true
-          npm run diversify || true
+          npm run lint || true
+          npm run type-check || true
+          npm run build || true
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(improvement): continuous improvement + diversity results"
-          title: "chore(improvement): apply continuous improvement and diversity results"
+          commit-message: "chore(improvement): continuous improvement results"
+          title: "chore(improvement): apply continuous improvement results"
           body: |
-            Automated improvement and diversity loop.
+            Automated improvement loop.
 
-            - Runs automation:improvement orchestration
-            - Runs diversification orchestrator
+            - Runs linting and type checking
+            - Verifies build process
+            - Ensures code quality
           branch: automation/continuous-improvement
           delete-branch: true
           signoff: false

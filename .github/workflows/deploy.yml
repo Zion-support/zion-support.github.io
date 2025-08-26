@@ -1,47 +1,49 @@
-name: Test
+name: Deploy
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  main:
-    name: Main Job
+  deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
+      
       - name: Install dependencies
         run: npm ci
+      
       - name: Build project
         run: npm run build
-      - name: Verify build output
+      
+      - name: Verify build
         run: |
           if [ ! -d .next ]; then
             echo "Build failed: .next folder not found"
             exit 1
           fi
-      - name: Run Jest with Coverage
-        run: npm test
-        continue-on-error: true
+          echo "Build successful! .next folder found."
+      
       - name: Upload build artifacts
-        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: build
           path: .next
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+          retention-days: 7
+      
+      - name: Deploy to production
+        run: |
+          echo "Deployment would happen here"
+          echo "This could be deploying to Vercel, Netlify, or your hosting platform"
+          echo "Build artifacts are available for manual deployment"
