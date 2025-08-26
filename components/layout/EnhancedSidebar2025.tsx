@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
+<<<<<<< HEAD
   Menu, X, ChevronDown, ChevronRight,
   Home, Search, Settings, User, 
   Brain, Cpu, Rocket, Shield, 
@@ -16,6 +17,8 @@ import {
   DollarSign, Phone, ArrowRight, Mail, MapPin, Dna, HelpCircle,
   Sparkles, Crown, Award, Target as TargetIcon, Zap as ZapIcon2, MessageCircle,
   Calendar, ExternalLink, BookOpen, FileText, Video, Headphones
+=======
+>>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -32,6 +35,7 @@ interface SidebarItem {
   category?: string;
 }
 
+<<<<<<< HEAD
 const navigationItems = [
   {
     title: 'AI & Consciousness',
@@ -136,6 +140,8 @@ const navigationItems = [
       { name: 'Virtual Reality AI', href: '/virtual-reality-ai-platform', description: 'AI-enhanced VR experiences' },
       { name: 'Space Debris Management', href: '/space-debris-management', description: 'Orbital debris tracking' },
       { name: 'Holographic Events Platform', href: '/holographic-events-platform', description: '3D holographic experiences' }
+=======
+>>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
     ]
   }
 ];
@@ -147,6 +153,7 @@ const quickActions = [
   { name: 'Contact Support', href: '/support', icon: <HelpCircle className="w-4 h-4" />, color: 'from-orange-500 to-red-600' }
 ];
 
+<<<<<<< HEAD
 const resourceLinks = [
   { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" />, description: 'Technical guides and API docs' },
   { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" />, description: 'Success stories and implementations' },
@@ -168,6 +175,8 @@ export default function EnhancedSidebar2025() {
     }
     setExpandedItems(newExpanded);
   };
+=======
+>>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
 
   const filteredItems = navigationItems.filter(item =>
     item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -186,6 +195,7 @@ export default function EnhancedSidebar2025() {
     return () => document.removeEventListener('keydown', handleEscape);
   }, []);
 
+<<<<<<< HEAD
   // Close sidebar on outside click
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -197,6 +207,8 @@ export default function EnhancedSidebar2025() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
+=======
+>>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
 
   return (
     <>
@@ -293,6 +305,7 @@ export default function EnhancedSidebar2025() {
             </button>
           </div>
 
+<<<<<<< HEAD
             {/* Quick Actions */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-sm font-semibold text-gray-300 mb-3 flex items-center space-x-2">
@@ -436,6 +449,12 @@ export default function EnhancedSidebar2025() {
           </motion.aside>
         )}
       </AnimatePresence>
+=======
+            </div>
+          </div>
+        </div>
+
+>>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
     </>
   );
 }
