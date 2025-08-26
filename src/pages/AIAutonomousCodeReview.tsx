@@ -1,284 +1,344 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Code, 
-  Zap, 
-  Target, 
-  BarChart3, 
-  Users, 
-  Shield, 
-  Clock,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  Heart,
-  Rocket,
-  Globe,
-  Lightbulb,
-  Bug,
-  GitBranch,
-  Terminal
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Code, Shield, Target, BarChart3, Users, Database, Globe, Rocket, Eye, Clock, Cloud, Network, Zap, Bug, CheckCircle, AlertTriangle } from 'lucide-react';
 
-export default function AIAutonomousCodeReview() {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Analysis",
-      description: "Intelligent code analysis using advanced machine learning algorithms"
-    },
-    {
-      icon: Code,
-      title: "Multi-Language Support",
-      description: "Support for all major programming languages and frameworks"
-    },
-    {
-      icon: Zap,
-      title: "Automated Reviews",
-      description: "24/7 automated code review with instant feedback"
-    },
-    {
-      icon: Target,
-      title: "Quality Metrics",
-      description: "Comprehensive code quality scoring and recommendations"
-    },
-    {
-      icon: Shield,
-      title: "Security Scanning",
-      description: "Automated security vulnerability detection and remediation"
-    },
-    {
-      icon: BarChart3,
-      title: "Performance Insights",
-      description: "Code performance analysis and optimization suggestions"
-    }
-  ];
-
-  const benefits = [
-    "Faster development cycles",
-    "Improved code quality",
-    "Reduced security risks",
-    "Consistent coding standards",
-    "24/7 availability",
-    "Cost-effective reviews"
-  ];
-
-  const useCases = [
-    {
-      title: "Enterprise Development",
-      description: "Large-scale code review for enterprise software projects"
-    },
-    {
-      title: "Startup Development",
-      description: "Rapid code review for fast-paced startup environments"
-    },
-    {
-      title: "Open Source Projects",
-      description: "Automated review for open source contributions"
-    },
-    {
-      title: "Code Quality Assurance",
-      description: "Ensuring consistent code quality across teams"
-    }
-  ];
-
-  const supportedLanguages = [
-    "JavaScript/TypeScript",
-    "Python",
-    "Java",
-    "C++",
-    "C#",
-    "Go",
-    "Rust",
-    "PHP",
-    "Ruby",
-    "Swift",
-    "Kotlin",
-    "Scala"
-  ];
-
+const AIAutonomousCodeReview: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <Brain className="w-20 h-20 text-cyan-400" />
-              <Code className="w-16 h-16 text-purple-400" />
+    <>
+      <Helmet>
+        <title>AI Autonomous Code Review - Zion Tech Group</title>
+        <meta name="description" content="Revolutionize your code quality with our AI Autonomous Code Review system. Automatically detect bugs, security vulnerabilities, and optimize code performance." />
+        <meta name="keywords" content="AI autonomous code review, automated code review, code quality, security analysis, bug detection, code optimization" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-code-review" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-orange-50 to-red-100">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-red-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-100 text-orange-800 text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Code Quality Assurance
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              AI Autonomous Code Review
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              AI Autonomous
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600"> Code Review</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Transform your development workflow with intelligent, automated code review that works 24/7. 
-              Get instant feedback, security insights, and quality improvements powered by advanced AI.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Transform your development process with intelligent, autonomous code review that continuously improves code quality, security, and performance.
             </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold py-3 px-8 rounded-lg transition-all duration-300 flex items-center gap-2"
-            >
-              Watch Demo
-              <Eye className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Intelligent Code Review Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI capabilities that revolutionize how you review and improve your code.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Supported Languages Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Multi-Language Support
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI understands and reviews code in all major programming languages.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {supportedLanguages.map((language, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-center hover:border-cyan-400 transition-all duration-300"
-              >
-                <Code className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
-                <span className="text-gray-300">{language}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Why Choose AI Code Review?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your development process with intelligent automation.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-4">
-              {benefits.slice(3).map((benefit, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
+                Start Code Review Trial
+              </button>
+              <button className="px-8 py-4 border-2 border-orange-600 text-orange-600 font-semibold rounded-lg hover:bg-orange-600 hover:text-white transition-all duration-300">
+                Schedule Demo
+              </button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Perfect For Every Development Team
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From startups to enterprises, our AI code review scales with your needs.
-            </p>
-          </div>
+        {/* Code Review Capabilities */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Autonomous Code Review Capabilities
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Our AI system provides comprehensive code analysis and improvement recommendations automatically.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300"
-              >
-                <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                  <Bug className="w-6 h-6 text-orange-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Bug Detection</h3>
+                <p className="text-gray-600">
+                  Advanced static and dynamic analysis to identify bugs, logic errors, and runtime issues before they reach production.
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Ready to Revolutionize Your Code Review?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the future of development with AI-powered code review.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Start Free Trial
-            </Link>
-            <Link
-              to="/pricing"
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold py-3 px-8 rounded-lg transition-all duration-300"
-            >
-              View Pricing
-            </Link>
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Security Analysis</h3>
+                <p className="text-gray-600">
+                  Comprehensive security vulnerability scanning including OWASP Top 10, injection attacks, and authentication flaws.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <BarChart3 className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Performance Optimization</h3>
+                <p className="text-gray-600">
+                  AI-driven performance analysis to identify bottlenecks, memory leaks, and optimization opportunities.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                  <CheckCircle className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Code Quality</h3>
+                <p className="text-gray-600">
+                  Automated assessment of code maintainability, readability, and adherence to best practices and coding standards.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                  <Target className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Architecture Review</h3>
+                <p className="text-gray-600">
+                  Intelligent analysis of code architecture, design patterns, and structural improvements for scalability.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                  <Users className="w-6 h-6 text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h3>
+                <p className="text-gray-600">
+                  Automated code review workflows that integrate with your development process and team collaboration tools.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Supported Languages */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Supported Programming Languages
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Our AI system supports a wide range of programming languages and frameworks.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl border border-orange-200 text-center">
+                <Code className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Web Development</h3>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>JavaScript/TypeScript</li>
+                  <li>Python</li>
+                  <li>PHP</li>
+                  <li>Ruby</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-200 text-center">
+                <Code className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Enterprise</h3>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>Java</li>
+                  <li>C#/.NET</li>
+                  <li>C++</li>
+                  <li>Go</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200 text-center">
+                <Code className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Mobile & App</h3>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>Swift</li>
+                  <li>Kotlin</li>
+                  <li>React Native</li>
+                  <li>Flutter</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200 text-center">
+                <Code className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Data & AI</h3>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>R</li>
+                  <li>Scala</li>
+                  <li>Julia</li>
+                  <li>MATLAB</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Review Process */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Autonomous Code Review Process
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Our AI system follows a comprehensive review methodology that ensures thorough code analysis.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-orange-600">1</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Scan</h3>
+                <p className="text-sm text-gray-600">
+                  Automated code scanning and parsing
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-red-600">2</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Analyze</h3>
+                <p className="text-sm text-gray-600">
+                  AI-powered code analysis and pattern recognition
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-blue-600">3</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Detect</h3>
+                <p className="text-sm text-gray-600">
+                  Identify issues, bugs, and vulnerabilities
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-green-600">4</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Recommend</h3>
+                <p className="text-sm text-gray-600">
+                  Generate improvement suggestions and fixes
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-purple-600">5</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Report</h3>
+                <p className="text-sm text-gray-600">
+                  Comprehensive review report and metrics
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Integration Features */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Seamless Integration
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Integrate our AI code review system with your existing development workflow and tools.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl border border-orange-200">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Version Control</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Git integration</li>
+                  <li>• GitHub/GitLab support</li>
+                  <li>• Pull request analysis</li>
+                  <li>• Branch protection</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl border border-blue-200">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">CI/CD Pipelines</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Jenkins integration</li>
+                  <li>• GitHub Actions</li>
+                  <li>• GitLab CI</li>
+                  <li>• Azure DevOps</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-200">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">IDEs & Editors</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• VS Code extension</li>
+                  <li>• IntelliJ plugin</li>
+                  <li>• Vim/Emacs support</li>
+                  <li>• Sublime Text</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-200">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Project Management</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Jira integration</li>
+                  <li>• Trello boards</li>
+                  <li>• Asana projects</li>
+                  <li>• Monday.com</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-xl border border-red-200">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Communication</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Slack notifications</li>
+                  <li>• Microsoft Teams</li>
+                  <li>• Discord integration</li>
+                  <li>• Email alerts</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-xl border border-yellow-200">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytics</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Code quality metrics</li>
+                  <li>• Team performance</li>
+                  <li>• Trend analysis</li>
+                  <li>• Custom dashboards</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-orange-600 to-red-600">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Improve Your Code Quality?
+            </h2>
+            <p className="text-xl text-orange-100 mb-8">
+              Join the future of autonomous code review with Zion Tech Group's AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-white text-orange-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
+                Start Code Review Trial
+              </button>
+              <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300">
+                Contact Development Team
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
-}
+};
+
+export default AIAutonomousCodeReview;
