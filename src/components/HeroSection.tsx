@@ -1,204 +1,176 @@
 
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Zap, Users, Brain, Sparkles, Star, TrendingUp, Shield } from "lucide-react";
-import { useRef } from "react";
+import React, { useState, useEffect } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Play, ArrowRight, Star, Users, Zap, Shield } from 'lucide-react';
 
-export function HeroSection() {
-  const { t } = useTranslation();
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  });
-  
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  };
+export const HeroSection: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [0, 100]);
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    }
-  };
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
-  const floatingVariants = {
-    animate: {
-      y: [-15, 15, -15],
-      rotate: [0, 5, 0],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
-  const particleVariants = {
-    animate: {
-      y: [0, -20, 0],
-      opacity: [0.3, 0.6, 0.3],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
-  const pulseVariants = {
-    animate: {
-      scale: [1, 1.1, 1],
-      opacity: [0.5, 0.8, 0.5],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
+  const stats = [
+    { value: "500+", label: "Projects Delivered", icon: Star },
+    { value: "50+", label: "Expert Team", icon: Users },
+    { value: "99.9%", label: "Uptime", icon: Zap },
+    { value: "24/7", label: "Support", icon: Shield }
+  ];
 
   return (
-    <section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
-      {/* Enhanced background with parallax effect */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Animated Background Elements */}
       <motion.div 
-        className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"
+        className="absolute inset-0 opacity-10"
         style={{ y, opacity }}
-      />
-      
-      {/* Animated floating particles with better positioning and variety */}
-      <div className="absolute inset-0">
-        <motion.div 
-          className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-purple-light opacity-60"
-          variants={floatingVariants}
-          animate="animate"
-        />
-        <motion.div 
-          className="absolute top-1/3 right-1/3 w-6 h-6 rounded-full bg-zion-cyan opacity-50"
-          variants={floatingVariants}
-          animate="animate"
-        />
-        <motion.div 
-          className="absolute bottom-1/4 left-1/3 w-3 h-3 rounded-full bg-zion-cyan-light opacity-70"
-          variants={particleVariants}
-          animate="animate"
-        />
-        <motion.div 
-          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-purple opacity-40"
-          variants={floatingVariants}
-          animate="animate"
-        />
-      </div>
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-700/20"></div>
+      </motion.div>
 
-      {/* Main content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
-          className="text-center max-w-5xl mx-auto"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+      {/* Floating Elements */}
+      <motion.div
+        className="absolute top-20 left-10"
+        animate={{ y: [0, -20, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <div className="w-4 h-4 bg-cyan-400 rounded-full opacity-60"></div>
+      </motion.div>
+      
+      <motion.div
+        className="absolute top-40 right-20"
+        animate={{ y: [0, 20, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+      >
+        <div className="w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
+      </motion.div>
+      
+      <motion.div
+        className="absolute bottom-40 left-20"
+        animate={{ y: [0, -15, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+      >
+        <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60"></div>
+      </motion.div>
+
+      {/* Hero Content */}
+      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="space-y-8"
         >
-          {/* Main heading with enhanced typography */}
-          <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
-            variants={itemVariants}
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center px-4 py-2 bg-cyan-500/10 text-cyan-400 rounded-full text-sm font-medium border border-cyan-500/20"
           >
-            <span className="bg-gradient-to-r from-white via-zion-cyan to-zion-purple-light bg-clip-text text-transparent">
-              {t("hero.title", "Transform Your Business with AI")}
+            <Zap className="w-4 h-4 mr-2" />
+            Leading AI & Technology Solutions
+          </motion.div>
+
+          {/* Main Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-5xl md:text-7xl font-bold mb-6"
+          >
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Zion Tech Group
             </span>
           </motion.h1>
 
-          {/* Subtitle with better readability */}
-          <motion.p 
-            className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed"
-            variants={itemVariants}
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            {t("hero.subtitle", "Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Accelerate your growth with Zion Tech Group.")}
+            Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services. 
+            Transform your business with cutting-edge technology.
           </motion.p>
 
-          {/* Enhanced CTA buttons */}
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-            variants={itemVariants}
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button 
-              asChild
-              size="lg"
-              className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            <Link 
+              to="/services" 
+              className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
             >
-              <Link to="/contact">
-                <Zap className="mr-2 h-5 w-5" />
-                {t("hero.get_started", "Get Started")}
-              </Link>
-            </Button>
+              <span className="flex items-center justify-center">
+                Explore Our Services
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
+            </Link>
             
-            <Button 
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
+            <Link 
+              to="/contact" 
+              className="group px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
             >
-              <Link to="/services">
-                <Users className="mr-2 h-5 w-5" />
-                {t("hero.explore_services", "Explore Services")}
-              </Link>
-            </Button>
+              <span className="flex items-center justify-center">
+                Get Started
+                <Play className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
+              </span>
+            </Link>
           </motion.div>
 
-          {/* Trust indicators */}
-          <motion.div 
-            className="flex flex-wrap justify-center items-center gap-8 text-zion-slate-light"
-            variants={itemVariants}
+          {/* Stats Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
           >
-            <div className="flex items-center gap-2">
-              <Star className="h-5 w-5 text-zion-cyan" />
-              <span className="text-sm font-medium">500+ Clients Served</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5 text-zion-purple" />
-              <span className="text-sm font-medium">99.9% Uptime</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Shield className="h-5 w-5 text-zion-cyan-light" />
-              <span className="text-sm font-medium">Enterprise Security</span>
-            </div>
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-500/20 rounded-full mb-3 group-hover:bg-cyan-500/30 transition-colors duration-300">
+                  <stat.icon className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-1">{stat.value}</div>
+                <div className="text-sm text-gray-400">{stat.label}</div>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div 
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 1, delay: 1 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-zion-cyan rounded-full flex justify-center">
-          <motion.div 
-            className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-        </div>
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="text-cyan-400"
+        >
+          <ChevronDown className="w-6 h-6" />
+        </motion.div>
+        <div className="text-xs text-gray-500 mt-2">Scroll to explore</div>
       </motion.div>
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent pointer-events-none"></div>
     </section>
   );
-}
+};

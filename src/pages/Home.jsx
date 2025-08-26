@@ -98,10 +98,10 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
-        <div className="container mx-auto px-4 text-center">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 text-center">
+        <div className="container mx-auto px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Welcome to <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Zion Tech Group</span>
           </h1>
@@ -121,6 +121,12 @@ export default function Home() {
               className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors"
             >
               Explore Services
+            </Link>
+            <Link 
+              to="/services/showcase-2029" 
+              className="px-8 py-4 border border-zion-purple text-zion-purple rounded-lg font-semibold hover:bg-zion-purple hover:text-white transition-colors"
+            >
+              2029 Services Showcase
             </Link>
           </div>
           
@@ -201,17 +207,17 @@ export default function Home() {
             
             <div className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-6 text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Cpu className="w-8 h-8 text-white" />
+                <Code className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Discover Products</h3>
               <p className="text-zion-slate-light mb-4">
-                Explore innovative technology products and solutions from leading providers.
+                Explore cutting-edge software, hardware, and innovative solutions from leading tech companies.
               </p>
               <Link 
                 to="/marketplace" 
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
               >
-                Shop Products
+                Browse Products
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>
@@ -220,9 +226,9 @@ export default function Home() {
               <div className="w-16 h-16 bg-gradient-to-r from-zion-green to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <Server className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Get Services</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Access Services</h3>
               <p className="text-zion-slate-light mb-4">
-                Access professional IT services, consulting, and implementation support.
+                Find professional IT services, consulting, and technical support from verified experts.
               </p>
               <Link 
                 to="/services" 
@@ -233,128 +239,42 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          
+          <div className="text-center">
+            <Link to="/marketplace">
+              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:scale-105 transition-transform">
+                Explore Marketplace
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Services Preview */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what industry leaders say about working with Zion Tech Group.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-6">
-                <div className="flex items-center mb-4">
-                  {renderStars(testimonial.rating)}
-                </div>
-                <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="text-white font-semibold">{testimonial.name}</div>
-                  <div className="text-zion-cyan text-sm">{testimonial.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We combine cutting-edge technology with proven expertise to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <CheckCircle className="w-6 h-6 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Industry Expertise</h3>
-                  <p className="text-zion-slate-light">Over 15 years of experience in AI, cybersecurity, and emerging technologies.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <CheckCircle className="w-6 h-6 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Innovation First</h3>
-                  <p className="text-zion-slate-light">We stay ahead of the curve with the latest technological advancements.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <CheckCircle className="w-6 h-6 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Free Marketplace</h3>
-                  <p className="text-zion-slate-light">The world's first free marketplace for high-tech and AI services.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <CheckCircle className="w-6 h-6 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
-                  <p className="text-zion-slate-light">Round-the-clock technical support and customer service.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <CheckCircle className="w-6 h-6 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Global Reach</h3>
-                  <p className="text-zion-slate-light">Serving clients worldwide with localized expertise and support.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <CheckCircle className="w-6 h-6 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Proven Results</h3>
-                  <p className="text-zion-slate-light">Track record of successful implementations and satisfied clients.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Our Services
           </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            Join the future of technology with Zion Tech Group. Let's discuss how we can help you achieve your goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform"
-            >
-              Contact Us
-            </Link>
-            <Link 
-              to="/services" 
-              className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-zion-blue transition-colors"
-            >
-              View Services
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
+              <h3 className="text-xl font-semibold text-white mb-4">AI & Analytics</h3>
+              <p className="text-zion-slate-light">
+                Advanced AI-powered business intelligence and analytics solutions.
+              </p>
+            </div>
+            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Cybersecurity</h3>
+              <p className="text-zion-slate-light">
+                Enterprise-grade security and threat detection systems.
+              </p>
+            </div>
+            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Cloud Solutions</h3>
+              <p className="text-zion-slate-light">
+                Scalable cloud infrastructure and DevOps services.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -401,6 +321,52 @@ export default function Home() {
               <div className="text-zion-slate-light text-xs">January 10, 2025</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 bg-zion-blue-dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Trusted by leading companies worldwide for our innovative technology solutions and exceptional service.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-6">
+                <div className="flex mb-4">
+                  {renderStars(testimonial.rating)}
+                </div>
+                <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-zion-cyan text-sm">{testimonial.role}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-white/90 mb-8">
+            Contact us today to discuss your technology needs.
+          </p>
+          <Link to="/contact">
+            <button className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform">
+              Contact Us
+            </button>
+          </Link>
         </div>
       </section>
     </div>

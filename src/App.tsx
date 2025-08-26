@@ -8,6 +8,8 @@ import { ChatAssistant } from './components/ChatAssistant.jsx';
 const Home = React.lazy(() => import('./pages/Home.jsx'));
 const About = React.lazy(() => import('./pages/About.jsx'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const ComprehensiveServices = React.lazy(() => import('./pages/ComprehensiveServices.jsx'));
+const ComprehensivePricing = React.lazy(() => import('./pages/ComprehensivePricing.jsx'));
 const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const Login = React.lazy(() => import('./pages/Login.jsx'));
 const FAQ = React.lazy(() => import('./pages/FAQ.jsx'));
@@ -30,6 +32,15 @@ const Status = React.lazy(() => import('./pages/Status.jsx'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap.jsx'));
 const ComprehensiveServicesShowcase2029 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2029.tsx'));
 
+// Additional service pages
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PartnersPage = React.lazy(() => import('./pages/PartnersPage'));
+const Services = React.lazy(() => import('./pages/Services'));
+const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+
 const LoadingSpinner = () => (
   <div className="min-h-screen bg-futuristic flex items-center justify-center">
     <div className="text-center">
@@ -51,6 +62,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
+              <Route path="/comprehensive-pricing" element={<ComprehensivePricing />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
               <Route path="/faq" element={<FAQ />} />
@@ -71,6 +84,7 @@ function App() {
               
               {/* Company Routes */}
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/partners" element={<Partners />} />
               <Route path="/careers" element={<Careers />} />
               
@@ -80,6 +94,25 @@ function App() {
               <Route path="/status" element={<Status />} />
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/services/showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
+              
+              {/* Additional Routes */}
+              <Route path="/enhanced-services" element={<EnhancedServices />} />
+              
+              {/* AI Services Routes */}
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/ai-services/:service" element={<AIServicesPage />} />
+              
+              {/* Micro SAAS Routes */}
+              <Route path="/micro-saas" element={<MicroSAASServicesPage />} />
+              <Route path="/micro-saas/:service" element={<MicroSAASServicesPage />} />
+              
+              {/* IT Services Routes */}
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/it-services/:service" element={<ITServicesPage />} />
+              
+              {/* Emerging Tech Routes */}
+              <Route path="/emerging-tech" element={<GreenIT />} />
+              <Route path="/emerging-tech/:service" element={<GreenIT />} />
             </Routes>
           </Suspense>
         </main>

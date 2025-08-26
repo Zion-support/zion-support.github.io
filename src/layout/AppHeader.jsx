@@ -58,6 +58,9 @@ export function AppHeader() {
                     <Link to="/services" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
                       All Services
                     </Link>
+                    <Link to="/comprehensive-services" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      Comprehensive Services
+                    </Link>
                     <Link to="/ai-services" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
                       AI & Analytics
                     </Link>
@@ -75,6 +78,9 @@ export function AppHeader() {
                     </Link>
                     <Link to="/green-it" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
                       Green IT
+                    </Link>
+                    <Link to="/services/showcase-2029" className="block px-4 py-2 text-white hover:bg-zion-cyan/10 hover:text-zion-cyan transition-colors">
+                      2029 Services Showcase
                     </Link>
                   </div>
                 </div>
@@ -158,6 +164,10 @@ export function AppHeader() {
             <Link to="/faq" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={closeAllDropdowns}>
               FAQ
             </Link>
+            
+            <Link to="/comprehensive-pricing" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={closeAllDropdowns}>
+              Pricing
+            </Link>
           </nav>
 
           {/* Actions */}
@@ -198,6 +208,9 @@ export function AppHeader() {
                   <Link to="/services" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
                     All Services
                   </Link>
+                  <Link to="/comprehensive-services" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    Comprehensive Services
+                  </Link>
                   <Link to="/ai-services" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
                     AI & Analytics
                   </Link>
@@ -206,6 +219,9 @@ export function AppHeader() {
                   </Link>
                   <Link to="/cloud-solutions" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
                     Cloud Solutions
+                  </Link>
+                  <Link to="/services/showcase-2029" className="block text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                    2029 Services Showcase
                   </Link>
                 </div>
               </div>
@@ -247,6 +263,10 @@ export function AppHeader() {
 
               <Link to="/faq" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
                 FAQ
+              </Link>
+              
+              <Link to="/comprehensive-pricing" className="text-white hover:text-zion-cyan transition-colors duration-300" onClick={() => setMobileMenuOpen(false)}>
+                Pricing
               </Link>
               
               <div className="pt-4 border-t border-zion-cyan/20">

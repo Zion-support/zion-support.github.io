@@ -99,48 +99,24 @@ export default function Status() {
     }
   ];
 
-  const recentIncidents = [
+  const incidents = [
     {
       id: 1,
       title: 'Scheduled Maintenance - Database Optimization',
       status: 'resolved',
-      severity: 'maintenance',
+      severity: 'low',
       startTime: '2024-01-15 02:00 UTC',
       endTime: '2024-01-15 04:00 UTC',
-      description: 'Routine database maintenance and optimization was completed successfully.',
-      updates: [
-        {
-          time: '2024-01-15 04:00 UTC',
-          message: 'Maintenance completed successfully. All systems are operational.'
-        },
-        {
-          time: '2024-01-15 02:00 UTC',
-          message: 'Scheduled maintenance has begun. Expected downtime: 2 hours.'
-        }
-      ]
+      description: 'Routine database maintenance and optimization completed successfully.'
     },
     {
       id: 2,
       title: 'API Response Time Degradation',
       status: 'resolved',
-      severity: 'minor',
+      severity: 'medium',
       startTime: '2024-01-10 14:30 UTC',
-      endTime: '2024-01-10 15:45 UTC',
-      description: 'Increased API response times were detected and resolved.',
-      updates: [
-        {
-          time: '2024-01-10 15:45 UTC',
-          message: 'Issue resolved. API response times are back to normal.'
-        },
-        {
-          time: '2024-01-10 14:45 UTC',
-          message: 'Engineers are investigating the increased response times.'
-        },
-        {
-          time: '2024-01-10 14:30 UTC',
-          message: 'We are investigating reports of increased API response times.'
-        }
-      ]
+      endTime: '2024-01-10 16:45 UTC',
+      description: 'Increased API response times due to high traffic load. Issue resolved with auto-scaling.'
     }
   ];
 
@@ -174,18 +150,18 @@ export default function Status() {
     }
   };
 
-  const getStatusBgColor = (status) => {
-    switch (status) {
-      case 'operational':
-        return 'bg-green-900/30 border-green-500/30';
-      case 'degraded':
-        return 'bg-yellow-900/30 border-yellow-500/30';
-      case 'outage':
-        return 'bg-red-900/30 border-red-500/30';
-      case 'maintenance':
-        return 'bg-blue-900/30 border-blue-500/30';
+  const getSeverityColor = (severity) => {
+    switch (severity) {
+      case 'low':
+        return 'bg-blue-500';
+      case 'medium':
+        return 'bg-yellow-500';
+      case 'high':
+        return 'bg-red-500';
+      case 'critical':
+        return 'bg-red-600';
       default:
-        return 'bg-gray-900/30 border-gray-500/30';
+        return 'bg-gray-500';
     }
   };
 
@@ -206,74 +182,59 @@ export default function Status() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            System Status
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            System <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Status</span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Real-time status of Zion Tech Group's systems and services. We're committed to transparency and keeping you informed.
+            Real-time status of Zion Tech Group services and infrastructure
           </p>
-        </div>
-
-        {/* Overall Status */}
-        <div className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-8 mb-8">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-white">Overall System Status</h2>
+          
+          {/* Overall Status */}
+          <div className="mt-8 inline-flex items-center bg-zinc-800/50 border border-zion-cyan/20 rounded-lg px-6 py-4">
+            <div className="flex items-center space-x-3">
+              {getStatusIcon(systemStatus.overall)}
+              <span className={`text-lg font-semibold ${getStatusColor(systemStatus.overall)}`}>
+                All Systems Operational
+              </span>
+            </div>
+            <div className="ml-6 flex items-center space-x-4 text-zion-slate-light">
+              <span>Uptime: {systemStatus.uptime}</span>
+              <span>Response: {systemStatus.responseTime}</span>
+            </div>
+          </div>
+          
+          {/* Last Updated */}
+          <div className="mt-4 flex items-center justify-center space-x-2 text-zion-slate-light">
+            <span>Last updated: {lastUpdated.toLocaleTimeString()}</span>
             <button
               onClick={refreshStatus}
               disabled={isRefreshing}
-              className="flex items-center px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light transition-colors disabled:opacity-50"
+              className="p-1 hover:text-zion-cyan transition-colors disabled:opacity-50"
             >
-              <RefreshCw className={`w-4 h-4 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
-              Refresh
+              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
             </button>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className={`inline-flex items-center px-4 py-2 rounded-full ${getStatusBgColor(systemStatus.overall)} border`}>
-                {getStatusIcon(systemStatus.overall)}
-                <span className={`ml-2 font-medium ${getStatusColor(systemStatus.overall)}`}>
-                  {systemStatus.overall === 'operational' ? 'All Systems Operational' : 'System Issues Detected'}
-                </span>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">{systemStatus.uptime}</div>
-              <div className="text-zion-slate-light">Uptime (30 days)</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">{systemStatus.responseTime}</div>
-              <div className="text-zion-slate-light">Avg Response Time</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">{systemStatus.lastIncident}</div>
-              <div className="text-zion-slate-light">Last Incident</div>
-            </div>
-          </div>
-          
-          <div className="mt-6 text-center text-zion-slate-light text-sm">
-            Last updated: {lastUpdated.toLocaleString()}
           </div>
         </div>
 
         {/* Services Status */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">Service Status</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Service Status</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-3">
+              <div key={index} className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-6">
+                <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   {getStatusIcon(service.status)}
                 </div>
                 <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-zion-slate-light">Status:</span>
+                    <span className={getStatusColor(service.status)}>Operational</span>
+                  </div>
                   <div className="flex justify-between">
                     <span className="text-zion-slate-light">Uptime:</span>
                     <span className="text-white">{service.uptime}</span>
@@ -293,15 +254,15 @@ export default function Status() {
         </div>
 
         {/* Regional Status */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">Regional Status</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Regional Performance</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {regions.map((region, index) => (
-              <div key={index} className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-white">{region.name}</h3>
+              <div key={index} className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-6 text-center">
+                <div className="flex items-center justify-center mb-4">
                   {getStatusIcon(region.status)}
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-3">{region.name}</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-zion-slate-light">Latency:</span>
@@ -318,50 +279,45 @@ export default function Status() {
         </div>
 
         {/* Recent Incidents */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">Recent Incidents</h2>
-          <div className="space-y-6">
-            {recentIncidents.map((incident) => (
-              <div key={incident.id} className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
-                    <div className="flex items-center gap-4 text-sm">
-                      <span className={`inline-flex items-center px-2 py-1 rounded-full ${getStatusBgColor(incident.status)} border`}>
-                        {getStatusIcon(incident.status)}
-                        <span className={`ml-1 ${getStatusColor(incident.status)}`}>
-                          {incident.status}
+        {incidents.length > 0 && (
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Recent Incidents</h2>
+            <div className="space-y-6">
+              {incidents.map((incident) => (
+                <div key={incident.id} className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-2">
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getSeverityColor(incident.severity)}`}>
+                          {incident.severity.toUpperCase()}
                         </span>
-                      </span>
-                      <span className="text-zion-slate-light">
-                        {incident.startTime} - {incident.endTime}
-                      </span>
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(incident.status)} border border-current`}>
+                          {incident.status.toUpperCase()}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
+                      <p className="text-zion-slate-light mb-4">{incident.description}</p>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                          <span className="text-zion-slate-light">Started:</span>
+                          <span className="text-white ml-2">{incident.startTime}</span>
+                        </div>
+                        <div>
+                          <span className="text-zion-slate-light">Resolved:</span>
+                          <span className="text-white ml-2">{incident.endTime}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                
-                <p className="text-zion-slate-light mb-4">{incident.description}</p>
-                
-                <div className="space-y-3">
-                  <h4 className="text-white font-medium">Updates:</h4>
-                  {incident.updates.map((update, index) => (
-                    <div key={index} className="flex items-start gap-3 text-sm">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <div className="text-zion-cyan font-medium">{update.time}</div>
-                        <div className="text-zion-slate-light">{update.message}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Performance Metrics */}
-        <div className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">Performance Metrics</h2>
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Performance Metrics</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
