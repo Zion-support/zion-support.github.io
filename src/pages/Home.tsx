@@ -26,6 +26,7 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
+import { PerformanceOptimizations } from "@/components/PerformanceOptimizations";
 
 export default function Home() {
   return (
@@ -638,6 +639,9 @@ export default function Home() {
 
       {/* Enhanced Newsletter Section */}
       <NewsletterSection />
+
+      {/* Performance Optimizations Section */}
+      <PerformanceOptimizations />
     </div>
   );
 }
