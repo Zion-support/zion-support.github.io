@@ -1,12 +1,8 @@
 
 import { GradientHeading } from "./GradientHeading";
-import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-=======
+import Link from "next/link";
 import { Briefcase, HardDrive, Lightbulb, Users, Brain } from "lucide-react";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
+import { Badge } from "@/components/ui/badge";
 
 const categories = [
   {
@@ -17,24 +13,11 @@ const categories = [
     color: "from-purple-500 to-indigo-600",
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    title: "AI & Micro SAAS",
-    description: "Cutting-edge AI services and affordable software solutions",
-=======
-    title: "Micro SAAS",
-    description: "Innovative AI-powered business solutions and automation tools",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
-    icon: <Lightbulb className="w-10 h-10" />,
-    link: "/micro-saas-services",
-    color: "from-emerald-500 to-green-600",
-=======
     title: "AI Solutions",
     description: "Cutting-edge AI and machine learning services",
     icon: <Brain className="w-10 h-10" />,
-    link: "/comprehensive-services",
+    link: "/ai-solutions",
     color: "from-pink-500 to-rose-600",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
   },
   {
     title: "Talents",
@@ -62,30 +45,16 @@ const specialServices = [
     link: "/it-onsite-services"
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    title: "View All Services",
-    link: "/comprehensive-services"
-=======
-    title: "Advanced AI & IT Services",
-    link: "/advanced-services"
-  },
-  {
-    title: "Services Comparison",
-    link: "/services-comparison"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e41a
-=======
     title: "AI Development",
-    link: "/comprehensive-services"
+    link: "/ai-development"
   },
   {
     title: "Cloud Migration",
-    link: "/comprehensive-services"
+    link: "/cloud-migration"
   },
   {
     title: "Cybersecurity",
-    link: "/comprehensive-services"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
+    link: "/cybersecurity"
   }
 ];
 
@@ -99,68 +68,67 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       <div className="container mx-auto px-4">
         {showTitle && (
           <div className="text-center mb-16">
-            <GradientHeading>Explore Categories</GradientHeading>
-            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
+            <GradientHeading className="mb-4">
+              Explore Our Service Categories
+            </GradientHeading>
+            <p className="text-white/80 text-lg max-w-2xl mx-auto">
+              Discover comprehensive solutions across multiple domains
             </p>
           </div>
         )}
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {categories.map((category, index) => (
-            <Link 
-              key={category.title} 
-              to={category.link} 
-              className="group block"
+            <div
+              key={index}
+              className="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
-              <div 
-                className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark/50 backdrop-blur-sm p-6 transition-all duration-500 hover:border-zion-purple/50 hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20 hover:bg-zion-blue-dark/70"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-zion-purple/20`}>
-                  <div className="text-white">
-                    {category.icon}
-                  </div>
-                </div>
-                <h3 className="text-white text-xl font-bold mb-2 group-hover:text-zion-cyan transition-colors duration-300">{category.title}</h3>
-                <p className="text-zion-slate-light group-hover:text-zion-slate-light/80 transition-colors duration-300">{category.description}</p>
-                
-                {/* Hover effect overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
+              <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${category.color} text-white mb-4`}>
+                {category.icon}
               </div>
-            </Link>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {category.title}
+              </h3>
+              <p className="text-gray-600 mb-4">
+                {category.description}
+              </p>
+              <Link
+                href={category.link}
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
+              >
+                Learn More
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
           ))}
         </div>
         
-        <div className="mt-8">
-          <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {specialServices.map((service) => (
-              <Link 
-                key={service.title}
-                to={service.link}
-                className="px-6 py-3 bg-zion-blue-light/50 hover:bg-zion-blue-dark/70 border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-purple/20 backdrop-blur-sm"
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-white mb-8">
+            Specialized Services
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {specialServices.map((service, index) => (
+              <Link
+                key={index}
+                href={service.link}
+                className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105"
               >
                 {service.title}
               </Link>
             ))}
-            
-            {/* New AI Services CTA */}
-            <Link 
-              to="/micro-saas-services"
-              className="px-6 py-3 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 hover:from-zion-purple/30 hover:to-zion-cyan/30 border border-zion-purple/30 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-purple/20 backdrop-blur-sm"
-            >
-              🚀 AI & Micro SAAS Services
-            </Link>
           </div>
-        </div>
-        
-        <div className="mt-12 flex justify-center">
-          <Link 
-            to="/categories" 
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
+          
+          <Link
+            href="/services"
+            className="inline-flex items-center px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            View All Categories →
+            View All Services
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </Link>
         </div>
       </div>

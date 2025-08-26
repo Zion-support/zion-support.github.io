@@ -227,7 +227,7 @@ export const AICodeGenerator: React.FC = () => {
 
       {/* Main Content */}
       <div className="p-6">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {activeTab === 'generate' && (
             <motion.div
               key="generate"
