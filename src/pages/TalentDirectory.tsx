@@ -1,364 +1,257 @@
 import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Search, Filter, MapPin, Briefcase, Star, Users, Zap, Building } from 'lucide-react';
 
-export default function TalentDirectory() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-
-  const categories = [
-    'All Categories',
-    'AI & Machine Learning',
-    'Software Development',
-    'Cybersecurity',
-    'Data Science',
-    'Cloud & DevOps',
-    'UI/UX Design',
-    'Project Management',
-    'Business Analysis'
-  ];
-
-  const locations = [
-    'All Locations',
-    'Remote',
-    'United States',
-    'Europe',
-    'Asia',
-    'Canada',
-    'Australia'
-  ];
-
-  const featuredTalents = [
+const TalentDirectory: React.FC = () => {
+  const talents = [
     {
       id: 1,
-      name: 'Dr. Sarah Chen',
-      title: 'Senior AI Engineer',
-      category: 'AI & Machine Learning',
-      location: 'Remote',
-      experience: '8+ years',
-      skills: ['Python', 'TensorFlow', 'PyTorch', 'NLP', 'Computer Vision'],
+      name: "Sarah Chen",
+      role: "Senior AI Engineer",
+      experience: "8+ years",
+      location: "San Francisco, CA",
+      skills: ["Machine Learning", "Python", "TensorFlow", "Computer Vision"],
       rating: 4.9,
-      reviews: 47,
-      avatar: 'SC',
-      hourlyRate: '$120-150',
-      availability: 'Available',
-      description: 'Expert in developing and deploying machine learning models for enterprise applications.'
+      projects: 24,
+      avatar: "👩‍💻"
     },
     {
       id: 2,
-      name: 'Michael Rodriguez',
-      title: 'Cybersecurity Specialist',
-      category: 'Cybersecurity',
-      location: 'United States',
-      experience: '10+ years',
-      skills: ['Penetration Testing', 'SOC2', 'ISO27001', 'Incident Response', 'Threat Hunting'],
+      name: "Marcus Rodriguez",
+      role: "Cloud Architect",
+      experience: "10+ years",
+      location: "Austin, TX",
+      skills: ["AWS", "Kubernetes", "Terraform", "DevOps"],
       rating: 4.8,
-      reviews: 32,
-      avatar: 'MR',
-      hourlyRate: '$100-130',
-      availability: 'Available',
-      description: 'Certified security professional with expertise in enterprise security and compliance.'
+      projects: 31,
+      avatar: "👨‍💻"
     },
     {
       id: 3,
-      name: 'Dr. James Kim',
-      title: 'Cloud Architect',
-      category: 'Cloud & DevOps',
-      location: 'Remote',
-      experience: '12+ years',
-      skills: ['AWS', 'Azure', 'Kubernetes', 'Docker', 'Terraform', 'CI/CD'],
+      name: "Priya Patel",
+      role: "Cybersecurity Specialist",
+      experience: "6+ years",
+      location: "New York, NY",
+      skills: ["Penetration Testing", "SOC", "Compliance", "Incident Response"],
       rating: 4.9,
-      reviews: 56,
-      avatar: 'JK',
-      hourlyRate: '$130-160',
-      availability: 'Available',
-      description: 'Senior cloud architect specializing in scalable infrastructure and DevOps automation.'
+      projects: 18,
+      avatar: "👩‍💻"
     },
     {
       id: 4,
-      name: 'Emily Watson',
-      title: 'Data Scientist',
-      category: 'Data Science',
-      location: 'Europe',
-      experience: '6+ years',
-      skills: ['Python', 'R', 'SQL', 'Tableau', 'Machine Learning', 'Statistics'],
+      name: "David Kim",
+      role: "Data Scientist",
+      experience: "7+ years",
+      location: "Seattle, WA",
+      skills: ["Data Analytics", "SQL", "R", "Tableau"],
       rating: 4.7,
-      reviews: 28,
-      avatar: 'EW',
-      hourlyRate: '$90-120',
-      availability: 'Available',
-      description: 'Data scientist with expertise in predictive analytics and business intelligence.'
+      projects: 22,
+      avatar: "👨‍💻"
     },
     {
       id: 5,
-      name: 'Alex Thompson',
-      title: 'Full Stack Developer',
-      category: 'Software Development',
-      location: 'Remote',
-      experience: '7+ years',
-      skills: ['React', 'Node.js', 'Python', 'PostgreSQL', 'AWS', 'TypeScript'],
+      name: "Emily Watson",
+      role: "Full Stack Developer",
+      experience: "5+ years",
+      location: "Boston, MA",
+      skills: ["React", "Node.js", "Python", "MongoDB"],
       rating: 4.8,
-      reviews: 41,
-      avatar: 'AT',
-      hourlyRate: '$80-110',
-      availability: 'Available',
-      description: 'Versatile developer with experience in modern web technologies and cloud platforms.'
+      projects: 19,
+      avatar: "👩‍💻"
     },
     {
       id: 6,
-      name: 'Lisa Park',
-      title: 'UX/UI Designer',
-      category: 'UI/UX Design',
-      location: 'United States',
-      experience: '5+ years',
-      skills: ['Figma', 'Adobe Creative Suite', 'User Research', 'Prototyping', 'Design Systems'],
-      rating: 4.6,
-      reviews: 23,
-      avatar: 'LP',
-      hourlyRate: '$70-100',
-      availability: 'Available',
-      description: 'Creative designer focused on user-centered design and digital product experiences.'
+      name: "Alex Thompson",
+      role: "DevOps Engineer",
+      experience: "9+ years",
+      location: "Denver, CO",
+      skills: ["Docker", "Jenkins", "Ansible", "Linux"],
+      rating: 4.9,
+      projects: 28,
+      avatar: "👨‍💻"
     }
   ];
 
-  const filteredTalents = featuredTalents.filter(talent => {
-    const matchesSearch = talent.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         talent.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         talent.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || talent.category === selectedCategory;
-    const matchesLocation = selectedLocation === 'all' || talent.location === selectedLocation;
-    
-    return matchesSearch && matchesCategory && matchesLocation;
-  });
+  const categories = [
+    "All",
+    "AI & Machine Learning",
+    "Cloud & DevOps",
+    "Cybersecurity",
+    "Data Science",
+    "Full Stack Development",
+    "Mobile Development",
+    "UI/UX Design"
+  ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Talent Directory - Zion Tech Group Expert Professionals" 
-        description="Discover top technology professionals in AI, cybersecurity, cloud computing, and more. Hire skilled experts for your projects."
-        keywords="talent directory, hire developers, AI engineers, cybersecurity experts, cloud architects, remote work"
-        canonical="https://ziontechgroup.com/talent"
+        title="Talent Directory - Zion Tech Group"
+        description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more."
+        keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists"
+        canonical="https://ziontechgroup.com/talent-directory"
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 text-white py-20">
+      <section className="relative bg-gradient-to-br from-violet-900 via-violet-800 to-purple-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            Talent Directory
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-            Connect with world-class technology professionals. From AI engineers to cybersecurity experts, 
-            find the perfect talent for your next project.
-          </p>
+          <motion.h1 
+            className="text-5xl md:text-6xl font-bold mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Top Technology
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
+              {" "}Talent
+            </span>
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-violet-100 max-w-4xl mx-auto leading-relaxed mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Connect with world-class technology professionals and experts in AI, cloud computing, 
+            cybersecurity, and more. Find the perfect talent for your next project.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search for talent, skills, or expertise..."
+                className="w-full px-12 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-400/20 backdrop-blur-sm"
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Search and Filters */}
-      <section className="py-12 bg-white border-b border-gray-200">
+      {/* Filters Section */}
+      <section className="py-8 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            {/* Search Bar */}
-            <div className="mb-8">
-              <div className="relative max-w-2xl mx-auto">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search for skills, expertise, or professionals..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-            </div>
-
-            {/* Filters */}
-            <div className="flex flex-wrap gap-4 justify-center">
-              <div className="flex items-center space-x-2">
-                <Filter className="w-5 h-5 text-gray-500" />
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  {categories.map((category, index) => (
-                    <option key={index} value={category === 'All Categories' ? 'all' : category}>
-                      {category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5 text-gray-500" />
-                <select
-                  value={selectedLocation}
-                  onChange={(e) => setSelectedLocation(e.target.value)}
-                  className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  {locations.map((location, index) => (
-                    <option key={index} value={location === 'All Locations' ? 'all' : location}>
-                      {location}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
+          <div className="flex flex-wrap items-center gap-4">
+            <span className="text-gray-600 font-medium">Filter by:</span>
+            {categories.map((category, index) => (
+              <button
+                key={category}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  index === 0 
+                    ? 'bg-violet-600 text-white' 
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
-            <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-gray-600">Expert Professionals</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
-              <div className="text-gray-600">Technology Skills</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
-              <div className="text-gray-600">Client Satisfaction</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
-              <div className="text-gray-600">Support Available</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Talent Listings */}
-      <section className="py-20 bg-white">
+      {/* Talent Grid */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Professionals</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover top-tier talent across various technology domains. 
-              All professionals are vetted and ready to contribute to your success.
+              Discover top-tier technology professionals ready to contribute to your next project
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {filteredTalents.map((talent) => (
-              <div key={talent.id} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {talents.map((talent, index) => (
+              <motion.div
+                key={talent.id}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
                 {/* Header */}
-                <div className="p-6 border-b border-gray-100">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">{talent.avatar}</span>
-                    </div>
-                    <div className="text-right">
-                      <div className="flex items-center space-x-1 mb-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm font-medium text-gray-900">{talent.rating}</span>
-                        <span className="text-sm text-gray-500">({talent.reviews})</span>
-                      </div>
-                      <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                        talent.availability === 'Available' 
-                          ? 'bg-green-100 text-green-800' 
-                          : 'bg-red-100 text-red-800'
-                      }`}>
-                        {talent.availability}
-                      </span>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="text-3xl">{talent.avatar}</div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900">{talent.name}</h3>
+                      <p className="text-sm text-gray-600">{talent.role}</p>
                     </div>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">{talent.name}</h3>
-                  <p className="text-blue-600 font-medium mb-2">{talent.title}</p>
-                  
-                  <div className="flex items-center space-x-4 text-sm text-gray-600 mb-3">
-                    <div className="flex items-center">
-                      <Briefcase className="w-4 h-4 mr-1" />
-                      {talent.experience}
-                    </div>
-                    <div className="flex items-center">
-                      <MapPin className="w-4 h-4 mr-1" />
-                      {talent.location}
-                    </div>
+                  <div className="flex items-center gap-1 text-yellow-400">
+                    <Star className="w-4 h-4 fill-current" />
+                    <span className="text-sm text-gray-600">{talent.rating}</span>
                   </div>
-                  
-                  <p className="text-gray-600 text-sm mb-3">{talent.description}</p>
-                  
-                  <div className="text-lg font-bold text-gray-900 mb-3">
-                    {talent.hourlyRate}/hr
+                </div>
+
+                {/* Details */}
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <Briefcase className="w-4 h-4" />
+                    <span>{talent.experience} experience</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <MapPin className="w-4 h-4" />
+                    <span>{talent.location}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <GraduationCap className="w-4 h-4" />
+                    <span>{talent.projects} projects completed</span>
                   </div>
                 </div>
 
                 {/* Skills */}
-                <div className="p-6">
-                  <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Skills</h4>
+                <div className="mb-6">
+                  <h4 className="text-sm font-medium text-gray-700 mb-2">Key Skills</h4>
                   <div className="flex flex-wrap gap-2">
-                    {talent.skills.map((skill, index) => (
+                    {talent.skills.map((skill, skillIndex) => (
                       <span
-                        key={index}
-                        className="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-medium"
+                        key={skillIndex}
+                        className="px-3 py-1 bg-violet-100 text-violet-700 text-xs rounded-full font-medium"
                       >
                         {skill}
                       </span>
                     ))}
                   </div>
-                  
-                  <div className="mt-6 flex space-x-3">
-                    <Link
-                      to={`/talent/${talent.id}`}
-                      className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors"
-                    >
-                      View Profile
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg text-center font-medium hover:bg-blue-50 transition-colors"
-                    >
-                      Hire Now
-                    </Link>
-                  </div>
                 </div>
-              </div>
+
+                {/* CTA */}
+                <button className="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                  Connect with {talent.name.split(' ')[0]}
+                </button>
+              </motion.div>
             ))}
           </div>
-
-          {filteredTalents.length === 0 && (
-            <div className="text-center py-12">
-              <Users className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-medium text-gray-900 mb-2">No results found</h3>
-              <p className="text-gray-600">Try adjusting your search criteria or browse all categories.</p>
-            </div>
-          )}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-violet-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Need Specialized Talent?</h2>
+          <h2 className="text-4xl font-bold mb-6">Looking for Top Talent?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Can't find the right professional? Our team can help you find the perfect match 
-            or connect you with custom talent solutions.
+            Whether you need a single expert or a complete team, we can connect you with the 
+            perfect technology professionals for your project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get Custom Quote
-            </Link>
-            <Link 
-              to="/talent" 
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
+            <button className="bg-white text-violet-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Post a Project
+            </button>
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-violet-600 transition-colors">
               Browse All Talent
-            </Link>
+            </button>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default TalentDirectory;

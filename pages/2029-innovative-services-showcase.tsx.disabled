@@ -8,8 +8,8 @@ import {
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
-import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
+// import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
+// import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
 
 const contactInfo = {

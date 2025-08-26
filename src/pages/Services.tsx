@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/comprehensiveServices';
 import React, { useState, useEffect } from 'react';
-import { SEO } from "@/components/SEO";
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
@@ -28,6 +27,8 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { enhancedMicroSaasServices2025, enhancedITServices2025, enhancedAIServices2025 } from '../data/comprehensiveServices2025';
+import Link from 'next/link';
+import { enhancedMicroSaasServices2025 } from '../data/comprehensiveServices2025';
 
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}

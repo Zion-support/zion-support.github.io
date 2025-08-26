@@ -1,9 +1,9 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/Textarea';
-import { DollarSign, MessageSquare } from 'lucide-react';
 import React, { useState } from 'react';
+import { Button } from '../ui/Button';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
+import { Input } from '../ui/Input';
+import { Textarea } from '../ui/Textarea';
+import { Mail, Calendar, DollarSign, MessageSquare } from 'lucide-react';
 
 interface HireNowCTAProps {
   talentName: string;
@@ -83,11 +83,13 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
                 Project Description
               </label>
               <Textarea
+                id="projectDescription"
                 name="projectDescription"
                 value={formData.projectDescription}
                 onChange={handleChange}
                 placeholder="Describe your project requirements..."
                 className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
+                required
               />
             </div>
 
@@ -97,11 +99,13 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
                   Budget Range
                 </label>
                 <Input
+                  id="budget"
                   name="budget"
                   value={formData.budget}
                   onChange={handleChange}
                   placeholder="e.g., $1000-5000"
                   className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
+                  required
                 />
               </div>
 
@@ -110,11 +114,13 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
                   Start Date
                 </label>
                 <Input
+                  id="startDate"
                   name="startDate"
                   type="date"
                   value={formData.startDate}
                   onChange={handleChange}
                   className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan"
+                  required
                 />
               </div>
             </div>
@@ -124,6 +130,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
                 Additional Message
               </label>
               <Textarea
+                id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}

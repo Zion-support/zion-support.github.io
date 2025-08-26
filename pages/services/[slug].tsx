@@ -3,18 +3,12 @@ import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
-import { Check, Mail, MapPin, Phone } from 'lucide-react';
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { innovativeMicroSaasServices2025 } from '../../src/data/innovativeMicroSaasServices2025';
+import { enhancedMicroSaasServices2025 } from '../../src/data/enhancedMicroSaasServices2025';
 
-// Import only the data files that actually exist
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2024 } from '../../src/data/innovativeMicroSaasServices2024';
-import { innovativeITServices2024 } from '../../data/2024-innovative-it-services';
-import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-
-// Define a union type for all services
-type Service = 
-  | typeof innovativeMicroSaasServices2024[number]
-  | typeof innovativeITServices2024[number]
-  | typeof realMarketAugmentations2025[number];
+type Service = typeof ultimateInnovativeServices2026[number];
 
 const contactInfo = {
 	mobile: '+1 302 464 0950',
@@ -24,11 +18,9 @@ const contactInfo = {
 };
 
 function getAllServices(): Service[] {
-	return [
-		...INNOVATIVE_MICRO_SAAS_SERVICES_2024,
-		...innovativeITServices2024,
-		...realMarketAugmentations2025
-	];
+	return enhancedRealMicroSaasServices
+		.concat(innovativeMicroSaasServices2025 as Service[])
+		.concat(enhancedMicroSaasServices2025 as Service[]);
 }
 
 function toSlug(value: string): string {

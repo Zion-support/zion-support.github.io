@@ -1,23 +1,306 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from "react-router-dom";
-import { 
-  ArrowRightIcon,
-  PlayIcon,
-  StarIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  UsersIcon,
-  CodeBracketIcon
-} from '@heroicons/react/24/outline';
+import { motion } from "framer-motion";
+import { NeonGlow, GradientBorder } from "@/components/ui/AnimatedBackground";
+import { ArrowRight, Zap, Users, Brain } from "lucide-react";
 
 export function HeroSection() {
+  const { t } = useTranslation();
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const particleVariants = {
+    animate: {
+      y: [0, -20, 0],
+      opacity: [0.3, 0.6, 0.3],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  return (
+    <section className="relative overflow-hidden py-20 md:py-32 cyber-grid">
+      {/* Background gradient effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
+      
+      {/* Enhanced animated floating particles */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse float"></div>
+        <div className="absolute top-1/3 right-1/3 w-3 h-3 rounded-full bg-zion-cyan opacity-30 animate-pulse float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-pulse float" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-1/6 left-1/6 w-1 h-1 rounded-full bg-zion-cyan opacity-50 animate-pulse float" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute bottom-1/3 right-1/6 w-2 h-2 rounded-full bg-zion-purple-light opacity-30 animate-pulse float" style={{animationDelay: '2.5s'}}></div>
+      </div>
+      
+      <div className="container relative z-10 px-4 mx-auto text-center">
+        <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold glow">
+          {t('home.hero_title')}
+        </GradientHeading>
+
+        <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
+          {t('home.hero_subtitle')}
+        </p>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animation-delay-400">
+          <Button
+    <section className="relative overflow-hidden py-20 md:py-32">
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 neon-pulse"
+    <section className="relative overflow-hidden py-16 md:py-24 lg:py-32">
+      {/* Background gradient effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
+      
+      {/* Animated floating particles */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div 
+          className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light"
+          variants={particleVariants}
+          animate="animate"
+        />
+        <motion.div 
+          className="absolute top-1/3 right-1/3 w-3 h-3 rounded-full bg-zion-cyan"
+          variants={particleVariants}
+          animate="animate"
+          style={{ animationDelay: '1s' }}
+        />
+        <motion.div 
+          className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple"
+          variants={particleVariants}
+          animate="animate"
+          style={{ animationDelay: '2s' }}
+        />
+        <motion.div 
+          className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light"
+          variants={particleVariants}
+          animate="animate"
+          style={{ animationDelay: '0.5s' }}
+        />
+      </div>
+      
+      <motion.div 
+        className="container relative z-10 px-4 mx-auto text-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div variants={itemVariants}>
+          <GradientHeading className="mb-4 md:mb-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            {t('home.hero_title')}
+          </GradientHeading>
+        </motion.div>
+
+        <motion.div variants={itemVariants}>
+          <p className="text-lg md:text-xl lg:text-2xl text-zion-slate-light mb-8 md:mb-10 max-w-3xl mx-auto leading-relaxed">
+            {t('home.hero_subtitle')}
+          </p>
+        </motion.div>
+
+        <motion.div 
+          className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6"
+          variants={itemVariants}
+        >
+          <Button
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-base md:text-lg py-4 md:py-6 px-8 md:px-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            size="lg"
+            asChild
+          >
+            <Link
+              to="/signup"
+              role="button"
+              aria-label={t('auth.signup')}
+              tabIndex={0}
+              data-testid="hero-signup-btn"
+      {/* Enhanced background gradient effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-blue opacity-90"></div>
+      
+      {/* Futuristic grid overlay */}
+      <div className="absolute inset-0 opacity-40" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }}></div>
+      
+      {/* Enhanced animated floating particles */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60 animate-pulse" style={{ animationDuration: '3s' }}></div>
+        <div className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-50 animate-pulse" style={{ animationDuration: '4s' }}></div>
+        <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-60 animate-pulse" style={{ animationDuration: '2.5s' }}></div>
+        <div className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30 animate-pulse" style={{ animationDuration: '5s' }}></div>
+        <div className="absolute top-3/4 left-1/3 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse" style={{ animationDuration: '3.5s' }}></div>
+        <div className="absolute bottom-1/3 right-1/2 w-3 h-3 rounded-full bg-zion-cyan opacity-40 animate-pulse" style={{ animationDuration: '4.5s' }}></div>
+      </div>
+      
+      <div className="container relative z-10 px-4 mx-auto text-center">
+        <NeonGlow glowColor="#8c15e9">
+          <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold leading-tight">
+            {t('home.hero_title')}
+          </GradientHeading>
+        </NeonGlow>
+
+        <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed">
+          {t('home.hero_subtitle')}
+        </p>
+
+        {/* Feature highlights */}
+        <div className="flex flex-wrap justify-center gap-6 mb-12">
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-zion-purple/20">
+            <Zap className="h-5 w-5 text-zion-cyan" />
+            <span>AI-Powered Matching</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-zion-purple/20">
+            <Users className="h-5 w-5 text-zion-cyan" />
+            <span>Global Talent Pool</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-zion-purple/20">
+            <Brain className="h-5 w-5 text-zion-cyan" />
+            <span>Smart Solutions</span>
+          </div>
+        </div>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <GradientBorder borderWidth="2px">
+            <Button
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 border-0"
+              size="lg"
+              asChild
+            >
+              <Link
+                to="/signup"
+                role="button"
+                aria-label={t('auth.signup')}
+                tabIndex={0}
+                data-testid="hero-signup-btn"
+                className="flex items-center gap-2"
+              >
+                {t('auth.signup')}
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
+          </GradientBorder>
+          
+          <GradientBorder borderWidth="2px">
+            <Link
+              id="browse-marketplace"
+              to="/marketplace"
+              className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center transition-all duration-300 hover:scale-105"
+            >
+              {t('home.browse_marketplace')}
+            </Link>
+            className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/30 neon-border"
+            className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-4 rounded-md inline-flex items-center justify-center neon-border hover:neon-pulse transition-all duration-300"
+          </GradientBorder>
+        </div>
+
+        {/* Additional CTA */}
+        <div className="mt-8">
+          <Link
+            to="/comprehensive-services"
+            className="text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300 inline-flex items-center gap-2 group"
+          >
+            <span>Explore Our Services</span>
+            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+          </Link>
+        </div>
+        
+        {/* Additional CTA for new services */}
+        <div className="mt-8 animate-fade-in-up animation-delay-4000">
+          <Link
+            to="/micro-saas-services"
+            className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300 group"
+          >
+            <span className="text-lg">🚀 Explore AI & Micro SAAS Services</span>
+            <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+          </Link>
+        </div>
+      </div>
+      
+      {/* Bottom animated border */}
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60 animate-pulse"></div>
+            className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-base md:text-lg py-4 md:py-6 px-8 md:px-10 rounded-lg inline-flex items-center justify-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+          >
+            {t('home.browse_marketplace')}
+          </Link>
+        </motion.div>
+
+        {/* Additional features preview */}
+        <motion.div 
+          className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
+          variants={itemVariants}
+        >
+          <div className="text-center p-4">
+            <div className="w-12 h-12 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <span className="text-zion-purple text-xl">🚀</span>
+            </div>
+            <h3 className="text-white font-semibold mb-2">AI-Powered Matching</h3>
+            <p className="text-zion-slate-light text-sm">Find the perfect talent with our advanced AI algorithms</p>
+          </div>
+          
+          <div className="text-center p-4">
+            <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <span className="text-zion-cyan text-xl">💼</span>
+            </div>
+            <h3 className="text-white font-semibold mb-2">Verified Professionals</h3>
+            <p className="text-zion-slate-light text-sm">All talent is pre-vetted and verified for quality</p>
+          </div>
+          
+          <div className="text-center p-4">
+            <div className="w-12 h-12 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <span className="text-zion-purple text-xl">⚡</span>
+            </div>
+            <h3 className="text-white font-semibold mb-2">Fast & Secure</h3>
+            <p className="text-zion-slate-light text-sm">Quick onboarding and secure payment processing</p>
+          </div>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowRight, Sparkles, Zap, Search, Shield, Rocket, Users, TrendingUp, Star } from "lucide-react";
+
+interface TrustMetric {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+  value: string;
+}
+
+interface FeatureBadge {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+  color: string;
+}
+
+export const HeroSection: React.FC = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
       }
     }
   };
@@ -28,177 +311,184 @@ export function HeroSection() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.8
+        duration: 0.8,
+        ease: "easeOut" as const
       }
     }
   };
 
+  const floatingVariants = {
+    animate: {
+      y: [-15, 15, -15],
+      rotate: [0, 5, -5, 0],
+      transition: {
+        duration: 8,
+        repeat: Infinity,
+        ease: "easeInOut" as const
+      }
+    }
+  };
+
+  const trustMetrics: TrustMetric[] = [
+    { icon: Users, label: "10K+ Users", value: "Trusted by thousands" },
+    { icon: TrendingUp, label: "95% Success", value: "Project completion rate" },
+    { icon: Shield, label: "Enterprise", value: "Fortune 500 clients" },
+    { icon: Rocket, label: "24/7 Support", value: "Always available" }
+  ];
+
+  const featureBadges: FeatureBadge[] = [
+    { icon: Zap, label: "AI-Powered Matching", color: "zion-cyan" },
+    { icon: Star, label: "Verified Professionals", color: "zion-purple" },
+    { icon: Shield, label: "Secure Payments", color: "zion-cyan" },
+    { icon: Rocket, label: "Enterprise Security", color: "zion-purple" }
+  ];
+
   return (
-    <section className="relative py-20 md:py-32 min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/30 to-slate-900 opacity-90" />
+    <section className="relative overflow-hidden py-20 md:py-32 min-h-[90vh] flex items-center">
+      {/* Background Layers */}
+      <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-90" />
+      <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-transparent to-zion-cyan/20 animate-pulse" />
       
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-500/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-blue-500/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-      </div>
-      
-      {/* Content */}
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
+      {/* Floating Elements */}
+      <motion.div 
+        className="absolute inset-0" 
+        variants={containerVariants} 
+        initial="hidden" 
+        animate="visible"
+      >
+        <motion.div 
+          className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60" 
+          variants={floatingVariants} 
+          animate="animate" 
+        />
+        <motion.div 
+          className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-50" 
+          variants={floatingVariants} 
+          animate="animate" 
+          style={{ animationDelay: "1s" }} 
+        />
+        <motion.div 
+          className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-60" 
+          variants={floatingVariants} 
+          animate="animate" 
+          style={{ animationDelay: "2s" }} 
+        />
+        <motion.div 
+          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30" 
+          variants={floatingVariants} 
+          animate="animate" 
+          style={{ animationDelay: "3s" }} 
+        />
+      </motion.div>
+
+      {/* Main Content */}
+      <div className="container relative z-10 px-4 mx-auto text-center">
+        <motion.div 
+          variants={containerVariants} 
+          initial="hidden" 
           animate="visible"
-          className="max-w-5xl mx-auto"
         >
           {/* Badge */}
-          <motion.div
-            variants={itemVariants}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-8"
+          <motion.div 
+            variants={itemVariants} 
+            className="mb-6"
           >
-            <StarIcon className="w-4 h-4" />
-            Trusted by 500+ Companies Worldwide
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Sparkles className="h-8 w-8 text-zion-cyan animate-pulse" />
+              <span className="text-zion-cyan text-lg font-medium">
+                AI-Powered Technology Solutions
+              </span>
+              <Sparkles className="h-8 w-8 text-zion-cyan animate-pulse" />
+            </div>
           </motion.div>
-          
+
           {/* Main Heading */}
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight"
+          <motion.div variants={itemVariants} className="mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white mb-4">
+              Transform Your Business with{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan animate-gradient">
+                AI
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light mt-4">
+              Leading the future of technology innovation
+            </p>
+          </motion.div>
+
+          {/* Description */}
+          <motion.p 
+            variants={itemVariants} 
+            className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed"
           >
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent animate-pulse">
-              Transform
-            </span>
-            <br />
-            <span className="text-white">Your Business</span>
-            <br />
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              with AI
-            </span>
-          </motion.h1>
-          
-          {/* Subtitle */}
-          <motion.p
-            variants={itemVariants}
-            className="text-xl md:text-2xl lg:text-3xl text-slate-300 mb-10 leading-relaxed max-w-4xl mx-auto"
-          >
-            Empowering enterprises with cutting-edge artificial intelligence solutions, 
-            quantum computing, and innovative technology services that drive real results.
+            Discover cutting-edge AI solutions, expert talent, and innovative services that drive digital transformation. 
+            From startups to enterprises, we deliver results that matter.
           </motion.p>
-          
+
           {/* CTA Buttons */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+          <motion.div 
+            variants={itemVariants} 
+            className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
           >
+            <Button 
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group"
+              size="lg" 
+              asChild
+            >
+              <Link 
+                to="/contact" 
+                role="button" 
+                aria-label="Get Started Today"
+                className="flex items-center gap-2"
+              >
+                <Rocket className="h-5 w-5 group-hover:animate-bounce" />
+                Get Started Today
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+            
             <Link
               to="/services"
-              className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-10 py-5 rounded-xl font-semibold text-xl transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105 flex items-center gap-3"
+              className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
+              <Search className="h-5 w-5 group-hover:rotate-12 transition-transform" />
               Explore Services
-              <ArrowRightIcon className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
-            <Link
-              to="/contact"
-              className="group border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-10 py-5 rounded-xl font-semibold text-xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
-            >
-              Get Started
-              <ArrowRightIcon className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </motion.div>
 
-          {/* Video Demo Button */}
-          <motion.div
-            variants={itemVariants}
-            className="mb-16"
+          {/* Trust Metrics */}
+          <motion.div 
+            variants={itemVariants} 
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8"
           >
-            <button className="inline-flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-300 group">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-cyan-400/50 group-hover:bg-cyan-400/20 transition-all duration-300">
-                <PlayIcon className="w-8 h-8 text-white ml-1" />
-              </div>
-              <div className="text-left">
-                <div className="text-sm text-slate-300 group-hover:text-cyan-400 transition-colors duration-300">
-                  Watch Demo
+            {trustMetrics.map((metric, index) => (
+              <motion.div 
+                key={index} 
+                className="text-center group hover:scale-105 transition-transform duration-300"
+                variants={itemVariants}
+              >
+                <div className="flex justify-center mb-2">
+                  <metric.icon className="h-8 w-8 text-zion-cyan group-hover:animate-pulse" />
                 </div>
-                <div className="text-xs text-slate-300">
-                  2 min overview
-                </div>
-              </div>
-            </button>
+                <div className="text-zion-cyan font-bold text-lg">{metric.label}</div>
+                <div className="text-zion-slate-light text-sm">{metric.value}</div>
+              </motion.div>
+            ))}
           </motion.div>
-          
-          {/* Stats */}
-          <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto"
+
+          {/* Feature Badges */}
+          <motion.div 
+            variants={itemVariants} 
+            className="flex flex-wrap justify-center items-center gap-6 text-zion-slate-light text-sm"
           >
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors duration-300">500+</div>
-              <div className="text-slate-300 text-sm">Projects Delivered</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors duration-300">50+</div>
-              <div className="text-slate-300 text-sm">Enterprise Clients</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors duration-300">99.9%</div>
-              <div className="text-slate-300 text-sm">Uptime SLA</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors duration-300">24/7</div>
-              <div className="text-slate-300 text-sm">Support</div>
-            </div>
+            {featureBadges.map((badge, index) => (
+              <div key={index} className="flex items-center gap-2 group">
+                <div className={`w-2 h-2 bg-${badge.color} rounded-full group-hover:animate-pulse`} />
+                <span className="group-hover:text-white transition-colors">{badge.label}</span>
+              </div>
+            ))}
           </motion.div>
         </motion.div>
       </div>
-      
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-cyan-400/30 rounded-full flex justify-center">
-          <motion.div
-            className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          />
-        </div>
-      </motion.div>
-
-      {/* Enhanced Trust Indicators */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.5, duration: 1 }}
-        className="absolute bottom-32 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-4">
-          <p className="text-slate-300 text-sm mb-3 text-center">Trusted by leading companies worldwide</p>
-          <div className="flex flex-wrap justify-center gap-6 opacity-60">
-            <div className="flex items-center space-x-2 text-blue-400">
-              <ShieldCheckIcon className="w-5 h-5" />
-              <span className="text-sm font-medium">SOC2 Certified</span>
-            </div>
-            <div className="flex items-center space-x-2 text-cyan-400">
-              <CloudIcon className="w-5 h-5" />
-              <span className="text-sm font-medium">Cloud Native</span>
-            </div>
-            <div className="flex items-center space-x-2 text-green-400">
-              <UsersIcon className="w-5 h-5" />
-              <span className="text-sm font-medium">24/7 Support</span>
-            </div>
-            <div className="flex items-center space-x-2 text-purple-400">
-              <CodeBracketIcon className="w-5 h-5" />
-              <span className="text-sm font-medium">Open Source</span>
-            </div>
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
-}
+};

@@ -77,23 +77,21 @@ export default function CommunityPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      <div className="container mx-auto px-4 py-20">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Community</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Connect with like-minded professionals, share knowledge, and stay ahead of the latest technology trends in our vibrant community.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
-              Join Community
-            </button>
-            <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-              Learn More
-            </button>
+    <>
+      <SEO
+        title="Community Forum | Zion AI Marketplace"
+        description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
+        keywords="community, forum, discussion, AI marketplace, questions, answers"
+        canonical="https://ziontechgroup.com/community"
+      />
+      
+      <div className="container py-8">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
+          <div>
+            <h1 className="text-3xl font-bold">Community Forum</h1>
+            <p className="text-muted-foreground mt-2">
+              Join the conversation, ask questions, and share your knowledge
+            </p>
           </div>
         </div>
 
