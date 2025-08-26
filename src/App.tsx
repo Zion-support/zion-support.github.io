@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -24,6 +26,13 @@ const Solutions = React.lazy(() => import('./pages/Solutions'));
 const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
 const News = React.lazy(() => import('./pages/News'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices.jsx'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const NotFound = React.lazy(() => import('./pages/404.jsx'));
+const InnovativeServices2027 = React.lazy(() => import('./pages/InnovativeServices2027'));
+const ComprehensivePricing2027 = React.lazy(() => import('./pages/ComprehensivePricing2027'));
+const AllServices2027 = React.lazy(() => import('./pages/AllServices2027'));
 
 // Additional pages for missing routes
 const Signup = React.lazy(() => import('./pages/Signup'));
@@ -158,12 +167,23 @@ function App() {
               <Route path="/security" element={<Security />} />
               <Route path="/status" element={<Status />} />
               <Route path="/cookies" element={<Cookies />} />
+              
+              {/* New pages from main branch */}
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/micro-saas-services" element={<MicroSaasServices />} />
+              <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+              <Route path="/hire-ai" element={<ZionHireAI />} />
+              <Route path="/innovative-services-2027" element={<InnovativeServices2027 />} />
+              <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricing2027 />} />
+              <Route path="/all-services-2027" element={<AllServices2027 />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
         
         <Footer />
         <ChatAssistant />
+        <PerformanceMonitor />
       </div>
     </Router>
   );
