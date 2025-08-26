@@ -1,61 +1,53 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from useNavigate, useLocation
-import { useAuth } from '@/hooks/useAuth';
-import { safeStorage } from '@/utils/safeStorage';
-import { LoginContent } from '@/components/auth/login';
-import { ErrorBoundary } from 'react-error-boundary';
-import LoginErrorFallback from '@/components/auth/login/LoginErrorFallback';
-import { useCart } from '@/context/CartContext';
-import { SAMPLE_EQUIPMENT } from './EquipmentDetail';
-import { toast } from '@/hooks/use-toast';
-import { useDispatch } from 'react-redux';
-import { setLoggedIn } from '@/store/authSlice';
-
+import React, { useState } from 'react';
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
 export default function Login() {
-  const { isAuthenticated, user, isLoading } = useAuth();
-  const router = useRouter(); // Initialized router
-  // location is now router
-  const { dispatch } = useCart();
-  const reduxDispatch = useDispatch();
-
-  useEffect(() => {
-    // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or router.asPath (containing query) changes
-    const queryString = router.asPath.split('?')[1] || '';
-    const params = new URLSearchParams(queryString);
-    const token = params.get('token');
-    if (token) {
-      safeStorage.setItem('zion_token', token);
-      // Clear token from URL to prevent re-processing and clean up history
-      // The actual authentication state will update via useAuth's listeners,
-      // which should trigger the other useEffect.
-      router.replace(router.pathname, undefined, { shallow: true }); // Use router.replace with shallow routing
-    }
-  }, [router.asPath, router.pathname, router]); // Depend on router.asPath
-
-  useEffect(() => {
-    if (!isLoading && isAuthenticated) {
-      reduxDispatch(setLoggedIn(true));
-      const next = typeof router.query.next === 'string' ? router.query.next : '/dashboard';
-      router.replace(next);
-    }
-  }, [isAuthenticated, isLoading, router, reduxDispatch]);
-
-  // Render LoginContent if not authenticated and auth is not loading
-  if (!isAuthenticated && !isLoading) {
-    return (
-      <ErrorBoundary FallbackComponent={LoginErrorFallback}>
-        <LoginContent />
-      </ErrorBoundary>
-    );
-  }
-
-  // Optional: Render a loading indicator while isLoading is true
-  if (isLoading) {
-    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
-  }
-
-  // If authenticated and isLoading is false, the useEffect above should have navigated.
-  // Return null or a minimal layout if needed, though direct navigation is preferred.
-  return null;
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Handle login logic here
+        console.log('Login attempt:', { email, password });
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEO title="Login" description="Access your Zion Tech Group account" keywords="login, sign in, account access, Zion Tech Group" canonical="https://ziontechgroup.com/login"/>
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-md mx-auto">
+          <div className="text-center mb-8">
+            <GradientHeading>Welcome Back</GradientHeading>
+            <p className="text-zion-slate-light mt-2">
+              Sign in to your account to continue
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
+                  Email Address
+                </label>
+                <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan" placeholder="Enter your email"/>
+              </div>
+              <div>
+                <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
+                  Password
+                </label>
+                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan" placeholder="Enter your password"/>
+              </div>
+              <Button type="submit" className="w-full">
+                Sign In
+              </Button>
+            </form>
+            <div className="mt-6 text-center">
+              <p className="text-zion-slate-light">
+                Don't have an account?{' '}
+                <a href="/signup" className="text-zion-cyan hover:underline">
+                  Sign up
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>);
 }

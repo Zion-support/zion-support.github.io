@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
+  Brain, 
+  Cpu, 
+  Database, 
+  Network, 
   Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
   Zap, 
   Globe, 
   ArrowRight,
@@ -18,76 +19,78 @@ import {
   Rocket,
   Code,
   BarChart3,
-  Network,
-  Database,
-  Server,
-  Key,
-  Fingerprint,
+  Eye,
+  MessageSquare,
+  Image,
+  Video,
+  FileText,
+  Target,
+  Clock,
+  DollarSign,
   Building,
   Factory,
+  Car,
   Heart,
-  DollarSign,
-  ShoppingCart,
-  Target
+  ShoppingCart
 } from 'lucide-react';
 
-const Cybersecurity = () => {
-  const securityServices = [
+const AI = () => {
+  const aiServices = [
     {
-      title: 'Threat Detection & Response',
-      description: 'Advanced security monitoring and incident response capabilities',
+      title: 'Machine Learning Solutions',
+      description: 'Custom ML models and algorithms tailored to your business needs',
+      icon: Brain,
+      features: [
+        'Predictive Analytics',
+        'Pattern Recognition',
+        'Anomaly Detection',
+        'Recommendation Systems',
+        'Forecasting Models'
+      ],
+      applications: ['Finance', 'Healthcare', 'Retail', 'Manufacturing'],
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      title: 'Natural Language Processing',
+      description: 'Advanced text and language understanding capabilities',
+      icon: MessageSquare,
+      features: [
+        'Text Classification',
+        'Sentiment Analysis',
+        'Language Translation',
+        'Chatbot Development',
+        'Document Processing'
+      ],
+      applications: ['Customer Service', 'Content Analysis', 'Legal', 'Education'],
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    },
+    {
+      title: 'Computer Vision',
+      description: 'Image and video analysis for automated decision making',
       icon: Eye,
       features: [
-        '24/7 Security Monitoring',
-        'Real-time Threat Detection',
-        'Automated Incident Response',
-        'Security Analytics',
-        'Threat Intelligence'
+        'Object Detection',
+        'Image Classification',
+        'Facial Recognition',
+        'Quality Control',
+        'Autonomous Systems'
       ],
-      applications: ['Enterprise', 'Healthcare', 'Finance', 'Government'],
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      applications: ['Manufacturing', 'Security', 'Healthcare', 'Automotive'],
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     {
-      title: 'Zero Trust Architecture',
-      description: 'Implement comprehensive zero trust security frameworks',
-      icon: Lock,
+      title: 'Deep Learning',
+      description: 'Neural network architectures for complex problem solving',
+      icon: Network,
       features: [
-        'Identity Verification',
-        'Access Control',
-        'Network Segmentation',
-        'Continuous Monitoring',
-        'Least Privilege Access'
+        'Convolutional Neural Networks',
+        'Recurrent Neural Networks',
+        'Transformer Models',
+        'Generative AI',
+        'Transfer Learning'
       ],
-      applications: ['Cloud Security', 'Remote Work', 'Enterprise', 'Critical Infrastructure'],
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      title: 'Penetration Testing',
-      description: 'Comprehensive security assessments and vulnerability testing',
-      icon: AlertTriangle,
-      features: [
-        'Network Penetration Testing',
-        'Web Application Testing',
-        'Social Engineering',
-        'Physical Security Testing',
-        'Red Team Operations'
-      ],
-      applications: ['Compliance', 'Risk Assessment', 'Security Audits', 'Incident Response'],
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    },
-    {
-      title: 'Security Compliance',
-      description: 'Achieve and maintain regulatory compliance standards',
-      icon: CheckCircle,
-      features: [
-        'SOC 2 Type II',
-        'ISO 27001',
-        'GDPR Compliance',
-        'HIPAA Security',
-        'PCI DSS'
-      ],
-      applications: ['Healthcare', 'Finance', 'E-commerce', 'Government'],
-      image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      applications: ['Research', 'Product Development', 'Creative Industries', 'Science'],
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     }
   ];
 
@@ -96,184 +99,184 @@ const Cybersecurity = () => {
       industry: 'Healthcare',
       icon: Heart,
       solutions: [
-        'HIPAA Compliance',
-        'Medical Device Security',
-        'Patient Data Protection',
-        'Ransomware Protection',
-        'Secure Telemedicine'
+        'Medical Image Analysis',
+        'Drug Discovery',
+        'Patient Risk Assessment',
+        'Diagnostic Support',
+        'Treatment Optimization'
       ],
       benefits: [
-        'Patient privacy protection',
-        'Regulatory compliance',
-        'Reduced security risks',
-        'Trust and reputation'
+        'Improved diagnostic accuracy',
+        'Faster drug development',
+        'Personalized treatment plans',
+        'Reduced healthcare costs'
       ]
     },
     {
       industry: 'Finance',
       icon: DollarSign,
       solutions: [
-        'PCI DSS Compliance',
         'Fraud Detection',
-        'Secure Banking Systems',
-        'Cryptocurrency Security',
-        'Regulatory Compliance'
+        'Credit Scoring',
+        'Algorithmic Trading',
+        'Risk Management',
+        'Customer Segmentation'
       ],
       benefits: [
-        'Enhanced customer trust',
-        'Regulatory compliance',
-        'Fraud prevention',
-        'Operational security'
+        'Enhanced security',
+        'Better risk assessment',
+        'Improved customer experience',
+        'Increased operational efficiency'
       ]
     },
     {
       industry: 'Manufacturing',
       icon: Factory,
       solutions: [
-        'OT Security',
-        'Supply Chain Security',
-        'Industrial IoT Protection',
-        'Intellectual Property Protection',
-        'Operational Continuity'
+        'Predictive Maintenance',
+        'Quality Control',
+        'Supply Chain Optimization',
+        'Process Automation',
+        'Demand Forecasting'
       ],
       benefits: [
-        'Production continuity',
-        'IP protection',
-        'Supply chain security',
-        'Competitive advantage'
+        'Reduced downtime',
+        'Higher product quality',
+        'Optimized inventory',
+        'Cost savings'
       ]
     },
     {
       industry: 'Retail',
       icon: ShoppingCart,
       solutions: [
-        'E-commerce Security',
-        'Payment Security',
-        'Customer Data Protection',
-        'Point of Sale Security',
-        'Supply Chain Security'
+        'Customer Behavior Analysis',
+        'Inventory Management',
+        'Price Optimization',
+        'Personalized Marketing',
+        'Demand Prediction'
       ],
       benefits: [
-        'Customer trust',
-        'Payment security',
-        'Regulatory compliance',
-        'Brand protection'
+        'Increased sales',
+        'Better customer retention',
+        'Optimized pricing',
+        'Improved inventory efficiency'
       ]
     }
   ];
 
-  const securityProcess = [
+  const aiProcess = [
     {
       step: '01',
-      title: 'Security Assessment',
-      description: 'Comprehensive evaluation of your current security posture',
-      icon: Eye,
+      title: 'Discovery & Analysis',
+      description: 'We analyze your business needs and identify AI opportunities',
+      icon: Target,
       details: [
-        'Vulnerability assessment',
-        'Risk analysis',
-        'Compliance review',
-        'Security audit'
+        'Business process analysis',
+        'Data assessment',
+        'ROI evaluation',
+        'Technology requirements'
       ]
     },
     {
       step: '02',
-      title: 'Strategy Development',
-      description: 'Create a customized security roadmap and implementation plan',
-      icon: Target,
+      title: 'Data Preparation',
+      description: 'We clean, structure, and prepare your data for AI processing',
+      icon: Database,
       details: [
-        'Security framework design',
-        'Technology selection',
-        'Implementation timeline',
-        'Resource planning'
+        'Data cleaning and validation',
+        'Feature engineering',
+        'Data augmentation',
+        'Quality assurance'
       ]
     },
     {
       step: '03',
-      title: 'Implementation',
-      description: 'Deploy security solutions and establish security controls',
-      icon: Rocket,
+      title: 'Model Development',
+      description: 'We develop and train custom AI models for your specific use case',
+      icon: Code,
       details: [
-        'Security tool deployment',
-        'Policy implementation',
-        'Training and awareness',
-        'Process establishment'
+        'Algorithm selection',
+        'Model training',
+        'Hyperparameter tuning',
+        'Performance optimization'
       ]
     },
     {
       step: '04',
       title: 'Testing & Validation',
-      description: 'Verify security measures and conduct penetration testing',
+      description: 'We thoroughly test models to ensure accuracy and reliability',
       icon: CheckCircle,
       details: [
-        'Security testing',
-        'Vulnerability scanning',
-        'Penetration testing',
-        'Compliance validation'
+        'Model validation',
+        'Performance testing',
+        'Bias detection',
+        'Security assessment'
       ]
     },
     {
       step: '05',
-      title: 'Monitoring & Maintenance',
-      description: 'Ongoing security monitoring and continuous improvement',
-      icon: TrendingUp,
+      title: 'Deployment & Integration',
+      description: 'We deploy models and integrate them with your existing systems',
+      icon: Rocket,
       details: [
-        '24/7 monitoring',
-        'Incident response',
-        'Regular updates',
-        'Continuous improvement'
+        'Production deployment',
+        'System integration',
+        'API development',
+        'Monitoring setup'
       ]
     },
     {
       step: '06',
-      title: 'Compliance & Reporting',
-      description: 'Maintain compliance and provide regular security reports',
-      icon: Award,
+      title: 'Maintenance & Optimization',
+      description: 'We continuously monitor and improve your AI solutions',
+      icon: TrendingUp,
       details: [
-        'Compliance monitoring',
-        'Security reporting',
-        'Audit support',
-        'Risk management'
+        'Performance monitoring',
+        'Model updates',
+        'Continuous learning',
+        'Ongoing support'
       ]
     }
   ];
 
   const caseStudies = [
     {
-      title: 'Healthcare Security Transformation',
-      company: 'Regional Hospital Network',
-      challenge: 'Need for comprehensive HIPAA compliance and patient data protection',
-      solution: 'Implemented zero trust architecture with advanced threat detection',
+      title: 'Healthcare AI Platform',
+      company: 'Major Hospital Network',
+      challenge: 'Need for faster and more accurate medical image analysis',
+      solution: 'Developed custom computer vision models for radiology',
       results: [
-        '100% HIPAA compliance',
-        'Zero data breaches in 2 years',
-        '99.9% uptime for critical systems',
-        'Reduced security incidents by 80%'
+        '95% accuracy in disease detection',
+        '60% reduction in diagnosis time',
+        'Improved patient outcomes',
+        'Cost savings of $2M annually'
       ],
       image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     {
-      title: 'Financial Services Security',
-      company: 'Digital Banking Platform',
-      challenge: 'Secure online banking operations and PCI DSS compliance',
-      solution: 'Multi-layered security with advanced fraud detection',
+      title: 'Financial Fraud Detection',
+      company: 'International Bank',
+      challenge: 'Real-time fraud detection across millions of transactions',
+      solution: 'Implemented machine learning-based fraud detection system',
       results: [
-        'PCI DSS Level 1 compliance',
-        '99.99% fraud detection accuracy',
-        'Zero successful attacks',
-        'Customer trust score increased by 40%'
+        '99.9% fraud detection accuracy',
+        '90% reduction in false positives',
+        'Real-time processing',
+        'Annual savings of $15M'
       ],
       image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     {
-      title: 'Manufacturing OT Security',
-      company: 'Global Manufacturing Corp',
-      challenge: 'Protect operational technology from cyber threats',
-      solution: 'Industrial cybersecurity framework with OT-specific protections',
+      title: 'Manufacturing Optimization',
+      company: 'Global Manufacturer',
+      challenge: 'Predictive maintenance and quality control automation',
+      solution: 'AI-powered IoT system for predictive analytics',
       results: [
-        'Zero OT security incidents',
-        '99.9% production uptime',
-        'Reduced security costs by 30%',
-        'Enhanced competitive position'
+        '40% reduction in unplanned downtime',
+        '25% improvement in product quality',
+        '30% reduction in maintenance costs',
+        'Increased production efficiency'
       ],
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     }
@@ -290,7 +293,7 @@ const Cybersecurity = () => {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent"
           >
-            Cybersecurity Solutions
+            AI Solutions
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
@@ -298,14 +301,13 @@ const Cybersecurity = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed"
           >
-            Protect your organization with enterprise-grade cybersecurity solutions. 
-            We provide comprehensive security services to safeguard your digital assets, 
-            ensure compliance, and maintain business continuity.
+            Transform your business with cutting-edge artificial intelligence and machine learning solutions. 
+            We help organizations harness the power of AI to drive innovation, efficiency, and growth.
           </motion.p>
         </div>
       </section>
 
-      {/* Security Services Grid */}
+      {/* AI Services Grid */}
       <section className="px-4 mb-20">
         <div className="container mx-auto">
           <motion.h2 
@@ -314,11 +316,11 @@ const Cybersecurity = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-white mb-12 text-center"
           >
-            Our Security Services
+            Our AI Services
           </motion.h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {securityServices.map((service, index) => (
+            {aiServices.map((service, index) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -402,7 +404,7 @@ const Cybersecurity = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-white mb-12 text-center"
           >
-            Industry-Specific Security Solutions
+            Industry-Specific AI Solutions
           </motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -423,11 +425,11 @@ const Cybersecurity = () => {
                 
                 {/* Solutions */}
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-zion-cyan mb-3">Security Solutions</h4>
+                  <h4 className="text-lg font-semibold text-zion-cyan mb-3">AI Solutions</h4>
                   <ul className="space-y-2">
                     {industry.solutions.map((solution, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-zion-slate-light">
-                        <Shield className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                        <Star className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" />
                         <span>{solution}</span>
                       </li>
                     ))}
@@ -452,7 +454,7 @@ const Cybersecurity = () => {
         </div>
       </section>
 
-      {/* Security Process */}
+      {/* AI Process */}
       <section className="px-4 mb-20">
         <div className="container mx-auto">
           <motion.h2 
@@ -461,11 +463,11 @@ const Cybersecurity = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-white mb-12 text-center"
           >
-            Our Security Implementation Process
+            Our AI Development Process
           </motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {securityProcess.map((step, index) => (
+            {aiProcess.map((step, index) => (
               <motion.div
                 key={step.step}
                 initial={{ opacity: 0, y: 30 }}
@@ -510,7 +512,7 @@ const Cybersecurity = () => {
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-white mb-12 text-center"
           >
-            Security Success Stories
+            AI Success Stories
           </motion.h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -584,18 +586,18 @@ const Cybersecurity = () => {
             className="bg-gradient-to-r from-zion-cyan-dark to-zion-blue-dark p-12 rounded-2xl"
           >
             <h2 className="text-4xl font-bold mb-6 text-white">
-              Secure Your Digital Future
+              Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Don't wait for a security breach to protect your organization. Our cybersecurity experts 
-              are ready to help you build a robust security foundation that protects your business today and tomorrow.
+              Let's discuss how artificial intelligence can drive innovation, efficiency, and growth 
+              for your organization. Our team of AI experts is ready to help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
                 className="bg-white text-zion-blue-dark hover:bg-zion-slate-light font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
-                Get Security Assessment
+                Start Your AI Journey
               </Link>
               <Link
                 to="/services"
@@ -611,4 +613,4 @@ const Cybersecurity = () => {
   );
 };
 
-export default Cybersecurity;
+export default AI;
