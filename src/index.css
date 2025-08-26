@@ -493,11 +493,13 @@ html {
 
 @layer base {
   * {
-    @apply border-gray-200;
+    border-color: #e5e7eb;
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    background-color: #ffffff;
+    color: #111827;
+    font-family: var(--font-sans, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji");
   }
 
   @keyframes pulse {
@@ -519,11 +521,11 @@ html {
   }
 
   ::-webkit-scrollbar-track {
-    background: #2e73ea;
+    background: #1f3a8a;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #530c8b;
+    background: #5d0f9a;
     border-radius: 5px;
   }
 

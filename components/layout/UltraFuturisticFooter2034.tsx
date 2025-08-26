@@ -1,101 +1,16 @@
 import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Zap, Brain, Atom, Shield, Rocket, 
-  Globe, Mail, Phone, MapPin, ArrowRight,
-  Star, Sparkles, Cpu, Lock, Cloud, 
-  BarChart3, Settings, Eye, Award, Clock, 
-  Heart, Lightbulb, Target, BookOpen, Truck, 
-  DollarSign, Palette, Code, Database, Users,
-  Twitter, Linkedin, Facebook, Instagram, Youtube,
-  Github, MessageCircle, MessageSquare
-} from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-=======
-
-  const serviceCategories = [
-    {
-      title: '🧠 AI & Consciousness',
-      icon: Brain,
-      services: [
-        { name: 'AI Consciousness Evolution 2026', href: '/ai-consciousness-evolution-2026' },
-        { name: 'Quantum AI Fusion Platform', href: '/quantum-ai-fusion-platform' },
-        { name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator' },
-        { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
-        { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }
-      ]
-    },
-    {
-      title: '⚛️ Quantum & Emerging Tech',
-      icon: Atom,
-      services: [
-        { name: 'Space Mining Platform 2026', href: '/space-mining-platform-2026' },
-        { name: 'Quantum Bio-Computing 2026', href: '/quantum-bio-computing-2026' },
-        { name: 'Brain-Computer Interface 2026', href: '/brain-computer-interface-2026' },
-        { name: 'Quantum Energy Platform 2026', href: '/quantum-energy-platform-2026' },
-        { name: 'Autonomous Vehicle AI 2026', href: '/autonomous-vehicle-ai-2026' }
-      ]
-    },
-    {
-      title: '🏙️ Enterprise IT',
-      icon: Shield,
-      services: [
-        { name: 'Quantum Cloud Infrastructure 2026', href: '/quantum-cloud-infrastructure-2026' },
-        { name: 'Edge Computing Orchestrator 2026', href: '/edge-computing-orchestrator-2026' },
-        { name: 'Zero Trust Security Platform 2026', href: '/zero-trust-security-platform-2026' },
-        { name: 'Blockchain Enterprise Platform 2026', href: '/blockchain-enterprise-platform-2026' },
-        { name: 'AI-Powered DevOps 2026', href: '/ai-powered-devops-2026' }
-      ]
-    },
-    {
-      title: '🎯 Micro SAAS',
-      icon: Target,
-      services: [
-        { name: 'LegalAI Contract Analyzer Pro', href: '/legal-ai-contract-analyzer-pro' },
-        { name: 'QuantumRisk Financial Intelligence', href: '/quantum-risk-financial-platform' },
-        { name: 'HealthAI Diagnostics Pro', href: '/ai-powered-healthcare-diagnostics-pro' },
-        { name: 'QuantumChain Supply Optimizer', href: '/quantum-supply-chain-optimizer' },
-        { name: 'CreativeAI Studio Pro', href: '/ai-powered-creative-studio-pro' }
-      ]
-    }
-  ];
-
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Support', href: '/support' }
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-=======
-
-  return (
-    <footer className="bg-gray-900 text-gray-300 border-t border-gray-800 mt-16">
-      <div className="max-w-7xl mx-auto px-4 py-8 flex items-center justify-between">
-        <div>© {new Date().getFullYear()} Zion Tech Group</div>
-        <div className="space-x-4 text-sm">
-          <a href="/privacy" className="hover:text-white">Privacy</a>
-          <a href="/terms" className="hover:text-white">Terms</a>
-          <a href="/contact" className="hover:text-white">Contact</a>
-        </div>
-      </div>
-    </footer>
-  );
+export default function UltraFuturisticFooter2034() {
+	const year = new Date().getFullYear();
+	return (
+		<footer className="border-t bg-gray-50 text-gray-700">
+			<div className="mx-auto max-w-6xl px-4 py-8 text-sm flex flex-col md:flex-row items-center justify-between gap-3">
+				<div>© {year} Zion Tech Group</div>
+				<nav className="flex gap-4">
+					<a href="/privacy" className="hover:underline">Privacy</a>
+					<a href="/terms" className="hover:underline">Terms</a>
+				</nav>
+			</div>
+		</footer>
+	);
 }
