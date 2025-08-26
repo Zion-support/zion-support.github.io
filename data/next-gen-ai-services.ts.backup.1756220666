@@ -616,6 +616,9 @@ export const nextGenAIServices: NextGenAIService[] = [
     launchDate: '2024-09-15',
     customers: 18,
     rating: 4.7,
+<<<<<<< HEAD
+    reviews: 9
+=======
     reviews: 245
   },
 
@@ -934,5 +937,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     customers: 45,
     rating: 4.9,
     reviews: 34
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a6f6
   }
 ];
