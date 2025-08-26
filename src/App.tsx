@@ -21,6 +21,9 @@ const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
 const ComprehensivePricing2027 = React.lazy(() => import('./pages/ComprehensivePricing2027'));
 
+// Catch-all route component for undefined routes
+const NotFound = React.lazy(() => import('./components/NotFound'));
+
 // Enhanced loading component with skeleton
 const LoadingFallback = () => (
   <div className="min-h-screen bg-background flex items-center justify-center">
@@ -76,6 +79,9 @@ function App() {
               <Route path="/digital-twin-platform" element={<InnovativeServicesShowcase2027 />} />
               <Route path="/biometric-security-platform" element={<InnovativeServicesShowcase2027 />} />
               <Route path="/neuromorphic-computing-platform" element={<InnovativeServicesShowcase2027 />} />
+              
+              {/* Catch-all route for undefined paths */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
