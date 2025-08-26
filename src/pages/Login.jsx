@@ -1,58 +1,92 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from useNavigate, useLocation
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
-import { safeStorage } from '@/utils/safeStorage';
-import { LoginContent } from '@/components/auth/login';
-import { ErrorBoundary } from 'react-error-boundary';
-import LoginErrorFallback from '@/components/auth/login/LoginErrorFallback';
-import { useCart } from '@/context/CartContext';
-import { SAMPLE_EQUIPMENT } from './EquipmentDetail';
-import { toast } from '@/hooks/use-toast';
-import { useDispatch } from 'react-redux';
-import { setLoggedIn } from '@/store/authSlice';
 
 export default function Login() {
-  const { isAuthenticated, user, isLoading } = useAuth();
-  const router = useRouter(); // Initialized router
-  // location is now router
-  const { dispatch } = useCart();
-  const reduxDispatch = useDispatch();
+  const { isAuthenticated, isLoading } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or router.asPath (containing query) changes
-    const queryString = router.asPath.split('?')[1] || '';
-    const params = new URLSearchParams(queryString);
+    // It runs when component mounts or location.search changes
+    const params = new URLSearchParams(location.search);
     const token = params.get('token');
     if (token) {
-      safeStorage.setItem('zion_token', token);
+      // Store token in localStorage for now
+      localStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing and clean up history
-      // The actual authentication state will update via useAuth's listeners,
-      // which should trigger the other useEffect.
-      router.replace(router.pathname, undefined, { shallow: true }); // Use router.replace with shallow routing
+      navigate(location.pathname, { replace: true });
     }
-  }, [router.asPath, router.pathname, router]); // Depend on router.asPath
+  }, [location.search, location.pathname, navigate]);
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
-      reduxDispatch(setLoggedIn(true));
-      const next = typeof router.query.next === 'string' ? router.query.next : '/dashboard';
-      router.replace(next);
+      const next = new URLSearchParams(location.search).get('next') || '/dashboard';
+      navigate(next, { replace: true });
     }
-  }, [isAuthenticated, isLoading, router, reduxDispatch]);
+  }, [isAuthenticated, isLoading, navigate, location.search]);
 
-  // Render LoginContent if not authenticated and auth is not loading
+  // Render simple login form if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
     return (
-      <ErrorBoundary FallbackComponent={LoginErrorFallback}>
-        <LoginContent />
-      </ErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
+        <div className="max-w-md w-full glass rounded-2xl p-8 border border-white/20">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
+            <p className="text-gray-300">Sign in to your account</p>
+          </div>
+          
+          <form className="space-y-6">
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+              <input
+                type="email"
+                className="w-full px-4 py-3 glass border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+                placeholder="Enter your email"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Password</label>
+              <input
+                type="password"
+                className="w-full px-4 py-3 glass border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+                placeholder="Enter your password"
+              />
+            </div>
+            
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105 shadow-lg shadow-zion-cyan/25"
+            >
+              Sign In
+            </button>
+          </form>
+          
+          <div className="mt-6 text-center">
+            <p className="text-gray-400 text-sm">
+              Don't have an account?{' '}
+              <button className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
+                Sign up
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
     );
   }
 
   // Optional: Render a loading indicator while isLoading is true
   if (isLoading) {
-    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-white text-lg">Loading...</p>
+        </div>
+      </div>
+    );
   }
 
   // If authenticated and isLoading is false, the useEffect above should have navigated.
