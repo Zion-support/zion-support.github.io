@@ -562,6 +562,7 @@ const Careers: React.FC = () => {
         keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
@@ -576,6 +577,8 @@ export default function Careers() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-aa85
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-beb3
         canonical="https://ziontechgroup.com/careers"
       />
       <AppHeader />

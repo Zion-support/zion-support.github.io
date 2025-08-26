@@ -72,6 +72,7 @@ export default function GreenIT() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
@@ -81,6 +82,9 @@ export default function GreenIT() {
 =======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
 >>>>>>> origin/cursor/website-audit-and-enhancement-aa85
+=======
+        canonical="https://ziontechgroup.com/green-it"
+>>>>>>> origin/cursor/website-audit-and-enhancement-beb3
       />
       <AppHeader />
       <main className="min-h-screen bg-background pt-16 pb-20">

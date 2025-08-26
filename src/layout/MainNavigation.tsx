@@ -171,6 +171,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
     },
     {
+      key: 'about',
+      href: '/about',
+      matches: (path: string) => path.startsWith('/about')
+    },
+    {
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services')
+    },
+    {
       key: 'marketplace',
       href: '/marketplace',
 <<<<<<< HEAD
@@ -265,6 +275,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/website-audit-and-enhancement-aa85
     },
     {
+      key: 'partners',
+      href: '/partners',
+      matches: (path: string) => path.startsWith('/partners')
+    },
+    {
       key: 'community',
       href: '/community',
 <<<<<<< HEAD
@@ -272,6 +287,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -343,6 +359,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       icon: <MessageSquare className="w-4 h-4" />,
       description: 'Get in touch with us'
 >>>>>>> origin/cursor/website-audit-and-enhancement-b91b
+=======
+      key: 'blog',
+      href: '/blog',
+      matches: (path: string) => path.startsWith('/blog')
+>>>>>>> origin/cursor/website-audit-and-enhancement-beb3
     }
   ];
 

@@ -755,6 +755,7 @@ const Sitemap: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
@@ -762,6 +763,8 @@ const Sitemap: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-aa85
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-beb3
         canonical="https://ziontechgroup.com/sitemap"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
