@@ -21,8 +21,8 @@ import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 
 // Import auth and notification providers
-import { AuthProvider } from '@/context/auth/AuthProvider';
-import { NotificationProvider } from './context';
+import { AuthProvider } from './context/auth/AuthProvider';
+import { NotificationProvider } from './context/notifications/NotificationContext';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
