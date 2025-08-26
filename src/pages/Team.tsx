@@ -1,144 +1,225 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import { Link } from 'react-router-dom';
+import { 
+  Users, 
+  Award, 
+  Heart, 
+  Target, 
+  Zap,
+  ArrowRight,
+  Linkedin,
+  Mail
+} from 'lucide-react';
 
-export default function Team() {
+const Team: React.FC = () => {
   const teamMembers = [
     {
-      name: 'Dr. Sarah Chen',
-      role: 'Chief Executive Officer',
-      bio: 'Visionary leader with 15+ years of experience in technology and AI. Former CTO at Fortune 500 companies.',
-      image: '👩‍💼',
-      expertise: ['AI Strategy', 'Digital Transformation', 'Leadership'],
-      linkedin: 'https://linkedin.com/in/sarahchen',
-      email: 'sarah.chen@ziontechgroup.com'
+      name: "Dr. Sarah Chen",
+      role: "Chief Executive Officer",
+      department: "Executive",
+      image: "/team/sarah-chen.jpg",
+      bio: "Visionary leader with 15+ years in technology innovation and business transformation.",
+      expertise: ["Strategic Leadership", "AI Strategy", "Business Development"],
+      linkedin: "https://linkedin.com/in/sarah-chen",
+      email: "sarah.chen@ziontechgroup.com"
     },
     {
-      name: 'Michael Rodriguez',
-      role: 'Chief Technology Officer',
-      bio: 'Expert in cloud architecture and DevOps with deep knowledge of enterprise-scale systems.',
-      image: '👨‍💻',
-      expertise: ['Cloud Architecture', 'DevOps', 'System Design'],
-      linkedin: 'https://linkedin.com/in/michaelrodriguez',
-      email: 'michael.rodriguez@ziontechgroup.com'
+      name: "Michael Rodriguez",
+      role: "Chief Technology Officer",
+      department: "Technology",
+      image: "/team/michael-rodriguez.jpg",
+      bio: "Technology expert specializing in AI, cloud architecture, and emerging technologies.",
+      expertise: ["AI/ML", "Cloud Architecture", "Technology Strategy"],
+      linkedin: "https://linkedin.com/in/michael-rodriguez",
+      email: "michael.rodriguez@ziontechgroup.com"
     },
     {
-      name: 'Dr. Emily Watson',
-      role: 'Head of AI Research',
-      bio: 'Leading researcher in machine learning and AI ethics. PhD from Stanford with 20+ publications.',
-      image: '👩‍🔬',
-      expertise: ['Machine Learning', 'AI Ethics', 'Research'],
-      linkedin: 'https://linkedin.com/in/emilywatson',
-      email: 'emily.watson@ziontechgroup.com'
+      name: "Dr. Emily Watson",
+      role: "Chief Research Officer",
+      department: "Research & Development",
+      image: "/team/emily-watson.jpg",
+      bio: "Leading researcher in quantum computing, AI consciousness, and advanced algorithms.",
+      expertise: ["Quantum Computing", "AI Research", "Algorithm Development"],
+      linkedin: "https://linkedin.com/in/emily-watson",
+      email: "emily.watson@ziontechgroup.com"
     },
     {
-      name: 'David Kim',
-      role: 'VP of Cybersecurity',
-      bio: 'Cybersecurity expert with certifications in CISSP, CISM, and extensive experience in threat intelligence.',
-      image: '👨‍🔒',
-      expertise: ['Cybersecurity', 'Threat Intelligence', 'Compliance'],
-      linkedin: 'https://linkedin.com/in/davidkim',
-      email: 'david.kim@ziontechgroup.com'
+      name: "David Kim",
+      role: "Chief Security Officer",
+      department: "Cybersecurity",
+      image: "/team/david-kim.jpg",
+      bio: "Cybersecurity expert with deep experience in threat detection and security architecture.",
+      expertise: ["Cybersecurity", "Threat Intelligence", "Security Architecture"],
+      linkedin: "https://linkedin.com/in/david-kim",
+      email: "david.kim@ziontechgroup.com"
     },
     {
-      name: 'Lisa Thompson',
-      role: 'VP of Client Success',
-      bio: 'Dedicated to ensuring client satisfaction and successful project delivery across all engagements.',
-      image: '👩‍💼',
-      expertise: ['Client Relations', 'Project Management', 'Success Metrics'],
-      linkedin: 'https://linkedin.com/in/lisathompson',
-      email: 'lisa.thompson@ziontechgroup.com'
+      name: "Lisa Thompson",
+      role: "VP of Engineering",
+      department: "Engineering",
+      image: "/team/lisa-thompson.jpg",
+      bio: "Engineering leader focused on scalable solutions and team development.",
+      expertise: ["Software Engineering", "Team Leadership", "System Architecture"],
+      linkedin: "https://linkedin.com/in/lisa-thompson",
+      email: "lisa.thompson@ziontechgroup.com"
     },
     {
-      name: 'James Wilson',
-      role: 'Head of Infrastructure',
-      bio: 'Infrastructure specialist with expertise in network design, system administration, and scalability.',
-      image: '👨‍🏗️',
-      expertise: ['Network Design', 'System Administration', 'Scalability'],
-      linkedin: 'https://linkedin.com/in/jameswilson',
-      email: 'james.wilson@ziontechgroup.com'
+      name: "James Wilson",
+      role: "VP of Business Development",
+      department: "Business Development",
+      image: "/team/james-wilson.jpg",
+      bio: "Business strategist with expertise in partnerships and market expansion.",
+      expertise: ["Business Strategy", "Partnerships", "Market Analysis"],
+      linkedin: "https://linkedin.com/in/james-wilson",
+      email: "james.wilson@ziontechgroup.com"
+    }
+  ];
+
+  const values = [
+    {
+      title: "Innovation First",
+      description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches.",
+      icon: Zap
+    },
+    {
+      title: "Excellence in Everything",
+      description: "We maintain the highest standards in our work, from code quality to client relationships.",
+      icon: Award
+    },
+    {
+      title: "Collaborative Culture",
+      description: "We believe in the power of teamwork and diverse perspectives to solve complex challenges.",
+      icon: Users
+    },
+    {
+      title: "Client Success",
+      description: "Our success is measured by the success of our clients and the impact we create together.",
+      icon: Target
+    },
+    {
+      title: "Integrity & Trust",
+      description: "We build lasting relationships based on honesty, transparency, and mutual respect.",
+      icon: Heart
+    }
+  ];
+
+  const departments = [
+    {
+      name: "Engineering",
+      description: "Building innovative solutions with cutting-edge technology",
+      memberCount: 45,
+      focus: ["Software Development", "AI/ML", "Cloud Infrastructure", "DevOps"]
+    },
+    {
+      name: "Research & Development",
+      description: "Exploring the frontiers of technology and innovation",
+      memberCount: 28,
+      focus: ["Quantum Computing", "AI Research", "Emerging Technologies", "Prototyping"]
+    },
+    {
+      name: "Cybersecurity",
+      description: "Protecting digital assets with advanced security solutions",
+      memberCount: 32,
+      focus: ["Threat Detection", "Security Architecture", "Compliance", "Incident Response"]
+    },
+    {
+      name: "Business Development",
+      description: "Growing partnerships and expanding market presence",
+      memberCount: 18,
+      focus: ["Strategic Partnerships", "Market Analysis", "Client Relations", "Growth Strategy"]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <SEO 
-        title="Our Team - Zion Tech Group"
-        description="Meet the exceptional team of experts at Zion Tech Group. Our leadership brings decades of experience in AI, cloud computing, cybersecurity, and digital transformation."
-        keywords="team, leadership, experts, AI specialists, technology leaders, Zion Tech Group"
-        canonical="https://ziontechgroup.com/team"
-      />
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+      <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Meet Our Team
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
-            Exceptional talent driving innovation and delivering transformative technology solutions
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
+            Passionate innovators, experts, and leaders working together to transform 
+            the future of technology and business.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/careers"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Join Our Team
+            </Link>
+            <Link
+              to="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
+            >
+              Get in Touch
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Team Grid */}
-      <section className="py-16">
+      {/* Leadership Team */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
               Leadership Team
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our leadership brings together decades of experience across technology, AI, and business transformation
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Meet the visionary leaders who guide our company's mission and drive innovation.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="p-6">
-                  <div className="text-center mb-6">
-                    <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
-                      {member.image}
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                    <p className="text-blue-600 font-medium">{member.role}</p>
+              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
+                <div className="text-center mb-6">
+                  <div className="w-32 h-32 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-16 h-16 text-white" />
                   </div>
-                  
-                  <p className="text-gray-600 text-center mb-6 leading-relaxed">
-                    {member.bio}
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                    {member.name}
+                  </h3>
+                  <p className="text-lg text-blue-600 font-semibold mb-1">
+                    {member.role}
                   </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Areas of Expertise</h4>
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {member.expertise.map((skill, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
+                  <p className="text-sm text-slate-500 mb-4">
+                    {member.department}
+                  </p>
+                </div>
+                
+                <p className="text-slate-600 mb-6 text-center">
+                  {member.bio}
+                </p>
+                
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-slate-700 mb-3">Expertise:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {member.expertise.map((skill, skillIndex) => (
+                      <span key={skillIndex} className="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">
+                        {skill}
+                      </span>
+                    ))}
                   </div>
-                  
-                  <div className="flex justify-center space-x-4">
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-700 transition-colors duration-300"
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.032-3.047-1.033 0-1.191.805-1.191 2.951v5.665H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                      </svg>
-                    </a>
-                    <a
-                      href={`mailto:${member.email}`}
-                      className="text-gray-600 hover:text-gray-800 transition-colors duration-300"
-                    >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </a>
-                  </div>
+                </div>
+                
+                <div className="flex justify-center space-x-4">
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a
+                    href={`mailto:${member.email}`}
+                    className="w-10 h-10 bg-slate-600 text-white rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors duration-200"
+                  >
+                    <Mail className="w-5 h-5" />
+                  </a>
                 </div>
               </div>
             ))}
@@ -146,32 +227,104 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Join Our Team Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+      {/* Company Values */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Our Values
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              The principles that guide our decisions, shape our culture, and drive our success.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <value.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  {value.title}
+                </h3>
+                <p className="text-slate-600">
+                  {value.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Departments */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Our Departments
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Specialized teams working together to deliver comprehensive solutions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {departments.map((dept, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-2xl font-bold text-slate-900">
+                    {dept.name}
+                  </h3>
+                  <span className="text-3xl font-bold text-blue-600">
+                    {dept.memberCount}
+                  </span>
+                </div>
+                <p className="text-slate-600 mb-6">
+                  {dept.description}
+                </p>
+                <div className="space-y-2">
+                  {dept.focus.map((focus, focusIndex) => (
+                    <div key={focusIndex} className="flex items-center text-sm text-slate-600">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                      {focus}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">
             Join Our Growing Team
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals who are passionate about technology and innovation. 
-            Join us in shaping the future of technology.
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            We're always looking for talented individuals who share our passion for 
+            innovation and excellence. Explore opportunities to grow with us.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/careers"
-              className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300"
+            <Link
+              to="/careers"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               View Open Positions
-            </a>
-            <a
-              href="/contact"
-              className="px-8 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300"
+            </Link>
+            <Link
+              to="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default Team;

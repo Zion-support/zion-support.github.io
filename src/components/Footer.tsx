@@ -45,41 +45,53 @@ function Footer() {
     {
       title: 'Services',
       links: [
-        { name: 'AI Solutions', href: '/services/ai' },
-        { name: 'Cloud & DevOps', href: '/services/cloud' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'IT Infrastructure', href: '/services/infrastructure' },
-        { name: 'Digital Transformation', href: '/services/transformation' },
-        { name: 'Technology Consulting', href: '/services/consulting' }
+        { label: "AI Solutions", path: "/services/ai" },
+        { label: "Cloud & DevOps", path: "/services/cloud" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "Quantum Computing", path: "/quantum-technology" },
+        { label: "Blockchain & Web3", path: "/services/blockchain" },
+        { label: "IoT Services", path: "/iot-services" },
+        { label: "Micro SAAS", path: "/micro-saas" },
+        { label: "Space Technology", path: "/space-tech" },
+        { label: "Green IT", path: "/green-it" },
+        { label: "Manufacturing", path: "/manufacturing-solutions" },
+        { label: "Financial Solutions", path: "/financial-solutions" }
       ]
     },
     {
       title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'News', href: '/news' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Contact', href: '/contact' }
+        { label: "About Us", path: "/about" },
+        { label: "Our Team", path: "/team" },
+        { label: "Leadership", path: "/leadership" },
+        { label: "Careers", path: "/careers" },
+        { label: "News & Updates", path: "/news" },
+        { label: "Case Studies", path: "/case-studies" },
+        { label: "Partners", path: "/partners" }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Tutorials', href: '/tutorials' },
-        { name: 'Support', href: '/support' }
+        { label: "Blog", path: "/blog" },
+        { label: "Documentation", path: "/docs" },
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "Research", path: "/research-development" },
+        { label: "Events", path: "/events" },
+        { label: "Tutorials", path: "/tutorials" }
       ]
     },
     {
       title: 'Legal',
       links: [
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'Accessibility', href: '/accessibility' }
+        { label: "Contact Us", path: "/contact" },
+        { label: "Help Center", path: "/help-center" },
+        { label: "Support Portal", path: "/support" },
+        { label: "Training", path: "/training" },
+        { label: "Consulting", path: "/services/consulting" },
+        { label: "Request Quote", path: "/request-quote" },
+        { label: "FAQ", path: "/faq" }
       ]
     }
   ];

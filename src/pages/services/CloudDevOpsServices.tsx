@@ -1,108 +1,128 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  Cpu, 
+  Cloud, 
+  Server, 
   Database, 
   Shield, 
-  TrendingUp, 
-  Zap,
+  Zap, 
+  GitBranch,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Monitor,
+  Lock
 } from 'lucide-react';
 
-const AIServices: React.FC = () => {
-  const aiServices = [
+const CloudDevOpsServices: React.FC = () => {
+  const cloudServices = [
     {
-      title: "Machine Learning Solutions",
-      description: "Custom ML models and algorithms for predictive analytics, pattern recognition, and data-driven insights.",
-      icon: Brain,
+      title: "Cloud Migration & Strategy",
+      description: "Seamless migration to cloud platforms with strategic planning and execution.",
+      icon: Cloud,
       features: [
-        "Predictive Analytics",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Recommendation Systems",
-        "Anomaly Detection"
+        "Multi-cloud Strategy",
+        "Legacy System Migration",
+        "Cost Optimization",
+        "Performance Optimization",
+        "Security Assessment"
       ]
     },
     {
-      title: "AI-Powered Automation",
-      description: "Intelligent process automation using AI to streamline operations and reduce manual tasks.",
-      icon: Zap,
+      title: "DevOps Implementation",
+      description: "Streamline development and operations with modern DevOps practices and tools.",
+      icon: GitBranch,
       features: [
-        "Workflow Automation",
-        "Document Processing",
-        "Customer Service Bots",
-        "Quality Assurance",
-        "Supply Chain Optimization"
+        "CI/CD Pipeline Setup",
+        "Infrastructure as Code",
+        "Automated Testing",
+        "Deployment Automation",
+        "Monitoring & Alerting"
       ]
     },
     {
-      title: "Data Analytics & Intelligence",
-      description: "Advanced analytics platforms that transform raw data into actionable business intelligence.",
-      icon: TrendingUp,
+      title: "Container Orchestration",
+      description: "Manage and scale containerized applications with Kubernetes and Docker.",
+      icon: Server,
       features: [
-        "Real-time Analytics",
-        "Business Intelligence",
-        "Data Visualization",
-        "Performance Metrics",
-        "Trend Analysis"
+        "Kubernetes Deployment",
+        "Docker Containerization",
+        "Service Mesh",
+        "Auto-scaling",
+        "Load Balancing"
       ]
     },
     {
-      title: "AI Infrastructure & Platforms",
-      description: "Scalable AI infrastructure and platforms for enterprise AI deployment and management.",
-      icon: Cpu,
-      features: [
-        "AI Model Deployment",
-        "Scalable Computing",
-        "Model Monitoring",
-        "API Integration",
-        "Performance Optimization"
-      ]
-    },
-    {
-      title: "AI Security & Compliance",
-      description: "AI-powered security solutions with built-in compliance and ethical AI practices.",
-      icon: Shield,
-      features: [
-        "Threat Detection",
-        "Fraud Prevention",
-        "Privacy Protection",
-        "Compliance Monitoring",
-        "Ethical AI Guidelines"
-      ]
-    },
-    {
-      title: "AI Consulting & Strategy",
-      description: "Strategic AI consulting to help organizations plan and implement AI initiatives.",
+      title: "Database Management",
+      description: "Optimize and manage databases in cloud environments for performance and reliability.",
       icon: Database,
       features: [
-        "AI Strategy Development",
-        "Technology Assessment",
-        "Implementation Roadmap",
-        "Team Training",
-        "ROI Analysis"
+        "Database Migration",
+        "Performance Tuning",
+        "Backup & Recovery",
+        "High Availability",
+        "Data Security"
+      ]
+    },
+    {
+      title: "Security & Compliance",
+      description: "Ensure cloud security and compliance with industry standards and best practices.",
+      icon: Shield,
+      features: [
+        "Identity & Access Management",
+        "Network Security",
+        "Data Encryption",
+        "Compliance Auditing",
+        "Threat Detection"
+      ]
+    },
+    {
+      title: "Monitoring & Observability",
+      description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",
+      icon: Monitor,
+      features: [
+        "Real-time Monitoring",
+        "Log Management",
+        "Performance Metrics",
+        "Alert Management",
+        "Troubleshooting Tools"
       ]
     }
   ];
 
   const benefits = [
-    "Increased operational efficiency and productivity",
-    "Enhanced decision-making with data-driven insights",
-    "Improved customer experience and personalization",
-    "Cost reduction through automation",
-    "Competitive advantage in the market",
-    "Scalable solutions that grow with your business"
+    "Faster time to market with automated deployments",
+    "Improved reliability and uptime",
+    "Cost optimization through resource management",
+    "Enhanced security and compliance",
+    "Scalable infrastructure that grows with your business",
+    "Better collaboration between development and operations teams"
   ];
 
   const technologies = [
-    "TensorFlow & PyTorch",
-    "OpenAI & GPT Models",
-    "Computer Vision APIs",
-    "Natural Language Processing",
-    "Cloud AI Services",
-    "Edge AI Computing"
+    "AWS, Azure, GCP",
+    "Kubernetes & Docker",
+    "Terraform & Ansible",
+    "Jenkins & GitLab CI",
+    "Prometheus & Grafana",
+    "ELK Stack"
+  ];
+
+  const cloudPlatforms = [
+    {
+      name: "Amazon Web Services",
+      description: "Leading cloud platform with comprehensive services",
+      features: ["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]
+    },
+    {
+      name: "Microsoft Azure",
+      description: "Enterprise-grade cloud solutions for Windows environments",
+      features: ["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]
+    },
+    {
+      name: "Google Cloud Platform",
+      description: "Innovative cloud services with AI and ML capabilities",
+      features: ["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]
+    }
   ];
 
   return (
@@ -112,11 +132,11 @@ const AIServices: React.FC = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            AI Solutions
+            Cloud & DevOps Services
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence solutions. 
-            From machine learning to automation, we deliver AI that works.
+            Accelerate your digital transformation with modern cloud infrastructure 
+            and DevOps practices that drive innovation and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -140,16 +160,16 @@ const AIServices: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Comprehensive AI Services
+              Comprehensive Cloud & DevOps Solutions
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Our AI services cover every aspect of artificial intelligence implementation, 
-              from strategy to deployment and ongoing optimization.
+              From cloud migration to DevOps transformation, we provide end-to-end 
+              solutions that modernize your infrastructure and accelerate delivery.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
+            {cloudServices.map((service, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-white" />
@@ -181,15 +201,51 @@ const AIServices: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Cloud Platforms Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Why Choose Our AI Solutions?
+              Multi-Cloud Expertise
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Experience the transformative power of AI with our proven approach and expertise.
+              We work with all major cloud providers to give you the best solutions 
+              for your specific needs and budget.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {cloudPlatforms.map((platform, index) => (
+              <div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  {platform.name}
+                </h3>
+                <p className="text-slate-600 mb-6">
+                  {platform.description}
+                </p>
+                <ul className="space-y-2">
+                  {platform.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-slate-600">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Benefits of Cloud & DevOps
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Transform your organization with modern cloud and DevOps practices.
             </p>
           </div>
           
@@ -207,20 +263,20 @@ const AIServices: React.FC = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Cutting-Edge Technologies
+              Technologies We Use
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We leverage the latest AI technologies and frameworks to deliver exceptional results.
+              We leverage industry-leading tools and technologies to deliver robust solutions.
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {technologies.map((tech, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
+              <div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
                 <p className="text-slate-700 font-semibold">{tech}</p>
               </div>
             ))}
@@ -232,17 +288,18 @@ const AIServices: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Ready to Transform Your Business with AI?
+            Ready to Modernize Your Infrastructure?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization.
+            Let's discuss how our cloud and DevOps expertise can transform your 
+            organization's technology landscape.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Start Your AI Journey
+              Start Your Transformation
             </Link>
             <Link
               to="/case-studies"
@@ -257,4 +314,4 @@ const AIServices: React.FC = () => {
   );
 };
 
-export default AIServices;
+export default CloudDevOpsServices;
