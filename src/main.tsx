@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
@@ -16,4 +14,3 @@ root.render(
 		<App />
 	</React.StrictMode>
 );
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-b3cc

@@ -4,7 +4,6 @@ import path from 'node:path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-<<<<<<< HEAD
   root: '.',
   publicDir: 'public',
   plugins: [react()],
@@ -20,38 +19,6 @@ export default defineConfig({
     rollupOptions: {
       input: path.resolve(__dirname, 'index.html'),
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'ui-vendor': [
-            '@radix-ui/react-accordion',
-            '@radix-ui/react-alert-dialog',
-            '@radix-ui/react-aspect-ratio',
-            '@radix-ui/react-avatar',
-            '@radix-ui/react-checkbox',
-            '@radix-ui/react-context-menu',
-            '@radix-ui/react-dialog',
-            '@radix-ui/react-dropdown-menu',
-            '@radix-ui/react-label',
-            '@radix-ui/react-popover',
-            '@radix-ui/react-progress',
-            '@radix-ui/react-radio-group',
-            '@radix-ui/react-scroll-area',
-            '@radix-ui/react-select',
-            '@radix-ui/react-separator',
-            '@radix-ui/react-slider',
-            '@radix-ui/react-slot',
-            '@radix-ui/react-switch',
-            '@radix-ui/react-tabs',
-            '@radix-ui/react-toast',
-            '@radix-ui/react-tooltip',
-          ],
-          'animation-vendor': ['framer-motion'],
-          'form-vendor': ['react-hook-form'],
-          'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
-          'icons-vendor': ['lucide-react'],
-          'charts-vendor': ['recharts'],
-          'date-vendor': ['date-fns', 'react-day-picker'],
-        },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
@@ -78,7 +45,6 @@ export default defineConfig({
       'clsx',
       'tailwind-merge',
     ],
-    exclude: ['@radix-ui/react-icons'],
   },
   css: { devSourcemap: false },
   server: {
@@ -97,62 +63,3 @@ export default defineConfig({
   worker: { format: 'es' },
   envPrefix: ['VITE_', 'ZION_'],
 })
-=======
-	plugins: [react()],
-	resolve: {
-		alias: {
-			'@': path.resolve(__dirname, './src')
-		}
-	},
-	build: {
-		target: 'esnext',
-		minify: 'esbuild',
-		sourcemap: false,
-		rollupOptions: {
-			output: {
-				manualChunks: {
-					'react-vendor': ['react', 'react-dom'],
-					'animation-vendor': ['framer-motion'],
-					'icons-vendor': ['lucide-react'],
-					'utils-vendor': ['clsx']
-				},
-				chunkFileNames: 'js/[name]-[hash].js',
-				entryFileNames: 'js/[name]-[hash].js',
-				assetFileNames: (assetInfo) => {
-					if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
-					if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
-					if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
-					return 'assets/[name]-[hash].[ext]';
-				}
-			}
-		},
-		esbuild: { drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [] },
-		chunkSizeWarningLimit: 1000
-	},
-	optimizeDeps: {
-		include: [
-			'react',
-			'react-dom',
-			'react-router-dom',
-			'framer-motion',
-			'lucide-react',
-			'clsx'
-		]
-	},
-	css: { devSourcemap: false },
-	server: {
-		port: 3000,
-		host: true,
-		open: true,
-		cors: true,
-		hmr: { overlay: false }
-	},
-	preview: { port: 4173, host: true, open: true },
-	define: {
-		__DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-		__PROD__: JSON.stringify(process.env.NODE_ENV === 'production')
-	},
-	worker: { format: 'es' },
-	envPrefix: ['VITE_', 'ZION_']
-});
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-b3cc
