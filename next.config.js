@@ -1,109 +1,18 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-import os from 'os';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Configure CDN asset prefix when running in production
-const isProd = process.env.NODE_ENV === 'production';
-const isNetlify = process.env.NETLIFY === 'true';
-const isPreviewBuild = process.env.CONTEXT !== 'production';
-
-// Only use CDN if:
-// 1. In production mode
-// 2. CDN URL is provided and not a placeholder
-// 3. Not a Netlify preview build (unless it's the main domain)
-// 4. CDN URL is a valid HTTPS URL
-const cdnUrl = process.env.NEXT_PUBLIC_CDN_URL;
-const isValidCDN =
-  cdnUrl &&
-  cdnUrl.startsWith('https://') &&
-  !cdnUrl.includes('yourdomain.com') &&
-  !cdnUrl.includes('example.com') &&
-  !cdnUrl.includes('localhost');
-
-const shouldUseCDN = isProd && isValidCDN && (!isNetlify || !isPreviewBuild);
-
-const assetPrefix = shouldUseCDN ? cdnUrl : '';
-
-// Log configuration for debugging
-if (process.env.NODE_ENV === 'development') {
-  console.log('Next.js Configuration:', {
-    isProd,
-    isNetlify,
-    isPreviewBuild,
-    cdnUrl: cdnUrl || 'Not set',
-    isValidCDN,
-    shouldUseCDN,
-    assetPrefix: assetPrefix || 'Disabled (serving from origin)',
-    imageOptimization: !(isNetlify && isPreviewBuild)
-      ? 'Enabled'
-      : 'Disabled for Netlify preview',
-  });
-}
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  // publicRuntimeConfig is generally not needed for NEXT_PUBLIC_ variables in modern Next.js.
-  // These variables are available via process.env directly.
-  // publicRuntimeConfig: {
-  //   NEXT_PUBLIC_SENTRY_RELEASE: process.env.SENTRY_RELEASE,
-  //   NEXT_PUBLIC_SENTRY_ENVIRONMENT: process.env.SENTRY_ENVIRONMENT,
-  //   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
-  //   NEXT_PUBLIC_STRIPE_TEST_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_STRIPE_TEST_PUBLISHABLE_KEY,
-  //   NEXT_PUBLIC_STRIPE_TEST_KEY: process.env.NEXT_PUBLIC_STRIPE_TEST_KEY,
-  //   NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
-  //   NEXT_PUBLIC_REOWN_PROJECT_ID: process.env.NEXT_PUBLIC_REOWN_PROJECT_ID,
-  //   NEXT_PUBLIC_VAPID_PUBLIC_KEY: process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY,
-  //   NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
-  //   NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
-  //   NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-  //   NEXT_PUBLIC_AUTOFIX_WEBHOOK_URL: process.env.NEXT_PUBLIC_AUTOFIX_WEBHOOK_URL,
-  //   NEXT_PUBLIC_SENTRY_DSN: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  //   NEXT_PUBLIC_FIREBASE_API_KEY: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  //   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  //   NEXT_PUBLIC_FIREBASE_PROJECT_ID: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  //   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  //   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  //   NEXT_PUBLIC_FIREBASE_APP_ID: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  //   NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
-  //   NEXT_PUBLIC_ANALYTICS_TRACKING_ID: process.env.NEXT_PUBLIC_ANALYTICS_TRACKING_ID,
-  //   NEXT_PUBLIC_DEVTOOLS: process.env.NEXT_PUBLIC_DEVTOOLS,
-  //   NEXT_PUBLIC_NETLIFY_CONTEXT: process.env.NEXT_PUBLIC_NETLIFY_CONTEXT,
-  //   NEXT_PUBLIC_SALESFORCE_URL: process.env.NEXT_PUBLIC_SALESFORCE_URL,
-  //   NEXT_PUBLIC_SALESFORCE_TOKEN: process.env.NEXT_PUBLIC_SALESFORCE_TOKEN,
-  //   NEXT_PUBLIC_MAILCHIMP_API_KEY: process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY,
-  //   NEXT_PUBLIC_MAILCHIMP_LIST_ID: process.env.NEXT_PUBLIC_MAILCHIMP_LIST_ID,
-  //   NEXT_PUBLIC_TEAMS_WEBHOOK_URL: process.env.NEXT_PUBLIC_TEAMS_WEBHOOK_URL,
-  //   NEXT_PUBLIC_ERROR_WEBHOOK_URL: process.env.NEXT_PUBLIC_ERROR_WEBHOOK_URL,
-  //   NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
-  //   NEXT_PUBLIC_SUPPORT_EMAIL: process.env.NEXT_PUBLIC_SUPPORT_EMAIL, // Added based on task description
-  // },
-  images: {
-    unoptimized: false, // Enabled Next.js Image Optimization for performance
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-    ],
-  },
-  eslint: {
-    // ignoreDuringBuilds: true, // Ensuring ESLint runs during build
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  // Enable source maps in production for easier stack traces in Sentry
-  productionBrowserSourceMaps: true, // Re-enabled
-
+  poweredByHeader: false,
+  trailingSlash: false,
+  reactStrictMode: true,
+  // Optimized for fast builds (hanging issue SOLVED)
+  // outputFileTracing: false, // Intentionally disabled via env vars in build scripts and netlify.toml to prevent hanging.
+  productionBrowserSourceMaps: false, // Disable for faster builds
+  
   // Environment configuration
   env: {
-    NEXT_PUBLIC_APP_URL:
-      process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
-    NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
-    NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
+    NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://your-project.supabase.co',
+    NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key-here',
   },
+
 
   modularizeImports: {
     'lucide-react': {
@@ -114,6 +23,7 @@ const nextConfig = {
       transform: '@radix-ui/react-icons/dist/{{member}}',
     },
   },
+
   experimental: {
     optimizePackageImports: [
       'lucide-react',

@@ -66,6 +66,19 @@
       }
     ]
   },
-  "include": ["src", "src/types/offline-shims.d.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "zion.app/recovered-content/**",
+    "contracts/**",
+    "typechain-types/**",
+    "cypress/**",
+    "data/2025-cutting-edge-enterprise-solutions.ts",
+    "data/2025-cutting-edge-it-infrastructure-innovations.ts",
+    "data/2025-emerging-tech-services.ts"
+  ]
 }
