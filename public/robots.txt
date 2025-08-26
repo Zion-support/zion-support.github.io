@@ -1,25 +1,35 @@
-
-# Allow all crawlers
 User-agent: *
 Allow: /
+
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap
+=======
+=======
+
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /temp_components/
 
 # Allow important pages
-Allow: /solutions/
-Allow: /services/
-Allow: /case-studies/
-Allow: /news/
-Allow: /events/
-Allow: /research-development/
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /portfolio
+Allow: /pricing-2025
+Allow: /comprehensive-2025-services-showcase
+Allow: /whitepapers
+Allow: /quantum-neural-network-platform
+Allow: /autonomous-business-operations-platform
+Allow: /ai-powered-it-asset-management
 
-# Sitemap
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Crawl delay (optional)
+# Crawl delay
+=======
+# Crawl-delay
 Crawl-delay: 1

@@ -41,7 +41,7 @@ interface Service {
   category: string;
   subcategory: string;
   price: number;
-  currency: string;
+  currency?: string;
   pricingModel: string;
   features: string[];
   benefits: string[];
@@ -70,26 +70,67 @@ const InnovativeMicroSaasServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
+  // Adapter functions to normalize the different service types
+  const adaptAdvancedService = (service: AdvancedMicroSaasService): Service => ({
+    id: service.id,
+    title: service.name,
+    description: service.description,
+    category: service.category,
+    subcategory: service.subcategory,
+    price: service.price,
+    currency: 'USD',
+    pricingModel: service.pricingModel,
+    features: service.features,
+    benefits: service.benefits,
+    useCases: service.targetAudience,
+    targetAudience: service.targetAudience,
+    tags: service.tags || [],
+    estimatedDelivery: service.estimatedDelivery || 'TBD',
+    supportLevel: service.supportLevel || 'Standard',
+    marketPrice: service.marketPrice,
+    contactInfo: service.contactInfo,
+    technology: service.technology,
+    integrations: service.integrations,
+    compliance: service.compliance,
+    roi: service.roi
+  });
+
+  const adaptEmergingService = (service: EmergingTechService): Service => ({
+    id: service.id,
+    title: service.title,
+    description: service.description,
+    category: service.category,
+    subcategory: service.subcategory,
+    price: typeof service.price === 'object' ? (service.price.monthly || service.price.yearly || service.price.oneTime || 0) : service.price,
+    currency: typeof service.price === 'object' ? service.price.currency : 'USD',
+    pricingModel: typeof service.price === 'object' ? service.price.pricingModel : 'Monthly',
+    features: service.features,
+    benefits: service.benefits,
+    useCases: service.useCases || [],
+    targetAudience: service.targetAudience,
+    tags: [],
+    estimatedDelivery: 'TBD',
+    supportLevel: 'Standard',
+    marketPrice: service.marketPrice,
+    contactInfo: service.contactInfo
+  });
+
   // Combine all services
-<<<<<<< HEAD
-  const allServices = [
-=======
-  const allServices: (EmergingTechService | AdvancedMicroSaasService)[] = [
->>>>>>> origin/cursor/website-audit-and-enhancement-2305
-    ...ADVANCED_MICRO_SAAS_SERVICES,
-    ...EMERGING_TECH_SERVICES
+  const allServices: Service[] = [
+    ...ADVANCED_MICRO_SAAS_SERVICES.map(adaptAdvancedService),
+    ...EMERGING_TECH_SERVICES.map(adaptEmergingService)
   ];
 
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-<<<<<<< HEAD
-    const serviceTitle = 'title' in service ? service.title : service.name;
-    const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
-=======
     const matchesSearch = ('title' in service ? service.title : service.name).toLowerCase().includes(searchTerm.toLowerCase()) ||
->>>>>>> origin/cursor/website-audit-and-enhancement-2305
+=======
+    const matchesSearch = (service.title || service.name || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+=======
+    const serviceTitle = service.title || service.name || '';
+    const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          ('tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
@@ -248,7 +289,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">{'title' in service ? service.title : service.name}</h3>
+                      <h3 className="text-xl font-bold text-white mb-2">{service.title || service.name}</h3>
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                     </div>
                     <button
@@ -265,15 +306,6 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       {service.category}
                     </span>
                     <div className="text-right">
-<<<<<<< HEAD
-                      <div className="text-2xl font-bold text-cyan-400">
-                        {typeof service.price === 'number' 
-                          ? formatPrice(service.price, 'currency' in service ? (service.currency as string) : '$')
-                          : formatPrice(service.price.monthly || 0, service.price.currency || '$')
-                        }
-                      </div>
-                      <div className="text-gray-400 text-sm">per {'pricingModel' in service ? service.pricingModel : 'month'}</div>
-=======
                         <div className="text-2xl font-bold text-white mb-2">
                           {formatPrice(
                             'price' in service && typeof service.price === 'number' 
@@ -289,7 +321,6 @@ const InnovativeMicroSaasServices: React.FC = () => {
                           )}
                         </div>
                         <div className="text-gray-400 text-sm">per {'pricingModel' in service ? service.pricingModel : 'subscription'}</div>
->>>>>>> origin/cursor/website-audit-and-enhancement-2305
                     </div>
                   </div>
 
@@ -297,47 +328,17 @@ const InnovativeMicroSaasServices: React.FC = () => {
                   {'tags' in service && service.tags && (
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, index) => (
-<<<<<<< HEAD
-                        <span
-                          key={index}
-                          className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                      {service.tags.length > 3 && (
-                        <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
-=======
                         <span key={index} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">
                           {tag}
                         </span>
                       ))}
                       {'tags' in service && service.tags.length > 3 && (
                         <span className="px-2 py-1 bg-gray-600 text-gray-300 text-xs rounded-full">
->>>>>>> origin/cursor/website-audit-and-enhancement-2305
                           +{service.tags.length - 3} more
                         </span>
                       )}
                     </div>
                   )}
-<<<<<<< HEAD
-
-                  {/* Support Level */}
-                  {'supportLevel' in service && (
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm text-gray-400">Support Level:</span>
-                      <span className={`px-2 py-1 text-xs text-white rounded ${getSupportLevelColor(service.supportLevel)}`}>
-                        {service.supportLevel}
-                      </span>
-                    </div>
-                  )}
-
-                  {/* Quick Info */}
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="flex items-center text-gray-400">
-                      <Clock size={16} className="mr-2" />
-                      {'estimatedDelivery' in service ? service.estimatedDelivery : 'Contact for details'}
-=======
 
                   {/* Support Level */}
                   <div className="flex items-center justify-between mb-4">
@@ -357,7 +358,6 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       <div className="text-sm text-white">
                         {'estimatedDelivery' in service ? service.estimatedDelivery : 'Custom'}
                       </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-2305
                     </div>
                     <div className="flex items-center text-gray-400">
                       <Users size={16} className="mr-2" />
@@ -424,11 +424,6 @@ const InnovativeMicroSaasServices: React.FC = () => {
                         </div>
                       </div>
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-2305
                       {/* CTA */}
                       <div className="pt-4 border-t border-gray-700">
                         <div className="flex flex-col sm:flex-row gap-3">

@@ -6,7 +6,8 @@ import {
   Star, TrendingUp, Target, Layers, Cpu, Database, 
   Cloud, Lock, ShieldCheck, Heart, Leaf, Car, 
   GraduationCap, Scale, Building, Factory, Camera,
-  Video, Music, Gamepad2, Sun, Moon, Wind, Droplets
+  Video, Music, Gamepad2, Sun, Moon, Wind, Droplets,
+  Code
 } from 'lucide-react';
 
 const contactInfo = {

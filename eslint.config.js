@@ -51,11 +51,6 @@ export default [
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
-<<<<<<< HEAD
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-=======
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
@@ -66,7 +61,6 @@ export default [
         ...globals.browser,
         ...globals.node,
         React: 'readonly',
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
         process: 'readonly',
         console: 'readonly',
         module: 'readonly',
@@ -77,17 +71,6 @@ export default [
         setInterval: 'readonly',
         clearTimeout: 'readonly',
         clearInterval: 'readonly'
-<<<<<<< HEAD
-      },
-      parser: tsparser,
-      parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
-=======
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
       }
     },
     plugins: {
@@ -121,90 +104,14 @@ export default [
       '**/*.cjs',
       '**/*.disabled/**',
       '**/tests.disabled/**',
-<<<<<<< HEAD
-=======
       '**/typechain-types.disabled/**',
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
       '**/types.disabled/**',
       '**/utils.disabled/**',
       '**/zion-os.disabled/**',
       '**/zion_academy/**',
-<<<<<<< HEAD
-      '**/src_backup/**',
-      '**/src_disabled/**',
-      '**/services.disabled.temp/**',
-      'test-*.js',
-      'workbox-config.js',
-      '*.backup.*',
-      '**/data/*.ts',
-      '**/pages/*.tsx',
-      '**/public/*.js',
-      '**/*.mjs',
-      '**/server.mjs',
-      '**/seed.js',
-      '**/jest.setup.js',
-      '**/extractFailingCode.js',
-      '**/fix-corrupted-files.js',
-      '**/fix-corruption.js',
-      '**/fix-merge-conflicts.js',
-      '**/fix-syntax-errors.js',
-      '**/mcp-automation-system.js',
-      '**/run-cursor-memory-automation.js',
-      '**/script.js',
-      '**/simple-mcp-test.js',
-      '**/simple-server.js',
-      '**/start-all-automations.js',
-      '**/backup/**',
-      '**/.temp_backup_components/**',
-      '**/src.broken/**',
-      '**/data.temp/**',
-      '**/contracts/**',
-      '**/cypress/**',
-      '**/src/components/disabled/**',
-      '**/src/components/header/**',
-      '**/src/components/ui/Futuristic*.tsx',
-      '**/src/components/ui/accordion.tsx',
-      '**/src/components/ui/alert.tsx',
-      '**/src/components/ui/avatar.tsx',
-      '**/src/components/ui/badge.tsx',
-      '**/src/components/ui/button.tsx',
-      '**/src/components/ui/card.tsx',
-      '**/src/components/ui/floating-action-button.tsx',
-      '**/src/components/ui/input.tsx',
-      '**/src/components/ui/loading-spinner.tsx',
-      '**/src/components/ui/loading.tsx',
-      '**/src/components/ui/select.tsx',
-      '**/src/components/ui/separator.tsx',
-      '**/src/components/ui/skeleton.tsx',
-      '**/src/components/ui/steps.tsx',
-      '**/src/components/ui/tabs.tsx',
-      '**/src/components/ui/textarea.tsx',
-      '**/src/components/ui/use-toast.tsx',
-      '**/src/hooks/use-toast.ts',
-      '**/src/hooks/usePerformance.ts',
-      '**/src/lib/utils.ts',
-      '**/src/main.tsx',
-      '**/src/types/listings.ts',
-      '**/src/components/AccessibilityEnhancer.tsx',
-      '**/src/components/Breadcrumb.tsx',
-      '**/src/components/ErrorBoundary.tsx',
-      '**/src/components/GradientHeading.tsx',
-      '**/src/components/LazyImage.tsx',
-      '**/src/components/LoadingSkeleton.tsx',
-      '**/src/components/SEO.tsx',
-      '**/src/components/SecurityHeaders.tsx',
-      '**/src/components/Sidebar.tsx',
-      '**/src/components/TrustIndicators.tsx',
-      '**/auto-fix-watcher.js',
-      '**/auto-run-all.js',
-      '**/comprehensive-automation-test.js',
-      '**/debug-paths.js',
-      '**/pages/**'
-=======
       'test*.js',
       'test*.ts',
       'test*.tsx'
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
     ]
   }
 ];

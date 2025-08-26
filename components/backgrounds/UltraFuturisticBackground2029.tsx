@@ -171,6 +171,7 @@ const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = (
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
         ctx.stroke();
+        ctx.restore();
       }
       
       for (let y = gridOffset; y < canvas.height; y += gridSize) {
@@ -203,7 +204,11 @@ const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = (
       ctx.lineWidth = 3;
       ctx.stroke();
 
-      animationFrameId = requestAnimationFrame(animate);
+      // Update animation parameters
+      waveOffset += 2;
+      timeOffset += 1;
+
+      requestAnimationFrame(animate);
     };
 
     // Handle window resize
@@ -212,6 +217,7 @@ const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = (
       canvas.height = window.innerHeight;
       initParticles();
     };
+  }, [intensity]);
 
     window.addEventListener('resize', handleResize);
     initParticles();

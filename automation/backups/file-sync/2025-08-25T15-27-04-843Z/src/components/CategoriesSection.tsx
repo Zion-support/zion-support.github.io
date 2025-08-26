@@ -6,6 +6,7 @@ import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
 const categories = [
   {
     title: "AI Services",
+=======
     description: "AI-powered solutions for automation, analytics, and intelligent decision making",
     icon: <Bot className="w-10 h-10" />,
     link: "/micro-saas-services?category=ai",
@@ -88,11 +89,12 @@ const categories = [
     count: "100+ Experts"
   },
   {
-    title: "Equipment",
-    description: "Rent or buy specialized hardware, servers, and devices",
-    icon: <HardDrive className="w-10 h-10" />,
-    link: "/equipment",
+    title: "IT Services",
+    description: "Infrastructure, security, and technical consulting",
+    icon: <Zap className="w-10 h-10" />,
+    link: "/all-services",
     color: "from-amber-500 to-orange-600",
+=======
     count: "50+ Items"
   },
   {
@@ -124,9 +126,33 @@ interface CategoriesSectionProps {
   showTitle?: boolean;
 }
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  }
+};
+
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
     <section className="py-20 bg-zion-blue relative overflow-hidden">
+=======
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-72 h-72 bg-zion-purple/10 rounded-full filter blur-3xl animate-pulse"></div>
@@ -135,27 +161,26 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
+=======
           <div className="text-center mb-16">
             <GradientHeading>Explore Our Ecosystem</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto">
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovative solutions
             </p>
-          </div>
+          </motion.div>
         )}
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => (
             <Link 
               key={category.title} 
               href={category.link} 
               className="group block"
             >
-              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px] hover:shadow-2xl">
-                <div className="flex items-center justify-between mb-4">
-                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="text-white">
-                      {category.icon}
-                    </div>
+              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px]">
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="text-white">
+                    {category.icon}
                   </div>
                   <div className="flex gap-2">
                     {category.isNew && (
@@ -181,17 +206,19 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               </div>
             </Link>
           ))}
-        </div>
+        </motion.div>
         
+=======
         <div className="mb-12">
           <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Solutions</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {specialServices.map((service) => (
-              <Link 
+              <motion.div
                 key={service.title}
                 href={service.link}
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
+=======
                 <div className="text-3xl mb-3">{item.icon}</div>
                 <h4 className="text-white font-semibold mb-2 group-hover:text-zion-cyan transition-colors">
                   {item.title}
@@ -200,8 +227,9 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               </Link>
             ))}
           </div>
-        </div>
+        </motion.div>
         
+=======
         <div className="text-center">
           <Link 
             href="/categories" 
@@ -209,7 +237,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           >
             Explore All Services →
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

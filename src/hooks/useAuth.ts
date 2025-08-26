@@ -1,5 +1,16 @@
-import { useState, useEffect } from 'react';
+<<<<<<< HEAD
+import { useContext } from 'react';
+import { AuthContext } from '@/context/auth/AuthContext';
+import type { AuthContextType } from '@/types/auth';
 
+export const useAuth = (): AuthContextType => {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context as AuthContextType;
+=======
+import { useState, useEffect } from 'react';
 interface User {
   id: string;
   email: string;
@@ -7,20 +18,17 @@ interface User {
   role: 'user' | 'admin';
   userType: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin';
 }
-
 interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
 }
-
 export const useAuth = () => {
   const [authState, setAuthState] = useState<AuthState>({
     user: null,
     isAuthenticated: false,
     isLoading: true,
   });
-
   useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
     const checkAuth = () => {
@@ -46,10 +54,8 @@ export const useAuth = () => {
         });
       }
     };
-
     checkAuth();
   }, []);
-
   const login = async (email: string, _password: string) => {
     // In a real app, you would make an API call to your backend
     setAuthState({
@@ -65,7 +71,6 @@ export const useAuth = () => {
     });
     localStorage.setItem('authToken', 'dummy-token');
   };
-
   const logout = () => {
     setAuthState({
       user: null,
@@ -74,10 +79,10 @@ export const useAuth = () => {
     });
     localStorage.removeItem('authToken');
   };
-
   return {
     ...authState,
     login,
     logout,
   };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 };

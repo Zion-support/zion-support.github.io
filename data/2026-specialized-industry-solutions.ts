@@ -245,7 +245,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Multi-carrier integration',
       'Mobile app for drivers'
     ],
-<<<<<<< HEAD
+
     popular: true,
     icon: '🚚',
     color: 'from-teal-600 to-green-600',
@@ -271,25 +271,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     customers: 38,
     rating: 4.7,
     reviews: 33
-=======
-    capabilities: [
-      'Production optimization',
-      'Predictive maintenance',
-      'Quality control',
-      'Supply chain optimization',
-      'Energy management',
-      'Performance analytics'
-    ],
-    marketAdvantage: 'Superior AI capabilities for manufacturing optimization with comprehensive IoT integration compared to traditional manufacturing platforms.',
-    averageMarketPrice: '$500-2000/month',
-    featuresCapabilities: [
-      'AI production optimization',
-      'Predictive maintenance',
-      'Quality control',
-      'Supply chain optimization',
-      'Energy management',
-      'Performance analytics'
-    ]
   },
 
   {
@@ -317,7 +298,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-powered-healthcare-diagnostics',
     marketPosition: 'Leading AI-powered healthcare diagnostics platform. Our advantage: Advanced medical AI with comprehensive diagnostic capabilities and regulatory compliance.',
-    targetAudience: 'Hospitals', 'Clinics', 'Medical practices', 'Pharmaceutical companies', 'Research institutions',
+    targetAudience: ['Hospitals', 'Clinics', 'Medical practices', 'Pharmaceutical companies', 'Research institutions'],
     trialDays: 45,
     setupTime: '4-6 weeks',
     category: 'Healthcare AI & Medical Diagnostics',
@@ -368,7 +349,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/smart-manufacturing-orchestrator',
     marketPosition: 'Leading smart manufacturing platform. Our advantage: Comprehensive AI and IoT integration with real-time optimization and predictive capabilities.',
-    targetAudience: 'Manufacturing companies', 'Industrial companies', 'Automotive manufacturers', 'Electronics companies', 'Chemical companies',
+    targetAudience: ['Manufacturing companies', 'Industrial companies', 'Automotive manufacturers', 'Electronics companies', 'Chemical companies'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Smart Manufacturing & Industry 4.0',
@@ -419,7 +400,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/financial-ai-trading-platform',
     marketPosition: 'Leading AI-powered financial trading platform. Our advantage: Advanced AI algorithms with comprehensive risk management and compliance monitoring.',
-    targetAudience: 'Investment firms', 'Hedge funds', 'Banks', 'Trading companies', 'Financial institutions',
+    targetAudience: ['Investment firms', 'Hedge funds', 'Banks', 'Trading companies', 'Financial institutions'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Financial AI & Algorithmic Trading',

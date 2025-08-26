@@ -245,3 +245,5 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     reviews: 45
   }
 ];
+
+export const innovativeMicroSaasV2Services = innovativeMicroSaasV2;

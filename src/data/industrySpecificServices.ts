@@ -28,7 +28,6 @@ export interface IndustrySpecificService {
   integrationPartners?: string[];
   caseStudies?: string[];
 }
-
 export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
   // Healthcare Industry Services
   {
@@ -88,7 +87,6 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     integrationPartners: ["Epic", "Cerner", "Allscripts", "Athenahealth", "Practice Fusion"],
     caseStudies: ["Major Hospital Network", "Radiology Practice", "Primary Care Group"]
   },
-
   // Financial Services Industry
   {
     id: "financial-ai-risk-management",
@@ -147,7 +145,6 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     integrationPartners: ["Bloomberg", "Reuters", "FactSet", "Moody's", "S&P Global"],
     caseStudies: ["Major Bank", "Investment Firm", "Insurance Company"]
   },
-
   // Manufacturing Industry Services
   {
     id: "manufacturing-ai-optimization",
@@ -206,7 +203,6 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     integrationPartners: ["SAP", "Oracle", "Siemens", "Rockwell Automation", "ABB"],
     caseStudies: ["Automotive Manufacturer", "Electronics Producer", "Chemical Plant"]
   },
-
   // Retail Industry Services
   {
     id: "retail-ai-customer-intelligence",
@@ -265,7 +261,6 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     integrationPartners: ["Shopify", "WooCommerce", "Magento", "Salesforce", "HubSpot"],
     caseStudies: ["E-commerce Platform", "Fashion Retailer", "Electronics Store"]
   },
-
   // Education Industry Services
   {
     id: "education-ai-learning-platform",
@@ -324,7 +319,6 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     integrationPartners: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
     caseStudies: ["University System", "K-12 District", "Corporate Training"]
   },
-
   // Transportation & Logistics Services
   {
     id: "transportation-ai-logistics-optimization",
@@ -383,7 +377,6 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     integrationPartners: ["SAP", "Oracle", "Manhattan Associates", "JDA Software", "Blue Yonder"],
     caseStudies: ["Major Trucking Company", "E-commerce Logistics", "Warehouse Operator"]
   },
-
   // Energy Industry Services
   {
     id: "energy-ai-grid-optimization",
@@ -442,7 +435,6 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     integrationPartners: ["Siemens", "GE", "ABB", "Schneider Electric", "Honeywell"],
     caseStudies: ["Major Utility", "Grid Operator", "Renewable Energy Provider"]
   },
-
   // Real Estate Industry Services
   {
     id: "real-estate-ai-market-intelligence",
@@ -501,7 +493,6 @@ export const INDUSTRY_SPECIFIC_SERVICES: IndustrySpecificService[] = [
     integrationPartners: ["Zillow", "Redfin", "Realtor.com", "CoStar", "Real Capital Analytics"],
     caseStudies: ["Real Estate Investment Firm", "Property Developer", "Real Estate Agency"]
   },
-
   // Agriculture Industry Services
   {
     id: "agriculture-ai-precision-farming",

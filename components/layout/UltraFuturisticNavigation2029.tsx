@@ -52,10 +52,10 @@ const serviceCategories = [
     color: 'from-blue-600 to-cyan-600',
     description: 'Space mining, biotech, and autonomous systems',
     services: [
-      { name: 'Space Mining Autonomous Platform', href: '/space-mining-autonomous-platform-2029', description: 'Autonomous asteroid and space mining', price: '$49,999/month' },
-      { name: 'Biotech AI Research Platform', href: '/biotech-ai-research-platform-2029', description: 'AI-powered drug discovery and research', price: '$32,999/month' },
-      { name: 'Metaverse AI Development Platform', href: '/metaverse-ai-development-platform-2029', description: 'AI-powered virtual world creation', price: '$16,999/month' },
-      { name: 'Autonomous Vehicle AI Platform', href: '/autonomous-vehicle-ai-platform-2029', description: 'Advanced self-driving AI systems', price: '$28,999/month' }
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform', description: 'Automated asteroid mining', price: '$45,999/month' },
+      { name: 'Metaverse Digital Reality Platform', href: '/metaverse-ai-development-platform', description: 'Immersive virtual worlds', price: '$8,999/month' },
+      { name: 'AI Predictive Health Analytics', href: '/services/ai-predictive-health-analytics-2029', description: 'Predictive health outcomes', price: '$7,999/month' },
+      { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager-2029', description: 'Fully autonomous business operations', price: '$12,999/month' }
     ]
   },
   {

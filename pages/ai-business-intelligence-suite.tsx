@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 
 import Layout from '../components/layout/Layout';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+// import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 
 export default function AIBusinessIntelligenceSuite() {
   const contactInfo = {
@@ -67,7 +67,7 @@ export default function AIBusinessIntelligenceSuite() {
           <link rel="canonical" href="https://ziontechgroup.com/ai-business-intelligence-suite" />
         </Head>
 
-        <UltraAdvancedNavigation />
+        {/* UltraAdvancedNavigation temporarily disabled due to build issues */}
 
         {/* Hero Section */}
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">

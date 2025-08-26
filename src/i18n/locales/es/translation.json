@@ -1,0 +1,119 @@
+{
+  "general": {
+    "app_name": "Mercado de IA de Zion",
+    "loading": "Cargando...",
+    "search": "Buscar",
+    "select_language": "Seleccionar idioma",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "submit": "Enviar",
+    "yes": "Sí",
+    "no": "No",
+    "success": "Éxito",
+    "error": "Error",
+    "open_main_menu": "Abrir menú principal",
+    "toggle_mobile_menu": "Alternar menú móvil",
+    "greeting_user": "¡Hola, {{name}}!",
+    "status_page": "Página de estado",
+    "check_status_page": "Puedes intentar refrescar la página o visitar nuestra",
+    "featured": "Destacado",
+    "recent": "Reciente",
+    "q_and_a": "Preguntas y Respuestas"
+  },
+  "nav": {
+    "home": "Inicio",
+    "marketplace": "Mercado",
+    "categories": "Categorías",
+    "talent": "Talento",
+    "equipment": "Equipamiento",
+    "community": "Comunidad",
+    "dashboard": "Panel",
+    "messages": "Mensajes",
+    "post_job": "Publicar Trabajo",
+    "analytics": "Analíticas"
+  },
+  "auth": {
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse",
+    "logout": "Cerrar Sesión",
+    "email": "Correo",
+    "password": "Contraseña",
+    "forgot_password": "¿Olvidó su contraseña?",
+    "remember_me": "Recordarme",
+    "login_success": "Sesión iniciada correctamente",
+    "logout_success": "Sesión cerrada correctamente",
+    "errors": {
+      "user_not_found": "No se encontró una cuenta con ese correo.",
+      "wrong_password": "Contraseña incorrecta. Inténtalo de nuevo.",
+      "account_locked": "Tu cuenta está bloqueada. Contacta al soporte.",
+      "generic": "Error de inicio de sesión. Inténtalo de nuevo."
+    }
+  },
+  "cart": {
+    "title": "Tu Carrito",
+    "empty": "Tu carrito está vacío",
+    "empty_alt": "Ilustración de carrito de compras vacío",
+    "empty_preview": "El carrito está vacío",
+    "continue_shopping": "Seguir comprando",
+    "subtotal": "Subtotal",
+    "processing": "Procesando...",
+    "checkout": "Pagar",
+    "view_cart": "Ver Carrito"
+  },
+  "home": {
+    "hero_title": "El Futuro del Mercado de Tecnología e IA",
+    "hero_subtitle": "El primer mercado gratuito dedicado a la alta tecnología e inteligencia artificial",
+    "browse_marketplace": "Explorar Mercado",
+    "create_profile": "Crear Perfil",
+    "explore_tools": "Explorar Nuestras Herramientas",
+    "tools_description": "Todo lo que necesitas para conectarte con el ecosistema de IA y tecnología",
+    "header_tagline": "Tu puerta de entrada a soluciones de IA y tecnología",
+    "quick_access_title": "Acceso Rápido",
+    "quick_access_subtitle": "Ve directo a nuestras funciones más populares",
+    "tool_mobile_app": "Aplicación Móvil", 
+    "tool_mobile_app_desc": "Zion sobre la marcha",
+    "all_features_title": "Explora Todas las Funciones",
+    "categories_title": "Explorar Categorías",
+    "categories_subtitle": "Descubre nuestro ecosistema integral de servicios tecnológicos, talento, equipamiento e innovación",
+    "no_categories_title": "No se Encontraron Categorías",
+    "no_categories_desc": "No pudimos encontrar categorías para mostrar en este momento.",
+    "no_categories_support": "Por favor, vuelve más tarde, o si crees que esto es un error, contacta al soporte.",
+    "featured_services": "Servicios Destacados",
+    "view_all_categories": "Ver Todas las Categorías →",
+    "benefits_title": "¿Por qué Zion?",
+    "benefits_subtitle": "Experimenta la próxima generación de mercado tecnológico con funciones diseñadas para maximizar la eficiencia y el valor",
+    "how_it_works_title": "Cómo Funciona",
+    "how_it_works_subtitle": "Un proceso simple de cuatro pasos para conectar proveedores de tecnología con clientes"
+  },
+  "jobs": {
+    "post_job_title": "Publicar un Trabajo",
+    "post_job_description": "Complete el formulario a continuación para publicar su trabajo y encontrar el talento perfecto",
+    "job_title": "Título del Trabajo",
+    "job_description": "Descripción del Trabajo",
+    "skills_required": "Habilidades Requeridas",
+    "budget": "Presupuesto",
+    "deadline": "Fecha Límite",
+    "job_posted": "Trabajo publicado correctamente"
+  },
+  "onboarding": {
+    "title": "¿Qué te trae a Zion?",
+    "subtitle": "Elige cómo deseas usar nuestra plataforma",
+    "talent_title": "Ofrezco servicios",
+    "talent_desc": "Encuentra trabajo y muestra tus habilidades",
+    "client_title": "Estoy contratando",
+    "client_desc": "Publica trabajos y encuentra profesionales talentosos"
+  },
+  "language": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "pt": "Português",
+    "ar": "العربية",
+    "language_changed": "Idioma cambiado a {{language}}",
+    "switch_to_detected": "¿Cambiar a {{language}}?"
+  },
+  "error_boundary": {
+    "message": "Algo salió mal.",
+    "retry": "Reintentar"
+  }
+}

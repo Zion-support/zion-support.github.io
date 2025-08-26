@@ -1,0 +1,342 @@
+import React from 'react';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { ArrowRight, ExternalLink, Home, Users, Briefcase, Settings, Shield, Cloud, Database, Brain, Building2 } from 'lucide-react';
+
+const Sitemap = () => {
+<<<<<<< HEAD:src/pages/Sitemap.tsx.backup.1756208062
+  const siteStructure = [
+    {
+      title: 'Main Pages',
+      icon: Home,
+      pages: [
+        { name: 'Home', path: '/', description: 'Welcome to Zion Tech Group' },
+        { name: 'About Us', path: '/about', description: 'Learn about our company' },
+        { name: 'Team', path: '/team', description: 'Meet our team' },
+        { name: 'Contact', path: '/contact', description: 'Get in touch with us' },
+        { name: 'Careers', path: '/careers', description: 'Join our team' },
+        { name: 'Get Started', path: '/get-started', description: 'Start your journey with us' }
+      ]
+    },
+    {
+      title: 'Services',
+      icon: Code,
+      pages: [
+        { name: 'AI Solutions', path: '/services/ai', description: 'AI-powered business solutions' },
+        { name: 'Cloud & DevOps', path: '/services/cloud', description: 'Cloud infrastructure & automation' },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', description: 'Advanced security solutions' },
+        { name: 'IT Infrastructure', path: '/services/infrastructure', description: 'Robust IT foundations' },
+        { name: 'Digital Transformation', path: '/services/transformation', description: 'Business modernization' },
+        { name: 'Consulting', path: '/services/consulting', description: 'Strategic technology guidance' }
+      ]
+    },
+    {
+      title: 'Solutions',
+      icon: Building,
+      pages: [
+        { name: 'Enterprise Solutions', path: '/solutions/enterprise', description: 'Large-scale business solutions' },
+        { name: 'Financial Solutions', path: '/solutions/financial', description: 'Fintech & banking solutions' },
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Healthcare technology' },
+        { name: 'Government Solutions', path: '/solutions/government', description: 'Public sector solutions' },
+        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', description: 'Industry 4.0 solutions' },
+        { name: 'Retail Solutions', path: '/solutions/retail', description: 'E-commerce & retail tech' }
+      ]
+    },
+    {
+      title: 'Resources',
+      icon: BookOpen,
+      pages: [
+        { name: 'Blog', path: '/blog', description: 'Latest insights and updates' },
+        { name: 'Events', path: '/events', description: 'Upcoming events and conferences' },
+        { name: 'Webinars', path: '/webinars', description: 'Educational webinars' },
+        { name: 'White Papers', path: '/white-papers', description: 'In-depth research papers' },
+        { name: 'Tutorials', path: '/tutorials', description: 'Step-by-step guides' },
+        { name: 'Research & Development', path: '/research-development', description: 'Our R&D initiatives' }
+      ]
+    },
+    {
+      title: 'Specialized Technologies',
+      icon: Rocket,
+      pages: [
+        { name: 'Quantum Technology', path: '/quantum-technology', description: 'Quantum computing platforms' },
+        { name: 'Space Tech', path: '/space-tech', description: 'Space technology solutions' },
+        { name: 'Green IT', path: '/green-it', description: 'Sustainable technology solutions' }
+      ]
+    },
+    {
+      title: 'Support & Legal',
+      icon: HelpCircle,
+      pages: [
+        { name: 'Help Center', path: '/help-center', description: 'Get help and support' },
+        { name: 'Support', path: '/support', description: 'Technical support services' },
+        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
+        { name: 'Privacy Policy', path: '/privacy', description: 'Our privacy practices' },
+        { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' }
+      ]
+    },
+    {
+      title: 'Business Tools',
+      icon: BarChart3,
+      pages: [
+        { name: 'Pricing', path: '/pricing', description: 'Service pricing and plans' },
+        { name: 'Service Comparison', path: '/service-comparison', description: 'Compare our services' },
+        { name: 'Service Portfolio', path: '/service-portfolio', description: 'View our service portfolio' },
+        { name: 'Service Recommendations', path: '/service-recommendations', description: 'Get personalized recommendations' },
+        { name: 'Service Innovation Hub', path: '/service-innovation-hub', description: 'Innovation showcase' },
+        { name: 'Services Showcase', path: '/services-showcase', description: 'Featured services' }
+=======
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
+
+const Sitemap: React.FC = () => {
+  const sitemapSections = [
+    {
+      title: "Main Pages",
+      links: [
+        { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
+        { name: "About Us", path: "/about", description: "Our story and mission" },
+        { name: "Contact", path: "/contact", description: "Get in touch with us" },
+        { name: "Pricing", path: "/pricing", description: "Our service pricing" },
+        { name: "Careers", path: "/careers", description: "Join our team" }
+      ]
+    },
+    {
+      title: "Services",
+      links: [
+        { name: "All Services", path: "/services", description: "Complete service overview" },
+        { name: "AI Solutions", path: "/services/ai", description: "Artificial Intelligence services" },
+        { name: "Cloud & DevOps", path: "/services/cloud", description: "Cloud infrastructure and automation" },
+        { name: "Cybersecurity", path: "/services/cybersecurity", description: "Security and threat protection" },
+        { name: "IT Infrastructure", path: "/services/infrastructure", description: "Network and system management" },
+        { name: "Digital Transformation", path: "/services/transformation", description: "Business process optimization" },
+        { name: "Consulting", path: "/services/consulting", description: "Technology strategy and advisory" },
+        { name: "Quantum Technology", path: "/quantum-technology", description: "Next-generation computing" },
+        { name: "Space Tech", path: "/space-tech", description: "Space technology solutions" },
+        { name: "Micro SAAS", path: "/micro-saas", description: "Scalable software solutions" }
+      ]
+    },
+    {
+      title: "Company",
+      links: [
+        { name: "Our Team", path: "/team", description: "Meet our experts" },
+        { name: "Partners", path: "/partners", description: "Strategic partnerships" },
+        { name: "Case Studies", path: "/case-studies", description: "Success stories" },
+        { name: "Research & Development", path: "/research-development", description: "Innovation hub" }
+      ]
+    },
+    {
+      title: "Resources",
+      links: [
+        { name: "Blog", path: "/blog", description: "Latest insights and news" },
+        { name: "Events", path: "/events", description: "Upcoming events" },
+        { name: "Webinars", path: "/webinars", description: "Educational content" },
+        { name: "White Papers", path: "/white-papers", description: "Research and analysis" },
+        { name: "Tutorials", path: "/tutorials", description: "Learning resources" }
+      ]
+    },
+    {
+      title: "Support",
+      links: [
+        { name: "Help Center", path: "/help", description: "Self-service support" },
+        { name: "Support Portal", path: "/support", description: "Technical support" },
+        { name: "FAQ", path: "/faq", description: "Frequently asked questions" },
+        { name: "Status", path: "/status", description: "Service status" }
+      ]
+    },
+    {
+      title: "Legal",
+      links: [
+        { name: "Privacy Policy", path: "/privacy", description: "Data protection and privacy" },
+        { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
+        { name: "Cookie Policy", path: "/cookies", description: "Cookie usage information" }
+>>>>>>> origin/cursor/website-audit-and-enhancement-98df
+      ]
+    }
+=======
+  const mainPages = [
+    { path: '/', title: 'Home', description: 'Main landing page', icon: Home },
+    { path: '/match', title: 'AI Talent Matcher', description: 'Find the perfect talent match', icon: Brain },
+    { path: '/talent', title: 'Talent Directory', description: 'Browse available talent', icon: Users },
+    { path: '/services', title: 'Services', description: 'Overview of all services', icon: Briefcase },
+    { path: '/contact', title: 'Contact', description: 'Get in touch with us', icon: ExternalLink },
+    { path: '/partners', title: 'Partners', description: 'Our business partners', icon: Users },
+    { path: '/blog', title: 'Blog', description: 'Latest insights and updates', icon: ExternalLink },
+>>>>>>> origin/cursor/website-audit-and-enhancement-33a4:src/pages/Sitemap.tsx
+  ];
+
+  const servicePages = [
+    { path: '/ai-solutions', title: 'AI Solutions', description: 'Artificial Intelligence services', icon: Brain },
+    { path: '/cybersecurity', title: 'Cybersecurity', description: 'Security and protection services', icon: Shield },
+    { path: '/cloud-devops', title: 'Cloud & DevOps', description: 'Cloud infrastructure and operations', icon: Cloud },
+    { path: '/data-analytics', title: 'Data Analytics', description: 'Data insights and analysis', icon: Database },
+    { path: '/enterprise-solutions', title: 'Enterprise Solutions', description: 'Large-scale business solutions', icon: Building2 },
+    { path: '/it-onsite-services', title: 'IT Onsite Services', description: 'On-site technical support', icon: Settings },
+    { path: '/micro-saas-services', title: 'Micro SaaS Services', description: 'Small business software solutions', icon: Briefcase },
+  ];
+
+  const additionalPages = [
+    { path: '/enhanced-services', title: 'Enhanced Services', description: 'Premium service offerings' },
+    { path: '/equipment', title: 'Equipment', description: 'Hardware and equipment rentals' },
+    { path: '/analytics', title: 'Analytics Dashboard', description: 'Performance metrics and insights' },
+    { path: '/mobile-launch', title: 'Mobile App', description: 'Download our mobile application' },
+    { path: '/community', title: 'Community', description: 'Join our community' },
+    { path: '/categories', title: 'Categories', description: 'Browse service categories' },
+    { path: '/zion-hire-ai', title: 'Zion Hire AI', description: 'AI-powered hiring platform' },
+    { path: '/request-quote', title: 'Request Quote', description: 'Get a custom quote' },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            Sitemap
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Navigate through all the pages and services available on our platform. 
+            Find exactly what you're looking for with our comprehensive site structure.
+          </p>
+        </div>
+
+        {/* Main Pages */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+            <Home className="w-8 h-8 text-blue-400" />
+            Main Pages
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mainPages.map((page) => {
+              const IconComponent = page.icon;
+              return (
+                <Card key={page.path} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <CardHeader>
+                    <div className="flex items-center gap-3">
+                      <IconComponent className="w-6 h-6 text-blue-400" />
+                      <CardTitle className="text-white">{page.title}</CardTitle>
+                    </div>
+                    <CardDescription className="text-gray-300">
+                      {page.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Link to={page.path}>
+                      <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                        Visit Page
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Service Pages */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+            <Briefcase className="w-8 h-8 text-green-400" />
+            Service Pages
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {servicePages.map((page) => {
+              const IconComponent = page.icon;
+              return (
+                <Card key={page.path} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <CardHeader>
+                    <div className="flex items-center gap-3">
+                      <IconComponent className="w-6 h-6 text-green-400" />
+                      <CardTitle className="text-white">{page.title}</CardTitle>
+                    </div>
+                    <CardDescription className="text-gray-300">
+                      {page.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Link to={page.path}>
+                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                        View Services
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Additional Pages */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+            <ExternalLink className="w-8 h-8 text-purple-400" />
+            Additional Pages
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {additionalPages.map((page) => (
+              <Card key={page.path} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <CardHeader>
+                  <CardTitle className="text-white">{page.title}</CardTitle>
+                  <CardDescription className="text-gray-300">
+                    {page.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link to={page.path}>
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+                      Explore
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Quick Navigation */}
+        <div className="text-center">
+          <Card className="bg-white/10 backdrop-blur-sm border-white/20 max-w-2xl mx-auto">
+            <CardHeader>
+              <CardTitle className="text-white text-2xl">Quick Navigation</CardTitle>
+              <CardDescription className="text-gray-300">
+                Use these quick links to jump to the most important sections
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <Link to="/services">
+                  <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/10">
+                    All Services
+                  </Button>
+                </Link>
+                <Link to="/talent">
+                  <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/10">
+                    Find Talent
+                  </Button>
+                </Link>
+                <Link to="/match">
+                  <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/10">
+                    AI Matcher
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button variant="outline" className="w-full border-white/30 text-white hover:bg-white/10">
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Sitemap;

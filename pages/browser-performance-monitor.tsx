@@ -3,10 +3,10 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Activity } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-import { extraServices } from '../data/extra-services';
+import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/2025-innovative-real-micro-saas-services';
 
 export default function BrowserPerformanceMonitorPage() {
-  const service = extraServices.find(s => s.id === 'browser-performance-monitor');
+  const service = servicesData.find(s => s.id === 'browser-performance-monitor');
   if (!service) return null;
 
   return (
@@ -44,9 +44,9 @@ export default function BrowserPerformanceMonitorPage() {
               </div>
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Start Monitoring<ArrowRight /></a>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{"+1 (555) 123-4567"}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{"contact@ziontechgroup.com"}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{"123 Innovation Drive, Tech City, TC 12345"}</span></div>
               </div>
             </div>
           </div>

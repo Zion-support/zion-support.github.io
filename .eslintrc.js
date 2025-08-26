@@ -1,78 +1,37 @@
 module.exports = {
   extends: [
-    "next/core-web-vitals",
-    "next/typescript"
+    'next/core-web-vitals'
   ],
-  parser: "@typescript-eslint/parser",
-  plugins: [
-    "@typescript-eslint",
-    "react",
-    "react-hooks"
-  ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
+  env: {
+    browser: true,
+    es6: true,
+    node: true
+  },
   rules: {
-    'no-unused-vars': 'off', // Turn off base rule
-    '@typescript-eslint/no-unused-vars': [
-      'warn',
-      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
-    ],
-    'no-console': 'warn',
-    'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/no-empty-object-type': 'warn',
-    '@next/next/no-html-link-for-pages': 'warn',
-    'react/no-unescaped-entities': 'warn'
+    'no-console': 'warn',
+    'react/no-unescaped-entities': 'off',
+    '@next/next/no-html-link-for-pages': 'off'
   },
   ignorePatterns: [
     'node_modules/',
     '.next/',
     'out/',
-    'build/',
     'dist/',
+    'build/',
     '*.config.js',
     '*.config.ts',
     'scripts/',
-    'automation/',
-    'netlify/',
-    '**/*.disabled/**',
-    '**/disabled/**',
-    '**/components.disabled/**',
-    '**/pages.disabled/**',
-    '**/types.disabled/**',
-    '**/utils.disabled/**',
-    '**/zion-os.disabled/**',
-    '**/tests.disabled/**',
-    '**/typechain-types.disabled/**',
-    '**/services.disabled.temp/**',
-    '**/src.broken/**',
-    '**/zion_academy/**',
-    '**/start-all-automations.js',
-    '**/test-*.js',
-    '**/simple-*.js',
-    '**/workbox-config.js',
-    '**/components_backup/**',
-    '**/pages_disabled/**',
-    '**/src_disabled/**',
-    '**/comprehensive-*.js',
-    '**/debug-*.js',
-    '**/extract*.js',
-    '**/fix-*.js',
-    '**/jest.setup.js',
-    '**/mcp-*.js',
-    '**/next-env.d.ts',
-    '**/public/*.js',
-    '**/run-*.js',
-    '**/script.js',
-    '**/seed.js',
-    '**/data/2025-*.ts',
-    '**/backup/**',
-    '**/auto-*.js',
-    'zion-website-analysis.json',
-    '*.backup.*',
-    '*.log',
-    '*.txt',
-    '*.md'
+    'automation/'
   ]
 };

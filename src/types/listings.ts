@@ -2,14 +2,17 @@ export interface Listing {
   id: string;
   title: string;
   description: string;
-  price: number;
-  currency: string;
   category: string;
+  subcategory?: string;
+  price?: number;
+  currency?: string;
   tags: string[];
-  images: string[];
-  seller: {
-    id: string;
+  author: {
     name: string;
+<<<<<<< HEAD
+    id: string;
+    avatarUrl?: string;
+=======
     avatar: string;
     rating: number;
     reviews: number;
@@ -38,13 +41,18 @@ export interface Listing {
     cost: number;
   };
 }
-
 export interface ListingFilter {
   category?: string;
   priceRange?: {
     min: number;
     max: number;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   };
+  images: string[];
+  createdAt: string;
+  rating: number;
+  reviewCount: number;
+  featured?: boolean;
   location?: string;
   condition?: string;
   tags?: string[];
@@ -52,7 +60,6 @@ export interface ListingFilter {
   sortBy?: 'price' | 'date' | 'rating' | 'views';
   sortOrder?: 'asc' | 'desc';
 }
-
 export interface ListingSearchResult {
   listings: Listing[];
   total: number;
@@ -60,7 +67,6 @@ export interface ListingSearchResult {
   limit: number;
   hasMore: boolean;
 }
-
 export interface ListingFormData {
   title: string;
   description: string;
@@ -83,7 +89,6 @@ export interface ListingFormData {
     cost: number;
   };
 }
-
 export interface ListingStats {
   totalListings: number;
   activeListings: number;
@@ -91,4 +96,27 @@ export interface ListingStats {
   totalFavorites: number;
   averagePrice: number;
   categoryDistribution: Record<string, number>;
+}
+
+export interface ProductListing {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  price: number;
+  currency: string;
+  tags: string[];
+  author: {
+    name: string;
+    id: string;
+    avatarUrl?: string;
+    email?: string;
+  };
+  images: string[];
+  createdAt: string;
+  aiScore?: number;
+  rating?: number;
+  reviewCount?: number;
+  featured?: boolean;
+  link?: string;
 }

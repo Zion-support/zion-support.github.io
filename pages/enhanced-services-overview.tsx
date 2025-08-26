@@ -13,7 +13,7 @@ import {
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground2035 from '../components/ui/UltraFuturisticBackground2035';
 import UltraFuturisticNavigation2033 from '../components/layout/UltraFuturisticNavigation2033';
-import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
+// import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
 
 export default function EnhancedServicesOverview() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');

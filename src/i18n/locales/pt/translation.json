@@ -11,7 +11,13 @@
     "yes": "Sim",
     "no": "Não",
     "success": "Sucesso",
-    "error": "Erro"
+    "error": "Erro",
+    "open_main_menu": "Abrir menu principal",
+    "toggle_mobile_menu": "Alternar menu móvel",
+    "greeting_user": "Olá, {{name}}!",
+    "status_page": "Página de status",
+    "check_status_page": "Você pode tentar atualizar a página ou visitar nossa",
+    "back_to_top": "Voltar ao topo"
   },
   "nav": {
     "home": "Início",
@@ -39,6 +45,17 @@
     "login_success": "Login realizado com sucesso",
     "logout_success": "Logout realizado com sucesso"
   },
+  "cart": {
+    "title": "Seu Carrinho",
+    "empty": "Seu carrinho está vazio",
+    "empty_alt": "Ilustração de carrinho de compras vazio",
+    "empty_preview": "Carrinho está vazio",
+    "continue_shopping": "Continuar Comprando",
+    "subtotal": "Subtotal",
+    "processing": "Processando...",
+    "checkout": "Finalizar Compra",
+    "view_cart": "Ver Carrinho"
+  },
   "home": {
     "hero_title": "O Futuro do Mercado de Tecnologia e IA",
     "hero_subtitle": "O primeiro mercado gratuito dedicado à alta tecnologia e inteligência artificial",
@@ -57,6 +74,14 @@
     "deadline": "Prazo",
     "job_posted": "Vaga publicada com sucesso"
   },
+  "onboarding": {
+    "title": "O que te traz à Zion?",
+    "subtitle": "Escolha como deseja usar nossa plataforma",
+    "talent_title": "Estou oferecendo serviços",
+    "talent_desc": "Encontre trabalho e mostre suas habilidades",
+    "client_title": "Estou contratando",
+    "client_desc": "Publique vagas e encontre profissionais talentosos"
+  },
   "language": {
     "en": "English",
     "es": "Español",
@@ -64,5 +89,9 @@
     "ar": "العربية",
     "language_changed": "Idioma alterado para {{language}}",
     "switch_to_detected": "Mudar para {{language}}?"
+  },
+  "error_boundary": {
+    "message": "Algo deu errado.",
+    "retry": "Tentar novamente"
   }
 }

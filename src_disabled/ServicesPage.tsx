@@ -4,9 +4,8 @@ import { ProductListing } from "@/types/listings";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Globe, Zap, Brain } from "lucide-react";
+import { Globe } from "lucide-react";
 import { useEffect, useState } from "react";
-import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
 
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -111,9 +110,9 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
     author: {
-      name: "AI Future Consulting",
-      id: "ai-future",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100",
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-02T10:30:00.000Z",
@@ -402,7 +401,7 @@ const SERVICE_FILTERS = [
 ];
 
 export default function ServicesPage() {
-  const [listings, setListings] = useState<ProductListing[]>([...SERVICE_LISTINGS, ...MICRO_SAAS_SERVICES]);
+  const [listings, setListings] = useState<ProductListing[]>(SERVICE_LISTINGS);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -414,30 +413,10 @@ export default function ServicesPage() {
 
   return (
     <>
-<<<<<<< HEAD:src/pages/ServicesPage.tsx
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
           <div className="flex flex-wrap gap-2">
-            <Link to="/services-showcase">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2" />
-                Services Showcase
-              </Button>
-            </Link>
-            <Link to="/pricing">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2" />
-                View Pricing
-              </Button>
-            </Link>
-            <Link to="/services-comparison">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2" />
-                Compare Services
-              </Button>
-            </Link>
-=======
       {/* Hero Section */}
       <div className="bg-zion-blue-dark py-16 px-4 md:px-8 border-b border-zion-blue-light">
         <div className="container mx-auto text-center">
@@ -486,18 +465,11 @@ export default function ServicesPage() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
->>>>>>> 6de525ab7fd2268019c6a3413cbe79321aeb887d:src_disabled/ServicesPage.tsx
+=======
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
                 Global IT Onsite Services
-              </Button>
-            </Link>
-            <Link to="/comprehensive-services">
-              <Button variant="outline" className="border-zion-cyan text-zion-purple hover:bg-zion-cyan/10">
-                <Globe className="h-4 w-4 mr-2" />
-                All Services
-              </Button>
               </Button>
             </Link>
             <Link to="/request-quote">
@@ -508,33 +480,14 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-
-      {/* Comprehensive Services Showcase */}
-      <ComprehensiveServicesShowcase />
-
-      {/* Marketplace Services */}
-      <div className="py-20 bg-zion-blue">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Marketplace <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Services</span>
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Discover additional services from our verified partners and technology experts in the marketplace
-            </p>
-          </div>
-          
-          <DynamicListingPage 
-            title="Marketplace Services"
-            description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
-            categorySlug="services"
-            listings={listings}
-            categoryFilters={SERVICE_FILTERS}
-            initialPrice={{ min: 3000, max: 10000 }}
-          />
-        </div>
-      </div>
-
+      <DynamicListingPage 
+        title="IT & AI Services"
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
+        categorySlug="services"
+        listings={listings}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min: 3000, max: 10000 }}
+      />
       <TrustedBySection />
     </>
   );

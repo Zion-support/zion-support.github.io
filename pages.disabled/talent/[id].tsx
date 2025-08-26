@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
@@ -65,7 +65,7 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
-  if (error || !profile) return <ProfileErrorState error={error || 'Talent not found'} />;
+  if (error || !profile) return <ProfileErrorState error={error} />;
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">

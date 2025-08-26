@@ -1,0 +1,848 @@
+2025-08-26 11:49:55 - [0;34m🔄 Starting to process remaining cursor branches...[0m
+2025-08-26 12:02:02 - [0;34m📊 Total remaining branches to process: 2724[0m
+2025-08-26 12:02:02 - [0;34m📋 Processing branch 1/2724:   cursor/add-2030q1-services-ui-8deb1aee36d[0m
+2025-08-26 12:02:02 - [0;34m🔄 Attempting to merge   cursor/add-2030q1-services-ui-8deb1aee36d...[0m
+2025-08-26 12:02:02 - [0;31m❌ Failed to fetch branch   cursor/add-2030q1-services-ui-8deb1aee36d[0m
+2025-08-26 12:02:02 - [0;31m❌ Failed to process branch   cursor/add-2030q1-services-ui-8deb1aee36d[0m
+2025-08-26 12:02:02 - [0;34m📊 Progress: 1/2724, ✅ 0, ❌ 1[0m
+2025-08-26 12:02:03 - [0;34m📋 Processing branch 2/2724:   cursor/add-and-advertise-new-services-then-build-0357[0m
+2025-08-26 12:02:04 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-0357...[0m
+2025-08-26 12:02:04 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-0357[0m
+2025-08-26 12:02:04 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-0357[0m
+2025-08-26 12:02:04 - [0;34m📊 Progress: 2/2724, ✅ 0, ❌ 2[0m
+2025-08-26 12:02:05 - [0;34m📋 Processing branch 3/2724:   cursor/add-and-advertise-new-services-then-build-03b6[0m
+2025-08-26 12:02:05 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-03b6...[0m
+2025-08-26 12:02:05 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-03b6[0m
+2025-08-26 12:02:05 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-03b6[0m
+2025-08-26 12:02:05 - [0;34m📊 Progress: 3/2724, ✅ 0, ❌ 3[0m
+2025-08-26 12:02:06 - [0;34m📋 Processing branch 4/2724:   cursor/add-and-advertise-new-services-then-build-06aa[0m
+2025-08-26 12:02:06 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-06aa...[0m
+2025-08-26 12:02:06 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-06aa[0m
+2025-08-26 12:02:06 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-06aa[0m
+2025-08-26 12:02:06 - [0;34m📊 Progress: 4/2724, ✅ 0, ❌ 4[0m
+2025-08-26 12:02:07 - [0;34m📋 Processing branch 5/2724:   cursor/add-and-advertise-new-services-then-build-0756[0m
+2025-08-26 12:02:07 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-0756...[0m
+2025-08-26 12:02:07 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-0756[0m
+2025-08-26 12:02:07 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-0756[0m
+2025-08-26 12:02:07 - [0;34m📊 Progress: 5/2724, ✅ 0, ❌ 5[0m
+2025-08-26 12:02:08 - [0;34m📋 Processing branch 6/2724:   cursor/add-and-advertise-new-services-then-build-0c04[0m
+2025-08-26 12:02:08 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-0c04...[0m
+2025-08-26 12:02:08 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-0c04[0m
+2025-08-26 12:02:08 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-0c04[0m
+2025-08-26 12:02:08 - [0;34m📊 Progress: 6/2724, ✅ 0, ❌ 6[0m
+2025-08-26 12:02:09 - [0;34m📋 Processing branch 7/2724:   cursor/add-and-advertise-new-services-then-build-0cca[0m
+2025-08-26 12:02:09 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-0cca...[0m
+2025-08-26 12:02:09 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-0cca[0m
+2025-08-26 12:02:09 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-0cca[0m
+2025-08-26 12:02:09 - [0;34m📊 Progress: 7/2724, ✅ 0, ❌ 7[0m
+2025-08-26 12:02:10 - [0;34m📋 Processing branch 8/2724:   cursor/add-and-advertise-new-services-then-build-174e[0m
+2025-08-26 12:02:10 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-174e...[0m
+2025-08-26 12:02:10 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-174e[0m
+2025-08-26 12:02:10 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-174e[0m
+2025-08-26 12:02:10 - [0;34m📊 Progress: 8/2724, ✅ 0, ❌ 8[0m
+2025-08-26 12:02:11 - [0;34m📋 Processing branch 9/2724:   cursor/add-and-advertise-new-services-then-build-17cc[0m
+2025-08-26 12:02:11 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-17cc...[0m
+2025-08-26 12:02:11 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-17cc[0m
+2025-08-26 12:02:11 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-17cc[0m
+2025-08-26 12:02:11 - [0;34m📊 Progress: 9/2724, ✅ 0, ❌ 9[0m
+2025-08-26 12:02:12 - [0;34m📋 Processing branch 10/2724:   cursor/add-and-advertise-new-services-then-build-192f[0m
+2025-08-26 12:02:12 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-192f...[0m
+2025-08-26 12:02:12 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-192f[0m
+2025-08-26 12:02:12 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-192f[0m
+2025-08-26 12:02:12 - [0;34m📊 Progress: 10/2724, ✅ 0, ❌ 10[0m
+2025-08-26 12:02:12 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:02:12 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:02:12 - [0;32m🚀 Completed batch 1[0m
+2025-08-26 12:02:13 - [0;34m📋 Processing branch 11/2724:   cursor/add-and-advertise-new-services-then-build-1d5b[0m
+2025-08-26 12:02:13 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-1d5b...[0m
+2025-08-26 12:02:13 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-1d5b[0m
+2025-08-26 12:02:13 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-1d5b[0m
+2025-08-26 12:02:13 - [0;34m📊 Progress: 11/2724, ✅ 0, ❌ 11[0m
+2025-08-26 12:02:14 - [0;34m📋 Processing branch 12/2724:   cursor/add-and-advertise-new-services-then-build-21f8[0m
+2025-08-26 12:02:14 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-21f8...[0m
+2025-08-26 12:02:14 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-21f8[0m
+2025-08-26 12:02:14 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-21f8[0m
+2025-08-26 12:02:14 - [0;34m📊 Progress: 12/2724, ✅ 0, ❌ 12[0m
+2025-08-26 12:02:15 - [0;34m📋 Processing branch 13/2724:   cursor/add-and-advertise-new-services-then-build-2b91[0m
+2025-08-26 12:02:15 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-2b91...[0m
+2025-08-26 12:02:15 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-2b91[0m
+2025-08-26 12:02:15 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-2b91[0m
+2025-08-26 12:02:15 - [0;34m📊 Progress: 13/2724, ✅ 0, ❌ 13[0m
+2025-08-26 12:02:16 - [0;34m📋 Processing branch 14/2724:   cursor/add-and-advertise-new-services-then-build-2c85[0m
+2025-08-26 12:02:16 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-2c85...[0m
+2025-08-26 12:02:16 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-2c85[0m
+2025-08-26 12:02:16 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-2c85[0m
+2025-08-26 12:02:16 - [0;34m📊 Progress: 14/2724, ✅ 0, ❌ 14[0m
+2025-08-26 12:02:17 - [0;34m📋 Processing branch 15/2724:   cursor/add-and-advertise-new-services-then-build-336c[0m
+2025-08-26 12:02:17 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-336c...[0m
+2025-08-26 12:02:17 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-336c[0m
+2025-08-26 12:02:17 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-336c[0m
+2025-08-26 12:02:17 - [0;34m📊 Progress: 15/2724, ✅ 0, ❌ 15[0m
+2025-08-26 12:02:18 - [0;34m📋 Processing branch 16/2724:   cursor/add-and-advertise-new-services-then-build-359a[0m
+2025-08-26 12:02:18 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-359a...[0m
+2025-08-26 12:02:18 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-359a[0m
+2025-08-26 12:02:18 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-359a[0m
+2025-08-26 12:02:18 - [0;34m📊 Progress: 16/2724, ✅ 0, ❌ 16[0m
+2025-08-26 12:02:20 - [0;34m📋 Processing branch 17/2724:   cursor/add-and-advertise-new-services-then-build-39d5[0m
+2025-08-26 12:02:20 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-39d5...[0m
+2025-08-26 12:02:20 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-39d5[0m
+2025-08-26 12:02:20 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-39d5[0m
+2025-08-26 12:02:20 - [0;34m📊 Progress: 17/2724, ✅ 0, ❌ 17[0m
+2025-08-26 12:02:21 - [0;34m📋 Processing branch 18/2724:   cursor/add-and-advertise-new-services-then-build-3ac9[0m
+2025-08-26 12:02:21 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-3ac9...[0m
+2025-08-26 12:02:21 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-3ac9[0m
+2025-08-26 12:02:21 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-3ac9[0m
+2025-08-26 12:02:21 - [0;34m📊 Progress: 18/2724, ✅ 0, ❌ 18[0m
+2025-08-26 12:02:22 - [0;34m📋 Processing branch 19/2724:   cursor/add-and-advertise-new-services-then-build-3bf4[0m
+2025-08-26 12:02:22 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-3bf4...[0m
+2025-08-26 12:02:22 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-3bf4[0m
+2025-08-26 12:02:22 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-3bf4[0m
+2025-08-26 12:02:22 - [0;34m📊 Progress: 19/2724, ✅ 0, ❌ 19[0m
+2025-08-26 12:02:23 - [0;34m📋 Processing branch 20/2724:   cursor/add-and-advertise-new-services-then-build-3f02[0m
+2025-08-26 12:02:23 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-3f02...[0m
+2025-08-26 12:02:23 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-3f02[0m
+2025-08-26 12:02:23 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-3f02[0m
+2025-08-26 12:02:23 - [0;34m📊 Progress: 20/2724, ✅ 0, ❌ 20[0m
+2025-08-26 12:02:23 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:02:23 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:02:23 - [0;32m🚀 Completed batch 2[0m
+2025-08-26 12:02:24 - [0;34m📋 Processing branch 21/2724:   cursor/add-and-advertise-new-services-then-build-3f57[0m
+2025-08-26 12:02:24 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-3f57...[0m
+2025-08-26 12:02:24 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-3f57[0m
+2025-08-26 12:02:24 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-3f57[0m
+2025-08-26 12:02:24 - [0;34m📊 Progress: 21/2724, ✅ 0, ❌ 21[0m
+2025-08-26 12:02:25 - [0;34m📋 Processing branch 22/2724:   cursor/add-and-advertise-new-services-then-build-4074[0m
+2025-08-26 12:02:25 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-4074...[0m
+2025-08-26 12:02:25 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-4074[0m
+2025-08-26 12:02:25 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-4074[0m
+2025-08-26 12:02:25 - [0;34m📊 Progress: 22/2724, ✅ 0, ❌ 22[0m
+2025-08-26 12:02:26 - [0;34m📋 Processing branch 23/2724:   cursor/add-and-advertise-new-services-then-build-4798[0m
+2025-08-26 12:02:26 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-4798...[0m
+2025-08-26 12:02:26 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-4798[0m
+2025-08-26 12:02:26 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-4798[0m
+2025-08-26 12:02:26 - [0;34m📊 Progress: 23/2724, ✅ 0, ❌ 23[0m
+2025-08-26 12:02:27 - [0;34m📋 Processing branch 24/2724:   cursor/add-and-advertise-new-services-then-build-4941[0m
+2025-08-26 12:02:27 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-4941...[0m
+2025-08-26 12:02:27 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-4941[0m
+2025-08-26 12:02:27 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-4941[0m
+2025-08-26 12:02:27 - [0;34m📊 Progress: 24/2724, ✅ 0, ❌ 24[0m
+2025-08-26 12:02:28 - [0;34m📋 Processing branch 25/2724:   cursor/add-and-advertise-new-services-then-build-49c1[0m
+2025-08-26 12:02:28 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-49c1...[0m
+2025-08-26 12:02:28 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-49c1[0m
+2025-08-26 12:02:28 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-49c1[0m
+2025-08-26 12:02:28 - [0;34m📊 Progress: 25/2724, ✅ 0, ❌ 25[0m
+2025-08-26 12:02:29 - [0;34m📋 Processing branch 26/2724:   cursor/add-and-advertise-new-services-then-build-4e03[0m
+2025-08-26 12:02:29 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-4e03...[0m
+2025-08-26 12:02:29 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-4e03[0m
+2025-08-26 12:02:29 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-4e03[0m
+2025-08-26 12:02:29 - [0;34m📊 Progress: 26/2724, ✅ 0, ❌ 26[0m
+2025-08-26 12:02:30 - [0;34m📋 Processing branch 27/2724:   cursor/add-and-advertise-new-services-then-build-5035[0m
+2025-08-26 12:02:30 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-5035...[0m
+2025-08-26 12:02:30 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-5035[0m
+2025-08-26 12:02:30 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-5035[0m
+2025-08-26 12:02:30 - [0;34m📊 Progress: 27/2724, ✅ 0, ❌ 27[0m
+2025-08-26 12:02:31 - [0;34m📋 Processing branch 28/2724:   cursor/add-and-advertise-new-services-then-build-506a[0m
+2025-08-26 12:02:31 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-506a...[0m
+2025-08-26 12:02:31 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-506a[0m
+2025-08-26 12:02:31 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-506a[0m
+2025-08-26 12:02:31 - [0;34m📊 Progress: 28/2724, ✅ 0, ❌ 28[0m
+2025-08-26 12:02:32 - [0;34m📋 Processing branch 29/2724:   cursor/add-and-advertise-new-services-then-build-5511[0m
+2025-08-26 12:02:32 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-5511...[0m
+2025-08-26 12:02:32 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-5511[0m
+2025-08-26 12:02:32 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-5511[0m
+2025-08-26 12:02:32 - [0;34m📊 Progress: 29/2724, ✅ 0, ❌ 29[0m
+2025-08-26 12:02:33 - [0;34m📋 Processing branch 30/2724:   cursor/add-and-advertise-new-services-then-build-5a0b[0m
+2025-08-26 12:02:33 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-5a0b...[0m
+2025-08-26 12:02:33 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-5a0b[0m
+2025-08-26 12:02:33 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-5a0b[0m
+2025-08-26 12:02:33 - [0;34m📊 Progress: 30/2724, ✅ 0, ❌ 30[0m
+2025-08-26 12:02:33 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:02:34 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:02:34 - [0;32m🚀 Completed batch 3[0m
+2025-08-26 12:02:35 - [0;34m📋 Processing branch 31/2724:   cursor/add-and-advertise-new-services-then-build-5b39[0m
+2025-08-26 12:02:35 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-5b39...[0m
+2025-08-26 12:02:35 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-5b39[0m
+2025-08-26 12:02:35 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-5b39[0m
+2025-08-26 12:02:35 - [0;34m📊 Progress: 31/2724, ✅ 0, ❌ 31[0m
+2025-08-26 12:02:36 - [0;34m📋 Processing branch 32/2724:   cursor/add-and-advertise-new-services-then-build-6510[0m
+2025-08-26 12:02:36 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-6510...[0m
+2025-08-26 12:02:36 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-6510[0m
+2025-08-26 12:02:36 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-6510[0m
+2025-08-26 12:02:36 - [0;34m📊 Progress: 32/2724, ✅ 0, ❌ 32[0m
+2025-08-26 12:02:37 - [0;34m📋 Processing branch 33/2724:   cursor/add-and-advertise-new-services-then-build-6afb[0m
+2025-08-26 12:02:37 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-6afb...[0m
+2025-08-26 12:02:37 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-6afb[0m
+2025-08-26 12:02:37 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-6afb[0m
+2025-08-26 12:02:37 - [0;34m📊 Progress: 33/2724, ✅ 0, ❌ 33[0m
+2025-08-26 12:02:38 - [0;34m📋 Processing branch 34/2724:   cursor/add-and-advertise-new-services-then-build-6d14[0m
+2025-08-26 12:02:38 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-6d14...[0m
+2025-08-26 12:02:38 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-6d14[0m
+2025-08-26 12:02:38 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-6d14[0m
+2025-08-26 12:02:38 - [0;34m📊 Progress: 34/2724, ✅ 0, ❌ 34[0m
+2025-08-26 12:02:39 - [0;34m📋 Processing branch 35/2724:   cursor/add-and-advertise-new-services-then-build-7152[0m
+2025-08-26 12:02:39 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-7152...[0m
+2025-08-26 12:02:39 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-7152[0m
+2025-08-26 12:02:39 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-7152[0m
+2025-08-26 12:02:39 - [0;34m📊 Progress: 35/2724, ✅ 0, ❌ 35[0m
+2025-08-26 12:02:40 - [0;34m📋 Processing branch 36/2724:   cursor/add-and-advertise-new-services-then-build-7683[0m
+2025-08-26 12:02:40 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-7683...[0m
+2025-08-26 12:02:40 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-7683[0m
+2025-08-26 12:02:40 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-7683[0m
+2025-08-26 12:02:40 - [0;34m📊 Progress: 36/2724, ✅ 0, ❌ 36[0m
+2025-08-26 12:02:41 - [0;34m📋 Processing branch 37/2724:   cursor/add-and-advertise-new-services-then-build-7aec[0m
+2025-08-26 12:02:41 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-7aec...[0m
+2025-08-26 12:02:41 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-7aec[0m
+2025-08-26 12:02:41 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-7aec[0m
+2025-08-26 12:02:41 - [0;34m📊 Progress: 37/2724, ✅ 0, ❌ 37[0m
+2025-08-26 12:02:42 - [0;34m📋 Processing branch 38/2724:   cursor/add-and-advertise-new-services-then-build-7c2e[0m
+2025-08-26 12:02:42 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-7c2e...[0m
+2025-08-26 12:02:42 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-7c2e[0m
+2025-08-26 12:02:42 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-7c2e[0m
+2025-08-26 12:02:42 - [0;34m📊 Progress: 38/2724, ✅ 0, ❌ 38[0m
+2025-08-26 12:02:43 - [0;34m📋 Processing branch 39/2724:   cursor/add-and-advertise-new-services-then-build-7fe9[0m
+2025-08-26 12:02:43 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-7fe9...[0m
+2025-08-26 12:02:43 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-7fe9[0m
+2025-08-26 12:02:43 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-7fe9[0m
+2025-08-26 12:02:43 - [0;34m📊 Progress: 39/2724, ✅ 0, ❌ 39[0m
+2025-08-26 12:02:44 - [0;34m📋 Processing branch 40/2724:   cursor/add-and-advertise-new-services-then-build-8699[0m
+2025-08-26 12:02:44 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-8699...[0m
+2025-08-26 12:02:44 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-8699[0m
+2025-08-26 12:02:44 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-8699[0m
+2025-08-26 12:02:44 - [0;34m📊 Progress: 40/2724, ✅ 0, ❌ 40[0m
+2025-08-26 12:02:44 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:02:45 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:02:45 - [0;32m🚀 Completed batch 4[0m
+2025-08-26 12:02:46 - [0;34m📋 Processing branch 41/2724:   cursor/add-and-advertise-new-services-then-build-86e9[0m
+2025-08-26 12:02:46 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-86e9...[0m
+2025-08-26 12:02:46 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-86e9[0m
+2025-08-26 12:02:46 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-86e9[0m
+2025-08-26 12:02:46 - [0;34m📊 Progress: 41/2724, ✅ 0, ❌ 41[0m
+2025-08-26 12:02:47 - [0;34m📋 Processing branch 42/2724:   cursor/add-and-advertise-new-services-then-build-8c77[0m
+2025-08-26 12:02:47 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-8c77...[0m
+2025-08-26 12:02:47 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-8c77[0m
+2025-08-26 12:02:47 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-8c77[0m
+2025-08-26 12:02:47 - [0;34m📊 Progress: 42/2724, ✅ 0, ❌ 42[0m
+2025-08-26 12:02:48 - [0;34m📋 Processing branch 43/2724:   cursor/add-and-advertise-new-services-then-build-98f2[0m
+2025-08-26 12:02:48 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-98f2...[0m
+2025-08-26 12:02:48 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-98f2[0m
+2025-08-26 12:02:48 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-98f2[0m
+2025-08-26 12:02:48 - [0;34m📊 Progress: 43/2724, ✅ 0, ❌ 43[0m
+2025-08-26 12:02:49 - [0;34m📋 Processing branch 44/2724:   cursor/add-and-advertise-new-services-then-build-99f7[0m
+2025-08-26 12:02:49 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-99f7...[0m
+2025-08-26 12:02:49 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-99f7[0m
+2025-08-26 12:02:49 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-99f7[0m
+2025-08-26 12:02:49 - [0;34m📊 Progress: 44/2724, ✅ 0, ❌ 44[0m
+2025-08-26 12:02:50 - [0;34m📋 Processing branch 45/2724:   cursor/add-and-advertise-new-services-then-build-9c6d[0m
+2025-08-26 12:02:50 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-9c6d...[0m
+2025-08-26 12:02:50 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-9c6d[0m
+2025-08-26 12:02:50 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-9c6d[0m
+2025-08-26 12:02:50 - [0;34m📊 Progress: 45/2724, ✅ 0, ❌ 45[0m
+2025-08-26 12:02:51 - [0;34m📋 Processing branch 46/2724:   cursor/add-and-advertise-new-services-then-build-9d8e[0m
+2025-08-26 12:02:51 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-9d8e...[0m
+2025-08-26 12:02:51 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-9d8e[0m
+2025-08-26 12:02:51 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-9d8e[0m
+2025-08-26 12:02:51 - [0;34m📊 Progress: 46/2724, ✅ 0, ❌ 46[0m
+2025-08-26 12:02:52 - [0;34m📋 Processing branch 47/2724:   cursor/add-and-advertise-new-services-then-build-a284[0m
+2025-08-26 12:02:52 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-a284...[0m
+2025-08-26 12:02:52 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-a284[0m
+2025-08-26 12:02:52 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-a284[0m
+2025-08-26 12:02:52 - [0;34m📊 Progress: 47/2724, ✅ 0, ❌ 47[0m
+2025-08-26 12:02:53 - [0;34m📋 Processing branch 48/2724:   cursor/add-and-advertise-new-services-then-build-a421[0m
+2025-08-26 12:02:53 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-a421...[0m
+2025-08-26 12:02:53 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-a421[0m
+2025-08-26 12:02:53 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-a421[0m
+2025-08-26 12:02:53 - [0;34m📊 Progress: 48/2724, ✅ 0, ❌ 48[0m
+2025-08-26 12:02:54 - [0;34m📋 Processing branch 49/2724:   cursor/add-and-advertise-new-services-then-build-a930[0m
+2025-08-26 12:02:54 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-a930...[0m
+2025-08-26 12:02:54 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-a930[0m
+2025-08-26 12:02:54 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-a930[0m
+2025-08-26 12:02:54 - [0;34m📊 Progress: 49/2724, ✅ 0, ❌ 49[0m
+2025-08-26 12:02:55 - [0;34m📋 Processing branch 50/2724:   cursor/add-and-advertise-new-services-then-build-a975[0m
+2025-08-26 12:02:55 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-a975...[0m
+2025-08-26 12:02:55 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-a975[0m
+2025-08-26 12:02:55 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-a975[0m
+2025-08-26 12:02:55 - [0;34m📊 Progress: 50/2724, ✅ 0, ❌ 50[0m
+2025-08-26 12:02:55 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:02:56 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:02:56 - [0;32m🚀 Completed batch 5[0m
+2025-08-26 12:02:57 - [0;34m📋 Processing branch 51/2724:   cursor/add-and-advertise-new-services-then-build-ab61[0m
+2025-08-26 12:02:57 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-ab61...[0m
+2025-08-26 12:02:57 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-ab61[0m
+2025-08-26 12:02:57 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-ab61[0m
+2025-08-26 12:02:57 - [0;34m📊 Progress: 51/2724, ✅ 0, ❌ 51[0m
+2025-08-26 12:02:58 - [0;34m📋 Processing branch 52/2724:   cursor/add-and-advertise-new-services-then-build-b17c[0m
+2025-08-26 12:02:58 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-b17c...[0m
+2025-08-26 12:02:58 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-b17c[0m
+2025-08-26 12:02:58 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-b17c[0m
+2025-08-26 12:02:58 - [0;34m📊 Progress: 52/2724, ✅ 0, ❌ 52[0m
+2025-08-26 12:02:59 - [0;34m📋 Processing branch 53/2724:   cursor/add-and-advertise-new-services-then-build-b3c7[0m
+2025-08-26 12:02:59 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-b3c7...[0m
+2025-08-26 12:02:59 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-b3c7[0m
+2025-08-26 12:02:59 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-b3c7[0m
+2025-08-26 12:02:59 - [0;34m📊 Progress: 53/2724, ✅ 0, ❌ 53[0m
+2025-08-26 12:03:00 - [0;34m📋 Processing branch 54/2724:   cursor/add-and-advertise-new-services-then-build-b766[0m
+2025-08-26 12:03:00 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-b766...[0m
+2025-08-26 12:03:00 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-b766[0m
+2025-08-26 12:03:00 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-b766[0m
+2025-08-26 12:03:00 - [0;34m📊 Progress: 54/2724, ✅ 0, ❌ 54[0m
+2025-08-26 12:03:01 - [0;34m📋 Processing branch 55/2724:   cursor/add-and-advertise-new-services-then-build-b89c[0m
+2025-08-26 12:03:01 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-b89c...[0m
+2025-08-26 12:03:01 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-b89c[0m
+2025-08-26 12:03:01 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-b89c[0m
+2025-08-26 12:03:01 - [0;34m📊 Progress: 55/2724, ✅ 0, ❌ 55[0m
+2025-08-26 12:03:02 - [0;34m📋 Processing branch 56/2724:   cursor/add-and-advertise-new-services-then-build-bb33[0m
+2025-08-26 12:03:02 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-bb33...[0m
+2025-08-26 12:03:02 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-bb33[0m
+2025-08-26 12:03:02 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-bb33[0m
+2025-08-26 12:03:02 - [0;34m📊 Progress: 56/2724, ✅ 0, ❌ 56[0m
+2025-08-26 12:03:03 - [0;34m📋 Processing branch 57/2724:   cursor/add-and-advertise-new-services-then-build-bdcb[0m
+2025-08-26 12:03:03 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-bdcb...[0m
+2025-08-26 12:03:03 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-bdcb[0m
+2025-08-26 12:03:03 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-bdcb[0m
+2025-08-26 12:03:03 - [0;34m📊 Progress: 57/2724, ✅ 0, ❌ 57[0m
+2025-08-26 12:03:04 - [0;34m📋 Processing branch 58/2724:   cursor/add-and-advertise-new-services-then-build-c44e[0m
+2025-08-26 12:03:04 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-c44e...[0m
+2025-08-26 12:03:04 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-c44e[0m
+2025-08-26 12:03:04 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-c44e[0m
+2025-08-26 12:03:04 - [0;34m📊 Progress: 58/2724, ✅ 0, ❌ 58[0m
+2025-08-26 12:03:05 - [0;34m📋 Processing branch 59/2724:   cursor/add-and-advertise-new-services-then-build-c4de[0m
+2025-08-26 12:03:05 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-c4de...[0m
+2025-08-26 12:03:05 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-c4de[0m
+2025-08-26 12:03:05 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-c4de[0m
+2025-08-26 12:03:05 - [0;34m📊 Progress: 59/2724, ✅ 0, ❌ 59[0m
+2025-08-26 12:03:06 - [0;34m📋 Processing branch 60/2724:   cursor/add-and-advertise-new-services-then-build-d192[0m
+2025-08-26 12:03:06 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-d192...[0m
+2025-08-26 12:03:06 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-d192[0m
+2025-08-26 12:03:06 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-d192[0m
+2025-08-26 12:03:06 - [0;34m📊 Progress: 60/2724, ✅ 0, ❌ 60[0m
+2025-08-26 12:03:06 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:03:07 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:03:07 - [0;32m🚀 Completed batch 6[0m
+2025-08-26 12:03:08 - [0;34m📋 Processing branch 61/2724:   cursor/add-and-advertise-new-services-then-build-d68c[0m
+2025-08-26 12:03:08 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-d68c...[0m
+2025-08-26 12:03:08 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-d68c[0m
+2025-08-26 12:03:08 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-d68c[0m
+2025-08-26 12:03:08 - [0;34m📊 Progress: 61/2724, ✅ 0, ❌ 61[0m
+2025-08-26 12:03:09 - [0;34m📋 Processing branch 62/2724:   cursor/add-and-advertise-new-services-then-build-da38[0m
+2025-08-26 12:03:09 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-da38...[0m
+2025-08-26 12:03:09 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-da38[0m
+2025-08-26 12:03:09 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-da38[0m
+2025-08-26 12:03:09 - [0;34m📊 Progress: 62/2724, ✅ 0, ❌ 62[0m
+2025-08-26 12:03:10 - [0;34m📋 Processing branch 63/2724:   cursor/add-and-advertise-new-services-then-build-e1f5[0m
+2025-08-26 12:03:10 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-e1f5...[0m
+2025-08-26 12:03:10 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-e1f5[0m
+2025-08-26 12:03:10 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-e1f5[0m
+2025-08-26 12:03:10 - [0;34m📊 Progress: 63/2724, ✅ 0, ❌ 63[0m
+2025-08-26 12:03:11 - [0;34m📋 Processing branch 64/2724:   cursor/add-and-advertise-new-services-then-build-e6ba[0m
+2025-08-26 12:03:11 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-e6ba...[0m
+2025-08-26 12:03:11 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-e6ba[0m
+2025-08-26 12:03:11 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-e6ba[0m
+2025-08-26 12:03:11 - [0;34m📊 Progress: 64/2724, ✅ 0, ❌ 64[0m
+2025-08-26 12:03:12 - [0;34m📋 Processing branch 65/2724:   cursor/add-and-advertise-new-services-then-build-e8d4[0m
+2025-08-26 12:03:12 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-e8d4...[0m
+2025-08-26 12:03:12 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-e8d4[0m
+2025-08-26 12:03:12 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-e8d4[0m
+2025-08-26 12:03:12 - [0;34m📊 Progress: 65/2724, ✅ 0, ❌ 65[0m
+2025-08-26 12:03:13 - [0;34m📋 Processing branch 66/2724:   cursor/add-and-advertise-new-services-then-build-ea8f[0m
+2025-08-26 12:03:13 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-ea8f...[0m
+2025-08-26 12:03:13 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-ea8f[0m
+2025-08-26 12:03:13 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-ea8f[0m
+2025-08-26 12:03:13 - [0;34m📊 Progress: 66/2724, ✅ 0, ❌ 66[0m
+2025-08-26 12:03:14 - [0;34m📋 Processing branch 67/2724:   cursor/add-and-advertise-new-services-then-build-ec85[0m
+2025-08-26 12:03:14 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-ec85...[0m
+2025-08-26 12:03:14 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-ec85[0m
+2025-08-26 12:03:14 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-ec85[0m
+2025-08-26 12:03:14 - [0;34m📊 Progress: 67/2724, ✅ 0, ❌ 67[0m
+2025-08-26 12:03:15 - [0;34m📋 Processing branch 68/2724:   cursor/add-and-advertise-new-services-then-build-ed33[0m
+2025-08-26 12:03:15 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-ed33...[0m
+2025-08-26 12:03:15 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-ed33[0m
+2025-08-26 12:03:15 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-ed33[0m
+2025-08-26 12:03:15 - [0;34m📊 Progress: 68/2724, ✅ 0, ❌ 68[0m
+2025-08-26 12:03:16 - [0;34m📋 Processing branch 69/2724:   cursor/add-and-advertise-new-services-then-build-ef5a[0m
+2025-08-26 12:03:16 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-ef5a...[0m
+2025-08-26 12:03:16 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-ef5a[0m
+2025-08-26 12:03:16 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-ef5a[0m
+2025-08-26 12:03:16 - [0;34m📊 Progress: 69/2724, ✅ 0, ❌ 69[0m
+2025-08-26 12:03:17 - [0;34m📋 Processing branch 70/2724:   cursor/add-and-advertise-new-services-then-build-f13c[0m
+2025-08-26 12:03:17 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-f13c...[0m
+2025-08-26 12:03:17 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-f13c[0m
+2025-08-26 12:03:17 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-f13c[0m
+2025-08-26 12:03:17 - [0;34m📊 Progress: 70/2724, ✅ 0, ❌ 70[0m
+2025-08-26 12:03:17 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:03:18 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:03:18 - [0;32m🚀 Completed batch 7[0m
+2025-08-26 12:03:19 - [0;34m📋 Processing branch 71/2724:   cursor/add-and-advertise-new-services-then-build-f199[0m
+2025-08-26 12:03:19 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-f199...[0m
+2025-08-26 12:03:19 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-f199[0m
+2025-08-26 12:03:19 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-f199[0m
+2025-08-26 12:03:19 - [0;34m📊 Progress: 71/2724, ✅ 0, ❌ 71[0m
+2025-08-26 12:03:20 - [0;34m📋 Processing branch 72/2724:   cursor/add-and-advertise-new-services-then-build-f35d[0m
+2025-08-26 12:03:20 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-f35d...[0m
+2025-08-26 12:03:20 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-f35d[0m
+2025-08-26 12:03:20 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-f35d[0m
+2025-08-26 12:03:20 - [0;34m📊 Progress: 72/2724, ✅ 0, ❌ 72[0m
+2025-08-26 12:03:21 - [0;34m📋 Processing branch 73/2724:   cursor/add-and-advertise-new-services-then-build-ff3f[0m
+2025-08-26 12:03:21 - [0;34m🔄 Attempting to merge   cursor/add-and-advertise-new-services-then-build-ff3f...[0m
+2025-08-26 12:03:21 - [0;31m❌ Failed to fetch branch   cursor/add-and-advertise-new-services-then-build-ff3f[0m
+2025-08-26 12:03:21 - [0;31m❌ Failed to process branch   cursor/add-and-advertise-new-services-then-build-ff3f[0m
+2025-08-26 12:03:21 - [0;34m📊 Progress: 73/2724, ✅ 0, ❌ 73[0m
+2025-08-26 12:03:22 - [0;34m📋 Processing branch 74/2724:   cursor/add-innovative-services-2025[0m
+2025-08-26 12:03:22 - [0;34m🔄 Attempting to merge   cursor/add-innovative-services-2025...[0m
+2025-08-26 12:03:22 - [0;31m❌ Failed to fetch branch   cursor/add-innovative-services-2025[0m
+2025-08-26 12:03:22 - [0;31m❌ Failed to process branch   cursor/add-innovative-services-2025[0m
+2025-08-26 12:03:22 - [0;34m📊 Progress: 74/2724, ✅ 0, ❌ 74[0m
+2025-08-26 12:03:23 - [0;34m📋 Processing branch 75/2724:   cursor/add-lateral-margins-for-zoom-animation-0c88[0m
+2025-08-26 12:03:23 - [0;34m🔄 Attempting to merge   cursor/add-lateral-margins-for-zoom-animation-0c88...[0m
+2025-08-26 12:03:23 - [0;31m❌ Failed to fetch branch   cursor/add-lateral-margins-for-zoom-animation-0c88[0m
+2025-08-26 12:03:23 - [0;31m❌ Failed to process branch   cursor/add-lateral-margins-for-zoom-animation-0c88[0m
+2025-08-26 12:03:23 - [0;34m📊 Progress: 75/2724, ✅ 0, ❌ 75[0m
+2025-08-26 12:03:24 - [0;34m📋 Processing branch 76/2724:   cursor/add-more-project-content-0e0b[0m
+2025-08-26 12:03:24 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-0e0b...[0m
+2025-08-26 12:03:24 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-0e0b[0m
+2025-08-26 12:03:24 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-0e0b[0m
+2025-08-26 12:03:24 - [0;34m📊 Progress: 76/2724, ✅ 0, ❌ 76[0m
+2025-08-26 12:03:25 - [0;34m📋 Processing branch 77/2724:   cursor/add-more-project-content-1001[0m
+2025-08-26 12:03:25 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-1001...[0m
+2025-08-26 12:03:25 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-1001[0m
+2025-08-26 12:03:25 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-1001[0m
+2025-08-26 12:03:25 - [0;34m📊 Progress: 77/2724, ✅ 0, ❌ 77[0m
+2025-08-26 12:03:26 - [0;34m📋 Processing branch 78/2724:   cursor/add-more-project-content-1b70[0m
+2025-08-26 12:03:26 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-1b70...[0m
+2025-08-26 12:03:26 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-1b70[0m
+2025-08-26 12:03:26 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-1b70[0m
+2025-08-26 12:03:26 - [0;34m📊 Progress: 78/2724, ✅ 0, ❌ 78[0m
+2025-08-26 12:03:27 - [0;34m📋 Processing branch 79/2724:   cursor/add-more-project-content-1e50[0m
+2025-08-26 12:03:27 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-1e50...[0m
+2025-08-26 12:03:27 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-1e50[0m
+2025-08-26 12:03:27 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-1e50[0m
+2025-08-26 12:03:27 - [0;34m📊 Progress: 79/2724, ✅ 0, ❌ 79[0m
+2025-08-26 12:03:28 - [0;34m📋 Processing branch 80/2724:   cursor/add-more-project-content-2d2a[0m
+2025-08-26 12:03:28 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-2d2a...[0m
+2025-08-26 12:03:28 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-2d2a[0m
+2025-08-26 12:03:28 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-2d2a[0m
+2025-08-26 12:03:28 - [0;34m📊 Progress: 80/2724, ✅ 0, ❌ 80[0m
+2025-08-26 12:03:28 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:03:28 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:03:28 - [0;32m🚀 Completed batch 8[0m
+2025-08-26 12:03:29 - [0;34m📋 Processing branch 81/2724:   cursor/add-more-project-content-3422[0m
+2025-08-26 12:03:29 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-3422...[0m
+2025-08-26 12:03:29 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-3422[0m
+2025-08-26 12:03:29 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-3422[0m
+2025-08-26 12:03:29 - [0;34m📊 Progress: 81/2724, ✅ 0, ❌ 81[0m
+2025-08-26 12:03:30 - [0;34m📋 Processing branch 82/2724:   cursor/add-more-project-content-343b[0m
+2025-08-26 12:03:30 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-343b...[0m
+2025-08-26 12:03:30 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-343b[0m
+2025-08-26 12:03:30 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-343b[0m
+2025-08-26 12:03:30 - [0;34m📊 Progress: 82/2724, ✅ 0, ❌ 82[0m
+2025-08-26 12:03:31 - [0;34m📋 Processing branch 83/2724:   cursor/add-more-project-content-3d4b[0m
+2025-08-26 12:03:31 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-3d4b...[0m
+2025-08-26 12:03:31 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-3d4b[0m
+2025-08-26 12:03:31 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-3d4b[0m
+2025-08-26 12:03:31 - [0;34m📊 Progress: 83/2724, ✅ 0, ❌ 83[0m
+2025-08-26 12:03:32 - [0;34m📋 Processing branch 84/2724:   cursor/add-more-project-content-43d6[0m
+2025-08-26 12:03:32 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-43d6...[0m
+2025-08-26 12:03:32 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-43d6[0m
+2025-08-26 12:03:32 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-43d6[0m
+2025-08-26 12:03:32 - [0;34m📊 Progress: 84/2724, ✅ 0, ❌ 84[0m
+2025-08-26 12:03:33 - [0;34m📋 Processing branch 85/2724:   cursor/add-more-project-content-4ab0[0m
+2025-08-26 12:03:33 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-4ab0...[0m
+2025-08-26 12:03:33 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-4ab0[0m
+2025-08-26 12:03:33 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-4ab0[0m
+2025-08-26 12:03:33 - [0;34m📊 Progress: 85/2724, ✅ 0, ❌ 85[0m
+2025-08-26 12:03:34 - [0;34m📋 Processing branch 86/2724:   cursor/add-more-project-content-4f94[0m
+2025-08-26 12:03:34 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-4f94...[0m
+2025-08-26 12:03:35 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-4f94[0m
+2025-08-26 12:03:35 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-4f94[0m
+2025-08-26 12:03:35 - [0;34m📊 Progress: 86/2724, ✅ 0, ❌ 86[0m
+2025-08-26 12:03:36 - [0;34m📋 Processing branch 87/2724:   cursor/add-more-project-content-56da[0m
+2025-08-26 12:03:36 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-56da...[0m
+2025-08-26 12:03:36 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-56da[0m
+2025-08-26 12:03:36 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-56da[0m
+2025-08-26 12:03:36 - [0;34m📊 Progress: 87/2724, ✅ 0, ❌ 87[0m
+2025-08-26 12:03:37 - [0;34m📋 Processing branch 88/2724:   cursor/add-more-project-content-5956[0m
+2025-08-26 12:03:37 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-5956...[0m
+2025-08-26 12:03:37 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-5956[0m
+2025-08-26 12:03:37 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-5956[0m
+2025-08-26 12:03:37 - [0;34m📊 Progress: 88/2724, ✅ 0, ❌ 88[0m
+2025-08-26 12:03:38 - [0;34m📋 Processing branch 89/2724:   cursor/add-more-project-content-5fae[0m
+2025-08-26 12:03:38 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-5fae...[0m
+2025-08-26 12:03:38 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-5fae[0m
+2025-08-26 12:03:38 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-5fae[0m
+2025-08-26 12:03:38 - [0;34m📊 Progress: 89/2724, ✅ 0, ❌ 89[0m
+2025-08-26 12:03:39 - [0;34m📋 Processing branch 90/2724:   cursor/add-more-project-content-68ea[0m
+2025-08-26 12:03:39 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-68ea...[0m
+2025-08-26 12:03:39 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-68ea[0m
+2025-08-26 12:03:39 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-68ea[0m
+2025-08-26 12:03:39 - [0;34m📊 Progress: 90/2724, ✅ 0, ❌ 90[0m
+2025-08-26 12:03:39 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:03:39 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:03:39 - [0;32m🚀 Completed batch 9[0m
+2025-08-26 12:03:40 - [0;34m📋 Processing branch 91/2724:   cursor/add-more-project-content-6db1[0m
+2025-08-26 12:03:40 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-6db1...[0m
+2025-08-26 12:03:40 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-6db1[0m
+2025-08-26 12:03:40 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-6db1[0m
+2025-08-26 12:03:40 - [0;34m📊 Progress: 91/2724, ✅ 0, ❌ 91[0m
+2025-08-26 12:03:41 - [0;34m📋 Processing branch 92/2724:   cursor/add-more-project-content-715e[0m
+2025-08-26 12:03:41 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-715e...[0m
+2025-08-26 12:03:41 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-715e[0m
+2025-08-26 12:03:41 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-715e[0m
+2025-08-26 12:03:41 - [0;34m📊 Progress: 92/2724, ✅ 0, ❌ 92[0m
+2025-08-26 12:03:42 - [0;34m📋 Processing branch 93/2724:   cursor/add-more-project-content-783a[0m
+2025-08-26 12:03:42 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-783a...[0m
+2025-08-26 12:03:42 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-783a[0m
+2025-08-26 12:03:42 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-783a[0m
+2025-08-26 12:03:42 - [0;34m📊 Progress: 93/2724, ✅ 0, ❌ 93[0m
+2025-08-26 12:03:43 - [0;34m📋 Processing branch 94/2724:   cursor/add-more-project-content-8277[0m
+2025-08-26 12:03:43 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-8277...[0m
+2025-08-26 12:03:43 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-8277[0m
+2025-08-26 12:03:43 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-8277[0m
+2025-08-26 12:03:43 - [0;34m📊 Progress: 94/2724, ✅ 0, ❌ 94[0m
+2025-08-26 12:03:44 - [0;34m📋 Processing branch 95/2724:   cursor/add-more-project-content-a286[0m
+2025-08-26 12:03:44 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-a286...[0m
+2025-08-26 12:03:44 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-a286[0m
+2025-08-26 12:03:44 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-a286[0m
+2025-08-26 12:03:44 - [0;34m📊 Progress: 95/2724, ✅ 0, ❌ 95[0m
+2025-08-26 12:03:45 - [0;34m📋 Processing branch 96/2724:   cursor/add-more-project-content-a592[0m
+2025-08-26 12:03:45 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-a592...[0m
+2025-08-26 12:03:45 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-a592[0m
+2025-08-26 12:03:45 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-a592[0m
+2025-08-26 12:03:45 - [0;34m📊 Progress: 96/2724, ✅ 0, ❌ 96[0m
+2025-08-26 12:03:46 - [0;34m📋 Processing branch 97/2724:   cursor/add-more-project-content-aa12[0m
+2025-08-26 12:03:46 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-aa12...[0m
+2025-08-26 12:03:46 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-aa12[0m
+2025-08-26 12:03:46 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-aa12[0m
+2025-08-26 12:03:46 - [0;34m📊 Progress: 97/2724, ✅ 0, ❌ 97[0m
+2025-08-26 12:03:47 - [0;34m📋 Processing branch 98/2724:   cursor/add-more-project-content-decc[0m
+2025-08-26 12:03:47 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-decc...[0m
+2025-08-26 12:03:47 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-decc[0m
+2025-08-26 12:03:47 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-decc[0m
+2025-08-26 12:03:47 - [0;34m📊 Progress: 98/2724, ✅ 0, ❌ 98[0m
+2025-08-26 12:03:48 - [0;34m📋 Processing branch 99/2724:   cursor/add-more-project-content-e6bb[0m
+2025-08-26 12:03:48 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-e6bb...[0m
+2025-08-26 12:03:48 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-e6bb[0m
+2025-08-26 12:03:48 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-e6bb[0m
+2025-08-26 12:03:48 - [0;34m📊 Progress: 99/2724, ✅ 0, ❌ 99[0m
+2025-08-26 12:03:49 - [0;34m📋 Processing branch 100/2724:   cursor/add-more-project-content-ed00[0m
+2025-08-26 12:03:49 - [0;34m🔄 Attempting to merge   cursor/add-more-project-content-ed00...[0m
+2025-08-26 12:03:49 - [0;31m❌ Failed to fetch branch   cursor/add-more-project-content-ed00[0m
+2025-08-26 12:03:49 - [0;31m❌ Failed to process branch   cursor/add-more-project-content-ed00[0m
+2025-08-26 12:03:49 - [0;34m📊 Progress: 100/2724, ✅ 0, ❌ 100[0m
+2025-08-26 12:03:49 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:03:50 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:03:50 - [0;32m🚀 Completed batch 10[0m
+2025-08-26 12:03:51 - [0;34m📋 Processing branch 101/2724:   cursor/add-next-gen-innovative-services[0m
+2025-08-26 12:03:51 - [0;34m🔄 Attempting to merge   cursor/add-next-gen-innovative-services...[0m
+2025-08-26 12:03:51 - [0;31m❌ Failed to fetch branch   cursor/add-next-gen-innovative-services[0m
+2025-08-26 12:03:51 - [0;31m❌ Failed to process branch   cursor/add-next-gen-innovative-services[0m
+2025-08-26 12:03:51 - [0;34m📊 Progress: 101/2724, ✅ 0, ❌ 101[0m
+2025-08-26 12:03:52 - [0;34m📋 Processing branch 102/2724:   cursor/add-services-pricing-q4-2029[0m
+2025-08-26 12:03:52 - [0;34m🔄 Attempting to merge   cursor/add-services-pricing-q4-2029...[0m
+2025-08-26 12:03:52 - [0;31m❌ Failed to fetch branch   cursor/add-services-pricing-q4-2029[0m
+2025-08-26 12:03:52 - [0;31m❌ Failed to process branch   cursor/add-services-pricing-q4-2029[0m
+2025-08-26 12:03:52 - [0;34m📊 Progress: 102/2724, ✅ 0, ❌ 102[0m
+2025-08-26 12:03:53 - [0;34m📋 Processing branch 103/2724:   cursor/adjust-app-visibility-with-gradients-and-transparency-02c2[0m
+2025-08-26 12:03:53 - [0;34m🔄 Attempting to merge   cursor/adjust-app-visibility-with-gradients-and-transparency-02c2...[0m
+2025-08-26 12:03:53 - [0;31m❌ Failed to fetch branch   cursor/adjust-app-visibility-with-gradients-and-transparency-02c2[0m
+2025-08-26 12:03:53 - [0;31m❌ Failed to process branch   cursor/adjust-app-visibility-with-gradients-and-transparency-02c2[0m
+2025-08-26 12:03:53 - [0;34m📊 Progress: 103/2724, ✅ 0, ❌ 103[0m
+2025-08-26 12:03:54 - [0;34m📋 Processing branch 104/2724:   cursor/agent-enhancement-and-main-branch-integration-4c76[0m
+2025-08-26 12:03:54 - [0;34m🔄 Attempting to merge   cursor/agent-enhancement-and-main-branch-integration-4c76...[0m
+2025-08-26 12:03:54 - [0;31m❌ Failed to fetch branch   cursor/agent-enhancement-and-main-branch-integration-4c76[0m
+2025-08-26 12:03:54 - [0;31m❌ Failed to process branch   cursor/agent-enhancement-and-main-branch-integration-4c76[0m
+2025-08-26 12:03:54 - [0;34m📊 Progress: 104/2724, ✅ 0, ❌ 104[0m
+2025-08-26 12:03:55 - [0;34m📋 Processing branch 105/2724:   cursor/agent-enhancement-and-main-branch-integration-7066[0m
+2025-08-26 12:03:55 - [0;34m🔄 Attempting to merge   cursor/agent-enhancement-and-main-branch-integration-7066...[0m
+2025-08-26 12:03:55 - [0;31m❌ Failed to fetch branch   cursor/agent-enhancement-and-main-branch-integration-7066[0m
+2025-08-26 12:03:55 - [0;31m❌ Failed to process branch   cursor/agent-enhancement-and-main-branch-integration-7066[0m
+2025-08-26 12:03:55 - [0;34m📊 Progress: 105/2724, ✅ 0, ❌ 105[0m
+2025-08-26 12:03:56 - [0;34m📋 Processing branch 106/2724:   cursor/agents-factory-setup[0m
+2025-08-26 12:03:56 - [0;34m🔄 Attempting to merge   cursor/agents-factory-setup...[0m
+2025-08-26 12:03:56 - [0;31m❌ Failed to fetch branch   cursor/agents-factory-setup[0m
+2025-08-26 12:03:56 - [0;31m❌ Failed to process branch   cursor/agents-factory-setup[0m
+2025-08-26 12:03:56 - [0;34m📊 Progress: 106/2724, ✅ 0, ❌ 106[0m
+2025-08-26 12:03:57 - [0;34m📋 Processing branch 107/2724:   cursor/analyze-and-improve-ziontechgroup-website-and-repository-03f9[0m
+2025-08-26 12:03:57 - [0;34m🔄 Attempting to merge   cursor/analyze-and-improve-ziontechgroup-website-and-repository-03f9...[0m
+2025-08-26 12:03:57 - [0;31m❌ Failed to fetch branch   cursor/analyze-and-improve-ziontechgroup-website-and-repository-03f9[0m
+2025-08-26 12:03:57 - [0;31m❌ Failed to process branch   cursor/analyze-and-improve-ziontechgroup-website-and-repository-03f9[0m
+2025-08-26 12:03:57 - [0;34m📊 Progress: 107/2724, ✅ 0, ❌ 107[0m
+2025-08-26 12:03:58 - [0;34m📋 Processing branch 108/2724:   cursor/analyze-and-improve-ziontechgroup-website-and-repository-70ca[0m
+2025-08-26 12:03:58 - [0;34m🔄 Attempting to merge   cursor/analyze-and-improve-ziontechgroup-website-and-repository-70ca...[0m
+2025-08-26 12:03:58 - [0;31m❌ Failed to fetch branch   cursor/analyze-and-improve-ziontechgroup-website-and-repository-70ca[0m
+2025-08-26 12:03:58 - [0;31m❌ Failed to process branch   cursor/analyze-and-improve-ziontechgroup-website-and-repository-70ca[0m
+2025-08-26 12:03:58 - [0;34m📊 Progress: 108/2724, ✅ 0, ❌ 108[0m
+2025-08-26 12:03:59 - [0;34m📋 Processing branch 109/2724:   cursor/analyze-and-improve-ziontechgroup-website-and-repository-adfc[0m
+2025-08-26 12:03:59 - [0;34m🔄 Attempting to merge   cursor/analyze-and-improve-ziontechgroup-website-and-repository-adfc...[0m
+2025-08-26 12:03:59 - [0;31m❌ Failed to fetch branch   cursor/analyze-and-improve-ziontechgroup-website-and-repository-adfc[0m
+2025-08-26 12:03:59 - [0;31m❌ Failed to process branch   cursor/analyze-and-improve-ziontechgroup-website-and-repository-adfc[0m
+2025-08-26 12:03:59 - [0;34m📊 Progress: 109/2724, ✅ 0, ❌ 109[0m
+2025-08-26 12:04:00 - [0;34m📋 Processing branch 110/2724:   cursor/analyze-and-improve-ziontechgroup-website-and-repository-c253[0m
+2025-08-26 12:04:00 - [0;34m🔄 Attempting to merge   cursor/analyze-and-improve-ziontechgroup-website-and-repository-c253...[0m
+2025-08-26 12:04:00 - [0;31m❌ Failed to fetch branch   cursor/analyze-and-improve-ziontechgroup-website-and-repository-c253[0m
+2025-08-26 12:04:00 - [0;31m❌ Failed to process branch   cursor/analyze-and-improve-ziontechgroup-website-and-repository-c253[0m
+2025-08-26 12:04:00 - [0;34m📊 Progress: 110/2724, ✅ 0, ❌ 110[0m
+2025-08-26 12:04:00 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:04:01 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:04:01 - [0;32m🚀 Completed batch 11[0m
+2025-08-26 12:04:02 - [0;34m📋 Processing branch 111/2724:   cursor/analyze-and-improve-ziontechgroup-website-and-repository-e819[0m
+2025-08-26 12:04:02 - [0;34m🔄 Attempting to merge   cursor/analyze-and-improve-ziontechgroup-website-and-repository-e819...[0m
+2025-08-26 12:04:02 - [0;31m❌ Failed to fetch branch   cursor/analyze-and-improve-ziontechgroup-website-and-repository-e819[0m
+2025-08-26 12:04:02 - [0;31m❌ Failed to process branch   cursor/analyze-and-improve-ziontechgroup-website-and-repository-e819[0m
+2025-08-26 12:04:02 - [0;34m📊 Progress: 111/2724, ✅ 0, ❌ 111[0m
+2025-08-26 12:04:03 - [0;34m📋 Processing branch 112/2724:   cursor/analyze-app-for-improvement-suggestions-cd5e[0m
+2025-08-26 12:04:03 - [0;34m🔄 Attempting to merge   cursor/analyze-app-for-improvement-suggestions-cd5e...[0m
+2025-08-26 12:04:03 - [0;31m❌ Failed to fetch branch   cursor/analyze-app-for-improvement-suggestions-cd5e[0m
+2025-08-26 12:04:03 - [0;31m❌ Failed to process branch   cursor/analyze-app-for-improvement-suggestions-cd5e[0m
+2025-08-26 12:04:03 - [0;34m📊 Progress: 112/2724, ✅ 0, ❌ 112[0m
+2025-08-26 12:04:04 - [0;34m📋 Processing branch 113/2724:   cursor/analyze-improve-and-deploy-application-02e7[0m
+2025-08-26 12:04:04 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-02e7...[0m
+2025-08-26 12:04:04 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-02e7[0m
+2025-08-26 12:04:04 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-02e7[0m
+2025-08-26 12:04:04 - [0;34m📊 Progress: 113/2724, ✅ 0, ❌ 113[0m
+2025-08-26 12:04:05 - [0;34m📋 Processing branch 114/2724:   cursor/analyze-improve-and-deploy-application-058d[0m
+2025-08-26 12:04:05 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-058d...[0m
+2025-08-26 12:04:05 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-058d[0m
+2025-08-26 12:04:05 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-058d[0m
+2025-08-26 12:04:05 - [0;34m📊 Progress: 114/2724, ✅ 0, ❌ 114[0m
+2025-08-26 12:04:06 - [0;34m📋 Processing branch 115/2724:   cursor/analyze-improve-and-deploy-application-06b1[0m
+2025-08-26 12:04:06 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-06b1...[0m
+2025-08-26 12:04:06 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-06b1[0m
+2025-08-26 12:04:06 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-06b1[0m
+2025-08-26 12:04:06 - [0;34m📊 Progress: 115/2724, ✅ 0, ❌ 115[0m
+2025-08-26 12:04:07 - [0;34m📋 Processing branch 116/2724:   cursor/analyze-improve-and-deploy-application-06e9[0m
+2025-08-26 12:04:07 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-06e9...[0m
+2025-08-26 12:04:07 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-06e9[0m
+2025-08-26 12:04:07 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-06e9[0m
+2025-08-26 12:04:07 - [0;34m📊 Progress: 116/2724, ✅ 0, ❌ 116[0m
+2025-08-26 12:04:08 - [0;34m📋 Processing branch 117/2724:   cursor/analyze-improve-and-deploy-application-07c1[0m
+2025-08-26 12:04:08 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-07c1...[0m
+2025-08-26 12:04:08 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-07c1[0m
+2025-08-26 12:04:08 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-07c1[0m
+2025-08-26 12:04:08 - [0;34m📊 Progress: 117/2724, ✅ 0, ❌ 117[0m
+2025-08-26 12:04:09 - [0;34m📋 Processing branch 118/2724:   cursor/analyze-improve-and-deploy-application-0801[0m
+2025-08-26 12:04:09 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-0801...[0m
+2025-08-26 12:04:09 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-0801[0m
+2025-08-26 12:04:09 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-0801[0m
+2025-08-26 12:04:09 - [0;34m📊 Progress: 118/2724, ✅ 0, ❌ 118[0m
+2025-08-26 12:04:10 - [0;34m📋 Processing branch 119/2724:   cursor/analyze-improve-and-deploy-application-0944[0m
+2025-08-26 12:04:10 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-0944...[0m
+2025-08-26 12:04:10 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-0944[0m
+2025-08-26 12:04:10 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-0944[0m
+2025-08-26 12:04:10 - [0;34m📊 Progress: 119/2724, ✅ 0, ❌ 119[0m
+2025-08-26 12:04:11 - [0;34m📋 Processing branch 120/2724:   cursor/analyze-improve-and-deploy-application-09a0[0m
+2025-08-26 12:04:11 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-09a0...[0m
+2025-08-26 12:04:11 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-09a0[0m
+2025-08-26 12:04:11 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-09a0[0m
+2025-08-26 12:04:11 - [0;34m📊 Progress: 120/2724, ✅ 0, ❌ 120[0m
+2025-08-26 12:04:11 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:04:12 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:04:12 - [0;32m🚀 Completed batch 12[0m
+2025-08-26 12:04:13 - [0;34m📋 Processing branch 121/2724:   cursor/analyze-improve-and-deploy-application-0c1b[0m
+2025-08-26 12:04:13 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-0c1b...[0m
+2025-08-26 12:04:13 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-0c1b[0m
+2025-08-26 12:04:13 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-0c1b[0m
+2025-08-26 12:04:13 - [0;34m📊 Progress: 121/2724, ✅ 0, ❌ 121[0m
+2025-08-26 12:04:14 - [0;34m📋 Processing branch 122/2724:   cursor/analyze-improve-and-deploy-application-0f2d[0m
+2025-08-26 12:04:14 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-0f2d...[0m
+2025-08-26 12:04:14 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-0f2d[0m
+2025-08-26 12:04:14 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-0f2d[0m
+2025-08-26 12:04:14 - [0;34m📊 Progress: 122/2724, ✅ 0, ❌ 122[0m
+2025-08-26 12:04:15 - [0;34m📋 Processing branch 123/2724:   cursor/analyze-improve-and-deploy-application-1032[0m
+2025-08-26 12:04:15 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-1032...[0m
+2025-08-26 12:04:15 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-1032[0m
+2025-08-26 12:04:15 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-1032[0m
+2025-08-26 12:04:15 - [0;34m📊 Progress: 123/2724, ✅ 0, ❌ 123[0m
+2025-08-26 12:04:16 - [0;34m📋 Processing branch 124/2724:   cursor/analyze-improve-and-deploy-application-10d2[0m
+2025-08-26 12:04:16 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-10d2...[0m
+2025-08-26 12:04:16 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-10d2[0m
+2025-08-26 12:04:16 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-10d2[0m
+2025-08-26 12:04:16 - [0;34m📊 Progress: 124/2724, ✅ 0, ❌ 124[0m
+2025-08-26 12:04:17 - [0;34m📋 Processing branch 125/2724:   cursor/analyze-improve-and-deploy-application-1133[0m
+2025-08-26 12:04:17 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-1133...[0m
+2025-08-26 12:04:17 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-1133[0m
+2025-08-26 12:04:17 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-1133[0m
+2025-08-26 12:04:17 - [0;34m📊 Progress: 125/2724, ✅ 0, ❌ 125[0m
+2025-08-26 12:04:18 - [0;34m📋 Processing branch 126/2724:   cursor/analyze-improve-and-deploy-application-1277[0m
+2025-08-26 12:04:18 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-1277...[0m
+2025-08-26 12:04:18 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-1277[0m
+2025-08-26 12:04:18 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-1277[0m
+2025-08-26 12:04:18 - [0;34m📊 Progress: 126/2724, ✅ 0, ❌ 126[0m
+2025-08-26 12:04:19 - [0;34m📋 Processing branch 127/2724:   cursor/analyze-improve-and-deploy-application-12ce[0m
+2025-08-26 12:04:19 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-12ce...[0m
+2025-08-26 12:04:19 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-12ce[0m
+2025-08-26 12:04:19 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-12ce[0m
+2025-08-26 12:04:19 - [0;34m📊 Progress: 127/2724, ✅ 0, ❌ 127[0m
+2025-08-26 12:04:20 - [0;34m📋 Processing branch 128/2724:   cursor/analyze-improve-and-deploy-application-1363[0m
+2025-08-26 12:04:20 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-1363...[0m
+2025-08-26 12:04:20 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-1363[0m
+2025-08-26 12:04:20 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-1363[0m
+2025-08-26 12:04:20 - [0;34m📊 Progress: 128/2724, ✅ 0, ❌ 128[0m
+2025-08-26 12:04:21 - [0;34m📋 Processing branch 129/2724:   cursor/analyze-improve-and-deploy-application-17ce[0m
+2025-08-26 12:04:21 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-17ce...[0m
+2025-08-26 12:04:21 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-17ce[0m
+2025-08-26 12:04:21 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-17ce[0m
+2025-08-26 12:04:21 - [0;34m📊 Progress: 129/2724, ✅ 0, ❌ 129[0m
+2025-08-26 12:04:22 - [0;34m📋 Processing branch 130/2724:   cursor/analyze-improve-and-deploy-application-17e5[0m
+2025-08-26 12:04:22 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-17e5...[0m
+2025-08-26 12:04:22 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-17e5[0m
+2025-08-26 12:04:22 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-17e5[0m
+2025-08-26 12:04:22 - [0;34m📊 Progress: 130/2724, ✅ 0, ❌ 130[0m
+2025-08-26 12:04:22 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:04:23 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:04:23 - [0;32m🚀 Completed batch 13[0m
+2025-08-26 12:04:24 - [0;34m📋 Processing branch 131/2724:   cursor/analyze-improve-and-deploy-application-18d2[0m
+2025-08-26 12:04:24 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-18d2...[0m
+2025-08-26 12:04:24 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-18d2[0m
+2025-08-26 12:04:24 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-18d2[0m
+2025-08-26 12:04:24 - [0;34m📊 Progress: 131/2724, ✅ 0, ❌ 131[0m
+2025-08-26 12:04:25 - [0;34m📋 Processing branch 132/2724:   cursor/analyze-improve-and-deploy-application-1a50[0m
+2025-08-26 12:04:25 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-1a50...[0m
+2025-08-26 12:04:25 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-1a50[0m
+2025-08-26 12:04:25 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-1a50[0m
+2025-08-26 12:04:25 - [0;34m📊 Progress: 132/2724, ✅ 0, ❌ 132[0m
+2025-08-26 12:04:26 - [0;34m📋 Processing branch 133/2724:   cursor/analyze-improve-and-deploy-application-1b99[0m
+2025-08-26 12:04:26 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-1b99...[0m
+2025-08-26 12:04:26 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-1b99[0m
+2025-08-26 12:04:26 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-1b99[0m
+2025-08-26 12:04:26 - [0;34m📊 Progress: 133/2724, ✅ 0, ❌ 133[0m
+2025-08-26 12:04:27 - [0;34m📋 Processing branch 134/2724:   cursor/analyze-improve-and-deploy-application-1ca5[0m
+2025-08-26 12:04:27 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-1ca5...[0m
+2025-08-26 12:04:27 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-1ca5[0m
+2025-08-26 12:04:27 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-1ca5[0m
+2025-08-26 12:04:27 - [0;34m📊 Progress: 134/2724, ✅ 0, ❌ 134[0m
+2025-08-26 12:04:28 - [0;34m📋 Processing branch 135/2724:   cursor/analyze-improve-and-deploy-application-1ea3[0m
+2025-08-26 12:04:28 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-1ea3...[0m
+2025-08-26 12:04:28 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-1ea3[0m
+2025-08-26 12:04:28 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-1ea3[0m
+2025-08-26 12:04:28 - [0;34m📊 Progress: 135/2724, ✅ 0, ❌ 135[0m
+2025-08-26 12:04:29 - [0;34m📋 Processing branch 136/2724:   cursor/analyze-improve-and-deploy-application-2157[0m
+2025-08-26 12:04:29 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-2157...[0m
+2025-08-26 12:04:29 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-2157[0m
+2025-08-26 12:04:29 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-2157[0m
+2025-08-26 12:04:29 - [0;34m📊 Progress: 136/2724, ✅ 0, ❌ 136[0m
+2025-08-26 12:04:30 - [0;34m📋 Processing branch 137/2724:   cursor/analyze-improve-and-deploy-application-242c[0m
+2025-08-26 12:04:30 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-242c...[0m
+2025-08-26 12:04:30 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-242c[0m
+2025-08-26 12:04:30 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-242c[0m
+2025-08-26 12:04:30 - [0;34m📊 Progress: 137/2724, ✅ 0, ❌ 137[0m
+2025-08-26 12:04:31 - [0;34m📋 Processing branch 138/2724:   cursor/analyze-improve-and-deploy-application-27ff[0m
+2025-08-26 12:04:31 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-27ff...[0m
+2025-08-26 12:04:31 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-27ff[0m
+2025-08-26 12:04:31 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-27ff[0m
+2025-08-26 12:04:31 - [0;34m📊 Progress: 138/2724, ✅ 0, ❌ 138[0m
+2025-08-26 12:04:32 - [0;34m📋 Processing branch 139/2724:   cursor/analyze-improve-and-deploy-application-2827[0m
+2025-08-26 12:04:32 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-2827...[0m
+2025-08-26 12:04:32 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-2827[0m
+2025-08-26 12:04:32 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-2827[0m
+2025-08-26 12:04:32 - [0;34m📊 Progress: 139/2724, ✅ 0, ❌ 139[0m
+2025-08-26 12:04:33 - [0;34m📋 Processing branch 140/2724:   cursor/analyze-improve-and-deploy-application-2f79[0m
+2025-08-26 12:04:33 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-2f79...[0m
+2025-08-26 12:04:33 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-2f79[0m
+2025-08-26 12:04:33 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-2f79[0m
+2025-08-26 12:04:33 - [0;34m📊 Progress: 140/2724, ✅ 0, ❌ 140[0m
+2025-08-26 12:04:33 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:04:34 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:04:34 - [0;32m🚀 Completed batch 14[0m
+2025-08-26 12:04:35 - [0;34m📋 Processing branch 141/2724:   cursor/analyze-improve-and-deploy-application-2f8d[0m
+2025-08-26 12:04:35 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-2f8d...[0m
+2025-08-26 12:04:35 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-2f8d[0m
+2025-08-26 12:04:35 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-2f8d[0m
+2025-08-26 12:04:35 - [0;34m📊 Progress: 141/2724, ✅ 0, ❌ 141[0m
+2025-08-26 12:04:36 - [0;34m📋 Processing branch 142/2724:   cursor/analyze-improve-and-deploy-application-2ffe[0m
+2025-08-26 12:04:36 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-2ffe...[0m
+2025-08-26 12:04:36 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-2ffe[0m
+2025-08-26 12:04:36 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-2ffe[0m
+2025-08-26 12:04:36 - [0;34m📊 Progress: 142/2724, ✅ 0, ❌ 142[0m
+2025-08-26 12:04:37 - [0;34m📋 Processing branch 143/2724:   cursor/analyze-improve-and-deploy-application-34ad[0m
+2025-08-26 12:04:37 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-34ad...[0m
+2025-08-26 12:04:37 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-34ad[0m
+2025-08-26 12:04:37 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-34ad[0m
+2025-08-26 12:04:37 - [0;34m📊 Progress: 143/2724, ✅ 0, ❌ 143[0m
+2025-08-26 12:04:38 - [0;34m📋 Processing branch 144/2724:   cursor/analyze-improve-and-deploy-application-3555[0m
+2025-08-26 12:04:38 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-3555...[0m
+2025-08-26 12:04:38 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-3555[0m
+2025-08-26 12:04:38 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-3555[0m
+2025-08-26 12:04:38 - [0;34m📊 Progress: 144/2724, ✅ 0, ❌ 144[0m
+2025-08-26 12:04:39 - [0;34m📋 Processing branch 145/2724:   cursor/analyze-improve-and-deploy-application-35fe[0m
+2025-08-26 12:04:39 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-35fe...[0m
+2025-08-26 12:04:39 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-35fe[0m
+2025-08-26 12:04:39 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-35fe[0m
+2025-08-26 12:04:39 - [0;34m📊 Progress: 145/2724, ✅ 0, ❌ 145[0m
+2025-08-26 12:04:40 - [0;34m📋 Processing branch 146/2724:   cursor/analyze-improve-and-deploy-application-36d0[0m
+2025-08-26 12:04:40 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-36d0...[0m
+2025-08-26 12:04:40 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-36d0[0m
+2025-08-26 12:04:40 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-36d0[0m
+2025-08-26 12:04:40 - [0;34m📊 Progress: 146/2724, ✅ 0, ❌ 146[0m
+2025-08-26 12:04:41 - [0;34m📋 Processing branch 147/2724:   cursor/analyze-improve-and-deploy-application-36f1[0m
+2025-08-26 12:04:41 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-36f1...[0m
+2025-08-26 12:04:41 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-36f1[0m
+2025-08-26 12:04:41 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-36f1[0m
+2025-08-26 12:04:41 - [0;34m📊 Progress: 147/2724, ✅ 0, ❌ 147[0m
+2025-08-26 12:04:42 - [0;34m📋 Processing branch 148/2724:   cursor/analyze-improve-and-deploy-application-37dd[0m
+2025-08-26 12:04:42 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-37dd...[0m
+2025-08-26 12:04:42 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-37dd[0m
+2025-08-26 12:04:42 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-37dd[0m
+2025-08-26 12:04:42 - [0;34m📊 Progress: 148/2724, ✅ 0, ❌ 148[0m
+2025-08-26 12:04:43 - [0;34m📋 Processing branch 149/2724:   cursor/analyze-improve-and-deploy-application-4852[0m
+2025-08-26 12:04:43 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-4852...[0m
+2025-08-26 12:04:43 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-4852[0m
+2025-08-26 12:04:43 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-4852[0m
+2025-08-26 12:04:43 - [0;34m📊 Progress: 149/2724, ✅ 0, ❌ 149[0m
+2025-08-26 12:04:44 - [0;34m📋 Processing branch 150/2724:   cursor/analyze-improve-and-deploy-application-4b02[0m
+2025-08-26 12:04:44 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-4b02...[0m
+2025-08-26 12:04:44 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-4b02[0m
+2025-08-26 12:04:44 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-4b02[0m
+2025-08-26 12:04:44 - [0;34m📊 Progress: 150/2724, ✅ 0, ❌ 150[0m
+2025-08-26 12:04:44 - [0;34m💾 Pushing batch changes to remote...[0m
+2025-08-26 12:04:44 - [1;33m⚠️  Failed to push changes, continuing...[0m
+2025-08-26 12:04:44 - [0;32m🚀 Completed batch 15[0m
+2025-08-26 12:04:45 - [0;34m📋 Processing branch 151/2724:   cursor/analyze-improve-and-deploy-application-4b5b[0m
+2025-08-26 12:04:45 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-4b5b...[0m
+2025-08-26 12:04:45 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-4b5b[0m
+2025-08-26 12:04:45 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-4b5b[0m
+2025-08-26 12:04:45 - [0;34m📊 Progress: 151/2724, ✅ 0, ❌ 151[0m
+2025-08-26 12:04:46 - [0;34m📋 Processing branch 152/2724:   cursor/analyze-improve-and-deploy-application-4dbb[0m
+2025-08-26 12:04:46 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-4dbb...[0m
+2025-08-26 12:04:46 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-4dbb[0m
+2025-08-26 12:04:46 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-4dbb[0m
+2025-08-26 12:04:46 - [0;34m📊 Progress: 152/2724, ✅ 0, ❌ 152[0m
+2025-08-26 12:04:47 - [0;34m📋 Processing branch 153/2724:   cursor/analyze-improve-and-deploy-application-5389[0m
+2025-08-26 12:04:47 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-5389...[0m
+2025-08-26 12:04:47 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-5389[0m
+2025-08-26 12:04:47 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-5389[0m
+2025-08-26 12:04:47 - [0;34m📊 Progress: 153/2724, ✅ 0, ❌ 153[0m
+2025-08-26 12:04:48 - [0;34m📋 Processing branch 154/2724:   cursor/analyze-improve-and-deploy-application-5973[0m
+2025-08-26 12:04:48 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-5973...[0m
+2025-08-26 12:04:48 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-5973[0m
+2025-08-26 12:04:48 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-5973[0m
+2025-08-26 12:04:48 - [0;34m📊 Progress: 154/2724, ✅ 0, ❌ 154[0m
+2025-08-26 12:04:49 - [0;34m📋 Processing branch 155/2724:   cursor/analyze-improve-and-deploy-application-5b25[0m
+2025-08-26 12:04:49 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-5b25...[0m
+2025-08-26 12:04:49 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-5b25[0m
+2025-08-26 12:04:49 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-5b25[0m
+2025-08-26 12:04:49 - [0;34m📊 Progress: 155/2724, ✅ 0, ❌ 155[0m
+2025-08-26 12:04:50 - [0;34m📋 Processing branch 156/2724:   cursor/analyze-improve-and-deploy-application-5fcc[0m
+2025-08-26 12:04:50 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-5fcc...[0m
+2025-08-26 12:04:50 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-5fcc[0m
+2025-08-26 12:04:50 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-5fcc[0m
+2025-08-26 12:04:50 - [0;34m📊 Progress: 156/2724, ✅ 0, ❌ 156[0m
+2025-08-26 12:04:52 - [0;34m📋 Processing branch 157/2724:   cursor/analyze-improve-and-deploy-application-609a[0m
+2025-08-26 12:04:52 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-609a...[0m
+2025-08-26 12:04:52 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-609a[0m
+2025-08-26 12:04:52 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-609a[0m
+2025-08-26 12:04:52 - [0;34m📊 Progress: 157/2724, ✅ 0, ❌ 157[0m
+2025-08-26 12:04:53 - [0;34m📋 Processing branch 158/2724:   cursor/analyze-improve-and-deploy-application-616f[0m
+2025-08-26 12:04:53 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-616f...[0m
+2025-08-26 12:04:53 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-616f[0m
+2025-08-26 12:04:53 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-616f[0m
+2025-08-26 12:04:53 - [0;34m📊 Progress: 158/2724, ✅ 0, ❌ 158[0m
+2025-08-26 12:04:54 - [0;34m📋 Processing branch 159/2724:   cursor/analyze-improve-and-deploy-application-64bc[0m
+2025-08-26 12:04:54 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-64bc...[0m
+2025-08-26 12:04:54 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-64bc[0m
+2025-08-26 12:04:54 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-64bc[0m
+2025-08-26 12:04:54 - [0;34m📊 Progress: 159/2724, ✅ 0, ❌ 159[0m
+2025-08-26 12:04:55 - [0;34m📋 Processing branch 160/2724:   cursor/analyze-improve-and-deploy-application-65a3[0m
+2025-08-26 12:04:55 - [0;34m🔄 Attempting to merge   cursor/analyze-improve-and-deploy-application-65a3...[0m
+2025-08-26 12:04:55 - [0;31m❌ Failed to fetch branch   cursor/analyze-improve-and-deploy-application-65a3[0m
+2025-08-26 12:04:55 - [0;31m❌ Failed to process branch   cursor/analyze-improve-and-deploy-application-65a3[0m
+2025-08-26 12:04:55 - [0;34m📊 Progress: 160/2724, ✅ 0, ❌ 160[0m
+2025-08-26 12:04:55 - [0;34m💾 Pushing batch changes to remote...[0m

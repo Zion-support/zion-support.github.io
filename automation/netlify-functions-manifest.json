@@ -1,0 +1,13 @@
+{
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "generatedAt": "2025-08-26T12:16:23.985Z",
+=======
+  "generatedAt": "2025-08-26T12:15:01.170Z",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7
+=======
+  "generatedAt": "2025-08-26T12:11:55.090Z",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2900
+  "functions": [],
+  "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
+}

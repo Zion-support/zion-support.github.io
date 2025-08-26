@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, BarChart3, Brain, Database, Users, Target, TrendingUp as TrendingUpIcon } from 'lucide-react';
 
 import Layout from '../components/layout/Layout';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+// import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { motion } from 'framer-motion';
 
 export default function AIBusinessIntelligencePage() {
