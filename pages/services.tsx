@@ -1,376 +1,249 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import Footer from '../components/Footer';
 
 export default function ServicesPage() {
   return (
     <>
       <Head>
-        <title>Our Services | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive technology services including AI, cloud infrastructure, cybersecurity, and digital transformation." />
-        <meta property="og:title" content="Our Services | Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive technology services including AI, cloud infrastructure, cybersecurity, and digital transformation." />
+        <title>Services | Zion Tech Group - AI & Automation Solutions</title>
+        <meta name="description" content="Explore Zion Tech Group's comprehensive range of AI development, automation, and technology consulting services." />
+        <meta property="og:title" content="Services - Zion Tech Group" />
+        <meta property="og:description" content="AI development, automation, and technology consulting services." />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto">
-            <Link href="/" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-8">
-              ← Back to Home
-            </Link>
-            
-            <header className="text-center mb-16">
-              <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Our Services
-              </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to transform your business through autonomous innovation and cutting-edge technology.
-              </p>
-            </header>
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Our Services
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Comprehensive AI and automation solutions designed to transform your business and drive innovation
+            </p>
+          </section>
 
-            {/* AI & Automation */}
-            <section className="mb-16">
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <div className="text-6xl mb-4">🤖</div>
-                    <h2 className="text-3xl font-bold mb-4 text-cyan-300">AI & Automation</h2>
-                    <p className="text-white/80 mb-6">
-                      Transform your business operations with intelligent automation systems that learn, adapt, and optimize continuously.
-                    </p>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-start">
-                        <span className="text-cyan-400 mr-3">✓</span>
-                        <span>Machine Learning Model Development</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-cyan-400 mr-3">✓</span>
-                        <span>Process Automation & Optimization</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-cyan-400 mr-3">✓</span>
-                        <span>Predictive Analytics & Insights</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-cyan-400 mr-3">✓</span>
-                        <span>Natural Language Processing</span>
-                      </li>
-                    </ul>
-                    <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all">
-                      Learn More
-                    </button>
-                  </div>
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold mb-4 text-cyan-300">Key Benefits</h3>
-                    <div className="space-y-3">
-                      <div className="flex items-center">
-                        <span className="text-green-400 mr-3">🚀</span>
-                        <span className="text-sm">50% increase in operational efficiency</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-green-400 mr-3">💰</span>
-                        <span className="text-sm">30% reduction in operational costs</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-green-400 mr-3">⚡</span>
-                        <span className="text-sm">24/7 autonomous operation</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Cloud Infrastructure */}
-            <section className="mb-16">
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  <div className="order-2 lg:order-1">
-                    <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-lg p-6">
-                      <h3 className="text-xl font-semibold mb-4 text-blue-300">Infrastructure Features</h3>
-                      <div className="space-y-3">
-                        <div className="flex items-center">
-                          <span className="text-blue-400 mr-3">☁️</span>
-                          <span className="text-sm">Multi-cloud deployment</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="text-blue-400 mr-3">🔄</span>
-                          <span className="text-sm">Auto-scaling capabilities</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="text-blue-400 mr-3">🛡️</span>
-                          <span className="text-sm">Advanced security protocols</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="order-1 lg:order-2">
-                    <div className="text-6xl mb-4">☁️</div>
-                    <h2 className="text-3xl font-bold mb-4 text-blue-300">Cloud Infrastructure</h2>
-                    <p className="text-white/80 mb-6">
-                      Build robust, scalable cloud solutions with advanced redundancy and self-healing capabilities.
-                    </p>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-start">
-                        <span className="text-blue-400 mr-3">✓</span>
-                        <span>Cloud Architecture Design</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-400 mr-3">✓</span>
-                        <span>DevOps & CI/CD Implementation</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-400 mr-3">✓</span>
-                        <span>Performance Optimization</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-blue-400 mr-3">✓</span>
-                        <span>Disaster Recovery Planning</span>
-                      </li>
-                    </ul>
-                    <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Cybersecurity */}
-            <section className="mb-16">
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <div className="text-6xl mb-4">🔒</div>
-                    <h2 className="text-3xl font-bold mb-4 text-green-300">Cybersecurity</h2>
-                    <p className="text-white/80 mb-6">
-                      Protect your digital assets with comprehensive security solutions powered by AI-driven threat detection.
-                    </p>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-start">
-                        <span className="text-green-400 mr-3">✓</span>
-                        <span>Threat Detection & Prevention</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-green-400 mr-3">✓</span>
-                        <span>Security Audits & Assessments</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-green-400 mr-3">✓</span>
-                        <span>Incident Response Planning</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-green-400 mr-3">✓</span>
-                        <span>Compliance Management</span>
-                      </li>
-                    </ul>
-                    <button className="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all">
-                      Learn More
-                    </button>
-                  </div>
-                  <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold mb-4 text-green-300">Security Features</h3>
-                    <div className="space-y-3">
-                      <div className="flex items-center">
-                        <span className="text-green-400 mr-3">🛡️</span>
-                        <span className="text-sm">Real-time threat monitoring</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-green-400 mr-3">🔍</span>
-                        <span className="text-sm">AI-powered analysis</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-green-400 mr-3">⚡</span>
-                        <span className="text-sm">Instant response systems</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Data Analytics */}
-            <section className="mb-16">
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  <div className="order-2 lg:order-1">
-                    <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-lg p-6">
-                      <h3 className="text-xl font-semibold mb-4 text-purple-300">Analytics Capabilities</h3>
-                      <div className="space-y-3">
-                        <div className="flex items-center">
-                          <span className="text-purple-400 mr-3">📊</span>
-                          <span className="text-sm">Real-time dashboards</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="text-purple-400 mr-3">🔮</span>
-                          <span className="text-sm">Predictive modeling</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="text-purple-400 mr-3">📈</span>
-                          <span className="text-sm">Trend analysis</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="order-1 lg:order-2">
-                    <div className="text-6xl mb-4">📊</div>
-                    <h2 className="text-3xl font-bold mb-4 text-purple-300">Data Analytics</h2>
-                    <p className="text-white/80 mb-6">
-                      Transform raw data into actionable insights with intelligent analytics and visualization tools.
-                    </p>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-start">
-                        <span className="text-purple-400 mr-3">✓</span>
-                        <span>Data Processing & ETL</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-purple-400 mr-3">✓</span>
-                        <span>Business Intelligence</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-purple-400 mr-3">✓</span>
-                        <span>Machine Learning Analytics</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-purple-400 mr-3">✓</span>
-                        <span>Custom Dashboard Development</span>
-                      </li>
-                    </ul>
-                    <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Digital Transformation */}
-            <section className="mb-16">
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <div className="text-6xl mb-4">🚀</div>
-                    <h2 className="text-3xl font-bold mb-4 text-yellow-300">Digital Transformation</h2>
-                    <p className="text-white/80 mb-6">
-                      Modernize your business operations with comprehensive digital transformation strategies and implementation.
-                    </p>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-start">
-                        <span className="text-yellow-400 mr-3">✓</span>
-                        <span>Digital Strategy Development</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-yellow-400 mr-3">✓</span>
-                        <span>Legacy System Modernization</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-yellow-400 mr-3">✓</span>
-                        <span>Change Management</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-yellow-400 mr-3">✓</span>
-                        <span>Technology Integration</span>
-                      </li>
-                    </ul>
-                    <button className="px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-700 transition-all">
-                      Learn More
-                    </button>
-                  </div>
-                  <div className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold mb-4 text-yellow-300">Transformation Benefits</h3>
-                    <div className="space-y-3">
-                      <div className="flex items-center">
-                        <span className="text-yellow-400 mr-3">⚡</span>
-                        <span className="text-sm">Improved efficiency</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-yellow-400 mr-3">💰</span>
-                        <span className="text-sm">Cost reduction</span>
-                      </div>
-                      <div className="flex items-center">
-                        <span className="text-yellow-400 mr-3">🎯</span>
-                        <span className="text-sm">Better customer experience</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Research & Development */}
-            <section className="mb-16">
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  <div className="order-2 lg:order-1">
-                    <div className="bg-gradient-to-br from-indigo-500/20 to-blue-500/20 border border-indigo-500/30 rounded-lg p-6">
-                      <h3 className="text-xl font-semibold mb-4 text-indigo-300">Research Areas</h3>
-                      <div className="space-y-3">
-                        <div className="flex items-center">
-                          <span className="text-indigo-400 mr-3">🔬</span>
-                          <span className="text-sm">AI & Machine Learning</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="text-indigo-400 mr-3">⚛️</span>
-                          <span className="text-sm">Quantum Computing</span>
-                        </div>
-                        <div className="flex items-center">
-                          <span className="text-indigo-400 mr-3">🌱</span>
-                          <span className="text-sm">Biotechnology</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="order-1 lg:order-2">
-                    <div className="text-6xl mb-4">🔬</div>
-                    <h2 className="text-3xl font-bold mb-4 text-indigo-300">Research & Development</h2>
-                    <p className="text-white/80 mb-6">
-                      Push the boundaries of technology with cutting-edge research in emerging technologies and innovative solutions.
-                    </p>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-start">
-                        <span className="text-indigo-400 mr-3">✓</span>
-                        <span>Emerging Technology Research</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-indigo-400 mr-3">✓</span>
-                        <span>Prototype Development</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-indigo-400 mr-3">✓</span>
-                        <span>Technology Transfer</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-indigo-400 mr-3">✓</span>
-                        <span>Innovation Consulting</span>
-                      </li>
-                    </ul>
-                    <button className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-700 transition-all">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="text-center">
-              <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-2xl p-8">
-                <h2 className="text-3xl font-bold mb-4 text-white/90">Ready to Transform Your Business?</h2>
-                <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-                  Let our team of experts and AI agents help you implement cutting-edge technology solutions that drive growth and innovation.
+          <section className="mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-2xl font-bold mb-4 text-cyan-400">AI Development</h3>
+                <p className="text-white/70 mb-6">
+                  Custom AI solutions including machine learning models, natural language processing, and computer vision systems.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all">
-                    Get Started
-                  </button>
-                  <button className="px-8 py-3 border border-cyan-400/30 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                    Schedule Consultation
-                  </button>
+                <ul className="space-y-2 text-sm text-white/60">
+                  <li>• Machine Learning Models</li>
+                  <li>• Natural Language Processing</li>
+                  <li>• Computer Vision</li>
+                  <li>• Predictive Analytics</li>
+                </ul>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-2xl font-bold mb-4 text-fuchsia-400">Automation Systems</h3>
+                <p className="text-white/70 mb-6">
+                  End-to-end automation solutions that streamline operations and improve efficiency across your organization.
+                </p>
+                <ul className="space-y-2 text-sm text-white/60">
+                  <li>• Process Automation</li>
+                  <li>• Workflow Optimization</li>
+                  <li>• Robotic Process Automation</li>
+                  <li>• Smart Workflows</li>
+                </ul>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                <div className="text-4xl mb-4">☁️</div>
+                <h3 className="text-2xl font-bold mb-4 text-green-400">Cloud Infrastructure</h3>
+                <p className="text-white/70 mb-6">
+                  Scalable cloud solutions with automated deployment, monitoring, and optimization for peak performance.
+                </p>
+                <ul className="space-y-2 text-sm text-white/60">
+                  <li>• Cloud Migration</li>
+                  <li>• Auto-scaling</li>
+                  <li>• Performance Optimization</li>
+                  <li>• Security Hardening</li>
+                </ul>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                <div className="text-4xl mb-4">🔧</div>
+                <h3 className="text-2xl font-bold mb-4 text-blue-400">DevOps & CI/CD</h3>
+                <p className="text-white/70 mb-6">
+                  Streamlined development and deployment pipelines with automated testing, building, and deployment processes.
+                </p>
+                <ul className="space-y-2 text-sm text-white/60">
+                  <li>• CI/CD Pipeline Setup</li>
+                  <li>• Automated Testing</li>
+                  <li>• Infrastructure as Code</li>
+                  <li>• Monitoring & Alerting</li>
+                </ul>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                <div className="text-4xl mb-4">📊</div>
+                <h3 className="text-2xl font-bold mb-4 text-purple-400">Data Analytics</h3>
+                <p className="text-white/70 mb-6">
+                  Advanced analytics and business intelligence solutions that turn your data into actionable insights.
+                </p>
+                <ul className="space-y-2 text-sm text-white/60">
+                  <li>• Data Visualization</li>
+                  <li>• Predictive Analytics</li>
+                  <li>• Business Intelligence</li>
+                  <li>• Real-time Dashboards</li>
+                </ul>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                <div className="text-4xl mb-4">💡</div>
+                <h3 className="text-2xl font-bold mb-4 text-yellow-400">Technology Consulting</h3>
+                <p className="text-white/70 mb-6">
+                  Strategic technology consulting to help you navigate digital transformation and innovation challenges.
+                </p>
+                <ul className="space-y-2 text-sm text-white/60">
+                  <li>• Digital Strategy</li>
+                  <li>• Technology Roadmap</li>
+                  <li>• Innovation Workshops</li>
+                  <li>• Performance Audits</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Why Choose Our Services?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-3 text-fuchsia-400">AI-Powered Excellence</h3>
+                  <p className="text-white/70">
+                    Our services leverage cutting-edge AI technology to deliver superior results, faster implementation, and continuous improvement.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-3 text-green-400">Proven Results</h3>
+                  <p className="text-white/70">
+                    With 227 active automations and 2,960+ pages generated, we have a track record of delivering measurable business value.
+                  </p>
                 </div>
               </div>
-            </section>
-          </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400">Service Delivery Process</h2>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">1</div>
+                  <h3 className="text-lg font-semibold mb-2">Discovery</h3>
+                  <p className="text-sm text-white/70">Understanding your needs and objectives</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-fuchsia-400 mb-2">2</div>
+                  <h3 className="text-lg font-semibold mb-2">Planning</h3>
+                  <p className="text-sm text-white/70">Creating detailed roadmap and strategy</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">3</div>
+                  <h3 className="text-lg font-semibold mb-2">Implementation</h3>
+                  <p className="text-sm text-white/70">Building and deploying solutions</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">4</div>
+                  <h3 className="text-lg font-semibold mb-2">Optimization</h3>
+                  <p className="text-sm text-white/70">Continuous improvement and support</p>
+                </div>
+              </div>
+            </div>
+
+            {/* AI Capabilities Section */}
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-purple-400">Advanced AI Capabilities</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-cyan-400">Natural Language Processing</h3>
+                  <ul className="space-y-2 text-white/70">
+                    <li>• Conversational AI and chatbots</li>
+                    <li>• Document analysis and extraction</li>
+                    <li>• Sentiment analysis and insights</li>
+                    <li>• Multi-language support</li>
+                    <li>• Custom language models</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-fuchsia-400">Computer Vision</h3>
+                  <ul className="space-y-2 text-white/70">
+                    <li>• Image and video analysis</li>
+                    <li>• Object detection and recognition</li>
+                    <li>• Quality control automation</li>
+                    <li>• Facial recognition systems</li>
+                    <li>• Medical imaging analysis</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-green-400">Predictive Analytics</h3>
+                  <ul className="space-y-2 text-white/70">
+                    <li>• Demand forecasting</li>
+                    <li>• Risk assessment models</li>
+                    <li>• Customer behavior prediction</li>
+                    <li>• Maintenance scheduling</li>
+                    <li>• Financial market analysis</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-blue-400">Autonomous Systems</h3>
+                  <ul className="space-y-2 text-white/70">
+                    <li>• Self-healing applications</li>
+                    <li>• Automated decision making</li>
+                    <li>• Continuous learning systems</li>
+                    <li>• Adaptive workflows</li>
+                    <li>• Intelligent resource allocation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Technology Stack */}
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
+              <h2 className="text-3xl font-bold mb-6 text-yellow-400">Technology Stack</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-cyan-400">AI & ML Frameworks</h3>
+                  <div className="grid grid-cols-2 gap-2 text-sm text-white/70">
+                    <span>• TensorFlow</span>
+                    <span>• PyTorch</span>
+                    <span>• Scikit-learn</span>
+                    <span>• Hugging Face</span>
+                    <span>• OpenAI GPT</span>
+                    <span>• Claude</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-fuchsia-400">Cloud Platforms</h3>
+                  <div className="grid grid-cols-2 gap-2 text-sm text-white/70">
+                    <span>• AWS</span>
+                    <span>• Azure</span>
+                    <span>• Google Cloud</span>
+                    <span>• Kubernetes</span>
+                    <span>• Docker</span>
+                    <span>• Terraform</span>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-green-400">Development Tools</h3>
+                  <div className="grid grid-cols-2 gap-2 text-sm text-white/70">
+                    <span>• Python</span>
+                    <span>• JavaScript</span>
+                    <span>• React</span>
+                    <span>• Node.js</span>
+                    <span>• FastAPI</span>
+                    <span>• PostgreSQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
+        <Footer />
       </div>
     </>
   );
