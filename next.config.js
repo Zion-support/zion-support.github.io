@@ -5,11 +5,12 @@ const nextConfig = {
 	output: 'export',
 	assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || '',
 	images: {
-		unoptimized: true
+		unoptimized: true,
+		domains: ["localhost"]
 	},
 	pageExtensions: ['page.tsx','page.ts','page.jsx','page.js'],
 	typescript: {
-		ignoreBuildErrors: true
+		ignoreBuildErrors: process.env.SKIP_TYPE_CHECK === 'true' || true
 	},
 	eslint: {
 		ignoreDuringBuilds: true
@@ -28,25 +29,7 @@ const nextConfig = {
 	}
 };
 
-  // Note: headers, redirects, and rewrites don't work with output: 'export'
-  // These are handled by Netlify via _headers and _redirects files
+// Note: headers, redirects, and rewrites don't work with output: 'export'
+// These are handled by Netlify via _headers and _redirects files
 
-  // Skip TypeScript checking during build if SKIP_TYPE_CHECK is set
-  typescript: {
-    ignoreBuildErrors: process.env.SKIP_TYPE_CHECK === 'true',
-  },
-
-  // Skip ESLint during build for faster deployment
-  reactStrictMode: true,
-  images: {
-    domains: ["localhost"],
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-};
-
-module.exports = nextConfig
+module.exports = nextConfig;

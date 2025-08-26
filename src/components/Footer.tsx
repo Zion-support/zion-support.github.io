@@ -1,213 +1,283 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Zap, Shield, Brain, Users } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  Twitter, 
+  Linkedin, 
+  Facebook, 
+  Instagram, 
+  Github, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  ArrowUp, 
+  Globe, 
+  Heart,
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Rocket,
+  Code,
+  Users,
+  Building,
+  Award,
+  Clock,
+  CheckCircle
+} from 'lucide-react';
 
-export const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+const footerNavigation = {
+  services: {
+    title: 'Services',
+    items: [
+      { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
+      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+      { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+      { name: 'IoT & Edge', href: '/services/iot-edge', icon: Zap },
+      { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
+      { name: 'Blockchain', href: '/services/blockchain', icon: Code },
+      { name: 'Digital Twin', href: '/services/digital-twin', icon: Building },
+      { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
+    ],
+  },
+  microSaas: {
+    title: 'Micro SAAS',
+    items: [
+      { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
+      { name: 'Customer Experience', href: '/micro-saas/customer-experience' },
+      { name: 'Quantum Computing', href: '/micro-saas/quantum-computing' },
+      { name: 'Supply Chain', href: '/micro-saas/supply-chain' },
+      { name: 'Cybersecurity', href: '/micro-saas/cybersecurity' },
+      { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' },
+      { name: 'Content Creation', href: '/micro-saas/content-creation' },
+      { name: 'HR Platform', href: '/micro-saas/hr-platform' }
+    ],
+  },
+  marketplace: {
+    title: 'Marketplace',
+    items: [
+      { name: 'Products', href: '/marketplace' },
+      { name: 'Services', href: '/services' },
+      { name: 'Talent', href: '/talent' },
+      { name: 'Equipment', href: '/equipment' },
+      { name: 'Categories', href: '/categories' },
+      { name: 'Green IT', href: '/green-it' },
+      { name: 'IT Onsite Services', href: '/it-onsite-services' },
+    ],
+  },
+  company: {
+    title: 'Company',
+    items: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'FAQ', href: '/faq' },
+      { name: 'Sitemap', href: '/sitemap' },
+    ],
+  },
+  support: {
+    title: 'Support & Resources',
+    items: [
+      { name: 'Help Center', href: '/help' },
+      { name: 'Contact Support', href: '/contact' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Security', href: '/security' },
+      { name: 'System Status', href: '/status' },
+    ],
+  },
+};
 
-  const socialLinks = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
-    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
-    { name: "GitHub", url: "https://github.com/Zion-Holdings", icon: "💻", color: "hover:bg-gray-600/20" },
-    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
-    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
-  ];
+const socialLinks = [
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-marketplace', icon: Linkedin },
+  { name: 'Facebook', href: 'https://www.facebook.com/zionmarketplace', icon: Facebook },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
+];
 
-  const footerSections = [
-    {
-      title: "Services",
-      links: [
-        { label: "AI Solutions", path: "/services/ai", icon: Brain },
-        { label: "Cloud & DevOps", path: "/services/cloud", icon: Globe },
-        { label: "Cybersecurity", path: "/services/cybersecurity", icon: Shield },
-        { label: "IT Infrastructure", path: "/services/infrastructure", icon: Zap },
-        { label: "Digital Transformation", path: "/services/transformation", icon: Users }
-      ]
-    },
-    {
-      title: "Company",
-      links: [
-        { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
-        { label: "Careers", path: "/careers" },
-        { label: "News & Updates", path: "/news" },
-        { label: "Case Studies", path: "/case-studies" },
-        { label: "Partners", path: "/partners" }
-      ]
-    },
-    {
-      title: "Resources",
-      links: [
-        { label: "Blog", path: "/blog" },
-        { label: "Documentation", path: "/docs" },
-        { label: "White Papers", path: "/white-papers" },
-        { label: "Webinars", path: "/webinars" },
-        { label: "Research", path: "/research-development" },
-        { label: "Events", path: "/events" },
-        { label: "Training", path: "/training" }
-      ]
-    },
-    {
-      title: "Support",
-      links: [
-        { label: "Contact Us", path: "/contact" },
-        { label: "Help Center", path: "/help" },
-        { label: "Support Portal", path: "/support" },
-        { label: "FAQ", path: "/faq" },
-        { label: "Consulting", path: "/services/consulting" },
-        { label: "Request Quote", path: "/contact" }
-      ]
-    }
-  ];
+const contactInfo = {
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
 
-  const contactInfo = [
-    { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
-    { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
-    { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
-    { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
-  ];
-
+export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, ${getComputedStyle(document.documentElement).getPropertyValue('--zion-cyan')} 2px, transparent 2px)`,
-          backgroundSize: '50px 50px'
-        }}></div>
+    <footer className="bg-futuristic border-t border-zion-cyan/20 pt-20 pb-8 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse"></div>
+        <div className="absolute bottom-32 right-32 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute top-40 right-40 w-16 h-16 border border-zion-cyan rounded-full animate-pulse delay-3000"></div>
       </div>
 
-      {/* Main Footer Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          {/* Company Info */}
+      <div className="container-responsive relative z-10">
+        {/* Main footer content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+          {/* Company info */}
           <div className="lg:col-span-2">
-            <div className="mb-8">
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent mb-4">
-                Zion Tech Group
-              </h3>
-              <p className="text-zion-slate-light text-lg leading-relaxed max-w-md">
-                Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services. 
-                Transform your business with cutting-edge technology and expert guidance.
-              </p>
-            </div>
-            
-            {/* Contact Info */}
-            <div className="space-y-4">
-              {contactInfo.map((contact, index) => (
-                <div key={index} className="flex items-start space-x-3 group">
-                  <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:from-zion-cyan/30 group-hover:to-zion-purple/30 transition-all duration-200">
-                    <contact.icon className="h-5 w-5 text-zion-cyan" />
-                  </div>
-                  <div>
-                    <span className="text-zion-slate-light text-sm font-medium">{contact.label}: </span>
-                    <a 
-                      href={contact.href} 
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 block"
-                    >
-                      {contact.value}
-                    </a>
-                  </div>
+            <motion.div 
+              className="mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center">
+                  <span className="text-2xl font-bold text-white">Z</span>
                 </div>
-              ))}
-            </div>
-
-            {/* Social Links */}
-            <div className="mt-8">
-              <h4 className="text-white font-semibold mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-10 h-10 bg-slate-800/50 hover:bg-slate-700/70 rounded-lg flex items-center justify-center text-lg transition-all duration-200 ${social.color}`}
-                  >
-                    {social.icon}
-                  </a>
-                ))}
+                <div>
+                  <h3 className="text-2xl font-bold text-gradient">ZION TECH GROUP</h3>
+                  <p className="text-sm text-zion-slate-light">Innovation • Intelligence • Impact</p>
+                </div>
               </div>
-            </div>
+            </motion.div>
+            
+            <motion.p 
+              className="text-zion-slate-light mb-8 max-w-sm leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              The world's first free marketplace dedicated to high-tech and artificial intelligence.
+              Connecting innovators, talent, and cutting-edge technology worldwide.
+            </motion.p>
+
+            {/* Contact info */}
+            <motion.div 
+              className="space-y-4 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="flex items-center gap-3 text-zion-slate-light hover:text-zion-cyan transition-colors">
+                <Phone className="w-4 h-4 text-zion-cyan" />
+                <a href={`tel:${contactInfo.phone}`} className="hover:text-zion-cyan">
+                  {contactInfo.phone}
+                </a>
+              </div>
+              <div className="flex items-center gap-3 text-zion-slate-light hover:text-zion-cyan transition-colors">
+                <Mail className="w-4 h-4 text-zion-cyan" />
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-zion-cyan">
+                  {contactInfo.email}
+                </a>
+              </div>
+              <div className="flex items-center gap-3 text-zion-slate-light">
+                <MapPin className="w-4 h-4 text-zion-cyan" />
+                <span>{contactInfo.address}</span>
+              </div>
+              <div className="flex items-center gap-3 text-zion-slate-light hover:text-zion-cyan transition-colors">
+                <Globe className="w-4 h-4 text-zion-cyan" />
+                <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
+                  {contactInfo.website}
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Social links */}
+            <motion.div 
+              className="flex space-x-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 hover:scale-110"
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </motion.div>
           </div>
 
-          {/* Footer Sections */}
-          {footerSections.map((section, index) => (
-            <div key={index}>
-              <h4 className="text-white font-semibold mb-6 text-lg">{section.title}</h4>
-              <ul className="space-y-3">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
+          {/* Navigation sections */}
+          {Object.entries(footerNavigation).map(([key, section], index) => (
+            <motion.div 
+              key={key}
+              className="space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+            >
+              <h4 className="text-lg font-semibold text-white flex items-center gap-2">
+                {section.title === 'Services' && <Zap className="w-5 h-5 text-zion-cyan" />}
+                {section.title === 'Micro SAAS' && <Code className="w-5 h-5 text-zion-purple" />}
+                {section.title === 'Marketplace' && <Building className="w-5 h-5 text-zion-blue" />}
+                {section.title === 'Company' && <Users className="w-5 h-5 text-zion-cyan" />}
+                {section.title === 'Support & Resources' && <Award className="w-5 h-5 text-zion-purple" />}
+                {section.title}
+              </h4>
+              <ul className="space-y-2">
+                {section.items.map((item) => (
+                  <li key={item.name}>
                     <Link
-                      to={link.path}
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 flex items-center group"
+                      to={item.href}
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 flex items-center gap-2 group"
                     >
-                      {link.icon && (
-                        <link.icon className="h-4 w-4 mr-2 text-zion-cyan/60 group-hover:text-zion-cyan transition-colors" />
-                      )}
-                      <span>{link.label}</span>
-                      <ArrowRight className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
+                      {item.icon && <item.icon className="w-3 h-3 group-hover:text-zion-cyan" />}
+                      {item.name}
                     </Link>
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Newsletter Section */}
-        <div className="mt-16 pt-12 border-t border-slate-700/30">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Zion Tech
-            </h3>
-            <p className="text-zion-slate-light mb-6">
-              Get the latest insights on AI, technology trends, and industry updates delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/90 hover:to-zion-blue/90 text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105">
-                Subscribe
-              </button>
-            </div>
+        {/* Bottom section */}
+        <motion.div 
+          className="pt-8 border-t border-zion-cyan/20 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <div className="flex items-center space-x-4 text-zion-slate-light text-sm">
+            <span>&copy; 2025 Zion Tech Group. All rights reserved.</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="hidden sm:inline">Made with <Heart className="w-4 h-4 inline text-zion-cyan" /> for innovation</span>
           </div>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="relative z-10 border-t border-slate-700/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-6 text-sm text-zion-slate-light">
-              <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
-              <Link to="/privacy" className="hover:text-zion-cyan transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-zion-cyan transition-colors">Terms of Service</Link>
-            </div>
-            
-            <div className="flex items-center space-x-2 text-zion-slate-light">
-              <span className="text-sm">Made with</span>
-              <Heart className="h-4 w-4 text-red-500 fill-current" />
-              <span className="text-sm">by Zion Tech Group</span>
-            </div>
+          
+          <div className="flex items-center space-x-4">
+            <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+              Privacy Policy
+            </Link>
+            <span className="text-zion-slate-light">•</span>
+            <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+              Terms of Service
+            </Link>
+            <span className="text-zion-slate-light">•</span>
+            <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+              Cookies
+            </Link>
           </div>
-        </div>
-      </div>
+        </motion.div>
 
-      {/* Scroll to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/90 hover:to-zion-blue/90 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110 z-50"
-      >
-        <ArrowUp className="h-6 w-6 mx-auto" />
-      </button>
+        {/* Scroll to top button */}
+        <motion.button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 p-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          whileHover={{ y: -5 }}
+        >
+          <ArrowUp className="w-5 h-5" />
+        </motion.button>
+      </div>
     </footer>
   );
-};
+}
