@@ -6,7 +6,14 @@ import {
   UserIcon,
   TagIcon,
   ArrowRightIcon,
-  NewspaperIcon
+  NewspaperIcon,
+  TrendingUpIcon as TrendingUp,
+  LightbulbIcon,
+  StarIcon,
+  GlobeAltIcon as Globe,
+  ShieldCheckIcon as Shield,
+  BoltIcon as Zap,
+  HeartIcon
 } from '@heroicons/react/24/outline';
 
 const News: React.FC = () => {
@@ -120,21 +127,23 @@ const News: React.FC = () => {
   ];
 
   const categories = [
-    'All News',
-    'Company News',
-    'Partnerships',
-    'Research & Development',
-    'Awards & Recognition',
-    'Business Expansion',
-    'AI Ethics',
-    'Quantum Technology',
-    'Healthcare AI',
-    'Financial Results',
-    'Corporate Governance'
+    { id: 'all', name: 'All News', icon: NewspaperIcon },
+    { id: 'company', name: 'Company News', icon: NewspaperIcon },
+    { id: 'partnerships', name: 'Partnerships', icon: UserIcon },
+    { id: 'research', name: 'Research & Development', icon: LightbulbIcon },
+    { id: 'awards', name: 'Awards & Recognition', icon: StarIcon },
+    { id: 'expansion', name: 'Business Expansion', icon: GlobeIcon },
+    { id: 'ethics', name: 'AI Ethics', icon: ShieldIcon },
+    { id: 'quantum', name: 'Quantum Technology', icon: ZapIcon },
+    { id: 'healthcare', name: 'Healthcare AI', icon: HeartIcon },
+    { id: 'financial', name: 'Financial Results', icon: CalendarIcon },
+    { id: 'governance', name: 'Corporate Governance', icon: UserIcon }
   ];
 
-  const featuredNews = newsArticles.filter(article => article.featured);
-  const recentNews = newsArticles.slice(0, 3);
+  // Combine all news sources
+  const allNews = [...breakingNews, ...latestNews, ...pressReleases];
+  const featuredNews = allNews.filter(article => article.priority === 'breaking');
+  const recentNews = allNews.slice(0, 3);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -196,14 +205,14 @@ const News: React.FC = () => {
           >
             {categories.map((category, index) => (
               <button
-                key={category}
+                key={category.id}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   index === 0
                     ? 'bg-purple-600 text-white'
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                {category}
+                {category.name}
               </button>
             ))}
           </motion.div>
