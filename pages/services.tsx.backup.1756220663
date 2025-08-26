@@ -36,10 +36,22 @@ import { enterpriseITServices2029V2 } from '../data/2029-enterprise-it-services-
 import { spaceMetaverseServices2029 } from '../data/2029-space-metaverse-services';
 import { researchDevelopmentServices2029 } from '../data/2029-research-development-services';
 
+<<<<<<< HEAD
+				<div className="mt-10 grid gap-6 sm:grid-cols-2">
+					<section className="rounded-lg border p-6">
+						<h2 className="text-xl font-medium">AI Autonomous Systems</h2>
+						<ul className="mt-2 list-disc pl-5 text-gray-700">
+							<li>Sales/CS multi-agent copilots</li>
+							<li>RAG and workflow orchestration</li>
+							<li>Observability and guardrails</li>
+						</ul>
+					</section>
+=======
 // Import our new service data
 // Note: Removed non-existent data imports (2034 datasets) to prevent build errors.
 import { real2025Q4AugmentedBatch } from '../data/real-2025-q4-augmented-batch';
 import { real2029Q3Additions } from '../data/real-2029-q3-additions';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a54a
 
   // Combine all services
   const allServices = [

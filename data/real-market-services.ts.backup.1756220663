@@ -362,6 +362,48 @@ export const realMarketServices: RealMarketService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+    implementationDetails: 'Ingestion workers, metrics engine, dashboard and alerts.',
+    launchDate: '2025-02-09',
+    customers: 44,
+    rating: 4.6,
+    reviews: 19
+  },
+  {
+    id: 'privacy-consent-manager-smb',
+    name: 'Privacy & Consent Manager (SMB)',
+    tagline: 'GDPR/CCPA banners, consent logs, DSAR intake and records',
+    price: '$49',
+    period: '/month',
+    description: 'Compliant consent banners, preference center, DSAR intake, and consent logs with exports and region rules.',
+    features: [
+      'Geo/rule‑based banners',
+      'Preference center',
+      'DSAR intake and workflows',
+      'Cookie catalog and scans',
+      'Consent logs and exports',
+      'Multi‑site management'
+    ],
+    popular: true,
+    icon: '⚖️',
+    color: 'from-slate-700 to-slate-900',
+    textColor: 'text-slate-200',
+    link: 'https://ziontechgroup.com/privacy-consent-manager',
+    marketPosition: 'Simpler pricing vs OneTrust; ideal for SMB and startups.',
+    targetAudience: 'SMBs and startups',
+    trialDays: 14,
+    setupTime: 'Same day',
+    category: 'Security & Compliance',
+    realService: true,
+    technology: ['Next.js', 'Edge rules'],
+    integrations: ['GTM', 'Segment', 'Tag managers'],
+    useCases: ['Cookie compliance', 'Consent records', 'DSAR intake'],
+    roi: 'Faster compliance and fewer legal risks.',
+    competitors: ['OneTrust', 'CookieYes', 'Didomi'],
+    marketSize: '$3B privacy tech',
+    growthRate: '16% YoY',
+    variant: 'security-futuristic' as any,
+=======
     implementationDetails: 'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',
     launchDate: '2025-08-22',
     customers: 13,
@@ -400,6 +442,7 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$6B+ MDM',
     growthRate: '18% YoY',
     variant: 'cloud-futuristic' as any,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a54a
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -407,6 +450,13 @@ export const realMarketServices: RealMarketService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+    implementationDetails: 'Region rules, consent logging, banner/prefs widgets.',
+    launchDate: '2025-02-01',
+    customers: 88,
+    rating: 4.6,
+    reviews: 36
+=======
     implementationDetails: 'Policy baselines, enrollment automation, reporting dashboards.',
     launchDate: '2025-02-20',
     customers: 19,
@@ -502,5 +552,6 @@ export const realMarketServices: RealMarketService[] = [
     customers: 14,
     rating: 4.5,
     reviews: 7
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a54a
   }
 ];
