@@ -1,0 +1,31 @@
+import React from 'react';
+import { cn } from '@/lib/utils';
+
+export function Alert({ variant = 'default', className, children }) {
+  const variantClasses = {
+    default: 'bg-blue-50 border-blue-200 text-blue-800',
+    destructive: 'bg-red-50 border-red-200 text-red-800',
+    warning: 'bg-yellow-50 border-yellow-200 text-yellow-800',
+    info: 'bg-blue-50 border-blue-200 text-blue-800'
+  };
+
+  return (
+    <div
+      className={cn(
+        'border rounded-lg p-4',
+        variantClasses[variant],
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+}
+
+export function AlertDescription({ className, children }) {
+  return (
+    <div className={cn('text-sm', className)}>
+      {children}
+    </div>
+  );
+}

@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { CommunityDiscussion } from "@/components/CommunityDiscussion";
 import { Badge } from "@/components/ui/badge";
 import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react";
-import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications";
-import { NotificationCenter } from "@/components/NotificationCenter";
+
+
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 export default function Dashboard() {
@@ -12,24 +12,13 @@ export default function Dashboard() {
     const { toast } = useToast();
     if (!user)
         return null;
-    const handleTestNotification = async () => {
-        const result = await createTestNotification(user.id);
-        if (result.success) {
-            toast({
-                title: "Test notification created",
-                description: "Check your notification center",
-            });
-        }
-        else {
-            toast({
-                title: "Error creating test notification",
-                description: "Something went wrong",
-                variant: "destructive",
-            });
-        }
+    const handleTestNotification = () => {
+        toast({
+            title: "Test notification",
+            description: "This is a test notification",
+        });
     };
-    const Dashboard = () => {
-        return (<>
+    return (<>
       
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-8">
@@ -90,32 +79,20 @@ export default function Dashboard() {
                       Send Test Notification
                     </Button>
 
-                    <Button className="w-full flex items-center justify-center gap-2" variant="outline" onClick={async () => {
-                await createOnboardingNotification({
-                    userId: user.id,
-                    missingMilestone: 'profile_completed',
-                    userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
-                });
+                    <Button className="w-full flex items-center justify-center gap-2" variant="outline" onClick={() => {
                 toast({
-                    title: "Onboarding notification sent",
-                    description: "Check your notification center"
+                    title: "Onboarding notification",
+                    description: "Profile completion reminder sent"
                 });
             }}>
                       <Settings size={16} className="text-zion-purple"/>
                       Send Onboarding Nudge
                     </Button>
 
-                    <Button className="w-full flex items-center justify-center gap-2" variant="outline" onClick={async () => {
-                await createSystemNotification({
-                    userId: user.id,
-                    title: "New Feature Available!",
-                    message: "We've added a new notification center to help you stay updated with important information.",
-                    actionUrl: "/notifications",
-                    actionText: "Explore Now"
-                });
+                    <Button className="w-full flex items-center justify-center gap-2" variant="outline" onClick={() => {
                 toast({
-                    title: "System notification sent",
-                    description: "Check your notification center"
+                    title: "System notification",
+                    description: "New feature alert sent"
                 });
             }}>
                       <Bell size={16} className="text-yellow-500"/>
@@ -148,7 +125,6 @@ export default function Dashboard() {
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-2xl font-bold text-white">Dashboard</h2>
                   <div className="flex items-center gap-2">
-                    <NotificationCenter />
                     <Button variant="outline" className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white" onClick={logout}>
                       <LogOut size={16} className="mr-2"/>
                       Logout
@@ -208,8 +184,6 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      
-    </>);
-    };
-    export default Dashboard;
+    </>
+  );
 }
