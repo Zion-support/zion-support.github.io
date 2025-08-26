@@ -10,7 +10,6 @@ const About = React.lazy(() => import('./pages/About.tsx'));
 const Contact = React.lazy(() => import('./pages/Contact.tsx'));
 const Blog = React.lazy(() => import('./pages/Blog.tsx'));
 const PartnersPage = React.lazy(() => import('./pages/Partners.tsx'));
-const Login = React.lazy(() => import('./pages/Login.jsx'));
 const FAQ = React.lazy(() => import('./pages/FAQ.tsx'));
 const Careers = React.lazy(() => import('./pages/Careers.tsx'));
 const Privacy = React.lazy(() => import('./pages/Privacy.tsx'));
@@ -46,7 +45,6 @@ function App() {
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
 
               {/* Catch-all route for 404 */}
               <Route path="*" element={
