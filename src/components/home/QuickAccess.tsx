@@ -1,75 +1,71 @@
-
-import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { cn } from "@/lib/utils";
-import { 
-  CpuChipIcon, 
-  CloudIcon, 
-  ShieldCheckIcon, 
-  CubeIcon,
-  CubeTransparentIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline';
+import { motion } from "framer-motion";
+import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone, Sparkles, Zap } from "lucide-react";
 
-export interface QuickAccessProps extends React.HTMLAttributes<HTMLElement> {}
-
-export function QuickAccess({ className, style, ...props }: QuickAccessProps) {
+export function QuickAccess() {
   const { t } = useTranslation();
+  
   const quickLinks = [
     {
-      id: 1,
-      title: "AI Solutions",
-      description: "Advanced AI and machine learning services",
-      icon: CpuChipIcon,
-      path: "/services",
-      color: "from-blue-500 to-cyan-500",
-      hoverColor: "from-blue-600 to-cyan-600"
+      title: t('home.tool_ai_matcher') || "AI Matcher",
+      description: t('home.tool_ai_matcher_desc') || "Find perfect matches",
+      icon: <Search className="h-7 w-7" />,
+      link: "/match",
+      color: "from-zion-cyan to-zion-cyan-light",
+      bgColor: "bg-zion-cyan/10",
+      borderColor: "border-zion-cyan/20",
+      hoverColor: "hover:border-zion-cyan/40"
     },
     {
-      id: 2,
-      title: "Cloud & DevOps",
-      description: "Scalable cloud infrastructure and automation",
-      icon: CloudIcon,
-      path: "/services",
-      color: "from-purple-500 to-pink-500",
-      hoverColor: "from-purple-600 to-pink-600"
+      title: t('home.tool_talent') || "Talent Directory",
+      description: t('home.tool_talent_desc') || "Browse verified experts",
+      icon: <Users className="h-7 w-7" />,
+      link: "/talent",
+      color: "from-zion-purple to-zion-purple-light",
+      bgColor: "bg-zion-purple/10",
+      borderColor: "border-zion-purple/20",
+      hoverColor: "hover:border-zion-purple/40"
     },
     {
-      id: 3,
-      title: "Cybersecurity",
-      description: "Enterprise-grade security solutions",
-      icon: ShieldCheckIcon,
-      path: "/services",
-      color: "from-green-500 to-emerald-500",
-      hoverColor: "from-green-600 to-emerald-600"
+      title: t('home.tool_services') || "Services",
+      description: t('home.tool_services_desc') || "Professional solutions",
+      icon: <Briefcase className="h-7 w-7" />,
+      link: "/services",
+      color: "from-zion-cyan to-zion-cyan-light",
+      bgColor: "bg-zion-cyan/10",
+      borderColor: "border-zion-cyan/20",
+      hoverColor: "hover:border-zion-cyan/40"
     },
     {
-      id: 4,
-      title: "Quantum Computing",
-      description: "Next-generation quantum solutions",
-      icon: CubeIcon,
-      path: "/services",
-      color: "from-indigo-500 to-purple-500",
-      hoverColor: "from-indigo-600 to-purple-600"
+      title: t('home.tool_equipment') || "Equipment",
+      description: t('home.tool_equipment_desc') || "Cutting-edge tech",
+      icon: <Settings className="h-7 w-7" />,
+      link: "/equipment",
+      color: "from-zion-purple to-zion-purple-light",
+      bgColor: "bg-zion-purple/10",
+      borderColor: "border-zion-purple/20",
+      hoverColor: "hover:border-zion-purple/40"
     },
     {
-      id: 5,
-      title: "Blockchain & Web3",
-      description: "Decentralized technology solutions",
-      icon: CubeTransparentIcon,
-      path: "/services",
-      color: "from-orange-500 to-red-500",
-      hoverColor: "from-orange-600 to-red-600"
+      title: t('nav.community') || "Community",
+      description: t('home.tool_chat_desc') || "Connect & collaborate",
+      icon: <MessageSquare className="h-7 w-7" />,
+      link: "/community",
+      color: "from-zion-cyan to-zion-cyan-light",
+      bgColor: "bg-zion-cyan/10",
+      borderColor: "border-zion-cyan/20",
+      hoverColor: "hover:border-zion-cyan/40"
     },
     {
-      id: 6,
-      title: "Get Started",
-      description: "Start your transformation journey",
-      icon: RocketLaunchIcon,
-      path: "/contact",
-      color: "from-yellow-500 to-orange-500",
-      hoverColor: "from-yellow-600 to-orange-600"
+      title: "Mobile App",
+      description: "Zion on the go",
+      icon: <Smartphone className="h-7 w-7" />,
+      link: "/mobile-launch",
+      color: "from-zion-purple to-zion-purple-light",
+      bgColor: "bg-zion-purple/10",
+      borderColor: "border-zion-purple/20",
+      hoverColor: "hover:border-zion-purple/40"
     }
   ];
 
@@ -78,97 +74,114 @@ export function QuickAccess({ className, style, ...props }: QuickAccessProps) {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: 0.1,
+        delayChildren: 0.2
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { opacity: 0, y: 20, scale: 0.9 },
     visible: {
-      y: 0,
       opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0.5
+        duration: 0.5,
+        ease: "easeOut"
       }
     }
   };
 
   return (
-    <section
-      className={cn("py-12 bg-zion-blue-dark", className)}
-      style={style}
-      {...props}
-    >
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
-            Quick Access
+    <section className="relative py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-zion-purple/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-zion-cyan/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-zion-blue/5 rounded-full blur-3xl" />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-zion-blue/20 border border-zion-blue/30 rounded-full backdrop-blur-sm">
+            <Sparkles className="h-4 w-4 text-zion-cyan" />
+            <span className="text-zion-cyan text-sm font-medium">Quick Access</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">
+            Everything You Need
           </h2>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            Explore our comprehensive range of technology solutions designed to drive your business forward
+          <p className="text-zion-slate-light text-lg md:text-xl max-w-2xl mx-auto">
+            Jump directly to our most popular features and discover the power of Zion
           </p>
         </motion.div>
 
-        {/* Quick Access Grid */}
         <motion.div
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {quickLinks.map((link) => (
+          {quickLinks.map((link, index) => (
             <motion.div
-              key={link.id}
+              key={index}
               variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
-              className="group"
+              whileHover={{
+                y: -8,
+                transition: { duration: 0.2 }
+              }}
             >
               <Link
-                to={link.path}
-                className="block h-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-white/20"
+                to={link.link}
+                className={`group relative block h-full ${link.bgColor} ${link.borderColor} ${link.hoverColor} border rounded-2xl p-6 transition-all duration-300 backdrop-blur-sm hover:shadow-2xl hover:shadow-zion-purple/10`}
               >
-                <div className="flex items-start space-x-4">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${link.color} rounded-lg flex items-center justify-center group-hover:bg-gradient-to-r ${link.hoverColor} transition-all duration-300`}>
-                    <link.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
-                      {link.title}
-                    </h3>
-                    <p className="text-slate-300 text-sm leading-relaxed">
-                      {link.description}
-                    </p>
+                <div className={`absolute inset-0 bg-gradient-to-br ${link.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`} />
+                
+                <div className={`relative mb-4 bg-gradient-to-br ${link.color} rounded-2xl w-16 h-16 flex items-center justify-center text-white shadow-lg group-hover:shadow-xl transition-all duration-300`}>
+                  {link.icon}
+                  <div className="absolute inset-0 bg-white/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                
+                <div className="relative">
+                  <h3 className="text-white font-semibold mb-2 text-lg group-hover:text-zion-cyan transition-colors duration-300">
+                    {link.title}
+                  </h3>
+                  <p className="text-zion-slate-light text-sm mb-4 leading-relaxed group-hover:text-zion-slate-light/80 transition-colors duration-300">
+                    {link.description}
+                  </p>
+                  <div className="flex items-center text-zion-cyan text-sm font-medium group-hover:text-zion-cyan-light transition-colors duration-300">
+                    <span>Explore</span>
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
                 </div>
                 
-                {/* Hover Effect */}
-                <div className="mt-4 flex items-center text-blue-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Learn more
-                  <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
+                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-zion-cyan/20 transition-all duration-300" />
               </Link>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Bottom CTA */}
         <motion.div
+          className="text-center mt-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-center mt-12"
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="inline-flex items-center space-x-2 text-slate-400 hover:text-white transition-colors duration-300">
-            <span>Need something specific?</span>
-            <Link to="/contact" className="text-blue-400 hover:text-blue-300 font-medium">
-              Contact our experts
-            </Link>
-          </div>
+          <Link
+            to="/marketplace"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/25"
+          >
+            <Zap className="h-5 w-5" />
+            Explore All Features
+            <ArrowRight className="h-5 w-5" />
+          </Link>
         </motion.div>
       </div>
     </section>

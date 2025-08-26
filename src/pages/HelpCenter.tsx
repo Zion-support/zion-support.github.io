@@ -1,11 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-import React from 'react';
-import { 
-  HelpCircle, 
-=======
   Search, 
   BookOpen, 
   MessageCircle, 
@@ -137,6 +130,7 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/Button";
 import { Search, BookOpen, MessageCircle, Phone, Mail, FileText, Users, Settings, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+=======
 =======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Search, X, ArrowDown } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
+import { Search, X } from 'lucide-react';
 
 interface SearchSuggestion {
   id: string;

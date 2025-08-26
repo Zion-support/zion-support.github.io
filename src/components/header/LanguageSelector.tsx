@@ -1,36 +1,4 @@
-import React, { useState } from 'react';
-import { ChevronDown, Globe } from 'lucide-react';
-
-interface Language {
-  code: string;
-  name: string;
-  flag: string;
-}
-
-export const LanguageSelector: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState('EN');
-
-  const languages: Language[] = [
-    { code: 'EN', name: 'English', flag: '🇺🇸' },
-    { code: 'ES', name: 'Español', flag: '🇪🇸' },
-    { code: 'FR', name: 'Français', flag: '🇫🇷' },
-    { code: 'DE', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'IT', name: 'Italiano', flag: '🇮🇹' },
-    { code: 'PT', name: 'Português', flag: '🇵🇹' },
-    { code: 'RU', name: 'Русский', flag: '🇷🇺' },
-    { code: 'ZH', name: '中文', flag: '🇨🇳' },
-    { code: 'JA', name: '日本語', flag: '🇯🇵' },
-    { code: 'KO', name: '한국어', flag: '🇰🇷' }
-  ];
-
-  const handleLanguageChange = (languageCode: string) => {
-    setCurrentLanguage(languageCode);
-    setIsOpen(false);
-    // Here you would typically implement language change logic
-  };
-
-  const currentLang = languages.find(lang => lang.code === currentLanguage);
+import { Globe } from 'lucide-react';
 
   return (
     <div className="relative">

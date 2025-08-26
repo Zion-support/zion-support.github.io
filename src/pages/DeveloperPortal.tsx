@@ -1,25 +1,6 @@
-
-import React from 'react';
-import SEO from '../SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Button } from '../ui/button';
-import { Badge } from '../ui/badge';
-import { 
-  Code, 
-  BookOpen, 
-  Zap, 
-  Shield, 
-  Users, 
-  MessageSquare, 
-  Github, 
-  ExternalLink,
-  Terminal,
-  Database,
-  Webhook,
-  Key,
-  Mail
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Code, BookOpen, Shield, Users, ArrowRight, Terminal, Database, FileCode, CheckCircle } from 'lucide-react';
 
 export default function DeveloperPortal() {
   const apiFeatures = [

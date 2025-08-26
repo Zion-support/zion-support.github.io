@@ -1,11 +1,3 @@
-import { 
-  X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
-  Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
-  Target, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Search, Building, Zap, Heart, 
-  Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, 
-  TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, 
-  LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone
-=======
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -21,6 +13,8 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
+=======
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { 
@@ -35,19 +29,12 @@ import {
   FileText, 
   HelpCircle, 
   MessageSquare, 
-  BarChart3, 
-  ShoppingCart, 
-  Wrench, 
-  Globe, 
-  Building, 
-  Code, 
-  Shield, 
-  Zap, 
-  ChevronRight, 
-  ChevronDown,
-  Star,
-  Rocket,
-  Cpu,
+  HelpCircle,
+  ChevronRight,
+  Building2,
+  Globe,
+  Zap,
+  Code,
   Database,
   Network,
   Lock,
@@ -149,6 +136,7 @@ import { cn } from '@/lib/utils';
   Building,
   Leaf
 } from 'lucide-react';
+import React from 'react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -1337,7 +1325,7 @@ interface SidebarProps {
   className?: string;
 }
 
-export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
+export function Sidebar({ isOpen = false }: SidebarProps) {
   const location = useLocation();
 =======
   Users, 
@@ -3169,42 +3157,22 @@ export function Sidebar() {
     const isItemActive = isActive(item.path);
 
     return (
-      <div key={item.name}>
-        <div className={`flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${
-          isItemActive
-            ? 'bg-blue-600 text-white shadow-lg'
-            : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
-        }`}>
-          <Link 
-            to={item.path} 
-            className={`flex items-center space-x-3 flex-1 ${level > 0 ? 'ml-4' : ''}`}
-          >
-            <item.icon className={`h-5 w-5 ${isItemActive ? 'text-white' : 'text-gray-500'}`} />
-            <span className="font-medium">{item.name}</span>
-            {item.badge && (
-              <span className="ml-auto px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-full">
-                {item.badge}
-              </span>
-            )}
-          </Link>
-          
-          {hasChildren && (
-            <button
-              onClick={() => toggleItem(item.name)}
-              className={`p-1 rounded transition-colors ${
-                isItemActive
-                  ? 'text-white hover:bg-white/20'
-                  : 'text-gray-500 hover:bg-gray-200'
-              }`}
-            >
-              {isExpanded ? (
-                <ChevronDown className="h-4 w-4" />
-              ) : (
-                <ChevronRight className="h-4 w-4" />
-              )}
-            </button>
-          )}
-        </div>
+      <div key={sectionKey} className="mb-4">
+        <button
+          onClick={() => toggleSection(sectionKey)}
+          className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light hover:text-zion-cyan transition-colors rounded-lg hover:bg-zion-purple/10"
+        >
+          <div className="flex items-center">
+            {icon && React.createElement(icon, { className: "w-5 h-5 mr-3" })}
+            <span className="font-medium">{title}</span>
+          </div>
+          <ChevronRight 
+            className={cn(
+              "w-4 h-4 transition-transform",
+              isExpanded ? "rotate-90" : ""
+            )} 
+          />
+        </button>
         
         {hasChildren && isExpanded && (
           <div className="ml-4 mt-2 space-y-1">
@@ -3230,7 +3198,44 @@ export function Sidebar() {
 
         {/* Navigation */}
         <nav className="space-y-2">
-          {sidebarItems.map(item => renderSidebarItem(item))}
+          {/* Main Navigation */}
+          <div className="mb-6">
+            <h3 className="text-xs font-semibold text-zion-slate-light uppercase tracking-wider mb-3 px-3">
+              Main
+            </h3>
+            {navigationItems.main.map((item) => {
+              const Icon = item.icon;
+              const isActive = location.pathname === item.href;
+              
+              return (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className={cn(
+                    "flex items-center px-3 py-2 text-sm rounded-lg transition-colors",
+                    isActive
+                      ? "bg-zion-purple/20 text-zion-cyan"
+                      : "text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10"
+                  )}
+                >
+                  <Icon className="w-4 h-4 mr-3" />
+                  {item.label}
+                </Link>
+              );
+            })}
+          </div>
+
+          {/* Marketplace Section */}
+          {renderNavSection('marketplace', navigationItems.marketplace, 'Marketplace', ShoppingCart)}
+          
+          {/* Solutions Section */}
+          {renderNavSection('solutions', navigationItems.solutions, 'Solutions', Zap)}
+          
+          {/* Resources Section */}
+          {renderNavSection('resources', navigationItems.resources, 'Resources', FileText)}
+          
+          {/* Community Section */}
+          {renderNavSection('community', navigationItems.community, 'Community', Users)}
         </nav>
 
         {/* Quick Actions */}
@@ -3241,8 +3246,8 @@ export function Sidebar() {
               to="/request-quote"
               className="flex items-center space-x-3 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
-              <MessageSquare className="h-5 w-5" />
-              <span className="font-medium">Request Quote</span>
+              <Handshake className="w-4 h-4 mr-2" />
+              Request Quote
             </Link>
             
             <Link

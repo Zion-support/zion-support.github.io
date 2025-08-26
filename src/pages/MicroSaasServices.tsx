@@ -1,5 +1,3 @@
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Rocket, Lock, Key, Brain as BrainIcon, Palette, Code, Server, Wifi, Smartphone, Tablet, Monitor, Printer, Scanner, Microphone, Headphones, Gamepad2, Watch, Thermometer, Lightbulb, Battery, Leaf as LeafIcon, Globe as GlobeIcon, Shield as ShieldIcon2, Zap as ZapIcon3, Database as DatabaseIcon2, Cloud as CloudIcon, Server as ServerIcon, Network as NetworkIcon, Lock as LockIcon, Key as KeyIcon, Brain as BrainIcon2, Palette as PaletteIcon, Code as CodeIcon, Server as ServerIcon2, Wifi as WifiIcon, Smartphone as SmartphoneIcon, Tablet as TabletIcon, Monitor as MonitorIcon, Printer as PrinterIcon, Scanner as ScannerIcon, Microphone as MicrophoneIcon, Headphones as HeadphonesIcon, Gamepad2 as Gamepad2Icon, Watch as WatchIcon, Thermometer as ThermometerIcon, Lightbulb as LightbulbIcon, Battery as BatteryIcon, Leaf as LeafIcon2, Globe as GlobeIcon2, Glasses, ArrowRight } from 'lucide-react';
-=======
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Star, TrendingUp, Zap, Shield, Brain, Code, BarChart3, Settings, Globe, Smartphone } from 'lucide-react';
@@ -30,6 +28,8 @@ import React, { useState, useMemo } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
+=======
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -765,26 +765,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 =======
 import { 
   Search, 
-  Filter, 
+  Grid3X3, 
+  List, 
   Star, 
   Clock, 
-  TrendingUp, 
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  ExternalLink,
-  Play,
-  Users,
-  Shield,
-  BarChart3,
-  Code,
-  Cloud,
-  Lock,
-  Settings,
-  Link as LinkIcon
-} from 'lucide-react';
-import { MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory, getFeaturedServices, getPopularServices, getNewServices } from '@/data/microSaasServices';
-=======
   ExternalLink, 
   Phone, 
   Mail, 
@@ -806,6 +790,22 @@ import { MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory, getFeatur
 } from 'lucide-react';
 import { MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory } from '@/data/microSaasServices';
 import { Link } from 'react-router-dom';
+=======
+  DollarSign, 
+  Users, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  ExternalLink, 
+  Eye,
+  Mail,
+  Phone,
+  MapPin
+} from 'lucide-react';
+import { MICRO_SAAS_SERVICES, MicroSaasService } from '@/data/microSaasServices';
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
 
 export default function MicroSaasServices() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -924,15 +924,17 @@ export default function MicroSaasServices() {
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'AI': return <Brain className="w-6 h-6" />;
-      case 'IT': return <Database className="w-6 h-6" />;
-      case 'Development': return <Code className="w-6 h-6" />;
-      case 'Analytics': return <BarChart3 className="w-6 h-6" />;
-      case 'Security': return <Shield className="w-6 h-6" />;
-      case 'Automation': return <Workflow className="w-6 h-6" />;
-      case 'Integration': return <LinkIcon className="w-6 h-6" />;
-      case 'Consulting': return <Users className="w-6 h-6" />;
-      default: return <Sparkles className="w-6 h-6" />;
+      case 'AI': return <Shield className="h-5 w-5" />;
+      case 'IT': return <Shield className="h-5 w-5" />;
+      case 'Development': return <Grid3X3 className="h-5 w-5" />;
+      case 'Analytics': return <List className="h-5 w-5" />;
+      case 'Security': return <Shield className="h-5 w-5" />;
+      case 'Automation': return <Zap className="h-5 w-5" />;
+      case 'Cloud': return <Shield className="h-5 w-5" />;
+      case 'Marketing': return <Grid3X3 className="h-5 w-5" />;
+      case 'Productivity': return <List className="h-5 w-5" />;
+      case 'Finance': return <DollarSign className="h-5 w-5" />;
+      default: return <Eye className="h-5 w-5" />;
     }
   };
 

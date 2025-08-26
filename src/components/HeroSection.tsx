@@ -31,17 +31,6 @@ export function HeroSection() {
     }
   };
 
-  const floatingVariants = {
-    animate: {
-      y: [-10, 10, -10],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
   return (
     <section 
       className="relative overflow-hidden py-20 md:py-32"

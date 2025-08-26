@@ -1,13 +1,18 @@
 import { motion } from 'framer-motion';
 =======
 import { 
-  Brain, 
-  Shield, 
-=======
 import { SEO } from '../components/SEO';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js';
 import { Badge } from '../components/ui/badge.js';
 import { Phone, Mail } from 'lucide-react';
+=======
+  Home, 
+  ShoppingCart, 
+  FileText, 
+  MessageSquare, 
+  HelpCircle,
+  Globe
+} from 'lucide-react';
 
 interface SitemapSection {
   id: string;
@@ -53,7 +58,7 @@ const sitemapSections: SitemapSection[] = [
     id: 'services',
     title: 'Services & Solutions',
     description: 'Our comprehensive range of technology services',
-    icon: <Zap className="w-6 h-6" />,
+    icon: <ShoppingCart className="w-6 h-6" />,
     links: [
       {
         title: 'Comprehensive Services',
@@ -88,7 +93,7 @@ const sitemapSections: SitemapSection[] = [
     id: 'resources',
     title: 'Resources & Support',
     description: 'Help, documentation, and support resources',
-    icon: <BookOpen className="w-6 h-6" />,
+    icon: <FileText className="w-6 h-6" />,
     links: [
       {
         title: 'Help Center',
@@ -703,50 +708,101 @@ export default function Sitemap() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3 text-sm text-gray-600">
-                  <div className="flex justify-between">
-                    <span>Total Pages:</span>
-                    <span className="font-medium">50+</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Last Updated:</span>
-                    <span className="font-medium">{new Date().toLocaleDateString()}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Site Version:</span>
-                    <span className="font-medium">2.0.0</span>
-                  </div>
+                <div className="space-y-3">
+                  {section.links.map((link) => (
+                    <div key={link.title} className="flex items-start justify-between p-3 rounded-lg hover:bg-zion-blue-light/10 transition-colors">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <a
+                            href={link.href}
+                            className="font-medium text-white hover:text-zion-cyan transition-colors"
+                            target={link.isExternal ? '_blank' : undefined}
+                            rel={link.isExternal ? 'noopener noreferrer' : undefined}
+                          >
+                            {link.title}
+                          </a>
+                          {link.badge && (
+                            <Badge variant="secondary" className="text-xs">
+                              {link.badge}
+                            </Badge>
+                          )}
+                          {link.isExternal && (
+                            <MessageSquare className="w-3 h-3 text-zion-slate-light" />
+                          )}
+                        </div>
+                        {link.description && (
+                          <p className="text-sm text-zion-slate-light">
+                            {link.description}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <MessageSquare className="h-5 w-5 text-zion-blue" />
-                  <span>Need Help?</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600 mb-4">
-                  Can't find what you're looking for? Our support team is here to help.
-                </p>
-                <div className="space-y-2">
-                  <Link
-                    to="/contact"
-                    className="block text-zion-blue hover:text-zion-blue-dark text-sm font-medium"
-                  >
-                    Contact Support →
-                  </Link>
-                  <Link
-                    to="/help-center"
-                    className="block text-zion-blue hover:text-zion-blue-dark text-sm font-medium"
-                  >
-                    Visit Help Center →
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+        {/* Quick Links */}
+        <Card className="bg-zion-blue-dark/50 border-zion-purple/20">
+          <CardHeader>
+            <CardTitle className="text-white">Quick Navigation</CardTitle>
+            <CardDescription className="text-zion-slate-light">
+              Most commonly accessed pages and resources
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <a
+                href="/comprehensive-services"
+                className="p-4 rounded-lg bg-zion-blue-light/10 hover:bg-zion-blue-light/20 transition-colors text-center"
+              >
+                <ShoppingCart className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
+                <div className="font-medium text-white">Services</div>
+                <div className="text-sm text-zion-slate-light">View all services</div>
+              </a>
+              
+              <a
+                href="/contact"
+                className="p-4 rounded-lg bg-zion-blue-light/10 hover:bg-zion-blue-light/20 transition-colors text-center"
+              >
+                <MessageSquare className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
+                <div className="font-medium text-white">Contact</div>
+                <div className="text-sm text-zion-slate-light">Get in touch</div>
+              </a>
+              
+              <a
+                href="/help"
+                className="p-4 rounded-lg bg-zion-blue-light/10 hover:bg-zion-blue-light/20 transition-colors text-center"
+              >
+                <HelpCircle className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
+                <div className="font-medium text-white">Help</div>
+                <div className="text-sm text-zion-slate-light">Find support</div>
+              </a>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Contact Information */}
+        <div className="mt-16 text-center">
+          <h2 className="text-2xl font-bold text-white mb-6">Need Help Finding Something?</h2>
+          <p className="text-zion-slate-light mb-8">
+            Can't find what you're looking for? Our team is here to help.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all font-medium"
+            >
+              <MessageSquare className="w-4 h-4" />
+              Contact Support
+            </a>
+            <a
+              href="/help"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-zion-blue-dark transition-all font-medium"
+            >
+              <HelpCircle className="w-4 h-4" />
+              Help Center
+            </a>
           </div>
         </div>
       </main>

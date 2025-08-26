@@ -12,12 +12,10 @@ import { UserMenu } from './UserMenu';
 import { LanguageSelector } from './LanguageSelector';
 =======
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import { UserMenu } from './UserMenu';
 import { LanguageSelector } from './LanguageSelector';
 import { MainNavigation } from '@/layout/MainNavigation';
-import { useAuth } from '@/hooks/useAuth';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
@@ -69,7 +67,6 @@ import {
 
 export interface HeaderProps {
   hideLogin?: boolean;
-  customLogo?: string;
   customTheme?: {
     primaryColor: string;
     backgroundColor: string;
@@ -120,8 +117,7 @@ export function Header() {
 =======
 }
 
-export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
-  const { user } = useAuth();
+export function Header({ hideLogin = false, customTheme }: HeaderProps) {
   const { isWhitelabel, primaryColor } = useWhitelabel();
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
@@ -449,7 +445,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       </div>
 
       <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
-=======
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-blue-dark/90 to-zion-slate-dark/95 backdrop-blur-xl"
       style={headerStyle}
     >
@@ -458,6 +453,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       
       <div className="relative container flex h-16 items-center px-4 sm:px-6">
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+=======
+        <Logo customColor={effectiveTheme?.primaryColor} />
 
         {/* Desktop Navigation */}
 =======

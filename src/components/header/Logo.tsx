@@ -1,26 +1,11 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface LogoProps {
-  customLogo?: string;
-  
+  customColor?: string;
 }
 
-export function Logo({ customLogo }: LogoProps) {
-  const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
-  
-  // Use the white-label logo if available and no specific customLogo is provided
-  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
-  // Use the white-label color if available and no specific _customColor is provided
-  // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined);
-  
-  if (logoToUse) {
-    return (
-      <Link href="/" className="flex items-center">
-        <img loading="lazy" src={logoToUse} alt={`${brandName} Logo`} className="h-8" />
-      </Link>
-    );
-  }
+export function Logo({ customColor }: LogoProps) {
+  const logoColor = customColor || '#3b82f6'; // Default blue color
   
   return (
     <Link href="/" className="flex items-center">

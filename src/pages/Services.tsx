@@ -36,188 +36,25 @@ export default function Services() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const serviceCategories = [
-    {
-      id: 'ai-ml',
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      description: 'Intelligent solutions powered by artificial intelligence',
-      services: [
-        {
-          name: 'AI Autonomous Systems',
-          path: '/services/ai-autonomous-systems',
-          description: 'Advanced autonomous AI systems that operate independently',
-          icon: Brain,
-          features: ['Self-learning algorithms', 'Predictive analytics', 'Automated decision making'],
-          pricing: 'Starting from $5,000/month'
-        },
-        {
-          name: 'AI Research Assistant',
-          path: '/ai-autonomous-research-assistant',
-          description: 'AI-powered research automation and insights',
-          icon: Brain,
-          features: ['Data analysis', 'Literature review', 'Trend identification'],
-          pricing: 'Starting from $3,000/month'
-        },
-        {
-          name: 'AI Business Intelligence',
-          path: '/services/ai-business-intelligence',
-          description: 'Advanced analytics and business insights',
-          icon: BarChart3,
-          features: ['Real-time dashboards', 'Predictive modeling', 'Performance tracking'],
-          pricing: 'Starting from $4,000/month'
-        },
-        {
-          name: 'AI Marketing Automation',
-          path: '/services/ai-marketing-automation',
-          description: 'Smart marketing optimization and automation',
-          icon: Target,
-          features: ['Customer segmentation', 'Campaign optimization', 'ROI tracking'],
-          pricing: 'Starting from $2,500/month'
-        }
-      ]
-    },
-    {
-      id: 'quantum',
-      title: 'Quantum Technology',
-      icon: Brain,
-      color: 'from-blue-500 to-cyan-500',
-      description: 'Next-generation quantum computing solutions',
-      services: [
-        {
-          name: 'Quantum Neural Networks',
-          path: '/quantum-neural-network-platform',
-          description: 'Quantum-powered neural networks for complex problems',
-          icon: Brain,
-          features: ['Quantum algorithms', 'Superior performance', 'Future-proof technology'],
-          pricing: 'Starting from $15,000/month'
-        },
-        {
-          name: 'Quantum Computing',
-          path: '/services/quantum-technology',
-          description: 'Quantum computing platforms and solutions',
-          icon: Cpu,
-          features: ['Quantum supremacy', 'Complex simulations', 'Cryptography'],
-          pricing: 'Starting from $20,000/month'
-        }
-      ]
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity',
-      icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      description: 'Comprehensive security and compliance solutions',
-      services: [
-        {
-          name: 'Cybersecurity Services',
-          path: '/services/cybersecurity',
-          description: 'Complete security solutions for your business',
-          icon: Shield,
-          features: ['Threat detection', 'Vulnerability assessment', 'Incident response'],
-          pricing: 'Starting from $3,500/month'
-        },
-        {
-          name: 'SOC2 Compliance Automation',
-          path: '/soc2-compliance-automation',
-          description: 'Automated compliance management and monitoring',
-          icon: Lock,
-          features: ['Automated audits', 'Real-time monitoring', 'Compliance reporting'],
-          pricing: 'Starting from $4,500/month'
-        }
-      ]
-    },
-    {
-      id: 'infrastructure',
-      title: 'Cloud & Infrastructure',
-      icon: Cpu,
-      color: 'from-blue-500 to-indigo-500',
-      description: 'Scalable cloud solutions and infrastructure management',
-      services: [
-        {
-          name: 'Cloud DevOps',
-          path: '/cloud-devops',
-          description: 'Cloud development and operations automation',
-          icon: Cloud,
-          features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting'],
-          pricing: 'Starting from $3,000/month'
-        },
-        {
-          name: 'IT Infrastructure',
-          path: '/services/it-infrastructure',
-          description: 'Complete IT infrastructure solutions',
-          icon: Network,
-          features: ['Network design', 'Hardware management', 'Performance optimization'],
-          pricing: 'Starting from $2,500/month'
-        },
-        {
-          name: '5G Enterprise Solutions',
-          path: '/5g-enterprise-solutions',
-          description: 'High-speed 5G connectivity solutions',
-          icon: Network,
-          features: ['Ultra-fast connectivity', 'Low latency', 'High bandwidth'],
-          pricing: 'Starting from $5,000/month'
-        }
-      ]
-    },
-    {
-      id: 'business',
-      title: 'Business Operations',
-      icon: Building,
-      color: 'from-green-500 to-emerald-500',
-      description: 'Streamlined business process automation',
-      services: [
-        {
-          name: 'Autonomous Business Platform',
-          path: '/autonomous-business-operations-platform',
-          description: 'Self-operating business systems and automation',
-          icon: Building,
-          features: ['Process automation', 'Workflow optimization', 'Performance analytics'],
-          pricing: 'Starting from $6,000/month'
-        },
-        {
-          name: 'AI Asset Management',
-          path: '/ai-powered-it-asset-management',
-          description: 'Intelligent IT asset management and tracking',
-          icon: Database,
-          features: ['Asset tracking', 'Lifecycle management', 'Cost optimization'],
-          pricing: 'Starting from $2,000/month'
-        }
-      ]
-    },
-    {
-      id: 'industry',
-      title: 'Industry Solutions',
-      icon: Target,
-      color: 'from-orange-500 to-yellow-500',
-      description: 'Tailored solutions for specific industries',
-      services: [
-        {
-          name: 'Healthcare Technology',
-          path: '/solutions/healthcare',
-          description: 'Technology solutions for healthcare industry',
-          icon: Heart,
-          features: ['Patient management', 'Medical analytics', 'Compliance'],
-          pricing: 'Starting from $8,000/month'
-        },
-        {
-          name: 'Financial Services',
-          path: '/services/financial-services',
-          description: 'Fintech solutions and financial technology',
-          icon: DollarSign,
-          features: ['Risk management', 'Fraud detection', 'Compliance'],
-          pricing: 'Starting from $7,000/month'
-        },
-        {
-          name: 'Manufacturing Intelligence',
-          path: '/services/manufacturing-intelligence',
-          description: 'Smart manufacturing and Industry 4.0 solutions',
-          icon: Cpu,
-          features: ['Predictive maintenance', 'Quality control', 'Supply chain optimization'],
-          pricing: 'Starting from $6,500/month'
-        }
-      ]
+  const allServices = [...COMPREHENSIVE_SERVICES];
+  
+  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+  
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
     }
   ];
 
@@ -495,18 +332,21 @@ import {
 =======
           className="mb-12"
         >
-          <div className="bg-zion-blue-light/20 backdrop-blur-md border border-zion-purple/30 rounded-2xl p-6">
-            {/* Search Bar */}
-            <div className="relative mb-6">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search services, features, or use cases..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
-              />
-            </div>
+                     {filteredServices.map((service) => (
+            <motion.div
+              key={service.id}
+              variants={itemVariants}
+              className="group relative bg-zion-blue-light/10 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-quantum"
+            >
+              {/* Service Card Header */}
+              <div className="mb-4">
+                <h3 className="text-xl font-bold text-zion-cyan mb-2 group-hover:text-neon-green transition-colors">
+                  {service.title}
+                </h3>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-sm rounded-full border border-zion-purple/30">
+                    {service.category}
+                  </span>
 
             {/* Filters */}
             <div className="flex flex-wrap gap-4">
@@ -643,83 +483,6 @@ import {
                 <div className="mb-4">
                   <div className="text-2xl font-bold text-zion-cyan">
                     {service.price}
-                  </div>
-                  <div className="text-sm text-zion-slate-light">
-                    Market: {service.marketPrice}
-                  </div>
-                </div>
-
-                {/* Key Benefits */}
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4 text-zion-cyan" />
-                    Key Benefits:
-                  </h4>
-                  <ul className="space-y-1">
-                    {service.benefits.slice(0, 2).map((benefit, idx) => (
-                      <li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">
-                        <CheckCircle className="w-3 h-3 text-zion-cyan" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Tags */}
-                <div className="mb-4">
-                  <div className="flex flex-wrap gap-2">
-                    {service.tags.slice(0, 4).map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light text-xs rounded border border-zion-blue-light/30"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {filteredServices.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:border-blue-400/50 hover:bg-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/20"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
-                  <IconComponent className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                  {service.name}
-                </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to={service.link}
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, idx) => (
             <div
@@ -738,6 +501,11 @@ import {
                   <p className="text-gray-400 text-sm leading-relaxed">
                     {service.description}
                   </p>
+=======
+                  </span>
+                  <span className="text-sm text-zion-slate-light">
+                    {service.deliveryTime || '2-4 weeks'}
+                  </span>
                 </div>
               </div>
 

@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
-import SEO from '../SEO';
-import { Check, Star, Zap, Brain, Server, Shield, Building } from 'lucide-react';
+import { useState } from 'react';
+import { Card } from '@/components/ui/card';
+import { 
+  Phone, 
+  Mail, 
+  Users, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  TrendingUp, 
+  Award, 
+  Globe
+} from 'lucide-react';
+import { SERVICE_PRICING_TIERS, CONTACT_INFO } from '../data/comprehensiveServices';
 
 const PricingPage: React.FC = () => {
-  const [selectedPlan, setSelectedPlan] = useState('monthly');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
   const pricingPlans = [
     {
@@ -211,54 +223,53 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Pricing Plans */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative rounded-2xl p-8 ${
-                  plan.popular
-                    ? 'bg-gradient-to-br from-zion-purple to-zion-purple-dark border-2 border-zion-cyan'
-                    : 'bg-zion-blue-dark border border-zion-blue-light'
-                } hover:border-zion-cyan transition-all duration-300 transform hover:scale-105`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+      {/* Pricing Tiers */}
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Choose Your Plan</h2>
+            
+            <div className="grid lg:grid-cols-3 gap-8">
+              {SERVICE_PRICING_TIERS.map((tier) => (
+                <Card key={tier.name} className="h-full bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  {tier.name === 'professional' && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-zion-gold text-zion-blue-dark px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-4">{tier.title}</h3>
+                    <div className="text-4xl font-bold text-zion-gold mb-2">
+                      ${formatPrice(tier.priceValue)}
+                    </div>
+                    <div className="text-zion-slate-light">
+                      per {billingCycle === 'yearly' ? 'month' : tier.billingCycle}
+                    </div>
+                    {billingCycle === 'yearly' && (
+                      <div className="text-sm text-zion-gold mt-2">
+                        Billed annually (${getDiscountedPrice(tier.priceValue)})
+                      </div>
+                    )}
                   </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-zion-slate-light mb-6">{plan.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">${plan.price}</span>
-                    <span className="text-zion-slate-light">/{plan.period}</span>
-                  </div>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <Check className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      <span className="text-white">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark'
-                      : 'bg-zion-blue-light hover:bg-zion-cyan text-white'
-                  }`}
-                >
-                  Get Started
-                </button>
-              </div>
-            ))}
+                  
+                  <ul className="space-y-4 mb-8">
+                    {tier.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-zion-gold flex-shrink-0 mt-1" />
+                        <span className="text-zion-slate-light">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <button className="w-full bg-zion-gold text-zion-blue-dark py-3 rounded-lg font-semibold hover:bg-zion-gold-light transition-colors">
+                    Get Started
+                  </button>
+                </Card>
+              ))}
+            </div>
           </div>
 
           {/* Service Categories */}

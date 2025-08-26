@@ -1,15 +1,12 @@
 import React from 'react';
+import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from './components/ErrorBoundary';
 import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { ConsentProvider } from "./context/ConsentContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import PwaInstallButton from "./components/PwaInstallButton";
-import { CookieBanner } from "./components/CookieBanner";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -23,8 +20,6 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
-const FAQPage = React.lazy(() => import('./pages/FAQ'));
-=======
 const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices'));
 =======
 import Home from './pages/Home';
@@ -157,6 +152,30 @@ const App = () => {
         <ThemeProvider defaultTheme="dark">
           <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <ErrorBoundary>
+=======
+const Home = React.lazy(() => import('./pages/Home'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
+
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/services', element: <ServicesPage /> },
+  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/open-app', element: <OpenAppRedirect /> },
+  { path: '/contact', element: <ContactPage /> },
+];
+
+const App = () => {
+  // Ensure each navigation starts at the top of the page
+  useScrollToTop();
+  return (
+    <WhitelabelProvider>
+      <ThemeProvider defaultTheme="dark">
+        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />
@@ -173,14 +192,10 @@ const App = () => {
             <Route path="/developers/*" element={<DeveloperRoutes />} />
             <Route path="*" element={<ErrorRoutes />} />
           </Routes>
-          </ErrorBoundary>
         </Suspense>
         <Toaster />
-        <SonnerToaster position="top-right" />
-          <CookieBanner />
-          <PwaInstallButton />
-        </ThemeProvider>
-      </ConsentProvider>
+        <SonnerToaster />
+      </ThemeProvider>
     </WhitelabelProvider>
   );
 };

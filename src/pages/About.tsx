@@ -1,21 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Target, 
-  Award, 
-  Globe, 
-  Zap, 
-  Shield,
-  TrendingUp,
-  Lightbulb,
-  Code,
-  Database,
-  Cloud,
-  Brain
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
 import {
   Users,
   Award,
@@ -930,6 +914,34 @@ const About = () => {
                 <span>Innovation Leader</span>
               </div>
 =======
+=======
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+
+export default function About() {
+  return (
+    <>
+      <SEO 
+        title="About Zion - The Future of AI & Tech Marketplace" 
+        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
+        keywords="about Zion, AI marketplace, tech platform, mission, vision, team" 
+        canonical="https://ziontechgroup.com/about" 
+      />
+      <Header />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>About Zion</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              The world's first free marketplace dedicated to high-tech and artificial intelligence
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
               <p className="text-zion-slate-light text-lg mb-6">
                 At Zion, we're on a mission to democratize access to cutting-edge AI and technology solutions. 
                 We believe that innovation thrives when barriers are removed and connections are made.
@@ -939,62 +951,45 @@ const About = () => {
                 technological solutions in one seamless ecosystem.
               </p>
               <p className="text-zion-slate-light text-lg">
-                By connecting talent with opportunity and innovation with implementation, we're creating 
-                a global community where the future of technology is being built today.
+                By connecting talent with opportunity and innovation with implementation, we're creating a 
+                global community where the future of technology is being built today.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600"
-                alt="Team collaboration"
-                width={800}
-                height={600}
-                className="object-cover w-full h-full"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-                To democratize access to cutting-edge technology solutions, enabling businesses 
-                of all sizes to thrive in the digital age through innovative micro SAAS platforms 
-                and AI-powered services.
-              </p>
-              <p className="text-zion-slate-light">
-                We believe that every organization deserves access to enterprise-grade technology 
-                that drives growth, efficiency, and competitive advantage.
-              </p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
-              <p className="text-lg text-zion-slate-light mb-6">
-                To be the leading force in the democratization of advanced technology, 
-                creating a world where innovation is accessible, sustainable, and beneficial 
-                for all.
-              </p>
-              <p className="text-zion-slate-light">
-                We envision a future where technology serves humanity, enhances productivity, 
-                and creates meaningful impact across industries and communities.
-              </p>
-              <p className="text-zion-slate-light text-lg">
-                Our goal is to become the premier destination for AI and tech innovation, fostering 
-                a community that shapes the future of how we live, work, and interact with technology.
-              </p>
-            </div>
-            <div className="rounded-lg overflow-hidden lg:order-first">
-              <Image
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600"
-                alt="Tech innovation"
-                width={800}
-                height={600}
-                className="object-cover w-full h-full"
-                loading="lazy"
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600" 
+                alt="Team collaboration" 
+                className="object-cover w-full h-full" 
               />
             </div>
           </div>
           
-          <div className="text-center content-section">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
+              <p className="text-zion-slate-light text-lg mb-6">
+                We envision a world where AI and technology are accessible to all, regardless of geographical 
+                or financial constraints. A world where the best minds can collaborate to solve the most challenging problems.
+              </p>
+              <p className="text-zion-slate-light text-lg mb-6">
+                Zion is building that world by creating a transparent, ethical, and inclusive platform that 
+                puts people at the center of technological advancement.
+              </p>
+              <p className="text-zion-slate-light text-lg">
+                Our goal is to become the premier destination for AI and tech innovation, fostering a community 
+                that shapes the future of how we live, work, and interact with technology.
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden lg:order-first">
+              <img 
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600" 
+                alt="Tech innovation" 
+                className="object-cover w-full h-full" 
+              />
+            </div>
+          </div>
+          
+          <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
@@ -1035,7 +1030,6 @@ const About = () => {
             </div>
           </div>
         </div>
-=======
 =======
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.',
@@ -2064,6 +2058,12 @@ const About = () => {
 =======
       </main>
       
+    </>
+  );
+}
+=======
+      </main>
+      <Footer />
     </>
   );
 }

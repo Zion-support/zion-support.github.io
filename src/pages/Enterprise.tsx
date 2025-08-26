@@ -1,5 +1,6 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Building2, Users, Shield, Zap, Globe, ArrowRight, CheckCircle, Award } from 'lucide-react';
 
 const Enterprise: React.FC = () => {
   return (

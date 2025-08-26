@@ -210,30 +210,18 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     checkAuth();
   }, []);
 
-  const login = async (email: string, password: string) => {
-    try {
-      setLoading(true);
-      
-      // In a real app, you would make an API call to your backend
-      // For now, we'll simulate a successful login
-      const mockUser: User = {
-        id: '1',
-        email,
-        name: email.split('@')[0],
-        role: 'user'
-      };
-
-      // Store user data and token
-      localStorage.setItem('authToken', 'mock-token');
-      localStorage.setItem('userData', JSON.stringify(mockUser));
-      
-      setUser(mockUser);
-    } catch (error) {
-      console.error('Login failed:', error);
-      throw error;
-    } finally {
-      setLoading(false);
-    }
+  const login = async (email: string) => {
+    // Simulate login
+    const mockUser: User = {
+      id: '1',
+      email,
+      name: 'User',
+      role: 'user'
+    };
+    
+    localStorage.setItem('user', JSON.stringify(mockUser));
+    setUser(mockUser);
+    return mockUser;
   };
 
   const register = async (email: string, password: string, name: string) => {

@@ -1,40 +1,22 @@
-import React, { useState, useMemo } from 'react';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
   Search, 
-  Filter, 
   Star, 
   Clock, 
-  DollarSign, 
-  Users, 
-  ArrowRight, 
-  CheckCircle, 
-  Phone, 
-  Mail, 
-  Globe,
-  Zap,
-  Shield,
   Brain,
-  Cpu,
-  Database,
-  Lock,
-  Cloud,
-  BarChart3,
-  TrendingUp,
-  Rocket,
-  Leaf,
-  Eye,
-  Code,
-  Network,
-  Cube,
-  Sparkles
+  Phone,
+  Mail
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025 } from '@/data/innovativeNewServices2025';
+import { 
+  MICRO_SERVICES, 
+  SERVICE_CATEGORIES, 
+  getServiceStats
+} from '@/data/comprehensiveServices';
+import { SEO } from '@/components/SEO';
 
 export default function InnovativeServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -42,23 +24,7 @@ export default function InnovativeServicesShowcase() {
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
   const [priceRange, setPriceRange] = useState<string>('all');
 
-  const filteredServices = useMemo(() => {
-    return INNOVATIVE_SERVICES_2025.filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-      
-      const matchesPrice = priceRange === 'all' || 
-        (priceRange === 'low' && service.price < 10000) ||
-        (priceRange === 'medium' && service.price >= 10000 && service.price < 25000) ||
-        (priceRange === 'high' && service.price >= 25000);
-      
-      return matchesSearch && matchesCategory && matchesSubcategory && matchesPrice;
-    });
-  }, [searchTerm, selectedCategory, selectedSubcategory, priceRange]);
+  const stats = getServiceStats();
 
   const getSubcategoriesForCategory = (category: string) => {
     if (category === 'all') return [];

@@ -1,7 +1,5 @@
 import { Globe, Zap } from "lucide-react";
 =======
-import { Globe, Zap } from "lucide-react";
-=======
 import { Globe, Brain, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Globe, Zap, Brain } from "lucide-react";
@@ -698,6 +696,211 @@ export default function ServicesPage() {
     }
     load();
   }, []);
+=======
+
+import { DynamicListingPage } from "@/components/DynamicListingPage";
+import { ProductListing } from "@/types/listings";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Globe } from "lucide-react";
+import { useEffect, useState } from "react";
+
+// Sample service listings
+const SERVICE_LISTINGS: ProductListing[] = [
+  {
+    id: "service-1",
+    name: "AI Development & Integration",
+    description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.",
+    category: "Development",
+    price: 5000,
+    currency: "$",
+    tags: ["AI Integration", "Machine Learning", "Enterprise"],
+      author: "Zion Tech Group",
+    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
+    created_at: "2023-12-10T14:48:00.000Z",
+    aiScore: 95,
+    rating: 4.9,
+    reviewCount: 124,
+  },
+  {
+    id: "service-2",
+    name: "Cloud Infrastructure Management",
+    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
+    category: "Management",
+    price: 3000,
+    currency: "$",
+    tags: ["Cloud", "DevOps", "Security"],
+      author: "Zion Tech Group",
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+    created_at: "2023-11-20T09:30:00.000Z",
+    aiScore: 88,
+    rating: 4.7,
+    reviewCount: 92,
+  },
+  {
+    id: "service-3",
+    name: "Big Data Analysis & Insights",
+    description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services.",
+    category: "Analytics",
+    price: 4500,
+    currency: "$",
+    tags: ["Big Data", "Analytics", "Business Intelligence"],
+      author: "Zion Tech Group",
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    created_at: "2024-01-05T11:15:00.000Z",
+    aiScore: 92,
+    rating: 4.8,
+    reviewCount: 78,
+  },
+  {
+    id: "service-4",
+    name: "Cybersecurity Assessment & Protection",
+    description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",
+    category: "Security",
+    price: 6000,
+    currency: "$",
+    tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
+      author: "Zion Tech Group",
+    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+    created_at: "2023-12-28T16:22:00.000Z",
+    aiScore: 89,
+    rating: 4.9,
+    reviewCount: 103,
+  },
+  {
+    id: "service-5",
+    name: "IT Infrastructure Modernization",
+    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
+    category: "Consulting",
+    price: 8500,
+    currency: "$",
+    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
+      author: "Zion Tech Group",
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    created_at: "2023-11-10T08:45:00.000Z",
+    aiScore: 86,
+    rating: 4.6,
+    reviewCount: 67,
+  },
+  {
+    id: "service-6",
+    name: "AI Strategy & Implementation",
+    description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
+    category: "Strategy",
+    price: 7500,
+    currency: "$",
+    tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
+      author: "Zion Tech Group",
+    images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
+    created_at: "2024-02-02T10:30:00.000Z",
+    aiScore: 94,
+    rating: 4.8,
+    reviewCount: 85,
+  },
+];
+
+function getRandomItem<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function generateRandomService(idNum: number): ProductListing {
+  const templates = [
+    {
+      name: "AI Automation Consulting",
+      category: "Consulting",
+      min: 4000,
+      max: 12000,
+      tags: ["Automation", "AI Strategy", "Optimization"],
+    },
+    {
+      name: "Cloud Migration & Support",
+      category: "Management",
+      min: 3000,
+      max: 9000,
+      tags: ["Cloud", "Migration", "DevOps"],
+    },
+    {
+      name: "Advanced Cybersecurity Suite",
+      category: "Security",
+      min: 5000,
+      max: 15000,
+      tags: ["Cybersecurity", "PenTesting", "Compliance"],
+    },
+    {
+      name: "Big Data Engineering",
+      category: "Analytics",
+      min: 3500,
+      max: 11000,
+      tags: ["Data Engineering", "Analytics", "ETL"],
+    },
+    {
+      name: "AI Model Training Service",
+      category: "Development",
+      min: 4500,
+      max: 13000,
+      tags: ["Machine Learning", "Model Training", "AI"],
+    },
+    {
+      name: "Digital Transformation Strategy",
+      category: "Strategy",
+      min: 6000,
+      max: 14000,
+      tags: ["Transformation", "Strategy", "Business"],
+    },
+  ];
+
+  const authors = [
+    "Global AI Experts",
+    "InnovateTech",
+    "SecureFuture",
+    "CloudOps Partners",
+    "DataVisor",
+    "NexGen Solutions",
+  ];
+
+  const images = [
+    "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500",
+    "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500",
+    "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
+    "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500",
+  ];
+
+  const template = getRandomItem(templates);
+  const author = getRandomItem(authors);
+  const price = Math.round(
+    Math.random() * (template.max - template.min) + template.min
+  );
+
+  return {
+    id: `auto-service-${idNum}`,
+    name: template.title,
+          description: `Professional ${template.title.toLowerCase()} with industry-standard practices and tailored solutions for your business.`,
+    category: template.category,
+    price,
+    currency: "$",
+    tags: template.tags,
+          author: author,
+    images: [getRandomItem(images)],
+    created_at: new Date().toISOString(),
+    ai_score: Math.floor(90 + Math.random() * 10),
+    rating: parseFloat((4 + Math.random()).toFixed(1)),
+    review_count: Math.floor(50 + Math.random() * 150),
+  };
+}
+
+// Filter options specific to services
+const SERVICE_FILTERS = [
+  { label: 'Development', value: 'development' },
+  { label: 'Management', value: 'management' },
+  { label: 'Security', value: 'security' },
+  { label: 'Analytics', value: 'analytics' },
+  { label: 'Consulting', value: 'consulting' },
+  { label: 'Strategy', value: 'strategy' },
+];
+
+export default function ServicesPage() {
+  const [listings, setListings] = useState<ProductListing[]>(SERVICE_LISTINGS);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -707,224 +910,6 @@ export default function ServicesPage() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    // Simulate dynamic service generation
-    const interval = setInterval(() => {
-      // This would typically fetch from an API
-      console.log("Services updated");
-    }, 300000); // 5 minutes
-
-  const allServices = [
-    // AI & Machine Learning
-    {
-      id: 'ai-autonomous-systems',
-      name: 'AI Autonomous Systems',
-      category: 'ai-ml',
-      description: 'Advanced autonomous AI systems that operate independently and make intelligent decisions.',
-      icon: Brain,
-      features: ['Self-learning algorithms', 'Autonomous decision making', 'Continuous optimization', 'Scalable architecture'],
-      path: '/services/ai-autonomous-systems',
-      color: 'from-purple-500 to-pink-500',
-      popular: true
-    },
-    {
-      id: 'ai-business-intelligence',
-      name: 'AI Business Intelligence',
-      category: 'ai-ml',
-      description: 'Transform your data into actionable insights with AI-powered analytics.',
-      icon: BarChart3,
-      features: ['Predictive analytics', 'Real-time dashboards', 'Data visualization', 'Business insights'],
-      path: '/services/ai-business-intelligence',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      id: 'ai-workflow-automation',
-      name: 'AI Workflow Automation',
-      category: 'ai-ml',
-      description: 'Automate complex business processes with intelligent workflow systems.',
-      icon: Zap,
-      features: ['Process automation', 'Intelligent routing', 'Performance monitoring', 'Error handling'],
-      path: '/services/ai-workflow-automation',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 'ai-customer-intelligence',
-      name: 'AI Customer Intelligence',
-      category: 'ai-ml',
-      description: 'Understand your customers better with AI-powered insights and analytics.',
-      icon: Users,
-      features: ['Customer segmentation', 'Behavior analysis', 'Predictive modeling', 'Personalization'],
-      path: '/services/ai-customer-intelligence',
-      color: 'from-purple-500 to-pink-500'
-    },
-
-    // Cybersecurity
-    {
-      id: 'cybersecurity',
-      name: 'Cybersecurity Services',
-      category: 'cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-      icon: Shield,
-      features: ['Threat detection', 'Vulnerability assessment', 'Incident response', 'Security training'],
-      path: '/services/cybersecurity',
-      color: 'from-red-500 to-pink-500',
-      popular: true
-    },
-    {
-      id: 'soc2-compliance',
-      name: 'SOC2 Compliance Automation',
-      category: 'cybersecurity',
-      description: 'Automate your SOC2 compliance process and maintain security standards.',
-      icon: Lock,
-      features: ['Automated audits', 'Compliance monitoring', 'Risk assessment', 'Documentation'],
-      path: '/soc2-compliance-automation',
-      color: 'from-orange-500 to-yellow-500'
-    },
-    {
-      id: 'security-assessment',
-      name: 'Security Assessment',
-      category: 'cybersecurity',
-      description: 'Comprehensive security audits and penetration testing services.',
-      icon: Shield,
-      features: ['Penetration testing', 'Vulnerability scanning', 'Security audits', 'Risk analysis'],
-      path: '/services/security-assessment',
-      color: 'from-red-500 to-pink-500'
-    },
-
-    // Quantum Technology
-    {
-      id: 'quantum-technology',
-      name: 'Quantum Technology',
-      category: 'quantum',
-      description: 'Next-generation quantum computing solutions for complex problem solving.',
-      icon: Cpu,
-      features: ['Quantum algorithms', 'Quantum-safe security', 'Quantum simulation', 'Research support'],
-      path: '/services/quantum-technology',
-      color: 'from-blue-500 to-cyan-500',
-      popular: true
-    },
-    {
-      id: 'quantum-neural-networks',
-      name: 'Quantum Neural Networks',
-      category: 'quantum',
-      description: 'Revolutionary quantum-powered neural network platforms.',
-      icon: Brain,
-      features: ['Quantum processing', 'Neural optimization', 'Advanced algorithms', 'Scalable architecture'],
-      path: '/quantum-neural-network-platform',
-      color: 'from-purple-500 to-pink-500'
-    },
-
-    // Cloud & Infrastructure
-    {
-      id: 'cloud-devops',
-      name: 'Cloud DevOps',
-      category: 'cloud',
-      description: 'Streamlined cloud development and operations for modern applications.',
-      icon: Cloud,
-      features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring & logging', 'Auto-scaling'],
-      path: '/cloud-devops',
-      color: 'from-blue-500 to-indigo-500'
-    },
-    {
-      id: 'it-infrastructure',
-      name: 'IT Infrastructure',
-      category: 'cloud',
-      description: 'Complete IT infrastructure solutions for enterprise environments.',
-      icon: Network,
-      features: ['Network design', 'Server management', 'Storage solutions', 'Backup & recovery'],
-      path: '/services/it-infrastructure',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: '5g-enterprise',
-      name: '5G Enterprise Solutions',
-      category: 'cloud',
-      description: 'High-speed 5G connectivity solutions for enterprise applications.',
-      icon: Network,
-      features: ['5G network design', 'Enterprise integration', 'Performance optimization', 'Security'],
-      path: '/5g-enterprise-solutions',
-      color: 'from-blue-500 to-cyan-500'
-    },
-
-    // Emerging Technologies
-    {
-      id: 'blockchain',
-      name: 'Blockchain Solutions',
-      category: 'emerging',
-      description: 'Decentralized applications and blockchain infrastructure development.',
-      icon: Code,
-      features: ['Smart contracts', 'DApp development', 'Blockchain consulting', 'Integration services'],
-      path: '/services/blockchain-solutions',
-      color: 'from-purple-500 to-violet-500'
-    },
-    {
-      id: 'iot-platforms',
-      name: 'IoT Platforms',
-      category: 'emerging',
-      description: 'Connected device management and IoT platform development.',
-      icon: Network,
-      features: ['Device management', 'Data collection', 'Analytics dashboard', 'Security protocols'],
-      path: '/services/iot-platforms',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 'ar-vr',
-      name: 'AR/VR Solutions',
-      category: 'emerging',
-      description: 'Immersive experiences and augmented reality applications.',
-      icon: Globe,
-      features: ['3D modeling', 'Interactive experiences', 'Platform development', 'Content creation'],
-      path: '/services/ar-vr-solutions',
-      color: 'from-purple-500 to-pink-500'
-    },
-
-    // Industry Solutions
-    {
-      id: 'healthcare',
-      name: 'Healthcare Technology',
-      category: 'industry',
-      description: 'AI-powered healthcare solutions for patient care optimization.',
-      icon: Heart,
-      features: ['Patient management', 'Medical analytics', 'AI diagnostics', 'Compliance'],
-      path: '/solutions/healthcare',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      id: 'financial',
-      name: 'Financial Services',
-      category: 'industry',
-      description: 'Fintech solutions for modern financial institutions.',
-      icon: DollarSign,
-      features: ['Risk management', 'Fraud detection', 'Compliance automation', 'Analytics'],
-      path: '/services/financial-services',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 'manufacturing',
-      name: 'Manufacturing Intelligence',
-      category: 'industry',
-      description: 'Smart manufacturing solutions with AI and IoT integration.',
-      icon: Factory,
-      features: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Automation'],
-      path: '/services/manufacturing-intelligence',
-      color: 'from-orange-500 to-yellow-500'
-    },
-    {
-      id: 'retail',
-      name: 'Retail Technology',
-      category: 'industry',
-      description: 'Digital retail transformation and customer experience solutions.',
-      icon: ShoppingCart,
-      features: ['E-commerce platforms', 'Customer analytics', 'Inventory management', 'Personalization'],
-      path: '/services/retail-technology',
-      color: 'from-purple-500 to-pink-500'
-    }
-  ];
-
-  const filteredServices = activeCategory === 'all' 
-    ? allServices 
-    : allServices.filter(service => service.category === activeCategory);
-=======
 // Use comprehensive services instead of sample listings
 const SERVICE_LISTINGS: ProductListing[] = COMPREHENSIVE_SERVICES;
 
@@ -944,6 +929,9 @@ export default function ServicesPage() {
             <Link to="/enhanced-services">
 =======
     
+=======
+  return (
+    <>
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
@@ -951,31 +939,6 @@ export default function ServicesPage() {
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
-                Enhanced Services Showcase
-              </Button>
-            </Link>
-            <Link to="/ai-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Brain className="h-4 w-4 mr-2" />
-                AI Services
-              </Button>
-            </Link>
-            <Link to="/cybersecurity-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Shield className="h-4 w-4 mr-2" />
-                Cybersecurity
-              </Button>
-            </Link>
-            <Link to="/it-onsite-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Zap className="h-4 w-4 mr-2" />
-                Premium Services
-              </Button>
-            </Link>
-            <Link to="/it-onsite-services">
-              <Button variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
-                <Globe className="h-4 w-4 mr-2" />
-=======
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue py-16 px-4 md:px-8">
         <div className="container mx-auto text-center">
@@ -1903,118 +1866,18 @@ export default function ServicesPage() {
             <Link to="/request-quote">
               <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 text-lg">
                 <DollarSign className="h-5 w-5 mr-2" />
+=======
+                Global IT Onsite Services
+              </Button>
+            </Link>
+            <Link to="/request-quote">
+              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                 Request a Quote
               </Button>
             </Link>
           </div>
         </div>
       </div>
-      {/* Service Categories Grid */}
-      <section className="py-20 bg-zion-blue">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Explore Our Service Categories
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Choose from our comprehensive range of technology services, each designed to address specific business needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {SERVICE_CATEGORIES.map((category) => (
-              <Link 
-                key={category.id} 
-                to={`/category/${category.id}`}
-                className="group block"
-              >
-                <div className="bg-zion-blue-dark/80 border border-zion-blue-light/30 rounded-xl p-8 h-full transition-all duration-300 hover:border-zion-purple/60 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-zion-purple/20">
-                  <div className="text-zion-cyan mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {category.icon}
-                  </div>
-                  <h3 className="text-white text-xl font-bold mb-3">{category.name}</h3>
-                  <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
-                    {category.description}
-                  </p>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-zion-cyan text-sm font-medium">
-                      {category.count} services
-                    </span>
-                    <span className="text-zion-slate-light text-sm">
-                      {category.avgPrice}
-                    </span>
-                  </div>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {category.features.map((feature, index) => (
-                      <span 
-                        key={index}
-                        className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex items-center text-zion-cyan group-hover:text-white transition-colors">
-                    <span className="text-sm font-medium">Explore Services</span>
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Services */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured Services
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Hand-picked services from our top providers, featuring the latest in AI, cloud, and cybersecurity
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {listings.slice(0, 6).map((service) => (
-              <div key={service.id} className="bg-zion-blue-dark/80 border border-zion-blue-light/30 rounded-xl overflow-hidden hover:border-zion-purple/60 transition-all duration-300 hover:shadow-xl hover:shadow-zion-purple/20">
-                <div className="relative">
-                  <img 
-                    src={service.images[0]} 
-                    alt={service.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute top-4 right-4 bg-zion-purple text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {service.category}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="flex items-center gap-1">
-                      <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                      <span className="text-white text-sm">{service.rating}</span>
-                    </div>
-                    <span className="text-zion-slate-light text-sm">({service.reviewCount} reviews)</span>
-                    <div className="ml-auto flex items-center gap-1 bg-zion-purple/20 px-2 py-1 rounded-full">
-                      <Sparkles className="h-3 w-3 text-zion-purple" />
-                      <span className="text-zion-purple text-xs font-medium">AI Score: {service.aiScore}</span>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-white text-lg font-bold mb-2">{service.title}</h3>
-                  <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.slice(0, 3).map((tag, index) => (
-                      <span 
-                        key={index}
-                        className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-blue-light/30"
-                      >
-=======
       {/* IT Services Showcase */}
       <div className="bg-zion-blue-dark py-16 mb-8">
         <div className="container mx-auto px-4">
@@ -2097,14 +1960,14 @@ export default function ServicesPage() {
       <DynamicListingPage 
 =======
       <DynamicListingPage
+=======
+      <DynamicListingPage 
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
         categorySlug="services"
         listings={listings}
         categoryFilters={SERVICE_FILTERS}
         initialPrice={{ min: 3000, max: 10000 }}
-        initialPrice={{ min: 1000, max: 10000 }}
-=======
         itemsPerPage={10}
       />
       <ServicesOverview />
@@ -2219,3 +2082,9 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;
+=======
+      />
+      <TrustedBySection />
+    </>
+  );
+}
