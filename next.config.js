@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+const assetPrefix = process.env.ASSET_PREFIX || (isProd ? undefined : undefined)
+
 const nextConfig = {
 <<<<<<< HEAD
 	reactStrictMode: true,
@@ -10,14 +13,11 @@ const nextConfig = {
 		unoptimized: true
 	},
 	typescript: {
+		// Allow builds to pass even if there are type errors; CI can run type-check separately
 		ignoreBuildErrors: true
 	},
 	eslint: {
 		ignoreDuringBuilds: true
-	},
-	typescript: {
-		// Allow builds to pass even if there are type errors; CI can run type-check separately
-		ignoreBuildErrors: true
 	},
 	async redirects() {
 		return [
