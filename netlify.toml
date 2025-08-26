@@ -192,7 +192,42 @@
 
 [[redirects]]
   from = "/ai-content-marketing-automation"
-  to = "/ai-content-generator"
+  to = "/services"
+  status = 301
+
+[[redirects]]
+  from = "/ai-consciousness-evolution"
+  to = "/ai-consciousness-evolution-2029"
+  status = 301
+
+[[redirects]]
+  from = "/ai-autonomous-ecosystem"
+  to = "/2029-innovative-services-showcase"
+  status = 301
+
+[[redirects]]
+  from = "/ai-ethics-governance"
+  to = "/services"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-compliance-automation"
+  to = "/quantum-secure-communication"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-network-security"
+  to = "/quantum-secure-communication"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-identity-verification"
+  to = "/quantum-secure-communication"
+  status = 301
+
+[[redirects]]
+  from = "/blockchain-enterprise-platform"
+  to = "/quantum-blockchain"
   status = 301
 
 [[redirects]]
