@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 
 interface CheckboxProps {
@@ -24,7 +20,6 @@ export function Checkbox({ checked, onChange, label, disabled = false, className
       />
       {label && <span className="text-sm text-gray-700">{label}</span>}
     </label>
-=======
 import { cn } from '@/lib/utils';
 
 interface CheckboxProps {
@@ -56,6 +51,5 @@ export function Checkbox({ checked, onCheckedChange, onChange, className = '', d
         className
       )}
     />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   );
 }
