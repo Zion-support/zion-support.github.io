@@ -22,55 +22,6 @@
 # Scheduled Functions (new automations replacing some GitHub Actions cadence)
 [[scheduled.functions]]
   name = "homepage_advertiser"
-  schedule = "*/1 * * * *" # every minute
-
-[[headers]]
-  for = "/_next/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[scheduled.functions]]
-  name = "front-enhancer"
-  schedule = "*/1 * * * *" # every minute
-
-[[scheduled.functions]]
-  name = "frontpage-enhancer"
-  schedule = "*/1 * * * *" # every minute
-
-[[scheduled.functions]]
-  name = "marketing-and-features-promo"
-  schedule = "*/15 * * * *" # every 15 minutes
-
-[[redirects]]
-  from = "/services/ai-customer-success-platform"
-  to = "/ai-customer-success-platform/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/services/intelligent-supply-chain-optimization"
-  to = "/intelligent-supply-chain-optimization/"
-  status = 301
-  force = true
-
-[[scheduled.functions]]
-  name = "fast-front-promoter"
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/images/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-  schedule = "*/1 * * * *" # every minute
-
-[[scheduled.functions]]
-  name = "hyper-front-runner"
-  schedule = "*/1 * * * *" # every minute
-=======
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
@@ -79,3 +30,29 @@
     X-DNS-Prefetch-Control = "on"
     # Allow Next static, plausible, and same-origin assets
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io https://*.plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+=======
+  schedule = "*/20 * * * *" # every 20 minutes
+
+[[scheduled.functions]]
+  name = "cloud_orchestrator"
+  schedule = "0 */4 * * *" # every 4 hours
+
+[[scheduled.functions]]
+  name = "front-enhancer"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "front-ads-scheduler"
+  schedule = "*/10 * * * *" # every 10 minutes
+
+[[scheduled.functions]]
+  name = "front-futurizer"
+  schedule = "*/15 * * * *" # every 15 minutes
+
+[[scheduled.functions]]
+  name = "marketing-and-features-promo"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "homepage-updater"
+  schedule = "0 */6 * * *" # every 6 hours
