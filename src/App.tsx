@@ -8,7 +8,7 @@ import { ChatAssistant } from './components/ChatAssistant';
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Careers = React.lazy(() => import('./pages/Careers'));
-const News = React.lazy(() => import('./pages/News'));
+const News = React.lazy(() => import('./pages/News').then(module => ({ default: (module as any).default || module })));
 const Press = React.lazy(() => import('./pages/Press'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
