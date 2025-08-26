@@ -25,14 +25,20 @@ interface Service {
     email: string;
     website: string;
   };
-  websiteUrl: string;
-  technologyStack: string[];
-  complianceStandards: string[];
-  integrationCapabilities: string[];
-  roiMetrics: string[];
-  competitiveAdvantages: string[];
-  industryApplications?: string[];
-  futurePotential?: string[];
+  websiteUrl?: string;
+  technology?: string[];
+  integrations?: string[];
+  compliance?: string[];
+  roi?: string;
+  competitors?: string[];
+  demoUrl?: string;
+  caseStudies?: string[];
+  marketTrend?: string;
+  industryFocus?: string[];
+  scalability?: string;
+  customizationLevel?: string;
+  innovationLevel?: string;
+  serviceLevel?: string;
 }
 
 const UltimateServicesShowcase2025: React.FC = () => {
@@ -248,32 +254,30 @@ const UltimateServicesShowcase2025: React.FC = () => {
                 </ul>
               </div>
 
-              {/* ROI Metrics */}
-              {service.roiMetrics && (
+              {/* ROI */}
+              {service.roi && (
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-yellow-300 mb-2">ROI Metrics</h4>
-                  <ul className="text-xs text-gray-300 space-y-1">
-                    {service.roiMetrics.slice(0, 2).map((metric, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="text-yellow-400 mr-2">📈</span>
-                        {metric}
-                      </li>
-                    ))}
-                  </ul>
+                  <h4 className="text-sm font-semibold text-yellow-300 mb-2">ROI</h4>
+                  <div className="text-xs text-gray-300">
+                    <span className="text-yellow-400 mr-2">📈</span>
+                    {service.roi}
+                  </div>
                 </div>
               )}
 
-              {/* Technology Stack */}
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-purple-300 mb-2">Technology Stack</h4>
-                <div className="flex flex-wrap gap-1">
-                  {service.technologyStack.slice(0, 4).map((tech, index) => (
-                    <span key={index} className="px-2 py-1 bg-purple-900/30 text-purple-300 text-xs rounded border border-purple-700/50">
-                      {tech}
-                    </span>
-                  ))}
+              {/* Technology */}
+              {service.technology && (
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-purple-300 mb-2">Technology</h4>
+                  <div className="flex flex-wrap gap-1">
+                    {service.technology.slice(0, 4).map((tech, index) => (
+                      <span key={index} className="px-2 py-1 bg-purple-900/30 text-purple-300 text-xs rounded border border-purple-700/50">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Market Price Comparison */}
               <div className="mb-4 p-3 bg-gray-700/50 rounded-lg">
@@ -329,9 +333,9 @@ const UltimateServicesShowcase2025: React.FC = () => {
               </div>
               <div>
                 <div className="text-4xl font-bold text-orange-400 mb-2">
-                  {Array.from(new Set(allServices.map(service => service.industryApplications || []).flat())).length}
+                  {Array.from(new Set(allServices.map(service => service.industryFocus || []).flat())).length}
                 </div>
-                <div className="text-gray-300">Industry Applications</div>
+                <div className="text-gray-300">Industry Focus</div>
               </div>
             </div>
           </div>

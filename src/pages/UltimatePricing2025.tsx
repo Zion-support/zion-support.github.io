@@ -25,14 +25,20 @@ interface Service {
     email: string;
     website: string;
   };
-  websiteUrl: string;
-  technologyStack: string[];
-  complianceStandards: string[];
-  integrationCapabilities: string[];
-  roiMetrics: string[];
-  competitiveAdvantages: string[];
-  industryApplications?: string[];
-  futurePotential?: string[];
+  websiteUrl?: string;
+  technology?: string[];
+  integrations?: string[];
+  compliance?: string[];
+  roi?: string;
+  competitors?: string[];
+  demoUrl?: string;
+  caseStudies?: string[];
+  marketTrend?: string;
+  industryFocus?: string[];
+  scalability?: string;
+  customizationLevel?: string;
+  innovationLevel?: string;
+  serviceLevel?: string;
 }
 
 const UltimatePricing2025: React.FC = () => {
