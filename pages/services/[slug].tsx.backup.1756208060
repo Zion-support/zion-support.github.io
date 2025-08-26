@@ -4,6 +4,10 @@ import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackgr
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+<<<<<<< HEAD
+import { ultimateInnovativeServices2026 } from '../../data/2026-ultimate-innovative-services';
+import { enterpriseITInfrastructureServices2026 } from '../../data/2026-enterprise-it-infrastructure-services';
+=======
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
@@ -35,6 +39,7 @@ import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
 import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
 import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
 import { real2027Q4Additions } from '../../data/real-2027-q4-additions';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f7d9
 
 type Service = typeof ultimateInnovativeServices2026[number];
 
@@ -46,6 +51,9 @@ const contactInfo = {
 };
 
 function getAllServices(): Service[] {
+<<<<<<< HEAD
+	return ultimateInnovativeServices2026.concat(enterpriseITInfrastructureServices2026);
+=======
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
@@ -76,6 +84,7 @@ function getAllServices(): Service[] {
 		.concat(real2027Q2Additions as unknown as Service[])
 		.concat(real2027Q3Additions as unknown as Service[])
 		.concat(real2027Q4Additions as unknown as Service[]);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f7d9
 }
 
 function toSlug(value: string): string {

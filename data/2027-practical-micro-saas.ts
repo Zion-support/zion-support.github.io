@@ -1,0 +1,1 @@
+export const practicalMicroSaas2027 = [] as any[];

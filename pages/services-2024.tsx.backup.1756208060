@@ -6,9 +6,14 @@ import {
   Brain, Atom, Cpu, Shield, Database, Cloud,
   ArrowRight, CheckCircle, Zap, Sparkles
 } from 'lucide-react';
+<<<<<<< HEAD
+import { ultimateInnovativeServices2026 } from '../data/2026-ultimate-innovative-services';
+import { enterpriseITInfrastructureServices2026 } from '../data/2026-enterprise-it-infrastructure-services';
+=======
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f7d9
 import Link from 'next/link';
 
 const Services2024Page: React.FC = () => {
