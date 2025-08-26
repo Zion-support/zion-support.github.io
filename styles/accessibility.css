@@ -24,23 +24,23 @@
   background: linear-gradient(to bottom right, var(--bg-primary), var(--bg-secondary)) !important;
 }
 
-.high-contrast .text-white\/70 {
+.high-contrast .text-white-70 {
   color: var(--text-secondary) !important;
 }
 
-.high-contrast .text-white\/50 {
+.high-contrast .text-white-50 {
   color: var(--text-muted) !important;
 }
 
-.high-contrast .border-white\/10 {
+.high-contrast .border-white-10 {
   border-color: var(--border-secondary) !important;
 }
 
-.high-contrast .bg-white\/5 {
+.high-contrast .bg-white-5 {
   background-color: var(--bg-tertiary) !important;
 }
 
-.high-contrast .bg-white\/10 {
+.high-contrast .bg-white-10 {
   background-color: var(--bg-secondary) !important;
 }
 

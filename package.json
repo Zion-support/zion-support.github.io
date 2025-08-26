@@ -386,7 +386,6 @@
     "framer-motion": "^6.5.1",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
-    "glob": "^11.0.3",
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
     "js-yaml": "^4.1.0",
@@ -437,11 +436,9 @@
   },
   "overrides": {
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
-    "glob": "^10.3.10",
     "rimraf": "^5.0.5"
   },
   "resolutions": {
-    "glob": "^10.4.5",
     "rimraf": "^5.0.5",
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0"
   }

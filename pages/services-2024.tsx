@@ -6,13 +6,8 @@ import {
   Brain, Atom, Cpu, Shield, Database, Cloud,
   ArrowRight, CheckCircle, Zap, Sparkles
 } from 'lucide-react';
-<<<<<<< HEAD
-import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
-import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
-=======
 import { enhancedMicroSaasServices2025 } from '../src/data/enhancedMicroSaasServices2025';
 import { innovativeITServices2025 } from '../src/data/innovativeITServices2025';
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-a8d7
 import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';
 import Link from 'next/link';
 
@@ -23,11 +18,7 @@ const Services2024Page: React.FC = () => {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
   // Combine all services
-<<<<<<< HEAD
-  const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026];
-=======
   const allServices = [...enhancedMicroSaasServices2025, ...innovativeITServices2025];
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-a8d7
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
