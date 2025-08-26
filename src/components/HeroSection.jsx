@@ -174,8 +174,8 @@ export function HeroSection() {
                         whileHover={{ scale: 1.05 }} 
                         transition={{ type: "spring", stiffness: 400 }}
                     >
-                        <div className="p-2 bg-zion-purple/20 rounded-full group-hover:bg-zion-purple/30 transition-colors">
-                            <Zap className="w-6 h-6 text-zion-purple"/>
+                        <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
+                            <Zap className="w-6 h-6 text-zion-cyan"/>
                         </div>
                         <span className="text-lg font-medium">Expert Talent</span>
                     </motion.div>
