@@ -9,6 +9,7 @@ import {
   Phone, Mail, MapPin, TrendingUp, Users, Award
 } from 'lucide-react';
 
+<<<<<<< HEAD
 // Import all the new 2032 service data
 import { futuristicAIServices2032 } from '../data/2032-futuristic-ai-services';
 import { quantumEmergingTechServices2032 } from '../data/2032-quantum-emerging-tech-services';
@@ -24,6 +25,27 @@ import { quantumEmergingTechServices2033 } from '../data/2033-quantum-emerging-t
 import { spaceMetaverseServices2033 } from '../data/2033-space-metaverse-services-v2';
 import { researchDevelopmentServices2033 } from '../data/2033-research-development-services-v2';
 import { enterpriseITServices2033 } from '../data/2033-enterprise-it-services-v2';
+=======
+// Import our new service data
+// import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
+// import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
+// import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services';
+
+// Import existing service data
+// import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
+// import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
+// import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
+// import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+// import { newRealServices2026 } from '../data/2025-2026-new-real-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { emergingTechServices } from '../data/emerging-tech-services';
+import { newRealServices } from '../data/new-real-services';
+import { realMarketServices } from '../data/real-market-services';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { realAdditions2025Q3 } from '../data/2025-q3-real-additions';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-77a4
 
 // Import new 2024 real market services
 import { realMarketServices } from '../data/2024-real-market-services';
@@ -42,7 +64,45 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
+<<<<<<< HEAD
 const serviceCategories = [
+=======
+// Helper function to get service pricing
+const getServicePricing = (service: any) => {
+  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+  if (service.price?.monthly) return `$${service.price.monthly}/month`;
+  return 'Contact for pricing';
+};
+
+// Helper function to get service features
+const getServiceFeatures = (service: any) => {
+  if (service.features) return service.features;
+  if (service.keyFeatures) return service.keyFeatures;
+  return [];
+};
+
+// Helper function to get service description
+const getServiceDescription = (service: any) => {
+  if (service.description) return service.description;
+  if (service.tagline) return service.tagline;
+  return 'No description available';
+};
+
+// Create unified services array
+const allServices = [
+	...enterpriseITServices,
+	...innovativeMicroSaasServices,
+	...innovativeAIServices,
+	...emergingTechServices,
+	...newRealServices,
+	...realMarketServices,
+	...enhancedRealMicroSaasServices,
+	...realAdditions2025Q3
+];
+
+const categories = [
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-77a4
   {
     id: 'ai-services',
     title: '🧠 Revolutionary AI Services',
