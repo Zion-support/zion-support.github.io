@@ -1,8 +1,15 @@
-export interface InnovativeMicroSaasService2025 {
-  id: string;
+export interface ServiceContact {
+  phone: string;
+  email: string;
+  website: string;
+  address: string;
+}
+
+export interface MicroSaasService {
+  id: number;
   name: string;
   category: string;
-  subcategory: string;
+  pricing: string;
   description: string;
   price: number;
   pricingModel: string;
@@ -11,299 +18,360 @@ export interface InnovativeMicroSaasService2025 {
   benefits: string[];
   targetAudience: string[];
   tags: string[];
+  contactInfo: ServiceContact;
   marketPrice: string;
-  roi: string;
   competitors: string[];
-  technology: string[];
+  roi: string;
+  setupTime: string;
   integrations: string[];
-  compliance: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-    address: string;
-  };
-  demoUrl?: string;
-  documentationUrl?: string;
-  freeTrial: boolean;
-  freeTrialDays: number;
+  freeTier: boolean;
+  trialPeriod: string;
 }
 
-export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService2025[] = [
-  // AI-Powered Carbon Footprint Management
+// Innovative Micro SAAS Services for 2025
+export const innovativeMicroSaasServices2025: MicroSaasService[] = [
   {
-    id: "carbon-footprint-ai",
-    name: "CarbonFootprint AI",
-    category: "Sustainability",
-    subcategory: "Environmental Management",
-    description: "AI-powered carbon footprint tracking and reduction platform for businesses, providing real-time monitoring, automated reporting, and sustainability optimization recommendations.",
+    id: 1,
+    name: "AI CodeGuard Pro",
+    category: "Cybersecurity",
+    pricing: "Freemium",
+    description: "AI-powered code security scanner that detects vulnerabilities, malware, and compliance issues in real-time",
+    price: 79,
+    pricingModel: "monthly",
+    userLimit: "Up to 50 developers",
+    features: [
+      "AI vulnerability detection",
+      "Real-time code scanning",
+      "Compliance monitoring",
+      "Threat intelligence",
+      "Automated fixes",
+      "Security reporting",
+      "Git integration",
+      "CI/CD pipeline security"
+    ],
+    benefits: [
+      "90% faster vulnerability detection",
+      "Reduced security risks",
+      "Compliance automation",
+      "Cost savings on security audits",
+      "Developer productivity",
+      "Zero false positives"
+    ],
+    targetAudience: ["Development teams", "DevOps engineers", "Security professionals", "Startups"],
+    tags: ["Cybersecurity", "AI", "Code Security", "DevOps", "Compliance"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-codeguard-pro",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$79-199/month",
+    competitors: ["Snyk", "SonarQube", "Veracode"],
+    roi: "500% within 2 months",
+    setupTime: "10 minutes",
+    integrations: ["GitHub", "GitLab", "Bitbucket", "Jenkins", "CircleCI"],
+    freeTier: true,
+    trialPeriod: "21 days"
+  },
+  {
+    id: 2,
+    name: "QuantumData Analytics",
+    category: "Data Analytics",
+    pricing: "Freemium",
+    description: "Quantum-inspired data analytics platform for processing massive datasets with unprecedented speed and accuracy",
+    price: 149,
+    pricingModel: "monthly",
+    userLimit: "Unlimited users",
+    features: [
+      "Quantum-inspired algorithms",
+      "Real-time data processing",
+      "Predictive analytics",
+      "Machine learning models",
+      "Data visualization",
+      "API integrations",
+      "Custom dashboards",
+      "Automated insights"
+    ],
+    benefits: [
+      "10x faster data processing",
+      "99.9% accuracy",
+      "Real-time insights",
+      "Scalable architecture",
+      "Cost-effective analytics",
+      "Competitive advantage"
+    ],
+    targetAudience: ["Data scientists", "Business analysts", "Enterprises", "Research institutions"],
+    tags: ["Data Analytics", "Quantum Computing", "AI", "Machine Learning", "Big Data"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantumdata-analytics",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$149-399/month",
+    competitors: ["Tableau", "Power BI", "Looker"],
+    roi: "400% within 3 months",
+    setupTime: "1 hour",
+    integrations: ["Snowflake", "BigQuery", "Redshift", "Python", "R"],
+    freeTier: true,
+    trialPeriod: "30 days"
+  },
+  {
+    id: 3,
+    name: "BlockchainTrust Manager",
+    category: "Blockchain",
+    pricing: "Freemium",
+    description: "Enterprise blockchain solution for secure digital identity, smart contracts, and decentralized applications",
     price: 199,
     pricingModel: "monthly",
     userLimit: "Up to 100 users",
     features: [
-      "Real-time carbon emission tracking",
-      "AI-powered sustainability recommendations",
-      "Automated ESG reporting",
-      "Carbon offset marketplace integration",
-      "Supply chain sustainability analysis",
-      "Regulatory compliance monitoring",
-      "Sustainability score dashboard",
-      "Carbon reduction goal setting"
+      "Digital identity management",
+      "Smart contract deployment",
+      "Blockchain analytics",
+      "Multi-chain support",
+      "Compliance tools",
+      "API gateway",
+      "Wallet integration",
+      "Audit trails"
     ],
     benefits: [
-      "Reduce carbon footprint by 25-40%",
-      "Achieve ESG compliance automatically",
-      "Save $100,000+ annually on sustainability reporting",
-      "Improve brand reputation and customer trust",
-      "Access to carbon credit markets"
+      "Enhanced security",
+      "Transparent transactions",
+      "Reduced fraud",
+      "Automated compliance",
+      "Cost savings",
+      "Trust building"
     ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Logistics providers",
-      "Retail chains",
-      "Technology companies",
-      "Financial institutions"
-    ],
-    tags: ["Sustainability", "ESG", "Carbon Management", "AI", "Compliance"],
-    marketPrice: "$199 - $599/month",
-    roi: "300% within 12 months",
-    competitors: ["Watershed", "Normative", "CarbonChain", "Persefoni"],
-    technology: ["Machine Learning", "IoT Integration", "Blockchain", "React", "Python"],
-    integrations: ["ERP Systems", "Accounting Software", "Supply Chain Platforms", "ESG Reporting Tools"],
-    compliance: ["GHG Protocol", "ISO 14064", "TCFD", "SEC Climate Disclosure"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
+    targetAudience: ["Financial institutions", "Healthcare providers", "Supply chain companies", "Government agencies"],
+    tags: ["Blockchain", "Digital Identity", "Smart Contracts", "Security", "Compliance"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
+      website: "https://ziontechgroup.com/blockchain-trust-manager",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    demoUrl: "https://ziontechgroup.com/demo/carbon-footprint-ai",
-    documentationUrl: "https://ziontechgroup.com/docs/carbon-footprint-ai",
-    freeTrial: true,
-    freeTrialDays: 21
+    marketPrice: "$199-599/month",
+    competitors: ["Hyperledger", "Ethereum Enterprise", "Corda"],
+    roi: "600% within 6 months",
+    setupTime: "2 hours",
+    integrations: ["Ethereum", "Polygon", "Solana", "AWS", "Azure"],
+    freeTier: true,
+    trialPeriod: "14 days"
   },
-
-  // Quantum-Safe Cybersecurity Platform
   {
-    id: "quantum-safe-cyber",
-    name: "QuantumSafe Cyber",
-    category: "Cybersecurity",
-    subcategory: "Quantum Security",
-    description: "Next-generation cybersecurity platform that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing era.",
-    price: 299,
+    id: 4,
+    name: "IoT Edge Intelligence",
+    category: "IoT",
+    pricing: "Freemium",
+    description: "Edge computing platform for IoT devices with real-time analytics, AI inference, and predictive maintenance",
+    price: 89,
     pricingModel: "monthly",
-    userLimit: "Up to 500 users",
+    userLimit: "Up to 1000 devices",
     features: [
-      "Post-quantum cryptography algorithms",
-      "Quantum key distribution (QKD)",
-      "Hybrid encryption systems",
-      "Quantum-resistant digital signatures",
-      "Real-time threat detection",
-      "Compliance monitoring dashboard",
-      "Automated security updates",
-      "Quantum risk assessment"
+      "Edge AI processing",
+      "Real-time analytics",
+      "Predictive maintenance",
+      "Device management",
+      "Data synchronization",
+      "Security protocols",
+      "Scalable architecture",
+      "Cloud integration"
     ],
     benefits: [
-      "Future-proof security against quantum attacks",
-      "Meet NIST post-quantum standards",
-      "Reduce security breach risk by 90%",
-      "Compliance with emerging regulations",
-      "Competitive advantage in security"
+      "Reduced latency",
+      "Lower bandwidth costs",
+      "Real-time insights",
+      "Predictive capabilities",
+      "Scalable deployment",
+      "Cost optimization"
     ],
-    targetAudience: [
-      "Financial institutions",
-      "Healthcare organizations",
-      "Government agencies",
-      "Defense contractors",
-      "Technology companies"
-    ],
-    tags: ["Cybersecurity", "Quantum Computing", "Encryption", "Compliance", "Future-Proof"],
-    marketPrice: "$299 - $999/month",
-    roi: "500% within 18 months",
-    competitors: ["ISARA", "PQShield", "Cryptosense", "Quantum Xchange"],
-    technology: ["Post-Quantum Cryptography", "Quantum Key Distribution", "Machine Learning", "Zero-Trust Architecture"],
-    integrations: ["Active Directory", "SIEM Systems", "Cloud Platforms", "Identity Management"],
-    compliance: ["NIST Standards", "FIPS 140-2", "SOC 2", "ISO 27001"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "enterprise",
+    targetAudience: ["Manufacturing", "Smart cities", "Healthcare", "Agriculture"],
+    tags: ["IoT", "Edge Computing", "AI", "Predictive Analytics", "Device Management"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
+      website: "https://ziontechgroup.com/iot-edge-intelligence",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    demoUrl: "https://ziontechgroup.com/demo/quantum-safe-cyber",
-    documentationUrl: "https://ziontechgroup.com/docs/quantum-safe-cyber",
-    freeTrial: true,
-    freeTrialDays: 30
+    marketPrice: "$89-299/month",
+    competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
+    roi: "350% within 4 months",
+    setupTime: "45 minutes",
+    integrations: ["MQTT", "CoAP", "HTTP", "AWS", "Azure", "Google Cloud"],
+    freeTier: true,
+    trialPeriod: "21 days"
   },
-
-  // AI-Powered Mental Health Support Platform
   {
-    id: "mental-health-ai",
-    name: "MentalHealth AI",
-    category: "Healthcare",
-    subcategory: "Mental Wellness",
-    description: "AI-powered mental health support platform that provides 24/7 emotional support, crisis intervention, and personalized wellness recommendations.",
-    price: 79,
+    id: 5,
+    name: "AR/VR Experience Studio",
+    category: "Immersive Technology",
+    pricing: "Freemium",
+    description: "Complete AR/VR development platform for creating immersive experiences, training simulations, and virtual events",
+    price: 129,
     pricingModel: "monthly",
-    userLimit: "Up to 1000 users",
+    userLimit: "Up to 25 developers",
     features: [
-      "24/7 AI emotional support",
-      "Crisis detection and intervention",
-      "Personalized wellness plans",
-      "Mood tracking and analysis",
-      "Professional therapist matching",
-      "Group support communities",
-      "Progress monitoring",
-      "Emergency contact integration"
+      "3D modeling tools",
+      "AR/VR templates",
+      "Interactive elements",
+      "Analytics dashboard",
+      "Multi-platform support",
+      "Collaboration tools",
+      "Asset library",
+      "Performance optimization"
     ],
     benefits: [
-      "Provide immediate mental health support",
-      "Reduce healthcare costs by 30%",
-      "Improve employee productivity and retention",
-      "Meet workplace wellness requirements",
-      "24/7 availability for support"
+      "Faster development",
+      "Cost-effective creation",
+      "Cross-platform compatibility",
+      "Enhanced user engagement",
+      "Training efficiency",
+      "Innovative marketing"
     ],
-    targetAudience: [
-      "Corporate wellness programs",
-      "Healthcare providers",
-      "Educational institutions",
-      "Government agencies",
-      "Insurance companies"
+    targetAudience: ["Game developers", "Training companies", "Marketing agencies", "Educational institutions"],
+    tags: ["AR/VR", "3D Modeling", "Immersive Technology", "Training", "Entertainment"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ar-vr-experience-studio",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$129-399/month",
+    competitors: ["Unity", "Unreal Engine", "Vuforia"],
+    roi: "450% within 5 months",
+    setupTime: "1 hour",
+    integrations: ["Unity", "Unreal Engine", "Oculus", "HTC Vive", "Magic Leap"],
+    freeTier: true,
+    trialPeriod: "30 days"
+  },
+  {
+    id: 6,
+    name: "GreenTech Monitor",
+    category: "Sustainability",
+    pricing: "Freemium",
+    description: "AI-powered sustainability monitoring platform for tracking carbon footprint, energy efficiency, and ESG compliance",
+    price: 69,
+    pricingModel: "monthly",
+    userLimit: "Up to 100 locations",
+    features: [
+      "Carbon footprint tracking",
+      "Energy consumption monitoring",
+      "ESG reporting",
+      "Sustainability scoring",
+      "Goal setting",
+      "Progress tracking",
+      "Compliance alerts",
+      "Stakeholder reporting"
     ],
-    tags: ["Mental Health", "AI", "Wellness", "Healthcare", "24/7 Support"],
-    marketPrice: "$79 - $299/month",
+    benefits: [
+      "Regulatory compliance",
+      "Cost savings",
+      "Brand reputation",
+      "Investor confidence",
+      "Operational efficiency",
+      "Sustainability leadership"
+    ],
+    targetAudience: ["Corporations", "Manufacturing", "Real estate", "Government"],
+    tags: ["Sustainability", "ESG", "Carbon Tracking", "Energy Efficiency", "Compliance"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/greentech-monitor",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$69-199/month",
+    competitors: ["Watershed", "Normative", "Persefoni"],
+    roi: "300% within 3 months",
+    setupTime: "30 minutes",
+    integrations: ["Utility APIs", "IoT sensors", "ERP systems", "Accounting software"],
+    freeTier: true,
+    trialPeriod: "14 days"
+  },
+  {
+    id: 7,
+    name: "FinTech Compliance Hub",
+    category: "Financial Technology",
+    pricing: "Freemium",
+    description: "Comprehensive compliance platform for fintech companies with automated regulatory reporting and risk management",
+    price: 179,
+    pricingModel: "monthly",
+    userLimit: "Up to 50 users",
+    features: [
+      "Regulatory compliance",
+      "Risk assessment",
+      "Automated reporting",
+      "Audit trails",
+      "KYC/AML tools",
+      "Fraud detection",
+      "Compliance alerts",
+      "Regulatory updates"
+    ],
+    benefits: [
+      "Regulatory compliance",
+      "Reduced fines",
+      "Operational efficiency",
+      "Risk mitigation",
+      "Audit readiness",
+      "Competitive advantage"
+    ],
+    targetAudience: ["Fintech startups", "Banks", "Payment processors", "Cryptocurrency exchanges"],
+    tags: ["Fintech", "Compliance", "Regulatory", "Risk Management", "KYC/AML"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/fintech-compliance-hub",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$179-499/month",
+    competitors: ["ComplyAdvantage", "Jumio", "Onfido"],
+    roi: "500% within 4 months",
+    setupTime: "2 hours",
+    integrations: ["Banking APIs", "Identity verification", "Regulatory databases", "Reporting systems"],
+    freeTier: true,
+    trialPeriod: "21 days"
+  },
+  {
+    id: 8,
+    name: "HealthTech AI Platform",
+    category: "Healthcare Technology",
+    pricing: "Freemium",
+    description: "AI-powered healthcare platform for patient monitoring, diagnosis assistance, and predictive health analytics",
+    price: 159,
+    pricingModel: "monthly",
+    userLimit: "Up to 100 healthcare providers",
+    features: [
+      "Patient monitoring",
+      "Diagnosis assistance",
+      "Predictive analytics",
+      "Health records management",
+      "Telemedicine tools",
+      "Medication tracking",
+      "Wellness recommendations",
+      "Emergency alerts"
+    ],
+    benefits: [
+      "Improved patient outcomes",
+      "Reduced healthcare costs",
+      "Early disease detection",
+      "Better care coordination",
+      "Operational efficiency",
+      "Patient satisfaction"
+    ],
+    targetAudience: ["Hospitals", "Clinics", "Telemedicine providers", "Health insurers"],
+    tags: ["Healthcare", "AI", "Telemedicine", "Patient Care", "Predictive Analytics"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/healthtech-ai-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$159-449/month",
+    competitors: ["Epic", "Cerner", "Athenahealth"],
     roi: "400% within 6 months",
-    competitors: ["Woebot", "Ginger", "Talkspace", "BetterHelp"],
-    technology: ["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Secure Messaging"],
-    integrations: ["HR Systems", "Healthcare Platforms", "Wearable Devices", "Calendar Systems"],
-    compliance: ["HIPAA", "GDPR", "SOC 2", "Mental Health Privacy Laws"],
-    estimatedDelivery: "2-3 weeks",
-    supportLevel: "premium",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    demoUrl: "https://ziontechgroup.com/demo/mental-health-ai",
-    documentationUrl: "https://ziontechgroup.com/docs/mental-health-ai",
-    freeTrial: true,
-    freeTrialDays: 14
-  },
-
-  // Autonomous Supply Chain Optimization
-  {
-    id: "autonomous-supply-chain",
-    name: "Autonomous Supply Chain",
-    category: "Logistics",
-    subcategory: "Supply Chain Management",
-    description: "AI-powered autonomous supply chain optimization platform that predicts disruptions, optimizes routes, and automates decision-making for logistics operations.",
-    price: 399,
-    pricingModel: "monthly",
-    userLimit: "Up to 200 users",
-    features: [
-      "Predictive disruption modeling",
-      "Autonomous route optimization",
-      "Real-time inventory management",
-      "Demand forecasting",
-      "Supplier risk assessment",
-      "Cost optimization algorithms",
-      "Sustainability tracking",
-      "Regulatory compliance monitoring"
-    ],
-    benefits: [
-      "Reduce supply chain costs by 20-35%",
-      "Improve delivery times by 40%",
-      "Minimize inventory waste by 30%",
-      "Enhance supplier relationships",
-      "Real-time visibility and control"
-    ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Retail chains",
-      "E-commerce platforms",
-      "Logistics providers",
-      "Distribution centers"
-    ],
-    tags: ["Supply Chain", "AI", "Logistics", "Optimization", "Automation"],
-    marketPrice: "$399 - $1,299/month",
-    roi: "450% within 12 months",
-    competitors: ["Flexport", "FourKites", "Project44", "ClearMetal"],
-    technology: ["Machine Learning", "IoT Sensors", "Blockchain", "Predictive Analytics"],
-    integrations: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "E-commerce Platforms"],
-    compliance: ["ISO 28000", "C-TPAT", "GDPR", "Supply Chain Security"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "enterprise",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    demoUrl: "https://ziontechgroup.com/demo/autonomous-supply-chain",
-    documentationUrl: "https://ziontechgroup.com/docs/autonomous-supply-chain",
-    freeTrial: true,
-    freeTrialDays: 21
-  },
-
-  // AI-Powered Financial Fraud Detection
-  {
-    id: "ai-fraud-detection",
-    name: "AI Fraud Detection",
-    category: "Financial Services",
-    subcategory: "Fraud Prevention",
-    description: "Advanced AI-powered financial fraud detection platform that uses machine learning to identify and prevent fraudulent transactions in real-time.",
-    price: 249,
-    pricingModel: "monthly",
-    userLimit: "Up to 1000 users",
-    features: [
-      "Real-time fraud detection",
-      "Machine learning algorithms",
-      "Behavioral analysis",
-      "Risk scoring",
-      "Automated alerts",
-      "Fraud pattern recognition",
-      "Compliance reporting",
-      "Integration APIs"
-    ],
-    benefits: [
-      "Reduce fraud losses by 80-90%",
-      "Improve customer trust and retention",
-      "Lower operational costs",
-      "Meet regulatory requirements",
-      "Real-time protection"
-    ],
-    targetAudience: [
-      "Banks and credit unions",
-      "Payment processors",
-      "E-commerce platforms",
-      "Insurance companies",
-      "Investment firms"
-    ],
-    tags: ["Fraud Detection", "AI", "Financial Services", "Security", "Compliance"],
-    marketPrice: "$249 - $899/month",
-    roi: "600% within 9 months",
-    competitors: ["Sift", "Signifyd", "Forter", "Riskified"],
-    technology: ["Machine Learning", "Deep Learning", "Real-time Processing", "Big Data Analytics"],
-    integrations: ["Payment Gateways", "Banking Systems", "CRM Platforms", "Risk Management Tools"],
-    compliance: ["PCI DSS", "SOC 2", "GDPR", "Financial Regulations"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection",
-    documentationUrl: "https://ziontechgroup.com/docs/ai-fraud-detection",
-    freeTrial: true,
-    freeTrialDays: 21
+    setupTime: "3 hours",
+    integrations: ["EHR systems", "Medical devices", "Insurance APIs", "Pharmacy systems"],
+    freeTier: true,
+    trialPeriod: "30 days"
   }
 ];

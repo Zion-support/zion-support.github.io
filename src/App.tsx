@@ -11,6 +11,8 @@ import Careers from './pages/Careers';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import NotFound from './pages/NotFound';
+import InnovativeServices from './pages/InnovativeServices';
+import ComprehensivePricing from './pages/ComprehensivePricing';
 
 // Service Pages
 import AISolutions from './pages/services/AI';
@@ -31,6 +33,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/innovative-services" element={<InnovativeServices />} />
+            <Route path="/pricing" element={<ComprehensivePricing />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/privacy" element={<Privacy />} />
