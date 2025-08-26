@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, Certificate } from 'lucide-react';
+import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';
 
 export default function Training() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -516,7 +516,7 @@ export default function Training() {
                       </div>
                     </div>
                     <div className="flex items-center gap-1 text-sm text-zion-slate-light">
-                      <Certificate className="w-4 h-4" />
+                      <FileText className="w-4 h-4" />
                       <span>{program.certification}</span>
                     </div>
                   </div>
