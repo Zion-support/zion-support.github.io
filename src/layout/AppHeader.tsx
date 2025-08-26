@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,7 +18,21 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
-    { name: 'Services', href: '/services', current: false },
+    { 
+      name: 'Services', 
+      href: '/services', 
+      current: false,
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'AI Solutions', href: '/services/ai' },
+        { name: 'Cloud & DevOps', href: '/services/cloud' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'IT Infrastructure', href: '/services/infrastructure' },
+        { name: 'Digital Transformation', href: '/services/transformation' },
+        { name: 'IT Consulting', href: '/services/consulting' }
+      ]
+    },
+    { name: 'Careers', href: '/careers', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
 
@@ -37,13 +52,42 @@ export function AppHeader() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex ml-8 space-x-8">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
-              >
-                {item.name}
-              </Link>
+              <div key={item.name} className="relative">
+                {item.hasDropdown ? (
+                  <div
+                    className="relative"
+                    onMouseEnter={() => setServicesDropdownOpen(true)}
+                    onMouseLeave={() => setServicesDropdownOpen(false)}
+                  >
+                    <button className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center">
+                      {item.name}
+                      <ChevronDown className="w-4 h-4 ml-1" />
+                    </button>
+                    
+                    {servicesDropdownOpen && (
+                      <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-slate-700 py-2 z-50">
+                        {item.dropdownItems?.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className="block px-4 py-2 text-sm text-slate-300 hover:text-cyan-400 hover:bg-slate-700 transition-colors duration-200"
+                            onClick={() => setServicesDropdownOpen(false)}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
             ))}
           </nav>
 
@@ -97,14 +141,35 @@ export function AppHeader() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 border-t border-slate-700/20">
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-slate-300 hover:text-cyan-400 block px-3 py-2 text-base font-medium transition-colors duration-200"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name}>
+                  {item.hasDropdown ? (
+                    <div>
+                      <div className="text-slate-300 px-3 py-2 text-base font-medium">
+                        {item.name}
+                      </div>
+                      <div className="ml-4 space-y-1">
+                        {item.dropdownItems?.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className="block px-3 py-2 text-sm text-slate-400 hover:text-cyan-400 transition-colors duration-200"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="text-slate-300 hover:text-cyan-400 block px-3 py-2 text-base font-medium transition-colors duration-200"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
               
               {/* Mobile Search */}

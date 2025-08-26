@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -306,6 +305,3 @@ export default function Services() {
     </div>
   );
 }
-=======
-import React, { useState } from 'react';
->>>>>>> 248414d82e4d3d36f213a52370681b8b6e365027

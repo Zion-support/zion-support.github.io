@@ -2,129 +2,117 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle,
-  Users,
-  Globe,
-  CheckCircle,
-  ArrowRight,
+  Cloud, 
+  Server, 
+  Database, 
+  Shield,
   Zap,
-  Target
+  Globe,
+  Lock,
+  BarChart3,
+  CheckCircle,
+  ArrowRight
 } from 'lucide-react';
 
-export default function CybersecurityServices() {
-  const securityServices = [
+export default function CloudServices() {
+  const cloudServices = [
     {
-      title: "Zero Trust Architecture",
-      description: "Implement comprehensive zero-trust security framework for your organization",
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency",
       features: [
-        "Identity Verification",
-        "Device Trust Assessment",
-        "Network Segmentation",
-        "Continuous Monitoring"
+        "Legacy System Assessment",
+        "Migration Strategy Planning",
+        "Data Migration & Validation",
+        "Performance Optimization"
       ],
-      icon: Shield,
+      icon: Cloud,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Threat Detection & Response",
-      description: "Advanced threat detection and automated response systems",
+      title: "DevOps Automation",
+      description: "Streamline development and operations with automated CI/CD pipelines and infrastructure management",
       features: [
-        "Real-time Monitoring",
-        "AI-Powered Detection",
-        "Automated Response",
-        "Incident Investigation"
+        "CI/CD Pipeline Setup",
+        "Infrastructure as Code",
+        "Automated Testing",
+        "Deployment Automation"
       ],
-      icon: Eye,
+      icon: Zap,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Penetration Testing",
-      description: "Comprehensive security testing to identify vulnerabilities",
+      title: "Container Orchestration",
+      description: "Manage and scale containerized applications with Kubernetes and Docker expertise",
       features: [
-        "External Testing",
-        "Internal Testing",
-        "Social Engineering",
-        "Physical Security"
+        "Kubernetes Clusters",
+        "Docker Containerization",
+        "Service Mesh Implementation",
+        "Auto-scaling Solutions"
       ],
-      icon: Target,
-      color: "from-orange-500 to-red-500"
+      icon: Server,
+      color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Security Audits & Compliance",
-      description: "Ensure compliance with industry standards and regulations",
+      title: "Multi-Cloud Management",
+      description: "Optimize costs and performance across multiple cloud providers",
       features: [
-        "SOC 2 Compliance",
-        "ISO 27001",
-        "GDPR Compliance",
-        "HIPAA Security"
+        "Multi-Cloud Strategy",
+        "Cost Optimization",
+        "Performance Monitoring",
+        "Unified Management"
       ],
-      icon: Lock,
-      color: "from-purple-500 to-pink-500"
+      icon: Globe,
+      color: "from-orange-500 to-red-500"
     }
   ];
 
-  const securitySolutions = [
+  const cloudPlatforms = [
     {
-      category: "Network Security",
-      solutions: [
-        "Firewall Management",
-        "Intrusion Detection",
-        "VPN Solutions",
-        "Network Monitoring"
-      ]
+      name: "AWS",
+      description: "Amazon Web Services solutions and optimization",
+      icon: "☁️",
+      features: ["EC2 & Lambda", "S3 & RDS", "CloudFormation", "CloudWatch"]
     },
     {
-      category: "Endpoint Security",
-      solutions: [
-        "Antivirus Protection",
-        "Device Management",
-        "Data Encryption",
-        "Access Control"
-      ]
+      name: "Azure",
+      description: "Microsoft Azure cloud services and integration",
+      icon: "🔷",
+      features: ["Virtual Machines", "Azure DevOps", "Functions", "Monitor"]
     },
     {
-      category: "Application Security",
-      solutions: [
-        "Code Review",
-        "Vulnerability Assessment",
-        "API Security",
-        "Secure Development"
-      ]
+      name: "Google Cloud",
+      description: "Google Cloud Platform services and AI integration",
+      icon: "🔵",
+      features: ["Compute Engine", "Cloud Run", "BigQuery", "AI Platform"]
     },
     {
-      category: "Data Protection",
-      solutions: [
-        "Data Encryption",
-        "Backup Security",
-        "Access Management",
-        "Compliance Monitoring"
-      ]
+      name: "Hybrid Cloud",
+      description: "On-premises and cloud hybrid solutions",
+      icon: "🔄",
+      features: ["Private Cloud", "Public Cloud", "Edge Computing", "Data Sync"]
     }
   ];
 
   const benefits = [
     {
-      icon: Shield,
-      title: "Comprehensive Protection",
-      description: "Multi-layered security approach covering all attack vectors"
-    },
-    {
       icon: Zap,
-      title: "24/7 Monitoring",
-      description: "Round-the-clock security monitoring and threat detection"
+      title: "Scalability",
+      description: "Scale resources up or down based on demand"
     },
     {
-      icon: Users,
-      title: "Expert Team",
-      description: "Certified cybersecurity professionals with industry experience"
+      icon: Shield,
+      title: "Security",
+      description: "Enterprise-grade security and compliance"
+    },
+    {
+      icon: BarChart3,
+      title: "Cost Efficiency",
+      description: "Pay only for what you use with optimized resource allocation"
     },
     {
       icon: Globe,
-      title: "Global Standards",
-      description: "Compliance with international security standards and best practices"
+      title: "Global Reach",
+      description: "Deploy applications worldwide with low latency"
     }
   ];
 
@@ -140,33 +128,33 @@ export default function CybersecurityServices() {
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Cybersecurity Services
+              Cloud & DevOps Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced security solutions to protect your business from evolving cyber threats
+              Scalable cloud solutions and DevOps automation to accelerate your digital transformation
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              From zero-trust architecture to threat detection and compliance management, 
-              we provide comprehensive cybersecurity solutions that keep your business secure.
+              From cloud migration to container orchestration, we help businesses leverage the power 
+              of cloud computing and DevOps practices for optimal performance and efficiency.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Security Services Grid */}
+      {/* Cloud Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Security Services
+              Our Cloud Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive cybersecurity solutions designed for modern threats
+              Comprehensive cloud and DevOps solutions designed for modern businesses
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityServices.map((service, index) => (
+            {cloudServices.map((service, index) => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
@@ -195,20 +183,20 @@ export default function CybersecurityServices() {
         </div>
       </section>
 
-      {/* Security Solutions Section */}
+      {/* Cloud Platforms Section */}
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Solutions
+              Cloud Platforms We Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive security coverage across all aspects of your business
+              Expertise across major cloud providers and hybrid solutions
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securitySolutions.map((solution, index) => (
+            {cloudPlatforms.map((platform, index) => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
@@ -217,12 +205,15 @@ export default function CybersecurityServices() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-xl font-bold text-cyan-400 mb-4">{solution.category}</h3>
+                <div className="text-4xl mb-4">{platform.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{platform.name}</h3>
+                <p className="text-gray-400 mb-4 text-sm">{platform.description}</p>
+                
                 <ul className="space-y-2">
-                  {solution.solutions.map((item, idx) => (
+                  {platform.features.map((feature, idx) => (
                     <li key={idx} className="text-sm text-gray-300 flex items-center">
                       <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-                      {item}
+                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -237,10 +228,10 @@ export default function CybersecurityServices() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Security Solutions?
+              Benefits of Cloud & DevOps
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive protection backed by expertise and innovation
+              Transform your business with cloud-native solutions and DevOps practices
             </p>
           </div>
           
@@ -271,10 +262,10 @@ export default function CybersecurityServices() {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Secure Your Business?
+            Ready to Scale with Cloud & DevOps?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our cybersecurity solutions can protect your organization
+            Let's discuss how our cloud solutions can accelerate your digital transformation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

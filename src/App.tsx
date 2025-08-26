@@ -8,6 +8,17 @@ const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
+const Careers = lazy(() => import('./pages/Careers'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+
+// Service pages
+const AIServices = lazy(() => import('./pages/AIServices'));
+const CloudServices = lazy(() => import('./pages/CloudServices'));
+const CybersecurityServices = lazy(() => import('./pages/CybersecurityServices'));
+const InfrastructureServices = lazy(() => import('./pages/InfrastructureServices'));
+const DigitalTransformationServices = lazy(() => import('./pages/DigitalTransformationServices'));
+const ConsultingServices = lazy(() => import('./pages/ConsultingServices'));
 
 // Loading spinner component
 const LoadingSpinner = () => (
@@ -37,10 +48,24 @@ function App() {
         <main>
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
+              {/* Main pages */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              
+              {/* Service pages */}
+              <Route path="/services/ai" element={<AIServices />} />
+              <Route path="/services/cloud" element={<CloudServices />} />
+              <Route path="/services/cybersecurity" element={<CybersecurityServices />} />
+              <Route path="/services/infrastructure" element={<InfrastructureServices />} />
+              <Route path="/services/transformation" element={<DigitalTransformationServices />} />
+              <Route path="/services/consulting" element={<ConsultingServices />} />
+              
+              {/* 404 catch-all */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

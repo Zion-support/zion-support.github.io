@@ -21,7 +21,8 @@ export const Footer: React.FC = () => {
         { label: "Cloud & DevOps", path: "/services/cloud" },
         { label: "Cybersecurity", path: "/services/cybersecurity" },
         { label: "IT Infrastructure", path: "/services/infrastructure" },
-        { label: "Digital Transformation", path: "/services/transformation" }
+        { label: "Digital Transformation", path: "/services/transformation" },
+        { label: "IT Consulting", path: "/services/consulting" }
       ]
     },
     {
@@ -30,32 +31,23 @@ export const Footer: React.FC = () => {
         { label: "About Us", path: "/about" },
         { label: "Our Team", path: "/about" },
         { label: "Careers", path: "/careers" },
-        { label: "News & Updates", path: "/news" },
-        { label: "Case Studies", path: "/case-studies" },
-        { label: "Partners", path: "/partners" }
+        { label: "Contact", path: "/contact" }
       ]
     },
     {
       title: "Resources",
       links: [
-        { label: "Blog", path: "/blog" },
-        { label: "Documentation", path: "/docs" },
-        { label: "White Papers", path: "/white-papers" },
-        { label: "Webinars", path: "/webinars" },
-        { label: "Research", path: "/research-development" },
-        { label: "Events", path: "/events" },
-        { label: "Training", path: "/training" }
+        { label: "Services Overview", path: "/services" },
+        { label: "Contact Us", path: "/contact" },
+        { label: "Careers", path: "/careers" }
       ]
     },
     {
-      title: "Support",
+      title: "Legal",
       links: [
-        { label: "Contact Us", path: "/contact" },
-        { label: "Help Center", path: "/help" },
-        { label: "Support Portal", path: "/support" },
-        { label: "FAQ", path: "/faq" },
-        { label: "Consulting", path: "/services/consulting" },
-        { label: "Request Quote", path: "/contact" }
+        { label: "Privacy Policy", path: "/privacy" },
+        { label: "Terms of Service", path: "/terms" },
+        { label: "Contact Support", path: "/contact" }
       ]
     }
   ];
@@ -169,9 +161,6 @@ export const Footer: React.FC = () => {
               </Link>
               <Link to="/terms" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200">
                 Terms of Service
-              </Link>
-              <Link to="/sitemap" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200">
-                Sitemap
               </Link>
             </div>
           </div>
