@@ -76,6 +76,7 @@ const config: Config = {
           light: "#451582",
           dark: "#000000",
         },
+<<<<<<< HEAD
         // Additional service category colors
         "zion-green": {
           DEFAULT: "#10b981",
@@ -156,6 +157,19 @@ const config: Config = {
           DEFAULT: "#06b6d4",
           light: "#22d3ee",
           dark: "#0891b2",
+=======
+        "zion-neon": {
+          DEFAULT: "#22ddd2",
+          light: "#7aeae4",
+          dark: "#14847e",
+          glow: "#22ddd2",
+        },
+        "zion-purple": {
+          DEFAULT: "#8c15e9",
+          light: "#b971f2",
+          dark: "#530c8b",
+          neon: "#b971f2",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
         },
       },
       borderRadius: {

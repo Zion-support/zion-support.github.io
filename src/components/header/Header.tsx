@@ -113,13 +113,23 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 =======
     <header 
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-lg shadow-2xl shadow-zion-purple/10"
 =======
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-purple-dark/95 to-zion-slate-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
+=======
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-slate-dark/95 to-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
       style={headerStyle}
     >
-      <div className="container flex h-16 items-center px-4 sm:px-6">
+      {/* Animated background pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
+      
+      {/* Glowing border effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" />
+      
+      <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
         {/* Desktop Navigation */}
@@ -195,6 +205,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
@@ -492,6 +503,11 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       )}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
+=======
+      
+      {/* Neon glow effect */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
     </header>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5241
 =======

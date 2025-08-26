@@ -13,8 +13,13 @@ const categories = [
     color: "from-purple-500 to-indigo-600",
   },
   {
+<<<<<<< HEAD
     title: "AI & Micro SAAS",
     description: "Cutting-edge AI services and affordable software solutions",
+=======
+    title: "Micro SAAS",
+    description: "Innovative AI-powered business solutions and automation tools",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/micro-saas-services",
     color: "from-emerald-500 to-green-600",

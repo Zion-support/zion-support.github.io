@@ -155,71 +155,6 @@
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
-  /* Floating particles animation */
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px) translateX(0px);
-      opacity: 0.7;
-    }
-    25% {
-      transform: translateY(-20px) translateX(10px);
-      opacity: 1;
-    }
-    50% {
-      transform: translateY(-40px) translateX(-5px);
-      opacity: 0.8;
-    }
-    75% {
-      transform: translateY(-20px) translateX(-15px);
-      opacity: 0.9;
-    }
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  /* Neon glow effects */
-  .neon-glow {
-    box-shadow: 
-      0 0 5px currentColor,
-      0 0 10px currentColor,
-      0 0 15px currentColor,
-      0 0 20px currentColor;
-  }
-
-  .neon-text {
-    text-shadow: 
-      0 0 5px currentColor,
-      0 0 10px currentColor,
-      0 0 15px currentColor;
-  }
-
-  /* Gradient text animation */
-  @keyframes gradient-shift {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
-
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
-  }
-
-  /* Smooth hover transitions */
-  .hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .hover-lift:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
-
   /* Custom scrollbar for webkit browsers */
   ::-webkit-scrollbar {
     width: 10px;
@@ -243,112 +178,98 @@
     scroll-behavior: smooth;
   }
 
-  /* Futuristic Animations */
+  /* Futuristic animations */
   @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
 
   @keyframes glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(34, 221, 210, 0.3); }
-    50% { box-shadow: 0 0 40px rgba(34, 221, 210, 0.6), 0 0 60px rgba(34, 221, 210, 0.3); }
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(34, 221, 210, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(34, 221, 210, 0.6);
+    }
   }
 
   @keyframes neon-pulse {
-    0%, 100% { 
-      text-shadow: 0 0 5px rgba(34, 221, 210, 0.8),
-                   0 0 10px rgba(34, 221, 210, 0.6),
-                   0 0 15px rgba(34, 221, 210, 0.4);
+    0%, 100% {
+      text-shadow: 0 0 5px rgba(34, 221, 210, 0.5), 0 0 10px rgba(34, 221, 210, 0.3);
     }
-    50% { 
-      text-shadow: 0 0 10px rgba(34, 221, 210, 1),
-                   0 0 20px rgba(34, 221, 210, 0.8),
-                   0 0 30px rgba(34, 221, 210, 0.6);
+    50% {
+      text-shadow: 0 0 20px rgba(34, 221, 210, 0.8), 0 0 30px rgba(34, 221, 210, 0.5);
     }
   }
 
-  @keyframes slide-in-left {
-    from { transform: translateX(-100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
   }
 
-  @keyframes slide-in-right {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-  }
-
-  @keyframes fade-in-up {
-    from { transform: translateY(30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-
-  /* Animation Classes */
-  .animate-float {
+  /* Animation classes */
+  .float {
     animation: float 6s ease-in-out infinite;
   }
 
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite;
+  .glow {
+    animation: glow 2s ease-in-out infinite alternate;
   }
 
-  .animate-neon {
+  .neon-pulse {
     animation: neon-pulse 2s ease-in-out infinite;
   }
 
-  .animate-slide-in-left {
-    animation: slide-in-left 0.8s ease-out;
+  .gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
   }
 
-  .animate-slide-in-right {
-    animation: slide-in-right 0.8s ease-out;
+  /* Hover effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .animate-fade-in-up {
-    animation: fade-in-up 0.8s ease-out;
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(140, 23, 233, 0.3);
   }
 
-  /* Animation Delays */
-  .animation-delay-2000 {
-    animation-delay: 2s;
+  /* Glass morphism effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
-
-  /* Futuristic Effects */
-  .backdrop-blur-sm {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-
-  .backdrop-blur-md {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-
-  .backdrop-blur-lg {
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-  }
-
-  /* Gradient Text */
-  .gradient-text {
-    background: linear-gradient(135deg, #22ddd2, #8c15e9, #2e73ea);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Neon Borders */
+  /* Neon border effect */
   .neon-border {
-    border: 1px solid rgba(34, 221, 210, 0.3);
-    box-shadow: 0 0 10px rgba(34, 221, 210, 0.2);
+    position: relative;
   }
 
-  .neon-border:hover {
-    border-color: rgba(34, 221, 210, 0.8);
-    box-shadow: 0 0 20px rgba(34, 221, 210, 0.4);
+  .neon-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(45deg, #22ddd2, #8c15e9, #22ddd2);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .neon-border:hover::before {
+    opacity: 1;
   }
 
   /* LiveKit UI overrides */
@@ -358,23 +279,5 @@
     --lk-button-background-hover: #0891B2;
     --lk-bg1: #0B1120;
     --lk-bg2: #0F172A;
-  }
-}
-
-@layer utilities {
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
-  
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
-  
-  .animation-delay-600 {
-    animation-delay: 600ms;
-  }
-  
-  .animation-delay-800 {
-    animation-delay: 800ms;
   }
 }

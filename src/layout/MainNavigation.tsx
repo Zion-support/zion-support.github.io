@@ -91,6 +91,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       key: 'services',
       href: '/services',
@@ -99,6 +100,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
+=======
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services')
+    },
+    {
+      key: 'micro-saas',
+      href: '/micro-saas-services',
+      matches: (path: string) => path.startsWith('/micro-saas-services')
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
     },
     {
       key: 'categories',
@@ -317,6 +328,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to={link.href}
               className={cn(
+<<<<<<< HEAD
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300",
                 link.matches(location.pathname)
                   ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
@@ -325,6 +337,27 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             >
               {link.key === 'pricing' && <Sparkles className="h-4 w-4 mr-2" />}
               {link.name}
+=======
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative overflow-hidden group",
+                link.matches(location.pathname)
+                  ? "bg-gradient-to-r from-zion-purple/30 to-zion-cyan/30 text-zion-cyan shadow-lg shadow-zion-purple/20"
+                  : "text-white hover:text-zion-cyan"
+              )}
+            >
+              {/* Hover background effect */}
+              <div className={cn(
+                "absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md",
+                link.matches(location.pathname) && "opacity-100"
+              )} />
+              
+              {/* Glowing border effect */}
+              <div className={cn(
+                "absolute inset-0 rounded-md border border-transparent group-hover:border-zion-purple/30 transition-all duration-300",
+                link.matches(location.pathname) && "border-zion-cyan/50"
+              )} />
+              
+              <span className="relative z-10">{link.name}</span>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
             </Link>
           </li>
         ))}
