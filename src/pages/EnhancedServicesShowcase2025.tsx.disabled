@@ -1,7 +1,45 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD:src/pages/EnhancedServicesShowcase2025.tsx
 import { allEnhancedServices, EnhancedService } from '../data/enhanced-2025-comprehensive-services';
+=======
+import { 
+  Brain, 
+  Shield, 
+  Cpu, 
+  Cloud, 
+  Rocket, 
+  Target, 
+  Users, 
+  Code, 
+  Network, 
+  Database, 
+  Lock, 
+  BarChart3, 
+  Heart, 
+  DollarSign, 
+  ShoppingCart, 
+  Building,
+  Eye,
+  Zap,
+  Globe,
+  ArrowRight,
+  Search,
+  Filter,
+  Star,
+  CheckCircle,
+  Clock,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  ChevronDown,
+  ChevronUp
+} from 'lucide-react';
+import { enhancedInnovativeMicroSaasServices2025 } from '../data/enhancedInnovativeServices2025';
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/EnhancedServicesShowcase2025.tsx.disabled
 
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -93,6 +131,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
+<<<<<<< HEAD:src/pages/EnhancedServicesShowcase2025.tsx
   const allServices = [
     ...advancedInnovativeServicesExpansionV3,
     ...specializedEnterpriseSolutions2025
@@ -101,6 +140,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   const categories = Array.from(new Set(allServices.map(service => service.category)));
 
   const filteredServices = allServices.filter(service =>
+=======
+  const categories = Array.from(new Set(enhancedInnovativeMicroSaasServices2025.map(service => service.category)));
+
+  const filteredServices = enhancedInnovativeMicroSaasServices2025.filter(service =>
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/EnhancedServicesShowcase2025.tsx.disabled
     (selectedCategory === 'all' || service.category === selectedCategory) &&
     (service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -219,8 +263,13 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+<<<<<<< HEAD:src/pages/EnhancedServicesShowcase2025.tsx
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-3xl font-bold text-blue-400">{allServices.length}</div>
+=======
+            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4">
+                              <div className="text-3xl font-bold text-cyan-400">{enhancedInnovativeMicroSaasServices2025.length}</div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/EnhancedServicesShowcase2025.tsx.disabled
               <div className="text-gray-400">Total Services</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">

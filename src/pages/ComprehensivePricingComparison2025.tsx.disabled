@@ -1,10 +1,56 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD:src/pages/ComprehensivePricingComparison2025.tsx
 import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
 import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
+=======
+import { 
+  Brain, 
+  Shield, 
+  Cpu, 
+  Cloud, 
+  Rocket, 
+    Target,
+  Users,
+  Code,
+  Network,
+  Database,
+  Lock,
+  BarChart3,
+  Heart,
+  DollarSign,
+  ShoppingCart,
+  Building,
+  Eye,
+  Zap,
+  Globe,
+  ArrowRight,
+  Search,
+  Filter,
+  Star,
+  CheckCircle,
+  Clock,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  ChevronDown,
+  ChevronUp,
+  Award,
+  Users2,
+  Globe2,
+  ShieldCheck,
+  TrendingDown,
+  Percent,
+  Calculator
+} from 'lucide-react';
+import { enhancedInnovativeMicroSaasServices2025 } from '../data/enhancedInnovativeServices2025';
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/ComprehensivePricingComparison2025.tsx.disabled
 
 const ComprehensivePricingComparison2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
+<<<<<<< HEAD:src/pages/ComprehensivePricingComparison2025.tsx
   const allServices = [
     ...advancedInnovativeServicesExpansionV3,
     ...specializedEnterpriseSolutions2025
@@ -27,6 +73,13 @@ const ComprehensivePricingComparison2025: React.FC = () => {
     { id: 'Energy & Sustainability', name: 'Energy & Sustainability', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Sustainability')).length },
     { id: 'Manufacturing & Industrial', name: 'Manufacturing & Industrial', count: allServices.filter(s => s.category.includes('Manufacturing') || s.category.includes('Industrial')).length }
   ];
+=======
+  const categories = Array.from(new Set(enhancedInnovativeMicroSaasServices2025.map(service => service.category)));
+
+  const filteredServices = enhancedInnovativeMicroSaasServices2025.filter(service =>
+    selectedCategory === 'all' || service.category === selectedCategory
+  );
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/ComprehensivePricingComparison2025.tsx.disabled
 
   const filteredServices = allServices.filter(service => {
     if (selectedCategory === 'all') return true;
@@ -75,6 +128,7 @@ const ComprehensivePricingComparison2025: React.FC = () => {
     return colorMap[categoryName] || 'from-blue-600 to-cyan-700';
   };
 
+<<<<<<< HEAD:src/pages/ComprehensivePricingComparison2025.tsx
   const getCategoryStats = (categoryName: string) => {
     const categoryServices = allServices.filter(service => {
       if (categoryName === 'all') return true;
@@ -89,6 +143,12 @@ const ComprehensivePricingComparison2025: React.FC = () => {
     }, 0) / categoryServices.length;
     
     const avgRating = categoryServices.reduce((sum, service) => sum + service.rating, 0) / categoryServices.length;
+=======
+  const getCategoryStats = (category: string) => {
+    const servicesInCategory = enhancedInnovativeMicroSaasServices2025.filter(service => service.category === category);
+    const totalPrice = servicesInCategory.reduce((sum, service) => sum + service.price, 0);
+    const avgPrice = totalPrice / servicesInCategory.length;
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/ComprehensivePricingComparison2025.tsx.disabled
     
     return {
       count: categoryServices.length,
@@ -97,6 +157,26 @@ const ComprehensivePricingComparison2025: React.FC = () => {
     };
   };
 
+<<<<<<< HEAD:src/pages/ComprehensivePricingComparison2025.tsx
+=======
+  const getOverallStats = () => {
+    const totalPrice = enhancedInnovativeMicroSaasServices2025.reduce((sum, service) => sum + service.price, 0);
+    const avgPrice = totalPrice / enhancedInnovativeMicroSaasServices2025.length;
+    const minPrice = Math.min(...enhancedInnovativeMicroSaasServices2025.map(s => s.price));
+    const maxPrice = Math.max(...enhancedInnovativeMicroSaasServices2025.map(s => s.price));
+    
+    return {
+      totalServices: enhancedInnovativeMicroSaasServices2025.length,
+      totalValue: totalPrice,
+      avgPrice: Math.round(avgPrice),
+      minPrice,
+      maxPrice
+    };
+  };
+
+  const overallStats = getOverallStats();
+
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/ComprehensivePricingComparison2025.tsx.disabled
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}

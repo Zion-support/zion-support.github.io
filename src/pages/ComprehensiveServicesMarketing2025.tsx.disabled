@@ -1,7 +1,49 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD:src/pages/ComprehensiveServicesMarketing2025.tsx
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { advancedInnovativeServices2025V3, advancedITServices2025, advancedAIServices2025 } from '../../data/2025-advanced-innovative-services-expansion-v3';
+=======
+import { 
+  Brain, 
+  Shield, 
+  Cpu, 
+  Cloud, 
+  Rocket, 
+    Target,
+  Users,
+  Code,
+  Network,
+  Database,
+  Lock,
+  BarChart3,
+  Heart,
+  DollarSign,
+  ShoppingCart,
+  Building,
+  Eye,
+  Zap,
+  Globe,
+  ArrowRight,
+  Search,
+  Filter,
+  Star,
+  CheckCircle,
+  Clock,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  ChevronDown,
+  ChevronUp,
+  Award,
+  Users2,
+  Globe2,
+  ShieldCheck
+} from 'lucide-react';
+import { enhancedInnovativeMicroSaasServices2025 } from '../data/enhancedInnovativeServices2025';
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/ComprehensiveServicesMarketing2025.tsx.disabled
 
 const ComprehensiveServicesMarketing2025: React.FC = () => {
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -49,6 +91,7 @@ const ComprehensiveServicesMarketing2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
+<<<<<<< HEAD:src/pages/ComprehensiveServicesMarketing2025.tsx
   const allServices = [
     ...advancedInnovativeServicesExpansionV3,
     ...specializedEnterpriseSolutions2025
@@ -57,6 +100,11 @@ const ComprehensiveServicesMarketing2025: React.FC = () => {
   const categories = Array.from(new Set(allServices.map(service => service.category)));
 
   const filteredServices = allServices.filter(service =>
+=======
+  const categories = Array.from(new Set(enhancedInnovativeMicroSaasServices2025.map(service => service.category)));
+
+  const filteredServices = enhancedInnovativeMicroSaasServices2025.filter(service =>
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/ComprehensiveServicesMarketing2025.tsx.disabled
     selectedCategory === 'all' || service.category === selectedCategory
   );
 
@@ -104,12 +152,18 @@ const ComprehensiveServicesMarketing2025: React.FC = () => {
     return colorMap[categoryName] || 'from-blue-600 to-cyan-700';
   };
 
+<<<<<<< HEAD:src/pages/ComprehensiveServicesMarketing2025.tsx
   const getCategoryStats = (categoryName: string) => {
     const servicesInCategory = allServices.filter(service => service.category === categoryName);
     const totalPrice = servicesInCategory.reduce((sum, service) => {
       const price = parseInt(service.price.replace(/[^0-9]/g, ''));
       return sum + price;
     }, 0);
+=======
+  const getCategoryStats = (category: string) => {
+    const servicesInCategory = enhancedInnovativeMicroSaasServices2025.filter(service => service.category === category);
+    const totalPrice = servicesInCategory.reduce((sum, service) => sum + service.price, 0);
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/ComprehensiveServicesMarketing2025.tsx.disabled
     const avgPrice = totalPrice / servicesInCategory.length;
     
     return {
@@ -285,12 +339,85 @@ const ComprehensiveServicesMarketing2025: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD:src/pages/ComprehensiveServicesMarketing2025.tsx
       {/* Category Filter */}
       <section className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">Filter by Category</h3>
             <div className="flex flex-wrap justify-center gap-4">
+=======
+        {/* Portfolio Overview */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Our Service Portfolio</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6">
+                              <div className="text-4xl font-bold text-cyan-400 mb-2">{enhancedInnovativeMicroSaasServices2025.length}</div>
+              <div className="text-gray-400 mb-2">Total Services</div>
+              <div className="text-sm text-gray-500">Comprehensive solutions</div>
+            </div>
+            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6">
+              <div className="text-4xl font-bold text-green-400 mb-2">{categories.length}</div>
+              <div className="text-gray-400 mb-2">Categories</div>
+              <div className="text-sm text-gray-500">Specialized domains</div>
+            </div>
+            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6">
+              <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-gray-400 mb-2">Support</div>
+              <div className="text-sm text-gray-500">Always available</div>
+            </div>
+            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-lg p-6">
+              <div className="text-4xl font-bold text-orange-400">99.9%</div>
+              <div className="text-gray-400 mb-2">Uptime</div>
+              <div className="text-sm text-gray-500">Reliable service</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Category Overview */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Categories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map((category) => {
+              const IconComponent = getCategoryIcon(category);
+              const stats = getCategoryStats(category);
+              
+              return (
+                <div
+                  key={category}
+                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 cursor-pointer"
+                  onClick={() => setSelectedCategory(category === selectedCategory ? 'all' : category)}
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-r ${getCategoryColor(category)} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2 text-center">{category}</h3>
+                  <div className="text-center space-y-2">
+                    <div className="text-2xl font-bold text-cyan-400">{stats.count}</div>
+                    <div className="text-sm text-gray-400">Services</div>
+                    <div className="text-sm text-gray-500">Avg: ${stats.avgPrice}/mo</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Category Filter */}
+        <div className="text-center mb-8">
+          <div className="flex flex-wrap justify-center gap-3">
+            <button
+              onClick={() => setSelectedCategory('all')}
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                selectedCategory === 'all'
+                  ? 'bg-cyan-500 text-white'
+                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+              }`}
+            >
+              All Services
+            </button>
+            {categories.map((category) => (
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03:src/pages/ComprehensiveServicesMarketing2025.tsx.disabled
               <button
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${

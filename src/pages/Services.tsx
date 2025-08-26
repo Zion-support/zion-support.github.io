@@ -472,6 +472,7 @@ const Services: React.FC = () => {
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { 
   Code, 
   Database, 
@@ -620,6 +621,9 @@ export default function Services() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [isVisible, setIsVisible] = useState(false);
+=======
+import ComprehensiveServicesShowcase from '../components/ComprehensiveServicesShowcase';
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03
 
   const services = [
     {
@@ -4214,6 +4218,7 @@ export default Services;
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Emerging Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -4300,6 +4305,13 @@ export default Services;
               </div>
             </div>
 =======
+=======
+      {/* Comprehensive Services Showcase */}
+      <section className="py-20">
+        <ComprehensiveServicesShowcase />
+      </section>
+
+>>>>>>> origin/cursor/website-audit-and-enhancement-5c03
       {/* Innovative Services 2025 Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/50 to-pink-900/50">
         <div className="max-w-4xl mx-auto text-center">
