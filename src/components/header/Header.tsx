@@ -11,17 +11,9 @@ import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
-<<<<<<< HEAD
-import { useState } from "react";
-<<<<<<< HEAD
-import { FuturisticBackground } from '@/components/ui/FuturisticBackground';
-=======
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
-=======
 import { Menu, X, Search as SearchIcon, Sparkles } from "lucide-react";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
 
 export interface HeaderProps {
   hideLogin?: boolean;
@@ -39,10 +31,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-<<<<<<< HEAD
-=======
   const [isScrolled, setIsScrolled] = useState(false);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
   const searchSuggestions = generateSearchSuggestions();
   
   // If we have a white-label tenant and no specific customTheme is provided,
@@ -81,51 +70,10 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   };
   
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <>
-      <FuturisticBackground variant="grid" intensity="low" className="opacity-30" />
-      <header 
-        className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-xl relative overflow-hidden"
-        style={headerStyle}
-      >
-        {/* Futuristic header accent */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-cyan/10 to-transparent opacity-50" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent" />
-        
-        <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
-          <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
-
-          <div className="ml-6 flex-1">
-            <MainNavigation />
-          </div>
-          
-          <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
-            <EnhancedSearchInput
-              value={query}
-              onChange={setQuery}
-              onSelectSuggestion={(text) => {
-                navigate(`/search?q=${encodeURIComponent(text)}`);
-                setQuery("");
-              }}
-              searchSuggestions={searchSuggestions}
-            />
-          </form>
-=======
     <header 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-lg shadow-2xl shadow-zion-purple/10"
-=======
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-purple-dark/95 to-zion-slate-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
-=======
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-slate-dark/95 to-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
-=======
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md neon-pulse"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
       style={headerStyle}
     >
       {/* Animated background pattern */}
@@ -138,25 +86,15 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
         {/* Desktop Navigation */}
-<<<<<<< HEAD
-        <div className="ml-6 flex-1 hidden lg:block">
-          <MainNavigation />
-        </div>
-<<<<<<< HEAD
-        
-=======
 
         {/* Search Bar */}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
         <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
-=======
         <div className="ml-6 flex-1 hidden md:block">
           <MainNavigation />
         </div>
 
         {/* Desktop Search */}
         <form onSubmit={handleSubmit} className="hidden lg:block w-64 mx-4">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -167,31 +105,11 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             searchSuggestions={searchSuggestions}
           />
         </form>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5241
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="flex items-center gap-2">
-            <LanguageSelector />
-            {!hideLogin && <UserMenu />}
-          </div>
-        </div>
-<<<<<<< HEAD
-        
-        {/* Floating navigation indicators */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-1">
-          <div className="w-2 h-1 bg-zion-cyan rounded-full animate-pulse" />
-          <div className="w-2 h-1 bg-zion-purple rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
-          <div className="w-2 h-1 bg-zion-cyan rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
-        </div>
-      </header>
-    </>
-=======
       </div>
       
       {/* Animated Header Border */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
-=======
         {/* Desktop Actions */}
         <div className="hidden lg:flex items-center gap-3">
           <Button 
@@ -204,40 +122,15 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
               Pricing
             </Link>
           </Button>
-=======
         {/* Desktop Actions */}
         <div className="flex items-center gap-2 hidden md:flex">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
           <LanguageSelector />
           {!hideLogin && <UserMenu />}
         </div>
 
-<<<<<<< HEAD
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden ml-auto">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={toggleMobileMenu}
-            className="text-zion-cyan hover:bg-zion-purple/10"
-          >
-            {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </Button>
-        </div>
-=======
         {/* Mobile Menu */}
         <MobileMenu className="md:hidden" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
       </div>
-<<<<<<< HEAD
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden border-t border-zion-purple/20 bg-zion-slate-dark/95 backdrop-blur-md">
-          <div className="container px-4 py-4">
-            {/* Mobile Search */}
-            <form onSubmit={handleSubmit} className="mb-4">
-=======
     <>
       <header 
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -299,23 +192,12 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         <div className="lg:hidden px-4 pb-4">
           <form onSubmit={handleSubmit}>
             <div className="relative">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(text) => {
                   navigate(`/search?q=${encodeURIComponent(text)}`);
                   setQuery("");
-<<<<<<< HEAD
-                  setIsMobileMenuOpen(false);
-                }}
-                searchSuggestions={searchSuggestions}
-              />
-            </form>
-
-            {/* Mobile Navigation */}
-            <nav className="mb-4">
-=======
                 }}
                 searchSuggestions={searchSuggestions}
                 placeholder="Search services, talent, equipment..."
@@ -343,42 +225,21 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             </div>
             
             <nav className="flex-1 p-4">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
               <ul className="space-y-2">
                 <li>
                   <Link
                     to="/"
-<<<<<<< HEAD
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-3 py-2 text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
-=======
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
                   >
                     Home
                   </Link>
                 </li>
                 <li>
                   <Link
-<<<<<<< HEAD
-                    to="/marketplace"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-3 py-2 text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
-                  >
-                    Marketplace
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-3 py-2 text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
-=======
                     to="/services"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
                   >
                     Services
                   </Link>
@@ -386,13 +247,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                 <li>
                   <Link
                     to="/talent"
-<<<<<<< HEAD
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-3 py-2 text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
-=======
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
                   >
                     Talent
                   </Link>
@@ -400,13 +256,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                 <li>
                   <Link
                     to="/equipment"
-<<<<<<< HEAD
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-3 py-2 text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
-=======
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
                   >
                     Equipment
                   </Link>
@@ -414,26 +265,14 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                 <li>
                   <Link
                     to="/community"
-<<<<<<< HEAD
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-3 py-2 text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
-=======
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
                   >
                     Community
                   </Link>
                 </li>
                 <li>
                   <Link
-<<<<<<< HEAD
-                    to="/pricing"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-3 py-2 text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
-                  >
-                    Pricing
-=======
                     to="/ai-content-generator"
                     onClick={toggleMobileMenu}
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
@@ -457,20 +296,14 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                     className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
                   >
                     Cloud Cost Optimizer
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
                   </Link>
                 </li>
                 {user && (
                   <li>
                     <Link
                       to="/dashboard"
-<<<<<<< HEAD
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="block px-3 py-2 text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
-=======
                       onClick={toggleMobileMenu}
                       className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
                     >
                       Dashboard
                     </Link>
@@ -479,22 +312,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
               </ul>
             </nav>
 
-<<<<<<< HEAD
-            {/* Mobile Actions */}
-            <div className="flex flex-col gap-2">
-              <Button 
-                asChild 
-                className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-              >
-                <Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Sparkles className="h-4 w-4 mr-2" />
-                  View Pricing
-                </Link>
-              </Button>
-              <div className="flex items-center justify-between">
-                <LanguageSelector />
-                {!hideLogin && <UserMenu />}
-=======
             <div className="p-4 border-t border-zion-purple/30">
               <div className="flex flex-col gap-3">
                 <button className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-medium hover:from-zion-purple-light hover:to-zion-cyan-light transition-all duration-300">
@@ -519,23 +336,15 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
                     </Link>
                   </div>
                 )}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
               </div>
             </div>
           </div>
         </div>
       )}
-<<<<<<< HEAD
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
-=======
       
       {/* Neon glow effect */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
     </header>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5241
-=======
     </>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
   );
 }

@@ -1,209 +1,170 @@
 import React from 'react';
-import Link from 'next/link';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
 
 const Privacy: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description" content="Learn about how Zion Tech Group collects, uses, and protects your personal information. Read our comprehensive privacy policy." />
-        <meta name="keywords" content="privacy policy, data protection, personal information, Zion Tech Group" />
-      </Helmet>
+      <SEO 
+        title="Privacy Policy - Zion Tech Group" 
+        description="Learn about how Zion Tech Group collects, uses, and protects your personal information." 
+        keywords="privacy policy, data protection, Zion Tech Group, personal information"
+        canonical="https://ziontechgroup.com/privacy"
+      />
       
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
-              <p className="text-lg text-gray-600">Last updated: {new Date().toLocaleDateString()}</p>
-            </div>
-
-            <div className="prose prose-lg max-w-none">
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
-                <p className="text-gray-700 mb-4">
-                  Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us in any way.
-                </p>
-                <p className="text-gray-700">
-                  By using our services, you agree to the collection and use of information in accordance with this policy.
-                </p>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Information We Collect</h2>
-                
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">2.1 Personal Information</h3>
-                <p className="text-gray-700 mb-4">
-                  We may collect personal information that you voluntarily provide to us, including:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 mb-4">
-                  <li>Name and contact information (email, phone number, address)</li>
-                  <li>Company and job title</li>
-                  <li>Payment and billing information</li>
-                  <li>Communication preferences</li>
-                  <li>Resume and professional information (for job applications)</li>
-                </ul>
-
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">2.2 Automatically Collected Information</h3>
-                <p className="text-gray-700 mb-4">
-                  When you visit our website, we automatically collect certain information, including:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 mb-4">
-                  <li>IP address and device information</li>
-                  <li>Browser type and version</li>
-                  <li>Operating system</li>
-                  <li>Pages visited and time spent</li>
-                  <li>Referring website</li>
-                  <li>Cookies and similar technologies</li>
-                </ul>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. How We Use Your Information</h2>
-                <p className="text-gray-700 mb-4">
-                  We use the collected information for various purposes:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 mb-4">
-                  <li>Provide and maintain our services</li>
-                  <li>Process transactions and payments</li>
-                  <li>Send you updates, newsletters, and marketing communications</li>
-                  <li>Respond to your inquiries and provide customer support</li>
-                  <li>Improve our website and services</li>
-                  <li>Comply with legal obligations</li>
-                  <li>Protect against fraud and security threats</li>
-                </ul>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Information Sharing and Disclosure</h2>
-                <p className="text-gray-700 mb-4">
-                  We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 mb-4">
-                  <li>With your explicit consent</li>
-                  <li>To comply with legal obligations</li>
-                  <li>To protect our rights and safety</li>
-                  <li>With trusted service providers who assist us in operating our business</li>
-                  <li>In connection with a business transfer or merger</li>
-                </ul>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Data Security</h2>
-                <p className="text-gray-700 mb-4">
-                  We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 mb-4">
-                  <li>Encryption of sensitive data</li>
-                  <li>Regular security assessments</li>
-                  <li>Access controls and authentication</li>
-                  <li>Secure data transmission protocols</li>
-                  <li>Employee training on data protection</li>
-                </ul>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Cookies and Tracking Technologies</h2>
-                <p className="text-gray-700 mb-4">
-                  We use cookies and similar tracking technologies to enhance your experience on our website. You can control cookie settings through your browser preferences.
-                </p>
-                <p className="text-gray-700">
-                  Types of cookies we use:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 mb-4">
-                  <li>Essential cookies for website functionality</li>
-                  <li>Analytics cookies to understand usage patterns</li>
-                  <li>Marketing cookies for personalized content</li>
-                  <li>Preference cookies to remember your settings</li>
-                </ul>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Your Rights and Choices</h2>
-                <p className="text-gray-700 mb-4">
-                  You have certain rights regarding your personal information:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 mb-4">
-                  <li>Access and review your personal information</li>
-                  <li>Correct inaccurate or incomplete information</li>
-                  <li>Request deletion of your personal information</li>
-                  <li>Object to processing of your personal information</li>
-                  <li>Withdraw consent at any time</li>
-                  <li>Opt-out of marketing communications</li>
-                </ul>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Data Retention</h2>
-                <p className="text-gray-700 mb-4">
-                  We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.
-                </p>
-                <p className="text-gray-700">
-                  When we no longer need your personal information, we will securely delete or anonymize it.
-                </p>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. International Data Transfers</h2>
-                <p className="text-gray-700 mb-4">
-                  Your personal information may be transferred to and processed in countries other than your own. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.
-                </p>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Children's Privacy</h2>
-                <p className="text-gray-700 mb-4">
-                  Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information, please contact us immediately.
-                </p>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Changes to This Privacy Policy</h2>
-                <p className="text-gray-700 mb-4">
-                  We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
-                </p>
-                <p className="text-gray-700">
-                  We encourage you to review this Privacy Policy periodically for any changes.
-                </p>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">12. Contact Us</h2>
-                <p className="text-gray-700 mb-4">
-                  If you have any questions about this Privacy Policy or our data practices, please contact us:
-                </p>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-gray-700 mb-2">
-                    <strong>Zion Tech Group</strong>
-                  </p>
-                  <p className="text-gray-700 mb-2">
-                    Email: <a href="mailto:privacy@ziontechgroup.com" className="text-blue-600 hover:text-blue-800">privacy@ziontechgroup.com</a>
-                  </p>
-                  <p className="text-gray-700 mb-2">
-                    Phone: <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800">+1 (302) 464-0950</a>
-                  </p>
-                  <p className="text-gray-700">
-                    Address: Delaware, United States
-                  </p>
-                </div>
-              </section>
-
-              <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">13. Governing Law</h2>
-                <p className="text-gray-700">
-                  This Privacy Policy is governed by and construed in accordance with the laws of the State of Delaware, United States. Any disputes arising from this Privacy Policy will be subject to the exclusive jurisdiction of the courts in Delaware.
-                </p>
-              </section>
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-gray-200 text-center">
-              <p className="text-gray-600">
-                Thank you for trusting Zion Tech Group with your information. We are committed to protecting your privacy and maintaining the highest standards of data protection.
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>Privacy Policy</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto space-y-8">
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">1. Introduction</h2>
+              <p className="text-zion-slate-light mb-4">
+                Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us.
               </p>
-            </div>
+              <p className="text-zion-slate-light">
+                By using our services, you agree to the collection and use of information in accordance with this policy.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">2. Information We Collect</h2>
+              <h3 className="text-xl font-semibold text-zion-cyan mb-3">2.1 Personal Information</h3>
+              <p className="text-zion-slate-light mb-4">
+                We may collect personal information that you provide directly to us, including:
+              </p>
+              <ul className="list-disc list-inside text-zion-slate-light mb-4 space-y-2 ml-4">
+                <li>Name and contact information (email, phone number, address)</li>
+                <li>Professional information (resume, skills, work history)</li>
+                <li>Account credentials and profile information</li>
+                <li>Communication preferences and marketing opt-ins</li>
+                <li>Payment and billing information</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-zion-cyan mb-3">2.2 Automatically Collected Information</h3>
+              <p className="text-zion-slate-light mb-4">
+                We automatically collect certain information when you use our services:
+              </p>
+              <ul className="list-disc list-inside text-zion-slate-light mb-4 space-y-2 ml-4">
+                <li>Device information (IP address, browser type, operating system)</li>
+                <li>Usage data (pages visited, time spent, features used)</li>
+                <li>Cookies and similar tracking technologies</li>
+                <li>Log files and analytics data</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">3. How We Use Your Information</h2>
+              <p className="text-zion-slate-light mb-4">
+                We use the information we collect for various purposes, including:
+              </p>
+              <ul className="list-disc list-inside text-zion-slate-light mb-4 space-y-2 ml-4">
+                <li>Providing and maintaining our services</li>
+                <li>Processing transactions and payments</li>
+                <li>Connecting talent with opportunities</li>
+                <li>Improving our platform and user experience</li>
+                <li>Communicating with you about our services</li>
+                <li>Ensuring security and preventing fraud</li>
+                <li>Complying with legal obligations</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">4. Information Sharing and Disclosure</h2>
+              <p className="text-zion-slate-light mb-4">
+                We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
+              </p>
+              <ul className="list-disc list-inside text-zion-slate-light mb-4 space-y-2 ml-4">
+                <li>With your explicit consent</li>
+                <li>To service providers who assist in operating our platform</li>
+                <li>To comply with legal requirements or protect our rights</li>
+                <li>In connection with a business transfer or merger</li>
+                <li>To prevent fraud or security threats</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">5. Data Security</h2>
+              <p className="text-zion-slate-light mb-4">
+                We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">6. Your Rights and Choices</h2>
+              <p className="text-zion-slate-light mb-4">
+                You have certain rights regarding your personal information:
+              </p>
+              <ul className="list-disc list-inside text-zion-slate-light mb-4 space-y-2 ml-4">
+                <li>Access and review your personal information</li>
+                <li>Update or correct inaccurate information</li>
+                <li>Request deletion of your personal information</li>
+                <li>Opt-out of marketing communications</li>
+                <li>Control cookie preferences</li>
+                <li>Data portability</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">7. Cookies and Tracking Technologies</h2>
+              <p className="text-zion-slate-light mb-4">
+                We use cookies and similar technologies to enhance your experience, analyze usage patterns, and provide personalized content. You can control cookie settings through your browser preferences.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">8. Third-Party Services</h2>
+              <p className="text-zion-slate-light mb-4">
+                Our platform may contain links to third-party websites or integrate with third-party services. We are not responsible for the privacy practices of these external services.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">9. Children's Privacy</h2>
+              <p className="text-zion-slate-light mb-4">
+                Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">10. International Data Transfers</h2>
+              <p className="text-zion-slate-light mb-4">
+                Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place to protect your data.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">11. Changes to This Policy</h2>
+              <p className="text-zion-slate-light mb-4">
+                We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on our website and updating the "Last updated" date.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">12. Contact Us</h2>
+              <p className="text-zion-slate-light mb-4">
+                If you have any questions about this Privacy Policy or our data practices, please contact us:
+              </p>
+              <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">
+                <p className="text-zion-slate-light mb-2">
+                  <strong>Email:</strong> privacy@ziontechgroup.com
+                </p>
+                <p className="text-zion-slate-light mb-2">
+                  <strong>Address:</strong> Zion Tech Group, Privacy Team
+                </p>
+                <p className="text-zion-slate-light">
+                  <strong>Phone:</strong> +1 (555) 123-4567
+                </p>
+              </div>
+            </section>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };

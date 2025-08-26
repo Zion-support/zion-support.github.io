@@ -1,0 +1,274 @@
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+import Button from '../../components/ui/Button';
+import Card from '../../components/ui/Card';
+<<<<<<< HEAD
+import { Check, Mail, MapPin, Phone } from 'lucide-react';
+
+// Import only the data files that actually exist
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2024 } from '../../src/data/innovativeMicroSaasServices2024';
+import { innovativeITServices2024 } from '../../data/2024-innovative-it-services';
+import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
+
+// Define a union type for all services
+type Service = 
+  | typeof innovativeMicroSaasServices2024[number]
+  | typeof innovativeITServices2024[number]
+  | typeof realMarketAugmentations2025[number];
+=======
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { innovativeMicroSaasServices2025 } from '../../src/data/innovativeMicroSaasServices2025';
+import { enhancedMicroSaasServices2025 } from '../../src/data/enhancedMicroSaasServices2025';
+
+type Service = typeof ultimateInnovativeServices2026[number];
+>>>>>>> origin/main
+
+const contactInfo = {
+	mobile: '+1 302 464 0950',
+	email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+};
+
+function getAllServices(): Service[] {
+<<<<<<< HEAD
+	return [
+		...INNOVATIVE_MICRO_SAAS_SERVICES_2024,
+		...innovativeITServices2024,
+		...realMarketAugmentations2025
+	];
+=======
+	return enhancedRealMicroSaasServices
+		.concat(innovativeMicroSaasServices2025 as Service[])
+		.concat(enhancedMicroSaasServices2025 as Service[]);
+>>>>>>> origin/main
+}
+
+function toSlug(value: string): string {
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+export async function getStaticPaths() {
+	const services = getAllServices();
+	const slugs = new Set<string>();
+
+	for (const s of services) {
+		const title = 'title' in s ? s.title : 'name' in s ? s.name : '';
+		if (title) {
+			const slug = toSlug(title);
+			slugs.add(slug);
+		}
+	}
+
+	const paths = Array.from(slugs).map(slug => ({
+		params: { slug }
+	}));
+
+	return {
+		paths,
+		fallback: 'blocking'
+	};
+}
+
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+	const services = getAllServices();
+	const service = services.find(s => {
+		const title = 'title' in s ? s.title : 'name' in s ? s.name : '';
+		return title && toSlug(title) === params.slug;
+	});
+
+	if (!service) {
+		return {
+			notFound: true
+		};
+	}
+
+	return {
+		props: {
+			service: JSON.parse(JSON.stringify(service))
+		},
+		revalidate: 60
+	};
+}
+
+interface ServicePageProps {
+	service: Service;
+}
+
+const ServicePage: React.FC<ServicePageProps> = ({ service }) => {
+	// Extract service properties with fallbacks
+	const title = 'title' in service ? service.title : 'name' in service ? service.name : 'Service';
+	const description = 'description' in service ? service.description : '';
+	const features = 'features' in service ? service.features : [];
+	const benefits = 'benefits' in service ? service.benefits : [];
+	const useCases = 'useCases' in service ? service.useCases : [];
+	const technology = 'technology' in service ? service.technology : [];
+	const tags = 'tags' in service ? service.tags : [];
+	const price = 'price' in service ? service.price : '';
+	const rating = 'rating' in service ? service.rating : 0;
+	const customers = 'customers' in service ? service.customers : '';
+
+	return (
+		<>
+			<Head>
+				<title>{title} - Zion Tech Group</title>
+				<meta name="description" content={description} />
+				<meta name="keywords" content={tags?.join(', ')} />
+			</Head>
+
+			<UltraFuturisticBackground>
+				<div className="min-h-screen bg-black text-white">
+					<div className="container mx-auto px-4 py-8">
+						<div className="max-w-4xl mx-auto">
+							{/* Header */}
+							<div className="text-center mb-12">
+								<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+									{title}
+								</h1>
+								<p className="text-xl text-gray-300 mb-8">
+									{description}
+								</p>
+								{tags && tags.length > 0 && (
+									<div className="flex flex-wrap justify-center gap-4 mb-8">
+										{tags.map((tag, index) => (
+											<span
+												key={index}
+												className="px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm"
+											>
+												{tag}
+											</span>
+										))}
+									</div>
+								)}
+								{price && (
+									<div className="text-2xl text-cyan-400 font-bold mb-4">
+										{price}
+									</div>
+								)}
+								{rating > 0 && (
+									<div className="flex items-center justify-center gap-2 text-yellow-400 mb-4">
+										<span>Rating: {rating}/5</span>
+										{Array.from({ length: 5 }).map((_, i) => (
+											<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-600'}>
+												★
+											</span>
+										))}
+									</div>
+								)}
+								{customers && (
+									<div className="text-gray-400 mb-4">
+										{customers} customers
+									</div>
+								)}
+							</div>
+
+							{/* Service Details */}
+							<div className="grid md:grid-cols-2 gap-8 mb-12">
+								{/* Features */}
+								{features && features.length > 0 && (
+									<Card className="p-6">
+										<h3 className="text-2xl font-bold text-cyan-400 mb-4">Key Features</h3>
+										<ul className="space-y-3">
+											{features.map((feature, index) => (
+												<li key={index} className="flex items-start">
+													<Check className="w-5 h-5 text-green-400 mt-0.5 mr-3 flex-shrink-0" />
+													<span className="text-gray-300">{feature}</span>
+												</li>
+											))}
+										</ul>
+									</Card>
+								)}
+
+								{/* Benefits */}
+								{benefits && benefits.length > 0 && (
+									<Card className="p-6">
+										<h3 className="text-2xl font-bold text-cyan-400 mb-4">Benefits</h3>
+										<ul className="space-y-3">
+											{benefits.map((benefit, index) => (
+												<li key={index} className="flex items-start">
+													<Check className="w-5 h-5 text-green-400 mt-0.5 mr-3 flex-shrink-0" />
+													<span className="text-gray-300">{benefit}</span>
+												</li>
+											))}
+										</ul>
+									</Card>
+								)}
+							</div>
+
+							{/* Use Cases */}
+							{useCases && useCases.length > 0 && (
+								<Card className="p-6 mb-8">
+									<h3 className="text-2xl font-bold text-cyan-400 mb-4">Use Cases</h3>
+									<div className="grid md:grid-cols-2 gap-4">
+										{useCases.map((useCase, index) => (
+											<div key={index} className="p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-lg">
+												<span className="text-cyan-400">{useCase}</span>
+											</div>
+										))}
+									</div>
+								</Card>
+							)}
+
+							{/* Technology Stack */}
+							{technology && technology.length > 0 && (
+								<Card className="p-6 mb-8">
+									<h3 className="text-2xl font-bold text-cyan-400 mb-4">Technology Stack</h3>
+									<div className="flex flex-wrap gap-3">
+										{technology.map((tech, index) => (
+											<span
+												key={index}
+												className="px-3 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-lg text-purple-400 text-sm"
+											>
+												{tech}
+											</span>
+										))}
+									</div>
+								</Card>
+							)}
+
+							{/* Contact Section */}
+							<Card className="p-8 text-center">
+								<h3 className="text-3xl font-bold text-cyan-400 mb-6">Ready to Get Started?</h3>
+								<p className="text-xl text-gray-300 mb-8">
+									Contact us to learn more about {title} and how it can transform your business.
+								</p>
+								<div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
+									<div className="flex items-center justify-center">
+										<Phone className="w-5 h-5 text-cyan-400 mr-3" />
+										<span className="text-gray-300">{contactInfo.mobile}</span>
+									</div>
+									<div className="flex items-center justify-center">
+										<Mail className="w-5 h-5 text-cyan-400 mr-3" />
+										<span className="text-gray-300">{contactInfo.email}</span>
+									</div>
+									<div className="flex items-center justify-center">
+										<MapPin className="w-5 h-5 text-cyan-400 mr-3" />
+										<span className="text-gray-300">{contactInfo.address}</span>
+									</div>
+								</div>
+								<div className="flex flex-col md:flex-row gap-4 justify-center">
+									<Button
+										href={`mailto:${contactInfo.email}?subject=Inquiry about ${title}`}
+										className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+									>
+										Get Quote
+									</Button>
+									<Button
+										href={contactInfo.website}
+										className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+									>
+										Visit Website
+									</Button>
+								</div>
+							</Card>
+						</div>
+					</div>
+				</div>
+			</UltraFuturisticBackground>
+		</>
+	);
+};
+
+export default ServicePage;
