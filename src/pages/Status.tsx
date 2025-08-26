@@ -15,51 +15,75 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-const Status: React.FC = () => {
-  const currentTime = new Date().toLocaleString();
-  
-  const services = [
-    {
-      name: 'Website',
-      status: 'operational',
-      uptime: '99.99%',
-      responseTime: '45ms',
-      lastChecked: '2 minutes ago'
-    },
-    {
-      name: 'API Services',
-      status: 'operational',
-      uptime: '99.95%',
-      responseTime: '120ms',
-      lastChecked: '1 minute ago'
-    },
-    {
-      name: 'Database',
-      status: 'operational',
-      uptime: '99.98%',
-      responseTime: '15ms',
-      lastChecked: '30 seconds ago'
-    },
-    {
-      name: 'Authentication',
-      status: 'operational',
-      uptime: '99.97%',
-      responseTime: '85ms',
-      lastChecked: '1 minute ago'
-    },
-    {
-      name: 'File Storage',
-      status: 'operational',
-      uptime: '99.96%',
-      responseTime: '200ms',
-      lastChecked: '2 minutes ago'
-    },
-    {
-      name: 'Email Services',
-      status: 'operational',
-      uptime: '99.94%',
-      responseTime: '150ms',
-      lastChecked: '1 minute ago'
+interface ServiceStatus {
+  name: string;
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance';
+  description: string;
+  lastChecked: string;
+}
+
+const FALLBACK_SERVICES: ServiceStatus[] = [
+  {
+    name: "Marketplace API",
+    status: "operational",
+    description: "Product listings and search functionality",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Authentication Service", 
+    status: "operational",
+    description: "User login and registration",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Payment Processing",
+    status: "operational", 
+    description: "Checkout and payment handling",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Talent Directory",
+    status: "operational",
+    description: "AI talent profiles and matching",
+    lastChecked: new Date().toISOString()
+  }
+];
+
+export default function Status() {
+  const [externalStatusLoaded, setExternalStatusLoaded] = useState(false);
+  const [showFallback, setShowFallback] = useState(false);
+  const [uptime, setUptime] = useState<number | null>(null);
+  const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https://status.ziontechgroup.com";
+
+  useEffect(() => {
+    // Try to load external status page, fallback after timeout
+    const timeout = setTimeout(() => {
+      if (!externalStatusLoaded) {
+        setShowFallback(true);
+      }
+    }, 5000); // 5 second timeout
+
+    return () => clearTimeout(timeout);
+  }, [externalStatusLoaded]);
+
+  useEffect(() => {
+    async function fetchUptime() {
+      try {
+        const res = await fetch('/api/status/summary');
+        if (!res.ok) return;
+        const data = await res.json();
+        const pct =
+          typeof data.uptime === 'number'
+            ? data.uptime
+            : typeof data.uptimePercent === 'number'
+            ? data.uptimePercent
+            : null;
+        if (typeof pct === 'number') {
+          setUptime(pct);
+        }
+      } catch (err) {
+        console.warn('Failed to fetch uptime', err);
+      }
     }
   ];
 
@@ -101,46 +125,61 @@ const Status: React.FC = () => {
     }
   };
 
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'low':
-        return 'bg-blue-100 text-blue-800';
-      case 'medium':
-        return 'bg-yellow-100 text-yellow-800';
-      case 'high':
-        return 'bg-red-100 text-red-800';
-      case 'critical':
-        return 'bg-red-200 text-red-900';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
+  const formatUptimePercent = (pct: number) => {
+    return pct.toFixed(2) + '%';
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Activity className="w-4 h-4 mr-2" />
-              System Status
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent">
-              System Status
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Real-time status of all Zion Tech Group services and systems. Monitor uptime, performance, and incident reports.
+    <>
+      <SEO
+        title="API Status"
+        description="View real-time service availability and uptime statistics."
+        canonical="https://app.ziontechgroup.com/status"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-white mb-4">System Status</h1>
+            <p className="text-zion-slate-light text-lg">
+              Real-time monitoring of Zion platform services
             </p>
-            
-            <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
-              <span>Last updated: {currentTime}</span>
-              <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
-                <RefreshCw className="w-4 h-4" />
-                <span>Refresh</span>
-              </button>
+            {uptime !== null && (
+              <p className="text-zion-slate-light text-sm mt-2">Uptime: {formatUptimePercent(uptime)}</p>
+            )}
+          </div>
+
+          {!showFallback && (
+            <div className="mb-8">
+              <Card className="bg-zion-blue-dark border-zion-blue-light">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <ExternalLink className="h-5 w-5" />
+                    Live Status Dashboard
+                  </CardTitle>
+                  <CardDescription>
+                    Loading detailed status information...
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <iframe
+                    src={statusUrl}
+                    title="Zion Status Page"
+                    className="w-full border-0 rounded"
+                    height="600"
+                    onLoad={() => setExternalStatusLoaded(true)}
+                    onError={() => setShowFallback(true)}
+                  />
+                  <div className="mt-4 text-center">
+                    <Button
+                      variant="outline"
+                      onClick={() => setShowFallback(true)}
+                      className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
+                    >
+                      View Simplified Status
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
