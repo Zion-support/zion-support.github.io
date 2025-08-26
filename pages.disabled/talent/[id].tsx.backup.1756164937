@@ -65,6 +65,7 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
+<<<<<<< HEAD:pages.disabled/talent/[id].tsx.backup.1756164937
 <<<<<<< HEAD:pages.disabled/talent/[id].tsx
   if (error || !profile) {
     // Redirect to 404 page or show error state
@@ -74,6 +75,9 @@ const TalentProfilePage: React.FC = () => {
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Talent not found'} />;
 >>>>>>> 1bbb93d0ccd935e3e47ed2f3b9029b761d33311e:pages/talent/[id].tsx
+=======
+  if (error || !profile) return <ProfileErrorState error={error || 'Talent not found'} />;
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce:pages/talent/[id].tsx
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">

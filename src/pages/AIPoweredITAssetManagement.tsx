@@ -23,6 +23,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   Server, 
   Zap, 
@@ -646,9 +647,100 @@ const AIPoweredITAssetManagement: React.FC = () => {
 =======
 import { Database, Brain, Shield, TrendingUp, ArrowRight, Users, Target, Clock, BarChart3, Zap } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-67e4
 
-export default function AIPoweredITAssetManagement() {
+const AIPoweredITAssetManagement: React.FC = () => {
+  const features = [
+    {
+      title: "Intelligent Discovery",
+      description: "AI-powered asset discovery and inventory management",
+      icon: "🔍"
+    },
+    {
+      title: "Predictive Maintenance",
+      description: "Forecast equipment failures and optimize maintenance schedules",
+      icon: "🔮"
+    },
+    {
+      title: "Lifecycle Management",
+      description: "End-to-end asset lifecycle tracking and optimization",
+      icon: "📊"
+    },
+    {
+      title: "Cost Optimization",
+      description: "AI-driven cost analysis and budget optimization",
+      icon: "💰"
+    }
+  ];
+
+  const assetTypes = [
+    {
+      category: "Hardware Assets",
+      assets: ["Servers", "Workstations", "Network devices", "Mobile devices", "Peripherals"]
+    },
+    {
+      category: "Software Assets",
+      assets: ["Licenses", "Applications", "Operating systems", "Cloud services", "Custom software"]
+    },
+    {
+      category: "Network Assets",
+      assets: ["Routers", "Switches", "Firewalls", "Cables", "Wireless equipment"]
+    },
+    {
+      category: "Cloud Assets",
+      assets: ["Virtual machines", "Storage", "Databases", "API services", "Serverless functions"]
+    }
+  ];
+
+  const capabilities = [
+    {
+      title: "Automated Discovery",
+      description: "Automatically discover and catalog all IT assets",
+      icon: "🤖"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of asset health and performance",
+      icon: "📡"
+    },
+    {
+      title: "Compliance Tracking",
+      description: "Track compliance with licensing and regulatory requirements",
+      icon: "✅"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Identify and assess security and operational risks",
+      icon: "⚠️"
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Cost Reduction",
+      description: "Reduce IT asset costs through optimization",
+      metric: "25%"
+    },
+    {
+      title: "Efficiency Gains",
+      description: "Improve asset management efficiency",
+      metric: "40%"
+    },
+    {
+      title: "Risk Mitigation",
+      description: "Reduce security and compliance risks",
+      metric: "60%"
+    },
+    {
+      title: "Uptime Improvement",
+      description: "Increase system availability and reliability",
+      metric: "99.9%"
+    }
+  ];
+
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
@@ -1345,68 +1437,36 @@ const AIPoweredITAssetManagement: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Harness the power of AI to transform your IT asset lifecycle management
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              AI-Powered
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                {" "}IT Asset Management
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your IT asset management with AI-powered intelligence. 
+              Discover, track, optimize, and secure all your technology assets 
+              with unprecedented accuracy and efficiency.
+>>>>>>> origin/cursor/website-audit-and-enhancement-67e4
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">AI Asset Discovery</h3>
-              <p className="text-gray-400">
-                Automatically discover and catalog all IT assets across your network with intelligent scanning and classification.
-              </p>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Predictive Maintenance</h3>
-              <p className="text-gray-400">
-                AI-powered predictive analytics to identify potential hardware failures before they occur.
-              </p>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Security Monitoring</h3>
-              <p className="text-gray-400">
-                Continuous security monitoring and threat detection across all IT assets with AI-powered analysis.
-              </p>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-6">
-                <TrendingUp className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Performance Optimization</h3>
-              <p className="text-gray-400">
-                Intelligent optimization of asset performance and resource allocation based on usage patterns.
-              </p>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
-                <Clock className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Lifecycle Management</h3>
-              <p className="text-gray-400">
-                Automated tracking of asset lifecycle from procurement to retirement with intelligent recommendations.
-              </p>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-indigo-500 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
-                <BarChart3 className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Real-Time Analytics</h3>
-              <p className="text-gray-400">
-                Live dashboards and reports providing comprehensive insights into asset utilization and performance.
-              </p>
+          {/* Key Features */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">AI-Powered Asset Intelligence</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 text-sm">{feature.description}</p>
+                </div>
+              ))}
             </div>
 =======
       {/* Benefits Section */}
@@ -1521,6 +1581,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             })}
 >>>>>>> origin/cursor/website-audit-and-enhancement-d426
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -1543,20 +1604,54 @@ const AIPoweredITAssetManagement: React.FC = () => {
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Manage all types of IT assets with intelligent automation and monitoring
             </p>
+=======
+          
+          {/* Asset Types */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Asset Coverage</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {assetTypes.map((type, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                  <h3 className="text-xl font-semibold text-white mb-4">{type.category}</h3>
+                  <ul className="space-y-2">
+                    {type.assets.map((asset, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                        {asset}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-67e4
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Database className="w-4 h-4 text-white" />
+          
+          {/* Core Capabilities */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Advanced Capabilities</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {capabilities.map((capability, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+                  <div className="text-4xl mb-4">{capability.icon}</div>
+                  <h3 className="text-lg font-semibold text-white mb-3">{capability.title}</h3>
+                  <p className="text-gray-300 text-sm">{capability.description}</p>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Hardware Assets</h3>
-                  <p className="text-gray-400">
-                    Servers, workstations, networking equipment, storage devices, and mobile devices.
-                  </p>
+              ))}
+            </div>
+          </div>
+          
+          {/* Benefits */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Why Choose AI Asset Management?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.metric}</div>
+                  <h3 className="text-lg font-semibold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-gray-300 text-sm">{benefit.description}</p>
                 </div>
+<<<<<<< HEAD
 =======
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our platform manages all types of IT assets across your organization.
@@ -1750,72 +1845,83 @@ const AIPoweredITAssetManagement: React.FC = () => {
                 </div>
                 <p className="text-white font-medium">{tech.name}</p>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
+=======
+              ))}
+            </div>
+          </div>
+          
+          {/* Implementation Process */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Implementation Process</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">1</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Assessment</h3>
+                <p className="text-gray-300 text-sm">Evaluate current asset management practices</p>
+>>>>>>> origin/cursor/website-audit-and-enhancement-67e4
               </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Target className="w-4 h-4 text-white" />
+              
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">2</span>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Software Assets</h3>
-                  <p className="text-gray-400">
-                    Operating systems, applications, databases, and development tools with license tracking.
-                  </p>
-                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Discovery</h3>
+                <p className="text-gray-300 text-sm">Deploy AI-powered asset discovery tools</p>
               </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Users className="w-4 h-4 text-white" />
+              
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">3</span>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Cloud Resources</h3>
-                  <p className="text-gray-400">
-                    Virtual machines, cloud storage, containers, and serverless functions across multiple providers.
-                  </p>
+                <h3 className="text-lg font-semibold text-white mb-2">Integration</h3>
+                <p className="text-gray-300 text-sm">Integrate with existing IT systems</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">4</span>
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Optimization</h3>
+                <p className="text-gray-300 text-sm">Continuous optimization and improvement</p>
               </div>
             </div>
-
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Shield className="w-4 h-4 text-white" />
+          </div>
+          
+          {/* Dashboard Preview */}
+          <div className="mb-16">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+              <h2 className="text-3xl font-bold text-center mb-8">Asset Management Dashboard</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">📊</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Asset Overview</h3>
+                  <p className="text-gray-300 text-sm">Comprehensive view of all IT assets</p>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Network Infrastructure</h3>
-                  <p className="text-gray-400">
-                    Routers, switches, firewalls, load balancers, and wireless access points.
-                  </p>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🔍</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Health Monitoring</h3>
+                  <p className="text-gray-300 text-sm">Real-time asset health and performance</p>
                 </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <TrendingUp className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Data Assets</h3>
-                  <p className="text-gray-400">
-                    Databases, file systems, backup systems, and data warehouses with classification.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <Clock className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">IoT Devices</h3>
-                  <p className="text-gray-400">
-                    Smart sensors, connected devices, and industrial IoT equipment with monitoring.
-                  </p>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">📈</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Analytics</h3>
+                  <p className="text-gray-300 text-sm">AI-powered insights and reporting</p>
                 </div>
               </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -2437,6 +2543,36 @@ const AIPoweredITAssetManagement: React.FC = () => {
                   <span>Streamline procurement processes</span>
                 </li>
               </ul>
+=======
+          
+          {/* Use Cases */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Perfect For</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+                <div className="text-4xl mb-4">🏢</div>
+                <h3 className="text-lg font-semibold text-white mb-3">Enterprise</h3>
+                <p className="text-gray-300 text-sm">Large organizations with complex IT infrastructure</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+                <div className="text-4xl mb-4">🏥</div>
+                <h3 className="text-lg font-semibold text-white mb-3">Healthcare</h3>
+                <p className="text-gray-300 text-sm">Medical facilities with critical IT systems</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+                <div className="text-4xl mb-4">🏭</div>
+                <h3 className="text-lg font-semibold text-white mb-3">Manufacturing</h3>
+                <p className="text-gray-300 text-sm">Industrial operations with IoT devices</p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
+                <div className="text-4xl mb-4">🏦</div>
+                <h3 className="text-lg font-semibold text-white mb-3">Financial</h3>
+                <p className="text-gray-300 text-sm">Banks and financial institutions</p>
+              </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-67e4
             </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
 =======
@@ -2488,6 +2624,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             ))}
 >>>>>>> origin/cursor/website-audit-and-enhancement-d426
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -2629,6 +2766,31 @@ const AIPoweredITAssetManagement: React.FC = () => {
               >
                 View Pricing
               </Link>
+=======
+          
+          {/* CTA Section */}
+          <div className="text-center">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold mb-4">Ready to Optimize Your IT Asset Management?</h3>
+              <p className="text-gray-300 mb-6">
+                Experience the power of AI-driven asset management. Discover, track, 
+                and optimize all your IT assets with unprecedented intelligence.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+                >
+                  Get Asset Assessment
+                </Link>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+                >
+                  View All Services
+                </Link>
+              </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-67e4
             </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
 =======
@@ -2967,6 +3129,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 
 export default AIPoweredITAssetManagement;
@@ -2974,3 +3137,8 @@ export default AIPoweredITAssetManagement;
 =======
 }
 >>>>>>> origin/cursor/website-audit-and-enhancement-d426
+=======
+};
+
+export default AIPoweredITAssetManagement;
+>>>>>>> origin/cursor/website-audit-and-enhancement-67e4
