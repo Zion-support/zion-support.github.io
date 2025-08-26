@@ -89,7 +89,8 @@ export const useAuth = () => {
       id: '1',
       email,
       name,
-      role: 'user'
+      role: 'user',
+      userType: 'creator',
     };
     
     setAuthState({
@@ -103,11 +104,10 @@ export const useAuth = () => {
 
   return {
     user: authState.user,
-    loading: authState.isLoading,
+    isAuthenticated: authState.isAuthenticated,
+    isLoading: authState.isLoading,
     login,
     logout,
     register,
-    isAuthenticated: authState.isAuthenticated,
-    isAdmin: authState.user?.role === 'admin'
   };
 };

@@ -1,38 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Zion Tech Group - Innovative IT Solutions and Services" />
-    <meta name="keywords" content="IT services, technology solutions, digital transformation, AI, cloud computing" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>Zion Tech Group - AI-Powered Technology Solutions & Digital Transformation Services</title>
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="description" content="Zion Tech Group - Leading AI, Cybersecurity, Cloud & Digital Transformation Services. Transform your business with cutting-edge technology solutions. 500+ projects delivered, 50+ expert team members." />
+    <meta name="keywords" content="AI services, cybersecurity, cloud computing, digital transformation, IT consulting, quantum computing, blockchain, machine learning, automation, business intelligence" />
     <meta name="author" content="Zion Tech Group" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#17072b" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ziontechgroup.com/" />
-    <meta property="og:title" content="Zion Tech Group - Innovative IT Solutions" />
-    <meta property="og:description" content="Leading provider of IT services, digital transformation, and innovative technology solutions." />
+    <meta property="og:title" content="Zion Tech Group - AI-Powered Technology Solutions & Digital Transformation" />
+    <meta property="og:description" content="Leading provider of AI services, cybersecurity, cloud computing, and digital transformation. 500+ successful projects, 99.9% uptime, 24/7 support." />
     <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Zion Tech Group" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://ziontechgroup.com/" />
-    <meta property="twitter:title" content="Zion Tech Group - Innovative IT Solutions" />
-    <meta property="twitter:description" content="Leading provider of IT services, digital transformation, and innovative technology solutions." />
+    <meta property="twitter:title" content="Zion Tech Group - AI-Powered Technology Solutions" />
+    <meta property="twitter:description" content="Leading provider of AI services, cybersecurity, cloud computing, and digital transformation. Transform your business today." />
     <meta property="twitter:image" content="/og-image.svg" />
+    <meta property="twitter:creator" content="@ziontechgroup" />
+    <meta property="twitter:site" content="@ziontechgroup" />
     
-    <title>Zion Tech Group - Innovative IT Solutions and Services</title>
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="//cdn.gpteng.co" />
     
-    <!-- Preload critical resources -->
-    <link rel="preload" href="/src/main.js" as="script" />
-    <link rel="preload" href="/src/index.css" as="style" />
+    <!-- Theme color -->
+    <meta name="msapplication-TileColor" content="#17072b" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     
     <!-- Manifest for PWA -->
     <link rel="manifest" href="/manifest.json" />
     
-    <!-- Theme color -->
-    <meta name="theme-color" content="#0f172a" />
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/main.tsx" as="script" />
+    <link rel="preload" href="/src/index.css" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" as="style" />
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/logo.svg",
+      "description": "Leading provider of AI services, cybersecurity, cloud computing, and digital transformation solutions.",
+      "foundingDate": "2020",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup",
+        "https://facebook.com/ziontechgroup"
+      ],
+      "numberOfEmployees": "50+",
+      "serviceArea": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Technology Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI & Analytics Solutions",
+              "description": "Advanced AI-powered business intelligence and analytics solutions"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cybersecurity Services",
+              "description": "Enterprise-grade security and threat detection systems"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cloud Solutions",
+              "description": "Scalable cloud infrastructure and DevOps services"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+    
+    <!-- Performance monitoring -->
+    <script>
+      // Performance monitoring
+      window.addEventListener('load', () => {
+        if ('performance' in window) {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>

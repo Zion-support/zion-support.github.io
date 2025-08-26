@@ -75,13 +75,16 @@ export function AppHeader() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
+      // Navigate to search results
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
 
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
+  const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+  ];
 
   const navigationItems = [
     {
@@ -360,151 +363,136 @@ export function AppHeader() {
                   </Link>
                 </div>
               )}
-
-              {/* Mobile menu button */}
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-              >
-                {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
             </div>
           </div>
         </div>
-      </header>
 
-      {/* Enhanced Mobile Navigation Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl"
-          >
-            <div className="container-responsive py-6">
-              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="mb-6">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search services, talent, equipment..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full bg-white/10 border border-zion-cyan/20 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                  />
-                  <button
-                    type="submit"
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-cyan p-2"
-                  >
-                    <Search className="h-5 w-5" />
-                  </button>
+        {/* Enhanced Mobile Navigation Menu */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl"
+            >
+              <div className="container-responsive py-6">
+                {/* Mobile Search */}
+                <form onSubmit={handleSearch} className="mb-6">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      placeholder="Search services, talent, equipment..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full bg-white/10 border border-zion-cyan/20 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+                    />
+                    <button
+                      type="submit"
+                      className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-cyan p-2"
+                    >
+                      <Search className="h-5 w-5" />
+                    </button>
+                  </div>
+                </form>
+
+                {/* Mobile Navigation Items */}
+                <nav className="space-y-2">
+                  {navigationItems.map((item) => (
+                    <div key={item.name}>
+                      <button
+                        onClick={() => toggleDropdown(item.name)}
+                        className="w-full flex items-center justify-between px-4 py-3 text-left text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-xl transition-all duration-300"
+                      >
+                        <div className="flex items-center space-x-3">
+                          <item.icon className="w-5 h-5" />
+                          <span className="font-medium">{item.name}</span>
+                        </div>
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                          activeDropdown === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+
+                      {/* Mobile Dropdown */}
+                      <AnimatePresence>
+                        {activeDropdown === item.name && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="ml-8 mt-2 space-y-1 overflow-hidden"
+                          >
+                            {item.dropdown?.map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                to={subItem.href}
+                                className="block px-4 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-200"
+                              >
+                                <div className="font-medium">{subItem.name}</div>
+                                {subItem.description && (
+                                  <div className="text-sm text-zion-slate-light/70 mt-1">
+                                    {subItem.description}
+                                  </div>
+                                )}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                </nav>
+
+                {/* Mobile User Actions */}
+                <div className="mt-6 pt-6 border-t border-zion-cyan/20">
+                  {user ? (
+                    <div className="space-y-2">
+                      <Link
+                        to="/dashboard"
+                        className="flex items-center space-x-3 px-4 py-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-200"
+                      >
+                        <User className="w-5 h-5" />
+                        <span>Dashboard</span>
+                      </Link>
+                      <Link
+                        to="/profile"
+                        className="flex items-center space-x-3 px-4 py-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-200"
+                      >
+                        <Settings className="w-5 h-5" />
+                        <span>Settings</span>
+                      </Link>
+                      <button
+                        onClick={logout}
+                        className="flex items-center space-x-3 px-4 py-3 text-zion-slate-light hover:text-red-400 hover:bg-red-400/10 rounded-lg transition-all duration-200 w-full text-left"
+                      >
+                        <LogOut className="w-5 h-5" />
+                        <span>Logout</span>
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="space-y-2">
+                      <Link
+                        to="/login"
+                        className="block px-4 py-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-200"
+                      >
+                        Login
+                      </Link>
+                      <Link
+                        to="/signup"
+                        className="block px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-center transition-all duration-200 hover:shadow-lg"
+                      >
+                        Get Started
+                      </Link>
+                    </div>
+                  )}
                 </div>
-              </form>
-
-              {/* Mobile Navigation Items */}
-              <nav className="space-y-2">
-                {navigationItems.map((item) => (
-                  <div key={item.name}>
-                    <button
-                      onClick={() => toggleDropdown(item.name)}
-                      className="w-full flex items-center justify-between px-4 py-3 text-left text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-xl transition-all duration-300"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <item.icon className="w-5 h-5" />
-                        <span className="font-medium">{item.name}</span>
-                      </div>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} />
-                    </button>
-
-                    {/* Mobile Dropdown */}
-                    <AnimatePresence>
-                      {activeDropdown === item.name && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.2 }}
-                          className="ml-8 mt-2 space-y-1 overflow-hidden"
-                        >
-                          {item.dropdown?.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              to={subItem.href}
-                              className="block px-4 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-200"
-                            >
-                              <div className="font-medium">{subItem.name}</div>
-                              {subItem.description && (
-                                <div className="text-sm text-zion-slate-light/70 mt-1">
-                                  {subItem.description}
-                                </div>
-                              )}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ))}
-              </nav>
-
-              {/* Mobile User Actions */}
-              <div className="mt-6 pt-6 border-t border-zion-cyan/20">
-                {user ? (
-                  <div className="space-y-2">
-                    <Link
-                      to="/dashboard"
-                      className="flex items-center space-x-3 px-4 py-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-200"
-                    >
-                      <User className="w-5 h-5" />
-                      <span>Dashboard</span>
-                    </Link>
-                    <Link
-                      to="/profile"
-                      className="flex items-center space-x-3 px-4 py-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-200"
-                    >
-                      <Settings className="w-5 h-5" />
-                      <span>Settings</span>
-                    </Link>
-                    <button
-                      onClick={logout}
-                      className="flex items-center space-x-3 px-4 py-3 text-zion-slate-light hover:text-red-400 hover:bg-red-400/10 rounded-lg transition-all duration-200 w-full text-left"
-                    >
-                      <LogOut className="w-5 h-5" />
-                      <span>Logout</span>
-                    </button>
-                  </div>
-                ) : (
-                  <div className="space-y-2">
-                    <Link
-                      to="/login"
-                      className="block px-4 py-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-200"
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      to="/signup"
-                      className="block px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-center transition-all duration-200 hover:shadow-lg"
-                    >
-                      Get Started
-                    </Link>
-                  </div>
-                )}
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
     </>
   );
 }
-
-// Missing icon component
-const ShoppingCart = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m6 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-  </svg>
-);
