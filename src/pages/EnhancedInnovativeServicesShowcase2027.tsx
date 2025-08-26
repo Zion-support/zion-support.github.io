@@ -37,7 +37,7 @@ import {
   Play,
   Eye,
   X,
-  Flask
+  Beaker
 } from 'lucide-react';
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from '../data/enhancedInnovativeServices2027';
 
