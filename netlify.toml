@@ -221,6 +221,7 @@
   status = 301
 
 [[redirects]]
+<<<<<<< HEAD
   from = "/quantum-identity-verification"
   to = "/quantum-secure-communication"
   status = 301
@@ -231,11 +232,14 @@
   status = 301
 
 [[redirects]]
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7466
   from = "/ai-customer-success-automation"
   to = "/ai-customer-success-platform"
   status = 301
 
 [[redirects]]
+<<<<<<< HEAD
   from = "/quantum-networking"
   to = "/quantum-services"
   status = 301
@@ -290,3 +294,23 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+  from = "/ai-content-marketing-automation"
+  to = "/intelligent-content-automation-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/browser-automation-cloud/"
+  to = "/browser-automation-cloud"
+  status = 301
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7466
