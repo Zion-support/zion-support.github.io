@@ -1,4 +1,6 @@
 import { UnifiedService } from '@/types/unifiedServiceTypes';
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2025 } from './comprehensiveInnovativeServices2025';
+import { SPECIALIZED_INDUSTRY_SERVICES_2025 } from './specializedIndustryServices2025';
 
 export const ZION_SERVICES: UnifiedService[] = [
 	{
@@ -81,7 +83,12 @@ export const ZION_SERVICES: UnifiedService[] = [
 		description: 'Embed a secure, brandable chat widget that answers questions from your docs, PDFs, and knowledge base.',
 		category: 'Micro SaaS',
 		price: { monthly: 79, yearly: 790, currency: 'USD', pricingModel: 'subscription' },
-		features: ['RAG over PDFs/Notion/Confluence', 'Citations and sources', 'Access control', 'Analytics dashboard'],
+		features: [
+			'RAG over PDFs/Notion/Confluence',
+			'Citations and sources',
+			'Access control',
+			'Analytics dashboard'
+		],
 		benefits: ['Deflect support tickets', 'Faster onboarding', '24/7 self-serve answers'],
 		useCases: ['Customer support', 'HR/IT helpdesk', 'Internal wikis'],
 		tags: ['RAG', 'LLM', 'Support Automation'],
@@ -101,7 +108,12 @@ export const ZION_SERVICES: UnifiedService[] = [
 		description: 'Research, plan, and generate SEO briefs and drafts with SERP analysis and internal linking suggestions.',
 		category: 'Micro SaaS',
 		price: { monthly: 59, yearly: 590, currency: 'USD', pricingModel: 'subscription' },
-		features: ['Keyword clustering', 'SERP gap analysis', 'Outline + draft generation', 'Programmatic SEO tools'],
+		features: [
+			'Keyword clustering',
+			'SERP gap analysis',
+			'Outline + draft generation',
+			'Programmatic SEO tools'
+		],
 		benefits: ['Rank faster', 'Scale content ops', 'Consistent quality'],
 		useCases: ['Publishers', 'E-commerce', 'Agencies'],
 		tags: ['SEO', 'NLP', 'Growth'],
@@ -255,6 +267,13 @@ export const ZION_SERVICES: UnifiedService[] = [
 			address: '364 E Main St STE 1008 Middletown DE 19709'
 		}
 	}
+];
+
+// Combine all services for comprehensive catalog
+export const ALL_ZION_SERVICES: UnifiedService[] = [
+	...ZION_SERVICES,
+	...COMPREHENSIVE_INNOVATIVE_SERVICES_2025,
+	...SPECIALIZED_INDUSTRY_SERVICES_2025
 ];
 
 export default ZION_SERVICES;
