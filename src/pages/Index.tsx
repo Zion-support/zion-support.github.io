@@ -18,6 +18,7 @@ import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
 import { SocialShareSection } from "@/components/SocialShareSection";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
+import { EnhancedHeader } from "@/components/EnhancedHeader";
 import { 
   ArrowRight, 
   Users, 
@@ -27,7 +28,8 @@ import {
   MessageSquare, 
   Sparkles,
   BarChart3,
-  Smartphone
+  Smartphone,
+  Brain
 } from "lucide-react";
 
 export default function Index() {
@@ -57,8 +59,14 @@ export default function Index() {
     {
       title: "Comprehensive Services",
       description: "Explore our complete portfolio of innovative technology solutions and micro SAAS services",
-      icon: <Star className="h-6 w-6 text-zion-purple" />,
+      icon: <Sparkles className="h-6 w-6 text-zion-purple" />,
       link: "/comprehensive-services"
+    },
+    {
+      title: "Revolutionary Services 2037",
+      description: "Experience the future with AI consciousness, quantum computing, and revolutionary micro SAAS solutions",
+      icon: <Brain className="h-6 w-6 text-zion-cyan" />,
+      link: "/revolutionary-services-2037"
     },
     {
       title: t("home.tool_equipment"),
@@ -88,60 +96,66 @@ export default function Index() {
         keywords={t("home.seo_keywords")}
         canonical="https://ziontechgroup.com/"
       />
-              <HeroSection />
       
-      {/* Quick Access Tools Section */}
-      <section className="py-16 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">
-              {t("home.explore_tools")}
-            </h2>
-            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">
-              {t("home.tools_description")}
-            </p>
+      <EnhancedHeader />
+      
+      {/* Add top padding for fixed header */}
+      <div className="pt-20">
+        <HeroSection />
+        
+        {/* Quick Access Tools Section */}
+        <section className="py-16 bg-zion-blue-dark">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">
+                {t("home.explore_tools")}
+              </h2>
+              <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">
+                {t("home.tools_description")}
+              </p>
+            </div>
+            
+            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
+              {toolsFeatures.map((feature, index) => (
+                <Link 
+                  key={index} 
+                  to={feature.link} 
+                  className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
+                >
+                  <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                  <p className="text-zion-slate-light mb-4">{feature.description}</p>
+                  <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
+                    <span>{t("general.explore")}</span>
+                    <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
-          
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
-            {toolsFeatures.map((feature, index) => (
-              <Link 
-                key={index} 
-                to={feature.link} 
-                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
-              >
-                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-zion-slate-light mb-4">{feature.description}</p>
-                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
-                  <span>{t("general.explore")}</span>
-                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      <CategoriesSection />
-      <BenefitsSection />
-      
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-      
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <TestimonialCarousel />
-      <TrustedBySection />
-      <BlogSection />
-      
-      {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
-      
-      <WaitlistSection />
-      <FloatingCTA />
-      <Footer />
+        </section>
+        
+        <CategoriesSection />
+        <BenefitsSection />
+        
+        {/* Add the comprehensive features guide section */}
+        <FeaturesGuideSection />
+        
+        <HowItWorksSection />
+        <FeaturedListingsSection />
+        <TestimonialCarousel />
+        <TrustedBySection />
+        <BlogSection />
+        
+        {/* Add social share section to encourage users to spread the word */}
+        <SocialShareSection />
+        
+        <WaitlistSection />
+        <FloatingCTA />
+        <Footer />
+      </div>
     </div>
   );
 }
