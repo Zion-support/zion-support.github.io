@@ -1,15 +1,11 @@
 [build]
-  # Use `npm ci` for deterministic installs, Next.js plugin expects .next
   command = "npm ci && npm run build"
-  publish = ".next"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max_old_space_size=4096"
+  NODE_OPTIONS = "--max_old_space_size=6144"
   NPM_FLAGS = "--prefer-offline"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
 
 # Optional: a few redirects that were present
 [[redirects]]

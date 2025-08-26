@@ -17,7 +17,7 @@ export default defineConfig({
     minify: 'terser',
     sourcemap: false,
     rollupOptions: {
-      input: path.resolve(__dirname, 'public/index.html'),
+      input: path.resolve(__dirname, 'index.html'),
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
@@ -98,9 +98,5 @@ export default defineConfig({
   preview: { port: 4173, host: true, open: true },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
   },
-  esbuild: { drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [] },
-  worker: { format: 'es' },
-  envPrefix: ['VITE_', 'ZION_'],
 })
