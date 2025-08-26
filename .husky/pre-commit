@@ -1,31 +1,4 @@
 #!/usr/bin/env sh
+. "$(dirname "$0")/_/husky.sh"
 
-echo "🔍 Running pre-commit checks..."
-
-# Run type checking
-echo "🔍 Running TypeScript type check..."
-npm run type-check || {
-  echo "❌ TypeScript type check failed. Please fix the issues before committing."
-  exit 1
-}
-
-# Run build check
-echo "🏗️ Running build check..."
-npm run build || {
-  echo "❌ Build failed. Please fix the issues before committing."
-  exit 1
-}
-
-# Run lint-staged on staged files
-echo "  🧹 Running lint-staged on staged files..."
-npx lint-staged
-
-if [ $? -ne 0 ]; then
-  echo "❌ Lint-staged checks failed!"
-  echo "   Please fix the lint errors in staged files."
-  echo "   Run 'npx lint-staged' locally to see details."
-  exit 1
-fi
-
-echo "✅ All pre-commit checks passed"
-echo "   🚀 Ready to commit!"
+npm install --package-lock-only
