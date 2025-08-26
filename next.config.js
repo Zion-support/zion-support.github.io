@@ -1041,10 +1041,11 @@ const nextConfig = {
     }
 
     // Ensure consistent optimization settings in all environments
-    config.optimization = {
-      ...config.optimization,
-      // usedExports removed to prevent cacheUnaffected conflicts
-    };
+  config.optimization = {
+    ...config.optimization,
+    // Explicitly disable usedExports to avoid cacheUnaffected conflict
+    usedExports: false,
+  };
 
     // Remove cacheUnaffected in case any plugin re-added it
     if (config.cache && config.cache.cacheUnaffected !== undefined) {
