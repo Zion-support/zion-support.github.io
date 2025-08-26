@@ -95,144 +95,111 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Preview */}
-      <section className="py-16 bg-zion-slate-dark">
+      {/* Services Preview Section */}
+      <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
-          <motion.div
+          <motion.div 
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Our Core Services
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Services</span>
             </h2>
-            <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Comprehensive technology solutions designed to drive innovation and growth in your organization
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to transform your business
             </p>
           </motion.div>
-          
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            <motion.div 
-              className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group"
-              variants={fadeInUp}
-              whileHover={{ y: -5, scale: 1.02 }}
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">AI & Analytics</h3>
-              <p className="text-zion-slate-light mb-4">
-                Advanced AI-powered business intelligence and analytics solutions that transform data into actionable insights.
-              </p>
-              <ul className="text-sm text-zion-slate-light space-y-1">
-                <li>• Machine Learning Models</li>
-                <li>• Predictive Analytics</li>
-                <li>• Natural Language Processing</li>
-              </ul>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group"
-              variants={fadeInUp}
-              whileHover={{ y: -5, scale: 1.02 }}
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Cybersecurity</h3>
-              <p className="text-zion-slate-light mb-4">
-                Enterprise-grade security and threat detection systems to protect your digital assets.
-              </p>
-              <ul className="text-sm text-zion-slate-light space-y-1">
-                <li>• Threat Detection & Response</li>
-                <li>• Security Auditing</li>
-                <li>• Compliance Management</li>
-              </ul>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group"
-              variants={fadeInUp}
-              whileHover={{ y: -5, scale: 1.02 }}
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Cloud className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Cloud Solutions</h3>
-              <p className="text-zion-slate-light mb-4">
-                Scalable cloud infrastructure and DevOps services for modern applications.
-              </p>
-              <ul className="text-sm text-zion-slate-light space-y-1">
-                <li>• Infrastructure as Code</li>
-                <li>• CI/CD Pipelines</li>
-                <li>• Cloud Migration</li>
-              </ul>
-            </motion.div>
-          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Brain,
+                title: "AI & Machine Learning",
+                description: "Cutting-edge artificial intelligence solutions for business automation and insights",
+                color: "from-purple-500 to-pink-500"
+              },
+              {
+                icon: Shield,
+                title: "Cybersecurity",
+                description: "Advanced security solutions with zero-trust architecture and threat protection",
+                color: "from-red-500 to-orange-500"
+              },
+              {
+                icon: Cloud,
+                title: "Cloud & Infrastructure",
+                description: "Scalable cloud solutions and DevOps automation for modern businesses",
+                color: "from-blue-500 to-cyan-500"
+              }
+            ].map((service, index) => (
+              <motion.div
+                key={service.title}
+                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6`}>
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-zion-slate-light leading-relaxed">{service.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-blue">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div>
-              <div className="text-3xl font-bold text-zion-cyan mb-2">500+</div>
-              <div className="text-zion-slate-light">Happy Clients</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-zion-purple mb-2">1000+</div>
-              <div className="text-zion-slate-light">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-zion-cyan mb-2">99.9%</div>
-              <div className="text-zion-slate-light">Uptime SLA</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-zion-purple mb-2">24/7</div>
-              <div className="text-zion-slate-light">Support</div>
-            </div>
-          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            {[
+              { value: "500+", label: "Global Clients" },
+              { value: "25+", label: "Countries" },
+              { value: "1000+", label: "Projects" },
+              { value: "99.9%", label: "Uptime" }
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-lg text-cyan-100">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
+      {/* Contact CTA Section */}
+      <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Transform</span> Your Business?
             </h2>
-            <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-              Join hundreds of companies that have already revolutionized their operations with our cutting-edge technology solutions.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Let's discuss how our innovative solutions can drive your success
             </p>
             <Link to="/contact">
               <motion.button 
-                className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform flex items-center gap-2 mx-auto"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:scale-105 transition-transform"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Contact Us Today
-                <Zap className="w-5 h-5" />
+                Get Started Today
               </motion.button>
             </Link>
           </motion.div>
