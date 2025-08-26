@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousCreativeDirector: React.FC = () => {
-  return (
-    <>
+const AIAutonomousCreativeDirector = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Creative Director | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous creative director that generates innovative ideas, designs, and creative content across all media types with human-like creativity and strategic thinking." />
-        <meta name="keywords" content="AI creative director, autonomous creativity, AI design, creative automation, AI marketing, creative strategy" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-creative-director" />
+        <meta name="description" content="Revolutionary AI autonomous creative director that generates innovative ideas, designs, and creative content across all media types with human-like creativity and strategic thinking."/>
+        <meta name="keywords" content="AI creative director, autonomous creativity, AI design, creative automation, AI marketing, creative strategy"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-creative-director"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-pink-900">
@@ -154,8 +152,6 @@ const AIAutonomousCreativeDirector: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousCreativeDirector;

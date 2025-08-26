@@ -1,11 +1,7 @@
-=======
-=======
 import React from 'react';
 import EnhancedComprehensiveServicesShowcase from '../components/EnhancedComprehensiveServicesShowcase';
-
-const InnovativeServicesShowcase2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+const InnovativeServicesShowcase2025 = () => {
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -41,254 +37,19 @@ const InnovativeServicesShowcase2025: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#services"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-            >
+            <a href="#services" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
               Explore Services
             </a>
-            <a
-              href="/comprehensive-pricing-2025"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
-            >
+            <a href="/comprehensive-pricing-2025" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300">
               View Pricing
             </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-            >
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
               Get Custom Quote
             </a>
-=======
-=======
           </div>
         </div>
       </section>
 
-========
-      {/* Category Filter */}
-      <section className="py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4">
-            {serviceCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
-              >
-                <category.icon className="w-5 h-5" />
-                {category.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"
-                onClick={() => setSelectedService(service.id)}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <span className="text-4xl">{service.icon}</span>
-                  {service.popular && (
-                    <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-xs px-2 py-1 rounded-full font-medium">
-                      Popular
-                    </span>
-                  )}
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
-                
-                <div className="mb-4">
-                  <span className="text-2xl font-bold text-white">{service.price}</span>
-                  <span className="text-gray-400">{service.period}</span>
-                </div>
-                
-                <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
-                
-                <div className="space-y-2 mb-4">
-                  {service.features.slice(0, 3).map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-400 bg-white/10 px-2 py-1 rounded">
-                    {service.category.replace('-', ' ').toUpperCase()}
-                  </span>
-                  <button className="text-blue-400 hover:text-blue-300 text-sm font-medium">
-                    Learn More →
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Service Detail Modal */}
-      {selectedServiceData && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-          >
-            <div className="p-8">
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center gap-4">
-                  <span className="text-6xl">{selectedServiceData.icon}</span>
-                  <div>
-                    <h2 className="text-3xl font-bold text-white">{selectedServiceData.name}</h2>
-                    <p className="text-xl text-gray-300">{selectedServiceData.tagline}</p>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="text-gray-400 hover:text-white text-2xl"
-                >
-                  ×
-                </button>
-              </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Service Overview</h3>
-                  <p className="text-gray-300 mb-6">{selectedServiceData.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <div className="space-y-2">
-                      {selectedServiceData.features.map((feature, index) => (
-                        <div key={index} className="flex items-center gap-2 text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Target Audience</h4>
-                    <p className="text-gray-300">{selectedServiceData.targetAudience}</p>
-                  </div>
-                </div>
-
-                <div>
-                  <div className="bg-white/10 rounded-xl p-6 mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-4">Pricing & Market</h4>
-                    <div className="space-y-3">
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Price:</span>
-                        <span className="text-white font-semibold">{selectedServiceData.price}{selectedServiceData.period}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">ROI:</span>
-                        <span className="text-green-400 font-semibold">{selectedServiceData.roi}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Market Size:</span>
-                        <span className="text-white font-semibold">{selectedServiceData.marketSize}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-400">Growth Rate:</span>
-                        <span className="text-blue-400 font-semibold">{selectedServiceData.growthRate}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white/10 rounded-xl p-6 mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-4">Competitive Analysis</h4>
-                    <p className="text-gray-300 mb-3">{selectedServiceData.marketPosition}</p>
-                    <div>
-                      <span className="text-gray-400 text-sm">Competitors:</span>
-                      <div className="flex flex-wrap gap-2 mt-2">
-                        {selectedServiceData.competitors.map((competitor, index) => (
-                          <span key={index} className="bg-red-500/20 text-red-300 text-xs px-2 py-1 rounded">
-                            {competitor}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <a
-                      href={selectedServiceData.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Visit Service
-                    </a>
-                    <a
-                      href="mailto:kleber@ziontechgroup.com?subject=Inquiry about service"
-                      className="flex-1 bg-white/10 text-white py-3 px-6 rounded-xl font-semibold text-center hover:bg-white/20 transition-all duration-300"
-                    >
-                      Contact Us
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      )}
-
-      {/* Call to Action */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Our innovative services are designed to give you a competitive edge in today's rapidly evolving technology landscape.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=Service consultation request"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Mail className="w-5 h-5" />
-                Get Free Consultation
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="bg-white/10 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Call Now
-              </a>
-            </div>
-          </motion.div>
-=======
-=======
-=======
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -508,25 +269,15 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:kleber@ziontechgroup.com?subject=Innovative Services 2025 Inquiry"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-            >
+            <a href="mailto:kleber@ziontechgroup.com?subject=Innovative Services 2025 Inquiry" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
               Get Custom Quote
             </a>
-            <a
-              href="tel:+13024640950"
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-            >
+            <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
               Schedule Consultation
             </a>
           </div>
-=======
-=======
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default InnovativeServicesShowcase2025;

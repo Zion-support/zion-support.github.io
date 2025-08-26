@@ -1,34 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Rocket, Zap, Users, Globe, Shield, TrendingUp, ArrowRight } from 'lucide-react';
-
-const MicroSAAS: React.FC = () => {
-  const microSaasServices = [
-    {
-      title: "AI Content Generator",
-      description: "Automated content creation platform for marketing, social media, and business communications.",
-      features: ["Content Templates", "AI Writing", "Multi-language Support", "SEO Optimization"]
-    },
-    {
-      title: "Accessibility Auditor",
-      description: "Comprehensive accessibility testing and compliance tools for web applications.",
-      features: ["WCAG Compliance", "Automated Testing", "Detailed Reports", "Remediation Guidance"]
-    },
-    {
-      title: "Affiliate Attribution Hub",
-      description: "Advanced tracking and analytics platform for affiliate marketing campaigns.",
-      features: ["Real-time Tracking", "Performance Analytics", "Commission Management", "Fraud Detection"]
-    },
-    {
-      title: "SOC2 Compliance Automation",
-      description: "Streamlined SOC2 compliance process with automated documentation and monitoring.",
-      features: ["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+const MicroSAAS = () => {
+    const microSaasServices = [
+        {
+            title: "AI Content Generator",
+            description: "Automated content creation platform for marketing, social media, and business communications.",
+            features: ["Content Templates", "AI Writing", "Multi-language Support", "SEO Optimization"]
+        },
+        {
+            title: "Accessibility Auditor",
+            description: "Comprehensive accessibility testing and compliance tools for web applications.",
+            features: ["WCAG Compliance", "Automated Testing", "Detailed Reports", "Remediation Guidance"]
+        },
+        {
+            title: "Affiliate Attribution Hub",
+            description: "Advanced tracking and analytics platform for affiliate marketing campaigns.",
+            features: ["Real-time Tracking", "Performance Analytics", "Commission Management", "Fraud Detection"]
+        },
+        {
+            title: "SOC2 Compliance Automation",
+            description: "Streamlined SOC2 compliance process with automated documentation and monitoring.",
+            features: ["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"]
+        }
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -45,36 +40,29 @@ const MicroSAAS: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {microSaasServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+            {microSaasServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 
                 <div>
                   <h4 className="font-semibold text-blue-400 mb-2">Key Features</h4>
                   <ul className="space-y-1">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-300 flex items-center">
+                    {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
                         {feature}
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
                 </div>
                 
                 <div className="mt-4">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
-                  >
+                  <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
                     Learn More
                     <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
                     </svg>
                   </Link>
                 </div>
-              </div>
-            ))}
+              </div>))}
           </div>
           
           <div className="text-center">
@@ -84,18 +72,13 @@ const MicroSAAS: React.FC = () => {
                 Can't find exactly what you need? We can develop custom micro-SAAS solutions 
                 tailored to your specific business requirements.
               </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
+              <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                 Discuss Custom Development
               </Link>
             </div>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default MicroSAAS;

@@ -1,132 +1,115 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Cloud, 
-  Server, 
-  Database, 
-  Shield, 
-  Zap, 
-  GitBranch,
-  ArrowRight,
-  CheckCircle,
-  Monitor,
-  Lock
-} from 'lucide-react';
-
-const CloudDevOpsServices: React.FC = () => {
-  const cloudServices = [
-    {
-      title: "Cloud Migration & Strategy",
-      description: "Seamless migration to cloud platforms with strategic planning and execution.",
-      icon: Cloud,
-      features: [
-        "Multi-cloud Strategy",
-        "Legacy System Migration",
-        "Cost Optimization",
-        "Performance Optimization",
-        "Security Assessment"
-      ]
-    },
-    {
-      title: "DevOps Implementation",
-      description: "Streamline development and operations with modern DevOps practices and tools.",
-      icon: GitBranch,
-      features: [
-        "CI/CD Pipeline Setup",
-        "Infrastructure as Code",
-        "Automated Testing",
-        "Deployment Automation",
-        "Monitoring & Alerting"
-      ]
-    },
-    {
-      title: "Container Orchestration",
-      description: "Manage and scale containerized applications with Kubernetes and Docker.",
-      icon: Server,
-      features: [
-        "Kubernetes Deployment",
-        "Docker Containerization",
-        "Service Mesh",
-        "Auto-scaling",
-        "Load Balancing"
-      ]
-    },
-    {
-      title: "Database Management",
-      description: "Optimize and manage databases in cloud environments for performance and reliability.",
-      icon: Database,
-      features: [
-        "Database Migration",
-        "Performance Tuning",
-        "Backup & Recovery",
-        "High Availability",
-        "Data Security"
-      ]
-    },
-    {
-      title: "Security & Compliance",
-      description: "Ensure cloud security and compliance with industry standards and best practices.",
-      icon: Shield,
-      features: [
-        "Identity & Access Management",
-        "Network Security",
-        "Data Encryption",
-        "Compliance Auditing",
-        "Threat Detection"
-      ]
-    },
-    {
-      title: "Monitoring & Observability",
-      description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",
-      icon: Monitor,
-      features: [
-        "Real-time Monitoring",
-        "Log Management",
-        "Performance Metrics",
-        "Alert Management",
-        "Troubleshooting Tools"
-      ]
-    }
-  ];
-
-  const benefits = [
-    "Faster time to market with automated deployments",
-    "Improved reliability and uptime",
-    "Cost optimization through resource management",
-    "Enhanced security and compliance",
-    "Scalable infrastructure that grows with your business",
-    "Better collaboration between development and operations teams"
-  ];
-
-  const technologies = [
-    "AWS, Azure, GCP",
-    "Kubernetes & Docker",
-    "Terraform & Ansible",
-    "Jenkins & GitLab CI",
-    "Prometheus & Grafana",
-    "ELK Stack"
-  ];
-
-  const cloudPlatforms = [
-    {
-      name: "Amazon Web Services",
-      description: "Leading cloud platform with comprehensive services",
-      features: ["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]
-    },
-    {
-      name: "Microsoft Azure",
-      description: "Enterprise-grade cloud solutions for Windows environments",
-      features: ["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]
-    },
-    {
-      name: "Google Cloud Platform",
-      description: "Innovative cloud services with AI and ML capabilities",
-      features: ["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+import { Cloud, Server, Database, Shield, GitBranch, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
+const CloudDevOpsServices = () => {
+    const cloudServices = [
+        {
+            title: "Cloud Migration & Strategy",
+            description: "Seamless migration to cloud platforms with strategic planning and execution.",
+            icon: Cloud,
+            features: [
+                "Multi-cloud Strategy",
+                "Legacy System Migration",
+                "Cost Optimization",
+                "Performance Optimization",
+                "Security Assessment"
+            ]
+        },
+        {
+            title: "DevOps Implementation",
+            description: "Streamline development and operations with modern DevOps practices and tools.",
+            icon: GitBranch,
+            features: [
+                "CI/CD Pipeline Setup",
+                "Infrastructure as Code",
+                "Automated Testing",
+                "Deployment Automation",
+                "Monitoring & Alerting"
+            ]
+        },
+        {
+            title: "Container Orchestration",
+            description: "Manage and scale containerized applications with Kubernetes and Docker.",
+            icon: Server,
+            features: [
+                "Kubernetes Deployment",
+                "Docker Containerization",
+                "Service Mesh",
+                "Auto-scaling",
+                "Load Balancing"
+            ]
+        },
+        {
+            title: "Database Management",
+            description: "Optimize and manage databases in cloud environments for performance and reliability.",
+            icon: Database,
+            features: [
+                "Database Migration",
+                "Performance Tuning",
+                "Backup & Recovery",
+                "High Availability",
+                "Data Security"
+            ]
+        },
+        {
+            title: "Security & Compliance",
+            description: "Ensure cloud security and compliance with industry standards and best practices.",
+            icon: Shield,
+            features: [
+                "Identity & Access Management",
+                "Network Security",
+                "Data Encryption",
+                "Compliance Auditing",
+                "Threat Detection"
+            ]
+        },
+        {
+            title: "Monitoring & Observability",
+            description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",
+            icon: Monitor,
+            features: [
+                "Real-time Monitoring",
+                "Log Management",
+                "Performance Metrics",
+                "Alert Management",
+                "Troubleshooting Tools"
+            ]
+        }
+    ];
+    const benefits = [
+        "Faster time to market with automated deployments",
+        "Improved reliability and uptime",
+        "Cost optimization through resource management",
+        "Enhanced security and compliance",
+        "Scalable infrastructure that grows with your business",
+        "Better collaboration between development and operations teams"
+    ];
+    const technologies = [
+        "AWS, Azure, GCP",
+        "Kubernetes & Docker",
+        "Terraform & Ansible",
+        "Jenkins & GitLab CI",
+        "Prometheus & Grafana",
+        "ELK Stack"
+    ];
+    const cloudPlatforms = [
+        {
+            name: "Amazon Web Services",
+            description: "Leading cloud platform with comprehensive services",
+            features: ["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]
+        },
+        {
+            name: "Microsoft Azure",
+            description: "Enterprise-grade cloud solutions for Windows environments",
+            features: ["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]
+        },
+        {
+            name: "Google Cloud Platform",
+            description: "Innovative cloud services with AI and ML capabilities",
+            features: ["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]
+        }
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -139,16 +122,10 @@ const CloudDevOpsServices: React.FC = () => {
             and DevOps practices that drive innovation and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
+            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </Link>
-            <Link
-              to="/request-quote"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
-            >
+            <Link to="/request-quote" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300">
               Request Quote
             </Link>
           </div>
@@ -169,10 +146,9 @@ const CloudDevOpsServices: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cloudServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
+            {cloudServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+                  <service.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {service.title}
@@ -181,22 +157,16 @@ const CloudDevOpsServices: React.FC = () => {
                   {service.description}
                 </p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
                       {feature}
-                    </li>
-                  ))}
+                    </li>))}
                 </ul>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200"
-                >
+                <Link to="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200">
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"/>
                 </Link>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -215,8 +185,7 @@ const CloudDevOpsServices: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {cloudPlatforms.map((platform, index) => (
-              <div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+            {cloudPlatforms.map((platform, index) => (<div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {platform.name}
                 </h3>
@@ -224,15 +193,12 @@ const CloudDevOpsServices: React.FC = () => {
                   {platform.description}
                 </p>
                 <ul className="space-y-2">
-                  {platform.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                  {platform.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0"/>
                       {feature}
-                    </li>
-                  ))}
+                    </li>))}
                 </ul>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -250,14 +216,12 @@ const CloudDevOpsServices: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
+            {benefits.map((benefit, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white" />
+                  <CheckCircle className="w-8 h-8 text-white"/>
                 </div>
                 <p className="text-lg text-slate-700">{benefit}</p>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -275,11 +239,9 @@ const CloudDevOpsServices: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (
-              <div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
+            {technologies.map((tech, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
                 <p className="text-slate-700 font-semibold">{tech}</p>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -295,23 +257,15 @@ const CloudDevOpsServices: React.FC = () => {
             organization's technology landscape.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
+            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Start Your Transformation
             </Link>
-            <Link
-              to="/case-studies"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
-            >
+            <Link to="/case-studies" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300">
               View Case Studies
             </Link>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default CloudDevOpsServices;

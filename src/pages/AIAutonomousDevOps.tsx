@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousDevOps: React.FC = () => {
-  return (
-    <>
+const AIAutonomousDevOps = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous DevOps Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous DevOps platform that automates software development, testing, deployment, and operations with intelligent automation and continuous learning." />
-        <meta name="keywords" content="AI DevOps, autonomous DevOps, AI automation, continuous integration, continuous deployment, AI operations" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-devops" />
+        <meta name="description" content="Revolutionary AI autonomous DevOps platform that automates software development, testing, deployment, and operations with intelligent automation and continuous learning."/>
+        <meta name="keywords" content="AI DevOps, autonomous DevOps, AI automation, continuous integration, continuous deployment, AI operations"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-devops"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
@@ -166,8 +164,6 @@ const AIAutonomousDevOps: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousDevOps;

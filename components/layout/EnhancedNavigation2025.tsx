@@ -8,9 +8,7 @@ import {
   Target, Microscope, Atom, Database,
   Lock, Cloud, BarChart3, Settings,
   Eye, Code, Palette, Layers,
-  Network, Server, ShieldCheck, ZapIcon,
-  GlobeIcon, StarIcon, TrendingUpIcon, UsersIcon,
-  CheckCircleIcon, ArrowRightIcon, CpuIcon,
+  Network, Server, ShieldCheck,
   DollarSign, Phone, ArrowRight, Mail, MapPin, Dna, BookOpen, Building
 } from 'lucide-react';
 
@@ -22,14 +20,8 @@ interface NavigationItem {
   children?: NavigationItem[];
   badge?: string;
   title?: string;
+  submenu?: NavigationItem[];
 }
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
 
 const navigationItems: NavigationItem[] = [
   {
@@ -38,9 +30,13 @@ const navigationItems: NavigationItem[] = [
     icon: <Globe className="w-5 h-5" />,
     description: 'Complete portfolio of all technology services',
     badge: 'Showcase',
-    color: 'from-cyan-500 to-blue-600',
-    isNew: true,
     children: [
+      { name: 'View All Services', href: '/innovative-micro-saas-showcase', description: 'Complete services portfolio' },
+      { name: 'Service Categories', href: '/innovative-micro-saas-showcase#categories', description: 'Browse by category' },
+      { name: 'Pricing Comparison', href: '/pricing', description: 'Compare service costs' },
+      { name: 'Service Search', href: '/innovative-micro-saas-showcase#search', description: 'Find specific services' }
+    ],
+    submenu: [
       { name: 'View All Services', href: '/innovative-micro-saas-showcase', description: 'Complete services portfolio' },
       { name: 'Service Categories', href: '/innovative-micro-saas-showcase#categories', description: 'Browse by category' },
       { name: 'Pricing Comparison', href: '/pricing', description: 'Compare service costs' },
@@ -53,8 +49,6 @@ const navigationItems: NavigationItem[] = [
     icon: <Brain className="w-5 h-5" />,
     description: 'Revolutionary AI automation and autonomous business processing',
     badge: 'New',
-    color: 'from-violet-500 to-purple-600',
-    isHot: true,
     children: [
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution', description: 'Emotional intelligence and self-awareness' },
       { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion', description: 'Quantum-AI hybrid computing' },
@@ -63,26 +57,13 @@ const navigationItems: NavigationItem[] = [
       { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
       { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized AI learning' },
       { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Medical AI solutions' },
-      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' },
-      { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' },
-      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Human-AI emotional collaboration' },
-      { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' },
-      { name: 'AI Sales Automation', href: '/ai-sales-automation-platform', description: 'Intelligent sales process automation' },
-      { name: 'AI Customer Service', href: '/ai-customer-service-platform', description: '24/7 automated support' },
-      { name: 'AI HR & Recruitment', href: '/ai-hr-recruitment-platform', description: 'Intelligent talent acquisition' },
-      { name: 'AI Marketing Automation', href: '/ai-marketing-automation-platform', description: 'Campaign optimization' },
-      { name: 'AI Project Management', href: '/ai-project-management-suite', description: 'Intelligent project planning' },
-      { name: 'AI Financial Analytics', href: '/ai-financial-analytics-platform', description: 'Financial forecasting' },
-      { name: 'AI SEO Optimization', href: '/ai-seo-optimization-platform', description: 'Search engine optimization' },
-      { name: 'AI Video Editing', href: '/ai-video-editing-platform', description: 'Automated video editing' },
-      { name: 'AI Website Personalization', href: '/ai-website-personalization-platform', description: 'Dynamic content adaptation' },
-      { name: 'AI Multimodal Fusion', href: '/ai-multimodal-fusion-platform', description: 'Unified AI processing' },
-      { name: 'AI Quantum Hybrid', href: '/ai-quantum-hybrid-computing', description: 'Quantum-enhanced AI' },
-      { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion', description: 'Emotional support AI' },
-      { name: 'AI Phone Agent', href: '/ai-phone-agent', description: 'Voice AI for calls' },
-      { name: 'AI Meeting Transcriber', href: '/ai-meeting-transcriber-pro', description: 'Meeting transcription' },
-      { name: 'AI IoT Platform', href: '/ai-iot-platform', description: 'Intelligent IoT management' },
-      { name: 'AI Market Research', href: '/ai-market-research', description: 'Competitive intelligence' }
+      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' }
+    ],
+    submenu: [
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution', description: 'Emotional intelligence and self-awareness' },
+      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion', description: 'Quantum-AI hybrid computing' },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem', description: 'Self-managing AI systems' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance', description: 'Ethical AI frameworks' }
     ]
   },
   {
@@ -91,130 +72,65 @@ const navigationItems: NavigationItem[] = [
     icon: <Atom className="w-5 h-5" />,
     description: 'Breakthrough quantum computing and space technology solutions',
     badge: 'Revolutionary',
-    color: 'from-indigo-500 to-blue-600',
-    isPremium: true,
     children: [
       { name: 'Space Mining Platform', href: '/space-mining-platform', description: 'Asteroid mining and space resources' },
       { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing', description: 'Quantum-biological hybrid processing' },
       { name: 'Brain-Computer Interface', href: '/brain-computer-interface', description: 'Neural interface technology' },
       { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' },
-      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform', description: 'Self-driving AI systems' },
-      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform', description: 'Materials science acceleration' },
-      { name: 'Quantum Robotics', href: '/quantum-robotics-platform', description: 'Quantum-enhanced robotics' },
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security', description: 'Unbreakable encryption' },
-      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization', description: 'Route optimization' },
-      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform', description: 'Next-gen security' },
-      { name: 'Metaverse AI Development', href: '/metaverse-ai-development-platform', description: 'Intelligent virtual worlds' },
-      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', description: 'Quantum ML algorithms' },
-      { name: 'Quantum Neural Networks', href: '/quantum-neural-networks', description: 'Quantum AI processing' },
-      { name: 'Quantum Cryptography', href: '/quantum-cryptography-platform', description: 'Unbreakable security' },
-      { name: 'Quantum Sensors', href: '/quantum-sensors-platform', description: 'Ultra-sensitive detection' },
-      { name: 'Quantum Communication', href: '/quantum-communication-platform', description: 'Secure quantum networks' },
-      { name: 'Quantum Simulation', href: '/quantum-simulation-platform', description: 'Complex system modeling' },
-      { name: 'Quantum Optimization', href: '/quantum-optimization-platform', description: 'Advanced problem solving' },
-      { name: 'Quantum Chemistry', href: '/quantum-chemistry-platform', description: 'Molecular simulation' },
-      { name: 'Quantum Finance', href: '/quantum-finance-platform', description: 'Financial modeling' },
-      { name: 'Quantum Biology', href: '/quantum-biology-platform', description: 'Biological quantum effects' }
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery', description: 'Advanced material science' },
+      { name: 'Quantum Robotics', href: '/quantum-robotics', description: 'Quantum-enhanced robotics' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security', description: 'Unbreakable quantum encryption' },
+      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization', description: 'Quantum supply chain optimization' }
+    ],
+    submenu: [
+      { name: 'Space Mining Platform', href: '/space-mining-platform', description: 'Asteroid mining and space resources' },
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing', description: 'Quantum-biological hybrid processing' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface', description: 'Neural interface technology' },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' }
     ]
   },
   {
     name: '🏢 Enterprise IT',
     href: '/enterprise-it',
     icon: <Shield className="w-5 h-5" />,
-    description: 'Advanced enterprise infrastructure and security solutions',
-    badge: 'Enterprise',
-    color: 'from-blue-500 to-cyan-600',
+    description: 'Enterprise-grade IT infrastructure and security solutions',
     children: [
-      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Quantum-enhanced cloud computing' },
-      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Edge processing optimization' },
-      { name: 'Zero Trust Security Platform', href: '/zero-trust-security', description: 'Advanced cybersecurity' },
-      { name: 'Blockchain Enterprise Platform', href: '/blockchain-enterprise', description: 'Enterprise blockchain solutions' },
-      { name: 'AI-Powered DevOps', href: '/ai-powered-devops', description: 'Intelligent development automation' },
-      { name: 'Quantum Networking', href: '/quantum-networking', description: 'Quantum communication protocols' },
-      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations', description: 'Self-managing IT systems' },
-      { name: 'Quantum Data Center', href: '/quantum-data-center', description: 'Next-gen data centers' },
-      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity', description: 'Quantum security solutions' },
-      { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration', description: 'Seamless cloud transitions' },
-      { name: 'Quantum Security Platform', href: '/quantum-security-platform', description: 'Quantum encryption' },
-      { name: 'Quantum Compliance', href: '/quantum-compliance-platform', description: 'Regulatory compliance' },
-      { name: 'Quantum Monitoring', href: '/quantum-monitoring-platform', description: 'Advanced system monitoring' },
-      { name: 'Quantum Backup', href: '/quantum-backup-platform', description: 'Secure data backup' },
-      { name: 'Quantum Recovery', href: '/quantum-recovery-platform', description: 'Disaster recovery' },
-      { name: 'Quantum Analytics', href: '/quantum-analytics-platform', description: 'Advanced data analytics' },
-      { name: 'Quantum Integration', href: '/quantum-integration-platform', description: 'System integration' },
-      { name: 'Quantum Automation', href: '/quantum-automation-platform', description: 'Intelligent automation' },
-      { name: 'Quantum Governance', href: '/quantum-governance-platform', description: 'IT governance' },
-      { name: 'Quantum Risk Management', href: '/quantum-risk-management', description: 'Risk assessment' }
+      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Distributed edge computing' },
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture', description: 'Advanced security framework' },
+      { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops', description: 'Intelligent development operations' },
+      { name: 'Quantum Networking', href: '/quantum-networking', description: 'Quantum communication networks' },
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations', description: 'Self-managing IT infrastructure' },
+      { name: 'Quantum Data Center', href: '/quantum-data-center', description: 'Quantum-enhanced data centers' },
+      { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration', description: 'Quantum cloud transformation' }
+    ],
+    submenu: [
+      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Distributed edge computing' },
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture', description: 'Advanced security framework' },
+      { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops', description: 'Intelligent development operations' }
     ]
   },
   {
-    name: '💻 Micro SAAS',
+    name: '🚀 Micro SAAS',
     href: '/micro-saas',
     icon: <Rocket className="w-5 h-5" />,
-    description: 'Innovative business solutions',
+    description: 'AI-powered micro SAAS solutions for modern businesses',
     children: [
-      { name: 'AI Decision Engine', href: '/ai-powered-decision-engine', description: 'Intelligent decision making' },
-      { name: 'Content Automation', href: '/intelligent-content-automation-platform', description: 'AI content creation' },
-      { name: 'Smart CRM Suite', href: '/smart-crm-intelligence-suite', description: 'AI-enhanced CRM' },
-      { name: 'Financial Analytics', href: '/automated-financial-analytics-platform', description: 'AI financial analysis' },
-      { name: 'Project Management', href: '/intelligent-project-management-suite', description: 'AI project optimization' },
-      { name: 'Business Intelligence', href: '/ai-business-intelligence', description: 'Advanced analytics' },
-      { name: 'Marketing Automation', href: '/ai-marketing-automation', description: 'Intelligent marketing' },
-      { name: 'Customer Service AI', href: '/ai-customer-service', description: 'Automated support' },
-      { name: 'HR & Recruitment', href: '/ai-hr-recruitment', description: 'AI talent management' },
-      { name: 'Legal Contract Analysis', href: '/ai-legal-contract-analyzer', description: 'Legal document review' },
-      { name: 'Sales Automation', href: '/ai-sales-automation-platform', description: 'Sales process automation' },
-      { name: 'Customer Service Platform', href: '/ai-customer-service-platform', description: '24/7 support automation' },
-      { name: 'HR & Recruitment Platform', href: '/ai-hr-recruitment-platform', description: 'Talent acquisition' },
-      { name: 'Marketing Automation Platform', href: '/ai-marketing-automation-platform', description: 'Campaign optimization' },
-      { name: 'Project Management Suite', href: '/ai-project-management-suite', description: 'Project automation' },
-      { name: 'Financial Analytics Platform', href: '/ai-financial-analytics-platform', description: 'Financial insights' },
-      { name: 'SEO Optimization Platform', href: '/ai-seo-optimization-platform', description: 'Search optimization' },
-      { name: 'Video Editing Platform', href: '/ai-video-editing-platform', description: 'Automated editing' },
-      { name: 'Website Personalization', href: '/ai-website-personalization-platform', description: 'Dynamic content' },
-      { name: 'Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Data insights' },
-      { name: 'Content Generation Platform', href: '/ai-content-generation-platform', description: 'AI content creation' }
-    ]
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: <Target className="w-5 h-5" />,
-    description: 'Industry-specific solutions',
-    children: [
-      { name: 'Healthcare Solutions', href: '/healthcare-solutions', description: 'Medical technology solutions' },
-      { name: 'Financial Services', href: '/financial-solutions', description: 'Fintech and banking solutions' },
-      { name: 'Manufacturing', href: '/manufacturing-solutions', description: 'Industrial automation' },
-      { name: 'Retail & E-commerce', href: '/retail-solutions', description: 'Digital commerce solutions' },
-      { name: 'Education', href: '/education-solutions', description: 'EdTech solutions' },
-      { name: 'Government', href: '/government-solutions', description: 'Public sector technology' }
-    ]
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
-    description: 'Knowledge and tools',
-    children: [
-      { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
-      { name: 'API Reference', href: '/api-docs', description: 'Developer APIs' },
-      { name: 'Blog', href: '/blog', description: 'Industry insights' },
-      { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-      { name: 'Whitepapers', href: '/whitepapers', description: 'Research papers' },
-      { name: 'Webinars', href: '/webinars', description: 'Educational content' }
-    ]
-  },
-  {
-    name: 'Company',
-    href: '/about',
-    icon: <Building className="w-5 h-5" />,
-    description: 'About Zion Tech Group',
-    children: [
-      { name: 'About Us', href: '/about', description: 'Our mission and vision' },
-      { name: 'Careers', href: '/careers', description: 'Join our team' },
-      { name: 'News', href: '/news', description: 'Company updates' },
-      { name: 'Contact', href: '/contact', description: 'Get in touch' },
-      { name: 'Partners', href: '/partners', description: 'Partnership opportunities' }
+      { name: 'AI Content Factory Platform', href: '/ai-content-factory', description: 'Automated content creation' },
+      { name: 'CRM Intelligence & Automation', href: '/crm-intelligence-automation', description: 'Smart customer management' },
+      { name: 'AI Decision Engine Platform', href: '/ai-decision-engine', description: 'Intelligent decision support' },
+      { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform', description: 'AI-powered e-commerce' },
+      { name: 'AI HR & Talent Platform', href: '/ai-hr-talent-platform', description: 'Intelligent HR solutions' },
+      { name: 'Financial Analytics Platform', href: '/financial-analytics-platform', description: 'Advanced financial insights' },
+      { name: 'Supply Chain Intelligence', href: '/supply-chain-intelligence', description: 'Smart supply chain management' },
+      { name: 'Marketing Automation Platform', href: '/marketing-automation-platform', description: 'Automated marketing campaigns' }
+    ],
+    submenu: [
+      { name: 'AI Content Factory Platform', href: '/ai-content-factory', description: 'Automated content creation' },
+      { name: 'CRM Intelligence & Automation', href: '/crm-intelligence-automation', description: 'Smart customer management' },
+      { name: 'AI Decision Engine Platform', href: '/ai-decision-engine', description: 'Intelligent decision support' },
+      { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform', description: 'AI-powered e-commerce' }
     ]
   }
 ];
@@ -222,70 +138,54 @@ const navigationItems: NavigationItem[] = [
 export default function EnhancedNavigation2025() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
-  // Close dropdowns when clicking outside
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleDropdownToggle = (name: string, e: React.MouseEvent) => {
-    e.stopPropagation();
+  const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
   const closeAllDropdowns = () => {
     setActiveDropdown(null);
-    setIsOpen(false);
   };
 
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800/50' : 'bg-transparent'
-    }`}>
-      {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-900/80 to-purple-900/80 backdrop-blur-sm border-b border-cyan-500/20">
-        <div className="max-w-7xl mx-auto px-4 py-2">
-          <div className="flex items-center justify-between text-sm">
-            <div className="flex items-center gap-6 text-cyan-300">
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span>{contactInfo.mobile}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <span>{contactInfo.email}</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
-              <span className="text-yellow-400 font-semibold">Revolutionary Technology Solutions</span>
-            </div>
-          </div>
-        </div>
-      </div>
+  const closeMenu = () => {
+    setIsOpen(false);
+    setActiveSubmenu(null);
+  };
 
-      {/* Main Navigation */}
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group" onClick={closeAllDropdowns}>
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-7 h-7 text-white" />
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (activeDropdown && !(event.target as Element).closest('.dropdown-container')) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [activeDropdown]);
+
+  return (
+    <nav className="bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 sticky top-0 z-50">
+      {/* Top Bar */}
+      <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-b border-cyan-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-2">
+            <div className="flex items-center space-x-6 text-sm">
+              <div className="flex items-center space-x-2 text-cyan-400">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
               </div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <div className="flex items-center space-x-2 text-purple-400">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
             </div>
-            <div>
-              <div className="text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent">
-                Zion Tech Group
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-green-400 text-sm">Live Support Available</span>
               </div>
-              <div className="text-xs text-gray-400">Revolutionary Technology</div>
             </div>
           </div>
         </div>
@@ -312,7 +212,7 @@ export default function EnhancedNavigation2025() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navigationItems.map((item) => (
-              <div key={item.name} className="relative">
+              <div key={item.name} className="relative dropdown-container">
                 <button
                   onClick={() => toggleDropdown(item.name)}
                   className="flex items-center gap-2 px-4 py-3 text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/5 group"
@@ -382,14 +282,13 @@ export default function EnhancedNavigation2025() {
             </Link>
           </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
       </div>
 

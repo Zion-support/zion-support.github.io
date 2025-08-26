@@ -1,10 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Logo: React.FC = () => {
+interface LogoProps {
+  customLogo?: string;
+  customColor?: string;
+  isWhitelabel?: boolean;
+  brandName?: string;
+}
+
+export const Logo: React.FC<LogoProps> = ({ 
+  customLogo, 
+  customColor, 
+  isWhitelabel = false, 
+  brandName = 'ZION' 
+}) => {
+  const logoColor = customColor || 'from-zion-cyan via-zion-purple-light to-zion-purple';
+
+  if (customLogo) {
+    return (
+      <Link to="/" className="flex items-center space-x-2">
+        <img src={customLogo} alt="Logo" className="h-8 w-auto" />
+      </Link>
+    );
+  }
+
   return (
-=======
-=======
     <Link to="/" className="flex items-center group">
       <div className="flex items-center space-x-2">
         {/* Icon */}
@@ -24,10 +44,7 @@ export const Logo: React.FC = () => {
             TECH GROUP
           </div>
         </div>
-=======
-=======
       </div>
-      <div className="text-xs lg:text-sm text-gray-300 font-medium">Group</div>
     </Link>
   );
 };

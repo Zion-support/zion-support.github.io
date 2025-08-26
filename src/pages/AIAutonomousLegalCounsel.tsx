@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousLegalCounsel: React.FC = () => {
-  return (
-    <>
+const AIAutonomousLegalCounsel = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Legal Counsel | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous legal counsel that provides 24/7 legal consultation, document analysis, and legal guidance with advanced AI capabilities." />
-        <meta name="keywords" content="AI legal counsel, autonomous legal AI, legal consultation, AI law, legal automation, AI legal assistant" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-legal-counsel" />
+        <meta name="description" content="Revolutionary AI autonomous legal counsel that provides 24/7 legal consultation, document analysis, and legal guidance with advanced AI capabilities."/>
+        <meta name="keywords" content="AI legal counsel, autonomous legal AI, legal consultation, AI law, legal automation, AI legal assistant"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-legal-counsel"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
@@ -120,11 +118,9 @@ const AIAutonomousLegalCounsel: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Legal Practice Areas</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Business Law', 'Contract Law', 'Employment Law', 'Real Estate', 'Family Law', 'Criminal Law', 'Intellectual Property', 'Tax Law'].map((area) => (
-                <div key={area} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Business Law', 'Contract Law', 'Employment Law', 'Real Estate', 'Family Law', 'Criminal Law', 'Intellectual Property', 'Tax Law'].map((area) => (<div key={area} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{area}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -176,8 +172,6 @@ const AIAutonomousLegalCounsel: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousLegalCounsel;

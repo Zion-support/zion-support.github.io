@@ -1,43 +1,34 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { allEnhancedServices } from '../data/enhanced-2025-comprehensive-services';
-
-const ComprehensiveServicesLanding2025: React.FC = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState<string>('all');
-
-  const industries = [
-    { id: 'all', name: 'All Industries', icon: '🏢', description: 'Comprehensive solutions across all sectors' },
-    { id: 'finance', name: 'Financial Services', icon: '💰', description: 'AI-powered trading, risk management, and compliance' },
-    { id: 'healthcare', name: 'Healthcare', icon: '🏥', description: 'Advanced analytics, patient care, and research' },
-    { id: 'manufacturing', name: 'Manufacturing', icon: '🏭', description: 'Smart factories, IoT, and supply chain optimization' },
-    { id: 'energy', name: 'Energy & Utilities', icon: '⚡', description: 'Renewable energy management and grid optimization' },
-    { id: 'logistics', name: 'Logistics & Transportation', icon: '🚚', description: 'Autonomous logistics and route optimization' },
-    { id: 'legal', name: 'Legal Services', icon: '⚖️', description: 'AI-powered research and document analysis' },
-    { id: 'marketing', name: 'Marketing & Advertising', icon: '📢', description: 'Autonomous campaigns and AI content generation' }
-  ];
-
-  const getServicesByIndustry = (industry: string) => {
-    if (industry === 'all') return allEnhancedServices;
-    
-    const industryMap: { [key: string]: string[] } = {
-      'finance': ['FinTech & AI', 'Cybersecurity & Quantum Computing'],
-      'healthcare': ['Healthcare & AI'],
-      'manufacturing': ['IoT & Edge Computing', 'Blockchain & Supply Chain'],
-      'energy': ['Energy & Sustainability'],
-      'logistics': ['Logistics & Transportation'],
-      'legal': ['Legal Tech & AI'],
-      'marketing': ['Marketing & AI']
+const ComprehensiveServicesLanding2025 = () => {
+    const [selectedIndustry, setSelectedIndustry] = useState('all');
+    const industries = [
+        { id: 'all', name: 'All Industries', icon: '🏢', description: 'Comprehensive solutions across all sectors' },
+        { id: 'finance', name: 'Financial Services', icon: '💰', description: 'AI-powered trading, risk management, and compliance' },
+        { id: 'healthcare', name: 'Healthcare', icon: '🏥', description: 'Advanced analytics, patient care, and research' },
+        { id: 'manufacturing', name: 'Manufacturing', icon: '🏭', description: 'Smart factories, IoT, and supply chain optimization' },
+        { id: 'energy', name: 'Energy & Utilities', icon: '⚡', description: 'Renewable energy management and grid optimization' },
+        { id: 'logistics', name: 'Logistics & Transportation', icon: '🚚', description: 'Autonomous logistics and route optimization' },
+        { id: 'legal', name: 'Legal Services', icon: '⚖️', description: 'AI-powered research and document analysis' },
+        { id: 'marketing', name: 'Marketing & Advertising', icon: '📢', description: 'Autonomous campaigns and AI content generation' }
+    ];
+    const getServicesByIndustry = (industry) => {
+        if (industry === 'all')
+            return allEnhancedServices;
+        const industryMap = {
+            'finance': ['FinTech & AI', 'Cybersecurity & Quantum Computing'],
+            'healthcare': ['Healthcare & AI'],
+            'manufacturing': ['IoT & Edge Computing', 'Blockchain & Supply Chain'],
+            'energy': ['Energy & Sustainability'],
+            'logistics': ['Logistics & Transportation'],
+            'legal': ['Legal Tech & AI'],
+            'marketing': ['Marketing & AI']
+        };
+        return allEnhancedServices.filter(service => industryMap[industry]?.includes(service.category));
     };
-    
-    return allEnhancedServices.filter(service => 
-      industryMap[industry]?.includes(service.category)
-    );
-  };
-
-  const filteredServices = getServicesByIndustry(selectedIndustry);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+    const filteredServices = getServicesByIndustry(selectedIndustry);
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -74,16 +65,10 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/enhanced-services-2025"
-              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105"
-            >
+            <Link to="/enhanced-services-2025" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105">
               Explore All Services
             </Link>
-            <a
-              href="tel:+13024640950"
-              className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105"
-            >
+            <a href="tel:+13024640950" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105">
               Call Now: +1 302 464 0950
             </a>
           </div>
@@ -103,30 +88,18 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {industries.map((industry) => (
-              <button
-                key={industry.id}
-                onClick={() => setSelectedIndustry(industry.id)}
-                className={`p-6 rounded-xl border transition-all duration-300 text-left ${
-                  selectedIndustry === industry.id
-                    ? 'bg-blue-500/20 border-blue-400 scale-105'
-                    : 'bg-white/10 border-white/20 hover:border-blue-400 hover:scale-105'
-                }`}
-              >
+            {industries.map((industry) => (<button key={industry.id} onClick={() => setSelectedIndustry(industry.id)} className={`p-6 rounded-xl border transition-all duration-300 text-left ${selectedIndustry === industry.id
+                ? 'bg-blue-500/20 border-blue-400 scale-105'
+                : 'bg-white/10 border-white/20 hover:border-blue-400 hover:scale-105'}`}>
                 <div className="text-4xl mb-3">{industry.icon}</div>
                 <h3 className="text-lg font-semibold mb-2">{industry.name}</h3>
                 <p className="text-sm text-gray-400">{industry.description}</p>
-              </button>
-            ))}
+              </button>))}
           </div>
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <div
-                key={service.id}
-                className="bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 overflow-hidden hover:border-blue-400 transition-all duration-300 hover:scale-105"
-              >
+            {filteredServices.map((service) => (<div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 overflow-hidden hover:border-blue-400 transition-all duration-300 hover:scale-105">
                 {/* Service Header */}
                 <div className="p-6 bg-gradient-to-r from-blue-600 to-purple-600">
                   <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
@@ -151,12 +124,10 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Benefits</h4>
                     <div className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, index) => (
-                        <div key={index} className="text-xs text-gray-300 flex items-center">
+                      {service.features.slice(0, 3).map((feature, index) => (<div key={index} className="text-xs text-gray-300 flex items-center">
                           <span className="text-green-400 mr-2">✓</span>
                           {feature}
-                        </div>
-                      ))}
+                        </div>))}
                     </div>
                   </div>
 
@@ -175,16 +146,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                     <button className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105">
                       Learn More
                     </button>
-                    <a
-                      href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
-                      className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105"
-                    >
+                    <a href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`} className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105">
                       Contact
                     </a>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -437,16 +404,10 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
-              >
+              <a href="tel:+13024640950" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
                 Call Now: +1 302 464 0950
               </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
-              >
+              <a href="mailto:kleber@ziontechgroup.com" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
                 Email: kleber@ziontechgroup.com
               </a>
             </div>
@@ -458,8 +419,6 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default ComprehensiveServicesLanding2025;

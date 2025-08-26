@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousSpeech: React.FC = () => {
-  return (
-    <>
+const AIAutonomousSpeech = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Speech Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous speech platform that continuously processes speech, recognizes voice, and generates audio with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI speech, autonomous speech, speech recognition, voice processing, autonomous operations, AI speech platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-speech" />
+        <meta name="description" content="Revolutionary AI autonomous speech platform that continuously processes speech, recognizes voice, and generates audio with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI speech, autonomous speech, speech recognition, voice processing, autonomous operations, AI speech platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-speech"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousSpeech: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Speech Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Speech Recognition', 'Voice Generation', 'Conversation AI', 'Language Translation', 'Voice Cloning', 'Audio Processing', 'Speech Analytics', 'Voice Commands'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Speech Recognition', 'Voice Generation', 'Conversation AI', 'Language Translation', 'Voice Cloning', 'Audio Processing', 'Speech Analytics', 'Voice Commands'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousSpeech: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousSpeech;

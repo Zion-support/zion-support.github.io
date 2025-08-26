@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousMonitoring: React.FC = () => {
-  return (
-    <>
+const AIAutonomousMonitoring = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Monitoring Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous monitoring platform that continuously monitors systems, detects issues, and maintains monitoring excellence with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI monitoring, autonomous monitoring, system monitoring, performance monitoring, autonomous operations, AI monitoring platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-monitoring" />
+        <meta name="description" content="Revolutionary AI autonomous monitoring platform that continuously monitors systems, detects issues, and maintains monitoring excellence with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI monitoring, autonomous monitoring, system monitoring, performance monitoring, autonomous operations, AI monitoring platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-monitoring"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousMonitoring: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Monitoring Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['System Monitoring', 'Performance Monitoring', 'Network Monitoring', 'Application Monitoring', 'Infrastructure Monitoring', 'Security Monitoring', 'Availability Monitoring', 'Log Monitoring'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['System Monitoring', 'Performance Monitoring', 'Network Monitoring', 'Application Monitoring', 'Infrastructure Monitoring', 'Security Monitoring', 'Availability Monitoring', 'Log Monitoring'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousMonitoring: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousMonitoring;

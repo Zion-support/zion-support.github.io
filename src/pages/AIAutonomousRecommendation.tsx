@@ -1,14 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const AIAutonomousRecommendation: React.FC = () => {
-  return (
-    <>
+const AIAutonomousRecommendation = () => {
+    return (<>
       <Helmet>
         <title>AI Autonomous Recommendation Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous recommendation platform that continuously provides personalized recommendations, suggestions, and insights with advanced AI capabilities and autonomous operation." />
-        <meta name="keywords" content="AI recommendation, autonomous recommendation, personalized suggestions, recommendation engine, autonomous operations, AI recommendation platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-recommendation" />
+        <meta name="description" content="Revolutionary AI autonomous recommendation platform that continuously provides personalized recommendations, suggestions, and insights with advanced AI capabilities and autonomous operation."/>
+        <meta name="keywords" content="AI recommendation, autonomous recommendation, personalized suggestions, recommendation engine, autonomous operations, AI recommendation platform"/>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-recommendation"/>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
@@ -126,11 +124,9 @@ const AIAutonomousRecommendation: React.FC = () => {
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Recommendation Solutions</h2>
             <div className="grid md:grid-cols-4 gap-6">
-              {['Product Recommendations', 'Content Recommendations', 'Service Recommendations', 'Action Recommendations', 'Strategy Recommendations', 'Tool Recommendations', 'Resource Recommendations', 'Solution Recommendations'].map((type) => (
-                <div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
+              {['Product Recommendations', 'Content Recommendations', 'Service Recommendations', 'Action Recommendations', 'Strategy Recommendations', 'Tool Recommendations', 'Resource Recommendations', 'Solution Recommendations'].map((type) => (<div key={type} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                   <span className="text-white font-medium">{type}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
 
@@ -172,8 +168,6 @@ const AIAutonomousRecommendation: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>);
 };
-
 export default AIAutonomousRecommendation;

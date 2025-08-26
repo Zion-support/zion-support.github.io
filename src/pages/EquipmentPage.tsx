@@ -1,482 +1,235 @@
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-import { useEffect, useState } from "react";
-import { generateRandomEquipment } from "@/utils/generateRandomEquipment";
-import { EQUIPMENT_LISTINGS } from "@/data/equipmentListings";
-const EQUIPMENT_FILTERS = [
-  { label: "Servers", value: "Servers" },
-  { label: "Networking", value: "Networking" },
-  { label: "Power", value: "Power" },
-  { label: "Cooling", value: "Cooling" },
-  { label: "Storage", value: "Storage" },
-  { label: "Security", value: "Security" },
-  { label: "Management", value: "Management" },
-  { label: "Infrastructure", value: "Infrastructure" },
-  { label: "AI", value: "AI" },
-  { label: "Robotics", value: "Robotics" },
-];
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Header } from '@/components/header/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Search, Filter, Server, Network, Zap, Snowflake, HardDrive, Shield, Settings, Cloud, Brain, Bot } from 'lucide-react';
 
-const EQUIPMENT_CACHE_KEY = 'equipmentCache';
+export default function EquipmentPage() {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
 
-export async function fetchEquipment(): Promise<ProductListing[]> {
-  // Added a try-catch block for better error handling during API call
-  try {
-    const { data } = await apiClient.get('/equipment');
-    if (typeof window !== 'undefined') {
-      safeStorage.setItem(EQUIPMENT_CACHE_KEY, JSON.stringify(data));
-    }
-    return data;
-  } catch (error: any) {
-    captureException(error);
-    console.error("Raw error object in fetchEquipment:", error);
-    if (error.response) {
-      console.error("Error response data in fetchEquipment:", error.response.data);
-    }
-    console.error("Failed to fetch equipment:", error);
-    toast({
-      title: error.message || 'Failed to fetch equipment',
-      variant: 'destructive',
-    });
-    // Offline fallback from localStorage if available
-    if (typeof window !== 'undefined') {
-      const cached = safeStorage.getItem(EQUIPMENT_CACHE_KEY);
-      if (cached) {
-        try {
-          return JSON.parse(cached) as ProductListing[];
-        } catch (_) {
-          // ignore parse errors and fall through to throw
+    const equipmentCategories = [
+        { id: 'all', name: 'All Equipment', icon: Server },
+        { id: 'servers', name: 'Servers', icon: Server },
+        { id: 'networking', name: 'Networking', icon: Network },
+        { id: 'power', name: 'Power', icon: Zap },
+        { id: 'cooling', name: 'Cooling', icon: Snowflake },
+        { id: 'storage', name: 'Storage', icon: HardDrive },
+        { id: 'security', name: 'Security', icon: Shield },
+        { id: 'management', name: 'Management', icon: Settings },
+        { id: 'infrastructure', name: 'Infrastructure', icon: Cloud },
+        { id: 'ai', name: 'AI', icon: Brain },
+        { id: 'robotics', name: 'Robotics', icon: Bot }
+    ];
+
+    const equipment = [
+        {
+            id: 'server-1',
+            name: 'Dell PowerEdge R750',
+            category: 'servers',
+            description: 'High-performance dual-socket server with Intel Xeon processors',
+            specs: ['2x Intel Xeon Gold 6338', '256GB DDR4 RAM', '4x 2.4TB NVMe SSDs'],
+            price: '$2,999',
+            availability: 'In Stock',
+            condition: 'New',
+            image: '/placeholder-server.jpg'
+        },
+        {
+            id: 'network-1',
+            name: 'Cisco Catalyst 9300',
+            category: 'networking',
+            description: 'Enterprise-grade network switch with advanced security features',
+            specs: ['48x 1Gbps ports', '4x 10Gbps uplinks', 'PoE+ support'],
+            price: '$1,499',
+            availability: 'In Stock',
+            condition: 'Refurbished',
+            image: '/placeholder-switch.jpg'
+        },
+        {
+            id: 'storage-1',
+            name: 'NetApp AFF A400',
+            category: 'storage',
+            description: 'All-flash storage array with enterprise data management',
+            specs: ['100TB raw capacity', 'NVMe over Fabrics', 'Data compression'],
+            price: '$15,999',
+            availability: 'Limited Stock',
+            condition: 'New',
+            image: '/placeholder-storage.jpg'
         }
-      }
-    }
-    // Propagate the error so react-query can handle it
-    throw error;
-  }
-}
+    ];
 
-export default function EquipmentPage() {
-  // Initialize with undefined or null to better distinguish between empty data and loading states
-  const [equipment, setEquipment] = useState<ProductListing[] | undefined>(undefined);
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
+    const filteredEquipment = equipment.filter(item => {
+        const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                             item.description.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
 
-  const {
-    data: fetchedEquipment,
-    error: equipmentError,
-    isLoading: isLoadingEquipment,
-    refetch: refetchEquipment
-  } = useQuery<ProductListing[], Error>({
-    queryKey: ['equipment'],
-    queryFn: fetchEquipment,
-    retry: 3,
-    retryDelay: (attempt) => Math.min(1000 * 2 ** attempt, 10000),
-    initialData: () => {
-      if (typeof window === 'undefined') return undefined;
-      const cached = safeStorage.getItem(EQUIPMENT_CACHE_KEY);
-      return cached ? (JSON.parse(cached) as ProductListing[]) : undefined;
-    },
-    onSuccess: (data) => {
-      if (typeof window !== 'undefined') {
-        safeStorage.setItem(EQUIPMENT_CACHE_KEY, JSON.stringify(data));
-      }
-    },
-  });
-  const delayedError = useDelayedError(equipmentError);
-
-  useEffect(() => {
-    if (fetchedEquipment) {
-      setEquipment(fetchedEquipment);
-    }
-    // Added equipmentError to dependency array for useEffect,
-    // so if an error occurs, we can potentially clear existing equipment or handle error state.
-  }, [fetchedEquipment, equipmentError]);
-
-  const {
-    trigger: fetchRecommendations,
-    isMutating: isFetchingRecommendations,
-  } = useSWRMutation(
-    "/api/equipment/recommendations",
-    async ( // Added async here
-      url: string,
-      { arg }: { arg: { userId: string } }
-    ): Promise<ProductListing[]> => { // Added return type
-      const res = await fetch(`${url}?userId=${arg.userId}`); // Added await
-      if (!res.ok) {
-        // Enhanced error handling for failed recommendations fetch
-        const errorData = await res.json().catch(() => ({ message: "Failed to fetch recommendations, and error response is not JSON."}));
-        console.error("Raw error object in fetchRecommendations:", errorData);
-        // The errorData is already logged, but this is to ensure it's captured before throwing.
-        console.error("Recommendation fetch error:", errorData);
-        throw new Error(errorData.message || "Failed to fetch recommendations");
-      }
-      return res.json();
-    }
-  );
-
-  // Interval for adding random equipment
-  // useEffect(() => {
-  //   // Only set interval if equipment is already loaded/exists to prevent adding to undefined
-  //   if (equipment && equipment.length > 0) {
-  //     const interval = setInterval(() => {
-  //       setEquipment((prev = []) => [...prev, generateRandomEquipment()]); // Ensure prev is an array
-  //     }, 120000);
-  //     return () => clearInterval(interval);
-  //   }
-  // }, [equipment]); // Added equipment to dependency array
-  // Removed the random equipment generation interval to rely on API data.
-
-  const handleRecommendations = async () => {
-    if (!user) {
-      navigate('/login?next=/equipment&reco=1');
-      return;
-    }
-    try {
-      // Ensure data is correctly typed or cast if necessary
-      const data: ProductListing[] = await fetchRecommendations({ userId: user.id });
-      setEquipment(data); // data should be ProductListing[]
-      toast({ title: 'Showing personalized recommendations' });
-    } catch (err: any) { // Typed error
-      console.error("Error in handleRecommendations:", err);
-      toast({ title: err.message || 'Failed to load recommendations', variant: 'destructive' });
-    }
-  };
-
-  // Make sure handleRecommendations is memoized or stable if it's a dependency elsewhere, though not strictly required here.
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    if (params.get('reco') === '1' && user) {
-      handleRecommendations();
-    }
-    // Added handleRecommendations to dependency array, ensure it's stable (e.g. via useCallback if it were passed down)
-    // For now, this is okay as it's defined in the same scope.
-  }, [user, location.search, handleRecommendations]);
-
-  // Updated loading condition to specifically check for equipment being undefined
-  if (isLoadingEquipment && equipment === undefined) {
     return (
-      <div data-testid="loading-state-equipment" className="container mx-auto p-4 space-y-4" aria-busy="true">
-        {/* Skeleton for the top button (e.g., AI Recommendations) */}
-        <div className="flex justify-end mb-6">
-            <Skeleton className="h-10 w-48" /> {/* Removed specific bg color, base Skeleton handles it */}
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
-          <div className="text-sm text-muted-foreground">Avg Rating</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-purple-400">{stats.totalEquipment}</div>
-          <div className="text-sm text-muted-foreground">Total Items</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-orange-400">{stats.inStockCount}</div>
-          <div className="text-sm text-muted-foreground">In Stock</div>
-        </div>
-      </div>
-    </CardContent>
-  </Card>
-);
+        <>
+            <SEO 
+                title="Tech Equipment - Zion Tech Group" 
+                description="Browse and rent professional tech equipment for your projects." 
+                canonical="https://ziontechgroup.com/equipment" 
+            />
+            <Header />
+            <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+                {/* Hero Section */}
+                <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto text-center">
+                        <div className="mb-8">
+                            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
+                                <Server className="w-4 h-4 mr-2" />
+                                Tech Equipment
+                            </div>
+                            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                                Professional
+                                <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Tech Equipment</span>
+                            </h1>
+                            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                                Access to professional-grade technology equipment for your development and testing needs.
+                            </p>
+                        </div>
 
-// Filter controls
-const EquipmentFilterControls = ({
-  sortBy,
-  setSortBy,
-  filterCategory,
-  setFilterCategory,
-  categories,
-  priceRange,
-  setPriceRange,
-  filterBrand,
-  setFilterBrand,
-  brandOptions,
-  filterAvailability,
-  setFilterAvailability,
-  availabilityOptions,
-  minRating,
-  setMinRating,
-  showRecommended,
-  setShowRecommended,
-  loading
-}: any) => (
-  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
-    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
-    <div className="flex items-center gap-2">
-      <Filter className="h-4 w-4 text-muted-foreground" />
-      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-gray-200 px-3 py-2 rounded">
-        <option value="">All Categories</option>
-        {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
-      </select>
-    </div>
-    <div className="flex items-center gap-2">
-      <SortAsc className="h-4 w-4 text-muted-foreground" />
-      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-gray-200 px-3 py-2 rounded">
-        <option value="newest">Newest First</option>
-        <option value="price-low">Price: Low to High</option>
-        <option value="price-high">Price: High to Low</option>
-        <option value="rating">Highest Rated</option>
-      </select>
-    </div>
-    <div className="flex items-center gap-2">
-      <span className="text-sm">$</span>
-      <input
-        type="number"
-        value={priceRange[0]}
-        onChange={(e) => setPriceRange([Number(e.target.value), priceRange[1]])}
-        className="w-20 bg-background border border-gray-200 px-2 py-1 rounded"
-      />
-      <span>-</span>
-      <input
-        type="number"
-        value={priceRange[1]}
-        onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])}
-        className="w-20 bg-background border border-gray-200 px-2 py-1 rounded"
-      />
-    </div>
-    {brandOptions.length > 0 && (
-      <div className="flex items-center gap-2">
-        <select
-          value={filterBrand}
-          onChange={(e) => setFilterBrand(e.target.value)}
-          className="bg-background border border-gray-200 px-3 py-2 rounded"
-        >
-          <option value="">All Brands</option>
-          {brandOptions.map((b: string) => (
-            <option key={b} value={b}>{b}</option>
-          ))}
-        </select>
-      </div>
-    )}
-    {availabilityOptions.length > 0 && (
-      <div className="flex items-center gap-2">
-        <select
-          value={filterAvailability}
-          onChange={(e) => setFilterAvailability(e.target.value)}
-          className="bg-background border border-gray-200 px-3 py-2 rounded"
-        >
-          <option value="">Any Availability</option>
-          {availabilityOptions.map((a: string) => (
-            <option key={a} value={a}>{a}</option>
-          ))}
-        </select>
-      </div>
-    )}
-    <div className="flex items-center gap-2">
-      <span className="text-sm">Rating ≥</span>
-      <select
-        value={minRating}
-        onChange={(e) => setMinRating(Number(e.target.value))}
-        className="bg-background border border-gray-200 px-2 py-1 rounded"
-      >
-        <option value={0}>Any</option>
-        <option value={5}>5</option>
-        <option value={4}>4</option>
-        <option value={3}>3</option>
-        <option value={2}>2</option>
-        <option value={1}>1</option>
-      </select>
-    </div>
-    <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
-      <Star className="h-4 w-4 mr-1" />
-      {showRecommended ? "All Equipment" : "Recommended"}
-    </Button>
-  </div>
-);
+                        {/* Search and Filter */}
+                        <div className="max-w-4xl mx-auto mb-12">
+                            <div className="relative mb-6">
+                                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                                <Input
+                                    type="text"
+                                    placeholder="Search equipment..."
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-gray-400"
+                                />
+                            </div>
+                            
+                            <div className="flex flex-wrap justify-center gap-2">
+                                {equipmentCategories.map((category) => (
+                                    <Button
+                                        key={category.id}
+                                        variant={selectedCategory === category.id ? "default" : "outline"}
+                                        size="sm"
+                                        onClick={() => setSelectedCategory(category.id)}
+                                        className={`${
+                                            selectedCategory === category.id
+                                                ? 'bg-zion-cyan text-zion-blue-dark'
+                                                : 'border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10'
+                                        }`}
+                                    >
+                                        <category.icon className="w-4 h-4 mr-2" />
+                                        {category.name}
+                                    </Button>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-// Equipment card
-const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing; onViewDetails: () => void }) => (
-  <Card className="h-full hover:shadow-lg transition-shadow">
-    <CardHeader className="pb-3">
-      <div className="flex items-start justify-between">
-        <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>
-          <p className="text-sm text-muted-foreground">{equipment.category}</p>
-          <div className="flex items-center gap-2 mt-2">
-            <Badge variant="secondary" className="text-xs">{equipment.brand}</Badge>
-          </div>
-        </div>
-        <div className="text-right">
-          <div className="text-xl font-bold text-blue-600">${equipment.price?.toLocaleString()}</div>
-          <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">
-            {equipment.availability}
-          </Badge>
-        </div>
-      </div>
-    </CardHeader>
-    <CardContent className="pt-0">
-      <div className="flex items-center gap-4 mb-3">
-        <div className="flex items-center gap-1">
-          <Star className="h-4 w-4 text-yellow-500 fill-current" />
-          <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>
-          <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>
-        </div>
-      </div>
-      <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{equipment.description}</p>
-      <div className="flex items-center justify-between">
-        <span className="text-sm font-medium">{equipment.category}</span>
-        <Button size="sm" onClick={onViewDetails}>
-          <ShoppingCart className="h-4 w-4 mr-1" />
-          View Details
-        </Button>
-      </div>
-    </CardContent>
-  </Card>
-);
+                {/* Equipment Grid */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto">
+                        {filteredEquipment.length === 0 ? (
+                            <div className="text-center py-20">
+                                <div className="w-24 h-24 bg-zion-blue-light rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <Search className="w-12 h-12 text-zion-slate-light" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-white mb-4">No Equipment Found</h3>
+                                <p className="text-zion-slate-light mb-8">
+                                    Try adjusting your search terms or category filters.
+                                </p>
+                                <Button onClick={() => {
+                                    setSearchTerm('');
+                                    setSelectedCategory('all');
+                                }}>
+                                    Clear Filters
+                                </Button>
+                            </div>
+                        ) : (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {filteredEquipment.map((item) => (
+                                    <Card key={item.id} className="bg-zion-blue-dark border-zion-blue-light hover:border-zion-cyan transition-all duration-300 hover:shadow-xl hover:shadow-zion-cyan/10">
+                                        <CardHeader>
+                                            <div className="flex items-start justify-between mb-4">
+                                                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">
+                                                    <Server className="w-6 h-6 text-zion-cyan" />
+                                                </div>
+                                                <div className="text-right">
+                                                    <Badge 
+                                                        variant={item.availability === 'In Stock' ? 'default' : 'secondary'}
+                                                        className={item.availability === 'In Stock' ? 'bg-green-500' : 'bg-yellow-500'}
+                                                    >
+                                                        {item.availability}
+                                                    </Badge>
+                                                </div>
+                                            </div>
+                                            <CardTitle className="text-xl text-white mb-2">{item.name}</CardTitle>
+                                            <CardDescription className="text-zion-slate-light">
+                                                {item.description}
+                                            </CardDescription>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <div className="mb-4">
+                                                <h4 className="text-white font-semibold mb-2">Specifications:</h4>
+                                                <ul className="space-y-1">
+                                                    {item.specs.map((spec, index) => (
+                                                        <li key={index} className="text-sm text-zion-slate-light flex items-center">
+                                                            <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2"></div>
+                                                            {spec}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                            
+                                            <div className="flex items-center justify-between mb-4">
+                                                <div className="text-2xl font-bold text-zion-cyan">{item.price}</div>
+                                                <Badge variant="outline" className="border-zion-blue-light text-zion-slate-light">
+                                                    {item.condition}
+                                                </Badge>
+                                            </div>
+                                            
+                                            <div className="flex gap-2">
+                                                <Button className="flex-1 bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark">
+                                                    View Details
+                                                </Button>
+                                                <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                                                    Contact Sales
+                                                </Button>
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </section>
 
-// Loading grid
-const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
-  </div>
-);
-
-// Main component
-export default function EquipmentPage() {
-  const router = useRouter();
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterCategory, setFilterCategory] = useState('');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 200000]);
-  const [filterBrand, setFilterBrand] = useState('');
-  const [filterAvailability, setFilterAvailability] = useState('');
-  const [minRating, setMinRating] = useState(0);
-  const [showRecommended, setShowRecommended] = useState(false);
-  const [totalGenerated, setTotalGenerated] = useState(0);
-
-  const fetchEquipment = useCallback(async (page: number, limit: number) => {
-    await new Promise(resolve => setTimeout(resolve, 400));
-
-    let allEquipment: ProductListing[] = [];
-    
-    if (page === 1) {
-      allEquipment = [...INITIAL_EQUIPMENT];
-    }
-    
-    const startId = INITIAL_EQUIPMENT.length + (page - 1) * limit + totalGenerated;
-    const newEquipment = generateDatacenterEquipment(limit, startId);
-    setTotalGenerated(prev => prev + newEquipment.length);
-    
-    allEquipment = [...allEquipment, ...newEquipment];
-    
-    let filteredEquipment = allEquipment;
-
-    if (filterCategory) {
-      filteredEquipment = filteredEquipment.filter(e => e.category === filterCategory);
-    }
-
-    if (filterBrand) {
-      filteredEquipment = filteredEquipment.filter(e => e.brand === filterBrand);
-    }
-
-    if (filterAvailability) {
-      filteredEquipment = filteredEquipment.filter(e => e.availability === filterAvailability);
-    }
-
-    filteredEquipment = filteredEquipment.filter(e => {
-      const price = e.price || 0;
-      return price >= priceRange[0] && price <= priceRange[1];
-    });
-
-    if (minRating > 0) {
-      filteredEquipment = filteredEquipment.filter(e => (e.rating || 0) >= minRating);
-    }
-
-    if (showRecommended) {
-      filteredEquipment = getRecommendedEquipment(filteredEquipment);
-    }
-    
-    filteredEquipment.sort((a, b) => {
-      switch (sortBy) {
-        case 'price-low':
-          return (a.price || 0) - (b.price || 0);
-        case 'price-high':
-          return (b.price || 0) - (a.price || 0);
-        case 'rating':
-          return (b.rating || 0) - (a.rating || 0);
-        default:
-          return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
-      }
-    });
-    
-    const startIndex = (page - 1) * limit;
-    const endIndex = startIndex + limit;
-    const items = filteredEquipment.slice(startIndex, endIndex);
-    
-    return {
-      items,
-      hasMore: endIndex < filteredEquipment.length || page < 10,
-      total: filteredEquipment.length
-    };
-  }, [sortBy, filterCategory, filterBrand, filterAvailability, priceRange, minRating, showRecommended, totalGenerated]);
-
-  const {
-    items: equipment,
-    loading,
-    error,
-    hasMore,
-    total,
-    isFetching,
-    lastElementRef,
-    refresh,
-    scrollToTop
-  } = useInfiniteScrollPagination(fetchEquipment, 12);
-
-  useEffect(() => {
-    refresh();
-    setTotalGenerated(0);
-  }, [sortBy, filterCategory, filterBrand, filterAvailability, priceRange, minRating, showRecommended]);
-
-  const marketStats = useMemo(() => {
-    if (equipment.length === 0) return null;
-    return getEquipmentMarketStats(equipment);
-  }, [equipment]);
-
-  const categories = useMemo(() => {
-    return Array.from(new Set(equipment.map(e => e.category).filter(Boolean)));
-  }, [equipment]);
-
-  const brandOptions = useMemo(() => {
-    return Array.from(new Set(equipment.map(e => e.brand).filter(Boolean)));
-  }, [equipment]);
-
-  const availabilityOptions = useMemo(() => {
-    return Array.from(new Set(equipment.map(e => e.availability).filter(Boolean)));
-  }, [equipment]);
-
-  useEffect(() => {
-    if (equipment.length > 0 && priceRange[0] === 0 && priceRange[1] === 200000) {
-      const prices = equipment.map(e => e.price || 0);
-      const min = Math.min(...prices);
-      const max = Math.max(...prices);
-      setPriceRange([min, max]);
-    }
-  }, [equipment]);
-
-  const [showScrollTop, setShowScrollTop] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-export default function EquipmentPage() {
-  const [listings, setListings] = useState<ProductListing[]>([
-    ...EQUIPMENT_LISTINGS,
-  ]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setListings((prev) => [...prev, generateRandomEquipment()]);
-    }, 120000); // add new equipment every 2 minutes
-    return () => clearInterval(interval);
-=======
-=======
-  }, []);
-
-  return (
-      <DynamicListingPage
-        title="Datacenter Equipment"
-        description="Browse professional hardware for modern datacenter and network deployments."
-        categorySlug="equipment"
-        listings={listings}
-        categoryFilters={EQUIPMENT_FILTERS}
-        initialPrice={{ min: 400, max: 50000 }}
-        detailBasePath="/equipment"
-      />
-  );
+                {/* Coming Soon Section */}
+                <section className="py-16 bg-zion-blue-dark">
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <div className="bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter">
+                            <h2 className="text-2xl font-bold text-white mb-6">Coming Soon</h2>
+                            <p className="text-zion-slate-light mb-6">
+                                Our equipment marketplace is currently under development. Soon you'll be able to browse, rent, and purchase professional tech equipment.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <Button className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark">
+                                    Get Notified
+                                </Button>
+                                <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                                    Contact Sales
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <Footer />
+        </>
+    );
 }
