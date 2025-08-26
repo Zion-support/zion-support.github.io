@@ -1,53 +1,24 @@
-import path from 'node:path'
-=======
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'node:path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // Keep project root
+  publicDir: false,
   plugins: [
     react(),
-    {
-      name: 'mock-api',
-      configureServer(server) {
-        server.middlewares.use('/api/services', (req, res) => {
-          const url = new URL(req.originalUrl || req.url, 'http://localhost')
-          const categoryId = url.searchParams.get('categoryId')
-          const data = SAMPLE_SERVICES.filter(
-            (item) => !categoryId || item.category === categoryId
-          )
-          res.setHeader('Content-Type', 'application/json')
-          res.end(JSON.stringify(data))
-        })
-      },
-    },
   ],
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { VitePWA } from 'vite-plugin-pwa';
-import { resolve } from 'path';
-=======
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
-
-// https://vitejs.dev/config/
-export default defineConfig({
-=======
   resolve: {
     alias: {
       '@': resolve(__dirname, './src')
     }
   },
   build: {
-    target: 'esnext',
-    minify: 'terser',
-    sourcemap: false,
     rollupOptions: {
-=======
+      input: path.resolve(__dirname, 'public/index.html'),
       output: {
         manualChunks: {
-          // Vendor chunks for better caching
           'react-vendor': ['react', 'react-dom'],
           'ui-vendor': [
             '@radix-ui/react-accordion',
@@ -79,39 +50,30 @@ export default defineConfig({
           'charts-vendor': ['recharts'],
           'date-vendor': ['date-fns', 'react-day-picker'],
         },
-        chunkFileNames: (chunkInfo) => {
-          const facadeModuleId = chunkInfo.facadeModuleId
-            ? chunkInfo.facadeModuleId.split('/').pop()?.replace('.tsx', '').replace('.ts', '')
-            : 'chunk'
-          return `js/[name]-[hash].js`
-        },
+        chunkFileNames: `js/[name]-[hash].js`,
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name?.split('.') || []
-          const ext = info[info.length - 1]
-          if (/\.(css)$/.test(assetInfo.name || '')) {
-            return 'css/[name]-[hash].[ext]'
-          }
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) {
-            return 'images/[name]-[hash].[ext]'
-          }
-          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) {
-            return 'fonts/[name]-[hash].[ext]'
-          }
+          const name = assetInfo.name || ''
+          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]'
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]'
+          if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]'
           return 'assets/[name]-[hash].[ext]'
         },
       },
       external: [],
     },
+    outDir: path.resolve(__dirname, 'dist'),
+    emptyOutDir: true,
+    target: 'esnext',
+    minify: 'terser',
+    sourcemap: false,
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
       },
-      mangle: {
-        safari10: true,
-      },
+      mangle: { safari10: true },
     },
     chunkSizeWarningLimit: 1000,
   },
@@ -127,17 +89,13 @@ export default defineConfig({
     ],
     exclude: ['@radix-ui/react-icons'],
   },
-  css: {
-    devSourcemap: false,
-  },
+  css: { devSourcemap: false },
   server: {
     port: 3000,
     host: true,
     open: true,
     cors: true,
-    hmr: {
-      overlay: false,
-    },
+    hmr: { overlay: false },
   },
   preview: {
     port: 4173,
@@ -148,4 +106,11 @@ export default defineConfig({
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
   },
-});
+  esbuild: {
+    loader: 'tsx',
+    jsx: 'automatic',
+    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+  },
+  worker: { format: 'es' },
+  envPrefix: ['VITE_', 'ZION_'],
+})

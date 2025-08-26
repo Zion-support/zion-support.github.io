@@ -72,7 +72,7 @@ const Sitemap: React.FC = () => {
 =======
 import { AppLayout } from "@/layout/AppLayout";
 =======
-import { AppHeader } from "@/layout/AppHeader";
+import { AppHeader } from "@/layout/AppHeader.jsx";
 import { Footer } from "@/components/Footer";
 =======
 

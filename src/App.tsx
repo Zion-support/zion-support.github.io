@@ -1,6 +1,8 @@
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AppHeader } from './layout/AppHeader.jsx';
+import { Footer } from './components/Footer';
+import { ChatAssistant } from './components/ChatAssistant';
 
 // Only import working components
 import Home from './pages/Home';
