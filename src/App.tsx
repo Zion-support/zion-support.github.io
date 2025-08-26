@@ -10,7 +10,7 @@ const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Services = lazy(() => import('./pages/Services'));
-const ServicesShowcase = lazy(() => import('./pages/ServicesShowcase'));
+
 const Pricing = lazy(() => import('./pages/Pricing'));
 const Blog = lazy(() => import('./pages/Blog'));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -39,11 +39,11 @@ const QuantumTechnology = lazy(() => import('./pages/QuantumTechnology'));
 const SpaceTech = lazy(() => import('./pages/SpaceTech'));
 
 // Service detail pages
-const AISolutions = lazy(() => import('./pages/services/AISolutions'));
-const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
+const AISolutions = lazy(() => import('./pages/services/AI'));
+const CloudDevOps = lazy(() => import('./pages/services/Cloud'));
 const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity'));
-const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure'));
-const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
+const ITInfrastructure = lazy(() => import('./pages/services/Infrastructure'));
+const DigitalTransformation = lazy(() => import('./pages/services/Transformation'));
 const Consulting = lazy(() => import('./pages/services/Consulting'));
 
 function App() {
@@ -59,7 +59,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/services" element={<Services />} />
-                <Route path="/services-showcase" element={<ServicesShowcase />} />
+
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/careers" element={<Careers />} />
