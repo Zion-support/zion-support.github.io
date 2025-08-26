@@ -4,7 +4,6 @@ import { Heart } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
   const socialLinks = [
     { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
     { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
@@ -43,7 +42,7 @@ const Footer: React.FC = () => {
         { label: "Documentation", path: "/docs" },
         { label: "White Papers", path: "/white-papers" },
         { label: "Webinars", path: "/webinars" },
-        { label: "Research", path: "/research-development" },
+        { label: "News", path: "/news" },
         { label: "Events", path: "/events" },
         { label: "Training", path: "/training" }
       ]

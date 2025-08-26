@@ -168,7 +168,7 @@ function App() {
         <Router>
           <div className="App min-h-screen flex flex-col">
             <Header />
-            <main className="flex-1 pt-16">
+            <main className="flex-1 pt-16"> {/* Add padding-top to account for fixed header */}
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
                   {routes.map(({ path, element }) => (
