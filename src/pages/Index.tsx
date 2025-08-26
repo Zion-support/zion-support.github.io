@@ -8,7 +8,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { WaitlistSection } from "@/components/WaitlistSection";
 import { BlogSection } from "@/components/BlogSection";
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
@@ -74,7 +74,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-zion-blue text-white">
-      <SEO 
+      <NextSeo 
         title={t("home.seo_title")} 
         description={t("home.seo_description")} 
         keywords={t("home.seo_keywords")}

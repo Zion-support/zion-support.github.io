@@ -100,24 +100,12 @@ export function ProductListingCard({
       }}
     >
       {/* Image */}
-      <div
-        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-        onClick={handleViewListing} // Keep existing onClick for navigation
-        role="button"
-        tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            handleViewListing();
-          }
-        }}
-      >
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <Image
-            src={imageSrc}
-            alt={listing.title}
-            layout="fill"
-            objectFit="cover"
+      <div className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'} onClick={handleViewListing}>
+        <div className={`relative ${isGrid ? 'h-48' : 'h-32 w-48'}`}>
+          <img
+            src={imageUrl}
+            alt={`Image of ${listing.title}`}
+            className="w-full h-full object-cover"
             onError={handleImageError}
             priority={false} // Assuming these are not LCP images
             sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48

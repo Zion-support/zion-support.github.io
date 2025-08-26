@@ -31,8 +31,9 @@ import {
 } from 'lucide-react';
 
 import { Footer } from "@/components/Footer";
-=======
 import { SEO } from "@/components/SEO";
+=======
+import { NextSeo } from "@/components/NextSeo";
 import { GradientHeading } from "@/components/GradientHeading";
 import Link from "next/link";
 import Image from "next/image";
@@ -214,39 +215,6 @@ const About: React.FC = () => {
 
   return (
     <>
-      <SEO 
-      description: 'We measure our success by your success, building long-term partnerships based on results.'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Continuous Learning',
-      description: 'Our team stays ahead of industry trends, ensuring you benefit from the latest technological advancements.'
-    }
-  ];
-
-  const services = [
-    {
-      icon: Code,
-      title: 'Custom Software Development',
-      description: 'Tailored solutions that address your unique business challenges and requirements.'
-    },
-    {
-      icon: Database,
-      title: 'Data Analytics & AI',
-      description: 'Transform your data into actionable insights with advanced analytics and machine learning.'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      description: 'Scalable infrastructure and streamlined development processes for modern applications.'
-    },
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Cutting-edge AI solutions that automate processes and enhance decision-making.'
-    }
-  ];
-=======
 import { Link } from 'react-router-dom';
 import { Users, Target, Award, Globe, Zap, Shield } from 'lucide-react';
 
@@ -256,6 +224,8 @@ const About = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
 =======
+=======
+      <NextSeo 
         title="About Zion - The Future of AI & Tech Marketplace" 
         description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
         keywords="about Zion, AI marketplace, tech platform, mission, vision, team"

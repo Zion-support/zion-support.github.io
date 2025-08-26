@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
-import { SEO } from "@/components/SEO";
+import { Footer } from "@/components/Footer";
+import { NextSeo } from "@/components/NextSeo";
 import { TalentCard } from "@/components/talent/TalentCard";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -157,7 +158,7 @@ export default function SavedTalentsPage() {
 
   return (
     <>
-      <SEO
+      <NextSeo
         title="Saved Talents | Zion AI Marketplace"
         description="View and manage your saved talents in the Zion AI Marketplace"
       />

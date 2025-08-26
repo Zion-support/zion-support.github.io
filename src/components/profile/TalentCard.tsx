@@ -1,77 +1,54 @@
 
-import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Heart, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { TalentProfile } from "@/types/talent";
-import { useAppDispatch } from "@/store/hooks";
-import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
 
 export interface TalentCardProps {
   talent: TalentProfile;
-  onBook: (talent: TalentProfile) => void;
-  onMessage: (talent: TalentProfile) => void;
+  onViewProfile: (id: string) => void;
+  onRequestHire: (talent: TalentProfile) => void;
+  isSaved: boolean;
+  onToggleSave: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
 }
 
-const TalentCardComponent = ({
+export function TalentCard({
   talent,
-  onBook,
-  onMessage,
+  onViewProfile,
+  onRequestHire,
+  isSaved,
+  onToggleSave,
   isAuthenticated
-}: TalentCardProps) => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { toast } = useToast();
-  const dispatch = useAppDispatch();
-  
+}: TalentCardProps) {
   const handleViewProfile = () => {
-    // Navigate directly to the talent profile
-    navigate(`/talent/${talent.id}`);
-    
-    // Also call the onViewProfile callback if provided
     if (onViewProfile) {
       onViewProfile(talent.id);
     }
   };
 
-  const handleMessage = (e: React.MouseEvent) => {
+  const handleRequestHire = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    if (onMessage) {
-      onMessage(talent);
-    } else {
-      navigate(`/messages?talentId=${talent.id}`);
+    if (onRequestHire) {
+      onRequestHire(talent);
     }
   };
 
-  const handleBook = (e: React.MouseEvent) => {
+  const handleToggleSave = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    if (onBook) {
-      onBook(talent);
+    if (onToggleSave) {
+      onToggleSave(talent.id, !isSaved);
     }
-
-    dispatch(addToWishlist({ id: talent.id, type: 'talent', data: talent }));
-    fetch(`${getApiUrl()}/wishlist`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: talent.id, type: 'talent' })
-    }).catch(() => {});
   };
-
 
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [];
 
   return (
-    <Card
-      className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
-      onClick={handleViewProfile}
-      tabIndex={0}
-    >
+    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
@@ -103,15 +80,14 @@ const TalentCardComponent = ({
               <Button
                 variant="ghost"
                 size="sm"
-                aria-label="save-to-wishlist"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}
               >
-                <Heart className={`h-5 w-5 ${isSaved ? 'fill-red-500 text-red-500' : ''}`} />
+                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
               </Button>
             </div>
-            <p className="text-white font-medium">{talent.professional_title}</p>
+            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
             
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
@@ -170,26 +146,23 @@ const TalentCardComponent = ({
               <Button
                 size="sm"
                 variant="secondary"
-                onClick={handleBook}
+                onClick={handleRequestHire}
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
-                Book
+                Hire
               </Button>
             )}
             <Button
               size="sm"
               variant="ghost"
-              onClick={handleMessage}
+              onClick={handleViewProfile}
               className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
             >
-              Message
+              View <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
           </div>
         </div>
       </div>
     </Card>
   );
-};
-
-export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';
+}

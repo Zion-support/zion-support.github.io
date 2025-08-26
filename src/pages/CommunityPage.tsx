@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import { useAuth } from "@/hooks/useAuth";
@@ -159,8 +159,8 @@ export default function CommunityPage() {
   ];
 
   return (
-    
-      <SEO
+    <>
+      <NextSeo
         title="Community Forum | Zion AI Marketplace"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useInterviews } from "@/hooks/useInterviews";
 import { Interview } from "@/types/interview";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { InterviewCard } from "@/components/interviews/InterviewCard";
 import { Button } from "@/components/ui/button";
@@ -94,7 +94,7 @@ function InterviewsContent() {
 
   return (
     <>
-      <SEO 
+      <NextSeo 
         title="Interviews | Zion AI Marketplace" 
         description="Manage your scheduled interviews with clients and talent" 
       />

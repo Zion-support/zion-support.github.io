@@ -1,10 +1,12 @@
-import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { NextSeo } from "@/components/NextSeo";
 import { GradientHeading } from "@/components/GradientHeading";
 
 const Privacy: React.FC = () => {
   return (
     <>
-      <SEO
+      <NextSeo
         title="Privacy Policy"
         description="Learn how Zion Tech Group handles your data and protects your privacy."
         canonical="https://ziontechgroup.com/privacy"

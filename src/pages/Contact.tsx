@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-=======
     phone: '',
     company: '',
     phone: '',
@@ -12,6 +10,27 @@ import React, { useState } from 'react';
     message: '',
     budget: '',
     timeline: ''
+=======
+import { useState } from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { NextSeo } from "@/components/NextSeo";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card } from "@/components/ui/card";
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { ChatAssistant } from "@/components/ChatAssistant";
+import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
+
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -484,15 +503,23 @@ const Contact = () => {
   ];
 
   return (
-      {/* Contact Form */}
-      <section className="py-20 bg-white">
-=======
     
       <SEO 
         title="Contact Zion - Get in Touch" 
         description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
+=======
+    <>
+      <NextSeo
+        title="Contact Zion - Get in Touch"
+        description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform."
         keywords="contact Zion, AI marketplace support, tech platform contact"
         canonical="https://app.ziontechgroup.com/contact"
+        openGraph={{
+          title: "Contact Zion - Get in Touch",
+          description:
+            "Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform.",
+          url: "https://app.ziontechgroup.com/contact",
+        }}
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

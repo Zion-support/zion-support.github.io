@@ -1,7 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -1759,7 +1756,7 @@ const Careers = () => {
 
   return (
     <>
-      <SEO
+      <NextSeo
         title="Careers at Zion - Join Our Team"
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
 =======

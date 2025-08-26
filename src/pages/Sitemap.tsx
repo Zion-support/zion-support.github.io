@@ -1,31 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { 
-  Home, 
-  Briefcase, 
-  Users, 
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js';
-import { Badge } from '../components/ui/badge.js';
-import { 
-  Home, 
-  HelpCircle, 
-  MessageCircle, 
-  Zap, 
-  Globe, 
-  Database, 
-  Lock, 
-  BookOpen, 
-  Phone, 
-  FileText, 
-  Shield, 
-=======
 import { motion } from 'framer-motion';
 =======
 import { 
@@ -170,6 +142,12 @@ const sitemapSections: SitemapSection[] = [
     ]
   }
 ];
+=======
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { NextSeo } from "@/components/NextSeo";
+import { completeSitemap } from "@/config/sitemap";
+import { Link } from "react-router-dom";
 
 export default function Sitemap() {
   const sitemapStructure = [
@@ -647,7 +625,7 @@ export default function Sitemap() {
 
   return (
     <>
-      <SEO
+      <NextSeo
         title="Sitemap | Zion AI Marketplace"
         description="Human readable sitemap for all public routes"
         keywords="sitemap, navigation"

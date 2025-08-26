@@ -12,7 +12,7 @@ import { ArrowRight, Calendar, Clock, User, Tag, Search, Filter, TrendingUp, Bra
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
+import { NextSeo } from "@/components/NextSeo";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -739,7 +739,7 @@ export default function Blog() {
               and the latest technology trends shaping the future of business.
 =======
     <>
-      <SEO 
+      <NextSeo 
         title="Blog - AI & Tech Insights" 
         description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." 
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"

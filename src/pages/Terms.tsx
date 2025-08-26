@@ -1,10 +1,12 @@
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import { NextSeo } from "@/components/NextSeo";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import TermsOfService from "@/legal/TermsOfService";
 
 const Terms: React.FC = () => {
   return (
-    
-      <SEO
+    <>
+      <NextSeo
         title="Terms of Service"
         description="The terms and conditions for using the Zion platform."
         canonical="https://ziontechgroup.com/terms"

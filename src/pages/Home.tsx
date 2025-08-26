@@ -15,11 +15,11 @@ import { SEO } from "@/components/SEO";
 import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
 =======
 import { SEO } from "@/components/SEO";
-import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
-=======
-import { SEO } from "@/components/SEO";
 import { FuturisticHero } from "@/components/home/FuturisticHero";
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
+=======
+import { NextSeo } from "@/components/NextSeo";
+import { HeroSection } from "@/components/HeroSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
@@ -288,9 +288,9 @@ export default function Home() {
   const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-background">
-      <SEO
-        title={t('home.seo_title')}
-        description={t('home.seo_description')}
+      <NextSeo 
+        title="Zion - The Tech & AI Marketplace" 
+        description="Discover top AI and tech talent, services, and equipment in one place."
         keywords="AI, technology, marketplace, services, talent"
         canonical="https://app.ziontechgroup.com/"
       />

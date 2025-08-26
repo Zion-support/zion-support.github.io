@@ -1,9 +1,7 @@
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { SEO } from "@/components/SEO";
-import JsonLd from "@/components/JsonLd";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import { NextSeo } from "@/components/NextSeo";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
 import type { BlogPost as BlogPostType } from "@/types/blog";
@@ -100,10 +98,10 @@ export default function BlogPost() {
   };
   
   return (
-    
-      <SEO 
-        title={post.title} 
-        description={post.excerpt} 
+    <>
+      <NextSeo
+        title={post.title}
+        description={post.excerpt}
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
