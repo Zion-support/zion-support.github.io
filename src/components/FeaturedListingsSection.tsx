@@ -7,11 +7,12 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
-interface FeaturedListingsSectionProps extends React.HTMLAttributes<HTMLElement> {
+interface FeaturedListingsSectionProps
+  extends React.HTMLAttributes<HTMLElement> {
   showTitle?: boolean;
 }
 
-export function FeaturedListingsSection({ showTitle = true, className, style, ...props }: FeaturedListingsSectionProps) {
+export function FeaturedListingsSection({ showTitle = true, className, ...props }: FeaturedListingsSectionProps) {
   const featuredListings = [
     {
       title: 'AI-Powered Business Intelligence',
@@ -52,7 +53,6 @@ export function FeaturedListingsSection({ showTitle = true, className, style, ..
     <section
       id="featured"
       className={cn("py-12 px-4 bg-background", className)}
-      style={style}
       {...props}
     >
       <div className="container mx-auto">
