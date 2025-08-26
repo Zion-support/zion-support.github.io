@@ -46,15 +46,15 @@
     "incremental": true,
     "typeRoots": ["./node_modules/@types", "./types"],
     "types": ["node"],
-    "jsx": "preserve",
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "plugins": [ { "name": "next" } ]
   },
-  "include": ["src", "pages"],
+  "include": [
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/index.css",
+    "src/components/ServicesOverview.tsx",
+    "src/components/ui/button.tsx",
+    "src/data/servicesData.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

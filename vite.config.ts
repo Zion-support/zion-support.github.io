@@ -31,33 +31,20 @@ export default defineConfig({
     rollupOptions: {
       external: ['lucide-react']
     }
-  }
-})
-      'framer-motion',
-      'lucide-react',
-      'clsx',
-      'class-variance-authority',
-      'tailwind-merge',
-    ],
-    exclude: ['@radix-ui/react-accordion', '@radix-ui/react-dialog'],
   },
-
   server: {
     port: 3000,
     host: true,
     open: true,
     cors: true,
   },
-
   preview: {
     port: 4173,
     host: true,
     open: true,
   },
-  // PostCSS configuration removed due to ES module compatibility issues
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
   },
 })
-=======

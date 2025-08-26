@@ -114,3 +114,26 @@ export interface ListingStats {
   averagePrice: number;
   categoryDistribution: Record<string, number>;
 }
+
+export interface ProductListing {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  price: number;
+  currency: string;
+  tags: string[];
+  author: {
+    name: string;
+    id: string;
+    avatarUrl?: string;
+    email?: string;
+  };
+  images: string[];
+  createdAt: string;
+  aiScore?: number;
+  rating?: number;
+  reviewCount?: number;
+  featured?: boolean;
+  link?: string;
+}
