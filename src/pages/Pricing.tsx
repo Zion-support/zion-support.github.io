@@ -1,70 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CogIcon } from '@heroicons/react/24/outline';
-
-const $page: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400" />
-            </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            $page
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under development. Contact us for more information.
-          </p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-          >
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CogIcon } from '@heroicons/react/24/outline';
-
-const $page: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400" />
-            </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            $page
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under development. Contact us for more information.
-          </p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-          >
-            Contact Us for More Information
-          </Link>
-            Contact Us for More Information
-          </Link>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default $page;
-import React from "react";
+import SEOHead from '../components/SEOHead';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Star, Zap, Shield, Brain, Cloud, Users, MessageCircle, FileText, Heart } from "lucide-react";
-import { Link } from "react-router-dom";
 
 export default function Pricing() {
+  // SEO structured data for the pricing page
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Zion Tech Group Pricing - AI-Powered Technology Solutions",
+    "description": "Transparent pricing for AI-powered technology solutions. Choose from Starter, Professional, Business, or Enterprise plans. 14-day free trial available.",
+    "url": "https://ziontechgroup.com/pricing",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+      "description": "Leading provider of AI-powered technology solutions and comprehensive IT services",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup",
+        "https://github.com/ziontechgroup"
+      ]
+    }
+  };
+
   const pricingTiers = [
     {
       name: "Starter",
@@ -215,241 +192,249 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-purple-dark">
-      {/* Hero Section */}
-      <div className="pt-20 pb-16 px-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent">
-            Transparent Pricing for Every Business
-          </h1>
-          <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto mb-8">
-            Choose the perfect plan for your needs. All plans include a 14-day free trial, 
-            no credit card required. Scale up or down anytime.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30 px-4 py-2 text-lg">
-              <Zap className="h-5 w-5 mr-2" />
-              14-Day Free Trial
-            </Badge>
-            <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30 px-4 py-2 text-lg">
-              <Shield className="h-5 w-5 mr-2" />
-              Enterprise Security
-            </Badge>
-            <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30 px-4 py-2 text-lg">
-              <Brain className="h-5 w-5 mr-2" />
-              AI-Powered Tools
-            </Badge>
-          </div>
-        </div>
-      </div>
-
-      {/* Pricing Tiers */}
-      <div className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {pricingTiers.map((tier, index) => (
-              <Card 
-                key={index} 
-                className={`relative overflow-hidden transition-all duration-300 hover:scale-105 ${
-                  tier.popular 
-                    ? 'border-zion-purple shadow-2xl shadow-zion-purple/25 bg-gradient-to-br from-zion-purple/10 to-zion-purple/5' 
-                    : 'border-zion-blue-light/30 hover:border-zion-purple/50 hover:shadow-xl hover:shadow-zion-purple/20'
-                } bg-zion-slate-dark/80 backdrop-blur-sm`}
-              >
-                {tier.popular && (
-                  <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white text-center py-2 text-sm font-semibold">
-                    <Star className="h-4 w-4 inline mr-2" />
-                    Most Popular
-                  </div>
-                )}
-                <CardHeader className={`text-center ${tier.popular ? 'pt-12' : 'pt-6'}`}>
-                  <CardTitle className="text-2xl font-bold text-white mb-2">{tier.name}</CardTitle>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-zion-cyan">{tier.price}</span>
-                    <span className="text-zion-cyan/70">{tier.period}</span>
-                  </div>
-                  <CardDescription className="text-zion-cyan/80">{tier.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  {tier.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center gap-3">
-                      <Check className="h-5 w-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zion-cyan/90 text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </CardContent>
-                <CardFooter>
-                  <Button 
-                    asChild 
-                    className={`w-full ${
-                      tier.popular 
-                        ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple' 
-                        : 'bg-gradient-to-r from-zion-blue to-zion-blue-dark hover:from-zion-cyan hover:to-zion-blue'
-                    } text-white border-0 shadow-lg`}
-                  >
-                    <Link to={tier.link}>
-                      {tier.cta}
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Service Categories */}
-      <div className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Explore Our Service Categories
-            </h2>
-            <p className="text-lg text-zion-cyan/80 max-w-3xl mx-auto">
-              Discover our comprehensive range of AI-powered micro SAAS solutions, 
-              each designed to address specific business needs and challenges.
+    <>
+      <SEOHead 
+        title="Zion Tech Group Pricing - AI-Powered Technology Solutions"
+        description="Transparent pricing for AI-powered technology solutions. Choose from Starter, Professional, Business, or Enterprise plans. 14-day free trial available."
+        keywords="Zion Tech Group pricing, AI services pricing, technology solutions cost, enterprise pricing, business pricing, professional pricing"
+        structuredData={structuredData}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-purple-dark">
+        {/* Hero Section */}
+        <div className="pt-20 pb-16 px-4">
+          <div className="container mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent">
+              Transparent Pricing for Every Business
+            </h1>
+            <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto mb-8">
+              Choose the perfect plan for your needs. All plans include a 14-day free trial, 
+              no credit card required. Scale up or down anytime.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30 px-4 py-2 text-lg">
+                <Zap className="h-5 w-5 mr-2" />
+                14-Day Free Trial
+              </Badge>
+              <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30 px-4 py-2 text-lg">
+                <Shield className="h-5 w-5 mr-2" />
+                Enterprise Security
+              </Badge>
+              <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30 px-4 py-2 text-lg">
+                <Brain className="h-5 w-5 mr-2" />
+                AI-Powered Tools
+              </Badge>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {serviceCategories.map((category, index) => (
-              <Card key={index} className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30 hover:border-zion-purple/50 transition-all duration-300">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-4">
-                    {category.icon}
-                    <CardTitle className="text-xl text-white">{category.name}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="border-l-2 border-zion-purple/50 pl-4">
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="font-semibold text-zion-cyan">{service.name}</h4>
-                        <span className="text-zion-purple font-bold">{service.price}</span>
-                      </div>
-                      <ul className="space-y-1">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="text-sm text-zion-cyan/70 flex items-center gap-2">
-                            <Check className="h-3 w-3 text-zion-purple" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
+        </div>
+
+        {/* Pricing Tiers */}
+        <div className="py-16 px-4">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {pricingTiers.map((tier, index) => (
+                <Card 
+                  key={index} 
+                  className={`relative overflow-hidden transition-all duration-300 hover:scale-105 ${
+                    tier.popular 
+                      ? 'border-zion-purple shadow-2xl shadow-zion-purple/25 bg-gradient-to-br from-zion-purple/10 to-zion-purple/5' 
+                      : 'border-zion-blue-light/30 hover:border-zion-purple/50 hover:shadow-xl hover:shadow-zion-purple/20'
+                  } bg-zion-slate-dark/80 backdrop-blur-sm`}
+                >
+                  {tier.popular && (
+                    <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white text-center py-2 text-sm font-semibold">
+                      <Star className="h-4 w-4 inline mr-2" />
+                      Most Popular
                     </div>
-                  ))}
+                  )}
+                  <CardHeader className={`text-center ${tier.popular ? 'pt-12' : 'pt-6'}`}>
+                    <CardTitle className="text-2xl font-bold text-white mb-2">{tier.name}</CardTitle>
+                    <div className="mb-4">
+                      <span className="text-4xl font-bold text-zion-cyan">{tier.price}</span>
+                      <span className="text-zion-cyan/70">{tier.period}</span>
+                    </div>
+                    <CardDescription className="text-zion-cyan/80">{tier.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    {tier.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center gap-3">
+                        <Check className="h-5 w-5 text-zion-cyan flex-shrink-0" />
+                        <span className="text-zion-cyan/90 text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </CardContent>
+                  <CardFooter>
+                    <Button 
+                      asChild 
+                      className={`w-full ${
+                        tier.popular 
+                          ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple' 
+                          : 'bg-gradient-to-r from-zion-blue to-zion-blue-dark hover:from-zion-cyan hover:to-zion-blue'
+                      } text-white border-0 shadow-lg`}
+                    >
+                      <Link to={tier.link}>
+                        {tier.cta}
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Service Categories */}
+        <div className="py-16 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Explore Our Service Categories
+              </h2>
+              <p className="text-lg text-zion-cyan/80 max-w-3xl mx-auto">
+                Discover our comprehensive range of AI-powered micro SAAS solutions, 
+                each designed to address specific business needs and challenges.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {serviceCategories.map((category, index) => (
+                <Card key={index} className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30 hover:border-zion-purple/50 transition-all duration-300">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-4">
+                      {category.icon}
+                      <CardTitle className="text-xl text-white">{category.name}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    {category.services.map((service, serviceIndex) => (
+                      <div key={serviceIndex} className="border-l-2 border-zion-purple/50 pl-4">
+                        <div className="flex justify-between items-start mb-2">
+                          <h4 className="font-semibold text-zion-cyan">{service.name}</h4>
+                          <span className="text-zion-purple font-bold">{service.price}</span>
+                        </div>
+                        <ul className="space-y-1">
+                          {service.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="text-sm text-zion-cyan/70 flex items-center gap-2">
+                              <Check className="h-3 w-3 text-zion-purple" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="py-16 px-4">
+          <div className="container mx-auto text-center">
+            <Card className="bg-gradient-to-r from-zion-purple/20 to-zion-blue/20 backdrop-blur-sm border-zion-purple/30 max-w-4xl mx-auto">
+              <CardHeader>
+                <CardTitle className="text-3xl text-white mb-4">
+                  Ready to Transform Your Business?
+                </CardTitle>
+                <CardDescription className="text-lg text-zion-cyan/80">
+                  Join thousands of businesses already using Zion's AI-powered solutions to accelerate growth, 
+                  improve efficiency, and stay ahead of the competition.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                  <div className="bg-zion-purple/20 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-zion-cyan mb-2">14 Days</div>
+                    <div className="text-zion-cyan/70">Free Trial</div>
+                  </div>
+                  <div className="bg-zion-purple/20 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-zion-cyan mb-2">24/7</div>
+                    <div className="text-zion-cyan/70">Expert Support</div>
+                  </div>
+                  <div className="bg-zion-purple/20 rounded-lg p-4">
+                    <div className="text-2xl font-bold text-zion-cyan mb-2">99.9%</div>
+                    <div className="text-zion-cyan/70">Uptime SLA</div>
+                  </div>
+                </div>
+              </CardContent>
+              <CardFooter className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white border-0 shadow-lg shadow-zion-purple/25">
+                  <Link to="/signup">
+                    Start Free Trial
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                  <Link to="/contact">
+                    <MessageCircle className="h-5 w-5 mr-2" />
+                    Contact Sales
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="py-16 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Frequently Asked Questions
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">
+                <CardHeader>
+                  <CardTitle className="text-white">What's included in the free trial?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-zion-cyan/80">
+                    All plans include a 14-day free trial with full access to all features. 
+                    No credit card required. You can upgrade, downgrade, or cancel anytime.
+                  </p>
                 </CardContent>
               </Card>
-            ))}
+              
+              <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">
+                <CardHeader>
+                  <CardTitle className="text-white">Can I change my plan later?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-zion-cyan/80">
+                    Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately, 
+                    and we'll prorate any billing adjustments.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">
+                <CardHeader>
+                  <CardTitle className="text-white">Do you offer enterprise discounts?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-zion-cyan/80">
+                    Yes, we offer volume discounts for enterprise customers. Contact our sales team 
+                    for custom pricing and dedicated support options.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">
+                <CardHeader>
+                  <CardTitle className="text-white">What support options are available?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-zion-cyan/80">
+                    All plans include email support. Professional and Business plans include priority support, 
+                    while Enterprise plans include 24/7 dedicated support.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* CTA Section */}
-      <div className="py-16 px-4">
-        <div className="container mx-auto text-center">
-          <Card className="bg-gradient-to-r from-zion-purple/20 to-zion-blue/20 backdrop-blur-sm border-zion-purple/30 max-w-4xl mx-auto">
-            <CardHeader>
-              <CardTitle className="text-3xl text-white mb-4">
-                Ready to Transform Your Business?
-              </CardTitle>
-              <CardDescription className="text-lg text-zion-cyan/80">
-                Join thousands of businesses already using Zion's AI-powered solutions to accelerate growth, 
-                improve efficiency, and stay ahead of the competition.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                <div className="bg-zion-purple/20 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-zion-cyan mb-2">14 Days</div>
-                  <div className="text-zion-cyan/70">Free Trial</div>
-                </div>
-                <div className="bg-zion-purple/20 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-zion-cyan mb-2">24/7</div>
-                  <div className="text-zion-cyan/70">Expert Support</div>
-                </div>
-                <div className="bg-zion-purple/20 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-zion-cyan mb-2">99.9%</div>
-                  <div className="text-zion-cyan/70">Uptime SLA</div>
-                </div>
-              </div>
-            </CardContent>
-            <CardFooter className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white border-0 shadow-lg shadow-zion-purple/25">
-                <Link to="/signup">
-                  Start Free Trial
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                <Link to="/contact">
-                  <MessageCircle className="h-5 w-5 mr-2" />
-                  Contact Sales
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">
-              <CardHeader>
-                <CardTitle className="text-white">What's included in the free trial?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan/80">
-                  All plans include a 14-day free trial with full access to all features. 
-                  No credit card required. You can upgrade, downgrade, or cancel anytime.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">
-              <CardHeader>
-                <CardTitle className="text-white">Can I change my plan later?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan/80">
-                  Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately, 
-                  and we'll prorate any billing adjustments.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">
-              <CardHeader>
-                <CardTitle className="text-white">Do you offer enterprise discounts?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan/80">
-                  Yes, we offer volume discounts for enterprise customers. Contact our sales team 
-                  for custom pricing and dedicated support options.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">
-              <CardHeader>
-                <CardTitle className="text-white">What support options are available?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan/80">
-                  All plans include email support. Professional and Business plans include priority support, 
-                  while Enterprise plans include 24/7 dedicated support.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 }
