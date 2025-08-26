@@ -97,6 +97,27 @@ module.exports = {
 =======
 =======
         },
+        // Zion brand palette (added)
+        'zion-blue': {
+          DEFAULT: '#1f3a8a',
+          light: '#3b5bcc',
+          dark: '#15265a',
+        },
+        'zion-cyan': {
+          DEFAULT: '#22ddd2',
+          light: '#5fe8e0',
+          dark: '#17a79f',
+        },
+        'zion-purple': {
+          DEFAULT: '#8c15e9',
+          light: '#a44af0',
+          dark: '#5d0f9a',
+        },
+        'zion-slate': {
+          DEFAULT: '#1f2937',
+          light: '#374151',
+          dark: '#0f172a',
+        },
         glow: {
           "0%": { boxShadow: "0 0 20px rgba(147, 51, 234, 0.3)" },
           "100%": { boxShadow: "0 0 30px rgba(147, 51, 234, 0.6)" },
@@ -210,11 +231,11 @@ module.exports = {
             textShadow: '0 0 10px rgba(34, 221, 210, 0.8), 0 0 20px rgba(34, 221, 210, 0.6), 0 0 30px rgba(34, 221, 210, 0.4)' 
           },
         },
+        // Minimal CSS variable mapped tokens
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
         border: 'hsl(var(--border))',
-        'zion-blue': { DEFAULT: '#2e73ea', light: '#8ab1f3', dark: '#172d67' },
-        'zion-purple': { DEFAULT: '#8c15e9', light: '#b971f2', dark: '#530c8b' },
-        'zion-cyan': { DEFAULT: '#22ddd2', light: '#7aeae4', dark: '#14847e' },
-        'zion-slate': { DEFAULT: '#17072b', light: '#451582', dark: '#000000' },
+        accent: 'hsl(var(--accent))',
       },
       backdropBlur: {
         'xs': '2px',

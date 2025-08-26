@@ -50,15 +50,12 @@ function renderApp() {
           <WhitelabelProvider>
             <Router>
               <AuthProvider>
-                <NotificationProvider>
-                  
-                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <AppLayout>
-                      <App />
-                    </AppLayout>
-                  </LanguageProvider>
-                  
-                </NotificationProvider>
+                <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                  <ViewModeProvider>
+                    <App />
+                  </ViewModeProvider>
+                  {/* LanguageDetectionPopup removed */}
+                </LanguageProvider>
               </AuthProvider>
             </Router>
           </WhitelabelProvider>
