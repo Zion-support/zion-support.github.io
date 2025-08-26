@@ -1,11 +1,6 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "target": "ES2020",
-=======
-    "target": "ES2024",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     "useDefineForClassFields": true,
     "lib": [
       "ES2020",
@@ -39,67 +34,36 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-=======
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es6"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false,
-<<<<<<< HEAD
     "strictNullChecks": false,
     "exactOptionalPropertyTypes": false,
     "noImplicitOverride": false,
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
-    "incremental": true,
-    "plugins": [{ "name": "next" }]
+    "incremental": true
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx"
   ],
   "exclude": [
     "src/components.disabled",
     "src/components.disabled/**/*",
-    "src/pages.disabled",
-    "src/pages.disabled/**/*"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "src_disabled/**/*",
+    "temp_components.disabled/**/*",
+    "node_modules"
+  ]
 }
