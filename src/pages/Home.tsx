@@ -38,7 +38,9 @@ import {
   Globe2,
   BarChart,
   ShieldCheck,
-  Zap as ZapIcon
+  Zap as ZapIcon,
+  Scale,
+  DollarSign
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { SEOConfigs } from '../components/SEOHead';
@@ -478,6 +480,120 @@ const Home: React.FC = () => {
                 <p className="text-gray-300">{reason.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Innovative Services 2025 Section */}
+      <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Innovative Services 2025
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our cutting-edge AI-powered micro SAAS services and next-generation solutions designed for the future
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gradient-to-br from-blue-800 to-indigo-900 p-8 rounded-2xl border border-blue-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6">
+                <Scale className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white">AI Legal Automation</h3>
+              <p className="text-blue-100 mb-6">Advanced AI platform for legal document automation with 99.9% accuracy</p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center text-blue-100">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  Contract Analysis & Generation
+                </li>
+                <li className="flex items-center text-blue-100">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  Compliance Automation
+                </li>
+                <li className="flex items-center text-blue-100">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  Multi-jurisdiction Support
+                </li>
+              </ul>
+              <Link 
+                to="/advanced-innovative-services-2025"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
+              >
+                Explore Legal AI
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-800 to-emerald-900 p-8 rounded-2xl border border-green-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Healthcare Analytics</h3>
+              <p className="text-green-100 mb-6">AI-powered healthcare analytics with 94% accuracy in disease prediction</p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center text-green-100">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  Predictive Medicine
+                </li>
+                <li className="flex items-center text-green-100">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  Patient Monitoring
+                </li>
+                <li className="flex items-center text-green-100">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  Treatment Optimization
+                </li>
+              </ul>
+              <Link 
+                to="/advanced-innovative-services-2025"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
+              >
+                Explore Healthcare AI
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-yellow-800 to-orange-900 p-8 rounded-2xl border border-yellow-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+                <DollarSign className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white">Financial Trading AI</h3>
+              <p className="text-yellow-100 mb-6">Advanced AI platform for financial trading with 87% market prediction accuracy</p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center text-yellow-100">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  Portfolio Optimization
+                </li>
+                <li className="flex items-center text-yellow-100">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  Risk Management
+                </li>
+                <li className="flex items-center text-yellow-100">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  Automated Trading
+                </li>
+              </ul>
+              <Link 
+                to="/advanced-innovative-services-2025"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
+              >
+                Explore Trading AI
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link 
+              to="/comprehensive-innovative-services-showcase"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group"
+            >
+              <Sparkles className="w-6 h-6" />
+              View All Innovative Services
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>

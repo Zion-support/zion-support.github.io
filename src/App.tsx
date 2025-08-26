@@ -74,6 +74,12 @@ const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTradin
 const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AICustomerServiceAutomation = lazy(() => import('./pages/services/AICustomerServiceAutomation'));
 
+// Advanced Innovative Services 2025
+const AdvancedInnovativeServices2025 = lazy(() => import('./pages/AdvancedInnovativeServices2025'));
+
+// Comprehensive Innovative Services Showcase
+const ComprehensiveInnovativeServicesShowcase = lazy(() => import('./pages/ComprehensiveInnovativeServicesShowcase'));
+
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
@@ -346,6 +352,12 @@ const App: React.FC = () => {
                       <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                       <Route path="/iot-management-platform" element={<IoTManagementPlatform />} />
                       <Route path="/blockchain-defi-solutions" element={<BlockchainDeFiSolutions />} />
+                      
+                      {/* Advanced Innovative Services 2025 */}
+                      <Route path="/advanced-innovative-services-2025" element={<AdvancedInnovativeServices2025 />} />
+                      
+                      {/* Comprehensive Innovative Services Showcase */}
+                      <Route path="/comprehensive-innovative-services-showcase" element={<ComprehensiveInnovativeServicesShowcase />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
