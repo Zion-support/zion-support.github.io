@@ -9,7 +9,7 @@ import {
   CheckCircle, ChevronRight, ExternalLink, Play, Pause, Volume2, VolumeX
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { advancedAIAutomationServices2026 } from '../data/2026-advanced-ai-automation-services';
+import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
 import { advancedCybersecurityServices2026 } from '../data/2026-advanced-cybersecurity-services';
 import { advancedFintechServices2026 } from '../data/2026-advanced-fintech-services';
 import { advancedHealthcareBiotechServices2026 } from '../data/2026-advanced-healthcare-biotech-services';
@@ -32,7 +32,7 @@ const serviceCategories = [
   {
     title: 'AI & Automation',
     description: 'Revolutionary AI platforms with autonomous business processing and intelligence',
-    services: advancedAIAutomationServices2026,
+    services: advancedAIAutomationServices,
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
     href: '/ai-automation-services',
@@ -366,7 +366,7 @@ export default function UltimateServicesShowcase2026() {
           <div className="mb-20">
             <h3 className="text-3xl font-bold text-white mb-8 text-center">AI & Automation Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {advancedAIAutomationServices2026.slice(0, 3).map((service, index) => (
+                              {advancedAIAutomationServices.slice(0, 3).map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}

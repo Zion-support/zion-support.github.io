@@ -91,7 +91,7 @@ export function AccessibilityEnhancer() {
   return (
     <>
       {/* Skip Links */}
-      <div className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50">
+      <div className="sr-only focus:absolute focus:top-4 focus:left-4 z-50">
         <a href="#main-content" className="bg-zion-cyan text-white px-4 py-2 rounded-md">
           Skip to main content
         </a>

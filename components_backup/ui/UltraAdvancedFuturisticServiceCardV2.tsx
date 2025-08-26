@@ -424,7 +424,7 @@ export default function UltraAdvancedFuturisticServiceCardV2({
           50% { transform: translateY(-10px); }
         }
         
-        .group:hover .group-hover\\:text-transparent {
+        .group:hover .group-hover-text-transparent {
           background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;

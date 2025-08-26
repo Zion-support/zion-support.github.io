@@ -6,10 +6,7 @@ import {
   Brain, Atom, Cpu, Shield, Database, Cloud,
   ArrowRight, CheckCircle, Zap, Sparkles
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 87bf1a88aa2a1e348293e3de507f18084096c365
+
 import { enhancedMicroSaasServices2025 } from '../src/data/enhancedMicroSaasServices2025';
 import { innovativeITServices2025 } from '../src/data/innovativeITServices2025';
 import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';

@@ -7,6 +7,7 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
+
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -20,15 +21,6 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Careers = React.lazy(() => import('./pages/Careers'));
-const News = React.lazy(() => import('./pages/News'));
-const Press = React.lazy(() => import('./pages/Press'));
-const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
-const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
 
 // Enhanced lazy loading with preloading hints from incoming branch
 const Services = lazy(() => import('./pages/Services'));
@@ -98,183 +90,880 @@ const FAQ = React.lazy(() => import('./pages/FAQ'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const FinancialSolutions = React.lazy(() => import('./pages/FinancialSolutions'));
 const Mobile = React.lazy(() => import('./pages/Mobile'));
-const QuantumTechnology = React.lazy(() => import('./pages/QuantumTechnology'));
-const SpaceTech = React.lazy(() => import('./pages/SpaceTech'));
 
-// Service pages from existing structure
-const CloudServices = React.lazy(() => import('./pages/services/Cloud'));
-const CybersecurityServices = React.lazy(() => import('./pages/services/Cybersecurity'));
-const InfrastructureServices = React.lazy(() => import('./pages/services/Infrastructure'));
-const ConsultingServices = React.lazy(() => import('./pages/services/Consulting'));
-const QuantumAIServices = React.lazy(() => import('./pages/services/quantum-ai'));
-
-// Additional service pages from existing structure
-const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
-const AdvancedServices2025 = React.lazy(() => import('./pages/AdvancedServices2025'));
-const AdvancedServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedServicesShowcase2025'));
-const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025'));
-const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
-const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
-
-// Other pages from existing structure
-const Login = React.lazy(() => import('./pages/Login'));
-const Signup = React.lazy(() => import('./pages/Signup'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
-const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
-const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
-const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
-const Analytics = React.lazy(() => import('./pages/Analytics'));
-const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
-const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
-const Categories = React.lazy(() => import('./pages/Categories'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
-const Signup = React.lazy(() => import('./pages/Signup'));
-const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
-const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
-const ContactPage = React.lazy(() => import('./pages/Contact'));
-const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
-const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
-const ServicesPricing = React.lazy(() => import('./pages/ServicesPricing'));
-const ServicesComparison = React.lazy(() => import('./pages/ServicesComparison'));
-
-const baseRoutes = [
-  { path: '/', element: <Home /> },
-  { path: '/home', element: <Home /> },
-  { path: '/about', element: <About /> },
-  { path: '/careers', element: <Careers /> },
-  { path: '/news', element: <News /> },
-  { path: '/press', element: <Press /> },
-  { path: '/case-studies', element: <CaseStudies /> },
-  { path: '/white-papers', element: <WhitePapers /> },
-  { path: '/privacy', element: <Privacy /> },
-  { path: '/terms', element: <Terms /> },
-  
-  // Additional missing pages
-  { path: '/partners', element: <Partners /> },
-  { path: '/docs', element: <Documentation /> },
-  { path: '/cookies', element: <Cookies /> },
-  { path: '/sitemap', element: <Sitemap /> },
-  { path: '/help', element: <HelpCenter /> },
-  { path: '/training', element: <Training /> },
-  { path: '/webinars', element: <Webinars /> },
-  { path: '/events', element: <Events /> },
-  { path: '/support', element: <Support /> },
-  { path: '/faq', element: <FAQ /> },
-  { path: '/green-it', element: <GreenIT /> },
-  { path: '/financial-solutions', element: <FinancialSolutions /> },
-  { path: '/mobile', element: <Mobile /> },
-  { path: '/quantum-technology', element: <QuantumTechnology /> },
-  { path: '/space-tech', element: <SpaceTech /> },
-  
-  // New routes from incoming branch
-  { path: '/services', element: <Services /> },
-  { path: '/ai-solutions', element: <AISolutions /> },
-  { path: '/services-showcase', element: <ServicesShowcase /> },
-  { path: '/innovative-services-showcase', element: <InnovativeServicesShowcase /> },
-  { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
-  { path: '/pricing', element: <PricingPage /> },
-  { path: '/emerging-tech', element: <EmergingTech /> },
-  
-  // New missing page routes
-  { path: '/quantum-neural-network-platform', element: <QuantumNeuralNetworkPlatform /> },
-  { path: '/autonomous-business-operations-platform', element: <AutonomousBusinessOperationsPlatform /> },
-  { path: '/ai-powered-it-asset-management', element: <AIPoweredITAssetManagement /> },
-  { path: '/soc2-compliance-automation', element: <SOC2ComplianceAutomation /> },
-  { path: '/ai-autonomous-research-assistant', element: <AIAutonomousResearchAssistant /> },
-  { path: '/5g-enterprise-solutions', element: <FiveGEnterpriseSolutions /> },
-  
-  // Service routes
-  { path: '/services/ai', element: <AIServices /> },
-  { path: '/services/cloud', element: <CloudServices /> },
-  { path: '/services/cybersecurity', element: <CybersecurityServices /> },
-  { path: '/services/infrastructure', element: <InfrastructureServices /> },
-  { path: '/services/transformation', element: <DigitalTransformation /> },
-  { path: '/services/consulting', element: <ConsultingServices /> },
-  { path: '/services/quantum-ai', element: <QuantumAIServices /> },
-  
-  // Additional service routes
-  { path: '/innovative-services-2025', element: <InnovativeServices2025 /> },
-  { path: '/advanced-services-2025', element: <AdvancedServices2025 /> },
-  { path: '/advanced-services-showcase-2025', element: <AdvancedServicesShowcase2025 /> },
-  { path: '/comprehensive-pricing-2025', element: <ComprehensivePricing2025 /> },
-  { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
-  { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
-  { path: '/services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
-  
-  // Ultimate Innovative Services 2026
-  { path: '/ultimate-services-showcase-2026', element: <UltimateServicesShowcase2026 /> },
-  { path: '/ultimate-services-2026', element: <UltimateServicesShowcase2026 /> },
-  { path: '/comprehensive-pricing-2026', element: <ComprehensivePricing2026 /> },
-  { path: '/pricing-2026', element: <ComprehensivePricing2026 /> },
-  
-  // Other routes
-  { path: '/match', element: <AIMatcherPage /> },
-  { path: '/login', element: <Login /> },
-  { path: '/signup', element: <Signup /> },
-  { path: '/talent', element: <TalentDirectory /> },
-  { path: '/talents', element: <TalentsPage /> },
-  { path: '/services', element: <ServicesPage /> },
-  { path: '/enhanced-services', element: <EnhancedServicesPage /> },
-  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
-  { path: '/categories', element: <Categories /> },
-  { path: '/equipment', element: <EquipmentPage /> },
-  { path: '/equipment/:id', element: <EquipmentDetail /> },
-  { path: '/analytics', element: <Analytics /> },
-  { path: '/mobile-launch', element: <MobileLaunchPage /> },
-  { path: '/open-app', element: <OpenAppRedirect /> },
-  { path: '/community', element: <CommunityPage /> },
-  { path: '/contact', element: <ContactPage /> },
-  { path: '/partners', element: <PartnersPage /> },
-  { path: '/zion-hire-ai', element: <ZionHireAI /> },
-  { path: '/hire-ai', element: <ZionHireAI /> },
-  { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
-  { path: '/services-pricing', element: <ServicesPricing /> },
-  { path: '/services-comparison', element: <ServicesComparison /> },
-  { path: '/blog', element: <Blog /> },
-  { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/about', element: <AboutPage /> },
-  { path: '/careers', element: <CareersPage /> },
-  { path: '/privacy', element: <PrivacyPage /> },
-  { path: '/terms', element: <TermsPage /> },
-  { path: '/green-it', element: <GreenITPage /> },
-  { path: '/help', element: <HelpCenterPage /> },
-  { path: '/cookies', element: <CookiesPage /> },
-];
-
-const App = () => {
-  // Ensure each navigation starts at the top of the page
-  useScrollToTop();
+// Enhanced App component with accessibility, performance, and SEO
+const App: React.FC = () => {
   return (
-    <WhitelabelProvider>
-      <ThemeProvider defaultTheme="dark">
-        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-          <Routes>
-            {baseRoutes.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
-            ))}
-            <Route path="/auth/*" element={<AuthRoutes />} />
-            <Route path="/dashboard/*" element={<DashboardRoutes />} />
-            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-            <Route path="/talent/*" element={<TalentRoutes />} />
-            <Route path="/admin/*" element={<AdminRoutes />} />
-            <Route path="/mobile/*" element={<MobileAppRoutes />} />
-            <Route path="/content/*" element={<ContentRoutes />} />
-            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-            <Route path="/community/*" element={<CommunityRoutes />} />
-            <Route path="/developers/*" element={<DeveloperRoutes />} />
-            <Route path="*" element={<ErrorRoutes />} />
-          </Routes>
-        </Suspense>
-        <Toaster />
-        <SonnerToaster position="top-right" />
-      </ThemeProvider>
-    </WhitelabelProvider>
+    <ThemeProvider>
+            <WhitelabelProvider>
+              <div className="App">
+                <Routes>
+                  {/* Enhanced Home Route with Suspense */}
+                  <Route
+                    path="/"
+                    element={
+                      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                        <div className="text-center">
+                          <h1 className="text-4xl font-bold text-white mb-4">Zion Tech Group</h1>
+                          <p className="text-white/80 text-lg">AI-Powered Innovation & Automation Platform</p>
+                        </div>
+                      </div>
+                    }
+                  />
+
+                  {/* Enhanced Service Routes */}
+                  <Route
+                    path="/services"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-fuchsia-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Services...</p>
+                          </div>
+                        </div>
+                      }>
+                        <Services />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Solutions Route */}
+                  <Route
+                    path="/ai-solutions"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-purple-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Solutions...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AISolutions />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Services Showcase Route */}
+                  <Route
+                    path="/services-showcase"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-green-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Services Showcase...</p>
+                          </div>
+                        </div>
+                      }>
+                        <ServicesShowcase />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Matcher Route */}
+                  <Route
+                    path="/ai-matcher"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Matcher...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AIMatcherPage />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Talent Directory Route */}
+                  <Route
+                    path="/talent"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-orange-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Talent Directory...</p>
+                          </div>
+                        </div>
+                      }>
+                        <TalentDirectory />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Talents Page Route */}
+                  <Route
+                    path="/talents"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-red-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Talents...</p>
+                          </div>
+                        </div>
+                      }>
+                        <TalentsPage />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Emerging Tech Route */}
+                  <Route
+                    path="/emerging-tech"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-pink-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Emerging Tech...</p>
+                          </div>
+                        </div>
+                      }>
+                        <EmergingTech />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Micro SaaS Services Route */}
+                  <Route
+                    path="/micro-saas-services"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-indigo-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Micro SaaS Services...</p>
+                          </div>
+                        </div>
+                      }>
+                        <MicroSaasServicesPage />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Pricing Page Route */}
+                  <Route
+                    path="/pricing"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-teal-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Pricing...</p>
+                          </div>
+                        </div>
+                      }>
+                        <PricingPage />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Services Route */}
+                  <Route
+                    path="/ai-services"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-emerald-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Services...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AIServices />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Cloud DevOps Route */}
+                  <Route
+                    path="/cloud-devops"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Cloud DevOps...</p>
+                          </div>
+                        </div>
+                      }>
+                        <CloudDevOps />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Enterprise Solutions Route */}
+                  <Route
+                    path="/enterprise-solutions"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Enterprise Solutions...</p>
+                          </div>
+                        </div>
+                      }>
+                        <EnterpriseSolutionsPage />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Digital Transformation Route */}
+                  <Route
+                    path="/digital-transformation"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-violet-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Digital Transformation...</p>
+                          </div>
+                        </div>
+                      }>
+                        <DigitalTransformation />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Business Intelligence Route */}
+                  <Route
+                    path="/services/ai-business-intelligence"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-rose-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Business Intelligence...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AIBusinessIntelligence />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Marketing Automation Route */}
+                  <Route
+                    path="/services/ai-marketing-automation"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-sky-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Marketing Automation...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AIMarketingAutomation />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced IoT Management Platform Route */}
+                  <Route
+                    path="/services/iot-management-platform"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-lime-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading IoT Management Platform...</p>
+                          </div>
+                        </div>
+                      }>
+                        <IoTManagementPlatform />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Blockchain DeFi Solutions Route */}
+                  <Route
+                    path="/services/blockchain-defi-solutions"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-amber-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Blockchain DeFi Solutions...</p>
+                          </div>
+                        </div>
+                      }>
+                        <BlockchainDeFiSolutions />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Workflow Automation Route */}
+                  <Route
+                    path="/services/ai-workflow-automation"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-emerald-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Workflow Automation...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AIWorkflowAutomation />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Blockchain Enterprise Solutions Route */}
+                  <Route
+                    path="/services/blockchain-enterprise-solutions"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-teal-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Blockchain Enterprise Solutions...</p>
+                          </div>
+                        </div>
+                      }>
+                        <BlockchainEnterpriseSolutions />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced IoT Data Analytics Route */}
+                  <Route
+                    path="/services/iot-data-analytics"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading IoT Data Analytics...</p>
+                          </div>
+                        </div>
+                      }>
+                        <IoTDataAnalytics />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Next Gen Innovative Services 2025 Route */}
+                  <Route
+                    path="/next-gen-innovative-services-2025"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-purple-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Next Gen Innovative Services 2025...</p>
+                          </div>
+                        </div>
+                      }>
+                        <NextGenInnovativeServices2025 />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Innovative Services Showcase Route */}
+                  <Route
+                    path="/innovative-services-showcase"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-pink-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Innovative Services Showcase...</p>
+                          </div>
+                        </div>
+                      }>
+                        <InnovativeServicesShowcase />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Ultimate Services Showcase 2026 Route */}
+                  <Route
+                    path="/ultimate-services-showcase-2026"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-indigo-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Ultimate Services Showcase 2026...</p>
+                          </div>
+                        </div>
+                      }>
+                        <UltimateServicesShowcase2026 />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Comprehensive Pricing 2026 Route */}
+                  <Route
+                    path="/comprehensive-pricing-2026"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Comprehensive Pricing 2026...</p>
+                          </div>
+                        </div>
+                      }>
+                        <ComprehensivePricing2026 />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Legal Document Automation Route */}
+                  <Route
+                    path="/services/ai-legal-document-automation"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-green-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Legal Document Automation...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AILegalDocumentAutomation />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Healthcare Analytics Route */}
+                  <Route
+                    path="/services/ai-healthcare-analytics"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-teal-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Healthcare Analytics...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AIHealthcareAnalytics />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Financial Trading Route */}
+                  <Route
+                    path="/services/ai-financial-trading"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-emerald-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Financial Trading...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AIFinancialTrading />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Supply Chain Optimization Route */}
+                  <Route
+                    path="/services/ai-supply-chain-optimization"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Supply Chain Optimization...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AISupplyChainOptimization />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Customer Service Automation Route */}
+                  <Route
+                    path="/services/ai-customer-service-automation"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-sky-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Customer Service Automation...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AICustomerServiceAutomation />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Quantum Neural Network Platform Route */}
+                  <Route
+                    path="/quantum-neural-network-platform"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-violet-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Quantum Neural Network Platform...</p>
+                          </div>
+                        </div>
+                      }>
+                        <QuantumNeuralNetworkPlatform />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Autonomous Business Operations Platform Route */}
+                  <Route
+                    path="/autonomous-business-operations-platform"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-rose-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Autonomous Business Operations Platform...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AutonomousBusinessOperationsPlatform />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Powered IT Asset Management Route */}
+                  <Route
+                    path="/ai-powered-it-asset-management"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-lime-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Powered IT Asset Management...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AIPoweredITAssetManagement />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced SOC2 Compliance Automation Route */}
+                  <Route
+                    path="/soc2-compliance-automation"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-amber-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading SOC2 Compliance Automation...</p>
+                          </div>
+                        </div>
+                      }>
+                        <SOC2ComplianceAutomation />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced AI Autonomous Research Assistant Route */}
+                  <Route
+                    path="/ai-autonomous-research-assistant"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-orange-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading AI Autonomous Research Assistant...</p>
+                          </div>
+                        </div>
+                      }>
+                        <AIAutonomousResearchAssistant />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced 5G Enterprise Solutions Route */}
+                  <Route
+                    path="/5g-enterprise-solutions"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-red-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading 5G Enterprise Solutions...</p>
+                          </div>
+                        </div>
+                      }>
+                        <FiveGEnterpriseSolutions />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Help Center Route */}
+                  <Route
+                    path="/help-center"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-pink-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Help Center...</p>
+                          </div>
+                        </div>
+                      }>
+                        <HelpCenter />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced New Services Route */}
+                  <Route
+                    path="/new-services"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-indigo-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading New Services...</p>
+                          </div>
+                        </div>
+                      }>
+                        <NewServices />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Partners Route */}
+                  <Route
+                    path="/partners"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Partners...</p>
+                          </div>
+                        </div>
+                      }>
+                        <Partners />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Documentation Route */}
+                  <Route
+                    path="/documentation"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Documentation...</p>
+                          </div>
+                        </div>
+                      }>
+                        <Documentation />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Cookies Route */}
+                  <Route
+                    path="/cookies"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-teal-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Cookies Policy...</p>
+                          </div>
+                        </div>
+                      }>
+                        <Cookies />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Sitemap Route */}
+                  <Route
+                    path="/sitemap"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-emerald-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Sitemap...</p>
+                          </div>
+                        </div>
+                      }>
+                        <Sitemap />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Training Route */}
+                  <Route
+                    path="/training"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-green-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Training...</p>
+                          </div>
+                        </div>
+                      }>
+                        <Training />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Webinars Route */}
+                  <Route
+                    path="/webinars"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-lime-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Webinars...</p>
+                          </div>
+                        </div>
+                      }>
+                        <Webinars />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Events Route */}
+                  <Route
+                    path="/events"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Events...</p>
+                          </div>
+                        </div>
+                      }>
+                        <Events />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Support Route */}
+                  <Route
+                    path="/support"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-orange-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Support...</p>
+                          </div>
+                        </div>
+                      }>
+                        <Support />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced FAQ Route */}
+                  <Route
+                    path="/faq"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-red-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading FAQ...</p>
+                          </div>
+                        </div>
+                      }>
+                        <FAQ />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Green IT Route */}
+                  <Route
+                    path="/green-it"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-rose-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Green IT...</p>
+                          </div>
+                        </div>
+                      }>
+                        <GreenIT />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Financial Solutions Route */}
+                  <Route
+                    path="/financial-solutions"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-pink-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Financial Solutions...</p>
+                          </div>
+                        </div>
+                      }>
+                        <FinancialSolutions />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Enhanced Mobile Route */}
+                  <Route
+                    path="/mobile"
+                    element={
+                      <Suspense fallback={
+                        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="w-16 h-16 border-4 border-indigo-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                            <p className="text-white/80 text-lg">Loading Mobile Solutions...</p>
+                          </div>
+                        </div>
+                      }>
+                        <Mobile />
+                      </Suspense>
+                    }
+                  />
+
+                  {/* Include all other route groups */}
+                  <AuthRoutes />
+                  <DashboardRoutes />
+                  <MarketplaceRoutes />
+                  <TalentRoutes />
+                  <AdminRoutes />
+                  <MobileAppRoutes />
+                  <ContentRoutes />
+                  <ErrorRoutes />
+                  <EnterpriseRoutes />
+                  <CommunityRoutes />
+                  <DeveloperRoutes />
+                </Routes>
+
+                {/* Enhanced Toasters */}
+                <Toaster />
+                <SonnerToaster />
+              </div>
+            </WhitelabelProvider>
+          </ThemeProvider>
   );
 };
 
