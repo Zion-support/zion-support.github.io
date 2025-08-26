@@ -2,129 +2,117 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle,
-  Users,
+  Rocket, 
+  Target, 
+  Users, 
   Globe,
+  Zap,
   CheckCircle,
   ArrowRight,
-  Zap,
-  Target
+  TrendingUp,
+  Lightbulb,
+  BarChart3
 } from 'lucide-react';
 
-export default function CybersecurityServices() {
-  const securityServices = [
+export default function DigitalTransformationServices() {
+  const transformationServices = [
     {
-      title: "Zero Trust Architecture",
-      description: "Implement comprehensive zero-trust security framework for your organization",
+      title: "Process Automation",
+      description: "Streamline business processes with intelligent automation solutions",
       features: [
-        "Identity Verification",
-        "Device Trust Assessment",
-        "Network Segmentation",
-        "Continuous Monitoring"
+        "Workflow Automation",
+        "RPA Implementation",
+        "Business Process Mapping",
+        "Performance Analytics"
       ],
-      icon: Shield,
+      icon: Zap,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Threat Detection & Response",
-      description: "Advanced threat detection and automated response systems",
+      title: "Digital Strategy",
+      description: "Comprehensive digital transformation roadmap and implementation",
       features: [
-        "Real-time Monitoring",
-        "AI-Powered Detection",
-        "Automated Response",
-        "Incident Investigation"
+        "Digital Assessment",
+        "Strategy Development",
+        "Change Management",
+        "Success Metrics"
       ],
-      icon: Eye,
+      icon: Target,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Penetration Testing",
-      description: "Comprehensive security testing to identify vulnerabilities",
+      title: "Customer Experience",
+      description: "Transform customer interactions with digital-first solutions",
       features: [
-        "External Testing",
-        "Internal Testing",
-        "Social Engineering",
-        "Physical Security"
+        "Omnichannel Strategy",
+        "Customer Journey Mapping",
+        "Digital Touchpoints",
+        "Feedback Systems"
       ],
-      icon: Target,
-      color: "from-orange-500 to-red-500"
+      icon: Users,
+      color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Security Audits & Compliance",
-      description: "Ensure compliance with industry standards and regulations",
+      title: "Data & Analytics",
+      description: "Leverage data insights to drive business decisions and growth",
       features: [
-        "SOC 2 Compliance",
-        "ISO 27001",
-        "GDPR Compliance",
-        "HIPAA Security"
+        "Data Strategy",
+        "Business Intelligence",
+        "Predictive Analytics",
+        "Data Governance"
       ],
-      icon: Lock,
-      color: "from-purple-500 to-pink-500"
+      icon: BarChart3,
+      color: "from-orange-500 to-red-500"
     }
   ];
 
-  const securitySolutions = [
+  const transformationPhases = [
     {
-      category: "Network Security",
-      solutions: [
-        "Firewall Management",
-        "Intrusion Detection",
-        "VPN Solutions",
-        "Network Monitoring"
-      ]
+      phase: "Assessment",
+      description: "Evaluate current state and identify transformation opportunities",
+      activities: ["Digital Maturity Assessment", "Gap Analysis", "Stakeholder Interviews", "Technology Review"],
+      icon: "🔍"
     },
     {
-      category: "Endpoint Security",
-      solutions: [
-        "Antivirus Protection",
-        "Device Management",
-        "Data Encryption",
-        "Access Control"
-      ]
+      phase: "Strategy",
+      description: "Develop comprehensive digital transformation roadmap",
+      activities: ["Vision Definition", "Goal Setting", "Technology Selection", "Timeline Planning"],
+      icon: "📋"
     },
     {
-      category: "Application Security",
-      solutions: [
-        "Code Review",
-        "Vulnerability Assessment",
-        "API Security",
-        "Secure Development"
-      ]
+      phase: "Implementation",
+      description: "Execute transformation initiatives with agile methodology",
+      activities: ["Pilot Programs", "Change Management", "Training Programs", "Progress Monitoring"],
+      icon: "🚀"
     },
     {
-      category: "Data Protection",
-      solutions: [
-        "Data Encryption",
-        "Backup Security",
-        "Access Management",
-        "Compliance Monitoring"
-      ]
+      phase: "Optimization",
+      description: "Continuously improve and scale successful initiatives",
+      activities: ["Performance Analysis", "Feedback Integration", "Process Refinement", "Scaling Success"],
+      icon: "⚡"
     }
   ];
 
   const benefits = [
     {
-      icon: Shield,
-      title: "Comprehensive Protection",
-      description: "Multi-layered security approach covering all attack vectors"
-    },
-    {
-      icon: Zap,
-      title: "24/7 Monitoring",
-      description: "Round-the-clock security monitoring and threat detection"
+      icon: TrendingUp,
+      title: "Increased Efficiency",
+      description: "Streamline operations and reduce manual processes"
     },
     {
       icon: Users,
-      title: "Expert Team",
-      description: "Certified cybersecurity professionals with industry experience"
+      title: "Better Customer Experience",
+      description: "Deliver seamless digital experiences across all touchpoints"
+    },
+    {
+      icon: Lightbulb,
+      title: "Innovation Culture",
+      description: "Foster a culture of continuous improvement and innovation"
     },
     {
       icon: Globe,
-      title: "Global Standards",
-      description: "Compliance with international security standards and best practices"
+      title: "Competitive Advantage",
+      description: "Stay ahead of the competition with digital-first solutions"
     }
   ];
 
@@ -140,33 +128,33 @@ export default function CybersecurityServices() {
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Cybersecurity Services
+              Digital Transformation Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced security solutions to protect your business from evolving cyber threats
+              Transform your business for the digital age with comprehensive transformation solutions
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              From zero-trust architecture to threat detection and compliance management, 
-              we provide comprehensive cybersecurity solutions that keep your business secure.
+              From process automation to digital strategy, customer experience to data analytics, 
+              we help businesses navigate their digital transformation journey successfully.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Security Services Grid */}
+      {/* Transformation Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Security Services
+              Our Transformation Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive cybersecurity solutions designed for modern threats
+              Comprehensive digital transformation solutions designed for business success
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityServices.map((service, index) => (
+            {transformationServices.map((service, index) => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
@@ -195,20 +183,20 @@ export default function CybersecurityServices() {
         </div>
       </section>
 
-      {/* Security Solutions Section */}
+      {/* Transformation Phases Section */}
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Solutions
+              Our Transformation Approach
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive security coverage across all aspects of your business
+              A proven methodology for successful digital transformation
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securitySolutions.map((solution, index) => (
+            {transformationPhases.map((phase, index) => (
               <motion.div
                 key={index}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
@@ -217,12 +205,15 @@ export default function CybersecurityServices() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-xl font-bold text-cyan-400 mb-4">{solution.category}</h3>
+                <div className="text-4xl mb-4">{phase.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{phase.phase}</h3>
+                <p className="text-gray-400 mb-4 text-sm">{phase.description}</p>
+                
                 <ul className="space-y-2">
-                  {solution.solutions.map((item, idx) => (
+                  {phase.activities.map((activity, idx) => (
                     <li key={idx} className="text-sm text-gray-300 flex items-center">
                       <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-                      {item}
+                      {activity}
                     </li>
                   ))}
                 </ul>
@@ -237,10 +228,10 @@ export default function CybersecurityServices() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Security Solutions?
+              Benefits of Digital Transformation
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive protection backed by expertise and innovation
+              Transform your business and unlock new opportunities for growth
             </p>
           </div>
           
@@ -271,10 +262,10 @@ export default function CybersecurityServices() {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Secure Your Business?
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our cybersecurity solutions can protect your organization
+            Let's discuss how digital transformation can drive your business forward
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
