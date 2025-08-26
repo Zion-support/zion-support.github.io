@@ -1,336 +1,210 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  Filter, 
-  MapPin, 
-  Clock, 
-  Users,
-  Heart,
-  Zap,
-  Globe,
-  Award,
-  Briefcase,
-  GraduationCap,
-  ArrowRight
-} from 'lucide-react';
+import { useState } from "react";
 
 export default function Careers() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedDepartment, setSelectedDepartment] = useState('All');
+  const [activeTab, setActiveTab] = useState("engineering");
+  
+  // Sample job listings
+  const jobs = {
+    engineering: [
+      {
+        title: "Senior Frontend Engineer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",
+        description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
+      },
+      {
+        title: "AI Research Engineer",
+        location: "San Francisco, CA",
+        type: "Full-time",
+        department: "Engineering",
+        description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
+      },
+      {
+        title: "Full Stack Developer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Engineering",
+        description: "Develop end-to-end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL."
+      }
+    ],
+    product: [
+      {
+        title: "Product Manager",
+        location: "New York, NY",
+        type: "Full-time",
+        department: "Product",
+        description: "Lead product development initiatives to enhance our marketplace experience for both talent and clients."
+      },
+      {
+        title: "UX/UI Designer",
+        location: "Remote",
+        type: "Full-time",
+        department: "Product",
+        description: "Create intuitive and engaging user experiences that make complex technology accessible to all users."
+      }
+    ],
+    marketing: [
+      {
+        title: "Growth Marketing Manager",
+        location: "Remote",
+        type: "Full-time",
+        department: "Marketing",
+        description: "Drive user acquisition and engagement strategies across multiple channels to grow our marketplace."
+      },
+      {
+        title: "Content Strategist",
+        location: "London, UK",
+        type: "Full-time",
+        department: "Marketing",
+        description: "Develop compelling content that educates and inspires our audience about the future of AI and technology."
+      }
+    ],
+    operations: [
+      {
+        title: "Community Manager",
+        location: "Remote",
+        type: "Full-time",
+        department: "Operations",
+        description: "Build and nurture our growing community of AI specialists, developers, and tech enthusiasts."
+      },
+      {
+        title: "Talent Acquisition Specialist",
+        location: "Remote",
+        type: "Full-time",
+        department: "Operations",
+        description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
+      }
+    ]
+  };
 
-  const departments = ['All', 'Engineering', 'AI & ML', 'Sales', 'Marketing', 'Operations', 'Design'];
-
-  const jobOpenings = [
-    {
-      id: 1,
-      title: 'Senior AI Engineer',
-      department: 'AI & ML',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-      requirements: ['PhD in Computer Science or related field', 'Expertise in TensorFlow, PyTorch', 'Experience with large language models'],
-      posted: '2 days ago'
-    },
-    {
-      id: 2,
-      title: 'Full Stack Developer',
-      department: 'Engineering',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Build scalable web applications and APIs using modern technologies and best practices.',
-      requirements: ['React, Node.js, Python', 'Cloud platforms (AWS/Azure)', 'Database design and optimization'],
-      posted: '1 week ago'
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity Specialist',
-      department: 'Operations',
-      location: 'Middletown, DE',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Implement and maintain security protocols to protect client data and systems.',
-      requirements: ['CISSP certification', 'Experience with SIEM tools', 'Incident response expertise'],
-      posted: '3 days ago'
-    },
-    {
-      id: 4,
-      title: 'Sales Development Representative',
-      department: 'Sales',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '2+ years',
-      description: 'Generate new business opportunities and build relationships with potential clients.',
-      requirements: ['B2B sales experience', 'Tech industry knowledge', 'Strong communication skills'],
-      posted: '1 week ago'
-    },
-    {
-      id: 5,
-      title: 'UX/UI Designer',
-      department: 'Design',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Create intuitive and beautiful user experiences for our digital products and platforms.',
-      requirements: ['Portfolio of web/mobile designs', 'Figma, Sketch proficiency', 'User research experience'],
-      posted: '5 days ago'
-    },
-    {
-      id: 6,
-      title: 'DevOps Engineer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Optimize our infrastructure and deployment processes for maximum efficiency and reliability.',
-      requirements: ['Kubernetes, Docker expertise', 'CI/CD pipeline experience', 'Cloud infrastructure management'],
-      posted: '2 weeks ago'
-    }
-  ];
-
-  const companyValues = [
-    {
-      icon: Heart,
-      title: 'Passion for Innovation',
-      description: 'We love what we do and are constantly pushing the boundaries of what\'s possible.'
-    },
-    {
-      icon: Zap,
-      title: 'Fast-Paced Growth',
-      description: 'Join a company that\'s growing rapidly and offers endless opportunities for advancement.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Impact',
-      description: 'Work on projects that make a difference in industries worldwide.'
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'We strive for excellence in everything we do, from code quality to customer service.'
-    }
-  ];
-
+  // Benefits list
   const benefits = [
     {
-      icon: Briefcase,
-      title: 'Flexible Work',
-      description: 'Remote-first culture with flexible hours and work arrangements'
+      title: "Flexible Work",
+      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
+      icon: "🏠"
     },
     {
-      icon: GraduationCap,
-      title: 'Learning & Development',
-      description: 'Continuous learning opportunities and professional development programs'
+      title: "Health & Wellness",
+      description: "Comprehensive health insurance and wellness programs to keep you at your best.",
+      icon: "❤️"
     },
     {
-      icon: Users,
-      title: 'Great Team',
-      description: 'Work with talented, passionate professionals from around the world'
+      title: "Continuous Learning",
+      description: "Education stipends and dedicated learning time to help you grow professionally.",
+      icon: "📚"
     },
     {
-      icon: Award,
-      title: 'Competitive Benefits',
-      description: 'Health insurance, 401(k), stock options, and more'
+      title: "Competitive Compensation",
+      description: "Salary packages that recognize your value, plus equity options to share in our success.",
+      icon: "💰"
     }
   ];
 
-  const filteredJobs = jobOpenings.filter(job => {
-    const matchesSearch = job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         job.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment;
-    return matchesSearch && matchesDepartment;
-  });
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our Team
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-32 pb-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8">
+            Join Our <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">Team</span>
           </h1>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Help us shape the future of technology. Join a team of innovators, problem-solvers, and visionaries.
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Help us build the future of AI and technology
           </p>
-          
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search for jobs, skills, or keywords..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
-            />
-          </div>
         </div>
-      </section>
-
-      {/* Department Filter */}
-      <section className="py-8 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-3 justify-center">
-            {departments.map((dept) => (
-              <button
-                key={dept}
-                onClick={() => setSelectedDepartment(dept)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedDepartment === dept 
-                    ? 'bg-zion-cyan text-white' 
-                    : 'bg-zion-blue-dark/50 text-zion-slate-light hover:bg-zion-cyan hover:text-white'
-                }`}
-              >
-                {dept}
-              </button>
-            ))}
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
+            <p className="text-zion-slate-light text-lg mb-6">
+              At Zion, we're not just building a marketplace; we're creating a new paradigm for how AI and 
+              technology are accessed, shared, and implemented globally.
+            </p>
+            <p className="text-zion-slate-light text-lg mb-6">
+              Our team is passionate about democratizing access to cutting-edge technology and connecting 
+              talented individuals with meaningful opportunities. We value innovation, collaboration, and 
+              impact in everything we do.
+            </p>
+            <p className="text-zion-slate-light text-lg">
+              If you're excited about shaping the future of AI and technology while working in a dynamic, 
+              remote-first environment with a mission-driven team, we'd love to meet you.
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* Job Listings */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-white">
-              Open Positions ({filteredJobs.length})
-            </h2>
-            <div className="flex items-center space-x-2 text-zion-slate-light">
-              <Filter className="w-4 h-4" />
-              <span className="text-sm">Filtered by: {selectedDepartment}</span>
+          <div className="rounded-lg overflow-hidden bg-zion-slate-dark/50 border border-zion-cyan/20">
+            <div className="w-full h-64 flex items-center justify-center text-zion-slate-light">
+              Team Collaboration Image
             </div>
           </div>
-          
-          <div className="space-y-6">
-            {filteredJobs.map((job) => (
-              <div key={job.id} className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-3 mb-3">
-                      <h3 className="text-xl font-semibold text-white">{job.title}</h3>
-                      <span className="px-3 py-1 bg-zion-cyan text-white text-xs font-medium rounded-full">
-                        {job.department}
-                      </span>
-                    </div>
-                    
-                    <div className="flex flex-wrap items-center space-x-6 text-sm text-zion-slate-light mb-4">
-                      <div className="flex items-center space-x-1">
-                        <MapPin className="w-4 h-4" />
-                        <span>{job.location}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{job.type}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Users className="w-4 h-4" />
-                        <span>{job.experience}</span>
-                      </div>
-                    </div>
-                    
-                    <p className="text-zion-slate-light mb-4">{job.description}</p>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-white font-medium mb-2">Key Requirements:</h4>
-                      <ul className="list-disc list-inside text-zion-slate-light text-sm space-y-1">
-                        {job.requirements.map((req, index) => (
-                          <li key={index}>{req}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-zion-slate-light">Posted {job.posted}</span>
-                      <Link to={`/careers/${job.id}`}>
-                        <button className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform flex items-center space-x-2">
-                          <span>Apply Now</span>
-                          <ArrowRight className="w-4 h-4" />
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-            
-            {filteredJobs.length === 0 && (
-              <div className="text-center py-16">
-                <Briefcase className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">No jobs found</h3>
-                <p className="text-zion-slate-light mb-6">
-                  Try adjusting your search criteria or check back later for new opportunities.
-                </p>
-              </div>
-            )}
-          </div>
         </div>
-      </section>
-
-      {/* Company Values */}
-      <section className="py-16 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Why Work at Zion Tech Group?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-8 h-8 text-zion-cyan" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-zion-slate-light text-sm">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Benefits & Perks
-          </h2>
+        
+        <div className="mb-24">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 text-center">
-                <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-zion-cyan" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-zion-slate-light text-sm">{benefit.description}</p>
+              <div key={index} className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 p-8 rounded-xl hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="text-4xl mb-4">{benefit.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-zion-slate-light">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Don't See the Right Role?
-          </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals to join our team. Send us your resume and we'll keep you in mind for future opportunities.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <button className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform">
-                Send Resume
-              </button>
-            </Link>
-            <Link to="/about">
-              <button className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-zion-blue transition-colors">
-                Learn About Us
-              </button>
-            </Link>
+        
+        <div className="mb-24">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
+          
+          <div className="w-full">
+            <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 mb-8 w-full flex flex-wrap justify-center rounded-lg p-2">
+              {Object.keys(jobs).map((department) => (
+                <button
+                  key={department}
+                  onClick={() => setActiveTab(department)}
+                  className={`px-6 py-3 rounded-lg transition-all duration-300 capitalize ${
+                    activeTab === department
+                      ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/40'
+                      : 'text-zion-slate-light hover:text-white hover:bg-zion-slate-dark/50'
+                  }`}
+                >
+                  {department}
+                </button>
+              ))}
+            </div>
+            
+            <div className="space-y-6">
+              {jobs[activeTab].map((job, index) => (
+                <div key={index} className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 rounded-xl p-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        <span className="text-xs text-zion-slate-light bg-zion-slate-dark/70 px-2 py-1 rounded-full">{job.location}</span>
+                        <span className="text-xs text-zion-slate-light bg-zion-slate-dark/70 px-2 py-1 rounded-full">{job.type}</span>
+                        <span className="text-xs text-zion-slate-light bg-zion-slate-dark/70 px-2 py-1 rounded-full">{job.department}</span>
+                      </div>
+                      <p className="text-zion-slate-light mb-4">{job.description}</p>
+                    </div>
+                    <button className="w-full md:w-auto mt-4 md:mt-0 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
+                      Apply Now
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </section>
+        
+        <div className="bg-gradient-to-r from-zion-slate-dark/50 to-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 md:p-12 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
+          <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
+            We're always looking for talented individuals who are passionate about AI and technology. 
+            Send us your resume and let's start a conversation.
+          </p>
+          <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
+            Send General Application
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
