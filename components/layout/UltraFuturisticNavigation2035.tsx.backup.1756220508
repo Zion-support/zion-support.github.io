@@ -22,6 +22,8 @@ interface NavigationItem {
 
 const navigationItems: NavigationItem[] = [
   {
+<<<<<<< HEAD
+=======
     name: 'All Services',
     href: '/ultimate-2025-futuristic-services-showcase',
     icon: <Globe className="w-5 h-5" />,
@@ -41,6 +43,7 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7e85
     name: 'AI & Consciousness',
     href: '/ai-services',
     icon: <Brain className="w-5 h-5" />,

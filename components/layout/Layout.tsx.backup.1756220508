@@ -1,9 +1,16 @@
+<<<<<<< HEAD
+import React from 'react';
+import UltraFuturisticNavigation from './UltraFuturisticNavigation';
+import EnhancedFooter from './EnhancedFooter';
+import UltraAdvancedFuturisticBackground from '../ui/UltraAdvancedFuturisticBackground';
+=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import UltraFuturisticNavigation2035 from './UltraFuturisticNavigation2035';
 import UltraFuturisticFooter2035 from './UltraFuturisticFooter2035';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2025 from '../backgrounds/UltraFuturisticBackground2025';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7e85
 import TopContactBar from './TopContactBar';
 
 type LayoutProps = {
@@ -27,6 +34,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default function Layout({ children }: LayoutProps) {
+<<<<<<< HEAD
+	return (
+		<div className="min-h-screen bg-black text-white">
+			<main>{children}</main>
+		</div>
+	);
+=======
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -59,4 +73,5 @@ export default function Layout({ children }: LayoutProps) {
       </div>
     </div>
   );
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7e85
 }
