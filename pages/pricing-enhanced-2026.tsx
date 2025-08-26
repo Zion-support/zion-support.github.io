@@ -540,3 +540,9 @@ export default function PricingEnhanced2026Page() {
     </UltraFuturisticBackground>
   );
 }
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}

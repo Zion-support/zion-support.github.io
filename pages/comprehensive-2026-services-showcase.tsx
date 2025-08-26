@@ -7,8 +7,8 @@ import {
   Brain, Atom, Rocket, Cpu, Database, Target, Sparkles,
   ChevronRight, Search, Filter, Grid, List
 } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import EnhancedFooter from '../components/layout/EnhancedFooter';
 import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion';
 import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions';
 

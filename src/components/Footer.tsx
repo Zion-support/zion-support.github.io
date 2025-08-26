@@ -18,14 +18,14 @@ const Footer: React.FC = () => {
     {
       title: "Services",
       links: [
+        { label: "Services Showcase", path: "/services-showcase" },
         { label: "AI Solutions", path: "/services/ai" },
+        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" },
+        { label: "AI Marketing Automation", path: "/services/ai-marketing-automation" },
         { label: "Cloud & DevOps", path: "/services/cloud" },
         { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "IT Infrastructure", path: "/services/infrastructure" },
         { label: "Digital Transformation", path: "/services/transformation" },
-        { label: "Quantum Neural Network", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Operations", path: "/autonomous-business-operations-platform" },
-        { label: "IT Asset Management", path: "/ai-powered-it-asset-management" }
+        { label: "Emerging Technologies", path: "/emerging-tech" }
       ]
     },
     {
@@ -36,27 +36,27 @@ const Footer: React.FC = () => {
         { label: "Careers", path: "/careers" },
         { label: "News", path: "/news" },
         { label: "Case Studies", path: "/case-studies" },
-        { label: "Events", path: "/events" }
+        { label: "Partners", path: "/partners" }
       ]
     },
     {
       title: "Resources",
       links: [
+        { label: "AI Matcher", path: "/ai-matcher" },
         { label: "Solutions", path: "/solutions" },
-        { label: "Services", path: "/services" },
-        { label: "Research", path: "/research-development" },
-        { label: "Resources", path: "/resources" },
-        { label: "Research", path: "/research-development" },
-        { label: "Privacy Policy", path: "/privacy" }
+        { label: "Research & Development", path: "/research-development" },
+        { label: "Training", path: "/training" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "White Papers", path: "/white-papers" }
       ]
     },
     {
       title: "Support",
       links: [
         { label: "Contact Us", path: "/contact" },
-        { label: "FAQ", path: "/faq" },
-        { label: "Consulting", path: "/services/consulting" },
-        { label: "Request Quote", path: "/contact" }
+        { label: "Help Center", path: "/help" },
+        { label: "Support", path: "/support" },
+        { label: "Request Quote", path: "/request-quote" }
       ]
     }
   ];

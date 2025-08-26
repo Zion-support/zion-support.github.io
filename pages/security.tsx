@@ -1,178 +1,307 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function SecurityPage() {
+export default function Security() {
+  const securityMeasures = [
+    {
+      id: 'data-protection',
+      title: 'Data Protection',
+      icon: Database,
+      features: [
+        'End-to-end encryption for all data in transit',
+        'AES-256 encryption for data at rest',
+        'Regular automated backups with encryption',
+        'Secure data centers with 24/7 monitoring',
+        'Data residency compliance for global clients'
+      ]
+    },
+    {
+      id: 'access-control',
+      title: 'Access Control',
+      icon: Key,
+      features: [
+        'Multi-factor authentication (MFA) required',
+        'Role-based access control (RBAC)',
+        'Principle of least privilege implementation',
+        'Regular access reviews and deprovisioning',
+        'Single sign-on (SSO) integration'
+      ]
+    },
+    {
+      id: 'infrastructure',
+      title: 'Infrastructure Security',
+      icon: Server,
+      features: [
+        'Network segmentation and firewalls',
+        'Intrusion detection and prevention systems',
+        'Regular vulnerability assessments',
+        'Automated security patching',
+        'DDoS protection and rate limiting'
+      ]
+    },
+    {
+      id: 'monitoring',
+      title: 'Security Monitoring',
+      icon: Eye,
+      features: [
+        '24/7 security operations center (SOC)',
+        'Real-time threat detection and response',
+        'Comprehensive audit logging',
+        'Security incident response team',
+        'Continuous security monitoring tools'
+      ]
+    }
+  ];
+
+  const certifications = [
+    { name: 'SOC 2 Type II', status: 'Certified' },
+    { name: 'ISO 27001', status: 'Certified' },
+    { name: 'GDPR', status: 'Compliant' },
+    { name: 'HIPAA', status: 'Compliant' },
+    { name: 'PCI DSS', status: 'Compliant' }
+  ];
+
   return (
     <>
       <Head>
-        <title>Security — Zion Tech Group</title>
-        <meta name="description" content="Security practices, policies, and measures implemented by Zion Tech Group to protect our systems and data." />
-        <meta property="og:title" content="Security — Zion Tech Group" />
-        <meta property="og:description" content="Security practices, policies, and measures implemented by Zion Tech Group to protect our systems and data." />
+        <title>Security | Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's comprehensive security measures, certifications, and commitment to protecting your data and privacy." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          {/* Header */}
-          <div className="mb-12">
-            <Link href="/" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-8">
-              <span className="mr-2">←</span>
-              Back to Home
-            </Link>
-            <h1 className="text-4xl font-bold mb-4">Security</h1>
-            <p className="text-xl text-white/80">Protecting your data and systems with enterprise-grade security</p>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <EnhancedNavigation />
+
+        {/* Hero Section */}
+        <section className="pt-32 pb-20 px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="flex items-center justify-center mb-6"
+            >
+              <Shield className="w-16 h-16 text-cyan-400" />
+            </motion.div>
+            
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent mb-6"
+            >
+              Security First
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+            >
+              Your security and privacy are our top priorities. Learn about our comprehensive security measures and industry-leading practices.
+            </motion.p>
           </div>
+        </section>
 
-          {/* Security Overview */}
-          <section className="mb-12">
-            <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/30 rounded-xl p-8">
-              <h2 className="text-2xl font-semibold mb-4 text-cyan-400">Our Security Commitment</h2>
-              <p className="text-white/80 mb-4">
-                At Zion Tech Group, security is not just a feature—it's the foundation of everything we build. We implement 
-                industry-leading security practices to ensure the protection of your data, systems, and digital assets.
+        {/* Security Overview */}
+        <section className="py-20 px-6">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">Enterprise-Grade Security</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We implement multiple layers of security controls to protect your data and ensure business continuity.
               </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              {securityMeasures.map((measure, index) => (
+                <motion.div
+                  key={measure.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
+                >
+                  <div className="flex items-center mb-6">
+                    <measure.icon className="w-8 h-8 text-cyan-400 mr-4" />
+                    <h3 className="text-2xl font-bold text-white">{measure.title}</h3>
+                  </div>
+                  
+                  <ul className="space-y-3">
+                    {measure.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-300 leading-relaxed">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
             </div>
-          </section>
 
-          {/* Security Features Grid */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-8 text-center">Security Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-cyan-400/30 transition-all">
-                <div className="w-12 h-12 bg-cyan-400/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
+            {/* Certifications */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16"
+            >
+              <h3 className="text-3xl font-bold text-white mb-6 text-center">Security Certifications & Compliance</h3>
+              
+              <div className="grid md:grid-cols-5 gap-6">
+                {certifications.map((cert, index) => (
+                  <motion.div
+                    key={cert.name}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="text-center p-4 bg-slate-800/50 rounded-xl border border-white/10"
+                  >
+                    <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                    <h4 className="text-white font-semibold mb-1">{cert.name}</h4>
+                    <p className="text-cyan-400 text-sm">{cert.status}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Security Incident Response */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="mb-16"
+            >
+              <h3 className="text-3xl font-bold text-white mb-6">Incident Response</h3>
+              <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-white font-semibold mb-4 flex items-center">
+                      <Eye className="w-5 h-5 text-cyan-400 mr-2" />
+                      Detection & Response
+                    </h4>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>• 24/7 security monitoring</li>
+                      <li>• Automated threat detection</li>
+                      <li>• Rapid incident response team</li>
+                      <li>• Regular security drills</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-white font-semibold mb-4 flex items-center">
+                      <Lock className="w-5 h-5 text-cyan-400 mr-2" />
+                      Business Continuity
+                    </h4>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>• Disaster recovery plans</li>
+                      <li>• Regular backup testing</li>
+                      <li>• Redundant infrastructure</li>
+                      <li>• Recovery time objectives (RTO)</li>
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Encryption</h3>
-                <p className="text-white/70">End-to-end encryption for all data in transit and at rest using AES-256 standards.</p>
               </div>
+            </motion.div>
 
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-fuchsia-400/30 transition-all">
-                <div className="w-12 h-12 bg-fuchsia-400/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
+            {/* Vulnerability Management */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="mb-16"
+            >
+              <h3 className="text-3xl font-bold text-white mb-6">Vulnerability Management</h3>
+              <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  We maintain a proactive approach to identifying and addressing security vulnerabilities:
+                </p>
+                
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-cyan-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Eye className="w-8 h-8 text-cyan-400" />
+                    </div>
+                    <h4 className="text-white font-semibold mb-2">Regular Scanning</h4>
+                    <p className="text-gray-300 text-sm">Continuous automated vulnerability scanning</p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-cyan-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Shield className="w-8 h-8 text-cyan-400" />
+                    </div>
+                    <h4 className="text-white font-semibold mb-2">Penetration Testing</h4>
+                    <p className="text-gray-300 text-sm">Annual third-party security assessments</p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-cyan-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle className="w-8 h-8 text-cyan-400" />
+                    </div>
+                    <h4 className="text-white font-semibold mb-2">Rapid Remediation</h4>
+                    <p className="text-gray-300 text-sm">Quick patching and vulnerability resolution</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Access Control</h3>
-                <p className="text-white/70">Multi-factor authentication and role-based access control for all systems.</p>
               </div>
+            </motion.div>
 
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-green-400/30 transition-all">
-                <div className="w-12 h-12 bg-green-400/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Monitoring</h3>
-                <p className="text-white/70">24/7 security monitoring with real-time threat detection and response.</p>
-              </div>
-
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-yellow-400/30 transition-all">
-                <div className="w-12 h-12 bg-yellow-400/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Backup & Recovery</h3>
-                <p className="text-white/70">Automated backup systems with disaster recovery capabilities and 99.9% uptime guarantee.</p>
-              </div>
-
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-purple-400/30 transition-all">
-                <div className="w-12 h-12 bg-purple-400/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Compliance</h3>
-                <p className="text-white/70">SOC 2 Type II, ISO 27001, and GDPR compliance with regular security audits.</p>
-              </div>
-
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-red-400/30 transition-all">
-                <div className="w-12 h-12 bg-red-400/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Incident Response</h3>
-                <p className="text-white/70">Rapid incident response team with automated threat intelligence and mitigation.</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Security Practices */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-8 text-center">Security Practices</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="text-xl font-semibold mb-4 text-cyan-400">Infrastructure Security</h3>
-                <ul className="space-y-2 text-white/70">
-                  <li>• Secure cloud infrastructure with private networks</li>
-                  <li>• Regular security patches and updates</li>
-                  <li>• Intrusion detection and prevention systems</li>
-                  <li>• DDoS protection and mitigation</li>
-                  <li>• Secure API endpoints with rate limiting</li>
-                </ul>
-              </div>
-
-              <div className="bg-white/5 border border-white/10 rounded-xl p-6">
-                <h3 className="text-xl font-semibold mb-4 text-fuchsia-400">Data Protection</h3>
-                <ul className="space-y-2 text-white/70">
-                  <li>• Data encryption at rest and in transit</li>
-                  <li>• Regular security audits and penetration testing</li>
-                  <li>• Secure data backup and recovery procedures</li>
-                  <li>• Data retention and deletion policies</li>
-                  <li>• Privacy by design principles</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Security Certifications */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-8 text-center">Security Certifications</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/30 rounded-xl p-6 text-center">
-                <h3 className="text-xl font-semibold mb-2">SOC 2 Type II</h3>
-                <p className="text-white/70">Service Organization Control 2 compliance for security, availability, and confidentiality.</p>
-              </div>
-              <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 border border-fuchsia-400/30 rounded-xl p-6 text-center">
-                <h3 className="text-xl font-semibold mb-2">ISO 27001</h3>
-                <p className="text-white/70">International standard for information security management systems.</p>
-              </div>
-              <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-400/30 rounded-xl p-6 text-center">
-                <h3 className="text-xl font-semibold mb-2">GDPR</h3>
-                <p className="text-white/70">General Data Protection Regulation compliance for EU data protection.</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Contact Security Team */}
-          <section className="mb-12">
-            <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-400/30 rounded-xl p-8 text-center">
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">Report Security Issues</h2>
-              <p className="text-white/80 mb-6">
-                If you discover a security vulnerability or have security concerns, please report them immediately to our security team.
+            {/* Contact Security Team */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-2xl p-8 border border-red-500/20"
+            >
+              <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
+                <Shield className="w-8 h-8 text-red-400 mr-4" />
+                Report Security Issues
+              </h3>
+              
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                If you discover a security vulnerability, please report it to our security team immediately:
               </p>
-              <div className="space-y-2 text-white/70">
-                <p>Email: security@zion.tech</p>
-                <p>Security Hotline: +1-800-ZION-SEC</p>
-                <p>Response Time: Within 24 hours</p>
+              
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="flex items-center">
+                  <Mail className="w-5 h-5 text-red-400 mr-3" />
+                  <div>
+                    <p className="text-white font-semibold">Security Email</p>
+                    <p className="text-gray-300">security@ziontechgroup.com</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <Phone className="w-5 h-5 text-red-400 mr-3" />
+                  <div>
+                    <p className="text-white font-semibold">Emergency Hotline</p>
+                    <p className="text-gray-300">+1 (555) 123-HELP</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <Key className="w-5 h-5 text-red-400 mr-3" />
+                  <div>
+                    <p className="text-white font-semibold">PGP Key</p>
+                    <p className="text-gray-300">Available on request</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </section>
-
-          {/* Navigation */}
-          <div className="mt-12 text-center">
-            <Link href="/contact" className="px-6 py-3 bg-cyan-400 hover:bg-cyan-300 text-black font-semibold rounded-lg transition-colors mr-4">
-              Contact Security Team
-            </Link>
-            <Link href="/privacy" className="px-6 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-colors">
-              Privacy Policy
-            </Link>
+            </motion.div>
           </div>
-        </main>
+        </section>
+
+        <EnhancedFooter />
       </div>
     </>
   );

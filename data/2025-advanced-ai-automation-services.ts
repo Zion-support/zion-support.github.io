@@ -801,7 +801,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-emotional-intelligence-trainer',
     marketPosition: 'Leading emotional intelligence training platform. Our advantage: Comprehensive approach covering both AI and human emotional development.',
-    targetAudience: 'HR departments', 'Educational institutions', 'Healthcare organizations', 'AI development teams', 'Leadership training programs',
+    targetAudience: ['HR departments', 'Educational institutions', 'Healthcare organizations', 'AI development teams', 'Leadership training programs'],
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'AI Emotional Intelligence & Human Development',
