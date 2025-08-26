@@ -1,6 +1,6 @@
 [build]
   # Deterministic install and build for Next static export
-  command = "npm ci && npm run export"
+  command = "npm ci && npm run build"
   publish = "out"
 
 [build.environment]
