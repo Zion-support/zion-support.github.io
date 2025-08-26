@@ -2,35 +2,53 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { MessageSquare, Sparkles } from "lucide-react";
+=======
 import { MessageSquare, ChevronDown, Users, Briefcase, Settings, BarChart3 } from "lucide-react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 import { MessageSquare, ChevronDown, Brain, Shield, Cloud, Zap } from "lucide-react";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
 =======
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-915d
 =======
 import { MessageSquare, ChevronDown, Users, Settings, HelpCircle, FileText } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 =======
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useRef } from "react";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
 =======
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-aa85
 =======
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 =======
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -38,12 +56,20 @@ interface MainNavigationProps {
   className?: string;
 }
 
+<<<<<<< HEAD
+interface DropdownItem {
+  key: string;
+  href: string;
+  icon?: React.ReactNode;
+  description?: string;
+=======
 interface NavigationLink {
   key: string;
   href: string;
   name: string;
   matches: (path: string) => boolean;
   dropdown?: { href: string; name: string; }[];
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
 }
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
@@ -51,7 +77,19 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+<<<<<<< HEAD
+=======
   // Close dropdown when clicking outside
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -65,30 +103,65 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setDropdownOpen(false);
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+<<<<<<< HEAD
+=======
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+>>>>>>> origin/cursor/website-audit-and-enhancement-915d
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 =======
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
 =======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+>>>>>>> origin/cursor/website-audit-and-enhancement-aa85
 =======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 =======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
 
   const baseLinks: NavigationLink[] = [
     {
       key: 'home',
       href: '/',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      matches: (path: string) => path === '/',
+      name: t('nav.home')
+    },
+    {
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services'),
+      name: t('nav.services')
+    },
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      key: 'services',
+      href: '/services',
+<<<<<<< HEAD
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/micro-saas-services')
+    },
+    {
+      key: 'ai-services',
+      href: '/micro-saas-services',
+      matches: (path: string) => path.startsWith('/micro-saas-services')
+=======
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services') || path.startsWith('/green-it')
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
 =======
       key: 'about',
       href: '/about',
@@ -97,11 +170,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'about',
       href: '/about',
       matches: (path: string) => path === '/about'
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
     },
     {
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-35e5
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
       key: 'services',
       href: '/services',
@@ -121,6 +199,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'micro-saas',
       href: '/micro-saas',
       matches: (path: string) => path.startsWith('/micro-saas')
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5db4
     },
     {
       key: 'about',
@@ -133,8 +212,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services')
 =======
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
       name: 'Home',
       matches: (path: string) => path === '/'
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
     },
     {
       key: 'services',
@@ -150,6 +231,22 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'marketplace',
       href: '/marketplace',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      matches: (path: string) => path.startsWith('/marketplace')
+    },
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
@@ -166,26 +263,32 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'micro-saas',
       href: '/micro-saas-services',
       matches: (path: string) => path.startsWith('/micro-saas-services')
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
 =======
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
     },
     {
       key: 'categories',
       href: '/categories',
       matches: (path: string) => path.startsWith('/categories')
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
 =======
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 =======
       matches: (path: string) => path.startsWith('/marketplace'),
       name: t('nav.marketplace')
+>>>>>>> origin/cursor/website-audit-and-enhancement-aa85
 =======
       name: 'Marketplace',
       matches: (path: string) => path.startsWith('/marketplace'),
@@ -195,10 +298,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { href: '/equipment', label: 'Equipment' },
         { href: '/green-it', label: 'Green IT' }
       ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 =======
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
+>>>>>>> origin/cursor/website-audit-and-enhancement-45a9
 =======
       name: 'Marketplace',
       matches: (path: string) => path.startsWith('/marketplace'),
@@ -208,12 +313,33 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { href: '/categories', name: 'Categories' },
         { href: '/green-it', name: 'Green IT' }
       ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
     },
     {
+>>>>>>> origin/cursor/website-audit-and-enhancement-6726
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-35e5
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
       key: 'talent',
       href: '/talent',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
+      name: t('nav.talent')
+    },
+    {
+      key: 'equipment',
+      href: '/equipment',
+<<<<<<< HEAD
+      matches: (path:string) => path.startsWith('/equipment')
+    },
+    {
+<<<<<<< HEAD
+      key: 'blog',
+      href: '/blog',
+      matches: (path: string) => path.startsWith('/blog')
+=======
       key: 'ai-hiring',
       href: '/zion-hire-ai',
       matches: (path: string) => path.startsWith('/zion-hire-ai') || path.startsWith('/hire-ai')
@@ -226,9 +352,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/categories',
       icon: <FileText className="w-4 h-4" />,
       description: 'Browse service categories'
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 =======
       matches: (path: string) => path.startsWith('/equipment'),
       name: t('nav.equipment')
+>>>>>>> origin/cursor/website-audit-and-enhancement-aa85
     },
     {
       key: 'partners',
@@ -242,6 +370,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { href: '/talent/apply', label: 'Apply as Talent' },
         { href: '/zion-hire-ai', label: 'AI Hiring' }
       ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
     },
     {
       key: 'enterprise',
@@ -255,17 +384,38 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { href: '/talents', name: 'Talent Directory' },
         { href: '/hire-ai', name: 'Hire AI' }
       ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
     },
     {
       key: 'community',
       href: '/community',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+    },
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      key: 'about',
+      href: '/about',
+      matches: (path: string) => path === '/about'
+=======
       key: 'pricing',
       href: '/pricing',
       matches: (path: string) => path === '/pricing'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
 =======
       key: 'about',
       href: '/about',
       matches: (path: string) => path === '/about'
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
 =======
       key: 'company',
       href: '/about',
@@ -273,21 +423,30 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
       name: t('nav.community')
+>>>>>>> origin/cursor/website-audit-and-enhancement-aa85
 =======
       key: 'about',
       href: '/about',
       matches: (path: string) => path === '/about'
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
     },
     {
       key: 'blog',
       href: '/blog',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      matches: (path: string) => path.startsWith('/blog')
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5
+=======
       key: 'blog',
       href: '/blog',
       matches: (path: string) => path.startsWith('/blog')
+>>>>>>> origin/cursor/website-audit-and-enhancement-35e5
 =======
       key: 'contact',
       href: '/contact',
       matches: (path: string) => path === '/contact'
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
       icon: <Users className="w-4 h-4" />,
       description: 'Join our community'
@@ -311,18 +470,47 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { href: '/blog', label: 'Blog' },
         { href: '/partners', label: 'Partners' }
       ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
     },
     {
       key: 'about',
       href: '/about',
+<<<<<<< HEAD
+      icon: <FileText className="w-4 h-4" />,
+      description: 'Learn about Zion Tech Group'
+    },
+    {
+      key: 'contact',
+      href: '/contact',
+      icon: <MessageSquare className="w-4 h-4" />,
+      description: 'Get in touch with us'
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
+=======
       key: 'blog',
       href: '/blog',
       matches: (path: string) => path.startsWith('/blog')
+>>>>>>> origin/cursor/website-audit-and-enhancement-beb3
 =======
       matches: (path: string) => path.startsWith('/blog')
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
     }
   ];
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const marketplaceDropdown: DropdownItem[] = [
+    { key: 'products', href: '/marketplace', icon: <Briefcase className="w-4 h-4" />, description: 'Browse products' },
+    { key: 'services', href: '/services', icon: <Settings className="w-4 h-4" />, description: 'IT services' },
+    { key: 'equipment', href: '/equipment', icon: <BarChart3 className="w-4 h-4" />, description: 'Tech equipment' },
+    { key: 'green-it', href: '/green-it', icon: <Users className="w-4 h-4" />, description: 'Sustainable solutions' },
+  ];
+
+  const companyDropdown: DropdownItem[] = [
+    { key: 'about', href: '/about', icon: <Users className="w-4 h-4" />, description: 'Learn about Zion' },
+    { key: 'careers', href: '/careers', icon: <Briefcase className="w-4 h-4" />, description: 'Join our team' },
+    { key: 'partners', href: '/partners', icon: <Users className="w-4 h-4" />, description: 'Partnership opportunities' },
+    { key: 'contact', href: '/contact', icon: <MessageSquare className="w-4 h-4" />, description: 'Get in touch' },
+=======
   const serviceDropdowns = [
     {
       key: 'ai-services',
@@ -376,6 +564,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { name: 'Enterprise Solutions', href: '/enterprise' }
       ]
     }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
 =======
   const serviceLinks = [
     { key: 'ai-analytics', href: '/ai-analytics-dashboard', name: 'AI Analytics' },
@@ -383,6 +572,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     { key: 'cybersecurity', href: '/cybersecurity-services', name: 'Cybersecurity' },
     { key: 'cloud-migration', href: '/cloud-migration-services', name: 'Cloud Migration' },
     { key: 'it-onsite', href: '/it-onsite-services', name: 'IT Onsite Services' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78ae
   ];
 
   let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
@@ -393,6 +583,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   ];
 
   let links = baseLinks;
+>>>>>>> origin/cursor/website-audit-and-enhancement-aa85
   
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -414,6 +605,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   ];
 
   let links = baseLinks;
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 =======
       name: 'Community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
@@ -437,6 +629,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   ];
 
   let links: NavigationLink[] = baseLinks;
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
   
   // Add authenticated-only links
   if (isAuthenticated) {
@@ -458,6 +651,48 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     });
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const renderDropdown = (items: DropdownItem[], dropdownKey: string) => (
+    <div className="relative" ref={dropdownRef}>
+      <button
+        onClick={() => setActiveDropdown(activeDropdown === dropdownKey ? null : dropdownKey)}
+        className={cn(
+          "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+          location.pathname.startsWith(`/${dropdownKey}`)
+            ? "bg-zion-purple/20 text-zion-cyan"
+            : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+        )}
+      >
+        {t(`nav.${dropdownKey}`)}
+        <ChevronDown className="ml-1 h-4 w-4" />
+      </button>
+      
+      {activeDropdown === dropdownKey && (
+        <div className="absolute top-full left-0 mt-2 w-64 rounded-md bg-zion-blue-dark border border-zion-purple/20 shadow-lg z-50">
+          <div className="p-2">
+            {items.map((item) => (
+              <Link
+                key={item.key}
+                to={item.href}
+                onClick={() => setActiveDropdown(null)}
+                className="flex items-center p-3 rounded-md text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+              >
+                {item.icon && <span className="mr-3">{item.icon}</span>}
+                <div>
+                  <div className="font-medium">{t(`nav.${item.key}`)}</div>
+                  {item.description && (
+                    <div className="text-sm text-zion-slate-light">{item.description}</div>
+                  )}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+=======
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
@@ -465,6 +700,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const closeDropdown = () => {
     setActiveDropdown(null);
   };
+>>>>>>> origin/cursor/website-audit-and-enhancement-aa85
   
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
@@ -493,7 +729,26 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   
   return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
       <ul className="flex items-center gap-1">
+<<<<<<< HEAD
+        {links.map((link) => (
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <li key={link.name} className="relative">
+            <Link
+              to={link.href}
+              className={cn(
+<<<<<<< HEAD
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300",
+                link.matches(location.pathname)
+                  ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:border hover:border-zion-purple/20"
+              )}
+            >
+              {link.key === 'pricing' && <Sparkles className="h-4 w-4 mr-2" />}
+              {link.name}
+=======
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative overflow-hidden group",
                 link.matches(location.pathname)
                   ? "bg-gradient-to-r from-zion-purple/30 to-zion-cyan/30 text-zion-cyan shadow-lg shadow-zion-purple/20"
@@ -513,16 +768,22 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               )} />
               
               <span className="relative z-10">{link.name}</span>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
             </Link>
 =======
           <li key={link.key} className="relative" onMouseLeave={handleDropdownClose}>
 =======
           <li key={link.name} className="relative">
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
             {link.dropdown ? (
               <div className="relative">
                 <button
                   onClick={() => handleDropdownToggle(link.key)}
+<<<<<<< HEAD
+                  onMouseEnter={() => setActiveDropdown(link.key)}
+=======
                   onBlur={() => setTimeout(closeDropdowns, 150)}
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
                   className={cn(
                     "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
                     link.matches(location.pathname)
@@ -535,16 +796,27 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 </button>
                 
                 {activeDropdown === link.key && (
+<<<<<<< HEAD
+                  <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
+=======
                   <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-md shadow-lg z-50">
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
                     <div className="py-2">
                       {link.dropdown.map((item) => (
                         <Link
                           key={item.href}
                           to={item.href}
+<<<<<<< HEAD
+                          className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+                          onClick={handleDropdownClose}
+                        >
+                          {item.label}
+=======
                           onClick={closeDropdowns}
                           className="block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
                         >
                           {item.name}
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
                         </Link>
                       ))}
                     </div>
@@ -564,6 +836,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 {link.name}
               </Link>
             )}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
+          </li>
+        ))}
+<<<<<<< HEAD
+=======
         {links.map((link) => {
           if (link.key === 'marketplace') {
             return (
@@ -597,6 +875,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </li>
           );
         })}
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 
         {/* Service Dropdowns */}
@@ -639,8 +918,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </div>
             )}
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
           </li>
         ))}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4af2
         
         {/* Services Dropdown */}
         <li className="relative">

@@ -70,9 +70,15 @@ export default function HelpCenterPage() {
   return (
     <>
       <SEO 
+<<<<<<< HEAD
+        title="Help Center | Zion Tech Group"
+        description="Find answers to common questions about using the Zion Tech Group platform. Browse help articles or contact our support team."
+        keywords="help center, support, FAQ, tutorial, guide, Zion Tech Group"
+=======
         title="Help Center - Zion Tech Group" 
         description="Get help and support for using Zion's marketplace platform. Find answers to common questions and contact our support team." 
         keywords="help center, support, FAQ, customer service, Zion Tech Group"
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
         canonical="https://ziontechgroup.com/help"
       />
       

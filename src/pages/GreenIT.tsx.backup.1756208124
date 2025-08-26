@@ -1,12 +1,24 @@
 import React from 'react';
+<<<<<<< HEAD
+import SEO from '../SEO';
+=======
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+const GreenIT: React.FC = () => {
+  const greenSolutions = [
+=======
 =======
 import { AppLayout } from "@/layout/AppLayout";
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
 import React from 'react';
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -16,6 +28,7 @@ import { AppLayout } from "@/layout";
 
 export default function GreenIT() {
   const greenITSolutions = [
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
     {
       title: "Energy-Efficient Infrastructure",
       description: "Sustainable IT infrastructure solutions that reduce energy consumption and carbon footprint.",
@@ -120,32 +133,63 @@ export default function GreenIT() {
       challenge: "Need for sustainable IT operations to meet customer demands",
       solution: "Comprehensive green IT transformation with carbon-neutral certification",
       results: ["100% renewable energy usage", "Carbon-neutral operations", "Increased customer satisfaction"]
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
     }
   ];
+>>>>>>> origin/cursor/website-audit-and-enhancement-67e4
 
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+=======
     <>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
     <AppLayout>
       <SEO
         title="Green IT Solutions - Sustainable Technology | Zion Tech Group"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
+<<<<<<< HEAD
+        keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware, Zion Tech Group"
+=======
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-35e5
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
         canonical="https://ziontechgroup.com/green-it"
 =======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
+>>>>>>> origin/cursor/website-audit-and-enhancement-aa85
 =======
         canonical="https://ziontechgroup.com/green-it"
+>>>>>>> origin/cursor/website-audit-and-enhancement-beb3
 =======
         canonical="https://ziontechgroup.com/green-it"
+>>>>>>> origin/cursor/website-audit-and-enhancement-24ce
 =======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
 =======
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
+>>>>>>> origin/cursor/website-audit-and-enhancement-d85a
       />
       <AppHeader />
       <main className="min-h-screen bg-background pt-16 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Green
@@ -172,6 +216,7 @@ export default function GreenIT() {
             <p className="mt-6 text-zion-slate-light text-xl max-w-4xl mx-auto">
               Transform your technology infrastructure with sustainable, eco-friendly solutions that reduce costs, 
               improve efficiency, and protect our planet. Join the green technology revolution.
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Badge variant="secondary" className="text-green-400 bg-green-400/10">
@@ -188,6 +233,15 @@ export default function GreenIT() {
               </Badge>
             </div>
           </div>
+<<<<<<< HEAD
+          
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {greenSolutions.map((solution, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+                <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>
+                <p className="text-gray-300 mb-4">{solution.description}</p>
+=======
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -231,6 +285,7 @@ export default function GreenIT() {
                   <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
                     <div className="text-2xl font-bold text-blue-400">60%</div>
                     <div className="text-zion-slate-light text-sm">Carbon Reduction</div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
                   </div>
                 </div>
               </div>
@@ -242,6 +297,17 @@ export default function GreenIT() {
                 />
               </div>
             </div>
+<<<<<<< HEAD
+            
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-8">Our Green IT Solutions</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {greenITSolutions.map((solution, index) => (
+                  <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
+                    <div className="flex justify-center mb-4">
+                      <solution.icon className="h-12 w-12 text-zion-cyan" />
+=======
           </section>
 
           {/* Green Solutions */}
@@ -254,6 +320,7 @@ export default function GreenIT() {
                     <div className="flex items-center gap-4 mb-4">
                       {solution.icon}
                       <CardTitle className="text-xl text-green-400">{solution.title}</CardTitle>
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
                     </div>
                     <CardDescription className="text-zion-slate-light">
                       {solution.description}
@@ -273,6 +340,54 @@ export default function GreenIT() {
                 </Card>
               ))}
             </div>
+<<<<<<< HEAD
+            
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">Why Choose Green IT?</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
+                  <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>
+                  <ul className="text-zion-slate-light space-y-2">
+                    <li>• Reduced carbon footprint and greenhouse gas emissions</li>
+                    <li>• Lower energy consumption and resource utilization</li>
+                    <li>• Decreased electronic waste through better lifecycle management</li>
+                    <li>• Support for renewable energy initiatives</li>
+                  </ul>
+                </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
+                
+                <div>
+                  <h4 className="font-semibold text-blue-400 mb-2">Environmental Benefits</h4>
+                  <ul className="space-y-1">
+                    {solution.benefits.map((benefit, idx) => (
+                      <li key={idx} className="text-sm text-gray-300 flex items-center">
+                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold mb-4">Go Green with Technology</h3>
+              <p className="text-gray-300 mb-6">
+                Ready to make your IT operations more sustainable? Let's discuss how 
+                green technology can benefit both your business and the environment.
+              </p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+              >
+                Explore Green Solutions
+              </Link>
+            </div>
+          </div>
+=======
           </section>
 
           {/* Services */}
@@ -377,11 +492,23 @@ export default function GreenIT() {
               </CardContent>
             </Card>
           </section>
+>>>>>>> origin/cursor/website-audit-and-enhancement-8676
         </div>
+<<<<<<< HEAD
+      </section>
+    </div>
+=======
       </main>
+<<<<<<< HEAD
+    </AppLayout>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-50d5
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
       <Footer />
     </>
+>>>>>>> origin/cursor/website-audit-and-enhancement-b91b
   );
 };
 
