@@ -7,7 +7,7 @@ import FeaturedListingsSection from "@/components/FeaturedListingsSection";
 import { SEO } from "@/components/SEO";
 import HeroSection from "@/components/HeroSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
-import FeatureCTAs from "@/components/home/FeatureCTAs";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { FloatingCTA } from "@/components/FloatingCTA";
