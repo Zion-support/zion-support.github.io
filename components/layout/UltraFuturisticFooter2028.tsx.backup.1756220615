@@ -6,8 +6,12 @@ import {
   Star, TrendingUp, Target, Layers, Cpu, Database, 
   Cloud, Lock, ShieldCheck, Heart, Leaf, Car, 
   GraduationCap, Scale, Building, Factory, Camera,
+<<<<<<< HEAD
+  Video, Music, Gamepad2, Sun, Moon, Wind, Droplets
+=======
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets,
   Code
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
 } from 'lucide-react';
 
 const contactInfo = {

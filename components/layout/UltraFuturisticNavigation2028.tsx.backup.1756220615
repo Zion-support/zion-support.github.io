@@ -9,8 +9,12 @@ import {
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
   Earth, Factory, Car, Building, GraduationCap, Scale,
   Palette, Camera, Video, Music, Gamepad2, Heart,
+<<<<<<< HEAD
+  Leaf, Sun, Moon, Wind, Droplets, Mountain, Tree
+=======
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
 } from 'lucide-react';
 
 const contactInfo = {
@@ -305,7 +309,11 @@ export default function UltraFuturisticNavigation2028() {
                 className="text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2"
               >
                 <link.icon className="w-4 h-4" />
+<<<<<<< HEAD
+                <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/gu, '').trim()}</span>
+=======
                 <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
               </Link>
             ))}
           </div>
@@ -410,7 +418,11 @@ export default function UltraFuturisticNavigation2028() {
                       className="flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                     >
                       <link.icon className="w-5 h-5 text-purple-400" />
+<<<<<<< HEAD
+                      <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/gu, '').trim()}</span>
+=======
                       <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9976
                     </Link>
                   ))}
                 </div>
