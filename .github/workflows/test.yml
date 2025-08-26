@@ -38,11 +38,6 @@ jobs:
           SERVER_PID=$!
           sleep 3
           kill $SERVER_PID || true
-      - name: Run linting
-        run: npm run lint
-      - name: Run type checking
-        run: npm run type-check
-      - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: build

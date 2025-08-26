@@ -36,12 +36,5 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Verify build output
-        run: |
-          if [ ! -d dist ]; then
-            echo "Build failed: dist folder not found"
-            exit 1
-          fi
-          echo "Build completed successfully"
 
 

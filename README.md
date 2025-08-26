@@ -4,6 +4,11 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)](https://github.com/Zion-Holdings/zion.app)
 
+[![CI/CD Pipeline](https://github.com/your-username/zion-tech-group/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/your-username/zion-tech-group/actions/workflows/ci-cd.yml)
+[![Testing](https://github.com/your-username/zion-tech-group/actions/workflows/testing.yml/badge.svg)](https://github.com/your-username/zion-tech-group/actions/workflows/testing.yml)
+[![Security](https://github.com/your-username/zion-tech-group/actions/workflows/security.yml/badge.svg)](https://github.com/your-username/zion-tech-group/actions/workflows/security.yml)
+[![Release](https://github.com/your-username/zion-tech-group/actions/workflows/release.yml/badge.svg)](https://github.com/your-username/zion-tech-group/actions/workflows/release.yml)
+
 ## 🚀 About Zion Tech Group
 
 Zion Tech Group is a leading technology solutions provider offering cutting-edge AI, quantum computing, cybersecurity, cloud infrastructure, and digital transformation services. Our platform serves businesses worldwide with innovative technology solutions designed to drive innovation, efficiency, and competitive advantage.
