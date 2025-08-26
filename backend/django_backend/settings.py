@@ -18,8 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'currencies',
     'authentication',
-    'backend.cart',
-    'backend.notifications',
+    'privacy',
 ]
 
 MIDDLEWARE = [

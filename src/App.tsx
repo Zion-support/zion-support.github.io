@@ -87,11 +87,9 @@ import ContactPage from './pages/Contact';
 import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
 import Checkout from './pages/Checkout';
-const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
-const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-const CartPage = React.lazy(() => import('./pages/cart'));
-=======
 import PrivacySettings from './pages/PrivacySettings';
+=======
+import PrivacyPage from './pages/PrivacyPage';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -124,10 +122,11 @@ const baseRoutes = [
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/cart', element: <CartPage /> },
   { path: '/checkout', element: <Checkout /> },
-=======
   { path: '/privacy-settings', element: <PrivacySettings /> },
 =======
   { path: '/theme-test', element: <ThemeTest /> },
+=======
+  { path: '/profile/privacy', element: <PrivacyPage /> },
 ];
 
 // Loading Component
