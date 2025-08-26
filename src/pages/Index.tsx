@@ -55,6 +55,12 @@ export default function Index() {
       link: "/services"
     },
     {
+      title: "Comprehensive Services",
+      description: "Explore our complete portfolio of innovative technology solutions and micro SAAS services",
+      icon: <Star className="h-6 w-6 text-zion-purple" />,
+      link: "/comprehensive-services"
+    },
+    {
       title: t("home.tool_equipment"),
       description: t("home.tool_equipment_desc"),
       icon: <Settings className="h-6 w-6 text-zion-purple" />,

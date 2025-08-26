@@ -72,12 +72,7 @@ export default defineConfig({
       'react',
       'react-dom',
       'react-router-dom',
-      'framer-motion',
-      'lucide-react',
-      'clsx',
-      'tailwind-merge',
     ],
-    exclude: ['@radix-ui/react-icons'],
   },
   css: { devSourcemap: false },
   server: {
