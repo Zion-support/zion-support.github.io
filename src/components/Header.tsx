@@ -1,335 +1,379 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Globe, Zap, Shield, Cpu, Database, Lock, Users } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
+  const location = useLocation();
+  const servicesDropdownRef = useRef<HTMLDivElement>(null);
+  const companyDropdownRef = useRef<HTMLDivElement>(null);
 
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const services = [
-    { 
-      name: 'AI Solutions', 
-      href: '/services/ai', 
-      description: 'Machine Learning & AI Services',
-      icon: Cpu,
-      color: 'from-zion-cyan to-zion-blue'
-    },
-    { 
-      name: 'Cloud & DevOps', 
-      href: '/services/cloud', 
-      description: 'Cloud Migration & Automation',
-      icon: Database,
-      color: 'from-zion-purple to-zion-purple-dark'
-    },
-    { 
-      name: 'Cybersecurity', 
-      href: '/services/cybersecurity', 
-      description: 'Security & Threat Protection',
-      icon: Shield,
-      color: 'from-zion-blue to-zion-blue-dark'
-    },
-    { 
-      name: 'IT Infrastructure', 
-      href: '/services/infrastructure', 
-      description: 'Network & System Management',
-      icon: Zap,
-      color: 'from-zion-cyan to-zion-purple'
-    },
-    { 
-      name: 'Digital Transformation', 
-      href: '/services/transformation', 
-      description: 'Business Process Optimization',
-      icon: Globe,
-      color: 'from-zion-purple to-zion-cyan'
-    },
-    { 
-      name: 'Consulting', 
-      href: '/services/consulting', 
-      description: 'Technology Strategy & Advisory',
-      icon: Users,
-      color: 'from-zion-blue to-zion-cyan'
-    }
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target as Node)) {
+        setIsServicesDropdownOpen(false);
+      }
+      if (companyDropdownRef.current && !companyDropdownRef.current.contains(event.target as Node)) {
+        setIsCompanyDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const isActive = (path: string) => location.pathname === path;
+
+  const serviceCategories = [
+    { path: '/services/ai', label: 'AI Solutions', description: 'Artificial Intelligence & Machine Learning' },
+    { path: '/services/cloud', label: 'Cloud & DevOps', description: 'Cloud Infrastructure & DevOps Automation' },
+    { path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Advanced Security Solutions' },
+    { path: '/services/infrastructure', label: 'Infrastructure', description: 'IT Infrastructure & Management' },
+    { path: '/services/consulting', label: 'Consulting', description: 'Strategic Technology Consulting' },
+    { path: '/services/transformation', label: 'Digital Transformation', description: 'Business Process Transformation' }
   ];
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    if (isMenuOpen) {
-      setIsServicesOpen(false);
-    }
-  };
+  const aiServices = [
+    { path: '/ai-autonomous-analytics', label: 'AI Analytics' },
+    { path: '/ai-autonomous-automation', label: 'AI Automation' },
+    { path: '/ai-autonomous-security', label: 'AI Security' },
+    { path: '/ai-autonomous-development', label: 'AI Development' },
+    { path: '/ai-autonomous-research', label: 'AI Research' },
+    { path: '/ai-autonomous-innovation', label: 'AI Innovation' }
+  ];
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
-  };
+  const companyLinks = [
+    { path: '/about', label: 'About Us' },
+    { path: '/careers', label: 'Careers' },
+    { path: '/blog', label: 'Blog' },
+    { path: '/contact', label: 'Contact' }
+  ];
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/20 shadow-2xl' 
-        : 'bg-slate-900/80 backdrop-blur-lg border-b border-white/10'
-    }`}>
+    <header 
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-slate-900/95 backdrop-blur-lg border-b border-white/10 shadow-lg' 
+          : 'bg-slate-900/80 backdrop-blur-md'
+      }`}
+      role="banner"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Enhanced Logo */}
-          <Link to="/" className="flex items-center group" onClick={closeMenu}>
-            <motion.div 
-              className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300 shadow-lg"
-              whileHover={{ rotate: 5 }}
-            >
-              <span className="text-white font-bold text-xl lg:text-2xl">Z</span>
-            </motion.div>
-            <motion.span 
-              className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-zion-cyan via-white to-zion-purple bg-clip-text text-transparent"
-              whileHover={{ scale: 1.05 }}
-            >
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link 
+            to="/" 
+            className="flex items-center group"
+            aria-label="Zion Tech Group - Home"
+          >
+            <span className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
               Zion Tech Group
-            </motion.span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav 
+            className="hidden lg:flex items-center space-x-8"
+            role="navigation"
+            aria-label="Main navigation"
+          >
             <Link
               to="/"
-              className="text-gray-300 hover:text-zion-cyan transition-all duration-300 font-medium relative group"
+              className={`relative px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+                isActive('/')
+                  ? 'text-blue-400'
+                  : 'text-gray-300 hover:text-white'
+              }`}
+              aria-current={isActive('/') ? 'page' : undefined}
             >
               Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-zion-cyan group-hover:w-full transition-all duration-300"></span>
+              {isActive('/') && (
+                <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-blue-400 to-cyan-400" />
+              )}
             </Link>
-            
-            {/* Enhanced Services Dropdown */}
-            <div className="relative group">
+
+            {/* Services Dropdown */}
+            <div className="relative" ref={servicesDropdownRef}>
               <button
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-                className="text-gray-300 hover:text-zion-cyan transition-all duration-300 font-medium flex items-center group"
+                onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-300 flex items-center space-x-1 ${
+                  location.pathname.startsWith('/services') || location.pathname.startsWith('/ai-autonomous') || location.pathname.startsWith('/comprehensive-services-showcase')
+                    ? 'text-blue-400'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+                aria-expanded={isServicesDropdownOpen}
+                aria-haspopup="true"
               >
-                Services
-                <ChevronDown className="ml-1 h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
+                <span>Services</span>
+                <svg className={`w-4 h-4 transition-transform duration-200 ${isServicesDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+                {(location.pathname.startsWith('/services') || location.pathname.startsWith('/ai-autonomous') || location.pathname.startsWith('/comprehensive-services-showcase')) && (
+                  <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-blue-400 to-cyan-400" />
+                )}
               </button>
-              
-              {/* Enhanced Services Dropdown Menu */}
-              <AnimatePresence>
-                {isServicesOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
-                    className="absolute top-full left-0 mt-4 w-96 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl overflow-hidden"
-                  >
-                    <div className="p-6">
-                      <div className="grid grid-cols-1 gap-3">
-                        {services.map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
-                            className="flex items-start p-4 rounded-xl hover:bg-white/10 transition-all duration-200 group"
-                            onClick={closeMenu}
-                          >
-                            <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300`}>
-                              <service.icon className="h-5 w-5 text-white" />
-                            </div>
-                            <div className="flex-1">
-                              <div className="text-white font-semibold group-hover:text-zion-cyan transition-colors duration-200">
-                                {service.name}
-                              </div>
-                              <div className="text-sm text-gray-400 mt-1">
-                                {service.description}
-                              </div>
-                            </div>
-                            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                              <ChevronDown className="h-4 w-4 text-zion-cyan rotate-[-90deg]" />
-                            </div>
-                          </Link>
-                        ))}
+
+              {isServicesDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-xl border border-white/10 backdrop-blur-lg">
+                  <div className="p-4">
+                    <div className="grid grid-cols-1 gap-4">
+                      {/* Service Categories */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-white mb-3">Service Categories</h3>
+                        <div className="space-y-2">
+                          {serviceCategories.map((service) => (
+                            <Link
+                              key={service.path}
+                              to={service.path}
+                              className="block p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200"
+                              onClick={() => setIsServicesDropdownOpen(false)}
+                            >
+                              <div className="font-medium text-white">{service.label}</div>
+                              <div className="text-sm text-gray-400">{service.description}</div>
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                      <div className="mt-6 pt-4 border-t border-white/10">
+                      
+                      {/* AI Services */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-white mb-3">AI Autonomous Services</h3>
+                        <div className="grid grid-cols-2 gap-2">
+                          {aiServices.map((service) => (
+                            <Link
+                              key={service.path}
+                              to={service.path}
+                              className="block p-2 rounded text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors duration-200"
+                              onClick={() => setIsServicesDropdownOpen(false)}
+                            >
+                              {service.label}
+                            </Link>
+                          ))}
+                        </div>
                         <Link
                           to="/services"
-                          className="block w-full text-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl font-medium hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105 shadow-lg"
-                          onClick={closeMenu}
+                          className="block mt-3 text-sm text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                          onClick={() => setIsServicesDropdownOpen(false)}
                         >
-                          View All Services
+                          View All Services →
+                        </Link>
+                      </div>
+
+                      {/* Comprehensive Services Showcase */}
+                      <div className="border-t border-gray-700 pt-3">
+                        <Link
+                          to="/comprehensive-services-showcase"
+                          className="block p-3 rounded-lg bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 hover:from-blue-600/30 hover:to-cyan-600/30 transition-all duration-200"
+                          onClick={() => setIsServicesDropdownOpen(false)}
+                        >
+                          <div className="font-medium text-white">🚀 Comprehensive Services Showcase</div>
+                          <div className="text-sm text-blue-300">View all our services in one place</div>
                         </Link>
                       </div>
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                  </div>
+                </div>
+              )}
             </div>
-            
+
+            {/* Company Dropdown */}
+            <div className="relative" ref={companyDropdownRef}>
+              <button
+                onClick={() => setIsCompanyDropdownOpen(!isCompanyDropdownOpen)}
+                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-300 flex items-center space-x-1 ${
+                  companyLinks.some(link => isActive(link.path))
+                    ? 'text-blue-400'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+                aria-expanded={isCompanyDropdownOpen}
+                aria-haspopup="true"
+              >
+                <span>Company</span>
+                <svg className={`w-4 h-4 transition-transform duration-200 ${isCompanyDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+                {companyLinks.some(link => isActive(link.path)) && (
+                  <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-blue-400 to-cyan-400" />
+                )}
+              </button>
+
+              {isCompanyDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-xl border border-white/10 backdrop-blur-lg">
+                  <div className="p-2">
+                    {companyLinks.map((link) => (
+                      <Link
+                        key={link.path}
+                        to={link.path}
+                        className="block px-3 py-2 rounded text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors duration-200"
+                        onClick={() => setIsCompanyDropdownOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link
-              to="/about"
-              className="text-gray-300 hover:text-zion-cyan transition-all duration-300 font-medium relative group"
+              to="/comprehensive-pricing-2025"
+              className={`relative px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+                isActive('/comprehensive-pricing-2025')
+                  ? 'text-blue-400'
+                  : 'text-gray-300 hover:text-white'
+              }`}
+              aria-current={isActive('/comprehensive-pricing-2025') ? 'page' : undefined}
             >
-              About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-zion-cyan group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            
-            <Link
-              to="/blog"
-              className="text-gray-300 hover:text-zion-cyan transition-all duration-300 font-medium relative group"
-            >
-              Blog
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-zion-cyan group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            
-            <Link
-              to="/contact"
-              className="text-gray-300 hover:text-zion-cyan transition-all duration-300 font-medium relative group"
-            >
-              Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-zion-cyan group-hover:w-full transition-all duration-300"></span>
+              Pricing
+              {isActive('/comprehensive-pricing-2025') && (
+                <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-blue-400 to-cyan-400" />
+              )}
             </Link>
           </nav>
 
-          {/* Enhanced CTA Button */}
+          {/* CTA Button */}
           <div className="hidden lg:block">
             <Link
-              to="/request-quote"
-              className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:from-zion-purple-dark hover:to-zion-cyan-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-purple/25"
+              to="/contact"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+              aria-label="Get started with our services"
             >
               Get Started
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
-            onClick={toggleMenu}
-            className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors duration-200"
-            aria-label="Toggle menu"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-controls="mobile-menu"
           >
-            <AnimatePresence mode="wait">
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {isMenuOpen ? (
-                <motion.div
-                  key="close"
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <X className="h-6 w-6" />
-                </motion.div>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <motion.div
-                  key="menu"
-                  initial={{ rotate: 90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: -90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Menu className="h-6 w-6" />
-                </motion.div>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               )}
-            </AnimatePresence>
+            </svg>
           </button>
         </div>
-      </div>
 
-      {/* Enhanced Mobile Menu */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-slate-800/95 backdrop-blur-xl border-t border-white/10"
-          >
-            <div className="px-4 py-6 space-y-4">
-              <Link
-                to="/"
-                className="block text-white hover:text-zion-cyan transition-colors duration-200 font-medium py-2"
-                onClick={closeMenu}
-              >
-                Home
-              </Link>
-              
-              {/* Mobile Services Accordion */}
-              <div className="space-y-2">
-                <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="flex items-center justify-between w-full text-white hover:text-zion-cyan transition-colors duration-200 font-medium py-2"
+        {/* Mobile Navigation */}
+        <div
+          id="mobile-menu"
+          className={`lg:hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen 
+              ? 'max-h-screen opacity-100' 
+              : 'max-h-0 opacity-0 pointer-events-none'
+          }`}
+          aria-hidden={!isMenuOpen}
+        >
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 rounded-lg mt-2 border border-white/10">
+            <Link
+              to="/"
+              className={`block px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
+                isActive('/')
+                  ? 'text-blue-400 bg-blue-900/20'
+                  : 'text-gray-300 hover:text-white hover:bg-gray-700'
+              }`}
+              aria-current={isActive('/') ? 'page' : undefined}
+            >
+              Home
+            </Link>
+            
+            {/* Mobile Services Section */}
+            <div className="border-t border-gray-700 pt-4">
+              <h3 className="px-3 py-2 text-sm font-semibold text-white">Services</h3>
+              {serviceCategories.map((service) => (
+                <Link
+                  key={service.path}
+                  to={service.path}
+                  className={`block px-6 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
+                    isActive(service.path)
+                      ? 'text-blue-400 bg-blue-900/20'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                  }`}
+                  aria-current={isActive(service.path) ? 'page' : undefined}
                 >
-                  Services
-                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                <AnimatePresence>
-                  {isServicesOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="pl-4 space-y-2 border-l border-white/20"
-                    >
-                      {services.map((service) => (
-                        <Link
-                          key={service.name}
-                          to={service.href}
-                          className="block text-gray-300 hover:text-zion-cyan transition-colors duration-200 py-2"
-                          onClick={closeMenu}
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-              
+                  {service.label}
+                </Link>
+              ))}
               <Link
-                to="/about"
-                className="block text-white hover:text-zion-cyan transition-colors duration-200 font-medium py-2"
-                onClick={closeMenu}
+                to="/services"
+                className="block px-6 py-2 text-base font-medium text-blue-400 hover:text-blue-300 transition-colors duration-200"
               >
-                About
+                View All Services
               </Link>
-              
               <Link
-                to="/blog"
-                className="block text-white hover:text-zion-cyan transition-colors duration-200 font-medium py-2"
-                onClick={closeMenu}
+                to="/comprehensive-services-showcase"
+                className="block px-6 py-2 text-base font-medium text-blue-400 hover:text-blue-300 transition-colors duration-200 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-md"
               >
-                Blog
+                🚀 Comprehensive Services Showcase
               </Link>
-              
+            </div>
+
+            {/* Mobile Company Section */}
+            <div className="border-t border-gray-700 pt-4">
+              <h3 className="px-3 py-2 text-sm font-semibold text-white">Company</h3>
+              {companyLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`block px-6 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
+                    isActive(link.path)
+                      ? 'text-blue-400 bg-blue-900/20'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                  }`}
+                  aria-current={isActive(link.path) ? 'page' : undefined}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <Link
+              to="/comprehensive-pricing-2025"
+              className={`block px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
+                isActive('/comprehensive-pricing-2025')
+                  ? 'text-blue-400 bg-blue-900/20'
+                  : 'text-gray-300 hover:text-white hover:bg-gray-700'
+              }`}
+              aria-current={isActive('/comprehensive-pricing-2025') ? 'page' : undefined}
+            >
+              Pricing
+            </Link>
+
+            <div className="pt-4 border-t border-gray-700">
               <Link
                 to="/contact"
-                className="block text-white hover:text-zion-cyan transition-colors duration-200 font-medium py-2"
-                onClick={closeMenu}
+                className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
-                Contact
+                Get Started
               </Link>
-              
-              <div className="pt-4 border-t border-white/10">
-                <Link
-                  to="/request-quote"
-                  className="block w-full text-center bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:from-zion-purple-dark hover:to-zion-cyan-dark transition-all duration-300"
-                  onClick={closeMenu}
-                >
-                  Get Started
-                </Link>
-              </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      </div>
     </header>
   );
 };
