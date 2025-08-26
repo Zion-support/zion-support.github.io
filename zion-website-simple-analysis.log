@@ -1,0 +1,69 @@
+2025-08-26 16:31:17,312 - INFO - 🔍 Analyzing page 1: https://ziontechgroup.com (depth: 0)
+2025-08-26 16:31:18,351 - INFO - 🔍 Analyzing page 2: https://ziontechgroup.com/request-quote/ (depth: 1)
+2025-08-26 16:31:19,530 - INFO - 🔍 Analyzing page 3: https://ziontechgroup.com/services (depth: 1)
+2025-08-26 16:31:20,751 - INFO - 🔍 Analyzing page 4: https://ziontechgroup.com/services/autonomous-analytics-briefs (depth: 2)
+2025-08-26 16:31:20,823 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/autonomous-analytics-briefs: HTTP Error: 404
+2025-08-26 16:31:21,823 - INFO - 🔍 Analyzing page 5: https://ziontechgroup.com/services/vendor-security-questionnaire-automation (depth: 2)
+2025-08-26 16:31:21,872 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/vendor-security-questionnaire-automation: HTTP Error: 404
+2025-08-26 16:31:22,873 - INFO - 🔍 Analyzing page 6: https://ziontechgroup.com/services/managed-sase-lite (depth: 2)
+2025-08-26 16:31:22,934 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/managed-sase-lite: HTTP Error: 404
+2025-08-26 16:31:23,934 - INFO - 🔍 Analyzing page 7: https://ziontechgroup.com/services/ai-data-contracts-assistant (depth: 2)
+2025-08-26 16:31:23,986 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/ai-data-contracts-assistant: HTTP Error: 404
+2025-08-26 16:31:24,986 - INFO - 🔍 Analyzing page 8: https://ziontechgroup.com/services/smart-release-notes-broadcaster (depth: 2)
+2025-08-26 16:31:25,036 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/smart-release-notes-broadcaster: HTTP Error: 404
+2025-08-26 16:31:26,037 - INFO - 🔍 Analyzing page 9: https://ziontechgroup.com/ai-autonomous-decision-engine (depth: 2)
+2025-08-26 16:31:26,088 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/ai-autonomous-decision-engine: HTTP Error: 404
+2025-08-26 16:31:27,088 - INFO - 🔍 Analyzing page 10: https://ziontechgroup.com/services/vendor-security-review-assistant (depth: 2)
+2025-08-26 16:31:27,139 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/vendor-security-review-assistant: HTTP Error: 404
+2025-08-26 16:31:28,139 - INFO - 🔍 Analyzing page 11: https://ziontechgroup.com/quantum-logistics-optimization (depth: 2)
+2025-08-26 16:31:28,193 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/quantum-logistics-optimization: HTTP Error: 404
+2025-08-26 16:31:29,194 - INFO - 🔍 Analyzing page 12: https://ziontechgroup.com/ai-customer-success-platform (depth: 2)
+2025-08-26 16:31:29,284 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/ai-customer-success-platform: HTTP Error: 404
+2025-08-26 16:31:30,284 - INFO - 🔍 Analyzing page 13: https://ziontechgroup.com/services/managed-mlops-platform (depth: 2)
+2025-08-26 16:31:30,336 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/managed-mlops-platform: HTTP Error: 404
+2025-08-26 16:31:31,336 - INFO - 🔍 Analyzing page 14: https://ziontechgroup.com/ai-healthcare-diagnostics (depth: 2)
+2025-08-26 16:31:31,389 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/ai-healthcare-diagnostics: HTTP Error: 404
+2025-08-26 16:31:32,389 - INFO - 🔍 Analyzing page 15: https://ziontechgroup.com/quantum-internet-security (depth: 2)
+2025-08-26 16:31:32,436 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/quantum-internet-security: HTTP Error: 404
+2025-08-26 16:31:33,436 - INFO - 🔍 Analyzing page 16: https://ziontechgroup.com/ai-powered-healthcare-diagnostics (depth: 2)
+2025-08-26 16:31:33,480 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/ai-powered-healthcare-diagnostics: HTTP Error: 404
+2025-08-26 16:31:34,480 - INFO - 🔍 Analyzing page 17: https://ziontechgroup.com/services/churn-prediction-insights (depth: 2)
+2025-08-26 16:31:34,538 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/churn-prediction-insights: HTTP Error: 404
+2025-08-26 16:31:35,538 - INFO - 🔍 Analyzing page 18: https://ziontechgroup.com/services/local-seo-insights-engine (depth: 2)
+2025-08-26 16:31:35,596 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/local-seo-insights-engine: HTTP Error: 404
+2025-08-26 16:31:36,596 - INFO - 🔍 Analyzing page 19: https://ziontechgroup.com/services/r-d-tooling-copilot (depth: 2)
+2025-08-26 16:31:36,647 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/r-d-tooling-copilot: HTTP Error: 404
+2025-08-26 16:31:37,648 - INFO - 🔍 Analyzing page 20: https://ziontechgroup.com/services/secure-data-mesh (depth: 2)
+2025-08-26 16:31:37,690 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/secure-data-mesh: HTTP Error: 404
+2025-08-26 16:31:38,690 - INFO - 🔍 Analyzing page 21: https://ziontechgroup.com/real-time-data-analytics (depth: 2)
+2025-08-26 16:31:38,736 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/real-time-data-analytics: HTTP Error: 404
+2025-08-26 16:31:39,736 - INFO - 🔍 Analyzing page 22: https://ziontechgroup.com/services/agentic-customer-support-suite (depth: 2)
+2025-08-26 16:31:39,793 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/agentic-customer-support-suite: HTTP Error: 404
+2025-08-26 16:31:40,793 - INFO - 🔍 Analyzing page 23: https://ziontechgroup.com/services/agentic-supply-chain-copilot (depth: 2)
+2025-08-26 16:31:40,846 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/agentic-supply-chain-copilot: HTTP Error: 404
+2025-08-26 16:31:41,846 - INFO - 🔍 Analyzing page 24: https://ziontechgroup.com/ai-legal-contract-analyzer (depth: 2)
+2025-08-26 16:31:41,886 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/ai-legal-contract-analyzer: HTTP Error: 404
+2025-08-26 16:31:42,887 - INFO - 🔍 Analyzing page 25: https://ziontechgroup.com/services/zero-trust-email-and-endpoint (depth: 2)
+2025-08-26 16:31:42,925 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/zero-trust-email-and-endpoint: HTTP Error: 404
+2025-08-26 16:31:43,926 - INFO - 🔍 Analyzing page 26: https://ziontechgroup.com/biotech-ai (depth: 2)
+2025-08-26 16:31:43,972 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/biotech-ai: HTTP Error: 404
+2025-08-26 16:31:44,973 - INFO - 🔍 Analyzing page 27: https://ziontechgroup.com/request-quote (depth: 2)
+2025-08-26 16:31:46,065 - INFO - 🔍 Analyzing page 28: https://ziontechgroup.com/ai-metaverse-development (depth: 2)
+2025-08-26 16:31:46,104 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/ai-metaverse-development: HTTP Error: 404
+2025-08-26 16:31:47,104 - INFO - 🔍 Analyzing page 29: https://ziontechgroup.com/services/ai-sales-sequence-orchestrator (depth: 2)
+2025-08-26 16:31:47,147 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/ai-sales-sequence-orchestrator: HTTP Error: 404
+2025-08-26 16:31:48,147 - INFO - 🔍 Analyzing page 30: https://ziontechgroup.com/services/agentic-revenue-forecasting-studio (depth: 2)
+2025-08-26 16:31:48,189 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/agentic-revenue-forecasting-studio: HTTP Error: 404
+2025-08-26 16:31:49,189 - INFO - 🔍 Analyzing page 31: https://ziontechgroup.com/services/data-quality-observability-service (depth: 2)
+2025-08-26 16:31:49,240 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/data-quality-observability-service: HTTP Error: 404
+2025-08-26 16:31:50,240 - INFO - 🔍 Analyzing page 32: https://ziontechgroup.com/services/docs-to-knowledge-bot (depth: 2)
+2025-08-26 16:31:50,283 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/docs-to-knowledge-bot: HTTP Error: 404
+2025-08-26 16:31:51,284 - INFO - 🔍 Analyzing page 33: https://ziontechgroup.com/services/partner-portal-builder (depth: 2)
+2025-08-26 16:31:51,323 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/partner-portal-builder: HTTP Error: 404
+2025-08-26 16:31:52,323 - INFO - 🔍 Analyzing page 34: https://ziontechgroup.com/ai-iot-platform-enterprise (depth: 2)
+2025-08-26 16:31:52,365 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/ai-iot-platform-enterprise: HTTP Error: 404
+2025-08-26 16:31:53,365 - INFO - 🔍 Analyzing page 35: https://ziontechgroup.com/quantum-cybersecurity (depth: 2)
+2025-08-26 16:31:54,537 - INFO - 🔍 Analyzing page 36: https://ziontechgroup.com/services/sre-oncall-as-a-service (depth: 2)
+2025-08-26 16:31:54,583 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/sre-oncall-as-a-service: HTTP Error: 404
+2025-08-26 16:31:55,584 - INFO - 🔍 Analyzing page 37: https://ziontechgroup.com/services/ai-sla-uptime-reporter (depth: 2)
+2025-08-26 16:31:55,634 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/ai-sla-uptime-reporter: HTTP Error: 404
