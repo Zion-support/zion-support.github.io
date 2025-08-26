@@ -1,11 +1,10 @@
+
+# Allow all crawlers
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
-=======
-# Sitemap location
-Sitemap: https://ziontechgroup.com/sitemap.xml
-Sitemap: https://ziontechgroup.com/sitemap
 
 # Allow all crawlers
 Allow: /about

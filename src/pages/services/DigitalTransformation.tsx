@@ -1,241 +1,110 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Rocket, 
-  Target, 
-  Users, 
-  BarChart3, 
-  Zap, 
-  TrendingUp,
-  Globe,
-  Lightbulb,
-  Shield,
-  Database,
-  Cpu,
-  Network
-} from 'lucide-react';
+import { RefreshCw, Target, Users, TrendingUp, Zap, Globe, ArrowRight, CheckCircle } from 'lucide-react';
 
 const DigitalTransformation: React.FC = () => {
-  const transformationServices = [
+  const features = [
     {
-      title: 'Business Process Optimization',
-      description: 'Streamline and automate business processes for maximum efficiency',
-      icon: <Target className="w-8 h-8" />,
-      features: ['Process Mapping', 'Workflow Automation', 'Performance Metrics', 'Continuous Improvement']
+      icon: RefreshCw,
+      title: "Process Automation",
+      description: "Streamline operations with intelligent automation solutions"
     },
     {
-      title: 'Customer Experience Transformation',
-      description: 'Create seamless, personalized customer experiences across all touchpoints',
-      icon: <Users className="w-8 h-8" />,
-      features: ['Omnichannel Strategy', 'Personalization', 'Customer Journey Mapping', 'Feedback Systems']
+      icon: Target,
+      title: "Digital Strategy",
+      description: "Comprehensive digital transformation roadmap and execution"
     },
     {
-      title: 'Data & Analytics Strategy',
-      description: 'Leverage data insights to drive informed business decisions',
-      icon: <BarChart3 className="w-8 h-8" />,
-      features: ['Data Strategy', 'Business Intelligence', 'Predictive Analytics', 'Data Governance']
+      icon: Users,
+      title: "Change Management",
+      description: "Expert guidance through organizational transformation"
     },
     {
-      title: 'Technology Modernization',
-      description: 'Upgrade legacy systems and adopt modern technology solutions',
-      icon: <Cpu className="w-8 h-8" />,
-      features: ['Legacy System Migration', 'Cloud Adoption', 'API Integration', 'Microservices Architecture']
+      icon: TrendingUp,
+      title: "Performance Optimization",
+      description: "Data-driven insights to improve business performance"
     }
-  ];
-
-  const transformationPhases = [
-    { name: 'Assessment', description: 'Evaluate current state and identify opportunities' },
-    { name: 'Strategy', description: 'Develop comprehensive transformation roadmap' },
-    { name: 'Implementation', description: 'Execute transformation initiatives' },
-    { name: 'Optimization', description: 'Continuous improvement and refinement' }
   ];
 
   const benefits = [
-    {
-      title: 'Increased Efficiency',
-      description: 'Streamlined processes and automated workflows',
-      icon: <Zap className="w-6 h-6" />
-    },
-    {
-      title: 'Better Customer Experience',
-      description: 'Enhanced customer satisfaction and loyalty',
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      title: 'Data-Driven Decisions',
-      description: 'Informed decision making with analytics',
-      icon: <BarChart3 className="w-6 h-6" />
-    },
-    {
-      title: 'Competitive Advantage',
-      description: 'Stay ahead with modern technology',
-      icon: <Rocket className="w-6 h-6" />
-    }
-  ];
-
-  const industries = [
-    { name: 'Healthcare', description: 'Digital health solutions and patient care optimization' },
-    { name: 'Finance', description: 'Fintech innovation and digital banking solutions' },
-    { name: 'Manufacturing', description: 'Industry 4.0 and smart manufacturing' },
-    { name: 'Retail', description: 'E-commerce and omnichannel retail solutions' },
-    { name: 'Education', description: 'Digital learning platforms and EdTech solutions' },
-    { name: 'Government', description: 'Digital government and citizen services' }
+    "Increased operational efficiency by 50%",
+    "Enhanced customer experience and satisfaction",
+    "Reduced operational costs and waste",
+    "Improved decision-making with real-time data",
+    "Competitive advantage in the digital marketplace"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="max-w-7xl mx-auto text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-5xl md:text-7xl font-bold mb-8">
-            Digital
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 block">
-              Transformation
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-            Transform your business for the digital age with strategic technology adoption and process optimization
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-            </Link>
-            <Link
-              to="/services"
-              className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-            >
-              View All Services
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Digital Transformation - Zion Tech Group"
+        description="Transform your business for the digital age with our comprehensive digital transformation services."
+        keywords="digital transformation, process automation, digital strategy, change management, performance optimization"
+        canonical="https://ziontechgroup.com/services/digital-transformation"
+      />
 
-      {/* Transformation Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-orange-900 via-orange-800 to-amber-900 text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative container mx-auto px-4 text-center">
+          <motion.h1 
+            className="text-5xl md:text-6xl font-bold mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Digital
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">
+              {" "}Transformation
+            </span>
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-orange-100 max-w-4xl mx-auto leading-relaxed mb-8"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our Digital Transformation Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive transformation solutions designed to modernize your business
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {transformationServices.map((service, index) => (
-              <motion.div
-                key={service.title}
-                className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="flex items-center mb-6">
-                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-xl mr-4">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold">{service.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-6 text-lg">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Transformation Phases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            Embrace the future of business with our comprehensive digital transformation services 
+            designed to modernize your operations and drive sustainable growth.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our Transformation Approach
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A proven methodology for successful digital transformation
-            </p>
+            <button className="bg-gradient-to-r from-orange-600 to-amber-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-amber-700 transition-all duration-300 transform hover:scale-105">
+              Start Your Transformation
+            </button>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {transformationPhases.map((phase, index) => (
-              <motion.div
-                key={phase.name}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-              >
-                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="text-white font-bold text-xl">{index + 1}</div>
-                </div>
-                <h3 className="text-xl font-bold mb-2">{phase.name}</h3>
-                <p className="text-gray-300 text-sm">{phase.description}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Industries We Transform
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Specialized transformation solutions for various industry sectors
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Transformation Capabilities</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              End-to-end digital transformation solutions for modern businesses
             </p>
-          </motion.div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <motion.div
-                key={industry.name}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-                whileHover={{ y: -3 }}
+                key={feature.title}
+                className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
-                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-6 h-6 text-white" />
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-center">{industry.name}</h3>
-                <p className="text-gray-300 text-sm text-center">{industry.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -243,72 +112,47 @@ const DigitalTransformation: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose Our Digital Transformation Services?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of strategic digital transformation
-            </p>
-          </motion.div>
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Transformation Services?</h2>
+              <p className="text-xl text-gray-600">
+                Experience the benefits of a well-executed digital transformation
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-              >
-                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
-              </motion.div>
-            ))}
+            <div className="space-y-6">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-center p-4 bg-white rounded-lg shadow-sm"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                    <CheckCircle className="w-4 h-4 text-orange-600" />
+                  </div>
+                  <span className="text-lg text-gray-700">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-3xl p-12 text-center border border-white/10"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our digital transformation services can modernize your business and drive growth
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Schedule a Consultation
-              </Link>
-              <Link
-                to="/services"
-                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Explore All Services
-              </Link>
-            </div>
-          </motion.div>
+      <section className="py-20 bg-gradient-to-r from-orange-600 to-amber-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Let's discuss how our digital transformation services can modernize your operations and drive growth.
+          </p>
+          <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            Schedule a Consultation
+          </button>
         </div>
       </section>
     </div>

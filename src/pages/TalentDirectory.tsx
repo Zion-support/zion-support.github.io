@@ -1,311 +1,257 @@
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { motion } from 'framer-motion';
+import { Users, Search, Filter, Star, MapPin, Briefcase, GraduationCap, Zap } from 'lucide-react';
 
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { TalentGrid } from "@/components/talent/TalentGrid";
-import { FilterSidebar } from "@/components/talent/FilterSidebar";
-import { TalentResults } from "@/components/talent/TalentResults";
-import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
-import { ErrorBanner } from "@/components/talent/ErrorBanner";
-import { useTalentDirectory } from "@/hooks/useTalentDirectory";
-import { SORT_OPTIONS } from "@/data/sortOptions";
-import { X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { TalentProfile } from "@/types/talent";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
-
-export default function TalentDirectory() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-
-  // Use our custom hook to manage state
-  const {
-    filteredTalents,
-    isLoading,
-    searchTerm,
-    setSearchTerm,
-    selectedSkills,
-    selectedAvailability,
-    selectedRegions,
-    priceRange,
-    setPriceRange,
-    experienceRange,
-    setExperienceRange,
-    sortOption,
-    setSortOption,
-    isMobileFilterOpen,
-    setIsMobileFilterOpen,
-    isHireModalOpen,
-    setIsHireModalOpen,
-    selectedTalent,
-    setSelectedTalent,
-    expandedSections,
-    error,
-    isAuthenticated,
-    toggleSkill,
-    toggleAvailability,
-    toggleRegion,
-    clearFilters,
-    toggleSection,
-  } = useTalentDirectory();
-
-  const locations = [
-    'All Locations',
-    'Remote',
-    'United States',
-    'Europe',
-    'Asia',
-    'Canada',
-    'Australia'
-  ];
-
-  const featuredTalents = [
+const TalentDirectory: React.FC = () => {
+  const talents = [
     {
       id: 1,
-      name: 'Dr. Sarah Chen',
-      title: 'Senior AI Engineer',
-      category: 'AI & Machine Learning',
-      location: 'Remote',
-      experience: '8+ years',
-      skills: ['Python', 'TensorFlow', 'PyTorch', 'NLP', 'Computer Vision'],
+      name: "Sarah Chen",
+      role: "Senior AI Engineer",
+      experience: "8+ years",
+      location: "San Francisco, CA",
+      skills: ["Machine Learning", "Python", "TensorFlow", "Computer Vision"],
       rating: 4.9,
-      reviews: 47,
-      avatar: 'SC',
-      hourlyRate: '$120-150',
-      availability: 'Available',
-      description: 'Expert in developing and deploying machine learning models for enterprise applications.'
+      projects: 24,
+      avatar: "👩‍💻"
     },
     {
       id: 2,
-      name: 'Michael Rodriguez',
-      title: 'Cybersecurity Specialist',
-      category: 'Cybersecurity',
-      location: 'United States',
-      experience: '10+ years',
-      skills: ['Penetration Testing', 'SOC2', 'ISO27001', 'Incident Response', 'Threat Hunting'],
+      name: "Marcus Rodriguez",
+      role: "Cloud Architect",
+      experience: "10+ years",
+      location: "Austin, TX",
+      skills: ["AWS", "Kubernetes", "Terraform", "DevOps"],
       rating: 4.8,
-      reviews: 32,
-      avatar: 'MR',
-      hourlyRate: '$100-130',
-      availability: 'Available',
-      description: 'Certified security professional with expertise in enterprise security and compliance.'
+      projects: 31,
+      avatar: "👨‍💻"
     },
     {
       id: 3,
-      name: 'Dr. James Kim',
-      title: 'Cloud Architect',
-      category: 'Cloud & DevOps',
-      location: 'Remote',
-      experience: '12+ years',
-      skills: ['AWS', 'Azure', 'Kubernetes', 'Docker', 'Terraform', 'CI/CD'],
+      name: "Priya Patel",
+      role: "Cybersecurity Specialist",
+      experience: "6+ years",
+      location: "New York, NY",
+      skills: ["Penetration Testing", "SOC", "Compliance", "Incident Response"],
       rating: 4.9,
-      reviews: 56,
-      avatar: 'JK',
-      hourlyRate: '$130-160',
-      availability: 'Available',
-      description: 'Senior cloud architect specializing in scalable infrastructure and DevOps automation.'
+      projects: 18,
+      avatar: "👩‍💻"
     },
     {
       id: 4,
-      name: 'Emily Watson',
-      title: 'Data Scientist',
-      category: 'Data Science',
-      location: 'Europe',
-      experience: '6+ years',
-      skills: ['Python', 'R', 'SQL', 'Tableau', 'Machine Learning', 'Statistics'],
+      name: "David Kim",
+      role: "Data Scientist",
+      experience: "7+ years",
+      location: "Seattle, WA",
+      skills: ["Data Analytics", "SQL", "R", "Tableau"],
       rating: 4.7,
-      reviews: 28,
-      avatar: 'EW',
-      hourlyRate: '$90-120',
-      availability: 'Available',
-      description: 'Data scientist with expertise in predictive analytics and business intelligence.'
+      projects: 22,
+      avatar: "👨‍💻"
     },
     {
       id: 5,
-      name: 'Alex Thompson',
-      title: 'Full Stack Developer',
-      category: 'Software Development',
-      location: 'Remote',
-      experience: '7+ years',
-      skills: ['React', 'Node.js', 'Python', 'PostgreSQL', 'AWS', 'TypeScript'],
+      name: "Emily Watson",
+      role: "Full Stack Developer",
+      experience: "5+ years",
+      location: "Boston, MA",
+      skills: ["React", "Node.js", "Python", "MongoDB"],
       rating: 4.8,
-      reviews: 41,
-      avatar: 'AT',
-      hourlyRate: '$80-110',
-      availability: 'Available',
-      description: 'Versatile developer with experience in modern web technologies and cloud platforms.'
+      projects: 19,
+      avatar: "👩‍💻"
     },
     {
       id: 6,
-      name: 'Lisa Park',
-      title: 'UX/UI Designer',
-      category: 'UI/UX Design',
-      location: 'United States',
-      experience: '5+ years',
-      skills: ['Figma', 'Adobe Creative Suite', 'User Research', 'Prototyping', 'Design Systems'],
-      rating: 4.6,
-      reviews: 23,
-      avatar: 'LP',
-      hourlyRate: '$70-100',
-      availability: 'Available',
-      description: 'Creative designer focused on user-centered design and digital product experiences.'
+      name: "Alex Thompson",
+      role: "DevOps Engineer",
+      experience: "9+ years",
+      location: "Denver, CO",
+      skills: ["Docker", "Jenkins", "Ansible", "Linux"],
+      rating: 4.9,
+      projects: 28,
+      avatar: "👨‍💻"
     }
   ];
 
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [filteredTalents]);
-
-  const totalPages = Math.ceil(filteredTalents.length / itemsPerPage);
-  const paginatedTalents = filteredTalents.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
-
-  const handleBook = (talent: TalentProfile) => {
-    setSelectedTalent(talent);
-    setIsHireModalOpen(true);
-  };
-  
-  const viewProfile = (id: string) => {
-    // Navigate to the talent profile page
-    navigate(`/talent/${id}`);
-  };
-  
-  return (
-    
-      <div className="container mx-auto px-4 py-8">
-        <TalentSkeleton />
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <ErrorBanner msg="Unable to load talent profiles." />
-      </div>
-    );
-  }
+  const categories = [
+    "All",
+    "AI & Machine Learning",
+    "Cloud & DevOps",
+    "Cybersecurity",
+    "Data Science",
+    "Full Stack Development",
+    "Mobile Development",
+    "UI/UX Design"
+  ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col space-y-8">
-          <div>
-            <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>
-            <p className="text-zion-slate-light">
-              Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
-            </p>
-          </div>
-          
-          {/* Main content */}
-          <div className="flex flex-col lg:flex-row gap-6">
-            {/* Sidebar - Desktop */}
-            <div className="w-full lg:w-64 shrink-0 hidden lg:block">
-              <FilterSidebar
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-                selectedSkills={selectedSkills}
-                toggleSkill={toggleSkill}
-                selectedAvailability={selectedAvailability}
-                toggleAvailability={toggleAvailability}
-                selectedRegions={selectedRegions}
-                toggleRegion={toggleRegion}
-                priceRange={priceRange}
-                setPriceRange={setPriceRange}
-                experienceRange={experienceRange}
-                setExperienceRange={setExperienceRange}
-                expandedSections={expandedSections}
-                toggleSection={toggleSection}
-                sortOption={sortOption}
-                setSortOption={setSortOption}
-                clearFilters={clearFilters}
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Talent Directory - Zion Tech Group"
+        description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more."
+        keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists"
+        canonical="https://ziontechgroup.com/talent-directory"
+      />
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-violet-900 via-violet-800 to-purple-900 text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative container mx-auto px-4 text-center">
+          <motion.h1 
+            className="text-5xl md:text-6xl font-bold mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Top Technology
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
+              {" "}Talent
+            </span>
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-violet-100 max-w-4xl mx-auto leading-relaxed mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Connect with world-class technology professionals and experts in AI, cloud computing, 
+            cybersecurity, and more. Find the perfect talent for your next project.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search for talent, skills, or expertise..."
+                className="w-full px-12 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-400/20 backdrop-blur-sm"
               />
             </div>
-            
-            {/* Mobile filter button */}
-            <div className="lg:hidden mb-4">
-              <Button
-                onClick={() => setIsMobileFilterOpen(true)}
-                variant="outline"
-                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
-              >
-                Filter & Sort
-              </Button>
-            </div>
-            
-            {/* Results */}
-            <TalentResults
-              talents={paginatedTalents}
-              totalCount={filteredTalents.length}
-              isLoading={isLoading}
-              viewProfile={viewProfile}
-              handleRequestHire={handleRequestHire}
-              isAuthenticated={isAuthenticated}
-              activeFiltersProps={{
-                selectedSkills,
-                toggleSkill,
-                selectedAvailability,
-                toggleAvailability,
-                selectedRegions,
-                toggleRegion,
-                priceRange,
-                setPriceRange,
-                experienceRange,
-                setExperienceRange,
-                clearFilters,
-              }}
-            />
-
-  const messageTalent = (id: string) => {
-    router.push(`/messages?talentId=${id}`);
-  };
-
-  if (isLoading) {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <TalentSkeleton />
-      </div>
-    );
-  }
-
-  if (
-    !isLoading &&
-    !error &&
-    filteredTalents.length === 0 &&
-    !searchTerm &&
-    selectedSkills.length === 0 &&
-    selectedAvailability.length === 0 &&
-    selectedRegions.length === 0 &&
-    priceRange[0] === 50 &&
-    priceRange[1] === 200 &&
-    experienceRange[0] === 0 &&
-    experienceRange[1] === 15
-  ) {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center py-16">
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Talent Directory Currently Empty
-          </h2>
-          <p className="text-zion-slate-light max-w-md mx-auto">
-            No talent profiles are currently available. Please check back later.
-          </p>
-          <Link
-            href="/signup?role=talent"
-            className="inline-block mt-6 bg-zion-purple text-white px-4 py-2 rounded hover:bg-zion-purple-dark"
-          >
-            Become a Talent – Sign Up
-          </Link>
+          </motion.div>
         </div>
-      </div>
-    
+      </section>
+
+      {/* Filters Section */}
+      <section className="py-8 bg-white border-b border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap items-center gap-4">
+            <span className="text-gray-600 font-medium">Filter by:</span>
+            {categories.map((category, index) => (
+              <button
+                key={category}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  index === 0 
+                    ? 'bg-violet-600 text-white' 
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Talent Grid */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Professionals</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover top-tier technology professionals ready to contribute to your next project
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {talents.map((talent, index) => (
+              <motion.div
+                key={talent.id}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                {/* Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="text-3xl">{talent.avatar}</div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900">{talent.name}</h3>
+                      <p className="text-sm text-gray-600">{talent.role}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 text-yellow-400">
+                    <Star className="w-4 h-4 fill-current" />
+                    <span className="text-sm text-gray-600">{talent.rating}</span>
+                  </div>
+                </div>
+
+                {/* Details */}
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <Briefcase className="w-4 h-4" />
+                    <span>{talent.experience} experience</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <MapPin className="w-4 h-4" />
+                    <span>{talent.location}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <GraduationCap className="w-4 h-4" />
+                    <span>{talent.projects} projects completed</span>
+                  </div>
+                </div>
+
+                {/* Skills */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-medium text-gray-700 mb-2">Key Skills</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {talent.skills.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="px-3 py-1 bg-violet-100 text-violet-700 text-xs rounded-full font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <button className="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                  Connect with {talent.name.split(' ')[0]}
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-violet-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Looking for Top Talent?</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Whether you need a single expert or a complete team, we can connect you with the 
+            perfect technology professionals for your project.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-violet-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Post a Project
+            </button>
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-violet-600 transition-colors">
+              Browse All Talent
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default TalentDirectory;

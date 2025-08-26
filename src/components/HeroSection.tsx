@@ -1,47 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+
+import { Button } from "@/components/ui/button";
+import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Zap, Star } from "lucide-react";
 
 export function HeroSection() {
   const { t } = useTranslation();
-  
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const floatingVariants = {
-    animate: {
-      y: [-10, 10, -10],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
   return (
     <section 
       className="relative overflow-hidden py-20 md:py-32"
@@ -79,45 +43,14 @@ export function HeroSection() {
             size="lg"
             asChild
           >
-            <div className="flex items-center gap-2 text-zion-cyan">
-              <Star className="w-5 h-5" />
-              <span className="text-sm font-medium">AI-Powered Matching</span>
-            </div>
-            <div className="flex items-center gap-2 text-zion-purple-light">
-              <Sparkles className="w-5 h-5" />
-              <span className="text-sm font-medium">Global Talent Network</span>
-            </div>
-            <div className="flex items-center gap-2 text-zion-cyan-light">
-              <Zap className="w-5 h-5" />
-              <span className="text-sm font-medium">Instant Connections</span>
-            </div>
-          </motion.div>
-
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 group transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-              size="lg"
-              asChild
-            >
-              <Link
-                to="/signup"
-                role="button"
-                aria-label={t('auth.signup')}
-                tabIndex={0}
-                data-testid="hero-signup-btn"
-                className="flex items-center gap-2"
-              >
-                {t('auth.signup')}
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
             <Link
-              id="browse-marketplace"
-              to="/marketplace"
-              className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+              to="/signup"
+              role="button"
+              aria-label={t('auth.signup')}
+              tabIndex={0}
+              data-testid="hero-signup-btn"
             >
-              {t('home.browse_marketplace')}
-              <ArrowRight className="w-5 h-5" />
+              {t('auth.signup')}
             </Link>
           </Button>
           <Link
@@ -140,52 +73,6 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-      
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-cyan-400/30 rounded-full flex justify-center">
-          <motion.div
-            className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          />
-        </div>
-      </motion.div>
-
-      {/* Enhanced Trust Indicators */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.5, duration: 1 }}
-        className="absolute bottom-32 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="bg-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-4">
-          <p className="text-slate-300 text-sm mb-3 text-center">Trusted by leading companies worldwide</p>
-          <div className="flex flex-wrap justify-center gap-6 opacity-60">
-            <div className="flex items-center space-x-2 text-blue-400">
-              <ShieldCheckIcon className="w-5 h-5" />
-              <span className="text-sm font-medium">SOC2 Certified</span>
-            </div>
-            <div className="flex items-center space-x-2 text-cyan-400">
-              <CloudIcon className="w-5 h-5" />
-              <span className="text-sm font-medium">Cloud Native</span>
-            </div>
-            <div className="flex items-center space-x-2 text-green-400">
-              <UsersIcon className="w-5 h-5" />
-              <span className="text-sm font-medium">24/7 Support</span>
-            </div>
-            <div className="flex items-center space-x-2 text-purple-400">
-              <CodeBracketIcon className="w-5 h-5" />
-              <span className="text-sm font-medium">Open Source</span>
-            </div>
-          </div>
-        </div>
-      </motion.div>
     </section>
   );
 }

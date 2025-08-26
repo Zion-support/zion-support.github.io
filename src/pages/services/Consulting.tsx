@@ -1,241 +1,110 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Target, 
-  BarChart3, 
-  Lightbulb, 
-  Zap, 
-  TrendingUp,
-  Globe,
-  Shield,
-  Database,
-  Cpu,
-  Network,
-  Rocket
-} from 'lucide-react';
+import { Lightbulb, Users, Target, TrendingUp, Zap, Globe, ArrowRight, CheckCircle } from 'lucide-react';
 
 const Consulting: React.FC = () => {
-  const consultingServices = [
+  const features = [
     {
-      title: 'Technology Strategy',
-      description: 'Develop comprehensive technology roadmaps aligned with business objectives',
-      icon: <Target className="w-8 h-8" />,
-      features: ['Technology Assessment', 'Roadmap Development', 'Architecture Planning', 'Vendor Selection']
+      icon: Lightbulb,
+      title: "Strategic Consulting",
+      description: "Expert guidance for technology strategy and business alignment"
     },
     {
-      title: 'Digital Innovation',
-      description: 'Identify and implement innovative technology solutions for competitive advantage',
-      icon: <Lightbulb className="w-8 h-8" />,
-      features: ['Innovation Workshops', 'Emerging Tech Evaluation', 'Proof of Concepts', 'Innovation Strategy']
+      icon: Users,
+      title: "Team Training",
+      description: "Comprehensive training programs for your technology teams"
     },
     {
-      title: 'Business Process Analysis',
-      description: 'Analyze and optimize business processes for maximum efficiency',
-      icon: <BarChart3 className="w-8 h-8" />,
-      features: ['Process Mapping', 'Gap Analysis', 'Optimization Recommendations', 'Implementation Support']
+      icon: Target,
+      title: "Project Management",
+      description: "Professional project management and delivery services"
     },
     {
-      title: 'Change Management',
-      description: 'Guide organizations through technology-driven transformation initiatives',
-      icon: <Users className="w-8 h-8" />,
-      features: ['Stakeholder Engagement', 'Training Programs', 'Communication Strategy', 'Success Metrics']
+      icon: TrendingUp,
+      title: "Performance Optimization",
+      description: "Data-driven insights to improve business performance"
     }
-  ];
-
-  const consultingAreas = [
-    { name: 'Strategic Planning', description: 'Long-term technology and business strategy development' },
-    { name: 'Technology Assessment', description: 'Comprehensive evaluation of current technology landscape' },
-    { name: 'Risk Management', description: 'Technology risk assessment and mitigation strategies' },
-    { name: 'Performance Optimization', description: 'System and process performance improvement' }
   ];
 
   const benefits = [
-    {
-      title: 'Expert Guidance',
-      description: 'Access to experienced technology consultants',
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      title: 'Strategic Insights',
-      description: 'Data-driven recommendations for business growth',
-      icon: <Target className="w-6 h-6" />
-    },
-    {
-      title: 'Cost Optimization',
-      description: 'Identify opportunities to reduce technology costs',
-      icon: <BarChart3 className="w-6 h-6" />
-    },
-    {
-      title: 'Competitive Advantage',
-      description: 'Stay ahead with innovative technology strategies',
-      icon: <Rocket className="w-6 h-6" />
-    }
-  ];
-
-  const industries = [
-    { name: 'Healthcare', description: 'Digital health strategy and technology consulting' },
-    { name: 'Finance', description: 'Fintech innovation and regulatory compliance consulting' },
-    { name: 'Manufacturing', description: 'Industry 4.0 and smart manufacturing consulting' },
-    { name: 'Retail', description: 'E-commerce and digital retail consulting' },
-    { name: 'Education', description: 'EdTech strategy and digital learning consulting' },
-    { name: 'Government', description: 'Digital government and public sector consulting' }
+    "Expert guidance from industry professionals",
+    "Customized solutions for your business needs",
+    "Proven methodologies and best practices",
+    "Ongoing support and consultation",
+    "Measurable results and ROI"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="max-w-7xl mx-auto text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-5xl md:text-7xl font-bold mb-8">
-            Technology
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 block">
-              Consulting
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-            Strategic technology consulting to drive innovation, efficiency, and business growth
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-            </Link>
-            <Link
-              to="/services"
-              className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-            >
-              View All Services
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Technology Consulting - Zion Tech Group"
+        description="Get expert technology consulting services to align your business strategy with cutting-edge solutions."
+        keywords="technology consulting, strategic consulting, team training, project management, performance optimization"
+        canonical="https://ziontechgroup.com/services/consulting"
+      />
 
-      {/* Consulting Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-indigo-900 via-indigo-800 to-blue-900 text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative container mx-auto px-4 text-center">
+          <motion.h1 
+            className="text-5xl md:text-6xl font-bold mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Technology
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400">
+              {" "}Consulting
+            </span>
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto leading-relaxed mb-8"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our Consulting Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Strategic consulting solutions designed to transform your technology landscape
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {consultingServices.map((service, index) => (
-              <motion.div
-                key={service.title}
-                className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="flex items-center mb-6">
-                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-xl mr-4">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold">{service.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-6 text-lg">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Consulting Areas Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            Get expert guidance to navigate the complex technology landscape and make informed 
+            decisions that drive your business forward.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Consulting Focus Areas
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Specialized consulting expertise across key technology domains
-            </p>
+            <button className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+              Get Expert Advice
+            </button>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {consultingAreas.map((area, index) => (
-              <motion.div
-                key={area.name}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-              >
-                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{area.name}</h3>
-                <p className="text-gray-300 text-sm">{area.description}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Industries We Serve
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Specialized consulting solutions for various industry sectors
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Consulting Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive consulting solutions to address your technology challenges
             </p>
-          </motion.div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
               <motion.div
-                key={industry.name}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-                whileHover={{ y: -3 }}
+                key={feature.title}
+                className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
-                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-6 h-6 text-white" />
+                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-indigo-600" />
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-center">{industry.name}</h3>
-                <p className="text-gray-300 text-sm text-center">{industry.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -243,72 +112,47 @@ const Consulting: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose Our Consulting Services?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of strategic technology consulting
-            </p>
-          </motion.div>
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Consulting Services?</h2>
+              <p className="text-xl text-gray-600">
+                Experience the benefits of expert technology consulting
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-              >
-                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
-              </motion.div>
-            ))}
+            <div className="space-y-6">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-center p-4 bg-white rounded-lg shadow-sm"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                  </div>
+                  <span className="text-lg text-gray-700">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-3xl p-12 text-center border border-white/10"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Technology Strategy?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our consulting services can drive innovation and growth for your organization
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Schedule a Consultation
-              </Link>
-              <Link
-                to="/services"
-                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Explore All Services
-              </Link>
-            </div>
-          </motion.div>
+      <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Get Expert Guidance?</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Let's discuss how our consulting services can help you make better technology decisions.
+          </p>
+          <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            Schedule a Consultation
+          </button>
         </div>
       </section>
     </div>
