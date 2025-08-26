@@ -29,10 +29,10 @@ export function Sidebar() {
             icon: Users,
             children: [
                 { name: 'Browse Talents', path: '/talents', icon: Users },
-                { name: 'Talent Directory', path: '/talent-directory', icon: Users },
-                { name: 'AI Matcher', path: '/ai-matcher', icon: Zap },
-                { name: 'Hire Now', path: '/hire-now', icon: Briefcase },
-                { name: 'Post a Job', path: '/post-job', icon: FileText },
+                { name: 'Talent Directory', path: '/talent', icon: Users },
+                { name: 'AI Matcher', path: '/match', icon: Zap },
+                { name: 'Hire Now', path: '/contact', icon: Briefcase },
+                { name: 'Post a Job', path: '/contact', icon: FileText },
             ]
         },
         {
@@ -48,25 +48,25 @@ export function Sidebar() {
         },
         {
             name: 'Company',
-            path: '/company',
+            path: '/about',
             icon: Building,
             children: [
                 { name: 'About Us', path: '/about', icon: Building },
-                { name: 'Careers', path: '/careers', icon: Briefcase },
+                { name: 'Team', path: '/team', icon: Users },
                 { name: 'Partners', path: '/partners', icon: Users },
-                { name: 'Press', path: '/press', icon: FileText },
+                { name: 'Contact', path: '/contact', icon: FileText },
             ]
         },
         {
             name: 'Resources',
-            path: '/resources',
+            path: '/blog',
             icon: FileText,
             children: [
                 { name: 'Blog', path: '/blog', icon: FileText },
-                { name: 'Documentation', path: '/docs', icon: Code },
-                { name: 'API Reference', path: '/api', icon: Code },
                 { name: 'Tutorials', path: '/tutorials', icon: Code },
-                { name: 'Case Studies', path: '/case-studies', icon: FileText },
+                { name: 'Webinars', path: '/webinars', icon: Code },
+                { name: 'White Papers', path: '/white-papers', icon: Code },
+                { name: 'Case Studies', path: '/services', icon: FileText },
             ]
         },
         {
@@ -77,8 +77,8 @@ export function Sidebar() {
                 { name: 'Help Center', path: '/help-center', icon: HelpCircle },
                 { name: 'FAQ', path: '/faq', icon: HelpCircle },
                 { name: 'Contact', path: '/contact', icon: MessageSquare },
-                { name: 'Live Chat', path: '/chat', icon: MessageSquare },
-                { name: 'Status', path: '/status', icon: BarChart3 },
+                { name: 'Request Quote', path: '/request-quote', icon: MessageSquare },
+                { name: 'Support', path: '/support', icon: BarChart3 },
             ]
         },
         {

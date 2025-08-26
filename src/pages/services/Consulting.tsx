@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Consulting: React.FC = () => {
+const ConsultingServices: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
@@ -40,4 +40,4 @@ const Consulting: React.FC = () => {
   );
 };
 
-export default Consulting;
+export default ConsultingServices;

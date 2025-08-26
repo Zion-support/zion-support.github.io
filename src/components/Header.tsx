@@ -96,10 +96,16 @@ const Header: React.FC = () => {
               About
             </Link>
             <Link
-              to="/blog"
+              to="/case-studies"
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
-              Blog
+              Case Studies
+            </Link>
+            <Link
+              to="/news"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              News
             </Link>
             <Link
               to="/careers"
@@ -184,11 +190,18 @@ const Header: React.FC = () => {
                 About
               </Link>
               <Link
-                to="/blog"
+                to="/case-studies"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Blog
+                Case Studies
+              </Link>
+              <Link
+                to="/news"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                News
               </Link>
               <Link
                 to="/careers"

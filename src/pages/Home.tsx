@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
 import HeroSection from '../components/HeroSection';
 import ServiceCard from '../components/ServiceCard';
+import InteractiveServiceShowcase from '../components/InteractiveServiceShowcase';
 
 const Home: React.FC = () => {
   const featuredServices = [
@@ -197,6 +198,9 @@ const Home: React.FC = () => {
           </motion.div>
         </div>
       </motion.section>
+
+      {/* Interactive Service Showcase */}
+      <InteractiveServiceShowcase />
 
       {/* Featured Services */}
       <motion.section 
