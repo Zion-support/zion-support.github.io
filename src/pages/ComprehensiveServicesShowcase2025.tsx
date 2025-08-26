@@ -194,48 +194,51 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
               </div>
 
               {/* Technology Stack */}
-              {('technologyStack' in service && service.technologyStack) && (
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Technology:</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {service.technologyStack.slice(0, 3).map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Technology:</h4>
+                <div className="flex flex-wrap gap-1">
+                  {(service as any).integrations?.slice(0, 3)?.map((tech: string, index: number) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  )) || (service as any).tags?.slice(0, 3)?.map((tech: string, index: number) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-blue-600/20 text-blue-300 text-xs rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  )) || []}
                 </div>
-              )}
+              </div>
 
               {/* ROI Metrics */}
-              {('roiMetrics' in service && service.roiMetrics) && (
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">ROI Metrics:</h4>
-                  <div className="text-sm text-gray-300">
-                    {service.roiMetrics.slice(0, 2).map((metric, index) => (
-                      <p key={index} className="mb-1">• {metric}</p>
-                    ))}
-                  </div>
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">ROI Metrics:</h4>
+                <div className="text-sm text-gray-300">
+                  {((service as any).roi ? [(service as any).roi] : (service as any).benefits?.slice(0, 2) || []).map((metric: string, index: number) => (
+                    <p key={index} className="mb-1">• {metric}</p>
+                  ))}
                 </div>
-              )}
+              </div>
 
               {/* Delivery and Support */}
               <div className="flex justify-between items-center mb-4 text-sm">
                 <span className="text-gray-400">
-                  Delivery: <span className="text-white">{service.estimatedDelivery}</span>
+                  Delivery: <span className="text-white">{(service as any).setupTime || 'Custom'}</span>
                 </span>
                 <span className="text-gray-400">
-                  Support: <span className="text-white capitalize">{service.supportLevel}</span>
+                  Support: <span className="text-white capitalize">{(service as any).support || 'Email & Phone'}</span>
                 </span>
               </div>
 
               {/* Action Buttons */}
               <div className="flex gap-2">
                 <Link
-                  to={('websiteUrl' in service && service.websiteUrl) ? service.websiteUrl : `/services/${service.id}`}
+                  to={`/services/${service.id}`}
                   className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors duration-200"
                 >
                   Learn More
