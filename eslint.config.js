@@ -51,11 +51,6 @@ export default [
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
-<<<<<<< HEAD
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-=======
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
@@ -66,7 +61,6 @@ export default [
         ...globals.browser,
         ...globals.node,
         React: 'readonly',
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
         process: 'readonly',
         console: 'readonly',
         module: 'readonly',
@@ -77,17 +71,6 @@ export default [
         setInterval: 'readonly',
         clearTimeout: 'readonly',
         clearInterval: 'readonly'
-<<<<<<< HEAD
-      },
-      parser: tsparser,
-      parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
-=======
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
       }
     },
     plugins: {
@@ -121,15 +104,11 @@ export default [
       '**/*.cjs',
       '**/*.disabled/**',
       '**/tests.disabled/**',
-<<<<<<< HEAD
-=======
       '**/typechain-types.disabled/**',
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
       '**/types.disabled/**',
       '**/utils.disabled/**',
       '**/zion-os.disabled/**',
       '**/zion_academy/**',
-<<<<<<< HEAD
       '**/src_backup/**',
       '**/src_disabled/**',
       '**/services.disabled.temp/**',
@@ -199,12 +178,10 @@ export default [
       '**/auto-run-all.js',
       '**/comprehensive-automation-test.js',
       '**/debug-paths.js',
-      '**/pages/**'
-=======
+      '**/pages/**',
       'test*.js',
       'test*.ts',
       'test*.tsx'
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
     ]
   }
 ];

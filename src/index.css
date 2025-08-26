@@ -142,222 +142,611 @@
   }
 }
 
-/* Enhanced floating delays */
-.floating-delay-1 {
-  animation-delay: 1s;
-}
-
-.floating-delay-2 {
-  animation-delay: 2s;
-}
-
-.floating-delay-3 {
-  animation-delay: 3s;
-}
-
-.floating-delay-4 {
-  animation-delay: 4s;
-}
-
-.floating-delay-5 {
-  animation-delay: 5s;
-}
-
-/* Utility classes */
-.gradient-text {
-  background: linear-gradient(135deg, #22ddd2, #8c15e9, #3b82f6);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-text 3s ease infinite;
-}
-
-.animate-gradient {
-  animation: gradient-text 3s ease infinite;
-}
-
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.hover-lift {
-  transition: all 0.3s ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.neon-border {
-  box-shadow: 0 0 20px rgba(34, 221, 210, 0.3);
-  border: 1px solid rgba(34, 221, 210, 0.5);
-}
-
-.neon-border:hover {
-  box-shadow: 0 0 30px rgba(34, 221, 210, 0.6);
-  border-color: rgba(34, 221, 210, 0.8);
-}
-
-/* Button styles */
-.btn-primary {
-  @apply bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25;
-}
-
-.btn-secondary {
-  @apply bg-white/10 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-xl border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-white/40;
-}
-
-/* Zion gradient background */
-.bg-zion-gradient {
-  background: linear-gradient(135deg, #172d67 0%, #1e3a8a 25%, #2e73ea 50%, #8c15e9 75%, #22ddd2 100%);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-}
-
-/* Enhanced animations */
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-bounce-gentle {
-  animation: bounce-gentle 2s ease-in-out infinite;
-}
-
-/* Line clamp utilities */
-.line-clamp-1 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-}
-
-.line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
-.line-clamp-3 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-
-.line-clamp-4 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-}
-
-/* Responsive utilities */
-@media (max-width: 768px) {
-  .mobile-hidden {
-    display: none;
+@keyframes float-delay-1 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
   }
 }
 
-@media (min-width: 769px) {
-  .desktop-hidden {
-    display: none;
+@keyframes float-delay-2 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
   }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+@keyframes float-delay-3 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+@keyframes float-delay-4 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(34, 221, 210, 0.5);
-  border-radius: 4px;
+@keyframes float-delay-5 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-22px);
+  }
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(34, 221, 210, 0.8);
+/* Enhanced utility classes */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .floating-delay-1 {
+    animation: float-delay-1 6s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+  
+  .floating-delay-2 {
+    animation: float-delay-2 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+  
+  .floating-delay-3 {
+    animation: float-delay-3 6s ease-in-out infinite;
+    animation-delay: 3s;
+  }
+  
+  .floating-delay-4 {
+    animation: float-delay-4 6s ease-in-out infinite;
+    animation-delay: 4s;
+  }
+  
+  .floating-delay-5 {
+    animation: float-delay-5 6s ease-in-out infinite;
+    animation-delay: 5s;
+  }
+  
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+  
+  .animate-gradient-text {
+    background-size: 200% 200%;
+    animation: gradient-text 3s ease infinite;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounce-gentle 2s ease-in-out infinite;
+  }
+  
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s linear infinite;
+  }
+  
+  .animate-neon-pulse {
+    animation: neon-pulse 1.5s ease-in-out infinite alternate;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slide-in-right 0.5s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.3s ease-out forwards;
+  }
+  
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+  
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(8px);
+  }
+  
+  .backdrop-blur-lg {
+    backdrop-filter: blur(16px);
+  }
+  
+  .backdrop-blur-xl {
+    backdrop-filter: blur(24px);
+  }
+  
+  .backdrop-blur-2xl {
+    backdrop-filter: blur(40px);
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .neon-border {
+    box-shadow: 0 0 20px rgba(34, 221, 210, 0.3);
+  }
+  
+  .neon-border:hover {
+    box-shadow: 0 0 30px rgba(34, 221, 210, 0.6);
+  }
+  
+  .zion-gradient {
+    background: linear-gradient(135deg, #22ddd2, #1e40af, #8c15e9);
+  }
+  
+  .zion-text-gradient {
+    background: linear-gradient(135deg, #22ddd2, #1e40af);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .zion-border-gradient {
+    border-image: linear-gradient(135deg, #22ddd2, #1e40af, #8c15e9) 1;
+  }
+  
+  .shadow-zion-glow {
+    box-shadow: 0 0 30px rgba(34, 221, 210, 0.3);
+  }
+  
+  .shadow-zion-glow:hover {
+    box-shadow: 0 0 50px rgba(34, 221, 210, 0.5);
+  }
 }
 
-/* Focus styles for accessibility */
-*:focus {
-  outline: 2px solid rgba(34, 221, 210, 0.5);
-  outline-offset: 2px;
+/* Enhanced button styles */
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/10 backdrop-blur-md text-white font-semibold py-3 px-6 rounded-xl border border-white/30 hover:border-zion-cyan/50 hover:bg-white/20 transition-all duration-300;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-zion-cyan text-zion-cyan font-semibold py-3 px-6 rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300;
+  }
+  
+  .btn-ghost {
+    @apply text-zion-slate-light hover:text-white font-medium py-3 px-6 rounded-xl hover:bg-white/10 transition-all duration-300;
+  }
 }
 
-/* Selection styles */
-::selection {
-  background: rgba(34, 221, 210, 0.3);
-  color: white;
+/* Enhanced form styles */
+@layer components {
+  .form-input {
+    @apply w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300;
+  }
+  
+  .form-textarea {
+    @apply w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300 resize-vertical;
+  }
+  
+  .form-select {
+    @apply w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300;
+  }
+  
+  .form-checkbox {
+    @apply w-5 h-5 bg-white/10 backdrop-blur-md border border-white/20 rounded text-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 focus:ring-offset-0 transition-all duration-300;
+  }
 }
 
-::-moz-selection {
-  background: rgba(34, 221, 210, 0.3);
-  color: white;
+/* Enhanced card styles */
+@layer components {
+  .card {
+    @apply bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-6 transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/25 hover:-translate-y-1;
+  }
+  
+  .card-glass {
+    @apply bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-6;
+  }
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Enhanced navigation styles */
+@layer components {
+  .nav-link {
+    @apply text-zion-slate-light hover:text-white font-medium py-2 px-4 rounded-lg hover:bg-white/10 transition-all duration-300;
+  }
+  
+  .nav-link-active {
+    @apply text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20;
+  }
+  
+  .nav-dropdown {
+    @apply absolute top-full left-0 mt-2 w-48 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg opacity-0 invisible translate-y-2 transition-all duration-300;
+  }
+  
+  .nav-dropdown:hover,
+  .nav-item:hover .nav-dropdown {
+    @apply opacity-100 visible translate-y-0;
+  }
+}
+
+/* Enhanced typography */
+@layer components {
+  .heading-1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+  
+  .heading-2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+  
+  .heading-3 {
+    @apply text-2xl md:text-3xl font-semibold leading-tight;
+  }
+  
+  .body-large {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+  
+  .body-medium {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+  
+  .body-small {
+    @apply text-sm md:text-base leading-relaxed;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
+  }
+}
+
+/* Enhanced responsive utilities */
+@layer utilities {
+  .container-responsive {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+  
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8;
+  }
+}
+
+/* Enhanced accessibility */
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  .focus-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zion-blue-dark;
+  }
+}
+
+/* Enhanced scrollbar */
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(34, 221, 210, 0.3) transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(34, 221, 210, 0.3);
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(34, 221, 210, 0.5);
+  }
+}
+
+/* Enhanced loading states */
+@layer utilities {
+  .loading-skeleton {
+    @apply animate-pulse bg-white/10 rounded;
+  }
+  
+  .loading-spinner {
+    @apply animate-spin rounded-full border-2 border-zion-cyan/30 border-t-zion-cyan;
+  }
+  
+  .loading-dots {
+    @apply flex space-x-1;
+  }
+  
+  .loading-dots > div {
+    @apply w-2 h-2 bg-zion-cyan rounded-full animate-bounce;
+  }
+  
+  .loading-dots > div:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  .loading-dots > div:nth-child(3) {
+    animation-delay: 0.2s;
+  }
 }
 
 /* Enhanced hover effects */
-.hover-scale {
-  transition: transform 0.3s ease;
+@layer utilities {
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    @apply shadow-lg shadow-zion-cyan/25;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300;
+  }
+  
+  .hover-scale:hover {
+    @apply scale-105;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-xl;
+  }
 }
 
-.hover-scale:hover {
-  transform: scale(1.05);
+/* Enhanced focus states */
+@layer utilities {
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zion-blue-dark;
+  }
+  
+  .focus-border {
+    @apply focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20;
+  }
 }
 
-/* Text shadow utilities */
-.text-shadow-sm {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+/* Enhanced transitions */
+@layer utilities {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .transition-fast {
+    @apply transition-all duration-150 ease-in-out;
+  }
+  
+  .transition-slow {
+    @apply transition-all duration-500 ease-in-out;
+  }
+  
+  .transition-bounce {
+    @apply transition-all duration-300 ease-bounce;
+  }
 }
 
-.text-shadow {
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+/* Enhanced shadows */
+@layer utilities {
+  .shadow-zion {
+    box-shadow: 0 4px 20px rgba(34, 221, 210, 0.15);
+  }
+  
+  .shadow-zion-lg {
+    box-shadow: 0 10px 40px rgba(34, 221, 210, 0.2);
+  }
+  
+  .shadow-zion-xl {
+    box-shadow: 0 20px 60px rgba(34, 221, 210, 0.25);
+  }
+  
+  .shadow-zion-2xl {
+    box-shadow: 0 25px 80px rgba(34, 221, 210, 0.3);
+  }
 }
 
-.text-shadow-lg {
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+/* Enhanced gradients */
+@layer utilities {
+  .bg-zion-gradient {
+    background: linear-gradient(135deg, #22ddd2, #1e40af, #8c15e9);
+  }
+  
+  .bg-zion-gradient-light {
+    background: linear-gradient(135deg, #22ddd2, #1e40af);
+  }
+  
+  .bg-zion-gradient-dark {
+    background: linear-gradient(135deg, #0f172a, #1e40af, #22ddd2);
+  }
+  
+  .text-zion-gradient {
+    background: linear-gradient(135deg, #22ddd2, #1e40af);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 }
 
-/* Backdrop blur utilities */
-.backdrop-blur-xs {
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+/* Enhanced borders */
+@layer utilities {
+  .border-zion {
+    border-color: #22ddd2;
+  }
+  
+  .border-zion-light {
+    border-color: rgba(34, 221, 210, 0.3);
+  }
+  
+  .border-zion-medium {
+    border-color: rgba(34, 221, 210, 0.5);
+  }
+  
+  .border-zion-dark {
+    border-color: rgba(34, 221, 210, 0.7);
+  }
 }
 
-.backdrop-blur-sm {
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+/* Enhanced backgrounds */
+@layer utilities {
+  .bg-zion-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(34, 221, 210, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(30, 64, 175, 0.1) 0%, transparent 50%);
+  }
+  
+  .bg-zion-mesh {
+    background-image: 
+      linear-gradient(45deg, rgba(34, 221, 210, 0.1) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(30, 64, 175, 0.1) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(34, 221, 210, 0.1) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(30, 64, 175, 0.1) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
 }
 
-.backdrop-blur-md {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+/* Enhanced animations for specific elements */
+@layer utilities {
+  .animate-float-slow {
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .animate-float-fast {
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+  
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+  
+  .animate-ping-slow {
+    animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
 }
 
-.backdrop-blur-lg {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+/* Enhanced responsive design utilities */
+@layer utilities {
+  .mobile-first {
+    @apply w-full md:w-auto;
+  }
+  
+  .desktop-only {
+    @apply hidden lg:block;
+  }
+  
+  .mobile-only {
+    @apply block lg:hidden;
+  }
+  
+  .tablet-up {
+    @apply hidden md:block;
+  }
+  
+  .tablet-down {
+    @apply block md:hidden;
+  }
 }
 
-.backdrop-blur-xl {
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+/* Enhanced print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break {
+    page-break-before: always;
+  }
+  
+  .print-avoid-break {
+    page-break-inside: avoid;
+  }
 }
 
-.backdrop-blur-2xl {
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
+/* Enhanced high contrast mode support */
+@media (prefers-contrast: high) {
+  .bg-white\/10 {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .border-white\/20 {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .text-zion-slate-light {
+    color: #ffffff;
+  }
+}
+
+/* Enhanced reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .animate-float,
+  .floating-delay-1,
+  .floating-delay-2,
+  .floating-delay-3,
+  .floating-delay-4,
+  .floating-delay-5 {
+    animation: none;
+  }
 }

@@ -3874,3 +3874,642 @@ fatal: could not read Username for 'https://github.com': Device not configured
 [2025-08-26T10:16:31.645Z] Checking for remote updates...
 [2025-08-26T10:16:34.514Z] Behind remote by 160 commits
 [2025-08-26T10:16:34.514Z] Staging all changes...
+[2025-08-26T10:16:34.776Z] Attempting auto-commit...
+[2025-08-26T10:17:19.467Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T10:10:03.299Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 build
+> tsc && vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 45 modules transformed.
+Generated an empty chunk: "utils".
+rendering chunks...
+computing gzip size...
+dist/index.html                       3.80 kB │ gzip:  1.21 kB
+dist/assets/index-Bjmc1bxP.css       10.93 kB │ gzip:  2.97 kB
+dist/assets/utils-l0sNRNKZ.js         0.00 kB │ gzip:  0.02 kB
+dist/assets/charts-CbGEknjW.js        0.03 kB │ gzip:  0.05 kB
+dist/assets/forms-CbGEknjW.js         0.03 kB │ gzip:  0.05 kB
+dist/assets/icons-CbGEknjW.js         0.03 kB │ gzip:  0.05 kB
+dist/assets/animations-hq5NsOOK.js    0.06 kB │ gzip:  0.07 kB
+dist/assets/ui-iWwMWcLP.js            0.92 kB │ gzip:  0.58 kB
+dist/assets/index-7PjGUZA-.js         6.16 kB │ gzip:  2.71 kB
+dist/assets/router-DcJBhAXa.js       30.03 kB │ gzip: 11.24 kB
+dist/assets/vendor-nf7bT_Uh.js      140.87 kB │ gzip: 45.26 kB
+✓ built in 10.06s
+✅ All pre-commit checks passed!
+❌ Invalid commit message format.
+Please use conventional commit format:
+  feat: add new feature
+  fix: resolve bug
+  docs: update documentation
+  style: formatting changes
+  refactor: code refactoring
+  perf: performance improvements
+  test: add tests
+  chore: maintenance tasks
+  ci: CI/CD changes
+  build: build system changes
+  revert: revert previous commit
+
+[2025-08-26T10:17:19.469Z] Attempting auto-pull...
+[2025-08-26T10:17:22.579Z] Auto-pull failed: Command failed: git pull origin main
+From https://github.com/Zion-Holdings/zion.app
+ * branch                    main       -> FETCH_HEAD
+❌ Invalid commit message format.
+Please use conventional commit format:
+  feat: add new feature
+  fix: resolve bug
+  docs: update documentation
+  style: formatting changes
+  refactor: code refactoring
+  perf: performance improvements
+  test: add tests
+  chore: maintenance tasks
+  ci: CI/CD changes
+  build: build system changes
+  revert: revert previous commit
+Not committing merge; use 'git commit' to complete the merge.
+
+[2025-08-26T10:17:22.580Z] Checking for merge conflicts...
+[2025-08-26T10:17:22.709Z] Attempting auto-push...
+[2025-08-26T10:17:23.409Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T10:17:23.409Z] Advanced git sync process completed
+[2025-08-26T10:17:30.568Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T10:16:34.855Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 prebuild
+> npm run build:health-check && npm run netlify:manifest
+
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 build:health-check
+> node automation/pre-build-health-check.cjs
+
+[pre-build-health-check] Node: v22.16.0
+[pre-build-health-check] OK
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 netlify:manifest
+> node scripts/generate-netlify-functions-manifest.cjs
+
+[netlify:manifest] Wrote placeholder manifest to /Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/automation/netlify-functions-manifest.json
+
+> bolt.new.zion.app@0.1.0 build
+> NODE_OPTIONS="--max-old-space-size=6144 --openssl-legacy-provider" next build
+
+sh: next: command not found
+❌ Build failed. Please fix the issues before committing.
+
+[2025-08-26T10:17:30.569Z] Attempting auto-pull...
+[2025-08-26T10:17:30.613Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T10:17:30.614Z] Checking for merge conflicts...
+[2025-08-26T10:17:30.701Z] Attempting auto-push...
+[2025-08-26T10:17:31.079Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T10:17:31.079Z] Advanced git sync process completed
+[2025-08-26T10:18:00.236Z] Starting advanced git sync process...
+[2025-08-26T10:18:00.238Z] Checking git status...
+[2025-08-26T10:18:00.401Z] Changes detected: 234 files modified
+[2025-08-26T10:18:00.401Z] Checking for remote updates...
+[2025-08-26T10:18:02.509Z] Behind remote by 160 commits
+[2025-08-26T10:18:02.510Z] Staging all changes...
+[2025-08-26T10:18:02.689Z] Attempting auto-commit...
+[2025-08-26T10:18:47.273Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T10:18:02.756Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+src/App.tsx(14,31): error TS2322: Type 'Promise<typeof import("/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/News")>' is not assignable to type 'Promise<{ default: ComponentType<any>; }>'.
+  Property 'default' is missing in type 'typeof import("/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/News")' but required in type '{ default: ComponentType<any>; }'.
+src/components/home/FeatureHighlights.tsx(115,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(127,15): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(174,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/pages/Events.tsx(353,28): error TS2339: Property 'completed' does not exist on type '{ id: number; title: string; description: string; date: string; time: string; location: string; type: string; attendees: number; price: string; image: string; tags: string[]; featured: boolean; }'.
+src/pages/News.tsx(136,24): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(137,22): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(149,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(150,32): error TS2339: Property 'icon' does not exist on type 'string'.
+src/pages/News.tsx(150,39): error TS2304: Cannot find name 'Newspaper'.
+src/pages/News.tsx(154,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(155,32): error TS2339: Property 'name' does not exist on type 'string'.
+src/pages/News.tsx(435,14): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(439,16): error TS2304: Cannot find name 'Newspaper'.
+src/pages/News.tsx(441,15): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(442,14): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(446,16): error TS2304: Cannot find name 'TrendingUp'.
+src/pages/News.tsx(448,15): error TS2304: Cannot find name 'Link'.
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T10:18:47.273Z] Attempting auto-pull...
+[2025-08-26T10:18:47.320Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T10:18:47.321Z] Checking for merge conflicts...
+[2025-08-26T10:18:47.407Z] Attempting auto-push...
+[2025-08-26T10:18:47.831Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T10:18:47.831Z] Advanced git sync process completed
+[2025-08-26T10:20:01.009Z] Starting advanced git sync process...
+[2025-08-26T10:20:01.013Z] Checking git status...
+[2025-08-26T10:20:01.275Z] Changes detected: 243 files modified
+[2025-08-26T10:20:01.275Z] Checking for remote updates...
+[2025-08-26T10:20:03.281Z] Behind remote by 160 commits
+[2025-08-26T10:20:03.282Z] Staging all changes...
+[2025-08-26T10:20:03.674Z] Attempting auto-commit...
+[2025-08-26T10:20:49.450Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T10:20:03.764Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+src/App.tsx(14,31): error TS2322: Type 'Promise<typeof import("/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/News")>' is not assignable to type 'Promise<{ default: ComponentType<any>; }>'.
+  Property 'default' is missing in type 'typeof import("/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/News")' but required in type '{ default: ComponentType<any>; }'.
+src/components/home/FeatureHighlights.tsx(115,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(127,15): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(174,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/pages/Events.tsx(353,28): error TS2339: Property 'completed' does not exist on type '{ id: number; title: string; description: string; date: string; time: string; location: string; type: string; attendees: number; price: string; image: string; tags: string[]; featured: boolean; }'.
+src/pages/News.tsx(136,24): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(137,22): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(149,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(150,32): error TS2339: Property 'icon' does not exist on type 'string'.
+src/pages/News.tsx(150,39): error TS2304: Cannot find name 'Newspaper'.
+src/pages/News.tsx(154,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(155,32): error TS2339: Property 'name' does not exist on type 'string'.
+src/pages/News.tsx(435,14): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(439,16): error TS2304: Cannot find name 'Newspaper'.
+src/pages/News.tsx(441,15): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(442,14): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(446,16): error TS2304: Cannot find name 'TrendingUp'.
+src/pages/News.tsx(448,15): error TS2304: Cannot find name 'Link'.
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T10:20:49.450Z] Attempting auto-pull...
+[2025-08-26T10:20:49.495Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T10:20:49.495Z] Checking for merge conflicts...
+[2025-08-26T10:20:49.570Z] Attempting auto-push...
+[2025-08-26T10:20:50.010Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T10:20:50.010Z] Advanced git sync process completed
+[2025-08-26T10:22:00.117Z] Starting advanced git sync process...
+[2025-08-26T10:22:00.121Z] Checking git status...
+[2025-08-26T10:22:00.354Z] Changes detected: 245 files modified
+[2025-08-26T10:22:00.354Z] Checking for remote updates...
+[2025-08-26T10:22:03.108Z] Behind remote by 160 commits
+[2025-08-26T10:22:03.109Z] Staging all changes...
+[2025-08-26T10:22:03.357Z] Attempting auto-commit...
+[2025-08-26T10:55:19.410Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T10:22:03.453Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+src/App.tsx(14,31): error TS2322: Type 'Promise<typeof import("/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/News")>' is not assignable to type 'Promise<{ default: ComponentType<any>; }>'.
+  Property 'default' is missing in type 'typeof import("/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/News")' but required in type '{ default: ComponentType<any>; }'.
+src/components/home/FeatureHighlights.tsx(115,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(127,15): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(174,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/pages/Events.tsx(353,28): error TS2339: Property 'completed' does not exist on type '{ id: number; title: string; description: string; date: string; time: string; location: string; type: string; attendees: number; price: string; image: string; tags: string[]; featured: boolean; }'.
+src/pages/News.tsx(136,24): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(137,22): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(149,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(150,32): error TS2339: Property 'icon' does not exist on type 'string'.
+src/pages/News.tsx(150,39): error TS2304: Cannot find name 'Newspaper'.
+src/pages/News.tsx(154,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(155,32): error TS2339: Property 'name' does not exist on type 'string'.
+src/pages/News.tsx(435,14): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(439,16): error TS2304: Cannot find name 'Newspaper'.
+src/pages/News.tsx(441,15): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(442,14): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(446,16): error TS2304: Cannot find name 'TrendingUp'.
+src/pages/News.tsx(448,15): error TS2304: Cannot find name 'Link'.
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T10:55:19.411Z] Attempting auto-pull...
+[2025-08-26T10:55:19.449Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T10:55:19.449Z] Checking for merge conflicts...
+[2025-08-26T10:55:19.512Z] Attempting auto-push...
+[2025-08-26T10:55:19.858Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T10:55:19.858Z] Advanced git sync process completed
+[2025-08-26T10:55:20.019Z] Starting advanced git sync process...
+[2025-08-26T10:55:20.022Z] Checking git status...
+[2025-08-26T10:55:20.222Z] Changes detected: 245 files modified
+[2025-08-26T10:55:20.222Z] Checking for remote updates...
+[2025-08-26T10:55:22.058Z] Behind remote by 170 commits
+[2025-08-26T10:55:22.058Z] Staging all changes...
+[2025-08-26T10:55:22.221Z] Attempting auto-commit...
+[2025-08-26T10:55:56.451Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T10:55:22.279Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+src/App.tsx(14,31): error TS2322: Type 'Promise<typeof import("/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/News")>' is not assignable to type 'Promise<{ default: ComponentType<any>; }>'.
+  Property 'default' is missing in type 'typeof import("/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/News")' but required in type '{ default: ComponentType<any>; }'.
+src/components/home/FeatureHighlights.tsx(115,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(127,15): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(174,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/pages/Events.tsx(353,28): error TS2339: Property 'completed' does not exist on type '{ id: number; title: string; description: string; date: string; time: string; location: string; type: string; attendees: number; price: string; image: string; tags: string[]; featured: boolean; }'.
+src/pages/News.tsx(136,24): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(137,22): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(149,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(150,32): error TS2339: Property 'icon' does not exist on type 'string'.
+src/pages/News.tsx(150,39): error TS2304: Cannot find name 'Newspaper'.
+src/pages/News.tsx(154,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(155,32): error TS2339: Property 'name' does not exist on type 'string'.
+src/pages/News.tsx(435,14): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(439,16): error TS2304: Cannot find name 'Newspaper'.
+src/pages/News.tsx(441,15): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(442,14): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(446,16): error TS2304: Cannot find name 'TrendingUp'.
+src/pages/News.tsx(448,15): error TS2304: Cannot find name 'Link'.
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T10:55:56.452Z] Attempting auto-pull...
+[2025-08-26T10:55:56.495Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T10:55:56.495Z] Checking for merge conflicts...
+[2025-08-26T10:55:56.562Z] Attempting auto-push...
+[2025-08-26T10:55:56.941Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T10:55:56.941Z] Advanced git sync process completed
+[2025-08-26T10:56:01.105Z] Starting advanced git sync process...
+[2025-08-26T10:56:01.108Z] Checking git status...
+[2025-08-26T10:56:01.282Z] Changes detected: 245 files modified
+[2025-08-26T10:56:01.282Z] Checking for remote updates...
+[2025-08-26T10:56:03.065Z] Behind remote by 170 commits
+[2025-08-26T10:56:03.065Z] Staging all changes...
+[2025-08-26T10:56:03.314Z] Attempting auto-commit...
+[2025-08-26T10:56:43.071Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T10:56:03.391Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+src/App.tsx(14,31): error TS2322: Type 'Promise<typeof import("/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/News")>' is not assignable to type 'Promise<{ default: ComponentType<any>; }>'.
+  Property 'default' is missing in type 'typeof import("/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/News")' but required in type '{ default: ComponentType<any>; }'.
+src/components/home/FeatureHighlights.tsx(115,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(127,15): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(174,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/pages/Events.tsx(353,28): error TS2339: Property 'completed' does not exist on type '{ id: number; title: string; description: string; date: string; time: string; location: string; type: string; attendees: number; price: string; image: string; tags: string[]; featured: boolean; }'.
+src/pages/News.tsx(136,24): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(137,22): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(149,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(150,32): error TS2339: Property 'icon' does not exist on type 'string'.
+src/pages/News.tsx(150,39): error TS2304: Cannot find name 'Newspaper'.
+src/pages/News.tsx(154,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(155,32): error TS2339: Property 'name' does not exist on type 'string'.
+src/pages/News.tsx(435,14): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(439,16): error TS2304: Cannot find name 'Newspaper'.
+src/pages/News.tsx(441,15): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(442,14): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(446,16): error TS2304: Cannot find name 'TrendingUp'.
+src/pages/News.tsx(448,15): error TS2304: Cannot find name 'Link'.
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T10:56:43.072Z] Attempting auto-pull...
+[2025-08-26T10:56:43.130Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T10:56:43.131Z] Checking for merge conflicts...
+[2025-08-26T10:56:43.219Z] Attempting auto-push...
+[2025-08-26T10:56:43.643Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T10:56:43.644Z] Advanced git sync process completed
+[2025-08-26T10:58:00.738Z] Starting advanced git sync process...
+[2025-08-26T10:58:00.741Z] Checking git status...
+[2025-08-26T10:58:00.914Z] Changes detected: 246 files modified
+[2025-08-26T10:58:00.915Z] Checking for remote updates...
+[2025-08-26T10:58:03.066Z] Behind remote by 170 commits
+[2025-08-26T10:58:03.066Z] Staging all changes...
+[2025-08-26T10:58:03.263Z] Attempting auto-commit...
+[2025-08-26T10:58:46.849Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T10:58:03.335Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 type-check
+> tsc --noEmit
+
+src/components/home/FeatureHighlights.tsx(112,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(124,15): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/components/home/FeatureHighlights.tsx(171,11): error TS2322: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: string; }; }; hover: { y: number; scale: number; transition: { duration: number; ease: string; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: string; }; }' is not assignable to type '{ transition?: Transition<any>; transitionEnd?: ResolvedValues; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: string; }' is not assignable to type 'Transition<any>'.
+              Type '{ duration: number; ease: string; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: string; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'string' is not assignable to type 'Easing | Easing[]'.
+src/pages/Events.tsx(353,28): error TS2339: Property 'completed' does not exist on type '{ id: number; title: string; description: string; date: string; time: string; location: string; type: string; attendees: number; price: string; image: string; tags: string[]; featured: boolean; }'.
+src/pages/News.tsx(136,24): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(137,22): error TS2304: Cannot find name 'newsArticles'.
+src/pages/News.tsx(149,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(150,32): error TS2339: Property 'icon' does not exist on type 'string'.
+src/pages/News.tsx(150,39): error TS2304: Cannot find name 'Newspaper'.
+src/pages/News.tsx(154,49): error TS2339: Property 'id' does not exist on type 'string'.
+src/pages/News.tsx(155,32): error TS2339: Property 'name' does not exist on type 'string'.
+src/pages/News.tsx(435,14): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(439,16): error TS2304: Cannot find name 'Newspaper'.
+src/pages/News.tsx(441,15): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(442,14): error TS2304: Cannot find name 'Link'.
+src/pages/News.tsx(446,16): error TS2304: Cannot find name 'TrendingUp'.
+src/pages/News.tsx(448,15): error TS2304: Cannot find name 'Link'.
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T10:58:46.850Z] Attempting auto-pull...
+[2025-08-26T10:58:46.892Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T10:58:46.892Z] Checking for merge conflicts...
+[2025-08-26T10:58:46.965Z] Attempting auto-push...
+[2025-08-26T10:58:47.352Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T10:58:47.353Z] Advanced git sync process completed
+[2025-08-26T11:00:00.810Z] Starting advanced git sync process...
+[2025-08-26T11:00:00.940Z] Checking git status...
+[2025-08-26T11:00:01.718Z] Changes detected: 246 files modified
+[2025-08-26T11:00:01.719Z] Checking for remote updates...
+[2025-08-26T11:00:06.616Z] Behind remote by 170 commits
+[2025-08-26T11:00:06.618Z] Staging all changes...

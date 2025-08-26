@@ -2,95 +2,95 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
-import { Check, ArrowRight, Sparkles } from 'lucide-react';
+import { Check, ArrowRight, Sparkles, Users, Building, Rocket, Brain, Shield, Cpu, Globe, Zap, Target, Lightbulb, Code, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server } from 'lucide-react';
 
-const highlightsData = [
-  {
-    title: "For Developers",
-    icon: "💻",
-    color: "from-blue-500 to-cyan-500",
-    bgColor: "bg-blue-500/10",
-    borderColor: "border-blue-500/30",
-    features: [
-      "AI-powered code generation",
-      "Automated testing & deployment",
-      "Performance optimization tools",
-      "Collaborative development features"
-    ]
-  },
-  {
-    title: "For Businesses",
-    icon: "🏢",
-    color: "from-purple-500 to-pink-500",
-    bgColor: "bg-purple-500/10",
-    borderColor: "border-purple-500/30",
-    features: [
-      "Digital transformation solutions",
-      "AI automation platforms",
-      "Data analytics & insights",
-      "Scalable cloud infrastructure"
-    ]
-  },
-  {
-    title: "For Entrepreneurs",
-    icon: "🚀",
-    color: "from-green-500 to-emerald-500",
-    bgColor: "bg-green-500/10",
-    borderColor: "border-green-500/30",
-    features: [
-      "Micro SAAS templates",
-      "MVP development tools",
-      "Market validation features",
-      "Growth automation systems"
-    ]
-  },
-  {
-    title: "For Enterprises",
-    icon: "🏛️",
-    color: "from-orange-500 to-red-500",
-    bgColor: "bg-orange-500/10",
-    borderColor: "border-orange-500/30",
-    features: [
-      "Enterprise AI solutions",
-      "Security & compliance tools",
-      "Integration capabilities",
-      "24/7 support & maintenance"
-    ]
-  }
-];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
+export const FeatureHighlights = () => {
+  const highlightsData = [
+    {
+      title: "Enterprise Solutions",
+      icon: <Building className="w-6 h-6" />,
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-500/10",
+      borderColor: "border-blue-500/20",
+      features: [
+        "AI-powered business process automation",
+        "Enterprise-grade security and compliance",
+        "Scalable cloud infrastructure solutions",
+        "Advanced analytics and reporting tools"
+      ]
+    },
+    {
+      title: "Startup & SMB",
+      icon: <Rocket className="w-6 h-6" />,
+      color: "from-green-500 to-green-600",
+      bgColor: "bg-green-500/10",
+      borderColor: "border-green-500/20",
+      features: [
+        "Cost-effective technology solutions",
+        "Rapid prototyping and MVP development",
+        "Growth-focused digital transformation",
+        "Flexible scaling options"
+      ]
+    },
+    {
+      title: "Developers & Engineers",
+      icon: <Code className="w-6 h-6" />,
+      color: "from-purple-500 to-purple-600",
+      bgColor: "bg-purple-500/10",
+      borderColor: "border-purple-500/20",
+      features: [
+        "Advanced development tools and APIs",
+        "AI-powered code assistance",
+        "DevOps and CI/CD automation",
+        "Performance optimization tools"
+      ]
+    },
+    {
+      title: "Micro SAAS Solutions",
+      icon: <Sparkles className="w-6 h-6" />,
+      color: "from-orange-500 to-red-600",
+      bgColor: "bg-orange-500/10",
+      borderColor: "border-orange-500/20",
+      features: [
+        "AI-powered content generation and code assistance tools",
+        "Cloud migration and cybersecurity audit services",
+        "Custom software development and integration",
+        "24/7 technical support and maintenance"
+      ]
     }
-  }
-};
+  ];
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut" as const
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
     }
-  },
-  hover: {
-    y: -8,
-    scale: 1.02,
-    transition: {
-      duration: 0.3,
-      ease: "easeOut" as const
-    }
-  }
-};
+  };
 
-export function FeatureHighlights() {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        duration: 0.6, 
+        ease: "easeOut" 
+      } 
+    },
+    hover: { 
+      y: -5, 
+      scale: 1.02, 
+      transition: { 
+        duration: 0.3, 
+        ease: "easeInOut" 
+      } 
+    }
+  };
+
   return (
     <section className="py-16 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-slate-dark relative overflow-hidden">
       {/* Background decorative elements */}
@@ -180,4 +180,4 @@ export function FeatureHighlights() {
       </motion.div>
     </section>
   );
-}
+};

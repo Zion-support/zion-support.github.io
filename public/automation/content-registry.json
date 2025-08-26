@@ -1685,10 +1685,6 @@
       "route": "/reports/blueprints/blueprint-2025-08-14-212855"
     },
     {
-<<<<<<< HEAD
-      "file": "pages/main/front/index.tsx",
-      "route": "/main/front"
-=======
       "file": "pages/reports/guides/guide-2025-08-14-091210.tsx",
       "route": "/reports/guides/guide-2025-08-14-091210"
     },
@@ -10636,9 +10632,6 @@
       "route": "/docs/reports/unused-exports.md"
     }
   ],
-<<<<<<< HEAD
-  "generatedAt": "2025-08-14T23:55:16.714Z",
-=======
   "generatedAt": "2025-08-14T11:23:18.988Z",
 >>>>>>> 00e69079ba4a2bc4cdba9e37a08071e1f5d50112
   "items": [
@@ -10660,23 +10653,6 @@
       "title": "Case Study — Trigger Homepage",
       "href": "/reports/cases/case-2025-08-15-000055",
       "desc": "New autonomous content",
-<<<<<<< HEAD
-      "createdAt": "2025-08-15T00:00:55.873Z",
-      "source": "cloud-deep-research-factory"
-    },
-    {
-      "title": "Guide — Cloud Improving Implementation",
-      "href": "/reports/guides/guide-2025-08-15-000055",
-      "desc": "New autonomous content",
-      "createdAt": "2025-08-15T00:00:55.873Z",
-      "source": "cloud-deep-research-factory"
-    },
-    {
-      "title": "Pattern — Cloud Improving Continuously",
-      "href": "/reports/patterns/pattern-2025-08-15-000055",
-      "desc": "New autonomous content",
-      "createdAt": "2025-08-15T00:00:55.873Z",
-=======
       "createdAt": "2025-08-14T11:29:28.358Z",
       "source": "cloud-deep-research-factory"
     },

@@ -80,3 +80,41 @@ src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file
   The file is in the program because:
     Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
     Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 prebuild
+> npm run build:health-check && npm run netlify:manifest
+
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 build:health-check
+> node automation/pre-build-health-check.cjs
+
+[pre-build-health-check] Node: v22.16.0
+[pre-build-health-check] OK
+npm warn Unknown env config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown env config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+
+> bolt.new.zion.app@0.1.0 netlify:manifest
+> node scripts/generate-netlify-functions-manifest.cjs
+
+[netlify:manifest] Wrote placeholder manifest to /Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/automation/netlify-functions-manifest.json
+
+> bolt.new.zion.app@0.1.0 build
+> NODE_OPTIONS="--max-old-space-size=6144 --openssl-legacy-provider" next build
+
+sh: next: command not found

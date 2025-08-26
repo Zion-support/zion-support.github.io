@@ -2388,3 +2388,266 @@ Node.js v22.16.0
 ==================================================
 [2025-08-26 07:16:33] Checking for failed services...
 [2025-08-26 07:16:33] Service Offline is offline, attempting restart...
+[2025-08-26 07:16:35] Service Offline is offline, attempting restart...
+[2025-08-26 07:16:37] Main automation runner completed
+node:internal/modules/cjs/loader:1404
+  throw err;
+  ^
+
+Error: Cannot find module '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/automation/Offline.cjs'
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v22.16.0
+[2025-08-26 07:20:01] Starting main automation runner...
+[2025-08-26 07:20:01] ml-link-intelligence is already running
+[2025-08-26 07:20:01] link-health-scheduler is already running
+[2025-08-26 07:20:01] real-time-performance-monitor is already running
+[2025-08-26 07:20:01] Running health check...
+🔍 Checking Zion Automation Systems Status...
+
+🟡 Warning autonomous-system-manager
+   Last Activity: 111s ago
+
+🟢 Online ml-link-intelligence
+   Last Activity: 56s ago
+
+🟢 Online link-health-scheduler
+   Last Activity: 0s ago
+
+🟢 Online real-time-performance-monitor
+   Last Activity: 15s ago
+
+📊 Log Files: 44 found
+   HEALTH.runtime.log: 17.82 KB
+   SYSTEM.runtime.log: 84.06 KB
+   ai-trends-cron.log: 0.13 KB
+   ai-trends-research.log: 0.25 KB
+   autonomous-manager-coordinated.log: 68.22 KB
+   autonomous-system-manager.log: 2.27 KB
+   autonomous-system-manager.runtime.log: 343.98 KB
+   backup.log: 1.47 KB
+   build.log: 5.82 KB
+   code-quality.log: 7.16 KB
+   config-sync.log: 3.46 KB
+   continuous-improvement.log: 11.10 KB
+   cron.log: 2.28 KB
+   data-sync.log: 3.95 KB
+   dependency.log: 11.83 KB
+   enhanced-automation-orchestrator.runtime.log: 12.20 KB
+   enhanced-autonomous-coordinated.log: 74.93 KB
+   enhanced-git-sync.log: 7.60 KB
+   error-recovery.log: 254.74 KB
+   file-sync.log: 2.84 KB
+   git-pull-rebase.log: 8.15 KB
+   git-status.log: 961.88 KB
+   git-sync.log: 276.35 KB
+   health-check.log: 104.51 KB
+   health.log: 15.07 KB
+   infinite-improvement.log: 14.28 KB
+   link-health-scheduler-coordinated.log: 38.38 KB
+   link-health-scheduler.log: 0.12 KB
+   link-health-scheduler.runtime.log: 190.20 KB
+   log-rotation.log: 0.39 KB
+   maintenance.log: 1.39 KB
+   master-coordinator.log: 74.83 KB
+   ml-link-intelligence-coordinated.log: 63.59 KB
+   ml-link-intelligence.log: 0.30 KB
+   ml-link-intelligence.runtime.log: 322.31 KB
+   performance-monitor-coordinated.log: 39.15 KB
+   real-time-performance-monitor.log: 1.36 KB
+   real-time-performance-monitor.runtime.log: 202.79 KB
+   run-automation.log: 84.03 KB
+   security.log: 2.54 KB
+   sitemap-keeper.log: 1.15 KB
+   sync-launcher.log: 1.37 KB
+   sync-orchestrator.log: 1.75 KB
+   test.log: 0.00 KB
+
+💾 Data Files: 9 found
+   ai-trends.json: 2.23 KB
+   analyzed-links.json: 2.17 KB
+   autonomous-config.json: 1.36 KB
+   autonomous-state.json: 0.82 KB
+   health-report.json: 0.40 KB
+   link-schedule.json: 0.45 KB
+   performance-alerts.json: 0.40 KB
+   performance-metrics.json: 5.03 KB
+   scheduled-links.json: 1.29 KB
+
+==================================================
+⚠️  Some automation systems need attention
+==================================================
+[2025-08-26 07:20:01] Checking for failed services...
+[2025-08-26 07:20:01] Main automation runner completed
+[2025-08-26 07:55:20] Starting main automation runner...
+[2025-08-26 07:55:20] ml-link-intelligence is already running
+[2025-08-26 07:55:20] link-health-scheduler is already running
+[2025-08-26 07:55:20] real-time-performance-monitor is already running
+[2025-08-26 07:55:20] Running health check...
+🔍 Checking Zion Automation Systems Status...
+
+🟢 Online autonomous-system-manager
+   Last Activity: 3s ago
+
+🟢 Online ml-link-intelligence
+   Last Activity: 1s ago
+
+🟡 Warning link-health-scheduler
+   Last Activity: 181s ago
+
+🟢 Online real-time-performance-monitor
+   Last Activity: 0s ago
+
+📊 Log Files: 44 found
+   HEALTH.runtime.log: 18.28 KB
+   SYSTEM.runtime.log: 86.58 KB
+   ai-trends-cron.log: 0.13 KB
+   ai-trends-research.log: 0.25 KB
+   autonomous-manager-coordinated.log: 70.57 KB
+   autonomous-system-manager.log: 2.27 KB
+   autonomous-system-manager.runtime.log: 357.32 KB
+   backup.log: 1.47 KB
+   build.log: 5.82 KB
+   code-quality.log: 7.16 KB
+   config-sync.log: 3.46 KB
+   continuous-improvement.log: 11.48 KB
+   cron.log: 2.28 KB
+   data-sync.log: 3.95 KB
+   dependency.log: 11.83 KB
+   enhanced-automation-orchestrator.runtime.log: 12.20 KB
+   enhanced-autonomous-coordinated.log: 74.93 KB
+   enhanced-git-sync.log: 7.60 KB
+   error-recovery.log: 262.87 KB
+   file-sync.log: 2.84 KB
+   git-pull-rebase.log: 8.42 KB
+   git-status.log: 961.88 KB
+   git-sync.log: 291.34 KB
+   health-check.log: 109.48 KB
+   health.log: 15.07 KB
+   infinite-improvement.log: 14.28 KB
+   link-health-scheduler-coordinated.log: 39.13 KB
+   link-health-scheduler.log: 0.12 KB
+   link-health-scheduler.runtime.log: 194.12 KB
+   log-rotation.log: 0.39 KB
+   maintenance.log: 1.39 KB
+   master-coordinator.log: 77.66 KB
+   ml-link-intelligence-coordinated.log: 66.29 KB
+   ml-link-intelligence.log: 0.30 KB
+   ml-link-intelligence.runtime.log: 331.41 KB
+   performance-monitor-coordinated.log: 40.17 KB
+   real-time-performance-monitor.log: 1.36 KB
+   real-time-performance-monitor.runtime.log: 208.25 KB
+   run-automation.log: 86.73 KB
+   security.log: 2.54 KB
+   sitemap-keeper.log: 1.15 KB
+   sync-launcher.log: 1.37 KB
+   sync-orchestrator.log: 1.75 KB
+   test.log: 0.00 KB
+
+💾 Data Files: 9 found
+   ai-trends.json: 2.23 KB
+   analyzed-links.json: 2.18 KB
+   autonomous-config.json: 1.36 KB
+   autonomous-state.json: 0.82 KB
+   health-report.json: 0.40 KB
+   link-schedule.json: 0.45 KB
+   performance-alerts.json: 0.40 KB
+   performance-metrics.json: 4.88 KB
+   scheduled-links.json: 1.29 KB
+
+==================================================
+⚠️  Some automation systems need attention
+==================================================
+[2025-08-26 07:55:20] Checking for failed services...
+[2025-08-26 07:55:20] Main automation runner completed
+[2025-08-26 08:00:01] Starting main automation runner...
+[2025-08-26 08:00:01] ml-link-intelligence is already running
+[2025-08-26 08:00:01] link-health-scheduler is already running
+[2025-08-26 08:00:01] real-time-performance-monitor is already running
+[2025-08-26 08:00:01] Running health check...
+🔍 Checking Zion Automation Systems Status...
+
+🟡 Warning autonomous-system-manager
+   Last Activity: 111s ago
+
+🟢 Online ml-link-intelligence
+   Last Activity: 0s ago
+
+🟢 Online link-health-scheduler
+   Last Activity: 0s ago
+
+🟢 Online real-time-performance-monitor
+   Last Activity: 1s ago
+
+📊 Log Files: 44 found
+   HEALTH.runtime.log: 18.90 KB
+   SYSTEM.runtime.log: 90.49 KB
+   ai-trends-cron.log: 0.13 KB
+   ai-trends-research.log: 0.25 KB
+   autonomous-manager-coordinated.log: 73.98 KB
+   autonomous-system-manager.log: 2.27 KB
+   autonomous-system-manager.runtime.log: 376.57 KB
+   backup.log: 1.47 KB
+   build.log: 6.34 KB
+   code-quality.log: 7.94 KB
+   config-sync.log: 3.46 KB
+   continuous-improvement.log: 11.92 KB
+   cron.log: 2.46 KB
+   data-sync.log: 3.95 KB
+   dependency.log: 12.26 KB
+   enhanced-automation-orchestrator.runtime.log: 12.20 KB
+   enhanced-autonomous-coordinated.log: 74.93 KB
+   enhanced-git-sync.log: 7.60 KB
+   error-recovery.log: 274.53 KB
+   file-sync.log: 2.84 KB
+   git-pull-rebase.log: 8.69 KB
+   git-status.log: 970.19 KB
+   git-sync.log: 313.43 KB
+   health-check.log: 109.68 KB
+   health.log: 15.17 KB
+   infinite-improvement.log: 14.53 KB
+   link-health-scheduler-coordinated.log: 40.34 KB
+   link-health-scheduler.log: 0.12 KB
+   link-health-scheduler.runtime.log: 199.99 KB
+   log-rotation.log: 0.39 KB
+   maintenance.log: 1.39 KB
+   master-coordinator.log: 80.43 KB
+   ml-link-intelligence-coordinated.log: 68.91 KB
+   ml-link-intelligence.log: 0.30 KB
+   ml-link-intelligence.runtime.log: 346.51 KB
+   performance-monitor-coordinated.log: 42.29 KB
+   real-time-performance-monitor.log: 1.36 KB
+   real-time-performance-monitor.runtime.log: 217.22 KB
+   run-automation.log: 89.43 KB
+   security.log: 2.54 KB
+   sitemap-keeper.log: 1.15 KB
+   sync-launcher.log: 1.37 KB
+   sync-orchestrator.log: 1.75 KB
+   test.log: 0.66 KB
+
+💾 Data Files: 9 found
+   ai-trends.json: 2.23 KB
+   analyzed-links.json: 2.17 KB
+   autonomous-config.json: 1.36 KB
+   autonomous-state.json: 0.82 KB
+   health-report.json: 0.40 KB
+   link-schedule.json: 0.45 KB
+   performance-alerts.json: 0.60 KB
+   performance-metrics.json: 7.52 KB
+   scheduled-links.json: 1.29 KB
+
+==================================================
+⚠️  Some automation systems need attention
+==================================================
+[2025-08-26 08:00:02] Checking for failed services...
+[2025-08-26 08:00:02] Main automation runner completed
