@@ -277,6 +277,7 @@ import { new2025Services } from '../data/new-2025-services';
 import { newRealInnovations } from '../data/new-real-innovations';
 import { serviceExpansions2025 } from '../data/service-expansions-2025';
 import { newOperationalServices2025 } from '../data/new-operational-services-2025';
+<<<<<<< HEAD
 import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
@@ -366,6 +367,10 @@ import { enterpriseBlockchainServices } from '../data/enterprise-blockchain-serv
 import { nextGenInnovativeServices } from '../data/next-gen-innovative-services';
 import { enterpriseAIServices } from '../data/enterprise-ai-services';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a83f
+=======
+import { revolutionary2025Services } from '../data/revolutionary-2025-services';
+import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cef6
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -413,6 +418,7 @@ export default function ServicesPage() {
     ...newRealInnovations,
     ...serviceExpansions2025,
     ...newOperationalServices2025,
+<<<<<<< HEAD
     ...realServicesQ12025,
     ...realEnterpriseServices2025,
     ...verifiedRealServices2025Batch2,
@@ -475,6 +481,10 @@ export default function ServicesPage() {
     ...nextGenInnovativeServices,
     ...enterpriseAIServices
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a83f
+=======
+    ...revolutionary2025Services,
+    ...nextGenInnovations2025
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cef6
   ];
 
   // Dynamic category counts mapped to the same filter logic below
