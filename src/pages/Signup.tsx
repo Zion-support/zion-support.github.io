@@ -78,16 +78,12 @@ export default function Signup() {
         data.email,
         data.password
       );
-      if (res.status !== 201) {
-        throw new Error(resData?.error || "Registration failed");
-      }
-
-      if (resData?.token) {
-        localStorage.setItem("token", resData.token);
+      if (error) {
+        throw new Error(error);
       }
 
       toast.success("Account created");
-      navigate("/dashboard");
+      navigate("/login");
     } catch (err: any) {
       const message = err.message ?? "Registration failed";
       form.setError("root", { message });
