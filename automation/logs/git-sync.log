@@ -2069,3 +2069,345 @@ fatal: could not read Username for 'https://github.com': Device not configured
 [2025-08-26T03:44:02.564Z] Up to date with remote
 [2025-08-26T03:44:02.565Z] Staging all changes...
 [2025-08-26T03:44:02.822Z] Attempting auto-commit...
+[2025-08-26T03:48:00.477Z] Starting advanced git sync process...
+[2025-08-26T03:48:00.480Z] Checking git status...
+[2025-08-26T03:48:00.696Z] Changes detected: 10 files modified
+[2025-08-26T03:48:00.696Z] Checking for remote updates...
+[2025-08-26T03:48:02.262Z] Behind remote by 1 commits
+[2025-08-26T03:48:02.262Z] Staging all changes...
+[2025-08-26T03:48:02.527Z] Attempting auto-commit...
+[2025-08-26T03:49:21.681Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T03:46:51.907Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 build
+> tsc && vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 45 modules transformed.
+Generated an empty chunk: "utils".
+rendering chunks...
+computing gzip size...
+dist/index.html                       3.80 kB │ gzip:  1.21 kB
+dist/assets/index-Bjmc1bxP.css       10.93 kB │ gzip:  2.97 kB
+dist/assets/utils-l0sNRNKZ.js         0.00 kB │ gzip:  0.02 kB
+dist/assets/charts-CbGEknjW.js        0.03 kB │ gzip:  0.05 kB
+dist/assets/forms-CbGEknjW.js         0.03 kB │ gzip:  0.05 kB
+dist/assets/icons-CbGEknjW.js         0.03 kB │ gzip:  0.05 kB
+dist/assets/animations-hq5NsOOK.js    0.06 kB │ gzip:  0.07 kB
+dist/assets/ui-iWwMWcLP.js            0.92 kB │ gzip:  0.58 kB
+dist/assets/index-7PjGUZA-.js         6.16 kB │ gzip:  2.71 kB
+dist/assets/router-DcJBhAXa.js       30.03 kB │ gzip: 11.24 kB
+dist/assets/vendor-nf7bT_Uh.js      140.87 kB │ gzip: 45.26 kB
+✓ built in 24.04s
+✅ All pre-commit checks passed!
+❌ Invalid commit message format.
+Please use conventional commit format:
+  feat: add new feature
+  fix: resolve bug
+  docs: update documentation
+  style: formatting changes
+  refactor: code refactoring
+  perf: performance improvements
+  test: add tests
+  chore: maintenance tasks
+  ci: CI/CD changes
+  build: build system changes
+  revert: revert previous commit
+
+[2025-08-26T03:49:21.684Z] Attempting auto-pull...
+[2025-08-26T03:49:21.793Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T03:49:21.794Z] Checking for merge conflicts...
+[2025-08-26T03:49:21.999Z] Attempting auto-push...
+[2025-08-26T03:49:22.617Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T03:49:22.618Z] Advanced git sync process completed
+[2025-08-26T03:49:42.184Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T03:48:02.589Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T03:49:42.185Z] Attempting auto-pull...
+[2025-08-26T03:49:42.242Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T03:49:42.242Z] Checking for merge conflicts...
+[2025-08-26T03:49:42.330Z] Attempting auto-push...
+[2025-08-26T03:49:42.759Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T03:49:42.759Z] Advanced git sync process completed
+[2025-08-26T03:50:00.883Z] Starting advanced git sync process...
+[2025-08-26T03:50:00.886Z] Checking git status...
+[2025-08-26T03:50:01.163Z] Changes detected: 20 files modified
+[2025-08-26T03:50:01.163Z] Checking for remote updates...
+[2025-08-26T03:50:02.949Z] Behind remote by 3 commits
+[2025-08-26T03:50:02.950Z] Staging all changes...
+[2025-08-26T03:50:03.177Z] Attempting auto-commit...
+[2025-08-26T03:51:56.531Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T03:50:03.234Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 build
+> tsc && vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 45 modules transformed.
+Generated an empty chunk: "utils".
+rendering chunks...
+computing gzip size...
+dist/index.html                       3.80 kB │ gzip:  1.21 kB
+dist/assets/index-Bjmc1bxP.css       10.93 kB │ gzip:  2.97 kB
+dist/assets/utils-l0sNRNKZ.js         0.00 kB │ gzip:  0.02 kB
+dist/assets/charts-CbGEknjW.js        0.03 kB │ gzip:  0.05 kB
+dist/assets/forms-CbGEknjW.js         0.03 kB │ gzip:  0.05 kB
+dist/assets/icons-CbGEknjW.js         0.03 kB │ gzip:  0.05 kB
+dist/assets/animations-hq5NsOOK.js    0.06 kB │ gzip:  0.07 kB
+dist/assets/ui-iWwMWcLP.js            0.92 kB │ gzip:  0.58 kB
+dist/assets/index-7PjGUZA-.js         6.16 kB │ gzip:  2.71 kB
+dist/assets/router-DcJBhAXa.js       30.03 kB │ gzip: 11.24 kB
+dist/assets/vendor-nf7bT_Uh.js      140.87 kB │ gzip: 45.26 kB
+✓ built in 8.99s
+✅ All pre-commit checks passed!
+❌ Invalid commit message format.
+Please use conventional commit format:
+  feat: add new feature
+  fix: resolve bug
+  docs: update documentation
+  style: formatting changes
+  refactor: code refactoring
+  perf: performance improvements
+  test: add tests
+  chore: maintenance tasks
+  ci: CI/CD changes
+  build: build system changes
+  revert: revert previous commit
+
+[2025-08-26T03:51:56.531Z] Attempting auto-pull...
+[2025-08-26T03:51:56.712Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T03:51:56.713Z] Checking for merge conflicts...
+[2025-08-26T03:51:56.852Z] Attempting auto-push...
+[2025-08-26T03:51:57.260Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T03:51:57.260Z] Advanced git sync process completed
+[2025-08-26T03:52:00.367Z] Starting advanced git sync process...
+[2025-08-26T03:52:00.369Z] Checking git status...
+[2025-08-26T03:52:00.548Z] Changes detected: 23 files modified
+[2025-08-26T03:52:00.548Z] Checking for remote updates...
+[2025-08-26T03:52:02.376Z] Behind remote by 4 commits
+[2025-08-26T03:52:02.376Z] Staging all changes...
+[2025-08-26T03:52:02.630Z] Attempting auto-commit...
+[2025-08-26T03:53:44.479Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T03:52:02.693Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 build
+> tsc && vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 45 modules transformed.
+Generated an empty chunk: "utils".
+rendering chunks...
+computing gzip size...
+dist/index.html                       3.80 kB │ gzip:  1.21 kB
+dist/assets/index-Bjmc1bxP.css       10.93 kB │ gzip:  2.97 kB
+dist/assets/utils-l0sNRNKZ.js         0.00 kB │ gzip:  0.02 kB
+dist/assets/charts-CbGEknjW.js        0.03 kB │ gzip:  0.05 kB
+dist/assets/forms-CbGEknjW.js         0.03 kB │ gzip:  0.05 kB
+dist/assets/icons-CbGEknjW.js         0.03 kB │ gzip:  0.05 kB
+dist/assets/animations-hq5NsOOK.js    0.06 kB │ gzip:  0.07 kB
+dist/assets/ui-iWwMWcLP.js            0.92 kB │ gzip:  0.58 kB
+dist/assets/index-7PjGUZA-.js         6.16 kB │ gzip:  2.71 kB
+dist/assets/router-DcJBhAXa.js       30.03 kB │ gzip: 11.24 kB
+dist/assets/vendor-nf7bT_Uh.js      140.87 kB │ gzip: 45.26 kB
+✓ built in 7.61s
+✅ All pre-commit checks passed!
+❌ Invalid commit message format.
+Please use conventional commit format:
+  feat: add new feature
+  fix: resolve bug
+  docs: update documentation
+  style: formatting changes
+  refactor: code refactoring
+  perf: performance improvements
+  test: add tests
+  chore: maintenance tasks
+  ci: CI/CD changes
+  build: build system changes
+  revert: revert previous commit
+
+[2025-08-26T03:53:44.479Z] Attempting auto-pull...
+[2025-08-26T03:53:44.527Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T03:53:44.527Z] Checking for merge conflicts...
+[2025-08-26T03:53:45.276Z] Attempting auto-push...
+[2025-08-26T03:53:45.665Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T03:53:45.665Z] Advanced git sync process completed
+[2025-08-26T03:54:00.770Z] Starting advanced git sync process...
+[2025-08-26T03:54:00.773Z] Checking git status...
+[2025-08-26T03:54:00.932Z] Changes detected: 22 files modified
+[2025-08-26T03:54:00.932Z] Checking for remote updates...
+[2025-08-26T03:54:02.675Z] Behind remote by 5 commits
+[2025-08-26T03:54:02.676Z] Staging all changes...
+[2025-08-26T03:54:02.875Z] Attempting auto-commit...
+[2025-08-26T03:55:38.323Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T03:54:02.929Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 build
+> tsc && vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 45 modules transformed.
+Generated an empty chunk: "utils".
+rendering chunks...
+computing gzip size...
+dist/index.html                       3.80 kB │ gzip:  1.21 kB
+dist/assets/index-Bjmc1bxP.css       10.93 kB │ gzip:  2.97 kB
+dist/assets/utils-l0sNRNKZ.js         0.00 kB │ gzip:  0.02 kB
+dist/assets/charts-CbGEknjW.js        0.03 kB │ gzip:  0.05 kB
+dist/assets/forms-CbGEknjW.js         0.03 kB │ gzip:  0.05 kB
+dist/assets/icons-CbGEknjW.js         0.03 kB │ gzip:  0.05 kB
+dist/assets/animations-hq5NsOOK.js    0.06 kB │ gzip:  0.07 kB
+dist/assets/ui-iWwMWcLP.js            0.92 kB │ gzip:  0.58 kB
+dist/assets/index-7PjGUZA-.js         6.16 kB │ gzip:  2.71 kB
+dist/assets/router-DcJBhAXa.js       30.03 kB │ gzip: 11.24 kB
+dist/assets/vendor-nf7bT_Uh.js      140.87 kB │ gzip: 45.26 kB
+✓ built in 11.50s
+✅ All pre-commit checks passed!
+❌ Invalid commit message format.
+Please use conventional commit format:
+  feat: add new feature
+  fix: resolve bug
+  docs: update documentation
+  style: formatting changes
+  refactor: code refactoring
+  perf: performance improvements
+  test: add tests
+  chore: maintenance tasks
+  ci: CI/CD changes
+  build: build system changes
+  revert: revert previous commit
+
+[2025-08-26T03:55:38.324Z] Attempting auto-pull...
+[2025-08-26T03:55:38.381Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T03:55:38.382Z] Checking for merge conflicts...
+[2025-08-26T03:55:39.386Z] Attempting auto-push...
+[2025-08-26T03:55:39.804Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T03:55:39.804Z] Advanced git sync process completed
+[2025-08-26T03:56:00.939Z] Starting advanced git sync process...
+[2025-08-26T03:56:00.945Z] Checking git status...
+[2025-08-26T03:56:01.638Z] Changes detected: 22 files modified
+[2025-08-26T03:56:01.639Z] Checking for remote updates...
+[2025-08-26T03:56:03.233Z] Behind remote by 5 commits
+[2025-08-26T03:56:03.234Z] Staging all changes...
+[2025-08-26T03:56:03.492Z] Attempting auto-commit...

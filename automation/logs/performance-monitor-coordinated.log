@@ -238,3 +238,74 @@ No metrics available
 [2025-08-26T03:43:33.216Z] metrics rss=30.83 MB heapUsed=4.35 MB cpuLoad=27.83 memUsage=77.97%
 [2025-08-26T03:44:01.493Z] Stopping Real-Time Performance Monitor...
 [2025-08-26T03:44:01.493Z] Stopping performance monitoring
+[2025-08-26T03:47:55.576Z] Starting Real-Time Performance Monitor
+[2025-08-26T03:47:55.581Z] Starting real-time performance monitoring
+[2025-08-26T03:48:01.507Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T03:48:01.508Z] Stopping performance monitoring
+[2025-08-26T03:49:00.969Z] Starting Real-Time Performance Monitor
+[2025-08-26T03:49:00.990Z] Starting real-time performance monitoring
+[2025-08-26T03:49:30.996Z] metrics rss=30.75 MB heapUsed=4.28 MB cpuLoad=16.04 memUsage=78.24%
+
+=== Performance Monitor Summary ===
+Timestamp: 2025-08-26T03:49:30.993Z
+System Uptime: 0 hours
+Hostname: MacBook-Pro-de-Kleber.local
+
+Current Status:
+  CPU Load: 16.04
+  Memory Usage: 78.24%
+  Memory Free: 6.96 GB
+  Process Memory: 30.75 MB
+  Process Uptime: 0 minutes
+
+Alerts:
+  Total: 0
+  Critical: 0 🔴
+  Warning: 0 🟡
+
+===================================
+
+[2025-08-26T03:50:00.999Z] metrics rss=31.07 MB heapUsed=4.43 MB cpuLoad=12.30 memUsage=75.97%
+[2025-08-26T03:50:02.047Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T03:50:02.047Z] Stopping performance monitoring
+[2025-08-26T03:51:06.105Z] Starting Real-Time Performance Monitor
+[2025-08-26T03:51:06.122Z] Starting real-time performance monitoring
+[2025-08-26T03:51:36.147Z] metrics rss=30.43 MB heapUsed=4.28 MB cpuLoad=10.62 memUsage=78.67%
+[2025-08-26T03:52:01.320Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T03:52:01.320Z] Stopping performance monitoring
+[2025-08-26T03:52:11.239Z] Starting Real-Time Performance Monitor
+[2025-08-26T03:52:11.246Z] Starting real-time performance monitoring
+[2025-08-26T03:52:41.250Z] metrics rss=30.58 MB heapUsed=4.28 MB cpuLoad=9.80 memUsage=78.98%
+[2025-08-26T03:53:11.250Z] metrics rss=30.77 MB heapUsed=4.35 MB cpuLoad=9.15 memUsage=79.25%
+[2025-08-26T03:53:41.252Z] metrics rss=30.82 MB heapUsed=4.37 MB cpuLoad=7.50 memUsage=77.93%
+[2025-08-26T03:54:01.663Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T03:54:01.663Z] Stopping performance monitoring
+[2025-08-26T03:54:16.339Z] Starting Real-Time Performance Monitor
+[2025-08-26T03:54:16.344Z] Starting real-time performance monitoring
+[2025-08-26T03:54:46.347Z] metrics rss=30.60 MB heapUsed=4.28 MB cpuLoad=8.72 memUsage=78.61%
+[2025-08-26T03:55:16.347Z] ALERT [WARNING] Memory usage warning: 80.23%
+[2025-08-26T03:55:16.347Z] metrics rss=30.78 MB heapUsed=4.34 MB cpuLoad=8.19 memUsage=80.23%
+
+=== Performance Monitor Summary ===
+Timestamp: 2025-08-26T03:55:16.346Z
+System Uptime: 0 hours
+Hostname: MacBook-Pro-de-Kleber.local
+
+Current Status:
+  CPU Load: 8.19
+  Memory Usage: 80.23%
+  Memory Free: 6.33 GB
+  Process Memory: 30.78 MB
+  Process Uptime: 1 minutes
+
+Alerts:
+  Total: 1
+  Critical: 0 🔴
+  Warning: 1 🟡
+
+===================================
+
+[2025-08-26T03:55:46.349Z] ALERT [WARNING] Memory usage warning: 81.24%
+[2025-08-26T03:55:46.350Z] metrics rss=30.98 MB heapUsed=4.47 MB cpuLoad=8.37 memUsage=81.24%
+[2025-08-26T03:56:02.335Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T03:56:02.336Z] Stopping performance monitoring

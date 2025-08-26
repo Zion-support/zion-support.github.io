@@ -348,3 +348,77 @@
 [2025-08-26T03:44:01.442Z] [SYSTEM] Restarting autonomous-system-manager in 5000ms (attempt 1/5)
 [2025-08-26T03:44:06.445Z] [SYSTEM] Starting service: autonomous-system-manager
 [2025-08-26T03:44:06.446Z] [SYSTEM] Service autonomous-system-manager started successfully
+[2025-08-26T03:47:50.436Z] [SYSTEM] Service real-time-performance-monitor exited with code 0, signal null
+[2025-08-26T03:47:50.437Z] [SYSTEM] Restarting real-time-performance-monitor in 10000ms (attempt 1/3)
+[2025-08-26T03:47:54.048Z] [SYSTEM] Service ml-link-intelligence exited with code 0, signal null
+[2025-08-26T03:47:54.048Z] [SYSTEM] Restarting ml-link-intelligence in 10000ms (attempt 1/3)
+[2025-08-26T03:48:00.438Z] [SYSTEM] Starting service: real-time-performance-monitor
+[2025-08-26T03:48:00.440Z] [SYSTEM] Service real-time-performance-monitor started successfully
+[2025-08-26T03:48:01.485Z] [SYSTEM] Service autonomous-system-manager exited with code 0, signal null
+[2025-08-26T03:48:01.488Z] [SYSTEM] Restarting autonomous-system-manager in 5000ms (attempt 1/5)
+[2025-08-26T03:48:04.050Z] [SYSTEM] Starting service: ml-link-intelligence
+[2025-08-26T03:48:04.053Z] [SYSTEM] Service ml-link-intelligence started successfully
+[2025-08-26T03:48:06.492Z] [SYSTEM] Starting service: autonomous-system-manager
+[2025-08-26T03:48:06.495Z] [SYSTEM] Service autonomous-system-manager started successfully
+[2025-08-26T03:48:10.018Z] [SYSTEM] Service link-health-scheduler exited with code 0, signal null
+[2025-08-26T03:48:10.018Z] [SYSTEM] Restarting link-health-scheduler in 15000ms (attempt 1/3)
+[2025-08-26T03:48:25.024Z] [SYSTEM] Starting service: link-health-scheduler
+[2025-08-26T03:48:25.026Z] [SYSTEM] Service link-health-scheduler started successfully
+[2025-08-26T03:49:00.553Z] [SYSTEM] Service real-time-performance-monitor exited with code 0, signal null
+[2025-08-26T03:49:00.553Z] [SYSTEM] Restarting real-time-performance-monitor in 10000ms (attempt 1/3)
+[2025-08-26T03:49:10.554Z] [SYSTEM] Starting service: real-time-performance-monitor
+[2025-08-26T03:49:10.561Z] [SYSTEM] Service real-time-performance-monitor started successfully
+[2025-08-26T03:50:02.014Z] [SYSTEM] Service autonomous-system-manager exited with code 0, signal null
+[2025-08-26T03:50:02.014Z] [SYSTEM] Restarting autonomous-system-manager in 5000ms (attempt 1/5)
+[2025-08-26T03:50:05.443Z] [SYSTEM] Service link-health-scheduler exited with code 0, signal null
+[2025-08-26T03:50:05.443Z] [SYSTEM] Restarting link-health-scheduler in 15000ms (attempt 1/3)
+[2025-08-26T03:50:07.015Z] [SYSTEM] Starting service: autonomous-system-manager
+[2025-08-26T03:50:07.017Z] [SYSTEM] Service autonomous-system-manager started successfully
+[2025-08-26T03:50:09.828Z] [SYSTEM] Service ml-link-intelligence exited with code 0, signal null
+[2025-08-26T03:50:09.829Z] [SYSTEM] Restarting ml-link-intelligence in 10000ms (attempt 1/3)
+[2025-08-26T03:50:11.044Z] [SYSTEM] Service real-time-performance-monitor exited with code 0, signal null
+[2025-08-26T03:50:11.044Z] [SYSTEM] Restarting real-time-performance-monitor in 10000ms (attempt 1/3)
+[2025-08-26T03:50:19.831Z] [SYSTEM] Starting service: ml-link-intelligence
+[2025-08-26T03:50:19.832Z] [SYSTEM] Service ml-link-intelligence started successfully
+[2025-08-26T03:50:20.443Z] [SYSTEM] Starting service: link-health-scheduler
+[2025-08-26T03:50:20.444Z] [SYSTEM] Service link-health-scheduler started successfully
+[2025-08-26T03:50:21.045Z] [SYSTEM] Starting service: real-time-performance-monitor
+[2025-08-26T03:50:21.047Z] [SYSTEM] Service real-time-performance-monitor started successfully
+[2025-08-26T03:52:01.302Z] [SYSTEM] Service autonomous-system-manager exited with code 0, signal null
+[2025-08-26T03:52:01.302Z] [SYSTEM] Restarting autonomous-system-manager in 5000ms (attempt 1/5)
+[2025-08-26T03:52:06.303Z] [SYSTEM] Starting service: autonomous-system-manager
+[2025-08-26T03:52:06.305Z] [SYSTEM] Service autonomous-system-manager started successfully
+[2025-08-26T03:52:10.577Z] [SYSTEM] Service link-health-scheduler exited with code 0, signal null
+[2025-08-26T03:52:10.577Z] [SYSTEM] Restarting link-health-scheduler in 15000ms (attempt 1/3)
+[2025-08-26T03:52:21.163Z] [SYSTEM] Service real-time-performance-monitor exited with code 0, signal null
+[2025-08-26T03:52:21.163Z] [SYSTEM] Restarting real-time-performance-monitor in 10000ms (attempt 1/3)
+[2025-08-26T03:52:25.405Z] [SYSTEM] Service ml-link-intelligence exited with code 0, signal null
+[2025-08-26T03:52:25.405Z] [SYSTEM] Restarting ml-link-intelligence in 10000ms (attempt 1/3)
+[2025-08-26T03:52:25.578Z] [SYSTEM] Starting service: link-health-scheduler
+[2025-08-26T03:52:25.579Z] [SYSTEM] Service link-health-scheduler started successfully
+[2025-08-26T03:52:31.164Z] [SYSTEM] Starting service: real-time-performance-monitor
+[2025-08-26T03:52:31.165Z] [SYSTEM] Service real-time-performance-monitor started successfully
+[2025-08-26T03:52:35.407Z] [SYSTEM] Starting service: ml-link-intelligence
+[2025-08-26T03:52:35.411Z] [SYSTEM] Service ml-link-intelligence started successfully
+[2025-08-26T03:54:01.666Z] [SYSTEM] Service autonomous-system-manager exited with code 0, signal null
+[2025-08-26T03:54:01.667Z] [SYSTEM] Restarting autonomous-system-manager in 5000ms (attempt 1/5)
+[2025-08-26T03:54:05.705Z] [SYSTEM] Service link-health-scheduler exited with code 0, signal null
+[2025-08-26T03:54:05.709Z] [SYSTEM] Restarting link-health-scheduler in 15000ms (attempt 1/3)
+[2025-08-26T03:54:06.795Z] [SYSTEM] Starting service: autonomous-system-manager
+[2025-08-26T03:54:06.798Z] [SYSTEM] Service autonomous-system-manager started successfully
+[2025-08-26T03:54:20.710Z] [SYSTEM] Starting service: link-health-scheduler
+[2025-08-26T03:54:20.712Z] [SYSTEM] Service link-health-scheduler started successfully
+[2025-08-26T03:54:31.448Z] [SYSTEM] Service real-time-performance-monitor exited with code 0, signal null
+[2025-08-26T03:54:31.448Z] [SYSTEM] Restarting real-time-performance-monitor in 10000ms (attempt 1/3)
+[2025-08-26T03:54:41.138Z] [SYSTEM] Service ml-link-intelligence exited with code 0, signal null
+[2025-08-26T03:54:41.139Z] [SYSTEM] Restarting ml-link-intelligence in 10000ms (attempt 1/3)
+[2025-08-26T03:54:41.448Z] [SYSTEM] Starting service: real-time-performance-monitor
+[2025-08-26T03:54:41.449Z] [SYSTEM] Service real-time-performance-monitor started successfully
+[2025-08-26T03:54:51.140Z] [SYSTEM] Starting service: ml-link-intelligence
+[2025-08-26T03:54:51.145Z] [SYSTEM] Service ml-link-intelligence started successfully
+[2025-08-26T03:56:02.455Z] [SYSTEM] Service autonomous-system-manager exited with code 0, signal null
+[2025-08-26T03:56:02.455Z] [SYSTEM] Restarting autonomous-system-manager in 5000ms (attempt 1/5)
+[2025-08-26T03:56:07.461Z] [SYSTEM] Starting service: autonomous-system-manager
+[2025-08-26T03:56:07.618Z] [SYSTEM] Service autonomous-system-manager started successfully
+[2025-08-26T03:56:10.859Z] [SYSTEM] Service link-health-scheduler exited with code 0, signal null
+[2025-08-26T03:56:10.861Z] [SYSTEM] Restarting link-health-scheduler in 15000ms (attempt 1/3)
