@@ -47,22 +47,6 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 );
 
 function App() {
-  // Performance monitoring
-  useEffect(() => {
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['navigation'] });
-      
-      return () => observer.disconnect();
-    }
-  }, []);
-
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -70,9 +54,9 @@ function App() {
         <main className="flex-1" role="main">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
+              {/* Main Routes */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/services" element={<ServicesPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
               <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
