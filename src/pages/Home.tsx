@@ -1,58 +1,10 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ChevronLeft, 
-  ChevronRight, 
-  CheckCircle, 
-  Star, 
-  ArrowRight,
-  Users,
-  TrendingUp,
-  Award,
-  Globe,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Lock,
-  Cpu,
-  Database,
-  Network,
-  Code,
-  BarChart3,
-  Target,
-  Lightbulb,
-  Rocket,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Sparkles,
-  Eye,
-  Heart,
-  Target as TargetIcon,
-  Bot,
-  Microchip,
-  Globe2,
-  BarChart,
-  ShieldCheck,
-  Zap as ZapIcon
-} from 'lucide-react';
-import { SEOHead } from '../components/SEOHead';
-
-// Lazy load components for better performance
-const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
-const LazyFeaturesSection = React.lazy(() => import('../components/home/FeaturesSection'));
-const LazyTestimonialsSection = React.lazy(() => import('../components/home/TestimonialsSection'));
-const LazyCTASection = React.lazy(() => import('../components/home/CTASection'));
-
-// Loading fallback component
-const LoadingFallback = ({ message }: { message: string }) => (
-  <div className="flex items-center justify-center py-12">
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>
-    <span className="ml-3 text-gray-600">{message}</span>
-  </div>
-);
+import { motion, Variants } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import HeroSection from '../components/HeroSection';
+import ServiceCard from '../components/ServiceCard';
+import InteractiveServiceShowcase from '../components/InteractiveServiceShowcase';
 
 const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -70,71 +22,60 @@ const Home: React.FC = () => {
 
   const heroSlides = [
     {
-      title: "AI-Powered Business Solutions",
-      subtitle: "Transform your business with cutting-edge artificial intelligence",
-      description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
-      image: "/images/hero-ai-solutions.jpg",
-      cta: "Explore AI Solutions",
-      path: "/ai-solutions",
-      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"]
+      name: "AI & Machine Learning",
+      count: 15,
+      description: "Cutting-edge artificial intelligence and machine learning solutions",
+      icon: "🤖",
+      color: "from-zion-blue to-zion-cyan",
+      href: "/services/ai"
     },
     {
-      title: "Comprehensive IT Services",
-      subtitle: "End-to-end technology solutions for modern businesses",
-      description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
-      image: "/images/hero-it-services.jpg",
-      cta: "View Our Services",
-      path: "/services",
-      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"]
+      name: "Quantum Computing",
+      count: 3,
+      description: "Revolutionary quantum computing and quantum internet platforms",
+      icon: "🔮",
+      color: "from-zion-purple to-zion-cyan",
+      href: "/services/quantum"
     },
     {
-      title: "Micro-SaaS Solutions",
-      subtitle: "Scalable software solutions for growing businesses",
-      description: "Custom SaaS applications designed to streamline operations and boost productivity. Built with modern technologies and best practices.",
-      image: "/images/hero-saas.jpg",
-      cta: "Learn More",
-      path: "/services/micro-saas-solutions",
-      features: ["Custom Development", "Scalable Architecture", "API Integration", "User Management"]
+      name: "Cybersecurity",
+      count: 5,
+      description: "Advanced zero-trust security and threat protection",
+      icon: "🛡️",
+      color: "from-zion-red to-zion-purple",
+      href: "/services/cybersecurity"
+    },
+    {
+      name: "Cloud & Infrastructure",
+      count: 8,
+      description: "Multi-cloud orchestration and edge computing",
+      icon: "☁️",
+      color: "from-zion-cyan to-zion-green",
+      href: "/services/cloud"
+    },
+    {
+      name: "Emerging Technologies",
+      count: 12,
+      description: "Space tech, biotechnology, nanotechnology, and fusion energy",
+      icon: "🚀",
+      color: "from-zion-yellow to-zion-orange",
+      href: "/comprehensive-services-showcase-2025"
+    },
+    {
+      name: "Digital Transformation",
+      count: 6,
+      description: "Comprehensive digital workplace and API management",
+      icon: "⚡",
+      color: "from-zion-orange to-zion-red",
+      href: "/services/transformation"
     }
   ];
 
   const stats = [
-    { label: "Projects Completed", value: "500+", icon: "🚀", color: "from-zion-cyan to-zion-blue" },
-    { label: "Happy Clients", value: "200+", icon: "😊", color: "from-zion-purple to-zion-cyan" },
-    { label: "Team Members", value: "50+", icon: "👥", color: "from-zion-blue to-zion-green" },
-    { label: "Years Experience", value: "10+", icon: "⏰", color: "from-zion-orange to-zion-red" }
-  ];
-
-  const whyChooseUs = [
-    {
-      icon: "🎯",
-      title: "Proven Track Record",
-      description: "500+ successful projects delivered across diverse industries with measurable ROI"
-    },
-    {
-      icon: "🚀",
-      title: "Innovation First",
-      description: "Pioneering cutting-edge technologies like quantum AI and neuromorphic computing"
-    },
-    {
-      icon: "🛡️",
-      title: "Enterprise Security",
-      description: "Bank-level security protocols and compliance standards for mission-critical applications"
-    },
-    {
-      icon: "🌍",
-      title: "Global Reach",
-      description: "Serving clients worldwide with 24/7 support and localized expertise"
-    }
-  ];
-
-  const industries = [
-    { name: "Financial Services", icon: "💰", description: "AI-powered trading, risk management, and compliance solutions" },
-    { name: "Healthcare", icon: "🏥", description: "Medical AI, drug discovery, and patient care optimization" },
-    { name: "Manufacturing", icon: "🏭", description: "Smart factories, predictive maintenance, and quality control" },
-    { name: "Energy", icon: "⚡", description: "Renewable energy optimization and smart grid management" },
-    { name: "Transportation", icon: "🚗", description: "Autonomous vehicles and intelligent logistics systems" },
-    { name: "Retail", icon: "🛍️", description: "AI-powered customer experience and inventory optimization" }
+    { label: "Services Available", value: "50+", icon: "🚀" },
+    { label: "Happy Clients", value: "200+", icon: "😊" },
+    { label: "Team Members", value: "50+", icon: "👥" },
+    { label: "Years Experience", value: "10+", icon: "⏰" }
   ];
 
   const containerVariants: Variants = {
@@ -321,6 +262,146 @@ const Home: React.FC = () => {
 
       {/* Interactive Service Showcase */}
       <InteractiveServiceShowcase />
+
+      {/* Comprehensive Services Overview */}
+      <motion.section 
+        className="py-20 bg-white/5 backdrop-blur-sm"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="gradient-text">Comprehensive Technology</span> Portfolio
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
+              From cutting-edge AI to revolutionary space technology, we offer the most comprehensive suite of innovative solutions in the industry
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div variants={itemVariants}>
+              <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <span className="text-2xl">🔮</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">Quantum Technologies</h3>
+                <p className="text-zion-slate-light text-center mb-4">
+                  Quantum AI fusion, quantum internet, and quantum-safe cryptography
+                </p>
+                <div className="text-center">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium">
+                    3 Services
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">Emerging Technologies</h3>
+                <p className="text-zion-slate-light text-center mb-4">
+                  Space tech, biotechnology, nanotechnology, and fusion energy
+                </p>
+                <div className="text-center">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium">
+                    12 Services
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-green rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <span className="text-2xl">☁️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">Cloud & Infrastructure</h3>
+                <p className="text-zion-slate-light text-center mb-4">
+                  Multi-cloud orchestration, edge computing, and DevOps automation
+                </p>
+                <div className="text-center">
+                  <span className="text-zion-cyan text-sm font-medium">
+                    8 Services
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-red to-zion-purple rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <span className="text-2xl">🛡️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">Cybersecurity</h3>
+                <p className="text-zion-slate-light text-center mb-4">
+                  Zero-trust architecture, threat detection, and compliance management
+                </p>
+                <div className="text-center">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium">
+                    5 Services
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-yellow to-zion-orange rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">Digital Transformation</h3>
+                <p className="text-zion-slate-light text-center mb-4">
+                  Digital workplace, API management, and performance monitoring
+                </p>
+                <div className="text-center">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium">
+                    6 Services
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-cyan rounded-xl flex items-center justify-center mb-6 mx-auto">
+                  <span className="text-2xl">🤖</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">AI & Machine Learning</h3>
+                <p className="text-zion-slate-light text-center mb-4">
+                  AI strategy, machine learning, and neural computing platforms
+                </p>
+                <div className="text-center">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium">
+                    15 Services
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          <motion.div className="text-center mt-12" variants={itemVariants}>
+            <a 
+              href="/comprehensive-services-showcase-2025"
+              className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-dark transition-colors duration-300"
+            >
+              View All Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </motion.div>
+        </div>
+      </motion.section>
 
       {/* Featured Services */}
       <motion.section 

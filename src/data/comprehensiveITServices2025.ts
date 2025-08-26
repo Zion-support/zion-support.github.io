@@ -1,595 +1,668 @@
-export interface ComprehensiveITService2025 {
-  id: string;
-  title: string;
-  description: string;
+export interface ComprehensiveITService {
+  id: number;
+  name: string;
   category: string;
   subcategory: string;
+  description: string;
+  pricing: string;
   price: number;
-  currency: string;
   pricingModel: string;
   features: string[];
   benefits: string[];
-  useCases: string[];
   targetAudience: string[];
   tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
+    address: string;
   };
-  websiteUrl: string;
-  demoUrl?: string;
-  documentationUrl?: string;
-  technologyStack: string[];
-  complianceStandards: string[];
-  integrationCapabilities: string[];
-  serviceLevelAgreement: {
-    responseTime: string;
-    uptime: string;
-    supportHours: string;
-    escalationProcess: string;
-  };
+  marketPrice: string;
+  competitors: string[];
+  roi: string;
+  setupTime: string;
+  integrations: string[];
+  freeTier: boolean;
+  trialPeriod: string;
+  serviceLevel: string;
+  useCases: string[];
+  compliance: string[];
+  scalability: string;
+  support: string;
+  certifications: string[];
 }
 
-export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService2025[] = [
-  // Enterprise Cloud Migration & Management
+export const comprehensiveITServices2025: ComprehensiveITService[] = [
   {
-    id: "enterprise-cloud-migration-management",
-    title: "Enterprise Cloud Migration & Management",
-    description: "Comprehensive cloud migration service that helps enterprises transition to cloud infrastructure with minimal downtime, optimal cost management, and enhanced security.",
-    category: "Cloud Services",
-    subcategory: "Migration & Management",
-    price: 15000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "End-to-end cloud migration planning",
-      "Multi-cloud strategy development",
-      "Legacy system modernization",
-      "Data migration and synchronization",
-      "Performance optimization",
-      "Cost optimization and monitoring",
-      "Security and compliance setup",
-      "24/7 cloud infrastructure management"
-    ],
-    benefits: [
-      "Reduce infrastructure costs by 40%",
-      "Improve system performance by 60%",
-      "Enhance scalability and flexibility",
-      "Reduce maintenance overhead",
-      "Improve disaster recovery capabilities"
-    ],
-    useCases: [
-      "Enterprise digital transformation",
-      "Legacy system modernization",
-      "Multi-location business expansion",
-      "Compliance and security enhancement",
-      "Cost optimization initiatives"
-    ],
-    targetAudience: [
-      "Large enterprises",
-      "Multi-national corporations",
-      "Government agencies",
-      "Financial institutions",
-      "Healthcare organizations"
-    ],
-    tags: ["Cloud Migration", "Enterprise", "Digital Transformation", "Infrastructure", "Management"],
-    estimatedDelivery: "8-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$15,000 - $50,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/enterprise-cloud-migration-management",
-    technologyStack: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Terraform", "Docker"],
-    complianceStandards: ["SOC2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
-    integrationCapabilities: ["On-premise Systems", "Legacy Applications", "Database Systems", "Security Tools", "Monitoring Platforms"],
-    serviceLevelAgreement: {
-      responseTime: "15 minutes for critical issues",
-      uptime: "99.9% guaranteed",
-      supportHours: "24/7/365",
-      escalationProcess: "4-tier escalation with executive oversight"
-    }
-  },
-
-  // Advanced Cybersecurity Operations Center
-  {
-    id: "advanced-cybersecurity-operations-center",
-    title: "Advanced Cybersecurity Operations Center (SOC)",
-    description: "24/7 cybersecurity operations center providing real-time threat monitoring, incident response, and proactive security measures for enterprise-level protection.",
+    id: 1,
+    name: "Zero-Trust Security Architecture",
     category: "Cybersecurity",
-    subcategory: "Security Operations",
+    subcategory: "Advanced Security",
+    description: "Comprehensive zero-trust security architecture implementing continuous verification, micro-segmentation, and adaptive access controls",
+    pricing: "Enterprise",
     price: 25000,
-    currency: "$",
     pricingModel: "monthly",
     features: [
-      "24/7 threat monitoring and detection",
-      "Advanced persistent threat hunting",
-      "Real-time incident response",
-      "Threat intelligence analysis",
-      "Vulnerability assessment and management",
-      "Security awareness training",
-      "Compliance reporting and auditing",
-      "Forensic analysis and investigation"
+      "Continuous identity verification",
+      "Micro-segmentation",
+      "Adaptive access controls",
+      "Behavioral analytics",
+      "Threat intelligence integration",
+      "Automated response systems",
+      "Compliance monitoring",
+      "Security orchestration"
     ],
     benefits: [
-      "Detect and respond to threats 10x faster",
-      "Reduce security incidents by 80%",
-      "Meet compliance requirements automatically",
-      "Protect against advanced cyber attacks",
-      "Provide peace of mind with 24/7 protection"
-    ],
-    useCases: [
-      "Financial institution security",
-      "Healthcare data protection",
-      "Government cybersecurity",
-      "Critical infrastructure protection",
-      "Enterprise security operations"
+      "100% security breach prevention",
+      "Zero trust compliance",
+      "Reduced attack surface",
+      "Automated threat response",
+      "Enhanced compliance",
+      "Cost-effective security"
     ],
     targetAudience: [
       "Financial institutions",
       "Healthcare organizations",
       "Government agencies",
-      "Critical infrastructure operators",
-      "Large enterprises"
+      "Defense contractors",
+      "Critical infrastructure",
+      "Enterprise companies"
     ],
-    tags: ["Cybersecurity", "SOC", "Threat Detection", "Incident Response", "Security Operations"],
-    estimatedDelivery: "4-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$25,000 - $75,000/month",
+    tags: ["Zero Trust", "Cybersecurity", "Identity Management", "Access Control", "Threat Prevention", "Compliance"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    websiteUrl: "https://ziontechgroup.com/advanced-cybersecurity-operations-center",
-    technologyStack: ["SIEM", "EDR", "SOAR", "Threat Intelligence", "Machine Learning", "AI"],
-    complianceStandards: ["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
-    integrationCapabilities: ["Security Tools", "Network Infrastructure", "Cloud Platforms", "Identity Management", "Compliance Systems"],
-    serviceLevelAgreement: {
-      responseTime: "5 minutes for critical threats",
-      uptime: "99.99% security monitoring",
-      supportHours: "24/7/365",
-      escalationProcess: "Immediate escalation for security incidents"
-    }
+    marketPrice: "$25,000/month (Industry average: $50,000/month)",
+    competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],
+    roi: "400% ROI within 8 months",
+    setupTime: "4-6 weeks",
+    integrations: ["Active Directory", "SAML", "OAuth", "SIEM systems", "EDR platforms"],
+    freeTier: false,
+    trialPeriod: "30 days",
+    serviceLevel: "24/7 security operations",
+    useCases: [
+      "Enterprise security transformation",
+      "Compliance requirements",
+      "Remote work security",
+      "Cloud security",
+      "IoT security",
+      "Critical infrastructure protection"
+    ],
+    compliance: ["NIST", "ISO 27001", "SOC 2", "FedRAMP", "HIPAA", "PCI DSS"],
+    scalability: "Unlimited users and devices",
+    support: "24/7 security expert support",
+    certifications: ["CISSP", "CISM", "CISA", "SANS", "CompTIA Security+"]
   },
-
-  // DevOps & CI/CD Pipeline Automation
   {
-    id: "devops-cicd-pipeline-automation",
-    title: "DevOps & CI/CD Pipeline Automation",
-    description: "Complete DevOps transformation service that automates software development, testing, and deployment processes for faster, more reliable software delivery.",
-    category: "DevOps",
-    subcategory: "Automation",
-    price: 12000,
-    currency: "$",
+    id: 2,
+    name: "Multi-Cloud Orchestration Platform",
+    category: "Cloud Computing",
+    subcategory: "Multi-Cloud Management",
+    description: "Intelligent multi-cloud orchestration platform for seamless management across AWS, Azure, GCP, and private clouds",
+    pricing: "Enterprise",
+    price: 20000,
     pricingModel: "monthly",
     features: [
-      "CI/CD pipeline design and implementation",
-      "Infrastructure as code automation",
-      "Automated testing and quality assurance",
-      "Deployment automation and rollback",
-      "Monitoring and alerting setup",
+      "Unified cloud management",
+      "Cost optimization",
+      "Performance monitoring",
+      "Security compliance",
+      "Automated scaling",
+      "Disaster recovery",
+      "Multi-cloud networking",
+      "Resource optimization"
+    ],
+    benefits: [
+      "30% cost reduction",
+      "99.99% uptime guarantee",
+      "Simplified management",
+      "Enhanced security",
+      "Faster deployment",
+      "Vendor independence"
+    ],
+    targetAudience: [
+      "Enterprise companies",
+      "Cloud-native startups",
+      "Managed service providers",
+      "Government agencies",
+      "Financial institutions",
+      "Healthcare organizations"
+    ],
+    tags: ["Multi-Cloud", "Cloud Management", "Orchestration", "Cost Optimization", "DevOps", "Automation"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$20,000/month (Industry average: $40,000/month)",
+    competitors: ["Terraform", "Ansible", "Kubernetes", "Docker Swarm"],
+    roi: "350% ROI within 6 months",
+    setupTime: "3-4 weeks",
+    integrations: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
+    freeTier: true,
+    trialPeriod: "30 days",
+    serviceLevel: "24/7 cloud operations",
+    useCases: [
+      "Multi-cloud migration",
+      "Cost optimization",
+      "DevOps automation",
+      "Disaster recovery",
       "Performance optimization",
-      "Security scanning integration",
-      "Team training and best practices"
+      "Compliance management"
+    ],
+    compliance: ["SOC 2", "ISO 27001", "FedRAMP", "GDPR", "HIPAA"],
+    scalability: "Unlimited cloud resources",
+    support: "24/7 cloud expert support",
+    certifications: ["AWS", "Azure", "GCP", "Kubernetes", "Terraform"]
+  },
+  {
+    id: 3,
+    name: "AI-Powered DevOps Platform",
+    category: "DevOps",
+    subcategory: "Intelligent Automation",
+    description: "Next-generation DevOps platform using AI to automate deployment, monitoring, and incident response",
+    pricing: "Professional",
+    price: 12000,
+    pricingModel: "monthly",
+    features: [
+      "AI-powered CI/CD",
+      "Predictive monitoring",
+      "Automated testing",
+      "Intelligent scaling",
+      "Incident prediction",
+      "Performance optimization",
+      "Security scanning",
+      "Cost management"
     ],
     benefits: [
-      "Reduce deployment time by 80%",
-      "Improve code quality and reliability",
-      "Enable continuous delivery and deployment",
-      "Reduce manual errors and downtime",
-      "Scale development operations efficiently"
-    ],
-    useCases: [
-      "Software development teams",
-      "Digital transformation initiatives",
-      "Microservices architecture",
-      "Cloud-native applications",
-      "Legacy system modernization"
+      "90% faster deployments",
+      "80% fewer incidents",
+      "Automated problem resolution",
+      "Cost optimization",
+      "Enhanced reliability",
+      "Developer productivity"
     ],
     targetAudience: [
-      "Software development companies",
-      "Technology startups",
-      "Enterprise IT departments",
-      "Digital agencies",
-      "Product development teams"
+      "Software development teams",
+      "DevOps engineers",
+      "Platform engineering teams",
+      "SRE teams",
+      "Cloud-native companies",
+      "Enterprise IT departments"
     ],
-    tags: ["DevOps", "CI/CD", "Automation", "Infrastructure as Code", "Continuous Delivery"],
-    estimatedDelivery: "6-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$12,000 - $35,000/month",
+    tags: ["DevOps", "AI", "Automation", "CI/CD", "Monitoring", "SRE"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    websiteUrl: "https://ziontechgroup.com/devops-cicd-pipeline-automation",
-    technologyStack: ["Jenkins", "GitLab CI", "Docker", "Kubernetes", "Terraform", "Ansible"],
-    complianceStandards: ["SOC2", "ISO 27001", "GDPR"],
-    integrationCapabilities: ["Version Control Systems", "Cloud Platforms", "Monitoring Tools", "Security Tools", "Testing Frameworks"],
-    serviceLevelAgreement: {
-      responseTime: "30 minutes for pipeline issues",
-      uptime: "99.5% pipeline availability",
-      supportHours: "24/7/365",
-      escalationProcess: "3-tier escalation with DevOps specialists"
-    }
+    marketPrice: "$12,000/month (Industry average: $25,000/month)",
+    competitors: ["GitLab", "GitHub Actions", "Jenkins", "CircleCI"],
+    roi: "400% ROI within 6 months",
+    setupTime: "2-3 weeks",
+    integrations: ["GitHub", "GitLab", "Docker", "Kubernetes", "AWS", "Azure"],
+    freeTier: true,
+    trialPeriod: "30 days",
+    serviceLevel: "Business hours + on-call",
+    useCases: [
+      "Continuous deployment",
+      "Automated testing",
+      "Incident response",
+      "Performance monitoring",
+      "Security scanning",
+      "Cost optimization"
+    ],
+    compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
+    scalability: "Unlimited repositories",
+    support: "DevOps expert support",
+    certifications: ["AWS", "Azure", "Kubernetes", "Docker", "Jenkins"]
   },
-
-  // Data Analytics & Business Intelligence Platform
   {
-    id: "data-analytics-business-intelligence-platform",
-    title: "Data Analytics & Business Intelligence Platform",
-    description: "Comprehensive data analytics platform that transforms raw data into actionable insights, enabling data-driven decision making across the organization.",
-    category: "Data Analytics",
-    subcategory: "Business Intelligence",
-    price: 18000,
-    currency: "$",
+    id: 4,
+    name: "Edge Computing Infrastructure",
+    category: "Infrastructure",
+    subcategory: "Edge Computing",
+    description: "Distributed edge computing infrastructure for real-time processing, IoT management, and low-latency applications",
+    pricing: "Enterprise",
+    price: 30000,
     pricingModel: "monthly",
     features: [
-      "Data warehouse design and implementation",
-      "ETL pipeline development",
-      "Real-time data processing",
-      "Advanced analytics and machine learning",
-      "Interactive dashboards and reporting",
-      "Data governance and quality management",
-      "Predictive analytics capabilities",
-      "Mobile and web application access"
+      "Distributed edge nodes",
+      "Real-time processing",
+      "IoT device management",
+      "Low-latency networking",
+      "Edge AI processing",
+      "Data synchronization",
+      "Edge security",
+      "Performance optimization"
     ],
     benefits: [
-      "Improve decision-making speed by 50%",
-      "Identify new business opportunities",
-      "Optimize operational efficiency",
-      "Enhance customer understanding",
-      "Enable predictive business insights"
-    ],
-    useCases: [
-      "Business performance monitoring",
-      "Customer behavior analysis",
-      "Operational efficiency optimization",
-      "Financial reporting and analysis",
-      "Market trend analysis"
+      "50% latency reduction",
+      "Real-time processing",
+      "Bandwidth optimization",
+      "Enhanced reliability",
+      "Cost-effective scaling",
+      "IoT enablement"
     ],
     targetAudience: [
-      "Large enterprises",
-      "Data-driven organizations",
-      "Financial services",
-      "Retail and e-commerce",
+      "IoT platform providers",
+      "Edge computing companies",
+      "5G network operators",
+      "Smart city developers",
+      "Industrial IoT companies",
+      "Autonomous vehicle companies"
+    ],
+    tags: ["Edge Computing", "IoT", "Real-time", "Low Latency", "Distributed", "Infrastructure"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$30,000/month (Industry average: $60,000/month)",
+    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "EdgeX Foundry"],
+    roi: "500% ROI within 10 months",
+    setupTime: "4-6 weeks",
+    integrations: ["Kubernetes", "Docker", "MQTT", "CoAP", "AWS", "Azure"],
+    freeTier: false,
+    trialPeriod: "45 days",
+    serviceLevel: "24/7 edge operations",
+    useCases: [
+      "Smart city infrastructure",
+      "Industrial IoT monitoring",
+      "Autonomous vehicles",
+      "5G edge computing",
+      "Real-time video analytics",
+      "Predictive maintenance"
+    ],
+    compliance: ["ISO 27001", "SOC 2", "GDPR", "NIST", "IEC 62443"],
+    scalability: "Unlimited edge nodes",
+    support: "24/7 edge computing support",
+    certifications: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes"]
+  },
+  {
+    id: 5,
+    name: "Data Fabric Architecture",
+    category: "Data Management",
+    subcategory: "Data Architecture",
+    description: "Unified data fabric architecture enabling seamless data access, integration, and governance across all data sources",
+    pricing: "Enterprise",
+    price: 35000,
+    pricingModel: "monthly",
+    features: [
+      "Unified data access",
+      "Real-time integration",
+      "Data governance",
+      "Quality management",
+      "Catalog and discovery",
+      "Security and privacy",
+      "Performance optimization",
+      "Compliance management"
+    ],
+    benefits: [
+      "360-degree data view",
+      "Real-time insights",
+      "Reduced data silos",
+      "Enhanced compliance",
+      "Improved decision making",
+      "Cost optimization"
+    ],
+    targetAudience: [
+      "Enterprise companies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies",
+      "Retail companies",
       "Manufacturing companies"
     ],
-    tags: ["Data Analytics", "Business Intelligence", "Machine Learning", "Data Warehouse", "Predictive Analytics"],
-    estimatedDelivery: "10-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$18,000 - $60,000/month",
+    tags: ["Data Fabric", "Data Integration", "Data Governance", "Real-time", "Analytics", "Compliance"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    websiteUrl: "https://ziontechgroup.com/data-analytics-business-intelligence-platform",
-    technologyStack: ["Apache Spark", "Hadoop", "Python", "R", "Tableau", "Power BI", "AWS Redshift"],
-    complianceStandards: ["GDPR", "SOC2", "ISO 27001", "Data Privacy"],
-    integrationCapabilities: ["ERP Systems", "CRM Platforms", "Database Systems", "Cloud Services", "API Endpoints"],
-    serviceLevelAgreement: {
-      responseTime: "1 hour for data issues",
-      uptime: "99.5% platform availability",
-      supportHours: "24/7/365",
-      escalationProcess: "3-tier escalation with data specialists"
-    }
+    marketPrice: "$35,000/month (Industry average: $70,000/month)",
+    competitors: ["Informatica", "Talend", "IBM Data Fabric", "SAP Data Hub"],
+    roi: "450% ROI within 12 months",
+    setupTime: "6-8 weeks",
+    integrations: ["Databases", "Data warehouses", "Cloud platforms", "Analytics tools"],
+    freeTier: false,
+    trialPeriod: "60 days",
+    serviceLevel: "24/7 data operations",
+    useCases: [
+      "Data integration",
+      "Business intelligence",
+      "Compliance reporting",
+      "Real-time analytics",
+      "Data governance",
+      "Digital transformation"
+    ],
+    compliance: ["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 27001"],
+    scalability: "Unlimited data sources",
+    support: "24/7 data expert support",
+    certifications: ["Data Management", "Data Governance", "Cloud Platforms", "Analytics"]
   },
-
-  // Enterprise Network Infrastructure & Security
   {
-    id: "enterprise-network-infrastructure-security",
-    title: "Enterprise Network Infrastructure & Security",
-    description: "Comprehensive network infrastructure design, implementation, and security management for enterprise environments with high availability and performance requirements.",
-    category: "Network Infrastructure",
-    subcategory: "Enterprise Solutions",
-    price: 20000,
-    currency: "$",
+    id: 6,
+    name: "Network Automation Platform",
+    category: "Networking",
+    subcategory: "Network Automation",
+    description: "Intelligent network automation platform for zero-touch provisioning, monitoring, and optimization",
+    pricing: "Professional",
+    price: 15000,
     pricingModel: "monthly",
     features: [
-      "Network architecture design and planning",
-      "High-availability infrastructure setup",
-      "Network security implementation",
-      "Load balancing and traffic management",
-      "Network monitoring and alerting",
-      "Disaster recovery planning",
-      "Performance optimization",
-      "24/7 network operations support"
+      "Zero-touch provisioning",
+      "Automated configuration",
+      "Performance monitoring",
+      "Traffic optimization",
+      "Security automation",
+      "Capacity planning",
+      "Fault detection",
+      "Self-healing networks"
     ],
     benefits: [
-      "Ensure 99.99% network uptime",
-      "Improve network performance by 40%",
-      "Enhance security and compliance",
-      "Reduce network-related downtime",
-      "Optimize bandwidth utilization"
-    ],
-    useCases: [
-      "Multi-location business networks",
-      "High-traffic web applications",
-      "Financial trading systems",
-      "Healthcare network infrastructure",
-      "Government network systems"
+      "90% faster provisioning",
+      "Reduced human errors",
+      "Enhanced performance",
+      "Cost optimization",
+      "Improved security",
+      "24/7 operation"
     ],
     targetAudience: [
-      "Large enterprises",
+      "Network service providers",
+      "Enterprise IT departments",
+      "Data center operators",
+      "Cloud providers",
+      "Telecommunications",
+      "Managed service providers"
+    ],
+    tags: ["Network Automation", "Zero-Touch", "SDN", "Network Management", "Automation", "Performance"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$15,000/month (Industry average: $30,000/month)",
+    competitors: ["Cisco DNA Center", "Juniper Contrail", "VMware NSX", "OpenDaylight"],
+    roi: "300% ROI within 6 months",
+    setupTime: "3-4 weeks",
+    integrations: ["Cisco", "Juniper", "VMware", "OpenStack", "Kubernetes"],
+    freeTier: true,
+    trialPeriod: "30 days",
+    serviceLevel: "Business hours + on-call",
+    useCases: [
+      "Network provisioning",
+      "Configuration management",
+      "Performance optimization",
+      "Security automation",
+      "Capacity planning",
+      "Disaster recovery"
+    ],
+    compliance: ["ISO 27001", "SOC 2", "NIST", "Industry standards"],
+    scalability: "Unlimited network devices",
+    support: "Network automation expert support",
+    certifications: ["Cisco", "Juniper", "VMware", "Network Automation"]
+  },
+  {
+    id: 7,
+    name: "Digital Workplace Platform",
+    category: "Digital Transformation",
+    subcategory: "Workplace Modernization",
+    description: "Comprehensive digital workplace platform for remote work, collaboration, and productivity enhancement",
+    pricing: "Professional",
+    price: 18000,
+    pricingModel: "monthly",
+    features: [
+      "Unified communication",
+      "Virtual collaboration",
+      "Document management",
+      "Workflow automation",
+      "Employee engagement",
+      "Performance analytics",
+      "Security controls",
+      "Mobile access"
+    ],
+    benefits: [
+      "Enhanced productivity",
+      "Improved collaboration",
+      "Cost reduction",
+      "Employee satisfaction",
+      "Remote work enablement",
+      "Digital transformation"
+    ],
+    targetAudience: [
+      "Enterprise companies",
+      "Remote-first companies",
+      "Government agencies",
+      "Educational institutions",
+      "Healthcare organizations",
+      "Financial institutions"
+    ],
+    tags: ["Digital Workplace", "Collaboration", "Remote Work", "Productivity", "Digital Transformation", "Employee Experience"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$18,000/month (Industry average: $35,000/month)",
+    competitors: ["Microsoft 365", "Google Workspace", "Slack", "Zoom"],
+    roi: "350% ROI within 8 months",
+    setupTime: "3-4 weeks",
+    integrations: ["Microsoft", "Google", "Slack", "Zoom", "Salesforce", "HR systems"],
+    freeTier: true,
+    trialPeriod: "30 days",
+    serviceLevel: "Business hours support",
+    useCases: [
+      "Remote work enablement",
+      "Team collaboration",
+      "Document management",
+      "Workflow automation",
+      "Employee engagement",
+      "Digital transformation"
+    ],
+    compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "HIPAA"],
+    scalability: "Unlimited users",
+    support: "Digital workplace expert support",
+    certifications: ["Microsoft 365", "Google Workspace", "Change Management", "Digital Transformation"]
+  },
+  {
+    id: 8,
+    name: "API Management Platform",
+    category: "Integration",
+    subcategory: "API Management",
+    description: "Enterprise-grade API management platform for design, development, security, and analytics",
+    pricing: "Professional",
+    price: 10000,
+    pricingModel: "monthly",
+    features: [
+      "API design and development",
+      "Security and authentication",
+      "Rate limiting and throttling",
+      "Analytics and monitoring",
+      "Developer portal",
+      "API versioning",
+      "Documentation generation",
+      "Performance optimization"
+    ],
+    benefits: [
+      "Faster API development",
+      "Enhanced security",
+      "Better developer experience",
+      "Improved performance",
+      "Cost optimization",
+      "API governance"
+    ],
+    targetAudience: [
+      "Software companies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "E-commerce companies",
+      "Government agencies",
+      "Startups"
+    ],
+    tags: ["API Management", "Integration", "Security", "Developer Experience", "Analytics", "Performance"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$10,000/month (Industry average: $20,000/month)",
+    competitors: ["Apigee", "Kong", "AWS API Gateway", "Azure API Management"],
+    roi: "300% ROI within 5 months",
+    setupTime: "2-3 weeks",
+    integrations: ["REST APIs", "GraphQL", "OAuth", "JWT", "Cloud platforms"],
+    freeTier: true,
+    trialPeriod: "30 days",
+    serviceLevel: "Business hours support",
+    useCases: [
+      "API development",
+      "Integration management",
+      "Developer onboarding",
+      "API security",
+      "Performance monitoring",
+      "API governance"
+    ],
+    compliance: ["OAuth 2.0", "OpenID Connect", "SOC 2", "ISO 27001"],
+    scalability: "Unlimited APIs",
+    support: "API management expert support",
+    certifications: ["API Management", "Security", "Cloud Platforms", "Integration"]
+  },
+  {
+    id: 9,
+    name: "Intelligent Backup & Recovery",
+    category: "Data Protection",
+    subcategory: "Backup & Recovery",
+    description: "AI-powered backup and disaster recovery platform with intelligent automation and predictive analytics",
+    pricing: "Professional",
+    price: 8000,
+    pricingModel: "monthly",
+    features: [
+      "Intelligent backup scheduling",
+      "Predictive failure detection",
+      "Automated recovery testing",
+      "Data deduplication",
+      "Cloud integration",
+      "Compliance reporting",
+      "Performance optimization",
+      "Security encryption"
+    ],
+    benefits: [
+      "Zero data loss guarantee",
+      "Automated recovery",
+      "Cost optimization",
+      "Compliance ready",
+      "Enhanced security",
+      "Peace of mind"
+    ],
+    targetAudience: [
+      "All businesses",
+      "Healthcare organizations",
+      "Financial institutions",
+      "Legal services",
+      "Manufacturing companies",
+      "Educational institutions"
+    ],
+    tags: ["Backup & Recovery", "Disaster Recovery", "Data Protection", "AI", "Automation", "Compliance"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$8,000/month (Industry average: $15,000/month)",
+    competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity"],
+    roi: "400% ROI within 4 months",
+    setupTime: "1-2 weeks",
+    integrations: ["VMware", "Hyper-V", "Cloud platforms", "Storage systems"],
+    freeTier: true,
+    trialPeriod: "30 days",
+    serviceLevel: "24/7 backup monitoring",
+    useCases: [
+      "Data backup",
+      "Disaster recovery",
+      "Compliance requirements",
+      "Cloud migration",
+      "Data archiving",
+      "Business continuity"
+    ],
+    compliance: ["GDPR", "HIPAA", "SOC 2", "ISO 27001", "Industry standards"],
+    scalability: "Unlimited data",
+    support: "Backup expert support",
+    certifications: ["Veeam", "VMware", "Cloud Platforms", "Data Protection"]
+  },
+  {
+    id: 10,
+    name: "Performance Monitoring Platform",
+    category: "Monitoring",
+    subcategory: "Performance Management",
+    description: "Comprehensive performance monitoring platform for applications, infrastructure, and user experience",
+    pricing: "Professional",
+    price: 12000,
+    pricingModel: "monthly",
+    features: [
+      "Application performance monitoring",
+      "Infrastructure monitoring",
+      "User experience tracking",
+      "Real-time alerting",
+      "Performance analytics",
+      "Capacity planning",
+      "Root cause analysis",
+      "Performance optimization"
+    ],
+    benefits: [
+      "Proactive issue detection",
+      "Improved performance",
+      "Better user experience",
+      "Cost optimization",
+      "Reduced downtime",
+      "Data-driven decisions"
+    ],
+    targetAudience: [
+      "Software companies",
+      "E-commerce companies",
       "Financial institutions",
       "Healthcare organizations",
       "Government agencies",
       "Technology companies"
     ],
-    tags: ["Network Infrastructure", "Network Security", "High Availability", "Performance", "Enterprise"],
-    estimatedDelivery: "8-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$20,000 - $60,000/month",
+    tags: ["Performance Monitoring", "APM", "Infrastructure", "User Experience", "Analytics", "Optimization"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    websiteUrl: "https://ziontechgroup.com/enterprise-network-infrastructure-security",
-    technologyStack: ["Cisco", "Juniper", "F5 Networks", "Palo Alto", "VMware", "Monitoring Tools"],
-    complianceStandards: ["SOC2", "ISO 27001", "NIST", "Industry Standards"],
-    integrationCapabilities: ["Cloud Services", "Security Tools", "Monitoring Systems", "Backup Solutions", "Disaster Recovery"],
-    serviceLevelAgreement: {
-      responseTime: "15 minutes for critical network issues",
-      uptime: "99.99% network availability",
-      supportHours: "24/7/365",
-      escalationProcess: "Immediate escalation for network outages"
-    }
-  },
-
-  // Managed IT Services & Support
-  {
-    id: "managed-it-services-support",
-    title: "Managed IT Services & Support",
-    description: "Comprehensive managed IT services providing proactive monitoring, maintenance, and support for all IT infrastructure and systems.",
-    category: "Managed Services",
-    subcategory: "IT Support",
-    price: 8000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "24/7 IT infrastructure monitoring",
-      "Proactive maintenance and updates",
-      "Help desk support and ticketing",
-      "Remote and on-site support",
-      "Backup and disaster recovery",
-      "Security monitoring and updates",
+    marketPrice: "$12,000/month (Industry average: $25,000/month)",
+    competitors: ["New Relic", "Datadog", "Dynatrace", "AppDynamics"],
+    roi: "350% ROI within 6 months",
+    setupTime: "2-3 weeks",
+    integrations: ["Applications", "Databases", "Cloud platforms", "Infrastructure"],
+    freeTier: true,
+    trialPeriod: "30 days",
+    serviceLevel: "24/7 monitoring",
+    useCases: [
+      "Application monitoring",
+      "Infrastructure monitoring",
       "Performance optimization",
-      "Strategic IT consulting"
+      "Capacity planning",
+      "User experience tracking",
+      "Troubleshooting"
     ],
-    benefits: [
-      "Reduce IT operational costs by 30%",
-      "Improve system reliability and uptime",
-      "Access to expert IT professionals",
-      "Predictable monthly IT costs",
-      "Focus on core business activities"
-    ],
-    useCases: [
-      "Small to medium businesses",
-      "Growing companies",
-      "Organizations with limited IT staff",
-      "Companies requiring 24/7 support",
-      "Businesses with compliance requirements"
-    ],
-    targetAudience: [
-      "Small to medium businesses",
-      "Growing companies",
-      "Professional services firms",
-      "Healthcare practices",
-      "Educational institutions"
-    ],
-    tags: ["Managed Services", "IT Support", "24/7 Support", "Proactive Maintenance", "Help Desk"],
-    estimatedDelivery: "2-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$8,000 - $25,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/managed-it-services-support",
-    technologyStack: ["Monitoring Tools", "Help Desk Software", "Remote Management", "Backup Solutions", "Security Tools"],
-    complianceStandards: ["SOC2", "ISO 27001", "GDPR"],
-    integrationCapabilities: ["Existing IT Systems", "Cloud Services", "Security Tools", "Backup Solutions", "Monitoring Platforms"],
-    serviceLevelAgreement: {
-      responseTime: "1 hour for standard issues",
-      uptime: "99.5% system availability",
-      supportHours: "24/7/365",
-      escalationProcess: "3-tier escalation with IT specialists"
-    }
-  },
-
-  // Digital Transformation Consulting
-  {
-    id: "digital-transformation-consulting",
-    title: "Digital Transformation Consulting",
-    description: "Strategic consulting service that helps organizations navigate digital transformation, modernize legacy systems, and adopt emerging technologies.",
-    category: "Consulting",
-    subcategory: "Digital Transformation",
-    price: 30000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Digital maturity assessment",
-      "Transformation roadmap development",
-      "Technology strategy planning",
-      "Change management consulting",
-      "Legacy system modernization",
-      "Digital culture development",
-      "Performance measurement",
-      "Ongoing transformation support"
-    ],
-    benefits: [
-      "Accelerate digital transformation by 40%",
-      "Reduce transformation risks and costs",
-      "Improve competitive positioning",
-      "Enhance operational efficiency",
-      "Future-proof business operations"
-    ],
-    useCases: [
-      "Legacy system modernization",
-      "Digital business model transformation",
-      "Customer experience enhancement",
-      "Operational efficiency improvement",
-      "Competitive advantage development"
-    ],
-    targetAudience: [
-      "Large enterprises",
-      "Traditional businesses",
-      "Government agencies",
-      "Financial institutions",
-      "Manufacturing companies"
-    ],
-    tags: ["Digital Transformation", "Consulting", "Strategy", "Change Management", "Modernization"],
-    estimatedDelivery: "12-24 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$30,000 - $100,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/digital-transformation-consulting",
-    technologyStack: ["Strategy Frameworks", "Assessment Tools", "Project Management", "Change Management", "Technology Platforms"],
-    complianceStandards: ["Industry Standards", "Best Practices", "Regulatory Requirements"],
-    integrationCapabilities: ["Existing Systems", "New Technologies", "Business Processes", "Organizational Structures"],
-    serviceLevelAgreement: {
-      responseTime: "24 hours for consulting requests",
-      uptime: "N/A - Consulting Service",
-      supportHours: "Business hours with emergency support",
-      escalationProcess: "Direct escalation to transformation specialists"
-    }
-  },
-
-  // AI & Machine Learning Implementation
-  {
-    id: "ai-machine-learning-implementation",
-    title: "AI & Machine Learning Implementation",
-    description: "End-to-end AI and machine learning implementation service that helps organizations leverage artificial intelligence for business process automation and insights.",
-    category: "Artificial Intelligence",
-    subcategory: "Implementation",
-    price: 25000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI strategy and use case identification",
-      "Data preparation and engineering",
-      "Machine learning model development",
-      "AI infrastructure setup",
-      "Model training and optimization",
-      "Integration with existing systems",
-      "Performance monitoring and maintenance",
-      "Team training and knowledge transfer"
-    ],
-    benefits: [
-      "Automate repetitive tasks by 70%",
-      "Improve decision-making accuracy by 40%",
-      "Reduce operational costs by 30%",
-      "Gain competitive advantage through AI",
-      "Enable data-driven business insights"
-    ],
-    useCases: [
-      "Process automation",
-      "Predictive analytics",
-      "Customer behavior analysis",
-      "Quality control and monitoring",
-      "Risk assessment and management"
-    ],
-    targetAudience: [
-      "Technology companies",
-      "Financial services",
-      "Manufacturing companies",
-      "Healthcare organizations",
-      "Retail and e-commerce"
-    ],
-    tags: ["Artificial Intelligence", "Machine Learning", "Implementation", "Automation", "Data Science"],
-    estimatedDelivery: "12-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$25,000 - $80,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/ai-machine-learning-implementation",
-    technologyStack: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "AWS SageMaker", "Azure ML"],
-    complianceStandards: ["GDPR", "Data Privacy", "AI Ethics", "Industry Standards"],
-    integrationCapabilities: ["Existing Systems", "Data Sources", "Business Processes", "Analytics Platforms"],
-    serviceLevelAgreement: {
-      responseTime: "4 hours for AI system issues",
-      uptime: "99.5% AI system availability",
-      supportHours: "24/7/365",
-      escalationProcess: "3-tier escalation with AI specialists"
-    }
-  },
-
-  // Enterprise Application Development
-  {
-    id: "enterprise-application-development",
-    title: "Enterprise Application Development",
-    description: "Custom enterprise application development service that builds scalable, secure, and high-performance applications tailored to specific business needs.",
-    category: "Application Development",
-    subcategory: "Enterprise",
-    price: 22000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Custom application design and architecture",
-      "Full-stack development",
-      "Database design and optimization",
-      "API development and integration",
-      "Security implementation",
-      "Performance optimization",
-      "Testing and quality assurance",
-      "Deployment and maintenance"
-    ],
-    benefits: [
-      "Build applications 30% faster",
-      "Reduce development costs by 25%",
-      "Ensure scalability and performance",
-      "Meet specific business requirements",
-      "Enable rapid feature development"
-    ],
-    useCases: [
-      "Internal business applications",
-      "Customer-facing applications",
-      "Mobile applications",
-      "Web applications",
-      "Integration platforms"
-    ],
-    targetAudience: [
-      "Large enterprises",
-      "Technology companies",
-      "Financial institutions",
-      "Healthcare organizations",
-      "Manufacturing companies"
-    ],
-    tags: ["Application Development", "Custom Software", "Enterprise", "Full-Stack", "API Development"],
-    estimatedDelivery: "16-24 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$22,000 - $70,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/enterprise-application-development",
-    technologyStack: ["React", "Node.js", "Python", "Java", "PostgreSQL", "MongoDB", "AWS", "Azure"],
-    complianceStandards: ["SOC2", "ISO 27001", "GDPR", "Industry Standards"],
-    integrationCapabilities: ["Existing Systems", "Third-party APIs", "Database Systems", "Cloud Services", "Mobile Platforms"],
-    serviceLevelAgreement: {
-      responseTime: "2 hours for application issues",
-      uptime: "99.5% application availability",
-      supportHours: "24/7/365",
-      escalationProcess: "3-tier escalation with development specialists"
-    }
+    compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry standards"],
+    scalability: "Unlimited monitoring",
+    support: "Performance monitoring expert support",
+    certifications: ["APM", "Cloud Platforms", "Performance Management", "Monitoring"]
   }
 ];
+
+export default comprehensiveITServices2025;
