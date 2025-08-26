@@ -1,0 +1,77 @@
+[build]
+<<<<<<< HEAD
+  # Stable Next.js build using existing scripts; ensure deps installed deterministically
+  command = "npm ci && npm run build"
+  # Publish the Next.js build directory so the Netlify Next plugin runs correctly
+  publish = ".next"
+  # Increase build timeout for large site generation
+  command_timeout = "30m"
+=======
+  # Use `npm ci` for deterministic installs, Next.js plugin expects .next
+  command = "npm ci && npm run build"
+  publish = ".next"
+>>>>>>> d08df48694b5cf8c292b7ffde7c28e3bb65838ec
+
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max_old_space_size=4096"
+  NPM_FLAGS = "--prefer-offline"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Optional: a few redirects that were present
+[[redirects]]
+  from = "/ai-autonomous-ecosystem"
+  to = "/ai-autonomous-ecosystem-manager"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-materials-discovery"
+  to = "/quantum-materials-discovery-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-vehicle-ai"
+  to = "/autonomous-vehicle-ai-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/ai-content-generator"
+  status = 301
+
+[[redirects]]
+  from = "/ai-customer-success-automation"
+  to = "/ai-customer-success-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/intelligent-content-automation-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/browser-automation-cloud/"
+  to = "/browser-automation-cloud"
+  status = 301
