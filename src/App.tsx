@@ -8,6 +8,8 @@ import Contact from './pages/Contact';
 import Services from './pages/Services';
 import Blog from './pages/Blog';
 import NotFound from './pages/NotFound';
+import InnovativeServices from './pages/InnovativeServices';
+import ComprehensivePricing from './pages/ComprehensivePricing';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/innovative-services" element={<InnovativeServices />} />
+            <Route path="/pricing" element={<ComprehensivePricing />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

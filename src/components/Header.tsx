@@ -30,6 +30,18 @@ const Header: React.FC = () => {
               Services
             </Link>
             <Link
+              to="/innovative-services"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              Innovative Services
+            </Link>
+            <Link
+              to="/pricing"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              Pricing
+            </Link>
+            <Link
               to="/about"
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
@@ -91,6 +103,20 @@ const Header: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
+              </Link>
+              <Link
+                to="/innovative-services"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Innovative Services
+              </Link>
+              <Link
+                to="/pricing"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Pricing
               </Link>
               <Link
                 to="/about"
