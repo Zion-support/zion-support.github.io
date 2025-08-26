@@ -1,272 +1,254 @@
+# Zion Tech Group Website
 
-# Zion Tech Group - Comprehensive IT & AI Services Platform
+A modern, responsive website built with React, TypeScript, and Vite for Zion Tech Group - a leading technology company specializing in AI solutions, cloud services, and digital transformation.
 
-## 🚀 About Zion Tech Group
+## 🌟 Features
 
-Zion Tech Group is a leading technology solutions provider offering comprehensive AI, cybersecurity, cloud, and digital transformation services. Our platform serves businesses worldwide with cutting-edge technology solutions designed to drive innovation and growth.
+- **Modern Design**: Clean, professional design with dark theme and gradient accents
+- **Responsive Layout**: Fully responsive design that works on all devices
+- **Interactive Components**: Smooth animations and transitions using Framer Motion
+- **SEO Optimized**: Built with search engine optimization in mind
+- **Fast Performance**: Optimized for speed and user experience
+- **Accessibility**: WCAG compliant with proper semantic HTML and ARIA labels
 
-**Website**: https://ziontechgroup.com  
-**Contact**: +1 302 464 0950 | kleber@ziontechgroup.com  
-**Address**: 364 E Main St STE 1008, Middletown DE 19709
+## 🚀 Tech Stack
 
-## 🌟 Our Service Portfolio
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Routing**: React Router DOM
+- **State Management**: React Hooks (useState, useContext)
+- **Package Manager**: npm
 
-### 🤖 AI & Machine Learning Services
-- **AI-Powered Business Process Automation Suite** - $299/month
-  - Reduce operational costs by 40-60%
-  - Increase productivity by 300%
-  - ROI within 3 months
-  
-- **Enterprise AI Content Generation Platform** - $199/month
-  - Save 80% on content creation time
-  - Improve SEO rankings by 200%
-  - Consistent brand messaging
-  
-- **AI Customer Behavior Analytics & Insights Platform** - $449/month
-  - Increase customer retention by 35%
-  - Boost customer lifetime value by 200%
-  - Reduce churn by 50%
+## 📁 Project Structure
 
-### 🔒 Cybersecurity Services
-- **Zero-Trust Security Architecture Implementation** - $2,500 (project-based)
-  - Reduce security incidents by 90%
-  - Meet compliance requirements
-  - Protect against insider threats
-  
-- **AI-Powered Advanced Threat Detection System** - $899/month
-  - Detect threats 10x faster
-  - Reduce false positives by 80%
-  - 24/7 automated protection
+```
+ziontechgroup-website/
+├── public/                 # Static assets
+├── src/
+│   ├── components/         # Reusable UI components
+│   │   ├── header/        # Header and navigation components
+│   │   └── ui/            # UI components (buttons, cards, etc.)
+│   ├── hooks/             # Custom React hooks
+│   ├── layout/            # Layout components (header, footer, sidebar)
+│   ├── pages/             # Page components
+│   ├── types/             # TypeScript type definitions
+│   ├── utils/             # Utility functions
+│   ├── App.tsx            # Main application component
+│   ├── main.tsx           # Application entry point
+│   └── index.css          # Global styles
+├── package.json            # Dependencies and scripts
+├── vite.config.ts          # Vite configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── README.md               # This file
+```
 
-### ☁️ Cloud & DevOps Services
-- **Multi-Cloud Management & Optimization Platform** - $399/month
-  - Reduce cloud costs by 30-40%
-  - Unified management interface
-  - Improved security posture
-  
-- **Enterprise DevOps Automation & CI/CD Pipeline** - $599/month
-  - Deploy 10x faster
-  - Reduce deployment failures by 90%
-  - Automated quality gates
+## 🛠️ Installation
 
-### 📊 Data & Analytics Services
-- **Real-Time Business Intelligence & Analytics Platform** - $299/month
-  - Instant business insights
-  - Data-driven decisions
-  - Improved operational efficiency
-  
-- **Enterprise Data Warehouse & ETL Solution** - $799/month
-  - Centralized data management
-  - Improved data quality
-  - Faster analytics
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/ziontechgroup-website.git
+   cd ziontechgroup-website
+   ```
 
-### 🔄 Digital Transformation Services
-- **Digital Transformation Strategy & Implementation** - $1,500 (project-based)
-  - Improved operational efficiency
-  - Enhanced customer experience
-  - Competitive advantage
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### 🌐 IoT & Smart Solutions
-- **Enterprise IoT Platform & Smart Solutions** - $599/month
-  - Operational efficiency
-  - Predictive maintenance
-  - Cost reduction
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-### ⛓️ Blockchain & Web3 Services
-- **Enterprise Blockchain & Web3 Development Services** - $899 (project-based)
-  - Transparent transactions
-  - Reduced costs
-  - Enhanced security
+4. **Open your browser**
+   Navigate to `http://localhost:5173`
 
-## 🎯 Key Features
+## 📜 Available Scripts
 
-- **Global Reach**: IT services available worldwide with local expertise
-- **24/7 Support**: Round-the-clock technical support and monitoring
-- **Enterprise-Grade**: SOC 2, ISO 27001, GDPR, HIPAA compliance
-- **AI-Powered**: Cutting-edge machine learning and automation
-- **Custom Solutions**: Tailored implementations for specific business needs
-- **Proven ROI**: Measurable business impact and cost savings
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
 
-## 🏆 Why Choose Zion Tech Group?
+## 🎨 Customization
 
-- **15+ Years Experience**: Proven expertise in enterprise technology
-- **AI Innovation**: Leading-edge AI and machine learning solutions
-- **Global Support**: Worldwide services with local expertise
-- **Customer Success**: Dedicated teams ensuring project success
-- **Competitive Pricing**: Transparent pricing with volume discounts
-- **Custom Solutions**: Tailored implementations for your business
+### Colors and Theme
 
-## 📞 Contact Information
+The website uses a custom color palette defined in `tailwind.config.js`:
 
-- **Phone**: +1 302 464 0950
+```javascript
+colors: {
+  'zion-blue': '#0f172a',
+  'zion-blue-dark': '#020617',
+  'zion-cyan': '#06b6d4',
+  'zion-purple': '#8b5cf6',
+  // ... more colors
+}
+```
+
+### Components
+
+All components are built with TypeScript and follow a consistent design pattern. You can customize:
+
+- **Layout**: Modify header, footer, and sidebar in `src/layout/`
+- **Pages**: Update page content in `src/pages/`
+- **Components**: Customize reusable components in `src/components/`
+
+## 📱 Pages
+
+1. **Home** (`/`) - Landing page with hero section and services overview
+2. **About** (`/about`) - Company information and values
+3. **Services** (`/services`) - Detailed service offerings
+4. **Pricing** (`/pricing`) - Service pricing plans
+5. **Team** (`/team`) - Team member profiles
+6. **Careers** (`/careers`) - Job opportunities
+7. **Blog** (`/blog`) - Articles and insights
+8. **Contact** (`/contact`) - Contact form and information
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_API_URL=your_api_url_here
+VITE_GOOGLE_ANALYTICS_ID=your_ga_id_here
+```
+
+### Build Configuration
+
+The build process is configured in `vite.config.ts`:
+
+```typescript
+export default defineConfig({
+  plugins: [react()],
+  base: '/',
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          animations: ['framer-motion']
+        }
+      }
+    }
+  }
+})
+```
+
+## 🚀 Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Deploy to Netlify
+
+1. Connect your GitHub repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+4. Deploy!
+
+### Deploy to Vercel
+
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run: `vercel`
+3. Follow the prompts
+
+### Deploy to GitHub Pages
+
+1. Add to `package.json`:
+   ```json
+   "homepage": "https://yourusername.github.io/repository-name",
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d dist"
+   }
+   ```
+
+2. Install gh-pages: `npm install --save-dev gh-pages`
+3. Deploy: `npm run deploy`
+
+## 📊 Performance Optimization
+
+- **Code Splitting**: Routes are lazy-loaded for better performance
+- **Image Optimization**: Optimized images and lazy loading
+- **Bundle Analysis**: Use `npm run analyze` to analyze bundle size
+- **Caching**: Proper cache headers for static assets
+
+## 🔒 Security
+
+- **HTTPS Only**: All external links use HTTPS
+- **Content Security Policy**: Configured in production builds
+- **Input Validation**: Form inputs are properly validated
+- **XSS Protection**: React's built-in XSS protection
+
+## 🧪 Testing
+
+```bash
+# Run tests
+npm test
+
+# Run tests in watch mode
+npm test:watch
+
+# Generate coverage report
+npm run test:coverage
+```
+
+## 📈 Analytics
+
+The website includes Google Analytics integration. Configure your tracking ID in the environment variables.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+For support and questions:
+
 - **Email**: kleber@ziontechgroup.com
-- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+- **Phone**: +1 302 464 0950
 - **Website**: https://ziontechgroup.com
 
-## 🔗 Quick Links
+## 🙏 Acknowledgments
 
-- [Enhanced Services](/enhanced-services) - Complete service catalog
-- [Services Overview](/services-overview) - Detailed service information
-- [Services Pricing](/services-pricing) - Transparent pricing
-- [IT Onsite Services](/it-onsite-services) - Global IT support
-- [Request Quote](/request-quote) - Get custom pricing
+- **Design Inspiration**: Modern tech company websites
+- **Icons**: Lucide React icon library
+- **Animations**: Framer Motion
+- **Styling**: Tailwind CSS
+
+## 📅 Changelog
+
+### Version 1.0.0 (Current)
+- Initial website launch
+- Complete page structure
+- Responsive design
+- SEO optimization
+- Performance optimization
 
 ---
 
-# Welcome to your Lovable project
+**Built with ❤️ by the Zion Tech Group Team**
 
-## Project info
-
-**URL**: https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Run the setup script with your preferred package manager (npm, pnpm, yarn, or bun)
-./setup.sh npm  # Default and most compatible option
-
-# If you're using OpenAI Codex environments, a convenience script is available:
-./.codex/setup.sh  # Installs dependencies using npm
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev  # Use the same package manager you specified in setup.sh
-```
-
-> **IMPORTANT**: This project requires internet access to install dependencies. Without network connectivity, the build process will fail with errors about missing modules like 'react', 'react-router-dom', and 'lucide-react'.
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
-## Integrations
-
-See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
-
-## Troubleshooting
-
-### Network Issues
-
-If you see errors related to missing modules like 'react', 'react-dom', or 'lucide-react', your environment may not have internet access to download these dependencies. Options to resolve this:
-
-1. Ensure you have internet connectivity
-2. Configure proxy settings if needed: `npm config set proxy http://your-proxy:port`
-3. Use a pre-downloaded `node_modules` directory if available
-
-### Package Manager Issues
-
-If you encounter errors running `bun install` (for example, integrity check failures), delete any `bun.lockb` file and run `npm install` instead. This project relies on npm and is not guaranteed to work with Bun. Adding `bun.lockb` to `.gitignore` ensures Bun isn't accidentally used.
-
-For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
-
-If you see a warning about `rimraf@3.0.2` being deprecated, install the latest
-version of `rimraf`:
-
-```sh
-npm install rimraf@^5 --save-dev
-```
-
-This updates the dependency to a supported v5 release.
-
-To prevent memory leaks from the deprecated `inflight` package, the project pins
-`glob` to version `10.4.5` via the `resolutions` field in `package.json`. Run
-`npm install` to ensure this version is installed.
-
-### Whitelabel Tenant Errors
-
-If the app logs **"Error loading tenant"** during startup, the request to the
-Supabase edge function that provides whitelabel settings failed. Confirm that
-`VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are set in your environment and
-that you have network connectivity. The tenant hook will retry a few times
-before giving up.
-
-## Testing
-
-Run unit tests with:
-
-```sh
-npm run test
-```
-
-To watch tests during development:
-
-```sh
-npm run test:watch
-```
-
-### End-to-End Tests
-
-Open Cypress for interactive debugging:
-
-```sh
-npm run cypress:open
-```
-
-Run the Cypress suite headlessly:
-
-```sh
-npm run cypress:run
-```
-
-### Coverage Report
-
-After running `npm run test`, open `coverage/lcov-report/index.html` in your
-browser to view detailed coverage information.
-
-When tests run on GitHub Actions, the workflow uploads the `coverage` directory
-using `actions/upload-artifact@v3`. Visit a workflow run and download the
-`coverage-report` artifact to retrieve the generated HTML coverage report.
-## Notes
-- Default model is `gpt-4o-mini`. You can set `OPENAI_MODEL` to any GPT-4 family model available to your key.
-- For enterprise usage, add authentication and stronger rate limiting.
+For more information about Zion Tech Group, visit [https://ziontechgroup.com](https://ziontechgroup.com)
