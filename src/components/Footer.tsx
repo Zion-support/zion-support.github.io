@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, Zap, Brain, Shield, Cloud, Cpu, Network } from 'lucide-react';
 import { motion } from 'framer-motion';
+=======
+import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -16,6 +20,7 @@ export const Footer: React.FC = () => {
 
   const footerSections = [
     {
+<<<<<<< HEAD
       title: "AI & Innovation",
       icon: Brain,
       links: [
@@ -46,6 +51,16 @@ export const Footer: React.FC = () => {
         { label: "Business Solutions", path: "/business-solutions" },
         { label: "Consulting", path: "/services/consulting" },
         { label: "Infrastructure", path: "/services/infrastructure" }
+=======
+      title: "Core Services",
+      links: [
+        { label: "AI Solutions", path: "/services/ai" },
+        { label: "Tech Talent", path: "/talent" },
+        { label: "Equipment", path: "/equipment" },
+        { label: "Consulting", path: "/consulting" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "Cloud Services", path: "/services/cloud" }
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
       ]
     },
     {
@@ -81,7 +96,12 @@ export const Footer: React.FC = () => {
         { label: "Help Center", path: "/help" },
         { label: "Support Portal", path: "/support" },
         { label: "FAQ", path: "/faq" },
+<<<<<<< HEAD
         { label: "Request Quote", path: "/contact" }
+=======
+        { label: "Request Quote", path: "/contact" },
+        { label: "Emergency Support", path: "/support/emergency" }
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
       ]
     }
   ];
@@ -166,11 +186,34 @@ export const Footer: React.FC = () => {
                   </div>
                 </motion.div>
               ))}
+<<<<<<< HEAD
             </motion.div>
+=======
+            </div>
+
+            {/* Social Links */}
+            <div className="mt-6">
+              <h4 className="text-white font-semibold mb-3">Follow Us</h4>
+              <div className="flex space-x-3">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-lg transition-all duration-200 ${social.color} hover:scale-110`}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
           </div>
 
           {/* Footer Sections */}
           {footerSections.map((section, index) => (
+<<<<<<< HEAD
             <motion.div 
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -184,12 +227,20 @@ export const Footer: React.FC = () => {
                 </div>
                 <h4 className="text-lg font-semibold text-white">{section.title}</h4>
               </div>
+=======
+            <div key={index}>
+              <h4 className="text-white font-semibold mb-4">{section.title}</h4>
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <Link 
+                    <Link
                       to={link.path}
+<<<<<<< HEAD
                       className="text-slate-300 hover:text-cyan-400 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform duration-200"
+=======
+                      className="text-slate-400 hover:text-cyan-400 transition-colors duration-200 text-sm hover:translate-x-1 inline-block"
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
                     >
                       {link.label}
                     </Link>
@@ -200,6 +251,7 @@ export const Footer: React.FC = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Social Links */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -235,10 +287,28 @@ export const Footer: React.FC = () => {
             >
               <ArrowUp className="h-5 w-5" />
             </motion.button>
+=======
+        {/* Newsletter Section */}
+        <div className="mt-12 pt-8 border-t border-slate-700/50">
+          <div className="max-w-2xl mx-auto text-center">
+            <h4 className="text-white font-semibold mb-2">Stay Updated</h4>
+            <p className="text-slate-400 mb-4">Get the latest insights on AI, technology trends, and industry updates</p>
+            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
+              <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
+                Subscribe
+              </button>
+            </div>
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
           </div>
         </motion.div>
       </div>
 
+<<<<<<< HEAD
       {/* Bottom Bar */}
       <div className="border-t border-slate-700/50 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -267,9 +337,30 @@ export const Footer: React.FC = () => {
               </Link>
               <Link to="/sitemap" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200 hover:underline">
                 Sitemap
+=======
+      {/* Bottom Footer */}
+      <div className="border-t border-slate-700/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex items-center space-x-2 text-slate-400 text-sm">
+              <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
+              <Heart className="w-4 h-4 text-red-500 fill-current" />
+            </div>
+            
+            <div className="flex items-center space-x-6 text-sm">
+              <Link to="/privacy" className="text-slate-400 hover:text-cyan-400 transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-slate-400 hover:text-cyan-400 transition-colors">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="text-slate-400 hover:text-cyan-400 transition-colors">
+                Cookie Policy
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
               </Link>
             </motion.div>
           </div>
+<<<<<<< HEAD
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -283,8 +374,18 @@ export const Footer: React.FC = () => {
               <span>by Zion Tech Group</span>
             </p>
           </motion.div>
+=======
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
         </div>
       </div>
+
+      {/* Scroll to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-110 z-50"
+      >
+        <ArrowUp className="w-5 h-5" />
+      </button>
     </footer>
   );
 };

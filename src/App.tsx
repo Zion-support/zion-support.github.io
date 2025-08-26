@@ -1,8 +1,11 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import { AppHeader } from './layout/AppHeader.jsx';
+import { Footer } from './components/Footer.jsx';
+import { ChatAssistant } from './components/ChatAssistant.jsx';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 
+<<<<<<< HEAD
 // Lazy load main pages
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -47,10 +50,35 @@ const LoadingSpinner = () => (
       <div className="absolute top-8 left-8 w-16 h-16 border-4 border-transparent border-t-purple-500 rounded-full animate-pulse"></div>
       {/* Glowing effect */}
       <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full animate-pulse"></div>
+=======
+// Lazy load pages with better chunking
+const Home = React.lazy(() => import('./pages/Home.jsx'));
+const About = React.lazy(() => import('./pages/About.jsx'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const Contact = React.lazy(() => import('./pages/Contact.jsx'));
+const Login = React.lazy(() => import('./pages/Login.jsx'));
+const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
+const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030.tsx'));
+
+// Enhanced loading spinner with accessibility
+const LoadingSpinner = () => (
+  <div 
+    className="min-h-screen bg-futuristic flex items-center justify-center"
+    role="status"
+    aria-label="Loading page content"
+  >
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-zion-cyan text-lg">Loading...</p>
+      <div className="sr-only">Loading page content, please wait...</div>
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
     </div>
   </div>
 );
 
+<<<<<<< HEAD
 // Enhanced 404 Not Found component with futuristic design
 const NotFound = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -78,13 +106,44 @@ const NotFound = () => (
           </div>
         </div>
       </div>
+=======
+// Error boundary component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen bg-futuristic flex items-center justify-center p-4">
+    <div className="text-center max-w-md">
+      <h2 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h2>
+      <p className="text-zion-slate-light mb-6">{error.message}</p>
+      <button
+        onClick={resetErrorBoundary}
+        className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors"
+      >
+        Try again
+      </button>
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
     </div>
   </div>
 );
 
 function App() {
+  // Performance monitoring
+  useEffect(() => {
+    if ('performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
+      
+      return () => observer.disconnect();
+    }
+  }, []);
+
   return (
     <Router>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Futuristic animated background */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -104,13 +163,19 @@ function App() {
         <AppHeader />
         
         <main className="relative z-10">
+=======
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+        <AppHeader />
+        <main className="flex-1" role="main">
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Main routes */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
+              <Route path="/services" element={<ServicesPage />} />
               <Route path="/contact" element={<Contact />} />
+<<<<<<< HEAD
               
               {/* AI Services */}
               <Route path="/ai-services" element={<AIServices />} />
@@ -140,11 +205,20 @@ function App() {
               
               {/* Catch all route */}
               <Route path="*" element={<NotFound />} />
+=======
+              <Route path="/login" element={<Login />} />
+              <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/revolutionary-services-2030" element={<RevolutionaryServicesShowcase2030 />} />
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
             </Routes>
           </Suspense>
         </main>
         
         <Footer />
+        <ChatAssistant />
+        <PerformanceMonitor />
       </div>
     </Router>
   );
