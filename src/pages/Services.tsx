@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from "@/components/SEO";
+import { SEOHead } from "@/components/SEOHead";
 import { UltimateServicesShowcase } from "@/components/UltimateServicesShowcase";
 import { 
   Brain, 
@@ -115,7 +115,7 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEOHead 
         title="Our Services - Zion Tech Group"
         description="Discover our comprehensive range of AI, IT infrastructure, and micro SAAS solutions designed to revolutionize your business operations."
         keywords="AI services, IT infrastructure, micro SAAS, autonomous systems, cloud computing, cybersecurity, Zion Tech Group services"

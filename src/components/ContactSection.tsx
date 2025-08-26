@@ -1,230 +1,88 @@
 import React from 'react';
-import Link from 'next/link';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  MessageSquare, 
-  ArrowRight,
-  Globe,
-  Shield,
-  Users
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 
 export function ContactSection() {
-  const contactMethods = [
+  const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email Us",
-      description: "Get in touch via email for general inquiries",
-      contact: "hello@ziontechgroup.com",
-      link: "mailto:hello@ziontechgroup.com",
-      color: "from-zion-cyan to-zion-blue"
+      icon: Phone,
+      title: "Phone",
+      value: "+1 302 464 0950",
+      link: "tel:+13024640950"
     },
     {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Call Us",
-      description: "Speak directly with our team",
-      contact: "+1 (302) 464-0950",
-      link: "tel:+13024640950",
-      color: "from-zion-purple to-zion-cyan"
+      icon: Mail,
+      title: "Email",
+      value: "kleber@ziontechgroup.com",
+      link: "mailto:kleber@ziontechgroup.com"
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Live Chat",
-      description: "Chat with our support team in real-time",
-      contact: "Available 24/7",
-      link: "/chat",
-      color: "from-zion-blue to-zion-purple"
-    }
-  ];
-
-  const officeLocations = [
-    {
-      city: "Wilmington, DE",
-      country: "United States",
-      address: "1000 N Market St, Wilmington, DE 19801",
-      icon: <MapPin className="w-5 h-5" />
-    },
-    {
-      city: "New York, NY",
-      country: "United States", 
-      address: "350 5th Ave, New York, NY 10118",
-      icon: <MapPin className="w-5 h-5" />
-    },
-    {
-      city: "London, UK",
-      country: "United Kingdom",
-      address: "1 Canary Wharf, London E14 5AB",
-      icon: <MapPin className="w-5 h-5" />
-    }
-  ];
-
-  const supportFeatures = [
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "24/7 Support",
-      description: "Round-the-clock technical support and monitoring"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level security for all communications"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Expert Team",
-      description: "Certified professionals ready to help"
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Global Reach",
-      description: "Support available in multiple time zones"
+      icon: MapPin,
+      title: "Address",
+      value: "364 E Main St STE 1008 Middletown DE 19709",
+      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-zion-blue-dark to-slate-900">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-futuristic">
-            Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Touch</span>
+    <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Get In Touch
           </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your business with cutting-edge technology? 
-            Let's discuss how Zion Tech Group can help you achieve your goals.
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Ready to transform your business? Contact us today to discuss your technology needs
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {/* Contact Methods */}
-          <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-6 font-tech">Contact Methods</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {contactMethods.map((method, index) => (
-                <div
-                  key={index}
-                  className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className={`w-12 h-12 bg-gradient-to-r ${method.color} rounded-xl flex items-center justify-center mb-4`}>
-                    <div className="text-white">
-                      {method.icon}
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-semibold text-white mb-2">{method.title}</h4>
-                  <p className="text-zion-slate-light text-sm mb-3">{method.description}</p>
-                  <a
-                    href={method.link}
-                    className="text-zion-cyan hover:text-white transition-colors duration-300 font-medium"
-                  >
-                    {method.contact}
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Office Hours */}
-          <div className="lg:col-span-1">
-            <h3 className="text-2xl font-bold text-white mb-6 font-tech">Office Hours</h3>
-            <div className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-zion-slate-light">Monday - Friday</span>
-                  <span className="text-white font-medium">9:00 AM - 6:00 PM EST</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-zion-slate-light">Saturday</span>
-                  <span className="text-white font-medium">10:00 AM - 4:00 PM EST</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-zion-slate-light">Sunday</span>
-                  <span className="text-white font-medium">Closed</span>
-                </div>
-                <div className="pt-4 border-t border-white/10">
-                  <div className="text-center">
-                    <div className="text-zion-cyan font-semibold">24/7 Emergency Support</div>
-                    <div className="text-zion-slate-light text-sm">Available for critical issues</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Office Locations */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Our Offices</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {officeLocations.map((office, index) => (
-              <div
-                key={index}
-                className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-3">
-                    <div className="text-white">
-                      {office.icon}
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white">{office.city}</h4>
-                    <p className="text-zion-slate-light text-sm">{office.country}</p>
-                  </div>
-                </div>
-                <p className="text-zion-slate-light text-sm leading-relaxed">{office.address}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Support Features */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Why Choose Our Support?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportFeatures.map((feature, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <div className="text-white">
-                    {feature.icon}
-                  </div>
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-2">{feature.title}</h4>
-                <p className="text-zion-slate-light text-sm leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-          <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your technology needs and discover how 
-            Zion Tech Group can help transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {contactInfo.map((contact, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="text-center"
             >
-              Contact Us Now
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              href="/request-quote"
-              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
-            >
-              Request Quote
-            </Link>
-          </div>
+              <a
+                href={contact.link}
+                className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4"
+              >
+                <contact.icon className="h-8 w-8 text-white" />
+              </a>
+              <h3 className="text-xl font-semibold text-white mb-2">{contact.title}</h3>
+              <p className="text-zion-slate-light">{contact.value}</p>
+            </motion.div>
+          ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+          >
+            Contact Us Today
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
 }
+
+export default ContactSection;

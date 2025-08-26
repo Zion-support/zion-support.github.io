@@ -1,187 +1,130 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp } from 'lucide-react';
+import { Brain, Shield, Cloud, Code } from 'lucide-react';
 
-export const Footer: React.FC = () => {
+export function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const socialLinks = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
-    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
-    { name: "GitHub", url: "https://github.com/Zion-Holdings", icon: "💻", color: "hover:bg-gray-600/20" },
-    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
-    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
-  ];
-
-  const footerSections = [
-    {
-      title: "Services",
-      links: [
-        { label: "AI Solutions", path: "/services/ai" },
-        { label: "Cloud & DevOps", path: "/services/cloud" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "IT Infrastructure", path: "/services/infrastructure" },
-        { label: "Digital Transformation", path: "/services/transformation" }
-      ]
-    },
-    {
-      title: "Company",
-      links: [
-        { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
-        { label: "Careers", path: "/careers" },
-        { label: "News & Updates", path: "/news" },
-        { label: "Case Studies", path: "/case-studies" },
-        { label: "Partners", path: "/partners" }
-      ]
-    },
-    {
-      title: "Resources",
-      links: [
-        { label: "Blog", path: "/blog" },
-        { label: "Documentation", path: "/docs" },
-        { label: "White Papers", path: "/white-papers" },
-        { label: "Webinars", path: "/webinars" },
-        { label: "Research", path: "/research-development" },
-        { label: "Events", path: "/events" },
-        { label: "Training", path: "/training" }
-      ]
-    },
-    {
-      title: "Support",
-      links: [
-        { label: "Contact Us", path: "/contact" },
-        { label: "Help Center", path: "/help" },
-        { label: "Support Portal", path: "/support" },
-        { label: "FAQ", path: "/faq" },
-        { label: "Consulting", path: "/services/consulting" },
-        { label: "Request Quote", path: "/contact" }
-      ]
-    }
-  ];
-
-  const contactInfo = [
-    { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
-    { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
-    { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
-    { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
-  ];
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+  const footerLinks = {
+    services: [
+      { name: 'AI & Autonomous Systems', href: '/services' },
+      { name: 'IT Infrastructure', href: '/services' },
+      { name: 'Micro SAAS Solutions', href: '/services' }
+    ],
+    company: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Careers', href: '/careers' }
+    ],
+    support: [
+      { name: 'Help Center', href: '/help' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'Status', href: '/status' }
+    ]
   };
 
   return (
-    <footer className="bg-slate-900 text-white">
-      {/* Main Footer Content */}
+    <footer className="bg-zion-slate-dark border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h3>
-              <p className="text-slate-300 mt-4 max-w-md">
-                Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services. 
-                Transform your business with cutting-edge technology.
-              </p>
+          <div className="md:col-span-2">
+            <div className="flex items-center mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                <Brain className="h-6 w-6 text-white" />
+              </div>
+              <span className="text-2xl font-bold text-white">Zion Tech Group</span>
             </div>
-            
-            {/* Contact Info */}
-            <div className="space-y-3">
-              {contactInfo.map((contact, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <contact.icon className="h-5 w-5 text-cyan-400" />
-                  <div>
-                    <span className="text-slate-400 text-sm">{contact.label}: </span>
-                    <a 
-                      href={contact.href} 
-                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
-                    >
-                      {contact.value}
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Footer Sections */}
-          {footerSections.map((section, index) => (
-            <div key={index}>
-              <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>
-              <ul className="space-y-2">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <Link 
-                      to={link.path}
-                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Social Links */}
-        <div className="mt-12 pt-8 border-t border-slate-700">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex space-x-4 mb-4 md:mb-0">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-all duration-200 ${social.color}`}
-                  aria-label={social.name}
-                >
-                  <span className="text-xl">{social.icon}</span>
-                </a>
-              ))}
-            </div>
-            
-            <button
-              onClick={scrollToTop}
-              className="p-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-cyan-400 transition-all duration-200"
-              aria-label="Scroll to top"
-            >
-              <ArrowUp className="h-5 w-5" />
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="border-t border-slate-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-slate-400 text-sm text-center md:text-left">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex items-center space-x-4 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200">
-                Terms of Service
-              </Link>
-              <Link to="/sitemap" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200">
-                Sitemap
-              </Link>
-            </div>
-          </div>
-          <div className="text-center mt-4">
-            <p className="text-slate-500 text-xs">
-              Made with <Heart className="inline h-3 w-3 text-red-500" /> by Zion Tech Group
+            <p className="text-zion-slate-light mb-6 max-w-md">
+              Leading the future of technology with revolutionary AI, IT infrastructure, 
+              and innovative micro SAAS solutions that transform businesses.
             </p>
+            <div className="flex space-x-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <Brain className="h-5 w-5 text-white" />
+              </div>
+              <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center">
+                <Shield className="h-5 w-5 text-white" />
+              </div>
+              <div className="w-10 h-10 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center">
+                <Cloud className="h-5 w-5 text-white" />
+              </div>
+              <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+                <Code className="h-5 w-5 text-white" />
+              </div>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+            <ul className="space-y-2">
+              {footerLinks.services.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-zion-slate-light hover:text-white transition-colors duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
+            <ul className="space-y-2">
+              {footerLinks.company.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-zion-slate-light hover:text-white transition-colors duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Contact Info */}
+        <div className="mt-8 pt-8 border-t border-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+            <div>
+              <p className="text-zion-slate-light">Phone</p>
+              <p className="text-white font-medium">+1 302 464 0950</p>
+            </div>
+            <div>
+              <p className="text-zion-slate-light">Email</p>
+              <p className="text-white font-medium">kleber@ziontechgroup.com</p>
+            </div>
+            <div>
+              <p className="text-zion-slate-light">Address</p>
+              <p className="text-white font-medium">364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-8 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-zion-slate-light text-sm">
+            © {currentYear} Zion Tech Group. All rights reserved.
+          </p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <Link to="/privacy" className="text-zion-slate-light hover:text-white text-sm transition-colors duration-300">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="text-zion-slate-light hover:text-white text-sm transition-colors duration-300">
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>
     </footer>
   );
-};
+}
+
+export default Footer;

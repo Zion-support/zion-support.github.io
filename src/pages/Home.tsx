@@ -266,7 +266,7 @@ import {
   Oganesson
 } from 'lucide-react';
 
-import { SEO } from '../components/SEO';
+import { SEOHead } from '../components/SEOHead';
 import { AIServicesShowcase } from '../components/AIServicesShowcase';
 import { UltimateServicesShowcase } from '../components/UltimateServicesShowcase';
 import { CategoriesSection } from '../components/CategoriesSection';
@@ -351,7 +351,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEOHead 
         title="Zion Tech Group - Revolutionary AI, IT & Micro SAAS Solutions"
         description="Transform your business with Zion Tech Group's cutting-edge AI, IT infrastructure, and innovative micro SAAS solutions. Leading the future of technology."
         keywords="AI solutions, IT infrastructure, micro SAAS, autonomous systems, cloud computing, cybersecurity, Zion Tech Group"
