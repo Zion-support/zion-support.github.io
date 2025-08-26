@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-import { Header } from "@/components/Header";
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -89,15 +82,7 @@ export default function Index() {
         keywords={t("home.seo_keywords")}
         canonical="https://ziontechgroup.com/"
       />
-<<<<<<< HEAD
-      <Header />
-      <HeroSection />
-<<<<<<< HEAD
-=======
               <HeroSection />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">

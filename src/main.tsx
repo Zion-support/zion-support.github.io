@@ -9,7 +9,7 @@ import { LanguageProvider } from '@/context/LanguageContext';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 import { AuthProvider } from './context/auth/AuthProvider';
-import { NotificationProvider } from './context/notifications/NotificationContext';
+import { NotificationProvider } from './components/ui/notification';
 
 const queryClient = new QueryClient({
   defaultOptions: {

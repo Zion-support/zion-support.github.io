@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-=======
-import * as React from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-import React, { createContext, useContext, useState, ReactNode } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 interface LanguageContextType {
   language: string;
   setLanguage: (lang: string) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   t: (key: string) => string;
   isRTL: boolean;
 }
@@ -30,23 +18,20 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
 
   const translations: Record<string, Record<string, string>> = {
     en: {
-      'welcome': 'Welcome',
-      'get_started': 'Get Started',
-      'learn_more': 'Learn More',
-      'contact_us': 'Contact Us'
+      welcome: 'Welcome',
+      get_started: 'Get Started',
+      learn_more: 'Learn More',
+      contact_us: 'Contact Us',
     },
     es: {
-      'welcome': 'Bienvenido',
-      'get_started': 'Comenzar',
-      'learn_more': 'Saber Más',
-      'contact_us': 'Contáctanos'
-    }
+      welcome: 'Bienvenido',
+      get_started: 'Comenzar',
+      learn_more: 'Saber Más',
+      contact_us: 'Contáctanos',
+    },
   };
 
-  const t = (key: string): string => {
-    return translations[language]?.[key] || key;
-  };
-
+  const t = (key: string): string => translations[language]?.[key] || key;
   const isRTL = language === 'ar' || language === 'he';
 
   return (
@@ -63,29 +48,3 @@ export function useLanguage(): LanguageContextType {
   }
   return context;
 }
-<<<<<<< HEAD
-=======
-}
-
-const LanguageContext = React.createContext<LanguageContextType | undefined>(undefined);
-
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = React.useState('en');
-
-  return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
-      {children}
-    </LanguageContext.Provider>
-  );
-};
-
-export const useLanguage = (): LanguageContextType => {
-  const context = React.useContext(LanguageContext);
-  if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

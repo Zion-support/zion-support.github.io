@@ -3,37 +3,6 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function Revolutionary2025ServicesShowcasePage() {
-  // Placeholder data for services
-  const services = [
-    {
-      id: 'ai-solutions',
-      name: 'AI Solutions',
-      description: 'Revolutionary artificial intelligence and machine learning services',
-      features: ['Custom AI Models', 'Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'AI Consulting'],
-      price: 'Custom',
-      rating: 5,
-      customers: 50
-    },
-    {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      description: 'Next-generation security solutions and threat protection',
-      features: ['Threat Detection', 'Zero Trust Architecture', 'Security Audits', 'Incident Response', 'Compliance'],
-      price: 'Custom',
-      rating: 5,
-      customers: 75
-    },
-    {
-      id: 'cloud-devops',
-      name: 'Cloud & DevOps',
-      description: 'Scalable cloud infrastructure and automation solutions',
-      features: ['Cloud Migration', 'DevOps Automation', 'Infrastructure as Code', 'Monitoring', 'Scalability'],
-      price: 'Custom',
-      rating: 5,
-      customers: 60
-=======
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
@@ -90,7 +59,6 @@ export default function Revolutionary2025ServicesShowcase() {
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
       default:
         return 0;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     }
   });
 

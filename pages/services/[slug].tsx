@@ -4,11 +4,6 @@ import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackgr
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
@@ -21,42 +16,7 @@ import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
 import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-<<<<<<< HEAD
-// import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-// import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
-// import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
-// import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
-// import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-// import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realQ4Services2025, } from '../../data/real-2025-q4-additions';
-import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
-// import { realMarketServicesExtended } from '../../data/real-market-services-extended';
-// import { real2026Additions } from '../../data/real-2026-additions';
-import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
-// import { added2026Q2Services } from '../../data/added-2026-q2-services';
-import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
-import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
-import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
-import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
-import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
-import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
-import { real2027Q4Additions } from '../../data/real-2027-q4-additions';
-
-type Service = typeof ultimateInnovativeServices2026[number];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-
-const contactInfo = {
-	mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'
-};
-
-<<<<<<< HEAD
-=======
 function getAllServices(): Service[] {
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
@@ -87,12 +47,6 @@ function getAllServices(): Service[] {
 		.concat(real2027Q2Additions as unknown as Service[])
 		.concat(real2027Q3Additions as unknown as Service[])
 		.concat(real2027Q4Additions as unknown as Service[]);
-<<<<<<< HEAD
-}
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-=======
 import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
 import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
@@ -138,7 +92,6 @@ const mockService: SimpleService = {
 		.concat(real2025Q3Additions as unknown as Service[]);
 }
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 function toSlug(value: string): string {
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
@@ -150,177 +103,13 @@ function extractServiceSlugFromLink(link: string): string | null {
 		if (path.startsWith('services/')) {
 			return path.substring('services/'.length);
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
-		return path;
-=======
 		return null;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 		return null;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 	} catch {
 		return null;
 	}
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function ServiceSlugPage({ params }: { params?: { slug: string } }) {
-	const slug = params?.slug || 'default-service';
-	
-	// Placeholder service data - replace with actual data
-	const service = {
-		name: 'Service Name',
-		tagline: 'Service description and tagline',
-		features: ['Feature 1', 'Feature 2', 'Feature 3'],
-		price: '$99/month',
-		rating: '4.8',
-		customers: '100+',
-		description: 'Detailed service description goes here...',
-		link: '#'
-	};
-
-	return (
-		<>
-			<Head>
-				<title>{service.name} — Zion Tech Group</title>
-				<meta name="description" content={service.tagline} />
-			</Head>
-			
-			<div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-				<main className="container mx-auto px-6 py-12">
-					{/* Hero Section */}
-					<section className="text-center mb-16">
-						<h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-							{service.name}
-						</h1>
-						<p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-							{service.tagline}
-						</p>
-						<div className="flex flex-wrap justify-center gap-4">
-							<a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-								Get Started
-							</a>
-							<a href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300">
-								View All Services
-							</a>
-						</div>
-					</section>
-
-					{/* Service Details */}
-					<section className="mb-16">
-						<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-							{/* Main Content */}
-							<div className="lg:col-span-2">
-								<div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8">
-									<h2 className="text-2xl font-bold mb-6 text-cyan-400">About This Service</h2>
-									<p className="text-white/80 mb-6">
-										{service.description}
-									</p>
-									
-									<h3 className="text-xl font-semibold mb-4 text-white">Key Features</h3>
-									<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-										{service.features.map((feature, index) => (
-											<div key={index} className="flex items-center gap-3">
-												<Check className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-												<span className="text-white/80">{feature}</span>
-											</div>
-										))}
-									</div>
-
-									<div className="flex flex-wrap gap-4">
-										<div className="text-center">
-											<div className="text-3xl font-bold text-cyan-400 mb-1">{service.rating}</div>
-											<div className="text-white/70 text-sm">Rating</div>
-										</div>
-										<div className="text-center">
-											<div className="text-3xl font-bold text-purple-400 mb-1">{service.customers}</div>
-											<div className="text-white/70 text-sm">Customers</div>
-										</div>
-										<div className="text-center">
-											<div className="text-3xl font-bold text-green-400 mb-1">{service.price}</div>
-											<div className="text-white/70 text-sm">Starting Price</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							{/* Sidebar */}
-							<div className="space-y-6">
-								{/* Contact Card */}
-								<div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-6">
-									<h3 className="text-xl font-bold mb-4 text-cyan-400">Get In Touch</h3>
-									<div className="space-y-4">
-										<div className="flex items-center gap-3">
-											<Phone className="w-5 h-5 text-cyan-400" />
-											<span className="text-white/80">{contactInfo.mobile}</span>
-										</div>
-										<div className="flex items-center gap-3">
-											<Mail className="w-5 h-5 text-cyan-400" />
-											<span className="text-white/80">{contactInfo.email}</span>
-										</div>
-										<div className="flex items-center gap-3">
-											<MapPin className="w-5 h-5 text-cyan-400" />
-											<span className="text-white/80">{contactInfo.address}</span>
-										</div>
-									</div>
-									
-									<a
-										href="/contact"
-										className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 mt-6"
-									>
-										Contact Us
-									</a>
-								</div>
-
-								{/* Quick Actions */}
-								<div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-6">
-									<h3 className="text-xl font-bold mb-4 text-purple-400">Quick Actions</h3>
-									<div className="space-y-3">
-										<a
-											href="/case-studies"
-											className="block w-full text-center bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2 rounded-lg font-medium transition-all duration-300"
-										>
-											View Case Studies
-										</a>
-										<a
-											href="/services"
-											className="block w-full text-center bg-white/10 hover:bg-white/20 border border-white/20 text-white py-2 rounded-lg font-medium transition-all duration-300"
-										>
-											Browse Services
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-
-					{/* CTA Section */}
-					<section className="text-center">
-						<h2 className="text-3xl font-bold mb-6 text-white">Ready to Get Started?</h2>
-						<p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-							Join hundreds of companies that have already transformed their business with our cutting-edge solutions.
-						</p>
-						<div className="flex flex-wrap justify-center gap-4">
-							<a
-								href="/contact"
-								className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-lg"
-							>
-								Start Your Project
-							</a>
-							<a
-								href="/case-studies"
-								className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-300 text-lg"
-							>
-								View Case Studies
-							</a>
-						</div>
-					</section>
-				</main>
-			</div>
-		</>
-=======
 export async function getStaticPaths() {
 	const services = getAllServices();
 	const slugs = new Set<string>();
@@ -489,10 +278,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 	);
 }
-=======
 export async function getStaticPaths() {
 	const services = getAllServices();
 	const slugs = new Set<string>();
@@ -513,7 +300,6 @@ export async function getStaticPaths() {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
 	};
-=======
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -561,7 +347,6 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
         </div>
 
 }
-=======
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
             {service.name}
@@ -698,4 +483,3 @@ export default function ServiceDetailPage({ service, slug }: { service: SimpleSe
     </Layout>
   );
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { ForumPost } from '@/types/community';
 
 interface PostCardProps {
@@ -30,7 +26,6 @@ export default function PostCard({ post }: PostCardProps) {
             <span>{post.likes} likes</span>
             <span>{post.views} views</span>
           </div>
-=======
 
 interface PostCardProps {
   post: {
@@ -55,19 +50,11 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
         <div className="flex items-center space-x-4">
           <span>{post.likes} likes</span>
           <span>{post.replies} replies</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 };
 
 export default PostCard;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
