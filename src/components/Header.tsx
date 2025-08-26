@@ -6,12 +6,14 @@ const Header: React.FC = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const services = [
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & AI Services' },
-    { name: 'Cloud & DevOps', href: '/services', description: 'Cloud Migration & Automation' },
-    { name: 'Cybersecurity', href: '/services', description: 'Security & Threat Protection' },
-    { name: 'IT Infrastructure', href: '/services', description: 'Network & System Management' },
-    { name: 'Digital Transformation', href: '/services', description: 'Business Process Optimization' },
-    { name: 'Consulting', href: '/services', description: 'Technology Strategy & Advisory' }
+    { name: 'Comprehensive Services 2025', href: '/comprehensive-services-showcase-2025', description: '100+ Cutting-edge Technology Solutions' },
+    { name: 'AI & Machine Learning', href: '/services/ai', description: 'Advanced AI Solutions & Platforms' },
+    { name: 'Quantum Computing', href: '/services/quantum', description: 'Quantum AI & Research Platforms' },
+    { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Enterprise Infrastructure Solutions' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced Security & Zero-Trust' },
+    { name: 'Edge Computing', href: '/services/edge', description: 'IoT & Edge AI Solutions' },
+    { name: 'Emerging Technologies', href: '/innovative-services-2025', description: 'Space Tech, Green Tech & More' },
+    { name: 'Industry Solutions', href: '/services/industry', description: 'Specialized Industry Platforms' }
   ];
 
   return (
@@ -96,10 +98,28 @@ const Header: React.FC = () => {
               About
             </Link>
             <Link
+              to="/case-studies"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              Case Studies
+            </Link>
+            <Link
+              to="/comprehensive-pricing-2025"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              Pricing
+            </Link>
+            <Link
               to="/blog"
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
               Blog
+            </Link>
+            <Link
+              to="/news"
+              className="text-gray-300 hover:text-white transition-colors duration-300"
+            >
+              News
             </Link>
             <Link
               to="/careers"
@@ -151,6 +171,13 @@ const Header: React.FC = () => {
               >
                 Home
               </Link>
+              <Link
+                to="/comprehensive-pricing-2025"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Pricing
+              </Link>
               
               {/* Mobile Services Section */}
               <div className="px-3 py-2">
@@ -184,11 +211,18 @@ const Header: React.FC = () => {
                 About
               </Link>
               <Link
-                to="/blog"
+                to="/case-studies"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Blog
+                Case Studies
+              </Link>
+              <Link
+                to="/news"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                News
               </Link>
               <Link
                 to="/careers"
