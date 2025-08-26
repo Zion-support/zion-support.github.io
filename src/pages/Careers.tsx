@@ -263,7 +263,7 @@ export default function Careers() {
 
           {/* Job Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {jobs[activeTab as keyof typeof jobs].map((job, index) => (
+            {jobs[activeTab]?.map((job, index) => (
               <div key={index} className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="flex items-start justify-between mb-4">
                   <div>
