@@ -360,6 +360,47 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     reviews: 12
   },
 
+<<<<<<< HEAD
+  // Autonomous IT Operations Platform
+  {
+    id: 'autonomous-it-operations',
+    name: 'Autonomous IT Operations Platform',
+    tagline: 'Self-healing IT infrastructure with AI-powered automation',
+    price: '$1,499',
+    period: '/month',
+    description: 'Advanced autonomous IT operations platform that uses AI and machine learning to automatically detect, diagnose, and resolve IT issues. Provides self-healing infrastructure with minimal human intervention.',
+    features: [
+      'AI-powered issue detection and diagnosis',
+      'Automated problem resolution',
+      'Self-healing infrastructure capabilities',
+      'Predictive maintenance and alerts',
+      'Intelligent resource allocation',
+      'Automated scaling and optimization',
+      'Integration with IT management tools',
+      'Custom automation workflows',
+      'Advanced analytics and reporting',
+      '24/7 autonomous operations'
+    ],
+    popular: true,
+    icon: '🤖',
+    color: 'from-cyan-600 to-blue-600',
+    textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup.com/autonomous-it-operations',
+    marketPosition: 'Competes with ServiceNow ($100/user/month), BMC Helix ($150/user/month). Our advantage: AI-powered automation and self-healing capabilities.',
+    targetAudience: 'Enterprises, IT operations teams, Managed service providers, Cloud providers, Infrastructure companies',
+    trialDays: 21,
+    setupTime: '2-3 weeks',
+    category: 'IT Operations',
+    realService: true,
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Docker, Kubernetes'],
+    integrations: ['ServiceNow, BMC, Jira, Zabbix, Nagios, AWS, Azure'],
+    useCases: ['IT operations automation, Incident management, Problem resolution, Infrastructure optimization, Service management'],
+    roi: 'Organizations report 400% ROI through reduced downtime and improved efficiency.',
+    competitors: ['ServiceNow, BMC Helix, Jira Service Management, Zendesk'],
+    marketSize: '$35B IT operations market',
+    growthRate: '30% annual growth',
+    variant: 'autonomous-itops-enterprise',
+=======
   // New Advanced IT Infrastructure Services for 2025
   {
     id: 'quantum-cloud-infrastructure-platform',
@@ -399,6 +440,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: '$50B+ potential market',
     growthRate: '800%+ annual growth',
     variant: 'quantum-cloud',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -406,6 +448,54 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+    implementationDetails: 'Autonomous IT operations platform with AI-powered automation and self-healing infrastructure capabilities.',
+    launchDate: '2025-01-18',
+    customers: 67,
+    rating: 4.8,
+    reviews: 52
+  },
+
+  // Quantum Internet Infrastructure Platform
+  {
+    id: 'quantum-internet-infrastructure',
+    name: 'Quantum Internet Infrastructure Platform',
+    tagline: 'Next-generation quantum networking for ultra-secure communications',
+    price: '$3,999',
+    period: '/month',
+    description: 'Cutting-edge quantum internet infrastructure platform that enables ultra-secure quantum communications and networking. Provides quantum key distribution, quantum repeaters, and quantum network management.',
+    features: [
+      'Quantum key distribution (QKD)',
+      'Quantum repeater networks',
+      'Quantum network management',
+      'Quantum-safe communications',
+      'Integration with classical networks',
+      'Custom quantum protocols',
+      'Performance monitoring and optimization',
+      'Expert consultation and support',
+      'Research and development collaboration',
+      '24/7 quantum network operations'
+    ],
+    popular: false,
+    icon: '🌐🔮',
+    color: 'from-violet-600 to-purple-600',
+    textColor: 'text-violet-400',
+    link: 'https://ziontechgroup.com/quantum-internet',
+    marketPosition: 'Leading edge in quantum internet. Competes with traditional networking but offers quantum-level security.',
+    targetAudience: 'Government agencies, Defense contractors, Financial institutions, Research institutions, Critical infrastructure',
+    trialDays: 45,
+    setupTime: '6-8 weeks',
+    category: 'Quantum Networking',
+    realService: true,
+    technology: ['Quantum protocols, Python, React, Node.js, PostgreSQL, Docker'],
+    integrations: ['Classical networks, Quantum devices, Research platforms, Security systems'],
+    useCases: ['Ultra-secure communications, Quantum networking, Research collaboration, Defense applications, Critical infrastructure'],
+    roi: 'Government agencies report 800% ROI through enhanced security and capabilities.',
+    competitors: ['Traditional networking vendors, Quantum networking startups'],
+    marketSize: '$1.2B quantum networking market',
+    growthRate: '70% annual growth',
+    variant: 'quantum-internet-enterprise',
+=======
     implementationDetails: 'Advanced quantum cloud infrastructure platform with hybrid quantum-classical computing, quantum-secured services, and comprehensive cloud management capabilities.',
     launchDate: '2025-01-30',
     customers: 5,
@@ -452,6 +542,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     marketSize: '$12.5B edge computing market',
     growthRate: '35% annual growth',
     variant: 'edge-computing',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -459,6 +550,13 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+    implementationDetails: 'Quantum internet infrastructure platform enabling ultra-secure quantum communications and networking.',
+    launchDate: '2025-02-15',
+    customers: 6,
+    rating: 4.9,
+    reviews: 4
+=======
     implementationDetails: 'Comprehensive edge computing orchestration platform with intelligent resource management, real-time optimization, and seamless cloud platform integration.',
     launchDate: '2025-02-20',
     customers: 28,
@@ -729,6 +827,7 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     customers: 32,
     rating: 4.7,
     reviews: 24
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
   }
 ];
 

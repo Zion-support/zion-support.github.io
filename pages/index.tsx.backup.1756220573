@@ -68,38 +68,70 @@ const serviceCategories = [
   {
     title: 'AI & Consciousness',
     description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
+<<<<<<< HEAD
+    services: ultimateFuturisticAIServices2025.slice(0, 3),
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+    href: '/ultimate-2025-futuristic-services-showcase',
+    features: ['Emotional Intelligence', 'Self-Awareness', 'Consciousness Evolution']
+=======
     services: innovativeAIServicesEnhanced2025.slice(0, 4),
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
     href: '/ai-services',
     features: ['Emotional Intelligence', 'Self-Awareness', 'Consciousness Evolution', 'Autonomous Research']
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
   },
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum computing and space technology solutions',
+<<<<<<< HEAD
+    services: [...ultimateFuturisticITServices2025.filter(s => s.name.toLowerCase().includes('quantum')).slice(0, 2), ...emergingTechServicesEnhanced2025.slice(0, 1)],
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-600',
+    href: '/ultimate-2025-futuristic-services-showcase',
+    features: ['Quantum Computing', 'Space Mining', 'Brain-Computer Interface']
+=======
     services: emergingTechServicesEnhanced2025.slice(0, 4),
     icon: Atom,
     color: 'from-indigo-500 to-blue-600',
     href: '/quantum-services',
     features: ['Quantum Computing', 'Space Mining', 'Brain-Computer Interface', 'Autonomous Vehicles']
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
   },
   {
     title: 'Enterprise IT & Security',
     description: 'Advanced enterprise infrastructure and security solutions',
+<<<<<<< HEAD
+    services: ultimateFuturisticITServices2025.slice(0, 3),
+    icon: Shield,
+    color: 'from-blue-500 to-cyan-600',
+    href: '/ultimate-2025-futuristic-services-showcase',
+    features: ['Zero Trust Security', 'Quantum Cloud', 'Autonomous Operations']
+=======
     services: innovativeITServicesEnhanced2025.slice(0, 4),
     icon: Shield,
     color: 'from-blue-500 to-cyan-600',
     href: '/enterprise-it',
     features: ['Zero Trust Security', 'Quantum Cloud', 'Autonomous Operations', 'Edge Computing']
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
   },
   {
     title: 'Micro SAAS Solutions',
     description: 'Innovative business solutions for modern enterprises',
+<<<<<<< HEAD
+    services: ultimateFuturisticMicroSaasServices2025.slice(0, 3),
+    icon: Rocket,
+    color: 'from-teal-500 to-emerald-600',
+    href: '/ultimate-2025-futuristic-services-showcase',
+    features: ['Content Automation', 'CRM Intelligence', 'Decision Engine']
+=======
     services: innovativeRealMicroSaasServices2025.slice(0, 4),
     icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
     href: '/micro-saas',
     features: ['Content Automation', 'CRM Intelligence', 'Decision Engine', 'Customer Success']
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
   },
   {
     title: 'Autonomous Systems',
@@ -1094,6 +1126,8 @@ const serviceCategories = [
       {/* Service Highlights Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+=======
           <div className="text-center mb-16">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
@@ -1332,6 +1366,7 @@ const serviceCategories = [
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

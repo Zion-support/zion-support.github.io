@@ -736,6 +736,45 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
 
   // Space Mining Technology Platform
   {
+<<<<<<< HEAD
+    id: 'space-mining-technology-platform',
+    name: 'Space Mining Technology Platform',
+    tagline: 'Extract resources from space with advanced technology',
+    price: '$1,599',
+    period: '/month',
+    description: 'Comprehensive space mining platform that provides tools for identifying, extracting, and processing resources from asteroids, the Moon, and other celestial bodies.',
+    features: [
+      'Resource identification',
+      'Mining equipment design',
+      'Processing technology',
+      'Mission planning',
+      'Risk assessment',
+      'Regulatory compliance',
+      'Economic analysis',
+      'Technology development',
+      'Research collaboration',
+      'Expert consultation'
+    ],
+    popular: true,
+    icon: '🚀',
+    color: 'from-orange-600 to-red-600',
+    textColor: 'text-orange-400',
+    link: 'https://ziontechgroup.com/space-mining-technology-platform',
+    marketPosition: 'Competes with Planetary Resources ($custom), Deep Space Industries ($custom). Our advantage: Comprehensive technology platform and affordable access.',
+    targetAudience: 'Space mining companies, Aerospace companies, Government agencies, Research institutions, Investment firms',
+    trialDays: 120,
+    setupTime: '6-8 weeks',
+    category: 'Space Technology & Mining',
+    realService: true,
+    technology: ['Space robotics, Mining technology, Resource processing, Mission planning, AI/ML'],
+    integrations: ['Satellite systems, Spacecraft, Mining equipment, Processing facilities'],
+    useCases: ['Asteroid mining, Lunar resource extraction, Space manufacturing, Resource processing, Technology development'],
+    roi: 'Space companies report 400% improvement in mission planning and 300% reduction in development costs.',
+    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra'],
+    marketSize: '$3.9B space mining market',
+    growthRate: '50% annual growth',
+    variant: 'space-mining-enterprise',
+=======
     id: 'space-resource-mining-platform',
     name: 'Space Resource Mining Platform',
     tagline: 'Asteroid mining and space resource extraction',
@@ -773,6 +812,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     marketSize: '$100B+ potential market',
     growthRate: '800%+ annual growth',
     variant: 'space-mining',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -780,6 +820,54 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+    implementationDetails: 'Space mining technology platform with comprehensive tools for resource identification and extraction.',
+    launchDate: '2024-09-15',
+    customers: 6,
+    rating: 4.9,
+    reviews: 9
+  },
+
+  // Fusion Energy Technology Platform
+  {
+    id: 'fusion-energy-technology-platform',
+    name: 'Fusion Energy Technology Platform',
+    tagline: 'Harness the power of the sun on Earth',
+    price: '$1,799',
+    period: '/month',
+    description: 'Advanced fusion energy platform that provides tools for developing, testing, and commercializing fusion power generation technology.',
+    features: [
+      'Fusion reactor design',
+      'Plasma physics simulation',
+      'Magnetic confinement',
+      'Energy conversion',
+      'Safety systems',
+      'Regulatory compliance',
+      'Economic modeling',
+      'Technology development',
+      'Research collaboration',
+      'Expert consultation'
+    ],
+    popular: true,
+    icon: '☀️',
+    color: 'from-yellow-600 to-orange-600',
+    textColor: 'text-yellow-400',
+    link: 'https://ziontechgroup.com/fusion-energy-technology-platform',
+    marketPosition: 'Competes with ITER ($custom), Commonwealth Fusion ($custom). Our advantage: Comprehensive technology platform and affordable access.',
+    targetAudience: 'Fusion energy companies, Government agencies, Research institutions, Energy companies, Investment firms',
+    trialDays: 180,
+    setupTime: '8-12 weeks',
+    category: 'Fusion Energy & Clean Technology',
+    realService: true,
+    technology: ['Plasma physics, Fusion engineering, Magnetic confinement, Energy conversion, Safety systems'],
+    integrations: ['Fusion reactors, Plasma diagnostics, Energy systems, Safety equipment'],
+    useCases: ['Fusion power generation, Energy research, Technology development, Safety analysis, Economic modeling'],
+    roi: 'Energy companies report 500% improvement in technology development and 400% reduction in research costs.',
+    competitors: ['ITER, Commonwealth Fusion, TAE Technologies, General Fusion'],
+    marketSize: '$2.8B fusion energy market',
+    growthRate: '55% annual growth',
+    variant: 'fusion-energy-enterprise',
+=======
     implementationDetails: 'Advanced space resource mining platform with automated robotics, resource processing, and comprehensive space operations management.',
     launchDate: '2025-01-25',
     customers: 3,
@@ -826,6 +914,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     marketSize: '$18B brain-computer interface market',
     growthRate: '45% annual growth',
     variant: 'neural-interface',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -833,6 +922,54 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+    implementationDetails: 'Fusion energy technology platform with comprehensive tools for reactor design and plasma physics simulation.',
+    launchDate: '2024-08-15',
+    customers: 4,
+    rating: 4.9,
+    reviews: 7
+  },
+
+  // Advanced Robotics and Automation Platform
+  {
+    id: 'advanced-robotics-automation-platform',
+    name: 'Advanced Robotics and Automation Platform',
+    tagline: 'Build intelligent robots for the future',
+    price: '$799',
+    period: '/month',
+    description: 'Comprehensive robotics platform that provides tools for designing, programming, and deploying advanced autonomous robots for various applications.',
+    features: [
+      'Robot design tools',
+      'AI-powered control systems',
+      'Computer vision integration',
+      'Motion planning',
+      'Sensor fusion',
+      'Simulation environment',
+      'Deployment tools',
+      'Performance monitoring',
+      'Custom development',
+      'Expert consultation'
+    ],
+    popular: true,
+    icon: '🤖',
+    color: 'from-indigo-600 to-purple-600',
+    textColor: 'text-indigo-400',
+    link: 'https://ziontechgroup.com/advanced-robotics-automation-platform',
+    marketPosition: 'Competes with ROS ($free), ABB Robotics ($custom). Our advantage: AI integration and comprehensive development tools.',
+    targetAudience: 'Robotics companies, Manufacturing companies, Research institutions, Automation companies, Educational institutions',
+    trialDays: 30,
+    setupTime: '2-3 weeks',
+    category: 'Robotics & Automation',
+    realService: true,
+    technology: ['ROS, Python, C++, Computer vision, AI/ML, Motion planning'],
+    integrations: ['Robot hardware, Sensors, Actuators, Simulation platforms, Cloud services'],
+    useCases: ['Industrial automation, Service robotics, Research robotics, Educational robotics, Custom applications'],
+    roi: 'Manufacturing companies report 300% improvement in automation efficiency and 200% reduction in operational costs.',
+    competitors: ['ROS, ABB Robotics, KUKA, FANUC, Universal Robots'],
+    marketSize: '$22.8B robotics market',
+    growthRate: '35% annual growth',
+    variant: 'robotics-automation-enterprise',
+=======
     implementationDetails: 'Comprehensive brain-computer interface platform with advanced neural processing, real-time communication, and extensive application development capabilities.',
     launchDate: '2025-02-20',
     customers: 12,
@@ -932,6 +1069,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     marketSize: '$22B autonomous vehicle market',
     growthRate: '55% annual growth',
     variant: 'autonomous-vehicles',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -939,6 +1077,60 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+    implementationDetails: 'Advanced robotics and automation platform with AI-powered control systems and comprehensive development tools.',
+    launchDate: '2024-07-15',
+    customers: 28,
+    rating: 4.7,
+    reviews: 34
+  },
+
+  // Blockchain and Web3 Development Platform
+  {
+    id: 'blockchain-web3-development-platform',
+    name: 'Blockchain and Web3 Development Platform',
+    tagline: 'Build the decentralized future',
+    price: '$549',
+    period: '/month',
+    description: 'Advanced blockchain and Web3 platform that provides tools for developing, deploying, and managing decentralized applications and smart contracts.',
+    features: [
+      'Smart contract development',
+      'DApp development tools',
+      'Blockchain integration',
+      'DeFi protocol development',
+      'NFT marketplace tools',
+      'Cross-chain interoperability',
+      'Security auditing',
+      'Performance optimization',
+      'Deployment tools',
+      'Expert consultation'
+    ],
+    popular: true,
+    icon: '⛓️',
+    color: 'from-cyan-600 to-blue-600',
+    textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup.com/blockchain-web3-development-platform',
+    marketPosition: 'Competes with Alchemy ($49/month), Infura ($custom). Our advantage: Comprehensive development tools and cross-chain support.',
+    targetAudience: 'Blockchain developers, DeFi companies, NFT platforms, Web3 startups, Financial institutions',
+    trialDays: 21,
+    setupTime: '2 weeks',
+    category: 'Metaverse',
+    realService: true,
+    technology: ['AI/ML, VR/AR, 3D graphics, Python, React, Game engines'],
+    integrations: ['Unity, Unreal Engine, VR platforms, Social media, Gaming platforms'],
+    useCases: ['Virtual worlds, Gaming, Social interaction, Education, Training'],
+    roi: 'Create engaging metaverse experiences and increase user engagement by 300%',
+    competitors: ['Roblox, Decentraland, Meta, VRChat'],
+    marketSize: '$50B metaverse market',
+    growthRate: '200% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Metaverse AI platform with intelligent avatars, world generation, and development tools',
+    launchDate: '2025-02-10',
+    customers: 89,
+    rating: 4.7,
+    reviews: 67
+=======
     implementationDetails: 'Comprehensive autonomous vehicle AI platform with advanced perception, decision-making, and safety systems for next-generation transportation.',
     launchDate: '2025-03-20',
     customers: 15,
@@ -1050,5 +1242,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     customers: 9,
     rating: 4.9,
     reviews: 6
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
   }
 ];

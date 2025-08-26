@@ -300,6 +300,13 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
+    implementationDetails: 'AI-powered healthcare diagnostics platform with medical imaging analysis and diagnostic assistance.',
+    launchDate: '2025-02-10',
+    customers: 18,
+    rating: 4.9,
+    reviews: 15
+=======
     implementationDetails: 'AI-powered cybersecurity platform with autonomous threat detection, response, and prevention capabilities.',
     launchDate: '2024-07-15',
     customers: 134,
@@ -676,6 +683,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     customers: 34,
     rating: 4.8,
     reviews: 25
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8f08
   }
 ];
 
