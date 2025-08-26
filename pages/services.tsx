@@ -1101,8 +1101,13 @@ export default function ServicesPage() {
                         
                         <div className="flex flex-col items-end space-y-3 ml-6">
                           <div className="text-right">
+<<<<<<< HEAD
                             <div className="text-sm text-gray-400 mb-1">Market Size</div>
                             <div className="text-sm text-green-400 font-semibold">{service.marketSize}</div>
+=======
+                            <div className="text-3xl font-bold text-white">{service.price}</div>
+                            <div className="text-gray-400 text-sm">per month</div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-acbf
                           </div>
                           <div className="text-right">
                             <div className="text-sm text-gray-400 mb-1">Growth Rate</div>
