@@ -183,33 +183,31 @@ export function FeaturedListingsSection() {
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-2xl font-bold text-cyan-400">{listing.price}</div>
-                    <div className="flex items-center text-gray-400 text-sm">
+                  <div className="flex items-center justify-between mb-4 text-sm text-gray-400">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex items-center">
+                        <Eye className="w-4 h-4 mr-1" />
+                        {listing.views}
+                      </div>
+                      <div className="flex items-center">
+                        <Heart className="w-4 h-4 mr-1" />
+                        {listing.likes}
+                      </div>
+                    </div>
+                    <div className="flex items-center">
                       <Clock className="w-4 h-4 mr-1" />
                       {listing.delivery}
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <div className="flex items-center">
-                      <Users className="w-4 h-4 mr-1" />
-                      {listing.views} views
-                    </div>
-                    <div className="flex items-center">
-                      <Eye className="w-4 h-4 mr-1" />
-                      {listing.likes} likes
-                    </div>
-                  </div>
-
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">by {listing.seller}</span>
+                    <div className="text-2xl font-bold text-white">{listing.price}</div>
                     <Link
                       to={`/services/${listing.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                     >
                       View Details
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
                 </div>
@@ -218,10 +216,11 @@ export function FeaturedListingsSection() {
           </AnimatePresence>
         </div>
 
+        {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-16"
         >
           <Link

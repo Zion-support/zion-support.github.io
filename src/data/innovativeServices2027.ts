@@ -1,712 +1,536 @@
-export interface InnovativeService2027 {
+export type InnovativeService2027 = {
   id: string;
   title: string;
   description: string;
   category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
+  price: string;
+  billing: 'month' | 'project' | 'hour' | 'year';
   features: string[];
   benefits: string[];
   useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
+  ctaLabel: string;
+  href: string;
+  external?: boolean;
+  technology: string[];
+  marketSize: string;
   roi: string;
-  innovationLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-    address: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-    compliance: string[];
-  };
-  competitors: string[];
-  marketTrend: string;
-  aiModel?: string;
-  trainingData?: string;
-}
+  implementationTime: string;
+  supportLevel: string;
+};
 
-export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
-  // AI-Powered Autonomous DevOps Platform
+export const innovativeServices2027: InnovativeService2027[] = [
+  // Advanced AI & Consciousness Services
   {
-    id: "ai-autonomous-devops-platform",
-    title: "AI Autonomous DevOps Platform",
-    description: "Next-generation DevOps platform that uses AI to autonomously manage infrastructure, deployments, monitoring, and incident response without human intervention.",
-    category: "AI & DevOps",
-    subcategory: "Autonomous Operations",
-    price: 3999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'ai-consciousness-simulator',
+    title: 'AI Consciousness Simulator Pro',
+    description: 'Advanced AI consciousness research platform with quantum-enhanced neural networks and ethical AI development tools.',
+    category: 'AI & Consciousness',
+    price: 'From $2,499/month',
+    billing: 'month',
     features: [
-      "AI-powered infrastructure management",
-      "Autonomous deployment orchestration",
-      "Intelligent monitoring and alerting",
-      "Self-healing systems",
-      "Predictive incident prevention",
-      "Automated scaling decisions",
-      "Security vulnerability detection",
-      "Performance optimization",
-      "Cost optimization",
-      "Compliance automation"
+      'Quantum-enhanced neural networks',
+      'Consciousness mapping algorithms',
+      'Ethical AI development framework',
+      'Multi-dimensional consciousness models',
+      'Real-time consciousness analysis',
+      'Integration with quantum computers'
     ],
     benefits: [
-      "Reduce DevOps workload by 70%",
-      "Improve system uptime by 99.9%",
-      "Faster incident resolution",
-      "Cost optimization",
-      "Enhanced security posture"
+      'Breakthrough AI consciousness research',
+      'Ethical AI development compliance',
+      'Advanced neural network architectures',
+      'Quantum computing integration',
+      'Research publication support',
+      'Academic collaboration tools'
     ],
     useCases: [
-      "Cloud infrastructure management",
-      "Microservices deployment",
-      "Kubernetes orchestration",
-      "CI/CD pipeline optimization",
-      "Production monitoring"
+      'AI consciousness research',
+      'Neuroscience applications',
+      'Philosophy of mind studies',
+      'Ethical AI development',
+      'Cognitive science research',
+      'Artificial general intelligence'
     ],
-    targetAudience: [
-      "DevOps engineers",
-      "Site reliability engineers",
-      "Cloud architects",
-      "Technology companies",
-      "Enterprises"
+    ctaLabel: 'Start Consciousness Research',
+    href: 'https://ziontechgroup.com/ai-services/consciousness-simulator',
+    external: true,
+    technology: ['Quantum Computing', 'Neural Networks', 'AI Ethics', 'Consciousness Research'],
+    marketSize: '$15.2B by 2027',
+    roi: '300-500% within 2 years',
+    implementationTime: '3-6 months',
+    supportLevel: '24/7 Expert Support + Research Collaboration'
+  },
+  {
+    id: 'quantum-emotion-processor',
+    title: 'Quantum Emotion Processor',
+    description: 'Quantum-powered emotional intelligence platform for advanced human-AI interaction and emotional understanding.',
+    category: 'Quantum AI',
+    price: 'From $1,999/month',
+    billing: 'month',
+    features: [
+      'Quantum emotion algorithms',
+      'Real-time emotional analysis',
+      'Multi-cultural emotion recognition',
+      'Emotional intelligence training',
+      'AI empathy development',
+      'Quantum emotional memory'
     ],
-    tags: ["AI", "DevOps", "Automation", "Infrastructure", "Monitoring"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,999 - $12,999/month",
-    roi: "300-500%",
-    innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    technicalSpecs: {
-      technology: ["GPT-5", "Kubernetes", "Terraform", "Prometheus", "Grafana"],
-      integrations: ["AWS", "Azure", "GCP", "GitHub", "GitLab", "Jenkins"],
-      apiEndpoints: 150,
-      uptime: "99.99%",
-      security: ["Zero Trust", "Encryption", "IAM", "Audit Logging"],
-      compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"]
-    },
-    competitors: ["HashiCorp", "GitLab", "GitHub", "Atlassian"],
-    marketTrend: "Explosive Growth"
+    benefits: [
+      'Advanced emotional AI capabilities',
+      'Improved human-AI interaction',
+      'Cultural sensitivity training',
+      'Emotional intelligence enhancement',
+      'Quantum computing advantages',
+      'Research collaboration opportunities'
+    ],
+    useCases: [
+      'Customer service AI',
+      'Mental health applications',
+      'Educational technology',
+      'Human-robot interaction',
+      'Emotional AI research',
+      'Cross-cultural communication'
+    ],
+    ctaLabel: 'Enable Quantum Emotions',
+    href: 'https://ziontechgroup.com/ai-services/quantum-emotion',
+    external: true,
+    technology: ['Quantum Computing', 'Emotional AI', 'Machine Learning', 'Cultural Intelligence'],
+    marketSize: '$8.7B by 2027',
+    roi: '250-400% within 18 months',
+    implementationTime: '4-8 months',
+    supportLevel: '24/7 Support + Emotional AI Training'
+  },
+  {
+    id: 'ai-autonomous-systems',
+    title: 'AI Autonomous Systems Platform',
+    description: 'Self-managing AI infrastructure with advanced autonomy, self-healing, and evolutionary learning capabilities.',
+    category: 'Autonomous AI',
+    price: 'From $3,999/month',
+    billing: 'month',
+    features: [
+      'Self-healing infrastructure',
+      'Evolutionary learning algorithms',
+      'Autonomous decision making',
+      'Predictive maintenance',
+      'Resource optimization',
+      'Zero-touch operations'
+    ],
+    benefits: [
+      'Reduced operational overhead',
+      'Improved system reliability',
+      'Automatic problem resolution',
+      'Continuous optimization',
+      'Scalable infrastructure',
+      'Cost reduction'
+    ],
+    useCases: [
+      'Data center management',
+      'Cloud infrastructure',
+      'IoT networks',
+      'Manufacturing systems',
+      'Smart cities',
+      'Autonomous vehicles'
+    ],
+    ctaLabel: 'Deploy Autonomous AI',
+    href: 'https://ziontechgroup.com/ai-services/autonomous-systems',
+    external: true,
+    technology: ['Machine Learning', 'Autonomous Systems', 'IoT', 'Cloud Computing'],
+    marketSize: '$25.3B by 2027',
+    roi: '400-600% within 2 years',
+    implementationTime: '6-12 months',
+    supportLevel: '24/7 Monitoring + Autonomous Operations'
   },
 
-  // Quantum-Secure Blockchain Platform
+  // Quantum Computing Services
   {
-    id: "quantum-secure-blockchain-platform",
-    title: "Quantum-Secure Blockchain Platform",
-    description: "Future-proof blockchain platform that integrates quantum-resistant cryptography to ensure security against quantum computing threats while maintaining high performance.",
-    category: "Blockchain & Quantum",
-    subcategory: "Quantum Security",
-    price: 5999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'quantum-ai-fusion',
+    title: 'Quantum AI Fusion Platform',
+    description: 'Revolutionary platform combining quantum computing with artificial intelligence for unprecedented computational power.',
+    category: 'Quantum AI',
+    price: 'From $5,999/month',
+    billing: 'month',
     features: [
-      "Quantum-resistant cryptography",
-      "High-performance blockchain",
-      "Smart contract platform",
-      "DeFi integration",
-      "Cross-chain interoperability",
-      "Advanced consensus mechanisms",
-      "Quantum key distribution",
-      "Zero-knowledge proofs",
-      "Scalable architecture",
-      "Enterprise features"
+      'Quantum-classical hybrid algorithms',
+      'Quantum machine learning',
+      'Quantum neural networks',
+      'Quantum optimization',
+      'Quantum cryptography',
+      'Quantum simulation'
     ],
     benefits: [
-      "Future-proof security",
-      "High transaction throughput",
-      "Low energy consumption",
-      "Regulatory compliance",
-      "Enterprise-grade reliability"
+      'Exponential computational speed',
+      'Quantum advantage in AI',
+      'Unbreakable encryption',
+      'Advanced optimization',
+      'Scientific breakthrough potential',
+      'Competitive advantage'
     ],
     useCases: [
-      "Financial services",
-      "Supply chain management",
-      "Digital identity",
-      "Asset tokenization",
-      "Decentralized finance"
+      'Drug discovery',
+      'Financial modeling',
+      'Climate simulation',
+      'Cryptography',
+      'Optimization problems',
+      'Scientific research'
     ],
-    targetAudience: [
-      "Financial institutions",
-      "Enterprises",
-      "DeFi platforms",
-      "Government agencies",
-      "Technology companies"
+    ctaLabel: 'Access Quantum AI',
+    href: 'https://ziontechgroup.com/quantum-computing/quantum-ai-fusion',
+    external: true,
+    technology: ['Quantum Computing', 'Artificial Intelligence', 'Machine Learning', 'Quantum Algorithms'],
+    marketSize: '$65.8B by 2027',
+    roi: '500-800% within 3 years',
+    implementationTime: '8-18 months',
+    supportLevel: '24/7 Quantum Support + Research Collaboration'
+  },
+  {
+    id: 'quantum-financial-modeling',
+    title: 'Quantum Financial Modeling Suite',
+    description: 'Advanced financial modeling using quantum computing for risk assessment, portfolio optimization, and market prediction.',
+    category: 'Quantum Finance',
+    price: 'From $4,999/month',
+    billing: 'month',
+    features: [
+      'Quantum risk assessment',
+      'Portfolio optimization',
+      'Market prediction algorithms',
+      'Quantum Monte Carlo',
+      'Real-time market analysis',
+      'Regulatory compliance'
     ],
-    tags: ["Blockchain", "Quantum Security", "DeFi", "Smart Contracts", "Cryptography"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$5,999 - $19,999/month",
-    roi: "400-700%",
-    innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    technicalSpecs: {
-      technology: ["Post-Quantum Cryptography", "Ethereum", "Polkadot", "Rust", "WebAssembly"],
-      integrations: ["MetaMask", "WalletConnect", "Chainlink", "Uniswap"],
-      apiEndpoints: 200,
-      uptime: "99.95%",
-      security: ["Quantum Resistance", "Multi-Sig", "Audit Trail"],
-      compliance: ["SOC 2", "ISO 27001", "GDPR", "Financial Regulations"]
-    },
-    competitors: ["Ethereum", "Polkadot", "Solana", "Cardano"],
-    marketTrend: "High Growth"
+    benefits: [
+      'Superior risk assessment',
+      'Optimal portfolio allocation',
+      'Enhanced market insights',
+      'Regulatory compliance',
+      'Competitive advantage',
+      'Risk reduction'
+    ],
+    useCases: [
+      'Investment banking',
+      'Asset management',
+      'Risk management',
+      'Trading algorithms',
+      'Insurance modeling',
+      'Financial planning'
+    ],
+    ctaLabel: 'Optimize with Quantum',
+    href: 'https://ziontechgroup.com/quantum-computing/financial-modeling',
+    external: true,
+    technology: ['Quantum Computing', 'Financial Modeling', 'Risk Assessment', 'Portfolio Optimization'],
+    marketSize: '$42.1B by 2027',
+    roi: '300-500% within 2 years',
+    implementationTime: '6-12 months',
+    supportLevel: '24/7 Financial + Quantum Support'
   },
 
-  // AI-Powered Cybersecurity Threat Intelligence
+  // Space Technology Services
   {
-    id: "ai-cybersecurity-threat-intelligence",
-    title: "AI Cybersecurity Threat Intelligence Platform",
-    description: "Advanced cybersecurity platform that uses AI to detect, analyze, and respond to threats in real-time, providing comprehensive threat intelligence and automated response capabilities.",
-    category: "AI & Cybersecurity",
-    subcategory: "Threat Intelligence",
-    price: 2499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'space-ai-platform',
+    title: 'Space AI Intelligence Platform',
+    description: 'AI-powered space technology platform for satellite management, space exploration, and extraterrestrial research.',
+    category: 'Space Technology',
+    price: 'From $8,999/month',
+    billing: 'month',
     features: [
-      "AI-powered threat detection",
-      "Real-time threat analysis",
-      "Behavioral analytics",
-      "Automated incident response",
-      "Threat hunting capabilities",
-      "Vulnerability assessment",
-      "Security orchestration",
-      "Compliance reporting",
-      "Threat intelligence sharing",
-      "Advanced analytics dashboard"
+      'Satellite AI management',
+      'Space exploration algorithms',
+      'Extraterrestrial data analysis',
+      'Orbital optimization',
+      'Space weather prediction',
+      'Mission planning AI'
     ],
     benefits: [
-      "Reduce threat detection time by 90%",
-      "Improve security posture by 60%",
-      "Automated threat response",
-      "Comprehensive threat visibility",
-      "Cost-effective security operations"
+      'Advanced space exploration',
+      'Satellite optimization',
+      'Space research capabilities',
+      'Mission success rate',
+      'Cost reduction',
+      'Innovation leadership'
     ],
     useCases: [
-      "Enterprise security operations",
-      "SOC management",
-      "Incident response",
-      "Threat hunting",
-      "Compliance monitoring"
+      'Satellite operations',
+      'Space exploration',
+      'Astronomy research',
+      'Space tourism',
+      'Planetary science',
+      'Space mining'
     ],
-    targetAudience: [
-      "CISOs",
-      "Security analysts",
-      "SOC teams",
-      "Enterprises",
-      "Government agencies"
+    ctaLabel: 'Explore Space with AI',
+    href: 'https://ziontechgroup.com/space-tech/ai-platform',
+    external: true,
+    technology: ['Space Technology', 'Artificial Intelligence', 'Satellite Systems', 'Space Exploration'],
+    marketSize: '$89.2B by 2027',
+    roi: '600-1000% within 3 years',
+    implementationTime: '12-24 months',
+    supportLevel: '24/7 Space Operations + AI Support'
+  },
+  {
+    id: 'quantum-space-communications',
+    title: 'Quantum Space Communications',
+    description: 'Quantum-encrypted space communications for secure satellite and interplanetary data transmission.',
+    category: 'Quantum Space',
+    price: 'From $12,999/month',
+    billing: 'month',
+    features: [
+      'Quantum encryption',
+      'Interplanetary communication',
+      'Satellite quantum networks',
+      'Space-time communication',
+      'Quantum entanglement',
+      'Secure space data'
     ],
-    tags: ["AI", "Cybersecurity", "Threat Intelligence", "SOC", "Incident Response"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,499 - $8,999/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    technicalSpecs: {
-      technology: ["GPT-5", "Machine Learning", "Behavioral Analytics", "SIEM", "SOAR"],
-      integrations: ["Splunk", "QRadar", "Microsoft Defender", "CrowdStrike"],
-      apiEndpoints: 100,
-      uptime: "99.99%",
-      security: ["Zero Trust", "Encryption", "Multi-Factor Authentication"],
-      compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR"]
-    },
-    competitors: ["CrowdStrike", "Palo Alto Networks", "FireEye", "Darktrace"],
-    marketTrend: "High Growth"
+    benefits: [
+      'Unbreakable space security',
+      'Interplanetary communication',
+      'Quantum advantage',
+      'Space exploration support',
+      'Military applications',
+      'Scientific breakthrough'
+    ],
+    useCases: [
+      'Satellite communications',
+      'Space missions',
+      'Military space operations',
+      'Scientific research',
+      'Space tourism',
+      'Interplanetary internet'
+    ],
+    ctaLabel: 'Secure Space Communications',
+    href: 'https://ziontechgroup.com/space-tech/quantum-communications',
+    external: true,
+    technology: ['Quantum Computing', 'Space Technology', 'Quantum Cryptography', 'Satellite Communications'],
+    marketSize: '$156.7B by 2027',
+    roi: '800-1200% within 4 years',
+    implementationTime: '18-36 months',
+    supportLevel: '24/7 Space + Quantum Support'
   },
 
-  // Edge AI Computing Platform
+  // Biotechnology & HealthTech
   {
-    id: "edge-ai-computing-platform",
-    title: "Edge AI Computing Platform",
-    description: "Distributed edge computing platform that brings AI processing capabilities to the edge, enabling real-time AI applications with minimal latency and bandwidth requirements.",
-    category: "Edge Computing & AI",
-    subcategory: "Edge AI",
-    price: 3499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'ai-biotech-platform',
+    title: 'AI Biotechnology Platform',
+    description: 'Advanced biotechnology platform combining AI with genetic engineering, drug discovery, and personalized medicine.',
+    category: 'Biotechnology',
+    price: 'From $6,999/month',
+    billing: 'month',
     features: [
-      "Distributed edge AI processing",
-      "Real-time inference",
-      "Edge model training",
-      "Federated learning",
-      "Edge device management",
-      "Low-latency connectivity",
-      "Bandwidth optimization",
-      "Edge security",
-      "Scalable infrastructure",
-      "AI model optimization"
+      'AI drug discovery',
+      'Genetic engineering AI',
+      'Personalized medicine',
+      'Biomarker analysis',
+      'Clinical trial optimization',
+      'Drug repurposing'
     ],
     benefits: [
-      "Reduce latency by 95%",
-      "Lower bandwidth costs by 70%",
-      "Real-time AI processing",
-      "Improved user experience",
-      "Scalable edge AI network"
+      'Accelerated drug development',
+      'Personalized treatments',
+      'Cost reduction',
+      'Improved success rates',
+      'Innovation leadership',
+      'Healthcare transformation'
     ],
     useCases: [
-      "Autonomous vehicles",
-      "Industrial IoT",
-      "Smart cities",
-      "Healthcare monitoring",
-      "Retail analytics"
+      'Pharmaceutical research',
+      'Genetic medicine',
+      'Clinical trials',
+      'Personalized healthcare',
+      'Disease prevention',
+      'Medical research'
     ],
-    targetAudience: [
-      "IoT companies",
-      "Manufacturing firms",
-      "Healthcare providers",
-      "Smart city initiatives",
-      "Technology companies"
+    ctaLabel: 'Revolutionize Biotech',
+    href: 'https://ziontechgroup.com/biotech/ai-platform',
+    external: true,
+    technology: ['Artificial Intelligence', 'Biotechnology', 'Genetic Engineering', 'Drug Discovery'],
+    marketSize: '$78.9B by 2027',
+    roi: '400-700% within 3 years',
+    implementationTime: '12-24 months',
+    supportLevel: '24/7 Biotech + AI Support'
+  },
+  {
+    id: 'quantum-medicine',
+    title: 'Quantum Medicine Solutions',
+    description: 'Quantum computing applications in medicine for drug discovery, protein folding, and medical imaging analysis.',
+    category: 'Quantum Medicine',
+    price: 'From $9,999/month',
+    billing: 'month',
+    features: [
+      'Quantum drug discovery',
+      'Protein folding simulation',
+      'Medical imaging analysis',
+      'Quantum molecular dynamics',
+      'Personalized medicine',
+      'Disease prediction'
     ],
-    tags: ["Edge Computing", "AI", "IoT", "Real-time", "Low Latency"],
-    estimatedDelivery: "10-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,499 - $14,999/month",
-    roi: "300-600%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    technicalSpecs: {
-      technology: ["TensorFlow Lite", "PyTorch Mobile", "ONNX", "Edge TPU", "NVIDIA Jetson"],
-      integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes"],
-      apiEndpoints: 300,
-      uptime: "99.9%",
-      security: ["Edge Security", "Encryption", "Device Authentication"],
-      compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry Standards"]
-    },
-    competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "FogHorn"],
-    marketTrend: "Explosive Growth"
+    benefits: [
+      'Exponential speed improvement',
+      'Accurate protein folding',
+      'Better drug design',
+      'Personalized treatments',
+      'Disease prevention',
+      'Medical breakthroughs'
+    ],
+    useCases: [
+      'Drug development',
+      'Protein research',
+      'Medical imaging',
+      'Personalized medicine',
+      'Disease research',
+      'Clinical applications'
+    ],
+    ctaLabel: 'Advance Quantum Medicine',
+    href: 'https://ziontechgroup.com/biotech/quantum-medicine',
+    external: true,
+    technology: ['Quantum Computing', 'Medicine', 'Drug Discovery', 'Protein Folding'],
+    marketSize: '$112.4B by 2027',
+    roi: '600-900% within 3 years',
+    implementationTime: '18-30 months',
+    supportLevel: '24/7 Medical + Quantum Support'
   },
 
-  // AI-Powered Healthcare Diagnostics Platform
+  // Advanced Cybersecurity
   {
-    id: "ai-healthcare-diagnostics-platform",
-    title: "AI Healthcare Diagnostics Platform",
-    description: "Comprehensive healthcare diagnostics platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
-    category: "AI & Healthcare",
-    subcategory: "Medical Diagnostics",
-    price: 4999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'quantum-cybersecurity',
+    title: 'Quantum Cybersecurity Platform',
+    description: 'Next-generation cybersecurity using quantum computing for unbreakable encryption and advanced threat detection.',
+    category: 'Quantum Security',
+    price: 'From $7,999/month',
+    billing: 'month',
     features: [
-      "AI-powered image analysis",
-      "Symptom analysis",
-      "Patient data integration",
-      "Diagnostic recommendations",
-      "Treatment planning",
-      "Risk assessment",
-      "Clinical decision support",
-      "Electronic health records",
-      "Telemedicine integration",
-      "Compliance management"
+      'Quantum encryption',
+      'Post-quantum cryptography',
+      'Quantum threat detection',
+      'Zero-trust architecture',
+      'AI-powered security',
+      'Quantum key distribution'
     ],
     benefits: [
-      "Improve diagnostic accuracy by 40%",
-      "Reduce diagnosis time by 60%",
-      "Better patient outcomes",
-      "Cost-effective healthcare",
-      "Enhanced clinical workflow"
+      'Unbreakable encryption',
+      'Future-proof security',
+      'Advanced threat detection',
+      'Regulatory compliance',
+      'Competitive advantage',
+      'Risk reduction'
     ],
     useCases: [
-      "Radiology",
-      "Pathology",
-      "Cardiology",
-      "Oncology",
-      "General practice"
+      'Government security',
+      'Financial institutions',
+      'Healthcare organizations',
+      'Critical infrastructure',
+      'Military applications',
+      'Enterprise security'
     ],
-    targetAudience: [
-      "Hospitals",
-      "Clinics",
-      "Radiologists",
-      "Pathologists",
-      "Healthcare providers"
-    ],
-    tags: ["AI", "Healthcare", "Diagnostics", "Medical Imaging", "Clinical Decision Support"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,999 - $24,999/month",
-    roi: "200-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    technicalSpecs: {
-      technology: ["GPT-5", "Computer Vision", "Natural Language Processing", "Deep Learning"],
-      integrations: ["Epic", "Cerner", "PACS", "DICOM", "HL7"],
-      apiEndpoints: 250,
-      uptime: "99.99%",
-      security: ["HIPAA Compliance", "Encryption", "Access Control"],
-      compliance: ["FDA", "HIPAA", "SOC 2", "ISO 27001"]
-    },
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips"],
-    marketTrend: "High Growth"
+    ctaLabel: 'Secure with Quantum',
+    href: 'https://ziontechgroup.com/cybersecurity/quantum-security',
+    external: true,
+    technology: ['Quantum Computing', 'Cybersecurity', 'Encryption', 'Threat Detection'],
+    marketSize: '$95.3B by 2027',
+    roi: '500-800% within 2 years',
+    implementationTime: '9-18 months',
+    supportLevel: '24/7 Security + Quantum Support'
   },
 
-  // Quantum Machine Learning Platform
+  // Emerging Technology Services
   {
-    id: "quantum-machine-learning-platform",
-    title: "Quantum Machine Learning Platform",
-    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex optimization problems and accelerate AI model training beyond classical computing limits.",
-    category: "Quantum Computing & AI",
-    subcategory: "Quantum ML",
-    price: 7999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'nanotech-manufacturing',
+    title: 'Nanotechnology Manufacturing Platform',
+    description: 'Advanced nanotechnology platform for precision manufacturing, materials science, and product innovation.',
+    category: 'Nanotechnology',
+    price: 'From $5,499/month',
+    billing: 'month',
     features: [
-      "Quantum algorithm optimization",
-      "Quantum neural networks",
-      "Hybrid classical-quantum computing",
-      "Quantum feature selection",
-      "Quantum optimization",
-      "Quantum simulation",
-      "Classical ML integration",
-      "Quantum advantage analysis",
-      "Scalable quantum infrastructure",
-      "Advanced analytics"
+      'Precision nanofabrication',
+      'Material innovation',
+      'Quality control AI',
+      'Scalable production',
+      'Research collaboration',
+      'Commercial applications'
     ],
     benefits: [
-      "Exponential speedup for optimization",
-      "Quantum advantage in specific tasks",
-      "Enhanced ML model performance",
-      "Future-proof technology",
-      "Competitive advantage"
+      'Precision manufacturing',
+      'Material innovation',
+      'Cost reduction',
+      'Quality improvement',
+      'Innovation leadership',
+      'Market advantage'
     ],
     useCases: [
-      "Financial modeling",
-      "Drug discovery",
-      "Logistics optimization",
-      "Climate modeling",
-      "Cryptography"
+      'Semiconductor manufacturing',
+      'Medical devices',
+      'Aerospace materials',
+      'Consumer products',
+      'Research applications',
+      'Industrial processes'
     ],
-    targetAudience: [
-      "Research institutions",
-      "Financial services",
-      "Pharmaceutical companies",
-      "Technology companies",
-      "Government agencies"
-    ],
-    tags: ["Quantum Computing", "Machine Learning", "Optimization", "AI", "Research"],
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$7,999 - $49,999/month",
-    roi: "500-1000%",
-    innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    technicalSpecs: {
-      technology: ["IBM Qiskit", "Google Cirq", "Microsoft Q#", "Rigetti Forest"],
-      integrations: ["TensorFlow", "PyTorch", "Scikit-learn", "Quantum Cloud Services"],
-      apiEndpoints: 100,
-      uptime: "99.5%",
-      security: ["Quantum Cryptography", "Encryption", "Access Control"],
-      compliance: ["SOC 2", "ISO 27001", "Research Standards"]
-    },
-    competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Quantum", "Rigetti"],
-    marketTrend: "Emerging Technology"
+    ctaLabel: 'Innovate with Nanotech',
+    href: 'https://ziontechgroup.com/emerging-tech/nanotechnology',
+    external: true,
+    technology: ['Nanotechnology', 'Manufacturing', 'Materials Science', 'Precision Engineering'],
+    marketSize: '$67.8B by 2027',
+    roi: '350-600% within 3 years',
+    implementationTime: '12-24 months',
+    supportLevel: '24/7 Nanotech + Manufacturing Support'
   },
-
-  // Autonomous Business Process Automation
   {
-    id: "autonomous-business-process-automation",
-    title: "Autonomous Business Process Automation Platform",
-    description: "Intelligent platform that autonomously identifies, analyzes, and automates business processes using AI, RPA, and process mining to drive operational efficiency.",
-    category: "AI & Automation",
-    subcategory: "Process Automation",
-    price: 2999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'brain-computer-interface',
+    title: 'Brain-Computer Interface Platform',
+    description: 'Revolutionary brain-computer interface technology for medical applications, gaming, and human enhancement.',
+    category: 'Neural Technology',
+    price: 'From $8,499/month',
+    billing: 'month',
     features: [
-      "AI-powered process discovery",
-      "Autonomous process optimization",
-      "RPA integration",
-      "Process mining analytics",
-      "Workflow automation",
-      "Document processing",
-      "Decision automation",
-      "Performance monitoring",
-      "Compliance tracking",
-      "Scalable automation"
+      'Neural signal processing',
+      'Brain-computer communication',
+      'Medical applications',
+      'Gaming integration',
+      'Research tools',
+      'Safety protocols'
     ],
     benefits: [
-      "Reduce process costs by 50%",
-      "Improve efficiency by 60%",
-      "Automated process optimization",
-      "Enhanced compliance",
-      "Scalable operations"
+      'Medical breakthroughs',
+      'Human enhancement',
+      'Gaming innovation',
+      'Research capabilities',
+      'Accessibility improvement',
+      'Technology leadership'
     ],
     useCases: [
-      "Finance and accounting",
-      "Human resources",
-      "Customer service",
-      "Supply chain",
-      "Sales operations"
+      'Medical rehabilitation',
+      'Gaming and entertainment',
+      'Research applications',
+      'Accessibility tools',
+      'Human enhancement',
+      'Neuroscience research'
     ],
-    targetAudience: [
-      "Business analysts",
-      "Process improvement teams",
-      "Operations managers",
-      "Enterprises",
-      "Consulting firms"
-    ],
-    tags: ["AI", "Automation", "RPA", "Process Mining", "Workflow"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,999 - $9,999/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    technicalSpecs: {
-      technology: ["GPT-5", "UiPath", "Automation Anywhere", "Blue Prism", "Celonis"],
-      integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics"],
-      apiEndpoints: 200,
-      uptime: "99.9%",
-      security: ["Role-based Access", "Encryption", "Audit Logging"],
-      compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX"]
-    },
-    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Celonis"],
-    marketTrend: "High Growth"
-  },
-
-  // 5G Enterprise Network Orchestration
-  {
-    id: "5g-enterprise-network-orchestration",
-    title: "5G Enterprise Network Orchestration Platform",
-    description: "Advanced 5G network orchestration platform that enables enterprises to deploy, manage, and optimize private 5G networks with AI-powered automation and security.",
-    category: "5G & Networking",
-    subcategory: "Network Orchestration",
-    price: 4499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "5G network deployment",
-      "Network slicing",
-      "AI-powered optimization",
-      "Security management",
-      "Performance monitoring",
-      "Edge computing integration",
-      "IoT device management",
-      "Quality of service",
-      "Traffic engineering",
-      "Compliance management"
-    ],
-    benefits: [
-      "Ultra-fast connectivity",
-      "Low latency applications",
-      "Massive IoT support",
-      "Enhanced security",
-      "Cost-effective networking"
-    ],
-    useCases: [
-      "Manufacturing automation",
-      "Smart cities",
-      "Healthcare applications",
-      "Autonomous vehicles",
-      "Industrial IoT"
-    ],
-    targetAudience: [
-      "Enterprises",
-      "Manufacturing firms",
-      "Healthcare providers",
-      "Smart city initiatives",
-      "Technology companies"
-    ],
-    tags: ["5G", "Networking", "Network Orchestration", "IoT", "Edge Computing"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,499 - $19,999/month",
-    roi: "300-600%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    technicalSpecs: {
-      technology: ["5G Core", "Network Slicing", "SDN", "NFV", "Edge Computing"],
-      integrations: ["Ericsson", "Nokia", "Huawei", "Cisco", "Juniper"],
-      apiEndpoints: 400,
-      uptime: "99.99%",
-      security: ["5G Security", "Encryption", "Network Security"],
-      compliance: ["3GPP Standards", "Security Standards", "Industry Regulations"]
-    },
-    competitors: ["Ericsson", "Nokia", "Huawei", "Cisco", "Juniper"],
-    marketTrend: "High Growth"
-  },
-
-  // AI-Powered Legal Technology Platform
-  {
-    id: "ai-legal-technology-platform",
-    title: "AI Legal Technology Platform",
-    description: "Comprehensive legal technology platform that uses AI to automate legal research, contract analysis, document review, and legal workflow management.",
-    category: "AI & Legal Tech",
-    subcategory: "Legal Automation",
-    price: 1999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered legal research",
-      "Contract analysis and review",
-      "Document automation",
-      "Legal workflow management",
-      "Compliance monitoring",
-      "Risk assessment",
-      "Case management",
-      "Legal analytics",
-      "E-discovery",
-      "Regulatory updates"
-    ],
-    benefits: [
-      "Reduce legal research time by 80%",
-      "Improve contract review accuracy by 60%",
-      "Automated legal workflows",
-      "Enhanced compliance",
-      "Cost-effective legal services"
-    ],
-    useCases: [
-      "Contract management",
-      "Legal research",
-      "Document review",
-      "Compliance monitoring",
-      "Risk assessment"
-    ],
-    targetAudience: [
-      "Law firms",
-      "Corporate legal departments",
-      "Legal professionals",
-      "Enterprises",
-      "Government agencies"
-    ],
-    tags: ["AI", "Legal Tech", "Contract Analysis", "Legal Research", "Automation"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,999 - $6,999/month",
-    roi: "200-350%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    technicalSpecs: {
-      technology: ["GPT-5", "Natural Language Processing", "Machine Learning", "Document Analysis"],
-      integrations: ["Clio", "MyCase", "PracticePanther", "Microsoft Office", "Adobe"],
-      apiEndpoints: 150,
-      uptime: "99.9%",
-      security: ["Data Encryption", "Access Control", "Audit Logging"],
-      compliance: ["SOC 2", "ISO 27001", "GDPR", "Legal Standards"]
-    },
-    competitors: ["Clio", "MyCase", "PracticePanther", "LexisNexis", "Westlaw"],
-    marketTrend: "High Growth"
-  },
-
-  // Sustainable Green Technology Platform
-  {
-    id: "sustainable-green-technology-platform",
-    title: "Sustainable Green Technology Platform",
-    description: "Comprehensive platform that helps organizations implement and monitor sustainable technology solutions, track environmental impact, and achieve ESG goals.",
-    category: "Sustainability & Technology",
-    subcategory: "Green Tech",
-    price: 1799,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Environmental impact tracking",
-      "Carbon footprint monitoring",
-      "Sustainable technology recommendations",
-      "ESG reporting",
-      "Energy efficiency optimization",
-      "Waste reduction tracking",
-      "Sustainability analytics",
-      "Compliance management",
-      "Green procurement",
-      "Stakeholder engagement"
-    ],
-    benefits: [
-      "Reduce environmental impact by 40%",
-      "Achieve ESG compliance",
-      "Cost savings through efficiency",
-      "Enhanced brand reputation",
-      "Regulatory compliance"
-    ],
-    useCases: [
-      "Corporate sustainability",
-      "ESG reporting",
-      "Energy management",
-      "Waste management",
-      "Green procurement"
-    ],
-    targetAudience: [
-      "Enterprises",
-      "Government agencies",
-      "Non-profits",
-      "Sustainability managers",
-      "ESG professionals"
-    ],
-    tags: ["Sustainability", "Green Technology", "ESG", "Environmental Impact", "Compliance"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,799 - $5,999/month",
-    roi: "150-300%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    technicalSpecs: {
-      technology: ["IoT Sensors", "Data Analytics", "Machine Learning", "Cloud Computing"],
-      integrations: ["Energy Management Systems", "Waste Management Systems", "ERP Systems"],
-      apiEndpoints: 100,
-      uptime: "99.9%",
-      security: ["Data Protection", "Access Control", "Audit Logging"],
-      compliance: ["ISO 14001", "GRI Standards", "SASB", "TCFD"]
-    },
-    competitors: ["Sphera", "EcoVadis", "Sustainalytics", "MSCI"],
-    marketTrend: "High Growth"
+    ctaLabel: 'Connect Mind & Machine',
+    href: 'https://ziontechgroup.com/emerging-tech/brain-computer-interface',
+    external: true,
+    technology: ['Neural Technology', 'Brain-Computer Interface', 'Signal Processing', 'Medical Technology'],
+    marketSize: '$45.2B by 2027',
+    roi: '400-700% within 3 years',
+    implementationTime: '15-30 months',
+    supportLevel: '24/7 Neural Tech + Medical Support'
   }
 ];
 
-export default INNOVATIVE_SERVICES_2027;
+export const serviceCategories2027 = [
+  'AI & Consciousness',
+  'Quantum AI',
+  'Autonomous AI',
+  'Quantum Computing',
+  'Quantum Finance',
+  'Space Technology',
+  'Quantum Space',
+  'Biotechnology',
+  'Quantum Medicine',
+  'Quantum Security',
+  'Nanotechnology',
+  'Neural Technology'
+];
+
+export const getServicesByCategory = (category: string) => {
+  return innovativeServices2027.filter(service => service.category === category);
+};
+
+export const getServiceById = (id: string) => {
+  return innovativeServices2027.find(service => service.id === id);
+};
