@@ -6,42 +6,6 @@
   :root {
     --font-sans: 'Orbitron', system-ui, sans-serif;
 
-<<<<<<< HEAD
-.dark {
-  --background: 0 0% 7%;
-  --foreground: 142 71% 45%;
-  --card: 0 0% 7%;
-  --card-foreground: 142 71% 45%;
-  --popover: 0 0% 7%;
-  --popover-foreground: 142 71% 45%;
-  --primary: 216 84% 50%;
-  --primary-foreground: 142 71% 45%;
-  --secondary: 0 0% 68%;
-  --secondary-foreground: 0 0% 7%;
-  --muted: 0 0% 68%;
-  --muted-foreground: 215 20% 65%;
-  --accent: 228 12% 92%;
-  --accent-foreground: 0 0% 7%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 142 71% 45%;
-  --border: 0 0% 68%;
-  --input: 0 0% 68%;
-  --ring: 216 84% 53%;
-  --sidebar-background: 228 12% 92%;
-  --sidebar-foreground: 0 0% 7%;
-  --sidebar-primary: 216 84% 53%;
-  --sidebar-primary-foreground: 142 71% 45%;
-  --sidebar-accent: 0 0% 68%;
-  --sidebar-accent-foreground: 0 0% 7%;
-  --sidebar-border: 0 0% 68%;
-  --sidebar-ring: 216 84% 53%;
-}
-
-=======
-@layer base {
-  :root {
-    --font-sans: 'Orbitron', system-ui, sans-serif;
-
     --background: 0 0% 7%;
     --foreground: 142 71% 45%;
 
@@ -82,48 +46,6 @@
 
     --sidebar-accent: 0 0% 68%;
 
-=======
-    --background: 0 0% 7%;
-    --foreground: 142 71% 45%;
-
-    --card: 0 0% 7%;
-    --card-foreground: 142 71% 45%;
-
-    --popover: 0 0% 7%;
-    --popover-foreground: 142 71% 45%;
-
-    --primary: 216 84% 50%;
-    --primary-foreground: 142 71% 45%;
-
-    --secondary: 0 0% 68%;
-    --secondary-foreground: 0 0% 7%;
-
-    --muted: 0 0% 68%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 228 12% 92%;
-    --accent-foreground: 0 0% 7%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 142 71% 45%;
-
-    --border: 0 0% 68%;
-    --input: 0 0% 68%;
-    --ring: 216 84% 53%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 228 12% 92%;
-
-    --sidebar-foreground: 0 0% 7%;
-
-    --sidebar-primary: 216 84% 53%;
-
-    --sidebar-primary-foreground: 142 71% 45%;
-
-    --sidebar-accent: 0 0% 68%;
-
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     --sidebar-accent-foreground: 0 0% 7%;
 
     --sidebar-border: 0 0% 68%;
@@ -211,10 +133,6 @@
   }
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 @layer base {
   * {
     @apply border-border;
@@ -335,7 +253,6 @@
     mask-composite: exclude;
   }
 
-<<<<<<< HEAD
   .fade-in-up {
     animation: fade-in-up 0.8s ease-out;
   }
@@ -360,7 +277,6 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
-<<<<<<< HEAD
   
   /* Large Text Mode */
   .large-text {
@@ -445,26 +361,13 @@
 
 .dark ::-webkit-scrollbar-thumb:hover {
   background: #6b7280;
-=======
-=======
+}
 
-  .glass-dark {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(34, 221, 210, 0.2);
-  }
-
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  /* LiveKit UI overrides */
-  [data-lk-theme='default'] {
-    --lk-color-accent: #06B6D4;
-    --lk-button-background: #06B6D4;
-    --lk-button-background-hover: #0891B2;
-    --lk-bg1: #0B1120;
-    --lk-bg2: #0F172A;
-  }
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+/* LiveKit UI overrides */
+[data-lk-theme='default'] {
+  --lk-color-accent: #06B6D4;
+  --lk-button-background: #06B6D4;
+  --lk-button-background-hover: #0891B2;
+  --lk-bg1: #0B1120;
+  --lk-bg2: #0F172A;
 }
