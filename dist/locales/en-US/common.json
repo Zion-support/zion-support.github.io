@@ -23,7 +23,33 @@
     "services": "Services",
 =======
     "marketplace": "Marketplace",
-    "ai-hiring": "AI Hiring",
+<<<<<<< HEAD:public/locales/en-US/common.json
+    "micro-saas": "Micro SAAS",
+    "categories": "Categories",
+    "services": "Services",
+    "micro-saas": "Micro SAAS",
+=======
+    "services": "Services",
+>>>>>>> origin/cursor/website-audit-and-enhancement-39b5:src/i18n/locales/en/translation.json
+    "talent": "Talent",
+    "equipment": "Equipment",
+    "community": "Community",
+    "company": "Company",
+    "blog": "Blog",
+    "dashboard": "Dashboard",
+    "messages": "Messages",
+    "post_job": "Post Job",
+    "analytics": "Analytics",
+<<<<<<< HEAD:public/locales/en-US/common.json
+    "faq": "FAQ",
+    "help": "Help Center"
+=======
+    "about": "About Us",
+    "careers": "Careers",
+    "partners": "Partners",
+    "contact": "Contact",
+    "products": "Products",
+    "green-it": "Green IT",
     "help": "Help Center",
     "faq": "FAQ",
     "about": "About",

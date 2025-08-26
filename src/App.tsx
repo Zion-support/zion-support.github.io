@@ -1,32 +1,13 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
-import { ChatAssistant } from './components/ChatAssistant';
+import React, { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
 
-// Lazy load pages
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Careers = React.lazy(() => import('./pages/Careers'));
-const News = React.lazy(() => import('./pages/News').then(module => ({ default: (module as any).default || module })));
-const Press = React.lazy(() => import('./pages/Press'));
-const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
-const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-
-// Enhanced lazy loading with preloading hints from incoming branch
-const Services = lazy(() => import('./pages/Services'));
-const AISolutions = lazy(() => import('./pages/services/AIServices'));
-const ServicesShowcase = lazy(() => import('./pages/ServicesShowcase'));
-const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
-const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
-const TalentsPage = lazy(() => import('./pages/TalentsPage'));
-const EmergingTech = lazy(() => import('./pages/EmergingTech'));
-
-// New pages from incoming branch
-const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
-const PricingPage = lazy(() => import('./pages/PricingPage'));
+// Only import working components
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import Solutions from './pages/Solutions';
 
 // 2027 Innovation Pages
 const CuttingEdgeInnovations2027 = lazy(() => import('./pages/CuttingEdgeInnovations2027'));
@@ -258,40 +239,17 @@ const LoadingFallback = () => (
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-        <AppHeader />
-        
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/accessibility" element={<Accessibility />} />
-              <Route path="/green-it" element={<GreenIT />} />
-              <Route path="/api-docs" element={<APIDocs />} />
-              <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/accessibility" element={<Accessibility />} />
-              <Route path="/gdpr" element={<GDPR />} />
-              <Route path="/api" element={<API />} />
-              <Route path="/status" element={<Status />} />
-            </Routes>
-          </Suspense>
-        </main>
-        
-        <Footer />
-        <ChatAssistant />
-      </div>
-    </Router>
+    <div className="App">
+      <Suspense fallback={<LoadingSpinner />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Suspense>
+    </div>
   );
 }
 

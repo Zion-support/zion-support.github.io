@@ -36,7 +36,7 @@ export default defineConfig({
 =======
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': resolve(__dirname, './src')
     }
   },
   build: {
@@ -148,23 +148,4 @@ export default defineConfig({
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
   },
-  esbuild: {
-    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-  },
-  // Performance optimizations
-  worker: {
-    format: 'es',
-  },
-  // Environment variables
-  envPrefix: ['VITE_', 'ZION_'],
-  // Experimental features
-  experimental: {
-    renderBuiltUrl(filename, { hostType }) {
-      if (hostType === 'js') {
-        return { js: `/${filename}` }
-      } else {
-        return { relative: true }
-      }
-    },
-  },
-})
+});
