@@ -1,0 +1,497 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Rocket, 
+  Users, 
+  Award,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Globe,
+  Zap,
+  Target
+} from 'lucide-react';
+
+interface CompanyValue {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  description: string;
+  color: string;
+}
+
+interface TeamMember {
+  name: string;
+  role: string;
+  expertise: string[];
+  avatar: string;
+}
+
+interface Milestone {
+  year: string;
+  title: string;
+  description: string;
+  achievement: string;
+}
+
+export const EnhancedAbout: React.FC = () => {
+  const companyValues: CompanyValue[] = [
+    {
+      icon: Brain,
+      title: 'Innovation First',
+      description: 'We push the boundaries of what\'s possible with cutting-edge technology',
+      color: 'zion-cyan'
+    },
+    {
+      icon: Shield,
+      title: 'Trust & Security',
+      description: 'Building secure, reliable solutions that protect our clients\' data',
+      color: 'zion-purple'
+    },
+    {
+      icon: Users,
+      title: 'Client Partnership',
+      description: 'Long-term relationships built on trust, transparency, and results',
+      color: 'zion-cyan'
+    },
+    {
+      icon: Rocket,
+      title: 'Excellence',
+      description: 'Delivering exceptional quality in every project we undertake',
+      color: 'zion-purple'
+    }
+  ];
+
+  const teamMembers: TeamMember[] = [
+    {
+      name: 'Kleber',
+      role: 'CEO & Founder',
+      expertise: ['AI/ML', 'Cloud Architecture', 'Digital Transformation'],
+      avatar: '👨‍💼'
+    },
+    {
+      name: 'AI Team',
+      role: 'Machine Learning Engineers',
+      expertise: ['Deep Learning', 'NLP', 'Computer Vision'],
+      avatar: '🤖'
+    },
+    {
+      name: 'DevOps Team',
+      role: 'Cloud & Infrastructure',
+      expertise: ['AWS/Azure', 'Kubernetes', 'CI/CD'],
+      avatar: '☁️'
+    },
+    {
+      name: 'Security Team',
+      role: 'Cybersecurity Experts',
+      expertise: ['Threat Detection', 'Compliance', 'Penetration Testing'],
+      avatar: '🔒'
+    }
+  ];
+
+  const milestones: Milestone[] = [
+    {
+      year: '2020',
+      title: 'Company Founded',
+      description: 'Zion Tech Group established with a vision for AI-driven innovation',
+      achievement: 'First AI solution deployed'
+    },
+    {
+      year: '2021',
+      title: 'AI Breakthrough',
+      description: 'Developed proprietary machine learning algorithms',
+      achievement: '10+ enterprise clients onboarded'
+    },
+    {
+      year: '2022',
+      title: 'Cloud Expansion',
+      description: 'Launched comprehensive cloud and DevOps services',
+      achievement: '50+ successful cloud migrations'
+    },
+    {
+      year: '2023',
+      title: 'Global Reach',
+      description: 'Expanded services to international markets',
+      achievement: '100+ projects completed'
+    },
+    {
+      year: '2024',
+      title: 'Industry Leader',
+      description: 'Recognized as a top technology solutions provider',
+      achievement: '95% client satisfaction rate'
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { scale: 0.9, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut" as const
+      }
+    },
+    hover: {
+      scale: 1.02,
+      y: -5,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+  const timelineVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <motion.div 
+          className="max-w-7xl mx-auto text-center"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.h1 
+            className="text-4xl md:text-6xl font-bold mb-6"
+            variants={itemVariants}
+          >
+            About{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              Zion Tech Group
+            </span>
+          </motion.h1>
+          <motion.p 
+            className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            variants={itemVariants}
+          >
+            Leading the future of technology innovation through AI-powered solutions, cloud expertise, and digital transformation.
+            We help businesses thrive in the digital age.
+          </motion.p>
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            variants={itemVariants}
+          >
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/services"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+            >
+              Our Services
+            </Link>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div variants={itemVariants}>
+              <div className="mb-6">
+                <Target className="h-16 w-16 text-zion-cyan mb-4" />
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Our Mission
+                </h2>
+                <p className="text-xl text-gray-300 leading-relaxed">
+                  To democratize access to cutting-edge technology solutions, enabling businesses of all sizes to leverage 
+                  the power of AI, cloud computing, and digital innovation to achieve unprecedented growth and success.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <div className="mb-6">
+                <Globe className="h-16 w-16 text-zion-purple mb-4" />
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Our Vision
+                </h2>
+                <p className="text-xl text-gray-300 leading-relaxed">
+                  To be the global leader in AI-powered technology solutions, driving the next wave of digital transformation 
+                  and creating a future where technology empowers every business to reach its full potential.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Company Values */}
+      <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Core Values
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              The principles that guide everything we do
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {companyValues.map((value, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"
+                variants={cardVariants}
+                whileHover="hover"
+              >
+                <div className="text-4xl mb-4 flex justify-center">
+                  <value.icon className={`h-16 w-16 text-${value.color} group-hover:scale-110 transition-transform duration-300`} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{value.title}</h3>
+                <p className="text-gray-300 text-center">{value.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Expert Team
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Meet the talented professionals driving innovation
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"
+                variants={cardVariants}
+                whileHover="hover"
+              >
+                <div className="text-6xl mb-4 flex justify-center">{member.avatar}</div>
+                <h3 className="text-xl font-semibold text-white mb-2 text-center">{member.name}</h3>
+                <p className="text-zion-cyan text-center mb-4">{member.role}</p>
+                <div className="space-y-2">
+                  {member.expertise.map((skill, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Company Timeline */}
+      <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Journey
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Key milestones in our growth and success
+            </p>
+          </motion.div>
+          
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-zion-cyan to-zion-purple"></div>
+            
+            <motion.div 
+              className="space-y-12"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {milestones.map((milestone, index) => (
+                <motion.div
+                  key={index}
+                  className={`relative flex items-center ${
+                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                  }`}
+                  variants={timelineVariants}
+                >
+                  {/* Timeline Dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zion-cyan rounded-full border-4 border-slate-900"></div>
+                  
+                  {/* Content */}
+                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                    <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                      <div className="text-2xl font-bold text-zion-cyan mb-2">{milestone.year}</div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{milestone.title}</h3>
+                      <p className="text-gray-300 mb-3">{milestone.description}</p>
+                      <div className="text-sm text-zion-purple font-medium">{milestone.achievement}</div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div 
+              className="text-center"
+              variants={itemVariants}
+            >
+              <div className="text-4xl font-bold text-zion-cyan mb-2">100+</div>
+              <div className="text-gray-300">Projects Completed</div>
+            </motion.div>
+            
+            <motion.div 
+              className="text-center"
+              variants={itemVariants}
+            >
+              <div className="text-4xl font-bold text-zion-purple mb-2">50+</div>
+              <div className="text-gray-300">Happy Clients</div>
+            </motion.div>
+            
+            <motion.div 
+              className="text-center"
+              variants={itemVariants}
+            >
+              <div className="text-4xl font-bold text-zion-cyan mb-2">95%</div>
+              <div className="text-gray-300">Client Satisfaction</div>
+            </motion.div>
+            
+            <motion.div 
+              className="text-center"
+              variants={itemVariants}
+            >
+              <div className="text-4xl font-bold text-zion-purple mb-2">24/7</div>
+              <div className="text-gray-300">Support Available</div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <motion.div 
+          className="max-w-4xl mx-auto text-center"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Work with Us?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our expertise can transform your business
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group"
+            >
+              Get Started Today
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/services"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+            >
+              View Our Services
+            </Link>
+          </div>
+        </motion.div>
+      </section>
+    </div>
+  );
+};

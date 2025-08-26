@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as MessageSquareIcon2, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as CodeIcon2, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
+
+
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
@@ -225,37 +225,34 @@ export default function PricingEnhanced2026Page() {
   ];
 
   return (
-    <UltraFuturisticBackground variant="quantum" intensity="high">
+    <UltraFuturisticBackground  intensity="high">
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
         <Head>
           <title>Enhanced 2026 Pricing - Zion Tech Group</title>
           <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions." />
           <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />
-          <link rel="icon" href="/favicon.svg" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
           
           {/* Open Graph */}
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026/" />
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-          <meta property="og:image:type" content="image/svg+xml" />
+          <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
           
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
-          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
-          <meta name="twitter:image:type" content="image/svg+xml" />
+          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         </Head>
         {/* Enhanced Header Section */}
         <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-7xl mx-auto text-center"
-          >
+            transition={{ duration: 0.8 }} className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
               Enhanced 2026 Pricing
             </h1>
@@ -314,11 +311,8 @@ export default function PricingEnhanced2026Page() {
                   key={tier.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative"
-                >
+                  transition={{ duration: 0.5, delay: index * 0.1 }} className="relative">
                   <UltraFuturisticCard
-                    variant={tier.variant}
                     className={`h-full ${tier.popular ? 'ring-2 ring-cyan-500 ring-opacity-50' : ''}`}
                   >
                     {tier.popular && (
@@ -356,10 +350,7 @@ export default function PricingEnhanced2026Page() {
                         ))}
                       </ul>
                       
-                                             <Button
-                         variant={tier.variant === 'quantum' ? 'quantum' : tier.variant === 'holographic' ? 'futuristic' : 'quantum'}
-                         size="lg"
-                         className="w-full"
+                                             <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200"
                          onClick={() => {
                            if (tier.name === 'Enterprise') {
                              window.open(`mailto:${contactInfo.email}?subject=Enterprise Pricing Inquiry`, '_blank');
@@ -369,7 +360,7 @@ export default function PricingEnhanced2026Page() {
                          }}
                        >
                          {tier.cta}
-                       </Button>
+                       </button>
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
@@ -385,9 +376,7 @@ export default function PricingEnhanced2026Page() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
+              viewport={{ once: true }} className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Service Categories & Pricing
               </h2>
@@ -405,7 +394,7 @@ export default function PricingEnhanced2026Page() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <UltraFuturisticCard variant="quantum-advanced" className="h-full">
+                  <UltraFuturisticCard className="h-full">
                     <div className="p-6">
                       <div className="flex items-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${category.color} mr-4`}>
@@ -430,15 +419,12 @@ export default function PricingEnhanced2026Page() {
                         ))}
                       </ul>
                       
-                      <Button
-                        variant="futuristic"
-                        size="sm"
-                        className="w-full"
+                      <button className="w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center"
                         onClick={() => window.open(`/2026-services-showcase-enhanced`, '_blank')}
                       >
                         View Services
                         <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
+                      </button>
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
@@ -454,9 +440,7 @@ export default function PricingEnhanced2026Page() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
+              viewport={{ once: true }} className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Featured Services
               </h2>
@@ -474,7 +458,7 @@ export default function PricingEnhanced2026Page() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <UltraFuturisticCard variant="holographic" className="h-full">
+                  <UltraFuturisticCard className="h-full">
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="text-4xl">{service.icon}</div>
@@ -497,22 +481,17 @@ export default function PricingEnhanced2026Page() {
                       </ul>
                       
                       <div className="flex space-x-2">
-                        <Button
-                          variant="quantum"
-                          size="sm"
-                          className="flex-1"
+                        <button className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center"
                           onClick={() => window.open(service.link, '_blank')}
                         >
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-1" />
-                        </Button>
-                        <Button
-                          variant="futuristic"
-                          size="sm"
+                        </button>
+                        <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center"
                           onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')}
                         >
                           Contact
-                        </Button>
+                        </button>
                       </div>
                     </div>
                   </UltraFuturisticCard>
@@ -529,9 +508,7 @@ export default function PricingEnhanced2026Page() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
-            >
+              viewport={{ once: true }} className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
               </h2>
@@ -539,22 +516,18 @@ export default function PricingEnhanced2026Page() {
                 Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  variant="quantum"
-                  size="lg"
+                <button className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center"
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
-                </Button>
-                <Button
-                  variant="futuristic"
-                  size="lg"
+                </button>
+                <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center"
                   onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
-                </Button>
+                </button>
               </div>
               <div className="mt-8 text-sm text-gray-400">
                 <p>Contact: {contactInfo.mobile} | {contactInfo.email}</p>

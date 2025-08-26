@@ -1,138 +1,78 @@
-export type MicroSaasSolution = {
+export type InnovativeMicroSaas = {
 	id: string;
 	name: string;
-	category: string;
-	tagline: string;
 	description: string;
+	tagline?: string;
+	category:
+		| 'Content Marketing'
+		| 'Business Operations'
+		| 'Marketing Automation'
+		| 'Customer Success'
+		| 'Sales Automation'
+		| 'Financial Technology'
+		| 'Human Resources'
+		| 'Supply Chain Management'
+		| 'Customer Support';
+	pricing: { starter: string; professional?: string; enterprise?: string };
 	features: string[];
-	pricing: {
-		starter?: string;
-		monthly?: number;
-		professional?: string;
-		enterprise?: string;
-	};
-	status?: 'Live' | 'Beta' | 'GA';
+	integrations?: string[];
+	useCases?: string[];
+	link: string;
+	realService?: boolean;
 	rating?: number;
-	customerCount?: number;
-	demo?: string;
-	contact?: string;
+	launchDate?: string;
 };
 
-export const innovativeMicroSaasSolutions = [
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	{
-		id: 'browser-automation-cloud',
-		name: 'Browser Automation Cloud',
-		description: 'Parallel Playwright/Puppeteer execution with queues, storage, and proxy rotation. Ideal for testing and automation.',
-		category: 'Micro SAAS',
-		popular: true,
-		pricing: { monthly: 99 },
-		features: [
-			'Headless Chrome/Firefox at scale',
-			'Queueing, retries and rate-limits',
-			'Har/trace artifacts and video',
-			'Rotating proxies and geo targeting',
-			'Webhook and API callbacks'
-		],
-		link: '/browser-automation-cloud'
+		id: 'podcast-transcription-seo-suite',
+		name: 'Podcast Transcription & SEO Suite',
+		tagline: 'Turn episodes into SEO-optimized blogs in minutes',
+		description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.',
+		category: 'Content Marketing',
+		pricing: { starter: '$39/mo' },
+		features: ['Multi-speaker diarization', 'SEO blog drafts', 'Pull-quotes', 'Schema & social cards'],
+		integrations: ['YouTube', 'Spotify', 'WordPress'],
+		useCases: ['Content repurposing', 'SEO growth'],
+		link: 'https://ziontechgroup.com/services/podcast-transcription-seo-suite',
+		realService: true,
+		rating: 4.7,
+		launchDate: '2025-12-01'
 	},
 	{
-		id: 'secrets-rotation-automation',
-		name: 'Secrets Rotation Automation',
-		description: 'Automate key and secret rotation across cloud providers and CI/CD with audit trails and approvals.',
-		category: 'Security',
-		popular: true,
-		pricing: { monthly: 199 },
-		features: [
-			'Vault/KMS rotation workflows',
-			'JIT credentials and expirations',
-			'Audit logs and policy approvals',
-			'GitHub Actions/CircleCI integration',
-			'Break-glass procedures'
-		],
-		link: '/secrets-rotation-automation'
+		id: 'local-seo-reviews-booster',
+		name: 'Local SEO Reviews Booster',
+		description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.',
+		category: 'Marketing Automation',
+		pricing: { starter: '$29/mo' },
+		features: ['Smart review routing', 'NPS & CSAT', 'Churn alerts', 'Multi-location dashboards'],
+		integrations: ['Google Business Profile', 'Yelp'],
+		useCases: ['Local ranking', 'Reputation management'],
+		link: 'https://ziontechgroup.com/services/local-seo-reviews-booster',
+		realService: true
 	},
 	{
-		id: 'api-performance-testing',
-		name: 'API Performance Testing',
-		description: 'Load, latency and regression testing-as-a-service with SLO-aware reports and CI integration.',
-		category: 'Quality',
-		popular: false,
-		pricing: { monthly: 129 },
-		features: [
-			'k6/Gatling compatible tests',
-			'Throughput & latency dashboards',
-			'Regression baselines and thresholds',
-			'Synthetic traffic and staging safety',
-			'PR check integration'
-		],
-		link: '/api-performance-testing'
+		id: 'smart-invoice-reconciliation',
+		name: 'Smart Invoice Reconciliation',
+		description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',
+		category: 'Financial Technology',
+		pricing: { starter: '$59/mo' },
+		features: ['OCR ingestion', 'Matching heuristics', 'Discrepancy alerts', 'Export to ERP'],
+		integrations: ['QuickBooks', 'Xero', 'Stripe'],
+		useCases: ['Accounting automation', 'Finance ops'],
+		link: 'https://ziontechgroup.com/services/smart-invoice-reconciliation',
+		realService: true
 	},
 	{
-		id: 'pdf-render-api',
-		name: 'PDF Render API',
-		description: 'High-fidelity HTML-to-PDF rendering with brand-safe fonts, assets, and encryption support.',
-		category: 'Developer Tools',
-		popular: true,
-		pricing: { monthly: 49 },
-		features: ['Headless Chromium rendering', 'Custom fonts and assets', 'Protected PDFs', 'Batch jobs', 'Webhooks'],
-		link: '/pdf-render-api'
-	},
-	{
-		id: 'webhook-relay-replay',
-		name: 'Webhook Relay & Replay',
-		description: 'Reliable webhook delivery with retries, dead-letter queues and deterministic replays.',
-		category: 'Integrations',
-		popular: false,
-		pricing: { monthly: 79 },
-		features: ['Idempotency and retries', 'Dead-letter queues', 'Replay by event id', 'Signature verification', 'Audit logs'],
-		link: '/webhook-relay-replay'
-	},
-	{
-		id: 'feature-flag-auditor',
-		name: 'Feature Flag Auditor',
-		description: 'Automated hygiene checks for feature flags with PR suggestions and safety guardrails.',
-		category: 'Micro SAAS',
-		popular: false,
-		pricing: { monthly: 29 },
-		features: [
-			'Detect dead/stale flags',
-			'Validate defaults and fallbacks',
-			'Experiment expiry and guardrails',
-			'Ownership and impact analysis',
-			'Autofix PRs and CI annotations'
-		],
-		link: '/services/feature-flag-auditor'
-	},
-	{
-		id: 'api-contract-testing-studio',
-		name: 'API Contract Testing Studio',
-		description: 'Consumer-driven contracts, backward-compat checks in CI, and autogenerated mocks.',
-		category: 'Developer Tools',
-		popular: true,
-		pricing: { monthly: 79 },
-		features: [
-			'OpenAPI/Pact validation',
-			'Backward-compat CI gates',
-			'Mock servers and data generators',
-			'Change diffs and approvals',
-			'Coverage dashboards'
-		],
-		link: '/services/api-contract-testing-studio'
-	},
-	{
-		id: 'email-deliverability-warmup-suite',
-		name: 'Email Deliverability & Warmup Suite',
-		description: 'Warmup automation, DMARC/SPF/DKIM checks, blocklist monitoring and inbox testing.',
-		category: 'Growth & Marketing',
-		popular: true,
-		pricing: { monthly: 19 },
-		features: [
-			'Mailbox warmup and cadence',
-			'DMARC/SPF/DKIM validation',
-			'Blocklist and spam trap monitor',
-			'Seed inbox placement testing',
-			'Remediation playbooks'
-		],
-		link: '/services/email-deliverability-and-warmup-suite'
+		id: 'candidate-screening-copilot',
+		name: 'Candidate Screening Copilot',
+		description: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
+		category: 'Human Resources',
+		pricing: { starter: '$69/mo' },
+		features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
+		integrations: ['Greenhouse', 'Lever'],
+		useCases: ['Faster hiring', 'Bias reduction'],
+		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
+		realService: true
 	}
 ];

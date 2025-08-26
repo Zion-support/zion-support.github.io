@@ -17,7 +17,7 @@ const contactInfo = {
 
 const serviceCategories = [
   {
-    title: 'Revolutionary 2026 AI',
+    title: 'AI & Machine Learning',
     icon: Brain,
     services: [
       { name: 'AI Consciousness Simulator', href: '/ai-consciousness-simulator', description: 'Simulate human-like consciousness in AI systems', price: '$2,999/month' },
@@ -30,10 +30,10 @@ const serviceCategories = [
     title: '2026 AI Services',
     icon: Sparkles,
     services: [
-      { name: 'AI Predictive Analytics Platform', href: '/ai-predictive-analytics-platform', description: 'Predict the future with AI-powered analytics', price: '$1,299/month' },
-      { name: 'AI Natural Language Processing', href: '/ai-natural-language-processing', description: 'Understand and process human language with AI', price: '$899/month' },
-      { name: 'AI Computer Vision Platform', href: '/ai-computer-vision-platform', description: 'See and understand images with AI intelligence', price: '$1,199/month' },
-      { name: 'AI Fraud Detection System', href: '/ai-fraud-detection-system', description: 'Detect and prevent fraud with AI intelligence', price: '$1,499/month' }
+      { name: 'AI Consciousness Simulator Pro', href: '/ai-consciousness-simulator-pro', description: 'Simulate human-like consciousness in AI systems', price: '$4,999/month' },
+      { name: 'AI Quantum Hybrid Computing', href: '/quantum-ai-hybrid-computing', description: 'Hybrid AI-Quantum computing for complex problem solving', price: '$7,999/month' },
+      { name: 'AI Multimodal Fusion Platform', href: '/ai-multimodal-fusion-platform', description: 'Unified AI platform for text, image, audio, and video processing', price: '$2,999/month' },
+      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'AI system that makes complex decisions autonomously', price: '$5,999/month' }
     ]
   },
   {
@@ -47,33 +47,13 @@ const serviceCategories = [
     ]
   },
   {
-    title: '2026 IT Services',
-    icon: Shield,
-    services: [
-      { name: 'Advanced Cybersecurity Suite', href: '/advanced-cybersecurity-suite', description: 'Next-generation cybersecurity protection for modern businesses', price: '$799/month' },
-      { name: 'Cloud Migration & Optimization', href: '/cloud-migration-optimization', description: 'Seamless cloud migration with intelligent optimization', price: '$1,299/month' },
-      { name: 'DevOps & CI/CD Automation', href: '/devops-cicd-automation', description: 'Accelerate software delivery with intelligent automation', price: '$599/month' },
-      { name: 'Data Analytics & Business Intelligence', href: '/data-analytics-business-intelligence', description: 'Transform data into actionable business insights', price: '$899/month' }
-    ]
-  },
-  {
-    title: '2026 Micro SaaS',
-    icon: Zap,
-    services: [
-      { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', description: 'Transform data into actionable insights with AI', price: '$299/month' },
-      { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Automate customer support with intelligent AI agents', price: '$199/month' },
-      { name: 'AI Marketing Automation Suite', href: '/ai-marketing-automation-suite', description: 'Intelligent marketing automation powered by AI', price: '$399/month' },
-      { name: 'AI Sales Intelligence Platform', href: '/ai-sales-intelligence-platform', description: 'Boost sales performance with AI-powered insights', price: '$249/month' }
-    ]
-  },
-  {
     title: 'Emerging Technologies',
-    icon: Rocket,
+    icon: Sparkles,
     services: [
-      { name: 'Neuromorphic Computing', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$1,499/month' },
+      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$1,499/month' },
       { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing for complex problem solving', price: '$2,999/month' },
-      { name: 'Photonic Computing', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$1,999/month' },
-      { name: 'Holographic Display', href: '/holographic-display-platform', description: 'Next-generation 3D holographic visualization', price: '$699/month' }
+      { name: 'Photonic Computing Platform', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$1,999/month' },
+      { name: 'Holographic Display Platform', href: '/holographic-display-platform', description: 'Next-generation 3D holographic visualization', price: '$699/month' }
     ]
   },
   {
@@ -87,45 +67,51 @@ const serviceCategories = [
     ]
   },
   {
-    title: 'Revolutionary IT Infrastructure',
+    title: 'Enterprise IT',
     icon: Shield,
     services: [
-      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Next-generation security with zero trust principles', price: '$5,999/month' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Intelligent edge computing management and optimization', price: '$3,999/month' },
-      { name: '5G Private Network Solutions', href: '/5g-private-network-solutions', description: 'Enterprise-grade 5G private networks', price: '$7,999/month' },
-      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Quantum computing in the cloud for everyone', price: '$2,999/month' }
+      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture', description: 'Advanced network security', price: 'Custom pricing' },
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed computing management', price: 'Custom pricing' },
+      { name: '5G Private Networks', href: '/5g-private-network-solutions', description: 'High-speed private networks', price: 'Custom pricing' },
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', description: 'Secure blockchain solutions', price: 'Custom pricing' }
     ]
   },
   {
-    title: 'Revolutionary Micro SaaS',
+    title: 'Innovative SaaS',
     icon: Zap,
     services: [
-      { name: 'AI Brand Personality Generator', href: '/ai-brand-personality-generator', description: 'Create unique brand personalities with AI', price: '$299/month' },
-      { name: 'Virtual Event Hologram Platform', href: '/virtual-event-hologram-platform', description: 'Create immersive holographic virtual events', price: '$799/month' },
-      { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber-pro', description: 'Advanced AI-powered meeting transcription and insights', price: '$199/month' },
-      { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion', description: 'AI-powered mental health support and wellness', price: '$149/month' }
+      { name: 'AI Autonomous Business Platform', href: '/ai-autonomous-business-platform', description: 'Run your business with AI', price: 'Custom pricing' },
+      { name: 'AI Creative Studio Platform', href: '/ai-creative-studio-platform', description: 'Unlimited AI-powered creativity', price: 'Custom pricing' },
+      { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion', description: 'Personalized healthcare AI', price: 'Custom pricing' },
+      { name: 'Quantum Logistics Platform', href: '/quantum-logistics-platform', description: 'Optimize supply chains with quantum', price: 'Custom pricing' }
+    ]
+  },
+  {
+    title: 'Quantum AI Services',
+    icon: Atom,
+    services: [
+      { name: 'Neuromorphic Computing', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$6,999/month' },
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing for complex problem solving', price: '$11,999/month' },
+      { name: 'Photonic Computing', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$7,499/month' },
+      { name: 'Holographic Display', href: '/holographic-display-platform', description: 'Next-generation 3D holographic visualization', price: '$5,999/month' }
     ]
   },
   {
     title: 'Revolutionary 2026 Services',
-    icon: Rocket,
+    icon: Star,
     services: [
-      { name: 'AI Quantum Financial Analytics', href: '/ai-quantum-financial-analytics', description: 'Quantum-powered AI for next-generation financial insights', price: '$1,299/month' },
-      { name: 'Neural Interface Development', href: '/neural-interface-development-platform', description: 'Build next-generation brain-computer interfaces with AI', price: '$2,999/month' },
-      { name: 'Quantum-Secure Cloud Storage', href: '/quantum-secure-cloud-storage', description: 'Future-proof storage with quantum-resistant encryption', price: '$199/month' },
-      { name: 'Zero Trust Network Architecture 2.0', href: '/zero-trust-network-architecture-2', description: 'Next-generation zero trust security with AI and quantum encryption', price: '$4,999/month' }
+      { name: 'AI Consciousness Transfer', href: '/ai-consciousness-transfer', description: 'Transfer consciousness between AI systems and humans', price: '$15,999/month' },
+      { name: 'Quantum Internet Infrastructure', href: '/quantum-internet-infrastructure', description: 'Ultra-secure quantum communication network', price: '$8,999/month' },
+      { name: 'Edge Quantum Computing', href: '/edge-quantum-computing', description: 'Quantum computing at the edge for real-time processing', price: '$4,999/month' },
+      { name: 'AI Space Mining Automation', href: '/ai-space-mining-automation', description: 'Automated space mining using advanced AI', price: '$8,999/month' }
     ]
   }
 ];
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
-  { name: 'Revolutionary 2026', href: '/revolutionary-2026-services' },
   { name: '2026 Services', href: '/2026-services-showcase' },
-  { name: 'Enterprise Solutions', href: '/enterprise-solutions-showcase' },
-  { name: 'Innovative Micro SAAS', href: '/innovative-micro-saas-showcase' },
-  { name: 'All Services', href: '/services' },
-  { name: 'Pricing', href: '/pricing' },
+  { name: 'Revolutionary 2026', href: '/revolutionary-2026-services-showcase' },
   { name: 'News', href: '/news' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
@@ -196,7 +182,7 @@ export default function UltraAdvancedNavigation() {
       </div>
 
       {/* Main Navigation */}
-      <div className="bg-gray-900/95 backdrop-blur-2xl border-b border-cyan-500/20">
+      <div className="bg-gray-900/90 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -207,16 +193,16 @@ export default function UltraAdvancedNavigation() {
             >
               <Link href="/" className="flex items-center space-x-3 group">
                 <div className="relative">
-                  <div className="w-14 h-14 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-cyan-500/30 group-hover:shadow-cyan-500/50 transition-all duration-300 group-hover:scale-110">
-                    <Rocket className="w-8 h-8 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25 group-hover:shadow-cyan-500/40 transition-all duration-300">
+                    <Rocket className="w-7 h-7 text-white" />
                   </div>
-                  <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-3xl font-black bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                     Zion Tech Group
                   </span>
-                  <span className="text-sm text-gray-300 font-medium">
+                  <span className="text-xs text-gray-400 font-medium">
                     Revolutionary AI & Quantum Solutions
                   </span>
                 </div>
@@ -246,42 +232,34 @@ export default function UltraAdvancedNavigation() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-96 bg-gray-900/98 backdrop-blur-2xl border border-cyan-500/30 rounded-2xl shadow-2xl shadow-cyan-500/20 z-50"
+                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-xl shadow-2xl shadow-black/50 z-50"
                       >
-                        <div className="p-6">
-                          <div className="mb-4">
-                            <h3 className="text-xl font-bold text-white mb-3 flex items-center space-x-3">
-                              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                                <category.icon className="w-5 h-5 text-white" />
-                              </div>
-                              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                                {category.title}
-                              </span>
-                            </h3>
-                            <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-full"></div>
+                        <div className="p-4">
+                          <div className="mb-3">
+                            <h3 className="text-lg font-semibold text-white mb-2">{category.title}</h3>
+                            <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full"></div>
                           </div>
-                          <div className="space-y-4">
+                          <div className="space-y-3">
                             {category.services.map((service) => (
                               <Link
                                 key={service.name}
                                 href={service.href}
-                                className="block p-4 rounded-xl hover:bg-gradient-to-r hover:from-cyan-500/10 hover:to-purple-500/10 border border-transparent hover:border-cyan-500/30 transition-all duration-300 group"
+                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
                                 onClick={closeMenu}
                               >
                                 <div className="flex items-start justify-between">
                                   <div className="flex-1">
-                                    <h4 className="font-semibold text-white group-hover:text-cyan-300 transition-colors text-lg">
+                                    <h4 className="font-medium text-white group-hover:text-cyan-300 transition-colors">
                                       {service.name}
                                     </h4>
-                                    <p className="text-sm text-gray-300 mt-2 leading-relaxed">
+                                    <p className="text-sm text-gray-400 mt-1">
                                       {service.description}
                                     </p>
                                   </div>
-                                  <div className="ml-4 text-right">
-                                    <div className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                                  <div className="ml-3">
+                                    <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded-full">
                                       {service.price}
-                                    </div>
-                                    <div className="text-xs text-gray-400 mt-1">per month</div>
+                                    </span>
                                   </div>
                                 </div>
                               </Link>
@@ -311,13 +289,13 @@ export default function UltraAdvancedNavigation() {
               <div className="flex items-center space-x-4">
                 <Link
                   href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-500 text-white font-bold rounded-2xl hover:from-cyan-600 hover:via-purple-700 hover:to-pink-600 transition-all duration-300 shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105 border border-transparent hover:border-cyan-400/50"
+                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"
                 >
                   Get Started
                 </Link>
                 <Link
                   href="/pricing"
-                  className="px-8 py-4 border-2 border-cyan-500/40 text-cyan-300 font-bold rounded-2xl hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-500/20 transition-all duration-300 hover:border-cyan-400/60 hover:text-cyan-200"
+                  className="px-6 py-3 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
                 >
                   View Pricing
                 </Link>

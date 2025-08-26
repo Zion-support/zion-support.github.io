@@ -1,221 +1,227 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Rocket, Zap, Shield, Brain, Sparkles, Star, TrendingUp } from 'lucide-react';
-import Link from 'next/link';
+import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle } from 'lucide-react';
+import Button from '../ui/Button';
 
-const EnhancedHero2026 = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced machine learning and neural networks'
-    },
-    {
-      icon: Shield,
-      title: 'Quantum Security',
-      description: 'Unbreakable encryption for the future'
-    },
-    {
-      icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Instant deployment and setup'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Proven ROI',
-      description: '1000%+ returns consistently'
+interface EnhancedHero2026Props {
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  serviceStats: {
+    totalServices: number;
+    aiServices: number;
+    emergingTech: number;
+    itSolutions: number;
+    microSaas: number;
+    revolutionaryServices: number;
+  };
+}
+
+export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
     }
-  ];
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+  const statsVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const
+      }
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-cyan-900/20"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+      {/* Enhanced Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.4),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.4),transparent_50%)]" />
       
       {/* Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+      <div className="absolute inset-0 pointer-events-none">
+        {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -100, 0],
-              opacity: [0.3, 0.8, 0.3],
-            }}
-            transition={{
-              duration: 10 + i * 2,
-              repeat: Infinity,
-              delay: i * 0.5,
-            }}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0.3, 0.8, 0.3],
+              scale: [1, 1.5, 1]
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: Math.random() * 2
             }}
           />
         ))}
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Main Hero Content */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-16"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="space-y-8"
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full text-cyan-300 text-sm font-medium mb-8"
-          >
-            <Sparkles className="w-4 h-4" />
-            <span>2026 Revolutionary Technology</span>
+          {/* Main Headline */}
+          <motion.div variants={itemVariants} className="space-y-6">
+            <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6">
+              <Star className="w-5 h-5 text-yellow-400" />
+              <span className="text-cyan-400 font-semibold">2026 Innovation Leader</span>
+              <TrendingUp className="w-5 h-5 text-green-400" />
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+              <span className="bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Future-Ready
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Transform your business with our revolutionary AI, Quantum, and IT infrastructure services. 
+              <span className="text-cyan-400 font-semibold"> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.
+            </p>
           </motion.div>
 
-          {/* Main Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
+          {/* Enhanced Stats Grid */}
+          <motion.div 
+            variants={itemVariants}
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto"
           >
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Future of
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-              Technology
-            </span>
-          </motion.h1>
-
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"
-          >
-            Experience the next generation of AI, quantum computing, and emerging technologies. 
-            Transform your business with our revolutionary services that deliver unprecedented ROI and innovation.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16"
-          >
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Link
-                href="/services"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-lg rounded-xl shadow-2xl shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200"
+            {[
+              { label: 'Total Services', value: serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' },
+              { label: 'AI Solutions', value: serviceStats.aiServices, icon: Brain, color: 'from-purple-500 to-pink-500' },
+              { label: 'Emerging Tech', value: serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
+              { label: 'IT Infrastructure', value: serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' },
+              { label: 'Micro SaaS', value: serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' },
+              { label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
+            ].map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                variants={statsVariants}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
               >
-                <Rocket className="w-6 h-6 mr-3" />
-                Explore Services
-                <ArrowRight className="w-5 h-5 ml-3" />
-              </Link>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2, delay: 0.1 }}
-            >
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-500/10 transition-all duration-200"
-              >
-                <Shield className="w-6 h-6 mr-3" />
-                Get Started
-              </Link>
-            </motion.div>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-          >
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">1000+</div>
-              <div className="text-gray-400 text-sm">Services</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">500+</div>
-              <div className="text-gray-400 text-sm">Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">1000%</div>
-              <div className="text-gray-400 text-sm">ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">24/7</div>
-              <div className="text-gray-400 text-sm">Support</div>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* Features Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
-        >
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="group relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                  <stat.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2 text-center">{feature.title}</h3>
-                <p className="text-gray-400 text-sm text-center">{feature.description}</p>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                  {stat.value.toLocaleString()}+
+                </div>
+                <div className="text-xs text-gray-400 leading-tight">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Enhanced CTA Section */}
+          <motion.div variants={itemVariants} className="space-y-6">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button 
+                href="/services" 
+                variant="primary"
+                size="xl"
+                className="text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group"
+              >
+                <span className="flex items-center">
+                  <Rocket className="mr-3 w-7 h-7 group-hover:rotate-12 transition-transform" />
+                  Explore All Services
+                </span>
+                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              
+              <Button 
+                href="/contact" 
+                variant="secondary"
+                size="xl"
+                className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
+              >
+                <span className="flex items-center">
+                  <Shield className="mr-3 w-7 h-7" />
+                  Get Expert Consultation
+                </span>
+              </Button>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span>5000+ Happy Customers</span>
               </div>
-            </motion.div>
-          ))}
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span>99.9% Uptime Guarantee</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span>24/7 Expert Support</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Contact Information */}
+          <motion.div 
+            variants={itemVariants}
+            className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"
+          >
+            <div className="text-center mb-4">
+              <h3 className="text-lg font-semibold text-white mb-2">Ready to Get Started?</h3>
+              <p className="text-gray-300 text-sm">Contact our team of experts today</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+              <div className="text-center">
+                <div className="text-cyan-400 font-medium">Phone</div>
+                <div className="text-white">{contactInfo.mobile}</div>
+              </div>
+              <div className="text-center">
+                <div className="text-cyan-400 font-medium">Email</div>
+                <div className="text-white">{contactInfo.email}</div>
+              </div>
+              <div className="text-center">
+                <div className="text-cyan-400 font-medium">Website</div>
+                <div className="text-white">{contactInfo.website}</div>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center"
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
-          />
-        </motion.div>
-      </motion.div>
     </section>
   );
-};
-
-export default EnhancedHero2026;
+}

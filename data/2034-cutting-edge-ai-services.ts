@@ -1,102 +1,61 @@
 export type CuttingEdgeAIService = {
 	id: string;
 	name: string;
-	category: string;
-	tagline: string;
 	description: string;
+	category:
+		| 'AI Consciousness'
+		| 'AI Emotional Intelligence'
+		| 'AI Creativity'
+		| 'AI Psychology'
+		| 'AI Business Management'
+		| 'AI Healthcare'
+		| 'AI Neural Interfaces'
+		| 'AI Quantum Computing';
+	pricing: { starter: string; professional?: string; enterprise?: string };
 	features: string[];
-	pricing: {
-		starter?: string;
-		monthly?: number;
-		professional?: string;
-		enterprise?: string;
-	};
-	status?: 'Live' | 'Beta' | 'GA';
+	integrations?: string[];
+	useCases?: string[];
+	link: string;
 	rating?: number;
-	customerCount?: number;
-	demo?: string;
-	contact?: string;
+	launchDate?: string;
+	realService?: boolean;
 };
 
-export const cuttingEdgeAIServices = [
-  {
-    id: 'ai-evaluation-orchestrator-2034',
-    name: 'AI Evaluation Orchestrator',
-    category: 'AI Services',
-    description: 'Automate LLM evals, regression tests, red-teaming, and leaderboards across providers with dashboards and gates.',
-    pricing: { monthly: 199 },
-    features: [
-      'Evaluation harness and datasets',
-      'Multi-model matrix (OpenAI, Anthropic, Groq, local)',
-      'Safety regressions and red-team packs',
-      'Leaderboards and quality gates'
-    ],
-    link: 'https://ziontechgroup.com/ai-evaluation-orchestrator',
-    launchDate: '2025-09-01',
-    rating: 4.8
-  },
-  {
-    id: 'ai-red-teaming-suite-2034',
-    name: 'AI Red Teaming Suite',
-    category: 'AI Services',
-    description: 'Continuously stress-test LLM apps with curated jailbreak and prompt injection attacks and automated reporting.',
-    pricing: { monthly: 149 },
-    features: [
-      'Attack packs and mutation engines',
-      'Policy checks and safety scoring',
-      'Automated regressions and reports',
-      'CI/CD integration'
-    ],
-    link: 'https://ziontechgroup.com/ai-red-teaming-suite',
-    launchDate: '2025-07-01',
-    rating: 4.7
-  },
-  {
-    id: 'rag-observability-2034',
-    name: 'RAG Observability & Guardrails',
-    category: 'AI Services',
-    description: 'End-to-end observability for RAG pipelines with drift detection, evals, and guardrails.',
-    pricing: { monthly: 129 },
-    features: [
-      'Chunking/embedding quality metrics',
-      'Hallucination and toxicity checks',
-      'Latency and cost dashboards',
-      'Retrieval drift detection'
-    ],
-    link: 'https://ziontechgroup.com/rag-observability',
-    launchDate: '2025-06-20',
-    rating: 4.6
-  },
-  {
-    id: 'sales-copilot-2034',
-    name: 'Sales Copilot',
-    category: 'AI Services',
-    description: 'AI assistant for prospecting, inbox triage, call notes, and next steps integrated with your CRM.',
-    pricing: { monthly: 39 },
-    features: [
-      'Multi-channel prospecting and enrichment',
-      'Email drafting and summarization',
-      'Call note extraction and action items',
-      'CRM updates and analytics'
-    ],
-    link: 'https://ziontechgroup.com/sales-copilot',
-    launchDate: '2025-05-10',
-    rating: 4.6
-  },
-  {
-    id: 'customer-service-ai-2034',
-    name: 'Customer Service AI',
-    category: 'AI Services',
-    description: '24/7 AI agent for Tier-1 support with handoff, analytics, and multi-channel coverage.',
-    pricing: { monthly: 59 },
-    features: [
-      'Chat, email, and voice channels',
-      'Handoff and ticketing integrations',
-      'Knowledge ingestion and RAG',
-      'CSAT and KPI dashboards'
-    ],
-    link: 'https://ziontechgroup.com/customer-service-ai',
-    launchDate: '2025-04-05',
-    rating: 4.7
-  }
+export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
+	{
+		id: 'ai-emotional-support-agent',
+		name: 'AI Emotional Support Agent',
+		description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
+		category: 'AI Emotional Intelligence',
+		pricing: { starter: '$99/mo' },
+		features: ['CBT-guided prompts', 'Mood tracking', 'Crisis escalation', 'HIPAA-friendly modes'],
+		integrations: ['Twilio', 'Slack'],
+		useCases: ['Employee wellness', '24/7 support'],
+		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent',
+		realService: true
+	},
+	{
+		id: 'ai-product-spec-writer',
+		name: 'AI Product Spec Writer',
+		description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
+		category: 'AI Business Management',
+		pricing: { starter: '$79/mo' },
+		features: ['PRD templates', 'Story generation', 'Acceptance criteria', 'Analytics alignment'],
+		integrations: ['Jira', 'Linear'],
+		useCases: ['Faster planning', 'Better alignment'],
+		link: 'https://ziontechgroup.com/services/ai-product-spec-writer',
+		realService: true
+	},
+	{
+		id: 'ai-creative-studio',
+		name: 'AI Creative Studio',
+		description: 'Generate brand-consistent images and short-form videos with approvals and rights management.',
+		category: 'AI Creativity',
+		pricing: { starter: '$149/mo' },
+		features: ['Brand kit', 'Image & video gen', 'Review & approvals', 'Rights management'],
+		integrations: ['Canva', 'Figma'],
+		useCases: ['Marketing velocity', 'Cost savings'],
+		link: 'https://ziontechgroup.com/services/ai-creative-studio',
+		realService: true
+	}
 ];
