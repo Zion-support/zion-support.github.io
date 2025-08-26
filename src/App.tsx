@@ -42,6 +42,7 @@ import NewProductsPage from './pages/NewProductsPage';
 import MoreProductsPage from './pages/MoreProductsPage';
 import Sitemap from './pages/Sitemap';
 import PartnersPage from './pages/Partners';
+import Help from './pages/Help';
 import Login from './pages/Login';
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
@@ -106,9 +107,12 @@ const baseRoutes = [
   { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
   { path: '/contact', element: <ContactPage /> },
-  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
-  { path: '/ai-services', element: <AIServicesPage /> },
-  { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
+  { path: '/partners', element: <PartnersPage /> },
+  { path: '/sitemap', element: <Sitemap /> },
+  { path: '/help', element: <Help /> },
+  { path: '/zion-hire-ai', element: <ZionHireAI /> },
+  { path: '/hire-ai', element: <ZionHireAI /> },
+  { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/faq', element: <FAQPage /> },
@@ -163,7 +167,8 @@ const App = () => {
         </Suspense>
         <Toaster />
         <SonnerToaster position="top-right" />
-        <InstallPrompt />
+        <SupportChatbot />
+        <PwaInstallButton />
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
