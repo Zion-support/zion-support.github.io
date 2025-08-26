@@ -1,40 +1,61 @@
 import React from 'react';
-import { useFormContext } from 'react-hook-form';
 
-export function Form({ ...props }) {
-  return <form {...props} />;
-}
+export const Form = ({ children, onSubmit, className = '' }) => {
+    return (
+        <form onSubmit={onSubmit} className={className}>
+            {children}
+        </form>
+    );
+};
 
-export function FormField({ name, ...props }) {
-  const { register, formState: { errors } } = useFormContext();
-  const error = errors[name];
-  
-  return (
-    <div>
-      <input {...register(name)} {...props} />
-      {error && (
-        <p className="text-red-500 text-sm mt-1">{error.message}</p>
-      )}
-    </div>
-  );
-}
+export const FormField = ({ control, name, render }) => {
+    return render({ field: { name, value: '', onChange: () => {} } });
+};
 
-export function FormItem({ className = "", ...props }) {
-  return <div className={className} {...props} />;
-}
+export const FormItem = ({ children, className = '' }) => {
+    return (
+        <div className={`space-y-2 ${className}`}>
+            {children}
+        </div>
+    );
+};
 
-export function FormLabel({ className = "", ...props }) {
-  return <label className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${className}`} {...props} />;
-}
+export const FormLabel = ({ children, className = '' }) => {
+    return (
+        <label className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${className}`}>
+            {children}
+        </label>
+    );
+};
 
-export function FormControl({ ...props }) {
-  return <div {...props} />;
-}
+export const FormControl = ({ children }) => {
+    return children;
+};
 
-export function FormDescription({ className = "", ...props }) {
-  return <p className={`text-sm text-muted-foreground ${className}`} {...props} />;
-}
+export const FormMessage = ({ children, className = '' }) => {
+    if (!children) return null;
+    return (
+        <p className={`text-sm font-medium text-destructive ${className}`}>
+            {children}
+        </p>
+    );
+};
 
-export function FormMessage({ className = "", ...props }) {
-  return <p className={`text-sm font-medium text-destructive ${className}`} {...props} />;
-}
+export const useForm = () => {
+    return {
+        control: {},
+        formState: { errors: {} },
+        handleSubmit: (fn) => (e) => {
+            e.preventDefault();
+            fn({});
+        },
+        register: () => ({}),
+        setValue: () => {},
+        watch: () => ({}),
+        reset: () => {},
+        clearErrors: () => {},
+        setError: () => {},
+        getValues: () => ({}),
+        trigger: () => Promise.resolve(true)
+    };
+};
