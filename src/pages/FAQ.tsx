@@ -1,111 +1,109 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { 
-  HelpCircle, 
-  Users, 
-  ShoppingCart, 
-  Shield, 
-  Zap, 
-  Globe,
-  ChevronDown,
+  ChevronDown, 
+  ChevronUp, 
   Search,
-  Mail,
+  HelpCircle,
+  MessageCircle,
   Phone,
-  MessageSquare
+  Mail
 } from 'lucide-react';
 
 export default function FAQ() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(item => item !== index)
+        : [...prev, index]
+    );
+  };
 
   const faqCategories = [
     {
-      title: "Getting Started",
-      icon: Zap,
-      questions: [
+      title: 'General Questions',
+      items: [
         {
-          question: "How do I create an account on Zion?",
-          answer: "Creating an account is simple! Click the 'Sign Up' button in the top right corner and choose whether you're a client looking for services or talent offering your skills. Fill in your basic information and verify your email to get started."
+          question: 'What is Zion Tech Group?',
+          answer: 'Zion Tech Group is the world\'s first free marketplace dedicated to high-tech and artificial intelligence. We connect talented professionals with innovative companies, providing cutting-edge AI solutions, quantum technology, and innovative IT services.'
         },
         {
-          question: "What types of accounts can I create?",
-          answer: "Zion offers two main account types: Client accounts for businesses and individuals seeking AI and tech services, and Talent accounts for professionals offering their expertise in AI, development, design, and other tech fields."
+          question: 'How do I get started with Zion Tech Group?',
+          answer: 'Getting started is easy! Simply browse our services, contact us through our contact form, or call us directly. Our team will work with you to understand your needs and recommend the best solutions for your business.'
         },
         {
-          question: "Is Zion really free to use?",
-          answer: "Yes! Zion is completely free to use. We believe in democratizing access to AI and tech solutions, so there are no subscription fees or hidden costs for using our platform."
+          question: 'What industries do you serve?',
+          answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, and more. Our AI and technology solutions are designed to be adaptable across various business sectors.'
         }
       ]
     },
     {
-      title: "For Talent & Creators",
-      icon: Users,
-      questions: [
+      title: 'Services & Solutions',
+      items: [
         {
-          question: "How do I create a talent profile?",
-          answer: "After signing up, navigate to your dashboard and click 'Create Profile'. You can add your skills, experience, portfolio, and set your rates. Make sure to include relevant certifications and examples of your work."
+          question: 'What AI services do you offer?',
+          answer: 'We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, autonomous systems, and custom AI development tailored to your specific business needs.'
         },
         {
-          question: "What types of services can I offer?",
-          answer: "You can offer any tech-related service including AI development, software engineering, data science, IT consulting, cybersecurity, cloud services, and more. We support both technical and business services."
+          question: 'Do you provide cybersecurity services?',
+          answer: 'Yes, we offer enterprise-grade cybersecurity services including threat detection, vulnerability assessments, security audits, compliance management, and 24/7 security monitoring to protect your business assets.'
         },
         {
-          question: "How do I get hired?",
-          answer: "Clients can find you through our search and matching system, or you can proactively apply to job postings. Make sure your profile is complete and showcases your best work to increase your chances of getting hired."
+          question: 'Can you help with cloud migration?',
+          answer: 'Absolutely! We provide end-to-end cloud migration services including strategy planning, infrastructure design, migration execution, and ongoing optimization to ensure smooth transitions to cloud platforms.'
         }
       ]
     },
     {
-      title: "For Clients & Businesses",
-      icon: ShoppingCart,
-      questions: [
+      title: 'Pricing & Billing',
+      items: [
         {
-          question: "How do I find the right talent for my project?",
-          answer: "You can browse our talent directory, use our AI-powered matching system, post job listings, or request quotes for specific projects. Our platform includes detailed profiles, skill assessments, and verified reviews."
+          question: 'How do you structure your pricing?',
+          answer: 'Our pricing is transparent and project-based. We offer competitive rates for our services and provide detailed quotes upfront. Contact us for a personalized quote based on your specific requirements.'
         },
         {
-          question: "What types of services are available?",
-          answer: "We offer a wide range of services including AI development, machine learning consulting, software development, IT consulting, data analysis, cloud services, cybersecurity, and specialized IT onsite services."
+          question: 'Do you offer payment plans?',
+          answer: 'Yes, we offer flexible payment options including milestone-based payments, monthly installments, and custom payment schedules to accommodate your business cash flow needs.'
         },
         {
-          question: "How do payments work?",
-          answer: "We provide secure payment processing with milestone-based payment systems. You can set up payment schedules, use escrow services for protection, and choose from various payment methods including credit cards and bank transfers."
+          question: 'Are there any hidden fees?',
+          answer: 'No hidden fees! We believe in complete transparency. All costs are clearly outlined in our proposals and contracts, so you know exactly what you\'re paying for.'
         }
       ]
     },
     {
-      title: "Security & Trust",
-      icon: Shield,
-      questions: [
+      title: 'Support & Maintenance',
+      items: [
         {
-          question: "How do you ensure quality and reliability?",
-          answer: "We implement a comprehensive verification system including profile verification, skill assessments, client reviews, and dispute resolution processes. Our community-driven approach helps maintain high standards across the platform."
+          question: 'What kind of support do you provide?',
+          answer: 'We provide comprehensive support including 24/7 technical assistance, regular maintenance updates, performance monitoring, and dedicated account managers to ensure your systems run smoothly.'
         },
         {
-          question: "What happens if there's a dispute?",
-          answer: "We have a built-in dispute resolution system. If issues arise, our support team will mediate and help find a fair solution. We also provide project protection and escrow services for added security."
+          question: 'How quickly do you respond to support requests?',
+          answer: 'We prioritize support requests based on severity. Critical issues are addressed within 1-2 hours, while standard requests are typically resolved within 24 hours. We also offer premium support packages for faster response times.'
         },
         {
-          question: "Is my data secure?",
-          answer: "Yes, we use enterprise-grade security measures including encryption, secure servers, and regular security audits. Your personal and business information is protected and never shared with third parties without your consent."
+          question: 'Do you provide training for our team?',
+          answer: 'Yes, we offer comprehensive training programs to help your team understand and effectively use the systems we implement. This includes user training, administrator training, and ongoing support documentation.'
         }
       ]
     },
     {
-      title: "Platform Features",
-      icon: Globe,
-      questions: [
+      title: 'Technical Requirements',
+      items: [
         {
-          question: "What makes Zion different from other platforms?",
-          answer: "Zion is specifically designed for AI and high-tech industries, offering specialized tools, AI-powered matching, comprehensive equipment listings, and a focus on sustainable technology. Our free model makes advanced tech accessible to businesses of all sizes."
+          question: 'What are the minimum system requirements?',
+          answer: 'System requirements vary depending on the specific solution. We\'ll assess your current infrastructure and recommend any necessary upgrades or modifications to ensure optimal performance.'
         },
         {
-          question: "Do you offer AI-powered matching?",
-          answer: "Yes! Our AI matching system analyzes project requirements and talent profiles to suggest the best matches. This saves time and helps ensure successful project outcomes."
+          question: 'How long does implementation typically take?',
+          answer: 'Implementation timelines vary based on project complexity. Simple solutions can be deployed in weeks, while complex enterprise systems may take several months. We\'ll provide a detailed timeline during project planning.'
         },
         {
-          question: "Can I list equipment and hardware?",
-          answer: "Absolutely! Our marketplace includes specialized AI hardware, servers, networking equipment, development tools, and other tech equipment. We also feature Green IT solutions for sustainable technology practices."
+          question: 'Do you integrate with existing systems?',
+          answer: 'Yes, we specialize in integrating our solutions with your existing systems and workflows. We ensure seamless integration while maintaining data integrity and system performance.'
         }
       ]
     }
@@ -113,166 +111,142 @@ export default function FAQ() {
 
   const filteredCategories = faqCategories.map(category => ({
     ...category,
-    questions: category.questions.filter(q => 
-      q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      q.answer.toLowerCase().includes(searchTerm.toLowerCase())
+    items: category.items.filter(item =>
+      item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.answer.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(category => category.questions.length > 0);
-
-  const toggleCategory = (title) => {
-    setExpandedCategory(expandedCategory === title ? null : title);
-  };
+  })).filter(category => category.items.length > 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Frequently Asked <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Questions</span>
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-              Find answers to common questions about Zion Tech Group's marketplace, 
-              services, and how to get started with AI and technology solutions.
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search for answers..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                />
+      <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            Find answers to common questions about our services, solutions, and how we can help transform your business
+          </p>
+          
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto relative">
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search for questions or topics..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Content */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          {filteredCategories.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="mb-12">
+              <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
+                <HelpCircle className="w-6 h-6 text-zion-cyan mr-3" />
+                {category.title}
+              </h2>
+              
+              <div className="space-y-4">
+                {category.items.map((item, itemIndex) => {
+                  const globalIndex = categoryIndex * 100 + itemIndex;
+                  const isOpen = openItems.includes(globalIndex);
+                  
+                  return (
+                    <div key={itemIndex} className="bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg overflow-hidden">
+                      <button
+                        onClick={() => toggleItem(globalIndex)}
+                        className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-zion-cyan/10 transition-colors"
+                      >
+                        <span className="text-white font-medium pr-4">{item.question}</span>
+                        {isOpen ? (
+                          <ChevronUp className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                        )}
+                      </button>
+                      
+                      {isOpen && (
+                        <div className="px-6 pb-4">
+                          <p className="text-zion-slate-light leading-relaxed">
+                            {item.answer}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
-          </div>
+          ))}
+          
+          {filteredCategories.length === 0 && (
+            <div className="text-center py-16">
+              <HelpCircle className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">No questions found</h3>
+              <p className="text-zion-slate-light mb-6">
+                Try adjusting your search terms or contact us directly for assistance.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
-      {/* FAQ Categories */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-6">
-            {filteredCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-zion-blue-light/10 rounded-lg border border-zion-blue-light/20 overflow-hidden">
-                <button
-                  onClick={() => toggleCategory(category.title)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-zion-blue-light/20 transition-colors"
-                >
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-zion-cyan/20 rounded-lg flex items-center justify-center">
-                      <category.icon className="w-5 h-5 text-zion-cyan" />
-                    </div>
-                    <h2 className="text-xl font-semibold text-white">{category.title}</h2>
-                  </div>
-                  <ChevronDown 
-                    className={`w-5 h-5 text-zion-cyan transition-transform ${
-                      expandedCategory === category.title ? 'rotate-180' : ''
-                    }`} 
-                  />
-                </button>
-                
-                {expandedCategory === category.title && (
-                  <div className="px-6 pb-4 border-t border-zion-blue-light/20">
-                    <div className="space-y-4 pt-4">
-                      {category.questions.map((item, questionIndex) => (
-                        <div key={questionIndex} className="bg-zion-blue-light/5 rounded-lg p-4">
-                          <h3 className="text-lg font-medium text-white mb-2">{item.question}</h3>
-                          <p className="text-zion-slate-light leading-relaxed">{item.answer}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Still Have Questions */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Contact Support */}
+      <section className="py-16 bg-zion-slate-dark">
+        <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Still Have Questions?
           </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Can't find what you're looking for? Our support team is here to help 
-            you get the answers you need.
+          <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
+            Our team is here to help! Contact us through any of the channels below and we'll get back to you as soon as possible.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20">
-              <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <MessageSquare className="w-6 h-6 text-zion-cyan" />
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
+              <MessageCircle className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>
-              <p className="text-zion-slate-light text-sm mb-4">Get instant help from our AI assistant</p>
-              <button className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm">
+              <p className="text-zion-slate-light text-sm mb-4">
+                Chat with our support team in real-time
+              </p>
+              <button className="px-4 py-2 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan-light transition-colors">
                 Start Chat
               </button>
             </div>
             
-            <div className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20">
-              <div className="w-12 h-12 bg-zion-purple/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-6 h-6 text-zion-purple" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>
-              <p className="text-zion-slate-light text-sm mb-4">Send us a detailed message</p>
+            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
+              <Phone className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Call us directly for immediate assistance
+              </p>
               <a 
-                href="mailto:support@ziontechgroup.com" 
-                className="text-zion-purple hover:text-zion-purple-light transition-colors text-sm"
+                href="tel:+13024640950"
+                className="px-4 py-2 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan-light transition-colors inline-block"
               >
-                support@ziontechgroup.com
+                Call Now
               </a>
             </div>
             
-            <div className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20">
-              <div className="w-12 h-12 bg-zion-green/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-zion-green" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
-              <p className="text-zion-slate-light text-sm mb-4">Call us for urgent assistance</p>
+            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
+              <Mail className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Send us a detailed message
+              </p>
               <a 
-                href="tel:+15551234567" 
-                className="text-zion-green hover:text-zion-green-light transition-colors text-sm"
+                href="mailto:kleber@ziontechgroup.com"
+                className="px-4 py-2 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan-light transition-colors inline-block"
               >
-                +1 (555) 123-4567
+                Send Email
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals and businesses already using Zion Tech Group 
-            to connect, collaborate, and grow.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
-            >
-              Contact Support
-            </Link>
-            <Link
-              to="/"
-              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-medium"
-            >
-              Explore Marketplace
-            </Link>
           </div>
         </div>
       </section>

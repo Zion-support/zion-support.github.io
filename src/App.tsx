@@ -13,6 +13,17 @@ const ComprehensivePricing = React.lazy(() => import('./pages/ComprehensivePrici
 const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const Login = React.lazy(() => import('./pages/Login.jsx'));
 
+// New pages
+const Marketplace = React.lazy(() => import('./pages/Marketplace.jsx'));
+const Blog = React.lazy(() => import('./pages/Blog.jsx'));
+const Partners = React.lazy(() => import('./pages/Partners.jsx'));
+const Careers = React.lazy(() => import('./pages/Careers.jsx'));
+const FAQ = React.lazy(() => import('./pages/FAQ.tsx'));
+const Privacy = React.lazy(() => import('./pages/Privacy.jsx'));
+const Terms = React.lazy(() => import('./pages/Terms.jsx'));
+const Help = React.lazy(() => import('./pages/Help.jsx'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap.jsx'));
+
 const LoadingSpinner = () => (
   <div className="min-h-screen bg-futuristic flex items-center justify-center">
     <div className="text-center">
@@ -37,6 +48,17 @@ function App() {
               <Route path="/comprehensive-pricing" element={<ComprehensivePricing />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
+              
+              {/* New routes */}
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/sitemap" element={<Sitemap />} />
             </Routes>
           </Suspense>
         </main>
