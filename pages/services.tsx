@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code } from 'lucide-react'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, CheckCircle, Rocket, Wrench, Cpu, Network, Smartphone, ShieldCheck, Globe2, ServerCog, FileText, Palette, Target, Lightbulb, Cog } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
+import ComprehensiveServicesShowcase from '../src/components/ComprehensiveServicesShowcase'
 
 export default function Services() {
 	const title = 'Services — Zion Tech Group'
@@ -14,26 +15,51 @@ export default function Services() {
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Our Services
+							Our Comprehensive Services
 						</h1>
 						<p className="mt-6 text-lg leading-8 text-gray-600">
-							From strategy to production, we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.
+							From AI automation to quantum computing, we deliver cutting-edge solutions that transform your business operations and drive innovation.
 						</p>
+						<div className="mt-10 flex items-center justify-center gap-x-6">
+							<Link
+								to="/contact"
+								className="rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
+							>
+								Get Started
+								<ArrowRight className="ml-2 h-4 w-4 inline" />
+							</Link>
+							<a
+								href="tel:+13024640950"
+								className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
+							>
+								Call: +1 302 464 0950
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			{/* Services Grid */}
+			{/* Core Services Overview */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl lg:text-center mb-16">
+						<h2 className="text-base font-semibold leading-7 text-blue-600">Core Service Categories</h2>
+						<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+							Transform your business with our innovative solutions
+						</p>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							Our comprehensive suite covers everything from AI automation to emerging technologies, designed to scale your business efficiently.
+						</p>
+					</div>
+
 					<div className="grid gap-8 lg:grid-cols-2">
-						{/* AI Autonomous Systems */}
+						{/* AI & Machine Learning */}
 						<div id="ai" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
 							<div className="flex items-center gap-x-3">
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
 									<Brain className="h-6 w-6 text-white" />
 								</div>
-								<h2 className="text-xl font-semibold text-gray-900">AI Autonomous Systems</h2>
+								<h3 className="text-xl font-semibold text-gray-900">AI & Machine Learning</h3>
 							</div>
 							<p className="mt-4 text-gray-600">
 								Transform your operations with intelligent automation and AI-powered decision making.
@@ -41,19 +67,19 @@ export default function Services() {
 							<ul className="mt-6 space-y-3">
 								<li className="flex items-center gap-x-3">
 									<Zap className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">Sales/CS multi-agent copilots</span>
+									<span className="text-sm text-gray-700">AI Autonomous Suite - $79/month</span>
 								</li>
 								<li className="flex items-center gap-x-3">
 									<Database className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">RAG and workflow orchestration</span>
+									<span className="text-sm text-gray-700">AI Email Responder - $99/month</span>
 								</li>
 								<li className="flex items-center gap-x-3">
 									<BarChart3 className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">Observability and guardrails</span>
+									<span className="text-sm text-gray-700">AI Customer QA Benchmark - $99/month</span>
 								</li>
 								<li className="flex items-center gap-x-3">
 									<Users className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">Intelligent process automation</span>
+									<span className="text-sm text-gray-700">AI Autonomous Code Review - $149/month</span>
 								</li>
 							</ul>
 							<div className="mt-8">
@@ -67,13 +93,13 @@ export default function Services() {
 							</div>
 						</div>
 
-						{/* Cloud Platforms */}
+						{/* Cloud & Infrastructure */}
 						<div id="cloud" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
 							<div className="flex items-center gap-x-3">
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
 									<Cloud className="h-6 w-6 text-white" />
 								</div>
-								<h2 className="text-xl font-semibold text-gray-900">Cloud Platforms</h2>
+								<h3 className="text-xl font-semibold text-gray-900">Cloud & Infrastructure</h3>
 							</div>
 							<p className="mt-4 text-gray-600">
 								Build scalable, resilient cloud infrastructure that grows with your business.
@@ -81,19 +107,19 @@ export default function Services() {
 							<ul className="mt-6 space-y-3">
 								<li className="flex items-center gap-x-3">
 									<Server className="h-4 w-4 text-green-600" />
-									<span className="text-sm text-gray-700">Serverless and Kubernetes</span>
+									<span className="text-sm text-gray-700">Quantum Cloud Infrastructure - $299/month</span>
 								</li>
 								<li className="flex items-center gap-x-3">
 									<Database className="h-4 w-4 text-green-600" />
-									<span className="text-sm text-gray-700">Data pipelines and ML ops</span>
+									<span className="text-sm text-gray-700">Autonomous DevOps Platform - $199/month</span>
 								</li>
 								<li className="flex items-center gap-x-3">
 									<BarChart3 className="h-4 w-4 text-green-600" />
-									<span className="text-sm text-gray-700">FinOps and SRE practices</span>
+									<span className="text-sm text-gray-700">Edge Computing Orchestrator - $159/month</span>
 								</li>
 								<li className="flex items-center gap-x-3">
 									<Globe className="h-4 w-4 text-green-600" />
-									<span className="text-sm text-gray-700">Multi-cloud architecture</span>
+									<span className="text-sm text-gray-700">Multi-cloud architecture solutions</span>
 								</li>
 							</ul>
 							<div className="mt-8">
@@ -113,7 +139,7 @@ export default function Services() {
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-600">
 									<Shield className="h-6 w-6 text-white" />
 								</div>
-								<h2 className="text-xl font-semibold text-gray-900">Cybersecurity</h2>
+								<h3 className="text-xl font-semibold text-gray-900">Cybersecurity</h3>
 							</div>
 							<p className="mt-4 text-gray-600">
 								Protect your business with enterprise-grade security frameworks and compliance.
@@ -121,15 +147,15 @@ export default function Services() {
 							<ul className="mt-6 space-y-3">
 								<li className="flex items-center gap-x-3">
 									<Lock className="h-4 w-4 text-red-600" />
-									<span className="text-sm text-gray-700">Zero-trust frameworks</span>
+									<span className="text-sm text-gray-700">Zero Trust Network Architecture - $399/month</span>
 								</li>
 								<li className="flex items-center gap-x-3">
 									<Shield className="h-4 w-4 text-red-600" />
-									<span className="text-sm text-gray-700">Compliance and threat modeling</span>
+									<span className="text-sm text-gray-700">AI-Powered Threat Intelligence - $249/month</span>
 								</li>
 								<li className="flex items-center gap-x-3">
 									<Zap className="h-4 w-4 text-red-600" />
-									<span className="text-sm text-gray-700">Incident response playbooks</span>
+									<span className="text-sm text-gray-700">M365 Security Hardening Kit - $199/month</span>
 								</li>
 								<li className="flex items-center gap-x-3">
 									<BarChart3 className="h-4 w-4 text-red-600" />
@@ -153,7 +179,7 @@ export default function Services() {
 								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
 									<Code className="h-6 w-6 text-white" />
 								</div>
-								<h2 className="text-xl font-semibold text-gray-900">Micro SaaS</h2>
+								<h3 className="text-xl font-semibold text-gray-900">Micro SaaS</h3>
 							</div>
 							<p className="mt-4 text-gray-600">
 								Rapidly build and deploy SaaS products with proven infrastructure patterns.
@@ -161,19 +187,19 @@ export default function Services() {
 							<ul className="mt-6 space-y-3">
 								<li className="flex items-center gap-x-3">
 									<Zap className="h-4 w-4 text-purple-600" />
-									<span className="text-sm text-gray-700">Rapid product delivery</span>
+									<span className="text-sm text-gray-700">Mobile-First Survey Tool - $19/month</span>
 								</li>
 								<li className="flex items-center gap-x-3">
 									<Database className="h-4 w-4 text-purple-600" />
-									<span className="text-sm text-gray-700">Billing, auth, and analytics</span>
+									<span className="text-sm text-gray-700">Event Management Dashboard - $89/month</span>
 								</li>
 								<li className="flex items-center gap-x-3">
 									<BarChart3 className="h-4 w-4 text-purple-600" />
-									<span className="text-sm text-gray-700">Growth experiments</span>
+									<span className="text-sm text-gray-700">Churn Risk Alerts - $49/month</span>
 								</li>
 								<li className="flex items-center gap-x-3">
 									<Users className="h-4 w-4 text-purple-600" />
-									<span className="text-sm text-gray-700">User onboarding & retention</span>
+									<span className="text-sm text-gray-700">Subscription Revenue Analytics - $59/month</span>
 								</li>
 							</ul>
 							<div className="mt-8">
@@ -186,9 +212,92 @@ export default function Services() {
 								</Link>
 							</div>
 						</div>
+
+						{/* Business Intelligence */}
+						<div id="bi" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+							<div className="flex items-center gap-x-3">
+								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+									<BarChart3 className="h-6 w-6 text-white" />
+								</div>
+								<h3 className="text-xl font-semibold text-gray-900">Business Intelligence</h3>
+							</div>
+							<p className="mt-4 text-gray-600">
+								Transform data into actionable insights with AI-powered analytics and reporting.
+							</p>
+							<ul className="mt-6 space-y-3">
+								<li className="flex items-center gap-x-3">
+									<Brain className="h-4 w-4 text-indigo-600" />
+									<span className="text-sm text-gray-700">AI Business Intelligence Platform - $179/month</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<Database className="h-4 w-4 text-indigo-600" />
+									<span className="text-sm text-gray-700">Data Pipeline Automation - $129/month</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<BarChart3 className="h-4 w-4 text-indigo-600" />
+									<span className="text-sm text-gray-700">Predictive analytics & insights</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<Users className="h-4 w-4 text-indigo-600" />
+									<span className="text-sm text-gray-700">Real-time dashboards & reporting</span>
+								</li>
+							</ul>
+							<div className="mt-8">
+								<Link
+									to="/contact"
+									className="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-500 transition-colors"
+								>
+									Unlock your data
+									<ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
+						</div>
+
+						{/* Emerging Technologies */}
+						<div id="emerging" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+							<div className="flex items-center gap-x-3">
+								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-600">
+									<Rocket className="h-6 w-6 text-white" />
+								</div>
+								<h3 className="text-xl font-semibold text-gray-900">Emerging Technologies</h3>
+							</div>
+							<p className="mt-4 text-gray-600">
+								Stay ahead with cutting-edge technologies like quantum computing and blockchain.
+							</p>
+							<ul className="mt-6 space-y-3">
+								<li className="flex items-center gap-x-3">
+									<Cpu className="h-4 w-4 text-violet-600" />
+									<span className="text-sm text-gray-700">Quantum Neural Network Platform - $499/month</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<Network className="h-4 w-4 text-violet-600" />
+									<span className="text-sm text-gray-700">Blockchain Web3 Platform - $299/month</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<Globe2 className="h-4 w-4 text-violet-600" />
+									<span className="text-sm text-gray-700">Space Technology Solutions - $399/month</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<Users className="h-4 w-4 text-violet-600" />
+									<span className="text-sm text-gray-700">Future-ready infrastructure</span>
+								</li>
+							</ul>
+							<div className="mt-8">
+								<Link
+									to="/contact"
+									className="inline-flex items-center text-sm font-semibold text-violet-600 hover:text-violet-500 transition-colors"
+								>
+									Explore the future
+									<ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
+
+			{/* Comprehensive Services Showcase */}
+			<ComprehensiveServicesShowcase />
 
 			{/* Process Section */}
 			<section className="bg-white py-24 sm:py-32">
@@ -253,6 +362,58 @@ export default function Services() {
 				</div>
 			</section>
 
+			{/* Contact Information */}
+			<section className="bg-gray-50 py-24 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl lg:text-center mb-16">
+						<h2 className="text-base font-semibold leading-7 text-blue-600">Get Started</h2>
+						<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+							Ready to transform your business?
+						</p>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							Contact us today to discuss how our innovative solutions can help you achieve your goals.
+						</p>
+					</div>
+
+					<div className="grid gap-8 lg:grid-cols-3">
+						<div className="text-center">
+							<div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 mb-4">
+								<Smartphone className="h-6 w-6 text-white" />
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+							<p className="text-gray-600">
+								<a href="tel:+13024640950" className="text-blue-600 hover:text-blue-500 font-medium">
+									+1 302 464 0950
+								</a>
+							</p>
+						</div>
+
+						<div className="text-center">
+							<div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 mb-4">
+								<FileText className="h-6 w-6 text-white" />
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+							<p className="text-gray-600">
+								<a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-500 font-medium">
+									kleber@ziontechgroup.com
+								</a>
+							</p>
+						</div>
+
+						<div className="text-center">
+							<div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 mb-4">
+								<Globe className="h-6 w-6 text-white" />
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+							<p className="text-gray-600">
+								364 E Main St STE 1008<br />
+								Middletown DE 19709
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			{/* CTA Section */}
 			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -271,6 +432,12 @@ export default function Services() {
 								Get in touch
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
 							</Link>
+							<a
+								href="tel:+13024640950"
+								className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
+							>
+								Call now: +1 302 464 0950
+							</a>
 						</div>
 					</div>
 				</div>
