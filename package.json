@@ -106,6 +106,7 @@
     "linting:fix": "npm run linting:orchestrator fix"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^3.8.0",
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
