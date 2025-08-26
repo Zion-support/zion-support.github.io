@@ -4,9 +4,10 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { useState } from "react";
 =======
-import { useState } from "react";
-=======
 import { MessageSquare, Sparkles, ChevronDown } from "lucide-react";
+=======
+import { MessageSquare, ShoppingCart } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
 =======
@@ -42,21 +43,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-=======
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
@@ -89,6 +75,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
 =======
+=======
+  const { items } = useCart();
+  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
 
   const baseLinks = [
     {

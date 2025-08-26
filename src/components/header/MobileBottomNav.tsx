@@ -25,7 +25,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-  const { count: favoritesCount } = useFavorites();
   const { items } = useCart();
   const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
 
