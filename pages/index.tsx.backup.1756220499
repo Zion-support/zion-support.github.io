@@ -3,9 +3,27 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
+import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
+import UltraFuturisticNavigation2034 from '../components/layout/UltraFuturisticNavigation2034';
+import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
+import EnhancedServiceShowcase from '../components/sections/EnhancedServiceShowcase';
+import Enhanced2026ServicesShowcase from '../components/sections/Enhanced2026ServicesShowcase';
+import Revolutionary2026ServiceShowcase from '../components/sections/Revolutionary2026ServiceShowcase';
+import Revolutionary2027ServicesShowcase from '../components/sections/Revolutionary2027ServicesShowcase';
+import Revolutionary2027Hero from '../components/sections/Revolutionary2027Hero';
+import EnhancedHero2026 from '../components/sections/EnhancedHero2026';
+import UltraFuturisticHero2032 from '../components/sections/UltraFuturisticHero2032';
+import UltraFuturisticServiceShowcase2032 from '../components/sections/UltraFuturisticServiceShowcase2032';
+import UltraFuturisticServiceShowcase2033 from '../components/sections/UltraFuturisticServiceShowcase2033';
+import UltraFuturisticServiceShowcase2034 from '../components/sections/UltraFuturisticServiceShowcase2034';
+=======
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import UltraInnovativeServiceShowcase from '../components/sections/UltraInnovativeServiceShowcase';
 import UltraFuturisticHero from '../components/sections/UltraFuturisticHero';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7cbf
 import { motion } from 'framer-motion';
 // Import new 2024 real market services
 import { realMarketServices } from '../data/2024-real-market-services';
@@ -209,11 +227,23 @@ export default function HomePage() {
   const adaptedServices = allServices.map(adaptServiceToEnhancedShowcase);
 
   return (
+<<<<<<< HEAD
+    <UltraAdvancedFuturisticBackground2026 
+      intensity="extreme" 
+      colorScheme="neural-network"
+      particleCount={800}
+      animationSpeed={3.0}
+      enableHolographic={true}
+      enableQuantumEffects={true}
+      enableNeuralNetworks={true}
+      enableMultidimensional={true}
+=======
     <UltraQuantumHolographicBackground 
       intensity="ultra" 
       colorScheme="quantum"
       particleCount={400}
       animationSpeed={1.8}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7cbf
     >
       <div className="min-h-screen">
         <Head>
@@ -229,12 +259,28 @@ export default function HomePage() {
           <link rel="canonical" href="https://ziontechgroup.com" />
         </Head>
 
+<<<<<<< HEAD
+      {/* Navigation */}
+      <UltraFuturisticNavigation2034 />
+
+      {/* Hero Section */}
+      <UltraFuturisticHero2032 />
+
+      {/* 2024 Real Market Services Showcase */}
+      <UltraFuturisticServiceShowcase2034 />
+
+        {/* 2026 Innovative Services Showcase */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-purple-900/20"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
+=======
         {/* Ultra Futuristic Hero Section */}
         <UltraFuturisticHero className="pt-20 pb-16" />
 
         {/* Service Statistics */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7cbf
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -262,6 +308,12 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
+        {/* Latest Innovations Showcase */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
+=======
         {/* Ultra Innovative Service Showcase */}
         <UltraInnovativeServiceShowcase 
           maxServices={6}
@@ -299,6 +351,7 @@ export default function HomePage() {
         {/* Why Choose Zion Tech Group */}
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7cbf
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -484,6 +537,10 @@ export default function HomePage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
+    </UltraAdvancedFuturisticBackground2026>
+=======
     </UltraQuantumHolographicBackground>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7cbf
   );
 }

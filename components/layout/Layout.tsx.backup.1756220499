@@ -1,11 +1,16 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import UltraFuturisticNavigation from './UltraFuturisticNavigation';
 import EnhancedFooter from './EnhancedFooter';
 import UltraAdvancedFuturisticBackground from '../ui/UltraAdvancedFuturisticBackground';
 import TopContactBar from './TopContactBar';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7cbf
 
 type LayoutProps = {
 	children: React.ReactNode;
+<<<<<<< HEAD
+=======
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -22,6 +27,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 			</UltraAdvancedFuturisticBackground>
 		</div>
 	);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7cbf
 };
 
 export default function Layout({ children }: LayoutProps) {
