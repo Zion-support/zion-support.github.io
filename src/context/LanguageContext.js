@@ -20,9 +20,7 @@ export function LanguageProvider({ children }) {
         return translations[language]?.[key] || key;
     };
     const isRTL = language === 'ar' || language === 'he';
-    return (<LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
-      {children}
-    </LanguageContext.Provider>);
+    return React.createElement(LanguageContext.Provider, { value: { language, setLanguage, t, isRTL } }, children);
 }
 export function useLanguage() {
     const context = useContext(LanguageContext);

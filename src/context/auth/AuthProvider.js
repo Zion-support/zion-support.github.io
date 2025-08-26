@@ -169,7 +169,5 @@ export const AuthProvider = ({ children }) => {
         onboardingStep,
         tokens
     };
-    return (<AuthContext.Provider value={authContextValue}>
-      {children}
-    </AuthContext.Provider>);
+    return React.createElement(AuthContext.Provider, { value: authContextValue }, children);
 };
