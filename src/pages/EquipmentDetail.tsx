@@ -1,8 +1,7 @@
 
 import { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { NextSeo } from "@/components/NextSeo";
+import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -29,7 +28,7 @@ export default function EquipmentDetail() {
   if (!equipment) {
     return (
       <>
-        <Header />
+        <NextSeo title="Equipment Not Found" description="Equipment not available" />
         <div className="min-h-screen bg-zion-blue py-12 px-4">
           <div className="container mx-auto">
             <div className="text-center py-20">
@@ -83,7 +82,15 @@ export default function EquipmentDetail() {
 
   return (
     <>
-      <Header />
+      <NextSeo
+        title={equipment.name}
+        description={equipment.description}
+        openGraph={{
+          title: equipment.name,
+          description: equipment.description,
+          images: equipment.images.length ? [{ url: equipment.images[0] }] : undefined,
+        }}
+      />
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

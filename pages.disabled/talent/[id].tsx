@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useParams, Navigate } from 'react-router-dom';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
@@ -65,7 +65,7 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
-  if (error || !profile) return <ProfileErrorState error={error} />;
+  if (error || !profile) return <Navigate to="/404" replace />;
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">

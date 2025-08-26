@@ -1,14 +1,5 @@
-const nextConfig = {
-	reactStrictMode: true,
-	trailingSlash: true,
-	output: 'export',
-	images: {
-		unoptimized: true
-	},
-	eslint: {
-		ignoreDuringBuilds: true
-	},
-	poweredByHeader: false
-};
+const { i18n } = require('./next-i18next.config');
 
-module.exports = nextConfig;
+module.exports = {
+  i18n,
+};

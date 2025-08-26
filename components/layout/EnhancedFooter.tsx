@@ -1,77 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Globe, 
-  Twitter, Linkedin, Facebook, Instagram, Github, Youtube,
-  ArrowRight, Rocket, Brain, Cpu, Shield,
-  Star, Users, TrendingUp, Zap
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-const serviceCategories = [
-  {
-    title: 'Next-Generation AI',
-    services: [
-      { name: 'AI Multimodal Fusion', href: '/ai-multimodal-fusion-platform' },
-      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine' },
-      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' },
-      { name: 'AI Quantum Hybrid Computing', href: '/ai-quantum-hybrid-computing' }
-    ]
-  },
-  {
-    title: 'Cutting-Edge IT',
-    services: [
-      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
-      { name: '5G Private Networks', href: '/5g-private-network-solutions' },
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' }
-    ]
-  },
-  {
-    title: 'Innovative SaaS',
-    services: [
-      { name: 'AI Brand Personality', href: '/ai-brand-personality-generator' },
-      { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform' },
-      { name: 'AI Meeting Transcriber', href: '/ai-meeting-transcriber-pro' },
-      { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion' }
-    ]
-  }
-];
-
-const companyLinks = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Resources', href: '/resources' },
-  { name: 'Services Advertising', href: '/services-advertising' },
-  { name: 'Market Pricing', href: '/market-pricing' }
-];
-
-const supportLinks = [
-  { name: 'Contact Support', href: '/contact' },
-  { name: 'Documentation', href: '/docs' },
-  { name: 'API Reference', href: '/api-documentation-generator' },
-  { name: 'Status Page', href: '/status-pages-slo' },
-  { name: 'Security', href: '/security' },
-  { name: 'Privacy Policy', href: '/privacy' }
-];
-
-const socialLinks = [
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-  { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: Youtube }
-];
-
-export default function EnhancedFooter() {
-  const currentYear = new Date().getFullYear();
+import { siteInfo } from '../../data/site-info';
 
   return (
     <footer className="bg-gray-900/95 backdrop-blur-md border-t border-gray-700/50">
@@ -193,58 +121,27 @@ export default function EnhancedFooter() {
               </ul>
             </motion.div>
           </div>
-
-          {/* Stats & Social */}
-          <div className="grid grid-cols-1 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <h4 className="text-lg font-semibold text-white mb-4">Our Impact</h4>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700/50">
-                  <div className="text-2xl font-bold text-cyan-400">800+</div>
-                  <div className="text-xs text-gray-400">Services</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700/50">
-                  <div className="text-2xl font-bold text-purple-400">1000%</div>
-                  <div className="text-xs text-gray-400">ROI</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700/50">
-                  <div className="text-2xl font-bold text-green-400">24/7</div>
-                  <div className="text-xs text-gray-400">Support</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/50 rounded-lg border border-gray-700/50">
-                  <div className="text-2xl font-bold text-pink-400">99.9%</div>
-                  <div className="text-xs text-gray-400">Uptime</div>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social) => {
-                  const Icon = social.icon;
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      className="w-10 h-10 bg-gray-800/50 border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all duration-200"
-                    >
-                      <Icon className="w-5 h-5" />
-                    </a>
-                  );
-                })}
-              </div>
-            </motion.div>
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <ul className="text-gray-300 space-y-2">
+              <li>
+                Email: <a className="underline hover:text-white" href={`mailto:${siteInfo.contact.email}`}>{siteInfo.contact.email}</a>
+              </li>
+              <li>
+                Phone: <a className="underline hover:text-white" href={`tel:${siteInfo.contact.phone.replace(/\s+/g, '')}`}>{siteInfo.contact.phone}</a>
+              </li>
+              <li>
+                Address: {siteInfo.contact.address}
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-300 hover:text-white">Twitter</a>
+              <a href="#" className="text-gray-300 hover:text-white">LinkedIn</a>
+              <a href="#" className="text-gray-300 hover:text-white">GitHub</a>
+            </div>
           </div>
         </div>
 
