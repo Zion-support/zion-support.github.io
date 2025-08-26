@@ -1,23 +1,21 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import React from 'react';
+import { useParams, Link } from 'react-router-dom';
 
-export default function GenericPage(){
-	const router = useRouter()
-	const slugParts = Array.isArray(router.query.slug) ? router.query.slug : (router.query.slug ? [router.query.slug as string] : [])
-	const path = '/' + slugParts.join('/')
-	const title = slugParts.length === 0 ? 'Page' : slugParts.map(s => s.replace(/-/g, ' ')).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' / ')
-	const canonical = `https://ziontechgroup.com${path.endsWith('/') ? path : path + '/'}`
+export default function GenericPage() {
+	const params = useParams();
+	const slugParts = params['*'] ? params['*'].split('/') : [];
+	const path = '/' + slugParts.join('/');
+	const title = slugParts.length === 0 ? 'Page' : slugParts.map(s => s.replace(/-/g, ' ')).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' / ');
+	const canonical = `https://ziontechgroup.com${path.endsWith('/') ? path : path + '/'}`;
 
 	return (
 		<main style={{padding:20,fontFamily:'sans-serif',lineHeight:1.6,maxWidth:900,margin:'0 auto'}}>
-			<Head>
-				<title>{title} | Zion Tech Group</title>
-				<meta name="description" content={`Information about ${title} at Zion Tech Group.`} />
-				<link rel="canonical" href={canonical} />
-			</Head>
+			<title>{title} | Zion Tech Group</title>
+			<meta name="description" content={`Information about ${title} at Zion Tech Group.`} />
+			<link rel="canonical" href={canonical} />
+			
 			<nav style={{marginBottom:16}} aria-label="Breadcrumbs">
-				<Link href="/" style={{color:'#2563eb'}}>Home</Link>
+				<Link to="/" style={{color:'#2563eb'}}>Home</Link>
 				<span style={{margin:'0 8px', color:'#9ca3af'}}>/</span>
 				<span>{title}</span>
 			</nav>
@@ -30,8 +28,8 @@ export default function GenericPage(){
 					<li>Applied AI: assistants, RAG, and automation</li>
 					<li>Cloud, DevOps, data, and cybersecurity services</li>
 				</ul>
-				<p style={{marginTop:8}}>Have questions about {title.toLowerCase()}? <Link href="/contact" style={{color:'#2563eb'}}>Contact us</Link>.</p>
+				<p style={{marginTop:8}}>Have questions about {title.toLowerCase()}? <Link to="/contact" style={{color:'#2563eb'}}>Contact us</Link>.</p>
 			</section>
 		</main>
-	)
+	);
 }
