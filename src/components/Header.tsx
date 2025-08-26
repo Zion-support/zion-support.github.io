@@ -1,13 +1,145 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import Sidebar from './Sidebar';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Search, 
+  User, 
+  ShoppingCart, 
+  Bell,
+  Globe,
+  Zap,
+  Shield,
+  Cpu,
+  Brain,
+  Building,
+  FileText,
+  HelpCircle,
+  MessageSquare,
+  Users,
+  Briefcase,
+  Star,
+  Rocket,
+  Leaf,
+  Smartphone,
+  DollarSign,
+  Target,
+  BookOpen,
+  Code,
+  Handshake,
+  Award,
+  TrendingUp,
+  Palette,
+  Monitor,
+  Server,
+  Cloud,
+  Key,
+  Eye,
+  ShieldCheck,
+  Bug,
+  Activity,
+  PieChart,
+  BarChart,
+  LineChart,
+  Map,
+  Calendar,
+  Clock,
+  Mail,
+  Phone,
+  MapPin,
+  Globe2,
+  Heart,
+  ThumbsUp,
+  CheckCircle,
+  AlertCircle,
+  Info,
+  ExternalLink
+} from 'lucide-react';
 
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+interface NavigationItem {
+  name: string;
+  path: string;
+  icon?: React.ComponentType<{ className?: string }>;
+  children?: NavigationItem[];
+  external?: boolean;
+}
+
+export function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
+  const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+  const router = useRouter();
+
+  const navigationItems: NavigationItem[] = [
+    {
+      name: 'Home',
+      path: '/',
+      icon: Zap
+    },
+    {
+      name: 'Services',
+      path: '/services',
+      icon: Briefcase,
+      children: [
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
+        { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
+        { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
+        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap },
+        { name: 'Green IT', path: '/green-it', icon: Leaf },
+        { name: 'Space Tech', path: '/space-tech', icon: Rocket },
+        { name: 'Mobile Solutions', path: '/mobile', icon: Smartphone },
+        { name: 'Financial Solutions', path: '/financial-solutions', icon: DollarSign },
+        { name: 'Micro SaaS Services', path: '/micro-saas-services', icon: Building }
+      ]
+    },
+    {
+      name: 'Company',
+      path: '/company',
+      icon: Building,
+      children: [
+        { name: 'About Us', path: '/about', icon: Building },
+        { name: 'Our Team', path: '/team', icon: Users },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Handshake },
+        { name: 'Press', path: '/press', icon: FileText },
+        { name: 'Research & Development', path: '/research-development', icon: Target }
+      ]
+    },
+    {
+      name: 'Resources',
+      path: '/resources',
+      icon: FileText,
+      children: [
+        { name: 'Blog & Insights', path: '/blog', icon: BookOpen },
+        { name: 'Case Studies', path: '/case-studies', icon: Target },
+        { name: 'Help Center', path: '/help-center', icon: HelpCircle },
+        { name: 'API Documentation', path: '/api-docs', icon: Code },
+        { name: 'Tutorials', path: '/tutorials', icon: Code },
+        { name: 'Webinars', path: '/webinars', icon: Calendar },
+        { name: 'White Papers', path: '/white-papers', icon: FileText },
+        { name: 'Documentation', path: '/documentation', icon: Code }
+      ]
+    },
+    {
+      name: 'Support',
+      path: '/support',
+      icon: HelpCircle,
+      children: [
+        { name: 'Help Center', path: '/help-center', icon: HelpCircle },
+        { name: 'FAQ', path: '/help-center#faq', icon: HelpCircle },
+        { name: 'Contact Support', path: '/contact', icon: MessageSquare },
+        { name: 'Live Chat', path: '/help-center/live-chat', icon: MessageSquare },
+        { name: 'Status', path: '/status', icon: Activity },
+        { name: 'Request Quote', path: '/contact', icon: MessageSquare }
+      ]
+    }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,133 +150,233 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const closeMenu = () => setIsMenuOpen(false);
-  const closeSidebar = () => setIsSidebarOpen(false);
+  const isActive = (path: string) => router.pathname === path;
 
-  const isActive = (path: string) => location.pathname === path;
-
-  const navigationItems = [
-    { path: '/', label: 'Home' },
-    { path: '/services', label: 'Services' },
-    { path: '/ai-solutions', label: 'AI Solutions' },
-    { path: '/quantum-technology', label: 'Quantum Tech' },
-    { path: '/cybersecurity', label: 'Security' },
-    { path: '/about', label: 'About' },
-    { path: '/contact', label: 'Contact' }
-  ];
-
-  return (
-    <>
-      <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-slate-900/95 backdrop-blur-lg border-b border-white/10 shadow-lg' 
-          : 'bg-slate-900/80 backdrop-blur-md'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Link to="/" className="flex items-center group" onClick={closeMenu}>
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
-                Zion Tech Group
-              </span>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-6">
-              {navigationItems.map((item) => (
+  const renderDropdown = (items: NavigationItem[], isOpen: boolean, onToggle: () => void) => (
+    <div className="relative">
+      <button
+        onClick={onToggle}
+        className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-colors ${
+          isOpen
+            ? 'bg-white/10 text-white'
+            : 'text-gray-300 hover:text-white hover:bg-white/10'
+        }`}
+      >
+        <span>Services</span>
+        <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+      
+      {isOpen && (
+        <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-lg shadow-xl z-50">
+          <div className="p-4">
+            <div className="grid grid-cols-1 gap-2">
+              {items.map((item) => (
                 <Link
                   key={item.path}
-                  to={item.path}
-                  className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
-                    isActive(item.path)
-                      ? 'text-white bg-blue-600/20'
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
-                  }`}
+                  href={item.path}
+                  className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                  onClick={() => {
+                    setIsServicesDropdownOpen(false);
+                    setIsCompanyDropdownOpen(false);
+                    setIsResourcesDropdownOpen(false);
+                  }}
                 >
-                  {item.label}
-                  {isActive(item.path) && (
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
-                  )}
+                  {item.icon && <item.icon className="h-5 w-5" />}
+                  <div>
+                    <div className="font-medium">{item.name}</div>
+                  </div>
                 </Link>
               ))}
-            </nav>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 
-            {/* CTA Button */}
-            <div className="hidden lg:block">
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-slate-900/95 backdrop-blur-lg border-b border-white/10' 
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center">
+                <Zap className="h-5 w-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-1">
+            {navigationItems.map((item) => (
+              <div key={item.name}>
+                {item.children ? (
+                  <div className="relative">
+                    <button
+                      onClick={() => {
+                        if (item.name === 'Services') setIsServicesDropdownOpen(!isServicesDropdownOpen);
+                        if (item.name === 'Company') setIsCompanyDropdownOpen(!isCompanyDropdownOpen);
+                        if (item.name === 'Resources') setIsResourcesDropdownOpen(!isResourcesDropdownOpen);
+                      }}
+                      className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-colors ${
+                        (item.name === 'Services' && isServicesDropdownOpen) ||
+                        (item.name === 'Company' && isCompanyDropdownOpen) ||
+                        (item.name === 'Resources' && isResourcesDropdownOpen)
+                          ? 'bg-white/10 text-white'
+                          : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className={`h-4 w-4 transition-transform ${
+                        (item.name === 'Services' && isServicesDropdownOpen) ||
+                        (item.name === 'Company' && isCompanyDropdownOpen) ||
+                        (item.name === 'Resources' && isResourcesDropdownOpen)
+                          ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                    
+                    {(item.name === 'Services' && isServicesDropdownOpen) ||
+                     (item.name === 'Company' && isCompanyDropdownOpen) ||
+                     (item.name === 'Resources' && isResourcesDropdownOpen) ? (
+                      <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-lg shadow-xl z-50">
+                        <div className="p-4">
+                          <div className="grid grid-cols-1 gap-2">
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.path}
+                                href={child.path}
+                                className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                                onClick={() => {
+                                  setIsServicesDropdownOpen(false);
+                                  setIsCompanyDropdownOpen(false);
+                                  setIsResourcesDropdownOpen(false);
+                                }}
+                              >
+                                {child.icon && <child.icon className="h-5 w-5" />}
+                                <div>
+                                  <div className="font-medium">{child.name}</div>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    ) : null}
+                  </div>
+                ) : (
+                  <Link
+                    href={item.path}
+                    className={`px-4 py-2 rounded-lg transition-colors ${
+                      isActive(item.path)
+                        ? 'bg-white/10 text-white'
+                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          {/* Right side actions */}
+          <div className="hidden md:flex items-center space-x-4">
+            <button className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
+              <Search className="h-5 w-5" />
+            </button>
+            
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+          >
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-slate-900/95 backdrop-blur-lg border-t border-white/10">
+          <div className="px-4 py-6 space-y-4">
+            {navigationItems.map((item) => (
+              <div key={item.name}>
+                {item.children ? (
+                  <div>
+                    <button
+                      onClick={() => {
+                        if (item.name === 'Services') setIsServicesDropdownOpen(!isServicesDropdownOpen);
+                        if (item.name === 'Company') setIsCompanyDropdownOpen(!isCompanyDropdownOpen);
+                        if (item.name === 'Resources') setIsResourcesDropdownOpen(!isResourcesDropdownOpen);
+                      }}
+                      className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className={`h-4 w-4 transition-transform ${
+                        (item.name === 'Services' && isServicesDropdownOpen) ||
+                        (item.name === 'Company' && isCompanyDropdownOpen) ||
+                        (item.name === 'Resources' && isResourcesDropdownOpen)
+                          ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                    
+                    {(item.name === 'Services' && isServicesDropdownOpen) ||
+                     (item.name === 'Company' && isCompanyDropdownOpen) ||
+                     (item.name === 'Resources' && isResourcesDropdownOpen) ? (
+                      <div className="ml-4 mt-2 space-y-2">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.path}
+                            href={child.path}
+                            className="block px-4 py-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                ) : (
+                  <Link
+                    href={item.path}
+                    className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+            
+            <div className="pt-4 border-t border-white/10">
               <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                href="/contact"
+                className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Get Started
               </Link>
             </div>
-
-            {/* Sidebar Toggle Button */}
-            <button
-              onClick={() => setIsSidebarOpen(true)}
-              className="hidden md:block p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
-              aria-label="Open sidebar"
-            >
-              <Menu className="h-6 w-6" />
-            </button>
-
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
-              aria-label="Toggle mobile menu"
-            >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-
-          {/* Mobile Navigation */}
-          <div className={`md:hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen 
-              ? 'max-h-96 opacity-100' 
-              : 'max-h-0 opacity-0 overflow-hidden'
-          }`}>
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 rounded-lg mt-2 border border-white/10">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                    isActive(item.path)
-                      ? 'text-white bg-blue-600/20 border-l-4 border-blue-400'
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
-                  }`}
-                  onClick={closeMenu}
-                >
-                  {item.label}
-                </Link>
-              ))}
-              
-              <div className="pt-4 border-t border-white/10">
-                <Link
-                  to="/contact"
-                  className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg"
-                  onClick={closeMenu}
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
-      </header>
-
-      {/* Sidebar */}
-      <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-    </>
+      )}
+    </header>
   );
-};
+}
 
 export default Header;
