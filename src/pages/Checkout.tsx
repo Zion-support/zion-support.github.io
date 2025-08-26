@@ -5,7 +5,16 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
-import { useAuth } from '@/hooks';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { useAuth } from '@/hooks/useAuth';
 
 interface CartItem {
   id: string;
@@ -26,9 +35,10 @@ export default function CheckoutPage() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const [items, setItems] = useState<CartItem[]>([]);
-  const form = useForm<CheckoutForm>({ defaultValues: { name: '', email: '', address: '', city: '', country: '' } });
-  const { getVariant, track } = useFeatureFlags();
-  const variant = getVariant('new-checkout-v2');
+  const { user } = useAuth();
+  const [showGuest, setShowGuest] = useState(false);
+  const [guestEmail, setGuestEmail] = useState('');
+  const [guestAddress, setGuestAddress] = useState('');
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -58,17 +68,12 @@ export default function CheckoutPage() {
     }
   }, [location.search]);
 
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-
-  const onSubmit = async (data: CheckoutForm) => {
+  const createSession = async (body: any) => {
     try {
-      const response = await fetch('/api/stripe/create-session', {
+      const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          productId: product.id,
-          customerEmail: user?.email,
-        }),
+        body: JSON.stringify(body),
       });
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || 'Failed');
@@ -101,9 +106,26 @@ export default function CheckoutPage() {
     }
   };
 
-  if (variant.name === 'v2') {
-    return <CheckoutV2 />;
-  }
+  const handleCheckout = async () => {
+    const product = items[0];
+    if (!user) {
+      setShowGuest(true);
+      return;
+    }
+    await createSession({ priceId: product.id });
+  };
+
+  const handleGuestSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const product = items[0];
+    await createSession({
+      priceId: product.id,
+      email: guestEmail,
+      shipping: guestAddress,
+    });
+  };
+
+  const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
 
   return (
     <div className="max-w-2xl mx-auto p-6">
@@ -138,6 +160,36 @@ export default function CheckoutPage() {
           </div>
         </div>
       </div>
+
+      <Dialog open={showGuest} onOpenChange={setShowGuest}>
+        <DialogContent>
+          <form onSubmit={handleGuestSubmit} className="space-y-4">
+            <DialogHeader>
+              <DialogTitle>Checkout as Guest</DialogTitle>
+              <DialogDescription>
+                Enter your contact email and shipping address
+              </DialogDescription>
+            </DialogHeader>
+            <Input
+              required
+              value={guestEmail}
+              onChange={(e) => setGuestEmail(e.target.value)}
+              placeholder="Email"
+              aria-label="Email"
+            />
+            <Input
+              required
+              value={guestAddress}
+              onChange={(e) => setGuestAddress(e.target.value)}
+              placeholder="Shipping Address"
+              aria-label="Shipping Address"
+            />
+            <DialogFooter>
+              <Button type="submit" className="w-full">Checkout</Button>
+            </DialogFooter>
+          </form>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
