@@ -231,7 +231,7 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <div className="text-center">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-lg font-semibold text-white mb-2">Innovation First</h3>
@@ -252,6 +252,27 @@ const Home: React.FC = () => {
               <h3 className="text-lg font-semibold text-white mb-2">ROI Focused</h3>
               <p className="text-gray-300 text-sm">Solutions designed to deliver measurable business value</p>
             </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            >
+              Contact Us Today
+            </Link>
+            <Link
+              to="/services"
+              className="inline-flex items-center px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+            >
+              View All Services
+            </Link>
+            <Link
+              to="/services-showcase"
+              className="inline-flex items-center px-8 py-3 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              Explore Micro SAAS Solutions
+            </Link>
           </div>
         </div>
       </section>
