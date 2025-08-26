@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -23,7 +25,7 @@ const ServicesAdvertising = React.lazy(() => import('./pages/ServicesAdvertising
 
 // Loading component
 const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-futuristic">
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark">
     <div className="relative">
       <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
       <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
@@ -64,6 +66,8 @@ function App() {
         
         <Footer />
         <ChatAssistant />
+        <PerformanceMonitor />
+        <AccessibilityEnhancer />
       </div>
     </Router>
   );
