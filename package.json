@@ -2,6 +2,7 @@
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
@@ -12,7 +13,9 @@
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
-    "fix:all": "npm run lint -- --fix || true"
+    "fix:all": "npm run lint -- --fix || true",
+    "analyze": "node scripts/analyze-bundle.js",
+    "analyze:build": "npm run build && npm run analyze"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
