@@ -9,6 +9,8 @@ import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import GreenIT from "@/pages/GreenIT";
 import Careers from "@/pages/Careers";
+import FAQ from "@/pages/FAQ";
+import Enterprise from "@/pages/Enterprise";
 import SearchPage from "@/pages/SearchPage";
 import { SitemapPage } from "@/components/SitemapPage";
 import Sitemap from "@/pages/Sitemap";
@@ -33,6 +35,7 @@ const ContentRoutes = () => {
       {/* Help Center Routes */}
       <Route path="/help" element={<HelpCenterPage />} />
       <Route path="/support" element={<HelpCenterPage />} />
+      <Route path="/faq" element={<FAQ />} />
       
       {/* Blog Routes */}
       <Route path="/blog" element={<Blog />} />
@@ -46,6 +49,9 @@ const ContentRoutes = () => {
 
       {/* Careers Route */}
       <Route path="/careers" element={<Careers />} />
+
+      {/* Enterprise Route */}
+      <Route path="/enterprise" element={<Enterprise />} />
 
       {/* Legal Pages */}
       <Route path="/terms" element={<Terms />} />

@@ -216,6 +216,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       key: 'services',
       href: '/services',
@@ -264,6 +265,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { href: '/green-it', label: 'Green IT' }
       ]
 >>>>>>> origin/cursor/website-audit-and-enhancement-24ce
+=======
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services')
+>>>>>>> origin/cursor/website-audit-and-enhancement-45a9
     },
     {
 >>>>>>> origin/cursor/website-audit-and-enhancement-6726
@@ -320,6 +326,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { href: '/zion-hire-ai', label: 'AI Hiring' }
       ]
 >>>>>>> origin/cursor/website-audit-and-enhancement-24ce
+    },
+    {
+      key: 'enterprise',
+      href: '/enterprise',
+      matches: (path: string) => path.startsWith('/enterprise')
     },
     {
       key: 'community',
