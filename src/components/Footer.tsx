@@ -8,41 +8,62 @@ const Footer: React.FC = () => {
     {
       title: "Services",
       links: [
-        { label: "AI Solutions", path: "/services" },
-        { label: "Cloud & DevOps", path: "/services" },
-        { label: "Cybersecurity", path: "/services" },
-        { label: "Quantum Computing", path: "/services" },
-        { label: "Blockchain & Web3", path: "/services" }
+        { label: "AI Solutions", path: "/services/ai-solutions" },
+        { label: "Quantum Computing", path: "/services/quantum-computing" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "Cloud & DevOps", path: "/services/cloud-devops" },
+        { label: "Blockchain & Web3", path: "/services/blockchain-web3" },
+        { label: "Enterprise IT", path: "/services/enterprise-it" },
+        { label: "Green IT", path: "/services/green-it" },
+        { label: "Space Technology", path: "/services/space-tech" },
+        { label: "Micro SaaS", path: "/services/micro-saas" }
+      ]
+    },
+    {
+      title: "Solutions",
+      links: [
+        { label: "AI Autonomous Business", path: "/solutions/ai-autonomous-business" },
+        { label: "AI Autonomous Research", path: "/solutions/ai-autonomous-research" },
+        { label: "AI Autonomous Ecosystem", path: "/solutions/ai-autonomous-ecosystem" },
+        { label: "Quantum Neural Network", path: "/solutions/quantum-neural-network" },
+        { label: "Quantum Edge Computing", path: "/solutions/quantum-edge-computing" },
+        { label: "AI-Powered Security", path: "/solutions/ai-powered-security" },
+        { label: "AI Content Generation", path: "/solutions/ai-content-generation" },
+        { label: "AI Business Intelligence", path: "/solutions/ai-business-intelligence" }
       ]
     },
     {
       title: "Company",
       links: [
         { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
-        { label: "Careers", path: "/about" },
-        { label: "News & Updates", path: "/blog" },
-        { label: "Case Studies", path: "/services" }
+        { label: "Our Team", path: "/team" },
+        { label: "Careers", path: "/careers" },
+        { label: "Partners", path: "/partners" },
+        { label: "News & Updates", path: "/news" },
+        { label: "Case Studies", path: "/case-studies" }
       ]
     },
     {
       title: "Resources",
       links: [
         { label: "Blog", path: "/blog" },
-        { label: "Documentation", path: "/services" },
-        { label: "White Papers", path: "/services" },
-        { label: "Webinars", path: "/services" },
-        { label: "Research", path: "/about" }
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "Events", path: "/events" },
+        { label: "Research & Development", path: "/research-development" },
+        { label: "Tutorials", path: "/tutorials" },
+        { label: "Documentation", path: "/documentation" }
       ]
     },
     {
       title: "Support",
       links: [
         { label: "Contact Us", path: "/contact" },
-        { label: "Help Center", path: "/contact" },
-        { label: "Support Portal", path: "/contact" },
-        { label: "Training", path: "/services" },
-        { label: "Consulting", path: "/contact" }
+        { label: "Help Center", path: "/help-center" },
+        { label: "Support Portal", path: "/support" },
+        { label: "Training", path: "/training" },
+        { label: "Consulting", path: "/consulting" },
+        { label: "FAQ", path: "/faq" }
       ]
     }
   ];
@@ -51,14 +72,25 @@ const Footer: React.FC = () => {
     { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼" },
     { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦" },
     { name: "GitHub", url: "https://github.com/ziontechgroup", icon: "💻" },
-    { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: "📺" }
+    { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: "📺" },
+    { name: "Facebook", url: "https://facebook.com/ziontechgroup", icon: "📘" },
+    { name: "Instagram", url: "https://instagram.com/ziontechgroup", icon: "📷" }
+  ];
+
+  const quickLinks = [
+    { label: "Request Quote", path: "/request-quote" },
+    { label: "AI Matcher", path: "/match" },
+    { label: "Talent Directory", path: "/talent" },
+    { label: "Equipment", path: "/equipment" },
+    { label: "Community", path: "/community" },
+    { label: "Zion Hire AI", path: "/zion-hire-ai" }
   ];
 
   return (
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
@@ -73,7 +105,7 @@ const Footer: React.FC = () => {
             </p>
             
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -107,6 +139,22 @@ const Footer: React.FC = () => {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Quick Links Section */}
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <h3 className="text-lg font-semibold text-white mb-4 text-center">Quick Access</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.path}
+                className="px-4 py-2 bg-white/10 hover:bg-blue-500/20 text-gray-300 hover:text-white rounded-lg transition-all duration-300 text-sm"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -154,6 +202,9 @@ const Footer: React.FC = () => {
               </Link>
               <Link to="/sitemap" className="hover:text-blue-400 transition-colors duration-300">
                 Sitemap
+              </Link>
+              <Link to="/accessibility" className="hover:text-blue-400 transition-colors duration-300">
+                Accessibility
               </Link>
             </div>
           </div>
