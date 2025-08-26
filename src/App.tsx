@@ -7,7 +7,7 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { Footer } from "./components/Footer";
+import Footer from "./components/Footer";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -22,6 +22,9 @@ import {
   DeveloperRoutes
 } from './routes';
 const Home = React.lazy(() => import('./pages/Home'));
+const AISolutions = React.lazy(() => import('./pages/AISolutions'));
+const QuantumTechnology = React.lazy(() => import('./pages/QuantumTechnology'));
+const Cybersecurity = React.lazy(() => import('./pages/Cybersecurity'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
@@ -45,6 +48,9 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
+  { path: '/ai-solutions', element: <AISolutions /> },
+  { path: '/quantum-technology', element: <QuantumTechnology /> },
+  { path: '/cybersecurity', element: <Cybersecurity /> },
   { path: '/match', element: <AIMatcherPage /> },
   { path: '/login', element: <Login /> },
   { path: '/signup', element: <Signup /> },

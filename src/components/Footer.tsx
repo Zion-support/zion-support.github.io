@@ -6,43 +6,63 @@ const Footer: React.FC = () => {
 
   const footerSections = [
     {
-      title: "Services",
+      title: "Core Services",
       links: [
-        { label: "AI Solutions", path: "/services" },
-        { label: "Cloud & DevOps", path: "/services" },
-        { label: "Cybersecurity", path: "/services" },
-        { label: "Quantum Computing", path: "/services" },
-        { label: "Blockchain & Web3", path: "/services" }
+        { label: "AI Solutions", path: "/ai-solutions" },
+        { label: "Quantum Technology", path: "/quantum-technology" },
+        { label: "Cybersecurity", path: "/cybersecurity" },
+        { label: "Cloud & DevOps", path: "/cloud-devops" },
+        { label: "Enterprise Solutions", path: "/enterprise-solutions" }
+      ]
+    },
+    {
+      title: "AI & Autonomous Systems",
+      links: [
+        { label: "AI Autonomous Systems", path: "/ai-autonomous-systems" },
+        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "AI Business Manager", path: "/ai-autonomous-business-manager" },
+        { label: "AI Business Platform", path: "/ai-autonomous-business-platform" },
+        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" }
+      ]
+    },
+    {
+      title: "Advanced Solutions",
+      links: [
+        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
+        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
+        { label: "SOC2 Compliance", path: "/soc2-compliance-automation" },
+        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
+        { label: "Emerging Technology", path: "/emerging-tech" }
+      ]
+    },
+    {
+      title: "Industry Solutions",
+      links: [
+        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
+        { label: "Financial Solutions", path: "/solutions/financial" },
+        { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
+        { label: "Retail Solutions", path: "/solutions/retail" },
+        { label: "Government Solutions", path: "/solutions/government" }
       ]
     },
     {
       title: "Company",
       links: [
         { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
-        { label: "Careers", path: "/about" },
-        { label: "News & Updates", path: "/blog" },
-        { label: "Case Studies", path: "/services" }
+        { label: "Our Team", path: "/team" },
+        { label: "Careers", path: "/careers" },
+        { label: "Partners", path: "/partners" },
+        { label: "Case Studies", path: "/case-studies" }
       ]
     },
     {
-      title: "Resources",
+      title: "Resources & Support",
       links: [
-        { label: "Blog", path: "/blog" },
-        { label: "Documentation", path: "/services" },
-        { label: "White Papers", path: "/services" },
-        { label: "Webinars", path: "/services" },
-        { label: "Research", path: "/about" }
-      ]
-    },
-    {
-      title: "Support",
-      links: [
-        { label: "Contact Us", path: "/contact" },
-        { label: "Help Center", path: "/contact" },
-        { label: "Support Portal", path: "/contact" },
-        { label: "Training", path: "/services" },
-        { label: "Consulting", path: "/contact" }
+        { label: "Help Center", path: "/help" },
+        { label: "Documentation", path: "/docs" },
+        { label: "FAQ", path: "/faq" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "White Papers", path: "/white-papers" }
       ]
     }
   ];
@@ -58,7 +78,7 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
