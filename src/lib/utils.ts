@@ -1,7 +1,4 @@
-import clsx, { type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
-
-import { type ClassValue, clsx } from "clsx";
+import clsx, { type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
@@ -69,6 +66,4 @@ export function capitalizeFirst(str: string): string {
 
 export function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
 }

@@ -32,19 +32,17 @@ export default function ListingDetail() {
 
   if (!listing) {
     return (
-      
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <div className="text-center py-20">
-              <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
-              <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
-              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
-                <Link href="/marketplace">Back to Marketplace</Link>
-              </Button>
-            </div>
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
+        <div className="container mx-auto">
+          <div className="text-center py-20">
+            <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
+            <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
+            <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
+              <Link href="/marketplace">Back to Marketplace</Link>
+            </Button>
           </div>
         </div>
-      
+      </div>
     );
   }
 
@@ -57,7 +55,7 @@ export default function ListingDetail() {
   };
 
   return (
-    
+    <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -101,52 +99,29 @@ export default function ListingDetail() {
                   </div>
                 )}
               </div>
-
-              {/* Description Section */}
+              
+              {/* Content */}
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
-                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
-                <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
+                <h2 className="text-xl font-bold text-white mb-4">Description</h2>
+                <p className="text-zion-slate-light leading-relaxed">{listing.description}</p>
                 
-                {/* Features */}
-                <div className="mt-8">
-                  <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 rounded-full bg-zion-purple/20">
-                        <Brain className="h-5 w-5 text-zion-purple" />
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-white">Advanced AI</h4>
-                        <p className="text-sm text-zion-slate-light">State-of-the-art machine learning techniques</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 rounded-full bg-zion-cyan/20">
-                        <Shield className="h-5 w-5 text-zion-cyan" />
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-white">Enterprise Security</h4>
-                        <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
-                      </div>
-                    </div>
+                {listing.features && listing.features.length > 0 && (
+                  <div className="mt-6">
+                    <h3 className="text-lg font-semibold text-white mb-3">Features</h3>
+                    <ul className="space-y-2">
+                      {listing.features.map((feature, index) => (
+                        <li key={index} className="flex items-center gap-2 text-zion-slate-light">
+                          <Brain className="h-4 w-4 text-zion-cyan" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
-                
-                {/* Tags */}
-                <div className="mt-8">
-                  <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {listing.tags.map((tag, i) => (
-                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
+                )}
               </div>
             </div>
             
-            {/* Right Column - Details */}
+            {/* Right Column - Details & Actions */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
                 <div className="mb-2">
@@ -294,6 +269,6 @@ export default function ListingDetail() {
           />
         </DialogContent>
       </Dialog>
-    
+    </>
   );
 }

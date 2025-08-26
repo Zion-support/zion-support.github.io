@@ -1,40 +1,84 @@
 
 import React from 'react';
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Request Quote - Zion Tech Group" 
-        description="Get a custom quote for your AI and tech project needs from Zion Tech Group."
-        keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group"
-        canonical="https://ziontechgroup.com/request-quote"
-      />
-      
-      <AppHeader />
-      
-      <main className="pt-16 pb-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Request a Custom Quote
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Tell us about your project and we'll connect you with the perfect talent and services for your needs
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <QuoteRequestForm />
-          </div>
-        </div>
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, Users, Zap } from "lucide-react";
+import { SEO } from '@/components/SEO';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { QuoteRequestForm } from '@/components/QuoteRequestForm';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { CheckCircle, Clock, Users, Zap, Brain, Code, Shield, Cloud, Palette, Layers } from 'lucide-react';
 
 export default function RequestQuote() {
+  const serviceCategories = [
+    {
+      icon: Brain,
+      title: 'AI & Machine Learning',
+      description: 'Custom AI solutions, model development, and ML infrastructure',
+      services: [
+        'Custom AI model development',
+        'Machine learning consulting',
+        'AI infrastructure setup',
+        'Data science services'
+      ]
+    },
+    {
+      icon: Code,
+      title: 'Software Development',
+      description: 'Full-stack development for web, mobile, and desktop applications',
+      services: [
+        'Web application development',
+        'Mobile app development',
+        'API development',
+        'System architecture'
+      ]
+    },
+    {
+      icon: Shield,
+      title: 'IT Services',
+      description: 'Onsite IT support, infrastructure, and digital transformation',
+      services: [
+        'Onsite IT support',
+        'Infrastructure setup',
+        'Cloud migration',
+        'Cybersecurity services'
+      ]
+    },
+    {
+      icon: Users,
+      title: 'Talent & Hiring',
+      description: 'AI-powered talent matching and recruitment services',
+      services: [
+        'AI talent matching',
+        'Recruitment services',
+        'Team building',
+        'Skill assessment'
+      ]
+    },
+    {
+      icon: Cloud,
+      title: 'Equipment & Hardware',
+      description: 'High-tech equipment, servers, and specialized hardware',
+      services: [
+        'AI/ML hardware',
+        'Server infrastructure',
+        'Networking equipment',
+        'Green IT solutions'
+      ]
+    },
+    {
+      icon: Palette,
+      title: 'Consulting',
+      description: 'Strategic technology consulting and digital transformation',
+      services: [
+        'Technology strategy',
+        'Digital transformation',
+        'Process optimization',
+        'Innovation consulting'
+      ]
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-zion-blue">
+    <>
       <SEO
         title="Request a Quote | Zion Tech Group"
         description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs."
@@ -114,107 +158,26 @@ export default function RequestQuote() {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">AI & Machine Learning</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Custom AI solutions, model development, and ML infrastructure
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Custom AI model development</li>
-                    <li>• Machine learning consulting</li>
-                    <li>• AI infrastructure setup</li>
-                    <li>• Data science services</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">IT Services</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Onsite IT support, infrastructure, and digital transformation
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Onsite IT support</li>
-                    <li>• Infrastructure setup</li>
-                    <li>• Cloud migration</li>
-                    <li>• Cybersecurity services</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Talent & Hiring</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    AI-powered talent matching and recruitment services
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• AI talent matching</li>
-                    <li>• Recruitment services</li>
-                    <li>• Team building</li>
-                    <li>• Skill assessment</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Equipment & Hardware</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    High-tech equipment, servers, and specialized hardware
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• AI/ML hardware</li>
-                    <li>• Server infrastructure</li>
-                    <li>• Networking equipment</li>
-                    <li>• Green IT solutions</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Consulting</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Strategic technology consulting and digital transformation
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Technology strategy</li>
-                    <li>• Digital transformation</li>
-                    <li>• Process optimization</li>
-                    <li>• Innovation consulting</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
-                <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Custom Solutions</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Tailored solutions for unique business requirements
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Custom software development</li>
-                    <li>• Integration services</li>
-                    <li>• API development</li>
-                    <li>• Legacy system modernization</li>
-                  </ul>
-                </CardContent>
-              </Card>
+              {serviceCategories.map((category, index) => (
+                <Card key={index} className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-3">
+                      <category.icon className="h-8 w-8 text-zion-cyan" />
+                      <CardTitle className="text-xl text-zion-cyan">{category.title}</CardTitle>
+                    </div>
+                    <CardDescription className="text-zion-slate-light">
+                      {category.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="text-zion-slate-light space-y-2">
+                      {category.services.map((service, serviceIndex) => (
+                        <li key={serviceIndex}>• {service}</li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
 
@@ -258,38 +221,6 @@ export default function RequestQuote() {
         </div>
       </main>
       
-      <Footer />
-    </div>
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-
-export default function RequestQuote() {
-  return (
-    <>
-      <SEO 
-        title="Request a Quote - Zion Tech Group"
-        description="Get a customized quote for your IT services, AI solutions, or tech projects. Our team will provide you with a detailed estimate tailored to your needs."
-        keywords="request quote, IT services quote, AI solutions quote, tech project estimate, custom pricing"
-        canonical="https://ziontechgroup.com/request-quote"
-      />
-      <Header />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Request a Custom Quote
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get a personalized estimate for your IT services, AI solutions, or tech projects. 
-              Our team will analyze your requirements and provide you with a detailed quote.
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <QuoteRequestForm />
-          </div>
-        </div>
-      </main>
       <Footer />
     </>
   );

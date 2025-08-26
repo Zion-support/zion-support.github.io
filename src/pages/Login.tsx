@@ -1,85 +1,53 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Mail, Lock, User, Eye, EyeOff, AlertCircle, CheckCircle } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, AlertCircle } from 'lucide-react';
 
-const Signup = () => {
+const Login = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
     email: '',
     password: '',
-    confirmPassword: '',
-    agreeToTerms: false,
-    userType: 'client'
+    rememberMe: false
   });
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
   
   const navigate = useNavigate();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value, type } = e.target;
-    const checked = (e.target as HTMLInputElement).checked;
-    
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
   };
 
-  const validateForm = () => {
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.password) {
-      setError('Please fill in all required fields');
-      return false;
-    }
-    
-    if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match');
-      return false;
-    }
-    
-    if (formData.password.length < 8) {
-      setError('Password must be at least 8 characters long');
-      return false;
-    }
-    
-    if (!formData.agreeToTerms) {
-      setError('Please agree to the terms and conditions');
-      return false;
-    }
-    
-    return true;
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
-    setSuccess('');
-
-    if (!validateForm()) {
-      return;
-    }
-
     setIsLoading(true);
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      // For demo purposes, accept any valid form data
-      setSuccess('Account created successfully! Redirecting to login...');
-      
-      // Redirect to login after 2 seconds
-      setTimeout(() => {
-        navigate('/login');
-      }, 2000);
-      
+      // For demo purposes, accept any email/password combination
+      if (formData.email && formData.password) {
+        // Store user data in localStorage (in real app, this would be a JWT token)
+        localStorage.setItem('zion_user', JSON.stringify({
+          id: '1',
+          email: formData.email,
+          name: formData.email.split('@')[0],
+          role: 'user'
+        }));
+        
+        // Redirect to dashboard
+        navigate('/dashboard');
+      } else {
+        setError('Please fill in all fields');
+      }
     } catch (err) {
-      setError('Signup failed. Please try again.');
+      setError('Login failed. Please try again.');
     } finally {
       setIsLoading(false);
     }
@@ -94,14 +62,14 @@ const Signup = () => {
             <span className="text-white font-bold text-xl">Z</span>
           </div>
           <h2 className="mt-6 text-3xl font-bold text-white">
-            Create your account
+            Welcome back
           </h2>
           <p className="mt-2 text-sm text-zion-slate-light">
-            Join Zion Tech Group and start your journey
+            Sign in to your account to continue
           </p>
         </div>
 
-        {/* Signup Form */}
+        {/* Login Form */}
         <div className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-8">
           <form className="space-y-6" onSubmit={handleSubmit}>
             {error && (
@@ -111,64 +79,10 @@ const Signup = () => {
               </div>
             )}
 
-            {success && (
-              <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-3 flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span className="text-green-400 text-sm">{success}</span>
-              </div>
-            )}
-
-            {/* Name Fields */}
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="firstName" className="block text-sm font-medium text-zion-slate-light mb-2">
-                  First Name *
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <User className="h-5 w-5 text-zion-slate-light" />
-                  </div>
-                  <input
-                    id="firstName"
-                    name="firstName"
-                    type="text"
-                    autoComplete="given-name"
-                    required
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    className="block w-full pl-10 pr-3 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-zion-purple/50"
-                    placeholder="First name"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="lastName" className="block text-sm font-medium text-zion-slate-light mb-2">
-                  Last Name *
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <User className="h-5 w-5 text-zion-slate-light" />
-                  </div>
-                  <input
-                    id="lastName"
-                    name="lastName"
-                    type="text"
-                    autoComplete="family-name"
-                    required
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    className="block w-full pl-10 pr-3 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-zion-purple/50"
-                    placeholder="Last name"
-                  />
-                </div>
-              </div>
-            </div>
-
             {/* Email Field */}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
-                Email Address *
+                Email Address
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -188,28 +102,10 @@ const Signup = () => {
               </div>
             </div>
 
-            {/* User Type */}
-            <div>
-              <label htmlFor="userType" className="block text-sm font-medium text-zion-slate-light mb-2">
-                I am a *
-              </label>
-              <select
-                id="userType"
-                name="userType"
-                value={formData.userType}
-                onChange={handleInputChange}
-                className="block w-full px-3 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-zion-purple/50"
-              >
-                <option value="client">Client (Looking for services)</option>
-                <option value="talent">Talent (Providing services)</option>
-                <option value="both">Both</option>
-              </select>
-            </div>
-
             {/* Password Field */}
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
-                Password *
+                Password
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -219,12 +115,12 @@ const Signup = () => {
                   id="password"
                   name="password"
                   type={showPassword ? 'text' : 'password'}
-                  autoComplete="new-password"
+                  autoComplete="current-password"
                   required
                   value={formData.password}
                   onChange={handleInputChange}
                   className="block w-full pl-10 pr-12 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-zion-purple/50"
-                  placeholder="Create a password"
+                  placeholder="Enter your password"
                 />
                 <button
                   type="button"
@@ -238,74 +134,30 @@ const Signup = () => {
                   )}
                 </button>
               </div>
-              <p className="mt-1 text-xs text-zion-slate-light">
-                Must be at least 8 characters long
-              </p>
             </div>
 
-            {/* Confirm Password Field */}
-            <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-zion-slate-light mb-2">
-                Confirm Password *
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Lock className="h-5 w-5 text-zion-slate-light" />
-                </div>
+            {/* Remember Me & Forgot Password */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
                 <input
-                  id="confirmPassword"
-                  name="confirmPassword"
-                  type={showConfirmPassword ? 'text' : 'password'}
-                  autoComplete="new-password"
-                  required
-                  value={formData.confirmPassword}
-                  onChange={handleInputChange}
-                  className="block w-full pl-10 pr-12 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-zion-purple/50"
-                  placeholder="Confirm your password"
-                />
-                <button
-                  type="button"
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center"
-                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                >
-                  {showConfirmPassword ? (
-                    <EyeOff className="h-5 w-5 text-zion-slate-light hover:text-zion-cyan" />
-                  ) : (
-                    <Eye className="h-5 w-5 text-zion-slate-light hover:text-zion-cyan" />
-                  )}
-                </button>
-              </div>
-            </div>
-
-            {/* Terms and Conditions */}
-            <div className="flex items-start">
-              <div className="flex items-center h-5">
-                <input
-                  id="agreeToTerms"
-                  name="agreeToTerms"
+                  id="rememberMe"
+                  name="rememberMe"
                   type="checkbox"
-                  checked={formData.agreeToTerms}
+                  checked={formData.rememberMe}
                   onChange={handleInputChange}
                   className="h-4 w-4 text-zion-purple focus:ring-zion-purple border-zion-purple/30 rounded bg-zion-blue-dark/50"
                 />
-              </div>
-              <div className="ml-3 text-sm">
-                <label htmlFor="agreeToTerms" className="text-zion-slate-light">
-                  I agree to the{' '}
-                  <Link
-                    to="/terms"
-                    className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                  >
-                    Terms and Conditions
-                  </Link>{' '}
-                  and{' '}
-                  <Link
-                    to="/privacy"
-                    className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                  >
-                    Privacy Policy
-                  </Link>
+                <label htmlFor="rememberMe" className="ml-2 block text-sm text-zion-slate-light">
+                  Remember me
                 </label>
+              </div>
+              <div className="text-sm">
+                <Link
+                  to="/forgot-password"
+                  className="font-medium text-zion-cyan hover:text-zion-cyan-light transition-colors"
+                >
+                  Forgot your password?
+                </Link>
               </div>
             </div>
 
@@ -319,37 +171,44 @@ const Signup = () => {
                 {isLoading ? (
                   <div className="flex items-center">
                     <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                    Creating account...
+                    Signing in...
                   </div>
                 ) : (
-                  'Create Account'
+                  'Sign in'
                 )}
               </button>
+            </div>
+
+            {/* Demo Credentials */}
+            <div className="bg-zion-blue-dark/30 border border-zion-cyan/30 rounded-lg p-3">
+              <p className="text-xs text-zion-slate-light mb-2">Demo Credentials:</p>
+              <p className="text-xs text-zion-cyan">Email: demo@ziontechgroup.com</p>
+              <p className="text-xs text-zion-cyan">Password: password123</p>
             </div>
           </form>
         </div>
 
-        {/* Sign In Link */}
+        {/* Sign Up Link */}
         <div className="text-center">
           <p className="text-zion-slate-light">
-            Already have an account?{' '}
+            Don't have an account?{' '}
             <Link
-              to="/login"
+              to="/signup"
               className="font-medium text-zion-cyan hover:text-zion-cyan-light transition-colors"
             >
-              Sign in here
+              Sign up here
             </Link>
           </p>
         </div>
 
-        {/* Social Signup */}
+        {/* Social Login */}
         <div className="mt-6">
           <div className="relative">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-zion-purple/30" />
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-zion-blue text-zion-slate-light">Or sign up with</span>
+              <span className="px-2 bg-zion-blue text-zion-slate-light">Or continue with</span>
             </div>
           </div>
 
@@ -395,4 +254,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;

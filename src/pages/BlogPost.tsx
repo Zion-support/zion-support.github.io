@@ -68,12 +68,6 @@ export default function BlogPost() {
   
   return (
     <>
-      <SEO
-        title={post.title}
-        description={post.excerpt}
-        keywords={post.tags.join(", ")}
-        ogImage={post.featuredImage}
-        canonical={`https://ziontechgroup.com/blog/${post.slug}`}
       <SEO 
         title={post.title}
         description={post.excerpt}

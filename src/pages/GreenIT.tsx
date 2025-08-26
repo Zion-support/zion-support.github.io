@@ -1,16 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import { AppLayout } from "@/layout/AppLayout";
-import React from 'react';
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import { Leaf, Server, Cloud } from "lucide-react";
-import { Link } from "react-router-dom";
-import { AppLayout } from "@/layout";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Leaf, Server, Cloud, Zap, Recycle, Globe, TrendingUp, Shield, Lightbulb, Users } from "lucide-react";
 
 export default function GreenIT() {
   const greenITSolutions = [
@@ -33,39 +29,6 @@ export default function GreenIT() {
       title: "Green Data Management",
       description: "Sustainable data storage and management solutions that minimize environmental impact.",
       benefits: ["Efficient Storage", "Data Deduplication", "Green Backup Solutions", "Sustainable Archives"]
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Leaf, Zap, Recycle, Globe, TrendingUp, Shield, Lightbulb, Users } from 'lucide-react';
-
-export default function GreenIT() {
-  const greenSolutions = [
-    {
-      icon: <Leaf className="w-8 h-8 text-green-400" />,
-      title: "Sustainable Data Centers",
-      description: "Energy-efficient data centers powered by renewable energy sources with advanced cooling systems and waste heat recovery.",
-      benefits: ["Reduced carbon footprint", "Lower energy costs", "Improved efficiency"]
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: "Renewable Energy Integration",
-      description: "Seamless integration of solar, wind, and hydroelectric power into IT infrastructure.",
-      benefits: ["100% renewable energy", "Grid independence", "Cost savings over time"]
-    },
-    {
-      icon: <Recycle className="w-8 h-8 text-blue-400" />,
-      title: "Circular IT Economy",
-      description: "Hardware recycling, refurbishment, and responsible disposal programs to minimize e-waste.",
-      benefits: ["Reduced e-waste", "Extended hardware lifecycle", "Environmental compliance"]
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-cyan-400" />,
-      title: "Carbon-Neutral Operations",
-      description: "Comprehensive carbon offset programs and sustainable business practices across all operations.",
-      benefits: ["Carbon neutrality", "ESG compliance", "Brand reputation"]
     }
   ];
 
@@ -121,147 +84,69 @@ export default function GreenIT() {
   ];
 
   return (
-    <>
     <AppLayout>
       <SEO
         title="Green IT Solutions - Sustainable Technology | Zion Tech Group"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://ziontechgroup.com/green-it"
-        canonical="https://ziontechgroup.com/marketplace/category/green-it"
-        canonical="https://ziontechgroup.com/green-it"
-        canonical="https://ziontechgroup.com/green-it"
-        canonical="https://ziontechgroup.com/marketplace/category/green-it"
-        canonical="https://ziontechgroup.com/marketplace/category/green-it"
-      />
-      <AppHeader />
-      <main className="min-h-screen bg-background pt-16 pb-20">
-        canonical="https://ziontechgroup.com/marketplace/category/green-it"
-      />
-      <AppHeader />
-      <main className="min-h-screen bg-background pt-16 pb-20">
-        canonical="https://ziontechgroup.com/marketplace/category/green-it"
-      />
-      <AppHeader />
-      <main className="min-h-screen bg-background pt-16 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Green
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}IT
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Sustainable technology solutions that reduce environmental impact while 
-              maintaining high performance and business value
-      <SEO 
-        title="Green IT Solutions - Zion Tech Group" 
-        description="Transform your IT operations with sustainable, eco-friendly solutions. Reduce carbon footprint and costs while improving efficiency." 
-        keywords="green IT, sustainable technology, eco-friendly IT, carbon neutral, renewable energy, e-waste management"
-        canonical="https://ziontechgroup.com/green-it"
       />
       
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-20">
-            <GradientHeading>Green IT Solutions</GradientHeading>
-            <p className="mt-6 text-zion-slate-light text-xl max-w-4xl mx-auto">
-              Transform your technology infrastructure with sustainable, eco-friendly solutions that reduce costs, 
-              improve efficiency, and protect our planet. Join the green technology revolution.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Badge variant="secondary" className="text-green-400 bg-green-400/10">
-                Carbon Neutral
-              </Badge>
-              <Badge variant="secondary" className="text-blue-400 bg-blue-400/10">
-                Energy Efficient
-              </Badge>
-              <Badge variant="secondary" className="text-yellow-400 bg-yellow-400/10">
-                Renewable Energy
-              </Badge>
-              <Badge variant="secondary" className="text-cyan-400 bg-cyan-400/10">
-                Sustainable
-              </Badge>
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+        {/* Hero Section */}
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-green-900/20 to-blue-900/20"></div>
+          <div className="relative container mx-auto px-4 py-24">
+            <div className="text-center max-w-4xl mx-auto">
+              <GradientHeading className="text-5xl md:text-6xl mb-6">
+                Green IT Solutions
+              </GradientHeading>
+              <p className="text-xl md:text-2xl text-zion-slate-light mb-8">
+                Sustainable technology solutions that protect our planet while powering your business
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-green-600 hover:bg-green-700">
+                  <Leaf className="w-5 h-5 mr-2" />
+                  Get Green IT Assessment
+                </Button>
+                <Button size="lg" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
+                  <Server className="w-5 h-5 mr-2" />
+                  View Case Studies
+                </Button>
+              </div>
             </div>
           </div>
-          <div className="mb-16">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
-                  <p className="text-zion-slate-light text-lg mb-6">
-                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. 
-                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure 
-                    while maintaining performance and reliability.
-                  </p>
-                  <p className="text-zion-slate-light text-lg mb-6">
-                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions 
-                    for reducing your carbon footprint.
-                  </p>
-                  <div className="mt-8">
-                    <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-                      Explore Green IT Solutions
-                    </Button>
+        </div>
 
-          {/* Why Green IT */}
-          <section className="mb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Why Choose Green IT?</h2>
-                <p className="text-zion-slate-light text-lg mb-6">
-                  The technology sector is responsible for a significant portion of global carbon emissions. 
-                  By adopting green IT practices, organizations can reduce their environmental impact while 
-                  improving operational efficiency and reducing costs.
-                </p>
-                <p className="text-zion-slate-light text-lg mb-6">
-                  Our comprehensive green IT solutions help businesses transition to sustainable technology 
-                  practices, from energy-efficient infrastructure to renewable energy integration and 
-                  responsible e-waste management.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
-                    <div className="text-2xl font-bold text-green-400">40%</div>
-                    <div className="text-zion-slate-light text-sm">Average Energy Savings</div>
-                  </div>
-                  <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
-                    <div className="text-2xl font-bold text-blue-400">60%</div>
-                    <div className="text-zion-slate-light text-sm">Carbon Reduction</div>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-lg overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1544191696-102dbdaeeaa5?auto=format&fit=crop&w=800&h=600" 
-                  alt="Green technology infrastructure" 
-                  className="object-cover w-full h-full"
-                />
-              </div>
+        {/* Green IT Solutions */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Sustainable Technology Solutions
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Our comprehensive green IT solutions help organizations reduce their environmental impact while improving efficiency and reducing costs.
+              </p>
             </div>
-          </section>
 
-          {/* Green Solutions */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Our Green IT Solutions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {greenSolutions.map((solution, index) => (
-                <Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-green-400/50 transition-colors">
-                  <CardHeader>
-                    <div className="flex items-center gap-4 mb-4">
-                      {solution.icon}
-                      <CardTitle className="text-xl text-green-400">{solution.title}</CardTitle>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {greenITSolutions.map((solution, index) => (
+                <Card key={index} className="bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
+                  <CardHeader className="text-center">
+                    <div className="bg-green-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Leaf className="w-8 h-8 text-green-400" />
                     </div>
-                    <CardDescription className="text-zion-slate-light">
-                      {solution.description}
-                    </CardDescription>
+                    <CardTitle className="text-white text-xl">{solution.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <h4 className="font-semibold text-white mb-3">Key Benefits:</h4>
+                    <CardDescription className="text-zion-slate-light mb-4">
+                      {solution.description}
+                    </CardDescription>
                     <ul className="space-y-2">
-                      {solution.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-zion-slate-light">
-                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      {solution.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-zion-slate-light">
+                          <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
                           {benefit}
                         </li>
                       ))}
@@ -270,74 +155,95 @@ export default function GreenIT() {
                 </Card>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Services */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Green IT Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Services */}
+        <section className="py-20 bg-zion-blue-dark/50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Green IT Services
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                From consulting to implementation, we provide end-to-end sustainable technology solutions.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {services.map((service, index) => (
-                <Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
+                <Card key={index} className="bg-zion-blue-dark border-zion-purple/20">
                   <CardHeader>
-                    <CardTitle className="text-xl text-green-400">{service.title}</CardTitle>
+                    <CardTitle className="text-white text-2xl">{service.title}</CardTitle>
                     <CardDescription className="text-zion-slate-light">
                       {service.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-white mb-3">Features:</h4>
+                    <div className="mb-6">
+                      <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                       <ul className="space-y-2">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-zion-slate-light">
-                            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-zion-slate-light">
+                            <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-green-400 font-semibold">{service.price}</span>
-                      <Button className="bg-green-600 hover:bg-green-700 text-white">
-                        Get Started
+                      <Badge variant="secondary" className="bg-green-600/20 text-green-400 border-green-600/40">
+                        {service.price}
+                      </Badge>
+                      <Button variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
+                        Learn More
                       </Button>
                     </div>
                   </CardContent>
                 </Card>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Case Studies */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Success Stories</h2>
-            <div className="space-y-8">
+        {/* Case Studies */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Success Stories
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                See how organizations are transforming their IT operations with sustainable technology.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
-                <Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
+                <Card key={index} className="bg-zion-blue-dark border-zion-purple/20">
                   <CardHeader>
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                      <div>
-                        <CardTitle className="text-xl text-green-400">{study.company}</CardTitle>
-                        <CardDescription className="text-zion-slate-light">
-                          {study.industry} • {study.challenge}
-                        </CardDescription>
-                      </div>
-                      <Badge variant="outline" className="border-green-400 text-green-400 w-fit">
-                        Case Study
+                    <div className="flex items-center justify-between mb-2">
+                      <CardTitle className="text-white text-xl">{study.company}</CardTitle>
+                      <Badge variant="outline" className="border-zion-blue-light text-zion-slate-light">
+                        {study.industry}
                       </Badge>
                     </div>
                   </CardHeader>
-                  <CardContent>
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-white mb-2">Solution:</h4>
-                      <p className="text-zion-slate-light">{study.solution}</p>
+                  <CardContent className="space-y-4">
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Challenge:</h4>
+                      <p className="text-zion-slate-light text-sm">{study.challenge}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-white mb-2">Results:</h4>
-                      <ul className="space-y-2">
-                        {study.results.map((result, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-zion-slate-light">
-                            <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      <h4 className="text-white font-semibold mb-2">Solution:</h4>
+                      <p className="text-zion-slate-light text-sm">{study.solution}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold mb-2">Results:</h4>
+                      <ul className="space-y-1">
+                        {study.results.map((result, resultIndex) => (
+                          <li key={resultIndex} className="flex items-center text-sm text-zion-slate-light">
+                            <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
                             {result}
                           </li>
                         ))}
@@ -347,38 +253,31 @@ export default function GreenIT() {
                 </Card>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Call to Action */}
-          <section className="text-center">
-            <Card className="bg-zion-blue-dark border-green-400/30 text-white max-w-3xl mx-auto">
-              <CardHeader>
-                <CardTitle className="text-2xl text-green-400">Ready to Go Green?</CardTitle>
-                <CardDescription className="text-zion-slate-light">
-                  Join hundreds of organizations that have already transformed their IT operations with our 
-                  sustainable solutions. Start your green IT journey today.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white">
-                    Schedule Consultation
-                  </Button>
-                  <Button variant="outline" className="border-green-400 text-green-400 hover:bg-green-400/10">
-                    Download Green IT Guide
-                  </Button>
-                </div>
-                <p className="text-sm text-zion-slate-light">
-                  Get a free sustainability assessment and personalized recommendations for your organization.
-                </p>
-              </CardContent>
-            </Card>
-          </section>
-        </div>
-      </main>
-      <Footer />
-    </>
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-green-900/20 to-blue-900/20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Go Green?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Join the sustainable technology revolution and reduce your environmental impact while improving your bottom line.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-green-600 hover:bg-green-700">
+                <Leaf className="w-5 h-5 mr-2" />
+                Start Your Green IT Journey
+              </Button>
+              <Button size="lg" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
+                <Users className="w-5 h-5 mr-2" />
+                Schedule Consultation
+              </Button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </AppLayout>
   );
-};
-
-export default GreenIT;
+}

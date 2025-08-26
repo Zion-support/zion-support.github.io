@@ -11,7 +11,7 @@ import { CommunityTrust } from "@/components/mobile-app/CommunityTrust";
 
 const MobileLaunchPage: React.FC = () => {
   return (
-    
+    <div className="min-h-screen bg-zion-blue">
       <SEO 
         title="Get the Zion App - AI Marketplace in Your Pocket"
         description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go."
@@ -32,7 +32,7 @@ const MobileLaunchPage: React.FC = () => {
       <MobileEmailCapture />
       
       <AppStoreBanner />
-    
+    </div>
   );
 };
 
