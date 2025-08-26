@@ -11,32 +11,8 @@ import {
   Star,
   TrendingUp
 } from 'lucide-react';
-import { CategoriesSection } from "@/components/CategoriesSection";
-import BenefitsSection from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection.jsx";
-import { NewsletterSection } from "@/components/NewsletterSection";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { PricingSection } from "@/components/PricingSection";
-import { TechSolutionsSection } from "@/components/TechSolutionsSection";
-import { CaseStudiesSection } from "@/components/CaseStudiesSection";
-import { TeamExpertiseSection } from "@/components/TeamExpertiseSection";
-import { GlobalPresenceSection } from "@/components/GlobalPresenceSection";
-import { InnovationResearchSection } from "@/components/InnovationResearchSection";
-import { ClientSuccessStoriesSection } from "@/components/ClientSuccessStoriesSection";
-import { TechnologyStackSection } from "@/components/TechnologyStackSection";
-import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
-import { AIServicesShowcase } from "@/components/AIServicesShowcase";
-import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
-import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
 import { ComprehensiveServicesShowcase2026 } from "@/components/ComprehensiveServicesShowcase2026";
 import { ComprehensivePricingGuide2026 } from "@/components/ComprehensivePricingGuide2026";
-import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -213,7 +189,6 @@ const EnhancedServiceCategories = React.memo(() => {
 });
 
 EnhancedServiceCategories.displayName = 'EnhancedServiceCategories';
->>>>>>> cursor/expand-services-and-deploy-updates-f4a9
 
 export default function Home() {
   const stats = [
@@ -384,40 +359,13 @@ export default function Home() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </motion.section>
-
-      {/* Enhanced Feature Highlights */}
-      <FeatureHighlights />
-
-      {/* Enhanced Quick Access Section */}
-      <QuickAccess />
-
-      {/* Enhanced Categories Section */}
-      <CategoriesSection />
-
-      {/* Enhanced Innovative Services Showcase */}
-      <EnhancedInnovativeServicesShowcase />
+      </section>
 
       {/* Comprehensive Services Showcase 2026 */}
       <ComprehensiveServicesShowcase2026 />
 
       {/* Comprehensive Pricing Guide 2026 */}
       <ComprehensivePricingGuide2026 />
-
-      {/* Enhanced Pricing Comparison */}
-      <EnhancedPricingComparison />
-
-      {/* Enhanced Benefits Section */}
-      <BenefitsSection />
-
-      {/* Enhanced How It Works Section */}
-      <HowItWorksSection />
-
-      {/* Enhanced Featured Listings Section */}
-      <FeaturedListingsSection />
-
-      {/* Enhanced Newsletter Section */}
-      <NewsletterSection />
-    </>
+    </div>
   );
 }
