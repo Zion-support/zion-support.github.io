@@ -27,11 +27,17 @@ export default function Layout({ children }: SimpleLayoutProps) {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<div className="min-h-screen bg-black text-white">
+<<<<<<< HEAD
 			<a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-black/80 focus:text-white focus:border focus:border-cyan-500 focus:rounded px-3 py-2 z-[100]">Skip to content</a>
 			<UltraAdvancedFuturisticBackground intensity="high" colorScheme="quantum-fusion" particleCount={300} animationSpeed={1.5} enableHolographic={true} enableQuantumEffects={true}>
 				<TopContactBar />
 				<UltraFuturisticNavigation />
 				<main id="main" className="pt-24 lg:pt-28">
+=======
+			<UltraAdvancedFuturisticBackground variant="fusion">
+				<QuantumHolographicNavbar />
+				<main className="pt-24 lg:pt-28">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7f29
 					{children}
 				</main>
 				<EnhancedFooter />
