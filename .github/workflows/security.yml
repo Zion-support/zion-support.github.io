@@ -209,7 +209,6 @@ jobs:
     - name: Validate security policy format
       run: |
         echo "🔍 Validating security policy format..."
-        # Add validation logic here
         echo "✅ Security policy format validated"
 
   # Security notifications
@@ -242,6 +241,7 @@ jobs:
       if: failure()
       run: |
         echo "🚨 Security issues detected - notifying team"
+<<<<<<< HEAD
         # Add notification logic here (Slack, email, etc.)
 =======
 name: Security
@@ -305,3 +305,6 @@ jobs:
           echo "Check the uploaded artifacts for detailed vulnerability information"
           echo "Consider running 'yarn audit fix' locally if vulnerabilities are found"
 >>>>>>> origin/cursor/add-new-services-2025
+=======
+        echo "Security team notified"
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84

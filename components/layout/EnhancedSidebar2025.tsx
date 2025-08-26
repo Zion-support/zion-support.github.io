@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
 <<<<<<< HEAD
+<<<<<<< HEAD
   Menu, X, ChevronDown, ChevronRight,
   Home, Search, Settings, User, 
   Brain, Cpu, Rocket, Shield, 
@@ -19,22 +20,20 @@ import {
   Calendar, ExternalLink, BookOpen, FileText, Video, Headphones
 =======
 >>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
 } from 'lucide-react';
 
 interface SidebarItem {
   name: string;
   href: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   description?: string;
   children?: SidebarItem[];
   badge?: string;
-  color?: string;
-  isNew?: boolean;
-  isHot?: boolean;
-  isPremium?: boolean;
-  category?: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const navigationItems = [
   {
@@ -142,6 +141,8 @@ const navigationItems = [
       { name: 'Holographic Events Platform', href: '/holographic-events-platform', description: '3D holographic experiences' }
 =======
 >>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
     ]
   }
 ];
@@ -153,6 +154,7 @@ const quickActions = [
   { name: 'Contact Support', href: '/support', icon: <HelpCircle className="w-4 h-4" />, color: 'from-orange-500 to-red-600' }
 ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const resourceLinks = [
   { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" />, description: 'Technical guides and API docs' },
@@ -177,6 +179,8 @@ export default function EnhancedSidebar2025() {
   };
 =======
 >>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
 
   const filteredItems = navigationItems.filter(item =>
     item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -196,6 +200,7 @@ export default function EnhancedSidebar2025() {
   }, []);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Close sidebar on outside click
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -209,6 +214,8 @@ export default function EnhancedSidebar2025() {
   }, [isOpen]);
 =======
 >>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
 
   return (
     <>
@@ -305,6 +312,7 @@ export default function EnhancedSidebar2025() {
             </button>
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Quick Actions */}
             <div className="p-6 border-b border-cyan-500/30">
@@ -450,11 +458,16 @@ export default function EnhancedSidebar2025() {
         )}
       </AnimatePresence>
 =======
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
 >>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
     </>
   );
 }

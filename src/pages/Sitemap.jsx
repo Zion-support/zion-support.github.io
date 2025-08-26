@@ -2,14 +2,30 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Home, 
-  Users, 
+  Info, 
   Settings, 
-  Globe,
-  FileText,
-  Shield,
+  ShoppingCart, 
+  Users, 
+  FileText, 
+  Shield, 
   HelpCircle,
+  Globe,
   Building,
   Briefcase,
+  MessageSquare,
+  BookOpen,
+  Star,
+  Zap,
+  Brain,
+  Cloud,
+  Lock,
+  Server,
+  Database,
+  Network,
+  Cpu,
+  Rocket,
+  Heart,
+  Leaf,
   Mail,
   Phone,
   MapPin
@@ -18,265 +34,214 @@ import {
 export default function Sitemap() {
   const sitemapStructure = [
     {
-      title: 'Main Pages',
+      category: 'Main Pages',
       icon: Home,
       pages: [
         { name: 'Home', path: '/', description: 'Main landing page' },
         { name: 'About Us', path: '/about', description: 'Company information and mission' },
-        { name: 'Contact', path: '/contact', description: 'Get in touch with us' }
+        { name: 'Contact', path: '/contact', description: 'Get in touch with us' },
+        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' }
       ]
     },
     {
-      title: 'Services',
+      category: 'Services',
       icon: Settings,
       pages: [
-        { name: 'All Services', path: '/services', description: 'Overview of our services' },
-        { name: 'Comprehensive Services', path: '/comprehensive-services', description: 'Detailed service catalog' },
-        { name: 'Pricing', path: '/comprehensive-pricing', description: 'Service pricing information' }
+        { name: 'All Services', path: '/services', description: 'Complete service catalog' },
+        { name: 'Comprehensive Services', path: '/comprehensive-services', description: 'Full service overview' },
+        { name: 'AI & Analytics', path: '/ai-services', description: 'Artificial intelligence solutions' },
+        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security and protection services' },
+        { name: 'Cloud Solutions', path: '/cloud-solutions', description: 'Cloud infrastructure and services' },
+        { name: 'Quantum Technology', path: '/quantum-technology', description: 'Quantum computing solutions' },
+        { name: 'Blockchain & Web3', path: '/blockchain', description: 'Blockchain and decentralized solutions' },
+        { name: 'Green IT', path: '/green-it', description: 'Sustainable technology solutions' },
+        { name: 'IT Onsite Services', path: '/it-onsite-services', description: 'On-site IT support and services' },
+        { name: '2029 Services Showcase', path: '/services/showcase-2029', description: 'Advanced 2029 services showcase' }
       ]
     },
     {
-      title: 'Marketplace',
-      icon: Globe,
+      category: 'Marketplace',
+      icon: ShoppingCart,
       pages: [
-        { name: 'Marketplace', path: '/marketplace', description: 'AI and tech marketplace' },
-        { name: 'Services', path: '/services', description: 'Browse available services' },
+        { name: 'Products', path: '/marketplace', description: 'Browse and purchase products' },
         { name: 'Talent', path: '/talent', description: 'Find skilled professionals' },
-        { name: 'Equipment', path: '/equipment', description: 'Technology equipment listings' },
-        { name: 'Green IT', path: '/green-it', description: 'Sustainable technology solutions' }
+        { name: 'Equipment', path: '/equipment', description: 'Technology equipment and hardware' },
+        { name: 'Categories', path: '/categories', description: 'Browse by category' }
       ]
     },
     {
-      title: 'Company',
+      category: 'Company',
       icon: Building,
       pages: [
-        { name: 'Partners', path: '/partners', description: 'Partnership opportunities' },
-        { name: 'Careers', path: '/careers', description: 'Job opportunities' },
         { name: 'Blog', path: '/blog', description: 'Latest news and insights' },
-        { name: 'Events', path: '/events', description: 'Upcoming events and webinars' }
+        { name: 'Partners', path: '/partners', description: 'Strategic partnerships' },
+        { name: 'Careers', path: '/careers', description: 'Job opportunities' },
+        { name: 'News', path: '/news', description: 'Company announcements' }
       ]
     },
     {
-      title: 'Support & Resources',
+      category: 'Support & Resources',
       icon: HelpCircle,
       pages: [
-        { name: 'Help Center', path: '/help', description: 'Support documentation' },
-        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
-        { name: 'Contact Support', path: '/contact', description: 'Get help from our team' }
+        { name: 'Help Center', path: '/help', description: 'Support and documentation' },
+        { name: 'Status Page', path: '/status', description: 'System status and uptime' },
+        { name: 'Sitemap', path: '/sitemap', description: 'Complete site navigation' }
       ]
     },
     {
-      title: 'Legal & Policies',
+      category: 'Legal & Policy',
       icon: Shield,
       pages: [
+        { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy' },
         { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
-        { name: 'Privacy Policy', path: '/privacy', description: 'Data protection information' },
-        { name: 'Security', path: '/security', description: 'Security practices' },
+        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage information' },
         { name: 'Accessibility', path: '/accessibility', description: 'Accessibility statement' }
-      ]
-    },
-    {
-      title: 'User Account',
-      icon: Users,
-      pages: [
-        { name: 'Login', path: '/login', description: 'User authentication' },
-        { name: 'Dashboard', path: '/dashboard', description: 'User dashboard' },
-        { name: 'Profile', path: '/profile', description: 'User profile management' },
-        { name: 'Settings', path: '/settings', description: 'Account settings' }
       ]
     }
   ];
 
-  const quickLinks = [
-    { name: 'Get Started', path: '/contact', description: 'Start your journey with Zion Tech Group' },
-    { name: 'View Services', path: '/comprehensive-services', description: 'Explore our AI and technology solutions' },
-    { name: 'Join Marketplace', path: '/marketplace', description: 'Connect with talent and opportunities' },
-    { name: 'Contact Sales', path: '/contact', description: 'Speak with our sales team' },
-    { name: 'Get Support', path: '/help', description: 'Find help and resources' },
-    { name: 'View Pricing', path: '/comprehensive-pricing', description: 'Understand our pricing structure' }
-  ];
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto px-4 py-12">
+        {/* Header */}
+        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Sitemap
+            Site <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Map</span>
           </h1>
-          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Navigate our website easily with this comprehensive overview of all pages and sections
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Navigate through our comprehensive technology services, marketplace, and company information
           </p>
         </div>
-      </section>
 
-      {/* Quick Links */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Quick Links
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {quickLinks.map((link, index) => (
-              <Link
-                key={index}
-                to={link.path}
-                className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105 group"
-              >
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                  {link.name}
-                </h3>
-                <p className="text-zion-slate-light text-sm">{link.description}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sitemap Structure */}
-      <section className="py-16 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Complete Site Structure
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-            {sitemapStructure.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="bg-zion-blue-dark/50 rounded-lg border border-zion-cyan/20 p-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <section.icon className="w-6 h-6 text-zion-cyan" />
-                  <h3 className="text-xl font-semibold text-white">{section.title}</h3>
+        {/* Sitemap Structure */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+          {sitemapStructure.map((section, index) => (
+            <div key={index} className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-3">
+                  <section.icon className="w-5 h-5 text-white" />
                 </div>
-                <div className="space-y-3">
-                  {section.pages.map((page, pageIndex) => (
-                    <div key={pageIndex} className="border-l-2 border-zion-cyan/30 pl-4">
-                      <Link
-                        to={page.path}
-                        className="block hover:bg-zion-cyan/10 p-2 rounded transition-colors"
-                      >
-                        <h4 className="text-white font-medium hover:text-zion-cyan transition-colors">
-                          {page.name}
-                        </h4>
-                        <p className="text-zion-slate-light text-sm">{page.description}</p>
-                      </Link>
-                    </div>
-                  ))}
-                </div>
+                <h2 className="text-xl font-semibold text-white">{section.category}</h2>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Contact Information
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 text-center">
-              <Mail className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <a 
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-              >
-                kleber@ziontechgroup.com
-              </a>
+              
+              <div className="space-y-3">
+                {section.pages.map((page, pageIndex) => (
+                  <div key={pageIndex} className="group">
+                    <Link 
+                      to={page.path}
+                      className="block text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
+                    >
+                      {page.name}
+                    </Link>
+                    <p className="text-zion-slate-light text-sm group-hover:text-zion-slate-light/80 transition-colors">
+                      {page.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-            
-            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 text-center">
-              <Phone className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+          ))}
+        </div>
+
+        {/* Contact Information */}
+        <div className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-8 mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white mb-4">Contact Information</h2>
+            <p className="text-zion-slate-light">
+              Get in touch with Zion Tech Group for all your technology needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8 text-white" />
+              </div>
               <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-              <a 
-                href="tel:+13024640950"
-                className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-              >
-                +1 302 464 0950
-              </a>
+              <p className="text-zion-cyan">{contactInfo.phone}</p>
             </div>
             
-            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 text-center">
-              <MapPin className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+              <p className="text-zion-cyan">{contactInfo.email}</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-green to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
               <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-              <p className="text-zion-slate-light text-sm">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </p>
+              <p className="text-zion-cyan text-sm">{contactInfo.address}</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Additional Resources */}
-      <section className="py-16 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Additional Resources
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 text-center">
-              <FileText className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
-              <p className="text-zion-slate-light text-sm mb-4">Technical documentation and guides</p>
-              <Link to="/help" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm">
-                View Docs →
-              </Link>
-            </div>
-            
-            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 text-center">
-              <Briefcase className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">API Reference</h3>
-              <p className="text-zion-slate-light text-sm mb-4">Developer API documentation</p>
-              <Link to="/api" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm">
-                API Docs →
-              </Link>
-            </div>
-            
-            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 text-center">
-              <Users className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Community</h3>
-              <p className="text-zion-slate-light text-sm mb-4">Join our community forum</p>
-              <Link to="/community" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm">
-                Join Forum →
-              </Link>
-            </div>
-            
-            <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20 text-center">
-              <Globe className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Status Page</h3>
-              <p className="text-zion-slate-light text-sm mb-4">System status and updates</p>
-              <Link to="/status" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm">
-                Check Status →
-              </Link>
-            </div>
+          
+          <div className="text-center mt-8">
+            <a 
+              href={contactInfo.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
+            >
+              <Globe className="w-4 h-4 mr-2" />
+              Visit our website
+            </a>
           </div>
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Need Help Finding Something?
-          </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            Can't find what you're looking for? Our team is here to help you navigate our website and find the information you need.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <button className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform">
-                Contact Us
-              </button>
+        {/* Quick Links */}
+        <div className="bg-zinc-800/30 border border-zion-cyan/20 rounded-lg p-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white mb-4">Quick Links</h2>
+            <p className="text-zion-slate-light">
+              Access our most popular services and resources
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Link 
+              to="/services"
+              className="p-4 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-center hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105"
+            >
+              <Settings className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
+              <span className="text-white font-medium">Services</span>
             </Link>
-            <Link to="/help">
-              <button className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white hover:text-zion-blue transition-colors">
-                Get Help
-              </button>
+            
+            <Link 
+              to="/marketplace"
+              className="p-4 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-center hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105"
+            >
+              <ShoppingCart className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
+              <span className="text-white font-medium">Marketplace</span>
+            </Link>
+            
+            <Link 
+              to="/contact"
+              className="p-4 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-center hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105"
+            >
+              <MessageSquare className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
+              <span className="text-white font-medium">Contact</span>
+            </Link>
+            
+            <Link 
+              to="/services/showcase-2029"
+              className="p-4 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-center hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105"
+            >
+              <Rocket className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
+              <span className="text-white font-medium">2029 Showcase</span>
             </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, ChevronDown, Search, 
@@ -169,6 +170,8 @@ const navigationItems: NavigationItem[] = [
 ];
 =======
 >>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
 
 const quickActions = [
   { name: 'Get Quote', href: '/quote', icon: <DollarSign className="w-4 h-4" />, color: 'from-green-500 to-emerald-600' },
@@ -177,6 +180,7 @@ const quickActions = [
 ];
 
 export default function EnhancedNavigation2025() {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -432,3 +436,5 @@ export default function EnhancedNavigation2025() {
 export default EnhancedNavigation2025;
 =======
 >>>>>>> 1b755efb74ef3ba3a2ec8b9ad1e4225ff00f8f76
+=======
+>>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
