@@ -27,6 +27,7 @@ const EmergingTech = lazy(() => import('./pages/EmergingTech'));
 // New pages from incoming branch
 const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
+const InnovativeServicesPage = lazy(() => import('./pages/InnovativeServicesPage'));
 
 // Service pages
 const AIServices = lazy(() => import('./pages/services/AIServices'));
@@ -140,6 +141,7 @@ function App() {
               <Route path="/zion-hire-ai" element={<ZionHireAI />} />
               <Route path="/support" element={<Support />} />
               <Route path="/news" element={<News />} />
+              <Route path="/innovative-services" element={<InnovativeServicesPage />} />
               <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
               <Route path="/pricing-page" element={<PricingPage />} />
               
