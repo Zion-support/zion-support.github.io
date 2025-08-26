@@ -33,6 +33,13 @@ import { BundleAnalyzer } from '@/components/ui/bundle-analyzer';
 import { QuickActions } from '@/components/ui/quick-actions';
 import { logInfo, logWarn, logError } from '@/utils/productionLogger';
 
+// Synchronously import core providers
+import { AuthProvider } from '../src/context/auth/AuthProvider';
+import { WhitelabelProvider } from '../src/context/WhitelabelContext';
+import { CartProvider } from '../src/context/CartContext';
+import { FeedbackProvider } from '../src/context/FeedbackContext';
+import { ThemeProvider } from '../src/context/ThemeContext';
+import GlobalErrorBoundary from '../src/components/GlobalErrorBoundary';
 
 // Dynamically load heavy components to improve initial load time
 const IntercomChat = dynamic(() => import('@/components/IntercomChat'), {
@@ -231,105 +238,21 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <>
-      <Head>
-        {/* Next.js font optimization handles preloading automatically */}
-        {/* Font optimization CSS to prevent CLS */}
-        <style jsx global>{`
-          :root {
-            --font-inter: ${inter.style.fontFamily};
-            --font-poppins: ${poppins.style.fontFamily};
-          }
-
-          /* Optimized fallback font adjustments */
-          @font-face {
-            font-family: 'Inter Fallback';
-            src: local('Arial'), local('system-ui');
-            size-adjust: 107%;
-            ascent-override: 90%;
-            descent-override: 25%;
-            line-gap-override: 0%;
-          }
-
-          @font-face {
-            font-family: 'Poppins Fallback';
-            src: local('Arial'), local('system-ui');
-            size-adjust: 102%;
-            ascent-override: 92%;
-            descent-override: 24%;
-            line-gap-override: 0%;
-          }
-
-          /* Performance optimizations */
-          .font-inter { font-family: var(--font-inter), 'Inter Fallback', system-ui, sans-serif; }
-          .font-poppins { font-family: var(--font-poppins), 'Poppins Fallback', system-ui, sans-serif; }
-        `}</style>
-      </Head>
-      <div className={`${inter.variable} ${poppins.variable}`}>
-        <ProductionErrorBoundary>
-          <RootErrorBoundary>
-            <HydrationErrorBoundary>
-              <React.Suspense
-                fallback={
-                  <div className="flex items-center justify-center min-h-screen">
-                    <div className="animate-pulse text-lg">Loading...</div>
-                  </div>
-                }
-              >
-                <GlobalErrorBoundary>
-                  <QueryClientProvider client={queryClient}>
-                    <ApiErrorBoundary>
-                      <ReduxProvider store={store}>
-                        <I18nextProvider i18n={i18n}>
-                          <ErrorProvider>
-                            <AuthProvider>
-                              <WhitelabelProvider>
-                                <LanguageProviderWrapper>
-                                  <WalletProvider>
-                                    <CartProvider>
-                                      <AnalyticsProvider>
-                                        <FeedbackProvider>
-                                          <ThemeProvider>
-                                            <AppLayout>
-                                              <RouteChangeHandler
-                                                resetScrollOnChange={true}
-                                                forceRerender={false}
-                                              />
-                                              <ErrorBoundary>
-                                                <Component
-                                                  key={router.asPath}
-                                                  {...pageProps}
-                                                />
-                                              </ErrorBoundary>
-                                              <ErrorResetOnRouteChange />
-                                              <ToastContainer />
-                                              <OfflineIndicator />
-                                              <IntercomChat />
-                                              <PerformanceMonitor />
-                                              <BundleAnalyzer />
-                                              <QuickActions />
-                                              <InstallPrompt />
-                                            </AppLayout>
-                                          </ThemeProvider>
-                                        </FeedbackProvider>
-                                      </AnalyticsProvider>
-                                    </CartProvider>
-                                  </WalletProvider>
-                                </LanguageProviderWrapper>
-                              </WhitelabelProvider>
-                            </AuthProvider>
-                          </ErrorProvider>
-                        </I18nextProvider>
-                      </ReduxProvider>
-                    </ApiErrorBoundary>
-                  </QueryClientProvider>
-                </GlobalErrorBoundary>
-              </React.Suspense>
-            </HydrationErrorBoundary>
-          </RootErrorBoundary>
-        </ProductionErrorBoundary>
-      </div>
-    </>
+    <QueryClientProvider client={queryClient}> {/* Added QueryClientProvider */}
+      <ProviderWrapper>
+        <GlobalErrorBoundary>
+          <Head>
+            <title>Zion App - AI Marketplace & DAO Platform</title>
+            <meta name="description" content="Zion App - The ultimate AI marketplace and DAO platform for the future of work" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <div>
+            <Component {...pageProps} />
+          </div>
+        </GlobalErrorBoundary>
+      </ProviderWrapper>
+    </QueryClientProvider>
   );
 }
 
