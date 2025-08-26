@@ -191,6 +191,13 @@ const serviceCategories = [
   // Service statistics
   const serviceStats = {
     totalServices: allServices.length,
+<<<<<<< HEAD
+    aiServices: nextGenerationAIServices.length + innovativeAIServices.length + realMarketServices.filter(s => s.category.includes('AI')).length + revolutionary2025Services.filter(s => s.category.includes('AI')).length + nextGenInnovations2025.filter(s => s.category.includes('AI')).length + innovative2026Services.filter(s => s.category.includes('AI')).length + emergingTech2026Services.filter(s => s.category.includes('AI')).length + nextGenAIServices2026.length,
+    emergingTech: emergingTechnologyServices.length + emergingTech2025Services.length + emergingTech2026Services.length,
+    itSolutions: comprehensiveITSolutions.length + enterpriseITServices.length + enterpriseIT2026Services.length + revolutionaryITInfrastructure2026.length,
+    microSaas: enhancedRealMicroSaasServices.length + innovativeMicroSaasServices.length + innovative2026Services.filter(s => s.category.includes('SaaS')).length + innovativeMicroSaas2026.length,
+    revolutionaryServices: revolutionary2025Services.length + nextGenInnovations2025.length + innovative2026Services.length + emergingTech2026Services.length + nextGenAIServices2026.length + revolutionaryITInfrastructure2026.length
+=======
     aiServices: nextGenerationAIServices.length + innovativeAIServices.length + realMarketServices.filter(s => s.category.includes('AI')).length + revolutionary2025Services.filter(s => s.category.includes('AI')).length + nextGenInnovations2025.filter(s => s.category.includes('AI')).length + innovative2026Services.filter(s => s.category.includes('AI')).length + emergingTech2026Services.filter(s => s.category.includes('AI')).length + innovative2026MicroSaasServices.filter(s => s.category.includes('AI')).length + innovative2026MicroSaasServicesV2.filter(s => s.category.includes('AI')).length + nextGenAIServices2026.filter(s => s.category.includes('AI')).length,
     emergingTech: emergingTechnologyServices.length + emergingTechServices2025.length + emergingTech2026Services.length + emergingTech2026ServicesNew.length + innovative2026MicroSaasServicesV2.filter(s => s.category.includes('Emerging')).length + spaceTechInnovations2026.filter(s => s.category.includes('Emerging')).length,
     itSolutions: comprehensiveITSolutions.length + enterpriseITServices.length + enterpriseIT2026Services.length + enterpriseIT2026ServicesNew.length,
@@ -199,6 +206,7 @@ const serviceCategories = [
     quantumServices: quantumSpaceServices.length + quantumAIServices2025.filter(s => s.category.includes('Quantum')).length + innovative2026MicroSaasServicesV2.filter(s => s.category.includes('Quantum')).length + spaceTechInnovations2026.filter(s => s.category.includes('Quantum')).length,
     blockchainServices: enterpriseIT2026Services.filter(s => s.category.includes('Blockchain')).length + blockchainInnovations2026.length,
     spaceTech: quantumSpaceServices.filter(s => s.category.includes('Space')).length + spaceTechInnovations2026.length
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e2d3
   };
 
 const featuredServices = [
@@ -509,6 +517,10 @@ export default function HomePage() {
           </div>
         </section>
 
+<<<<<<< HEAD
+        {/* Contact CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+=======
         {/* Enhanced Service Showcase */}
         <Enhanced2026ServicesShowcase />
 
@@ -839,6 +851,7 @@ export default function HomePage() {
 
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e2d3
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
