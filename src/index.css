@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Zion Brand Colors */
+:root {
+  --zion-cyan: #22ddd2;
+  --zion-cyan-light: #4adebb;
+  --zion-blue: #2e73ea;
+  --zion-blue-dark: #172d67;
+  --zion-blue-light: #3b82f6;
+  --zion-purple: #8c15e9;
+  --zion-purple-light: #a78bfa;
+  --zion-purple-dark: #6b21a8;
+  --zion-slate: #64748b;
+  --zion-slate-light: #94a3b8;
+  --zion-slate-dark: #475569;
+}
+
 /* Futuristic utility classes */
 @layer utilities {
   .neon-glow {

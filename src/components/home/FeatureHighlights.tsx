@@ -1,65 +1,61 @@
 
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Check, Sparkles, Users, Building, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Card, CardContent } from '@/components/ui/card';
+import { Check, ArrowRight, Sparkles, Users, Building, Rocket, Brain, Shield, Cpu, Globe, Zap, Target, Lightbulb, Code, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server } from 'lucide-react';
 
-export function FeatureHighlights() {
+export const FeatureHighlights = () => {
   const highlightsData = [
     {
-      title: "For Talent Seekers",
-      icon: <Users className="w-6 h-6" />,
-      color: "from-cyan-500 to-blue-600",
-      bgColor: "bg-cyan-500/10",
-      borderColor: "border-cyan-500/20",
+      title: "Enterprise Solutions",
+      icon: <Building className="w-6 h-6" />,
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-500/10",
+      borderColor: "border-blue-500/20",
       features: [
-        "AI-powered talent matching based on your specific project requirements",
-        "Verified profiles with skills validation and credential checking",
-        "Transparent pricing and no hidden fees",
-        "Direct communication with potential candidates",
-        "Secure payment protection and dispute resolution",
-        "Post jobs and receive AI-matched applicants"
+        "AI-powered business process automation",
+        "Enterprise-grade security and compliance",
+        "Scalable cloud infrastructure solutions",
+        "Advanced analytics and reporting tools"
       ]
     },
     {
-      title: "For Talent & Service Providers",
-      icon: <Sparkles className="w-6 h-6" />,
-      color: "from-purple-500 to-indigo-600",
+      title: "Startup & SMB",
+      icon: <Rocket className="w-6 h-6" />,
+      color: "from-green-500 to-green-600",
+      bgColor: "bg-green-500/10",
+      borderColor: "border-green-500/20",
+      features: [
+        "Cost-effective technology solutions",
+        "Rapid prototyping and MVP development",
+        "Growth-focused digital transformation",
+        "Flexible scaling options"
+      ]
+    },
+    {
+      title: "Developers & Engineers",
+      icon: <Code className="w-6 h-6" />,
+      color: "from-purple-500 to-purple-600",
       bgColor: "bg-purple-500/10",
       borderColor: "border-purple-500/20",
       features: [
-        "Create a professional profile showcasing your skills and experience",
-        "Get matched with relevant projects that fit your expertise",
-        "Secure payment processing with on-time disbursements",
-        "Build your reputation through client reviews and ratings",
-        "Access to enterprise clients and high-value projects",
-        "Professional development resources and community support"
-      ]
-    },
-    {
-      title: "For Enterprise Clients",
-      icon: <Building className="w-6 h-6" />,
-      color: "from-emerald-500 to-green-600",
-      bgColor: "bg-emerald-500/10",
-      borderColor: "border-emerald-500/20",
-      features: [
-        "White-labeled talent portal with your company branding",
-        "Dedicated account management and priority support",
-        "Custom talent pools and preferred provider networks",
-        "Advanced analytics and reporting capabilities",
-        "API access for seamless integration with your HR systems",
-        "Customizable workflow and approval processes"
+        "Advanced development tools and APIs",
+        "AI-powered code assistance",
+        "DevOps and CI/CD automation",
+        "Performance optimization tools"
       ]
     },
     {
       title: "Micro SAAS Solutions",
+      icon: <Sparkles className="w-6 h-6" />,
+      color: "from-orange-500 to-red-600",
+      bgColor: "bg-orange-500/10",
+      borderColor: "border-orange-500/20",
       features: [
         "AI-powered content generation and code assistance tools",
         "Cloud migration and cybersecurity audit services",
-        "Business intelligence dashboards and analytics platforms",
-        "SEO optimization and digital marketing automation",
-        "Custom chatbot builders and conversational AI solutions",
-        "Scalable pricing plans from startup to enterprise"
+        "Custom software development and integration",
+        "24/7 technical support and maintenance"
       ]
     }
   ];
@@ -69,25 +65,25 @@ export function FeatureHighlights() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
+        staggerChildren: 0.1,
+        delayChildren: 0.2
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
+    hidden: { 
+      opacity: 0, 
+      y: 20 
+    },
+    visible: { 
+      opacity: 1, 
       y: 0,
-      opacity: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         ease: "easeOut"
       }
-    }
-  };
-
-  const cardVariants = {
+    },
     hover: {
       y: -8,
       scale: 1.02,
@@ -170,7 +166,7 @@ export function FeatureHighlights() {
               </Card>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Call to action */}
         <motion.div 
@@ -187,4 +183,4 @@ export function FeatureHighlights() {
       </motion.div>
     </section>
   );
-}
+};

@@ -162,7 +162,7 @@ const Careers: React.FC = () => {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Benefits Section */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
@@ -198,7 +198,7 @@ const Careers: React.FC = () => {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Open Positions */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
@@ -249,7 +249,7 @@ const Careers: React.FC = () => {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* CTA Section */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
@@ -276,7 +276,7 @@ const Careers: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

@@ -31,8 +31,10 @@ export function Footer() {
       icon: Brain,
       links: [
         { name: "AI Solutions", href: "/ai-solutions" },
+        { name: "AI Agent Orchestrator", href: "/ai-agent-orchestrator" },
+        { name: "AI Analytics Copilot", href: "/ai-analytics-copilot" },
         { name: "Quantum Technology", href: "/quantum-technology" },
-        { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "Quantum Neural Network Platform", href: "/quantum-neural-network-platform" },
         { name: "Cloud & DevOps", href: "/cloud-devops" },
         { name: "Enterprise Solutions", href: "/enterprise-solutions" },
         { name: "Micro SAAS", href: "/micro-saas" }
@@ -42,30 +44,32 @@ export function Footer() {
       title: "Infrastructure & Security",
       icon: Shield,
       links: [
-        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
-        { label: "Cloud DevOps", path: "/cloud-devops" },
-        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
-        { label: "Network Infrastructure", path: "/services/network-infrastructure" },
-        { label: "Managed IT Services", path: "/services/managed-it-services" },
-        { label: "Security Assessment", path: "/services/security-assessment" }
+        { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "Advanced Cybersecurity Suite", href: "/advanced-cybersecurity-suite" },
+        { name: "SOC2 Compliance Automation", href: "/soc2-compliance-automation" },
+        { name: "5G Enterprise Solutions", href: "/5g-enterprise-solutions" },
+        { name: "5G Network Optimization", href: "/5g-network-optimization" },
+        { name: "IT Infrastructure", href: "/services/it-infrastructure" },
+        { name: "AI-Powered IT Asset Management", href: "/ai-powered-it-asset-management" },
+        { name: "Network Infrastructure", href: "/services/network-infrastructure" }
       ]
     },
     {
-      title: "Industry Solutions",
+      title: "Company",
       icon: Building,
       links: [
         { name: "About Us", href: "/about" },
         { name: "Our Team", href: "/team" },
+        { name: "Mission", href: "/mission" },
         { name: "Careers", href: "/careers" },
-        { name: "Blog", href: "/blog" },
+        { name: "Partners", href: "/partners" },
+        { name: "News & Blog", href: "/news" },
         { name: "Case Studies", href: "/case-studies" },
-        { name: "Partners", href: "/partners" }
+        { name: "Contact", href: "/contact" }
       ]
     },
     {
-      title: "Company & Resources",
+      title: "Resources & Support",
       icon: Users,
       links: [
         { name: "Documentation", href: "/docs" },
@@ -74,7 +78,8 @@ export function Footer() {
         { name: "Webinars", href: "/webinars" },
         { name: "White Papers", href: "/white-papers" },
         { name: "FAQ", href: "/faq" },
-        { name: "Support", href: "/support" }
+        { name: "Support", href: "/support" },
+        { name: "Events", href: "/events" }
       ]
     }
   ];
@@ -83,7 +88,7 @@ export function Footer() {
   const socialLinks = [
     { 
       name: 'LinkedIn', 
-      url: 'https://www.linkedin.com/company/ziontechgroup', 
+      url: 'https://linkedin.com/company/ziontechgroup', 
       icon: Linkedin,
       fallback: 'https://linkedin.com'
     },
@@ -95,7 +100,7 @@ export function Footer() {
     },
     { 
       name: 'GitHub', 
-      url: 'https://github.com/ziontechgroup', 
+      url: 'https://github.com/Zion-Holdings', 
       icon: Github,
       fallback: 'https://github.com'
     },

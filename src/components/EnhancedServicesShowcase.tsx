@@ -323,6 +323,6 @@ export function EnhancedServicesShowcase() {
       </div>
     </div>
   );
-};
+}
 
 export default EnhancedServicesShowcase;

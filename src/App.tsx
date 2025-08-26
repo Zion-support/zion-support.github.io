@@ -41,6 +41,15 @@ const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation')
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 
+// Missing pages from analysis - AI Services
+const AIAgentOrchestrator = lazy(() => import('./pages/AIAgentOrchestrator'));
+const AIAnalyticsCopilot = lazy(() => import('./pages/AIAnalyticsCopilot'));
+const FiveGNetworkOptimization = lazy(() => import('./pages/FiveGNetworkOptimization'));
+const AdvancedCybersecuritySuite = lazy(() => import('./pages/AdvancedCybersecuritySuite'));
+const AdvancedResearchAutomation = lazy(() => import('./pages/AdvancedResearchAutomation'));
+const AffiliateAttributionHub = lazy(() => import('./pages/AffiliateAttributionHub'));
+const AgenticRAGHelpdesk = lazy(() => import('./pages/AgenticRAGHelpdesk'));
+
 // New innovative service pages
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
@@ -193,9 +202,18 @@ const App: React.FC = () => {
                     <Route path="/soc2-compliance-automation" element={<SOC2ComplianceAutomation />} />
                     <Route path="/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                     <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
+                    <Route path="/5g-network-optimization" element={<FiveGNetworkOptimization />} />
                     <Route path="/case-studies" element={<CaseStudies />} />
                     <Route path="/help" element={<HelpCenter />} />
                     <Route path="/new-services" element={<NewServices />} />
+                    
+                    {/* Additional missing AI service routes */}
+                    <Route path="/ai-agent-orchestrator" element={<AIAgentOrchestrator />} />
+                    <Route path="/ai-analytics-copilot" element={<AIAnalyticsCopilot />} />
+                    <Route path="/advanced-cybersecurity-suite" element={<AdvancedCybersecuritySuite />} />
+                    <Route path="/advanced-research-automation" element={<AdvancedResearchAutomation />} />
+                    <Route path="/affiliate-attribution-hub" element={<AffiliateAttributionHub />} />
+                    <Route path="/agentic-rag-helpdesk" element={<AgenticRAGHelpdesk />} />
                     
                     {/* Additional missing pages */}
                     <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />

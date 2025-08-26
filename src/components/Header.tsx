@@ -54,23 +54,21 @@ export function Header() {
       href: '/services',
       dropdown: [
         { name: 'AI Solutions', href: '/ai-solutions', description: 'Advanced AI and machine learning services' },
+        { name: 'AI Agent Orchestrator', href: '/ai-agent-orchestrator', description: 'Coordinate multiple AI agents seamlessly' },
+        { name: 'AI Analytics Copilot', href: '/ai-analytics-copilot', description: 'Transform data into actionable insights' },
         { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-generation quantum computing' },
         { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Comprehensive security solutions' },
+        { name: 'Advanced Cybersecurity Suite', href: '/advanced-cybersecurity-suite', description: 'Enterprise security solutions' },
+        { name: '5G Solutions', href: '/5g-enterprise-solutions', description: '5G network and optimization services' },
+        { name: '5G Network Optimization', href: '/5g-network-optimization', description: 'Maximize 5G performance' },
         { name: 'Cloud & DevOps', href: '/cloud-devops', description: 'Scalable cloud infrastructure' },
         { name: 'Enterprise Solutions', href: '/enterprise-solutions', description: 'Large-scale business solutions' },
         { name: 'Micro SAAS', href: '/micro-saas', description: 'Scalable software solutions' }
       ]
     },
     { 
-      path: '/services', 
-      label: 'Services', 
-      icon: '🤖',
-      description: 'Explore our comprehensive service offerings',
-      hasDropdown: true
-    },
-    { 
-      name: 'Company', 
-      href: '/about',
+      name: 'Solutions', 
+      href: '/solutions',
       dropdown: [
         { name: 'Healthcare', href: '/solutions/healthcare', description: 'AI-powered healthcare solutions' },
         { name: 'Finance', href: '/solutions/finance', description: 'Financial technology innovations' },
@@ -86,6 +84,7 @@ export function Header() {
       dropdown: [
         { name: 'About Us', href: '/about', description: 'Learn about our mission and values' },
         { name: 'Our Team', href: '/team', description: 'Meet our leadership and experts' },
+        { name: 'Mission', href: '/mission', description: 'Our vision and mission' },
         { name: 'Careers', href: '/careers', description: 'Join our innovative team' },
         { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
         { name: 'News & Blog', href: '/news', description: 'Latest updates and insights' },
@@ -94,7 +93,7 @@ export function Header() {
     },
     { 
       name: 'Resources', 
-      href: '/docs',
+      href: '/resources',
       dropdown: [
         { name: 'Documentation', href: '/docs', description: 'Technical guides and APIs' },
         { name: 'Help Center', href: '/help', description: 'Support and troubleshooting' },

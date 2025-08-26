@@ -183,7 +183,7 @@ const News: React.FC = () => {
             and the impact we're making in the world of technology.
           </motion.p>
         </div>
-      </section>
+      </div>
 
       {/* Category Filter */}
       <div className="px-4 sm:px-6 lg:px-8 pb-12">
@@ -336,7 +336,7 @@ const News: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Press Releases */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
@@ -420,7 +420,7 @@ const News: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </div>
 
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
