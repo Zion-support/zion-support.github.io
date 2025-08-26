@@ -1,9 +1,6 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion, Variants } from 'framer-motion';
-import HeroSection from '../components/HeroSection';
-import ServiceCard from '../components/ServiceCard';
 
 const Home: React.FC = () => {
   const featuredServices = [
@@ -310,5 +307,3 @@ const Home: React.FC = () => {
     </div>
   );
 };
-
-export default Home;

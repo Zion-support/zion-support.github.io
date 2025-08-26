@@ -4,40 +4,6 @@ import { Link } from 'react-router-dom';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const services = [
-    { name: 'AI Solutions', path: '/services' },
-    { name: 'Cloud & DevOps', path: '/services' },
-    { name: 'Cybersecurity', path: '/services' },
-    { name: 'Digital Transformation', path: '/services' },
-    { name: 'Web Development', path: '/services' },
-    { name: 'Data Analytics', path: '/services' }
-  ];
-
-  const company = [
-    { name: 'About Us', path: '/about' },
-    { name: 'Our Team', path: '/about' },
-    { name: 'Careers', path: '/careers' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'News', path: '/news' },
-    { name: 'Press Kit', path: '/press' }
-  ];
-
-  const resources = [
-    { name: "Case Studies", path: "/case-studies" },
-    { name: "White Papers", path: "/white-papers" },
-    { name: "Webinars", path: "/webinars" },
-    { name: "Documentation", path: "/docs" }
-  ];
-
-  const legal = [
-    { name: 'Privacy Policy', path: '/privacy' },
-    { name: 'Terms of Service', path: '/terms' },
-    { name: 'Cookie Policy', path: '/cookies' },
-    { name: 'GDPR Compliance', path: '/gdpr' },
-    { name: 'Security', path: '/security' },
-    { name: 'Compliance', path: '/compliance' }
-  ];
-
   const socialLinks = [
     {
       name: 'LinkedIn',
@@ -116,6 +82,58 @@ const Footer: React.FC = () => {
                 Wilmington, DE & Remote
               </div>
             </div>
+    {
+      title: "Company",
+      links: [
+        { label: "About Us", path: "/about" },
+        { label: "Our Team", path: "/about" },
+        { label: "Careers", path: "/careers" },
+        { label: "News & Updates", path: "/blog" },
+        { label: "Case Studies", path: "/case-studies" },
+        { label: "Partners", path: "/partners" }
+      ]
+    },
+    {
+      title: "Resources",
+      links: [
+        { label: "Blog", path: "/blog" },
+        { label: "Documentation", path: "/docs" },
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "Research", path: "/research" },
+        { label: "Events", path: "/events" }
+      ]
+    },
+    {
+      title: "Support",
+      links: [
+        { label: "Contact Us", path: "/contact" },
+        { label: "Help Center", path: "/help" },
+        { label: "Support Portal", path: "/support" },
+        { label: "Training", path: "/training" },
+        { label: "Consulting", path: "/consulting" },
+        { label: "Request Quote", path: "/request-quote" }
+      ]
+    }
+  ];
+
+  return (
+    <footer className="bg-slate-900 text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <span className="text-2xl font-bold">Zion Tech Group</span>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of innovative technology solutions, AI-powered services, 
+              and digital transformation expertise. We help businesses navigate the future of technology.
+            </p>
             
             {/* Social Links */}
             <div className="flex space-x-4">
@@ -200,6 +218,47 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
+          </div>
+          {footerSections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-lg font-semibold text-white mb-4">{section.title}</h3>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      to={link.path}
+                      className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Newsletter Signup */}
+      <div className="border-t border-white/10 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Stay Updated with Our Latest Insights
+            </h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Get the latest technology trends, AI insights, and industry updates delivered to your inbox.
+            </p>
+            <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
 
