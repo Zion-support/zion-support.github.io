@@ -1,220 +1,361 @@
-import { ProductListing } from "@/types/listings";
+export interface InnovativeMicroSaasService {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  pricingModel: string;
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
+  tags: string[];
+  estimatedDelivery: string;
+  supportLevel: string;
+  marketPrice: string;
+  roi: string;
+  innovationLevel: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+  competitors?: string[];
+  marketSize?: string;
+}
 
-export const SERVICES: ProductListing[] = [
+export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
+  // AI-Powered Business Intelligence Platform
   {
-    id: "service-1",
-    title: "AI Development & Integration",
-    description:
-      "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.",
-    category: "Development",
-    price: 5000,
+    id: "ai-business-intelligence-platform",
+    title: "AI Business Intelligence Platform",
+    description: "Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports for business decision-making.",
+    category: "AI & Analytics",
+    subcategory: "Business Intelligence",
+    price: 2999,
     currency: "$",
-    tags: ["AI Integration", "Machine Learning", "Enterprise"],
-    author: {
-      name: "TechSolutions Inc.",
-      id: "tech-solutions",
-      avatarUrl:
-        "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-    },
-    images: [
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered data analysis",
+      "Automated insight generation",
+      "Natural language queries",
+      "Predictive analytics",
+      "Custom dashboard creation",
+      "Real-time data processing",
+      "Multi-source data integration",
+      "Advanced visualization tools",
+      "Automated reporting",
+      "Mobile app access"
     ],
-    createdAt: "2023-12-10T14:48:00.000Z",
-    aiScore: 95,
-    rating: 4.9,
-    reviewCount: 124,
+    benefits: [
+      "Reduce analysis time by 80%",
+      "Improve decision accuracy by 60%",
+      "Automated insight discovery",
+      "Real-time business monitoring",
+      "Scalable analytics infrastructure"
+    ],
+    useCases: [
+      "Sales performance analysis",
+      "Customer behavior insights",
+      "Financial reporting automation",
+      "Operational efficiency tracking",
+      "Market trend analysis"
+    ],
+    targetAudience: [
+      "Business analysts",
+      "Data scientists",
+      "Executives",
+      "Marketing teams",
+      "Sales teams"
+    ],
+    tags: ["AI", "Analytics", "Business Intelligence", "Data Science", "Reporting"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,999 - $8,999/month",
+    roi: "250-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],
+      apiEndpoints: 150,
+      uptime: "99.9%",
+      security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]
+    },
+    competitors: ["Tableau", "Power BI", "Looker", "Qlik"],
+    marketSize: "$29.9 billion by 2025"
   },
+
+  // AI-Powered Autonomous DevOps Platform
   {
-    id: "service-2",
-    title: "Cloud Infrastructure Management",
-    description:
-      "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
-    category: "Management",
-    price: 3000,
+    id: "ai-autonomous-devops-platform",
+    title: "AI Autonomous DevOps Platform",
+    description: "Self-healing DevOps platform that automatically detects, diagnoses, and resolves infrastructure issues using AI and machine learning.",
+    category: "DevOps & Infrastructure",
+    subcategory: "Automation",
+    price: 3499,
     currency: "$",
-    tags: ["Cloud", "DevOps", "Security"],
-    author: {
-      name: "CloudPro Experts",
-      id: "cloud-pro",
-    },
-    images: [
-      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered incident detection",
+      "Automated root cause analysis",
+      "Self-healing infrastructure",
+      "Predictive maintenance",
+      "Intelligent scaling",
+      "Security vulnerability scanning",
+      "Performance optimization",
+      "Cost optimization",
+      "Multi-cloud management",
+      "Real-time monitoring"
     ],
-    createdAt: "2023-11-20T09:30:00.000Z",
-    aiScore: 88,
-    rating: 4.7,
-    reviewCount: 92,
+    benefits: [
+      "Reduce downtime by 90%",
+      "Cut operational costs by 40%",
+      "Improve deployment success rate to 99.9%",
+      "Automated security compliance",
+      "24/7 infrastructure monitoring"
+    ],
+    useCases: [
+      "Enterprise DevOps automation",
+      "Cloud infrastructure management",
+      "Microservices orchestration",
+      "Security operations automation",
+      "Performance monitoring"
+    ],
+    targetAudience: [
+      "DevOps engineers",
+      "Site reliability engineers",
+      "Cloud architects",
+      "IT operations teams",
+      "Startups and enterprises"
+    ],
+    tags: ["AI", "DevOps", "Automation", "Infrastructure", "Monitoring"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,499 - $9,999/month",
+    roi: "300-500%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "Kubernetes", "Docker", "Terraform", "Prometheus"],
+      integrations: ["AWS", "Azure", "GCP", "GitHub", "Jenkins", "Slack"],
+      apiEndpoints: 200,
+      uptime: "99.99%",
+      security: ["SOC 2", "ISO 27001", "Zero-trust architecture", "Encryption at rest"]
+    },
+    competitors: ["DataDog", "New Relic", "Splunk", "PagerDuty"],
+    marketSize: "$8.2 billion by 2025"
   },
+
+  // Quantum-Safe Cybersecurity Suite
   {
-    id: "service-3",
-    title: "Big Data Analysis & Insights",
-    description:
-      "Transform your raw data into actionable business insights with our advanced analytics and visualization services.",
-    category: "Analytics",
-    price: 4500,
+    id: "quantum-safe-cybersecurity-suite",
+    title: "Quantum-Safe Cybersecurity Suite",
+    description: "Future-proof cybersecurity solution that implements post-quantum cryptography to protect against quantum computing threats.",
+    category: "Cybersecurity",
+    subcategory: "Quantum Security",
+    price: 5999,
     currency: "$",
-    tags: ["Big Data", "Analytics", "Business Intelligence"],
-    author: {
-      name: "DataMind Solutions",
-      id: "datamind",
-      avatarUrl:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100",
-    },
-    images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+    pricingModel: "monthly",
+    features: [
+      "Post-quantum cryptography",
+      "Quantum-resistant algorithms",
+      "Hybrid encryption systems",
+      "Key management",
+      "Digital signatures",
+      "Certificate management",
+      "Compliance frameworks",
+      "Threat intelligence",
+      "Incident response",
+      "Security training"
     ],
-    createdAt: "2024-01-05T11:15:00.000Z",
-    aiScore: 92,
-    rating: 4.8,
-    reviewCount: 78,
+    benefits: [
+      "Future-proof against quantum threats",
+      "Maintain data security for decades",
+      "Meet regulatory requirements",
+      "Reduce security risks",
+      "Competitive advantage"
+    ],
+    useCases: [
+      "Government agencies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Critical infrastructure",
+      "Long-term data storage"
+    ],
+    targetAudience: [
+      "CISOs and security teams",
+      "Government agencies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Defense contractors"
+    ],
+    tags: ["Cybersecurity", "Quantum Computing", "Post-Quantum", "Encryption", "Compliance"],
+    estimatedDelivery: "16-20 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$5,999 - $15,999/month",
+    roi: "200-400%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Post-quantum algorithms", "Hybrid encryption", "Key management", "React", "Node.js"],
+      integrations: ["PKI systems", "Identity management", "SIEM platforms", "Compliance tools"],
+      apiEndpoints: 200,
+      uptime: "99.99%",
+      security: ["Quantum-resistant", "SOC 2", "ISO 27001", "FIPS 140-2", "Zero-trust"]
+    },
+    competitors: ["ISARA", "PQShield", "Crypta Labs", "Quantum Xchange"],
+    marketSize: "$2.8 billion by 2025"
   },
+
+  // AI-Powered Healthcare Diagnostics Platform
   {
-    id: "service-4",
-    title: "Cybersecurity Assessment & Protection",
-    description:
-      "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",
-    category: "Security",
-    price: 6000,
+    id: "ai-healthcare-diagnostics-platform",
+    title: "AI Healthcare Diagnostics Platform",
+    description: "Advanced medical diagnostics platform that uses AI to analyze medical images, lab results, and patient data for early disease detection.",
+    category: "AI & Healthcare",
+    subcategory: "Diagnostics",
+    price: 4499,
     currency: "$",
-    tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
-    author: {
-      name: "SecureNet Team",
-      id: "secure-net",
-    },
-    images: [
-      "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500",
+    pricingModel: "monthly",
+    features: [
+      "Medical image analysis",
+      "Lab result interpretation",
+      "Patient data analytics",
+      "Disease prediction models",
+      "Treatment recommendations",
+      "Clinical decision support",
+      "Electronic health records",
+      "Telemedicine integration",
+      "Mobile app access",
+      "Compliance reporting"
     ],
-    createdAt: "2023-12-28T16:22:00.000Z",
-    aiScore: 89,
-    rating: 4.9,
-    reviewCount: 103,
+    benefits: [
+      "Improve diagnostic accuracy by 25%",
+      "Reduce diagnosis time by 60%",
+      "Early disease detection",
+      "Better patient outcomes",
+      "Cost-effective healthcare"
+    ],
+    useCases: [
+      "Radiology departments",
+      "Pathology labs",
+      "Primary care clinics",
+      "Specialist practices",
+      "Research institutions"
+    ],
+    targetAudience: [
+      "Healthcare providers",
+      "Hospitals and clinics",
+      "Medical researchers",
+      "Health insurance companies",
+      "Pharmaceutical companies"
+    ],
+    tags: ["AI", "Healthcare", "Diagnostics", "Medical Imaging", "Machine Learning"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,499 - $12,999/month",
+    roi: "150-300%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
+      integrations: ["PACS systems", "EHR platforms", "Lab systems", "Telemedicine platforms"],
+      apiEndpoints: 300,
+      uptime: "99.9%",
+      security: ["HIPAA", "SOC 2", "GDPR", "Data encryption", "Audit logging"]
+    },
+    competitors: ["Butterfly Network", "Zebra Medical", "Aidoc", "Enlitic"],
+    marketSize: "$45.2 billion by 2025"
   },
+
+  // Edge AI Computing Platform
   {
-    id: "service-5",
-    title: "IT Infrastructure Modernization",
-    description:
-      "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
-    category: "Consulting",
-    price: 8500,
+    id: "edge-ai-computing-platform",
+    title: "Edge AI Computing Platform",
+    description: "Distributed AI computing platform that brings machine learning capabilities to edge devices for real-time processing and decision making.",
+    category: "AI & Edge Computing",
+    subcategory: "Distributed Computing",
+    price: 3799,
     currency: "$",
-    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
-    author: {
-      name: "ModernizeIT Consulting",
-      id: "modernize-it",
-    },
-    images: [
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
+    pricingModel: "monthly",
+    features: [
+      "Edge AI model deployment",
+      "Real-time inference",
+      "Distributed training",
+      "Model optimization",
+      "Edge device management",
+      "Data synchronization",
+      "Offline capabilities",
+      "Scalable architecture",
+      "Security features",
+      "Monitoring dashboard"
     ],
-    createdAt: "2023-11-10T08:45:00.000Z",
-    aiScore: 86,
-    rating: 4.6,
-    reviewCount: 67,
-  },
-  {
-    id: "service-6",
-    title: "AI Strategy & Implementation",
-    description:
-      "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
-    category: "Strategy",
-    price: 7500,
-    currency: "$",
-    tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
-    author: {
-      name: "AI Future Consulting",
-      id: "ai-future",
-      avatarUrl:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
-    },
-    images: [
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500",
+    benefits: [
+      "Reduce latency by 90%",
+      "Lower bandwidth costs by 70%",
+      "Improve privacy and security",
+      "Real-time decision making",
+      "Scalable AI deployment"
     ],
-    createdAt: "2024-02-02T10:30:00.000Z",
-    aiScore: 94,
-    rating: 4.8,
-    reviewCount: 85,
-  },
-  {
-    id: "service-7",
-    title: "DevOps Automation Setup",
-    description:
-      "Implement CI/CD pipelines and infrastructure automation to streamline deployments and reduce downtime.",
-    category: "Management",
-    price: 5500,
-    currency: "$",
-    tags: ["DevOps", "Automation", "CI/CD"],
-    author: {
-      name: "Pipeline Pros",
-      id: "pipeline-pros",
-    },
-    images: [
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500",
+    useCases: [
+      "Autonomous vehicles",
+      "Smart cities",
+      "Industrial IoT",
+      "Retail analytics",
+      "Healthcare monitoring"
     ],
-    createdAt: "2024-02-20T09:00:00.000Z",
-    aiScore: 90,
-    rating: 4.7,
-    reviewCount: 58,
-  },
-  {
-    id: "service-8",
-    title: "Enterprise SaaS Deployment",
-    description:
-      "End-to-end deployment of scalable SaaS applications with ongoing maintenance and support.",
-    category: "Development",
-    price: 6500,
-    currency: "$",
-    tags: ["SaaS", "Cloud", "Scaling"],
-    author: {
-      name: "SaaSify Corp",
-      id: "saasify",
-    },
-    images: [
-      "https://images.unsplash.com/photo-1556485687-b8553ddfbc05?auto=format&fit=crop&w=800&h=500",
+    targetAudience: [
+      "IoT device manufacturers",
+      "Smart city planners",
+      "Industrial companies",
+      "Retail chains",
+      "Healthcare providers"
     ],
-    createdAt: "2024-03-01T12:00:00.000Z",
-    aiScore: 91,
-    rating: 4.6,
-    reviewCount: 42,
-  },
-  {
-    id: "service-9",
-    title: "Machine Learning Model Optimization",
-    description:
-      "Improve existing ML models for better accuracy and performance using best-practice tuning techniques.",
-    category: "Analytics",
-    price: 4800,
-    currency: "$",
-    tags: ["Machine Learning", "Optimization", "Tuning"],
-    author: {
-      name: "ModelTune Labs",
-      id: "modeltune",
+    tags: ["AI", "Edge Computing", "IoT", "Machine Learning", "Real-time"],
+    estimatedDelivery: "14-18 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,799 - $11,999/month",
+    roi: "250-450%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    images: [
-      "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&h=500",
-    ],
-    createdAt: "2024-02-10T08:00:00.000Z",
-    aiScore: 93,
-    rating: 4.8,
-    reviewCount: 69,
-  },
-  {
-    id: "service-10",
-    title: "Blockchain Integration Consulting",
-    description:
-      "Consulting services to integrate blockchain technology into existing business processes and applications.",
-    category: "Consulting",
-    price: 7000,
-    currency: "$",
-    tags: ["Blockchain", "Integration", "Consulting"],
-    author: {
-      name: "BlockAdvisors",
-      id: "block-advisors",
+    technicalSpecs: {
+      technology: ["TensorFlow Lite", "ONNX", "Edge TPU", "React", "Node.js", "MongoDB"],
+      integrations: ["IoT platforms", "Cloud AI services", "Edge devices", "Data centers"],
+      apiEndpoints: 400,
+      uptime: "99.9%",
+      security: ["Edge security", "Data encryption", "Secure boot", "Device authentication"]
     },
-    images: [
-      "https://images.unsplash.com/photo-1518544881698-88d0d5b4b04b?auto=format&fit=crop&w=800&h=500",
-    ],
-    createdAt: "2024-01-25T15:30:00.000Z",
-    aiScore: 89,
-    rating: 4.5,
-    reviewCount: 36,
-  },
+    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],
+    marketSize: "$12.3 billion by 2025"
+  }
 ];
