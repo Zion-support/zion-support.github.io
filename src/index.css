@@ -14,11 +14,30 @@
   --zion-red: #ef4444;
 }
 
+/* Dark mode variables */
+.dark {
+  --zion-blue-dark: #1e293b;
+  --zion-blue-light: #334155;
+  --zion-slate: #64748b;
+  --zion-purple-dark: #7c3aed;
+  --zion-cyan: #22d3ee;
+  --zion-green: #34d399;
+  --zion-orange: #fbbf24;
+  --zion-red: #f87171;
+}
+
 @layer base {
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-family: ui-sans-serif, system-ui, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Dark mode body styles */
+  .dark body {
+    background-color: #0f172a;
+    color: #f8fafc;
   }
 }
 
@@ -29,8 +48,17 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
+  .dark .glass {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
   .neon-border {
     border: 1px solid transparent;
     background: linear-gradient(45deg, #06b6d4, #581c87) border-box;
+  }
+
+  .dark .neon-border {
+    background: linear-gradient(45deg, #22d3ee, #7c3aed) border-box;
   }
 }
