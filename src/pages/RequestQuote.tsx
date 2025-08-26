@@ -1,14 +1,14 @@
+
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Calculator, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+=======
+import { AppHeader } from "@/layout/AppHeader";
+import Footer from "@/components/Footer";
+=======
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+=======
+import { Footer } from "@/components/Footer";
 
 const RequestQuote: React.FC = () => {
   const [formData, setFormData] = useState({

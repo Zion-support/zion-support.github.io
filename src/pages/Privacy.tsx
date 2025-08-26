@@ -4,11 +4,14 @@ import { Helmet } from 'react-helmet-async';
 const Privacy: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description" content="Learn about how Zion Tech Group collects, uses, and protects your personal information. Read our comprehensive privacy policy." />
-        <meta name="keywords" content="privacy policy, data protection, personal information, Zion Tech Group" />
-      </Helmet>
+      <SEO
+        title="Privacy Policy"
+        description="Learn how Zion Tech Group handles your data and protects your privacy."
+        canonical="https://ziontechgroup.com/privacy"
+=======
+=======
+=======
+      />
       
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
