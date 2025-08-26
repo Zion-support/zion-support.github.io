@@ -679,61 +679,13 @@ const SERVICE_LISTINGS: ProductListing[] = [
   }
 ];
 
-// Service categories with icons and descriptions
-const SERVICE_CATEGORIES = [
-  {
-    id: "ai-services",
-    name: "AI & Machine Learning",
-    icon: <Brain className="w-8 h-8" />,
-    description: "Custom AI development, ML model training, and strategic consulting",
-    count: 15,
-    avgPrice: "$8,000 - $25,000",
-    features: ["Custom AI Models", "ML Training", "Strategy Consulting", "Integration"]
-  },
-  {
-    id: "cloud-services",
-    name: "Cloud & Infrastructure",
-    icon: <Cloud className="w-8 h-8" />,
-    description: "Cloud migration, DevOps automation, and infrastructure management",
-    count: 12,
-    avgPrice: "$5,000 - $30,000",
-    features: ["Cloud Migration", "DevOps", "Kubernetes", "Monitoring"]
-  },
-  {
-    id: "security-services",
-    name: "Cybersecurity",
-    icon: <Shield className="w-8 h-8" />,
-    description: "Security audits, compliance frameworks, and threat protection",
-    count: 8,
-    avgPrice: "$8,000 - $35,000",
-    features: ["Security Audits", "Compliance", "Penetration Testing", "Incident Response"]
-  },
-  {
-    id: "data-services",
-    name: "Data & Analytics",
-    icon: <Database className="w-8 h-8" />,
-    description: "Big data engineering, BI dashboards, and data governance",
-    count: 10,
-    avgPrice: "$6,000 - $28,000",
-    features: ["Big Data", "Business Intelligence", "Data Governance", "Analytics"]
-  },
-  {
-    id: "development-services",
-    name: "Development Services",
-    icon: <Code className="w-8 h-8" />,
-    description: "Web development, mobile apps, and API integration",
-    count: 18,
-    avgPrice: "$3,000 - $35,000",
-    features: ["Web Development", "Mobile Apps", "APIs", "Integration"]
-  },
-  {
-    id: "blockchain-services",
-    name: "Blockchain & Web3",
-    icon: <Link2 className="w-8 h-8" />,
-    description: "Smart contracts, DeFi protocols, and NFT solutions",
-    count: 6,
-    avgPrice: "$15,000 - $50,000",
-    features: ["Smart Contracts", "DeFi", "NFTs", "Blockchain"]
+async function fetchServices() {
+  try {
+    const res = await apiClient.get('/api/services');
+    return res.data as ProductListing[];
+  } catch (err) {
+    captureException(err);
+    throw err;
   }
 ];
 
@@ -762,6 +714,8 @@ import { useNavigate } from 'react-router-dom';
 
 export default function ServicesPage() {
   const [listings, setListings] = useState<ProductListing[]>(SERVICES);
+
+  const { data, error, isLoading, mutate } = useSWR<ProductListing[]>('/api/services', fetchServices);
 
   useEffect(() => {
     async function load() {
