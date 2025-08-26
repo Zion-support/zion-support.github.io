@@ -216,6 +216,7 @@ export default function News() {
     { name: 'Business', count: 1, active: false }
   ];
 
+<<<<<<< HEAD
   const featuredNews = [
     {
       id: 1,
@@ -1332,6 +1333,8 @@ export default function News() {
 
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7
   return (
     <>
       <Head>
@@ -1349,7 +1352,11 @@ export default function News() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+=======
+              className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7
             >
               Latest News & Updates
             </motion.h1>
@@ -1357,22 +1364,93 @@ export default function News() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
               className="text-xl text-gray-300 max-w-3xl mx-auto"
             >
               Stay informed about the latest breakthroughs in AI, quantum computing, and cutting-edge technology from Zion Tech Group.
+=======
+              className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
+            >
+              Stay informed about our latest innovations, breakthroughs, and industry insights in AI, quantum computing, and technology.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7
             </motion.p>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* News Articles */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {newsArticles.map((article, index) => (
+=======
+        {/* Featured Article */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="max-w-7xl mx-auto">
+            {newsArticles.filter(article => article.featured).map((article, index) => (
+              <motion.div
+                key={article.slug}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-gray-900 to-gray-800 border border-gray-700"
+              >
+                <div className="grid lg:grid-cols-2 gap-8 p-8">
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-4 text-sm text-gray-400">
+                      <span className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        {article.date}
+                      </span>
+                      <span className="flex items-center">
+                        <Clock className="w-4 h-4 mr-2" />
+                        {article.readTime}
+                      </span>
+                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs">
+                        {article.category}
+                      </span>
+                    </div>
+                    <h2 className="text-3xl font-bold text-white leading-tight">
+                      {article.title}
+                    </h2>
+                    <p className="text-lg text-gray-300 leading-relaxed">
+                      {article.excerpt}
+                    </p>
+                    <Link 
+                      href={`/news/${article.slug}`}
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                    >
+                      Read Full Article
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </Link>
+                  </div>
+                  <div className="relative">
+                    <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg border border-gray-700 flex items-center justify-center">
+                      <div className="text-center text-gray-400">
+                        <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                          <Star className="w-8 h-8 text-white" />
+                        </div>
+                        <p className="text-sm">Featured Article</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* News Grid */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {newsArticles.filter(article => !article.featured).map((article, index) => (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7
                 <motion.article
                   key={article.slug}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
                 >
@@ -1404,12 +1482,76 @@ export default function News() {
                       >
                         Read More
                         <ArrowRight className="w-4 h-4 ml-1" />
+=======
+                  transition={{ duration: 0.8, delay: 0.1 * index }}
+                  className="bg-gray-900/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center justify-between text-sm text-gray-400">
+                      <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full">
+                        {article.category}
+                      </span>
+                      <span className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        {article.date}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-white leading-tight hover:text-cyan-400 transition-colors">
+                      {article.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {article.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between pt-4">
+                      <span className="text-sm text-gray-400 flex items-center">
+                        <Clock className="w-4 h-4 mr-2" />
+                        {article.readTime}
+                      </span>
+                      <Link 
+                        href={`/news/${article.slug}`}
+                        className="text-cyan-400 hover:text-cyan-300 font-medium text-sm flex items-center group"
+                      >
+                        Read More
+                        <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7
                       </Link>
                     </div>
                   </div>
                 </motion.article>
               ))}
             </div>
+<<<<<<< HEAD
+=======
+          </div>
+        </section>
+
+        {/* Newsletter Signup */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl border border-gray-700 p-8"
+            >
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Stay Updated with Zion Tech Group
+              </h3>
+              <p className="text-gray-300 mb-6">
+                Get the latest news, insights, and updates delivered directly to your inbox.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                />
+                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                  Subscribe
+                </button>
+              </div>
+            </motion.div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7
           </div>
         </section>
       </div>

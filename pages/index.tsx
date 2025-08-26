@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -6,11 +7,23 @@ const Home: NextPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
       <Head>
+<<<<<<< HEAD
         <title>Zion Tech Group — AI-Powered Technology Solutions</title>
         <meta
           name="description"
           content="Discover cutting-edge AI services, quantum computing solutions, blockchain platforms, and innovative technology services from Zion Tech Group."
         />
+=======
+        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
+        <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
+        <meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />
+        <meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+      
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform","url":"https://ziontechgroup.com/","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script>
+>>>>>>> origin/cursor/website-audit-and-enhancement-33a4
       </Head>
       
       <main className="container mx-auto px-6 py-12">
@@ -187,3 +200,10 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+=======
+import Home from '../src/pages/Home';
+
+export default function Index() {
+  return <Home />;
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2900
