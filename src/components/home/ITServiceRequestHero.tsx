@@ -1,12 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  WrenchScrewdriverIcon, 
-  ComputerDesktopIcon,
-  ServerIcon,
-  CogIcon
-} from '@heroicons/react/24/outline';
+import React, { useState } from "react";
+import { OptimizedImage as Image } from "@/components/ui/OptimizedImage";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export function ITServiceRequestHero() {
   const services = [
