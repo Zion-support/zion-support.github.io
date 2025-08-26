@@ -7,10 +7,9 @@ import { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
 import { Logo } from '@/components/header/Logo';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { CurrencySelector } from '@/components/header/CurrencySelector';
-import { useTranslation } from 'react-i18next';
-import { Menu, X } from 'lucide-react';
+import { ModeToggle } from '@/components/ModeToggle';
+import Menu from 'lucide-react/dist/esm/icons/menu';
+import X from 'lucide-react/dist/esm/icons/x';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
@@ -191,11 +190,8 @@ export function AppHeader() {
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
-          <div className="relative bg-gray-900 border-t border-green-700/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu 
-              unreadCount={unreadCount} 
-              onClose={() => setMobileMenuOpen(false)} 
-            />
+          <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu />
           </div>
         </div>
       </div>

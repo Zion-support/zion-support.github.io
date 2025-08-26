@@ -16,6 +16,8 @@ import { Logo } from './Logo';
 import { UserMenu } from './UserMenu';
 import { LanguageSelector } from './LanguageSelector';
 import { MainNavigation } from '@/layout/MainNavigation';
+import { MobileMenu } from './MobileMenu';
+import { useAuth } from '@/hooks/useAuth';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
@@ -472,24 +474,6 @@ export function Header({ hideLogin = false, customTheme }: HeaderProps) {
         <div className="ml-6 flex-1 hidden lg:block">
           <MainNavigation />
         </div>
-        
-        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <EnhancedSearchInput
-              value={query}
-              onChange={setQuery}
-              onSelectSuggestion={(text) => {
-                navigate(`/search?q=${encodeURIComponent(text)}`);
-                setQuery("");
-              }}
-              searchSuggestions={searchSuggestions}
-            />
-          </div>
-=======
-        <div className="ml-6 flex-1 hidden lg:block">
-          <MainNavigation />
-        </div>
 
         {/* Enhanced Search */}
         <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-4">
@@ -507,6 +491,13 @@ export function Header({ hideLogin = false, customTheme }: HeaderProps) {
         </div>
         
         <form onSubmit={handleSubmit} className="hidden lg:block w-72 mx-6">
+=======
+        <div className="ml-6 flex-1 hidden md:block">
+          <MainNavigation />
+        </div>
+
+        {/* Desktop Search */}
+        <form onSubmit={handleSubmit} className="hidden lg:block w-64 mx-4">
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -616,8 +607,8 @@ export function Header({ hideLogin = false, customTheme }: HeaderProps) {
 
         </form>
 
-        {/* Right Side Actions */}
-        <div className="flex items-center gap-2">
+        {/* Desktop Actions */}
+        <div className="flex items-center gap-2 hidden md:flex">
           <LanguageSelector />
           {!hideLogin && <UserMenu />}
           
@@ -640,6 +631,9 @@ export function Header({ hideLogin = false, customTheme }: HeaderProps) {
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
+
+        {/* Mobile Menu */}
+        <MobileMenu className="md:hidden" />
       </div>
       {isMobileMenuOpen && (
       {isMenuOpen && (

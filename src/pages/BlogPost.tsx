@@ -99,12 +99,16 @@ export default function BlogPost() {
   
   return (
     <>
-      <NextSeo
+      <SEO 
         title={post.title}
         description={post.excerpt}
-        keywords={post.tags.join(", ")}
-        ogImage={post.featuredImage}
-        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
+        keywords={post.tags?.join(', ') || ''}
+        image={post.featuredImage}
+        canonical={`${window.location.origin}/blog/${slug}`}
+        type="article"
+        author={post.author?.name || 'Zion Tech Group'}
+        publishedTime={post.publishedDate}
+        tags={post.tags}
       />
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
