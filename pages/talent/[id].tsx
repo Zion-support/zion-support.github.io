@@ -1,77 +1,73 @@
 import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
-import type { TalentProfile } from '@/types/talent';
-import TalentDetails from '@/components/talent/TalentDetails';
-import NotFound from '@/components/NotFound';
-import { ErrorBoundary } from '@/components/ErrorBoundary';
+import ErrorPage from 'next/error';
+import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
+import type { TalentProfile as TalentProfileType } from '@/types/talent';
+import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 
-const TalentPage: React.FC = () => {
+interface TalentProfileWithSocial extends TalentProfileType {
+  social?: Record<string, string>;
+}
+
+const TalentProfilePage: React.FC = () => {
   const router = useRouter();
-  const { id } = router.query;
-  const [profile, setProfile] = useState<(TalentProfile & { social?: Record<string, string> }) | null>(null);
-  const [loading, setLoading] = useState(false);
+  const { id } = router.query as { id?: string };
+  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!id) return;
     const fetchProfile = async () => {
+      if (!id) return;
+      setLoading(true);
+      setError(null);
       try {
-        setLoading(true);
         const res = await fetch(`/api/talent/${id}`);
+        if (res.status === 404) {
+          setError('Talent not found');
+          setProfile(null);
+          return;
+        }
         if (!res.ok) throw new Error('Failed to load profile');
         const data = await res.json();
         setProfile(data.profile);
-        setError(null);
       } catch (err) {
-        setError((err as Error).message);
+        setError('Talent not found');
       } finally {
         setLoading(false);
       }
     };
-    fetchProfile();
+
+    if (id) {
+      fetchProfile();
+    }
   }, [id]);
 
-  if (loading) {
-    return (
-      <div className="p-4 space-y-2" data-testid="talent-loading">
-        <Skeleton className="h-8 w-1/3" />
-        <Skeleton className="h-4 w-full" />
-        <Skeleton className="h-4 w-2/3" />
-      </div>
-    );
-  }
+  if (loading) return <ProfileLoadingState />;
+  if (error || !profile) return <ErrorPage statusCode={404} />;
 
-  if (error) {
-    return (
-      <div className="p-4">
-        <Alert variant="destructive">
-          <AlertTitle>Error</AlertTitle>
-          <AlertDescription>{error}</AlertDescription>
-        </Alert>
-      </div>
-    );
-  }
-
-  if (!profile) {
-    return <NotFound />;
-  }
-
-  // If we reach here, talent data is available
   return (
-    <>
-      <Head>
-        <title>{profile.full_name}</title>
-        <meta property="og:title" content={profile.full_name} />
-        {profile.profile_picture_url && (
-          <meta property="og:image" content={profile.profile_picture_url} />
+    <main className="min-h-screen bg-zion-blue py-8 text-white">
+      <div className="container mx-auto px-4 space-y-4">
+        <h1 className="text-3xl font-bold" data-testid="profile-name">
+          {profile.full_name}
+        </h1>
+        {profile.skills && profile.skills.length > 0 && (
+          <div>
+            <h2 className="font-semibold">Skills</h2>
+            <ul className="list-disc ml-5">
+              {profile.skills.map(skill => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </ul>
+          </div>
         )}
-      </Head>
-      <TalentDetails talent={profile} />
-    </>
+        {profile.availability_type && (
+          <p>Availability: {profile.availability_type}</p>
+        )}
+      </div>
+    </main>
   );
 };
 
-export default TalentPage;
+export default TalentProfilePage;
