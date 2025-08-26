@@ -33,6 +33,12 @@ const navigationItems: NavigationItem[] = [
       { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion-platform', description: 'Quantum-AI hybrid computing' },
       { name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator', description: 'Cross-modal AI integration' },
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager', description: 'Self-managing AI systems' },
+<<<<<<< HEAD
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-platform', description: 'Ethical AI frameworks' },
+      { name: 'AI Content Generator Pro', href: '/ai-content-generator', description: 'Professional AI content creation' },
+      { name: 'AI Meeting Transcriber', href: '/ai-meeting-transcriber', description: 'AI-powered meeting transcription' },
+      { name: 'AI Brand Personality', href: '/ai-brand-personality-generator', description: 'Consistent brand voice with AI' }
+=======
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework', description: 'Ethical AI frameworks' },
       { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' }
     ]
@@ -60,6 +66,7 @@ const navigationItems: NavigationItem[] = [
       { name: 'Keyword Research Engine', href: '/keyword-research-engine', description: 'Low-competition keywords discovery' },
       { name: 'Privacy Analytics Suite', href: '/analytics-suite', description: 'Cookie-less, privacy-friendly analytics' },
       { name: 'Invoice Studio', href: '/invoice-studio', description: 'Instant branded invoices and payments' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-732a
     ]
   },
   {

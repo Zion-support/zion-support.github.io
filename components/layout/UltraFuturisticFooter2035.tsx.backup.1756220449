@@ -8,6 +8,8 @@ import {
   Star, Users, TrendingUp
 } from 'lucide-react';
 
+<<<<<<< HEAD
+=======
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -149,6 +151,7 @@ const socialLinks = [
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
 ];
 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-732a
 const UltraFuturisticFooter2035: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
