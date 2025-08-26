@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Clock, Globe, Shield, Zap, MapPin, CheckCircle } from "lucide-react";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { MapPin, Clock, Globe, ArrowRight, Shield, Zap } from "lucide-react";
+import { GradientHeading } from '../GradientHeading';
+import { Input } from '../ui/input';
+import { Button } from '../ui/button';
 
 export function ITServiceRequestHero() {
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (location.trim()) {
       setIsSubmitting(true);
@@ -20,16 +20,6 @@ export function ITServiceRequestHero() {
         setIsSubmitting(false);
         navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
       }, 1000);
-import { MapPin, Clock, Globe, ArrowRight, Shield, Zap } from "lucide-react";
-
-export function ITServiceRequestHero() {
-  const [location, setLocation] = useState("");
-  const navigate = useNavigate();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (location.trim()) {
-      navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
     }
   };
 
@@ -67,34 +57,6 @@ export function ITServiceRequestHero() {
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
-  return (
-    <section className="bg-zion-blue-dark py-16 md:py-24 border-b border-zion-purple/20 cyber-grid relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10"></div>
-      <div className="relative container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="float">
-          <GradientHeading className="mb-6 text-4xl md:text-5xl glow">
-            24x7 Global IT Onsite Services
-          </GradientHeading>
-          <p className="text-lg text-zion-slate-light mb-8 max-w-md">
-            Request professional technicians anywhere in the world, anytime you need them.
-          </p>
-        </div>
-        <div className="bg-zion-blue-light/80 backdrop-blur-sm p-6 rounded-lg shadow-lg neon-border float">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <Input
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-              placeholder="Enter service location"
-              className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
-            />
-            <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6">
-              Request Service
-            </Button>
-          </form>
-          <p className="text-xs text-center text-zion-slate-light mt-3">
-            Available worldwide, 24 hours a day
-          </p>
-        </div>
       </div>
 
       <motion.div 
@@ -117,212 +79,111 @@ export function ITServiceRequestHero() {
             </div>
             
             <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
-              24x7 Global IT Onsite Services
+              24/7 Global IT Onsite Services
             </GradientHeading>
             
-            <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed max-w-lg">
               Request professional technicians anywhere in the world, anytime you need them. 
-              Fast, reliable, and secure IT solutions for your business.
+              Our certified experts are ready to solve your IT challenges on-site.
             </p>
 
-            {/* Feature highlights */}
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                <span className="text-zion-cyan-light">Available 24/7 worldwide</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-zion-purple rounded-full"></div>
-                <span className="text-zion-purple-light">Certified technicians</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-zion-blue rounded-full"></div>
-                <span className="text-zion-blue-light">Same-day response guarantee</span>
-              </div>
+            {/* Features grid */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="flex items-center gap-3"
+                >
+                  <feature.icon className={`w-5 h-5 ${feature.color}`} />
+                  <span className="text-zion-slate-light text-sm">{feature.text}</span>
+                </motion.div>
+              ))}
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/10">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-zion-cyan">150+</div>
-                <div className="text-sm text-zion-slate-light">Countries</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-zion-purple">24/7</div>
-                <div className="text-sm text-zion-slate-light">Support</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-zion-blue">15min</div>
-                <div className="text-sm text-zion-slate-light">Response</div>
-              </div>
-            </div>
+            {/* CTA Button */}
+            <motion.div variants={itemVariants}>
+              <Button 
+                size="lg"
+                className="bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300"
+                onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </motion.div>
           </motion.div>
 
-          {/* Right form */}
-          <motion.div variants={itemVariants} className="relative">
-            <div className="relative">
-              {/* Glassmorphism form container */}
-              <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-8 shadow-2xl">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="w-8 h-8 text-zion-cyan" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Request Service</h3>
-                  <p className="text-zion-slate-light">Enter your location to get started</p>
+          {/* Right content - Service Request Form */}
+          <motion.div variants={itemVariants} id="service-form">
+            <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8 shadow-2xl shadow-zion-cyan/10">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-white" />
                 </div>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="relative">
-                    <Input
-                      value={location}
-                      onChange={(e) => setLocation(e.target.value)}
-                      placeholder="Enter service location (e.g., New York, NY)"
-                      className="w-full bg-white/10 border-white/30 focus:border-zion-cyan focus:ring-zion-cyan text-white placeholder-zion-slate-light rounded-xl py-4 px-4 text-lg backdrop-blur-sm"
-                      required
-                    />
-                    <MapPin className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan/50" />
-                  </div>
-
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-lg py-4 rounded-xl shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 group"
-                  >
-                    <span className="flex items-center gap-2">
-                      Request Service Now
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                    </span>
-                  </Button>
-                </form>
-
-                {/* Trust indicators */}
-                <div className="mt-6 pt-6 border-t border-white/10">
-                  <div className="flex items-center justify-center gap-4 text-xs text-zion-slate-light">
-                    <div className="flex items-center gap-1">
-                      <Shield className="w-3 h-3 text-zion-cyan" />
-                      <span>Secure</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3 text-zion-purple" />
-                      <span>Fast</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Globe className="w-3 h-3 text-zion-blue" />
-                      <span>Global</span>
-                    </div>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">Request Onsite Service</h3>
+                <p className="text-zion-slate-light">Tell us where you need help</p>
               </div>
 
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-zion-cyan/30 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-zion-purple/30 rounded-full animate-pulse" style={{ animationDelay: "1s" }}></div>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="location" className="block text-sm font-medium text-zion-slate-light mb-2">
+                    Service Location
+                  </label>
+                  <Input
+                    id="location"
+                    type="text"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                    placeholder="Enter city, address, or coordinates"
+                    className="w-full bg-zion-blue-dark/50 border-zion-cyan/30 focus:border-zion-cyan focus:ring-zion-cyan/20 text-white placeholder:text-zion-slate-light/50"
+                    required
+                  />
+                </div>
+
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white font-semibold py-4 rounded-xl text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-zion-purple/25"
+                >
+                  {isSubmitting ? "Processing..." : "Request Service"}
+                </Button>
+
+                <p className="text-xs text-center text-zion-slate-light">
+                  Available worldwide, 24 hours a day • Response within 2 hours
+                </p>
+              </form>
             </div>
           </motion.div>
         </div>
+
+        {/* Bottom features section */}
+        <motion.div 
+          variants={itemVariants}
+          className="mt-20 text-center"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              { icon: Clock, title: "24/7 Support", desc: "Round-the-clock assistance" },
+              { icon: Globe, title: "Global Reach", desc: "150+ countries covered" },
+              { icon: Shield, title: "Certified Experts", desc: "Vetted professionals" },
+              { icon: Zap, title: "Fast Response", desc: "2-hour response time" }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">{feature.title}</h4>
+                <p className="text-zion-slate-light text-sm">{feature.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );
 }
-import React from 'react';
-import { ArrowRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
-
-export const ITServiceRequestHero: React.FC = () => {
-  return (
-    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20"></div>
-        <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-0 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/2 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 text-orange-400 rounded-full text-sm font-medium mb-6">
-            <Zap className="w-4 h-4 mr-2" />
-            IT Services & Solutions
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transform Your Business with
-            <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent"> Advanced Technology</span>
-          </h1>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud, and quantum computing 
-            solutions that drive innovation and accelerate your digital transformation journey.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a
-              href="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              Request IT Services
-              <ArrowRight className="w-5 h-5 ml-2 inline" />
-            </a>
-            <a
-              href="/services"
-              className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-            >
-              Explore Solutions
-            </a>
-          </div>
-
-          {/* Feature Icons */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Brain className="w-8 h-8 text-white" />
-              </div>
-              <p className="text-sm text-gray-300">AI Solutions</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <p className="text-sm text-gray-300">Cybersecurity</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Cloud className="w-8 h-8 text-white" />
-              </div>
-              <p className="text-sm text-gray-300">Cloud & DevOps</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <p className="text-sm text-gray-300">Innovation</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg
-          className="w-full h-16 text-slate-800"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-            opacity=".25"
-            fill="currentColor"
-          />
-          <path
-            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-            opacity=".5"
-            fill="currentColor"
-          />
-          <path
-            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-            fill="currentColor"
-          />
-        </svg>
-      </div>
-    </section>
-  );
-};

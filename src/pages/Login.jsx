@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { safeStorage } from '@/utils/safeStorage';
-import { LoginContent } from '@/components/auth/login';
+import { LoginForm } from '@/components/auth/login/LoginForm';
 
 export default function Login() {
   const { isAuthenticated, user, isLoading } = useAuth();
@@ -32,7 +32,7 @@ export default function Login() {
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
-    return <LoginContent />;
+    return <LoginForm />;
   }
 
   // Optional: Render a loading indicator while isLoading is true
