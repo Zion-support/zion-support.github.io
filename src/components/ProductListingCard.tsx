@@ -205,6 +205,4 @@ export function ProductListingCard({
   );
 };
 
-const MemoizedProductListingCard = React.memo(ProductListingCard);
-MemoizedProductListingCard.displayName = 'ProductListingCard';
-export { MemoizedProductListingCard as ProductListingCard };
+export default React.memo(ProductListingCard);

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const featuredListings = [
   {
@@ -97,88 +98,12 @@ const featuredListings = [
     featured: false,
     technologies: ["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"],
     highlights: ["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"]
-  },
-  {
-    id: 6,
-    title: "Enterprise Data Analytics Dashboard",
-    category: "Data Analytics",
-    description: "Comprehensive business intelligence platform with advanced reporting and predictive analytics",
-    rating: 4.8,
-    reviews: 145,
-    views: 3120,
-    likes: 167,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    price: "$25,000",
-    tags: ["Data Analytics", "Business Intelligence", "Dashboard", "Predictive"],
-    duration: "4-5 months",
-    team: "6 experts",
-    location: "Remote",
-    featured: false,
-    technologies: ["Python", "Tableau", "PostgreSQL", "Apache Spark", "React"],
-    highlights: ["Real-time Dashboards", "Predictive Models", "Data Integration", "Custom Reports"]
   }
 ];
 
-const categories = [
-  "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
-];
-
-import React from 'react';
-import Link from 'next/link';
-
-export function FeaturedListingsSection() {
-  const featuredServices = [
-    {
-      title: 'AI-Powered Business Intelligence',
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-      category: 'AI Solutions',
-      rating: 4.9,
-      reviews: 127,
-      price: 'From $2,500',
-      image: '🤖',
-      link: '/services/ai',
-      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
-    },
-    {
-      title: 'Cloud Migration & Optimization',
-      description: 'Seamlessly migrate to the cloud with our proven methodology and expert guidance.',
-      category: 'Cloud & DevOps',
-      rating: 4.8,
-      reviews: 89,
-      price: 'From $5,000',
-      image: '☁️',
-      link: '/services/cloud',
-      features: ['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
-    },
-    {
-      title: 'Cybersecurity Assessment & Implementation',
-      description: 'Comprehensive security evaluation and implementation for enterprise-level protection.',
-      category: 'Cybersecurity',
-      rating: 4.9,
-      reviews: 156,
-      price: 'From $3,500',
-      image: '🔒',
-      link: '/services/cybersecurity',
-      features: ['Security Audits', 'Threat Detection', 'Incident Response']
-export function FeaturedListingsSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredListing, setHoveredListing] = useState<number | null>(null);
-  const [showFilters, setShowFilters] = useState(false);
-
-  const filteredListings = selectedCategory === "All" 
-    ? featuredListings 
-    : featuredListings.filter(listing => listing.category === selectedCategory);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
-    }
-  ];
+export default function FeaturedListingsSection() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('rating');
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -201,7 +126,7 @@ export function FeaturedListingsSection() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredServices.map((service, index) => (
+          {featuredListings.map((service, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
@@ -215,7 +140,7 @@ export function FeaturedListingsSection() {
                 </div>
                 
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {service.image}
+                  {service.image ? '🚀' : '💻'}
                 </div>
                 
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
@@ -229,7 +154,7 @@ export function FeaturedListingsSection() {
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
-                    {service.features.map((feature, idx) => (
+                    {service.highlights.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
                         {feature}
@@ -241,7 +166,7 @@ export function FeaturedListingsSection() {
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-gray-900">{service.price}</span>
                   <Link
-                    href={service.link}
+                    to="/services"
                     className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
                   >
                     Learn More →
@@ -251,7 +176,7 @@ export function FeaturedListingsSection() {
               
               <div className="px-6 pb-6">
                 <Link
-                  href={service.link}
+                  to="/services"
                   className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
                 >
                   Get Started
@@ -263,7 +188,7 @@ export function FeaturedListingsSection() {
         
         <div className="text-center mt-12">
           <Link
-            href="/services"
+            to="/services"
             className="inline-flex items-center px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300"
           >
             View All Services
