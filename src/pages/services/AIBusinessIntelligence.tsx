@@ -18,9 +18,11 @@ import {
   Star,
   Clock,
   Globe,
-  Award
+  Award,
+  DollarSign
 } from 'lucide-react';
 import SEOHead from '../../components/SEOHead';
+import { motion } from 'framer-motion';
 
 const AIBusinessIntelligence: React.FC = () => {
   const features = [
@@ -97,10 +99,10 @@ const AIBusinessIntelligence: React.FC = () => {
         "Advanced ML models",
         "Custom dashboards",
         "Priority support",
-        "Real-time alerts",
+        "Weekly reports",
         "Data integration (10 sources)",
-        "API access",
-        "Custom training"
+        "Custom integrations",
+        "Advanced security features"
       ],
       popular: true
     },
@@ -108,16 +110,16 @@ const AIBusinessIntelligence: React.FC = () => {
       name: "Enterprise",
       price: "$12,000",
       period: "/month",
-      description: "For large organizations requiring enterprise-grade AI solutions",
+      description: "For large enterprises requiring maximum performance and customization",
       features: [
         "Unlimited users",
         "Custom ML models",
         "White-label dashboards",
         "24/7 dedicated support",
-        "Advanced security",
+        "Real-time reporting",
         "Unlimited data sources",
-        "Custom development",
-        "On-premise option",
+        "Custom AI training",
+        "Advanced compliance",
         "SLA guarantees"
       ],
       popular: false
@@ -151,93 +153,61 @@ const AIBusinessIntelligence: React.FC = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
       <SEOHead 
-        title="AI Business Intelligence - Zion Tech Group"
-        description="Transform your business with AI-powered analytics, predictive modeling, and real-time insights. Get actionable intelligence that drives growth and efficiency."
-        keywords="AI business intelligence, predictive analytics, machine learning, data analytics, business insights, real-time dashboards"
+        title="AI Business Intelligence Solutions | Zion"
+        description="Transform your business with AI-powered analytics, predictive insights, and automated decision-making. Get real-time dashboards and machine learning models."
+        keywords="AI business intelligence, predictive analytics, machine learning, data analytics, business insights, AI dashboards"
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-        
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Business Intelligence
-            </div>
-            
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               AI Business Intelligence
             </h1>
-            
-            <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your data into actionable intelligence with our advanced AI-powered analytics platform. 
-              Get real-time insights, predictive modeling, and automated decision-making capabilities.
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+              Transform your data into actionable insights with AI-powered analytics, 
+              predictive modeling, and automated decision-making capabilities.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
-                Get Started Today
+                Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              
               <Link
-                to="#demo"
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-semibold rounded-lg transition-all duration-300 backdrop-blur-sm"
               >
-                Watch Demo
+                Explore All Services
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-500/20 mb-4">
-                <TrendingUp className="h-8 w-8 text-blue-400" />
-              </div>
-              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">25%</div>
-              <div className="text-lg font-semibold text-gray-300 mb-2">Revenue Increase</div>
-              <div className="text-sm text-gray-400">Average improvement</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500/20 mb-4">
-                <Zap className="h-8 w-8 text-green-400" />
-              </div>
-              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">60%</div>
-              <div className="text-lg font-semibold text-gray-300 mb-2">Faster Decisions</div>
-              <div className="text-sm text-gray-400">With real-time insights</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-500/20 mb-4">
-                <Shield className="h-8 w-8 text-purple-400" />
-              </div>
-              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-lg font-semibold text-gray-300 mb-2">Uptime</div>
-              <div className="text-sm text-gray-400">Reliable performance</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-cyan-500/20 mb-4">
-                <Users className="h-8 w-8 text-cyan-400" />
-              </div>
-              <div className="text-3xl lg:text-4xl font-bold text-white mb-2">500+</div>
-              <div className="text-lg font-semibold text-gray-300 mb-2">Happy Clients</div>
-              <div className="text-sm text-gray-400">Worldwide</div>
             </div>
           </div>
         </div>
@@ -248,10 +218,10 @@ const AIBusinessIntelligence: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Powerful Features for Modern Business
+              Powerful AI-Powered Features
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Our AI Business Intelligence platform combines cutting-edge technology with intuitive design
+              Everything you need to turn your data into strategic business advantages
             </p>
           </div>
           
@@ -259,13 +229,12 @@ const AIBusinessIntelligence: React.FC = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl"
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl"
               >
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6`}>
-                  <feature.icon className="h-8 w-8 text-white" />
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{feature.description}</p>
               </div>
             ))}
@@ -364,45 +333,44 @@ const AIBusinessIntelligence: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Real results from real businesses using our AI Business Intelligence platform
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="flex items-center space-x-1 mr-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-500 fill-current" />
-                    ))}
-                  </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                Proven Results Across Industries
+              </h2>
+              <p className="text-xl text-gray-400">
+                Join hundreds of companies already transforming their business with AI
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-white" />
                 </div>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed">"{testimonial.content}"</p>
-                
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    {testimonial.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Increased Efficiency</h3>
+                <p className="text-gray-400">Automate manual processes and optimize operations for maximum productivity</p>
               </div>
-            ))}
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Better Decisions</h3>
+                <p className="text-gray-400">Make data-driven decisions with confidence using AI-powered insights</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <DollarSign className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Cost Savings</h3>
+                <p className="text-gray-400">Reduce operational costs and increase ROI through intelligent automation</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

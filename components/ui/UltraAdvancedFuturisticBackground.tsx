@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 
 interface UltraAdvancedFuturisticBackgroundProps {
   children: React.ReactNode;
@@ -26,6 +25,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       vx: number;
       vy: number;
       size: number;
+      opacity: number;
       color: string;
       opacity: number;
       life: number;
@@ -181,8 +181,8 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ctx.stroke();
         }
       }
-
-      animationRef.current = requestAnimationFrame(animate);
+      
+      animationFrameId = requestAnimationFrame(animate);
     };
 
     resizeCanvas();
@@ -193,9 +193,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
+      cancelAnimationFrame(animationFrameId);
     };
   }, [variant]);
 
@@ -304,6 +302,8 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       <div className="relative z-30">
         {children}
       </div>
+      
+      {children}
     </div>
   );
 };

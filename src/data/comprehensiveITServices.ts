@@ -812,6 +812,384 @@ export const COMPREHENSIVE_IT_SERVICES: ITService[] = [
     freeConsultation: true,
     maintenanceIncluded: true,
     warrantyPeriod: '2 years'
+  },
+  {
+    id: '5g-enterprise-network-solutions',
+    title: '5G Enterprise Network Solutions',
+    description: 'Complete 5G network infrastructure for enterprises, enabling ultra-fast connectivity, IoT integration, and edge computing capabilities.',
+    category: 'Network Infrastructure',
+    subcategory: '5G Networks',
+    price: 5000,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      '5G network design & deployment',
+      'Enterprise-grade connectivity',
+      'IoT device integration',
+      'Edge computing infrastructure',
+      'Network slicing capabilities',
+      'Advanced security protocols',
+      'Performance monitoring',
+      'Scalable architecture',
+      '24/7 network support',
+      'Compliance & certification'
+    ],
+    benefits: [
+      'Ultra-fast data transfer speeds',
+      'Low latency for real-time applications',
+      'Massive IoT device support',
+      'Enhanced mobile broadband',
+      'Future-proof network infrastructure',
+      'Competitive advantage'
+    ],
+    useCases: [
+      'Smart manufacturing',
+      'Autonomous vehicles',
+      'Remote healthcare',
+      'Smart cities',
+      'Industrial automation'
+    ],
+    targetAudience: [
+      'Large enterprises',
+      'Manufacturing companies',
+      'Healthcare organizations',
+      'Transportation companies',
+      'Smart city initiatives'
+    ],
+    tags: ['5g', 'enterprise-networks', 'iot', 'edge-computing', 'network-infrastructure'],
+    estimatedDelivery: '12-20 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$5,000 - $15,000/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    aiScore: 98,
+    rating: 4.9,
+    reviewCount: 45,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    freeConsultation: true,
+    maintenanceIncluded: true,
+    warrantyPeriod: '2 years'
+  },
+  {
+    id: 'ai-powered-cybersecurity-operations',
+    title: 'AI-Powered Cybersecurity Operations Center',
+    description: 'Advanced cybersecurity operations center that uses artificial intelligence to detect, prevent, and respond to cyber threats in real-time.',
+    category: 'Cybersecurity',
+    subcategory: 'AI Security',
+    price: 3500,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'AI-powered threat detection',
+      'Real-time monitoring & alerting',
+      'Automated incident response',
+      'Behavioral analysis',
+      'Threat intelligence integration',
+      'Vulnerability assessment',
+      'Compliance reporting',
+      '24/7 security monitoring',
+      'Custom security policies',
+      'Advanced analytics dashboard'
+    ],
+    benefits: [
+      '99.9% threat detection rate',
+      'Reduced response time by 80%',
+      'Proactive threat prevention',
+      'Compliance with regulations',
+      'Cost-effective security operations',
+      'Scalable security infrastructure'
+    ],
+    useCases: [
+      'Enterprise security operations',
+      'Financial institutions',
+      'Healthcare organizations',
+      'Government agencies',
+      'Critical infrastructure'
+    ],
+    targetAudience: [
+      'CISOs',
+      'Security managers',
+      'IT directors',
+      'Compliance officers',
+      'Risk managers'
+    ],
+    tags: ['ai-security', 'cybersecurity', 'threat-detection', 'incident-response', 'compliance'],
+    estimatedDelivery: '6-10 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$3,500 - $8,000/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    aiScore: 97,
+    rating: 4.9,
+    reviewCount: 67,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    freeConsultation: true,
+    maintenanceIncluded: true,
+    warrantyPeriod: '1 year'
+  },
+  {
+    id: 'quantum-resistant-cryptography',
+    title: 'Quantum-Resistant Cryptography Solutions',
+    description: 'Future-proof cryptographic solutions designed to withstand attacks from quantum computers, ensuring long-term data security.',
+    category: 'Cybersecurity',
+    subcategory: 'Quantum Security',
+    price: 2500,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'Post-quantum cryptography algorithms',
+      'Quantum key distribution',
+      'Hybrid encryption systems',
+      'Secure key management',
+      'Compliance with NIST standards',
+      'Performance optimization',
+      'Integration APIs',
+      'Custom algorithm development',
+      'Security auditing',
+      'Expert consultation'
+    ],
+    benefits: [
+      'Future-proof security',
+      'Quantum-resistant encryption',
+      'Regulatory compliance',
+      'Enhanced data protection',
+      'Competitive advantage',
+      'Long-term security investment'
+    ],
+    useCases: [
+      'Government communications',
+      'Financial transactions',
+      'Healthcare data protection',
+      'Long-term data storage',
+      'Critical infrastructure'
+    ],
+    targetAudience: [
+      'Government agencies',
+      'Financial institutions',
+      'Healthcare organizations',
+      'Defense contractors',
+      'Research institutions'
+    ],
+    tags: ['quantum-security', 'cryptography', 'post-quantum', 'encryption', 'future-proof'],
+    estimatedDelivery: '8-12 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$2,500 - $6,000/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    aiScore: 96,
+    rating: 4.8,
+    reviewCount: 23,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    freeConsultation: true,
+    maintenanceIncluded: true,
+    warrantyPeriod: '3 years'
+  },
+  {
+    id: 'autonomous-devops-automation',
+    title: 'Autonomous DevOps Automation Platform',
+    description: 'Intelligent DevOps automation platform that autonomously manages CI/CD pipelines, infrastructure, and deployment processes.',
+    category: 'DevOps & Automation',
+    subcategory: 'AI Automation',
+    price: 1800,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'AI-powered CI/CD optimization',
+      'Autonomous infrastructure management',
+      'Intelligent deployment strategies',
+      'Performance monitoring & optimization',
+      'Automated testing & quality assurance',
+      'Security scanning & compliance',
+      'Cost optimization',
+      'Real-time analytics',
+      'Custom automation workflows',
+      '24/7 operations support'
+    ],
+    benefits: [
+      'Reduce deployment time by 70%',
+      'Improve code quality by 40%',
+      'Lower operational costs',
+      'Enhanced security & compliance',
+      'Scalable automation',
+      'Continuous optimization'
+    ],
+    useCases: [
+      'Software development teams',
+      'DevOps teams',
+      'Platform engineering',
+      'Cloud operations',
+      'Microservices architecture'
+    ],
+    targetAudience: [
+      'DevOps engineers',
+      'Platform engineers',
+      'SRE teams',
+      'Development managers',
+      'IT operations'
+    ],
+    tags: ['devops', 'automation', 'ci-cd', 'infrastructure', 'ai-automation'],
+    estimatedDelivery: '4-8 weeks',
+    supportLevel: 'premium',
+    marketPrice: '$1,800 - $4,500/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    aiScore: 95,
+    rating: 4.8,
+    reviewCount: 89,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    freeConsultation: true,
+    maintenanceIncluded: true,
+    warrantyPeriod: '1 year'
+  },
+  {
+    id: 'edge-computing-infrastructure',
+    title: 'Edge Computing Infrastructure Solutions',
+    description: 'Distributed edge computing infrastructure that brings computation and data storage closer to data sources, reducing latency and improving performance.',
+    category: 'Infrastructure',
+    subcategory: 'Edge Computing',
+    price: 3200,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'Edge node deployment & management',
+      'Distributed computing architecture',
+      'Real-time data processing',
+      'Low-latency connectivity',
+      'Edge AI & machine learning',
+      'Security & encryption',
+      'Load balancing & optimization',
+      'Monitoring & analytics',
+      'Scalable infrastructure',
+      '24/7 technical support'
+    ],
+    benefits: [
+      'Reduced latency by 80%',
+      'Improved bandwidth efficiency',
+      'Enhanced data privacy',
+      'Real-time processing capabilities',
+      'Scalable edge infrastructure',
+      'Cost optimization'
+    ],
+    useCases: [
+      'IoT applications',
+      'Real-time analytics',
+      'Autonomous systems',
+      'Content delivery networks',
+      'Industrial automation'
+    ],
+    targetAudience: [
+      'IoT companies',
+      'Manufacturing firms',
+      'Telecommunications',
+      'Content providers',
+      'Industrial companies'
+    ],
+    tags: ['edge-computing', 'distributed-computing', 'iot', 'low-latency', 'real-time'],
+    estimatedDelivery: '10-16 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$3,200 - $8,000/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    aiScore: 94,
+    rating: 4.7,
+    reviewCount: 34,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    freeConsultation: true,
+    maintenanceIncluded: true,
+    warrantyPeriod: '2 years'
+  },
+  {
+    id: 'blockchain-enterprise-platform',
+    title: 'Blockchain Enterprise Platform',
+    description: 'Enterprise-grade blockchain platform for secure, transparent, and efficient business operations with smart contracts and decentralized applications.',
+    category: 'Blockchain & Web3',
+    subcategory: 'Enterprise Blockchain',
+    price: 2800,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'Enterprise blockchain infrastructure',
+      'Smart contract development',
+      'Multi-party collaboration tools',
+      'Consensus mechanisms',
+      'Security & encryption',
+      'API integration',
+      'Analytics & reporting',
+      'Compliance & governance',
+      'Scalable architecture',
+      '24/7 platform support'
+    ],
+    benefits: [
+      'Enhanced transparency & trust',
+      'Reduced transaction costs',
+      'Improved security',
+      'Automated processes',
+      'Regulatory compliance',
+      'Innovative business models'
+    ],
+    useCases: [
+      'Supply chain management',
+      'Financial services',
+      'Healthcare records',
+      'Digital identity',
+      'Asset tokenization'
+    ],
+    targetAudience: [
+      'Enterprise organizations',
+      'Financial institutions',
+      'Healthcare providers',
+      'Supply chain companies',
+      'Government agencies'
+    ],
+    tags: ['blockchain', 'enterprise', 'smart-contracts', 'web3', 'decentralized'],
+    estimatedDelivery: '8-14 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$2,800 - $7,500/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    aiScore: 93,
+    rating: 4.7,
+    reviewCount: 56,
+    featured: true,
+    location: 'Global',
+    availability: 'Available',
+    freeConsultation: true,
+    maintenanceIncluded: true,
+    warrantyPeriod: '2 years'
   }
 ];
 

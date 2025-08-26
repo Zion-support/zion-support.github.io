@@ -10,6 +10,7 @@ const categories = [
     icon: <Briefcase className="w-10 h-10" />,
     link: "/services",
     color: "from-purple-500 to-indigo-600",
+    gradient: "from-zion-purple to-zion-purple-dark",
   },
   {
     title: "Talents",
@@ -17,6 +18,7 @@ const categories = [
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
     color: "from-cyan-500 to-blue-600",
+    gradient: "from-zion-cyan to-zion-blue",
   },
   {
     title: "Equipment",
@@ -24,6 +26,7 @@ const categories = [
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
     color: "from-amber-500 to-orange-600",
+    gradient: "from-zion-cyan-light to-zion-cyan",
   },
   {
     title: "Innovation",
@@ -31,6 +34,7 @@ const categories = [
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/category/innovation",
     color: "from-emerald-500 to-green-600",
+    gradient: "from-zion-purple-light to-zion-purple",
   },
 ];
 
@@ -53,17 +57,54 @@ interface CategoriesSectionProps {
   showTitle?: boolean;
 }
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  }
+};
+
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
-    <section className="py-20 bg-zion-blue">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-zion-blue relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
+          backgroundSize: '50px 50px'
+        }}></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
-          <div className="text-center mb-16">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <GradientHeading>Explore Categories</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
             </p>
-          </div>
+          </motion.div>
         )}
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -78,37 +119,54 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                   <div className="text-white">
                     {category.icon}
                   </div>
-                </div>
-                <h3 className="text-white text-xl font-bold mb-2">{category.title}</h3>
-                <p className="text-zion-slate-light">{category.description}</p>
-              </div>
-            </Link>
+                </motion.div>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
         
-        <div className="mt-8">
+        <motion.div 
+          className="mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {specialServices.map((service) => (
-              <Link 
+              <motion.div
                 key={service.title}
                 href={service.link}
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
-                {service.title}
-              </Link>
+                <Link 
+                  to={service.link}
+                  className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center gap-2"
+                >
+                  {service.title}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
         
-        <div className="mt-12 flex justify-center">
+        <motion.div 
+          className="mt-12 flex justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
           <Link 
             href="/categories" 
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
-            View All Categories →
+            View All Categories
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

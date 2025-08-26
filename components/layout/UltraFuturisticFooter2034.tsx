@@ -23,14 +23,29 @@ const contactInfo = {
 
 const serviceCategories = [
   {
-    title: '🧠 AI & Consciousness',
-    icon: <Brain className="w-5 h-5 text-cyan-400" />,
-    services: [
-      { name: 'AI Consciousness Evolution Pro', href: '/ai-consciousness-evolution-pro', isNew: true },
-      { name: 'Quantum AI Fusion Platform', href: '/quantum-ai-fusion-platform', isHot: true },
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
-      { name: 'AI Creativity Studio Pro', href: '/ai-creativity-studio-pro', isNew: true }
+    title: 'New Services 2025',
+    links: [
+      { name: 'Comprehensive Services Showcase', href: '/comprehensive-new-services-showcase-2025' },
+      { name: 'New Micro SAAS Services', href: '/comprehensive-new-services-showcase-2025#services' },
+      { name: 'New AI Services', href: '/comprehensive-new-services-showcase-2025#services' },
+      { name: 'New IT Services', href: '/comprehensive-new-services-showcase-2025#services' },
+      { name: 'New Business Solutions', href: '/comprehensive-new-services-showcase-2025#services' },
+      { name: 'Service Categories', href: '/comprehensive-new-services-showcase-2025#services' },
+      { name: 'Pricing & Plans', href: '/comprehensive-new-services-showcase-2025#services' },
+      { name: 'Contact & Support', href: '/comprehensive-new-services-showcase-2025#contact' }
+    ]
+  },
+  {
+    title: 'AI & Consciousness',
+    links: [
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025' },
+      { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network' },
+      { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant' },
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training' },
+      { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform' },
+      { name: 'AI Content Personalization', href: '/ai-content-personalization-engine' },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' }
     ]
   },
   {
