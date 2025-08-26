@@ -1,0 +1,41 @@
+import React from 'react';
+
+export default function LoginErrorFallback({ error, resetErrorBoundary }) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <div className="max-w-md w-full space-y-8 p-8 text-center">
+        <div className="text-red-400 text-6xl mb-4">⚠️</div>
+        <h2 className="text-2xl font-bold text-white">Something went wrong</h2>
+        <p className="text-zion-slate-light mb-6">
+          We encountered an error while loading the login page. Please try again.
+        </p>
+        
+        {error && (
+          <div className="bg-red-500/20 border border-red-500/50 text-red-200 px-4 py-3 rounded-lg text-sm">
+            {error.message || 'An unexpected error occurred'}
+          </div>
+        )}
+        
+        <div className="space-y-4">
+          <button
+            onClick={resetErrorBoundary}
+            className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
+          >
+            Try Again
+          </button>
+          
+          <button
+            onClick={() => window.location.href = '/'}
+            className="w-full bg-zion-slate-dark text-zion-slate-light border border-zion-purple/30 px-6 py-3 rounded-lg hover:bg-zion-slate hover:text-white transition-all duration-300 font-medium"
+          >
+            Go Home
+          </button>
+        </div>
+        
+        <p className="text-zion-slate-light text-sm">
+          If the problem persists, please contact our support team.
+        </p>
+      </div>
+    </div>
+  );
+}

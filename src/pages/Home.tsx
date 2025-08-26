@@ -14,12 +14,17 @@ import {
   Star,
   Play,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Sparkles,
+  Rocket,
+  Target,
+  Lightbulb
 } from 'lucide-react';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   const heroSlides = [
     {
@@ -29,7 +34,8 @@ export default function Home() {
       image: "/images/hero-ai-solutions.jpg",
       cta: "Explore AI Solutions",
       path: "/services/ai-solutions",
-      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"]
+      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
+      icon: Brain
     },
     {
       title: "Comprehensive IT Services",
@@ -38,7 +44,8 @@ export default function Home() {
       image: "/images/hero-it-services.jpg",
       cta: "View Our Services",
       path: "/services",
-      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"]
+      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],
+      icon: Cloud
     },
     {
       title: "Green IT Solutions",
@@ -47,7 +54,8 @@ export default function Home() {
       image: "/images/hero-green-it.jpg",
       cta: "Learn More",
       path: "/green-it",
-      features: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"]
+      features: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
+      icon: Shield
     }
   ];
 
@@ -151,6 +159,10 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [isAutoPlaying, heroSlides.length]);
 
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     setIsAutoPlaying(false);
@@ -167,11 +179,11 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light scrollbar-thin">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-24 pb-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 container-responsive">
           {/* Hero Carousel */}
           <div className="relative">
             <div className="overflow-hidden rounded-2xl">
@@ -180,29 +192,40 @@ export default function Home() {
                   <div key={index} className="w-full flex-shrink-0">
                     <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[600px]">
                       <div className="text-center lg:text-left">
-                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                        <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
+                          <slide.icon className="w-8 h-8 text-zion-cyan animate-float" />
+                          <span className="text-zion-cyan text-sm font-medium bg-zion-cyan/10 px-3 py-1 rounded-full">
+                            Featured Solution
+                          </span>
+                        </div>
+                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-slide-up">
                           {slide.title}
                         </h1>
-                        <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
+                        <p className="text-xl text-zion-slate-light mb-8 leading-relaxed animate-fade-in">
                           {slide.description}
                         </p>
                         <div className="flex flex-wrap gap-3 mb-8 justify-center lg:justify-start">
                           {slide.features.map((feature, featureIndex) => (
-                            <span key={featureIndex} className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full">
+                            <span key={featureIndex} className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30 hover:bg-zion-cyan/30 transition-all duration-300">
                               {feature}
                             </span>
                           ))}
                         </div>
                         <Link
                           to={slide.path}
-                          className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
+                          className="btn-primary inline-flex items-center group"
                         >
                           {slide.cta}
-                          <ArrowRight className="w-5 h-5 ml-2" />
+                          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                         </Link>
                       </div>
-                      <div className="bg-zion-blue-light/20 rounded-xl h-64 flex items-center justify-center">
-                        <span className="text-zion-slate-light text-lg">{slide.image}</span>
+                      <div className="bg-zion-blue-light/20 rounded-xl h-64 flex items-center justify-center glass-strong">
+                        <div className="text-center">
+                          <div className="w-20 h-20 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-glow">
+                            <slide.icon className="w-10 h-10 text-zion-cyan" />
+                          </div>
+                          <span className="text-zion-slate-light text-lg">{slide.image}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -213,13 +236,13 @@ export default function Home() {
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-white p-3 rounded-full transition-all duration-300"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 focus-ring"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-white p-3 rounded-full transition-all duration-300"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 focus-ring"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -230,8 +253,8 @@ export default function Home() {
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-zion-cyan' : 'bg-zion-slate-light/50'
+                  className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${
+                    index === currentSlide ? 'bg-zion-cyan scale-125' : 'bg-zion-slate-light/50'
                   }`}
                 />
               ))}
@@ -241,15 +264,23 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding bg-zion-blue-light/5">
+        <div className="container-responsive">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-gradient">
+              Our Impact in Numbers
+            </h2>
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+              Real results that speak for themselves
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-zion-cyan" />
+              <div key={index} className="text-center group">
+                <div className="w-20 h-20 bg-zion-cyan/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-zion-cyan/30 transition-all duration-300 hover:scale-110">
+                  <stat.icon className="w-10 h-10 text-zion-cyan group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-2">{stat.value}</h3>
+                <h3 className="text-4xl font-bold text-white mb-2 group-hover:text-gradient transition-all duration-300">{stat.value}</h3>
                 <p className="text-lg font-semibold text-zion-cyan mb-2">{stat.label}</p>
                 <p className="text-zion-slate-light">{stat.description}</p>
               </div>
@@ -259,27 +290,31 @@ export default function Home() {
       </section>
 
       {/* Featured Services */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding">
+        <div className="container-responsive">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Featured Services</h2>
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <Sparkles className="w-6 h-6 text-zion-cyan" />
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Featured Services</h2>
+              <Sparkles className="w-6 h-6 text-zion-cyan" />
+            </div>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Discover our most popular solutions that are transforming businesses worldwide.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid-responsive">
             {featuredServices.map((service, index) => (
-              <div key={index} className="bg-zion-blue-light/10 rounded-xl p-6 border border-zion-blue-light/20 hover:border-zion-cyan/40 transition-all duration-300">
+              <div key={index} className="bg-zion-blue-light/10 rounded-xl p-6 border border-zion-blue-light/20 hover:border-zion-cyan/40 transition-all duration-300 card-hover card-glow group">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">
-                    <service.icon className="w-6 h-6 text-zion-cyan" />
+                  <div className="w-14 h-14 bg-zion-cyan/20 rounded-xl flex items-center justify-center group-hover:bg-zion-cyan/30 transition-all duration-300">
+                    <service.icon className="w-7 h-7 text-zion-cyan group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <span className="text-xs text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded-full">
+                  <span className="text-xs text-zion-cyan bg-zion-cyan/10 px-3 py-1 rounded-full border border-zion-cyan/20">
                     {service.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-gradient transition-all duration-300">{service.title}</h3>
                 <p className="text-zion-slate-light mb-4">{service.description}</p>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-zion-cyan">{service.price}</span>
@@ -299,9 +334,10 @@ export default function Home() {
                 </div>
                 <Link
                   to={service.path}
-                  className="block w-full text-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
+                  className="block w-full text-center btn-primary group"
                 >
                   Learn More
+                  <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
             ))}
@@ -310,10 +346,14 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding bg-zion-blue-light/5">
+        <div className="container-responsive">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group</h2>
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <Target className="w-6 h-6 text-zion-purple" />
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Why Choose Zion Tech Group</h2>
+              <Target className="w-6 h-6 text-zion-purple" />
+            </div>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               We combine cutting-edge technology with proven expertise to deliver exceptional results.
             </p>
@@ -321,11 +361,11 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-zion-purple/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-zion-purple" />
+              <div key={index} className="text-center group">
+                <div className="w-20 h-20 bg-zion-purple/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-zion-purple/30 transition-all duration-300 hover:scale-110">
+                  <feature.icon className="w-10 h-10 text-zion-purple group-hover:scale-110 transition-transform duration-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-gradient transition-all duration-300">{feature.title}</h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
               </div>
             ))}
@@ -334,10 +374,14 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding">
+        <div className="container-responsive">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <Star className="w-6 h-6 text-yellow-400" />
+              <h2 className="text-3xl md:text-4xl font-bold text-white">What Our Clients Say</h2>
+              <Star className="w-6 h-6 text-yellow-400" />
+            </div>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Don't just take our word for it. Here's what our clients have to say about working with us.
             </p>
@@ -345,16 +389,16 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-zion-blue-light/10 rounded-xl p-6 border border-zion-blue-light/20">
+              <div key={index} className="bg-zion-blue-light/10 rounded-xl p-6 border border-zion-blue-light/20 card-hover group">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-zion-slate-light mb-6 italic">"{testimonial.content}"</p>
+                <p className="text-zion-slate-light mb-6 italic group-hover:text-white transition-colors duration-300">"{testimonial.content}"</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center">
-                    <span className="text-zion-cyan font-semibold">
+                  <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center group-hover:bg-zion-cyan/30 transition-all duration-300">
+                    <span className="text-zion-cyan font-semibold group-hover:scale-110 transition-transform duration-300">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
@@ -371,11 +415,15 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-zion-blue-light/5">
+      <section className="section-padding bg-zion-blue-light/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Rocket className="w-8 h-8 text-zion-cyan animate-float" />
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              Ready to Transform Your Business?
+            </h2>
+            <Rocket className="w-8 h-8 text-zion-cyan animate-float" />
+          </div>
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Join hundreds of businesses that have already transformed their operations 
             with Zion Tech Group's innovative solutions.
@@ -383,13 +431,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
+              className="btn-primary"
             >
               Get Started Today
             </Link>
             <Link
               to="/services"
-              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-medium"
+              className="btn-secondary"
             >
               View All Services
             </Link>
