@@ -27,6 +27,8 @@ import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
 import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
+import { UltimateInnovativeServicesShowcase2027 } from "@/components/UltimateInnovativeServicesShowcase2027";
+import { EnhancedPricingSection2027 } from "@/components/EnhancedPricingSection2027";
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -444,11 +446,17 @@ export default function Home() {
       {/* Enhanced Categories Section */}
       <CategoriesSection />
 
-      {/* Enhanced Innovative Services Showcase */}
-      <EnhancedInnovativeServicesShowcase />
-
-      {/* Enhanced Pricing Comparison */}
-      <EnhancedPricingComparison />
+              {/* Enhanced Innovative Services Showcase */}
+        <EnhancedInnovativeServicesShowcase />
+        
+        {/* Ultimate Innovative Services Showcase 2027 */}
+        <UltimateInnovativeServicesShowcase2027 />
+        
+        {/* Enhanced Pricing Section 2027 */}
+        <EnhancedPricingSection2027 />
+        
+        {/* Enhanced Pricing Comparison */}
+        <EnhancedPricingComparison />
 
       {/* Enhanced Benefits Section */}
       <BenefitsSection />
