@@ -33,8 +33,9 @@ import { store } from './store';
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
-import { Provider } from 'react-redux';
-import { store } from './store/store';
+import { CartProvider } from './context/CartContext';
+import { UnitProvider } from './context/UnitContext';
+import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
@@ -142,9 +143,13 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                   <AnalyticsProvider>
                     <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                       <ViewModeProvider>
-                        <AppLayout>
-                          <App />
-                        </AppLayout>
+                        <UnitProvider>
+                          <CartProvider>
+                            <AppLayout>
+                              <App />
+                            </AppLayout>
+                          </CartProvider>
+                        </UnitProvider>
                       </ViewModeProvider>
                       <LanguageDetectionPopup />
                     </LanguageProvider>
