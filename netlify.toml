@@ -10,6 +10,16 @@
   command_timeout = "30m"
 
 [build.environment]
+  NODE_OPTIONS = "--max_old_space_size=4096"
+  NPM_FLAGS = "--prefer-offline"
+  NODE_VERSION = "20"
+  NEXT_PUBLIC_SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY" # Replace with your actual Supabase key
+  NEXT_PUBLIC_REOWN_PROJECT_ID = "VALID_PROJECT_ID_PLACEHOLDER" # IMPORTANT: Replace with your actual Reown AppKit Project ID
+  EXAMPLE_API_URL = "https://jsonplaceholder.typicode.com/todos/1"
+  # Sentry DSNs are intentionally exposed in client bundles. Exclude them from
+  # Netlify's secrets scanning to prevent false positives during deploys.
+  SECRETS_SCAN_OMIT_KEYS = "SENTRY_DSN,NEXT_PUBLIC_SENTRY_DSN"
+
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -26,7 +36,6 @@
     Cross-Origin-Opener-Policy = "same-origin"
     Cross-Origin-Resource-Policy = "same-origin"
     X-DNS-Prefetch-Control = "on"
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
 
 [[redirects]]
   from = "/ai-consciousness-evolution"
@@ -87,16 +96,6 @@
   from = "/ai-creativity-orchestrator"
   to = "/ai-creativity-studio"
   status = 301
-=======
-  NODE_OPTIONS = "--max_old_space_size=4096"
-  NPM_FLAGS = "--prefer-offline"
-  NODE_VERSION = "20"
-  NEXT_PUBLIC_SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY" # Replace with your actual Supabase key
-  NEXT_PUBLIC_REOWN_PROJECT_ID = "VALID_PROJECT_ID_PLACEHOLDER" # IMPORTANT: Replace with your actual Reown AppKit Project ID
-  EXAMPLE_API_URL = "https://jsonplaceholder.typicode.com/todos/1"
-  # Sentry DSNs are intentionally exposed in client bundles. Exclude them from
-  # Netlify's secrets scanning to prevent false positives during deploys.
-  SECRETS_SCAN_OMIT_KEYS = "SENTRY_DSN,NEXT_PUBLIC_SENTRY_DSN"
 
 [functions.environment]
   SENTRY_LOG_LEVEL = "debug"
