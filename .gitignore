@@ -187,3 +187,5 @@ automation/logs/**
 automation/backups/**
 dist/**
 tsconfig.tsbuildinfo
+
+.next/**
