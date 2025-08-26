@@ -1,474 +1,329 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 } from 'lucide-react';
 
-export default function Tutorials() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedDifficulty, setSelectedDifficulty] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: BookOpen, count: 45 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 18 },
-    { id: 'security', name: 'Security & Compliance', icon: Shield, count: 12 },
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 10 },
-    { id: 'automation', name: 'Automation', icon: Zap, count: 8 },
-    { id: 'integration', name: 'Integrations', icon: Globe, count: 7 }
-  ];
-
-  const difficulties = [
-    { id: 'all', name: 'All Levels', count: 45 },
-    { id: 'beginner', name: 'Beginner', count: 20 },
-    { id: 'intermediate', name: 'Intermediate', count: 15 },
-    { id: 'advanced', name: 'Advanced', count: 10 }
-  ];
-
-  const tutorials = [
+const Tutorials: React.FC = () => {
+  const tutorialCategories = [
     {
-      id: 1,
-      title: 'Building Your First AI Chatbot',
-      description: 'Learn how to create an intelligent chatbot using our AI platform. This comprehensive tutorial covers everything from setup to deployment.',
-      category: 'ai-ml',
-      difficulty: 'beginner',
-      duration: '45 min',
-      rating: 4.8,
-      students: 1247,
-      thumbnail: '/images/tutorials/ai-chatbot.jpg',
-      instructor: 'Dr. Sarah Chen',
-      tags: ['AI', 'Chatbot', 'NLP', 'Beginner'],
-      featured: true,
-      icon: MessageCircle
+      title: "Beginner",
+      description: "Perfect for those new to AI and technology",
+      color: "from-green-500 to-emerald-500",
+      count: "12"
     },
     {
-      id: 2,
-      title: 'Implementing Computer Vision with AI',
-      description: 'Discover how to build image recognition systems using computer vision and deep learning techniques.',
-      category: 'ai-ml',
-      difficulty: 'intermediate',
-      duration: '75 min',
-      rating: 4.9,
-      students: 892,
-      thumbnail: '/images/tutorials/computer-vision.jpg',
-      instructor: 'Michael Rodriguez',
-      tags: ['Computer Vision', 'Deep Learning', 'Image Recognition', 'Intermediate'],
-      featured: true,
-      icon: Eye
+      title: "Intermediate",
+      description: "For users with some experience",
+      color: "from-yellow-500 to-orange-500",
+      count: "18"
     },
     {
-      id: 3,
-      title: 'Natural Language Processing Fundamentals',
-      description: 'Master the basics of NLP including text processing, sentiment analysis, and language understanding.',
-      category: 'ai-ml',
-      difficulty: 'intermediate',
-      duration: '90 min',
-      rating: 4.7,
-      students: 1563,
-      thumbnail: '/images/tutorials/nlp-fundamentals.jpg',
-      instructor: 'Dr. Elena Petrova',
-      tags: ['NLP', 'Text Processing', 'Sentiment Analysis', 'Intermediate'],
-      featured: false,
-      icon: Type
+      title: "Advanced",
+      description: "Complex topics for experienced users",
+      color: "from-red-500 to-pink-500",
+      count: "8"
     },
     {
-      id: 4,
-      title: 'Cybersecurity Best Practices',
-      description: 'Learn essential security practices for protecting your AI applications and data from cyber threats.',
-      category: 'security',
-      difficulty: 'intermediate',
-      duration: '60 min',
-      rating: 4.8,
-      students: 2341,
-      thumbnail: '/images/tutorials/cybersecurity.jpg',
-      instructor: 'Alex Thompson',
-      tags: ['Security', 'Cybersecurity', 'Best Practices', 'Intermediate'],
-      featured: true,
-      icon: Shield
-    },
-    {
-      id: 5,
-      title: 'Data Analytics Dashboard Creation',
-      description: 'Build interactive dashboards to visualize and analyze your data effectively.',
-      category: 'data',
-      difficulty: 'beginner',
-      duration: '50 min',
-      rating: 4.6,
-      students: 987,
-      thumbnail: '/images/tutorials/data-dashboard.jpg',
-      instructor: 'Maria Garcia',
-      tags: ['Data Analytics', 'Dashboard', 'Visualization', 'Beginner'],
-      featured: false,
-      icon: BarChart3
-    },
-    {
-      id: 6,
-      title: 'Workflow Automation with AI',
-      description: 'Automate business processes using AI-powered workflow engines and decision trees.',
-      category: 'automation',
-      difficulty: 'advanced',
-      duration: '120 min',
-      rating: 4.9,
-      students: 456,
-      thumbnail: '/images/tutorials/workflow-automation.jpg',
-      instructor: 'David Kim',
-      tags: ['Automation', 'Workflow', 'AI', 'Advanced'],
-      featured: false,
-      icon: Zap
-    },
-    {
-      id: 7,
-      title: 'API Integration Masterclass',
-      description: 'Learn how to integrate external APIs and services with your AI applications.',
-      category: 'integration',
-      difficulty: 'intermediate',
-      duration: '80 min',
-      rating: 4.7,
-      students: 723,
-      thumbnail: '/images/tutorials/api-integration.jpg',
-      instructor: 'Sarah Johnson',
-      tags: ['API', 'Integration', 'Web Services', 'Intermediate'],
-      featured: false,
-      icon: Globe
-    },
-    {
-      id: 8,
-      title: 'Advanced Machine Learning Models',
-      description: 'Deep dive into advanced ML techniques including ensemble methods and neural networks.',
-      category: 'ai-ml',
-      difficulty: 'advanced',
-      duration: '150 min',
-      rating: 4.9,
-      students: 389,
-      thumbnail: '/images/tutorials/advanced-ml.jpg',
-      instructor: 'Dr. James Wilson',
-      tags: ['Machine Learning', 'Neural Networks', 'Advanced', 'Deep Learning'],
-      featured: false,
-      icon: Brain
+      title: "Expert",
+      description: "Cutting-edge research and techniques",
+      color: "from-purple-500 to-indigo-500",
+      count: "5"
     }
   ];
 
-  const featuredTutorials = tutorials.filter(tutorial => tutorial.featured);
-  const filteredTutorials = tutorials.filter(tutorial => 
-    (selectedCategory === 'all' || tutorial.category === selectedCategory) &&
-    (selectedDifficulty === 'all' || tutorial.difficulty === selectedDifficulty) &&
-    (searchQuery === '' || tutorial.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-     tutorial.description.toLowerCase().includes(searchQuery.toLowerCase()) || 
-     tutorial.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-  );
+  const featuredTutorials = [
+    {
+      title: "Building Your First AI Chatbot",
+      description: "Learn to create a conversational AI chatbot using our platform. This comprehensive tutorial covers everything from data preparation to deployment.",
+      category: "Beginner",
+      duration: "45 min",
+      instructor: "Dr. Sarah Chen",
+      rating: 4.8,
+      students: "2.3k",
+      thumbnail: "/images/tutorials/ai-chatbot.jpg"
+    },
+    {
+      title: "Quantum Neural Network Implementation",
+      description: "Dive deep into quantum computing and implement neural networks that leverage quantum properties for enhanced performance.",
+      category: "Advanced",
+      duration: "90 min",
+      instructor: "Michael Rodriguez",
+      rating: 4.9,
+      students: "856",
+      thumbnail: "/images/tutorials/quantum-neural.jpg"
+    },
+    {
+      title: "Cybersecurity Best Practices",
+      description: "Master essential cybersecurity concepts and implement robust security measures to protect your applications and data.",
+      category: "Intermediate",
+      duration: "60 min",
+      instructor: "James Wilson",
+      rating: 4.7,
+      students: "1.5k",
+      thumbnail: "/images/tutorials/cybersecurity.jpg"
+    },
+    {
+      title: "AI Model Optimization",
+      description: "Learn advanced techniques to optimize your AI models for better performance, faster inference, and reduced resource consumption.",
+      category: "Expert",
+      duration: "75 min",
+      instructor: "Dr. Emily Watson",
+      rating: 4.6,
+      students: "623",
+      thumbnail: "/images/tutorials/model-optimization.jpg"
+    }
+  ];
 
-  const stats = [
-    { label: 'Total Tutorials', value: '45+', icon: BookOpen },
-    { label: 'Active Students', value: '15K+', icon: Users },
-    { label: 'Hours of Content', value: '60+', icon: Clock },
-    { label: 'Expert Instructors', value: '12+', icon: Award }
+  const recentTutorials = [
+    {
+      title: "Data Pipeline Automation",
+      category: "Intermediate",
+      duration: "40 min",
+      instructor: "David Kim",
+      rating: 4.5,
+      students: "432"
+    },
+    {
+      title: "Cloud Infrastructure Setup",
+      category: "Beginner",
+      duration: "35 min",
+      instructor: "Lisa Thompson",
+      rating: 4.4,
+      students: "789"
+    },
+    {
+      title: "API Integration Patterns",
+      category: "Intermediate",
+      duration: "50 min",
+      instructor: "Dr. Sarah Chen",
+      rating: 4.6,
+      students: "567"
+    },
+    {
+      title: "Machine Learning Model Deployment",
+      category: "Advanced",
+      duration: "65 min",
+      instructor: "Michael Rodriguez",
+      rating: 4.7,
+      students: "345"
+    }
+  ];
+
+  const learningPaths = [
+    {
+      title: "AI Developer Path",
+      description: "Complete path from beginner to AI expert",
+      courses: 8,
+      duration: "12 weeks",
+      level: "Beginner to Expert"
+    },
+    {
+      title: "Cybersecurity Specialist",
+      description: "Master security and compliance",
+      courses: 6,
+      duration: "8 weeks",
+      level: "Intermediate to Expert"
+    },
+    {
+      title: "Quantum Computing Engineer",
+      description: "Learn quantum algorithms and applications",
+      courses: 5,
+      duration: "10 weeks",
+      level: "Advanced to Expert"
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      <div className="container mx-auto px-4 py-20">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Learn <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">AI & Technology</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Master cutting-edge AI technologies through our comprehensive video tutorials, hands-on projects, and expert-led courses.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
-              Start Learning
-            </button>
-            <Link
-              to="/contact"
-              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-            >
-              Get Support
-            </Link>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Video
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                {" "}Tutorials
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Master cutting-edge technologies with our comprehensive video tutorials. 
+              From AI fundamentals to advanced quantum computing, learn at your own pace 
+              with expert instructors.
+            </p>
           </div>
-        </div>
-
-        {/* Tutorial Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Search and Filters */}
-        <div className="mb-12">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-4 mb-6">
-              {/* Search */}
-              <div className="flex-1 relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+          
+          {/* Search and Filter */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex-1">
                 <input
                   type="text"
-                  placeholder="Search tutorials, topics, or instructors..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Search for tutorials, topics, or instructors..."
+                  className="w-full px-6 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-            </div>
-            
-            {/* Category and Difficulty Filters */}
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category) => {
-                const Icon = category.icon;
-                return (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                        : 'bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white'
-                    }`}
-                  >
-                    <Icon className="w-4 h-4" />
-                    <span>{category.name}</span>
-                    <span className="text-xs opacity-75">({category.count})</span>
-                  </button>
-                );
-              })}
-            </div>
-            
-            <div className="flex flex-wrap gap-3 mt-4">
-              {difficulties.map((difficulty) => (
-                <button
-                  key={difficulty.id}
-                  onClick={() => setSelectedDifficulty(difficulty.id)}
-                  className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
-                    selectedDifficulty === difficulty.id
-                      ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white shadow-lg'
-                      : 'bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white'
-                  }`}
-                >
-                  {difficulty.name} ({difficulty.count})
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Featured Tutorials */}
-        {featuredTutorials.length > 0 && (
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Featured Tutorials
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredTutorials.map((tutorial) => {
-                const Icon = tutorial.icon;
-                return (
-                  <div key={tutorial.id} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">
-                          Featured
-                        </span>
-                      </div>
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                      {tutorial.title}
-                    </h3>
-                    
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                      {tutorial.description}
-                    </p>
-                    
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {tutorial.tags.map((tag, idx) => (
-                        <span key={idx} className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2">
-                        <div className="flex items-center gap-1">
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span className="text-white text-sm">{tutorial.rating}</span>
-                        </div>
-                        <span className="text-gray-400 text-sm">({tutorial.students.toLocaleString()})</span>
-                      </div>
-                      <div className="text-gray-400 text-sm">
-                        {tutorial.duration}
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-sm text-gray-400">by {tutorial.instructor}</div>
-                      <div className="flex items-center gap-1">
-                        <span className={`px-2 py-1 text-xs rounded-full ${
-                          tutorial.difficulty === 'beginner' ? 'bg-green-500/20 text-green-400' :
-                          tutorial.difficulty === 'intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                          'bg-red-500/20 text-red-400'
-                        }`}>
-                          {tutorial.difficulty.charAt(0).toUpperCase() + tutorial.difficulty.slice(1)}
-                        </span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex gap-2">
-                      <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2">
-                        <Play className="w-4 h-4" />
-                        Start Learning
-                      </button>
-                      <button className="p-3 bg-white/10 text-gray-300 hover:bg-white/20 rounded-lg transition-colors">
-                        <Heart className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {/* All Tutorials */}
-        <div className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-white">
-              All Tutorials
-            </h2>
-            <div className="text-gray-300">
-              Showing {filteredTutorials.length} of {tutorials.length} tutorials
+              <select className="px-6 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <option value="">All Levels</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+                <option value="expert">Expert</option>
+              </select>
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-xl transition-all duration-300">
+                Search
+              </button>
             </div>
           </div>
           
-          {filteredTutorials.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredTutorials.map((tutorial) => {
-                const Icon = tutorial.icon;
-                return (
-                  <div key={tutorial.id} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-white" />
-                      </div>
-                      {tutorial.featured && (
-                        <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">
-                          Featured
-                        </span>
-                      )}
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                      {tutorial.title}
-                    </h3>
-                    
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                      {tutorial.description}
-                    </p>
-                    
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {tutorial.tags.map((tag, idx) => (
-                        <span key={idx} className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2">
-                        <div className="flex items-center gap-1">
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span className="text-white text-sm">{tutorial.rating}</span>
-                        </div>
-                        <span className="text-gray-400 text-sm">({tutorial.students.toLocaleString()})</span>
-                      </div>
-                      <div className="text-gray-400 text-sm">
-                        {tutorial.duration}
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-sm text-gray-400">by {tutorial.instructor}</div>
-                      <div className="flex items-center gap-1">
-                        <span className={`px-2 py-1 text-xs rounded-full ${
-                          tutorial.difficulty === 'beginner' ? 'bg-green-500/20 text-green-400' :
-                          tutorial.difficulty === 'intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                          'bg-red-500/20 text-red-400'
-                        }`}>
-                          {tutorial.difficulty.charAt(0).toUpperCase() + tutorial.difficulty.slice(1)}
-                        </span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex gap-2">
-                      <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2">
-                        <Play className="w-4 h-4" />
-                        Start Learning
-                      </button>
-                      <button className="p-3 bg-white/10 text-gray-300 hover:bg-white/20 rounded-lg transition-colors">
-                        <Heart className="w-4 h-4" />
-                      </button>
+          {/* Difficulty Levels */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Choose Your Level</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {tutorialCategories.map((category, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 cursor-pointer">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                    <span className="text-2xl font-bold text-white">{category.count}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2 text-center">{category.title}</h3>
+                  <p className="text-gray-300 text-sm text-center">{category.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Featured Tutorials */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Featured Tutorials</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {featuredTutorials.map((tutorial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+                  <div className="flex items-start justify-between mb-4">
+                    <span className={`px-3 py-1 text-xs rounded-full border ${
+                      tutorial.category === 'Beginner' ? 'bg-green-500/20 text-green-300 border-green-500/30' :
+                      tutorial.category === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-300 border-yellow-500/30' :
+                      tutorial.category === 'Advanced' ? 'bg-red-500/20 text-red-300 border-red-500/30' :
+                      'bg-purple-500/20 text-purple-300 border-purple-500/30'
+                    }`}>
+                      {tutorial.category}
+                    </span>
+                    <div className="flex items-center gap-1">
+                      <span className="text-yellow-400">★</span>
+                      <span className="text-sm text-gray-300">{tutorial.rating}</span>
                     </div>
                   </div>
-                );
-              })}
+                  
+                  <h3 className="text-xl font-semibold text-white mb-3">{tutorial.title}</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{tutorial.description}</p>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-4 text-sm text-gray-400">
+                      <span>{tutorial.duration}</span>
+                      <span>{tutorial.students} students</span>
+                    </div>
+                    <span className="text-sm text-blue-400">Instructor: {tutorial.instructor}</span>
+                  </div>
+                  
+                  <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-300">
+                    Start Learning
+                  </button>
+                </div>
+              ))}
             </div>
-          ) : (
-            <div className="text-center py-16">
-              <div className="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="w-10 h-10 text-gray-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">No tutorials found</h3>
-              <p className="text-gray-400 mb-6">
-                Try adjusting your search criteria or browse all categories
+          </div>
+          
+          {/* Learning Paths */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Learning Paths</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {learningPaths.map((path, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-3">{path.title}</h3>
+                  <p className="text-gray-300 mb-4">{path.description}</p>
+                  
+                  <div className="space-y-2 mb-4 text-sm text-gray-400">
+                    <div className="flex justify-between">
+                      <span>Courses:</span>
+                      <span>{path.courses}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Duration:</span>
+                      <span>{path.duration}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Level:</span>
+                      <span>{path.level}</span>
+                    </div>
+                  </div>
+                  
+                  <button className="w-full px-4 py-2 border border-gray-600 text-white text-sm rounded-lg hover:bg-gray-800 transition-all duration-300">
+                    View Path
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Recent Tutorials */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Recently Added</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {recentTutorials.map((tutorial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className={`px-2 py-1 text-xs rounded-full ${
+                      tutorial.category === 'Beginner' ? 'bg-green-500/20 text-green-300 border border-green-500/30' :
+                      tutorial.category === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30' :
+                      'bg-red-500/20 text-red-300 border border-red-500/30'
+                    }`}>
+                      {tutorial.category}
+                    </span>
+                    <div className="flex items-center gap-1">
+                      <span className="text-yellow-400 text-sm">★</span>
+                      <span className="text-xs text-gray-300">{tutorial.rating}</span>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-lg font-semibold text-white mb-2">{tutorial.title}</h3>
+                  <p className="text-sm text-gray-400 mb-3">Instructor: {tutorial.instructor}</p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs text-gray-500">
+                      <span>{tutorial.duration}</span> • <span>{tutorial.students} students</span>
+                    </div>
+                    <button className="px-4 py-2 border border-gray-600 text-white text-sm rounded-lg hover:bg-gray-800 transition-all duration-300">
+                      Watch
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* CTA Section */}
+          <div className="text-center">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold mb-4">Ready to Start Learning?</h3>
+              <p className="text-gray-300 mb-6">
+                Join thousands of learners who are mastering cutting-edge technologies 
+                with our comprehensive tutorial library. Start your learning journey today!
               </p>
-              <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('all');
-                  setSelectedDifficulty('all');
-                }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300"
-              >
-                Clear Filters
-              </button>
-            </div>
-          )}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Start Learning?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of developers who are already learning AI and technology with our comprehensive tutorial library. 
-              Start your learning journey today!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
-                Browse All Tutorials
-              </button>
-              <Link
-                to="/contact"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                Get Support
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/help-center"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+                >
+                  Browse All Tutorials
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+                >
+                  Request Tutorial
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
-}
+};
+
+export default Tutorials;
