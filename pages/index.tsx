@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle } from 'lucide-react'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Star, Award, Globe, Rocket, Target, Lightbulb } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
 
 export default function Index() {
@@ -13,6 +13,12 @@ export default function Index() {
 			<section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
+						<div className="mb-8 flex items-center justify-center">
+							<div className="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-200">
+								<Star className="h-4 w-4 text-yellow-500 fill-current" />
+								<span className="text-sm font-medium text-gray-700">Trusted by Fortune 500 Companies</span>
+							</div>
+						</div>
 						<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
 							Transform Your Business with{' '}
 							<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -25,16 +31,18 @@ export default function Index() {
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
 								to="/contact"
-								className="rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
+								className="group relative rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl hover:scale-105"
+								aria-label="Get started with Zion Tech Group"
 							>
 								Get Started
-								<ArrowRight className="ml-2 h-4 w-4 inline" />
+								<ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
 							</Link>
 							<Link
 								to="/services"
-								className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
+								className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors group"
+								aria-label="Learn more about our services"
 							>
-								Learn more <span aria-hidden="true">→</span>
+								Learn more <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform inline-block">→</span>
 							</Link>
 						</div>
 					</div>
@@ -53,10 +61,29 @@ export default function Index() {
 				</div>
 			</section>
 
+			{/* Trust Indicators */}
+			<section className="py-16 bg-white border-b border-gray-100">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="text-center">
+						<p className="text-sm font-medium text-gray-500 mb-8">Trusted by industry leaders</p>
+						<div className="flex items-center justify-center space-x-12 opacity-60">
+							<div className="h-8 w-24 bg-gradient-to-r from-gray-300 to-gray-400 rounded animate-pulse"></div>
+							<div className="h-8 w-20 bg-gradient-to-r from-gray-300 to-gray-400 rounded animate-pulse"></div>
+							<div className="h-8 w-28 bg-gradient-to-r from-gray-300 to-gray-400 rounded animate-pulse"></div>
+							<div className="h-8 w-24 bg-gradient-to-r from-gray-300 to-gray-400 rounded animate-pulse"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			{/* Features Section */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl lg:text-center">
+						<div className="flex items-center justify-center mb-4">
+							<Award className="h-6 w-6 text-blue-600 mr-2" />
+							<span className="text-base font-semibold leading-7 text-blue-600">Advanced Technology</span>
+						</div>
 						<h2 className="text-base font-semibold leading-7 text-blue-600">Advanced Technology</h2>
 						<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
 							Everything you need to scale your business
@@ -67,9 +94,11 @@ export default function Index() {
 					</div>
 					<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
 						<dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-							<div className="flex flex-col">
+							<div className="flex flex-col group">
 								<dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-									<Brain className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
+									<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
+										<Brain className="h-6 w-6 text-white" />
+									</div>
 									AI Autonomous Systems
 								</dt>
 								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
@@ -77,15 +106,17 @@ export default function Index() {
 										Multi-agent copilots, RAG workflows, and intelligent automation that scales with your business needs.
 									</p>
 									<p className="mt-6">
-										<a href="/services#ai" className="text-sm font-semibold leading-6 text-blue-600 hover:text-blue-500 transition-colors">
-											Learn more <span aria-hidden="true">→</span>
+										<a href="/services#ai" className="text-sm font-semibold leading-6 text-blue-600 hover:text-blue-500 transition-colors group">
+											Learn more <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform inline-block">→</span>
 										</a>
 									</p>
 								</dd>
 							</div>
-							<div className="flex flex-col">
+							<div className="flex flex-col group">
 								<dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-									<Cloud className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
+									<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-600 group-hover:bg-green-700 transition-colors">
+										<Cloud className="h-6 w-6 text-white" />
+									</div>
 									Cloud Platforms
 								</dt>
 								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
@@ -93,15 +124,17 @@ export default function Index() {
 										Serverless architectures, Kubernetes orchestration, and data pipelines built for enterprise scale.
 									</p>
 									<p className="mt-6">
-										<a href="/services#cloud" className="text-sm font-semibold leading-6 text-blue-600 hover:text-blue-500 transition-colors">
-											Learn more <span aria-hidden="true">→</span>
+										<a href="/services#cloud" className="text-sm font-semibold leading-6 text-green-600 hover:text-green-500 transition-colors group">
+											Learn more <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform inline-block">→</span>
 										</a>
 									</p>
 								</dd>
 							</div>
-							<div className="flex flex-col">
+							<div className="flex flex-col group">
 								<dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-									<Shield className="h-5 w-5 flex-none text-blue-600" aria-hidden="true" />
+									<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors">
+										<Shield className="h-6 w-6 text-white" />
+									</div>
 									Cybersecurity
 								</dt>
 								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
@@ -109,13 +142,57 @@ export default function Index() {
 										Zero-trust frameworks, compliance automation, and incident response that protects your business.
 									</p>
 									<p className="mt-6">
-										<a href="/services#cybersecurity" className="text-sm font-semibold leading-6 text-blue-600 hover:text-blue-500 transition-colors">
-											Learn more <span aria-hidden="true">→</span>
+										<a href="/services#cybersecurity" className="text-sm font-semibold leading-6 text-purple-600 hover:text-purple-500 transition-colors group">
+											Learn more <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform inline-block">→</span>
 										</a>
 									</p>
 								</dd>
 							</div>
 						</dl>
+					</div>
+				</div>
+			</section>
+
+			{/* Why Choose Us Section */}
+			<section className="py-24 sm:py-32 bg-gray-50">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl lg:text-center mb-16">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+							Why Choose Zion Tech Group?
+						</h2>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							We combine cutting-edge technology with proven methodologies to deliver exceptional results.
+						</p>
+					</div>
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+						<div className="text-center group">
+							<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4">
+								<Rocket className="h-8 w-8 text-blue-600" />
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">Fast Delivery</h3>
+							<p className="text-gray-600">Deploy solutions in weeks, not months</p>
+						</div>
+						<div className="text-center group">
+							<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 group-hover:bg-green-200 transition-colors mb-4">
+								<Target className="h-8 w-8 text-green-600" />
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">Proven Results</h3>
+							<p className="text-gray-600">98% client satisfaction rate</p>
+						</div>
+						<div className="text-center group">
+							<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors mb-4">
+								<Lightbulb className="h-8 w-8 text-purple-600" />
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">Innovation</h3>
+							<p className="text-gray-600">Cutting-edge AI and cloud solutions</p>
+						</div>
+						<div className="text-center group">
+							<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 group-hover:bg-orange-200 transition-colors mb-4">
+								<Globe className="h-8 w-8 text-orange-600" />
+							</div>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">Global Reach</h3>
+							<p className="text-gray-600">24/7 support across time zones</p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -133,21 +210,21 @@ export default function Index() {
 							</p>
 						</div>
 						<dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-							<div className="flex flex-col bg-gray-400/5 p-8">
-								<dt className="text-sm font-semibold leading-6 text-gray-600">AI Systems Deployed</dt>
-								<dd className="order-first text-3xl font-bold tracking-tight text-gray-900">50+</dd>
+							<div className="flex flex-col bg-gradient-to-br from-blue-50 to-blue-100 p-8 group hover:from-blue-100 hover:to-blue-200 transition-all duration-300">
+								<dt className="text-sm font-semibold leading-6 text-blue-700">AI Systems Deployed</dt>
+								<dd className="order-first text-3xl font-bold tracking-tight text-blue-900 group-hover:scale-110 transition-transform">50+</dd>
 							</div>
-							<div className="flex flex-col bg-gray-400/5 p-8">
-								<dt className="text-sm font-semibold leading-6 text-gray-600">Cloud Migrations</dt>
-								<dd className="order-first text-3xl font-bold tracking-tight text-gray-900">100+</dd>
+							<div className="flex flex-col bg-gradient-to-br from-green-50 to-green-100 p-8 group hover:from-green-100 hover:to-green-200 transition-all duration-300">
+								<dt className="text-sm font-semibold leading-6 text-green-700">Cloud Migrations</dt>
+								<dd className="order-first text-3xl font-bold tracking-tight text-green-900 group-hover:scale-110 transition-transform">100+</dd>
 							</div>
-							<div className="flex flex-col bg-gray-400/5 p-8">
-								<dt className="text-sm font-semibold leading-6 text-gray-600">Security Audits</dt>
-								<dd className="order-first text-3xl font-bold tracking-tight text-gray-900">200+</dd>
+							<div className="flex flex-col bg-gradient-to-br from-purple-50 to-purple-100 p-8 group hover:from-purple-100 hover:to-purple-200 transition-all duration-300">
+								<dt className="text-sm font-semibold leading-6 text-purple-700">Security Audits</dt>
+								<dd className="order-first text-3xl font-bold tracking-tight text-purple-900 group-hover:scale-110 transition-transform">200+</dd>
 							</div>
-							<div className="flex flex-col bg-gray-400/5 p-8">
-								<dt className="text-sm font-semibold leading-6 text-gray-600">Client Satisfaction</dt>
-								<dd className="order-first text-3xl font-bold tracking-tight text-gray-900">98%</dd>
+							<div className="flex flex-col bg-gradient-to-br from-orange-50 to-orange-100 p-8 group hover:from-orange-100 hover:to-orange-200 transition-all duration-300">
+								<dt className="text-sm font-semibold leading-6 text-orange-700">Client Satisfaction</dt>
+								<dd className="order-first text-3xl font-bold tracking-tight text-orange-900 group-hover:scale-110 transition-transform">98%</dd>
 							</div>
 						</dl>
 					</div>
@@ -155,8 +232,9 @@ export default function Index() {
 			</section>
 
 			{/* CTA Section */}
-			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32 relative overflow-hidden">
+				<div className="absolute inset-0 bg-black/10"></div>
+				<div className="relative mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 							Ready to transform your business?
@@ -167,16 +245,18 @@ export default function Index() {
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
 								to="/contact"
-								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
+								className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105"
+								aria-label="Get started with Zion Tech Group"
 							>
 								Get Started
-								<ArrowRight className="ml-2 h-4 w-4 inline" />
+								<ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
 							</Link>
 							<Link
 								to="/services"
-								className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
+								className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group"
+								aria-label="View our services"
 							>
-								View Services <span aria-hidden="true">→</span>
+								View Services <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform inline-block">→</span>
 							</Link>
 						</div>
 					</div>

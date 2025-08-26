@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, CheckCircle, Clock, MessageSquare, Building } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
 
 export default function Contact() {
@@ -13,9 +13,36 @@ export default function Contact() {
 	})
 	const [isSubmitting, setIsSubmitting] = useState(false)
 	const [isSubmitted, setIsSubmitted] = useState(false)
+	const [errors, setErrors] = useState<{[key: string]: string}>({})
+
+	const validateForm = () => {
+		const newErrors: {[key: string]: string} = {}
+		
+		if (!formData.name.trim()) {
+			newErrors.name = 'Name is required'
+		}
+		
+		if (!formData.email.trim()) {
+			newErrors.email = 'Email is required'
+		} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+			newErrors.email = 'Please enter a valid email address'
+		}
+		
+		if (!formData.message.trim()) {
+			newErrors.message = 'Message is required'
+		}
+		
+		setErrors(newErrors)
+		return Object.keys(newErrors).length === 0
+	}
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault()
+		
+		if (!validateForm()) {
+			return
+		}
+		
 		setIsSubmitting(true)
 		
 		// Simulate form submission
@@ -26,10 +53,19 @@ export default function Contact() {
 	}
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+		const { name, value } = e.target
 		setFormData({
 			...formData,
-			[e.target.name]: e.target.value
+			[name]: value
 		})
+		
+		// Clear error when user starts typing
+		if (errors[name]) {
+			setErrors({
+				...errors,
+				[name]: ''
+			})
+		}
 	}
 
 	const isFormValid = formData.name.trim() && formData.email.trim() && formData.message.trim()
@@ -53,12 +89,14 @@ export default function Contact() {
 								<Link
 									to="/services"
 									className="rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-colors"
+									aria-label="View our services"
 								>
 									View Services
 								</Link>
 								<Link
 									to="/"
 									className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600 transition-colors"
+									aria-label="Back to homepage"
 								>
 									Back to Home
 								</Link>
@@ -98,7 +136,7 @@ export default function Contact() {
 							<form onSubmit={handleSubmit} className="space-y-6">
 								<div className="grid gap-6 sm:grid-cols-2">
 									<div>
-										<label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+										<label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
 											Name *
 										</label>
 										<input
@@ -107,13 +145,21 @@ export default function Contact() {
 											name="name"
 											value={formData.name}
 											onChange={handleChange}
-											required
-											className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-											placeholder="Your name"
+											className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors ${
+												errors.name ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300'
+											}`}
+											placeholder="Your full name"
+											aria-describedby={errors.name ? 'name-error' : undefined}
+											aria-invalid={!!errors.name}
 										/>
+										{errors.name && (
+											<p id="name-error" className="mt-1 text-sm text-red-600">
+												{errors.name}
+											</p>
+										)}
 									</div>
 									<div>
-										<label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+										<label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 											Email *
 										</label>
 										<input
@@ -122,14 +168,23 @@ export default function Contact() {
 											name="email"
 											value={formData.email}
 											onChange={handleChange}
-											required
-											className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+											className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors ${
+												errors.email ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300'
+											}`}
 											placeholder="your.email@company.com"
+											aria-describedby={errors.email ? 'email-error' : undefined}
+											aria-invalid={!!errors.email}
 										/>
+										{errors.email && (
+											<p id="email-error" className="mt-1 text-sm text-red-600">
+												{errors.email}
+											</p>
+										)}
 									</div>
 								</div>
+								
 								<div>
-									<label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+									<label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
 										Company
 									</label>
 									<input
@@ -138,61 +193,73 @@ export default function Contact() {
 										name="company"
 										value={formData.company}
 										onChange={handleChange}
-										className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-										placeholder="Your company (optional)"
+										className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+										placeholder="Your company name"
 									/>
 								</div>
+								
 								<div>
-									<label htmlFor="service" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-										Service of Interest
+									<label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+										Service Interest
 									</label>
 									<select
 										id="service"
 										name="service"
 										value={formData.service}
 										onChange={handleChange}
-										className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+										className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
 									>
 										<option value="">Select a service</option>
 										<option value="ai">AI Autonomous Systems</option>
 										<option value="cloud">Cloud Platforms</option>
 										<option value="cybersecurity">Cybersecurity</option>
+										<option value="saas">Custom Software</option>
 										<option value="consulting">Consulting</option>
-										<option value="other">Other</option>
 									</select>
 								</div>
+								
 								<div>
-									<label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+									<label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
 										Message *
 									</label>
 									<textarea
 										id="message"
 										name="message"
-										rows={4}
+										rows={5}
 										value={formData.message}
 										onChange={handleChange}
-										required
-										className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none"
+										className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors ${
+											errors.message ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300'
+										}`}
 										placeholder="Tell us about your project or how we can help..."
+										aria-describedby={errors.message ? 'message-error' : undefined}
+										aria-invalid={!!errors.message}
 									/>
+									{errors.message && (
+										<p id="message-error" className="mt-1 text-sm text-red-600">
+											{errors.message}
+										</p>
+									)}
 								</div>
+								
 								<button
 									type="submit"
 									disabled={!isFormValid || isSubmitting}
-									className={`w-full flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+									className={`w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white transition-all duration-200 ${
 										isFormValid && !isSubmitting
-											? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl'
-											: 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed'
+											? 'bg-blue-600 hover:bg-blue-700 hover:scale-105 shadow-lg hover:shadow-xl'
+											: 'bg-gray-400 cursor-not-allowed'
 									}`}
+									aria-label={isSubmitting ? 'Submitting form...' : 'Send message'}
 								>
 									{isSubmitting ? (
 										<>
-											<div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+											<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
 											Sending...
 										</>
 									) : (
 										<>
-											<Send className="w-4 h-4 mr-2" />
+											<Send className="h-5 w-5 mr-2" />
 											Send Message
 										</>
 									)}
@@ -201,115 +268,71 @@ export default function Contact() {
 						</div>
 
 						{/* Contact Information */}
-						<div>
-							<h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-8">
-								Contact Information
-							</h2>
-							<div className="space-y-8">
-								<div className="flex items-start gap-4">
-									<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-										<Mail className="h-5 w-5 text-white" />
+						<div className="space-y-8">
+							<div>
+								<h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-6">
+									Contact Information
+								</h2>
+								<div className="space-y-6">
+									<div className="flex items-start space-x-4">
+										<div className="flex-shrink-0">
+											<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
+												<Mail className="h-5 w-5 text-blue-600" />
+											</div>
+										</div>
+										<div>
+											<h3 className="text-sm font-medium text-gray-900">Email</h3>
+											<p className="text-sm text-gray-600">hello@ziontechgroup.com</p>
+										</div>
 									</div>
-									<div>
-										<h3 className="text-lg font-semibold text-gray-900">Email</h3>
-										<p className="text-gray-600">
-											<a 
-												href="mailto:contact@ziontechgroup.com" 
-												className="text-blue-600 hover:text-blue-500 transition-colors"
-											>
-												contact@ziontechgroup.com
-											</a>
-										</p>
-										<p className="text-sm text-gray-500 mt-1">
-											We typically respond within one business day
-										</p>
+									
+									<div className="flex items-start space-x-4">
+										<div className="flex-shrink-0">
+											<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100">
+												<Phone className="h-5 w-5 text-green-600" />
+											</div>
+										</div>
+										<div>
+											<h3 className="text-sm font-medium text-gray-900">Phone</h3>
+											<p className="text-sm text-gray-600">+1 (555) 123-4567</p>
+										</div>
 									</div>
-								</div>
-
-								<div className="flex items-start gap-4">
-									<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-										<Phone className="h-5 w-5 text-white" />
-									</div>
-									<div>
-										<h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-										<p className="text-gray-600">
-											<a 
-												href="tel:+1-555-123-4567" 
-												className="text-blue-600 hover:text-blue-500 transition-colors"
-											>
-												+1 (555) 123-4567
-											</a>
-										</p>
-										<p className="text-sm text-gray-500 mt-1">
-											Available Monday-Friday, 9 AM - 6 PM EST
-										</p>
-									</div>
-								</div>
-
-								<div className="flex items-start gap-4">
-									<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
-										<MapPin className="h-5 w-5 text-white" />
-									</div>
-									<div>
-										<h3 className="text-lg font-semibold text-gray-900">Office</h3>
-										<p className="text-gray-600">
-											123 Tech Street<br />
-											Innovation District<br />
-											San Francisco, CA 94105
-										</p>
-										<p className="text-sm text-gray-500 mt-1">
-											By appointment only
-										</p>
+									
+									<div className="flex items-start space-x-4">
+										<div className="flex-shrink-0">
+											<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100">
+												<MapPin className="h-5 w-5 text-purple-600" />
+											</div>
+										</div>
+										<div>
+											<h3 className="text-sm font-medium text-gray-900">Office</h3>
+											<p className="text-sm text-gray-600">San Francisco, CA</p>
+										</div>
 									</div>
 								</div>
 							</div>
 
-							{/* Additional Info */}
-							<div className="mt-12 p-6 bg-gray-50 rounded-lg">
-								<h3 className="text-lg font-semibold text-gray-900 mb-4">
-									Why choose Zion Tech Group?
-								</h3>
-								<ul className="space-y-2 text-sm text-gray-600">
-									<li className="flex items-center gap-2">
-										<CheckCircle className="h-4 w-4 text-green-600" />
-										Proven track record with 50+ successful projects
-									</li>
-									<li className="flex items-center gap-2">
-										<CheckCircle className="h-4 w-4 text-green-600" />
-										Expert team with deep industry knowledge
-									</li>
-									<li className="flex items-center gap-2">
-										<CheckCircle className="h-4 w-4 text-green-600" />
-										End-to-end solution delivery
-									</li>
-									<li className="flex items-center gap-2">
-										<CheckCircle className="h-4 w-4 text-green-600" />
-										Ongoing support and maintenance
-									</li>
-								</ul>
+							<div className="border-t border-gray-200 pt-8">
+								<h3 className="text-lg font-semibold text-gray-900 mb-4">Response Time</h3>
+								<div className="flex items-center space-x-2 text-sm text-gray-600">
+									<Clock className="h-4 w-4" />
+									<span>We typically respond within 24 hours</span>
+								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</section>
 
-			{/* CTA Section */}
-			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl text-center">
-						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-							Ready to get started?
-						</h2>
-						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
-							Don't wait to transform your business. Contact us today to discuss your project.
-						</p>
-						<div className="mt-10 flex items-center justify-center gap-x-6">
-							<Link
-								to="/services"
-								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
-							>
-								View Services
-							</Link>
+							<div className="border-t border-gray-200 pt-8">
+								<h3 className="text-lg font-semibold text-gray-900 mb-4">Business Hours</h3>
+								<div className="space-y-2 text-sm text-gray-600">
+									<div className="flex items-center space-x-2">
+										<Building className="h-4 w-4" />
+										<span>Monday - Friday: 9:00 AM - 6:00 PM PST</span>
+									</div>
+									<div className="flex items-center space-x-2">
+										<MessageSquare className="h-4 w-4" />
+										<span>Weekend support available for urgent matters</span>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
