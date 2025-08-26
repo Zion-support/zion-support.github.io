@@ -86,9 +86,12 @@ module.exports = {
         'zion-purple-light': '#a855f7',
         'zion-cyan': '#22ddd2',
         'zion-cyan-dark': '#14b8a6',
+        'zion-cyan-light': '#67e8f9',
         'zion-slate-light': '#94a3b8',
         'zion-slate': '#64748b',
         'zion-slate-dark': '#475569',
+        'zion-green': '#10b981',
+        'zion-pink': '#ec4899',
       },
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

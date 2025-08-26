@@ -13,7 +13,18 @@ import {
   Heart, 
   ArrowUp,
   Send,
-  CheckCircle
+  CheckCircle,
+  Globe,
+  Shield,
+  Cloud,
+  Brain,
+  Database,
+  Zap,
+  Users,
+  BookOpen,
+  FileText,
+  HelpCircle,
+  ExternalLink
 } from 'lucide-react';
 
 export function FooterNewsletter() {
@@ -37,42 +48,47 @@ export function FooterNewsletter() {
   };
 
   return (
-    <div className="bg-zion-blue-dark/30 p-6 rounded-xl border border-zion-cyan/20">
-      <h3 className="text-xl font-semibold text-white mb-4">Stay Updated</h3>
-      <p className="text-zion-slate-light mb-4 text-sm">
-        Get the latest insights on AI, cybersecurity, and technology trends delivered to your inbox.
-      </p>
+    <div className="bg-gradient-to-r from-zion-blue-dark/50 to-zion-purple-dark/50 p-8 rounded-2xl border border-zion-cyan/20 backdrop-blur-sm">
+      <div className="text-center mb-6">
+        <h3 className="text-2xl font-bold text-white mb-2">Stay Ahead of the Curve</h3>
+        <p className="text-zion-slate-light text-sm">
+          Get exclusive insights on AI, blockchain, quantum computing, and emerging technologies delivered to your inbox.
+        </p>
+      </div>
       
       {isSubscribed ? (
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="flex items-center gap-3 p-3 bg-green-500/20 border border-green-500/30 rounded-lg"
+          className="flex items-center justify-center gap-3 p-4 bg-green-500/20 border border-green-500/30 rounded-xl"
         >
-          <CheckCircle className="w-5 h-5 text-green-400" />
-          <span className="text-green-400 text-sm">Successfully subscribed!</span>
+          <CheckCircle className="w-6 h-6 text-green-400" />
+          <span className="text-green-400 font-medium">Successfully subscribed! Welcome to the future.</span>
         </motion.div>
       ) : (
-        <form onSubmit={handleSubscribe} className="flex gap-2">
+        <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            className="flex-1 px-3 py-2 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-sm"
+            placeholder="Enter your email address"
+            className="flex-1 px-4 py-3 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-sm backdrop-blur-sm"
             required
           />
           <motion.button
             type="submit"
             disabled={isLoading}
-            className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50"
+            className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 disabled:opacity-50 font-medium"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             {isLoading ? (
-              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mx-auto"></div>
             ) : (
-              <Send className="w-4 h-4" />
+              <span className="flex items-center gap-2">
+                Subscribe
+                <Send className="w-4 h-4" />
+              </span>
             )}
           </motion.button>
         </form>
@@ -89,95 +105,161 @@ export function Footer() {
   const footerSections = [
     {
       title: "Company",
+      icon: <Users className="h-5 w-5 text-zion-cyan" />,
       links: [
         { label: "About Us", path: "/about" },
         { label: "Our Team", path: "/about#team" },
         { label: "Careers", path: "/careers" },
-        { label: "Press", path: "/press" }
+        { label: "Press & Media", path: "/press" },
+        { label: "Partnerships", path: "/partnerships" },
+        { label: "Investor Relations", path: "/investors" }
       ]
     },
     {
       title: "Services",
+      icon: <Brain className="h-5 w-5 text-zion-cyan" />,
       links: [
-        { label: "AI & Analytics", path: "/services#ai" },
+        { label: "AI & Machine Learning", path: "/services#ai-ml" },
+        { label: "Blockchain & Web3", path: "/services#blockchain" },
+        { label: "IoT & Edge Computing", path: "/services#iot-edge" },
+        { label: "Quantum Computing", path: "/services#quantum" },
+        { label: "AR/VR & Metaverse", path: "/services#ar-vr" },
         { label: "Cybersecurity", path: "/services#cybersecurity" },
-        { label: "Cloud Solutions", path: "/services#cloud" },
-        { label: "IT Consulting", path: "/services#consulting" }
+        { label: "Cloud & Infrastructure", path: "/services#cloud" },
+        { label: "Business Intelligence", path: "/services#business-intelligence" }
+      ]
+    },
+    {
+      title: "Solutions",
+      icon: <Database className="h-5 w-5 text-zion-cyan" />,
+      links: [
+        { label: "Enterprise Solutions", path: "/solutions/enterprise" },
+        { label: "Startup Solutions", path: "/solutions/startups" },
+        { label: "Government Solutions", path: "/solutions/government" },
+        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
+        { label: "Financial Services", path: "/solutions/financial" },
+        { label: "Manufacturing", path: "/solutions/manufacturing" },
+        { label: "Retail & E-commerce", path: "/solutions/retail" },
+        { label: "Education", path: "/solutions/education" }
       ]
     },
     {
       title: "Resources",
+      icon: <BookOpen className="h-5 w-5 text-zion-cyan" />,
       links: [
-        { label: "Blog", path: "/blog" },
+        { label: "Blog & Insights", path: "/blog" },
         { label: "Case Studies", path: "/case-studies" },
+        { label: "White Papers", path: "/white-papers" },
         { label: "Documentation", path: "/docs" },
-        { label: "Support", path: "/support" }
+        { label: "API Reference", path: "/api" },
+        { label: "Developer Tools", path: "/dev-tools" },
+        { label: "Research Papers", path: "/research" },
+        { label: "Industry Reports", path: "/reports" }
+      ]
+    },
+    {
+      title: "Support",
+      icon: <HelpCircle className="h-5 w-5 text-zion-cyan" />,
+      links: [
+        { label: "Help Center", path: "/help" },
+        { label: "Contact Support", path: "/support" },
+        { label: "Community Forum", path: "/community" },
+        { label: "Training & Certification", path: "/training" },
+        { label: "Status Page", path: "/status" },
+        { label: "Security Center", path: "/security" },
+        { label: "Compliance", path: "/compliance" },
+        { label: "Disaster Recovery", path: "/disaster-recovery" }
       ]
     },
     {
       title: "Legal",
+      icon: <FileText className="h-5 w-5 text-zion-cyan" />,
       links: [
         { label: "Privacy Policy", path: "/privacy" },
         { label: "Terms of Service", path: "/terms" },
         { label: "Cookie Policy", path: "/cookies" },
-        { label: "GDPR", path: "/gdpr" }
+        { label: "GDPR Compliance", path: "/gdpr" },
+        { label: "Data Processing", path: "/data-processing" },
+        { label: "Intellectual Property", path: "/ip" },
+        { label: "Licenses", path: "/licenses" },
+        { label: "Accessibility", path: "/accessibility" }
       ]
     }
   ];
 
   const socialLinks = [
-    { icon: <Twitter className="h-5 w-5" />, href: "https://twitter.com/ziontechgroup", label: "Twitter" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/company/zion-tech-group", label: "LinkedIn" },
-    { icon: <Facebook className="h-5 w-5" />, href: "https://www.facebook.com/ziontechgroup", label: "Facebook" },
-    { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/ziontechgroup", label: "Instagram" },
-    { icon: <Github className="h-5 w-5" />, href: "https://github.com/ziontechgroup", label: "GitHub" }
+    { icon: <Twitter className="h-5 w-5" />, href: "https://twitter.com/ziontechgroup", label: "Twitter", color: "hover:text-blue-400" },
+    { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/company/zion-tech-group", label: "LinkedIn", color: "hover:text-blue-600" },
+    { icon: <Facebook className="h-5 w-5" />, href: "https://www.facebook.com/ziontechgroup", label: "Facebook", color: "hover:text-blue-500" },
+    { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/ziontechgroup", label: "Instagram", color: "hover:text-pink-500" },
+    { icon: <Github className="h-5 w-5" />, href: "https://github.com/ziontechgroup", label: "GitHub", color: "hover:text-gray-400" },
+    { icon: <Globe className="h-5 w-5" />, href: "https://ziontechgroup.com", label: "Website", color: "hover:text-zion-cyan" }
+  ];
+
+  const quickLinks = [
+    { label: "Get Started", path: "/contact", highlight: true },
+    { label: "Request Demo", path: "/demo" },
+    { label: "Pricing", path: "/pricing" },
+    { label: "Compare Plans", path: "/compare" },
+    { label: "Migration Guide", path: "/migration" },
+    { label: "Integration Hub", path: "/integrations" }
   ];
 
   return (
-    <footer className="bg-zion-blue text-white relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
-        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
+    <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white relative overflow-hidden">
+      {/* Enhanced background decorative elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full animate-pulse delay-500"></div>
+        <div className="absolute top-1/3 right-1/3 w-20 h-20 border border-zion-purple-light rounded-full animate-pulse delay-1500"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-12 h-12 border border-zion-cyan rounded-full animate-pulse delay-2000"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-          {/* Company Info */}
+      <div className="relative z-10 container mx-auto px-4 py-20">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-16">
+          {/* Company Info - Spans 2 columns */}
           <div className="lg:col-span-2">
             <motion.div 
-              className="mb-6"
+              className="mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+              <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 Zion Tech Group
               </h3>
-              <p className="text-zion-slate-light mb-6 leading-relaxed">
-                The world's first free marketplace dedicated to high-tech and artificial intelligence. 
-                Connecting talented professionals with innovative companies.
+              <p className="text-zion-slate-light mb-8 leading-relaxed text-sm">
+                Pioneering the future with cutting-edge AI, blockchain, quantum computing, and emerging technologies. 
+                We transform businesses through intelligent automation and next-generation cybersecurity solutions.
               </p>
               
-              {/* Contact Info */}
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3 text-zion-slate-light">
-                  <Phone className="w-4 h-4 text-zion-cyan"/>
-                  <span className="text-sm">+1 302 464 0950</span>
+              {/* Enhanced Contact Info */}
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3 text-zion-slate-light group hover:text-zion-cyan transition-colors duration-200">
+                  <Phone className="w-4 h-4 text-zion-cyan group-hover:scale-110 transition-transform duration-200"/>
+                  <a href="tel:+13024640950" className="text-sm hover:text-white transition-colors">
+                    +1 302 464 0950
+                  </a>
                 </div>
-                <div className="flex items-center gap-3 text-zion-slate-light">
-                  <Mail className="w-4 h-4 text-zion-cyan"/>
-                  <span className="text-sm">kleber@ziontechgroup.com</span>
+                <div className="flex items-center gap-3 text-zion-slate-light group hover:text-zion-cyan transition-colors duration-200">
+                  <Mail className="w-4 h-4 text-zion-cyan group-hover:scale-110 transition-transform duration-200"/>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-sm hover:text-white transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
                 </div>
-                <div className="flex items-center gap-3 text-zion-slate-light">
-                  <MapPin className="w-4 h-4 text-zion-cyan"/>
-                  <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
+                <div className="flex items-center gap-3 text-zion-slate-light group hover:text-zion-cyan transition-colors duration-200">
+                  <MapPin className="w-4 h-4 text-zion-cyan group-hover:scale-110 transition-transform duration-200"/>
+                  <span className="text-sm">
+                    364 E Main St STE 1008<br />
+                    Middletown DE 19709
+                  </span>
                 </div>
               </div>
 
-              {/* Social media */}
+              {/* Enhanced Social Media */}
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a 
@@ -185,20 +267,22 @@ export function Footer() {
                     href={social.href} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full" 
+                    className={`text-zion-slate-light ${social.color} transition-all duration-300 p-2 hover:bg-zion-cyan/10 rounded-full group`} 
                     aria-label={social.label} 
                     title={social.label} 
                     whileHover={{ scale: 1.1 }} 
                     whileTap={{ scale: 0.95 }}
                   >
-                    {social.icon}
+                    <div className="group-hover:scale-110 transition-transform duration-200">
+                      {social.icon}
+                    </div>
                   </motion.a>
                 ))}
               </div>
             </motion.div>
           </div>
 
-          {/* Footer Sections */}
+          {/* Footer Sections - Each spans 1 column */}
           {footerSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
@@ -207,15 +291,21 @@ export function Footer() {
               transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>
+              <div className="flex items-center gap-2 mb-4">
+                {section.icon}
+                <h4 className="text-lg font-semibold text-white">{section.title}</h4>
+              </div>
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <Link 
                       to={link.path} 
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 text-sm"
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 text-sm group flex items-center gap-2"
                     >
-                      {link.label}
+                      <span className="group-hover:translate-x-1 transition-transform duration-200">
+                        {link.label}
+                      </span>
+                      {link.path.startsWith('http') && <ExternalLink className="w-3 h-3 opacity-50" />}
                     </Link>
                   </li>
                 ))}
@@ -224,23 +314,57 @@ export function Footer() {
           ))}
         </div>
 
+        {/* Quick Links Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-zion-cyan/20 p-8">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">Quick Actions</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {quickLinks.map((link, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link
+                    to={link.path}
+                    className={`block p-4 text-center rounded-xl transition-all duration-300 ${
+                      link.highlight
+                        ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'
+                        : 'bg-white/10 text-zion-slate-light hover:bg-white/20 hover:text-white border border-zion-cyan/20'
+                    }`}
+                  >
+                    <span className="text-sm font-medium">{link.label}</span>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
         {/* Newsletter Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-16"
         >
           <FooterNewsletter />
         </motion.div>
 
         {/* Bottom Section */}
         <div className="border-t border-zion-cyan/20 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2 text-zion-slate-light text-sm">
               <span>© 2024 Zion Tech Group. All rights reserved.</span>
               <Heart className="w-4 h-4 text-red-400 animate-pulse" />
+              <span>Made with innovation</span>
             </div>
             
             <div className="flex items-center gap-6 text-sm">
@@ -253,22 +377,29 @@ export function Footer() {
               <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Cookie Policy
               </Link>
+              <Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Sitemap
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll to Top Button */}
+      {/* Enhanced Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 z-40"
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 z-40 group"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1 }}
       >
-        <ArrowUp className="w-5 h-5" />
+        <ArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform duration-200" />
+        {/* Tooltip */}
+        <div className="absolute bottom-full right-0 mb-2 px-2 py-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
+          Back to Top
+        </div>
       </motion.button>
     </footer>
   );
