@@ -15,6 +15,38 @@ const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/Compr
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
 
+// Marketplace pages
+const Marketplace = React.lazy(() => import('./pages/Marketplace.jsx'));
+const Talent = React.lazy(() => import('./pages/Talent.jsx'));
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage.jsx'));
+const Categories = React.lazy(() => import('./pages/Categories.jsx'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT.jsx'));
+const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServicesPage.jsx'));
+
+// Company pages
+const Blog = React.lazy(() => import('./pages/Blog.jsx'));
+const Partners = React.lazy(() => import('./pages/Partners.jsx'));
+const Careers = React.lazy(() => import('./pages/Careers.jsx'));
+const FAQ = React.lazy(() => import('./pages/FAQ.jsx'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap.jsx'));
+
+// Resources pages
+const HelpCenter = React.lazy(() => import('./pages/HelpCenter.jsx'));
+const Documentation = React.lazy(() => import('./pages/Documentation.jsx'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers.jsx'));
+const Webinars = React.lazy(() => import('./pages/Webinars.jsx'));
+const Training = React.lazy(() => import('./pages/Training.jsx'));
+const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment.jsx'));
+
+// Support pages
+const Support = React.lazy(() => import('./pages/Support.jsx'));
+const Terms = React.lazy(() => import('./pages/Terms.jsx'));
+const Privacy = React.lazy(() => import('./pages/Privacy.jsx'));
+const Security = React.lazy(() => import('./pages/Security.jsx'));
+const Status = React.lazy(() => import('./pages/Status.jsx'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility.jsx'));
+const Cookies = React.lazy(() => import('./pages/Cookies.jsx'));
+
 // Enhanced loading spinner with accessibility
 const LoadingSpinner = () => (
   <div 
@@ -70,6 +102,7 @@ function App() {
         <main className="flex-1" role="main">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
+              {/* Main routes */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<ServicesPage />} />
@@ -78,6 +111,38 @@ function App() {
               <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
               <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
+              
+              {/* Marketplace routes */}
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/talent" element={<Talent />} />
+              <Route path="/equipment" element={<EquipmentPage />} />
+              <Route path="/categories" element={<Categories />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
+              
+              {/* Company routes */}
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              
+              {/* Resources routes */}
+              <Route path="/help" element={<HelpCenter />} />
+              <Route path="/docs" element={<Documentation />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/training" element={<Training />} />
+              <Route path="/research" element={<ResearchDevelopment />} />
+              
+              {/* Support routes */}
+              <Route path="/support" element={<Support />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/security" element={<Security />} />
+              <Route path="/status" element={<Status />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/cookies" element={<Cookies />} />
             </Routes>
           </Suspense>
         </main>
