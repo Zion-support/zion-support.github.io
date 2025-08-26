@@ -1,4 +1,4 @@
-import { SEO } from '@/components/SEO';
+import SEO from '../SEO';
 
 const Mobile = () => {
   const mobileFeatures = [

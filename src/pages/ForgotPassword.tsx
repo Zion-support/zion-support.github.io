@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
+import SEO from '../SEO';
+import { GradientHeading } from '../GradientHeading';
+import { Button } from '../ui/Button';
+import { Input } from '../ui/Input';
 import { Mail, ArrowLeft, CheckCircle } from 'lucide-react';
 
 export default function ForgotPassword() {

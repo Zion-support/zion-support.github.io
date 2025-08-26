@@ -147,6 +147,19 @@ const Header: React.FC = () => {
               )}
             </Link>
             <Link
+              to="/faq"
+              className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
+                isActive('/faq')
+                  ? 'text-white bg-blue-600/20'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+              }`}
+            >
+              FAQ
+              {isActive('/faq') && (
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
+              )}
+            </Link>
+            <Link
               to="/careers"
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                 isActive('/careers')
@@ -257,6 +270,17 @@ const Header: React.FC = () => {
               onClick={closeMenu}
             >
               Blog
+            </Link>
+            <Link
+              to="/faq"
+              className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                isActive('/faq')
+                  ? 'text-white bg-blue-600/20 border-l-4 border-blue-400'
+                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+              }`}
+              onClick={closeMenu}
+            >
+              FAQ
             </Link>
             
             <div className="pt-4 border-t border-white/10">

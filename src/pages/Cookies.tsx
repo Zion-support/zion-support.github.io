@@ -1,6 +1,6 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import SEO from '../SEO';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { Shield, CircleDot, Settings, Eye, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
