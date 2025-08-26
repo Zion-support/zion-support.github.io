@@ -9,23 +9,19 @@ import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { showApiError } from '@/utils/apiErrorHandler';
-import './utils/globalFetchInterceptor';
-import './utils/consoleErrorToast';
 import ToastProvider from './components/ToastProvider';
 
 // Import i18n configuration
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 
 // Import auth and notification providers
 import { AuthProvider } from './context/auth/AuthProvider';
-import { NotificationProvider } from './context/notifications/NotificationContext';
+// import { NotificationProvider } from './context/notifications/NotificationContext';
 
 // Import analytics provider
-import { AnalyticsProvider } from './context/AnalyticsContext';
 import { ViewModeProvider } from './context/ViewModeContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
@@ -49,18 +45,14 @@ function renderApp() {
           <WhitelabelProvider>
             <Router>
               <AuthProvider>
-                <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ViewModeProvider>
-                        <AppLayout>
-                          <App />
-                        </AppLayout>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
-                    </LanguageProvider>
-                  </AnalyticsProvider>
-                </NotificationProvider>
+                <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                  <ViewModeProvider>
+                    <AppLayout>
+                      <App />
+                    </AppLayout>
+                  </ViewModeProvider>
+                  {/* LanguageDetectionPopup removed */}
+                </LanguageProvider>
               </AuthProvider>
             </Router>
           </WhitelabelProvider>
@@ -97,29 +89,3 @@ window.addEventListener('error', (e) => {
   console.error('Unhandled error:', e.error || e.message);
   displayFatalError(e.message);
 });
-
-// Render the app with proper provider structure
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <WhitelabelProvider>
-          <Router>
-            <AuthProvider>
-              <NotificationProvider>
-                <AnalyticsProvider>
-                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <AppLayout>
-                      <App />
-                    </AppLayout>
-                    <LanguageDetectionPopup />
-                  </LanguageProvider>
-                </AnalyticsProvider>
-              </NotificationProvider>
-            </AuthProvider>
-          </Router>
-        </WhitelabelProvider>
-      </QueryClientProvider>
-    </HelmetProvider>
-  </React.StrictMode>,
-);

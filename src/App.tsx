@@ -10,7 +10,7 @@ const About = React.lazy(() => import('./pages/About'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 const News = React.lazy(() => import('./pages/News'));
 const Press = React.lazy(() => import('./pages/Press'));
-const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+// const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
@@ -111,7 +111,6 @@ const Login = React.lazy(() => import('./pages/Login'));
 const Signup = React.lazy(() => import('./pages/Signup'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
-const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
 const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
 const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
 const Analytics = React.lazy(() => import('./pages/Analytics'));
@@ -121,17 +120,13 @@ const Categories = React.lazy(() => import('./pages/Categories'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
-const Signup = React.lazy(() => import('./pages/Signup'));
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
-const About = React.lazy(() => import('./pages/About'));
 const Team = React.lazy(() => import('./pages/Team'));
-const Careers = React.lazy(() => import('./pages/Careers'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 
@@ -171,6 +166,9 @@ const baseRoutes = [
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
   { path: '/pricing', element: <PricingPage /> },
   { path: '/emerging-tech', element: <EmergingTech /> },
+  
+  // Revolutionary Services 2025 (maps to EnhancedServicesPage)
+  { path: '/revolutionary-services-2025', element: <EnhancedServicesPage /> },
   
   // 2027 Innovation Routes
   { path: '/cutting-edge-innovations-2027', element: <CuttingEdgeInnovations2027 /> },
