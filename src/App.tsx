@@ -59,7 +59,6 @@ const Signup = React.lazy(() => import('./pages/Signup'));
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
-=======
 
 const { lazy, Suspense } = React;
 const Home = lazy(() => import('./pages/Home'));
@@ -85,6 +84,10 @@ import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
 import Checkout from './pages/Checkout';
 import ProductPage from './pages/ProductPage';
+=======
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+const CartPage = React.lazy(() => import('./pages/cart'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -111,7 +114,7 @@ const baseRoutes = [
   { path: '/zion-hire-ai', element: <ZionHireAI /> },
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/cart', element: <Checkout /> },
+  { path: '/cart', element: <CartPage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/faq', element: <FAQPage /> },

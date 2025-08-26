@@ -20,7 +20,9 @@ import { LanguageDetectionPopup } from './components/LanguageDetectionPopup.tsx'
 
 // Import auth and notification providers
 import { AuthProvider } from '@/context/auth/AuthProvider';
-import { NotificationProvider, WhitelabelProvider } from './context';
+import { NotificationProvider } from './context';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
@@ -111,10 +113,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
               <NotificationProvider>
                 <AnalyticsProvider>
                   <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <ErrorBoundary>
-                      <App />
-                      <LanguageDetectionPopup />
-                    </ErrorBoundary>
+                    <Provider store={store}>
+                      <AppLayout>
+                        <App />
+                      </AppLayout>
+                    </Provider>
+                    <LanguageDetectionPopup />
                   </LanguageProvider>
                 </AnalyticsProvider>
               </NotificationProvider>

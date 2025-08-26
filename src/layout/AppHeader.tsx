@@ -11,9 +11,7 @@ import { Menu, X } from 'lucide-react';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { useAuth } from '@/hooks/useAuth';
-import { UserProfileDropdown } from '@/components/header/UserProfileDropdown'; // Import UserProfileDropdown
+import { CartIcon } from '@/components/CartIcon';
 
 interface AppHeaderProps {
   onSidebarToggle?: () => void;
@@ -96,7 +94,7 @@ export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
           <div className="ml-6 flex-1 hidden md:block">
             <MainNavigation unreadCount={unreadCount} />
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <motion.button
@@ -133,7 +131,8 @@ export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
               </AnimatePresence>
             </motion.button>
           </div>
-          
+          <CartIcon className="mx-4" />
+          <ModeToggle />
         </div>
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       
