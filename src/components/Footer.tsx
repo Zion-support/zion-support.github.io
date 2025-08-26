@@ -18,15 +18,17 @@ const Footer: React.FC = () => {
     { name: 'Our Team', path: '/about' },
     { name: 'Careers', path: '/careers' },
     { name: 'Blog', path: '/blog' },
-    { name: 'News', path: '/news' },
-    { name: 'Press Kit', path: '/press' }
+    { name: 'Pricing', path: '/pricing' },
+    { name: 'Support', path: '/support' }
   ];
 
   const resources = [
     { name: "Case Studies", path: "/case-studies" },
     { name: "White Papers", path: "/white-papers" },
     { name: "Webinars", path: "/webinars" },
-    { name: "Documentation", path: "/docs" }
+    { name: "Tutorials", path: "/tutorials" },
+    { name: "Documentation", path: "/docs" },
+    { name: "Sitemap", path: "/sitemap" }
   ];
 
   const legal = [
