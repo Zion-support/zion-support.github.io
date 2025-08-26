@@ -6,16 +6,40 @@ import {
   Globe, Rocket, Cpu, Database, Lock, 
   Cloud, Server, Code, BarChart3, Target
 } from 'lucide-react';
+<<<<<<< HEAD
+
+// Import all the new 2025 service data
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
+import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+
+// Import advanced 2025 services
+import { advancedMicroSaasServices2025 } from '../data/2025-advanced-micro-saas-services';
+import { advancedAIServices2025 } from '../data/2025-advanced-ai-services';
+import { advancedITServices2025 } from '../data/2025-advanced-it-services';
+import { advancedEmergingTechServices2025 } from '../data/2025-advanced-emerging-tech-services';
+
+// Import existing services for comprehensive coverage
+=======
 import UltraAdvancedQuantumMatrixBackground from '../components/ui/UltraAdvancedQuantumMatrixBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e36f
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
+<<<<<<< HEAD
+import { newRealServices } from '../data/new-real-services';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { industryRealServices } from '../data/industry-real-services';
+import { real2025Q4AdditionsBatch2 } from '../data/real-2025-q4-additions-batch2';
+=======
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { innovativeITServices } from '../data/innovative-it-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e36f
 
 // Import our new service data
 // Note: Removed non-existent data imports (2034 datasets) to prevent build errors.
@@ -31,9 +55,14 @@ import { real2029Q3Additions } from '../data/real-2029-q3-additions';
     ...innovativeMicroSaasServices,
     ...extraServices,
     ...additionalEnhancedServices,
+<<<<<<< HEAD
+    ...newRealServices,
+    ...marketValidatedServices
+=======
     ...nextGenerationAIServices,
     ...innovativeITServices,
     ...innovativeAIServices
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e36f
   ];
 
   // Dynamic category counts mapped to the same filter logic below
@@ -403,9 +432,15 @@ export default function Services() {
   };
 
   return (
+<<<<<<< HEAD
+    <EnhancedFuturisticBackground intensity={1.3} variant="neural">
+      <EnhancedNavigation />
+      <div className="min-h-screen pt-16">
+=======
     <UltraAdvancedQuantumMatrixBackground intensity={1.5} variant="quantum-holographic">
       <div className="min-h-screen">
         <UltraAdvancedNavigation />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e36f
         <Head>
         <title>500+ Revolutionary Services - Zion Tech Group | AI, Quantum & IT Solutions</title>
         <meta name="description" content="Explore 500+ revolutionary AI, quantum computing, and IT services. From neural interfaces to enterprise solutions. Contact: +1 302 464 0950" />
@@ -419,6 +454,23 @@ export default function Services() {
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Head>
 
+<<<<<<< HEAD
+      {/* Header Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Explore <span className="text-cyan-400">500+ Revolutionary</span> Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              From quantum AI to space technology, discover services that will transform your business and give you unprecedented competitive advantages
+            </p>
+          </motion.div>
+=======
         {/* Header Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 mt-20">
           <div className="max-w-7xl mx-auto text-center">
@@ -439,6 +491,7 @@ export default function Services() {
                 Discover cutting-edge solutions in quantum AI, space technology, biotech, cybersecurity, 
                 and autonomous systems. Transform your business with unprecedented capabilities.
               </p>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e36f
 
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
             {heroStats.map((s, i) => (
@@ -805,6 +858,10 @@ export default function Services() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
+    </EnhancedFuturisticBackground>
+=======
     </UltraAdvancedQuantumMatrixBackground>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e36f
   );
 }
