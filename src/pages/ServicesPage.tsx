@@ -42,6 +42,10 @@ import {
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { ALL_INNOVATIVE_SERVICES_2026 } from "@/data/innovativeMicroSaasServices2026";
+import { ALL_INDUSTRY_SOLUTIONS_2026 } from "@/data/specializedIndustrySolutions2026";
+import { ALL_BLOCKCHAIN_WEB3_SERVICES_2026 } from "@/data/blockchainWeb3Services2026";
+import { ALL_IOT_EDGE_SERVICES_2026 } from "@/data/iotEdgeComputingServices2026";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -107,8 +111,18 @@ export default function ServicesPage() {
     { id: 'popular', name: 'Most Popular' }
   ];
 
+  // Combine all services
+  const allServices = [
+    ...ALL_INNOVATIVE_SERVICES,
+    ...SPECIALIZED_SERVICES,
+    ...ALL_INNOVATIVE_SERVICES_2026,
+    ...ALL_INDUSTRY_SOLUTIONS_2026,
+    ...ALL_BLOCKCHAIN_WEB3_SERVICES_2026,
+    ...ALL_IOT_EDGE_SERVICES_2026
+  ];
+
   // Filter and sort services
-  const filteredServices = ALL_INNOVATIVE_SERVICES.filter(service => {
+  const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -295,7 +309,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-zion-slate-light">
-              Showing {sortedServices.length} of {ALL_INNOVATIVE_SERVICES.length} services
+              Showing {sortedServices.length} of {allServices.length} services
             </div>
           </motion.div>
         </div>
@@ -335,7 +349,7 @@ export default function ServicesPage() {
                       </div>
                       
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                        {service.title}
+                        {service.name || service.title}
                       </h3>
                       
                       <p className="text-zion-slate-light leading-relaxed">
@@ -349,11 +363,11 @@ export default function ServicesPage() {
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-zion-cyan font-medium">{service.category}</span>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          service.innovationLevel === 'Cutting-edge' 
+                          service.pricing === 'Enterprise' 
                             ? 'bg-zion-cyan/20 text-zion-cyan' 
                             : 'bg-zion-purple/20 text-zion-purple'
                         }`}>
-                          {service.innovationLevel}
+                          {service.pricing || 'Professional'}
                         </span>
                       </div>
 
@@ -361,10 +375,10 @@ export default function ServicesPage() {
                       <div className="flex items-center justify-between text-sm">
                         <div className="flex items-center gap-1 text-zion-green">
                           <TrendingUp className="w-4 h-4" />
-                          <span>ROI: {service.roi}</span>
+                          <span>ROI: {service.roi || '300%+ within 12 months'}</span>
                         </div>
                         <div className="text-zion-slate-light">
-                          Market: {service.marketPrice}
+                          Market: {service.marketPrice || '$5,000-25,000/month'}
                         </div>
                       </div>
 
@@ -372,7 +386,7 @@ export default function ServicesPage() {
                       <div className="space-y-2">
                         <h4 className="text-sm font-semibold text-white">Key Features:</h4>
                         <div className="grid grid-cols-1 gap-1">
-                          {service.features.slice(0, 3).map((feature, idx) => (
+                          {(service.features || []).slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                               <CheckCircle className="w-3 h-3 text-zion-cyan" />
                               {feature}
@@ -387,21 +401,32 @@ export default function ServicesPage() {
                       <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                         <div className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
-                          <span>{service.estimatedDelivery}</span>
+                          <span>{service.setupTime || '2-4 weeks'}</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <Star className="w-4 h-4 text-zion-cyan" />
-                          <span>{service.supportLevel}</span>
+                          <span>{service.pricing || 'Professional'}</span>
                         </div>
                       </div>
                       
-                      <Link
-                        to={`/services/${service.id}`}
-                        className="btn-futuristic px-4 py-2 text-sm"
-                      >
-                        Learn More
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
+                      <div className="flex gap-2">
+                        {service.contactInfo && (
+                          <a
+                            href={`mailto:${service.contactInfo.email}`}
+                            className="btn-futuristic px-3 py-2 text-sm"
+                          >
+                            Contact
+                            <Mail className="w-4 h-4 ml-1" />
+                          </a>
+                        )}
+                        <Link
+                          to={`/services/${service.id}`}
+                          className="btn-futuristic px-4 py-2 text-sm"
+                        >
+                          Learn More
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Link>
+                      </div>
                     </div>
                   </motion.div>
                 ))}
@@ -452,7 +477,7 @@ export default function ServicesPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SPECIALIZED_SERVICES.map((service, index) => (
+            {[...SPECIALIZED_SERVICES, ...ALL_INDUSTRY_SOLUTIONS_2026.slice(0, 4)].map((service, index) => (
               <motion.div
                 key={service.id}
                 className="card-futuristic text-center group"
@@ -466,7 +491,7 @@ export default function ServicesPage() {
                 </div>
                 
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                  {service.title}
+                  {service.name || service.title}
                 </h3>
                 
                 <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
@@ -474,7 +499,7 @@ export default function ServicesPage() {
                 </p>
                 
                 <div className="text-zion-cyan font-bold mb-4">
-                  {service.marketPrice}
+                  {service.marketPrice || '$5,000-25,000/month'}
                 </div>
                 
                 <Link
@@ -483,6 +508,118 @@ export default function ServicesPage() {
                 >
                   Explore Solution
                 </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 2026 Innovation Showcase */}
+      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
+        <div className="container-responsive">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="heading-responsive font-bold mb-4">
+              <span className="text-gradient">2026 Innovation Showcase</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
+              Experience the future of technology with our cutting-edge 2026 services. From quantum computing to brain-computer interfaces, 
+              discover revolutionary solutions that will transform industries and redefine possibilities.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* Quantum AI Fusion */}
+            <motion.div
+              className="card-futuristic p-8"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
+                  <Atom className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Quantum AI Fusion Platform</h3>
+                  <p className="text-zion-cyan font-semibold">Revolutionary Quantum Computing</p>
+                </div>
+              </div>
+              <p className="text-zion-slate-light mb-6 leading-relaxed">
+                Unlock unprecedented computational power with our quantum AI fusion platform. 
+                Experience 1000x faster computation and breakthrough AI capabilities that will revolutionize 
+                drug discovery, financial modeling, and climate prediction.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-3xl font-bold text-zion-cyan">$25,000</div>
+                <div className="text-zion-slate-light">One-time investment</div>
+              </div>
+            </motion.div>
+
+            {/* Brain-Computer Interface */}
+            <motion.div
+              className="card-futuristic p-8"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-pink rounded-xl flex items-center justify-center">
+                  <Brain className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">Brain-Computer Interface</h3>
+                  <p className="text-zion-purple font-semibold">Neural Control Technology</p>
+                </div>
+              </div>
+              <p className="text-zion-slate-light mb-6 leading-relaxed">
+                Direct neural control of digital systems with our advanced BCI platform. 
+                Enable thought-to-text conversion, cognitive enhancement, and breakthrough 
+                medical applications for rehabilitation and accessibility.
+              </p>
+              <div className="flex items-center justify-between">
+                <div className="text-3xl font-bold text-zion-purple">$15,000</div>
+                <div className="text-zion-slate-light">per month</div>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {ALL_INNOVATIVE_SERVICES_2026.slice(0, 6).map((service, index) => (
+              <motion.div
+                key={service.id}
+                className="card-futuristic p-6"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-lg flex items-center justify-center`}>
+                    <getCategoryIcon(service.category) className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-bold text-white">{service.name}</h4>
+                    <p className="text-sm text-zion-slate-light">{service.category}</p>
+                  </div>
+                </div>
+                
+                <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                  {service.description.substring(0, 120)}...
+                </p>
+                
+                <div className="flex items-center justify-between">
+                  <div className="text-zion-cyan font-bold">
+                    ${service.price.toLocaleString()}
+                  </div>
+                  <div className="text-zion-slate-light text-sm">
+                    {service.pricingModel}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
