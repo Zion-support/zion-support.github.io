@@ -54,7 +54,7 @@ export default function VideoCall() {
         }
     };
     return (<>
-      <SEO title={`Video Call - Room ${roomId}`} description="Zion video call"/>
+      <SEOHead title={`Video Call - Room ${roomId}`} description="Zion video call"/>
       
       <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
         {!hasJoined ? (<div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">

@@ -11,7 +11,7 @@ function PortfolioBuilderContent() {
   
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Portfolio Builder | Zion AI Marketplace" 
         description="Create and customize your resume and portfolio to showcase your skills and experience." 
       />

@@ -56,7 +56,7 @@ const ComprehensivePricing2027: React.FC = () => {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Comprehensive Pricing 2027 - Zion Tech Group"
         description="Explore our comprehensive pricing for cutting-edge AI, cybersecurity, quantum computing, and emerging technology solutions. Find the perfect plan for your business needs."
         canonical="/comprehensive-pricing-2027"

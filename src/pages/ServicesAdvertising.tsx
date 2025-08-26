@@ -32,7 +32,7 @@ import {
   Lock,
   Globe as GlobeIcon
 } from 'lucide-react';
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { ALL_INNOVATIVE_SERVICES } from "@/data/innovativeMicroSaasServices2025.ts";
 
 export default function ServicesAdvertising() {
@@ -70,7 +70,7 @@ export default function ServicesAdvertising() {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Comprehensive Micro SAAS Services - Zion Tech Group"
         description="Discover our complete portfolio of innovative micro SAAS services including AI Content & Marketing, Data Privacy, Green Tech, Remote Work Tools, E-commerce Solutions, Healthcare Tech, EdTech, Real Estate Tech, Supply Chain AI, and Customer Support Automation."
         canonical="/services-advertising"

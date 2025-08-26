@@ -17,7 +17,7 @@ import {
   Cloud,
   Code,
   BookOpen,
-  Handshake,
+  Users,
   LogIn,
   ArrowRight,
   ExternalLink

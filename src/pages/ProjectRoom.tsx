@@ -67,7 +67,7 @@ export default function ProjectRoom() {
   
   return (
     <>
-      <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />
+      <SEOHead title={`Project Room - ${projectId}`} description="Collaborate on your project" />
       
       <main className="container mx-auto py-8">
         <div className="flex justify-between items-center mb-6">

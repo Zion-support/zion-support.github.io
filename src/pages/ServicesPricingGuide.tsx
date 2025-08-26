@@ -48,7 +48,7 @@ export default function ServicesPricingGuide() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
-      <SEO 
+      <SEOHead 
         title="Services Pricing Guide - Zion Tech Group" 
         description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio."
         keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing"

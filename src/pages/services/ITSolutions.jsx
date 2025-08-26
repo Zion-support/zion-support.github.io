@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { Shield, Database, Monitor } from 'lucide-react';
 const ITSolutions = () => {
     const features = [
@@ -32,7 +32,7 @@ const ITSolutions = () => {
         "Expert technical support and maintenance"
     ];
     return (<div className="min-h-screen bg-background">
-      <SEO title="IT Solutions - Zion Tech Group" description="Comprehensive IT solutions to optimize your business operations and technology infrastructure." keywords="IT solutions, system integration, IT support, data management, IT security" canonical="https://ziontechgroup.com/services/it-solutions"/>
+      <SEOHead title="IT Solutions - Zion Tech Group" description="Comprehensive IT solutions to optimize your business operations and technology infrastructure." keywords="IT solutions, system integration, IT support, data management, IT security" canonical="https://ziontechgroup.com/services/it-solutions"/>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 text-white py-20">

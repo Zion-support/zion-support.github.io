@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 import { useEffect, useState } from "react";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 // Enhanced service listings with new micro SAAS services
 const SERVICE_LISTINGS = [
     // AI & Machine Learning Services
@@ -1050,7 +1050,7 @@ export default function ServicesPage() {
         return () => clearInterval(interval);
     }, []);
     return (<div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Comprehensive IT & AI Services 2025 - Zion Tech Group" 
         description="Discover cutting-edge AI, Quantum Computing, Blockchain, Metaverse, and specialized industry solutions. From micro SAAS to enterprise platforms, transform your business with Zion Tech Group's innovative technology services." 
         keywords="AI services, quantum computing, blockchain AI, metaverse platform, cybersecurity, cloud infrastructure, business intelligence, Zion Tech Group, IT services, technology consulting, micro SAAS, enterprise solutions" 

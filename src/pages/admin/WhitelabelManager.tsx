@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -20,7 +20,7 @@ export default function WhitelabelManager() {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="White-Label Management - Zion AI Marketplace"
         description="Create and manage white-label instances of the Zion AI Marketplace platform."
       />

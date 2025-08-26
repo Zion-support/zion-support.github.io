@@ -8,7 +8,7 @@ function ContractBuilderPage() {
   return (
     <ProtectedRoute>
       <>
-        <SEO 
+        <SEOHead 
           title="Smart Contract Builder | Zion AI Marketplace" 
           description="Create and deploy blockchain-backed smart contracts for your projects"
         />

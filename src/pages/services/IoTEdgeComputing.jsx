@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import Link from 'next/link';
 import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from 'lucide-react';
 export default function IoTEdgeComputingServices() {
@@ -186,7 +186,7 @@ export default function IoTEdgeComputingServices() {
         }
     ];
     return (<div className="min-h-screen bg-background">
-      <SEO title="IoT & Edge Computing Services - Zion Tech Group" description="Comprehensive IoT solutions, edge computing infrastructure, and smart device management platforms for connected ecosystems." keywords="IoT services, edge computing, smart devices, IoT platform, device management, IoT analytics, smart cities" canonical="https://ziontechgroup.com/services/iot-edge-computing"/>
+      <SEOHead title="IoT & Edge Computing Services - Zion Tech Group" description="Comprehensive IoT solutions, edge computing infrastructure, and smart device management platforms for connected ecosystems." keywords="IoT services, edge computing, smart devices, IoT platform, device management, IoT analytics, smart cities" canonical="https://ziontechgroup.com/services/iot-edge-computing"/>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20">

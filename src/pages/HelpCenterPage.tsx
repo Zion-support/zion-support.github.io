@@ -69,7 +69,7 @@ export default function HelpCenterPage() {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Help Center - Zion Tech Group" 
         description="Get help and support for using Zion's marketplace platform. Find answers to common questions and contact our support team." 
         keywords="help center, support, FAQ, customer service, Zion Tech Group"

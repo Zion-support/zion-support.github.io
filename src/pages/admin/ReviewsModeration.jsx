@@ -1,4 +1,4 @@
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useState, useEffect } from "react";
@@ -36,7 +36,7 @@ function ReviewsModerationContent() {
         fetchReviews();
     };
     return (<>
-      <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"/>
+      <SEOHead title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"/>
       
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">

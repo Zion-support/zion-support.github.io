@@ -506,11 +506,11 @@ export default function CybersecurityServicesPage() {
       </div>
     </div>
     <>
-      <SEO 
+      <SEOHead 
         title="Cybersecurity Services & Solutions - Zion Tech Group" 
         description="Protect your business with enterprise-grade cybersecurity solutions including threat detection, zero trust security, and compliance services. 24/7 monitoring and support."
       />
-      <Header />
+      <FuturisticNavigation />
       
       <main className="flex-1">
         {/* Hero Section */}

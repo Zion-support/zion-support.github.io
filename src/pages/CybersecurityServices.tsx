@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { 
   Shield, 
   Lock, 
@@ -155,7 +155,7 @@ export default function CybersecurityServices() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
-      <SEO 
+      <SEOHead 
         title="Cybersecurity Services - Zion Tech Group" 
         description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response."
         keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group"

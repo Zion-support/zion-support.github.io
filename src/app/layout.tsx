@@ -48,7 +48,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider defaultTheme="system" storageKey="zion-theme">
           <div className="min-h-screen bg-background">
-            <Header />
+            <FuturisticNavigation />
             <main className="flex-1">
               {children}
             </main>

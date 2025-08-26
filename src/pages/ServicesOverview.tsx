@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 import { 
@@ -208,7 +208,7 @@ export default function ServicesOverview() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="All Services - Zion Tech Group Comprehensive Technology Solutions" 
         description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions."
         keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services"

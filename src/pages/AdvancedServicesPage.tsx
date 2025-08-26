@@ -66,7 +66,7 @@ export default function AdvancedServicesPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Advanced AI & IT Services - Zion Tech Group" 
         description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation."
         keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation"

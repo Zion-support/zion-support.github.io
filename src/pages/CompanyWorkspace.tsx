@@ -1,11 +1,11 @@
 
 import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { FuturisticNavigation } from "@/components/FuturisticNavigation";
+import { FuturisticFooter } from "@/components/FuturisticFooter";
 import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate, useParams } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 import { useWhitelabel } from "@/context/WhitelabelContext";
@@ -44,11 +44,11 @@ export default function CompanyWorkspace() {
 
   return (
     <ProtectedRoute>
-      <SEO 
+      <SEOHead 
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
-      <Header 
+      <FuturisticNavigation 
         customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
         customTheme={effectiveTheme}
       />

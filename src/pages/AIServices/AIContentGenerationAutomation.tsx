@@ -57,7 +57,7 @@ const benefits = [
 export default function AIContentGenerationAutomation() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
+      <SEOHead 
         title="Content Generation Automation - Zion Tech Group" 
         description="AI-powered content generation automation solution that transforms your operations with intelligent automation and real-time insights."
         keywords="AI content generation automation, automation, intelligent systems, business optimization"

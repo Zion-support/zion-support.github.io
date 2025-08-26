@@ -58,7 +58,7 @@ const InnovativeServices2027: React.FC = () => {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Innovative Services 2027 - Zion Tech Group"
         description="Discover cutting-edge AI, cybersecurity, quantum computing, and emerging technology solutions. Transform your business with Zion Tech Group's innovative services for 2027."
         canonical="/innovative-services-2027"

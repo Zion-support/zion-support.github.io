@@ -1,6 +1,6 @@
 import React from "react";
 import { useProjects } from "@/hooks/useProjects";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -9,7 +9,7 @@ import { Clock, Briefcase } from "lucide-react";
 function ProjectsContent() {
     const { projects, isLoading } = useProjects();
     return (<>
-      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>
+      <SEOHead title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">

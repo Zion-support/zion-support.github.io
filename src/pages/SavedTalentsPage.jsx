@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { TalentCard } from "@/components/talent/TalentCard";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -135,7 +135,7 @@ export default function SavedTalentsPage() {
         }
     };
     return (<>
-      <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace"/>
+      <SEOHead title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace"/>
       
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>

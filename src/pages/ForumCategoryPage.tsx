@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Input } from "@/components/ui/input";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import PostCard from "@/components/community/PostCard";
 import { ForumCategoryInfo } from "@/types/community";
 import { usePostsByCategory } from "@/hooks/usePostsByCategory";

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -247,7 +247,7 @@ export default function ForumPostPage() {
     const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
     const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
     return (<>
-      <SEO title={`${post.title} | Community Forum | Zion AI Marketplace`} description={post.content.substring(0, 160)} keywords={`community, forum, discussion, ${post.tags.join(', ')}`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>
+      <SEOHead title={`${post.title} | Community Forum | Zion AI Marketplace`} description={post.content.substring(0, 160)} keywords={`community, forum, discussion, ${post.tags.join(', ')}`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>
       
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">

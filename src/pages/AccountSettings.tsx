@@ -92,7 +92,7 @@ export default function AccountSettings() {
 
   return (
     <>
-      <SEO title="Account Settings" description="Manage your account" />
+      <SEOHead title="Account Settings" description="Manage your account" />
       
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>

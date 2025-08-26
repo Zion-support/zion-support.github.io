@@ -758,7 +758,7 @@ export default function News() {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="News & Press - Zion Tech Group"
         description="Stay updated with the latest news, product launches, company updates, and industry insights from Zion Tech Group."
         keywords="news, press releases, company updates, AI news, technology news, Zion Tech Group"
@@ -1290,7 +1290,7 @@ export default News;
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="News & Updates - Zion Tech Group" 
         description="Stay updated with the latest news, press releases, and announcements from Zion Tech Group"
         keywords="news, updates, press releases, announcements, Zion Tech Group"

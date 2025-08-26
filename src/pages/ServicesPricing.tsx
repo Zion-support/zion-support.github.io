@@ -175,7 +175,7 @@ export default function ServicesPricing() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
-      <SEO 
+      <SEOHead 
         title="Micro SAAS Services Pricing - Zion Tech Group" 
         description="Transparent pricing for our comprehensive micro SAAS services. Choose from Starter, Professional, or Enterprise tiers to match your business needs and budget."
         keywords="micro SAAS pricing, service costs, AI services pricing, IT solutions pricing"

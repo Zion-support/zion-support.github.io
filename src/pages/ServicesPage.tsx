@@ -40,7 +40,7 @@ import {
   Building,
   Truck
 } from 'lucide-react';
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
 
 export default function ServicesPage() {
@@ -150,7 +150,7 @@ export default function ServicesPage() {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Innovative Micro SAAS Services - Zion Tech Group"
         description="Discover cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, Healthcare AI, Legal Tech, and more. Transform your business with our innovative technology services."
         canonical="/services"

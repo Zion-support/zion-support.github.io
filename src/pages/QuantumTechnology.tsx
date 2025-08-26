@@ -1,4 +1,4 @@
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { Atom, Cpu, Globe, Shield, Zap, Target, Users, BarChart3, Rocket, Brain } from 'lucide-react';
 =======
 import React, { useState } from 'react';
@@ -139,7 +139,7 @@ const QuantumTechnology: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background pt-20">
-      <SEO 
+      <SEOHead 
         title="Quantum Technology - Zion Tech Group" 
         description="Explore cutting-edge quantum technology solutions including quantum computing, neural networks, cryptography, and financial applications from Zion Tech Group."
         keywords="quantum technology, quantum computing, quantum neural networks, quantum cryptography, quantum financial trading"

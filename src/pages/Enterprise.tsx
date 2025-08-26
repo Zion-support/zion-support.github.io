@@ -82,7 +82,7 @@ export default function Enterprise() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Enterprise Solutions - Zion Tech Group" 
         description="Enterprise-grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform."
         keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group"

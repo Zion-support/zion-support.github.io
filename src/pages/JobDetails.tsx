@@ -74,7 +74,7 @@ export default function JobDetails() {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job.description.substring(0, 160)}
       />

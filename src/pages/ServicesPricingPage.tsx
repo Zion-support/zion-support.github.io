@@ -333,7 +333,7 @@ export default function ServicesPricingPage() {
 
   return (
     <div className="min-h-screen bg-zion-blue">
-      <SEO 
+      <SEOHead 
         title="Services Pricing - Zion Tech Group" 
         description="Comprehensive pricing for all our IT and AI services. Compare features, benefits, and pricing to find the perfect solution for your business needs."
         keywords="IT services pricing, AI services cost, cybersecurity pricing, cloud services pricing, data analytics pricing, web development pricing"

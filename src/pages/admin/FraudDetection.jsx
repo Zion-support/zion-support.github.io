@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -124,7 +124,7 @@ export default function FraudDetection() {
         setContentTypeFilter(null);
     };
     const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
-    return (<SEO title="Fraud Detection | Admin Dashboard" description="Monitor and manage fraud detection alerts on the Zion AI Marketplace"/>
+    return (<SEOHead title="Fraud Detection | Admin Dashboard" description="Monitor and manage fraud detection alerts on the Zion AI Marketplace"/>
         ,
             <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">

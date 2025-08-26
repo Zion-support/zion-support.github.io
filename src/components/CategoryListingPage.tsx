@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Footer } from "@/components/Footer";
+import { FuturisticFooter } from "@/components/FuturisticFooter";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { Button } from "@/components/ui/button";

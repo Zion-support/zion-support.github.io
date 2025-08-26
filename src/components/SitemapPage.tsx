@@ -26,7 +26,7 @@ export default function SitemapPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEOHead 
         title="Sitemap"
         description="Complete navigation guide for Zion Tech Group website"
         keywords="sitemap, navigation, website structure, Zion Tech Group"

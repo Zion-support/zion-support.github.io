@@ -8,7 +8,7 @@ function ProjectMilestones() {
   return (
     <ProtectedRoute>
       <>
-        <SEO 
+        <SEOHead 
           title="Payment Milestones | Zion AI Marketplace" 
           description="Manage project payment milestones and deliverables"
         />

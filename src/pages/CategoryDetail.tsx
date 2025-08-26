@@ -1,6 +1,6 @@
 
 import { useParams, Link } from "react-router-dom";
-import { Header } from "@/components/header/Header";
+import { FuturisticNavigation } from "@/components/FuturisticNavigation";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { useState, useEffect, useRef } from "react";

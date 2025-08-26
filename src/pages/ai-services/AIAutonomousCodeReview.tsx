@@ -98,7 +98,7 @@ const testimonials = [
 export default function AIAutonomousCodeReview() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
-      <SEO 
+      <SEOHead 
         title="AI Autonomous Code Review - Zion Tech Group" 
         description="Revolutionize your code review process with AI-powered analysis. Automated security scanning, performance optimization, and quality assurance."
         keywords="AI code review, automated code review, code security, code quality, AI development tools, code analysis"

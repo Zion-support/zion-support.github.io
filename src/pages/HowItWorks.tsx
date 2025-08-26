@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { 
   Search, 
   UserPlus, 
-  Handshake, 
+  Users, 
   CheckCircle, 
   Star, 
   MessageSquare, 
@@ -41,7 +41,7 @@ export default function HowItWorks() {
       color: "text-zion-cyan"
     },
     {
-      icon: Handshake,
+      icon: Users,
       title: "Hire & Collaborate",
       description: "Select your preferred talent, set up milestones, and begin your project with full transparency and support.",
       color: "text-zion-purple"

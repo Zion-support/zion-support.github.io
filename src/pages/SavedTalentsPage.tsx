@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { TalentCard } from "@/components/talent/TalentCard";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";

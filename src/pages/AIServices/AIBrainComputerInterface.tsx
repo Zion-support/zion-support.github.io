@@ -57,7 +57,7 @@ const benefits = [
 export default function AIBrainComputerInterface() {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
+      <SEOHead 
         title="Brain Computer Interface - Zion Tech Group" 
         description="AI-powered brain computer interface solution that transforms your operations with intelligent automation and real-time insights."
         keywords="AI brain computer interface, automation, intelligent systems, business optimization"

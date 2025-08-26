@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
+import SEOHead from "@/components/SEOHead";
 import { 
   Cloud, 
   Server, 
@@ -149,7 +149,7 @@ export default function CloudMigrationServices() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
-      <SEO 
+      <SEOHead 
         title="Cloud Migration Services - Zion Tech Group" 
         description="Expert cloud migration services for AWS, Azure, and Google Cloud. Seamless migration with zero downtime and cost optimization."
         keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud optimization, Zion Tech Group"

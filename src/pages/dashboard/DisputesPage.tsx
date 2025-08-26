@@ -8,7 +8,7 @@ function DisputesPage() {
   return (
     <ProtectedRoute>
       <>
-        <SEO 
+        <SEOHead 
           title="Dispute Resolution Center | Zion AI Marketplace" 
           description="View and manage disputes between clients and talents"
         />
