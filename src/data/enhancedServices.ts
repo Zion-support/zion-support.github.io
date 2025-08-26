@@ -382,8 +382,9 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 94
-<<<<<<< HEAD
   },
+
+  // Additional modern services (new)
   {
     id: "mlops-platform",
     title: "Managed MLOps Platform",
@@ -524,9 +525,21 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 96
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-  }
+  },
+
+  // New diversified services
+  { id: "rag-knowledge-bases", title: "RAG Knowledge Base Chatbots", description: "Deploy retrieval-augmented generation chatbots grounded on your docs, SharePoint, Confluence, and databases with guardrails and analytics.", category: "AI & Machine Learning", price: 3999, currency: "$", tags: ["RAG", "Chatbot", "Vector DB", "Guardrails"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-10T10:00:00.000Z", rating: 4.8, reviewCount: 52, location: "Global", availability: "2-3 Weeks", aiScore: 95 },
+  { id: "aws-well-architected", title: "AWS Well-Architected Review", description: "Certified review across 6 pillars with remediation plan and quick wins to improve cost, security, and reliability.", category: "Cloud & Infrastructure", price: 3500, currency: "$", tags: ["AWS", "Well-Architected", "Security", "Cost"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-12T09:00:00.000Z", rating: 4.9, reviewCount: 61, location: "Global", availability: "Within-week", aiScore: 88 },
+  { id: "managed-kubernetes-sre", title: "Managed Kubernetes SRE", description: "24/7 SRE for EKS/AKS/GKE with SLOs, autoscaling, upgrades, and security hardening.", category: "DevOps", price: 4999, currency: "$", tags: ["Kubernetes", "SRE", "Autoscaling", "Security"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-14T08:00:00.000Z", rating: 4.8, reviewCount: 84, location: "Global", availability: "Within-month", aiScore: 90 },
+  { id: "lakehouse-build", title: "Data Lakehouse Build (Delta/Iceberg)", description: "Modern lakehouse on Databricks or open-source stack with ingestion, quality, governance, and BI.", category: "Data & Analytics", price: 14999, currency: "$", tags: ["Delta", "Iceberg", "ELT", "BI"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-16T10:30:00.000Z", rating: 4.7, reviewCount: 39, location: "Global", availability: "Within-month", aiScore: 92 },
+  { id: "marketing-attribution-ml", title: "Marketing Attribution ML", description: "Multi-touch attribution using econometrics + ML with budget optimizer to maximize ROAS.", category: "Business Intelligence", price: 5999, currency: "$", tags: ["Attribution", "MMM", "ROAS", "Optimization"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-18T09:45:00.000Z", rating: 4.8, reviewCount: 44, location: "Global", availability: "Within-month", aiScore: 93 },
+  { id: "soc-as-a-service", title: "SOC-as-a-Service (MDR)", description: "Managed detection and response with SIEM integration, 24/7 monitoring, and incident response.", category: "Cybersecurity", price: 6999, currency: "$", tags: ["SOC", "MDR", "SIEM", "Incident Response"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-20T11:10:00.000Z", rating: 4.9, reviewCount: 73, location: "Global", availability: "Within-week", aiScore: 94 },
+  { id: "vciso", title: "Virtual CISO (vCISO)", description: "Fractional security leadership, roadmap, policy, vendor risk, and board reporting.", category: "Security & Compliance", price: 4999, currency: "$", tags: ["vCISO", "Risk", "Policy", "Governance"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-22T08:35:00.000Z", rating: 4.8, reviewCount: 28, location: "Global", availability: "Within-week", aiScore: 87 },
+  { id: "shopify-headless", title: "Headless Commerce (Shopify + Next.js)", description: "High-performance headless storefront with SEO, personalization, and analytics.", category: "Web Development", price: 12999, currency: "$", tags: ["Shopify", "Next.js", "Headless", "SEO"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1520975922192-8f32a5ed3050?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-24T12:00:00.000Z", rating: 4.7, reviewCount: 51, location: "Global", availability: "Within-month", aiScore: 90 },
+  { id: "salesforce-ai-copilot", title: "Salesforce AI Copilot Integration", description: "Embed AI assistants in Salesforce for lead scoring, case summaries, and email drafting.", category: "CRM & Sales", price: 4999, currency: "$", tags: ["Salesforce", "Copilot", "GenAI", "CRM"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-26T10:10:00.000Z", rating: 4.8, reviewCount: 62, location: "Global", availability: "Within-month", aiScore: 92 },
+  { id: "vision-quality-inspection", title: "Computer Vision Quality Inspection", description: "On-prem/edge vision for defect detection in manufacturing lines with dashboards.", category: "IoT & Edge", price: 9999, currency: "$", tags: ["Computer Vision", "Edge", "Manufacturing", "Defect Detection"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-28T09:25:00.000Z", rating: 4.8, reviewCount: 33, location: "Global", availability: "Within-month", aiScore: 93 },
+  { id: "ai-talent-sourcing", title: "AI Talent Sourcing & Screening", description: "Pipeline sourcing, ranking, and screening with bias controls and interview automation.", category: "HR Tech", price: 2999, currency: "$", tags: ["Recruiting", "Screening", "LLM", "Bias Controls"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-04-30T08:00:00.000Z", rating: 4.7, reviewCount: 47, location: "Global", availability: "Within-week", aiScore: 91 },
+  { id: "governed-rag-platform", title: "Governed RAG Platform", description: "End-to-end governed RAG with evaluations, citations, access controls, PHI/PII redaction, and monitoring.", category: "AI & Machine Learning", price: 7999, currency: "$", tags: ["RAG", "Governance", "PII", "Monitoring"], author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" }, images: ["https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=500"], createdAt: "2024-05-02T10:00:00.000Z", rating: 4.9, reviewCount: 21, location: "Global", availability: "Within-month", aiScore: 97 }
 ];
 
 // Service categories for filtering
@@ -551,12 +564,9 @@ export const SERVICE_PRICING_TIERS = {
   enterprise: { range: "$8,000 - $25,000+", description: "Custom enterprise solutions with dedicated support" }
 };
 
-<<<<<<< HEAD
 // Backward-compatible alias expected by EnhancedServicesPage
 export const PRICING_TIERS = SERVICE_PRICING_TIERS;
 
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 // Contact information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",

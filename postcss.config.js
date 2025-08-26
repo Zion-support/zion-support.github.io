@@ -1,11 +1,6 @@
-module.exports = {
+export default {
   plugins: {
-<<<<<<< HEAD
-    'tailwindcss': {},
-    'autoprefixer': {},
-=======
-    "@tailwindcss/postcss": {},
+    tailwindcss: {},
     autoprefixer: {},
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
   },
 };
