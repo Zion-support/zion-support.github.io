@@ -41,3 +41,28 @@
   from = "/ai-content-marketing-automation"
   to = "/ai-content-generator"
   status = 301
+
+[[redirects]]
+  from = "/ai-customer-success-automation"
+  to = "/ai-customer-success-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/intelligent-content-automation-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/browser-automation-cloud/"
+  to = "/browser-automation-cloud"
+  status = 301

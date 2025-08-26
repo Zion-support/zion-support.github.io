@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import { useEffect } from 'react'
+
+export default function FacebookRedirect() {
+	useEffect(() => {
+		window.location.replace('https://www.facebook.com/ziontechgroup')
+	}, [])
+	return <p>Redirecting to Facebook…</p>
+=======
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
@@ -23,4 +32,5 @@ export default function FacebookRedirect() {
 			</div>
 		</>
 	);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7466
 }
