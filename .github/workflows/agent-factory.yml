@@ -2,20 +2,20 @@ name: Link Crawler Factory
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '0 0 * * 0'  # Weekly instead of every 30 minutes
   workflow_dispatch:
     inputs:
       max_shards:
         description: Max number of parallel agents
-        default: '16'
+        default: '8'
         required: true
       max_depth:
         description: Crawl depth
-        default: '3'
+        default: '2'
         required: true
 
 permissions:
-  contents: write
+  contents: read  # Changed from write to read for security
   actions: read
   issues: write
 
@@ -41,24 +41,24 @@ jobs:
         name: Compute shard matrix
         env:
           LEN: ${{ steps.queue.outputs.len }}
-          MAX: ${{ github.event.inputs.max_shards || '16' }}
+          MAX: ${{ github.event.inputs.max_shards || '8' }}
         run: |
           length=${LEN:-0}
-          cap=${MAX:-8}
-          if [ "$length" -lt 50 ]; then k=0; elif [ "$length" -lt 200 ]; then k=1; elif [ "$length" -lt 800 ]; then k=2; elif [ "$length" -lt 2000 ]; then k=3; else k=4; fi
+          cap=${MAX:-4}
+          if [ "$length" -lt 50 ]; then k=0; elif [ "$length" -lt 200 ]; then k=1; elif [ "$length" -lt 800 ]; then k=2; else k=3; fi
           shards=$(( 1<<k ))
           if [ "$shards" -lt 1 ]; then shards=1; fi
           if [ "$shards" -gt "$cap" ]; then shards=$cap; fi
           jq -n --argjson shards "$shards" '{include: [range(0; $shards) | {shard: ., num_shards: $shards}]}' | tee matrix.json
           echo "matrix=$(cat matrix.json)" >> "$GITHUB_OUTPUT"
       - id: depth
-        run: echo "depth=${{ github.event.inputs.max_depth || '3' }}" >> "$GITHUB_OUTPUT"
+        run: echo "depth=${{ github.event.inputs.max_depth || '2' }}" >> "$GITHUB_OUTPUT"
 
   agent:
     needs: [generate-matrix]
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 16
+      max-parallel: 8  # Reduced from 16
       matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix).include }}
     steps:
       - uses: actions/checkout@v4
@@ -77,13 +77,12 @@ jobs:
           wc -l shard_urls.txt || true
           if [ ! -s shard_urls.txt ]; then echo "No URLs for this shard"; fi
 
-      - uses: actions/setup-node@v4
       - name: Run crawler (linkinator) on shard
         run: |
           set -e
           urls=$(paste -sd' ' shard_urls.txt || true)
           if [ -z "$urls" ]; then echo '{}' > report.json; exit 0; fi
-          npx --yes linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json || true
+          npx --yes linkinator $urls --recurse --concurrency 10 --skip '.*(logout|signout).*' --format json > report.json || true
 
       - name: Upload shard report
         uses: actions/upload-artifact@v4
@@ -122,12 +121,12 @@ jobs:
           # Next queue (new seeds from successes, bounded)
           jq '
             [.links[] | select(.state!="BROKEN") | .url] |
-            unique | .[:5000]
+            unique | .[:1000]  # Reduced from 5000
           ' merged.json > next_queue.json
 
           # Markdown summary
           jq -n --slurpfile b broken.json '
-            { broken: ($b[0] | length), sample: ($b[0] | .[:50]) } as $meta |
+            { broken: ($b[0] | length), sample: ($b[0] | .[:20]) } as $meta |  # Reduced sample size
             "Broken links: \($meta.broken)\n\n" +
             (if $meta.broken>0 then
               "| Source | Target | Status |\n|---|---|---|\n" +
@@ -153,12 +152,9 @@ jobs:
           labels: link-check, automated
           assignees: ''
 
-      - name: Update queue
+      - name: Update queue (read-only mode)
         run: |
-          mkdir -p state
-          cp next_queue.json state/queue.json
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add state/queue.json
-          git commit -m "chore(crawler): update queue" || echo "No queue changes"
-          git push || true
+          echo "Queue update disabled for security - queue file would be updated here in production"
+          # In production, this would update the queue file
+          # For now, just log what would happen
+          echo "Would update queue with $(cat next_queue.json | jq 'length') URLs"
