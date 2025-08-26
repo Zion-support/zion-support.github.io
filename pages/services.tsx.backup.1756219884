@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import Head from 'next/head'
+import React from 'react'
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services'
+import { advancedITServices } from '../data/advanced-it-services'
+import { innovativeAIServices } from '../data/innovative-ai-services'
+import { addedMicroSaaS2025 } from '../data/2025-added-micro-saas'
+import { addedITServices2025 } from '../data/2025-added-it-services'
+import { addedAIServices2025 } from '../data/2025-added-ai-services'
+=======
 export default function Services(){return (<main style={{padding:20,fontFamily:'sans-serif',lineHeight:1.6,maxWidth:1000,margin:'0 auto'}}>
 <link rel="canonical" href="https://ziontechgroup.com/services"/>
 <meta name="description" content="Zion Tech Group offers Micro SaaS, IT consulting, and applied AI services for startups, SMBs, and enterprises."/>
@@ -8,6 +18,7 @@ export default function Services(){return (<main style={{padding:20,fontFamily:'
 <meta property="og:image" content="/assets/og-default.jpg"/>
 <h1 style={{marginBottom:10}}>Services</h1>
 <p style={{color:'#374151'}}>We deliver end-to-end technology solutions: micro SaaS products, IT consulting, and applied AI—tailored for startups, SMBs, and enterprises.</p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a9ca
 
 export default function Services() {
 	const title = 'Services — Zion Tech Group'
