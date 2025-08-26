@@ -29,10 +29,15 @@ import {
   Phone,
   Mail,
   MapPin,
-  Globe as GlobeIcon
+  Globe as GlobeIcon,
+  Heart,
+  Smartphone
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { NEXT_GEN_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "@/data/nextGenInnovativeMicroSaasServices2025";
+import { COMPREHENSIVE_IT_SERVICES_2025 } from "@/data/comprehensiveITServices2025";
+import { COMPREHENSIVE_AI_SERVICES_2025 } from "@/data/comprehensiveAIServices2025";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -43,14 +48,20 @@ export default function ServicesPage() {
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'ai-marketing', name: 'AI & Marketing', icon: TrendingUp, color: 'from-zion-orange to-zion-purple' },
+    { id: 'ai-customer-experience', name: 'AI & Customer Experience', icon: Users, color: 'from-zion-pink to-zion-purple' },
+    { id: 'ai-security', name: 'AI & Security', icon: Shield, color: 'from-zion-purple to-zion-red' },
+    { id: 'ai-supply-chain', name: 'AI & Supply Chain', icon: Network, color: 'from-zion-green to-zion-blue' },
+    { id: 'ai-healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-zion-red to-zion-pink' },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
-    { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
-    { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
-    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
-    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' }
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: Lock, color: 'from-zion-purple to-zion-blue' },
+    { id: 'iot-edge', name: 'IoT & Edge Computing', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
+    { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Cloud, color: 'from-zion-blue to-zion-cyan' },
+    { id: 'digital-transformation', name: 'Digital Transformation', icon: TrendingUp, color: 'from-zion-orange to-zion-blue' },
+    { id: 'metaverse-vr', name: 'Metaverse & VR', icon: Globe, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'enterprise-software', name: 'Enterprise Software', icon: Server, color: 'from-zion-blue to-zion-purple' },
+    { id: 'mobile-development', name: 'Mobile Development', icon: Smartphone, color: 'from-zion-green to-zion-orange' }
   ];
 
   const priceRanges = [
@@ -68,14 +79,23 @@ export default function ServicesPage() {
     { id: 'popular', name: 'Most Popular' }
   ];
 
+  // Combine all services
+  const allServices = [
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...NEXT_GEN_INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...COMPREHENSIVE_IT_SERVICES_2025,
+    ...COMPREHENSIVE_AI_SERVICES_2025
+  ];
+
   // Filter and sort services
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => {
+  const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
     const matchesCategory = selectedCategory === 'all' || 
-                           service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
+                           service.category.toLowerCase().includes(selectedCategory.replace('-', ' ')) ||
+                           service.subcategory.toLowerCase().includes(selectedCategory.replace('-', ' '));
     
     const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'budget' && service.price <= 1000) ||
@@ -166,7 +186,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length}+</div>
+                <div className="text-3xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               <motion.div 
@@ -256,7 +276,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="text-zion-slate-light">
-              Showing {sortedServices.length} of {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
+              Showing {sortedServices.length} of {allServices.length} services
             </div>
           </motion.div>
         </div>
@@ -277,7 +297,7 @@ export default function ServicesPage() {
                 {sortedServices.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    className="card-futuristic group"
+                    className="card-futuristic-enhanced group"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -358,7 +378,7 @@ export default function ServicesPage() {
                       
                       <Link
                         to={`/services/${service.id}`}
-                        className="btn-futuristic px-4 py-2 text-sm"
+                        className="btn-futuristic-enhanced px-4 py-2 text-sm"
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2" />

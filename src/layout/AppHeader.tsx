@@ -27,7 +27,8 @@ import {
   Video,
   FileText,
   Heart,
-  PanelLeft
+  PanelLeft,
+  Smartphone
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 
@@ -72,13 +73,20 @@ export function AppHeader() {
       icon: Zap,
       dropdown: [
         { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain },
+        { name: 'AI & Marketing', href: '/services/ai-marketing', icon: TrendingUp },
+        { name: 'AI & Customer Experience', href: '/services/ai-customer-experience', icon: Users },
+        { name: 'AI & Security', href: '/services/ai-security', icon: Shield },
+        { name: 'AI & Supply Chain', href: '/services/ai-supply-chain', icon: Network },
+        { name: 'AI & Healthcare', href: '/services/ai-healthcare', icon: Heart },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
-        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
-        { name: 'Blockchain', href: '/services/blockchain', icon: Lock },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe },
-        { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
+        { name: 'Blockchain & Web3', href: '/services/blockchain', icon: Lock },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge', icon: Cpu },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: TrendingUp },
+        { name: 'Metaverse & VR', href: '/services/metaverse-vr', icon: Globe },
+        { name: 'Enterprise Software', href: '/services/enterprise-software', icon: Server },
+        { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone }
       ]
     },
     {
@@ -93,7 +101,11 @@ export function AppHeader() {
         { name: 'Cybersecurity', href: '/micro-saas/cybersecurity' },
         { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' },
         { name: 'Content Creation', href: '/micro-saas/content-creation' },
-        { name: 'HR Platform', href: '/micro-saas/hr-platform' }
+        { name: 'HR Platform', href: '/micro-saas/hr-platform' },
+        { name: 'Metaverse Business', href: '/micro-saas/metaverse-business' },
+        { name: 'Quantum Finance', href: '/micro-saas/quantum-finance' },
+        { name: 'AI Healthcare', href: '/micro-saas/ai-healthcare' },
+        { name: 'Blockchain Identity', href: '/micro-saas/blockchain-identity' }
       ]
     },
     {
