@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Globe, Zap, Shield, Cpu, Database, Lock, Users } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const location = useLocation();
 
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions', description: 'Machine Learning & AI Services' },
@@ -29,14 +28,10 @@ export function Header() {
     { name: 'News', href: '/news', description: 'Company updates and announcements' }
   ];
 
-  const resources = [
-    { name: 'Blog', href: '/blog', description: 'Insights and thought leadership' },
-    { name: 'Case Studies', href: '/case-studies', description: 'Success stories and results' },
-    { name: 'White Papers', href: '/white-papers', description: 'In-depth research and analysis' },
-    { name: 'Webinars', href: '/webinars', description: 'Educational sessions and demos' },
-    { name: 'Events', href: '/events', description: 'Industry conferences and meetups' },
-    { name: 'Help Center', href: '/help', description: 'Support and documentation' }
-  ];
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+  };
 
   const companyLinks = [
     { name: 'About Us', href: '/about' },
@@ -69,6 +64,96 @@ export function Header() {
     setIsServicesOpen(false);
   };
 
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  const navigationItems = [
+    {
+      name: 'Home',
+      path: '/',
+      hasDropdown: false
+    },
+    {
+      name: 'Services',
+      path: '/services',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'AI Solutions', path: '/services/ai-solutions' },
+        { name: 'Cybersecurity', path: '/services/cybersecurity' },
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops' },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure' },
+        { name: 'Digital Transformation', path: '/services/digital-transformation' },
+        { name: 'Green IT', path: '/green-it' },
+        { name: 'Quantum Technology', path: '/quantum-technology' },
+        { name: 'Space Tech', path: '/space-tech' },
+        { name: 'Mobile Solutions', path: '/mobile' },
+        { name: 'Financial Solutions', path: '/financial-solutions' },
+        { name: 'Micro SaaS Services', path: '/micro-saas-services' }
+      ]
+    },
+    {
+      name: 'Company',
+      path: '/about',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'About Us', path: '/about' },
+        { name: 'Our Team', path: '/team' },
+        { name: 'Careers', path: '/careers' },
+        { name: 'Partners', path: '/partners' },
+        { name: 'Research & Development', path: '/research-development' }
+      ]
+    },
+    {
+      name: 'Resources',
+      path: '/resources',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Blog & Insights', path: '/blog' },
+        { name: 'Tutorials', path: '/tutorials' },
+        { name: 'Webinars', path: '/webinars' },
+        { name: 'White Papers', path: '/white-papers' },
+        { name: 'Case Studies', path: '/case-studies' },
+        { name: 'Documentation', path: '/documentation' },
+        { name: 'API Reference', path: '/api' },
+        { name: 'Developer Portal', path: '/developer' }
+      ]
+    },
+    {
+      name: 'Support',
+      path: '/support',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Help Center', path: '/help-center' },
+        { name: 'FAQ', path: '/faq' },
+        { name: 'Contact Support', path: '/contact' },
+        { name: 'Request Quote', path: '/request-quote' },
+        { name: 'Service Comparison', path: '/service-comparison' }
+      ]
+    },
+    {
+      name: 'Enterprise',
+      path: '/enterprise',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Enterprise Solutions', path: '/enterprise' },
+        { name: 'Custom Solutions', path: '/solutions' },
+        { name: 'Community', path: '/community' },
+        { name: 'Marketplace', path: '/marketplace' }
+      ]
+    },
+    {
+      name: 'Talent',
+      path: '/talent',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Browse Talents', path: '/talents' },
+        { name: 'Talent Directory', path: '/talent-directory' },
+        { name: 'Hire Now', path: '/talent' }
+      ]
+    }
+  ];
+
   return (
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -94,214 +179,64 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            <Link
-              to="/"
-              className="text-gray-300 hover:text-zion-cyan transition-all duration-300 font-medium relative group"
-            >
-              Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-zion-cyan group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            
-            {/* Enhanced Services Dropdown */}
-            <div className="relative group">
-              <button
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
-                className="text-gray-300 hover:text-zion-cyan transition-all duration-300 font-medium flex items-center group"
-              >
-                Services
-                <ChevronDown className="ml-1 h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
-              </button>
-              
-              {/* Services Dropdown Menu */}
-              {isServicesOpen && (
-                <div
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
-                  className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl"
-                >
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 gap-2">
-                      {services.map((service) => (
-                        <Link
-                          to="/services"
-                          className="block w-full text-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl font-medium hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105 shadow-lg"
-                          onClick={closeMenu}
-                        >
-                          View All Services
-                        </Link>
+          <nav className="hidden lg:flex items-center space-x-1">
+            {navigationItems.map((item) => (
+              <div key={item.name} className="relative">
+                {item.hasDropdown ? (
+                  <div className="relative">
+                    <button
+                      onClick={() => toggleDropdown(item.name)}
+                      className={`flex items-center px-4 py-2 rounded-lg transition-colors duration-300 ${
+                        isActive(item.path) || activeDropdown === item.name
+                          ? 'text-blue-400 font-semibold' 
+                          : 'text-gray-300 hover:text-white'
+                      }`}
+                    >
+                      {item.name}
+                      <ChevronDownIcon className="ml-1 h-4 w-4" />
+                    </button>
+                    
+                    {activeDropdown === item.name && (
+                      <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 border border-white/10 rounded-lg shadow-xl backdrop-blur-lg">
+                        <div className="py-2">
+                          {item.dropdownItems?.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.name}
+                              to={dropdownItem.path}
+                              className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors duration-200"
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              {dropdownItem.name}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </motion.div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`px-4 py-2 rounded-lg transition-colors duration-300 ${
+                      isActive(item.path)
+                        ? 'text-blue-400 font-semibold' 
+                        : 'text-gray-300 hover:text-white'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
                 )}
-              </AnimatePresence>
-            </div>
-
-            {/* Company Dropdown */}
-            <div className="relative group">
-              <button className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
-                Company
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              
-              <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto">
-                <div className="p-4">
-                  <div className="space-y-2">
-                    {companyLinks.map((link) => (
-                      <Link
-                        key={link.name}
-                        to={link.href}
-                        className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
               </div>
-            </div>
+            ))}
+          </nav>
 
-            {/* Resources Dropdown */}
-            <div className="relative group">
-              <button className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
-                Resources
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              
-              <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto">
-                <div className="p-4">
-                  <div className="space-y-2">
-                    {resourcesLinks.map((link) => (
-                      <Link
-                        key={link.name}
-                        to={link.href}
-                        className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Company Dropdown */}
-            <div className="relative group">
-              <button
-                onMouseEnter={() => setIsCompanyOpen(true)}
-                onMouseLeave={() => setIsCompanyOpen(false)}
-                className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center"
-              >
-                Company
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              
-              {/* Company Dropdown Menu */}
-              {isCompanyOpen && (
-                <div
-                  onMouseEnter={() => setIsCompanyOpen(true)}
-                  onMouseLeave={() => setIsCompanyOpen(false)}
-                  className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl"
-                >
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 gap-2">
-                      {company.map((item) => (
-                        <Link
-                          key={item.name}
-                          to={item.href}
-                          className="flex items-start p-3 rounded-lg hover:bg-white/10 transition-all duration-200 group"
-                        >
-                          <div className="flex-1">
-                            <div className="text-white font-medium group-hover:text-blue-400 transition-colors duration-200">
-                              {item.name}
-                            </div>
-                            <div className="text-sm text-gray-400 mt-1">
-                              {item.description}
-                            </div>
-                          </div>
-                          <svg className="h-4 w-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Resources Dropdown */}
-            <div className="relative group">
-              <button
-                onMouseEnter={() => setIsResourcesOpen(true)}
-                onMouseLeave={() => setIsResourcesOpen(false)}
-                className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center"
-              >
-                Resources
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              
-              {/* Resources Dropdown Menu */}
-              {isResourcesOpen && (
-                <div
-                  onMouseEnter={() => setIsResourcesOpen(true)}
-                  onMouseLeave={() => setIsResourcesOpen(false)}
-                  className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl"
-                >
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 gap-2">
-                      {resources.map((item) => (
-                        <Link
-                          key={item.name}
-                          to={item.href}
-                          className="flex items-start p-3 rounded-lg hover:bg-white/10 transition-all duration-200 group"
-                        >
-                          <div className="flex-1">
-                            <div className="text-white font-medium group-hover:text-blue-400 transition-colors duration-200">
-                              {item.name}
-                            </div>
-                            <div className="text-sm text-gray-400 mt-1">
-                              {item.description}
-                            </div>
-                          </div>
-                          <svg className="h-4 w-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/pricing"
-              className="text-gray-300 hover:text-white transition-colors duration-300"
+              className="text-gray-300 hover:text-white transition-colors duration-300 px-4 py-2"
             >
               Pricing
             </Link>
-            
-            <Link
-              to="/contact"
-              className="text-gray-300 hover:text-zion-cyan transition-all duration-300 font-medium relative group"
-            >
-              Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-zion-cyan group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </nav>
-
-          {/* Enhanced CTA Button */}
-          <div className="hidden lg:block">
             <Link
               to="/request-quote"
               className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:from-zion-purple-dark hover:to-zion-cyan-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-purple/25"
@@ -312,9 +247,10 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={toggleMenu}
-            className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors duration-200"
-            aria-label="Toggle menu"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200"
+            aria-label="Toggle mobile menu"
+            aria-expanded={isMenuOpen}
           >
             <AnimatePresence mode="wait">
               {isMenuOpen ? (
@@ -343,138 +279,73 @@ export function Header() {
         </div>
       </div>
 
-      {/* Enhanced Mobile Menu */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-slate-800/95 backdrop-blur-xl border-t border-white/10"
-          >
-            <div className="px-4 py-6 space-y-4">
-              <Link
-                to="/"
-                className="block text-white hover:text-zion-cyan transition-colors duration-200 font-medium py-2"
-                onClick={closeMenu}
-              >
-                Home
-                {isActive('/') && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
+        {/* Mobile Navigation */}
+        <div className={`lg:hidden transition-all duration-300 ease-in-out ${
+          isMenuOpen 
+            ? 'max-h-screen opacity-100' 
+            : 'max-h-0 opacity-0 overflow-hidden'
+        }`}>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 rounded-lg mt-2 border border-white/10">
+            {navigationItems.map((item) => (
+              <div key={item.name}>
+                {item.hasDropdown ? (
+                  <div>
+                    <button
+                      onClick={() => toggleDropdown(item.name)}
+                      className={`w-full text-left px-3 py-2 rounded-md transition-all duration-200 ${
+                        isActive(item.path) || activeDropdown === item.name
+                          ? 'text-blue-400 bg-blue-600/20 font-semibold'
+                          : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        {item.name}
+                        <ChevronDownIcon className={`h-4 w-4 transition-transform duration-200 ${
+                          activeDropdown === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </div>
+                    </button>
+                    
+                    {activeDropdown === item.name && (
+                      <div className="ml-4 mt-2 space-y-1">
+                        {item.dropdownItems?.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.path}
+                            className="block px-3 py-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 transition-all duration-200"
+                            onClick={closeMenu}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`block px-3 py-2 rounded-md transition-all duration-200 ${
+                      isActive(item.path)
+                        ? 'text-blue-400 bg-blue-600/20 font-semibold'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                    }`}
+                    onClick={closeMenu}
+                  >
+                    {item.name}
+                  </Link>
                 )}
-              </Link>
-              
-              {/* Mobile Services Accordion */}
-              <div className="space-y-2">
-                <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="flex items-center justify-between w-full text-white hover:text-zion-cyan transition-colors duration-200 font-medium py-2"
-                >
-                  Services
-                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                <AnimatePresence>
-                  {isServicesOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="pl-4 space-y-2 border-l border-white/20"
-                    >
-                      {services.map((service) => (
-                        <Link
-                          key={service.name}
-                          to={service.href}
-                          className="block text-gray-300 hover:text-zion-cyan transition-colors duration-200 py-2"
-                          onClick={closeMenu}
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
               </div>
-
-              {/* Mobile Company Section */}
-              <div className="px-3 py-2">
-                <div className="text-sm font-medium text-gray-400 mb-2">Company</div>
-                <div className="space-y-1 ml-4">
-                  {services.slice(0, 6).map((service) => (
-                    <Link
-                      key={link.name}
-                      to={link.href}
-                      className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Mobile Resources Section */}
-              <div className="px-3 py-2">
-                <div className="text-sm font-medium text-gray-400 mb-2">Resources</div>
-                <div className="space-y-1 ml-4">
-                  {resourcesLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      to={link.href}
-                      className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Mobile Company Section */}
-              <div className="px-3 py-2">
-                <div className="text-sm font-medium text-gray-400 mb-2">Company</div>
-                <div className="space-y-1 ml-4">
-                  {company.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Mobile Resources Section */}
-              <div className="px-3 py-2">
-                <div className="text-sm font-medium text-gray-400 mb-2">Resources</div>
-                <div className="space-y-1 ml-4">
-                  {resources.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
+            ))}
+            
+            {/* Mobile CTA */}
+            <div className="pt-4 border-t border-gray-700 space-y-2">
               <Link
                 to="/pricing"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
+                className="block w-full text-center px-6 py-2 text-gray-300 hover:text-white transition-colors duration-300"
+                onClick={closeMenu}
               >
                 Pricing
               </Link>
-              
               <Link
                 to="/contact"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"

@@ -2,44 +2,76 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
-import EnhancedSEO from './components/EnhancedSEO';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { useScrollToTop } from "./hooks";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-
-// Lazy load pages
-const Home = lazy(() => import('./pages/Home'));
-const Services = lazy(() => import('./pages/Services'));
-
-// Missing pages from analysis
-const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
-const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
-
-// Company information pages
-const About = lazy(() => import('./pages/About'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Services = lazy(() => import('./pages/Services'));
-const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
-const AdvancedServices2025 = lazy(() => import('./pages/AdvancedServices2025'));
-const AdvancedServicesShowcase2025 = lazy(() => import('./pages/AdvancedServicesShowcase2025'));
-const ComprehensivePricing2025 = lazy(() => import('./pages/ComprehensivePricing2025'));
-const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
-const ComprehensiveServicesOverview2025 = lazy(() => import('./pages/ComprehensiveServicesOverview2025'));
-const Blog = lazy(() => import('./pages/Blog'));
-const News = lazy(() => import('./pages/News'));
-
-// Additional pages
-const Community = lazy(() => import('./pages/CommunityPage'));
-const Status = lazy(() => import('./pages/Status'));
-
-// Loading spinner component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
-  </div>
-);
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Services from './pages/Services';
+import Blog from './pages/Blog';
+import NotFound from './pages/NotFound';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Sitemap from './pages/Sitemap';
+import Careers from './pages/Careers';
+import Partners from './pages/Partners';
+import FAQ from './pages/FAQ';
+import HelpCenter from './pages/HelpCenter';
+import Support from './pages/Support';
+import Pricing from './pages/Pricing';
+import Team from './pages/Team';
+import ResearchDevelopment from './pages/ResearchDevelopment';
+import SpaceTech from './pages/SpaceTech';
+import QuantumTechnology from './pages/QuantumTechnology';
+import GreenIT from './pages/GreenIT';
+import Mobile from './pages/Mobile';
+import Events from './pages/Events';
+import Tutorials from './pages/Tutorials';
+import Webinars from './pages/Webinars';
+import WhitePapers from './pages/WhitePapers';
+import CaseStudies from './pages/CaseStudies';
+import Resources from './pages/Resources';
+import Documentation from './pages/Documentation';
+import API from './pages/API';
+import Developer from './pages/Developer';
+import Enterprise from './pages/Enterprise';
+import Solutions from './pages/Solutions';
+import Community from './pages/Community';
+import Marketplace from './pages/Marketplace';
+import Talent from './pages/Talent';
+import Talents from './pages/Talents';
+import TalentDirectory from './pages/TalentDirectory';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import ForgotPassword from './pages/ForgotPassword';
+import Dashboard from './pages/Dashboard';
+import Profile from './pages/Profile';
+import Settings from './pages/Settings';
+import Admin from './pages/Admin';
+import Analytics from './pages/Analytics';
+import MobileLaunch from './pages/MobileLaunch';
+import OpenApp from './pages/OpenApp';
+import RequestQuote from './pages/RequestQuote';
+import ServiceComparison from './pages/ServiceComparison';
+import ServiceInnovationHub from './pages/ServiceInnovationHub';
+import ServicePortfolioDashboard from './pages/ServicePortfolioDashboard';
+import ServiceRecommendations from './pages/ServiceRecommendations';
+import ServicesShowcase from './pages/ServicesShowcase';
+import MicroSAASServices from './pages/MicroSAASServices';
+import FinancialSolutions from './pages/FinancialSolutions';
+import GetStarted from './pages/GetStarted';
+import AccessibilityAuditor from './pages/accessibility-auditor';
+import AdvancedCybersecuritySuite from './pages/advanced-cybersecurity-suite';
+import AffiliateAttributionHub from './pages/affiliate-attribution-hub';
+import SOC2ComplianceAutomation from './pages/soc2-compliance-automation';
+import QuantumEdgeComputingPlatform from './pages/QuantumEdgeComputingPlatform';
+import ServiceComparisonPage from './pages/ServiceComparison';
+import ServiceInnovationHubPage from './pages/ServiceInnovationHub';
+import ServicePortfolioDashboardPage from './pages/ServicePortfolioDashboard';
+import ServiceRecommendationsPage from './pages/ServiceRecommendations';
+import ServicesShowcasePage from './pages/ServicesShowcase';
+import MicroSAASServicesPage from './pages/MicroSAASServicesPage';
+import UltimatePricing2025 from './pages/UltimatePricing2025';
+import UltimateServicesShowcase2025 from './pages/UltimateServicesShowcase2025';
+import ZeroTrustNetworkArchitecture from './pages/ZeroTrustNetworkArchitecture';
 
 function App() {
   // Performance optimization: Preload critical routes
@@ -68,57 +100,111 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider>
-      <WhitelabelProvider>
-        <Router>
-          <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-            {/* Enhanced SEO */}
-            <EnhancedSEO 
-              title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
-              description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
-              keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
-              type="website"
-              url="https://ziontechgroup.com"
-            />
-            
-            <Header />
-            <Sidebar />
-            
-            <main className="pt-20">
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  {/* Main Routes */}
-                  <Route path="/" element={<Home />} />
-                  <Route path="/services" element={<Services />} />
-                  
-                  {/* Missing pages from analysis */}
-                  <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
-                  <Route path="/autonomous-business-operations-platform" element={<AutonomousBusinessOperationsPlatform />} />
-                  
-                  {/* Company Routes */}
-                  <Route path="/about" element={<About />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/mission" element={<Mission />} />
-                  <Route path="/team" element={<Team />} />
-                  <Route path="/pricing" element={<Pricing />} />
-                  <Route path="/careers" element={<Careers />} />
-                  <Route path="/partners" element={<Partners />} />
-                  <Route path="/blog" element={<Blog />} />
-                  <Route path="/news" element={<News />} />
-                  
-                  {/* Additional Routes */}
-                  <Route path="/community" element={<Community />} />
-                  <Route path="/status" element={<Status />} />
-                </Routes>
-              </Suspense>
-            </main>
-            
-            <Footer />
-            <SonnerToaster />
-          </div>
-        </Router>
-      </WhitelabelProvider>
-    </ThemeProvider>
+    <HelmetProvider>
+      <Router>
+        <div className="App">
+          <Header />
+          <main className="pt-16"> {/* Add padding-top to account for fixed header */}
+            <Routes>
+              {/* Main Routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/blog" element={<Blog />} />
+              
+              {/* Legal & Info Pages */}
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/help-center" element={<HelpCenter />} />
+              <Route path="/support" element={<Support />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/team" element={<Team />} />
+              
+              {/* Technology Pages */}
+              <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/space-tech" element={<SpaceTech />} />
+              <Route path="/quantum-technology" element={<QuantumTechnology />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/mobile" element={<Mobile />} />
+              
+              {/* Content Pages */}
+              <Route path="/events" element={<Events />} />
+              <Route path="/tutorials" element={<Tutorials />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/documentation" element={<Documentation />} />
+              <Route path="/api" element={<API />} />
+              <Route path="/developer" element={<Developer />} />
+              
+              {/* Enterprise & Business Pages */}
+              <Route path="/enterprise" element={<Enterprise />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/community" element={<Community />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              
+              {/* Talent & HR Pages */}
+              <Route path="/talent" element={<Talent />} />
+              <Route path="/talents" element={<Talents />} />
+              <Route path="/talent-directory" element={<TalentDirectory />} />
+              
+              {/* Auth Pages */}
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              
+              {/* Dashboard & Admin Pages */}
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/analytics" element={<Analytics />} />
+              
+              {/* Mobile App Pages */}
+              <Route path="/mobile-launch" element={<MobileLaunch />} />
+              <Route path="/open-app" element={<OpenApp />} />
+              
+              {/* Service & Quote Pages */}
+              <Route path="/request-quote" element={<RequestQuote />} />
+              <Route path="/service-comparison" element={<ServiceComparison />} />
+              <Route path="/service-innovation-hub" element={<ServiceInnovationHub />} />
+              <Route path="/service-portfolio-dashboard" element={<ServicePortfolioDashboard />} />
+              <Route path="/service-recommendations" element={<ServiceRecommendations />} />
+              <Route path="/services-showcase" element={<ServicesShowcase />} />
+              <Route path="/micro-saas-services" element={<MicroSAASServices />} />
+              <Route path="/financial-solutions" element={<FinancialSolutions />} />
+              <Route path="/get-started" element={<GetStarted />} />
+              
+              {/* Specialized Service Pages */}
+              <Route path="/accessibility-auditor" element={<AccessibilityAuditor />} />
+              <Route path="/advanced-cybersecurity-suite" element={<AdvancedCybersecuritySuite />} />
+              <Route path="/affiliate-attribution-hub" element={<AffiliateAttributionHub />} />
+              <Route path="/soc2-compliance-automation" element={<SOC2ComplianceAutomation />} />
+              <Route path="/quantum-edge-computing-platform" element={<QuantumEdgeComputingPlatform />} />
+              <Route path="/service-comparison-page" element={<ServiceComparisonPage />} />
+              <Route path="/service-innovation-hub-page" element={<ServiceInnovationHubPage />} />
+              <Route path="/service-portfolio-dashboard-page" element={<ServicePortfolioDashboardPage />} />
+              <Route path="/service-recommendations-page" element={<ServiceRecommendationsPage />} />
+              <Route path="/services-showcase-page" element={<ServicesShowcasePage />} />
+              <Route path="/micro-saas-services-page" element={<MicroSAASServicesPage />} />
+              <Route path="/ultimate-pricing-2025" element={<UltimatePricing2025 />} />
+              <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
+              <Route path="/zero-trust-network-architecture" element={<ZeroTrustNetworkArchitecture />} />
+              
+              {/* Catch-all route */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 
