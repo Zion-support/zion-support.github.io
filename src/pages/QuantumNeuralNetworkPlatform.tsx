@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import { Brain, Cpu, Zap, Shield, TrendingUp, Users, ArrowRight } from 'lucide-react';
 
 const QuantumNeuralNetworkPlatform: React.FC = () => {

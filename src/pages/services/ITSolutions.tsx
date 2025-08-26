@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Check, Server, Shield, Cloud, Database, Network, Monitor, Zap } from 'lucide-react';
 
 export default function ITSolutions() {

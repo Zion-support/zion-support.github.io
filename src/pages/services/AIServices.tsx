@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Check, Brain, Zap, Shield, Database, Users, TrendingUp, Globe } from 'lucide-react';
 
 export default function AIServices() {

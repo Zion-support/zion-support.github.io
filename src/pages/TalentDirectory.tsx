@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SEO } from "@/components/SEO";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Search, Filter, MapPin, Briefcase, Star, Users, Zap, Building } from 'lucide-react';
 
 export default function TalentDirectory() {

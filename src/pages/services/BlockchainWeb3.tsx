@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Check, Link as LinkIcon, Shield, Zap, Globe, Target, Activity, Smartphone, Server, Cloud, Database, Users } from 'lucide-react';
 
 export default function BlockchainWeb3Services() {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { enhancedMicroSaasServices2025 } from '../data/comprehensiveServices2025';
 
 const Services: React.FC = () => {

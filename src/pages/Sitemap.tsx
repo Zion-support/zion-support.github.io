@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Head from 'next/head';
+import Link from 'next/link';
 
 const Sitemap: React.FC = () => {
   const sitemapStructure = [
