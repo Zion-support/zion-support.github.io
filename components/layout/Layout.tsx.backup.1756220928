@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import UltraFuturisticNavigation2035 from './UltraFuturisticNavigation2035';
+import UltraFuturisticFooter2035 from './UltraFuturisticFooter2035';
+=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import EnhancedNavigation2025 from './EnhancedNavigation2025';
 import UltraFuturisticFooter2034 from './UltraFuturisticFooter2034';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraAdvancedFuturisticBackground from '../ui/UltraAdvancedFuturisticBackground';
 import TopContactBar from './TopContactBar';

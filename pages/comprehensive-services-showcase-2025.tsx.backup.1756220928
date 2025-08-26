@@ -40,6 +40,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
   const [sortBy, setSortBy] = useState('name');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
+<<<<<<< HEAD
+  const filteredServices = innovativeRealMicroSaasServices2025.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+=======
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     
@@ -53,6 +59,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
     
     const matchesCategory = selectedCategory === 'all' || 
                            service.category.toLowerCase().includes(selectedCategory) ||
@@ -66,11 +73,17 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       case 'name':
         return a.name.localeCompare(b.name);
       case 'price':
+<<<<<<< HEAD
+        return a.pricing.starter.price - b.pricing.starter.price;
+      case 'market':
+        return parseFloat(b.marketSize.replace('$', '').replace('B', '')) - parseFloat(a.marketSize.replace('$', '').replace('B', ''));
+=======
         const priceA = parseFloat(a.price.replace(/[$,]/g, ''));
         const priceB = parseFloat(b.price.replace(/[$,]/g, ''));
         return priceA - priceB;
       case 'category':
         return a.category.localeCompare(b.category);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
       default:
         return 0;
     }
@@ -228,6 +241,25 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 exit={{ opacity: 0 }}
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
+<<<<<<< HEAD
+                {sortedServices.map((service, index) => {
+                  const CategoryIcon = getCategoryIcon(service.category);
+                  const categoryColor = getCategoryColor(service.category);
+                  
+                  return (
+                    <motion.div
+                      key={service.id}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                    >
+                      {/* Category Badge */}
+                      <div className="absolute top-4 right-4">
+                        <div className={`inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${categoryColor} text-white`}>
+                          <CategoryIcon className="w-3 h-3" />
+                          <span>{service.category}</span>
+=======
                 <div className="relative p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 h-full">
                   {/* Category Badge */}
                   <div className="absolute top-4 right-4">
@@ -269,6 +301,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                         <div key={featureIndex} className="flex items-center gap-2 text-xs text-gray-300">
                           <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0" />
                           <span className="line-clamp-1">{feature}</span>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
                         </div>
                       </div>
 
@@ -311,6 +344,13 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                         <p className="text-sm text-gray-400">Starting from</p>
                       </div>
 
+<<<<<<< HEAD
+                      {/* Market Info */}
+                      <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
+                        <span>Market: {service.marketSize}</span>
+                        <span className="text-cyan-400">Hot</span>
+                      </div>
+=======
                   {/* Tags */}
                   <div className="mb-6">
                     <div className="flex flex-wrap gap-1">
@@ -324,6 +364,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                       ))}
                     </div>
                   </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
 
                       {/* CTA Button */}
                       <Link
