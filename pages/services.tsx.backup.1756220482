@@ -38,6 +38,8 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { quantumSpaceServices } from '../data/quantum-space-services';
 import { enterpriseITServices } from '../data/enterprise-it-services';
+<<<<<<< HEAD
+=======
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { newRealServices } from '../data/new-real-services';
@@ -76,6 +78,7 @@ import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-se
 import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
 import { ultimate2026Services } from '../data/ultimate-2026-services';
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7821
 
 				<div className="mt-10 grid gap-6 sm:grid-cols-2">
 					<section className="rounded-lg border p-6">
@@ -87,6 +90,14 @@ import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovat
 						</ul>
 					</section>
 
+<<<<<<< HEAD
+// Helper function to get service description
+const getServiceDescription = (service: any) => {
+  if (service.description) return service.description;
+  if (service.tagline) return service.tagline;
+  return 'No description available';
+};
+=======
   const allServices = [
     ...innovativeAIServices,
     ...quantumSpaceServices,
@@ -130,6 +141,7 @@ import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovat
     ...ultimate2026Services,
     ...revolutionary2026Innovations
   ];
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7821
 
 // Create unified services array
 const allServices = [
