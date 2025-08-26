@@ -26,6 +26,9 @@ const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -72,6 +75,9 @@ function App() {
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/enhanced-services" element={<EnhancedServices />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/solutions" element={<Solutions />} />
               
               {/* AI Services Routes */}
               <Route path="/ai-services" element={<AIServicesPage />} />
