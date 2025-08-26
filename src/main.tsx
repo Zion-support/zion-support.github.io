@@ -19,10 +19,8 @@ import { LanguageProvider } from './context/LanguageContext';
 import { LanguageDetectionPopup } from './components/LanguageDetectionPopup.tsx';
 
 // Import auth and notification providers
-// Import the AuthProvider directly from the auth context barrel file. Using the
-// alias here ensures Vite resolves the path correctly when building.
-import { AuthProvider } from '@/context/auth';
-import { NotificationProvider } from './context';
+import { AuthProvider } from '@/context/auth/AuthProvider';
+import { NotificationProvider, WhitelabelProvider } from './context';
 
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
@@ -102,24 +100,20 @@ window.addEventListener('error', (e) => {
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <WhitelabelProvider>
-          <Router>
-            <AuthProvider>
-              <NotificationProvider>
-                <AnalyticsProvider>
-                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <AppLayout>
-                      <App />
-                    </AppLayout>
-                    <LanguageDetectionPopup />
-                  </LanguageProvider>
-                </AnalyticsProvider>
-              </NotificationProvider>
-            </AuthProvider>
-          </Router>
-        </WhitelabelProvider>
-      </QueryClientProvider>
+      <Router>
+        <AuthProvider>
+          <NotificationProvider>
+            <AnalyticsProvider>
+              <WhitelabelProvider>
+                <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                  <App />
+                  <LanguageDetectionPopup />
+                </LanguageProvider>
+              </WhitelabelProvider>
+            </AnalyticsProvider>
+          </NotificationProvider>
+        </AuthProvider>
+      </Router>
     </HelmetProvider>
   </React.StrictMode>,
 );
