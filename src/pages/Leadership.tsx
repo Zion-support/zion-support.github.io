@@ -1,18 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Award, 
-  Globe, 
-  Target, 
-  Zap,
-  ArrowRight,
-  Linkedin,
-  Mail,
-  MapPin,
-  Calendar
-} from 'lucide-react';
+import Link from 'next/link';
+import { Users, Award, Globe, Lightbulb, Target, Heart, Shield, Rocket, Brain, Code, Palette, Database, Network, Zap, Star, Linkedin, Twitter, Mail } from 'lucide-react';
 
 const Leadership: React.FC = () => {
   const leadershipTeam = [

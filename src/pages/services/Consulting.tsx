@@ -1,21 +1,4 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { Lightbulb, Users, Target, TrendingUp, Zap, Globe, ArrowRight, CheckCircle } from 'lucide-react';
-
-const Consulting: React.FC = () => {
-  const features = [
-    {
-<<<<<<< HEAD
-      icon: Lightbulb,
-      title: "Strategic Consulting",
-      description: "Expert guidance for technology strategy and business alignment"
-    },
-    {
-      icon: Users,
-      title: "Team Training",
-      description: "Comprehensive training programs for your technology teams"
-=======
       title: "Technology Assessment",
       description: "Comprehensive evaluation of your current technology landscape and capabilities",
       features: ["Infrastructure Review", "Technology Stack Analysis", "Gap Identification", "Recommendations"],
@@ -32,31 +15,11 @@ const Consulting: React.FC = () => {
       description: "Expert guidance in selecting the right technology partners and solutions",
       features: ["Requirements Analysis", "Vendor Evaluation", "Contract Negotiation", "Implementation Support"],
       icon: "🤝"
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
     },
     {
       icon: Target,
       title: "Project Management",
-<<<<<<< HEAD
-<<<<<<< HEAD
-      description: "Professional project management and delivery services"
-    },
-    {
-      icon: TrendingUp,
-      title: "Performance Optimization",
-      description: "Data-driven insights to improve business performance"
-    }
-  ];
-
-  const benefits = [
-    "Expert guidance from industry professionals",
-    "Customized solutions for your business needs",
-    "Proven methodologies and best practices",
-    "Ongoing support and consultation",
-    "Measurable results and ROI"
 =======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
       description: "Professional project management for successful technology implementations",
       features: ["Project Planning", "Team Coordination", "Timeline Management", "Quality Assurance"],
       icon: "📊"
@@ -68,7 +31,6 @@ const Consulting: React.FC = () => {
     { step: "Analysis", icon: "📊", description: "Analyze current state and identify opportunities" },
     { step: "Strategy", icon: "🎯", description: "Develop comprehensive recommendations" },
     { step: "Implementation", icon: "🚀", description: "Execute strategy with ongoing support" }
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
   ];
 
   const consultingAreas = [
@@ -77,6 +39,8 @@ const Consulting: React.FC = () => {
     { area: "Security & Compliance", solutions: ["Security assessment", "Compliance audit", "Risk management", "Security strategy"] },
     { area: "Cloud Strategy", solutions: ["Cloud assessment", "Migration planning", "Cost optimization", "Multi-cloud strategy"] }
   ];
+=======
+import Link from 'next/link';
 
   return (
     <div className="min-h-screen bg-background">
@@ -87,120 +51,6 @@ const Consulting: React.FC = () => {
         canonical="https://ziontechgroup.com/services/consulting"
       />
 
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-indigo-900 via-indigo-800 to-blue-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
-          <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Technology
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400">
-              {" "}Consulting
-            </span>
-          </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto leading-relaxed mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Get expert guidance to navigate the complex technology landscape and make informed 
-            decisions that drive your business forward.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <button className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-              Get Expert Advice
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Consulting Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive consulting solutions to address your technology challenges
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-indigo-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Consulting Services?</h2>
-              <p className="text-xl text-gray-600">
-                Experience the benefits of expert technology consulting
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-center p-4 bg-white rounded-lg shadow-sm"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
-                  </div>
-                  <span className="text-lg text-gray-700">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Get Expert Guidance?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how our consulting services can help you make better technology decisions.
-          </p>
-          <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Schedule a Consultation
-          </button>
-        </div>
-      </section>
-    </div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -310,40 +160,6 @@ const Consulting: React.FC = () => {
               </p>
             </div>
             
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Expert Guidance</h3>
-                <p className="text-gray-300">Seasoned consultants with deep industry expertise</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Cost Savings</h3>
-                <p className="text-gray-300">Avoid costly mistakes and optimize technology investments</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
-                <p className="text-gray-300">Track record of successful technology implementations</p>
-              </div>
-            </div>
-          </div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {consultingAreas.map((area, index) => (
                 <div
@@ -428,7 +244,6 @@ const Consulting: React.FC = () => {
               ))}
             </div>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
         </section>
 
         {/* CTA Section */}
@@ -450,10 +265,6 @@ const Consulting: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
   );
 };
 

@@ -1,17 +1,14 @@
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import React from 'react';
+import Link from 'next/link';
 
 const Terms: React.FC = () => {
   return (
-    
-      <SEO
-        title="Terms of Service"
-        description="The terms and conditions for using the Zion platform."
-        canonical="https://ziontechgroup.com/terms"
-=======
-=======
-=======
-      />
+    <>
+      <Helmet>
+        <title>Terms of Service - Zion Tech Group</title>
+        <meta name="description" content="Read Zion Tech Group's Terms of Service. Learn about the terms and conditions governing the use of our services and website." />
+        <meta name="keywords" content="terms of service, terms and conditions, user agreement, Zion Tech Group" />
+      </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -232,7 +229,7 @@ const Terms: React.FC = () => {
           </div>
         </div>
       </div>
-    
+    </>
   );
 };
 

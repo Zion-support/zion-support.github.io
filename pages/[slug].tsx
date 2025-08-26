@@ -142,7 +142,7 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
             {service.name}
           </h1>
-                      <p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">

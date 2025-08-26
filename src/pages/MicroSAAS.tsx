@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Rocket, Zap, Users, Globe, Shield, TrendingUp, ArrowRight } from 'lucide-react';
 
 const MicroSAAS: React.FC = () => {
   const microSaasServices = [
