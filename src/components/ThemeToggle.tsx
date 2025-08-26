@@ -1,44 +1,86 @@
-import React, { useState, useEffect } from 'react'
-import { Sun, Moon } from 'lucide-react'
+import React, { useState, useEffect } from 'react';
+import { Sun, Moon, Monitor } from 'lucide-react';
 
-export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false)
+type Theme = 'light' | 'dark' | 'system';
+
+export function ThemeToggle() {
+  const [theme, setTheme] = useState<Theme>('system');
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
-    const savedTheme = localStorage.getItem('zion-theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDark(true)
-      document.documentElement.classList.add('dark')
+    setMounted(true);
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    if (savedTheme) {
+      setTheme(savedTheme);
     }
-  }, [])
+  }, []);
 
-  const toggleTheme = () => {
-    const newTheme = !isDark
-    setIsDark(newTheme)
+  useEffect(() => {
+    if (!mounted) return;
+
+    const root = document.documentElement;
     
-    if (newTheme) {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('zion-theme', 'dark')
+    if (theme === 'system') {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.classList.remove('light', 'dark');
+      root.classList.add(systemTheme);
     } else {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('zion-theme', 'light')
+      root.classList.remove('light', 'dark');
+      root.classList.add(theme);
     }
+    
+    localStorage.setItem('theme', theme);
+  }, [theme, mounted]);
+
+  const handleThemeChange = (newTheme: Theme) => {
+    setTheme(newTheme);
+  };
+
+  if (!mounted) {
+    return (
+      <div className="w-10 h-10 bg-zion-slate-light/20 rounded-lg animate-pulse" />
+    );
   }
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-    >
-      {isDark ? (
-        <Sun className="w-5 h-5 text-yellow-500" />
-      ) : (
-        <Moon className="w-5 h-5 text-gray-600" />
-      )}
-    </button>
-  )
+    <div className="relative">
+      <div className="flex items-center bg-zion-slate-light/10 rounded-lg p-1">
+        <button
+          onClick={() => handleThemeChange('light')}
+          className={`p-2 rounded-md transition-all duration-200 ${
+            theme === 'light'
+              ? 'bg-zion-cyan text-white shadow-lg'
+              : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
+          }`}
+          aria-label="Light theme"
+        >
+          <Sun className="w-4 h-4" />
+        </button>
+        
+        <button
+          onClick={() => handleThemeChange('system')}
+          className={`p-2 rounded-md transition-all duration-200 ${
+            theme === 'system'
+              ? 'bg-zion-cyan text-white shadow-lg'
+              : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
+          }`}
+          aria-label="System theme"
+        >
+          <Monitor className="w-4 h-4" />
+        </button>
+        
+        <button
+          onClick={() => handleThemeChange('dark')}
+          className={`p-2 rounded-md transition-all duration-200 ${
+            theme === 'dark'
+              ? 'bg-zion-cyan text-white shadow-lg'
+              : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
+          }`}
+          aria-label="Dark theme"
+        >
+          <Moon className="w-4 h-4" />
+        </button>
+      </div>
+    </div>
+  );
 }
