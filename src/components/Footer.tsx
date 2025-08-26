@@ -11,16 +11,41 @@ const Footer: React.FC = () => {
     { name: "Consulting", path: "/services/consulting" }
   ];
 
+  const solutions = [
+    { name: "Enterprise", path: "/solutions/enterprise" },
+    { name: "Financial", path: "/solutions/financial" },
+    { name: "Healthcare", path: "/solutions/healthcare" },
+    { name: "Government", path: "/solutions/government" },
+    { name: "Manufacturing", path: "/solutions/manufacturing" },
+    { name: "Retail", path: "/solutions/retail" }
+  ];
+
   const company = [
     { name: "About Us", path: "/about" },
+    { name: "Team", path: "/team" },
     { name: "Careers", path: "/careers" },
-    { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" }
+  ];
+
+  const resources = [
+    { name: "Blog", path: "/blog" },
+    { name: "Events", path: "/events" },
+    { name: "Webinars", path: "/webinars" },
+    { name: "White Papers", path: "/white-papers" },
+    { name: "Tutorials", path: "/tutorials" },
+    { name: "Research & Development", path: "/research-development" }
   ];
 
   const legal = [
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Service", path: "/terms" }
+  ];
+
+  const support = [
+    { name: "Help Center", path: "/help-center" },
+    { name: "Support", path: "/support" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Get Started", path: "/get-started" }
   ];
 
   const socialLinks = [
@@ -56,7 +81,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
@@ -98,6 +123,23 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
+          {/* Solutions */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+            <ul className="space-y-2">
+              {solutions.map((solution) => (
+                <li key={solution.path}>
+                  <Link 
+                    to={solution.path} 
+                    className="text-gray-300 hover:text-white transition-colors duration-300"
+                  >
+                    {solution.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Company */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
@@ -115,10 +157,37 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Resources */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Legal</h4>
+            <h4 className="text-lg font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
+              {resources.map((resource) => (
+                <li key={resource.path}>
+                  <Link 
+                    to={resource.path} 
+                    className="text-gray-300 hover:text-white transition-colors duration-300"
+                  >
+                    {resource.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Support & Legal */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Support & Legal</h4>
+            <ul className="space-y-2">
+              {support.map((item) => (
+                <li key={item.path}>
+                  <Link 
+                    to={item.path} 
+                    className="text-gray-300 hover:text-white transition-colors duration-300"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
               {legal.map((item) => (
                 <li key={item.path}>
                   <Link 
