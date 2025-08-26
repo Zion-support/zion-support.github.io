@@ -401,30 +401,29 @@ export default function EnhancedNavigation2025() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden"
+            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50"
           >
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <button
-                    onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/5"
+                    onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
+                    className="w-full flex items-center justify-between px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
                   >
-                    <div className="flex items-center gap-3">
-                      {item.icon}
-                      <span>{item.name}</span>
+                    <span className="font-medium">{item.name}</span>
+                    <div className="flex items-center space-x-2">
                       {item.badge && (
                         <span className="px-2 py-1 text-xs font-semibold bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-full">
                           {item.badge}
                         </span>
                       )}
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        activeSubmenu === item.name ? 'rotate-180' : ''
+                      }`} />
                     </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
                   </button>
-                  
-                  {activeDropdown === item.name && (
+
+                  {activeSubmenu === item.name && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
@@ -432,33 +431,29 @@ export default function EnhancedNavigation2025() {
                       transition={{ duration: 0.2 }}
                       className="ml-6 mt-2 space-y-2"
                     >
-                      {item.children?.map((child) => (
+                      {item.submenu?.map((subitem) => (
                         <Link
-                          key={child.name}
-                          href={child.href}
-                          onClick={closeAllDropdowns}
-                          className="block p-3 text-gray-400 hover:text-cyan-300 transition-colors duration-200 rounded-lg hover:bg-white/5"
+                          key={subitem.name}
+                          href={subitem.href}
+                          onClick={closeMenu}
+                          className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
                         >
-                          <div className="font-medium">{child.name}</div>
-                          <div className="text-sm text-gray-500">{child.description}</div>
+                          <h4 className="text-white font-medium">{subitem.name}</h4>
+                          <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
                         </Link>
                       ))}
                     </motion.div>
                   )}
                 </div>
               ))}
-              
-              {/* Mobile CTA Buttons */}
-              <div className="pt-4 space-y-3">
-                <Link href="/contact" onClick={closeAllDropdowns}>
-                  <button className="w-full px-6 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300">
-                    Get Started
-                  </button>
-                </Link>
-                <Link href="/comprehensive-services-showcase-2025" onClick={closeAllDropdowns}>
-                  <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300">
-                    View Services
-                  </button>
+
+              {/* Mobile CTA */}
+              <div className="pt-4">
+                <Link
+                  href="/contact"
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
+                >
+                  Get Started
                 </Link>
               </div>
             </div>

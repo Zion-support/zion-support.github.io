@@ -14,23 +14,11 @@ interface SEOProps {
 <<<<<<< HEAD
   canonical?: string;
   ogImage?: string;
-<<<<<<< HEAD
-=======
-  keywords?: string | string[];
   image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-  structuredData?: any;
+  noIndex?: boolean;
   noindex?: boolean;
   nofollow?: boolean;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+  jsonLd?: any;
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -219,41 +207,6 @@ export default function SEO({ title, description, canonical, ogImage }: SEOProps
   );
 };
 
-export default function SEO({ title, description, canonical, ogImage }: SEOProps) {
-  const router = useRouter();
-
-  const pageTitle = title || DEFAULTS.title;
-  const pageDescription = description || DEFAULTS.description;
-
-  // Derive canonical from router when not explicitly provided
-  const asPath = router?.asPath || '/';
-  const pathWithoutQueryOrHash = asPath.split('#')[0].split('?')[0];
-  const normalizedPath = pathWithoutQueryOrHash.endsWith('/') ? pathWithoutQueryOrHash : `${pathWithoutQueryOrHash}/`;
-  const derivedCanonical = `${DEFAULTS.url}${normalizedPath === '/' ? '' : normalizedPath}`;
-  const canonicalUrl = canonical || derivedCanonical;
-
-  return (
-    <Head>
-      <title>{pageTitle}</title>
-      <meta name="description" content={pageDescription} />
-      <meta name="robots" content="index,follow" />
-      {canonicalUrl ? <link rel="canonical" href={canonicalUrl} /> : null}
-      <link rel="alternate" hrefLang="en" href={canonicalUrl} />
-      <meta property="og:title" content={pageTitle} />
-      <meta property="og:description" content={pageDescription} />
-      <meta property="og:url" content={pageUrl} />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      {ogImage ? <meta property="og:image" content={ogImage} /> : null}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={pageTitle} />
-      <meta name="twitter:description" content={pageDescription} />
-      {ogImage ? <meta name="twitter:image" content={ogImage} /> : null}
-    </Head>
-  );
-};
-
 export default function SEO({ title, description, canonical, ogImage, image, noIndex, noindex, nofollow, jsonLd }: SEOProps) {
 	const router = useRouter();
 	const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || DEFAULTS.url;
@@ -283,41 +236,6 @@ export default function SEO({ title, description, canonical, ogImage, image, noI
 	}
 	const canonicalUrl = withTrailingSlash(canonical ? toAbsoluteUrl(canonical) : normalizedCanonical);
 
-	// Mark SEO rendered synchronously to avoid duplicate default + page-level SEO
-	const seoCtx = useSEOContext();
-	if (seoCtx && !seoCtx.renderedRef.current) {
-		seoCtx.renderedRef.current = true;
-	}
-
-	// Default JSON-LD if none provided
-	const defaultJsonLd = [
-		{
-			"@context": "https://schema.org",
-			"@type": "Organization",
-			"name": "Zion Tech Group",
-			"url": baseUrl,
-			"logo": `${baseUrl.replace(/\/$/, '')}/favicon.svg`,
-			"sameAs": [
-				"https://www.linkedin.com/company/zion-tech-group",
-				"https://github.com/Zion-Holdings",
-				"https://www.instagram.com/ziontechgroup",
-				"https://www.youtube.com/@ziontechgroup",
-				"https://twitter.com/ziontechgroup"
-			]
-		},
-		{
-			"@context": "https://schema.org",
-			"@type": "WebSite",
-			"url": baseUrl,
-			"name": "Zion Tech Group",
-			"potentialAction": {
-				"@type": "SearchAction",
-				"target": `${baseUrl.replace(/\/$/, '')}/search?q={search_term_string}`,
-				"query-input": "required name=search_term_string"
-			}
-		}
-	];
-
 	return (
 		<Head>
 			<title>{pageTitle}</title>
@@ -341,8 +259,8 @@ export default function SEO({ title, description, canonical, ogImage, image, noI
 			<meta name="twitter:description" content={pageDescription} />
 			<meta name="twitter:image" content={imageUrl} />
 			<meta name="twitter:image:alt" content={imageAlt} />
-			{(jsonLd || defaultJsonLd) ? (
-				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd || defaultJsonLd) }} />
+			{jsonLd ? (
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 			) : null}
 		</Head>
 	);

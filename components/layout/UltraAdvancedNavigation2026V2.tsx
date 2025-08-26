@@ -207,69 +207,34 @@ export default function UltraAdvancedNavigation2026V2() {
             transition={{ duration: 0.3 }}
             className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden"
           >
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-8">
-                <div className="text-xl font-bold text-white">Menu</div>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="p-2 text-gray-300 hover:text-white transition-colors"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-
-              <div className="space-y-6">
-                {navigationItems.map((item) => (
-                  <div key={item.name}>
-                    {item.dropdown ? (
-                      <div>
-                            <button
-                              onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                              className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
-                            >
-                              <div className="flex items-center space-x-3">
-                                {item.icon}
-                                <span>{item.name}</span>
-                              </div>
-                              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                                activeDropdown === item.name ? 'rotate-180' : ''
-                              }`} />
-                            </button>
-                            {activeDropdown === item.name && (
-                              <div className="ml-6 mt-2 space-y-2">
-                                {item.dropdown.map((dropdownItem) => (
-                                  <Link
-                                    key={dropdownItem.name}
-                                    href={dropdownItem.href}
-                                    onClick={() => setIsOpen(false)}
-                                    className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white"
-                                  >
-                                    {dropdownItem.icon}
-                                    <span>{dropdownItem.name}</span>
-                                  </Link>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
-                      >
-                        {item.icon}
-                        <span>{item.name}</span>
-                      </Link>
-                    )}
-                  </div>
-                ))}
-
-                <div className="pt-6 border-t border-white/10">
-                  <Link href="/contact" onClick={() => setIsOpen(false)}>
-                    <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
-                      Get Started
-                    </button>
-                  </Link>
+            <div className="px-4 py-6 space-y-4">
+              {navigationItems.map((item) => (
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <div className="text-white font-medium mb-2">{item.name}</div>
+                      <div className="ml-4 space-y-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="block text-gray-400 hover:text-white transition-colors py-1"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="block text-white hover:text-cyan-300 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                 </div>
 
                 {/* Mobile Contact Info */}
