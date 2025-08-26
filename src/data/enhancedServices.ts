@@ -382,6 +382,282 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 94
+  },
+  {
+    id: "ai-governance-compliance-suite",
+    title: "AI Governance & Compliance Suite",
+    description: "End-to-end governance for AI systems including policy design, risk assessment, model registries, bias testing, audit trails, and reporting compliant with NIST AI RMF, EU AI Act, and ISO/IEC 23894.",
+    category: "AI & Machine Learning",
+    price: 7999,
+    currency: "$",
+    tags: ["AI Governance", "Compliance", "Risk Management", "Model Registry"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1556740714-a8395b3bf30f?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-10T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 64,
+    featured: true,
+    location: "Global",
+    availability: "3-6 Weeks",
+    aiScore: 96
+  },
+  {
+    id: "finops-cloud-cost-optimizer",
+    title: "FinOps Cloud Cost Optimizer",
+    description: "Hands-on FinOps practice launch: workload right‑sizing, commitment planning (SP/RI), storage lifecycle tuning, anomaly detection, unit economics dashboards, and showback/chargeback setup across AWS/Azure/GCP.",
+    category: "Cloud Management",
+    price: 4999,
+    currency: "$",
+    tags: ["FinOps", "Cost Optimization", "Cloud Governance", "Multi-Cloud"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-12T09:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 118,
+    location: "Global",
+    availability: "2-4 Weeks",
+    aiScore: 92
+  },
+  {
+    id: "managed-kubernetes-platform-engineering",
+    title: "Managed Kubernetes & Platform Engineering",
+    description: "Golden paths, IDP portals, GitOps, progressive delivery, policy-as-code, SSO, and multi‑cluster governance. Includes SRE runbooks, autoscaling, and cost guardrails.",
+    category: "Development & DevOps",
+    price: 8999,
+    currency: "$",
+    tags: ["Kubernetes", "Platform Engineering", "GitOps", "SRE"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-14T08:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 72,
+    featured: true,
+    location: "Global",
+    availability: "4-8 Weeks",
+    aiScore: 94
+  },
+  {
+    id: "m365-security-hardening-zero-trust",
+    title: "Microsoft 365 Security Hardening & Zero Trust",
+    description: "Conditional Access, baseline hardening, Defender for Office 365, identity protection, phishing simulation, and insider risk tuning mapped to Zero Trust.",
+    category: "Cybersecurity",
+    price: 3499,
+    currency: "$",
+    tags: ["M365", "Zero Trust", "Defender", "Identity"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-15T12:30:00.000Z",
+    rating: 4.7,
+    reviewCount: 91,
+    location: "Global",
+    availability: "1-3 Weeks",
+    aiScore: 90
+  },
+  {
+    id: "data-mesh-accelerator",
+    title: "Data Mesh Accelerator",
+    description: "Domain‑oriented data products on lakehouse (Delta/Iceberg), federated governance, data contracts, lineage, and self‑serve platform with quality SLAs.",
+    category: "Data & Analytics",
+    price: 10999,
+    currency: "$",
+    tags: ["Data Mesh", "Lakehouse", "Governance", "Lineage"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-16T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 37,
+    featured: true,
+    location: "Global",
+    availability: "6-10 Weeks",
+    aiScore: 95
+  },
+  {
+    id: "privacy-preserving-ml-federated-learning",
+    title: "Privacy‑Preserving ML & Federated Learning",
+    description: "Design and deploy FL with DP/HE for regulated data sharing across hospitals/banks; includes threat modeling, privacy budgets, and eval tooling.",
+    category: "AI & Machine Learning",
+    price: 12999,
+    currency: "$",
+    tags: ["Federated Learning", "Differential Privacy", "Homomorphic Encryption", "Compliance"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-17T11:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 24,
+    location: "Global",
+    availability: "8-12 Weeks",
+    aiScore: 97
+  },
+  {
+    id: "sap-erp-automation-copilot",
+    title: "SAP/ERP Automation Copilot",
+    description: "Task mining + low‑code bots for AP/AR, MRP, order management; out‑of‑the‑box connectors for SAP, Oracle, Dynamics; governance & audit trails.",
+    category: "AI Automation",
+    price: 5999,
+    currency: "$",
+    tags: ["RPA", "Task Mining", "ERP", "SAP"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-18T09:30:00.000Z",
+    rating: 4.7,
+    reviewCount: 58,
+    location: "Global",
+    availability: "3-6 Weeks",
+    aiScore: 91
+  },
+  {
+    id: "quantum-ready-risk-lab",
+    title: "Quantum‑Ready Risk Lab",
+    description: "Security posture evaluation for PQC, crypto inventory, migration roadmaps to NIST PQC algorithms, and hybrid KEM integrations for apps and VPNs.",
+    category: "Cybersecurity",
+    price: 7499,
+    currency: "$",
+    tags: ["Post‑Quantum", "PQC", "Cryptography", "Migration"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-19T12:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 33,
+    location: "Global",
+    availability: "4-6 Weeks",
+    aiScore: 93
+  },
+  {
+    id: "responsible-genai-content-safety",
+    title: "Responsible GenAI Content Safety",
+    description: "Hallucination detection, toxicity filters, copyright scanning, safety policies, red‑teaming, and governance dashboards for LLM applications.",
+    category: "AI & Machine Learning",
+    price: 3999,
+    currency: "$",
+    tags: ["GenAI", "Safety", "RLHF", "Governance"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-20T08:30:00.000Z",
+    rating: 4.6,
+    reviewCount: 49,
+    location: "Global",
+    availability: "2-5 Weeks",
+    aiScore: 90
+  },
+  {
+    id: "contact-center-ai-automation",
+    title: "Contact Center AI Automation",
+    description: "Voicebots + agent assist + QA with analytics; integrates with Genesys, Avaya, Five9; measurable AHT reduction and CSAT lift.",
+    category: "Customer Analytics",
+    price: 4599,
+    currency: "$",
+    tags: ["Voice AI", "Agent Assist", "QA", "CX"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-21T10:30:00.000Z",
+    rating: 4.8,
+    reviewCount: 77,
+    location: "Global",
+    availability: "3-6 Weeks",
+    aiScore: 92
+  },
+  {
+    id: "iot-edge-observability",
+    title: "IoT Edge Observability & Device Management",
+    description: "Fleet mgmt, OTA updates, secure enrollment, metrics/traces/logs, and anomaly detection for industrial IoT at scale.",
+    category: "Edge Computing",
+    price: 6499,
+    currency: "$",
+    tags: ["IoT", "Edge", "Observability", "OTA"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1553406623-0eb7d7482cf7?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-22T09:45:00.000Z",
+    rating: 4.7,
+    reviewCount: 41,
+    location: "Global",
+    availability: "4-8 Weeks",
+    aiScore: 91
+  },
+  {
+    id: "healthcare-interop-fhir-apis",
+    title: "Healthcare Interoperability & FHIR APIs",
+    description: "HL7 v2 to FHIR pipelines, consent mgmt, SMART on FHIR apps, and security hardening for HIPAA compliance.",
+    category: "Healthcare Technology",
+    price: 9999,
+    currency: "$",
+    tags: ["FHIR", "Interoperability", "HIPAA", "Healthcare"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1581091014534-8987c1d2c602?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-23T11:15:00.000Z",
+    rating: 4.9,
+    reviewCount: 29,
+    location: "Global",
+    availability: "6-12 Weeks",
+    aiScore: 94
+  },
+  {
+    id: "payments-risk-fraud-ml",
+    title: "Payments Risk & Fraud ML",
+    description: "Real‑time rules + graph features + ML pipelines for fraud prevention in fintech/e‑commerce; includes monitoring & alerting.",
+    category: "Financial Technology",
+    price: 8999,
+    currency: "$",
+    tags: ["Fraud", "Graph", "Real‑time", "FinTech"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      email: "kleber@ziontechgroup.com"
+    },
+    images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2025-01-24T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 52,
+    location: "Global",
+    availability: "5-9 Weeks",
+    aiScore: 93
   }
 ];
 
