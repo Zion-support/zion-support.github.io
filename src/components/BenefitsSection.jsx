@@ -1,103 +1,104 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, Zap, Shield, Users, Clock, TrendingUp, Star, Award, Globe, Lock } from 'lucide-react';
-const benefits = [
+import { 
+  Brain, 
+  Shield, 
+  Zap, 
+  BarChart3, 
+  Users, 
+  Clock, 
+  Target, 
+  Rocket,
+  Star,
+  Award,
+  TrendingUp,
+  Globe
+} from 'lucide-react';
+
+export default function BenefitsSection() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const benefits = [
     {
-        icon: <Zap className="w-8 h-8"/>,
-        title: "Lightning Fast",
-        description: "Get your projects delivered in record time with our efficient development process",
-        color: "from-zion-cyan to-zion-blue",
-        bgColor: "from-zion-cyan/20 to-zion-blue/20",
-        stats: "3x Faster",
-        features: ["Rapid Prototyping", "Quick Deployment", "Fast Iteration"]
+      icon: <Brain className="w-10 h-10" />,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.',
+      color: 'from-blue-500 to-cyan-500',
+      bgColor: 'from-blue-500/20 to-cyan-500/20',
+      stats: '40-60% Cost Reduction',
+      features: ['Machine Learning', 'Predictive Analytics', 'Process Automation']
     },
     {
-        icon: <Shield className="w-8 h-8"/>,
-        title: "Enterprise Security",
-        description: "Bank-grade security measures to protect your data and applications",
-        color: "from-zion-purple to-zion-purple-dark",
-        bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-        stats: "99.99% Uptime",
-        features: ["SOC 2 Compliant", "GDPR Ready", "End-to-End Encryption"]
+      icon: <Shield className="w-10 h-10" />,
+      title: 'Quantum-Secure Protection',
+      description: 'Unbreakable security with quantum-resistant encryption and AI-powered threat detection.',
+      color: 'from-green-500 to-emerald-500',
+      bgColor: 'from-green-500/20 to-emerald-500/20',
+      stats: '99.9% Uptime',
+      features: ['Zero-Trust Security', 'Threat Detection', 'Compliance Ready']
     },
     {
-        icon: <Users className="w-8 h-8"/>,
-        title: "Expert Team",
-        description: "Work with certified professionals with years of industry experience",
-        color: "from-zion-cyan-light to-zion-cyan",
-        bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-        stats: "500+ Experts",
-        features: ["Certified Professionals", "Global Network", "Industry Veterans"]
+      icon: <Zap className="w-10 h-10" />,
+      title: 'Autonomous Operations',
+      description: 'Self-managing systems that run your business operations with minimal human intervention.',
+      color: 'from-purple-500 to-indigo-500',
+      bgColor: 'from-purple-500/20 to-indigo-500/20',
+      stats: '300% Productivity',
+      features: ['Auto-scaling', 'Self-healing', 'Smart Routing']
     },
     {
-        icon: <Clock className="w-8 h-8"/>,
-        title: "24/7 Support",
-        description: "Round-the-clock assistance whenever you need help or have questions",
-        color: "from-zion-purple-light to-zion-purple",
-        bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-        stats: "24/7",
-        features: ["Live Chat", "Phone Support", "Email Response"]
-    },
-    {
-        icon: <TrendingUp className="w-8 h-8"/>,
-        title: "Scalable Solutions",
-        description: "Built to grow with your business, from startup to enterprise",
-        color: "from-zion-cyan to-zion-purple",
-        bgColor: "from-zion-cyan/20 to-zion-purple/20",
-        stats: "10x Growth",
-        features: ["Auto-scaling", "Load Balancing", "Performance Monitoring"]
-    },
-    {
-        icon: <CheckCircle className="w-8 h-8"/>,
-        title: "Quality Guaranteed",
-        description: "100% satisfaction guarantee with our comprehensive testing process",
-        color: "from-zion-purple to-zion-cyan",
-        bgColor: "from-zion-purple/20 to-zion-cyan/20",
-        stats: "100% Success",
-        features: ["Comprehensive Testing", "Quality Assurance", "Satisfaction Guarantee"]
+      icon: <BarChart3 className="w-10 h-10" />,
+      title: 'Predictive Analytics',
+      description: 'Forecast trends, identify opportunities, and make data-driven decisions with confidence.',
+      color: 'from-orange-500 to-red-500',
+      bgColor: 'from-orange-500/20 to-red-500/20',
+      stats: '200% ROI Boost',
+      features: ['Real-time Insights', 'Trend Forecasting', 'Performance Metrics']
     }
-];
-const additionalStats = [
-    { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Customer Rating" },
-    { icon: <Award className="w-6 h-6"/>, value: "50+", label: "Industry Awards" },
-    { icon: <Globe className="w-6 h-6"/>, value: "100+", label: "Countries Served" },
-    { icon: <Lock className="w-6 h-6"/>, value: "1000+", label: "Projects Completed" }
-];
-export function BenefitsSection() {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.15,
-                delayChildren: 0.2
-            }
-        }
-    };
-    const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.6,
-                ease: "easeOut"
-            }
-        }
-    };
-    const statsVariants = {
-        hidden: { opacity: 0, scale: 0.8 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                duration: 0.5,
-                ease: "easeOut"
-            }
-        }
-    };
-    return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
+  ];
+
+  const additionalStats = [
+    { icon: <Users className="w-6 h-6" />, value: '500+', label: 'Happy Clients' },
+    { icon: <Clock className="w-6 h-6" />, value: '24/7', label: 'Support' },
+    { icon: <Target className="w-6 h-6" />, value: '99.9%', label: 'Success Rate' },
+    { icon: <Rocket className="w-6 h-6" />, value: '15+', label: 'Years Experience' }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const statsVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -126,17 +127,27 @@ export function BenefitsSection() {
 
         {/* Additional stats section */}
         <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {additionalStats.map((stat, index) => (<motion.div key={index} variants={statsVariants} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+          {additionalStats.map((stat, index) => (
+            <motion.div key={index} variants={statsVariants} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
               <div className="text-zion-cyan mb-2 flex justify-center">
                 {stat.icon}
               </div>
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
               <div className="text-zion-slate-light text-sm">{stat.label}</div>
-            </motion.div>))}
+            </motion.div>
+          ))}
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {benefits.map((benefit, index) => (<motion.div key={index} variants={itemVariants} onHoverStart={() => setHoveredIndex(index)} onHoverEnd={() => setHoveredIndex(null)} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }}>
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          {benefits.map((benefit, index) => (
+            <motion.div 
+              key={index} 
+              variants={itemVariants} 
+              onHoverStart={() => setHoveredIndex(index)} 
+              onHoverEnd={() => setHoveredIndex(null)} 
+              whileHover={{ y: -8 }} 
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
                 {/* Icon with enhanced background */}
                 <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${benefit.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
@@ -160,12 +171,28 @@ export function BenefitsSection() {
 
                 {/* Features list */}
                 <AnimatePresence>
-                  {hoveredIndex === index && (<motion.div className="space-y-2" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }}>
-                      {benefit.features.map((feature, idx) => (<motion.div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }}>
+                  {hoveredIndex === index && (
+                    <motion.div 
+                      className="space-y-2" 
+                      initial={{ opacity: 0, height: 0 }} 
+                      animate={{ opacity: 1, height: "auto" }} 
+                      exit={{ opacity: 0, height: 0 }} 
+                      transition={{ duration: 0.3 }}
+                    >
+                      {benefit.features.map((feature, idx) => (
+                        <motion.div 
+                          key={idx} 
+                          className="flex items-center gap-2 text-zion-slate-light/80 text-sm" 
+                          initial={{ opacity: 0, x: -10 }} 
+                          animate={{ opacity: 1, x: 0 }} 
+                          transition={{ delay: idx * 0.1 }}
+                        >
                           <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                           <span>{feature}</span>
-                        </motion.div>))}
-                    </motion.div>)}
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  )}
                 </AnimatePresence>
 
                 {/* Hover indicator */}
@@ -173,7 +200,8 @@ export function BenefitsSection() {
                   {hoveredIndex === index ? "Hover to see details" : "Hover for details"}
                 </div>
               </div>
-            </motion.div>))}
+            </motion.div>
+          ))}
         </motion.div>
 
         {/* Call to action */}
@@ -190,5 +218,6 @@ export function BenefitsSection() {
           </div>
         </motion.div>
       </div>
-    </section>);
+    </section>
+  );
 }
