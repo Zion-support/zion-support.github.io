@@ -1,5 +1,5 @@
 import React from "react";
-import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm";
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function TalentOnboarding() {
@@ -20,7 +20,7 @@ export default function TalentOnboarding() {
             </p>
           </div>
           
-          <TalentOnboardingForm />
+          <TalentRegistrationForm />
         </div>
       </div>
       

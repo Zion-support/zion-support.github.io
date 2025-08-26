@@ -1,8 +1,6 @@
-import { SEO } from "@/components/SEO";
-import { Atom, Cpu, Globe, Shield, Zap, Target, Users, BarChart3, Rocket, Brain } from 'lucide-react';
-=======
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
   Atom, 
   Zap, 
@@ -56,7 +54,7 @@ import {
   Bot
 } from 'lucide-react';
 
-export default function QuantumTechnology() {
+const QuantumTechnology = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedUseCase, setSelectedUseCase] = useState(0);
 
@@ -68,7 +66,6 @@ export default function QuantumTechnology() {
     { id: 'benefits', label: 'Benefits', icon: Star }
   ];
 
-const QuantumTechnology: React.FC = () => {
   const quantumServices = [
     {
       icon: Atom,
@@ -138,18 +135,15 @@ const QuantumTechnology: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background pt-20">
-      <SEO 
-        title="Quantum Technology - Zion Tech Group" 
-        description="Explore cutting-edge quantum technology solutions including quantum computing, neural networks, cryptography, and financial applications from Zion Tech Group."
-        keywords="quantum technology, quantum computing, quantum neural networks, quantum cryptography, quantum financial trading"
-        canonical="https://ziontechgroup.com/quantum-technology"
-      />
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-4xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum Technology for the
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Future</span>
@@ -159,95 +153,138 @@ const QuantumTechnology: React.FC = () => {
               From computing to cryptography, we're building the quantum future today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <Link 
+                to="/quantum-solutions"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
                 Explore Solutions
-              </button>
-              <button className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+              </Link>
+              <Link 
+                to="/quantum-research"
+                className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
                 Learn More
-              </button>
+              </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Quantum Services Grid */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
               Quantum Technology Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our quantum technology portfolio spans across computing, cryptography, AI, and financial applications, 
               providing cutting-edge solutions for the most challenging problems.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {quantumServices.map((service) => (
-              <div
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            {quantumServices.map((service, index) => (
+              <motion.div
                 key={service.title}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group"
+                className="bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 overflow-hidden group hover:border-white/40 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 * index }}
+                whileHover={{ y: -5 }}
               >
                 <div className="p-8">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm text-gray-600">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                      <li key={feature} className="flex items-center text-sm text-gray-300">
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
+                  <Link 
+                    to={service.path}
+                    className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 inline-block text-center"
+                  >
                     Learn More
-                  </button>
+                  </Link>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Applications Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
               Quantum Technology Applications
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover how quantum technology is transforming industries and solving previously impossible problems.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {applications.map((application) => (
-              <div key={application.title} className="text-center">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            {applications.map((application, index) => (
+              <motion.div 
+                key={application.title} 
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.0 + (index * 0.1) }}
+              >
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-6">
                   <application.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{application.title}</h3>
-                <p className="text-gray-600">{application.description}</p>
-              </div>
+                <h3 className="text-xl font-bold text-white mb-3">{application.title}</h3>
+                <p className="text-gray-300">{application.description}</p>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Technology Overview */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
                 The Power of Quantum Computing
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-300 mb-6">
                 Quantum computing represents a paradigm shift in computational power. By leveraging quantum mechanical 
                 phenomena like superposition and entanglement, quantum computers can process information in ways that 
                 classical computers simply cannot.
@@ -256,27 +293,32 @@ const QuantumTechnology: React.FC = () => {
                 <div className="flex items-start">
                   <div className="w-6 h-6 bg-purple-500 rounded-full flex-shrink-0 mt-1 mr-3"></div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Exponential Speedup</h3>
-                    <p className="text-gray-600">Solve complex problems in minutes instead of years</p>
+                    <h3 className="font-semibold text-white">Exponential Speedup</h3>
+                    <p className="text-gray-300">Solve complex problems in minutes instead of years</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="w-6 h-6 bg-purple-500 rounded-full flex-shrink-0 mt-1 mr-3"></div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Parallel Processing</h3>
-                    <p className="text-gray-600">Process multiple possibilities simultaneously</p>
+                    <h3 className="font-semibold text-white">Parallel Processing</h3>
+                    <p className="text-gray-300">Process multiple possibilities simultaneously</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="w-6 h-6 bg-purple-500 rounded-full flex-shrink-0 mt-1 mr-3"></div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Quantum Advantage</h3>
-                    <p className="text-gray-600">Outperform classical computers on specific tasks</p>
+                    <h3 className="font-semibold text-white">Quantum Advantage</h3>
+                    <p className="text-gray-300">Outperform classical computers on specific tasks</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-8 text-white">
+            </motion.div>
+            <motion.div 
+              className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-8 text-white"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 1.4 }}
+            >
               <h3 className="text-2xl font-bold mb-4">Quantum Computing Milestones</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
@@ -296,29 +338,41 @@ const QuantumTechnology: React.FC = () => {
                   <span className="font-bold">Research</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Ready to Explore the Quantum Future?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-            Join the quantum revolution and discover how quantum technology can transform your business. 
-            Our experts are ready to guide you through the quantum landscape.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-              Schedule Demo
-            </button>
-            <button className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              Download Whitepaper
-            </button>
-          </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-pink-600">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.6 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Explore the Quantum Future?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+              Join the quantum revolution and discover how quantum technology can transform your business. 
+              Our experts are ready to guide you through the quantum landscape.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact"
+                className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                Schedule Demo
+              </Link>
+              <Link 
+                to="/quantum-whitepaper"
+                className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Download Whitepaper
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>

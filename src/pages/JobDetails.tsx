@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, DollarSign, Briefcase } from '@/components/icons';
 import { formatDistanceToNow } from 'date-fns';
-import { toast } from 'sonner';
+import { useToast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import useJobDetails from '@/hooks/useJobDetails';
 import { ApplyToJobModal } from '@/components/messaging/job-application';
@@ -18,6 +18,7 @@ export default function JobDetails() {
     const { user, isAuthenticated } = useAuth();
     const navigate = useNavigate();
     const { isWhitelabel, brandName } = useWhitelabel();
+    const { toast } = useToast();
     const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
     if (isLoading) {
         return (<div className="flex items-center justify-center min-h-screen">

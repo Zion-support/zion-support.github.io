@@ -31,7 +31,7 @@ import {
   serviceCategories2025,
   getServicesByCategory2025,
   getPopularServices2025 
-} from '../../data/2025-cutting-edge-innovative-services';
+} from '../../data/2025-cutting-edge-innovative-services.js';
 import { 
   specializedIndustrySolutions2025,
   industryCategories2025,
@@ -41,7 +41,7 @@ import {
   comprehensivePricingAnalysis2025,
   getMarketInsights,
   getCompetitiveLandscape 
-} from '../../data/2025-comprehensive-pricing-analysis';
+} from '../../data/2025-comprehensive-pricing-analysis.js';
 
 export default function CuttingEdgeInnovativeServices2025() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -56,7 +56,7 @@ export default function CuttingEdgeInnovativeServices2025() {
 
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesIndustry = selectedIndustry === 'All' || (service as any).industry === selectedIndustry;
+          const matchesIndustry = selectedIndustry === 'All' || service.industry === selectedIndustry;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     
