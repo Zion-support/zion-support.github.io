@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { safeStorage } from '@/utils/safeStorage';
-import { getCartKey } from '@/utils/cartUtils';
-import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
 import { apiClient } from '@/utils/apiClient';
 
@@ -27,7 +25,8 @@ interface CheckoutForm {
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const [searchParams] = useSearchParams();
+  const sku = searchParams.get('sku');
   const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({
     defaultValues: { name: '', email: '', address: '', city: '', country: '' },
@@ -47,7 +46,7 @@ export default function CheckoutPage() {
         setItems([]);
       }
     }
-  }, [searchParams]);
+  }, [sku]);
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
 
