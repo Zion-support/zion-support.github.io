@@ -17,6 +17,7 @@ const Privacy = React.lazy(() => import('./pages/Privacy.tsx'));
 const Terms = React.lazy(() => import('./pages/Terms.tsx'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT.tsx'));
+const InnovativeServicesShowcase = React.lazy(() => import('./pages/InnovativeServicesShowcase2025.tsx'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -47,6 +48,7 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/innovative-services" element={<InnovativeServicesShowcase />} />
 
               {/* Catch-all route for 404 */}
               <Route path="*" element={
