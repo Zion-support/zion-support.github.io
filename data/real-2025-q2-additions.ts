@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const real2025Q2Additions = [
-  {
-    id: 'q2-service-1',
-    name: 'Q2 2025 Service',
-    tagline: 'Q2 2025 service solutions',
-    price: '$299',
-    category: 'Q2 Services'
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export interface Real2025Q2Addition {
   id: string;
   name: string;
@@ -25,9 +13,5 @@ export const real2025Q2Additions: Real2025Q2Addition[] = [
     tagline: 'Second quarter innovation',
     price: '$399',
     features: ['Advanced features', 'Enhanced performance', 'Better integration']
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

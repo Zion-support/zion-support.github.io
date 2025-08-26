@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   Brain, 
   Globe, 
   Shield, 
@@ -67,8 +56,6 @@ const technologies = [
   'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'
 ];
 
-<<<<<<< HEAD
-=======
   Zap, 
   Users, 
   Shield, 
@@ -130,39 +117,22 @@ const features = [
   }
 ];
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export function FeatureHighlights() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        staggerChildren: 0.2,
-=======
         staggerChildren: 0.15,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
         staggerChildren: 0.2,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         delayChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    hidden: { opacity: 0, y: 30, scale: 0.95 },
-=======
     hidden: { opacity: 0, y: 30, scale: 0.9 },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
     hidden: { opacity: 0, y: 30, scale: 0.95 },
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     visible: {
       opacity: 1,
       y: 0,
@@ -174,10 +144,6 @@ export function FeatureHighlights() {
     }
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const achievementVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
@@ -208,8 +174,6 @@ export function FeatureHighlights() {
         {/* Header */}
         <motion.div 
           className="text-center mb-20"
-<<<<<<< HEAD
-=======
   return (
     <section className="py-20 bg-gradient-to-b from-zion-slate/5 to-background relative overflow-hidden">
       {/* Background decorative elements */}
@@ -220,17 +184,10 @@ export function FeatureHighlights() {
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Why Industry Leaders
@@ -246,8 +203,6 @@ export function FeatureHighlights() {
         {/* Feature Highlights Grid */}
         <motion.div 
           className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20"
-<<<<<<< HEAD
-=======
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">
@@ -266,17 +221,10 @@ export function FeatureHighlights() {
         </motion.div>
 
         <motion.div
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         >
           {highlights.map((highlight, index) => (
             <motion.div
@@ -408,8 +356,6 @@ export function FeatureHighlights() {
               <ArrowRight className="w-6 h-6" />
             </div>
           </motion.div>
-<<<<<<< HEAD
-=======
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {features.map((feature, index) => {
@@ -485,18 +431,11 @@ export function FeatureHighlights() {
               </button>
             </div>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </motion.div>
       </div>
     </section>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
 import { Brain, Shield, Zap, Globe, Users, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -614,6 +553,3 @@ export const FeatureHighlights: React.FC = () => {
   );
 };
 >>>>>>> origin/cursor/website-audit-and-enhancement-438b
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

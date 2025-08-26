@@ -1,91 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  UsersIcon, 
-  LightBulbIcon, 
-  RocketLaunchIcon, 
-  ShieldCheckIcon,
-  GlobeAltIcon,
-  ChartBarIcon,
-  CogIcon,
-  HeartIcon
-} from '@heroicons/react/24/outline';
 
-const About: React.FC = () => {
-  const stats = [
-    { number: '500+', label: 'Projects Completed', icon: RocketLaunchIcon },
-    { number: '50+', label: 'Expert Team Members', icon: UsersIcon },
-    { number: '98%', label: 'Client Satisfaction', icon: HeartIcon },
-    { number: '24/7', label: 'Support Available', icon: ShieldCheckIcon }
-  ];
-
-  const values = [
-    {
-      icon: LightBulbIcon,
-      title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.'
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Excellence',
-      description: 'Quality is non-negotiable. We deliver solutions that exceed expectations and stand the test of time.'
-    },
-    {
-      icon: UsersIcon,
-      title: 'Collaboration',
-      description: 'We believe in the power of teamwork and building strong partnerships with our clients and community.'
-    },
-    {
-      icon: GlobeAltIcon,
-      title: 'Global Impact',
-      description: 'Our solutions help businesses worldwide thrive in the digital age and create positive change.'
-    }
-  ];
-
-  const team = [
-    {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
-      image: '/team/kleber-santos.jpg'
-    },
-    {
-      name: 'Sarah Chen',
-      role: 'CTO',
-      bio: 'Technology expert specializing in AI, cloud architecture, and scalable solutions.',
-      image: '/team/sarah-chen.jpg'
-    },
-    {
-      name: 'Marcus Rodriguez',
-      role: 'Head of AI Solutions',
-      bio: 'AI specialist with deep expertise in machine learning and autonomous systems.',
-      image: '/team/marcus-rodriguez.jpg'
-    },
-    {
-      name: 'Dr. Emily Watson',
-      role: 'Research Director',
-      bio: 'Leading our quantum computing and emerging technology research initiatives.',
-      image: '/team/emily-watson.jpg'
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { AppLayout } from "@/layout/AppLayout";
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
-=======
 
 >>>>>>> origin/cursor/website-audit-and-enhancement-374e
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import { 
   LightBulbIcon, 
@@ -99,69 +18,9 @@ import {
 
 export default function About() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-background">
-=======
     <AppLayout>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
       <SEO 
-<<<<<<< HEAD
-        title="About Zion Tech Group - Leading Technology Solutions Provider" 
-        description="Learn about Zion Tech Group's mission to revolutionize technology services through AI, innovation, and digital transformation expertise."
-        keywords="about us, Zion Tech Group, technology company, AI services, digital transformation"
-        canonical="https://ziontechgroup.com/about"
-      />
-
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            About Zion Tech Group
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-            Pioneering the future of technology through innovative AI solutions, 
-            cutting-edge services, and transformative digital experiences.
-          </p>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Our Mission
-              </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                To democratize advanced technology solutions and empower businesses of all sizes 
-                to thrive in the digital age through accessible, innovative, and sustainable 
-                technology services.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                We believe that cutting-edge technology should be available to everyone, 
-                not just large corporations. Our mission is to bridge the gap between 
-                complex technological solutions and practical business needs.
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-              <p className="text-gray-600 leading-relaxed">
-                To become the world's most trusted partner for AI-powered technology solutions, 
-                leading the charge in sustainable digital transformation and creating a future 
-                where technology serves humanity's greatest needs.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Values */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-=======
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { AppLayout } from "@/layout";
@@ -173,34 +32,16 @@ export default function About() {
         title="About Zion Tech Group - The Future of AI & Tech Marketplace" 
         description="Learn about Zion Tech Group's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
         keywords="about Zion Tech Group, AI marketplace, tech platform, mission, vision, team"
-=======
         title="About Zion - The Future of AI & Tech Marketplace" 
         description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
         keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-39b5
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-aa85
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-beb3
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-24ce
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-45a9
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-374e
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-d85a
         canonical="https://ziontechgroup.com/about"
       />
@@ -393,76 +234,29 @@ export default function About() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Join hundreds of companies that have already revolutionized their operations 
-            with Zion Tech Group's innovative solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Get Started Today
-            </Link>
-            <Link 
-              to="/services" 
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              Explore Our Services
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-=======
 import { Helmet } from 'react-helmet-async';
 import { EnhancedAbout } from '@/components/EnhancedAbout';
-=======
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 export default function About() {
   return (
     <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group - a leading technology solutions provider specializing in AI, cloud services, cybersecurity, and digital transformation." />
-        <meta name="keywords" content="about us, technology company, AI solutions, cloud services, digital transformation" />
-        <link rel="canonical" href="https://ziontechgroup.com/about" />
-      </Helmet>
-      
-      <EnhancedAbout />
-=======
       </main>
 >>>>>>> origin/cursor/website-audit-and-enhancement-374e
     </>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
-=======
       </main>
     </AppLayout>
 >>>>>>> origin/cursor/website-audit-and-enhancement-50d5
-=======
       </main>
     </AppLayout>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
   );
 }
-=======
-=======
       <SEO 
         title="About Zion - The Future of AI & Tech Marketplace" 
         description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
@@ -576,7 +370,6 @@ export default function About() {
     </>
   );
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Users, Target, Zap, Globe, Award, TrendingUp, Shield, Lightbulb } from 'lucide-react';
 
 const About: React.FC = () => {
@@ -623,10 +416,6 @@ const About: React.FC = () => {
       year: "2022",
       title: "Company Founded",
       description: "Zion Tech Group was established with a vision to revolutionize technology solutions."
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
 
@@ -640,27 +429,6 @@ const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Zion Tech Group</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Pioneering the future of technology through innovation, excellence, and unwavering commitment to our clients' success.
-            </p>
-          </motion.div>
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -677,60 +445,10 @@ const About: React.FC = () => {
               innovative AI solutions, quantum computing, and cutting-edge digital technologies.
             </p>
           </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </section>
 
       {/* Mission & Vision */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-              <p className="text-xl text-gray-300 leading-relaxed mb-6">
-                To empower businesses with cutting-edge technology solutions that drive innovation, 
-                efficiency, and sustainable growth in an ever-evolving digital landscape.
-              </p>
-              <p className="text-lg text-gray-400 leading-relaxed">
-                We believe that technology should be a force for good, solving real-world problems 
-                and creating opportunities for businesses and communities to thrive.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl p-8 border border-white/10">
-                <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  To be the global leader in innovative technology solutions, recognized for our 
-                  commitment to excellence, sustainability, and positive impact on society.
-                </p>
-                <div className="mt-6 flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                    <RocketLaunchIcon className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-white font-semibold">Building Tomorrow's Solutions Today</span>
-                </div>
-              </div>
-            </motion.div>
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -753,10 +471,6 @@ const About: React.FC = () => {
               <p className="text-lg text-gray-300">
                 To be the global leader in transformative technology solutions, creating a future where 
                 every business can harness the full potential of AI and quantum computing.
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -769,50 +483,10 @@ const About: React.FC = () => {
               Pioneering the future of technology through innovative AI solutions, quantum computing, 
               and cutting-edge digital transformation services.
             </p>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Stats Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
-            <p className="text-xl text-gray-300">Delivering results that speak for themselves</p>
-          </motion.div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </motion.div>
-            ))}
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Mission & Vision Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -848,114 +522,12 @@ const About: React.FC = () => {
               <p className="text-lg text-gray-300">
                 We envision a future where businesses operate seamlessly with intelligent systems, 
                 unlocking unprecedented levels of efficiency, innovation, and human potential.
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
               </p>
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-              </p>
-            </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Values Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
-            <p className="text-xl text-gray-300">The principles that guide everything we do</p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                  <value.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{value.description}</p>
-              </motion.div>
-=======
-<<<<<<< HEAD
-      {/* Company Values */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Core Values
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              These fundamental principles guide everything we do and shape our company culture.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
-              </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-            ))}
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
-      {/* Team Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Meet Our Leadership Team</h2>
-            <p className="text-xl text-gray-300">The brilliant minds driving innovation and growth</p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300 text-center"
-              >
-                <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">{member.name.charAt(0)}</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                <p className="text-blue-400 font-medium mb-3">{member.role}</p>
-                <p className="text-gray-300 text-sm leading-relaxed">{member.bio}</p>
-              </motion.div>
-            ))}
-=======
       {/* Company Stats */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -969,9 +541,6 @@ const About: React.FC = () => {
                 <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Company Story Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1032,41 +601,10 @@ const About: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Company History */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Journey
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From startup to industry leader, discover the key milestones in our company's growth.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {milestones.map((milestone, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">{milestone.year}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{milestone.title}</h3>
-                <p className="text-gray-300">{milestone.description}</p>
-              </div>
-            ))}
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Core Values Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -1134,10 +672,6 @@ const About: React.FC = () => {
                 our clients for what's next in technology.
               </p>
             </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </section>
@@ -1145,71 +679,6 @@ const About: React.FC = () => {
       {/* Team Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Meet Our Team
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our diverse team of experts brings together decades of experience in technology, 
-              AI, quantum computing, and business innovation.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center">
-              <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Users className="w-12 h-12 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Leadership Team</h3>
-              <p className="text-gray-300 mb-4">Experienced executives driving innovation and growth</p>
-              <Link
-                to="/team"
-                className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200"
-              >
-                Meet the Leaders
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-            
-            <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center">
-              <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Zap className="w-12 h-12 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Technical Experts</h3>
-              <p className="text-gray-300 mb-4">World-class engineers and scientists pushing boundaries</p>
-              <Link
-                to="/careers"
-                className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200"
-              >
-                Join Our Team
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-            
-            <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center">
-              <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Shield className="w-12 h-12 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Support Team</h3>
-              <p className="text-gray-300 mb-4">Dedicated professionals ensuring your success</p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors duration-200"
-              >
-                Get Support
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             Our Leadership Team
           </h2>
@@ -1247,73 +716,10 @@ const About: React.FC = () => {
                 of computational technology.
               </p>
             </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Story Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">Our Story</h2>
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Founded in 2020, Zion Tech Group began as a small team of passionate technologists 
-                with a shared vision: to make cutting-edge technology accessible to businesses of all sizes.
-              </p>
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                What started as a consulting firm has evolved into a comprehensive technology partner, 
-                helping organizations navigate the complexities of digital transformation and emerging technologies.
-              </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Today, we're proud to serve clients across industries, from startups to Fortune 500 companies, 
-                always staying true to our founding principles of innovation, excellence, and client success.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl p-8 border border-white/10">
-                <h3 className="text-2xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                    <span>Proven track record of successful implementations</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                    <span>Expert team with deep industry knowledge</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                    <span>Cutting-edge technology and innovative solutions</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                    <span>Dedicated support and ongoing partnership</span>
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-7xl mx-auto">
@@ -1336,122 +742,45 @@ const About: React.FC = () => {
             <div>
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">99.9%</div>
               <p className="text-gray-300">Uptime</p>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-            </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how Zion Tech Group can help you achieve your technology goals and drive innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 hover:shadow-lg"
-              >
-                Get Started Today
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                Explore Our Services
-              </a>
-            </div>
-          </motion.div>
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Work with Us?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how Zion Tech Group can help transform your business with cutting-edge technology solutions.
-=======
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Join Us in Shaping the Future
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Whether you're looking to transform your business with AI, explore quantum computing, 
             or partner with us on innovative projects, we'd love to hear from you.
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-=======
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
 >>>>>>> origin/cursor/website-audit-and-enhancement-56af
-=======
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             >
               Get in Touch
             </Link>
             <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-              to="/case-studies"
-              className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-            >
-              View Our Work
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               to="/careers"
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
             >
               Join Our Team
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
             </Link>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-            </Link>
-          </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </section>
     </div>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default About;
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 // Icon components
 const Innovation = ({ className }: { className?: string }) => (
   <Lightbulb className={className} />
@@ -1470,8 +799,3 @@ const Integrity = ({ className }: { className?: string }) => (
 );
 
 export default About;
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

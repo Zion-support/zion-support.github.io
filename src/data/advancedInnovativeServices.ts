@@ -20,21 +20,6 @@ export interface AdvancedInnovativeService {
     email: string;
     website: string;
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  websiteUrl: string;
-  demoUrl?: string;
-  caseStudies?: string[];
-  marketTrends?: string[];
-}
-
-export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   technology: string[];
   integrations: string[];
   compliance: string[];
@@ -109,56 +94,11 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "Combines edge computing with cloud-based ML for real-time predictions"
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // Quantum Machine Learning Platform
   {
     id: "quantum-machine-learning-platform",
     title: "Quantum Machine Learning Platform",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    description: "Revolutionary platform that combines quantum computing with machine learning algorithms for unprecedented computational power and accuracy.",
-    category: "Quantum Computing",
-    subcategory: "Machine Learning",
-    price: 3500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum neural networks",
-      "Quantum optimization algorithms",
-      "Hybrid quantum-classical computing",
-      "Real-time quantum simulations",
-      "Advanced quantum algorithms",
-      "Performance benchmarking",
-      "API for developers",
-      "Cloud-based access",
-      "Training and support",
-      "Custom algorithm development"
-    ],
-    benefits: [
-      "Exponential speed improvements",
-      "Solve previously impossible problems",
-      "Future-proof technology",
-      "Competitive advantage",
-      "Research breakthrough capabilities"
-    ],
-    useCases: [
-      "Drug discovery and molecular modeling",
-      "Financial portfolio optimization",
-      "Climate change modeling",
-      "Cryptography and security",
-      "Supply chain optimization"
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     description: "Revolutionary platform that combines quantum computing principles with machine learning to solve complex optimization problems and accelerate AI model training.",
     category: "Quantum Computing",
     subcategory: "Machine Learning",
@@ -191,176 +131,25 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Logistics optimization",
       "Cryptography and security",
       "Material science research"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ],
     targetAudience: [
       "Research institutions",
       "Pharmaceutical companies",
       "Financial institutions",
       "Government agencies",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      "Tech companies"
-    ],
-    tags: ["Quantum Computing", "Machine Learning", "AI", "Research", "Advanced Computing"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$15,000 - $50,000/month",
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       "Technology companies"
     ],
     tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Innovation"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,500 - $8,000/month",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    websiteUrl: "https://ziontechgroup.com/quantum-ml-platform"
-  },
-
-  // AI-Powered Space Technology Platform
-  {
-    id: "ai-space-technology-platform",
-    title: "AI Space Technology Platform - Intelligent Space Exploration",
-    description: "Advanced AI platform for space exploration, satellite management, and space data analysis using cutting-edge artificial intelligence and machine learning.",
-    category: "AI & Space Technology",
-    subcategory: "Space Exploration",
-    price: 4000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Satellite orbit optimization",
-      "Space debris tracking",
-      "Planetary data analysis",
-      "Mission planning automation",
-      "Real-time space monitoring",
-      "Predictive space weather",
-      "Astronomical data processing",
-      "Space mission simulation",
-      "Integration with space agencies",
-      "Advanced visualization tools"
-    ],
-    benefits: [
-      "Optimize space missions",
-      "Reduce satellite costs",
-      "Improve space safety",
-      "Accelerate space research",
-      "Enable new space capabilities"
-    ],
-    useCases: [
-      "Space agencies",
-      "Satellite companies",
-      "Research institutions",
-      "Defense organizations",
-      "Commercial space companies"
-    ],
-    targetAudience: [
-      "Space engineers",
-      "Satellite operators",
-      "Research scientists",
-      "Mission planners",
-      "Space technology consultants"
-    ],
-    tags: ["AI", "Space Technology", "Satellite Management", "Space Exploration", "Machine Learning"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,000 - $20,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Machine Learning", "Computer Vision", "Python", "TensorFlow", "Space APIs"],
-    integrations: ["NASA APIs", "ESA systems", "Satellite networks", "Space weather services"],
-    compliance: ["Space regulations", "International standards", "Security protocols"],
-    roi: "700% within 24 months",
-    competitors: ["Maxar", "Planet Labs", "SpaceX", "Blue Origin"],
-    demoUrl: "https://ziontechgroup.com/demo/ai-space-technology",
-    caseStudies: ["Satellite optimization 50% efficiency", "Mission planning automation"],
-    marketTrends: ["Growing commercial space sector", "Increasing satellite launches", "Rising space research funding"]
-  },
-
-  // AI-Powered Biotechnology Platform
-  {
-    id: "ai-biotechnology-platform",
-    title: "AI Biotechnology Platform - Intelligent Life Sciences",
-    description: "Revolutionary AI platform that accelerates drug discovery, protein folding, and biological research using advanced machine learning and computational biology.",
-    category: "AI & Biotechnology",
-    subcategory: "Life Sciences",
-    price: 3000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered drug discovery",
-      "Protein structure prediction",
-      "Genomic data analysis",
-      "Drug interaction modeling",
-      "Clinical trial optimization",
-      "Toxicity prediction",
-      "Biomarker discovery",
-      "API integration",
-      "Regulatory compliance"
-    ],
-    benefits: [
-      "10x faster drug discovery",
-      "Reduce development costs",
-      "Improve success rates",
-      "Accelerate time to market",
-      "Personalized medicine"
-    ],
-    useCases: [
-      "Pharmaceutical research",
-      "Biotech companies",
-      "Academic research",
-      "Clinical trials",
-      "Drug repurposing"
-    ],
-    targetAudience: [
-      "Pharmaceutical companies",
-      "Biotechnology firms",
-      "Research institutions",
-      "Healthcare providers",
-      "Government agencies"
-    ],
-    tags: ["AI", "Drug Discovery", "Healthcare", "Biotechnology", "Research"],
-    estimatedDelivery: "10-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$25,000 - $80,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/ai-drug-discovery"
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     technology: ["Qiskit", "PennyLane", "Cirq", "Python", "React", "TensorFlow", "PyTorch"],
     integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
     compliance: ["ISO 27001", "FedRAMP", "SOC 2", "NIST"],
@@ -369,56 +158,13 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketTrend: "Explosive growth with 500% annual increase in quantum computing adoption",
     innovationLevel: "Pioneering quantum-classical hybrid approaches",
     uniqueValue: "First commercial platform combining quantum computing with practical ML applications"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   },
 
   // Autonomous Drone Fleet Management
   {
     id: "autonomous-drone-fleet-management",
     title: "Autonomous Drone Fleet Management Platform",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    description: "Intelligent platform for managing autonomous drone fleets across various industries including delivery, surveillance, and inspection.",
-    category: "Autonomous Systems",
-    subcategory: "Drone Management",
-    price: 7000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Fleet orchestration",
-      "Autonomous navigation",
-      "Real-time monitoring",
-      "Predictive maintenance",
-      "Route optimization",
-      "Safety protocols",
-      "API integration",
-      "Compliance management"
-    ],
-    benefits: [
-      "Accelerate drug discovery by 10x",
-      "Reduce research costs by 60%",
-      "Improve drug safety",
-      "Faster clinical trials",
-      "Breakthrough discoveries"
-    ],
-    useCases: [
-      "Package delivery",
-      "Infrastructure inspection",
-      "Agricultural monitoring",
-      "Security surveillance",
-      "Emergency response"
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     description: "AI-powered platform for managing autonomous drone fleets for delivery, inspection, surveillance, and data collection with real-time monitoring and optimization.",
     category: "Autonomous Systems",
     subcategory: "Drone Management",
@@ -451,13 +197,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Search and rescue operations",
       "Security and surveillance",
       "Environmental monitoring"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ],
     targetAudience: [
       "Biotech researchers",
@@ -466,32 +206,15 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Bioinformaticians",
       "Medical professionals"
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     tags: ["Autonomous Systems", "Drones", "AI", "Fleet Management", "IoT", "Logistics"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$799 - $3,000/month",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    tags: ["Drones", "Autonomous Systems", "Fleet Management", "IoT", "Automation"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$7,000 - $22,000/month",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     technology: ["Deep Learning", "Bioinformatics", "Python", "TensorFlow", "Molecular modeling"],
     integrations: ["Lab equipment", "Research databases", "Clinical trial systems", "FDA databases"],
     compliance: ["FDA regulations", "HIPAA", "Clinical trial standards", "Research ethics"],
@@ -797,7 +520,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$22,000 - $70,000/month",
-=======
     tags: ["Autonomous Systems", "Drones", "AI", "Fleet Management", "IoT", "Logistics"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
@@ -808,22 +530,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    websiteUrl: "https://ziontechgroup.com/quantum-financial-modeling"
-  },
-
-  // AI-Powered Healthcare Diagnostics Platform
-  {
-    id: "ai-healthcare-diagnostics-platform",
-    title: "AI-Powered Healthcare Diagnostics Platform",
-    description: "Advanced medical diagnostics platform that uses AI to analyze medical images, predict diseases, and assist healthcare professionals.",
-    category: "Healthcare AI",
-    subcategory: "Medical Diagnostics",
-    price: 8500,
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     technology: ["Python", "ROS", "React", "Node.js", "MongoDB", "AWS", "Computer Vision"],
     integrations: ["DJI SDK", "Parrot SDK", "Weather APIs", "GIS systems", "ERP systems"],
     compliance: ["FAA Part 107", "ISO 27001", "SOC 2", "GDPR"],
@@ -1157,58 +863,11 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     category: "AI & Healthcare",
     subcategory: "Medical Diagnostics",
     price: 599,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Medical image analysis",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      "Disease prediction",
-      "Treatment recommendations",
-      "Patient monitoring",
-      "Clinical decision support",
-      "Compliance management",
-      "API integration",
-      "Mobile applications"
-    ],
-    benefits: [
-      "Improve diagnostic accuracy",
-      "Reduce diagnosis time",
-      "Lower healthcare costs",
-      "Better patient outcomes",
-      "Scalable healthcare"
-    ],
-    useCases: [
-      "Radiology",
-      "Pathology",
-      "Cardiology",
-      "Oncology",
-      "Primary care"
-    ],
-    targetAudience: [
-      "Hospitals",
-      "Clinics",
-      "Diagnostic centers",
-      "Healthcare providers",
-      "Medical researchers"
-    ],
-    tags: ["Healthcare", "AI", "Diagnostics", "Medical Imaging", "Clinical Decision"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "premium",
-    marketPrice: "$8,500 - $25,000/month",
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       "Diagnostic assistance",
       "Patient risk assessment",
       "Treatment recommendations",
@@ -1245,29 +904,12 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$599 - $2,200/month",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    websiteUrl: "https://ziontechgroup.com/ai-healthcare-diagnostics"
-  }
-];
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "MongoDB", "AWS"],
     integrations: ["PACS systems", "EHR platforms", "Telemedicine systems", "Medical devices"],
     compliance: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
@@ -1343,10 +985,4 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
 ];
 
 export default ADVANCED_INNOVATIVE_SERVICES;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

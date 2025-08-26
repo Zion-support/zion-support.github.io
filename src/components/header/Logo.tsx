@@ -3,17 +3,6 @@ import { Link } from 'react-router-dom';
 
 export const Logo: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <Link to="/" className="flex items-center space-x-2">
-      <div className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-zion-cyan via-blue-500 to-zion-cyan bg-clip-text text-transparent">
-        Zion Tech
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <Link to="/" className="flex items-center group">
       <div className="flex items-center space-x-2">
         {/* Icon */}
@@ -33,13 +22,7 @@ export const Logo: React.FC = () => {
             TECH GROUP
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/website-audit-and-enhancement-24ce
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       </div>
       <div className="text-xs lg:text-sm text-gray-300 font-medium">Group</div>
     </Link>

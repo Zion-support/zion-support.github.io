@@ -2,14 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Building2, Factory, Car, Heart, GraduationCap, 
-  Shield, Globe, Zap, Brain, Rocket, Users, BarChart3
-=======
   Building, Car, Heart, DollarSign, GraduationCap, 
   Shield, Factory, Globe, Brain, Atom, Rocket,
-  ArrowRight, CheckCircle, Star, Users, Zap
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+  ArrowRight, CheckCircle, Star, Users, Zap, Cloud, BarChart3
 } from 'lucide-react';
 
 export default function SolutionsPage() {
@@ -17,7 +12,7 @@ export default function SolutionsPage() {
     {
       name: 'Enterprise',
       description: 'Scalable solutions for large organizations with complex requirements',
-      icon: Building2,
+      icon: Building,
       color: 'from-blue-400 to-cyan-500',
       solutions: [
         'Digital Transformation',

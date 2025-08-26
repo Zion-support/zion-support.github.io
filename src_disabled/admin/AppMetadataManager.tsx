@@ -5,18 +5,10 @@ import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager";
 
 const AppMetadataManager: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-      <SEO 
-=======
     <>
       <SEO
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
     
       <SEO 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         title="App Metadata Manager"
         description="Manage app store metadata for the Zion mobile application"
         // noindex removed - not supported in new SEO component

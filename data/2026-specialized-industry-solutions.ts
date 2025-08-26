@@ -245,33 +245,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Multi-carrier integration',
       'Mobile app for drivers'
     ],
-<<<<<<< HEAD
-    popular: true,
-    icon: '🚚',
-    color: 'from-teal-600 to-green-600',
-    textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/logistics-supply-chain-ai',
-    marketPosition: 'Leading logistics AI platform. Competes with Manhattan Associates ($100K+ setup), JDA Software ($150K+ setup). Our advantage: AI-powered optimization and cost-effective implementation.',
-    targetAudience: 'Logistics companies, Supply chain managers, E-commerce companies, Manufacturing firms, Retail chains',
-    trialDays: 30,
-    setupTime: '4-6 weeks',
-    category: 'Logistics Technology',
-    realService: true,
-    technology: ['Machine Learning', 'Python', 'React', 'Node.js', 'GPS tracking', 'IoT sensors'],
-    integrations: ['WMS systems', 'TMS systems', 'ERP systems', 'Carrier APIs', 'Tracking systems'],
-    useCases: ['Route optimization', 'Supply chain management', 'Inventory optimization', 'Cost reduction', 'Performance tracking'],
-    roi: 'Average 350% ROI through reduced costs and improved operational efficiency.',
-    competitors: ['Manhattan Associates', 'JDA Software', 'Oracle SCM', 'SAP SCM'],
-    marketSize: '$67.2B supply chain management market',
-    growthRate: '11.2% annual growth',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Advanced logistics AI platform with comprehensive optimization and tracking capabilities.',
-    launchDate: '2024-02-15',
-    customers: 38,
-    rating: 4.7,
-    reviews: 33
-=======
     capabilities: [
       'Production optimization',
       'Predictive maintenance',

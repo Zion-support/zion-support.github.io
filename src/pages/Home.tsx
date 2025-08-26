@@ -1,15 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 import React from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -21,10 +14,6 @@ import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { PricingSection } from "@/components/PricingSection";
 import { TechSolutionsSection } from "@/components/TechSolutionsSection";
@@ -71,8 +60,6 @@ export default function Home() {
       <ITServiceRequestHero />
       <FloatingCTA />
     </>
-<<<<<<< HEAD
-=======
 import { AnimatedBackground, FloatingParticles } from "@/components/ui/AnimatedBackground";
 
 // Lazy load heavy components for better performance
@@ -358,8 +345,5 @@ export default function Home() {
       {/* Enhanced Newsletter Section */}
       <NewsletterSection />
     </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 }

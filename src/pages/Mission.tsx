@@ -1,18 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-      label: 'Countries Reached',
-      description: 'Global presence and impact across diverse markets'
-    },
-    {
-      number: '95%',
-      label: 'Client Satisfaction',
-      description: 'Consistently exceeding client expectations and needs'
-    },
-    {
-      number: '100%',
-      label: 'Carbon Neutral',
-      description: 'Committed to sustainable technology development'
-=======
 import { Link } from 'react-router-dom';
 import { 
   Target, 
@@ -208,7 +194,6 @@ export default function Mission() {
         "Zero-touch business operations",
         "AI-human collaboration ecosystem"
       ]
-=======
 import { Link } from 'react-router-dom';
 import { 
   Target, 
@@ -253,97 +238,7 @@ const Mission: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-  const strategicGoals = [
-    {
-      icon: Globe,
-      title: 'Global Expansion',
-      description: 'Expand our presence to serve clients in 50+ countries by 2030.',
-      target: '2030'
-    },
-    {
-      icon: Rocket,
-      title: 'Technology Leadership',
-      description: 'Become the leading provider of AI-powered autonomous business solutions.',
-      target: '2027'
-    },
-    {
-      icon: Award,
-      title: 'Client Success',
-      description: 'Achieve 99% client satisfaction rate and 95% project success rate.',
-      target: '2026'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Sustainable Growth',
-      description: 'Maintain 40% year-over-year growth while expanding our service portfolio.',
-      target: '2025'
-    }
-  ];
-
-  const impactMetrics = [
-    {
-      number: '500+',
-      label: 'Businesses Transformed',
-      description: 'Companies that have achieved digital transformation with our solutions'
-    },
-    {
-      number: '2.5M+',
-      label: 'Lives Impacted',
-      description: 'People whose work and lives have been improved through our technology'
-    },
-    {
-      number: '$2B+',
-      label: 'Value Created',
-      description: 'Economic value generated for our clients through digital transformation'
-    },
-    {
-      number: '50+',
-      label: 'Countries Served',
-      description: 'Global reach with localized solutions and support'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-    }
-  ];
-
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
-<<<<<<< HEAD
-      {/* Mission Pillars */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Our Mission Pillars
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Four core pillars that guide our mission and drive our impact across the technology landscape.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {missionPillars.map((pillar, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
-              >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${pillar.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <pillar.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{pillar.title}</h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">{pillar.description}</p>
-                
-                <div>
-                  <h4 className="text-sm font-medium text-gray-300 mb-3">Key Goals:</h4>
-                  <ul className="space-y-2">
-                    {pillar.goals.map((goal, goalIndex) => (
-                      <li key={goalIndex} className="flex items-start space-x-2 text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
-                        <span>{goal}</span>
-                      </li>
-                    ))}
-                  </ul>
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -502,7 +397,6 @@ const Mission: React.FC = () => {
                     </div>
                     <p className="text-gray-300">{goal.description}</p>
                   </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
                 </div>
               </div>
             ))}
@@ -510,10 +404,6 @@ const Mission: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {/* Strategic Goals Timeline */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -554,7 +444,6 @@ const Mission: React.FC = () => {
                   </div>
                 </div>
               ))}
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -590,7 +479,6 @@ const Mission: React.FC = () => {
 
       {/* Core Values */}
                 <p className="text-gray-400 leading-relaxed">{value.description}</p>
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Core Values</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -622,7 +510,6 @@ const Mission: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                   {metric.number}
-=======
       </div>
 
       {/* Mission Pillars */}
@@ -738,7 +625,6 @@ const Mission: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-=======
       {/* Impact Metrics */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -752,18 +638,12 @@ const Mission: React.FC = () => {
             {impactMetrics.map((metric, index) => (
               <div key={index} className="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
                 <div className="text-4xl font-bold text-blue-400 mb-2">{metric.number}</div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
                 <div className="text-lg font-semibold text-white mb-2">{metric.label}</div>
                 <p className="text-sm text-gray-300">{metric.description}</p>
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-
-      </div>
-=======
       {/* Call to Action */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
@@ -792,7 +672,6 @@ const Mission: React.FC = () => {
           </div>
         </div>
       </div>
-=======
       </section>
 
       {/* Call to Action */}
@@ -819,7 +698,6 @@ const Mission: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     </div>
   );
 };

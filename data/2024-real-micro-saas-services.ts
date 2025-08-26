@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 export interface RealMicroSaasService2024 {
   id: string;
   name: string;
@@ -14,18 +12,6 @@ export interface RealMicroSaasService2024 {
 
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
   {
-<<<<<<< HEAD
-    id: 'ai-content-generator-2024',
-    name: 'AI Content Generator 2024',
-    tagline: 'Generate high-quality content with AI',
-    price: '$99',
-    variant: 'ai',
-    features: ['AI-powered content creation', 'SEO optimization', 'Multi-language support'],
-    rating: 4.8,
-    customers: '500+'
-<<<<<<< HEAD
-=======
-=======
     id: 'ai-business-intelligence-pro',
     name: 'AI Business Intelligence Pro',
     tagline: 'Transform data into actionable insights with AI',
@@ -75,22 +61,10 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     customers: 1800,
     rating: 4.9,
     reviews: 890
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   },
 
   // AI Customer Success Automation
   {
-<<<<<<< HEAD
-    id: 'quantum-security-2024',
-    name: 'Quantum Security Platform 2024',
-    tagline: 'Next-generation quantum security',
-    price: '$299',
-    variant: 'security',
-    features: ['Quantum encryption', 'Advanced threat detection', 'Compliance tools'],
-    rating: 4.9,
-    customers: '200+'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
     id: 'ai-customer-success-automation',
     name: 'AI Customer Success Automation',
     tagline: 'Automate customer success with intelligent workflows',
@@ -511,6 +485,5 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     customers: 1900,
     rating: 4.8,
     reviews: 1050
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

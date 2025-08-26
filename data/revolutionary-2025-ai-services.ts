@@ -1,1 +1,9 @@
-export const revolutionary2025AIServices: Array<Record<string, any>> = []
+export interface RevolutionaryAI2025Service {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  features: string[];
+}
+
+export const revolutionaryAI2025Services: RevolutionaryAI2025Service[] = [];
