@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Production logger utility for error tracking and monitoring
 interface ErrorLogData {
   message: string;

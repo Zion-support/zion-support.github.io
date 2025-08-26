@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { safeStorage } from '@/utils/safeStorage';
-import { LoginContent } from '@/components/auth/login';
+import { LoginContent } from '@/components/auth/login/LoginContent';
 import { ErrorBoundary } from 'react-error-boundary';
-import LoginErrorFallback from '@/components/auth/login/LoginErrorFallback';
+import { LoginErrorFallback } from '@/components/auth/login/LoginErrorFallback';
 import { useCart } from '@/context/CartContext';
-import { SAMPLE_EQUIPMENT } from './EquipmentDetail';
+
 import { toast } from '@/hooks/use-toast';
 import { useDispatch } from 'react-redux';
 import { setLoggedIn } from '@/store/authSlice';
@@ -25,7 +25,8 @@ export default function Login() {
     const params = new URLSearchParams(queryString);
     const token = params.get('token');
     if (token) {
-      safeStorage.setItem('zion_token', token);
+      // Store token in localStorage for now
+      localStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing and clean up history
       // The actual authentication state will update via useAuth's listeners,
       // which should trigger the other useEffect.
