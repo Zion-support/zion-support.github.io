@@ -1,6 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { 
+  CalendarIcon,
+  ClockIcon,
+  UserIcon,
+  TagIcon,
+  ArrowRightIcon,
+  NewspaperIcon,
+  TrendingUpIcon as TrendingUp,
+  LightbulbIcon,
+  StarIcon,
+  GlobeAltIcon as Globe,
+  ShieldCheckIcon as Shield,
+  BoltIcon as Zap,
+  HeartIcon
+} from '@heroicons/react/24/outline';
 
 const News: React.FC = () => {
   const fadeInUp = {
@@ -99,14 +113,23 @@ const News: React.FC = () => {
   ];
 
   const categories = [
-    "All News",
-    "Product Launch",
-    "Company News", 
-    "Partnerships",
-    "Technical Insights",
-    "Case Studies",
-    "Industry Insights"
+    { id: 'all', name: 'All News', icon: NewspaperIcon },
+    { id: 'company', name: 'Company News', icon: NewspaperIcon },
+    { id: 'partnerships', name: 'Partnerships', icon: UserIcon },
+    { id: 'research', name: 'Research & Development', icon: LightbulbIcon },
+    { id: 'awards', name: 'Awards & Recognition', icon: StarIcon },
+    { id: 'expansion', name: 'Business Expansion', icon: GlobeIcon },
+    { id: 'ethics', name: 'AI Ethics', icon: ShieldIcon },
+    { id: 'quantum', name: 'Quantum Technology', icon: ZapIcon },
+    { id: 'healthcare', name: 'Healthcare AI', icon: HeartIcon },
+    { id: 'financial', name: 'Financial Results', icon: CalendarIcon },
+    { id: 'governance', name: 'Corporate Governance', icon: UserIcon }
   ];
+
+  // Combine all news sources
+  const allNews = [...breakingNews, ...latestNews, ...pressReleases];
+  const featuredNews = allNews.filter(article => article.priority === 'breaking');
+  const recentNews = allNews.slice(0, 3);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -139,27 +162,18 @@ const News: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.h1 
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Latest
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}News & Updates
-              </span>
-            </motion.h1>
-            
-            <motion.p 
-              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Stay informed about our latest innovations, company milestones, industry insights, 
-              and the future of technology that we're helping to shape.
-            </motion.p>
+            {categories.map((category, index) => (
+              <button
+                key={category.id}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  index === 0
+                    ? 'bg-purple-600 text-white'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                {category.name}
+              </button>
+            ))}
           </motion.div>
         </section>
 

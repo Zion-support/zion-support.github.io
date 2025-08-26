@@ -553,15 +553,21 @@ body::after {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> 87bf1a88aa2a1e348293e3de507f18084096c365
 ::-webkit-scrollbar-track {
   background: rgba(15, 23, 42, 0.8);
   border-radius: 6px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 87bf1a88aa2a1e348293e3de507f18084096c365
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, rgb(var(--accent-cyan)), rgb(var(--accent-blue)));
   border-radius: 6px;

@@ -36,6 +36,7 @@ export interface InnovativeITService2024 {
 export const innovativeITServices2024: InnovativeITService2024[] = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     id: "ai-powered-it-asset-management",
     name: "AI-Powered IT Asset Management",
     tagline: "Intelligent asset tracking and lifecycle management for modern enterprises",
@@ -139,20 +140,16 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     name: 'Cloud Automation Platform 2024',
     tagline: 'Automate your cloud infrastructure',
     price: '$199',
+=======
+    id: 'cloud-infrastructure-2024',
+    name: 'Cloud Infrastructure Solution 2024',
+    tagline: 'Scalable cloud infrastructure for enterprises',
+    price: '$499',
+>>>>>>> 87bf1a88aa2a1e348293e3de507f18084096c365
     variant: 'cloud',
-    features: ['Infrastructure automation', 'Cost optimization', 'Security compliance'],
+    features: ['Auto-scaling', 'Load balancing', 'High availability'],
     rating: 4.7,
     customers: '300+'
-  },
-  {
-    id: 'api-gateway-2024',
-    name: 'API Gateway 2024',
-    tagline: 'Manage and secure your APIs',
-    price: '$149',
-    variant: 'api',
-    features: ['API management', 'Rate limiting', 'Authentication'],
-    rating: 4.6,
-    customers: '400+'
   }
 ];
 >>>>>>> origin/main

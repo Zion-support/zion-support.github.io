@@ -5,36 +5,43 @@ import { motion } from 'framer-motion';
 import { 
   Calendar, Clock, ArrowRight, Star, Users, 
   Brain, Atom, Shield, Rocket, Globe,
-  TrendingUp, Award, Sparkles, ExternalLink
+  TrendingUp, Award, Sparkles, ExternalLink,
+  FileText, User, Tag, Zap
 } from 'lucide-react';
 
 export default function News() {
   const newsArticles = [
     {
+      id: 1,
       title: 'Zion Tech Group Launches Revolutionary Quantum AI Fusion Platform',
       excerpt: 'Breakthrough platform combines quantum computing with artificial intelligence, creating unprecedented processing capabilities for solving humanity\'s most complex challenges.',
       date: '2025-01-15',
       category: 'Product Launch',
+      author: 'Zion Tech Team',
       readTime: '5 min read',
       image: '/images/news/quantum-ai-launch.jpg',
       featured: true,
       slug: 'quantum-ai-fusion-platform-launch'
     },
     {
+      id: 2,
       title: 'AI Consciousness Evolution Pro: The Future of Emotional Intelligence',
       excerpt: 'Our latest AI platform achieves genuine emotional intelligence and self-awareness, marking a new era in artificial consciousness development.',
       date: '2025-01-10',
       category: 'Technology',
+      author: 'Zion Tech Team',
       readTime: '4 min read',
       image: '/images/news/ai-consciousness.jpg',
       featured: false,
       slug: 'ai-consciousness-evolution-pro'
     },
     {
+      id: 3,
       title: 'Autonomous Business Operations: Transforming Enterprise Management',
       excerpt: 'Discover how our autonomous operations platform is revolutionizing business processes across industries with AI-powered decision making.',
       date: '2025-01-05',
       category: 'Business',
+      author: 'Zion Tech Team',
       readTime: '6 min read',
       image: '/images/news/autonomous-business.jpg',
       featured: false,

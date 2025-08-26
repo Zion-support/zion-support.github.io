@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface RealMarketAugmentation2025 {
   id: string;
 <<<<<<< HEAD
@@ -38,6 +39,9 @@ export interface RealMarketAugmentation2025 {
 }
 
 export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
+=======
+export const realMarketAugmentations2025 = [
+>>>>>>> 87bf1a88aa2a1e348293e3de507f18084096c365
   {
 <<<<<<< HEAD
     id: "ai-market-intelligence-platform",
@@ -156,10 +160,17 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
     fundingTrends: "High interest in quantum computing applications"
 =======
     id: 'market-augmentation-1',
+<<<<<<< HEAD
     name: 'Market Augmentation Service 1',
     tagline: 'Enhance your market presence',
     price: '$299',
     features: ['Market analysis', 'Strategy development', 'Implementation support']
 >>>>>>> origin/main
+=======
+    name: 'Market Augmentation Service 2025',
+    tagline: 'Advanced market augmentation solutions',
+    price: '$599',
+    category: 'Market Services'
+>>>>>>> 87bf1a88aa2a1e348293e3de507f18084096c365
   }
 ];

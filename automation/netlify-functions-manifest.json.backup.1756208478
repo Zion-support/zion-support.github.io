@@ -1,0 +1,9 @@
+{
+<<<<<<< HEAD
+  "generatedAt": "2025-08-26T10:30:33.512Z",
+=======
+  "generatedAt": "2025-08-26T11:32:43.272Z",
+>>>>>>> origin/cursor/website-audit-and-enhancement-91a4
+  "functions": [],
+  "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
+}
