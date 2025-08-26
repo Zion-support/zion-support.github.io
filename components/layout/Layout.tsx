@@ -37,4 +37,6 @@ export default function Layout({ children }: LayoutProps) {
 			</UltraFuturisticBackground2035>
 		</div>
 	);
-};
+}
+
+export default Layout;
