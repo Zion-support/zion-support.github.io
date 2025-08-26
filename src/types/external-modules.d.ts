@@ -222,6 +222,7 @@ declare module 'lucide-react' {
   export const Video: LucideIcon;
   export const VideoOff: LucideIcon;
   export const Volume: LucideIcon;
+  export const Volume1: LucideIcon;
   export const Volume2: LucideIcon;
   export const VolumeX: LucideIcon;
   export const Wallet: LucideIcon;
