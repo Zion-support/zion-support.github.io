@@ -25,7 +25,7 @@
     "test:node": "node -v",
     "check-updates": "ncu",
     "audit-vulnerabilities": "npm audit",
-    "hourly-job": "node scripts/hourly-job.js"
+    "cron:eslint-fix": "node scripts/cron-eslint-fix.js"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
