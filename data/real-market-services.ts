@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
 export interface RealMarketService {
   id: string;
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];
@@ -27,10 +31,18 @@ export interface RealMarketService {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
+=======
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   };
   realImplementation: boolean;
@@ -1634,5 +1646,32 @@ export const realMarketServices: RealMarketService[] = [
     customers: 31,
     rating: 4.5,
     reviews: 12
+=======
+  };
+}
+
+export const realMarketServices: RealMarketService[] = [
+  {
+    id: "market-analysis-platform",
+    name: "Market Analysis Platform",
+    tagline: "Comprehensive market research and analysis",
+    price: "$69/month",
+    description: "Advanced market analysis platform providing insights and trends for business decision making.",
+    features: [
+      "Market research tools",
+      "Trend analysis",
+      "Competitor tracking",
+      "Data visualization",
+      "Report generation"
+    ],
+    link: "/services/market-analysis-platform",
+    category: "Market Services",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   }
 ];

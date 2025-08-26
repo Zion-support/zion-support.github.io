@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 export interface InnovativeAIService {
+=======
+export interface InnovativeAiService {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   id: string;
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];
@@ -25,10 +30,18 @@ export interface InnovativeAIService {
   marketSize: string;
   growthRate: string;
   variant: string;
+=======
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   };
   realImplementation: boolean;
@@ -1282,5 +1295,32 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4.9,
     reviews: 2100
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8dd4
+=======
+  };
+}
+
+export const innovativeAIServices: InnovativeAiService[] = [
+  {
+    id: "ai-predictive-analytics",
+    name: "AI Predictive Analytics",
+    tagline: "Future-proof your business with predictive insights",
+    price: "$89/month",
+    description: "Advanced predictive analytics platform that uses machine learning to forecast trends and business outcomes.",
+    features: [
+      "Machine learning models",
+      "Real-time predictions",
+      "Custom algorithms",
+      "Data visualization",
+      "API integration"
+    ],
+    link: "/services/ai-predictive-analytics",
+    category: "AI & Analytics",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   }
 ];

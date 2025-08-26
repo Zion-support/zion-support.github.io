@@ -1,6 +1,7 @@
 module.exports = {
   plugins: {
     tailwindcss: {},
+<<<<<<< HEAD
     'autoprefixer': {},
     'cssnano': process.env.NODE_ENV === 'production' ? {
       preset: ['default', {
@@ -13,5 +14,8 @@ module.exports = {
         minifySelectors: true,
       }]
     } : false,
+=======
+    autoprefixer: {},
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   },
 };

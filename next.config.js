@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
@@ -33,3 +34,14 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+=======
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+}
+
+module.exports = nextConfig
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc

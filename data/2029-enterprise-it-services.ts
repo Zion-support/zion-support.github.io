@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface EnterpriseIT2029Service {
+=======
+export interface EnterpriseItService2029 {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   id: string;
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];
@@ -27,10 +32,18 @@ export interface EnterpriseIT2029Service {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
+=======
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   };
   realImplementation: boolean;
@@ -398,5 +411,32 @@ export const enterpriseIT2029Services: EnterpriseIT2029Service[] = [
     customers: 25,
     rating: 4.8,
     reviews: 18
+=======
+  };
+}
+
+export const enterpriseITServices2029: EnterpriseItService2029[] = [
+  {
+    id: "2029-enterprise-it",
+    name: "2029 Enterprise IT Service Platform",
+    tagline: "Enterprise IT services for 2029",
+    price: "$599/month",
+    description: "Advanced enterprise IT service platform designed for large organizations in 2029.",
+    features: [
+      "Enterprise IT services",
+      "Scalable solutions",
+      "Advanced security",
+      "24/7 support",
+      "Custom integration"
+    ],
+    link: "/services/2029-enterprise-it",
+    category: "Enterprise IT Services 2029",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   }
 ];

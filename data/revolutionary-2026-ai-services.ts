@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface Revolutionary2026AIService {
+=======
+export interface Revolutionary2026AiService {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   id: string;
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];
@@ -27,10 +32,18 @@ export interface Revolutionary2026AIService {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
+=======
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   };
   realImplementation: boolean;
@@ -500,5 +513,32 @@ export const revolutionary2026AIServices: Revolutionary2026AIService[] = [
     customers: 50,
     rating: 4.9,
     reviews: 25
+=======
+  };
+}
+
+export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
+  {
+    id: "2026-revolutionary-ai",
+    name: "2026 Revolutionary AI Platform",
+    tagline: "Revolutionary AI for 2026",
+    price: "$249/month",
+    description: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.",
+    features: [
+      "Revolutionary AI",
+      "Transformative capabilities",
+      "Advanced algorithms",
+      "Innovation platform",
+      "Future-ready AI"
+    ],
+    link: "/services/2026-revolutionary-ai",
+    category: "Revolutionary 2026 AI",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   }
 ];

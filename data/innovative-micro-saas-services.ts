@@ -3,6 +3,7 @@ export interface InnovativeMicroSaasService {
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];
@@ -25,10 +26,18 @@ export interface InnovativeMicroSaasService {
   marketSize: string;
   growthRate: string;
   variant: string;
+=======
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   };
   realImplementation: boolean;
@@ -928,5 +937,32 @@ export const newInnovativeServices = [
     customers: 12,
     rating: 4.9,
     reviews: 6
+=======
+  };
+}
+
+export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
+  {
+    id: "smart-project-manager",
+    name: "Smart Project Manager",
+    tagline: "AI-powered project management and collaboration",
+    price: "$39/month",
+    description: "Intelligent project management platform that uses AI to optimize workflows and team collaboration.",
+    features: [
+      "AI task prioritization",
+      "Team collaboration tools",
+      "Progress tracking",
+      "Resource optimization",
+      "Integration capabilities"
+    ],
+    link: "/services/smart-project-manager",
+    category: "Project Management",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
   }
 ];
