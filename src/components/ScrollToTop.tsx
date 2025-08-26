@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
@@ -6,6 +7,11 @@ import { ChevronUp } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a577
 
 export function ScrollToTop() {
+=======
+import React, { useState, useEffect } from 'react';
+
+const ScrollToTop: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -24,11 +30,16 @@ export function ScrollToTop() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
+<<<<<<< HEAD
       behavior: 'smooth'
+=======
+      behavior: 'smooth',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
     });
   };
 
   return (
+<<<<<<< HEAD
     <AnimatePresence>
       {isVisible && (
         <motion.button
@@ -63,6 +74,17 @@ export function ScrollToTop() {
         >
           <svg 
             className="w-6 h-6" 
+=======
+    <>
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          aria-label="Scroll to top"
+        >
+          <svg 
+            className="w-6 h-6 mx-auto" 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
@@ -74,9 +96,19 @@ export function ScrollToTop() {
               d="M5 10l7-7m0 0l7 7m-7-7v18" 
             />
           </svg>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a577
         </motion.button>
       )}
     </AnimatePresence>
   );
 }
+=======
+        </button>
+      )}
+    </>
+  );
+};
+
+export default ScrollToTop;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfe9
