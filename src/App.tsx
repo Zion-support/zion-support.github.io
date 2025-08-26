@@ -26,6 +26,7 @@ const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const TestNewServices = React.lazy(() => import('./pages/TestNewServices'));
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -92,6 +93,9 @@ function App() {
               {/* Marketplace Routes */}
               <Route path="/marketplace" element={<GreenIT />} />
               <Route path="/marketplace/:service" element={<GreenIT />} />
+              
+              {/* Test New Services Route */}
+              <Route path="/test-new-services" element={<TestNewServices />} />
             </Routes>
           </Suspense>
         </main>
