@@ -1,185 +1,45 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const featuredListings = [
+const featuredServices = [
   {
-    id: 1,
-    title: "AI-Powered E-commerce Platform",
-    category: "Web Development",
-    description: "Modern e-commerce solution with AI-driven product recommendations and personalized shopping experience",
+    title: 'AI-Powered Business Intelligence',
+    description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
+    category: 'AI Solutions',
     rating: 4.9,
     reviews: 127,
-    views: 2847,
-    likes: 156,
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    price: "$15,000",
-    tags: ["React", "Node.js", "AI/ML", "E-commerce"],
-    duration: "3-4 months",
-    team: "5 experts",
-    location: "Remote",
-    featured: true,
-    technologies: ["React", "Node.js", "MongoDB", "AI/ML", "AWS"],
-    highlights: ["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"]
+    price: 'From $2,500',
+    image: '🤖',
+    link: '/services/ai',
+    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
   },
   {
-    id: 2,
-    title: "Mobile Banking Application",
-    category: "Mobile Development",
-    description: "Secure and user-friendly mobile banking app with biometric authentication and real-time transactions",
+    title: 'Cloud Migration & Optimization',
+    description: 'Seamlessly migrate to the cloud with our proven methodology and expert guidance.',
+    category: 'Cloud & DevOps',
     rating: 4.8,
     reviews: 89,
-    views: 1956,
-    likes: 134,
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    price: "$22,000",
-    tags: ["React Native", "Security", "FinTech", "Biometrics"],
-    duration: "4-5 months",
-    team: "6 experts",
-    location: "Hybrid",
-    featured: true,
-    technologies: ["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"],
-    highlights: ["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"]
+    price: 'From $5,000',
+    image: '☁️',
+    link: '/services/cloud',
+    features: ['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
   },
   {
-    id: 3,
-    title: "Cloud Infrastructure Migration",
-    category: "Cloud & DevOps",
-    description: "Complete migration from on-premise to cloud with automated CI/CD pipelines and monitoring",
-    rating: 4.7,
-    reviews: 156,
-    views: 3241,
-    likes: 189,
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
-    price: "$18,500",
-    tags: ["AWS", "Docker", "Kubernetes", "CI/CD"],
-    duration: "2-3 months",
-    team: "4 experts",
-    location: "On-site",
-    featured: true,
-    technologies: ["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],
-    highlights: ["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]
-  },
-  {
-    id: 4,
-    title: "Healthcare AI Diagnostic System",
-    category: "AI & Machine Learning",
-    description: "Advanced medical diagnostic platform using computer vision and machine learning for accurate disease detection",
+    title: 'Cybersecurity Assessment & Implementation',
+    description: 'Comprehensive security evaluation and implementation for enterprise-level protection.',
+    category: 'Cybersecurity',
     rating: 4.9,
-    reviews: 203,
-    views: 4567,
-    likes: 278,
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    price: "$35,000",
-    tags: ["Python", "TensorFlow", "Computer Vision", "Healthcare"],
-    duration: "6-8 months",
-    team: "8 experts",
-    location: "Remote",
-    featured: true,
-    technologies: ["Python", "TensorFlow", "OpenCV", "Docker", "AWS"],
-    highlights: ["95% Accuracy", "Real-time Processing", "HIPAA Compliant", "API Integration"]
-  },
-  {
-    id: 5,
-    title: "Smart City IoT Platform",
-    category: "IoT Solutions",
-    description: "Comprehensive IoT platform for smart city management with real-time monitoring and analytics",
-    rating: 4.6,
-    reviews: 78,
-    views: 1890,
-    likes: 112,
-    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    price: "$28,000",
-    tags: ["IoT", "Big Data", "Analytics", "Smart Cities"],
-    duration: "5-6 months",
-    team: "7 experts",
-    location: "Hybrid",
-    featured: false,
-    technologies: ["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"],
-    highlights: ["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"]
-  },
-  {
-    id: 6,
-    title: "Enterprise Data Analytics Dashboard",
-    category: "Data Analytics",
-    description: "Comprehensive business intelligence platform with advanced reporting and predictive analytics",
-    rating: 4.8,
-    reviews: 145,
-    views: 3120,
-    likes: 167,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    price: "$25,000",
-    tags: ["Data Analytics", "Business Intelligence", "Dashboard", "Predictive"],
-    duration: "4-5 months",
-    team: "6 experts",
-    location: "Remote",
-    featured: false,
-    technologies: ["Python", "Tableau", "PostgreSQL", "Apache Spark", "React"],
-    highlights: ["Real-time Dashboards", "Predictive Models", "Data Integration", "Custom Reports"]
+    reviews: 156,
+    price: 'From $3,500',
+    image: '🔒',
+    link: '/services/cybersecurity',
+    features: ['Security Audits', 'Threat Detection', 'Incident Response']
   }
 ];
 
-const categories = [
-  "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
-];
-
-import React from 'react';
-import Link from 'next/link';
-
 export function FeaturedListingsSection() {
-  const featuredServices = [
-    {
-      title: 'AI-Powered Business Intelligence',
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-      category: 'AI Solutions',
-      rating: 4.9,
-      reviews: 127,
-      price: 'From $2,500',
-      image: '🤖',
-      link: '/services/ai',
-      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
-    },
-    {
-      title: 'Cloud Migration & Optimization',
-      description: 'Seamlessly migrate to the cloud with our proven methodology and expert guidance.',
-      category: 'Cloud & DevOps',
-      rating: 4.8,
-      reviews: 89,
-      price: 'From $5,000',
-      image: '☁️',
-      link: '/services/cloud',
-      features: ['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
-    },
-    {
-      title: 'Cybersecurity Assessment & Implementation',
-      description: 'Comprehensive security evaluation and implementation for enterprise-level protection.',
-      category: 'Cybersecurity',
-      rating: 4.9,
-      reviews: 156,
-      price: 'From $3,500',
-      image: '🔒',
-      link: '/services/cybersecurity',
-      features: ['Security Audits', 'Threat Detection', 'Incident Response']
-export function FeaturedListingsSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredListing, setHoveredListing] = useState<number | null>(null);
-  const [showFilters, setShowFilters] = useState(false);
-
-  const filteredListings = selectedCategory === "All" 
-    ? featuredListings 
-    : featuredListings.filter(listing => listing.category === selectedCategory);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
-    }
-  ];
-
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
@@ -241,7 +101,7 @@ export function FeaturedListingsSection() {
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-gray-900">{service.price}</span>
                   <Link
-                    href={service.link}
+                    to={service.link}
                     className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
                   >
                     Learn More →
@@ -251,7 +111,7 @@ export function FeaturedListingsSection() {
               
               <div className="px-6 pb-6">
                 <Link
-                  href={service.link}
+                  to={service.link}
                   className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
                 >
                   Get Started
@@ -263,13 +123,11 @@ export function FeaturedListingsSection() {
         
         <div className="text-center mt-12">
           <Link
-            href="/services"
+            to="/services"
             className="inline-flex items-center px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300"
           >
             View All Services
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </div>
       </div>

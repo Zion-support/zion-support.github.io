@@ -98,59 +98,38 @@ export function BenefitsSection() {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
         ease: "easeOut"
       }
     }
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
-      {/* Enhanced background pattern */}
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
+      {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
-        }} />
+        <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-      
-      {/* Floating decorative elements */}
-      <div className="absolute inset-0">
-        <motion.div 
-          className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div 
-          className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
-          animate={{ rotate: -360 }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div 
-          className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
-          className="text-center mb-20"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Why Choose <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Zion Tech Group</span>?
+            Why Choose <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Zion</span>
           </h2>
-          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            We combine cutting-edge technology with proven methodologies to deliver exceptional results. 
-            Our commitment to excellence drives every project to success.
+          <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
+            Experience the next generation of tech marketplace with features designed to maximize efficiency and value
           </p>
         </motion.div>
 
-        {/* Additional stats section */}
+        {/* Additional Stats */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
           variants={containerVariants}
@@ -159,8 +138,8 @@ export function BenefitsSection() {
           viewport={{ once: true }}
         >
           {additionalStats.map((stat, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               variants={statsVariants}
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
             >
@@ -237,7 +216,7 @@ export function BenefitsSection() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Call to action */}
         <motion.div 
@@ -258,57 +237,9 @@ export function BenefitsSection() {
             </div>
           </div>
         </motion.div>
-
-import { GradientHeading } from "./GradientHeading";
-import { FeatureCard } from "./FeatureCard";
-import { Bot, Clock, Globe, TrendingDown } from "lucide-react";
-
-const benefits = [
-  {
-    title: "AI-Powered Matchmaking",
-    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
-    icon: <Bot className="w-8 h-8" />,
-  },
-  {
-    title: "Global Availability",
-    description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
-    icon: <Globe className="w-8 h-8" />,
-  },
-  {
-    title: "24/7 Support",
-    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
-    icon: <Clock className="w-8 h-8" />,
-  },
-  {
-    title: "Cost Reduction",
-    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",
-    icon: <TrendingDown className="w-8 h-8" />,
-  },
-];
-
-export function BenefitsSection() {
-  return (
-    <section className="py-20 bg-zion-blue-light">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <GradientHeading>Why Zion?</GradientHeading>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-            Experience the next generation of tech marketplace with features designed to maximize efficiency and value
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <FeatureCard
-              key={index}
-              title={benefit.title}
-              description={benefit.description}
-              icon={benefit.icon}
-              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-500 hover:shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-105"
-            />
-          ))}
-        </div>
       </div>
     </section>
   );
 }
+
+
