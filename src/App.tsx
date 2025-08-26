@@ -47,11 +47,11 @@ const SupplyChain = React.lazy(() => import('./pages/services/ManufacturingSolut
 const ContentCreation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 const HRPlatform = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
 
-// Marketplace pages
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
-const Products = React.lazy(() => import('./pages/Marketplace'));
-const Talent = React.lazy(() => import('./pages/Marketplace'));
-const Equipment = React.lazy(() => import('./pages/Marketplace'));
+// Marketplace pages - temporarily disabled due to missing components
+// const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+// const Products = React.lazy(() => import('./pages/Marketplace'));
+// const Talent = React.lazy(() => import('./pages/Marketplace'));
+// const Equipment = React.lazy(() => import('./pages/Marketplace'));
 
 // Company pages
 const Team = React.lazy(() => import('./pages/About'));
@@ -167,15 +167,15 @@ function App() {
               <Route path="/it-services/green-it" element={<Sustainability />} />
               <Route path="/it-services/5g-solutions" element={<FiveGSolutions />} />
               
-              {/* Marketplace Routes */}
-              <Route path="/marketplace" element={<Marketplace />} />
+              {/* Marketplace Routes - temporarily disabled due to missing components */}
+              {/* <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/marketplace/products" element={<Products />} />
               <Route path="/marketplace/talent" element={<Talent />} />
               <Route path="/marketplace/equipment" element={<Equipment />} />
               <Route path="/marketplace/services" element={<ServicesPage />} />
               <Route path="/talent" element={<Talent />} />
               <Route path="/equipment" element={<Equipment />} />
-              <Route path="/categories" element={<Marketplace />} />
+              <Route path="/categories" element={<Marketplace />} /> */}
               <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
               
               {/* Company Routes */}
