@@ -4,9 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { DollarSign } from "lucide-react";
 import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
+
 import Image from 'next/image'; // Import next/image
-export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
+function ProductListingCardComponent({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
     const isGrid = view === 'grid';
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
@@ -61,7 +61,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
           {listing.featured && (<Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
               Featured
             </Badge>)}
-          <FavoriteButton itemId={listing.id} itemType="product"/>
+
         </div>
       </div>
       
