@@ -152,13 +152,11 @@ const ServicesPricingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       <SEOHead 
-        config={{
-          title: "Services Pricing - Zion Tech Group",
-          description: "Comprehensive pricing for our innovative micro SaaS services, AI solutions, and IT services. Competitive rates with enterprise-grade features.",
-          keywords: "micro SaaS pricing, AI services pricing, IT services pricing, competitive rates, enterprise solutions, Zion Tech Group",
-          type: "website",
-          url: "https://ziontechgroup.com/services-pricing"
-        }}
+        title="Services Pricing - Zion Tech Group"
+        description="Comprehensive pricing for our innovative micro SaaS services, AI solutions, and IT services. Competitive rates with enterprise-grade features."
+        keywords="micro SaaS pricing, AI services pricing, IT services pricing, competitive rates, enterprise solutions, Zion Tech Group"
+        type="website"
+        url="https://ziontechgroup.com/services-pricing"
       />
 
       {/* Hero Section */}
