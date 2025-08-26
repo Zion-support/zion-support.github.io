@@ -122,6 +122,38 @@ const Home: React.FC = () => {
     { label: "Years Experience", value: "10+", icon: "⏰" }
   ];
 
+  const whyChooseUs = [
+    {
+      icon: "🎯",
+      title: "Proven Track Record",
+      description: "500+ successful projects delivered across diverse industries with measurable ROI"
+    },
+    {
+      icon: "🚀",
+      title: "Innovation First",
+      description: "Pioneering cutting-edge technologies like quantum AI and neuromorphic computing"
+    },
+    {
+      icon: "🛡️",
+      title: "Enterprise Security",
+      description: "Bank-level security protocols and compliance standards for mission-critical applications"
+    },
+    {
+      icon: "🌍",
+      title: "Global Reach",
+      description: "Serving clients worldwide with 24/7 support and localized expertise"
+    }
+  ];
+
+  const industries = [
+    { name: "Financial Services", icon: "💰", description: "AI-powered trading, risk management, and compliance solutions" },
+    { name: "Healthcare", icon: "🏥", description: "Medical AI, drug discovery, and patient care optimization" },
+    { name: "Manufacturing", icon: "🏭", description: "Smart factories, predictive maintenance, and quality control" },
+    { name: "Energy", icon: "⚡", description: "Renewable energy optimization and smart grid management" },
+    { name: "Transportation", icon: "🚗", description: "Autonomous vehicles and intelligent logistics systems" },
+    { name: "Retail", icon: "🛍️", description: "AI-powered customer experience and inventory optimization" }
+  ];
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -240,9 +272,57 @@ const Home: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Stats Section */}
+      {/* Industries We Serve */}
       <motion.section 
         className="py-20 bg-white/5 backdrop-blur-sm"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Industries We <span className="gradient-text">Transform</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our innovative solutions drive digital transformation across diverse sectors
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {industries.map((industry, index) => (
+              <motion.div
+                key={industry.name}
+                variants={itemVariants}
+                className="group"
+              >
+                <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover-lift">
+                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">{industry.icon}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-zion-cyan transition-colors duration-300">
+                    {industry.name}
+                  </h3>
+                  <p className="text-zion-slate-light text-center">
+                    {industry.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Why Choose Us */}
+      <motion.section 
+        className="py-20"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -255,6 +335,54 @@ const Home: React.FC = () => {
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our track record speaks for itself - we deliver results that exceed expectations
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {whyChooseUs.map((reason, index) => (
+              <motion.div
+                key={reason.title}
+                variants={itemVariants}
+                className="group"
+              >
+                <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover-lift">
+                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">{reason.icon}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                    {reason.title}
+                  </h3>
+                  <p className="text-zion-slate-light">
+                    {reason.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Stats Section */}
+      <motion.section 
+        className="py-20 bg-white/5 backdrop-blur-sm"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our <span className="gradient-text">Impact</span> in Numbers
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Quantifying our success through measurable achievements and client satisfaction
             </p>
           </motion.div>
           
