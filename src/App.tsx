@@ -14,6 +14,7 @@ const Login = React.lazy(() => import('./pages/Login.jsx'));
 const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
+const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030.tsx'));
 
 // Enhanced loading spinner with accessibility
 const LoadingSpinner = () => (
@@ -78,6 +79,7 @@ function App() {
               <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
               <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/revolutionary-services-2030" element={<RevolutionaryServicesShowcase2030 />} />
             </Routes>
           </Suspense>
         </main>
