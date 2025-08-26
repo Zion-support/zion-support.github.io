@@ -26,6 +26,7 @@ import { SecurityComplianceSection } from "@/components/SecurityComplianceSectio
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
+import { Revolutionary2029ServicesShowcase } from "@/components/Revolutionary2029ServicesShowcase";
 import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
 
 // Enhanced loading component with better UX
@@ -446,6 +447,9 @@ export default function Home() {
 
       {/* Enhanced Innovative Services Showcase */}
       <EnhancedInnovativeServicesShowcase />
+
+      {/* Revolutionary 2029 Services Showcase */}
+      <Revolutionary2029ServicesShowcase />
 
       {/* Enhanced Pricing Comparison */}
       <EnhancedPricingComparison />
