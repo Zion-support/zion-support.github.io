@@ -99,9 +99,10 @@ export function Header() {
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation' },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights' },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization' },
-        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management' },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes' },
-        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Patient care optimization' }
+        { name: 'AI Education Professor', path: '/ai-autonomous-education-professor', description: 'Intelligent educational systems' },
+        { name: 'AI Healthcare Physician', path: '/ai-autonomous-healthcare-physician', description: 'AI-powered medical diagnosis' },
+        { name: 'AI Learning System', path: '/ai-autonomous-learning-system', description: 'Adaptive learning platforms' },
+        { name: 'AI Legal Counsel', path: '/ai-autonomous-legal-counsel', description: 'Automated legal services' }
       ]
     },
     {
@@ -111,7 +112,7 @@ export function Header() {
       services: [
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Quantum-powered neural networks' },
         { name: 'Quantum Computing', path: '/services/quantum-technology', description: 'Quantum computing platforms' },
-        { name: 'Quantum-Safe Security', path: '/services/quantum-security', description: 'Future-proof quantum security' }
+        { name: 'Quantum Technology', path: '/services/quantum-technology', description: 'Advanced quantum solutions' }
       ]
     },
     {
@@ -131,9 +132,9 @@ export function Header() {
       services: [
         { name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Complete security solutions' },
         { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', description: 'Automated compliance management' },
-        { name: 'Security Assessment', path: '/services/security-assessment', description: 'Security audit and testing' },
-        { name: 'Compliance & Audit', path: '/services/compliance-audit', description: 'Regulatory compliance support' },
-        { name: 'Threat Detection', path: '/services/threat-detection', description: 'Real-time security monitoring' }
+        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', description: 'Comprehensive security solutions' },
+        { name: 'Security Assessment', path: '/services/cybersecurity', description: 'Security audit and testing' },
+        { name: 'Threat Detection', path: '/services/cybersecurity', description: 'Real-time security monitoring' }
       ]
     },
     {
@@ -144,10 +145,10 @@ export function Header() {
         { name: 'Cloud DevOps', path: '/cloud-devops', description: 'Cloud development and operations' },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Complete IT infrastructure solutions' },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', description: 'High-speed 5G connectivity' },
-        { name: 'Cloud Migration', path: '/services/cloud-migration', description: 'Seamless cloud transition' },
-        { name: 'Network Infrastructure', path: '/services/network-infrastructure', description: 'Robust network solutions' },
-        { name: 'Managed IT Services', path: '/services/managed-it-services', description: '24/7 IT support' },
-        { name: 'DevOps Automation', path: '/services/devops-automation', description: 'Streamlined development' }
+        { name: 'Cloud Migration', path: '/cloud-devops', description: 'Seamless cloud transition' },
+        { name: 'Network Infrastructure', path: '/services/it-infrastructure', description: 'Robust network solutions' },
+        { name: 'Managed IT Services', path: '/services/it-infrastructure', description: '24/7 IT support' },
+        { name: 'DevOps Automation', path: '/cloud-devops', description: 'Streamlined development' }
       ]
     },
     {
@@ -155,10 +156,10 @@ export function Header() {
       icon: Rocket,
       description: 'Cutting-edge solutions for tomorrow\'s challenges',
       services: [
-        { name: 'Blockchain Solutions', path: '/services/blockchain-solutions', description: 'Decentralized applications' },
-        { name: 'IoT Platforms', path: '/services/iot-platforms', description: 'Connected device management' },
-        { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Next-generation computing' },
-        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences' }
+        { name: 'Blockchain Solutions', path: '/blockchain-enterprise-solutions', description: 'Decentralized applications' },
+        { name: 'IoT Platforms', path: '/iot-data-analytics', description: 'Connected device management' },
+        { name: 'Quantum Computing', path: '/services/quantum-technology', description: 'Next-generation computing' },
+        { name: 'Emerging Technologies', path: '/emerging-tech', description: 'Cutting-edge innovations' }
       ]
     },
     {
@@ -167,8 +168,8 @@ export function Header() {
       description: 'Tailored solutions for specific industries',
       services: [
         { name: 'Healthcare Technology', path: '/solutions/healthcare', description: 'Medical innovation' },
-        { name: 'Financial Services', path: '/solutions/financial', description: 'Fintech solutions' },
-        { name: 'Manufacturing Intelligence', path: '/solutions/manufacturing', description: 'Smart manufacturing' },
+        { name: 'Financial Solutions', path: '/financial-solutions', description: 'Fintech solutions' },
+        { name: 'Manufacturing Solutions', path: '/manufacturing-solutions', description: 'Smart manufacturing' },
         { name: 'Retail Technology', path: '/solutions/retail', description: 'Digital retail transformation' }
       ]
     }
@@ -182,7 +183,7 @@ export function Header() {
       solutions: [
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Complete business modernization' },
         { name: 'Enterprise AI', path: '/solutions/enterprise', description: 'AI-powered enterprise solutions' },
-        { name: 'Data Analytics', path: '/services/data-analytics', description: 'Business intelligence platform' }
+        { name: 'Data Analytics', path: '/services/ai-business-intelligence', description: 'Business intelligence platform' }
       ]
     },
     {
@@ -192,7 +193,7 @@ export function Header() {
       solutions: [
         { name: 'Micro SAAS', path: '/services/micro-saas-solutions', description: 'Custom software solutions' },
         { name: 'Cloud Migration', path: '/cloud-devops', description: 'Affordable cloud solutions' },
-        { name: 'IT Support', path: '/services/it-support', description: 'Managed IT services' }
+        { name: 'IT Support', path: '/services/it-infrastructure', description: 'Managed IT services' }
       ]
     },
     {
@@ -201,10 +202,10 @@ export function Header() {
       description: 'Industry-specific expertise',
       solutions: [
         { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Medical technology innovation' },
-        { name: 'Financial Solutions', path: '/solutions/financial', description: 'Fintech and banking solutions' },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', description: 'Industry 4.0 transformation' },
+        { name: 'Financial Solutions', path: '/financial-solutions', description: 'Fintech and banking solutions' },
+        { name: 'Manufacturing Solutions', path: '/manufacturing-solutions', description: 'Industry 4.0 transformation' },
         { name: 'Retail Solutions', path: '/solutions/retail', description: 'Digital commerce solutions' },
-        { name: 'Government Solutions', path: '/solutions/government', description: 'Public sector technology' }
+        { name: 'Government Solutions', path: '/solutions/enterprise', description: 'Public sector technology' }
       ]
     }
   ];

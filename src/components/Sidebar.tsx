@@ -33,11 +33,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'AI Education Professor', path: '/ai-autonomous-education-professor', icon: Brain },
+        { name: 'AI Healthcare Physician', path: '/ai-autonomous-healthcare-physician', icon: Brain },
+        { name: 'AI Learning System', path: '/ai-autonomous-learning-system', icon: Brain },
+        { name: 'AI Legal Counsel', path: '/ai-autonomous-legal-counsel', icon: Brain },
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'Machine Learning', path: '/services/ai-machine-learning', icon: Brain },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 }
       ]
     },
@@ -49,9 +49,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock },
         { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cloud },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
-        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Network },
-        { name: 'Managed IT Services', path: '/services/managed-it-services', icon: Server },
-        { name: 'Security Assessment', path: '/services/security-assessment', icon: Shield }
+        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket }
       ]
     },
     {
@@ -59,12 +59,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
         { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Users },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: BarChart3 },
-        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
+        { name: 'Financial Solutions', path: '/financial-solutions', icon: BarChart3 },
+        { name: 'Manufacturing Solutions', path: '/manufacturing-solutions', icon: Cpu },
         { name: 'Retail Solutions', path: '/solutions/retail', icon: Smartphone },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Building },
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Zap },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe }
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Blockchain Solutions', path: '/blockchain-enterprise-solutions', icon: Globe }
       ]
     },
     {

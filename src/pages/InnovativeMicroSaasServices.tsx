@@ -70,9 +70,36 @@ const InnovativeMicroSaasServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
-  // Combine all services
+  // Combine all services and map to Service interface
   const allServices: Service[] = [
-    ...ADVANCED_MICRO_SAAS_SERVICES,
+    ...ADVANCED_MICRO_SAAS_SERVICES.map(service => ({
+      id: service.id,
+      title: service.name,
+      description: service.description,
+      category: service.category,
+      subcategory: service.subcategory,
+      price: service.price,
+      currency: "$",
+      pricingModel: service.pricingModel,
+      features: service.features,
+      benefits: service.benefits,
+      useCases: service.targetAudience,
+      targetAudience: service.targetAudience,
+      tags: service.tags,
+      estimatedDelivery: service.estimatedDelivery,
+      supportLevel: service.supportLevel,
+      marketPrice: service.marketPrice,
+      contactInfo: {
+        phone: service.contactInfo.phone,
+        email: service.contactInfo.email,
+        website: service.contactInfo.website
+      },
+      technology: service.technology,
+      integrations: service.integrations,
+      compliance: service.compliance,
+      roi: service.roi,
+      competitors: service.competitors
+    })),
     ...EMERGING_TECH_SERVICES
   ];
 

@@ -32,11 +32,11 @@ export function Footer() {
       links: [
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "AI Education Professor", path: "/ai-autonomous-education-professor" },
+        { label: "AI Healthcare Physician", path: "/ai-autonomous-healthcare-physician" },
+        { label: "AI Learning System", path: "/ai-autonomous-learning-system" },
+        { label: "AI Legal Counsel", path: "/ai-autonomous-legal-counsel" },
         { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
-        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "Machine Learning Solutions", path: "/services/ai-machine-learning" },
         { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" }
       ]
     },
@@ -49,9 +49,9 @@ export function Footer() {
         { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
         { label: "Cloud DevOps", path: "/cloud-devops" },
         { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
-        { label: "Network Infrastructure", path: "/services/network-infrastructure" },
-        { label: "Managed IT Services", path: "/services/managed-it-services" },
-        { label: "Security Assessment", path: "/services/security-assessment" }
+        { label: "Advanced Cybersecurity Suite", path: "/advanced-cybersecurity-suite" },
+        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
+        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" }
       ]
     },
     {
@@ -60,12 +60,12 @@ export function Footer() {
       links: [
         { label: "Enterprise Solutions", path: "/solutions/enterprise" },
         { label: "Healthcare Solutions", path: "/solutions/healthcare" },
-        { label: "Financial Solutions", path: "/solutions/financial" },
-        { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
+        { label: "Financial Solutions", path: "/financial-solutions" },
+        { label: "Manufacturing Solutions", path: "/manufacturing-solutions" },
         { label: "Retail Solutions", path: "/solutions/retail" },
-        { label: "Government Solutions", path: "/solutions/government" },
         { label: "Digital Transformation", path: "/digital-transformation" },
-        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" }
+        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
+        { label: "Blockchain Solutions", path: "/blockchain-enterprise-solutions" }
       ]
     },
     {

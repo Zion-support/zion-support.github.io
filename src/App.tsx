@@ -4,7 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -12,7 +12,7 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
@@ -21,7 +21,7 @@ import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import { ScrollToTop } from './components/ScrollToTop';
 
 // Enhanced lazy loading with preloading hints
@@ -53,6 +53,10 @@ const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/Autonomo
 const AIPoweredITAssetManagement = lazy(() => import('./pages/AIPoweredITAssetManagement'));
 const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutomation'));
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
+const AIAutonomousEducationProfessor = lazy(() => import('./pages/AIAutonomousEducationProfessor'));
+const AIAutonomousHealthcarePhysician = lazy(() => import('./pages/AIAutonomousHealthcarePhysician'));
+const AIAutonomousLearningSystem = lazy(() => import('./pages/AIAutonomousLearningSystem'));
+const AIAutonomousLegalCounsel = lazy(() => import('./pages/AIAutonomousLegalCounsel'));
 const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
@@ -112,10 +116,7 @@ const AIAutonomousData = lazy(() => import('./pages/services/AIAutonomousData'))
 const AIAutonomousDecisionEngine = lazy(() => import('./pages/services/AIAutonomousDecisionEngine'));
 const AIAutonomousDecisionPlatform = lazy(() => import('./pages/services/AIAutonomousDecisionPlatform'));
 const AIAutonomousDevOps = lazy(() => import('./pages/services/AIAutonomousDevOps'));
-const AIAutonomousEducationProfessor = lazy(() => import('./pages/services/AIAutonomousEducationProfessor'));
-const AIAutonomousHealthcarePhysician = lazy(() => import('./pages/services/AIAutonomousHealthcarePhysician'));
-const AIAutonomousLearningSystem = lazy(() => import('./pages/services/AIAutonomousLearningSystem'));
-const AIAutonomousLegalCounsel = lazy(() => import('./pages/services/AIAutonomousLegalCounsel'));
+
 const AIAutonomousLogistics = lazy(() => import('./pages/services/AIAutonomousLogistics'));
 const AIAutonomousManufacturing = lazy(() => import('./pages/services/AIAutonomousManufacturing'));
 const AIAutonomousResearch = lazy(() => import('./pages/services/AIAutonomousResearch'));
@@ -157,8 +158,7 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer>
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
                   title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
@@ -196,6 +196,10 @@ const App: React.FC = () => {
                       <Route path="/ai-powered-it-asset-management" element={<AIPoweredITAssetManagement />} />
                       <Route path="/soc2-compliance-automation" element={<SOC2ComplianceAutomation />} />
                       <Route path="/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+                      <Route path="/ai-autonomous-education-professor" element={<AIAutonomousEducationProfessor />} />
+                      <Route path="/ai-autonomous-healthcare-physician" element={<AIAutonomousHealthcarePhysician />} />
+                      <Route path="/ai-autonomous-learning-system" element={<AIAutonomousLearningSystem />} />
+                      <Route path="/ai-autonomous-legal-counsel" element={<AIAutonomousLegalCounsel />} />
                       <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
@@ -375,9 +379,8 @@ const App: React.FC = () => {
                     </div>
                   </>
                 )}
-              </div>
-            </PerformanceOptimizer>
-          </Router>
+                              </div>
+            </Router>
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>
