@@ -3,11 +3,12 @@ const nextConfig = {
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
-	assetPrefix,
+	assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || '',
 	images: {
 		// Using unoptimized to support static hosting/CDN without Next Image optimization
 		unoptimized: true
 	},
+	pageExtensions: ['page.tsx','page.ts','page.jsx','page.js'],
 	typescript: {
 		ignoreBuildErrors: true
 	},
