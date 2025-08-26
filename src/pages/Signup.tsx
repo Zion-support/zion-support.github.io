@@ -155,7 +155,7 @@ export default function Signup() {
                           <div className="relative">
                             <Input
                               placeholder="John Doe"
-                              className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              className="bg-zion-blue pl-10 text-black placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               {...field}
                               aria-autocomplete="none"
                               autoComplete="off"
@@ -178,7 +178,7 @@ export default function Signup() {
                           <div className="relative">
                             <Input
                               placeholder="you@example.com"
-                              className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              className="bg-zion-blue pl-10 text-black placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               {...field}
                               autoComplete="off"
                               aria-autocomplete="none"
@@ -203,7 +203,7 @@ export default function Signup() {
                             <Input
                               type={showPassword ? "text" : "password"}
                               placeholder="••••••••"
-                              className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
+                              className="bg-zion-blue pl-10 text-black border-zion-blue-light focus:border-zion-purple"
                               {...field}
                               autoComplete="new-password"
                             />
@@ -242,16 +242,8 @@ export default function Signup() {
                             <Input
                               type={showConfirmPassword ? "text" : "password"}
                               placeholder="••••••••"
-                              className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
-                              value={confirmPasswordValue}
-                              onChange={(e) => {
-                                field.onChange(e)
-                                setConfirmPasswordValue(e.target.value)
-                              }}
-                              onBlur={(e) => {
-                                field.onBlur()
-                                setConfirmPasswordValue(e.target.value)
-                              }}
+                              className="bg-zion-blue pl-10 text-black border-zion-blue-light focus:border-zion-purple"
+                              {...field}
                               autoComplete="new-password"
                             />
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
