@@ -14,12 +14,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  lint-and-types:
+    name: Lint and Type Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -27,38 +29,43 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        
+      - name: Prettier check
+        run: npm run format:check
+        
       - name: ESLint
         run: npm run lint
+        
       - name: Type check
         run: npm run type-check
+
   build:
+    name: Build
     runs-on: ubuntu-latest
     needs: lint-and-types
     steps:
       - uses: actions/checkout@v4
+      
       - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
           node-version: 20.x
           cache: 'npm'
+          
       - name: Install dependencies
         run: npm ci
-      - name: Prettier
-        run: npm run format
-      - name: ESLint
-        run: npm run lint
-      - name: Type check
-        run: npm run type-check
+        
       - name: Build
         run: npm run build
-
+        
       - name: Security scan (non-blocking)
-        run: npm run security:scan
+        run: npm audit
         continue-on-error: true
 
   test:
     name: Test
     runs-on: ubuntu-latest
+    needs: build
     timeout-minutes: 15
     steps:
       - name: Checkout

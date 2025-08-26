@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-// Re-export from Button.tsx for backward compatibility
-export { Button, buttonVariants } from './Button';
-export type { ButtonProps } from './Button';
-=======
 import React from 'react';
 
 interface ButtonProps {
@@ -29,10 +24,10 @@ export function Button({
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   
   const variantClasses = {
-    default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
-    outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',
-    ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',
-    link: 'text-zion-cyan hover:underline focus:ring-zion-cyan'
+    default: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+    outline: 'border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
+    ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-500',
+    link: 'text-blue-600 hover:underline focus:ring-blue-500'
   };
   
   const sizeClasses = {
@@ -59,4 +54,3 @@ export function Button({
     </button>
   );
 }
->>>>>>> origin/cursor/build-and-fix-errors-merged

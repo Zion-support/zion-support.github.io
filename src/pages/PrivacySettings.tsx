@@ -1,24 +1,23 @@
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
 import { Switch } from '@/components/ui/switch';
 import { Button } from '@/components/ui/button';
-import { useConsent } from '@/context/ConsentContext';
 
 export default function PrivacySettings() {
-  const { consent, updateConsent } = useConsent();
-  const [analytics, setAnalytics] = useState(consent.analytics);
-  const [ads, setAds] = useState(consent.ads);
+  const [analytics, setAnalytics] = useState(true);
+  const [ads, setAds] = useState(false);
 
   const handleSave = () => {
-    updateConsent({ analytics, ads });
+    // Save preferences to localStorage
+    localStorage.setItem('privacy-analytics', analytics.toString());
+    localStorage.setItem('privacy-ads', ads.toString());
+    alert('Preferences saved!');
   };
 
   return (
     <>
       <Header />
-      <SEO title="Privacy Settings" description="Manage your cookie preferences" />
       <main className="container mx-auto px-4 py-8 space-y-6">
         <h1 className="text-2xl font-bold">Privacy Settings</h1>
         <div className="space-y-4">

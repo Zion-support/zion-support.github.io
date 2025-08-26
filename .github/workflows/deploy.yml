@@ -10,8 +10,8 @@ permissions:
   actions: read
 
 jobs:
-  main:
-    name: Main Job
+  deploy:
+    name: Deploy to Production
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -25,33 +25,47 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-      - name: Install dependencies (for Sentry CLI and potential build step)
+          
+      - name: Install dependencies
         run: npm ci
-      - name: Build application (to generate sourcemaps for Sentry)
+        
+      - name: Build application
         env:
-          # Mimic Netlify's production environment as much as possible for consistent sourcemaps
-          # These are illustrative; actual values might need to match netlify.toml production context
           NODE_ENV: production
           NEXT_TELEMETRY_DISABLED: '1'
-          # Add other critical NEXT_PUBLIC_ vars if they affect sourcemap generation or IDs
-        run: npm run build # This uses the standard build, not the full optimized-build.cjs
+        run: npm run build
 
       - name: Create Sentry release
         uses: getsentry/action-release@v1
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: zion-holdings # Make sure this is your Sentry org slug
-          SENTRY_PROJECT: javascript-nextjs # Make sure this is your Sentry project slug
+          SENTRY_ORG: zion-holdings
+          SENTRY_PROJECT: javascript-nextjs
         with:
           environment: production
-          sourcemaps: # Path to sourcemaps
+          sourcemaps:
             - './.next/**/*.js.map'
-            - './.next/static/**/*.js.map' # Common locations for Next.js sourcemaps
-          url_prefix: '~/_next' # Adjust if your assets are served from a different base path e.g. /_next or cdn
-          # version: ${{ github.sha }} # Explicitly set version, defaults to github.sha
-          set_commits: auto # Automatically associate commits with the release
-          # deploy: # Optional: if you want to mark the release as deployed in Sentry
-          # env: production
-          # started_at: ${{ steps.start_time.outputs.time }} # Requires a step to output current time
-          # name: "Netlify Production Deployment"
+            - './.next/static/**/*.js.map'
+          url_prefix: '~/_next'
+          set_commits: auto
+          
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2.0
+        with:
+          publish-dir: './.next'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          
+      - name: Notify deployment status
+        if: always()
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Deployment successful"
+          else
+            echo "❌ Deployment failed"
+          fi
 

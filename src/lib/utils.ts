@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 import clsx, { type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
  
-=======
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
-<<<<<<< HEAD
-=======
+
 export function formatDate(date: Date | string): string {
   const d = new Date(date);
   return d.toLocaleDateString('en-US', {
@@ -19,12 +13,14 @@ export function formatDate(date: Date | string): string {
     day: 'numeric'
   });
 }
+
 export function formatCurrency(amount: number, currency = 'USD'): string {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency
   }).format(amount);
 }
+
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
@@ -32,20 +28,20 @@ export function debounce<T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    setTimeout(() => func(...args), wait);
   };
 }
+
 export function throttle<T extends (...args: any[]) => any>(
   func: T,
-  limit: number
+  wait: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+      setTimeout(() => inThrottle = false, wait);
     }
   };
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896

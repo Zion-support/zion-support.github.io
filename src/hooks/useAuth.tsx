@@ -15,7 +15,6 @@ interface AuthContextType {
   updateProfile: (data: Partial<User>) => Promise<void>;
 }
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
-<<<<<<< HEAD
 
   // Mock auth functions for now - these would connect to Supabase in a real implementation
   const signIn = async (email: string, password: string) => {
@@ -171,15 +170,12 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
-=======
-export const useAuth = () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error('useAuth must be used within an AuthProvider');
   }
   return context;
-};
+}
 interface AuthProviderProps {
   children: ReactNode;
 }
