@@ -63,6 +63,9 @@ module.exports = {
         'shimmer': 'shimmer 2.5s linear infinite',
         'gradient': 'gradient 8s ease infinite',
         'neon-pulse': 'neon-pulse 1.5s ease-in-out infinite alternate',
+        'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+        'slide-in-right': 'slide-in-right 0.5s ease-out forwards',
+        'scale-in': 'scale-in 0.3s ease-out forwards',
       },
       keyframes: {
         float: {
@@ -88,6 +91,18 @@ module.exports = {
           '100%': { 
             textShadow: '0 0 10px rgba(34, 221, 210, 0.8), 0 0 20px rgba(34, 221, 210, 0.6), 0 0 30px rgba(34, 221, 210, 0.4)' 
           },
+        },
+        'fade-in-up': {
+          '0%': { opacity: 0, transform: 'translateY(30px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+        'slide-in-right': {
+          '0%': { opacity: 0, transform: 'translateX(30px)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
+        'scale-in': {
+          '0%': { opacity: 0, transform: 'scale(0.9)' },
+          '100%': { opacity: 1, transform: 'scale(1)' },
         },
       },
       backdropBlur: {

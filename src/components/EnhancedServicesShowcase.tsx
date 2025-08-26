@@ -38,6 +38,10 @@ import {
 import enhancedMicroSaasServices2025 from '../data/enhancedMicroSaasServices2025';
 import enhancedAIServices2025 from '../data/enhancedAIServices2025';
 import enhancedITServices2025 from '../data/enhancedITServices2025';
+import nextGenInnovativeServices2025 from '../data/nextGenInnovativeServices2025';
+import blockchainWeb3Services2025 from '../data/blockchainWeb3Services2025';
+import iotEdgeComputingServices2025 from '../data/iotEdgeComputingServices2025';
+import advancedCybersecurityServices2025 from '../data/advancedCybersecurityServices2025';
 
 interface ServiceShowcaseProps {
   title?: string;
@@ -410,6 +414,386 @@ export function EnhancedServicesShowcase({
     </Card>
   );
 
+  const renderInnovativeService = (service: any) => (
+    <Card 
+      key={service.id} 
+      className="group relative overflow-hidden bg-gradient-to-br from-green-800/50 to-emerald-700/50 border-green-600/30 hover:border-green-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm"
+    >
+      <CardHeader className="pb-4">
+        <div className="flex items-center gap-3 mb-3">
+          <div className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>
+            {getCategoryIcon(service.category)}
+          </div>
+          <Badge variant="outline" className="border-green-500 text-green-300">
+            {service.category}
+          </Badge>
+        </div>
+        <CardTitle className="text-xl text-white group-hover:text-green-400 transition-colors">
+          {service.name}
+        </CardTitle>
+        <CardDescription className="text-green-200">
+          {service.description}
+        </CardDescription>
+      </CardHeader>
+
+      <CardContent className="space-y-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Star className="h-4 w-4 text-green-400" />
+            <span className="text-green-400 font-semibold">Innovation Score: {service.innovationScore}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Zap className="h-4 w-4 text-yellow-400" />
+            <span className="text-yellow-400 font-semibold">{formatPrice(service.price, service.pricingModel)}</span>
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <h4 className="text-sm font-semibold text-green-200">Key Features:</h4>
+          <div className="flex flex-wrap gap-2">
+            {service.features.slice(0, 4).map((feature: string, index: number) => (
+              <Badge key={index} variant="secondary" className="text-xs bg-green-700/50 text-green-200">
+                {feature}
+              </Badge>
+            ))}
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <h4 className="text-sm font-semibold text-green-200">Benefits:</h4>
+          <div className="flex flex-wrap gap-2">
+            {service.benefits.slice(0, 3).map((benefit: string, index: number) => (
+              <Badge key={index} variant="outline" className="text-xs border-emerald-500/30 text-emerald-400">
+                {benefit}
+              </Badge>
+            ))}
+          </div>
+        </div>
+
+        <div className="pt-4 border-t border-green-600/30">
+          <div className="flex items-center justify-between mb-4">
+            <div className="space-y-1">
+              <span className="text-sm text-green-300">Market Price:</span>
+              <div className="text-lg font-bold text-white">{service.marketPrice}</div>
+            </div>
+            <div className="text-right">
+              <span className="text-sm text-green-300">Emerging Tech:</span>
+              <div className="text-sm font-semibold text-yellow-400">
+                {service.emergingTech ? 'Yes' : 'No'}
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex gap-2">
+            <Button 
+              size="sm"
+              className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold transition-all duration-300"
+              onClick={() => window.open(service.contactInfo.website, '_blank')}
+            >
+              Learn More
+            </Button>
+            <Button 
+              size="sm"
+              variant="outline"
+              className="border-green-500 text-green-300 hover:border-emerald-500 hover:text-emerald-400"
+              onClick={() => window.open(`mailto:${service.contactInfo.email}`)}
+            >
+              Contact
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+
+  const renderBlockchainService = (service: any) => (
+    <Card 
+      key={service.id} 
+      className="group relative overflow-hidden bg-gradient-to-br from-orange-800/50 to-red-700/50 border-orange-600/30 hover:border-orange-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm"
+    >
+      <CardHeader className="pb-4">
+        <div className="flex items-center gap-3 mb-3">
+          <div className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>
+            {getCategoryIcon(service.category)}
+          </div>
+          <Badge variant="outline" className="border-orange-500 text-orange-300">
+            {service.category}
+          </Badge>
+        </div>
+        <CardTitle className="text-xl text-white group-hover:text-orange-400 transition-colors">
+          {service.name}
+        </CardTitle>
+        <CardDescription className="text-orange-200">
+          {service.description}
+        </CardDescription>
+      </CardHeader>
+
+      <CardContent className="space-y-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Shield className="h-4 w-4 text-orange-400" />
+            <span className="text-orange-400 font-semibold">Blockchain Score: {service.blockchainScore}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Zap className="h-4 w-4 text-yellow-400" />
+            <span className="text-yellow-400 font-semibold">{formatPrice(service.price, service.pricingModel)}</span>
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <h4 className="text-sm font-semibold text-orange-200">Key Features:</h4>
+          <div className="flex flex-wrap gap-2">
+            {service.features.slice(0, 4).map((feature: string, index: number) => (
+              <Badge key={index} variant="secondary" className="text-xs bg-orange-700/50 text-orange-200">
+                {feature}
+              </Badge>
+            ))}
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <h4 className="text-sm font-semibold text-orange-200">Web3 Features:</h4>
+          <div className="flex flex-wrap gap-2">
+            <Badge variant="outline" className="text-xs border-red-500/30 text-red-400">
+              {service.web3Native ? 'Web3 Native' : 'Traditional'}
+            </Badge>
+            <Badge variant="outline" className="text-xs border-red-500/30 text-red-400">
+              {service.smartContractSupport ? 'Smart Contracts' : 'No Smart Contracts'}
+            </Badge>
+            <Badge variant="outline" className="text-xs border-red-500/30 text-red-400">
+              {service.crossChainCompatibility ? 'Cross-Chain' : 'Single Chain'}
+            </Badge>
+          </div>
+        </div>
+
+        <div className="pt-4 border-t border-orange-600/30">
+          <div className="flex items-center justify-between mb-4">
+            <div className="space-y-1">
+              <span className="text-sm text-orange-300">Market Price:</span>
+              <div className="text-lg font-bold text-white">{service.marketPrice}</div>
+            </div>
+            <div className="text-right">
+              <span className="text-sm text-orange-300">Use Cases:</span>
+              <div className="text-sm font-semibold text-yellow-400">
+                {service.useCases.length}
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex gap-2">
+            <Button 
+              size="sm"
+              className="flex-1 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold transition-all duration-300"
+              onClick={() => window.open(service.contactInfo.website, '_blank')}
+            >
+              Learn More
+            </Button>
+            <Button 
+              size="sm"
+              variant="outline"
+              className="border-orange-500 text-orange-300 hover:border-red-500 hover:text-red-400"
+              onClick={() => window.open(`mailto:${service.contactInfo.email}`)}
+            >
+              Contact
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+
+  const renderIoTService = (service: any) => (
+    <Card 
+      key={service.id} 
+      className="group relative overflow-hidden bg-gradient-to-br from-teal-800/50 to-cyan-700/50 border-teal-600/30 hover:border-teal-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm"
+    >
+      <CardHeader className="pb-4">
+        <div className="flex items-center gap-3 mb-3">
+          <div className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>
+            {getCategoryIcon(service.category)}
+          </div>
+          <Badge variant="outline" className="border-teal-500 text-teal-300">
+            {service.category}
+          </Badge>
+        </div>
+        <CardTitle className="text-xl text-white group-hover:text-teal-400 transition-colors">
+          {service.name}
+        </CardTitle>
+        <CardDescription className="text-teal-200">
+          {service.description}
+        </CardDescription>
+      </CardHeader>
+
+      <CardContent className="space-y-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Settings className="h-4 w-4 text-teal-400" />
+            <span className="text-teal-400 font-semibold">IoT Score: {service.iotScore}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Zap className="h-4 w-4 text-yellow-400" />
+            <span className="text-yellow-400 font-semibold">{formatPrice(service.price, service.pricingModel)}</span>
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <h4 className="text-sm font-semibold text-teal-200">Key Features:</h4>
+          <div className="flex flex-wrap gap-2">
+            {service.features.slice(0, 4).map((feature: string, index: number) => (
+              <Badge key={index} variant="secondary" className="text-xs bg-teal-700/50 text-teal-200">
+                {feature}
+              </Badge>
+            ))}
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <h4 className="text-sm font-semibold text-teal-200">IoT Features:</h4>
+          <div className="flex flex-wrap gap-2">
+            <Badge variant="outline" className="text-xs border-cyan-500/30 text-cyan-400">
+              {service.edgeNative ? 'Edge Native' : 'Cloud Based'}
+            </Badge>
+            <Badge variant="outline" className="text-xs border-cyan-500/30 text-cyan-400">
+              {service.aiIntegration ? 'AI Powered' : 'Traditional'}
+            </Badge>
+            <Badge variant="outline" className="text-xs border-cyan-500/30 text-cyan-400">
+              {service.predictiveAnalytics ? 'Predictive' : 'Reactive'}
+            </Badge>
+          </div>
+        </div>
+
+        <div className="pt-4 border-t border-teal-600/30">
+          <div className="flex items-center justify-between mb-4">
+            <div className="space-y-1">
+              <span className="text-sm text-teal-300">Market Price:</span>
+              <div className="text-lg font-bold text-white">{service.marketPrice}</div>
+            </div>
+            <div className="text-right">
+              <span className="text-sm text-teal-300">Real-time:</span>
+              <div className="text-sm font-semibold text-yellow-400">
+                {service.realTimeProcessing ? 'Yes' : 'No'}
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex gap-2">
+            <Button 
+              size="sm"
+              className="flex-1 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white font-semibold transition-all duration-300"
+              onClick={() => window.open(service.contactInfo.website, '_blank')}
+            >
+              Learn More
+            </Button>
+            <Button 
+              size="sm"
+              variant="outline"
+              className="border-teal-500 text-teal-300 hover:border-cyan-500 hover:text-cyan-400"
+              onClick={() => window.open(`mailto:${service.contactInfo.email}`)}
+            >
+              Contact
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+
+  const renderCybersecurityService = (service: any) => (
+    <Card 
+      key={service.id} 
+      className="group relative overflow-hidden bg-gradient-to-br from-pink-800/50 to-rose-700/50 border-pink-600/30 hover:border-pink-500/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm"
+    >
+      <CardHeader className="pb-4">
+        <div className="flex items-center gap-3 mb-3">
+          <div className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>
+            {getCategoryIcon(service.category)}
+          </div>
+          <Badge variant="outline" className="border-pink-500 text-pink-300">
+            {service.category}
+          </Badge>
+        </div>
+        <CardTitle className="text-xl text-white group-hover:text-pink-400 transition-colors">
+          {service.name}
+        </CardTitle>
+        <CardDescription className="text-pink-200">
+          {service.description}
+        </CardDescription>
+      </CardHeader>
+
+      <CardContent className="space-y-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Shield className="h-4 w-4 text-pink-400" />
+            <span className="text-pink-400 font-semibold">Security Score: {service.securityScore}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Zap className="h-4 w-4 text-yellow-400" />
+            <span className="text-yellow-400 font-semibold">{formatPrice(service.price, service.pricingModel)}</span>
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <h4 className="text-sm font-semibold text-pink-200">Key Features:</h4>
+          <div className="flex flex-wrap gap-2">
+            {service.features.slice(0, 4).map((feature: string, index: number) => (
+              <Badge key={index} variant="secondary" className="text-xs bg-pink-700/50 text-pink-200">
+                {feature}
+              </Badge>
+            ))}
+          </div>
+        </div>
+
+        <div className="space-y-2">
+          <h4 className="text-sm font-semibold text-pink-200">Security Features:</h4>
+          <div className="flex flex-wrap gap-2">
+            <Badge variant="outline" className="text-xs border-rose-500/30 text-rose-400">
+              {service.zeroTrust ? 'Zero Trust' : 'Traditional'}
+            </Badge>
+            <Badge variant="outline" className="text-xs border-rose-500/30 text-rose-400">
+              {service.aiPowered ? 'AI Powered' : 'Rule Based'}
+            </Badge>
+            <Badge variant="outline" className="text-xs border-rose-500/30 text-rose-400">
+              {service.quantumResistant ? 'Quantum Resistant' : 'Standard'}
+            </Badge>
+          </div>
+        </div>
+
+        <div className="pt-4 border-t border-pink-600/30">
+          <div className="flex items-center justify-between mb-4">
+            <div className="space-y-1">
+              <span className="text-sm text-pink-300">Market Price:</span>
+              <div className="text-lg font-bold text-white">{service.marketPrice}</div>
+            </div>
+            <div className="text-right">
+              <span className="text-sm text-pink-300">Threat Intel:</span>
+              <div className="text-sm font-semibold text-yellow-400">
+                {service.threatIntelligence ? 'Yes' : 'No'}
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex gap-2">
+            <Button 
+              size="sm"
+              className="flex-1 bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 text-white font-semibold transition-all duration-300"
+              onClick={() => window.open(service.contactInfo.website, '_blank')}
+            >
+              Learn More
+            </Button>
+            <Button 
+              size="sm"
+              variant="outline"
+              className="border-pink-500 text-pink-300 hover:border-rose-500 hover:text-rose-400"
+              onClick={() => window.open(`mailto:${service.contactInfo.email}`)}
+            >
+              Contact
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+
   return (
     <div className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4">
@@ -423,13 +807,13 @@ export function EnhancedServicesShowcase({
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 bg-slate-800/50 border border-slate-600/30">
+          <TabsList className="grid w-full grid-cols-4 bg-slate-800/50 border border-slate-600/30">
             <TabsTrigger 
               value="microsaas" 
               className="data-[state=active]:bg-blue-600 data-[state=active]:text-white"
             >
               <Zap className="h-4 w-4 mr-2" />
-              Micro SAAS Services
+              Micro SAAS
             </TabsTrigger>
             <TabsTrigger 
               value="ai" 
@@ -444,6 +828,13 @@ export function EnhancedServicesShowcase({
             >
               <Server className="h-4 w-4 mr-2" />
               IT Services
+            </TabsTrigger>
+            <TabsTrigger 
+              value="innovative" 
+              className="data-[state=active]:bg-green-600 data-[state=active]:text-white"
+            >
+              <Star className="h-4 w-4 mr-2" />
+              Innovative
             </TabsTrigger>
           </TabsList>
 
@@ -462,6 +853,42 @@ export function EnhancedServicesShowcase({
           <TabsContent value="it" className="mt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {enhancedITServices2025.map(renderITService)}
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="innovative" className="mt-8">
+            <div className="space-y-8">
+              {/* Next Gen Innovative Services */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Next Generation Innovative Services</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {nextGenInnovativeServices2025.map(renderInnovativeService)}
+                </div>
+              </div>
+              
+              {/* Blockchain & Web3 Services */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Blockchain & Web3 Services</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {blockchainWeb3Services2025.map(renderBlockchainService)}
+                </div>
+              </div>
+              
+              {/* IoT & Edge Computing Services */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">IoT & Edge Computing Services</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {iotEdgeComputingServices2025.map(renderIoTService)}
+                </div>
+              </div>
+              
+              {/* Advanced Cybersecurity Services */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Advanced Cybersecurity Services</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {advancedCybersecurityServices2025.map(renderCybersecurityService)}
+                </div>
+              </div>
             </div>
           </TabsContent>
         </Tabs>
