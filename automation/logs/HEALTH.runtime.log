@@ -81,3 +81,8 @@
 [2025-08-26T03:40:36.503Z] [HEALTH] All services healthy
 [2025-08-26T03:41:06.506Z] [HEALTH] All services healthy
 [2025-08-26T03:41:36.509Z] [HEALTH] All services healthy
+[2025-08-26T03:42:06.510Z] [HEALTH] Health check issues found: Service autonomous-system-manager is enabled but not running, Service link-health-scheduler is enabled but not running
+[2025-08-26T03:42:36.512Z] [HEALTH] All services healthy
+[2025-08-26T03:43:06.514Z] [HEALTH] All services healthy
+[2025-08-26T03:43:36.517Z] [HEALTH] All services healthy
+[2025-08-26T03:44:06.520Z] [HEALTH] All services healthy

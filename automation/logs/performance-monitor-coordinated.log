@@ -231,3 +231,10 @@ No metrics available
 [2025-08-26T03:41:57.928Z] metrics rss=30.97 MB heapUsed=4.40 MB cpuLoad=31.49 memUsage=78.74%
 [2025-08-26T03:42:02.627Z] Stopping Real-Time Performance Monitor...
 [2025-08-26T03:42:02.628Z] Stopping performance monitoring
+[2025-08-26T03:42:33.196Z] Starting Real-Time Performance Monitor
+[2025-08-26T03:42:33.211Z] Starting real-time performance monitoring
+[2025-08-26T03:43:03.217Z] ALERT [WARNING] Memory usage warning: 80.37%
+[2025-08-26T03:43:03.220Z] metrics rss=30.62 MB heapUsed=4.28 MB cpuLoad=31.57 memUsage=80.37%
+[2025-08-26T03:43:33.216Z] metrics rss=30.83 MB heapUsed=4.35 MB cpuLoad=27.83 memUsage=77.97%
+[2025-08-26T03:44:01.493Z] Stopping Real-Time Performance Monitor...
+[2025-08-26T03:44:01.493Z] Stopping performance monitoring
