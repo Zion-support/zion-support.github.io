@@ -549,3 +549,6 @@ export const allEnhancedServices2025 = {
   itServices: enhancedITServices2025,
   aiServices: enhancedAIServices2025
 };
+
+// Export the main services array for backward compatibility
+export const ENHANCED_INNOVATIVE_SERVICES_2025 = enhancedInnovativeMicroSaasServices2025;
