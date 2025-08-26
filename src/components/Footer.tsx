@@ -6,6 +6,7 @@ const footerNavigation = {
   services: {
     title: 'Core Services',
     items: [
+      { name: 'Enhanced Services 2025', href: '/enhanced-services-2025', icon: Sparkles, description: 'Cutting-edge 2025 services' },
       { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, description: 'AI-powered business intelligence' },
       { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Advanced threat detection' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Cloud infrastructure solutions' },

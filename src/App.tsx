@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader.jsx';
 import { Footer } from './components/Footer.jsx';
@@ -37,6 +37,7 @@ const ForgotPassword = React.lazy(() => import('./pages/ForgotPassword'));
 const ResetPassword = React.lazy(() => import('./pages/ResetPassword'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
 
 // Service pages
 const CybersecurityServices = React.lazy(() => import('./pages/CybersecurityServices.tsx'));
@@ -112,6 +113,7 @@ function App() {
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/enhanced-services" element={<EnhancedServices />} />
+              <Route path="/enhanced-services-2025" element={<EnhancedServicesPage />} />
               
               {/* User Dashboard */}
               <Route path="/dashboard" element={<Dashboard />} />

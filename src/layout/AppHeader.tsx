@@ -65,6 +65,7 @@ export function AppHeader() {
       icon: Zap,
       color: 'from-zion-cyan to-zion-blue',
       dropdown: [
+        { name: 'Enhanced Services 2025', href: '/enhanced-services-2025', icon: Sparkles, description: 'Cutting-edge 2025 services' },
         { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, description: 'AI-powered business intelligence and analytics' },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Advanced threat detection and security' },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Cloud infrastructure and automation' },
