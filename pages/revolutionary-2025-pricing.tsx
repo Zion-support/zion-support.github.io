@@ -2,9 +2,59 @@ import React from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, TrendingUp } from 'lucide-react';
 
-export default function Revolutionary2025PricingPage() {
-  // Placeholder data for services
-  const services = [
+import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
+// import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
+import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary-2025-it-infrastructure';
+import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas';
+
+export default function Revolutionary2025Pricing() {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+  // Combine all revolutionary services
+  const allRevolutionaryServices = [
+    ...revolutionaryAI2025Services,
+    ...revolutionaryITInfrastructure2025Services,
+    ...revolutionary2025MicroSaasServices
+  ];
+
+  // Service categories
+  const serviceCategories = [
+    { id: 'all', name: 'All Services', icon: Sparkles, count: allRevolutionaryServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: revolutionaryAI2025Services.length },
+    { id: 'infrastructure', name: 'IT Infrastructure', icon: Cpu, count: revolutionaryITInfrastructure2025Services.length },
+          { id: 'saas', name: 'Micro SaaS', icon: Zap, count: revolutionary2025MicroSaasServices.length }
+  ];
+
+  // Filter services based on selected category
+  const filteredServices = selectedCategory === 'all' 
+    ? allRevolutionaryServices 
+    : allRevolutionaryServices.filter(service => {
+        if (selectedCategory === 'ai') return service.category.includes('AI');
+        if (selectedCategory === 'infrastructure') return service.category.includes('IT') || service.category.includes('Network') || service.category.includes('Computing');
+        if (selectedCategory === 'saas') return service.category.includes('AI') || service.category.includes('Virtual') || service.category.includes('Creative');
+        return true;
+      });
+
+  // Calculate pricing with billing cycle
+  const getPrice = (service: any) => {
+    const basePrice = parseInt(service.price.replace('$', '').replace(',', ''));
+    if (billingCycle === 'yearly') {
+      return Math.floor(basePrice * 0.8); // 20% discount for yearly
+    }
+    return basePrice;
+  };
+
+  // Pricing tiers for comparison
+  const pricingTiers = [
     {
       id: 'ai-solutions',
       name: 'AI Solutions',

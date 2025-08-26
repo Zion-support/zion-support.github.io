@@ -238,12 +238,29 @@ const resources = [
     setExpandedSections(newExpanded);
   };
 
-  const filteredServices = sidebarItems.flatMap(item =>
-    item.children?.filter(child =>
-      child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      child.description?.toLowerCase().includes(searchQuery.toLowerCase())
-    ) || []
-  );
+  const toggleItem = (itemName: string) => {
+    const newExpanded = new Set(expandedItems);
+    if (newExpanded.has(itemName)) {
+      newExpanded.delete(itemName);
+    } else {
+      newExpanded.add(itemName);
+    }
+    setExpandedItems(newExpanded);
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  const isActive = (_href: string) => false;
 
   return (
     <motion.aside

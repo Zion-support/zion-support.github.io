@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 
 import Layout from '../components/layout/Layout';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+// import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 
 export default function QuantumSecureCommunication() {
   const contactInfo = {
