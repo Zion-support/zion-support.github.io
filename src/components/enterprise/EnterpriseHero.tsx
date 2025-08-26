@@ -42,7 +42,7 @@ export function EnterpriseHero() {
                 />
               </div>
             </div>
-            <div className="absolute -bottom-4 -right-4 bg-card p-4 rounded-lg shadow-lg border border-border">
+            <div className="absolute -bottom-4 -right-4 bg-card p-4 rounded-lg shadow-lg border border-gray-200">
               <p className="text-sm font-medium">Custom branding & white labeling</p>
             </div>
           </div>

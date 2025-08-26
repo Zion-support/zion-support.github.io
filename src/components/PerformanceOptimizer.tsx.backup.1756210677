@@ -265,7 +265,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
           <Progress value={Math.min(100, (metrics.ttfb / 800) * 100)} className="h-1" />
         </div>
         
-        <div className="pt-2 border-t border-border">
+        <div className="pt-2 border-t border-gray-200">
           <div className="flex items-center justify-between">
             <span className="text-xs font-medium">Overall Score</span>
             <div className="flex items-center gap-2">

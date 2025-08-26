@@ -98,9 +98,9 @@ export function SignUpForm() {
       </div>
 
       <div className="relative flex items-center">
-        <div className="flex-grow border-t border-border"></div>
+        <div className="flex-grow border-t border-gray-200"></div>
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
-        <div className="flex-grow border-t border-border"></div>
+        <div className="flex-grow border-t border-gray-200"></div>
       </div>
       
       {error && (

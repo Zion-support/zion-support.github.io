@@ -30,15 +30,15 @@ export function AdminHeader() {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-card rounded-lg p-4 border border-border">
+        <div className="bg-card rounded-lg p-4 border border-gray-200">
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
         </div>
-        <div className="bg-card rounded-lg p-4 border border-border">
+        <div className="bg-card rounded-lg p-4 border border-gray-200">
           <div className="text-sm text-muted-foreground">Team Members</div>
           <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || "∞"}</div>
         </div>
-        <div className="bg-card rounded-lg p-4 border border-border">
+        <div className="bg-card rounded-lg p-4 border border-gray-200">
           <div className="text-sm text-muted-foreground">Billing Cycle</div>
           <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>
         </div>

@@ -30,7 +30,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent' 
               ? "border-primary bg-primary/5" 
-              : "border-border hover:border-primary/40"
+              : "border-gray-200 hover:border-primary/40"
           }`}
           onClick={() => handleSelect('talent')}
         >
@@ -54,7 +54,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
           className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
-              : "border-border hover:border-primary/40"
+              : "border-gray-200 hover:border-primary/40"
           }`}
           onClick={() => handleSelect('client')}
         >
