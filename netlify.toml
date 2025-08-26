@@ -1,6 +1,6 @@
 [build]
-  command = "npm ci && npm run build"
-  publish = ".next"
+  command = "chmod +x scripts/pre-build-check.sh && ./scripts/pre-build-check.sh && pnpm install --frozen-lockfile && pnpm run export"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "20"

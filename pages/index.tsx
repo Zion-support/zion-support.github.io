@@ -12,11 +12,15 @@ const Home: NextPage = () => {
   return (
     <div className="relative">
       <Head>
-        <title>Zion — AI‑Powered Marketplace & Automation Platform</title>
-        <meta
-          name="description"
-          content="Explore AI services, products, talent, automation dashboard, and expert resources. Build, scale, and automate with Zion."
-        />
+        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform</title>
+        <meta name="description" content="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
+        <meta property="og:title" content="Zion Tech Group — Leading-Edge Technology Solutions" />
+        <meta property="og:description" content="Cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="keywords" content="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+      
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform","url":"https://ziontechgroup.com/","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script>
       </Head>
 
       <AnimatedBackground className="pointer-events-none" />
