@@ -1,6 +1,7 @@
 
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
+import { SERVICES } from "@/data/servicesData";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { ServicesOverview } from "@/components/services/ServicesOverview";
 import { Button } from "@/components/ui/button";
@@ -45,8 +46,6 @@ import Link from "next/link";
 import { Globe } from "lucide-react";
 import ServicesList from '@/components/ServicesList';
 
-// Enhanced service listings with real pricing and descriptions
-=======
 import { Globe, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ENHANCED_SERVICES } from "@/data/enhancedServices";
@@ -151,6 +150,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     reviewCount: 167,
   },
+=======
 
   // Cybersecurity Services
   {
@@ -1979,39 +1979,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-      {/* Featured Services Showcase */}
-      <section className="py-16 bg-gradient-to-r from-zion-blue to-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Featured Enterprise Services</h2>
-            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              Discover our most popular and innovative technology solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {FEATURED_SERVICES.slice(0, 3).map((service) => (
-              <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center">
-                    <Star className="w-6 h-6 text-zion-cyan" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold">{service.title}</h3>
-                    <p className="text-zion-slate-light text-sm">{service.subcategory}</p>
-                  </div>
-                </div>
-                <p className="text-zion-slate-light text-sm mb-4 line-clamp-2">
-                  {service.description}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-white font-bold">{service.currency}{service.price.toLocaleString()}</span>
-                  <Link to={`/service/${service.id}`}>
-                    <Button size="sm" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                      Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                    </Button>
-                  </Link>
-=======
       {/* Service Categories Grid */}
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -2198,14 +2165,17 @@ export default function ServicesPage() {
       </div>
 
       <DynamicListingPage 
+=======
+      <DynamicListingPage
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
         categorySlug="services"
         listings={listings}
         categoryFilters={SERVICE_FILTERS}
         initialPrice={{ min: 3000, max: 10000 }}
-=======
         initialPrice={{ min: 1000, max: 10000 }}
+=======
+        itemsPerPage={10}
       />
       <ServicesOverview />
 =======
