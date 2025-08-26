@@ -3,17 +3,13 @@ import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { safeStorage } from '@/utils/safeStorage';
-import { getStripe } from '@/utils/getStripe';
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from '@/components/ui/form';
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
+import { ControllerRenderProps } from 'react-hook-form';
+import CheckoutProgress from '@/components/checkout/CheckoutProgress';
 
 interface CartItem {
   id: string;
@@ -83,67 +79,37 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="container max-w-2xl py-10">
-      <h1 className="text-3xl font-bold mb-6">{t('checkout.title')}</h1>
-      <div className="grid gap-6">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <FormField name="name" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('checkout.name')}</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="email" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('checkout.email')}</FormLabel>
-                <FormControl>
-                  <Input type="email" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="address" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('checkout.address')}</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="city" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('checkout.city')}</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="country" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('checkout.country')}</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <div className="border-t pt-4">
-              <div className="flex justify-between font-semibold mb-4">
-                <span>{t('checkout.subtotal')}</span>
-                <span>${subtotal.toFixed(2)}</span>
-              </div>
-              <Button className="w-full" type="submit">
-                {t('checkout.pay')}
-              </Button>
-            </div>
-          </form>
-        </Form>
+    <div className="max-w-2xl mx-auto p-6">
+      <h1 className="text-2xl font-bold mb-6">Checkout</h1>
+      <CheckoutProgress currentStep={0} className="mb-6" />
+
+      {/* Order Summary */}
+      <div className="bg-gray-50 p-4 rounded-md mb-6">
+        <h2 className="font-semibold mb-3">Order Summary</h2>
+        {items.map(item => (
+          <div key={item.id} className="flex justify-between items-center py-2">
+            <span>{item.name} (x{item.quantity})</span>
+            <span>${(item.price * item.quantity).toFixed(2)}</span>
+          </div>
+        ))}
+        <div className="border-t pt-2 mt-2">
+          <div className="flex justify-between text-sm text-gray-600 mb-1">
+            <span>Subtotal:</span>
+            <span>${subtotal.toFixed(2)}</span>
+          </div>
+          <div className="flex justify-between text-sm text-gray-600 mb-1">
+            <span>Tax (8%):</span>
+            <span>${tax.toFixed(2)}</span>
+          </div>
+          <div className="flex justify-between text-sm text-gray-600 mb-2">
+            <span>Shipping:</span>
+            <span>{shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}</span>
+          </div>
+          <div className="flex justify-between font-bold text-lg">
+            <span>Total:</span>
+            <span>${total.toFixed(2)}</span>
+          </div>
+        </div>
       </div>
     </div>
   );
