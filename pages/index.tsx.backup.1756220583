@@ -27,7 +27,19 @@ import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-busines
 import { ultimateInnovativeServices2025 } from '../data/2025-ultimate-innovative-services';
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { emergingTechServices } from '../data/emerging-tech-services';
+import { nextGenAIServices } from '../data/next-gen-ai-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { quantumAIServices } from '../data/quantum-ai-services';
+import { spaceTechServices } from '../data/space-tech-services';
+import { biotechAIServices } from '../data/biotech-ai-services';
+=======
+import { additionalEnhancedServices } from '../data/additional-real-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-915b
 
 export default function HomePage() {
   const heroStats = [
@@ -1088,6 +1100,29 @@ const serviceCategories = [
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Service Highlights Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+            >
+              Revolutionary Technology Services
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-xl text-gray-300 max-w-3xl mx-auto"
+            >
+              Discover our comprehensive portfolio of cutting-edge AI, quantum computing, and enterprise solutions that are transforming industries worldwide.
+            </motion.p>
+          </div>
+=======
       {/* New Real Services */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -1146,6 +1181,7 @@ const serviceCategories = [
               Each service is designed to deliver immediate value and exponential ROI.
             </p>
           </motion.div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-915b
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
