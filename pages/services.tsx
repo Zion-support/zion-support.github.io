@@ -10,6 +10,7 @@ import {
   Phone, Mail, MapPin, TrendingUp, Users, Award
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Import all the new 2032 service data
@@ -82,6 +83,11 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
 import UltraFuturisticNavigation from '../components/layout/UltraFuturisticNavigation';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7f29
+=======
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+import EnhancedServiceCard from '../components/ui/EnhancedServiceCard';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a83f
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { quantumSpaceServices } from '../data/quantum-space-services';
@@ -294,6 +300,7 @@ import { additionalEnhancedServices } from '../data/additional-real-services';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { advancedITServices } from '../data/advanced-it-services';
@@ -333,6 +340,10 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 import { emergingTechServices } from '../data/emerging-tech-services';
 import { enterpriseBlockchainServices } from '../data/enterprise-blockchain-services';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a6f6
+=======
+import { nextGenInnovativeServices } from '../data/next-gen-innovative-services';
+import { enterpriseAIServices } from '../data/enterprise-ai-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a83f
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -351,6 +362,7 @@ export default function ServicesPage() {
     ...additionalEnhancedServices,
 <<<<<<< HEAD
     ...extraServices,
+<<<<<<< HEAD
 <<<<<<< HEAD
     ...newlyAddedServices,
     ...newRealServices,
@@ -436,6 +448,11 @@ export default function ServicesPage() {
     ...emergingTechServices,
     ...enterpriseBlockchainServices
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a6f6
+=======
+    ...additionalEnhancedServices,
+    ...nextGenInnovativeServices,
+    ...enterpriseAIServices
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a83f
   ];
 
   // Dynamic category counts mapped to the same filter logic below
@@ -659,6 +676,7 @@ export default function ServicesPage() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <>
       <Head>
         <title>Services | Zion Tech Group - AI & Automation Solutions</title>
@@ -698,6 +716,11 @@ export default function ServicesPage() {
     <>
       <UltraFuturisticNavigation />
       <UltraAdvancedFuturisticBackground intensity={1.3} variant="fusion">
+=======
+    <EnhancedFuturisticBackground intensity={1.3} variant="neural">
+      <EnhancedNavigation />
+      <div className="min-h-screen pt-16">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a83f
         <Head>
         <title>500+ Revolutionary Services - Zion Tech Group | AI, Quantum & IT Solutions</title>
         <meta name="description" content="Explore 500+ revolutionary AI, quantum computing, and IT services. From neural interfaces to enterprise solutions. Contact: +1 302 464 0950" />
@@ -893,6 +916,7 @@ export default function ServicesPage() {
                   transition={{ duration: 0.8, delay: index * 0.05 }}
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <UltraFuturisticServiceCard service={service} />
 =======
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/30 h-full relative overflow-hidden">
@@ -970,6 +994,9 @@ export default function ServicesPage() {
                     </div>
                   </div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9d55
+=======
+                  <EnhancedServiceCard service={service} />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a83f
                 </motion.div>
               ))}
             </div>
@@ -1179,6 +1206,7 @@ export default function ServicesPage() {
               <div className="flex flex-col items-center gap-2"><MapPin className="w-6 h-6 text-cyan-400" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-white font-semibold text-sm hover:text-cyan-300">{contactInfo.address}</a></div>
             </div>
           </div>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl">
               Start Free Consultation
@@ -1268,6 +1296,11 @@ export default function ServicesPage() {
       </footer>
     </UltraAdvancedFuturisticBackground>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7e5c
+=======
+        </section>
+      </div>
+    </EnhancedFuturisticBackground>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a83f
   );
 }
 =======
