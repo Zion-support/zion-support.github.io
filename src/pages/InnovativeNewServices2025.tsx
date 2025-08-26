@@ -38,6 +38,10 @@ const InnovativeNewServices2025: React.FC = () => {
 
   const filteredServices = allServices.filter(service => {
     const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
+    
+    // All services have a price property
+    const servicePrice = service.price;
+    
     const priceMatch = selectedPriceRange === 'all' || 
       (selectedPriceRange === '0-2000' && service.price < 2000) ||
       (selectedPriceRange === '2000-5000' && service.price >= 2000 && service.price < 5000) ||

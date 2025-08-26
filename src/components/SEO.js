@@ -4,7 +4,7 @@ export function SEO({ title, description, keywords, canonical, image = '/images/
     const siteName = 'Zion Tech Group';
     const siteUrl = 'https://ziontechgroup.com';
     const fullTitle = `${title} | ${siteName}`;
-    const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
+    const fullCanonical = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : siteUrl;
     const fullImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
     // Default structured data for organization
     const defaultStructuredData = {

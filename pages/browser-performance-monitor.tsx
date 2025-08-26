@@ -3,10 +3,10 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Activity } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-import { extraServices } from '../data/extra-services';
+import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/2025-innovative-real-micro-saas-services';
 
 export default function BrowserPerformanceMonitorPage() {
-  const service = extraServices.find(s => s.id === 'browser-performance-monitor');
+  const service = servicesData.find(s => s.id === 'browser-performance-monitor');
   if (!service) return null;
 
   return (

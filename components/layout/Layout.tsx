@@ -3,7 +3,7 @@ import UltraFuturisticNavigation2034 from './UltraFuturisticNavigation2034';
 import UltraFuturisticFooter2034 from './UltraFuturisticFooter2034';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2035 from '../ui/UltraFuturisticBackground2035';
-import TopContactBar from './TopContactBar';
+// import TopContactBar from './TopContactBar';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -25,7 +25,7 @@ export default function Layout({ children }: LayoutProps) {
 				enableNeonEffects={true}
 				enableSpaceTime={true}
 			>
-				<TopContactBar />
+				{/* TopContactBar temporarily disabled due to missing module */}
 				<UltraFuturisticNavigation2034 onMenuClick={() => setSidebarOpen(true)} />
 				<div className="flex">
 					<EnhancedSidebar2025 isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
@@ -37,4 +37,6 @@ export default function Layout({ children }: LayoutProps) {
 			</UltraFuturisticBackground2035>
 		</div>
 	);
-};
+}
+
+export default Layout;

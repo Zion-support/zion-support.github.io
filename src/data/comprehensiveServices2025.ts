@@ -588,6 +588,565 @@ export const enhancedMicroSaasServices2025: MicroSaasService[] = [
     integrations: ["AI frameworks", "Cloud platforms", "Payment systems", "Collaboration tools"],
     freeTier: false,
     trialPeriod: "30 days"
+  },
+  {
+    id: 13,
+    name: "SmartInvoice AI",
+    category: "Finance",
+    pricing: "Professional",
+    description: "AI-powered invoice processing and accounts payable automation with intelligent data extraction and fraud detection",
+    price: 89,
+    pricingModel: "monthly",
+    userLimit: "Up to 50 users",
+    features: [
+      "AI invoice scanning",
+      "Automated data extraction",
+      "Fraud detection",
+      "Payment automation",
+      "Expense tracking",
+      "Multi-currency support",
+      "Real-time reporting",
+      "Integration APIs"
+    ],
+    benefits: [
+      "90% faster processing",
+      "Reduced manual errors",
+      "Fraud prevention",
+      "Cost savings",
+      "Improved cash flow",
+      "Compliance automation"
+    ],
+    targetAudience: ["Accounting firms", "Finance departments", "Small businesses", "Enterprises"],
+    tags: ["Invoice Processing", "AI", "Automation", "Finance", "Fraud Detection"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/smart-invoice-ai",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$89-199/month",
+    competitors: ["Bill.com", "FreshBooks", "QuickBooks"],
+    roi: "300% in 6 months",
+    setupTime: "2-3 days",
+    integrations: ["QuickBooks", "Xero", "Sage", "Stripe", "PayPal"],
+    freeTier: false,
+    trialPeriod: "14 days"
+  },
+  {
+    id: 14,
+    name: "ContentGenius Pro",
+    category: "Marketing",
+    pricing: "Professional",
+    description: "AI-powered content creation platform for marketing, social media, and SEO with multi-language support",
+    price: 67,
+    pricingModel: "monthly",
+    userLimit: "Up to 20 users",
+    features: [
+      "AI content generation",
+      "SEO optimization",
+      "Multi-language support",
+      "Brand voice training",
+      "Content calendar",
+      "Social media automation",
+      "Performance analytics",
+      "Plagiarism checker"
+    ],
+    benefits: [
+      "10x faster content creation",
+      "Improved SEO rankings",
+      "Consistent brand voice",
+      "Multi-language reach",
+      "Cost reduction",
+      "Better engagement"
+    ],
+    targetAudience: ["Marketing agencies", "Content creators", "Small businesses", "E-commerce"],
+    tags: ["Content Creation", "AI", "SEO", "Marketing", "Social Media"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/content-genius-pro",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$67-149/month",
+    competitors: ["Jasper", "Copy.ai", "Writesonic"],
+    roi: "250% in 3 months",
+    setupTime: "1 day",
+    integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Buffer"],
+    freeTier: false,
+    trialPeriod: "7 days"
+  },
+  {
+    id: 15,
+    name: "LeadFlow CRM",
+    category: "CRM",
+    pricing: "Professional",
+    description: "Intelligent CRM with AI-powered lead scoring, automated follow-ups, and predictive sales analytics",
+    price: 45,
+    pricingModel: "monthly",
+    userLimit: "Up to 30 users",
+    features: [
+      "AI lead scoring",
+      "Automated follow-ups",
+      "Sales forecasting",
+      "Pipeline management",
+      "Email tracking",
+      "Meeting scheduling",
+      "Performance analytics",
+      "Mobile app"
+    ],
+    benefits: [
+      "25% increase in conversions",
+      "Automated sales processes",
+      "Better lead prioritization",
+      "Improved forecasting",
+      "Time savings",
+      "Revenue growth"
+    ],
+    targetAudience: ["Sales teams", "Real estate agents", "Insurance agents", "Consultants"],
+    tags: ["CRM", "Lead Management", "Sales Automation", "AI", "Analytics"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/leadflow-crm",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$45-99/month",
+    competitors: ["Salesforce", "HubSpot", "Pipedrive"],
+    roi: "400% in 6 months",
+    setupTime: "3-5 days",
+    integrations: ["Gmail", "Outlook", "Slack", "Zoom", "Stripe"],
+    freeTier: true,
+    trialPeriod: "30 days"
+  },
+  {
+    id: 16,
+    name: "DataViz Studio",
+    category: "Analytics",
+    pricing: "Professional",
+    description: "Advanced data visualization and analytics platform with AI-powered insights and interactive dashboards",
+    price: 79,
+    pricingModel: "monthly",
+    userLimit: "Up to 40 users",
+    features: [
+      "AI-powered insights",
+      "Interactive dashboards",
+      "Real-time data streaming",
+      "Custom visualizations",
+      "Data connectors",
+      "Automated reporting",
+      "Mobile responsive",
+      "API access"
+    ],
+    benefits: [
+      "Faster decision making",
+      "Better data understanding",
+      "Automated insights",
+      "Cost reduction",
+      "Improved collaboration",
+      "Real-time monitoring"
+    ],
+    targetAudience: ["Data analysts", "Business intelligence teams", "Executives", "Marketing teams"],
+    tags: ["Data Visualization", "Analytics", "AI", "Dashboards", "Business Intelligence"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/dataviz-studio",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$79-179/month",
+    competitors: ["Tableau", "Power BI", "Looker"],
+    roi: "350% in 4 months",
+    setupTime: "1 week",
+    integrations: ["Salesforce", "HubSpot", "Google Analytics", "MySQL", "PostgreSQL"],
+    freeTier: false,
+    trialPeriod: "14 days"
+  },
+  {
+    id: 17,
+    name: "SmartScheduler AI",
+    category: "Scheduling",
+    pricing: "Freemium",
+    description: "Intelligent scheduling platform with AI-powered optimization, conflict resolution, and automated coordination",
+    price: 39,
+    pricingModel: "monthly",
+    userLimit: "Up to 35 users",
+    features: [
+      "AI scheduling optimization",
+      "Conflict resolution",
+      "Calendar integration",
+      "Meeting automation",
+      "Resource allocation",
+      "Travel planning",
+      "Mobile app",
+      "API integrations"
+    ],
+    benefits: [
+      "40% time savings",
+      "Reduced scheduling conflicts",
+      "Better resource utilization",
+      "Improved productivity",
+      "Automated coordination",
+      "Cost reduction"
+    ],
+    targetAudience: ["Project managers", "HR departments", "Consulting firms", "Event planners"],
+    tags: ["Scheduling", "AI", "Calendar", "Automation", "Productivity"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/smart-scheduler-ai",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$39-89/month",
+    competitors: ["Calendly", "Acuity", "Scheduling.com"],
+    roi: "280% in 3 months",
+    setupTime: "2-3 days",
+    integrations: ["Google Calendar", "Outlook", "Slack", "Zoom", "Teams"],
+    freeTier: true,
+    trialPeriod: "30 days"
+  },
+  {
+    id: 18,
+    name: "QuantumCode Studio",
+    category: "Quantum Computing",
+    pricing: "Enterprise",
+    description: "Quantum computing development platform with quantum algorithms, simulation tools, and cloud quantum access",
+    price: 299,
+    pricingModel: "monthly",
+    userLimit: "Up to 15 users",
+    features: [
+      "Quantum algorithm library",
+      "Simulation environment",
+      "Cloud quantum access",
+      "Quantum circuit designer",
+      "Performance optimization",
+      "Educational resources",
+      "API access",
+      "Expert support"
+    ],
+    benefits: [
+      "Quantum advantage",
+      "Faster computations",
+      "Innovation leadership",
+      "Research capabilities",
+      "Competitive edge",
+      "Future-proof technology"
+    ],
+    targetAudience: ["Research institutions", "Pharmaceutical companies", "Financial services", "Tech companies"],
+    tags: ["Quantum Computing", "Algorithms", "Simulation", "Research", "Innovation"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-code-studio",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$299-599/month",
+    competitors: ["IBM Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
+    roi: "500% in 12 months",
+    setupTime: "2-3 weeks",
+    integrations: ["Python", "Jupyter", "Git", "Cloud platforms", "Research tools"],
+    freeTier: false,
+    trialPeriod: "7 days"
+  },
+  {
+    id: 19,
+    name: "EdgeCompute Pro",
+    category: "Edge Computing",
+    pricing: "Enterprise",
+    description: "Edge computing platform for IoT devices, real-time processing, and distributed computing with AI capabilities",
+    price: 199,
+    pricingModel: "monthly",
+    userLimit: "Up to 100 devices",
+    features: [
+      "Edge AI processing",
+      "Real-time analytics",
+      "IoT device management",
+      "Distributed computing",
+      "Low-latency processing",
+      "Offline capabilities",
+      "Security protocols",
+      "Scalable infrastructure"
+    ],
+    benefits: [
+      "Reduced latency",
+      "Bandwidth optimization",
+      "Real-time insights",
+      "Cost efficiency",
+      "Offline operation",
+      "Scalable architecture"
+    ],
+    targetAudience: ["IoT companies", "Manufacturing", "Smart cities", "Healthcare providers"],
+    tags: ["Edge Computing", "IoT", "AI", "Real-time", "Distributed Systems"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/edge-compute-pro",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$199-399/month",
+    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"],
+    roi: "400% in 8 months",
+    setupTime: "2-4 weeks",
+    integrations: ["AWS", "Azure", "GCP", "MQTT", "REST APIs"],
+    freeTier: false,
+    trialPeriod: "14 days"
+  },
+  {
+    id: 20,
+    name: "PrivacyGuard AI",
+    category: "Privacy AI",
+    pricing: "Professional",
+    description: "AI-powered privacy protection platform with data anonymization, compliance monitoring, and privacy analytics",
+    price: 129,
+    pricingModel: "monthly",
+    userLimit: "Up to 60 users",
+    features: [
+      "Data anonymization",
+      "Compliance monitoring",
+      "Privacy analytics",
+      "GDPR compliance",
+      "Data classification",
+      "Audit trails",
+      "Privacy scoring",
+      "Automated reporting"
+    ],
+    benefits: [
+      "Regulatory compliance",
+      "Data protection",
+      "Risk reduction",
+      "Trust building",
+      "Automated compliance",
+      "Cost savings"
+    ],
+    targetAudience: ["Healthcare", "Financial services", "E-commerce", "Legal firms"],
+    tags: ["Privacy", "AI", "Compliance", "GDPR", "Data Protection"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/privacy-guard-ai",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$129-249/month",
+    competitors: ["OneTrust", "TrustArc", "BigID"],
+    roi: "350% in 6 months",
+    setupTime: "1-2 weeks",
+    integrations: ["Salesforce", "HubSpot", "AWS", "Azure", "Database systems"],
+    freeTier: false,
+    trialPeriod: "21 days"
+  },
+  {
+    id: 21,
+    name: "AI Governance Suite",
+    category: "AI Governance",
+    pricing: "Enterprise",
+    description: "Comprehensive AI governance platform with ethical AI monitoring, bias detection, and compliance management",
+    price: 450,
+    pricingModel: "monthly",
+    userLimit: "Up to 200 users",
+    features: [
+      "Ethical AI monitoring",
+      "Bias detection",
+      "Compliance management",
+      "Model explainability",
+      "Risk assessment",
+      "Audit trails",
+      "Policy enforcement",
+      "Training programs"
+    ],
+    benefits: [
+      "Risk mitigation",
+      "Regulatory compliance",
+      "Ethical AI practices",
+      "Trust building",
+      "Liability reduction",
+      "Best practices"
+    ],
+    targetAudience: ["Large enterprises", "AI companies", "Financial services", "Healthcare"],
+    tags: ["AI Governance", "Ethics", "Compliance", "Risk Management", "Bias Detection"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-governance-suite",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$450-899/month",
+    competitors: ["DataRobot", "H2O.ai", "IBM Watson"],
+    roi: "600% in 12 months",
+    setupTime: "3-4 weeks",
+    integrations: ["ML platforms", "Cloud services", "Monitoring tools", "Compliance systems"],
+    freeTier: false,
+    trialPeriod: "30 days"
+  },
+  {
+    id: 22,
+    name: "EcoSystem AI",
+    category: "AI Ecosystem",
+    pricing: "Professional",
+    description: "Integrated AI ecosystem platform connecting multiple AI services, models, and tools in one unified interface",
+    price: 179,
+    pricingModel: "monthly",
+    userLimit: "Up to 80 users",
+    features: [
+      "Unified AI interface",
+      "Model marketplace",
+      "Service integration",
+      "Workflow automation",
+      "Performance monitoring",
+      "Cost optimization",
+      "API management",
+      "Custom pipelines"
+    ],
+    benefits: [
+      "Simplified AI adoption",
+      "Cost optimization",
+      "Better integration",
+      "Faster deployment",
+      "Unified experience",
+      "Scalable solutions"
+    ],
+    targetAudience: ["AI teams", "Data scientists", "Enterprises", "Startups"],
+    tags: ["AI Ecosystem", "Integration", "Unified Platform", "Workflow", "Automation"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ecosystem-ai",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$179-349/month",
+    competitors: ["Dataiku", "Alteryx", "RapidMiner"],
+    roi: "450% in 8 months",
+    setupTime: "2-3 weeks",
+    integrations: ["All major AI platforms", "Cloud services", "Data sources", "Business tools"],
+    freeTier: false,
+    trialPeriod: "21 days"
+  },
+  {
+    id: 23,
+    name: "Blockchain Analytics Pro",
+    category: "Finance",
+    pricing: "Enterprise",
+    description: "Advanced blockchain analytics platform with AI-powered insights, fraud detection, and compliance monitoring",
+    price: 299,
+    pricingModel: "monthly",
+    userLimit: "Up to 50 users",
+    features: [
+      "Blockchain monitoring",
+      "AI fraud detection",
+      "Compliance reporting",
+      "Transaction analysis",
+      "Risk assessment",
+      "Real-time alerts",
+      "Regulatory compliance",
+      "API access"
+    ],
+    benefits: [
+      "Fraud prevention",
+      "Regulatory compliance",
+      "Risk mitigation",
+      "Transparency",
+      "Cost reduction",
+      "Trust building"
+    ],
+    targetAudience: ["Financial institutions", "Cryptocurrency exchanges", "Regulatory bodies", "Law enforcement"],
+    tags: ["Blockchain", "Analytics", "Fraud Detection", "Compliance", "AI"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/blockchain-analytics-pro",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$299-599/month",
+    competitors: ["Chainalysis", "Elliptic", "CipherTrace"],
+    roi: "500% in 9 months",
+    setupTime: "3-4 weeks",
+    integrations: ["Major blockchains", "Financial systems", "Regulatory databases", "Analytics tools"],
+    freeTier: false,
+    trialPeriod: "14 days"
+  },
+  {
+    id: 24,
+    name: "SmartContract AI",
+    category: "AI Architecture",
+    pricing: "Professional",
+    description: "AI-powered smart contract development platform with automated testing, security analysis, and deployment tools",
+    price: 159,
+    pricingModel: "monthly",
+    userLimit: "Up to 40 users",
+    features: [
+      "AI code generation",
+      "Security analysis",
+      "Automated testing",
+      "Deployment tools",
+      "Version control",
+      "Audit trails",
+      "Performance monitoring",
+      "Integration APIs"
+    ],
+    benefits: [
+      "Faster development",
+      "Enhanced security",
+      "Reduced bugs",
+      "Cost savings",
+      "Better quality",
+      "Faster deployment"
+    ],
+    targetAudience: ["Blockchain developers", "Smart contract teams", "DeFi projects", "Legal tech"],
+    tags: ["Smart Contracts", "AI", "Blockchain", "Security", "Development"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/smart-contract-ai",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$159-299/month",
+    competitors: ["OpenZeppelin", "Truffle", "Hardhat"],
+    roi: "400% in 6 months",
+    setupTime: "1-2 weeks",
+    integrations: ["Ethereum", "Solana", "Polygon", "Development tools", "Testing frameworks"],
+    freeTier: false,
+    trialPeriod: "21 days"
+  },
+  {
+    id: 25,
+    name: "Quantum Security Vault",
+    category: "Quantum Computing",
+    pricing: "Enterprise",
+    description: "Quantum-resistant cryptography platform with post-quantum algorithms and future-proof security solutions",
+    price: 399,
+    pricingModel: "monthly",
+    userLimit: "Up to 100 users",
+    features: [
+      "Post-quantum cryptography",
+      "Quantum-resistant algorithms",
+      "Key management",
+      "Encryption services",
+      "Security auditing",
+      "Compliance tools",
+      "API access",
+      "Expert consultation"
+    ],
+    benefits: [
+      "Future-proof security",
+      "Quantum resistance",
+      "Regulatory compliance",
+      "Risk mitigation",
+      "Long-term protection",
+      "Competitive advantage"
+    ],
+    targetAudience: ["Government agencies", "Financial institutions", "Healthcare", "Defense contractors"],
+    tags: ["Quantum Security", "Cryptography", "Post-quantum", "Encryption", "Compliance"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-security-vault",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$399-799/month",
+    competitors: ["NIST PQC", "Cloudflare", "Google"],
+    roi: "600% in 18 months",
+    setupTime: "4-6 weeks",
+    integrations: ["Security systems", "Cloud platforms", "Identity providers", "Compliance tools"],
+    freeTier: false,
+    trialPeriod: "30 days"
   }
 ];
 
@@ -844,6 +1403,246 @@ export const enhancedITServices2025: ITService[] = [
     certifications: ["Data Science", "Machine Learning", "Business Intelligence", "Analytics"],
     deliveryTime: "14-20 weeks",
     support: "24/7 analytics support"
+  },
+  {
+    id: 7,
+    name: "DevOps Automation Platform",
+    category: "DevOps",
+    description: "Comprehensive DevOps automation with CI/CD pipelines, infrastructure as code, and AI-powered optimization",
+    hourlyRate: 165,
+    projectRate: 18000,
+    features: [
+      "CI/CD automation",
+      "Infrastructure as code",
+      "AI-powered optimization",
+      "Container orchestration",
+      "Monitoring & alerting",
+      "Security scanning",
+      "Performance testing",
+      "Deployment automation"
+    ],
+    benefits: [
+      "Faster deployments",
+      "Reduced errors",
+      "Cost optimization",
+      "Better collaboration",
+      "Scalable infrastructure",
+      "Security compliance"
+    ],
+    targetAudience: ["Software companies", "IT departments", "Startups", "Enterprises"],
+    tags: ["DevOps", "Automation", "CI/CD", "Infrastructure", "AI"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/devops-automation",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$18,000-45,000",
+    responseTime: "4 hours",
+    sla: "99.9% availability",
+    certifications: ["AWS DevOps", "Azure DevOps", "Kubernetes CKA"],
+    deliveryTime: "8-12 weeks",
+    support: "24/7 DevOps support"
+  },
+  {
+    id: 8,
+    name: "Data Center Modernization",
+    category: "Infrastructure",
+    description: "Complete data center transformation with AI-powered optimization, energy efficiency, and hybrid cloud integration",
+    hourlyRate: 185,
+    projectRate: 35000,
+    features: [
+      "AI-powered optimization",
+      "Energy efficiency",
+      "Hybrid cloud integration",
+      "Virtualization",
+      "Storage optimization",
+      "Network modernization",
+      "Security enhancement",
+      "Disaster recovery"
+    ],
+    benefits: [
+      "40% cost reduction",
+      "Improved performance",
+      "Energy savings",
+      "Better scalability",
+      "Enhanced security",
+      "Future-ready infrastructure"
+    ],
+    targetAudience: ["Large enterprises", "Data centers", "Financial institutions", "Healthcare organizations"],
+    tags: ["Data Center", "Modernization", "AI", "Energy Efficiency", "Hybrid Cloud"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/data-center-modernization",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$35,000-80,000",
+    responseTime: "6 hours",
+    sla: "99.99% uptime",
+    certifications: ["Data Center Design", "Energy Management", "Cloud Architecture"],
+    deliveryTime: "16-24 weeks",
+    support: "24/7 infrastructure support"
+  },
+  {
+    id: 9,
+    name: "IoT Infrastructure & Management",
+    category: "IoT",
+    description: "End-to-end IoT infrastructure design, implementation, and management with AI-powered analytics and security",
+    hourlyRate: 155,
+    projectRate: 22000,
+    features: [
+      "IoT architecture design",
+      "Device management",
+      "AI-powered analytics",
+      "Security protocols",
+      "Data processing",
+      "Real-time monitoring",
+      "Scalable infrastructure",
+      "Integration APIs"
+    ],
+    benefits: [
+      "Connected ecosystem",
+      "Real-time insights",
+      "Automated operations",
+      "Cost optimization",
+      "Scalable solutions",
+      "Security compliance"
+    ],
+    targetAudience: ["Manufacturing", "Smart cities", "Healthcare", "Agriculture"],
+    tags: ["IoT", "Infrastructure", "Device Management", "AI", "Security"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/iot-infrastructure",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$22,000-55,000",
+    responseTime: "4 hours",
+    sla: "99.8% availability",
+    certifications: ["IoT Architecture", "Edge Computing", "Security"],
+    deliveryTime: "12-18 weeks",
+    support: "24/7 IoT support"
+  },
+  {
+    id: 10,
+    name: "Digital Transformation Consulting",
+    category: "Consulting",
+    description: "Strategic digital transformation consulting with technology roadmap, change management, and implementation support",
+    hourlyRate: 225,
+    projectRate: 45000,
+    features: [
+      "Technology assessment",
+      "Digital roadmap",
+      "Change management",
+      "Implementation support",
+      "Performance monitoring",
+      "ROI tracking",
+      "Training programs",
+      "Continuous improvement"
+    ],
+    benefits: [
+      "Strategic guidance",
+      "Risk mitigation",
+      "Faster adoption",
+      "Cost optimization",
+      "Competitive advantage",
+      "Sustainable transformation"
+    ],
+    targetAudience: ["Large enterprises", "Government agencies", "Healthcare", "Financial services"],
+    tags: ["Digital Transformation", "Consulting", "Strategy", "Change Management", "Technology"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/digital-transformation",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$45,000-120,000",
+    responseTime: "8 hours",
+    sla: "99.5% satisfaction",
+    certifications: ["Digital Transformation", "Change Management", "Project Management"],
+    deliveryTime: "20-32 weeks",
+    support: "Business hours consulting support"
+  },
+  {
+    id: 11,
+    name: "Legacy System Modernization",
+    category: "Modernization",
+    description: "Legacy system modernization with cloud migration, API development, and microservices architecture",
+    hourlyRate: 175,
+    projectRate: 28000,
+    features: [
+      "Legacy assessment",
+      "Cloud migration",
+      "API development",
+      "Microservices architecture",
+      "Data migration",
+      "Performance optimization",
+      "Security enhancement",
+      "Training & support"
+    ],
+    benefits: [
+      "Improved performance",
+      "Cost reduction",
+      "Better scalability",
+      "Enhanced security",
+      "Modern architecture",
+      "Easier maintenance"
+    ],
+    targetAudience: ["Enterprises", "Government agencies", "Healthcare", "Financial institutions"],
+    tags: ["Legacy Systems", "Modernization", "Cloud Migration", "Microservices", "API"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/legacy-modernization",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$28,000-75,000",
+    responseTime: "6 hours",
+    sla: "99.7% availability",
+    certifications: ["Cloud Architecture", "API Development", "Microservices"],
+    deliveryTime: "16-24 weeks",
+    support: "24/7 modernization support"
+  },
+  {
+    id: 12,
+    name: "Enterprise Software Development",
+    category: "Software Development",
+    description: "Custom enterprise software development with modern technologies, AI integration, and scalable architecture",
+    hourlyRate: 160,
+    projectRate: 32000,
+    features: [
+      "Custom development",
+      "AI integration",
+      "Scalable architecture",
+      "Cloud deployment",
+      "Security implementation",
+      "Testing & QA",
+      "Documentation",
+      "Training & support"
+    ],
+    benefits: [
+      "Tailored solutions",
+      "Competitive advantage",
+      "Scalable architecture",
+      "Cost optimization",
+      "Better user experience",
+      "Future-ready technology"
+    ],
+    targetAudience: ["Enterprises", "Startups", "Government agencies", "Healthcare"],
+    tags: ["Software Development", "Custom Solutions", "AI", "Cloud", "Enterprise"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/enterprise-software",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$32,000-85,000",
+    responseTime: "4 hours",
+    sla: "99.8% satisfaction",
+    certifications: ["Software Development", "Cloud Architecture", "AI Integration"],
+    deliveryTime: "20-28 weeks",
+    support: "24/7 development support"
   }
 ];
 
@@ -1100,6 +1899,258 @@ export const enhancedAIServices2025: AIService[] = [
     compliance: ["GDPR", "CCPA", "ISO 27001"],
     aiScore: 88,
     useCases: ["Customer support", "Sales assistance", "Appointment booking", "Information retrieval"]
+  },
+  {
+    id: 7,
+    name: "AI-Powered Predictive Maintenance",
+    category: "Predictive Analytics",
+    description: "Advanced predictive maintenance solutions using AI and IoT sensors to prevent equipment failures and optimize operations",
+    pricing: "Enterprise",
+    price: 4200,
+    pricingModel: "monthly",
+    features: [
+      "IoT sensor integration",
+      "Failure prediction",
+      "Maintenance scheduling",
+      "Performance optimization",
+      "Cost analysis",
+      "Real-time monitoring",
+      "Alert system",
+      "Historical analysis"
+    ],
+    benefits: [
+      "Reduced downtime",
+      "Cost savings",
+      "Extended equipment life",
+      "Improved safety",
+      "Optimized maintenance",
+      "Better resource planning"
+    ],
+    targetAudience: ["Manufacturing", "Energy companies", "Transportation", "Healthcare facilities"],
+    tags: ["Predictive Maintenance", "IoT", "AI", "Analytics", "Equipment Management"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-predictive-maintenance",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$4,200-9,500/month",
+    aiModels: ["LSTM", "Random Forest", "XGBoost", "Custom ML models"],
+    accuracy: "94.2%",
+    trainingData: "Equipment sensor data",
+    compliance: ["ISO 27001", "SOC 2", "Industry standards"],
+    aiScore: 94,
+    useCases: ["Manufacturing equipment", "HVAC systems", "Medical devices", "Transportation vehicles"]
+  },
+  {
+    id: 8,
+    name: "AI-Powered Supply Chain Optimization",
+    category: "Supply Chain",
+    description: "Intelligent supply chain optimization with demand forecasting, inventory management, and logistics optimization",
+    pricing: "Enterprise",
+    price: 3800,
+    pricingModel: "monthly",
+    features: [
+      "Demand forecasting",
+      "Inventory optimization",
+      "Route optimization",
+      "Supplier management",
+      "Risk assessment",
+      "Cost optimization",
+      "Real-time tracking",
+      "Performance analytics"
+    ],
+    benefits: [
+      "Reduced costs",
+      "Improved efficiency",
+      "Better inventory management",
+      "Faster delivery",
+      "Risk mitigation",
+      "Competitive advantage"
+    ],
+    targetAudience: ["Retail chains", "Manufacturing", "E-commerce", "Logistics companies"],
+    tags: ["Supply Chain", "AI", "Optimization", "Logistics", "Inventory Management"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-supply-chain",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$3,800-8,500/month",
+    aiModels: ["Prophet", "ARIMA", "Neural Networks", "Optimization algorithms"],
+    accuracy: "92.8%",
+    trainingData: "Supply chain datasets",
+    compliance: ["GDPR", "SOC 2", "Industry standards"],
+    aiScore: 92,
+    useCases: ["Demand forecasting", "Inventory optimization", "Route planning", "Supplier selection"]
+  },
+  {
+    id: 9,
+    name: "AI-Powered Customer Experience",
+    category: "Customer Experience",
+    description: "Comprehensive customer experience platform with AI-powered personalization, sentiment analysis, and journey optimization",
+    pricing: "Professional",
+    price: 2800,
+    pricingModel: "monthly",
+    features: [
+      "Customer segmentation",
+      "Personalization engine",
+      "Sentiment analysis",
+      "Journey mapping",
+      "Recommendation engine",
+      "A/B testing",
+      "Performance analytics",
+      "Integration APIs"
+    ],
+    benefits: [
+      "Improved customer satisfaction",
+      "Increased conversions",
+      "Better personalization",
+      "Reduced churn",
+      "Higher engagement",
+      "Data-driven insights"
+    ],
+    targetAudience: ["E-commerce", "Retail", "SaaS companies", "Service businesses"],
+    tags: ["Customer Experience", "AI", "Personalization", "Analytics", "Optimization"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-customer-experience",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$2,800-6,500/month",
+    aiModels: ["BERT", "GPT-4", "Recommendation systems", "Clustering algorithms"],
+    accuracy: "91.5%",
+    trainingData: "Customer interaction data",
+    compliance: ["GDPR", "CCPA", "SOC 2"],
+    aiScore: 91,
+    useCases: ["Product recommendations", "Content personalization", "Customer support", "Marketing campaigns"]
+  },
+  {
+    id: 10,
+    name: "AI-Powered Financial Risk Management",
+    category: "Financial AI",
+    description: "Advanced financial risk management platform with AI-powered risk assessment, fraud detection, and compliance monitoring",
+    pricing: "Enterprise",
+    price: 5500,
+    pricingModel: "monthly",
+    features: [
+      "Risk assessment",
+      "Fraud detection",
+      "Compliance monitoring",
+      "Portfolio optimization",
+      "Stress testing",
+      "Real-time alerts",
+      "Regulatory reporting",
+      "Performance analytics"
+    ],
+    benefits: [
+      "Risk mitigation",
+      "Fraud prevention",
+      "Regulatory compliance",
+      "Cost reduction",
+      "Better decision making",
+      "Competitive advantage"
+    ],
+    targetAudience: ["Banks", "Investment firms", "Insurance companies", "Financial services"],
+    tags: ["Financial AI", "Risk Management", "Fraud Detection", "Compliance", "Analytics"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-financial-risk",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$5,500-12,000/month",
+    aiModels: ["Deep Learning", "Random Forest", "XGBoost", "Custom financial models"],
+    accuracy: "96.3%",
+    trainingData: "Financial datasets",
+    compliance: ["GDPR", "SOC 2", "PCI DSS", "Financial regulations"],
+    aiScore: 96,
+    useCases: ["Credit risk assessment", "Fraud detection", "Portfolio optimization", "Regulatory compliance"]
+  },
+  {
+    id: 11,
+    name: "AI-Powered Healthcare Analytics",
+    category: "Healthcare AI",
+    description: "Comprehensive healthcare analytics platform with AI-powered diagnosis support, patient monitoring, and predictive health",
+    pricing: "Enterprise",
+    price: 4800,
+    pricingModel: "monthly",
+    features: [
+      "Diagnosis support",
+      "Patient monitoring",
+      "Predictive health",
+      "Treatment optimization",
+      "Clinical decision support",
+      "Population health",
+      "Performance analytics",
+      "HIPAA compliance"
+    ],
+    benefits: [
+      "Improved diagnosis accuracy",
+      "Better patient outcomes",
+      "Cost reduction",
+      "Efficiency gains",
+      "Preventive care",
+      "Research insights"
+    ],
+    targetAudience: ["Hospitals", "Clinics", "Research institutions", "Healthcare providers"],
+    tags: ["Healthcare AI", "Medical Analytics", "Diagnosis", "Patient Care", "Predictive Health"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-healthcare-analytics",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$4,800-10,500/month",
+    aiModels: ["Deep Learning", "Computer Vision", "NLP", "Medical AI models"],
+    accuracy: "93.7%",
+    trainingData: "Medical datasets",
+    compliance: ["HIPAA", "GDPR", "SOC 2", "Medical regulations"],
+    aiScore: 93,
+    useCases: ["Medical imaging", "Diagnosis support", "Patient monitoring", "Drug discovery"]
+  },
+  {
+    id: 12,
+    name: "AI-Powered Marketing Automation",
+    category: "Marketing AI",
+    description: "Intelligent marketing automation platform with AI-powered campaign optimization, audience targeting, and performance analytics",
+    pricing: "Professional",
+    price: 3200,
+    pricingModel: "monthly",
+    features: [
+      "Campaign optimization",
+      "Audience targeting",
+      "Content personalization",
+      "A/B testing",
+      "Performance analytics",
+      "ROI tracking",
+      "Multi-channel automation",
+      "Integration APIs"
+    ],
+    benefits: [
+      "Improved ROI",
+      "Better targeting",
+      "Automated optimization",
+      "Cost reduction",
+      "Faster results",
+      "Data-driven decisions"
+    ],
+    targetAudience: ["Marketing agencies", "E-commerce", "SaaS companies", "Enterprises"],
+    tags: ["Marketing AI", "Automation", "Campaign Optimization", "Analytics", "Personalization"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-marketing-automation",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$3,200-7,500/month",
+    aiModels: ["Machine Learning", "NLP", "Recommendation systems", "Optimization algorithms"],
+    accuracy: "90.8%",
+    trainingData: "Marketing datasets",
+    compliance: ["GDPR", "CCPA", "SOC 2"],
+    aiScore: 90,
+    useCases: ["Campaign optimization", "Audience targeting", "Content personalization", "ROI optimization"]
   }
 ];
 
