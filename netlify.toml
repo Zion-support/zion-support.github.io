@@ -56,92 +56,58 @@
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
-<<<<<<< HEAD
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    # Comprehensive CSP with unsafe-eval for third-party libraries
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://js.stripe.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://res.cloudinary.com; connect-src *; frame-src https://js.stripe.com"
-=======
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-DNS-Prefetch-Control = "on"
     Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
->>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
-
-[[headers]]
-  for = "/_next/static/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/logos/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# Redirects
-[[redirects]]
-<<<<<<< HEAD
-  from = "/home"
-  to = "/"
-=======
   from = "/rag-evaluation-lab"
   to = "/services/rag-evaluation-lab"
->>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
   status = 301
   force = true
 
-<<<<<<< HEAD
-[functions.environment]
-  SENTRY_LOG_LEVEL = "debug"
-
-[functions.sentryDsnCheckCron]
-  schedule = "@daily"
-
-[functions.healthCheckCron]
-    schedule = "*/5 * * * *"
-
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-  [plugins.inputs]
-    # Point to the correct images directory
-    imagesPath = "public/logos"
-    # Use production domain  
-    deliveryType = "fetch"
-    # Set max file size to optimize performance
-    maxSize = 1048576
-    # Set concurrent uploads
-    uploadConcurrency = 10
-
-=======
 [[redirects]]
   from = "/soc2-compliance-automation"
   to = "/services/soc2-compliance-automation"
+=======
+
+[[redirects]]
+  from = "/services/ai-customer-success-platform"
+  to = "/ai-customer-success-platform/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/browser-automation-cloud"
-  to = "/services/browser-automation-cloud"
+  from = "/services/intelligent-supply-chain-optimization"
+  to = "/intelligent-supply-chain-optimization/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/secrets-rotation-automation"
-  to = "/services/secrets-rotation-automation"
+  from = "/services/ai-financial-planning-platform"
+  to = "/ai-financial-planning-platform/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/api-performance-testing"
-  to = "/services/api-performance-testing"
+  from = "/services/ai-sales-intelligence-platform"
+  to = "/ai-sales-intelligence-platform/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/social/linkedin"
-  to = "https://www.linkedin.com/company/zion-tech-group"
-  status = 302
+  from = "/services/ai-powered-decision-engine"
+  to = "/ai-powered-decision-engine/"
+  status = 301
   force = true
->>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
+
+[[redirects]]
+  from = "/services/intelligent-content-automation-platform"
+  to = "/intelligent-content-automation-platform/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/smart-crm-intelligence-suite"
+  to = "/smart-crm-intelligence-suite/"
+  status = 301
+  force = true

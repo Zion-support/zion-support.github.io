@@ -78,14 +78,10 @@ const UltraFuturisticFooter2034: React.FC = () => {
   };
 
 const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+  { name: 'X', href: 'https://x.com/ziontechgroup', icon: Twitter },
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
-  { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup/', icon: Facebook },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-  { name: 'Discord', href: 'https://discord.gg/ziontechgroup', icon: MessageCircle },
-  { name: 'Slack', href: 'https://ziontechgroup.slack.com', icon: MessageSquare }
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
 ];
 
 export default function UltraFuturisticFooter2034() {

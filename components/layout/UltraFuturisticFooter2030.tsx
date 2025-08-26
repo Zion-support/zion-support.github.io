@@ -91,12 +91,10 @@ const mainNavigation = [
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-  { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup/', icon: Facebook },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
+  { name: 'X', href: 'https://x.com/ziontechgroup', icon: Twitter },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
 ];
 
 const certifications = [

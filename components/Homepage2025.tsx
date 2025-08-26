@@ -755,7 +755,7 @@ const Homepage2025: React.FC = () => {
                 <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a></li>
                 <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Website</a></li>
                 <li><a href="https://www.linkedin.com/company/zion-tech-group" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
-                <li><a href="https://twitter.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">Twitter</a></li>
+                <li><a href="https://x.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">Twitter</a></li>
               </ul>
             </div>
           </div>
