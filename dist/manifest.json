@@ -1,35 +1,17 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "name": "Zion Tech Group - Micro SAAS Services",
+  "name": "Zion Tech Group - AI-Powered Business Solutions & Micro SAAS Services",
   "short_name": "Zion Tech",
-  "description": "Transform your business with Zion Tech Group's micro SAAS services. AI-powered solutions for productivity, finance, marketing, CRM, analytics, and more.",
+  "description": "Transform your business with Zion Tech Group's cutting-edge artificial intelligence solutions, comprehensive IT services, innovative micro-SaaS platforms, and AI-powered tech marketplace.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#10B981",
-<<<<<<< HEAD
-=======
-  "name": "Zion Tech Group - AI-Powered Business Solutions",
-  "short_name": "Zion Tech",
-  "description": "Transform your business with cutting-edge artificial intelligence solutions, comprehensive IT services, and innovative micro-SaaS platforms.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#667eea",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
->>>>>>> origin/main
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
-  "categories": ["business", "productivity", "technology"],
+  "categories": ["business", "productivity", "technology", "ai", "saas"],
   "icons": [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
       "src": "/icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
@@ -61,21 +43,11 @@
     },
     {
       "src": "/icons/icon-192x192.png",
-<<<<<<< HEAD
-=======
-      "src": "/logo192.png",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
->>>>>>> origin/main
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
       "src": "/icons/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png",
@@ -86,262 +58,88 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
-<<<<<<< HEAD
-=======
-      "src": "/logo512.png",
-=======
-  "name": "Zion Tech Group - AI-Powered Tech Marketplace",
-  "short_name": "Zion Tech",
-  "description": "Discover top AI and tech talent, services, and equipment in one place. AI-powered matching for your tech needs.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#172d67",
-  "theme_color": "#2e73ea",
-  "orientation": "portrait-primary",
-  "scope": "/",
-  "lang": "en",
-  "dir": "ltr",
-  "categories": [
-    "business",
-    "productivity",
-    "technology",
-    "marketplace"
-  ],
-  "icons": [
-    {
-      "src": "/images/zion-logo-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/images/zion-logo-512.png",
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-<<<<<<< HEAD
-      "src": "/logo192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/logo512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-=======
-      "src": "/images/zion-logo-72.png",
-      "sizes": "72x72",
-      "type": "image/png"
-    },
-    {
-      "src": "/images/zion-logo-96.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    },
-    {
-      "src": "/images/zion-logo-128.png",
-      "sizes": "128x128",
-      "type": "image/png"
-    },
-    {
-      "src": "/images/zion-logo-144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    },
-    {
-      "src": "/images/zion-logo-152.png",
-      "sizes": "152x152",
-      "type": "image/png"
-    },
-    {
-      "src": "/images/zion-logo-384.png",
-      "sizes": "384x384",
-      "type": "image/png"
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
     }
   ],
   "screenshots": [
     {
-<<<<<<< HEAD
-      "src": "/screenshot-wide.png",
+      "src": "/screenshots/desktop-home.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Zion Tech Group Homepage"
+      "label": "Zion Tech Group Homepage - Desktop View"
     },
     {
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "375x667",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile View"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
->>>>>>> origin/main
-=======
-      "src": "/images/screenshot-desktop.png",
+      "label": "Zion Tech Group Homepage - Mobile View"
+    },
+    {
+      "src": "/screenshots/services-page.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Zion Tech Group Desktop View"
+      "label": "AI Services & Solutions Page"
     },
     {
-      "src": "/images/screenshot-mobile.png",
-      "sizes": "390x844",
+      "src": "/screenshots/marketplace.png",
+      "sizes": "1280x720",
       "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile View"
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+      "form_factor": "wide",
+      "label": "AI Talent & Services Marketplace"
     }
   ],
   "shortcuts": [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "name": "Micro SAAS Services",
-      "short_name": "Services",
-      "description": "Browse our micro SAAS services",
-      "url": "/micro-saas-services",
+      "name": "AI Services",
+      "short_name": "AI Services",
+      "description": "Browse our AI-powered business solutions",
+      "url": "/services",
       "icons": [
         {
-          "src": "/icons/icon-96x96.png",
+          "src": "/icons/ai-services-96x96.png",
           "sizes": "96x96"
-=======
-      "name": "AI Solutions",
-      "short_name": "AI",
-      "description": "Explore our AI-powered business solutions",
-      "url": "/ai-solutions",
-      "icons": [
-        {
-          "src": "/logo192.png",
-          "sizes": "192x192"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
-      "name": "Find Talent",
-      "short_name": "Talent",
-      "description": "Browse and find tech talent",
-      "url": "/talent",
-      "icons": [
-        {
-          "src": "/images/talent-icon.png",
-          "sizes": "96x96"
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         }
       ]
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-      "name": "Pricing",
-      "short_name": "Pricing",
-      "description": "View pricing plans",
-      "url": "/pricing",
+      "name": "Micro SAAS",
+      "short_name": "Micro SAAS",
+      "description": "Explore our micro SAAS services",
+      "url": "/micro-saas-services",
       "icons": [
         {
-          "src": "/icons/icon-96x96.png",
+          "src": "/icons/micro-saas-96x96.png",
           "sizes": "96x96"
-=======
-      "name": "Services",
-      "short_name": "Services",
-      "description": "View our comprehensive IT services",
-      "url": "/services",
+        }
+      ]
+    },
+    {
+      "name": "Marketplace",
+      "short_name": "Marketplace",
+      "description": "Find AI talent and services",
+      "url": "/marketplace",
       "icons": [
         {
-          "src": "/logo192.png",
-          "sizes": "192x192"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+          "src": "/icons/marketplace-96x96.png",
+          "sizes": "96x96"
         }
       ]
     },
     {
       "name": "Contact",
       "short_name": "Contact",
-<<<<<<< HEAD
-      "description": "Get in touch with us",
-      "url": "/#contact",
-      "icons": [
-        {
-          "src": "/icons/icon-96x96.png",
-          "sizes": "96x96"
-<<<<<<< HEAD
-=======
       "description": "Get in touch with our team",
       "url": "/contact",
       "icons": [
         {
-          "src": "/logo192.png",
-          "sizes": "192x192"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
->>>>>>> origin/main
-=======
-      "name": "Browse Services",
-      "short_name": "Services",
-      "description": "Explore tech services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/images/services-icon.png",
+          "src": "/icons/contact-96x96.png",
           "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "AI Matcher",
-      "short_name": "AI Match",
-      "description": "AI-powered talent matching",
-      "url": "/match",
-      "icons": [
-        {
-          "src": "/images/ai-icon.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Equipment",
-      "short_name": "Equipment",
-      "description": "Browse tech equipment",
-      "url": "/equipment",
-      "icons": [
-        {
-          "src": "/images/equipment-icon.png",
-          "sizes": "96x96"
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         }
       ]
     }
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "screenshots": [
-    {
-      "src": "/screenshots/desktop-1.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Homepage - Desktop View"
-    },
-    {
-      "src": "/screenshots/mobile-1.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Homepage - Mobile View"
-    }
-  ],
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   "related_applications": [
     {
       "platform": "webapp",
@@ -356,36 +154,25 @@
     "client_mode": "navigate-existing"
   },
   "handle_links": "preferred",
-  "protocol_handlers": [
+  "scope_extensions": [
     {
-      "protocol": "web+zion",
-      "url": "/?protocol=%s"
+      "origin": "https://ziontechgroup.com"
     }
   ],
   "file_handlers": [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       "action": "/file-handler",
       "accept": {
-        "text/*": [".txt", ".md", ".html"],
         "application/pdf": [".pdf"],
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
-=======
-      "action": "/",
-      "accept": {
-        "text/*": [".txt", ".md", ".json"],
-        "application/pdf": [".pdf"],
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
-      "action": "/upload",
-      "accept": {
         "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"],
-        "application/pdf": [".pdf"],
-        "text/*": [".txt", ".md", ".json"]
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+        "text/*": [".txt", ".md", ".json", ".csv"]
       }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+zion",
+      "url": "/protocol-handler?url=%s"
     }
   ],
   "share_target": {
@@ -404,43 +191,30 @@
       ]
     }
   },
-  "permissions": [
-    "notifications",
-    "background-sync",
-    "storage"
-  ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   "background": {
     "service_worker": "/sw.js",
     "type": "module"
   },
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+  "permissions": [
+    "notifications",
+    "background-sync",
+    "storage",
+    "geolocation"
+  ],
   "features": [
     "Cross Platform",
     "fast",
     "simple",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "responsive",
-    "offline-capable"
-=======
     "AI-Powered",
-    "Offline Support"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
-=======
-    "ai-powered",
-    "offline-capable"
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+    "Micro SAAS",
+    "Business Solutions",
+    "Tech Marketplace"
   ],
   "developer": {
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com"
-  }
+  },
+  "version": "2.0.0",
+  "build_date": "2025-01-20",
+  "last_updated": "2025-01-20"
 }
