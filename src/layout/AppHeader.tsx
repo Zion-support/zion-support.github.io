@@ -1,9 +1,21 @@
 
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import { MainSidebar } from '@/components/layout/MainSidebar';
 =======
 import { Sidebar } from '@/components/Sidebar';
+=======
+import { useState } from 'react';
+import { useMessaging } from '@/context/MessagingContext';
+import { MainNavigation } from './MainNavigation';
+import { Logo } from '@/components/header/Logo';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
+import { Menu, X } from 'lucide-react';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
+import { useAuth } from '@/hooks/useAuth';
+import { UserProfileDropdown } from '@/components/header/UserProfileDropdown'; // Import UserProfileDropdown
 
 interface AppHeaderProps {
   onSidebarToggle?: () => void;
@@ -128,8 +140,15 @@ export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
               </AnimatePresence>
             </motion.button>
           </div>
-          
-          <ModeToggle />
+
+          <PointsBadge />
+          <LanguageSwitcher />
+          {/* Replace the greeting span with UserProfileDropdown */}
+          {user && (
+            <div className="ml-4"> {/* Added a div for potential spacing adjustments if needed */}
+              <UserProfileDropdown />
+            </div>
+          )}
         </div>
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       
