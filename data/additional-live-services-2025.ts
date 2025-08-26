@@ -13,7 +13,5 @@ export const additionalLiveServices2025: AdditionalLiveService2025[] = [
     tagline: 'Real-time service delivery',
     price: '$199',
     features: ['Real-time monitoring', 'Live support', 'Performance tracking']
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

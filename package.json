@@ -1,12 +1,8 @@
 {
-  "name": "zion-tech-group-website",
+  "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  },
   "scripts": {
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
@@ -18,7 +14,9 @@
     "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint -- --fix || true",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "analyze": "node scripts/analyze-bundle.js",
+    "analyze:build": "npm run build && npm run analyze"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -44,6 +42,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.8.2",
+    "@tanstack/react-query": "^5.85.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cmdk": "^0.2.1",
@@ -56,8 +55,8 @@
     "firebase": "^9.23.0",
     "framer-motion": "^12.23.12",
     "fuse.js": "^7.0.0",
-    "i18next": "^25.4.1",
-    "i18next-browser-languagedetector": "^7.2.0",
+    "i18next": "^25.4.2",
+    "i18next-browser-languagedetector": "^8.0.0",
     "input-otp": "^1.1.0",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.8.1",
@@ -85,16 +84,23 @@
     "@types/react-dom": "^18.2.14",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
-    "@vitejs/plugin-react": "^4.1.1",
-    "autoprefixer": "^10.4.21",
-    "cssnano": "^7.1.1",
-    "eslint": "^8.57.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.0.0",
-    "vite": "^5.4.19"
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }

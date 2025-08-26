@@ -150,7 +150,6 @@ const Webinars: React.FC = () => {
               </Link>
             </div>
           </div>
-=======
 import { CogIcon } from '@heroicons/react/24/outline';
 
 const $page: React.FC = () => {

@@ -12,7 +12,6 @@ export interface AiAutonomousEcosystem2029 {
 
 export const aiAutonomousEcosystem2029: AIAutonomousEcosystem2029[] = [
   {
-=======
   description: string;
   features: string[];
   link: string;

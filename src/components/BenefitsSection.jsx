@@ -1,89 +1,48 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, Zap, Shield, Users, Clock, TrendingUp, Star, Award, Globe, Lock } from 'lucide-react';
+import { 
+  Brain, 
+  Shield, 
+  Rocket, 
+  Users, 
+  TrendingUp, 
+  Zap, 
+  Star, 
+  Globe,
+  Cpu,
+  Database
+} from 'lucide-react';
 
-const benefits = [
-  {
-    icon: <Zap className="w-8 h-8"/>,
-    title: "Lightning Fast",
-    description: "Get your projects delivered in record time with our efficient development process",
-    color: "from-zion-cyan to-zion-blue",
-    bgColor: "from-zion-cyan/20 to-zion-blue/20",
-    stats: "3x Faster",
-    features: ["Rapid Prototyping", "Quick Deployment", "Fast Iteration"]
-  },
-  {
-    icon: <Shield className="w-8 h-8"/>,
-    title: "Enterprise Security",
-    description: "Bank-grade security measures to protect your data and applications",
-    color: "from-zion-purple to-zion-purple-dark",
-    bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-    stats: "99.99% Uptime",
-    features: ["SOC 2 Compliant", "GDPR Ready", "End-to-End Encryption"]
-  },
-  {
-    icon: <Users className="w-8 h-8"/>,
-    title: "Expert Team",
-    description: "Work with certified professionals with years of industry experience",
-    color: "from-zion-cyan-light to-zion-cyan",
-    bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-    stats: "500+ Experts",
-    features: ["Certified Professionals", "Global Network", "Industry Veterans"]
-  },
-  {
-    icon: <Clock className="w-8 h-8"/>,
-    title: "24/7 Support",
-    description: "Round-the-clock assistance whenever you need help or have questions",
-    color: "from-zion-purple-light to-zion-purple",
-    bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-    stats: "24/7",
-    features: ["Live Chat", "Phone Support", "Email Response"]
-  },
-  {
-    icon: <TrendingUp className="w-8 h-8"/>,
-    title: "Scalable Solutions",
-    description: "Built to grow with your business, from startup to enterprise",
-    color: "from-zion-cyan to-zion-purple",
-    bgColor: "from-zion-cyan/20 to-zion-purple/20",
-    stats: "10x Growth",
-    features: ["Auto-scaling", "Load Balancing", "Performance Monitoring"]
-  },
-  {
-    icon: <CheckCircle className="w-8 h-8"/>,
-    title: "Quality Guaranteed",
-    description: "100% satisfaction guarantee with our comprehensive testing process",
-    color: "from-zion-purple to-zion-cyan",
-    bgColor: "from-zion-purple/20 to-zion-cyan/20",
-    stats: "100% Success",
-    features: ["Comprehensive Testing", "Quality Assurance", "Satisfaction Guarantee"]
-  }
-];
-
-const additionalStats = [
-  { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Customer Rating" },
-  { icon: <Award className="w-6 h-6"/>, value: "50+", label: "Industry Awards" },
-  { icon: <Globe className="w-6 h-6"/>, value: "100+", label: "Countries Served" },
-  { icon: <Lock className="w-6 h-6"/>, value: "1000+", label: "Projects Completed" }
-];
-
-export function BenefitsSection() {
+export default function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2
+        staggerChildren: 0.2,
+        delayChildren: 0.1
       }
     }
   };
-  
+
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const statsVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
       opacity: 1,
       transition: {
         duration: 0.6,

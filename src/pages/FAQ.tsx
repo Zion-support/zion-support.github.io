@@ -128,13 +128,6 @@ const FAQ: React.FC = () => {
     )
   })).filter(category => category.questions.length > 0);
 
-<<<<<<< HEAD
-  const toggleCategory = (title) => {
-    setExpandedCategory(expandedCategory === title ? null : title);
-  };
-
-=======
->>>>>>> cursor/website-audit-and-enhancement-96e5
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
