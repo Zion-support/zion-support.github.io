@@ -26,8 +26,11 @@ import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 import { newRealServices } from '../data/new-real-services';
 import { marketValidatedServices } from '../data/market-validated-services';
+<<<<<<< HEAD
+=======
 import { industryRealServices } from '../data/industry-real-services';
 import { real2025Q4AdditionsBatch2 } from '../data/real-2025-q4-additions-batch2';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
 
 // Import our new service data
 // Note: Removed non-existent data imports (2034 datasets) to prevent build errors.
@@ -209,7 +212,11 @@ const allServices = [
   ...marketReadyServices,
   ...marketValidatedServices,
   ...industryRealServices,
+<<<<<<< HEAD
+  ...newSaasItAiServices2025
+=======
   ...real2025Q4AdditionsBatch2
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
 ];
 
 const categories = [
@@ -331,10 +338,17 @@ export default function Services() {
         return (parseInt(getServicePricing(b).replace(/[^0-9]/g, '')) || 0) - 
                (parseInt(getServicePricing(a).replace(/[^0-9]/g, '')) || 0);
       case 'newest':
+<<<<<<< HEAD
+        return new Date((b as any).launchDate || '2020-01-01').getTime() - 
+               new Date((a as any).launchDate || '2020-01-01').getTime();
+      case 'rating':
+        return (((b as any).rating || 0) as number) - (((a as any).rating || 0) as number);
+=======
         return new Date(getServiceLaunchDate(b)).getTime() - 
                new Date(getServiceLaunchDate(a)).getTime();
       case 'rating':
         return getServiceRating(b) - getServiceRating(a);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
       default:
         return 0;
     }

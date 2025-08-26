@@ -17,6 +17,9 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
 import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
 import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
+<<<<<<< HEAD
+import { newRealServices2025 } from '../../data/new-real-services-2025';
+=======
 import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
@@ -25,6 +28,7 @@ import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 import { realQ4Services2025, } from '../../data/real-2025-q4-additions';
 import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
 import { real2025Q4AdditionsBatch2 } from '../../data/real-2025-q4-additions-batch2';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
@@ -48,6 +52,9 @@ function getAllServices(): Service[] {
 		.concat(realEnterpriseServices2025 as unknown as Service[])
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
 		.concat(realMarketAugmentations2025 as unknown as Service[])
+<<<<<<< HEAD
+		.concat(newRealServices2025 as unknown as Service[]);
+=======
 		.concat(additionalLiveServices2025 as unknown as Service[])
 		.concat(real2025Q2Additions as unknown as Service[])
 		.concat(augmentedServicesBatch3 as unknown as Service[])
@@ -56,6 +63,7 @@ function getAllServices(): Service[] {
 		.concat(realQ4Services2025 as unknown as Service[])
 		.concat(real2025Q4Additions as unknown as Service[])
 		.concat(real2025Q4AdditionsBatch2 as unknown as Service[]);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
 }
 
 function toSlug(value: string): string {

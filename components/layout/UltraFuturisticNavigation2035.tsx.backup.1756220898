@@ -260,11 +260,23 @@ const navigationItems: NavigationItem[] = [
     description: 'Browse by category',
     badge: 'New',
     children: [
+<<<<<<< HEAD
+      { name: 'AI & Consciousness', href: '/services#ai-consciousness', description: 'AI, data, ML services' },
+      { name: 'Enterprise IT', href: '/services#enterprise-it', description: 'Cloud, cost, platform' },
+      { name: 'Quantum & Emerging', href: '/services#quantum-emerging', description: 'Monitoring & telemetry' },
+      { name: 'Micro SAAS', href: '/services#micro-saas', description: 'Business tools and automation' },
+      { name: 'Education & Research', href: '/services#education-research', description: 'Learning and R&D' },
+      { name: 'AI Evaluation Orchestrator', href: '/services/ai-evaluation-orchestrator', description: 'Automated LLM evals' },
+      { name: 'SEO Automation Suite', href: '/seo-automation-suite', description: 'Technical SEO automation' },
+      { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent', description: 'Agentless discovery' },
+      { name: 'Managed Postgres HA', href: '/managed-postgres-ha', description: 'HA Postgres ops' }
+=======
       { name: 'AI & Data', href: '/services?filter=ai-consciousness', description: 'AI, data, ML services' },
       { name: 'Enterprise IT', href: '/services?filter=enterprise-it', description: 'Infra, security, platforms' },
       { name: 'Quantum & Emerging', href: '/services?filter=quantum-emerging', description: 'Quantum, space, frontier' },
       { name: 'Micro SAAS', href: '/services?filter=micro-saas', description: 'Business accelerators' },
       { name: 'Creative & Media', href: '/services?filter=creative-media', description: 'Content, media, design' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
     ]
   },
   {

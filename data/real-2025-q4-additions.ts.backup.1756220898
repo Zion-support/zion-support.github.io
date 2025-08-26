@@ -46,6 +46,13 @@ const contact = {
   website: 'https://ziontechgroup.com'
 };
 
+<<<<<<< HEAD
+function toSlug(value: string) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+export const real2025Q4Additions: Q4Service[] = [
+=======
 export const realQ4Services2025: RealQ4Service[] = [
 	{
 		id: 'affiliate-marketing-hub',
@@ -258,6 +265,7 @@ export const realQ4Services2025: RealQ4Service[] = [
 		reviews: 28
 	}];
 export const real2025Q4Additions = [
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
   {
     id: 'ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform',
