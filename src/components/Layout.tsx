@@ -17,10 +17,18 @@ const navigation: NavItem[] = [
     label: 'Services', 
     href: '/services',
     children: [
-      { label: 'AI Systems', href: '/services#ai' },
-      { label: 'Cloud Platforms', href: '/services#cloud' },
+      { label: 'AI & Machine Learning', href: '/services#ai' },
+      { label: 'Quantum Technology', href: '/services#quantum' },
       { label: 'Cybersecurity', href: '/services#cybersecurity' },
-      { label: 'Micro SaaS', href: '/services#saas' }
+      { label: 'Cloud & Infrastructure', href: '/services#cloud' },
+      { label: 'Blockchain & Web3', href: '/services#blockchain' },
+      { label: 'IoT & Edge Computing', href: '/services#iot' },
+      { label: 'Biotechnology & Healthcare', href: '/services#biotech' },
+      { label: 'Space Technology', href: '/services#space' },
+      { label: 'Manufacturing & Industry 4.0', href: '/services#manufacturing' },
+      { label: 'FinTech & Wealth Management', href: '/services#fintech' },
+      { label: 'Consulting & Strategy', href: '/services#consulting' },
+      { label: 'All Services', href: '/services' }
     ]
   },
   { label: 'Contact', href: '/contact' }

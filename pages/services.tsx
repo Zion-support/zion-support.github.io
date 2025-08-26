@@ -1,11 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code } from 'lucide-react'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2 } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
+import { additionalEnhancedServices } from '../data/additional-real-services'
 
 export default function Services() {
+	const [searchTerm, setSearchTerm] = useState('')
+	const [selectedCategory, setSelectedCategory] = useState('all')
+	const [sortBy, setSortBy] = useState('popularity')
+
 	const title = 'Services — Zion Tech Group'
-	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
+	const description = 'Comprehensive AI, IT, and micro SaaS solutions for modern businesses.'
+
+	// Get unique categories
+	const categories = ['all', ...new Set(additionalEnhancedServices.map(service => service.category))]
+
+	// Filter and sort services
+	const filteredServices = additionalEnhancedServices
+		.filter(service => 
+			(selectedCategory === 'all' || service.category === selectedCategory) &&
+			(service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			 service.tagline.toLowerCase().includes(searchTerm.toLowerCase()))
+		)
+		.sort((a, b) => {
+			switch (sortBy) {
+				case 'popularity':
+					return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
+				case 'price':
+					return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''))
+				case 'rating':
+					return (b.rating || 0) - (a.rating || 0)
+				case 'newest':
+					return new Date(b.launchDate || '2024-01-01').getTime() - new Date(a.launchDate || '2024-01-01').getTime()
+				default:
+					return 0
+			}
+		})
 
 	return (
 		<PageTransition>
@@ -14,11 +45,75 @@ export default function Services() {
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							Our Services
+							Our Comprehensive Services
 						</h1>
 						<p className="mt-6 text-lg leading-8 text-gray-600">
-							From strategy to production, we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.
+							From cutting-edge AI solutions to enterprise IT infrastructure, we deliver innovative micro SaaS and technology services that transform businesses.
 						</p>
+						<div className="mt-8 flex items-center justify-center gap-4">
+							<div className="flex items-center gap-2 text-sm text-gray-600">
+								<Users2 className="h-4 w-4" />
+								<span>500+ Active Customers</span>
+							</div>
+							<div className="flex items-center gap-2 text-sm text-gray-600">
+								<Star className="h-4 w-4 text-yellow-500" />
+								<span>4.7/5 Rating</span>
+							</div>
+							<div className="flex items-center gap-2 text-sm text-gray-600">
+								<TrendingUp className="h-4 w-4 text-green-500" />
+								<span>99.9% Uptime</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Search and Filter Section */}
+			<section className="bg-white py-12 border-b border-gray-200">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
+						{/* Search */}
+						<div className="relative flex-1 max-w-md">
+							<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+							<input
+								type="text"
+								placeholder="Search services..."
+								value={searchTerm}
+								onChange={(e) => setSearchTerm(e.target.value)}
+								className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							/>
+						</div>
+
+						{/* Category Filter */}
+						<div className="flex items-center gap-2">
+							<Filter className="h-4 w-4 text-gray-400" />
+							<select
+								value={selectedCategory}
+								onChange={(e) => setSelectedCategory(e.target.value)}
+								className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							>
+								{categories.map(category => (
+									<option key={category} value={category}>
+										{category === 'all' ? 'All Categories' : category}
+									</option>
+								))}
+							</select>
+						</div>
+
+						{/* Sort */}
+						<div className="flex items-center gap-2">
+							<Clock className="h-4 w-4 text-gray-400" />
+							<select
+								value={sortBy}
+								onChange={(e) => setSortBy(e.target.value)}
+								className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							>
+								<option value="popularity">Most Popular</option>
+								<option value="price">Price: Low to High</option>
+								<option value="rating">Highest Rated</option>
+								<option value="newest">Newest First</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -26,234 +121,128 @@ export default function Services() {
 			{/* Services Grid */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="grid gap-8 lg:grid-cols-2">
-						{/* AI Autonomous Systems */}
-						<div id="ai" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
-							<div className="flex items-center gap-x-3">
-								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
-									<Brain className="h-6 w-6 text-white" />
-								</div>
-								<h2 className="text-xl font-semibold text-gray-900">AI Autonomous Systems</h2>
-							</div>
-							<p className="mt-4 text-gray-600">
-								Transform your operations with intelligent automation and AI-powered decision making.
-							</p>
-							<ul className="mt-6 space-y-3">
-								<li className="flex items-center gap-x-3">
-									<Zap className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">Sales/CS multi-agent copilots</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Database className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">RAG and workflow orchestration</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<BarChart3 className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">Observability and guardrails</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Users className="h-4 w-4 text-blue-600" />
-									<span className="text-sm text-gray-700">Intelligent process automation</span>
-								</li>
-							</ul>
-							<div className="mt-8">
-								<Link
-									to="/contact"
-									className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors"
-								>
-									Get started with AI
-									<ArrowRight className="ml-2 h-4 w-4" />
-								</Link>
-							</div>
-						</div>
-
-						{/* Cloud Platforms */}
-						<div id="cloud" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
-							<div className="flex items-center gap-x-3">
-								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
-									<Cloud className="h-6 w-6 text-white" />
-								</div>
-								<h2 className="text-xl font-semibold text-gray-900">Cloud Platforms</h2>
-							</div>
-							<p className="mt-4 text-gray-600">
-								Build scalable, resilient cloud infrastructure that grows with your business.
-							</p>
-							<ul className="mt-6 space-y-3">
-								<li className="flex items-center gap-x-3">
-									<Server className="h-4 w-4 text-green-600" />
-									<span className="text-sm text-gray-700">Serverless and Kubernetes</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Database className="h-4 w-4 text-green-600" />
-									<span className="text-sm text-gray-700">Data pipelines and ML ops</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<BarChart3 className="h-4 w-4 text-green-600" />
-									<span className="text-sm text-gray-700">FinOps and SRE practices</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Globe className="h-4 w-4 text-green-600" />
-									<span className="text-sm text-gray-700">Multi-cloud architecture</span>
-								</li>
-							</ul>
-							<div className="mt-8">
-								<Link
-									to="/contact"
-									className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors"
-								>
-									Build your cloud platform
-									<ArrowRight className="ml-2 h-4 w-4" />
-								</Link>
-							</div>
-						</div>
-
-						{/* Cybersecurity */}
-						<div id="cybersecurity" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
-							<div className="flex items-center gap-x-3">
-								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-600">
-									<Shield className="h-6 w-6 text-white" />
-								</div>
-								<h2 className="text-xl font-semibold text-gray-900">Cybersecurity</h2>
-							</div>
-							<p className="mt-4 text-gray-600">
-								Protect your business with enterprise-grade security frameworks and compliance.
-							</p>
-							<ul className="mt-6 space-y-3">
-								<li className="flex items-center gap-x-3">
-									<Lock className="h-4 w-4 text-red-600" />
-									<span className="text-sm text-gray-700">Zero-trust frameworks</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Shield className="h-4 w-4 text-red-600" />
-									<span className="text-sm text-gray-700">Compliance and threat modeling</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Zap className="h-4 w-4 text-red-600" />
-									<span className="text-sm text-gray-700">Incident response playbooks</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<BarChart3 className="h-4 w-4 text-red-600" />
-									<span className="text-sm text-gray-700">Security monitoring & analytics</span>
-								</li>
-							</ul>
-							<div className="mt-8">
-								<Link
-									to="/contact"
-									className="inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-500 transition-colors"
-								>
-									Secure your business
-									<ArrowRight className="ml-2 h-4 w-4" />
-								</Link>
-							</div>
-						</div>
-
-						{/* Micro SaaS */}
-						<div id="saas" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
-							<div className="flex items-center gap-x-3">
-								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
-									<Code className="h-6 w-6 text-white" />
-								</div>
-								<h2 className="text-xl font-semibold text-gray-900">Micro SaaS</h2>
-							</div>
-							<p className="mt-4 text-gray-600">
-								Rapidly build and deploy SaaS products with proven infrastructure patterns.
-							</p>
-							<ul className="mt-6 space-y-3">
-								<li className="flex items-center gap-x-3">
-									<Zap className="h-4 w-4 text-purple-600" />
-									<span className="text-sm text-gray-700">Rapid product delivery</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Database className="h-4 w-4 text-purple-600" />
-									<span className="text-sm text-gray-700">Billing, auth, and analytics</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<BarChart3 className="h-4 w-4 text-purple-600" />
-									<span className="text-sm text-gray-700">Growth experiments</span>
-								</li>
-								<li className="flex items-center gap-x-3">
-									<Users className="h-4 w-4 text-purple-600" />
-									<span className="text-sm text-gray-700">User onboarding & retention</span>
-								</li>
-							</ul>
-							<div className="mt-8">
-								<Link
-									to="/contact"
-									className="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors"
-								>
-									Build your SaaS
-									<ArrowRight className="ml-2 h-4 w-4" />
-								</Link>
-							</div>
-						</div>
+					{/* Results Count */}
+					<div className="mb-8">
+						<p className="text-gray-600">
+							Showing {filteredServices.length} of {additionalEnhancedServices.length} services
+						</p>
 					</div>
+
+					{/* Services Grid */}
+					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+						{filteredServices.map((service) => (
+							<div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+								{/* Popular Badge */}
+								{service.popular && (
+									<div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+										POPULAR
+									</div>
+								)}
+
+								{/* Service Icon and Header */}
+								<div className="flex items-center gap-x-3 mb-4">
+									<div className="text-3xl">{service.icon}</div>
+									<div>
+										<h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+											{service.name}
+										</h3>
+										<p className="text-sm text-gray-500">{service.tagline}</p>
+									</div>
+								</div>
+
+								{/* Price */}
+								<div className="mb-4">
+									<div className="flex items-baseline gap-2">
+										<span className="text-2xl font-bold text-gray-900">{service.price}</span>
+										<span className="text-gray-500">{service.period}</span>
+									</div>
+									{service.trialDays && (
+										<p className="text-sm text-green-600 font-medium">
+											{service.trialDays}-day free trial
+										</p>
+									)}
+								</div>
+
+								{/* Description */}
+								<p className="text-gray-600 text-sm mb-4 line-clamp-3">
+									{service.description}
+								</p>
+
+								{/* Features */}
+								<div className="mb-4">
+									<h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+									<ul className="space-y-1">
+										{service.features.slice(0, 3).map((feature, index) => (
+											<li key={index} className="flex items-center gap-2 text-xs text-gray-600">
+												<Zap className="h-3 w-3 text-blue-500" />
+												{feature}
+											</li>
+										))}
+									</ul>
+								</div>
+
+								{/* Category and Rating */}
+								<div className="flex items-center justify-between mb-4">
+									<span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+										{service.category}
+									</span>
+									{service.rating && (
+										<div className="flex items-center gap-1">
+											<Star className="h-3 w-3 text-yellow-400 fill-current" />
+											<span className="text-xs text-gray-600">{service.rating}</span>
+											<span className="text-xs text-gray-400">({service.reviews})</span>
+										</div>
+									)}
+								</div>
+
+								{/* Market Info */}
+								<div className="mb-4 p-3 bg-gray-50 rounded-lg">
+									<div className="grid grid-cols-2 gap-2 text-xs">
+										<div>
+											<span className="text-gray-500">Market:</span>
+											<p className="font-medium">{service.marketSize}</p>
+										</div>
+										<div>
+											<span className="text-gray-500">Growth:</span>
+											<p className="font-medium text-green-600">{service.growthRate}</p>
+										</div>
+									</div>
+								</div>
+
+								{/* CTA Button */}
+								<div className="flex gap-2">
+									<Link
+										to={service.link}
+										className="flex-1 inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+									>
+										Learn More
+										<ArrowRight className="ml-2 h-4 w-4" />
+									</Link>
+									<Link
+										to="/contact"
+										className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+									>
+										Contact
+									</Link>
+								</div>
+							</div>
+						))}
+					</div>
+
+					{/* No Results */}
+					{filteredServices.length === 0 && (
+						<div className="text-center py-12">
+							<div className="text-gray-400 mb-4">
+								<Search className="h-16 w-16 mx-auto" />
+							</div>
+							<h3 className="text-lg font-medium text-gray-900 mb-2">No services found</h3>
+							<p className="text-gray-600">Try adjusting your search terms or filters.</p>
+						</div>
+					)}
 				</div>
 			</section>
 
-			{/* Process Section */}
-			<section className="bg-white py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="mx-auto max-w-2xl lg:text-center">
-						<h2 className="text-base font-semibold leading-7 text-blue-600">Our Process</h2>
-						<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-							How we deliver results
-						</p>
-						<p className="mt-6 text-lg leading-8 text-gray-600">
-							We follow a proven methodology that ensures successful delivery and measurable outcomes.
-						</p>
-					</div>
-					<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-						<dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
-							<div className="flex flex-col">
-								<dt className="text-lg font-semibold leading-7 text-gray-900">
-									<span className="mr-2 text-2xl font-bold text-blue-600">1</span>
-									Discovery
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										We analyze your current state, understand your goals, and design a roadmap for success.
-									</p>
-								</dd>
-							</div>
-							<div className="flex flex-col">
-								<dt className="text-lg font-semibold leading-7 text-gray-900">
-									<span className="mr-2 text-2xl font-bold text-blue-600">2</span>
-									Design
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										We architect solutions that align with your business objectives and technical requirements.
-									</p>
-								</dd>
-							</div>
-							<div className="flex flex-col">
-								<dt className="text-lg font-semibold leading-7 text-gray-900">
-									<span className="mr-2 text-2xl font-bold text-blue-600">3</span>
-									Develop
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										We build and test your solution using industry best practices and modern technologies.
-									</p>
-								</dd>
-							</div>
-							<div className="flex flex-col">
-								<dt className="text-lg font-semibold leading-7 text-gray-900">
-									<span className="mr-2 text-2xl font-bold text-blue-600">4</span>
-									Deploy
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-									<p className="flex-auto">
-										We launch your solution and provide ongoing support to ensure continued success.
-									</p>
-								</dd>
-							</div>
-						</dl>
-					</div>
-				</div>
-			</section>
-
-			{/* CTA Section */}
+			{/* Contact Information */}
 			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
@@ -261,8 +250,43 @@ export default function Services() {
 							Ready to get started?
 						</h2>
 						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
-							Let's discuss your project and how we can help you achieve your goals.
+							Let's discuss your project and how our innovative services can help you achieve your goals.
 						</p>
+						
+						{/* Contact Details */}
+						<div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+							<div>
+								<div className="mx-auto h-12 w-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+									<Users className="h-6 w-6 text-white" />
+								</div>
+								<h3 className="text-lg font-semibold text-white">Contact Us</h3>
+								<p className="mt-2 text-blue-100">
+									Mobile: +1 302 464 0950<br />
+									Email: kleber@ziontechgroup.com
+								</p>
+							</div>
+							<div>
+								<div className="mx-auto h-12 w-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+									<Globe className="h-6 w-6 text-white" />
+								</div>
+								<h3 className="text-lg font-semibold text-white">Visit Us</h3>
+								<p className="mt-2 text-blue-100">
+									364 E Main St STE 1008<br />
+									Middletown DE 19709
+								</p>
+							</div>
+							<div>
+								<div className="mx-auto h-12 w-12 bg-white/20 rounded-lg flex items-center justify-center mb-4">
+									<Zap className="h-6 w-6 text-white" />
+								</div>
+								<h3 className="text-lg font-semibold text-white">Get Started</h3>
+								<p className="mt-2 text-blue-100">
+									Free consultation<br />
+									Custom solutions
+								</p>
+							</div>
+						</div>
+
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
 								to="/contact"
@@ -271,6 +295,12 @@ export default function Services() {
 								Get in touch
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
 							</Link>
+							<a
+								href="tel:+13024640950"
+								className="rounded-md border border-white px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-blue-600 transition-colors"
+							>
+								Call Now
+							</a>
 						</div>
 					</div>
 				</div>
