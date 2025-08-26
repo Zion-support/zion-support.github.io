@@ -7,8 +7,8 @@ import BenefitsSection from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection.jsx";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
+import { EnhancedSEO } from "@/components/EnhancedSEO.tsx";
+import { PerformanceOptimizedHero } from "@/components/PerformanceOptimizedHero.tsx";
 import { QuickAccess } from "@/components/home/QuickAccess";
 
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
@@ -207,14 +207,15 @@ EnhancedServiceCategories.displayName = 'EnhancedServiceCategories';
 export default function Home() {
   return (
     <>
-      <SEO 
+      <EnhancedSEO 
         title="Zion Tech Group - Leading Technology Solutions & Innovation"
         description="Transform your business with Zion Tech Group's cutting-edge technology solutions. AI, Cloud, Cybersecurity, and Digital Transformation services."
         keywords="technology solutions, AI, cloud computing, cybersecurity, digital transformation, IT services"
+        type="website"
       />
       
       <Suspense fallback={<EnhancedLoadingSpinner />}>
-        <HeroSection />
+        <PerformanceOptimizedHero />
         <StatsSection />
         <EnhancedServiceCategories />
         <TechSolutionsSection />
