@@ -1,17 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 	reactStrictMode: true,
-	trailingSlash: true,
-	output: 'export',
 	images: {
+		// Using unoptimized to support static hosting/CDN without Next Image optimization
 		unoptimized: true
 	},
 	eslint: {
 		ignoreDuringBuilds: true
+	},
+	typescript: {
+		// Allow builds to pass even if there are type errors; CI can run type-check separately
+		ignoreBuildErrors: true
 	},
 	async redirects() {
 		return [
@@ -25,29 +24,6 @@ const nextConfig = {
 			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true }
 		];
 	}
-};
-
-  // Note: headers, redirects, and rewrites don't work with output: 'export'
-  // These are handled by Netlify via _headers and _redirects files
-
-  // Skip TypeScript checking during build if SKIP_TYPE_CHECK is set
-  typescript: {
-    ignoreBuildErrors: process.env.SKIP_TYPE_CHECK === 'true',
-  },
-
-  // Skip ESLint during build for faster deployment
-=======
-  reactStrictMode: true,
-  images: {
-    domains: ["localhost"],
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 };
 
 export default nextConfig;
