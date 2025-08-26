@@ -1,7 +1,28 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
-import { Button } from '../ui/button';
+
+// Simple Button component to avoid import issues
+const Button = ({ children, variant = 'default', size = 'sm', onClick, className = '' }) => {
+    const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
+    const variantClasses = {
+        default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
+        outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',
+        ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate'
+    };
+    const sizeClasses = {
+        sm: 'px-3 py-1.5 text-sm',
+        md: 'px-4 py-2 text-sm',
+        lg: 'px-6 py-3 text-base'
+    };
+    const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+    
+    return (
+        <button className={classes} onClick={onClick}>
+            {children}
+        </button>
+    );
+};
 const AccessibilityContext = createContext(undefined);
 export const useAccessibility = () => {
     const context = useContext(AccessibilityContext);

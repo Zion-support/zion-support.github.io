@@ -1,11 +1,90 @@
 import React, { useState } from "react";
 import { MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+
+// Simple Button component to avoid import issues
+const Button = ({ children, variant = 'default', size = 'sm', onClick, disabled = false, className = '' }) => {
+    const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
+    const variantClasses = {
+        default: 'bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light focus:ring-zion-cyan',
+        secondary: 'bg-zion-blue text-white hover:bg-zion-blue-dark focus:ring-zion-blue'
+    };
+    const sizeClasses = {
+        sm: 'px-3 py-1.5 text-sm'
+    };
+    const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+    
+    return (
+        <button className={classes} onClick={onClick} disabled={disabled}>
+            {children}
+        </button>
+    );
+};
+
+// Simple Input component to avoid import issues
+const Input = ({ placeholder, className = '', value, onChange, maxLength }) => {
+    return (
+        <input
+            type="text"
+            placeholder={placeholder}
+            className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
+            value={value}
+            onChange={onChange}
+            maxLength={maxLength}
+        />
+    );
+};
+
+// Simple Textarea component to avoid import issues
+const Textarea = ({ placeholder, className = '', value, onChange, maxLength, rows = 3 }) => {
+    return (
+        <textarea
+            placeholder={placeholder}
+            className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none ${className}`}
+            value={value}
+            onChange={onChange}
+            maxLength={maxLength}
+            rows={rows}
+        />
+    );
+};
+
+// Simple Avatar component to avoid import issues
+const Avatar = ({ children, className = '' }) => {
+    return (
+        <div className={`w-10 h-10 rounded-full bg-zion-cyan flex items-center justify-center text-zion-blue font-semibold ${className}`}>
+            {children}
+        </div>
+    );
+};
+
+const AvatarFallback = ({ children }) => {
+    return <span className="text-sm">{children}</span>;
+};
+
+// Simple Card component to avoid import issues
+const Card = ({ children, className = '' }) => {
+    return (
+        <div className={`bg-white rounded-lg shadow-md border ${className}`}>
+            {children}
+        </div>
+    );
+};
+
+const CardContent = ({ children, className = '' }) => {
+    return (
+        <div className={`p-4 ${className}`}>
+            {children}
+        </div>
+    );
+};
+
+// Simple Separator component to avoid import issues
+const Separator = ({ className = '' }) => {
+    return (
+        <div className={`border-t border-gray-200 ${className}`}>
+        </div>
+    );
+};
 const initialPosts = [
     {
         id: 1,

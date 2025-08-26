@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PlusIcon, XMarkIcon, ChatBubbleLeftRightIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
+import { Plus, X, MessageCircle, Phone, Mail } from 'lucide-react';
 const FloatingActionButton = ({ className = '' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
     const actionItems = [
         {
-            icon: ChatBubbleLeftRightIcon,
+            icon: MessageCircle,
             label: 'Live Chat',
             action: () => window.open('https://ziontechgroup.com/chat', '_blank'),
             color: 'bg-green-500 hover:bg-green-600'
         },
         {
-            icon: PhoneIcon,
+            icon: Phone,
             label: 'Call Us',
             action: () => window.open('tel:+1-555-0123', '_self'),
             color: 'bg-blue-500 hover:bg-blue-600'
         },
         {
-            icon: EnvelopeIcon,
+            icon: Mail,
             label: 'Email',
             action: () => window.open('mailto:info@ziontechgroup.com', '_self'),
             color: 'bg-purple-500 hover:bg-purple-600'
@@ -41,9 +41,9 @@ const FloatingActionButton = ({ className = '' }) => {
       <motion.button onClick={toggleMenu} className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}>
         <AnimatePresence mode="wait">
           {isOpen ? (<motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
-              <XMarkIcon className="w-6 h-6"/>
+              <X className="w-6 h-6"/>
             </motion.div>) : (<motion.div key="open" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
-              <PlusIcon className="w-6 h-6"/>
+              <Plus className="w-6 h-6"/>
             </motion.div>)}
         </AnimatePresence>
       </motion.button>

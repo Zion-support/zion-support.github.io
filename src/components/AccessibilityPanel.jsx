@@ -8,8 +8,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         reducedMotion: false,
         screenReader: false,
         keyboardNavigation: false,
-        focusIndicator: true,
-        colorBlindness: 'none'
+        focusIndicator: true
     });
     const [accessibilityScore, setAccessibilityScore] = useState(85);
     const [activeTab, setActiveTab] = useState('general');

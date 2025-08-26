@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
-import { PerformanceMonitor } from './components/PerformanceOptimizer';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { AccessibilityPanel } from './components/ui/accessibility-panel';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages
@@ -70,7 +71,21 @@ function App() {
         
         <Footer />
         <ChatAssistant />
-        <PerformanceMonitor />
+        <PerformanceOptimizer />
+        <AccessibilityPanel 
+          enabled={true}
+          defaultSettings={{
+            highContrast: false,
+            largeText: false,
+            reducedMotion: false,
+            focusIndicator: true,
+            keyboardNavigation: true
+          }}
+          onSettingsChange={(settings) => {
+            // Handle accessibility settings changes
+            console.log('Accessibility settings updated:', settings);
+          }}
+        />
       </div>
     </Router>
   );
