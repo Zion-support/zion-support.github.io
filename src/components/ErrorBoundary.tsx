@@ -3,6 +3,7 @@ import { toast } from 'react-hot-toast';
 
 interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface State {
@@ -22,7 +23,8 @@ export class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      return null;
+      if (this.props.fallback) return <>{this.props.fallback}</>;
+      return <div className="p-4 text-center">Something went wrong.</div>;
     }
 
     return this.props.children;
