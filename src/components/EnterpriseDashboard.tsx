@@ -15,7 +15,6 @@ import {
   Loader2
 } from 'lucide-react';
 import { useAnalytics } from '../hooks/useAnalytics';
-
 interface SystemMetric {
   id: string;
   name: string;
@@ -30,7 +29,6 @@ interface SystemMetric {
   };
   lastUpdated: Date;
 }
-
 interface ServiceStatus {
   id: string;
   name: string;
@@ -44,7 +42,6 @@ interface ServiceStatus {
     resolved: boolean;
   };
 }
-
 interface SecurityAlert {
   id: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
@@ -56,7 +53,6 @@ interface SecurityAlert {
   affected: string[];
   source: string;
 }
-
 interface UserActivity {
   id: string;
   userId: string;
@@ -68,20 +64,17 @@ interface UserActivity {
   userAgent: string;
   status: 'success' | 'failure' | 'pending';
 }
-
 export const EnterpriseDashboard: React.FC = () => {
   const { trackEvent } = useAnalytics({
     enableTracking: true,
     enableUserBehaviorTracking: true
   });
-
   const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'security' | 'users' | 'services' | 'analytics'>('overview');
   const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [dateRange, setDateRange] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
   const [searchQuery, setSearchQuery] = useState('');
   const [filterStatus, setFilterStatus] = useState<string>('all');
-
   // Mock data - in production, this would come from real-time APIs
   const [systemMetrics] = useState<SystemMetric[]>([
     {
@@ -129,7 +122,6 @@ export const EnterpriseDashboard: React.FC = () => {
       lastUpdated: new Date()
     }
   ]);
-
   const [serviceStatuses] = useState<ServiceStatus[]>([
     {
       id: 'web-server',
@@ -164,7 +156,6 @@ export const EnterpriseDashboard: React.FC = () => {
       errorRate: 0.001
     }
   ]);
-
   const [securityAlerts] = useState<SecurityAlert[]>([
     {
       id: 'alert-1',
@@ -189,7 +180,6 @@ export const EnterpriseDashboard: React.FC = () => {
       source: 'Access Control System'
     }
   ]);
-
   const [userActivities] = useState<UserActivity[]>([
     {
       id: 'activity-1',
@@ -214,24 +204,19 @@ export const EnterpriseDashboard: React.FC = () => {
       status: 'success'
     }
   ]);
-
   // Refresh data
   const refreshData = useCallback(async () => {
     setIsRefreshing(true);
-    
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
       // Update timestamps (simplified for demo)
       const now = new Date();
       console.log('Data refreshed at:', now.toLocaleTimeString());
-      
       trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', undefined, { 
         tab: activeTab,
         dateRange 
       });
-      
     } catch (error) {
       console.error('Failed to refresh data:', error);
       trackEvent('enterprise_dashboard', 'refresh_failed', 'error', undefined, { 
@@ -241,21 +226,17 @@ export const EnterpriseDashboard: React.FC = () => {
       setIsRefreshing(false);
     }
   }, [activeTab, dateRange, trackEvent]);
-
   // Auto-refresh effect
   useEffect(() => {
     const interval = setInterval(refreshData, refreshInterval);
     return () => clearInterval(interval);
   }, [refreshInterval, refreshData]);
-
   // Filtered data
   const filteredSecurityAlerts = useMemo(() => {
     let filtered = securityAlerts;
-    
     if (filterStatus !== 'all') {
       filtered = filtered.filter(alert => alert.status === filterStatus);
     }
-    
     if (searchQuery) {
       filtered = filtered.filter(alert => 
         alert.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -263,13 +244,10 @@ export const EnterpriseDashboard: React.FC = () => {
         alert.type.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
-    
     return filtered;
   }, [securityAlerts, filterStatus, searchQuery]);
-
   const filteredUserActivities = useMemo(() => {
     let filtered = userActivities;
-    
     if (searchQuery) {
       filtered = filtered.filter(activity => 
         activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -277,10 +255,8 @@ export const EnterpriseDashboard: React.FC = () => {
         activity.resource.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
-    
     return filtered;
   }, [userActivities, searchQuery]);
-
   // Get status color
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -302,7 +278,6 @@ export const EnterpriseDashboard: React.FC = () => {
         return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30';
     }
   };
-
   // Get severity color
   const getSeverityColor = (severity: string) => {
     switch (severity) {
@@ -318,7 +293,6 @@ export const EnterpriseDashboard: React.FC = () => {
         return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30';
     }
   };
-
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
@@ -332,7 +306,6 @@ export const EnterpriseDashboard: React.FC = () => {
               Production
             </div>
           </h2>
-          
           <div className="flex items-center gap-3">
             <select
               value={refreshInterval / 1000}
@@ -344,7 +317,6 @@ export const EnterpriseDashboard: React.FC = () => {
               <option value={60}>1m</option>
               <option value={300}>5m</option>
             </select>
-            
             <button
               onClick={refreshData}
               disabled={isRefreshing}
@@ -360,7 +332,6 @@ export const EnterpriseDashboard: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Navigation Tabs */}
       <div className="border-b border-gray-200 dark:border-gray-700">
         <nav className="flex space-x-8 px-6">
@@ -387,7 +358,6 @@ export const EnterpriseDashboard: React.FC = () => {
           ))}
         </nav>
       </div>
-
       {/* Main Content */}
       <div className="p-6">
         <AnimatePresence>
@@ -416,11 +386,9 @@ export const EnterpriseDashboard: React.FC = () => {
                         {metric.status}
                       </span>
                     </div>
-                    
                     <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                       {metric.value}{metric.unit}
                     </div>
-                    
                     <div className="flex items-center gap-2 text-sm">
                       <span className={`flex items-center gap-1 ${
                         metric.trend === 'up' ? 'text-red-600' :
@@ -438,7 +406,6 @@ export const EnterpriseDashboard: React.FC = () => {
                   </motion.div>
                 ))}
               </div>
-
               {/* Service Status Overview */}
               <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -473,7 +440,6 @@ export const EnterpriseDashboard: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Recent Security Alerts */}
               <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
                 <div className="flex items-center justify-between mb-4">
@@ -519,7 +485,6 @@ export const EnterpriseDashboard: React.FC = () => {
               </div>
             </motion.div>
           )}
-
           {activeTab === 'performance' && (
             <motion.div
               key="performance"
@@ -537,7 +502,6 @@ export const EnterpriseDashboard: React.FC = () => {
                   Real-time performance metrics and system health monitoring
                 </p>
               </div>
-
               {/* Performance Charts Placeholder */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
@@ -549,7 +513,6 @@ export const EnterpriseDashboard: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-4">Response Time & Throughput</h4>
                   <div className="h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">
@@ -562,7 +525,6 @@ export const EnterpriseDashboard: React.FC = () => {
               </div>
             </motion.div>
           )}
-
           {activeTab === 'security' && (
             <motion.div
               key="security"
@@ -594,7 +556,6 @@ export const EnterpriseDashboard: React.FC = () => {
                   <option value="false_positive">False Positive</option>
                 </select>
               </div>
-
               {/* Security Alerts */}
               <div className="space-y-4">
                 {filteredSecurityAlerts.map((alert) => (
@@ -620,14 +581,12 @@ export const EnterpriseDashboard: React.FC = () => {
                         {alert.timestamp.toLocaleString()}
                       </span>
                     </div>
-                    
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                       {alert.title}
                     </h4>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">
                       {alert.description}
                     </p>
-                    
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                       <div>
                         <span className="font-medium text-gray-700 dark:text-gray-300">Source:</span>
@@ -649,7 +608,6 @@ export const EnterpriseDashboard: React.FC = () => {
               </div>
             </motion.div>
           )}
-
           {activeTab === 'users' && (
             <motion.div
               key="users"
@@ -680,7 +638,6 @@ export const EnterpriseDashboard: React.FC = () => {
                   <option value="30d">Last 30 Days</option>
                 </select>
               </div>
-
               {/* User Activities */}
               <div className="space-y-4">
                 {filteredUserActivities.map((activity) => (
@@ -713,7 +670,6 @@ export const EnterpriseDashboard: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600 dark:text-gray-400">
                       <div>
                         <span className="font-medium">IP:</span> {activity.ipAddress}
@@ -730,7 +686,6 @@ export const EnterpriseDashboard: React.FC = () => {
               </div>
             </motion.div>
           )}
-
           {activeTab === 'services' && (
             <motion.div
               key="services"
@@ -748,7 +703,6 @@ export const EnterpriseDashboard: React.FC = () => {
                   Monitor and manage all system services
                 </p>
               </div>
-
               {/* Service Status Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {serviceStatuses.map((service) => (
@@ -766,7 +720,6 @@ export const EnterpriseDashboard: React.FC = () => {
                         {service.status}
                       </span>
                     </div>
-                    
                     <div className="space-y-3">
                       <div className="flex justify-between">
                         <span className="text-gray-600 dark:text-gray-400">Uptime</span>
@@ -787,7 +740,6 @@ export const EnterpriseDashboard: React.FC = () => {
                         </span>
                       </div>
                     </div>
-                    
                     {service.lastIncident && (
                       <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
                         <div className="text-sm font-medium text-yellow-800 dark:text-yellow-200 mb-1">
@@ -803,7 +755,6 @@ export const EnterpriseDashboard: React.FC = () => {
               </div>
             </motion.div>
           )}
-
           {activeTab === 'analytics' && (
             <motion.div
               key="analytics"
@@ -821,7 +772,6 @@ export const EnterpriseDashboard: React.FC = () => {
                   Comprehensive analytics and business intelligence
                 </p>
               </div>
-
               {/* Analytics Charts Placeholder */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
@@ -833,7 +783,6 @@ export const EnterpriseDashboard: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-4">Trend Analysis</h4>
                   <div className="h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">

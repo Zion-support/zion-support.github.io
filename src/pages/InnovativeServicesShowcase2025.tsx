@@ -1,6 +1,6 @@
+=======
 import React from 'react';
 import EnhancedComprehensiveServicesShowcase from '../components/EnhancedComprehensiveServicesShowcase';
-
 const InnovativeServicesShowcase2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -16,7 +16,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Discover our comprehensive portfolio of cutting-edge micro SAAS solutions, IT services, and AI-powered innovations designed to transform your business and drive competitive advantage in the digital age
           </p>
-          
           {/* Key Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
@@ -36,7 +35,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               <div className="text-sm text-gray-300">Support Available</div>
             </div>
           </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -57,11 +55,10 @@ const InnovativeServicesShowcase2025: React.FC = () => {
             >
               Get Custom Quote
             </a>
+=======
           </div>
         </div>
       </section>
-
->>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/InnovativeServicesShowcase2025.tsx.cleanup-backup.1756208768
       {/* Category Filter */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
@@ -83,7 +80,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
@@ -105,17 +101,13 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                     </span>
                   )}
                 </div>
-                
                 <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                 <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
-                
                 <div className="mb-4">
                   <span className="text-2xl font-bold text-white">{service.price}</span>
                   <span className="text-gray-400">{service.period}</span>
                 </div>
-                
                 <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
-                
                 <div className="space-y-2 mb-4">
                   {service.features.slice(0, 3).map((feature, index) => (
                     <div key={index} className="flex items-center gap-2 text-sm text-gray-400">
@@ -124,7 +116,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-400 bg-white/10 px-2 py-1 rounded">
                     {service.category.replace('-', ' ').toUpperCase()}
@@ -138,7 +129,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Service Detail Modal */}
       {selectedServiceData && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
@@ -164,12 +154,10 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                   ×
                 </button>
               </div>
-
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Service Overview</h3>
                   <p className="text-gray-300 mb-6">{selectedServiceData.description}</p>
-                  
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <div className="space-y-2">
@@ -181,13 +169,11 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Target Audience</h4>
                     <p className="text-gray-300">{selectedServiceData.targetAudience}</p>
                   </div>
                 </div>
-
                 <div>
                   <div className="bg-white/10 rounded-xl p-6 mb-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Pricing & Market</h4>
@@ -210,7 +196,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className="bg-white/10 rounded-xl p-6 mb-6">
                     <h4 className="text-lg font-semibold text-white mb-4">Competitive Analysis</h4>
                     <p className="text-gray-300 mb-3">{selectedServiceData.marketPosition}</p>
@@ -225,7 +210,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className="flex gap-4">
                     <a
                       href={selectedServiceData.link}
@@ -249,7 +233,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </motion.div>
         </div>
       )}
-
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -282,6 +265,8 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               </a>
             </div>
           </motion.div>
+=======
+=======
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -293,7 +278,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               We combine cutting-edge technology with proven business expertise to deliver solutions that drive real results
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🚀</div>
@@ -302,7 +286,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                 We stay ahead of technology trends, offering the latest AI, quantum computing, and emerging tech solutions
               </p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">💼</div>
               <h3 className="text-xl font-semibold text-white mb-3">Business Focused</h3>
@@ -310,7 +293,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                 Every solution is designed with ROI in mind, ensuring measurable business impact and value creation
               </p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-semibold text-white mb-3">Enterprise Grade</h3>
@@ -318,7 +300,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                 Built with security, scalability, and compliance in mind for enterprise-level reliability
               </p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🌐</div>
               <h3 className="text-xl font-semibold text-white mb-3">Global Reach</h3>
@@ -326,7 +307,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                 Serving clients worldwide with localized support and compliance expertise
               </p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Rapid Deployment</h3>
@@ -334,7 +314,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                 Quick implementation and setup with minimal disruption to your business operations
               </p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🤝</div>
               <h3 className="text-xl font-semibold text-white mb-3">Dedicated Support</h3>
@@ -345,7 +324,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Service Categories Overview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -357,7 +335,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               Comprehensive solutions across multiple technology domains to meet all your business needs
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-500/30">
               <div className="text-4xl mb-4">🤖</div>
@@ -367,7 +344,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               </p>
               <div className="text-blue-400 text-sm font-semibold">Starting at $1,499/month</div>
             </div>
-            
             <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 rounded-xl p-6 border border-green-500/30">
               <div className="text-4xl mb-4">🔐</div>
               <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
@@ -376,7 +352,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               </p>
               <div className="text-green-400 text-sm font-semibold">Starting at $3,999/month</div>
             </div>
-            
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-500/30">
               <div className="text-4xl mb-4">☁️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Cloud & DevOps</h3>
@@ -385,7 +360,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               </p>
               <div className="text-purple-400 text-sm font-semibold">Starting at $1,999/month</div>
             </div>
-            
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 rounded-xl p-6 border border-orange-500/30">
               <div className="text-4xl mb-4">🏭</div>
               <h3 className="text-xl font-semibold text-white mb-3">Industry Solutions</h3>
@@ -397,7 +371,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Market Position & Competitive Advantage */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -409,7 +382,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               Leading the industry with breakthrough technologies and proven business value
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <h3 className="text-2xl font-semibold text-white mb-4">Technology Leadership</h3>
@@ -432,7 +404,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                 </li>
               </ul>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <h3 className="text-2xl font-semibold text-white mb-4">Business Impact</h3>
               <ul className="space-y-3 text-gray-300">
@@ -457,12 +428,10 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Showcase */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
         <EnhancedComprehensiveServicesShowcase />
       </section>
-
       {/* Contact & Get Started */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -472,7 +441,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our innovative services can help drive your digital transformation and competitive advantage
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-2xl mb-2">📧</div>
@@ -482,7 +450,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                 kleber@ziontechgroup.com
               </a>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-2xl mb-2">📞</div>
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
@@ -491,7 +458,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
                 +1 302 464 0950
               </a>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-2xl mb-2">📍</div>
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
@@ -499,7 +465,6 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               <p className="text-blue-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Innovative Services 2025 Inquiry"
@@ -514,10 +479,10 @@ const InnovativeServicesShowcase2025: React.FC = () => {
               Schedule Consultation
             </a>
           </div>
+=======
         </div>
       </section>
     </div>
   );
 };
-
 export default InnovativeServicesShowcase2025;

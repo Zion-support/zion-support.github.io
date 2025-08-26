@@ -21,7 +21,6 @@ export function LoadingSpinner({ size = 'md', color = 'primary', customColor, cl
             repeat: Infinity,
             ease: "linear"
         }} role="status" aria-label="Loading"/>
-      
       {showText && (<motion.p className="mt-3 text-sm text-zion-slate-light text-center" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
           {text}
         </motion.p>)}

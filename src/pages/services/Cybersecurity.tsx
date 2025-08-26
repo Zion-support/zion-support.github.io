@@ -1,4 +1,6 @@
 import React from 'react';
+=======
+=======
       title: "Threat Detection & Response",
       description: "Advanced threat detection and rapid incident response capabilities",
       features: ["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],
@@ -34,7 +36,6 @@ import React from 'react';
       icon: "📋"
     }
   ];
-
   const securityFeatures = [
     { name: "Zero Trust Architecture", icon: "🔐", description: "Never trust, always verify security model" },
     { name: "Multi-Factor Authentication", icon: "🔑", description: "Enhanced access control and security" },
@@ -42,7 +43,6 @@ import React from 'react';
     { name: "24/7 Security Operations", icon: "👁️", description: "Continuous monitoring and response" }
   ];
 import Link from 'next/link';
-
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -51,10 +51,8 @@ import Link from 'next/link';
         keywords="cybersecurity, threat detection, security monitoring, access control, vulnerability assessment"
         canonical="https://ziontechgroup.com/services/cybersecurity"
       />
-
 import { Link } from 'react-router-dom';
 import { Shield, Lock, Eye, AlertTriangle, Users, Database, Network, Zap } from 'lucide-react';
-
 const Cybersecurity: React.FC = () => {
   const securityServices = [
     {
@@ -82,7 +80,6 @@ const Cybersecurity: React.FC = () => {
       features: ["Firewall Management", "Network Segmentation", "Intrusion Detection", "VPN Solutions"]
     }
   ];
-
   const complianceFrameworks = [
     {
       name: "SOC 2",
@@ -101,7 +98,6 @@ const Cybersecurity: React.FC = () => {
       description: "Health Insurance Portability and Accountability Act compliance"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -137,7 +133,6 @@ const Cybersecurity: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Security Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -150,7 +145,6 @@ const Cybersecurity: React.FC = () => {
               tailored to your organization's needs.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {securityServices.map((service, index) => (
               <div
@@ -175,7 +169,6 @@ const Cybersecurity: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Compliance Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -187,7 +180,6 @@ const Cybersecurity: React.FC = () => {
               Meet industry standards and regulatory requirements with our compliance-focused security solutions.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {complianceFrameworks.map((framework, index) => (
               <div key={index} className="text-center">
@@ -201,7 +193,6 @@ const Cybersecurity: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
@@ -233,7 +224,7 @@ const Cybersecurity: React.FC = () => {
             </div>
           </div>
         </section>
-
+=======
         {/* Security Features */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -245,7 +236,6 @@ const Cybersecurity: React.FC = () => {
                 State-of-the-art security technologies and practices
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {securityFeatures.map((feature, index) => (
                 <div
@@ -260,7 +250,6 @@ const Cybersecurity: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Security Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -272,7 +261,6 @@ const Cybersecurity: React.FC = () => {
                 Comprehensive security solutions to protect your business from all angles
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {securityServices.map((service, index) => (
                 <div
@@ -282,7 +270,6 @@ const Cybersecurity: React.FC = () => {
                   <div className="text-5xl mb-6">{service.icon}</div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
-                  
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -299,7 +286,7 @@ const Cybersecurity: React.FC = () => {
             </div>
           </div>
         </section>
-
+=======
         {/* Security Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -311,7 +298,6 @@ const Cybersecurity: React.FC = () => {
                 Proven expertise and cutting-edge technology to keep your business secure
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -322,7 +308,6 @@ const Cybersecurity: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Proactive Protection</h3>
                 <p className="text-gray-300">Identify and mitigate threats before they impact your business</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -332,7 +317,6 @@ const Cybersecurity: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Compliance Ready</h3>
                 <p className="text-gray-300">Meet industry standards and regulatory requirements</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -345,7 +329,6 @@ const Cybersecurity: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
@@ -353,6 +336,7 @@ const Cybersecurity: React.FC = () => {
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
+=======
               Let's discuss how our cybersecurity solutions can protect your digital assets
             </p>
             <Link
@@ -365,6 +349,8 @@ const Cybersecurity: React.FC = () => {
         </section>
       </div>
     </>
+=======
+=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -393,5 +379,4 @@ const Cybersecurity: React.FC = () => {
     </div>
   );
 };
-
 export default Cybersecurity;

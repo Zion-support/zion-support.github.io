@@ -1,6 +1,5 @@
-
 import { AppLayout } from "@/layout/AppLayout";
-
+=======
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -12,7 +11,6 @@ import {
   ChartBarIcon,
   ShieldCheckIcon
 } from '@heroicons/react/24/outline';
-
 export default function About() {
   return (
     <AppLayout>
@@ -20,7 +18,6 @@ export default function About() {
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { AppLayout } from "@/layout";
-
 export default function About() {
   return (
     <AppLayout>
@@ -31,6 +28,13 @@ export default function About() {
         title="About Zion - The Future of AI & Tech Marketplace" 
         description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
         keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
+=======
+=======
+=======
+=======
+=======
+=======
+=======
         canonical="https://ziontechgroup.com/about"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -41,7 +45,6 @@ export default function About() {
               The principles that guide everything we do and every decision we make.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
@@ -55,7 +58,6 @@ export default function About() {
                 technologies and creative solutions to solve complex challenges.
               </p>
             </div>
-
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,7 +70,6 @@ export default function About() {
                 to customer service, ensuring exceptional results for our clients.
               </p>
             </div>
-
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,7 +85,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Company Stats */}
       <section className="py-20 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
@@ -94,7 +94,6 @@ export default function About() {
               Our impact and growth in the technology industry.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">500+</div>
@@ -115,7 +114,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Leadership Team */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -125,7 +123,6 @@ export default function About() {
               Meet the visionary leaders driving innovation and growth at Zion Tech Group.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-32 h-32 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full mx-auto mb-6 flex items-center justify-center">
@@ -137,7 +134,6 @@ export default function About() {
                 Visionary leader with 15+ years of experience in technology and business strategy.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-32 h-32 bg-gradient-to-br from-green-400 to-blue-400 rounded-full mx-auto mb-6 flex items-center justify-center">
                 <span className="text-4xl font-bold text-white">JS</span>
@@ -148,7 +144,6 @@ export default function About() {
                 AI and technology expert leading our innovation and development initiatives.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-32 h-32 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mx-auto mb-6 flex items-center justify-center">
                 <span className="text-4xl font-bold text-white">MJ</span>
@@ -162,7 +157,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Company History */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -172,7 +166,6 @@ export default function About() {
               From startup to industry leader - the story of Zion Tech Group.
             </p>
           </div>
-          
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               <div className="flex items-start space-x-6">
@@ -185,7 +178,6 @@ export default function About() {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">2021</div>
                 <div>
@@ -196,7 +188,6 @@ export default function About() {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">2023</div>
                 <div>
@@ -207,7 +198,6 @@ export default function About() {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start space-x-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">2024</div>
                 <div>
@@ -223,19 +213,20 @@ export default function About() {
         </div>
 import { Helmet } from 'react-helmet-async';
 import { EnhancedAbout } from '@/components/EnhancedAbout';
-
+=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-
 export default function About() {
   return (
     <>
       </main>
     </>
+=======
       </main>
     </AppLayout>
+=======
       </main>
     </AppLayout>
   );
@@ -255,7 +246,6 @@ export default function About() {
               The world's first free marketplace dedicated to high-tech and artificial intelligence
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
@@ -280,7 +270,6 @@ export default function About() {
               />
             </div>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
@@ -306,7 +295,6 @@ export default function About() {
               />
             </div>
           </div>
-          
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -321,7 +309,6 @@ export default function About() {
                   We embrace cutting-edge technologies and creative thinking to push the boundaries of what's possible.
                 </p>
               </div>
-              
               <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                 <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                   <svg className="w-8 h-8 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -333,7 +320,6 @@ export default function About() {
                   We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive.
                 </p>
               </div>
-              
               <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                 <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                   <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -354,7 +340,6 @@ export default function About() {
   );
 }
 import { Users, Target, Zap, Globe, Award, TrendingUp, Shield, Lightbulb } from 'lucide-react';
-
 const About: React.FC = () => {
   const values = [
     {
@@ -378,7 +363,6 @@ const About: React.FC = () => {
       description: "We operate with honesty, transparency, and ethical practices in all our business relationships and operations."
     }
   ];
-
   const milestones = [
     {
       year: "2025",
@@ -401,17 +385,16 @@ const About: React.FC = () => {
       description: "Zion Tech Group was established with a vision to revolutionize technology solutions."
     }
   ];
-
   const stats = [
     { number: "500+", label: "Projects Completed", icon: Target },
     { number: "50+", label: "Team Members", icon: Users },
     { number: "25+", label: "Countries Served", icon: Globe },
     { number: "99%", label: "Client Satisfaction", icon: Award }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
+=======
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -430,8 +413,8 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Mission & Vision */}
+=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -445,7 +428,6 @@ const About: React.FC = () => {
                 accessible to businesses of all sizes, enabling them to thrive in the digital age.
               </p>
             </div>
-            
             <div className="bg-slate-800/50 border border-white/10 rounded-xl p-8">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
                 <Lightbulb className="w-8 h-8 text-white" />
@@ -454,6 +436,7 @@ const About: React.FC = () => {
               <p className="text-lg text-gray-300">
                 To be the global leader in transformative technology solutions, creating a future where 
                 every business can harness the full potential of AI and quantum computing.
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -469,7 +452,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-
+=======
       {/* Mission & Vision Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -510,7 +493,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Company Stats */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -524,6 +506,8 @@ const About: React.FC = () => {
                 <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
+=======
+=======
       {/* Company Story Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -587,7 +571,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-
+=======
       {/* Core Values Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -658,10 +642,10 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Team Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+=======
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             Our Leadership Team
           </h2>
@@ -702,7 +686,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-
+=======
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-7xl mx-auto">
@@ -729,10 +713,10 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
+=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -746,11 +730,13 @@ const About: React.FC = () => {
             <Link
               to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
+=======
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
             >
               Get in Touch
             </Link>
             <Link
+=======
               to="/careers"
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
             >
@@ -762,22 +748,18 @@ const About: React.FC = () => {
     </div>
   );
 };
-
+=======
 // Icon components
 const Innovation = ({ className }: { className?: string }) => (
   <Lightbulb className={className} />
 );
-
 const Excellence = ({ className }: { className?: string }) => (
   <Award className={className} />
 );
-
 const Collaboration = ({ className }: { className?: string }) => (
   <Users className={className} />
 );
-
 const Integrity = ({ className }: { className?: string }) => (
   <Shield className={className} />
 );
-
 export default About;

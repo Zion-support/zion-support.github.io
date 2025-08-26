@@ -14,10 +14,8 @@ import {
   Eye,
   Heart
 } from 'lucide-react';
-
 const TermsPage = () => {
   const lastUpdated = "December 15, 2024";
-
   const keyTerms = [
     {
       term: "Services",
@@ -36,7 +34,6 @@ const TermsPage = () => {
       definition: "Our website, applications, and any related technology infrastructure"
     }
   ];
-
   const userObligations = [
     {
       title: "Account Security",
@@ -59,7 +56,6 @@ const TermsPage = () => {
       icon: <Heart className="h-5 w-5" />
     }
   ];
-
   const prohibitedActivities = [
     "Violating any applicable laws or regulations",
     "Infringing on intellectual property rights",
@@ -70,7 +66,6 @@ const TermsPage = () => {
     "Engaging in fraudulent or deceptive practices",
     "Spamming or sending unsolicited communications"
   ];
-
   const intellectualProperty = [
     {
       category: "Our IP",
@@ -88,7 +83,6 @@ const TermsPage = () => {
       rights: ["Copyright compliance", "Trademark respect", "License adherence", "Attribution requirements"]
     }
   ];
-
   const privacyAndData = [
     "We collect and process personal data as described in our Privacy Policy",
     "By using our services, you consent to our data practices",
@@ -97,7 +91,6 @@ const TermsPage = () => {
     "You have rights regarding your personal data as outlined in our Privacy Policy",
     "We retain data for as long as necessary to provide our services"
   ];
-
   const terminationConditions = [
     "Breach of these terms of service",
     "Violation of applicable laws or regulations",
@@ -106,30 +99,7 @@ const TermsPage = () => {
     "Extended period of account inactivity",
     "Request for account deletion by the user"
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-zion-blue-dark text-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 bg-zion-cyan/20 rounded-full flex items-center justify-center">
-              <FileText className="h-10 w-10 text-zion-cyan" />
-            </div>
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
-            Terms of Service
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            These terms govern your use of Zion Tech Group's services. By using our platform, 
-            you agree to be bound by these terms and our Privacy Policy.
-          </p>
-          <div className="flex items-center justify-center space-x-4 text-zion-slate-light">
-            <Calendar className="h-5 w-5" />
-            <span>Last updated: {lastUpdated}</span>
-          </div>
-=======
     <>
       <SEO
         title="Terms of Service"
@@ -140,10 +110,8 @@ const TermsPage = () => {
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4">
           <TermsOfService />
->>>>>>> origin/cursor/website-audit-and-enhancement-3805
         </div>
       </section>
-
       {/* Table of Contents */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -168,7 +136,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* Overview */}
       <section id="overview" className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -195,7 +162,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* Definitions */}
       <section id="definitions" className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -204,7 +170,6 @@ const TermsPage = () => {
             <p className="text-zion-slate-light mb-8">
               For the purposes of these Terms, the following terms have the following meanings:
             </p>
-            
             <div className="space-y-6">
               {keyTerms.map((item, index) => (
                 <div key={index} className="bg-zion-blue-light/10 p-6 rounded-xl border border-zion-blue-light/20">
@@ -216,7 +181,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* Acceptance of Terms */}
       <section id="acceptance" className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -240,7 +204,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* Description of Services */}
       <section id="services" className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,7 +232,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* User Accounts */}
       <section id="user-accounts" className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -297,7 +259,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* User Obligations */}
       <section id="user-obligations" className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -306,7 +267,6 @@ const TermsPage = () => {
             <p className="text-zion-slate-light mb-8">
               As a user of our Services, you agree to comply with the following obligations:
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {userObligations.map((obligation, index) => (
                 <div key={index} className="bg-zion-blue-light/10 p-6 rounded-xl border border-zion-blue-light/20">
@@ -321,7 +281,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* Prohibited Activities */}
       <section id="prohibited-activities" className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -330,7 +289,6 @@ const TermsPage = () => {
             <p className="text-zion-slate-light mb-8">
               You agree not to engage in any of the following prohibited activities:
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               {prohibitedActivities.map((activity, index) => (
                 <div key={index} className="flex items-start space-x-3">
@@ -339,7 +297,6 @@ const TermsPage = () => {
                 </div>
               ))}
             </div>
-            
             <p className="text-zion-slate-light">
               Violation of these prohibitions may result in immediate termination of your account and access 
               to our Services, and may also result in legal action.
@@ -347,7 +304,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* Intellectual Property */}
       <section id="intellectual-property" className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -357,7 +313,6 @@ const TermsPage = () => {
               Our Services and their original content, features, and functionality are and will remain the 
               exclusive property of Zion Tech Group and its licensors.
             </p>
-            
             <div className="space-y-6">
               {intellectualProperty.map((item, index) => (
                 <div key={index} className="bg-zion-blue-light/10 p-6 rounded-xl border border-zion-blue-light/20">
@@ -379,7 +334,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* Privacy and Data */}
       <section id="privacy-data" className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -389,7 +343,6 @@ const TermsPage = () => {
               Your privacy is important to us. Our collection and use of personal information is governed by 
               our Privacy Policy, which is incorporated into these Terms by reference.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               {privacyAndData.map((item, index) => (
                 <div key={index} className="flex items-start space-x-3">
@@ -398,7 +351,6 @@ const TermsPage = () => {
                 </div>
               ))}
             </div>
-            
             <p className="text-zion-slate-light">
               By using our Services, you consent to our collection and use of information as detailed in our 
               Privacy Policy.
@@ -406,7 +358,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* Termination */}
       <section id="termination" className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -438,7 +389,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* Disclaimers */}
       <section id="disclaimers" className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -463,7 +413,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* Limitation of Liability */}
       <section id="limitation-liability" className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -489,7 +438,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* Governing Law */}
       <section id="governing-law" className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -516,7 +464,6 @@ const TermsPage = () => {
           </div>
         </div>
       </section>
-
       {/* Contact */}
       <section id="contact" className="py-20 bg-gradient-to-br from-zion-purple-dark via-zion-blue to-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -524,27 +471,23 @@ const TermsPage = () => {
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             If you have any questions about these Terms of Service, please contact us:
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-zion-blue-dark/50 p-6 rounded-xl border border-zion-blue-light/20">
               <Mail className="h-8 w-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Email</h3>
               <p className="text-zion-slate-light">legal@ziontechgroup.com</p>
             </div>
-            
             <div className="bg-zion-blue-dark/50 p-6 rounded-xl border border-zion-blue-light/20">
               <Phone className="h-8 w-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
               <p className="text-zion-slate-light">+1 (555) 123-4567</p>
             </div>
-            
             <div className="bg-zion-blue-dark/50 p-6 rounded-xl border border-zion-blue-light/20">
               <Globe className="h-8 w-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Address</h3>
               <p className="text-zion-slate-light">San Francisco, CA</p>
             </div>
           </div>
-          
           <div className="mt-12">
             <Link to="/contact">
               <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105">
@@ -557,5 +500,4 @@ const TermsPage = () => {
     </div>
   );
 };
-
 export default TermsPage;

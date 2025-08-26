@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
-
 const $page: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -25,7 +24,6 @@ const $page: React.FC = () => {
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
-
 const $page: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -48,6 +46,7 @@ const $page: React.FC = () => {
           >
             Contact Us for More Information
           </Link>
+=======
             Contact Us for More Information
           </Link>
         </div>
@@ -55,15 +54,14 @@ const $page: React.FC = () => {
     </div>
   );
 };
-
 export default $page;
+=======
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Star, Zap, Shield, Brain, Cloud, Users, MessageCircle, FileText, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function Pricing() {
   const pricingTiers = [
     {
@@ -155,7 +153,6 @@ export default function Pricing() {
       link: "/contact"
     }
   ];
-
   const serviceCategories = [
     {
       name: "AI & Machine Learning",
@@ -213,7 +210,6 @@ export default function Pricing() {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-purple-dark">
       {/* Hero Section */}
@@ -242,7 +238,6 @@ export default function Pricing() {
           </div>
         </div>
       </div>
-
       {/* Pricing Tiers */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -297,7 +292,6 @@ export default function Pricing() {
           </div>
         </div>
       </div>
-
       {/* Service Categories */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -310,7 +304,6 @@ export default function Pricing() {
               each designed to address specific business needs and challenges.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {serviceCategories.map((category, index) => (
               <Card key={index} className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30 hover:border-zion-purple/50 transition-all duration-300">
@@ -343,7 +336,6 @@ export default function Pricing() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-16 px-4">
         <div className="container mx-auto text-center">
@@ -389,7 +381,6 @@ export default function Pricing() {
           </Card>
         </div>
       </div>
-
       {/* FAQ Section */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -398,7 +389,6 @@ export default function Pricing() {
               Frequently Asked Questions
             </h2>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">
               <CardHeader>
@@ -411,7 +401,6 @@ export default function Pricing() {
                 </p>
               </CardContent>
             </Card>
-            
             <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">
               <CardHeader>
                 <CardTitle className="text-white">Can I change my plan later?</CardTitle>
@@ -423,7 +412,6 @@ export default function Pricing() {
                 </p>
               </CardContent>
             </Card>
-            
             <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">
               <CardHeader>
                 <CardTitle className="text-white">Do you offer enterprise discounts?</CardTitle>
@@ -435,7 +423,6 @@ export default function Pricing() {
                 </p>
               </CardContent>
             </Card>
-            
             <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">
               <CardHeader>
                 <CardTitle className="text-white">What support options are available?</CardTitle>

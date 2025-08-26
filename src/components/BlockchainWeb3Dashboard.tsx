@@ -19,21 +19,17 @@ import {
 } from 'lucide-react';
 import { useBlockchainWeb3 } from '../hooks/useBlockchainWeb3';
 import { useAnalytics } from '../hooks/useAnalytics';
-
 interface BlockchainDashboardProps {
   className?: string;
 }
-
 export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ className = '' }) => {
   const { trackEvent } = useAnalytics({
     enableTracking: true,
     enableUserBehaviorTracking: true
   });
-
   const [activeTab, setActiveTab] = useState<'overview' | 'wallet' | 'contracts' | 'nfts' | 'defi' | 'transactions'>('overview');
   const [showMintNFT, setShowMintNFT] = useState(false);
   const [showSendTransaction, setShowSendTransaction] = useState(false);
-
   const {
     wallet,
     contracts,
@@ -51,19 +47,16 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
     sendTransaction,
     createDeFiPosition
   } = useBlockchainWeb3();
-
   const [nftForm, setNftForm] = useState({
     name: '',
     description: '',
     image: ''
   });
-
   const [transactionForm, setTransactionForm] = useState({
     to: '',
     value: '',
     data: ''
   });
-
   const handleConnectWallet = useCallback(async () => {
     try {
       await connectWallet();
@@ -72,7 +65,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
       console.error('Failed to connect wallet:', error);
     }
   }, [connectWallet, trackEvent]);
-
   const handleMintNFT = useCallback(async () => {
     if (nftForm.name.trim() && wallet) {
       try {
@@ -81,7 +73,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
           description: nftForm.description,
           image: nftForm.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=${nftForm.name}`
         };
-        
         await mintNFT(contracts[1]?.address || '', metadata);
         setNftForm({ name: '', description: '', image: '' });
         setShowMintNFT(false);
@@ -91,7 +82,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
       }
     }
   }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
-
   const handleSendTransaction = useCallback(async () => {
     if (transactionForm.to.trim() && transactionForm.value && wallet) {
       try {
@@ -108,7 +98,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
       }
     }
   }, [transactionForm, wallet, sendTransaction, trackEvent]);
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'confirmed': return 'text-green-600 bg-green-100';
@@ -117,7 +106,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   return (
     <div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {/* Header */}
@@ -135,7 +123,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
             </p>
           </div>
         </div>
-        
         <div className="flex items-center space-x-2">
           {!wallet ? (
             <button
@@ -161,7 +148,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
           )}
         </div>
       </div>
-
       {/* Wallet Status */}
       {wallet && (
         <div className="p-4 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 border-b border-gray-200 dark:border-gray-700">
@@ -173,20 +159,16 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                   Wallet Connected
                 </span>
               </div>
-              
               <div className="text-sm text-gray-600 dark:text-gray-400">
                 <span className="font-medium">Address:</span> {wallet.address.slice(0, 6)}...{wallet.address.slice(-4)}
               </div>
-              
               <div className="text-sm text-gray-600 dark:text-gray-400">
                 <span className="font-medium">Balance:</span> {wallet.balance} ETH
               </div>
-              
               <div className="text-sm text-gray-600 dark:text-gray-400">
                 <span className="font-medium">Network:</span> {wallet.network}
               </div>
             </div>
-            
             <select
               value={wallet.chainId}
               onChange={(e) => switchNetwork(parseInt(e.target.value))}
@@ -200,7 +182,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
           </div>
         </div>
       )}
-
       {/* Navigation Tabs */}
       <div className="flex border-b border-gray-200 dark:border-gray-700">
         {[
@@ -225,7 +206,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
           </button>
         ))}
       </div>
-
       {/* Content */}
       <div className="p-4">
         <AnimatePresence>
@@ -248,7 +228,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                     <Coins className="w-8 h-8 text-blue-500" />
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -258,7 +237,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                     <Smartphone className="w-8 h-8 text-green-500" />
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -268,7 +246,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                     <Image className="w-8 h-8 text-purple-500" />
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -279,7 +256,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                   </div>
                 </div>
               </div>
-
               {/* Recent Activity */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Activity</h3>
@@ -313,7 +289,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
               </div>
             </motion.div>
           )}
-
           {activeTab === 'wallet' && (
             <motion.div
               key="wallet"
@@ -360,7 +335,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                           </button>
                         </div>
                       </div>
-                      
                       <div>
                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                           Balance
@@ -369,14 +343,12 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                           {wallet.balance} ETH
                         </p>
                       </div>
-                      
                       <div>
                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                           Network
                         </label>
                         <p className="text-lg text-gray-900 dark:text-white">{wallet.network}</p>
                       </div>
-                      
                       <div>
                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                           Chain ID
@@ -385,7 +357,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                       </div>
                     </div>
                   </div>
-
                   <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Actions</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -396,7 +367,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                         <Send className="w-5 h-5" />
                         <span>Send Transaction</span>
                       </button>
-                      
                       <button
                         onClick={() => setShowMintNFT(true)}
                         className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-purple-600 rounded-lg hover:bg-purple-700"
@@ -410,7 +380,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
               )}
             </motion.div>
           )}
-
           {activeTab === 'contracts' && (
             <motion.div
               key="contracts"
@@ -436,7 +405,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                   Add Contract
                 </button>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {contracts.map((contract) => (
                   <div key={contract.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
@@ -446,7 +414,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                         {contract.network}
                       </span>
                     </div>
-                    
                     <div className="space-y-2 text-sm">
                       <div className="flex items-center justify-between">
                         <span className="text-gray-500 dark:text-gray-400">Address:</span>
@@ -454,17 +421,14 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                           {contract.address.slice(0, 8)}...{contract.address.slice(-6)}
                         </code>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <span className="text-gray-500 dark:text-gray-400">Functions:</span>
                         <span className="text-gray-900 dark:text-white">{contract.functions.length}</span>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <span className="text-gray-500 dark:text-gray-400">Events:</span>
                         <span className="text-gray-900 dark:text-white">{contract.events.length}</span>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <span className="text-gray-500 dark:text-gray-400">Last Used:</span>
                         <span className="text-gray-900 dark:text-white">
@@ -477,7 +441,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
               </div>
             </motion.div>
           )}
-
           {activeTab === 'nfts' && (
             <motion.div
               key="nfts"
@@ -496,7 +459,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                   Mint NFT
                 </button>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {nfts.map((nft) => (
                   <div key={nft.id} className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">
@@ -508,27 +470,23 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                     <div className="p-4">
                       <h4 className="font-medium text-gray-900 dark:text-white mb-2">{nft.name}</h4>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{nft.description}</p>
-                      
                       <div className="space-y-2 text-sm">
                         <div className="flex items-center justify-between">
                           <span className="text-gray-500 dark:text-gray-400">Token ID:</span>
                           <span className="text-gray-900 dark:text-white">{nft.tokenId}</span>
                         </div>
-                        
                         <div className="flex items-center justify-between">
                           <span className="text-gray-500 dark:text-gray-400">Owner:</span>
                           <code className="text-xs font-mono">
                             {nft.owner.slice(0, 6)}...{nft.owner.slice(-4)}
                           </code>
                         </div>
-                        
                         <div className="flex items-center justify-between">
                           <span className="text-gray-500 dark:text-gray-400">Mint Date:</span>
                           <span className="text-gray-900 dark:text-white">
                             {nft.mintDate.toLocaleDateString()}
                           </span>
                         </div>
-                        
                         {nft.isListed && (
                           <div className="flex items-center justify-between">
                             <span className="text-gray-500 dark:text-gray-400">Price:</span>
@@ -542,7 +500,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
               </div>
             </motion.div>
           )}
-
           {activeTab === 'defi' && (
             <motion.div
               key="defi"
@@ -568,7 +525,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                   Add Position
                 </button>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {defiPositions.map((position) => (
                   <div key={position.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
@@ -582,28 +538,23 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                         {position.type}
                       </span>
                     </div>
-                    
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
                         <span className="text-gray-500 dark:text-gray-400">Asset:</span>
                         <span className="font-medium text-gray-900 dark:text-white">{position.asset}</span>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <span className="text-gray-500 dark:text-gray-400">Amount:</span>
                         <span className="font-medium text-gray-900 dark:text-white">{position.amount}</span>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <span className="text-gray-500 dark:text-gray-400">APY:</span>
                         <span className="text-green-600 font-medium">{position.apy}%</span>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <span className="text-gray-500 dark:text-gray-400">Rewards:</span>
                         <span className="text-orange-600 font-medium">{position.rewards}</span>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <span className="text-gray-500 dark:text-gray-400">Started:</span>
                         <span className="text-gray-900 dark:text-white">
@@ -616,7 +567,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
               </div>
             </motion.div>
           )}
-
           {activeTab === 'transactions' && (
             <motion.div
               key="transactions"
@@ -635,7 +585,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                   Send Transaction
                 </button>
               </div>
-              
               <div className="space-y-3">
                 {transactions.map((tx) => (
                   <div key={tx.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
@@ -657,7 +606,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                         {tx.status}
                       </span>
                     </div>
-                    
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                       <div>
                         <span className="text-gray-500 dark:text-gray-400">From:</span>
@@ -665,32 +613,27 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                           {tx.from.slice(0, 8)}...{tx.from.slice(-6)}
                         </code>
                       </div>
-                      
                       <div>
                         <span className="text-gray-500 dark:text-gray-400">To:</span>
                         <code className="block text-xs font-mono mt-1">
                           {tx.to.slice(0, 8)}...{tx.to.slice(-6)}
                         </code>
                       </div>
-                      
                       <div>
                         <span className="text-gray-500 dark:text-gray-400">Value:</span>
                         <p className="font-medium text-gray-900 dark:text-white mt-1">{tx.value} ETH</p>
                       </div>
                     </div>
-                    
                     <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-600">
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                         <div>
                           <span className="text-gray-500 dark:text-gray-400">Gas Used:</span>
                           <p className="text-gray-900 dark:text-white">{tx.gasUsed}</p>
                         </div>
-                        
                         <div>
                           <span className="text-gray-500 dark:text-gray-400">Gas Price:</span>
                           <p className="text-gray-900 dark:text-white">{tx.gasPrice} Gwei</p>
                         </div>
-                        
                         <div>
                           <span className="text-gray-500 dark:text-gray-400">Timestamp:</span>
                           <p className="text-gray-900 dark:text-white">
@@ -706,7 +649,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
           )}
         </AnimatePresence>
       </div>
-
       {/* Mint NFT Modal */}
       <AnimatePresence>
         {showMintNFT && (
@@ -723,7 +665,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
               className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Mint New NFT</h3>
-              
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -737,7 +678,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                     placeholder="NFT Name"
                   />
                 </div>
-                
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Description
@@ -750,7 +690,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                     rows={3}
                   />
                 </div>
-                
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Image URL (optional)
@@ -764,7 +703,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                   />
                 </div>
               </div>
-              
               <div className="flex space-x-3 mt-6">
                 <button
                   onClick={handleMintNFT}
@@ -773,7 +711,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                 >
                   {isProcessing ? 'Minting...' : 'Mint NFT'}
                 </button>
-                
                 <button
                   onClick={() => setShowMintNFT(false)}
                   className="flex-1 px-4 py-2 text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600"
@@ -785,7 +722,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Send Transaction Modal */}
       <AnimatePresence>
         {showSendTransaction && (
@@ -802,7 +738,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
               className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Send Transaction</h3>
-              
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -816,7 +751,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                     placeholder="0x..."
                   />
                 </div>
-                
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Amount (ETH)
@@ -830,7 +764,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                     placeholder="0.1"
                   />
                 </div>
-                
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Data (optional)
@@ -844,7 +777,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                   />
                 </div>
               </div>
-              
               <div className="flex space-x-3 mt-6">
                 <button
                   onClick={handleSendTransaction}
@@ -853,7 +785,6 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
                 >
                   {isProcessing ? 'Sending...' : 'Send Transaction'}
                 </button>
-                
                 <button
                   onClick={() => setShowSendTransaction(false)}
                   className="flex-1 px-4 py-2 text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600"

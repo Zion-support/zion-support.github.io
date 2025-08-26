@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -11,7 +10,6 @@ import { BlogPost } from "@/types/blog";
 import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { Search } from "lucide-react";
-
 // Categories for filtering
 const CATEGORIES = [
   "All Categories",
@@ -22,34 +20,27 @@ const CATEGORIES = [
   "Recruitment",
   "Infrastructure"
 ];
-
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [posts, setPosts] = useState<BlogPost[]>([...BLOG_POSTS]);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setPosts(prev => [...prev, generateRandomBlogPost()]);
     }, 120000); // every 2 minutes
     return () => clearInterval(interval);
   }, []);
-
   // Filter blog posts based on search and category
   const filteredPosts = posts.filter(post => {
     const matchesSearch = 
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
       post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      
     const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
-    
     return matchesSearch && matchesCategory;
   });
-  
   // Get featured posts
   const featuredPosts = posts.filter(post => post.isFeatured);
-  
   return (
     <>
       <SEO 
@@ -66,7 +57,6 @@ export default function Blog() {
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
-          
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (
             <div className="mb-16">
@@ -122,7 +112,6 @@ export default function Blog() {
               </div>
             </div>
           )}
-        
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -136,7 +125,6 @@ export default function Blog() {
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                 />
               </div>
-              
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                   <SelectValue placeholder="Select Category" />
@@ -151,7 +139,6 @@ export default function Blog() {
               </Select>
             </div>
           </div>
-
           {/* Blog Posts Grid */}
           {filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -234,7 +221,6 @@ export default function Blog() {
     </>
   );
 }
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -248,11 +234,9 @@ import {
   Eye,
   BookOpen
 } from 'lucide-react';
-
 const Blog: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const categories = [
     { id: 'all', name: 'All Categories', count: 25 },
     { id: 'ai', name: 'AI & Machine Learning', count: 8 },
@@ -261,7 +245,6 @@ const Blog: React.FC = () => {
     { id: 'cloud', name: 'Cloud & DevOps', count: 4 },
     { id: 'business', name: 'Business & Strategy', count: 2 }
   ];
-
   const blogPosts = [
 export default function Blog() {
   const [posts, setPosts] = useState<BlogPost[]>([
@@ -370,20 +353,16 @@ export default function Blog() {
       image: '/api/placeholder/400/250'
     }
   ];
-
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
-
   const filteredPosts = selectedCategory === 'all' 
     ? regularPosts 
     : regularPosts.filter(post => post.category === selectedCategory);
-
   const searchFilteredPosts = filteredPosts.filter(post =>
     post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
     post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
   );
-
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
@@ -392,7 +371,6 @@ export default function Blog() {
       day: 'numeric' 
     });
   };
-
   const recentArticles = [
     {
       id: 4,
@@ -479,9 +457,7 @@ export default function Blog() {
       likes: 134
     }
   ];
-
   const allArticles = [...featuredArticles, ...recentArticles];
-
   const filteredArticles = allArticles.filter(article => {
     const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
     const matchesSearch = 
@@ -490,7 +466,6 @@ export default function Blog() {
       article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   const sortedArticles = filteredArticles.sort((a, b) => {
     switch (sortBy) {
       case 'latest':
@@ -503,7 +478,6 @@ export default function Blog() {
         return 0;
     }
   });
-
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
@@ -512,5 +486,6 @@ export default function Blog() {
       day: 'numeric' 
     });
   };
-
+=======
 }
+=======

@@ -1,9 +1,9 @@
 import React from 'react';
+=======
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, RefreshCw, Target, Users, Zap, Globe } from 'lucide-react';
-
 const DigitalTransformation: React.FC = () => {
   const transformationServices = [
     {
@@ -29,6 +29,7 @@ const DigitalTransformation: React.FC = () => {
       description: "Streamline operations and improve efficiency through digital workflows",
       features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
       icon: "⚡"
+=======
       features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
       icon: "⚡"
     },
@@ -37,6 +38,7 @@ const DigitalTransformation: React.FC = () => {
       description: "Create seamless digital experiences that delight your customers",
       features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
       icon: "🎯"
+=======
       features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
       icon: "🎯"
     },
@@ -45,17 +47,18 @@ const DigitalTransformation: React.FC = () => {
       description: "Leverage data insights to drive informed business decisions",
       features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
       icon: "📊"
+=======
       features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
       icon: "📊"
     },
     {
       title: "Technology Infrastructure",
       description: "Modernize your technology stack for scalability and performance",
+=======
       features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
       icon: "🏗️"
     }
   ];
-
   const benefits = [
     "Increased operational efficiency by 50%",
     "Enhanced customer experience and satisfaction",
@@ -63,15 +66,14 @@ const DigitalTransformation: React.FC = () => {
     "Improved decision-making with real-time data",
     "Competitive advantage in the digital marketplace"
   ];
-
   const transformationApproach = [
     { step: "Assessment", icon: "🔍", description: "Evaluate current state and identify opportunities" },
     { step: "Strategy", icon: "📋", description: "Develop comprehensive transformation roadmap" },
     { step: "Implementation", icon: "🚀", description: "Execute changes with agile methodology" },
     { step: "Optimization", icon: "📈", description: "Continuous improvement and scaling" }
   ];
-
   return (
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       <SEO 
         title="Digital Transformation - Zion Tech Group"
@@ -79,7 +81,6 @@ const DigitalTransformation: React.FC = () => {
         keywords="digital transformation, process automation, digital strategy, change management, performance optimization"
         canonical="https://ziontechgroup.com/services/digital-transformation"
       />
-
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -118,8 +119,8 @@ const DigitalTransformation: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Services Section */}
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -130,7 +131,6 @@ const DigitalTransformation: React.FC = () => {
               End-to-end digital transformation solutions for modern businesses
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {transformationServices.map((service, index) => (
               <motion.div
@@ -144,7 +144,6 @@ const DigitalTransformation: React.FC = () => {
                 <div className="text-5xl mb-6">{service.icon}</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -161,7 +160,7 @@ const DigitalTransformation: React.FC = () => {
           </div>
         </div>
       </section>
-
+=======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -173,7 +172,6 @@ const DigitalTransformation: React.FC = () => {
               Unlock new opportunities and competitive advantages
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div 
               className="text-center"
@@ -190,7 +188,6 @@ const DigitalTransformation: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Increased Efficiency</h3>
               <p className="text-gray-300">Streamlined processes and automated workflows</p>
             </motion.div>
-            
             <motion.div 
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
@@ -206,7 +203,6 @@ const DigitalTransformation: React.FC = () => {
               <h3 className="text-xl font-semibold text-white mb-3">Better Customer Experience</h3>
               <p className="text-gray-300">Enhanced engagement and satisfaction</p>
             </motion.div>
-            
             <motion.div 
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
@@ -225,7 +221,6 @@ const DigitalTransformation: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -237,7 +232,6 @@ const DigitalTransformation: React.FC = () => {
               A proven methodology for successful digital transformation
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {transformationApproach.map((step, index) => (
               <motion.div
@@ -258,7 +252,7 @@ const DigitalTransformation: React.FC = () => {
           </div>
         </div>
       </section>
-
+=======
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -280,8 +274,7 @@ const DigitalTransformation: React.FC = () => {
     </div>
   );
 };
-
 export default DigitalTransformation;
+=======
 };
-
 export default DigitalTransformation;

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -14,7 +13,6 @@ import {
   Award,
   Zap as ZapIcon
 } from 'lucide-react';
-
 const highlights = [
   {
     icon: Brain,
@@ -44,18 +42,15 @@ const highlights = [
     borderColor: 'border-zion-blue/20'
   }
 ];
-
 const achievements = [
   { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },
   { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' },
   { icon: TrendingUp, number: '300%', label: 'Growth Rate', color: 'text-green-400' },
   { icon: Star, number: '4.9/5', label: 'User Rating', color: 'text-zion-purple' }
 ];
-
 const technologies = [
   'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'
 ];
-
   Zap, 
   Users, 
   Shield, 
@@ -65,7 +60,6 @@ const technologies = [
   Award,
   Heart
 } from 'lucide-react';
-
 const features = [
   {
     icon: Zap,
@@ -116,7 +110,7 @@ const features = [
     iconColor: 'text-zion-pink'
   }
 ];
-
+=======
 export function FeatureHighlights() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -124,14 +118,15 @@ export function FeatureHighlights() {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
+=======
         staggerChildren: 0.2,
         delayChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.9 },
+=======
     hidden: { opacity: 0, y: 30, scale: 0.95 },
     visible: {
       opacity: 1,
@@ -143,7 +138,6 @@ export function FeatureHighlights() {
       }
     }
   };
-
   const achievementVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
@@ -152,7 +146,6 @@ export function FeatureHighlights() {
       transition: { duration: 0.5 }
     }
   };
-
   const techVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: {
@@ -161,7 +154,6 @@ export function FeatureHighlights() {
       transition: { duration: 0.5 }
     }
   };
-
   return (
     <section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate relative overflow-hidden">
       {/* Background decorative elements */}
@@ -169,7 +161,6 @@ export function FeatureHighlights() {
         <div className="absolute top-20 right-20 w-96 h-96 bg-zion-purple rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-zion-cyan rounded-full blur-3xl"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div 
@@ -181,9 +172,9 @@ export function FeatureHighlights() {
         <div className="absolute top-20 left-20 w-64 h-64 bg-zion-purple/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-zion-cyan/5 rounded-full blur-3xl"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
+=======
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -199,7 +190,6 @@ export function FeatureHighlights() {
             Discover the cutting-edge features and capabilities that make us the preferred choice for forward-thinking organizations
           </p>
         </motion.div>
-
         {/* Feature Highlights Grid */}
         <motion.div 
           className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20"
@@ -209,18 +199,16 @@ export function FeatureHighlights() {
             <Award className="w-4 h-4" />
             <span>Why Choose Zion</span>
           </div>
-          
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Built for the Future of Work
           </h2>
-          
           <p className="text-lg md:text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Experience the next generation of talent marketplace with cutting-edge AI, 
             global reach, and enterprise-grade security.
           </p>
         </motion.div>
-
         <motion.div
+=======
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -240,22 +228,18 @@ export function FeatureHighlights() {
               <div className={`h-full p-8 rounded-3xl ${highlight.bgColor} ${highlight.borderColor} border-2 hover:border-opacity-40 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
                 {/* Background gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${highlight.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className={`inline-flex p-4 rounded-2xl bg-white/10 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <highlight.icon className="w-8 h-8 text-white" />
                   </div>
-
                   {/* Content */}
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-200">
                     {highlight.title}
                   </h3>
-                  
                   <p className="text-zion-slate-light leading-relaxed mb-6">
                     {highlight.description}
                   </p>
-
                   {/* Features */}
                   <ul className="space-y-3">
                     {highlight.features.map((feature, idx) => (
@@ -270,7 +254,6 @@ export function FeatureHighlights() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Achievements Section */}
         <motion.div 
           className="bg-gradient-to-r from-zion-blue/20 to-zion-purple/20 rounded-3xl p-8 md:p-12 border border-zion-blue-light/20 mb-20"
@@ -287,7 +270,6 @@ export function FeatureHighlights() {
               Our achievements speak volumes about our commitment to excellence
             </p>
           </div>
-
           <motion.div 
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
             variants={containerVariants}
@@ -312,7 +294,6 @@ export function FeatureHighlights() {
             ))}
           </motion.div>
         </motion.div>
-
         {/* Technology Stack */}
         <motion.div 
           className="text-center"
@@ -324,7 +305,6 @@ export function FeatureHighlights() {
           <h3 className="text-3xl font-bold text-white mb-8">
             Cutting-Edge Technology Stack
           </h3>
-          
           <motion.div 
             className="flex flex-wrap justify-center gap-4 mb-12"
             variants={containerVariants}
@@ -343,7 +323,6 @@ export function FeatureHighlights() {
               </motion.div>
             ))}
           </motion.div>
-
           {/* CTA */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -374,12 +353,10 @@ export function FeatureHighlights() {
                 <div className="relative h-full p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 backdrop-blur-xl hover:border-white/20 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-zion-purple/10">
                   {/* Background glow effect */}
                   <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                  
                   {/* Icon container with enhanced styling */}
                   <div className={`relative z-10 w-20 h-20 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg`}>
                     <IconComponent className={`w-10 h-10 ${feature.iconColor}`} />
                   </div>
-
                   {/* Content */}
                   <div className="relative z-10">
                     <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
@@ -389,10 +366,8 @@ export function FeatureHighlights() {
                       {feature.description}
                     </p>
                   </div>
-
                   {/* Corner accent */}
                   <div className={`absolute top-4 right-4 w-3 h-3 bg-gradient-to-br ${feature.color} rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300`}></div>
-                  
                   {/* Bottom accent line */}
                   <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${feature.color} rounded-b-2xl opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 origin-left`}></div>
                 </div>
@@ -400,7 +375,6 @@ export function FeatureHighlights() {
             );
           })}
         </motion.div>
-
         {/* Bottom CTA section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -417,11 +391,9 @@ export function FeatureHighlights() {
               </h3>
               <Heart className="w-8 h-8 text-zion-cyan animate-pulse" />
             </div>
-            
             <p className="text-lg text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Experience the difference that AI-powered matching and global talent access can make for your business.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-purple/25">
                 Get Started Today
@@ -431,14 +403,15 @@ export function FeatureHighlights() {
               </button>
             </div>
           </div>
+=======
         </motion.div>
       </div>
     </section>
   );
 }
+=======
 import React from 'react';
 import { Brain, Shield, Zap, Globe, Users, Target, CheckCircle, ArrowRight } from 'lucide-react';
-
 export const FeatureHighlights: React.FC = () => {
   const features = [
     {
@@ -478,7 +451,6 @@ export const FeatureHighlights: React.FC = () => {
       benefits: ["ROI measurement", "Business impact", "Performance tracking", "Success metrics"]
     }
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -491,7 +463,6 @@ export const FeatureHighlights: React.FC = () => {
             technology partner for businesses worldwide.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
@@ -501,15 +472,12 @@ export const FeatureHighlights: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
-              
               <h3 className="text-xl font-semibold text-white mb-3 text-center">
                 {feature.title}
               </h3>
-              
               <p className="text-gray-300 mb-4 text-center">
                 {feature.description}
               </p>
-              
               <ul className="space-y-2">
                 {feature.benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-center text-sm text-gray-400">
@@ -521,7 +489,6 @@ export const FeatureHighlights: React.FC = () => {
             </div>
           ))}
         </div>
-
         <div className="text-center mt-16">
           <div className="bg-slate-800/50 border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -552,3 +519,4 @@ export const FeatureHighlights: React.FC = () => {
     </section>
   );
 };
+=======

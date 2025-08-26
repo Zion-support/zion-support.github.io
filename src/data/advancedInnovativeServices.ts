@@ -20,6 +20,7 @@ export interface AdvancedInnovativeService {
     email: string;
     website: string;
   };
+=======
   technology: string[];
   integrations: string[];
   compliance: string[];
@@ -29,7 +30,6 @@ export interface AdvancedInnovativeService {
   innovationLevel: string;
   uniqueValue: string;
 }
-
 export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   // AI-Powered Predictive Maintenance Platform
   {
@@ -93,11 +93,12 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     innovationLevel: "Cutting-edge AI/ML with real-time IoT integration",
     uniqueValue: "Combines edge computing with cloud-based ML for real-time predictions"
   },
-
+=======
   // Quantum Machine Learning Platform
   {
     id: "quantum-machine-learning-platform",
     title: "Quantum Machine Learning Platform",
+=======
     description: "Revolutionary platform that combines quantum computing principles with machine learning to solve complex optimization problems and accelerate AI model training.",
     category: "Quantum Computing",
     subcategory: "Machine Learning",
@@ -130,23 +131,27 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Logistics optimization",
       "Cryptography and security",
       "Material science research"
+=======
     ],
     targetAudience: [
       "Research institutions",
       "Pharmaceutical companies",
       "Financial institutions",
       "Government agencies",
+=======
       "Technology companies"
     ],
     tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Innovation"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,500 - $8,000/month",
+=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+=======
     technology: ["Qiskit", "PennyLane", "Cirq", "Python", "React", "TensorFlow", "PyTorch"],
     integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
     compliance: ["ISO 27001", "FedRAMP", "SOC 2", "NIST"],
@@ -155,12 +160,13 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     marketTrend: "Explosive growth with 500% annual increase in quantum computing adoption",
     innovationLevel: "Pioneering quantum-classical hybrid approaches",
     uniqueValue: "First commercial platform combining quantum computing with practical ML applications"
+=======
   },
-
   // Autonomous Drone Fleet Management
   {
     id: "autonomous-drone-fleet-management",
     title: "Autonomous Drone Fleet Management Platform",
+=======
     description: "AI-powered platform for managing autonomous drone fleets for delivery, inspection, surveillance, and data collection with real-time monitoring and optimization.",
     category: "Autonomous Systems",
     subcategory: "Drone Management",
@@ -193,6 +199,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       "Search and rescue operations",
       "Security and surveillance",
       "Environmental monitoring"
+=======
     ],
     targetAudience: [
       "Biotech researchers",
@@ -219,7 +226,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     caseStudies: ["Drug discovery acceleration", "Protein folding breakthrough"],
     marketTrends: ["Growing biotech investment", "AI drug discovery boom", "Increasing regulatory support"]
   },
-
   // AI-Powered Climate Intelligence Platform
   {
     id: "ai-climate-intelligence-platform",
@@ -281,7 +287,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     caseStudies: ["Corporation 40% sustainability improvement", "Government climate risk reduction"],
     marketTrends: ["Growing climate awareness", "Increasing regulations", "Rising sustainability demand"]
   },
-
   // AI-Powered Cybersecurity Intelligence Platform
   {
     id: "ai-cybersecurity-intelligence-platform",
@@ -343,7 +348,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     caseStudies: ["Bank 95% threat reduction", "Healthcare compliance automation"],
     marketTrends: ["Rising cyber threats", "Increasing regulations", "Growing AI adoption"]
   },
-
   // AI-Powered Financial Trading Platform
   {
     id: "ai-financial-trading-platform",
@@ -405,7 +409,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     caseStudies: ["Hedge fund 35% performance improvement", "Risk reduction 60%"],
     marketTrends: ["Growing algorithmic trading", "Increasing AI adoption", "Rising market volatility"]
   },
-
   // AI-Powered Manufacturing Intelligence Platform
   {
     id: "ai-manufacturing-intelligence-platform",
@@ -467,7 +470,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     caseStudies: ["Factory 50% downtime reduction", "Quality improvement 40%"],
     marketTrends: ["Industry 4.0 adoption", "Smart manufacturing growth", "IoT integration increase"]
   },
-
   // AI-Powered Energy Grid Intelligence Platform
   {
     id: "ai-energy-grid-intelligence-platform",
@@ -524,6 +526,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+=======
     technology: ["Python", "ROS", "React", "Node.js", "MongoDB", "AWS", "Computer Vision"],
     integrations: ["DJI SDK", "Parrot SDK", "Weather APIs", "GIS systems", "ERP systems"],
     compliance: ["FAA Part 107", "ISO 27001", "SOC 2", "GDPR"],
@@ -533,7 +536,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     innovationLevel: "Leading-edge autonomous fleet management with AI optimization",
     uniqueValue: "First comprehensive platform for multi-drone autonomous operations"
   },
-
   // Blockchain-Based Digital Identity Platform
   {
     id: "blockchain-digital-identity-platform",
@@ -596,7 +598,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     innovationLevel: "Cutting-edge blockchain identity with zero-knowledge proofs",
     uniqueValue: "First enterprise-grade SSI platform with comprehensive compliance features"
   },
-
   // AI-Powered Legal Document Analysis
   {
     id: "ai-legal-document-analysis",
@@ -659,7 +660,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     innovationLevel: "Advanced AI with legal domain expertise",
     uniqueValue: "First comprehensive legal document analysis platform with risk scoring"
   },
-
   // Sustainable Energy Management Platform
   {
     id: "sustainable-energy-management",
@@ -722,7 +722,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     innovationLevel: "Advanced AI-powered sustainability optimization",
     uniqueValue: "First comprehensive platform combining energy management with ESG compliance"
   },
-
   // Advanced Cybersecurity Threat Intelligence
   {
     id: "advanced-cybersecurity-threat-intelligence",
@@ -785,7 +784,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     innovationLevel: "Advanced AI with real-time threat intelligence",
     uniqueValue: "First AI-powered platform combining threat detection with automated response"
   },
-
   // Smart City IoT Management Platform
   {
     id: "smart-city-iot-management",
@@ -848,7 +846,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     innovationLevel: "Comprehensive IoT platform for urban infrastructure management",
     uniqueValue: "First integrated platform managing all aspects of smart city operations"
   },
-
   // AI-Powered Healthcare Diagnostics
   {
     id: "ai-healthcare-diagnostics",
@@ -857,10 +854,12 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     category: "AI & Healthcare",
     subcategory: "Medical Diagnostics",
     price: 599,
+=======
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Medical image analysis",
+=======
       "Diagnostic assistance",
       "Patient risk assessment",
       "Treatment recommendations",
@@ -897,11 +896,13 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$599 - $2,200/month",
+=======
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+=======
     technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "MongoDB", "AWS"],
     integrations: ["PACS systems", "EHR platforms", "Telemedicine systems", "Medical devices"],
     compliance: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
@@ -911,7 +912,6 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     innovationLevel: "Advanced AI with medical domain expertise",
     uniqueValue: "First comprehensive AI platform for medical diagnostics and clinical support"
   },
-
   // Quantum-Safe Communication Platform
   {
     id: "quantum-safe-communication",
@@ -975,5 +975,5 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     uniqueValue: "First commercial platform implementing NIST-approved post-quantum algorithms"
   }
 ];
-
 export default ADVANCED_INNOVATIVE_SERVICES;
+=======

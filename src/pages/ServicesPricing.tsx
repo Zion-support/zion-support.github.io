@@ -24,7 +24,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
 const pricingTiers = [
   {
     name: "Starter",
@@ -93,7 +92,6 @@ const pricingTiers = [
     popular: false
   }
 ];
-
 const serviceCategories = [
   {
     name: "AI Services",
@@ -136,7 +134,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const benefits = [
   {
     icon: <CheckCircle className="w-8 h-8" />,
@@ -169,10 +166,8 @@ const benefits = [
     description: "Regular updates and new features to keep you ahead"
   }
 ];
-
 export default function ServicesPricing() {
   const [selectedTier, setSelectedTier] = useState<string>('professional');
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO 
@@ -181,7 +176,6 @@ export default function ServicesPricing() {
         keywords="micro SAAS pricing, service costs, AI services pricing, IT solutions pricing"
         url="https://ziontechgroup.com/services-pricing"
       />
-
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
@@ -204,7 +198,6 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark py-4 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto">
@@ -230,7 +223,6 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-
       {/* Pricing Tiers */}
       <div className="py-20 px-4">
         <div className="container mx-auto">
@@ -242,7 +234,6 @@ export default function ServicesPricing() {
               All plans include our core features with additional capabilities as you scale up
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index) => (
               <Card 
@@ -258,7 +249,6 @@ export default function ServicesPricing() {
                     </Badge>
                   </div>
                 )}
-                
                 <CardHeader className="text-center pb-6">
                   <CardTitle className="text-2xl text-white mb-2">{tier.name}</CardTitle>
                   <CardDescription className="text-zion-slate-light mb-4">
@@ -269,7 +259,6 @@ export default function ServicesPricing() {
                     <div className="text-zion-slate-light text-sm">Range: ${tier.priceRange}</div>
                   </div>
                 </CardHeader>
-                
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
                     <h4 className="text-white font-semibold mb-3">What's Included:</h4>
@@ -280,7 +269,6 @@ export default function ServicesPricing() {
                       </div>
                     ))}
                   </div>
-                  
                   {tier.notIncluded.length > 0 && (
                     <div className="space-y-3 pt-4 border-t border-zion-blue-light">
                       <h4 className="text-white font-semibold mb-3">Not Included:</h4>
@@ -292,7 +280,6 @@ export default function ServicesPricing() {
                       ))}
                     </div>
                   )}
-                  
                   <Button 
                     className={`w-full mt-6 bg-gradient-to-r ${tier.color} hover:opacity-90 text-white`}
                     size="lg"
@@ -306,7 +293,6 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-
       {/* Service Category Pricing */}
       <div className="py-20 px-4 bg-zion-blue-dark">
         <div className="container mx-auto">
@@ -318,7 +304,6 @@ export default function ServicesPricing() {
               Detailed pricing for each service category. Contact us for custom enterprise solutions.
             </p>
           </div>
-
           <Tabs value={selectedTier} onValueChange={setSelectedTier} className="max-w-6xl mx-auto">
             <TabsList className="grid w-full grid-cols-3 bg-zion-blue border-zion-blue-light">
               <TabsTrigger value="starter" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
@@ -331,7 +316,6 @@ export default function ServicesPricing() {
                 Enterprise
               </TabsTrigger>
             </TabsList>
-            
             <TabsContent value={selectedTier} className="mt-8">
               <div className="space-y-8">
                 {serviceCategories.map((category, index) => (
@@ -342,7 +326,6 @@ export default function ServicesPricing() {
                       </div>
                       <h3 className="text-xl font-bold text-white">{category.name}</h3>
                     </div>
-                    
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {category.services.map((service, serviceIndex) => (
                         <div key={serviceIndex} className="flex items-center justify-between p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
@@ -363,7 +346,6 @@ export default function ServicesPricing() {
           </Tabs>
         </div>
       </div>
-
       {/* Benefits Section */}
       <div className="py-20 px-4">
         <div className="container mx-auto">
@@ -375,7 +357,6 @@ export default function ServicesPricing() {
               We deliver more than just software - we deliver business transformation
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light bg-zion-blue-dark">
@@ -389,7 +370,6 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">

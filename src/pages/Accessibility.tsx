@@ -1,6 +1,6 @@
 import React from 'react';
+=======
 import { Eye, Ear, Hand, Brain, Shield, Users, Globe, Zap, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
-
 const Accessibility: React.FC = () => {
   const accessibilityFeatures = [
     {
@@ -28,7 +28,6 @@ const Accessibility: React.FC = () => {
       features: ["Clear navigation", "Consistent layout", "Readable fonts", "Logical content flow"]
     }
   ];
-
   const complianceStandards = [
     {
       standard: "WCAG 2.1",
@@ -55,7 +54,6 @@ const Accessibility: React.FC = () => {
       status: "Compliant"
     }
   ];
-
   const toolsAndTechnologies = [
     {
       name: "Screen Readers",
@@ -88,7 +86,6 @@ const Accessibility: React.FC = () => {
       icon: Eye
     }
   ];
-
   const ongoingImprovements = [
     "Regular accessibility audits and testing",
     "User feedback integration",
@@ -97,7 +94,6 @@ const Accessibility: React.FC = () => {
     "Third-party accessibility reviews",
     "Compliance monitoring and reporting"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -133,7 +129,6 @@ const Accessibility: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Accessibility Features */}
       <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -146,7 +141,6 @@ const Accessibility: React.FC = () => {
               an inclusive experience for all users.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {accessibilityFeatures.map((feature, index) => (
               <div
@@ -171,7 +165,6 @@ const Accessibility: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Compliance Standards */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -184,7 +177,6 @@ const Accessibility: React.FC = () => {
               and regulations to ensure equal access for all users.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {complianceStandards.map((standard, index) => (
               <div
@@ -204,7 +196,6 @@ const Accessibility: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Tools and Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -217,7 +208,6 @@ const Accessibility: React.FC = () => {
               assistive technologies and accessibility tools.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {toolsAndTechnologies.map((tool, index) => (
               <div
@@ -234,7 +224,6 @@ const Accessibility: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Ongoing Improvements */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -274,7 +263,6 @@ const Accessibility: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -304,5 +292,4 @@ const Accessibility: React.FC = () => {
     </div>
   );
 };
-
 export default Accessibility;

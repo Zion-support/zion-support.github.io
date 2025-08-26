@@ -61,7 +61,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                   <X className="w-5 h-5"/>
                 </button>
               </div>
-              
               <div className="space-y-3">
                 <Link to="/marketplace" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
                   <div className="w-10 h-10 bg-zion-cyan/10 rounded-lg flex items-center justify-center group-hover:bg-zion-cyan/20 transition-colors">
@@ -72,7 +71,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                     <div className="text-sm text-gray-500">Find AI services & talent</div>
                   </div>
                 </Link>
-                
                 <Link to="/contact" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
                   <div className="w-10 h-10 bg-zion-purple/10 rounded-lg flex items-center justify-center group-hover:bg-zion-purple/20 transition-colors">
                     <MessageCircle className="w-5 h-5 text-zion-purple"/>
@@ -82,7 +80,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                     <div className="text-sm text-gray-500">24/7 assistance</div>
                   </div>
                 </Link>
-                
                 <Link to="/signup" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
                   <div className="w-10 h-10 bg-zion-cyan-light/10 rounded-lg flex items-center justify-center group-hover:bg-zion-cyan-light/20 transition-colors">
                     <Users className="w-5 h-5 text-zion-cyan-light"/>
@@ -93,7 +90,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                   </div>
                 </Link>
               </div>
-              
               <div className="mt-4 pt-4 border-t border-gray-100">
                 <div className="text-xs text-gray-500 text-center">
                   Need help? <span className="text-zion-cyan cursor-pointer hover:underline">Chat with us</span>
@@ -118,7 +114,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 <X className="w-5 h-5"/>
               </button>
             </div>
-            
             <div className="space-y-3">
               <Link to="/marketplace" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
                 <div className="w-10 h-10 bg-zion-cyan/10 rounded-lg flex items-center justify-center group-hover:bg-zion-cyan/20 transition-colors">
@@ -129,7 +124,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                   <div className="text-sm text-gray-500">Find what you need</div>
                 </div>
               </Link>
-              
               <Link to="/contact" className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group" onClick={() => setIsExpanded(false)}>
                 <div className="w-10 h-10 bg-zion-purple/10 rounded-lg flex items-center justify-center group-hover:bg-zion-purple/20 transition-colors">
                   <MessageCircle className="w-5 h-5 text-zion-purple"/>
@@ -140,7 +134,6 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 </div>
               </Link>
             </div>
-            
             <div className="mt-4 pt-4 border-t border-gray-100">
               <div className="text-xs text-gray-500 text-center">
                 Or start a conversation with our AI assistant

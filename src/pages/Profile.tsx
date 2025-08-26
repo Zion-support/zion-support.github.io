@@ -1,39 +1,31 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 import React, { useEffect } from 'react';
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-
 export default function Profile() {
   const { user, isLoading, logout } = useAuth();
   const navigate = useNavigate();
-
   useEffect(() => {
     if (!isLoading && !user) {
       toast.error("Please log in to view your profile");
       navigate("/login?redirect=/profile");
     }
   }, [user, isLoading, navigate]);
-
   if (isLoading) {
     return (
       <>
-        
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="animate-pulse text-white">Loading profile...</div>
         </div>
-        
       </>
     );
   }
-
   if (!user) {
     return (
       <>
-        
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
             <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
@@ -46,14 +38,11 @@ export default function Profile() {
             </Button>
           </div>
         </div>
-        
       </>
     );
   }
-
   return (
     <>
-      
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-8">
           <h1 className="text-2xl font-bold text-white mb-8">My Profile</h1>
@@ -82,7 +71,7 @@ export default function Profile() {
           </div>
         </div>
       </div>
-      
+=======
 const Profile: React.FC = () => {
   return (
     <>
@@ -90,7 +79,6 @@ const Profile: React.FC = () => {
         <title>Profile - Zion Tech Group</title>
         <meta name="description" content="Manage your Zion Tech Group profile. Update your information, preferences, and account settings." />
       </Helmet>
-      
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -99,7 +87,6 @@ const Profile: React.FC = () => {
               Manage your account information, preferences, and settings in one place.
             </p>
           </div>
-          
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               Profile management coming soon. We're building comprehensive profile features.
@@ -110,5 +97,4 @@ const Profile: React.FC = () => {
     </>
   );
 };
-
 export default Profile;

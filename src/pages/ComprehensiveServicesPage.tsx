@@ -11,19 +11,23 @@ import {
   Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Filter, Building
 } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
+=======
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+=======
 import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
+=======
 import { 
   Search, 
   Filter, 
   Star, 
   Clock, 
+=======
   Users, 
   Zap,
   ArrowRight,
@@ -62,7 +66,6 @@ import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
 import { ENHANCED_IT_SERVICES } from '@/data/enhancedITServices';
 import { ENHANCED_AI_SERVICES } from '@/data/enhancedAIServices';
 import { Link } from 'react-router-dom';
-
 interface Service {
   id: string;
   title: string;
@@ -75,29 +78,23 @@ interface Service {
   features?: string[];
   benefits?: string[];
 }
-
 export default function ComprehensiveServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricingTier, setSelectedPricingTier] = useState('all');
-
   const filteredServices = useMemo(() => {
     return COMPREHENSIVE_SERVICES.filter(service => {
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
-      
       return matchesSearch && matchesCategory && matchesPricing;
     });
   }, [searchTerm, selectedCategory, selectedPricingTier]);
-
   const getCategoryIcon = (categoryName: string) => {
     return '💼';
   const [activeTab, setActiveTab] = useState('micro-saas');
-
   // Combine all services for search
   const allServices: Service[] = [
     ...MICRO_SAAS_SERVICES.map(service => ({
@@ -116,7 +113,6 @@ export default function ComprehensiveServicesPage() {
       pricing: service.pricing
     }))
   ];
-
   // Filter services based on search and category
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -125,10 +121,8 @@ export default function ComprehensiveServicesPage() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'Content & Marketing': <FileText className="h-6 w-6" />,
@@ -161,8 +155,8 @@ export default function ComprehensiveServicesPage() {
       'Recommendation Systems': <Star className="h-6 w-6" />
     };
     return iconMap[category] || <Settings className="h-6 w-6" />;
+=======
   };
-
   const getServiceTypeColor = (type: string) => {
     const colorMap: { [key: string]: string } = {
       'Micro SAAS': 'bg-blue-100 text-blue-800',
@@ -171,7 +165,6 @@ export default function ComprehensiveServicesPage() {
     };
     return colorMap[type] || 'bg-gray-100 text-gray-800';
   };
-
   return (
     <div className="min-h-screen bg-zion-blue-dark">
               <SEO 
@@ -180,7 +173,6 @@ export default function ComprehensiveServicesPage() {
           keywords="micro SAAS, IT services, AI solutions, Zion Tech Group"
           url="https://ziontechgroup.com/comprehensive-services"
         />
-
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
         <div className="container mx-auto text-center">
@@ -206,7 +198,6 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Contact Information */}
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
@@ -232,7 +223,6 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Search and Filter Controls */}
       <div className="bg-zion-blue-dark py-8 px-4">
         <div className="container mx-auto">
@@ -271,7 +261,6 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -301,7 +290,6 @@ export default function ComprehensiveServicesPage() {
                       </Badge>
                     ))}
                   </div>
-
                   {/* Pricing and Rating */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -316,7 +304,6 @@ export default function ComprehensiveServicesPage() {
                       <span className="text-zion-slate-light text-sm">({service.reviewCount})</span>
                     </div>
                   </div>
-
                   {/* AI Score */}
                   {service.aiScore && (
                     <div className="flex items-center justify-between text-sm">
@@ -332,7 +319,6 @@ export default function ComprehensiveServicesPage() {
                       </div>
                     </div>
                   )}
-
                   {/* Availability and Location */}
                   <div className="flex items-center justify-between text-sm text-zion-slate-light">
                     <div className="flex items-center gap-1">
@@ -344,7 +330,6 @@ export default function ComprehensiveServicesPage() {
                       <span>{service.location}</span>
                     </div>
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex gap-2 pt-2">
                     <Button className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -359,7 +344,6 @@ export default function ComprehensiveServicesPage() {
               </Card>
             ))}
           </div>
-
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
               <div className="text-zion-slate-light text-lg mb-4">
@@ -380,7 +364,6 @@ export default function ComprehensiveServicesPage() {
           )}
         </div>
       </div>
-
       {/* Why Choose Zion Tech Group */}
       <div className="bg-zion-blue-dark py-16 px-4">
         <div className="container mx-auto">
@@ -392,7 +375,6 @@ export default function ComprehensiveServicesPage() {
               We deliver innovative, scalable, and cost-effective solutions that drive real business transformation
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
@@ -427,7 +409,6 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
@@ -457,7 +438,6 @@ export default function ComprehensiveServicesPage() {
         keywords="micro SAAS, IT services, AI solutions, technology services, business solutions"
       />
       <Header />
-      
       <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -465,7 +445,6 @@ export default function ComprehensiveServicesPage() {
           <div className="absolute inset-0 opacity-30" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}></div>
-          
           <div className="container mx-auto relative z-10 text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Comprehensive
@@ -477,7 +456,6 @@ export default function ComprehensiveServicesPage() {
               Transform your business with our complete suite of micro SAAS solutions, 
               professional IT services, and cutting-edge AI technology.
             </p>
-            
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
                 <span className="text-2xl">🤖</span>
@@ -492,7 +470,6 @@ export default function ComprehensiveServicesPage() {
                 <span>Professional IT Services</span>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-light text-white px-8 py-3">
                 <Link to="/contact">Get Started Today</Link>
@@ -503,7 +480,6 @@ export default function ComprehensiveServicesPage() {
             </div>
           </div>
         </section>
-
         {/* Services Navigation */}
         <section className="py-12 bg-white/5 backdrop-blur-sm">
           <div className="container mx-auto px-4">
@@ -522,7 +498,6 @@ export default function ComprehensiveServicesPage() {
                   AI Solutions
                 </TabsTrigger>
               </TabsList>
-
               {/* Search and Filter */}
               <div className="mt-8 flex flex-col md:flex-row gap-4 items-center justify-between">
                 <div className="relative flex-1 max-w-md">
@@ -534,7 +509,6 @@ export default function ComprehensiveServicesPage() {
                     className="pl-10 bg-white/10 border-zion-purple/20 text-white placeholder-zion-slate-light"
                   />
                 </div>
-                
                 <div className="flex items-center gap-2">
                   <Filter className="h-4 w-4 text-zion-slate-light" />
                   <select
@@ -550,7 +524,6 @@ export default function ComprehensiveServicesPage() {
                   </select>
                 </div>
               </div>
-
               {/* Micro SAAS Services */}
               <TabsContent value="micro-saas" className="mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -586,7 +559,6 @@ export default function ComprehensiveServicesPage() {
                             {service.pricing.currency}{service.pricing.yearly}/year
                           </span>
                         </div>
-                        
                         <div className="space-y-2">
                           <h4 className="text-white font-semibold text-sm">Key Features:</h4>
                           <ul className="space-y-1">
@@ -598,7 +570,6 @@ export default function ComprehensiveServicesPage() {
                             ))}
                           </ul>
                         </div>
-
                         <div className="space-y-2">
                           <h4 className="text-white font-semibold text-sm">Benefits:</h4>
                           <ul className="space-y-1">
@@ -622,7 +593,6 @@ export default function ComprehensiveServicesPage() {
                   ))}
                 </div>
               </TabsContent>
-
               {/* IT Services */}
               <TabsContent value="it-services" className="mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -658,12 +628,10 @@ export default function ComprehensiveServicesPage() {
                             {service.pricing.currency}{service.pricing.project} project
                           </span>
                         </div>
-                        
                         <div className="space-y-2">
                           <h4 className="text-white font-semibold text-sm">Timeline:</h4>
                           <p className="text-zion-slate-light text-sm">{service.timeline}</p>
                         </div>
-
                         <div className="space-y-2">
                           <h4 className="text-white font-semibold text-sm">Key Features:</h4>
                           <ul className="space-y-1">
@@ -687,7 +655,6 @@ export default function ComprehensiveServicesPage() {
                   ))}
                 </div>
               </TabsContent>
-
               {/* AI Services */}
               <TabsContent value="ai-services" className="mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -723,7 +690,6 @@ export default function ComprehensiveServicesPage() {
                             {service.pricing.currency}{service.pricing.yearly}/year
                           </span>
                         </div>
-                        
                         <div className="space-y-2">
                           <h4 className="text-white font-semibold text-sm">Key Features:</h4>
                           <ul className="space-y-1">
@@ -735,7 +701,6 @@ export default function ComprehensiveServicesPage() {
                             ))}
                           </ul>
                         </div>
-
                         <div className="space-y-2">
                           <h4 className="text-white font-semibold text-sm">Benefits:</h4>
                           <ul className="space-y-1">
@@ -762,7 +727,6 @@ export default function ComprehensiveServicesPage() {
             </Tabs>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-purple-dark">
           <div className="container mx-auto px-4 text-center">
@@ -784,8 +748,8 @@ export default function ComprehensiveServicesPage() {
           </div>
         </section>
       </main>
-      
       <Footer />
     </>
+=======
   );
 }

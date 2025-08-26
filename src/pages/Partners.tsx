@@ -1,4 +1,5 @@
 import React from 'react';
+=======
 import { 
   Building, 
   Globe, 
@@ -24,11 +25,11 @@ import {
   CheckCircle,
   Star
 } from 'lucide-react';
-
 const Partners: React.FC = () => {
   const partnershipTypes = [
     {
       icon: Building,
+=======
       title: 'Technology Partners',
       description: 'Strategic partnerships with leading technology companies to deliver comprehensive solutions.',
       benefits: [
@@ -72,7 +73,6 @@ const Partners: React.FC = () => {
       ]
     }
   ];
-
   const currentPartners = [
     {
       name: 'Microsoft',
@@ -147,7 +147,6 @@ const Partners: React.FC = () => {
       color: "from-blue-500 to-cyan-500"
     }
   ];
-
   const successStories = [
     {
       title: "Microsoft Azure Partnership Success",
@@ -175,7 +174,6 @@ const Partners: React.FC = () => {
       description: 'Strategic partnership for networking and cybersecurity solutions.'
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -183,7 +181,6 @@ const Partners: React.FC = () => {
         <meta name="description" content="Join Zion Tech Group's partner network. Strategic partnerships for technology solutions, growth opportunities, and market expansion." />
         <meta name="keywords" content="partners, partnerships, technology partners, channel partners, Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-900 to-slate-900 text-white">
@@ -211,7 +208,6 @@ const Partners: React.FC = () => {
             </div>
           </div>
         </div>
-
       {partnerCategories.map((category, categoryIndex) => (
         <div key={categoryIndex} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <div className="text-center mb-12">
@@ -221,7 +217,6 @@ const Partners: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-4">{category.title}</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {category.partners.map((partner, partnerIndex) => (
               <div
@@ -233,7 +228,6 @@ const Partners: React.FC = () => {
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Building className="w-10 h-10 text-white" />
                   </div>
-                  
                   <div className="text-center mb-4">
                     <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
                     <p className="text-gray-300 text-sm mb-3">{partner.description}</p>
@@ -246,12 +240,10 @@ const Partners: React.FC = () => {
                       {partner.tier}
                     </span>
                   </div>
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Partnership</h4>
                     <p className="text-gray-300 text-sm">{partner.partnership}</p>
                   </div>
-                  
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Benefits</h4>
                     <div className="flex flex-wrap gap-1">
@@ -265,7 +257,6 @@ const Partners: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                  
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -276,7 +267,6 @@ const Partners: React.FC = () => {
           </div>
         </div>
       ))}
-
       {/* Success Stories */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -292,10 +282,8 @@ const Partners: React.FC = () => {
                     {story.category}
                   </span>
                 </div>
-                
                 <h3 className="text-xl font-bold text-white mb-3">{story.title}</h3>
                 <p className="text-gray-300 text-sm mb-4">{story.description}</p>
-                
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Metrics</h4>
                   <div className="space-y-1">
@@ -307,7 +295,6 @@ const Partners: React.FC = () => {
                     ))}
                   </div>
                 </div>
-                
                 <div className="text-center">
                   <p className="text-xs text-gray-400">Partner</p>
                   <p className="text-sm text-white font-medium">{story.partner}</p>
@@ -317,7 +304,6 @@ const Partners: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Become a Partner CTA */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
@@ -347,7 +333,6 @@ const Partners: React.FC = () => {
                 We offer various partnership models to suit different business needs and objectives.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {partnershipTypes.map((type, index) => (
                 <div key={index} className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300">
@@ -369,7 +354,6 @@ const Partners: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Current Partners */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -379,6 +363,7 @@ const Partners: React.FC = () => {
                 We're proud to work with leading technology companies and organizations worldwide.
               </p>
             </div>
+=======
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
             >
               Start Partnership Discussion
@@ -387,7 +372,7 @@ const Partners: React.FC = () => {
             <button className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
               Download Partner Kit
             </button>
-            
+=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {currentPartners.map((partner, index) => (
                 <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
@@ -402,7 +387,6 @@ const Partners: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Partner Benefits */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -412,7 +396,6 @@ const Partners: React.FC = () => {
                 Discover the advantages of joining our partner ecosystem and growing your business with Zion Tech Group.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partnerBenefits.map((benefit, index) => (
                 <div key={index} className="text-center">
@@ -426,12 +409,10 @@ const Partners: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Partnership Process */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-8">Partnership Process</h2>
-            
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
@@ -440,7 +421,6 @@ const Partners: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Initial Contact</h3>
                 <p className="text-gray-600">Reach out to discuss partnership opportunities</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   2
@@ -448,7 +428,6 @@ const Partners: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Assessment</h3>
                 <p className="text-gray-600">Evaluate fit and alignment of objectives</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   3
@@ -456,7 +435,6 @@ const Partners: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Agreement</h3>
                 <p className="text-gray-600">Finalize partnership terms and conditions</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   4
@@ -467,7 +445,6 @@ const Partners: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -475,7 +452,6 @@ const Partners: React.FC = () => {
             <p className="text-xl text-gray-600 mb-8">
               Let's discuss how we can work together to create value for both our organizations and our clients.
             </p>
-            
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a 
                 href="/contact" 
@@ -490,7 +466,6 @@ const Partners: React.FC = () => {
                 Email Partnerships
               </a>
             </div>
-            
             <div className="mt-8 pt-8 border-t border-gray-200">
               <p className="text-gray-600 mb-4">
                 <strong>Partnership Inquiries:</strong>
@@ -511,7 +486,6 @@ const Partners: React.FC = () => {
   );
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-
 export default function Partners() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -521,7 +495,6 @@ export default function Partners() {
         keywords="partners, collaborations, strategic partnerships, Zion Tech Group"
         canonical="https://ziontechgroup.com/partners"
       />
-
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <GradientHeading>Our Partners</GradientHeading>
@@ -529,7 +502,6 @@ export default function Partners() {
             Building the future of tech through strategic partnerships
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Partner cards would go here */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -538,14 +510,12 @@ export default function Partners() {
               We collaborate with leading technology companies to deliver innovative solutions.
             </p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <h3 className="text-xl font-semibold text-zion-cyan mb-4">Technology Partners</h3>
             <p className="text-zion-slate-light">
               Working with cutting-edge tech providers to enhance our platform capabilities.
             </p>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
             <h3 className="text-xl font-semibold text-zion-cyan mb-4">Academic Partners</h3>
             <p className="text-zion-slate-light">
@@ -558,5 +528,4 @@ export default function Partners() {
   );
 }
 };
-
 export default Partners;

@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
-
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategories, setExpandedCategories] = useState<string[]>(['getting-started']);
-
   const toggleCategory = (category: string) => {
     setExpandedCategories(prev => 
       prev.includes(category) 
@@ -14,7 +12,6 @@ export default function HelpCenter() {
         : [...prev, category]
     );
   };
-
   const helpCategories = {
     'getting-started': {
       title: 'Getting Started',
@@ -77,7 +74,6 @@ export default function HelpCenter() {
       ]
     }
   };
-
   const popularArticles = [
     'How to create your first account',
     'Understanding the marketplace',
@@ -86,7 +82,6 @@ export default function HelpCenter() {
     'Payment and escrow system',
     'Account security best practices'
   ];
-
   return (
     <>
       <Helmet>
@@ -95,7 +90,6 @@ export default function HelpCenter() {
         <meta name="keywords" content="help center, support, FAQ, tutorials, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/help-center" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         {/* Hero Section */}
         <section className="pt-24 pb-16 px-4">
@@ -106,7 +100,6 @@ export default function HelpCenter() {
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8">
               Find answers to common questions, explore tutorials, and get the support you need to succeed with Zion Tech Group.
             </p>
-            
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
@@ -120,7 +113,6 @@ export default function HelpCenter() {
             </div>
           </div>
         </section>
-
         {/* Help Categories */}
         <section className="py-16 px-4">
           <div className="container mx-auto">
@@ -146,7 +138,6 @@ export default function HelpCenter() {
                       )}
                     </button>
                   </div>
-                  
                   {expandedCategories.includes(key) && (
                     <div className="space-y-2">
                       {category.articles.map((article, index) => (
@@ -165,7 +156,6 @@ export default function HelpCenter() {
             </div>
           </div>
         </section>
-
         {/* Popular Articles */}
         <section className="py-16 px-4 bg-zion-blue-light/10">
           <div className="container mx-auto">
@@ -181,6 +171,8 @@ export default function HelpCenter() {
                     Read Article
                     <ArrowRight className="w-4 h-4 ml-2" />
 import React, { useState } from 'react';
+=======
+=======
 import { Link } from 'react-router-dom';
 import { 
   Search, 
@@ -196,7 +188,6 @@ import {
   Zap,
   Cloud
 } from 'lucide-react';
-
 const HelpCenter: React.FC = () => {
   const faqCategories = [
     {
@@ -239,6 +230,7 @@ const HelpCenter: React.FC = () => {
           question: "How quickly do you respond to support requests?",
           answer: "We prioritize support requests based on severity. Critical issues receive immediate attention, while standard requests are typically addressed within 4-8 hours during business hours."
         }
+=======
   const helpCategories = [
     {
       title: "Getting Started",
@@ -281,7 +273,6 @@ const HelpCenter: React.FC = () => {
       ]
     }
   ];
-
   const supportChannels = [
     {
       title: "Phone Support",
@@ -308,7 +299,6 @@ const HelpCenter: React.FC = () => {
       response: "Immediate"
     }
   ];
-
   const resources = [
     {
       title: "Documentation",
@@ -339,7 +329,7 @@ const HelpCenter: React.FC = () => {
       category: "Community"
     }
   ];
-
+=======
   const popularArticles = [
     {
       title: "How to Train Your First AI Model",
@@ -366,7 +356,6 @@ const HelpCenter: React.FC = () => {
       views: "1.2k"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -390,7 +379,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 export default function HelpCenter() {
   const helpCategories = [
     {
@@ -472,7 +460,6 @@ export default function HelpCenter() {
       color: "from-teal-500 to-cyan-500"
     }
   ];
-
   const quickActions = [
     {
       title: "Contact Support",
@@ -503,7 +490,6 @@ export default function HelpCenter() {
       color: "bg-blue-500 text-white"
     }
   ];
-
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -512,9 +498,7 @@ export default function HelpCenter() {
         keywords="help, support, documentation, Zion Tech Group, AI marketplace, tech services"
         canonical="https://ziontechgroup.com/help-center"
       />
-      
       <AppHeader />
-      
       <main className="pt-16 pb-20">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
@@ -525,13 +509,11 @@ export default function HelpCenter() {
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Find answers, tutorials, and support resources to help you make the most of Zion Tech Group
             </p>
-            
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
-
 const $page: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -584,7 +566,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Search, MessageCircle, BookOpen, Users, Settings, Shield, CreditCard, HelpCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function HelpCenter() {
   const helpCategories = [
     {
@@ -624,7 +605,6 @@ export default function HelpCenter() {
       color: "text-zion-blue"
     }
   ];
-
   const faqs = [
     {
       question: "How do I create an account on Zion?",
@@ -659,7 +639,6 @@ export default function HelpCenter() {
       answer: "Yes! Zion is available worldwide. We support multiple currencies and languages, making it easy to connect with talent and clients globally."
     }
   ];
-
   return (
     <AppLayout>
       <SEO 
@@ -668,7 +647,6 @@ export default function HelpCenter() {
         keywords="help center, support, FAQ, Zion marketplace, customer service"
         canonical="https://ziontechgroup.com/help"
       />
-      
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -678,7 +656,6 @@ export default function HelpCenter() {
               Find answers to your questions and get the support you need
             </p>
           </div>
-
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-16">
             <div className="relative">
@@ -690,7 +667,6 @@ export default function HelpCenter() {
               />
             </div>
           </div>
-
           {/* Help Categories */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8 text-center">How can we help you?</h2>
@@ -718,7 +694,6 @@ export default function HelpCenter() {
             </div>
           </div>
         </section>
-
         {/* Quick Actions */}
         <section className="py-16 bg-zion-blue/5">
           <div className="container mx-auto px-4">
@@ -740,7 +715,6 @@ export default function HelpCenter() {
             </div>
           </div>
         </section>
-
         {/* Help Categories */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -786,7 +760,6 @@ export default function HelpCenter() {
               and get the most out of Zion Tech Group's services
             </p>
           </div>
-          
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-16">
             <div className="relative">
@@ -800,7 +773,6 @@ export default function HelpCenter() {
               </button>
             </div>
           </div>
-          
           {/* Help Categories */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Browse by Category</h2>
@@ -809,7 +781,6 @@ export default function HelpCenter() {
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{category.description}</p>
-                  
                   <div className="space-y-2 mb-4">
                     {category.articles.map((article, idx) => (
                       <div key={idx} className="text-sm text-gray-400 hover:text-blue-400 cursor-pointer transition-colors">
@@ -817,19 +788,18 @@ export default function HelpCenter() {
                       </div>
                     ))}
                   </div>
-                  
                   <Link
                     to={`/docs/${category.title.toLowerCase().replace(/\s+/g, '-')}`}
                     className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
                   >
                     View All →
+=======
                   </Link>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Contact Support */}
         <section className="py-16 px-4">
           <div className="container mx-auto text-center">
@@ -837,7 +807,6 @@ export default function HelpCenter() {
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Our support team is here to help you 24/7. Get in touch with us through any of these channels.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -849,7 +818,6 @@ export default function HelpCenter() {
                   Start Chat
                 </button>
               </div>
-              
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-6 h-6 text-zion-cyan" />
@@ -863,7 +831,6 @@ export default function HelpCenter() {
                   Send Email
                 </Link>
               </div>
-              
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-6 h-6 text-zion-cyan" />
@@ -884,7 +851,6 @@ export default function HelpCenter() {
     </>
   );
 }
-          
           {/* Popular Articles */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Popular Articles</h2>
@@ -906,7 +872,6 @@ export default function HelpCenter() {
               ))}
             </div>
           </div>
-          
           {/* Quick Actions */}
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
@@ -937,12 +902,13 @@ export default function HelpCenter() {
             </div>
           </div>
         </div>
+=======
       </section>
     </div>
   );
 };
-
 export default $page;
+=======
             <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="space-y-4">
@@ -959,7 +925,6 @@ export default $page;
               </Accordion>
             </div>
           </div>
-
           {/* Contact Section */}
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Still need help?</h2>
@@ -981,8 +946,8 @@ export default $page;
     </AppLayout>
   );
 }
+=======
         </section>
-
         {/* Additional Resources */}
         <section className="py-16 bg-zion-blue-dark">
           <div className="container mx-auto px-4">
@@ -992,7 +957,6 @@ export default $page;
                 Explore our comprehensive library of resources to help you succeed on Zion Tech Group
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card className="bg-zion-blue border-zion-purple/20">
                 <CardContent className="p-6 text-center">
@@ -1006,7 +970,6 @@ export default $page;
                   </Button>
                 </CardContent>
               </Card>
-              
               <Card className="bg-zion-blue border-zion-purple/20">
                 <CardContent className="p-6 text-center">
                   <FileText className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
@@ -1019,7 +982,6 @@ export default $page;
                   </Button>
                 </CardContent>
               </Card>
-              
               <Card className="bg-zion-blue border-zion-purple/20">
                 <CardContent className="p-6 text-center">
                   <Users className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
@@ -1035,7 +997,6 @@ export default $page;
             </div>
           </div>
         </section>
-
         {/* Contact Support */}
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
@@ -1058,8 +1019,8 @@ export default $page;
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
   );
 }
+=======

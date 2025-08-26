@@ -4,12 +4,9 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import { Button } from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
->>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:temp_components.disabled/audit-log-vault.tsx
+=======
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
-
-
 import { Globe, Check, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-
 export default function DomainDNSMonitorPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -17,7 +14,6 @@ export default function DomainDNSMonitorPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   const features = [
     'Registrar expiry and auto-renew checks',
     'NS/DS drift and delegation correctness',
@@ -26,17 +22,15 @@ export default function DomainDNSMonitorPage() {
     'Propagation tests across regions',
     'Alerts, webhooks and change history'
   ];
-
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
->>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:temp_components.disabled/audit-log-vault.tsx
+=======
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
         <title>Domain & DNS Health Monitor | Zion Tech Group</title>
         <meta name="description" content="Track domain expiry, DNS provider health, NS/DS drift, DNSSEC, and MX/SPF/DMARC correctness. Catch misconfigurations before outages." />
         <link rel="canonical" href="https://ziontechgroup.com/domain-dns-monitor" />
       </Head>
-
       <div className="min-h-screen pt-24 pb-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
@@ -45,7 +39,6 @@ export default function DomainDNSMonitorPage() {
             </h1>
             <p className="mt-4 text-xl text-gray-300 max-w-3xl mx-auto">Prevent domain lapses, email deliverability issues and outages with continuous DNS hygiene checks.</p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
@@ -75,8 +68,7 @@ export default function DomainDNSMonitorPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
->>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:temp_components.disabled/audit-log-vault.tsx
+=======
     </QuantumHolographicMatrixBackground>
   );
 }
-

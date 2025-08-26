@@ -2,6 +2,7 @@ export interface ComprehensiveITService {
   id: string;
   title: string;
   description: string;
+=======
   id: string;
   title: string;
   description: string;
@@ -35,8 +36,8 @@ export interface ComprehensiveITService {
   customizationLevel: string;
   serviceLevel: string;
 }
-
 export const comprehensiveITServices2025: ComprehensiveITService[] = [
+=======
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   // Cloud Infrastructure & Migration Services
   {
@@ -104,7 +105,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom cloud solutions and migration strategies",
     serviceLevel: "24/7 managed cloud services"
   },
-
   // Cybersecurity & Information Security Services
   {
     id: "cybersecurity-information-security-services",
@@ -170,7 +170,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom security frameworks and compliance solutions",
     serviceLevel: "24/7 security monitoring and response"
   },
-
   // DevOps & CI/CD Pipeline Services
   {
     id: "devops-cicd-pipeline-services",
@@ -236,7 +235,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom DevOps workflows and automation rules",
     serviceLevel: "24/7 DevOps support and monitoring"
   },
-
   // Data Management & Analytics Services
   {
     id: "data-management-analytics-services",
@@ -302,7 +300,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom analytics solutions and reporting dashboards",
     serviceLevel: "24/7 data monitoring and support"
   },
-
   // Network Infrastructure & Management Services
   {
     id: "network-infrastructure-management-services",
@@ -368,7 +365,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom network solutions and security configurations",
     serviceLevel: "24/7 network monitoring and support"
   },
-
   // IT Consulting & Strategic Planning Services
   {
     id: "it-consulting-strategic-planning-services",
@@ -434,7 +430,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom strategic plans and technology roadmaps",
     serviceLevel: "Flexible consulting engagement models"
   },
-
   // IT Support & Help Desk Services
   {
     id: "it-support-help-desk-services",
@@ -500,7 +495,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom support workflows and knowledge bases",
     serviceLevel: "24/7 technical support and monitoring"
   },
-
   // Software Development & Custom Solutions
   {
     id: "software-development-custom-solutions",
@@ -566,7 +560,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Fully custom software solutions and integrations",
     serviceLevel: "Comprehensive development and ongoing support"
   },
-
   // IT Project Management & Implementation Services
   {
     id: "it-project-management-implementation-services",
@@ -891,7 +884,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   customizationLevel: string;
   serviceLevel: string;
 }
-
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   // Cloud Infrastructure & Migration Services
   {
@@ -959,7 +951,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom cloud solutions and migration strategies",
     serviceLevel: "24/7 managed cloud services"
   },
-
   // Cybersecurity & Information Security Services
   {
     id: "cybersecurity-information-security-services",
@@ -1025,7 +1016,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom security frameworks and compliance solutions",
     serviceLevel: "24/7 security monitoring and response"
   },
-
   // DevOps & CI/CD Pipeline Services
   {
     id: "devops-cicd-pipeline-services",
@@ -1091,7 +1081,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom DevOps workflows and automation rules",
     serviceLevel: "24/7 DevOps support and monitoring"
   },
-
   // Data Management & Analytics Services
   {
     id: "data-management-analytics-services",
@@ -1157,7 +1146,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom analytics solutions and reporting dashboards",
     serviceLevel: "24/7 data monitoring and support"
   },
-
   // Network Infrastructure & Management Services
   {
     id: "network-infrastructure-management-services",
@@ -1223,7 +1211,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom network solutions and security configurations",
     serviceLevel: "24/7 network monitoring and support"
   },
-
   // IT Consulting & Strategic Planning Services
   {
     id: "it-consulting-strategic-planning-services",
@@ -1289,7 +1276,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom strategic plans and technology roadmaps",
     serviceLevel: "Flexible consulting engagement models"
   },
-
   // IT Support & Help Desk Services
   {
     id: "it-support-help-desk-services",
@@ -1355,7 +1341,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Custom support workflows and knowledge bases",
     serviceLevel: "24/7 technical support and monitoring"
   },
-
   // Software Development & Custom Solutions
   {
     id: "software-development-custom-solutions",
@@ -1421,7 +1406,6 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     customizationLevel: "Fully custom software solutions and integrations",
     serviceLevel: "Comprehensive development and ongoing support"
   },
-
   // IT Project Management & Implementation Services
   {
     id: "it-project-management-implementation-services",
@@ -1488,9 +1472,8 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     serviceLevel: "Comprehensive project management and support"
   }
 ];
-
 export default COMPREHENSIVE_IT_SERVICES_2025;
+=======
   }
 ];
-
 export default COMPREHENSIVE_IT_SERVICES_2025;

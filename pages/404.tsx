@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function Custom404() {
   return (
     <>
@@ -9,7 +8,6 @@ export default function Custom404() {
         <title>404 - Page Not Found | Zion</title>
         <meta name="description" content="The page you're looking for doesn't exist." />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center px-4">
         <div className="text-center text-white">
           <div className="mb-8">
@@ -21,7 +19,6 @@ export default function Custom404() {
               The page you're looking for doesn't exist or has been moved.
             </p>
           </div>
-          
           <div className="space-y-4">
             <Link 
               href="/"
@@ -29,7 +26,6 @@ export default function Custom404() {
             >
               Go Home
             </Link>
-            
             <div className="text-sm text-gray-400">
               <p>Or try one of these pages:</p>
               <div className="flex justify-center space-x-4 mt-2">

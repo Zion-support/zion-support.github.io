@@ -1,3 +1,4 @@
+=======
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -28,7 +29,6 @@ import {
   Building,
   HardDrive
 } from 'lucide-react';
-
 const ITServices = [
   {
     title: "Cloud Infrastructure Management",
@@ -179,7 +179,6 @@ const ITServices = [
     link: "/request-quote?service=24-7-support"
   }
 ];
-
 const categories = [
   { name: "All", value: "all", icon: <Globe className="h-4 w-4" /> },
   { name: "Cloud", value: "cloud", icon: <Cloud className="h-4 w-4" /> },
@@ -198,14 +197,11 @@ const categories = [
   { name: "Project Management", value: "project management", icon: <BarChart3 className="h-4 w-4" /> },
   { name: "Support", value: "support", icon: <Monitor className="h-4 w-4" /> }
 ];
-
 export default function ITServicesPage() {
   const [selectedCategory, setSelectedCategory] = React.useState("all");
-
   const filteredServices = selectedCategory === "all" 
     ? ITServices 
     : ITServices.filter(service => service.category.toLowerCase() === selectedCategory);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">
       {/* Hero Section */}
@@ -248,7 +244,6 @@ import {
   CheckCircle,
   Star
 } from 'lucide-react';
-
 export default function ITServicesPage() {
   const itServices = [
     {
@@ -528,7 +523,6 @@ export default function ITServicesPage() {
       reviews: 73
     }
   ];
-
   const categories = [
     "All Services",
     "Cloud Services",
@@ -542,13 +536,10 @@ export default function ITServicesPage() {
     "Compliance",
     "Virtualization"
   ];
-
   const [selectedCategory, setSelectedCategory] = React.useState("All Services");
-
   const filteredServices = selectedCategory === "All Services" 
     ? itServices 
     : itServices.filter(service => service.category === selectedCategory);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Hero Section */}
@@ -570,11 +561,11 @@ export default function ITServicesPage() {
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <MessageSquare className="h-5 w-5 mr-2" />
               Get Free Consultation
+=======
             </Button>
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
@@ -596,7 +587,7 @@ export default function ITServicesPage() {
           </div>
         </div>
       </div>
-
+=======
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -616,7 +607,6 @@ export default function ITServicesPage() {
             </Button>
           ))}
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {filteredServices.map((service, index) => (
@@ -645,7 +635,6 @@ export default function ITServicesPage() {
           ))}
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -668,6 +657,7 @@ export default function ITServicesPage() {
                       <span>({service.reviews})</span>
                     </div>
                   </div>
+=======
                 </div>
                 <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
                   {service.title}
@@ -695,7 +685,6 @@ export default function ITServicesPage() {
                   <Link to={service.link}>
                     Get Started
                   </Link>
-              
               <CardContent className="space-y-4">
                 <div>
                   <h4 className="font-semibold text-zion-cyan mb-2">Key Features:</h4>
@@ -708,7 +697,6 @@ export default function ITServicesPage() {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <h4 className="font-semibold text-zion-cyan mb-2">Pricing:</h4>
@@ -733,7 +721,6 @@ export default function ITServicesPage() {
                   </div>
                 </div>
               </CardContent>
-              
               <div className="p-6 pt-0 space-y-3">
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   <MessageSquare className="h-4 w-4 mr-2" />
@@ -742,12 +729,12 @@ export default function ITServicesPage() {
                 <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
                   <Phone className="h-4 w-4 mr-2" />
                   Call Now
+=======
                 </Button>
               </div>
             </Card>
           ))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center py-12">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -767,7 +754,6 @@ export default function ITServicesPage() {
             </Button>
           </div>
       </div>
-
       {/* Why Choose Us Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -776,7 +762,6 @@ export default function ITServicesPage() {
             We combine technical expertise with business acumen to deliver IT solutions that drive real business value.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -787,7 +772,6 @@ export default function ITServicesPage() {
               Certified professionals with years of experience in enterprise IT solutions.
             </p>
           </div>
-          
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Clock className="h-8 w-8 text-zion-cyan" />
@@ -797,7 +781,6 @@ export default function ITServicesPage() {
               Round-the-clock support to ensure your systems are always running smoothly.
             </p>
           </div>
-          
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <CheckCircle className="h-8 w-8 text-zion-purple" />
@@ -809,7 +792,6 @@ export default function ITServicesPage() {
           </div>
         </div>
       </div>
-
       {/* Contact Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -833,9 +815,11 @@ export default function ITServicesPage() {
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>Website: https://ziontechgroup.com</p>
           </div>
+=======
         </div>
       </div>
     </div>
   );
 }
+=======
 }

@@ -3,7 +3,6 @@ import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Check, Users, Shield, BarChart3, Zap, Globe, Phone, Lock } from 'lucide-react';
-
 export default function Enterprise() {
   const features = [
     {
@@ -37,7 +36,6 @@ export default function Enterprise() {
       description: "Priority support with dedicated account managers and 24/7 technical assistance."
     }
   ];
-
   const plans = [
     {
       name: "Starter",
@@ -79,7 +77,6 @@ export default function Enterprise() {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -88,7 +85,6 @@ export default function Enterprise() {
         keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group"
         canonical="https://ziontechgroup.com/enterprise"
       />
-
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -109,7 +105,6 @@ export default function Enterprise() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -121,7 +116,6 @@ export default function Enterprise() {
               Everything you need to manage large-scale tech operations efficiently and securely
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="bg-zion-blue border-zion-purple/20 hover:border-zion-purple/40 transition-colors">
@@ -139,7 +133,6 @@ export default function Enterprise() {
           </div>
         </div>
       </section>
-
       {/* Plans Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -151,7 +144,6 @@ export default function Enterprise() {
               Choose the plan that fits your organization's needs and scale
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {plans.map((plan, index) => (
               <Card key={index} className={`bg-zion-blue-dark border-zion-purple/20 ${
@@ -191,7 +183,6 @@ export default function Enterprise() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">

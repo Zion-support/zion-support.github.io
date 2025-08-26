@@ -1,4 +1,3 @@
-
 import React from 'react';
     <div className="min-h-screen bg-background">
       <SEO 
@@ -7,9 +6,7 @@ import React from 'react';
         keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group"
         canonical="https://ziontechgroup.com/request-quote"
       />
-      
       <AppHeader />
-      
       <main className="pt-16 pb-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -20,18 +17,17 @@ import React from 'react';
               Tell us about your project and we'll connect you with the perfect talent and services for your needs
             </p>
           </div>
-          
           <div className="max-w-4xl mx-auto">
             <QuoteRequestForm />
           </div>
         </div>
+=======
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Clock, Users, Zap } from "lucide-react";
-
 export default function RequestQuote() {
   return (
     <div className="min-h-screen bg-zion-blue">
@@ -42,7 +38,6 @@ export default function RequestQuote() {
         canonical="https://ziontechgroup.com/request-quote"
       />
       <Header />
-      
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -55,7 +50,6 @@ export default function RequestQuote() {
               we'll provide you with a detailed, competitive quote tailored to your specific requirements.
             </p>
           </div>
-
           {/* Benefits Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
@@ -69,7 +63,6 @@ export default function RequestQuote() {
                 </CardDescription>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
               <CardHeader className="text-center">
                 <CheckCircle className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
@@ -81,7 +74,6 @@ export default function RequestQuote() {
                 </CardDescription>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
               <CardHeader className="text-center">
                 <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
@@ -93,7 +85,6 @@ export default function RequestQuote() {
                 </CardDescription>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
               <CardHeader className="text-center">
                 <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
@@ -106,13 +97,11 @@ export default function RequestQuote() {
               </CardContent>
             </Card>
           </div>
-
           {/* Services Overview */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
               What We Can Quote For You
             </h2>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
@@ -130,7 +119,6 @@ export default function RequestQuote() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">IT Services</CardTitle>
@@ -147,7 +135,6 @@ export default function RequestQuote() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">Talent & Hiring</CardTitle>
@@ -164,7 +151,6 @@ export default function RequestQuote() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">Equipment & Hardware</CardTitle>
@@ -181,7 +167,6 @@ export default function RequestQuote() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">Consulting</CardTitle>
@@ -198,7 +183,6 @@ export default function RequestQuote() {
                   </ul>
                 </CardContent>
               </Card>
-
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">Custom Solutions</CardTitle>
@@ -217,7 +201,6 @@ export default function RequestQuote() {
               </Card>
             </div>
           </div>
-
           {/* Quote Form Section */}
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
@@ -228,10 +211,8 @@ export default function RequestQuote() {
                 Fill out the form below and we'll get back to you with a detailed quote within 24 hours.
               </p>
             </div>
-            
             <QuoteRequestForm />
           </div>
-
           {/* Additional Information */}
           <div className="mt-16 text-center">
             <h3 className="text-2xl font-bold text-white mb-6">
@@ -257,12 +238,11 @@ export default function RequestQuote() {
           </div>
         </div>
       </main>
-      
       <Footer />
     </div>
+=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-
 export default function RequestQuote() {
   return (
     <>
@@ -284,7 +264,6 @@ export default function RequestQuote() {
               Our team will analyze your requirements and provide you with a detailed quote.
             </p>
           </div>
-          
           <div className="max-w-4xl mx-auto">
             <QuoteRequestForm />
           </div>

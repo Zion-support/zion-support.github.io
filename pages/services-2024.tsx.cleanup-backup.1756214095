@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react';
-=======
 import React, { useState } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -10,33 +6,22 @@ import {
   Brain, Atom, Cpu, Shield, Database, Cloud,
   ArrowRight, CheckCircle, Zap, Sparkles
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import { enhancedMicroSaasServices2025 } from '../src/data/enhancedMicroSaasServices2025';
 import { innovativeITServices2025 } from '../src/data/innovativeITServices2025';
 =======
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';
 import Link from 'next/link';
-
 // Import the new 2024 services
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
-
-<<<<<<< HEAD
-  // Combine all services
-  const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026];
-=======
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 const serviceCategories = [
   {
     id: 'ai-services',
@@ -96,66 +81,23 @@ const serviceCategories = [
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
 ];
-
 export default function Services2024Page() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
-
   const filteredServices = serviceCategories.flatMap(category => category.services).filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
     const matchesCategory = selectedCategory === 'all' || 
                            service.category.toLowerCase().includes(selectedCategory.toLowerCase());
-    
     const matchesPrice = priceRange === 'all' || 
                         (priceRange === 'low' && parseInt(service.price.replace('$', '')) < 200) ||
                         (priceRange === 'medium' && parseInt(service.price.replace('$', '')) >= 200 && parseInt(service.price.replace('$', '')) < 500) ||
                         (priceRange === 'high' && parseInt(service.price.replace('$', '')) >= 500);
-    
     return matchesSearch && matchesCategory && matchesPrice;
   });
-
-<<<<<<< HEAD
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Sparkles, count: allServices.length },
-    { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai')).length },
-    { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security')).length },
-    { id: 'it', name: 'Enterprise IT', icon: Cpu, count: allServices.filter(s => s.variant.includes('it')).length },
-    { id: 'api', name: 'API & Development', icon: Database, count: allServices.filter(s => s.variant.includes('api')).length },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.variant.includes('cloud')).length },
-    { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing')).length },
-    { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project')).length },
-    { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer')).length }
-  ];
-
-  const getVariantIcon = (variant: string) => {
-    if (variant.includes('ai')) return Brain;
-    if (variant.includes('security')) return Shield;
-    if (variant.includes('it')) return Cpu;
-    if (variant.includes('api')) return Database;
-    if (variant.includes('cloud')) return Cloud;
-    if (variant.includes('marketing')) return TrendingUp;
-    if (variant.includes('project')) return Users;
-    if (variant.includes('customer')) return CheckCircle;
-    return Sparkles;
-  };
-
-  const getVariantColor = (variant: string) => {
-    if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
-    if (variant.includes('security')) return 'from-red-500 to-pink-500';
-    if (variant.includes('it')) return 'from-green-500 to-emerald-500';
-    if (variant.includes('api')) return 'from-purple-500 to-violet-500';
-    if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500';
-    if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
-    if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
-    if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
-    return 'from-gray-500 to-slate-500';
-  };
-=======
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
@@ -169,25 +111,9 @@ export default function Services2024Page() {
         return b.popular ? 1 : -1;
     }
   });
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
   return (
     <>
       <Head>
-<<<<<<< HEAD
-        <title>2024 Revolutionary Services - Zion Tech Group</title>
-        <meta name="description" content="Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
-      </Head>
-
-      <UltraFuturisticBackground2034 intensity={0.8} theme="quantum" />
-
-      <div className="relative z-10 min-h-screen">
-        {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-=======
         <title>2024 Revolutionary Services - Zion Tech Group | AI, Quantum, Enterprise Solutions</title>
         <meta name="description" content="Explore Zion Tech Group's revolutionary 2024 services including AI automation, quantum security, enterprise IT solutions, and innovative micro SAAS platforms." />
         <meta name="keywords" content="AI automation, quantum security, enterprise IT, micro SAAS, business intelligence, marketing automation, API management, DevOps automation" />
@@ -200,108 +126,16 @@ export default function Services2024Page() {
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
         <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
       </Head>
-
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
-                <Sparkles className="w-5 h-5 text-cyan-400" />
-                <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                  Future-Ready
-                </span>
-                <br />
-                <span className="text-white">Solutions</span>
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Experience the next generation of AI, quantum security, and enterprise IT solutions. 
-                Transform your business with our revolutionary 2024 service portfolio.
-              </p>
-
-              {/* Stats */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>
-                  <div className="text-gray-400">Revolutionary Services</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
-                  <div className="text-gray-400">Service Categories</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">4.8</div>
-                  <div className="text-gray-400">Average Rating</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">1000+</div>
-                  <div className="text-gray-400">Happy Customers</div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Search and Filters */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-16">
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm">
-              <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-                {/* Search */}
-                <div className="lg:col-span-2">
-                  <div className="relative">
-                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="text"
-                      placeholder="Search services by name, features, or description..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
-                    />
-                  </div>
-                </div>
-
-                {/* Category Filter */}
-                <div>
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
-                    {categories.map((category) => (
-                      <option key={category.id} value={category.id}>
-                        {category.name} ({category.count})
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Sort */}
-                <div className="flex space-x-2">
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value as any)} className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
-                    <option value="name">Sort by Name</option>
-                    <option value="price">Sort by Price</option>
-                    <option value="rating">Sort by Rating</option>
-                    <option value="customers">Sort by Customers</option>
-                  </select>
-                  <button
-                    onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
-                    {sortOrder === 'asc' ? '↑' : '↓'}
-                  </button>
-                </div>
-              </div>
-=======
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   2024 Revolutionary
@@ -330,7 +164,6 @@ export default function Services2024Page() {
             </motion.div>
           </div>
         </div>
-
         {/* Search and Filters */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="bg-black/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 mb-12">
@@ -346,7 +179,6 @@ export default function Services2024Page() {
                   className="w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 />
               </div>
-
               {/* Category Filter */}
               <select
                 value={selectedCategory}
@@ -361,7 +193,6 @@ export default function Services2024Page() {
                 <option value="business">Business & Analytics</option>
                 <option value="marketing">Marketing & Automation</option>
               </select>
-
               {/* Price Filter */}
               <select
                 value={priceRange}
@@ -373,7 +204,6 @@ export default function Services2024Page() {
                 <option value="medium">$200-$500/month</option>
                 <option value="high">Over $500/month</option>
               </select>
-
               {/* Sort By */}
               <select
                 value={sortBy}
@@ -385,105 +215,9 @@ export default function Services2024Page() {
                 <option value="price-high">Price: High to Low</option>
                 <option value="rating">Highest Rated</option>
               </select>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
-        {/* Services Grid */}
-        <section className="px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            {filteredServices.length === 0 ? (
-              <div className="text-center py-20">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
-                <p className="text-gray-400">Try adjusting your search criteria or filters.</p>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service, index) => (
-                  <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
-                    <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
-                      {/* Service Header */}
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center">
-                          {React.createElement(getVariantIcon(service.variant), { 
-                            className: `w-6 h-6 text-cyan-400` 
-                          })}
-                        </div>
-                        <div className="text-right">
-                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                          <div className="text-sm text-gray-400">per month</div>
-                        </div>
-                      </div>
-
-                      {/* Service Info */}
-                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
-                        {service.name}
-                      </h3>
-                      <p className="text-gray-300 mb-4 leading-relaxed">
-                        {service.tagline}
-                      </p>
-
-                      {/* Features */}
-                      <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
-                        <div className="space-y-2">
-                          {service.features.slice(0, 3).map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center space-x-2">
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                              <span className="text-sm text-gray-300">{feature}</span>
-                            </div>
-                          ))}
-                          {service.features.length > 3 && (
-                            <div className="text-sm text-cyan-400">
-                              +{service.features.length - 3} more features
-                            </div>
-                          )}
-                        </div>
-                      </div>
-
-                      {/* Stats */}
-                      <div className="grid grid-cols-3 gap-4 mb-6">
-                        <div className="text-center">
-                          <div className="flex items-center justify-center space-x-1 mb-1">
-                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                            <span className="text-sm font-semibold text-white">{service.rating}</span>
-                          </div>
-                          <div className="text-xs text-gray-400">Rating</div>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-sm font-semibold text-white mb-1">{service.customers}</div>
-                          <div className="text-xs text-gray-400">Customers</div>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-sm font-semibold text-white mb-1">{service.launchDate}</div>
-                          <div className="text-xs text-gray-400">Launched</div>
-                        </div>
-                      </div>
-
-                      {/* CTA */}
-                      <div className="flex items-center justify-between">
-                        <Link
-                          href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
-                          <span className="font-medium">Learn More</span>
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-                        </Link>
-                        <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
-                          {service.variant.replace('-futuristic', '').replace('-', ' ')}
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            )}
-=======
           {/* Service Categories */}
           <div className="space-y-16">
             {serviceCategories.map((category) => (
@@ -502,7 +236,6 @@ export default function Services2024Page() {
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{category.title}</h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">{category.description}</p>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.services.map((service) => (
                     <motion.div
@@ -517,24 +250,20 @@ export default function Services2024Page() {
                           ⭐ Most Popular
                         </div>
                       )}
-
                       {/* Service Icon */}
                       <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} mb-4`}>
                         <span className="text-2xl">{service.icon}</span>
                       </div>
-
                       {/* Service Info */}
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                         {service.name}
                       </h3>
                       <p className="text-gray-400 mb-4 line-clamp-3">{service.description}</p>
-
                       {/* Price */}
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                         <div className="text-sm text-gray-500">{service.period}</div>
                       </div>
-
                       {/* Features Preview */}
                       <div className="space-y-2 mb-6">
                         {service.features.slice(0, 3).map((feature, index) => (
@@ -549,7 +278,6 @@ export default function Services2024Page() {
                           </div>
                         )}
                       </div>
-
                       {/* Stats */}
                       <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
                         <div className="flex items-center">
@@ -561,7 +289,6 @@ export default function Services2024Page() {
                           {service.customers.toLocaleString()}+ customers
                         </div>
                       </div>
-
                       {/* CTA Button */}
                       <Link
                         href={service.link}
@@ -569,7 +296,6 @@ export default function Services2024Page() {
                       >
                         Get Started
                       </Link>
-
                       {/* Trial Info */}
                       <div className="text-center mt-3 text-sm text-gray-400">
                         {service.trialDays}-day free trial • Setup in {service.setupTime}
@@ -580,7 +306,6 @@ export default function Services2024Page() {
               </motion.div>
             ))}
           </div>
-
           {/* CTA Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -612,7 +337,6 @@ export default function Services2024Page() {
             </div>
           </motion.div>
         </div>
-
         {/* Contact Section */}
         <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border-t border-cyan-500/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -624,7 +348,6 @@ export default function Services2024Page() {
                 Our experts are here to help you find the perfect solution for your business needs.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -636,7 +359,6 @@ export default function Services2024Page() {
                   {contactInfo.mobile}
                 </a>
               </div>
-              
               <div className="text-center">
                 <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
@@ -647,17 +369,14 @@ export default function Services2024Page() {
                   {contactInfo.email}
                 </a>
               </div>
-              
               <div className="text-center">
                 <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-pink-300">{contactInfo.address}</p>
               </div>
             </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-4xl mx-auto text-center">
@@ -692,5 +411,4 @@ export default function Services2024Page() {
     </>
   );
 };
-
 export default Services2024Page;

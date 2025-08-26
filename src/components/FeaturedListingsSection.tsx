@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar } from 'lucide-react';
-
 const featuredListings = [
   {
     id: 1,
@@ -118,14 +117,11 @@ const featuredListings = [
     highlights: ["Real-time Dashboards", "Predictive Models", "Data Integration", "Custom Reports"]
   }
 ];
-
 const categories = [
   "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
 ];
-
 import React from 'react';
-import Link from 'next/link';
-
+import { Link } from 'react-router-dom';
 export function FeaturedListingsSection() {
   const featuredServices = [
     {
@@ -160,15 +156,14 @@ export function FeaturedListingsSection() {
       image: '🔒',
       link: '/services/cybersecurity',
       features: ['Security Audits', 'Threat Detection', 'Incident Response']
+=======
 export function FeaturedListingsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<number | null>(null);
   const [showFilters, setShowFilters] = useState(false);
-
   const filteredListings = selectedCategory === "All" 
     ? featuredListings 
     : featuredListings.filter(listing => listing.category === selectedCategory);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -179,7 +174,6 @@ export function FeaturedListingsSection() {
       }
     }
   ];
-
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
@@ -187,7 +181,6 @@ export function FeaturedListingsSection() {
       </span>
     ));
   };
-
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,7 +192,6 @@ export function FeaturedListingsSection() {
             Discover our most popular and highly-rated technology solutions
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredServices.map((service, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
@@ -213,19 +205,15 @@ export function FeaturedListingsSection() {
                     <span className="text-sm text-gray-600 ml-1">({service.reviews})</span>
                   </div>
                 </div>
-                
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {service.image}
                 </div>
-                
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   {service.title}
                 </h3>
-                
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   {service.description}
                 </p>
-                
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -237,7 +225,6 @@ export function FeaturedListingsSection() {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-gray-900">{service.price}</span>
                   <Link
@@ -246,9 +233,9 @@ export function FeaturedListingsSection() {
                   >
                     Learn More →
                   </Link>
+=======
                 </div>
               </div>
-              
               <div className="px-6 pb-6">
                 <Link
                   href={service.link}
@@ -260,7 +247,6 @@ export function FeaturedListingsSection() {
             </div>
           ))}
         </div>
-        
         <div className="text-center mt-12">
           <Link
             href="/services"
@@ -272,6 +258,7 @@ export function FeaturedListingsSection() {
             </svg>
           </Link>
         </div>
+=======
       </div>
     </section>
   );

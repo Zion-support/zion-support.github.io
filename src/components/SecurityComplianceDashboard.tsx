@@ -17,21 +17,17 @@ import {
 } from 'lucide-react';
 import { useSecurityCompliance } from '../hooks/useSecurityCompliance';
 import { useAnalytics } from '../hooks/useAnalytics';
-
 interface SecurityDashboardProps {
   className?: string;
 }
-
 export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ className = '' }) => {
   const { trackEvent } = useAnalytics({
     enableTracking: true,
     enableUserBehaviorTracking: true
   });
-
   const [activeTab, setActiveTab] = useState<'overview' | 'events' | 'compliance' | 'threats' | 'reports'>('overview');
   const [showSettings, setShowSettings] = useState(false);
   const [copied, setCopied] = useState(false);
-
   const {
     securityEvents,
     complianceRules,
@@ -48,22 +44,18 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
     exportAuditLog,
     configureSecurity
   } = useSecurityCompliance();
-
   const handleStartMonitoring = useCallback(() => {
     startMonitoring();
     trackEvent('security', 'dashboard', 'monitoring_started');
   }, [startMonitoring, trackEvent]);
-
   const handleStopMonitoring = useCallback(() => {
     stopMonitoring();
     trackEvent('security', 'dashboard', 'monitoring_stopped');
   }, [stopMonitoring, trackEvent]);
-
   const handleCheckCompliance = useCallback(async () => {
     await checkCompliance();
     trackEvent('security', 'dashboard', 'compliance_checked');
   }, [checkCompliance, trackEvent]);
-
   const handleGenerateReport = useCallback(() => {
     const report = generateSecurityReport();
     navigator.clipboard.writeText(report);
@@ -71,7 +63,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
     setTimeout(() => setCopied(false), 2000);
     trackEvent('security', 'dashboard', 'report_generated');
   }, [generateSecurityReport, trackEvent]);
-
   const handleExportAuditLog = useCallback(() => {
     const auditLog = exportAuditLog();
     const blob = new Blob([auditLog], { type: 'application/json' });
@@ -83,7 +74,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
     URL.revokeObjectURL(url);
     trackEvent('security', 'dashboard', 'audit_log_exported');
   }, [exportAuditLog, trackEvent]);
-
   const handleAddComplianceRule = useCallback(() => {
     const newRule = {
       name: 'Custom Compliance Rule',
@@ -96,7 +86,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
     addComplianceRule(newRule);
     trackEvent('security', 'dashboard', 'compliance_rule_added');
   }, [addComplianceRule, trackEvent]);
-
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical': return 'text-red-600 bg-red-100';
@@ -106,7 +95,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'compliant': return 'text-green-600 bg-green-100';
@@ -115,7 +103,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
       default: return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getThreatLevelColor = (level: string) => {
     switch (level) {
       case 'critical': return 'text-red-600 bg-red-100 border-red-200';
@@ -125,7 +112,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
       default: return 'text-gray-600 bg-gray-100 border-gray-200';
     }
   };
-
   return (
     <div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {/* Header */}
@@ -143,7 +129,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
             </p>
           </div>
         </div>
-        
         <div className="flex items-center space-x-2">
           <button
             onClick={handleCheckCompliance}
@@ -157,7 +142,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
             )}
             <span>Check Compliance</span>
           </button>
-          
           <button
             onClick={() => setShowSettings(!showSettings)}
             className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -166,7 +150,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
           </button>
         </div>
       </div>
-
       {/* Monitoring Status */}
       <div className="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center justify-between">
@@ -177,7 +160,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
                 {isMonitoring ? 'Monitoring Active' : 'Monitoring Inactive'}
               </span>
             </div>
-            
             <div className="flex items-center space-x-2">
               <Clock className="w-4 h-4 text-gray-500" />
               <span className="text-sm text-gray-600 dark:text-gray-400">
@@ -185,7 +167,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
               </span>
             </div>
           </div>
-          
           <div className="flex space-x-2">
             {!isMonitoring ? (
               <button
@@ -207,7 +188,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
           </div>
         </div>
       </div>
-
       {/* Navigation Tabs */}
       <div className="flex border-b border-gray-200 dark:border-gray-700">
         {[
@@ -231,7 +211,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
           </button>
         ))}
       </div>
-
       {/* Content */}
       <div className="p-4">
         <AnimatePresence>
@@ -254,7 +233,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
                     <AlertTriangle className="w-8 h-8 text-orange-500" />
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -264,7 +242,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
                     <XCircle className="w-8 h-8 text-red-500" />
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -274,7 +251,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
                     <CheckCircle className="w-8 h-8 text-green-500" />
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <div>
@@ -287,7 +263,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
                   </div>
                 </div>
               </div>
-
               {/* Recent Events */}
               <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Recent Security Events</h3>
@@ -317,7 +292,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
               </div>
             </motion.div>
           )}
-
           {activeTab === 'events' && (
             <motion.div
               key="events"
@@ -340,7 +314,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
                   Add Test Event
                 </button>
               </div>
-              
               <div className="space-y-3">
                 {securityEvents.map((event) => (
                   <div key={event.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
@@ -387,7 +360,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
               </div>
             </motion.div>
           )}
-
           {activeTab === 'compliance' && (
             <motion.div
               key="compliance"
@@ -405,7 +377,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
                   Add Rule
                 </button>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {complianceRules.map((rule) => (
                   <div key={rule.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
@@ -450,7 +421,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
               </div>
             </motion.div>
           )}
-
           {activeTab === 'threats' && (
             <motion.div
               key="threats"
@@ -460,7 +430,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
               className="space-y-4"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Threat Intelligence</h3>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Current Threat Level</h4>
@@ -474,7 +443,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
                     </p>
                   </div>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Response Metrics</h4>
                   <div className="space-y-3">
@@ -501,7 +469,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
               </div>
             </motion.div>
           )}
-
           {activeTab === 'reports' && (
             <motion.div
               key="reports"
@@ -511,7 +478,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
               className="space-y-4"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Reports & Analytics</h3>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Security Report</h4>
@@ -535,7 +501,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
                     )}
                   </button>
                 </div>
-                
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                   <h4 className="font-medium text-gray-900 dark:text-white mb-3">Audit Log Export</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
@@ -556,7 +521,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
           )}
         </AnimatePresence>
       </div>
-
       {/* Settings Panel */}
       <AnimatePresence>
         {showSettings && (
@@ -581,7 +545,6 @@ export const SecurityComplianceDashboard: React.FC<SecurityDashboardProps> = ({ 
                   </span>
                 </label>
               </div>
-              
               <div>
                 <label className="flex items-center space-x-2">
                   <input

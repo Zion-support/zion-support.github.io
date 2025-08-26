@@ -1,6 +1,5 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
-
 export const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
@@ -58,7 +57,6 @@ export const TestimonialsSection: React.FC = () => {
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
     }
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,7 +123,6 @@ export const TestimonialsSection: React.FC = () => {
             <ChevronRightIcon className="w-6 h-6 text-white" />
           </button>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
             <div
@@ -146,7 +143,6 @@ export const TestimonialsSection: React.FC = () => {
                   <p className="text-sm text-orange-400">{testimonial.company}</p>
                 </div>
               </div>
-
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
@@ -155,14 +151,12 @@ export const TestimonialsSection: React.FC = () => {
                   />
                 ))}
               </div>
-
               <blockquote className="text-gray-300 italic">
                 "{testimonial.content}"
               </blockquote>
             </div>
           ))}
         </div>
-
         <div className="text-center mt-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300">
             <Quote className="w-5 h-5 mr-2" />

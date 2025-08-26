@@ -1,7 +1,7 @@
 import React from 'react';
+=======
 import { Link } from 'react-router-dom';
 import { Link as LinkIcon, Shield, Zap, Users, Globe, Cpu, Database, Network, TrendingUp, Lock, Eye, Target } from 'lucide-react';
-
 const BlockchainWeb3: React.FC = () => {
   const blockchainServices = [
     {
@@ -41,7 +41,6 @@ const BlockchainWeb3: React.FC = () => {
       features: ["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"]
     }
   ];
-
   const web3Technologies = [
     {
       name: "Ethereum",
@@ -74,9 +73,9 @@ const BlockchainWeb3: React.FC = () => {
       icon: "AVAX"
     }
   ];
-
   const useCases = [
     {
+=======
       title: "Financial Services",
       description: "DeFi protocols, payment systems, and asset tokenization",
       icon: TrendingUp
@@ -107,7 +106,6 @@ const BlockchainWeb3: React.FC = () => {
       icon: Target
     }
   ];
-
   const benefits = [
     "Transparent and immutable record-keeping",
     "Reduced intermediaries and costs",
@@ -116,7 +114,6 @@ const BlockchainWeb3: React.FC = () => {
     "Global accessibility and inclusivity",
     "Real-time settlement and automation"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -152,7 +149,6 @@ const BlockchainWeb3: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Blockchain Services Grid */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -165,7 +161,6 @@ const BlockchainWeb3: React.FC = () => {
               and Web3 application creation.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blockchainServices.map((service, index) => (
               <div
@@ -185,12 +180,13 @@ const BlockchainWeb3: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+=======
               </div>
             ))}
           </div>
         </div>
       </section>
-
+=======
       {/* Web3 Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -203,7 +199,6 @@ const BlockchainWeb3: React.FC = () => {
               the best solutions for your specific needs.
             </p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {web3Technologies.map((tech, index) => (
               <div
@@ -220,7 +215,6 @@ const BlockchainWeb3: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -233,7 +227,6 @@ const BlockchainWeb3: React.FC = () => {
               and create new opportunities for innovation.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <div
@@ -250,8 +243,8 @@ const BlockchainWeb3: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
+=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -290,7 +283,7 @@ const BlockchainWeb3: React.FC = () => {
           </div>
         </div>
       </section>
-
+=======
       {/* Development Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -301,7 +294,6 @@ const BlockchainWeb3: React.FC = () => {
             A systematic approach to building secure, scalable, and user-friendly 
             blockchain applications.
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -334,8 +326,8 @@ const BlockchainWeb3: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
+=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -364,8 +356,7 @@ const BlockchainWeb3: React.FC = () => {
     </div>
   );
 };
-
 export default BlockchainWeb3;
+=======
 };
-
 export default BlockchainWeb3;

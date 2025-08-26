@@ -3,6 +3,7 @@ export interface ITService {
   title: string;
   description: string;
   category: string;
+=======
   pricing: {
     hourly: number;
     project: number;
@@ -22,7 +23,6 @@ export interface ITService {
   icon: string;
   image: string;
 }
-
 export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "ai-development-integration",
@@ -579,15 +579,13 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"
   }
 ];
-
 export const getITServiceById = (id: string): ITService | undefined => {
   return ENHANCED_IT_SERVICES.find(service => service.id === id);
 };
-
 export const getITServicesByCategory = (category: string): ITService[] => {
   return ENHANCED_IT_SERVICES.filter(service => service.category === category);
 };
-
 export const getITServiceCategories = (): string[] => {
   return [...new Set(ENHANCED_IT_SERVICES.map(service => service.category))];
 };
+=======

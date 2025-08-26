@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+=======
 import React from 'react';
 import { FileText, Download, Calendar, User, Tag, ArrowRight, Search, Filter, BookOpen, Globe, Zap, Target, TrendingUp, Brain, Atom, Shield, Wifi, Leaf, Cloud, BarChart3, Link } from 'lucide-react';
+=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const WhitePapers: React.FC = () => {
   const whitePapers = [
     {
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
-
 const $page: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -21,6 +21,7 @@ const $page: React.FC = () => {
             <div className="p-3 bg-blue-600/20 rounded-full">
               <CogIcon className="h-12 w-12 text-blue-400" />
             </div>
+=======
       title: "AI-Powered Digital Transformation: A Comprehensive Guide for Enterprise Leaders",
       category: "Digital Transformation",
       date: "2025-01-10",
@@ -98,7 +99,6 @@ const $page: React.FC = () => {
       pageCount: 20
     }
   ];
-
   const categories = [
     { name: "All", count: 6, active: true },
     { name: "AI & Machine Learning", count: 2, active: false },
@@ -107,6 +107,7 @@ const $page: React.FC = () => {
     { name: "Cloud & Infrastructure", count: 1, active: false },
     { name: "AI Ethics", count: 1, active: false }
   ];
+=======
       title: "AI-Powered Business Transformation: A Comprehensive Guide",
       description: "Explore how artificial intelligence is revolutionizing business operations and driving digital transformation across industries.",
       author: "Dr. Sarah Chen",
@@ -167,7 +168,6 @@ const $page: React.FC = () => {
       pdfUrl: "#"
     }
   ];
-
   const categories = [
     "All Categories",
     "Artificial Intelligence",
@@ -179,10 +179,8 @@ const $page: React.FC = () => {
     "Cloud Computing",
     "Data Analytics"
   ];
-
   const [selectedCategory, setSelectedCategory] = React.useState("All Categories");
   const [searchQuery, setSearchQuery] = React.useState("");
-
   const filteredPapers = whitePapers.filter(paper => {
     const matchesCategory = selectedCategory === "All Categories" || paper.category === selectedCategory;
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -190,7 +188,6 @@ const $page: React.FC = () => {
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -229,7 +226,6 @@ const $page: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* White Papers Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -247,6 +243,7 @@ const $page: React.FC = () => {
                     <Download className="w-4 h-4 mr-1" />
                     {paper.downloads}
                   </div>
+=======
       title: "AI-Powered Business Transformation: A Comprehensive Guide",
       description: "Explore how artificial intelligence is revolutionizing business operations and creating new opportunities for growth and innovation.",
       category: "AI & Business",
@@ -279,7 +276,6 @@ const $page: React.FC = () => {
       downloadCount: "1,600+"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -296,7 +292,6 @@ const $page: React.FC = () => {
               and innovative solutions for modern businesses
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {whitePapers.map((paper, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
@@ -305,12 +300,10 @@ const $page: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{paper.title}</h3>
                 <p className="text-gray-300 mb-4">{paper.description}</p>
-                
                 <div className="flex items-center justify-between mb-4 text-sm text-gray-400">
                   <span>Published: {paper.date}</span>
                   <span>{paper.pages} pages</span>
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-400">{paper.downloadCount} downloads</span>
                   <Link
@@ -323,15 +316,12 @@ const $page: React.FC = () => {
                     </svg>
                   </Link>
                 </div>
-                
                 <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
                   {paper.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-4 line-clamp-3">
                   {paper.description}
                 </p>
-                
                 <div className="flex flex-wrap gap-2 mb-4">
                   {paper.tags.map((tag, idx) => (
                     <span
@@ -342,7 +332,6 @@ const $page: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <div className="flex items-center">
                     <User className="w-4 h-4 mr-1" />
@@ -353,7 +342,6 @@ const $page: React.FC = () => {
                     {paper.date}
                   </div>
                 </div>
-                
                 <a
                   href={paper.pdfUrl}
                   className="w-full flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
@@ -364,7 +352,6 @@ const $page: React.FC = () => {
               </div>
             ))}
           </div>
-          
           {filteredPapers.length === 0 && (
             <div className="text-center py-16">
               <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -374,7 +361,6 @@ const $page: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* Featured Research */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -387,7 +373,6 @@ const $page: React.FC = () => {
               the latest technology trends and innovations.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {categories.slice(1, 9).map((category, index) => (
               <div
@@ -431,7 +416,7 @@ const $page: React.FC = () => {
             >
               View All Resources
             </a>
-          
+=======
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
@@ -448,7 +433,6 @@ const $page: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Featured Paper */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-4xl mx-auto text-center">
@@ -480,7 +464,6 @@ const $page: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Newsletter Signup */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -506,7 +489,6 @@ const $page: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-4xl mx-auto text-center">
@@ -537,8 +519,8 @@ const $page: React.FC = () => {
     </>
   );
 };
-
 export default WhitePapers;
+=======
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             $page
           </h1>
@@ -556,5 +538,4 @@ export default WhitePapers;
     </div>
   );
 };
-
 export default $page;

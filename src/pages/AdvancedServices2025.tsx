@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const AdvancedServices2025: React.FC = () => {
   const advancedServices = [
     {
@@ -298,7 +297,6 @@ const AdvancedServices2025: React.FC = () => {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -314,7 +312,6 @@ const AdvancedServices2025: React.FC = () => {
               Cutting-edge technology solutions and innovative micro SaaS services designed to transform your business
             </p>
           </div>
-          
           {advancedServices.map((category, categoryIndex) => (
             <div key={categoryIndex} className="mb-20">
               <div className="text-center mb-12">
@@ -325,7 +322,6 @@ const AdvancedServices2025: React.FC = () => {
                   {category.description}
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
                   <div
@@ -335,7 +331,6 @@ const AdvancedServices2025: React.FC = () => {
                     <div className="text-4xl mb-4">{service.icon}</div>
                     <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
-                    
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
@@ -347,12 +342,10 @@ const AdvancedServices2025: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-green-400 mb-2">Pricing:</h4>
                       <p className="text-sm text-gray-300">{service.pricing}</p>
                     </div>
-
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-yellow-400 mb-2">Key Benefits:</h4>
                       <ul className="space-y-1">
@@ -364,17 +357,14 @@ const AdvancedServices2025: React.FC = () => {
                         ))}
                       </ul>
                     </div>
-
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-purple-400 mb-2">Market Position:</h4>
                       <p className="text-sm text-gray-300">{service.marketPosition}</p>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Competitive Advantage:</h4>
                       <p className="text-sm text-gray-300">{service.competitiveAdvantage}</p>
                     </div>
-                    
                     <Link
                       to="/contact"
                       className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
@@ -391,7 +381,6 @@ const AdvancedServices2025: React.FC = () => {
           ))}
         </div>
       </section>
-
       {/* Enhanced CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -433,5 +422,4 @@ const AdvancedServices2025: React.FC = () => {
     </div>
   );
 };
-
 export default AdvancedServices2025;

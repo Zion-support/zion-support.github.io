@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+=======
 import { 
   Mail, 
   Phone, 
@@ -17,7 +18,6 @@ import {
   ExternalLink,
   Star
 } from "lucide-react";
-
 export function ContactInfo() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -30,7 +30,6 @@ export function ContactInfo() {
             Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div className="space-y-6">
@@ -54,7 +53,6 @@ export function ContactInfo() {
                     <p className="text-zion-cyan">+1 302 464 0950</p>
                   </div>
                 </div>
-                
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">
                     <Mail className="h-5 w-5 text-zion-purple" />
@@ -64,7 +62,6 @@ export function ContactInfo() {
                     <p className="text-zion-cyan">kleber@ziontechgroup.com</p>
                   </div>
                 </div>
-                
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">
                     <MapPin className="h-5 w-5 text-zion-purple" />
@@ -74,7 +71,6 @@ export function ContactInfo() {
                     <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
                   </div>
                 </div>
-                
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">
                     <Globe className="h-5 w-5 text-zion-purple" />
@@ -94,7 +90,6 @@ export function ContactInfo() {
                 </div>
               </CardContent>
             </Card>
-            
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
@@ -131,7 +126,6 @@ export function ContactInfo() {
               </CardContent>
             </Card>
           </div>
-          
           {/* Quick Actions & Services */}
           <div className="space-y-6">
             <Card className="bg-zion-blue border-zion-blue-light">
@@ -150,21 +144,18 @@ export function ContactInfo() {
                     Request Free Quote
                   </Button>
                 </Link>
-                
                 <Link to="/comprehensive-services">
                 <Link href="/comprehensive-services">
                   <Button variant="outline" className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                     View All Services
                   </Button>
                 </Link>
-                
                 <Link to="/it-onsite-services">
                 <Link href="/it-onsite-services">
                   <Button variant="outline" className="w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10">
                     IT Onsite Services
                   </Button>
                 </Link>
-                
                 <div className="pt-4 border-t border-zion-blue-light">
                   <p className="text-zion-slate-light text-sm mb-3">Need immediate assistance?</p>
                   <div className="flex items-center gap-2">
@@ -174,7 +165,6 @@ export function ContactInfo() {
                 </div>
               </CardContent>
             </Card>
-            
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
@@ -212,7 +202,6 @@ export function ContactInfo() {
             </Card>
           </div>
         </div>
-        
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto">

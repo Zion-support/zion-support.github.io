@@ -113,6 +113,7 @@ module.exports = {
             "background-size": "200% 200%",
             "background-position": "right center",
           },
+=======
         },
         glow: {
           "0%": { boxShadow: "0 0 20px rgba(147, 51, 234, 0.3)" },
@@ -285,6 +286,7 @@ module.exports = {
       minHeight: {
         'screen-75': '75vh',
         'screen-90': '90vh',
+=======
       },
     },
   },

@@ -1,4 +1,5 @@
 import React from 'react';
+=======
       title: "Technology Assessment",
       description: "Comprehensive evaluation of your current technology landscape and capabilities",
       features: ["Infrastructure Review", "Technology Stack Analysis", "Gap Identification", "Recommendations"],
@@ -9,12 +10,14 @@ import React from 'react';
       description: "Develop long-term technology strategy aligned with business objectives",
       features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
       icon: "📋"
+=======
       features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
       icon: "📋"
     },
     {
       title: "Vendor Selection",
       description: "Expert guidance in selecting the right technology partners and solutions",
+=======
       features: ["Requirements Analysis", "Vendor Evaluation", "Contract Negotiation", "Implementation Support"],
       icon: "🤝"
     },
@@ -26,14 +29,12 @@ import React from 'react';
       icon: "📊"
     }
   ];
-
   const consultingApproach = [
     { step: "Discovery", icon: "🔍", description: "Understand your business needs and challenges" },
     { step: "Analysis", icon: "📊", description: "Analyze current state and identify opportunities" },
     { step: "Strategy", icon: "🎯", description: "Develop comprehensive recommendations" },
     { step: "Implementation", icon: "🚀", description: "Execute strategy with ongoing support" }
   ];
-
   const consultingAreas = [
     { area: "Enterprise Architecture", solutions: ["Technology strategy", "System design", "Integration planning", "Scalability assessment"] },
     { area: "Digital Strategy", solutions: ["Digital transformation", "Technology roadmap", "Innovation strategy", "Change management"] },
@@ -41,7 +42,6 @@ import React from 'react';
     { area: "Cloud Strategy", solutions: ["Cloud assessment", "Migration planning", "Cost optimization", "Multi-cloud strategy"] }
   ];
 import Link from 'next/link';
-
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -50,7 +50,6 @@ import Link from 'next/link';
         keywords="technology consulting, strategic consulting, team training, project management, performance optimization"
         canonical="https://ziontechgroup.com/services/consulting"
       />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -81,7 +80,7 @@ import Link from 'next/link';
             </div>
           </div>
         </section>
-
+=======
         {/* Consulting Approach */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -93,7 +92,6 @@ import Link from 'next/link';
                 A proven methodology for successful technology consulting
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {consultingApproach.map((step, index) => (
                 <div
@@ -108,7 +106,6 @@ import Link from 'next/link';
             </div>
           </div>
         </section>
-
         {/* Consulting Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -120,7 +117,6 @@ import Link from 'next/link';
                 Comprehensive technology consulting to drive your business success
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {consultingServices.map((service, index) => (
                 <div
@@ -130,7 +126,6 @@ import Link from 'next/link';
                   <div className="text-5xl mb-6">{service.icon}</div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
-                  
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -147,7 +142,6 @@ import Link from 'next/link';
             </div>
           </div>
         </section>
-
         {/* Consulting Areas */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -159,7 +153,6 @@ import Link from 'next/link';
                 Specialized expertise across key technology domains
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {consultingAreas.map((area, index) => (
                 <div
@@ -180,7 +173,7 @@ import Link from 'next/link';
             </div>
           </div>
         </section>
-
+=======
         {/* Success Stories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -192,7 +185,6 @@ import Link from 'next/link';
                 Real results from our consulting projects
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">Financial Services Firm</h3>
@@ -203,7 +195,6 @@ import Link from 'next/link';
                   <strong>Results:</strong> 40% cost reduction, improved reliability
                 </div>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">Healthcare Provider</h3>
                 <p className="text-gray-300 mb-4">
@@ -216,7 +207,6 @@ import Link from 'next/link';
             </div>
           </div>
         </section>
-
         {/* Technology Stack */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -228,8 +218,8 @@ import Link from 'next/link';
                 Deep knowledge across leading technology platforms and solutions
               </p>
             </div>
-            
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+=======
               {[
                 "Cloud Platforms", "Security Solutions", "Data Analytics", "AI/ML",
                 "DevOps Tools", "Enterprise Software", "Integration Platforms", "Mobile Technologies",
@@ -245,8 +235,8 @@ import Link from 'next/link';
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
+=======
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -267,5 +257,4 @@ import Link from 'next/link';
     </>
   );
 };
-
 export default Consulting;

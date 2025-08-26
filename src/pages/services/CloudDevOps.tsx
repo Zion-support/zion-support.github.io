@@ -1,18 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+=======
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+=======
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
 const CloudDevOps: React.FC = () => {
   const features = [
     {
       icon: Cloud,
       title: "Cloud Migration",
+=======
       description: "Seamless migration to cloud platforms with minimal downtime",
       features: ["AWS Migration", "Azure Migration", "Google Cloud Migration", "Multi-cloud Strategy"],
       icon: "☁️"
@@ -28,9 +30,9 @@ const CloudDevOps: React.FC = () => {
       description: "Manage and scale containerized applications efficiently",
       features: ["Kubernetes", "Docker", "Service Mesh", "Microservices Architecture"],
       icon: "📦"
+=======
 import { Link } from 'react-router-dom';
 import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'lucide-react';
-
 const CloudDevOps: React.FC = () => {
   const cloudServices = [
     {
@@ -44,6 +46,7 @@ const CloudDevOps: React.FC = () => {
       title: "Infrastructure as Code",
       description: "Automated infrastructure provisioning and management using modern DevOps practices.",
       features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
+=======
       description: "Automated infrastructure provisioning and management using modern DevOps practices.",
       features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
     },
@@ -77,20 +80,19 @@ const CloudDevOps: React.FC = () => {
       icon: "🏗️"
     }
   ];
-
   const cloudPlatforms = [
+=======
     { name: "AWS", features: ["EC2", "S3", "Lambda", "RDS", "CloudFormation"] },
     { name: "Azure", features: ["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "ARM Templates"] },
     { name: "Google Cloud", features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "Deployment Manager"] }
   ];
-
   const devOpsTools = [
     { category: "CI/CD", tools: ["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },
     { category: "Infrastructure", tools: ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },
     { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },
     { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
   ];
-
+=======
   return (
     <>
       <Helmet>
@@ -101,7 +103,7 @@ const CloudDevOps: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/cloud-devops" />
         <link rel="canonical" href="https://ziontechgroup.com/services/cloud-devops" />
       </Helmet>
-
+=======
       description: "Automated build, test, and deployment pipelines for faster, more reliable releases.",
       features: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
     },
@@ -112,7 +114,6 @@ const CloudDevOps: React.FC = () => {
       features: ["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"]
     }
   ];
-
   const platforms = [
     {
       name: "AWS",
@@ -135,7 +136,6 @@ const CloudDevOps: React.FC = () => {
       icon: "🌐"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -171,7 +171,6 @@ const CloudDevOps: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Cloud Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -183,7 +182,6 @@ const CloudDevOps: React.FC = () => {
               Comprehensive solutions to modernize your infrastructure and accelerate your development lifecycle.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {cloudServices.map((service, index) => (
               <div
@@ -208,7 +206,6 @@ const CloudDevOps: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Cloud Platforms */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -220,7 +217,6 @@ const CloudDevOps: React.FC = () => {
               Expertise across major cloud providers to give you flexibility and choice.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {platforms.map((platform, index) => (
               <div key={index} className="text-center">
@@ -234,8 +230,8 @@ const CloudDevOps: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
+=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -295,8 +291,8 @@ const CloudDevOps: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
+=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -327,7 +323,6 @@ const CloudDevOps: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Cloud Services Overview */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -339,7 +334,6 @@ const CloudDevOps: React.FC = () => {
                 Comprehensive solutions to modernize your infrastructure and development practices
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {cloudServices.map((service, index) => (
                 <div
@@ -349,7 +343,6 @@ const CloudDevOps: React.FC = () => {
                   <div className="text-5xl mb-6">{service.icon}</div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
-                  
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -366,7 +359,7 @@ const CloudDevOps: React.FC = () => {
             </div>
           </div>
         </section>
-
+=======
         {/* Cloud Platforms */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -378,7 +371,6 @@ const CloudDevOps: React.FC = () => {
                 Deep expertise across major cloud providers
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {cloudPlatforms.map((platform, index) => (
                 <div
@@ -399,7 +391,6 @@ const CloudDevOps: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* DevOps Process */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -411,7 +402,6 @@ const CloudDevOps: React.FC = () => {
                 Structured approach to implementing modern DevOps practices
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {[
                 { step: "Assessment", icon: "🔍", description: "Evaluate current processes and identify improvement opportunities" },
@@ -431,7 +421,6 @@ const CloudDevOps: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* DevOps Tools */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -443,7 +432,6 @@ const CloudDevOps: React.FC = () => {
                 Industry-leading tools for modern DevOps practices
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {devOpsTools.map((category, index) => (
                 <div
@@ -463,7 +451,6 @@ const CloudDevOps: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -475,7 +462,6 @@ const CloudDevOps: React.FC = () => {
                 Transform your development and operations for better results
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 { title: "Faster Deployment", description: "Reduce time-to-market with automated CI/CD pipelines", icon: "⚡" },
@@ -497,7 +483,6 @@ const CloudDevOps: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Case Studies */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -509,7 +494,6 @@ const CloudDevOps: React.FC = () => {
                 Real results from our cloud and DevOps implementations
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">E-commerce Platform</h3>
@@ -520,7 +504,6 @@ const CloudDevOps: React.FC = () => {
                   <strong>Results:</strong> 99.9% uptime, 60% faster deployments
                 </div>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">Financial Services App</h3>
                 <p className="text-gray-300 mb-4">
@@ -533,7 +516,6 @@ const CloudDevOps: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
@@ -541,6 +523,7 @@ const CloudDevOps: React.FC = () => {
               Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
+=======
               Let's discuss how cloud migration and DevOps can accelerate your business
             </p>
             <Link
@@ -553,6 +536,8 @@ const CloudDevOps: React.FC = () => {
         </section>
       </div>
     </>
+=======
+=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -581,5 +566,4 @@ const CloudDevOps: React.FC = () => {
     </div>
   );
 };
-
 export default CloudDevOps;

@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, Clock, DollarSign, Users, Zap, Heart, Globe, Shield } from 'lucide-react';
-
 export default function Careers() {
   const openPositions = [
     {
@@ -74,7 +73,6 @@ export default function Careers() {
       posted: "4 days ago"
     }
   ];
-
   const benefits = [
     {
       icon: <Zap className="w-8 h-8 text-zion-cyan" />,
@@ -100,12 +98,12 @@ export default function Careers() {
       icon: <Shield className="w-8 h-8 text-zion-cyan" />,
       title: "Security",
       description: "Competitive salary, equity, and retirement benefits"
+=======
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 export default function Careers() {
   // Sample job listings
   const jobs = {
@@ -181,7 +179,6 @@ export default function Careers() {
       }
     ]
   };
-
   // Benefits list
   const benefits = [
     {
@@ -221,7 +218,6 @@ export default function Careers() {
       )
     }
   ];
-
   return (
     <>
       <SEO 
@@ -230,7 +226,6 @@ export default function Careers() {
         keywords="careers, jobs, Zion Tech Group, AI jobs, tech jobs, remote jobs"
         canonical="https://ziontechgroup.com/careers"
       />
-      
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -255,7 +250,6 @@ export default function Careers() {
               </Badge>
             </div>
           </div>
-
           {/* Company Culture */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
@@ -275,7 +269,6 @@ export default function Careers() {
               ))}
             </div>
           </section>
-
           {/* Open Positions */}
           <section>
             <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>
@@ -302,7 +295,6 @@ export default function Careers() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-zion-slate-light mb-4">{position.description}</p>
-                    
                     <div className="mb-4">
                       <h4 className="font-semibold text-white mb-2">Requirements:</h4>
                       <ul className="list-disc list-inside text-zion-slate-light space-y-1 ml-4">
@@ -311,7 +303,6 @@ export default function Careers() {
                         ))}
                       </ul>
                     </div>
-                    
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                       <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                         <span className="flex items-center gap-1">
@@ -328,7 +319,6 @@ export default function Careers() {
               ))}
             </div>
           </section>
-
           {/* Call to Action */}
           <section className="mt-20 text-center">
             <Card className="bg-zion-blue-dark border-zion-cyan/30 text-white max-w-2xl mx-auto">
@@ -345,7 +335,6 @@ export default function Careers() {
               </CardContent>
             </Card>
           </section>
-
           {/* Contact Information */}
           <section className="mt-20 text-center">
             <h2 className="text-2xl font-bold text-white mb-8">Get in Touch</h2>
@@ -375,7 +364,6 @@ export default function Careers() {
               Help us build the future of AI and technology
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
@@ -401,7 +389,6 @@ export default function Careers() {
               />
             </div>
           </div>
-          
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -416,10 +403,8 @@ export default function Careers() {
               ))}
             </div>
           </div>
-          
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
-            
             <Tabs defaultValue="engineering" className="w-full">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center">
                 <TabsTrigger value="engineering" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Engineering</TabsTrigger>
@@ -427,7 +412,6 @@ export default function Careers() {
                 <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>
                 <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>
               </TabsList>
-              
               {Object.entries(jobs).map(([department, jobList]) => (
                 <TabsContent key={department} value={department} className="space-y-6">
                   {jobList.map((job, index) => (
@@ -454,7 +438,6 @@ export default function Careers() {
               ))}
             </Tabs>
           </div>
-          
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">

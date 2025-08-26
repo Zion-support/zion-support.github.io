@@ -1,6 +1,6 @@
 import { ProductListing } from "@/types/listings";
-
 // Comprehensive Micro SAAS Services, IT Services, and AI Services
+=======
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services
   {
@@ -19,6 +19,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1633412802999-5ea7c61b2107?auto=format&fit=crop&w=800&h=500"],
+=======
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
     },
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
@@ -193,7 +194,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 94
   },
-
   // IT Infrastructure Services
   {
     id: "cloud-migration-consulting",
@@ -212,6 +212,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-10T11:45:00.000Z",
     rating: 4.9,
+=======
     reviewCount: 134,
     featured: true,
     location: "Global",
@@ -472,7 +473,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 89
   },
-
   // Micro SAAS Solutions
   {
     id: "inventory-management-saas",
@@ -483,6 +483,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 199,
     currency: "$",
     tags: ["Inventory Management", "Barcode Scanning", "Automated Reordering", "Analytics"],
+=======
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
@@ -525,6 +526,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     price: 299,
     currency: "$",
     tags: ["Project Management", "Task Automation", "Resource Optimization", "Risk Assessment"],
+=======
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
@@ -561,7 +563,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 90
   },
-
   // Advanced AI Solutions
   {
     id: "computer-vision-api",
@@ -579,6 +580,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-15T09:30:00.000Z",
+=======
     images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.9,
@@ -590,7 +592,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     pricingTier: "Enterprise"
   }
 ];
-
 export const SERVICE_CATEGORIES = [
   "AI Services",
   "IT Services", 
@@ -602,7 +603,6 @@ export const SERVICE_CATEGORIES = [
   "IoT Solutions",
   "Education"
 ];
-
 export const SERVICE_SUBCATEGORIES = {
   "AI Services": ["Chatbots & Virtual Assistants", "Content Generation", "Business Intelligence", "Computer Vision", "Natural Language Processing"],
   "IT Services": ["Cloud Services", "Cybersecurity", "DevOps", "Infrastructure", "Data Management"],
@@ -614,7 +614,6 @@ export const SERVICE_SUBCATEGORIES = {
   "IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],
   "Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"]
 };
-
 export const PRICING_TIERS = {
   "Starter": { min: 500, max: 2000, label: "Starter ($500 - $2,000)" },
   "Professional": { min: 2000, max: 5000, label: "Professional ($2,000 - $5,000)" },
@@ -668,7 +667,6 @@ export const PRICING_TIERS = {
     availability: "3-4 Weeks",
     aiScore: 96
   },
-
   // IT Consulting & Strategy
   {
     id: "digital-transformation-strategy",
@@ -716,7 +714,6 @@ export const PRICING_TIERS = {
     availability: "3-4 Weeks",
     aiScore: 88
   },
-
   // Specialized Micro SAAS
   {
     id: "hr-automation-platform",
@@ -787,7 +784,6 @@ export const PRICING_TIERS = {
     aiScore: 90
   }
 ];
-
 // Service Categories for better organization
 export const SERVICE_CATEGORIES = [
   {
@@ -815,7 +811,6 @@ export const SERVICE_CATEGORIES = [
     services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS")
   }
 ];
-
 // Pricing Tiers for different service levels
 export const PRICING_TIERS = [
   {
@@ -858,7 +853,6 @@ export const PRICING_TIERS = [
     ]
   }
 ];
-
 // Contact Information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",
@@ -868,3 +862,4 @@ export const CONTACT_INFO = {
   businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
   responseTime: "24-48 hours for initial response"
 };
+=======

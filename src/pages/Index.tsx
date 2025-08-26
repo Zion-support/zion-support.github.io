@@ -1,6 +1,4 @@
-
-
-import React, { Suspense } from 'react';
+=======
 import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -30,14 +28,9 @@ import {
   BarChart3,
   Smartphone
 } from "lucide-react";
-
-// Lazy load heavy components for better performance
-const InteractiveServiceShowcase = React.lazy(() => import('@/components/InteractiveServiceShowcase'));
-
 export default function Index() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
-  
   // Tools and features showcase
   const toolsFeatures = [
     {
@@ -77,7 +70,6 @@ export default function Index() {
       link: "/mobile-launch"
     }
   ];
-
   return (
     <div className="min-h-screen bg-zion-blue text-white">
       <SEO 
@@ -86,10 +78,8 @@ export default function Index() {
         keywords={t("home.seo_keywords", "AI solutions, cloud computing, cybersecurity, digital transformation, technology consulting")}
         canonical="https://ziontechgroup.com/"
       />
-      
-      {/* Enhanced Hero Section */}
-      <PerformanceOptimizedHero />
-      
+              <HeroSection />
+=======
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -101,7 +91,6 @@ export default function Index() {
               {t("home.tools_description", "Discover our comprehensive suite of technology tools and services designed to accelerate your business growth.")}
             </p>
           </div>
-          
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index) => (
               <Link 
@@ -123,25 +112,10 @@ export default function Index() {
           </div>
         </div>
       </section>
-      
-      {/* Enhanced Services Showcase */}
-      <EnhancedServicesShowcase />
-      
       <CategoriesSection />
       <BenefitsSection />
-      
-      {/* Interactive Service Showcase - Lazy Loaded */}
-      <Suspense fallback={
-        <div className="py-20 bg-zion-slate-dark">
-          <div className="container mx-auto px-4 text-center">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan mx-auto mb-8"></div>
-            <h3 className="text-2xl font-bold text-white">Loading Interactive Services...</h3>
-          </div>
-        </div>
-      }>
-        <InteractiveServiceShowcase />
-      </Suspense>
-      
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />
       <HowItWorksSection />
       
       {/* Enhanced Testimonials */}
@@ -149,10 +123,8 @@ export default function Index() {
       
       <TrustedBySection />
       <BlogSection />
-      
-      {/* Enhanced Contact CTA Section */}
-      <EnhancedContactCTA />
-      
+      {/* Add social share section to encourage users to spread the word */}
+      <SocialShareSection />
       <WaitlistSection />
       <FloatingCTA />
       <Footer />

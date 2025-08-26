@@ -1,8 +1,9 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, ChevronDown, Users, Briefcase, Settings, BarChart3 } from "lucide-react";
+=======
+=======
 import { MessageSquare, ChevronDown, Brain, Shield, Cloud, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
@@ -24,6 +25,7 @@ import { useState } from "react";
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+=======
 import { useTranslation } from "react-i18next";
 import {
   DropdownMenu,
@@ -31,13 +33,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
+=======
 interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
 }
-
 interface NavigationLink {
   key: string;
   href: string;
@@ -45,30 +46,30 @@ interface NavigationLink {
   matches: (path: string) => boolean;
   dropdown?: { href: string; name: string; }[];
 }
-
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
+=======
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
+=======
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
+=======
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+=======
         setDropdownOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
@@ -79,232 +80,43 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  const baseLinks: NavigationLink[] = [
-    {
-      key: 'home',
-      href: '/',
-      matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services') || path.startsWith('/green-it')
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path.startsWith('/about')
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path === '/about'
-    },
-    {
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-    },
-    {
-      key: 'ai-services',
-      href: '/ai-services',
-      matches: (path: string) => path.startsWith('/ai-services')
-    },
-    {
-      key: 'it-services',
-      href: '/it-services',
-      matches: (path: string) => path.startsWith('/it-services')
-    },
-    {
-      key: 'micro-saas',
-      href: '/micro-saas',
-      matches: (path: string) => path.startsWith('/micro-saas')
-    },
-    {
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path.startsWith('/about')
-    },
-    {
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services')
-      name: 'Home',
-      matches: (path: string) => path === '/'
-    },
-    {
-      key: 'services',
-      href: '/services',
-      name: 'Services',
-      matches: (path: string) => path.startsWith('/services')
-    },
-    {
-      key: 'services',
-      href: '/comprehensive-services',
-      matches: (path: string) => path.startsWith('/comprehensive-services') || path.startsWith('/services')
-    },
-    {
-      key: 'marketplace',
-      href: '/marketplace',
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services')
-    },
-    {
-      key: 'micro-saas',
-      href: '/micro-saas-services',
-      matches: (path: string) => path.startsWith('/micro-saas-services')
-      matches: (path: string) => path === '/'
-    },
-    {
-      key: 'marketplace',
-      href: '/marketplace',
-      matches: (path: string) => path.startsWith('/marketplace')
-    },
-    {
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-    },
-    {
-      key: 'categories',
-      href: '/categories',
-      matches: (path: string) => path.startsWith('/categories')
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-      matches: (path: string) => path.startsWith('/marketplace'),
-      name: t('nav.marketplace')
-      name: 'Marketplace',
-      matches: (path: string) => path.startsWith('/marketplace'),
-      dropdown: [
-        { href: '/marketplace', label: 'All Products' },
-        { href: '/categories', label: 'Categories' },
-        { href: '/equipment', label: 'Equipment' },
-        { href: '/green-it', label: 'Green IT' }
-      ]
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-      name: 'Marketplace',
-      matches: (path: string) => path.startsWith('/marketplace'),
-      dropdown: [
-        { href: '/services', name: 'Services' },
-        { href: '/equipment', name: 'Equipment' },
-        { href: '/categories', name: 'Categories' },
-        { href: '/green-it', name: 'Green IT' }
-      ]
-    },
-    {
-      key: 'talent',
-      href: '/talent',
-      key: 'ai-hiring',
-      href: '/zion-hire-ai',
-      matches: (path: string) => path.startsWith('/zion-hire-ai') || path.startsWith('/hire-ai')
+  const toggleDropdown = (dropdownName: string) => {
+    if (activeDropdown === dropdownName) {
+      setActiveDropdown(null);
+    } else {
+      setActiveDropdown(dropdownName);
     }
+  };
+  const isActive = (path: string) => location.pathname === path;
+  // Align to live site routes discovered in sitemap
+  const navigationItems = [
+    { key: 'home', href: '/', label: t('nav.home'), icon: null },
+    { key: 'about', href: '/about', label: t('nav.about'), icon: null },
+    { key: 'solutions', href: '/solutions', label: t('nav.solutions') ?? 'Solutions', icon: null },
+    { key: 'services', href: '/services', label: t('nav.services'), icon: <ChevronDown className="w-4 h-4 ml-1" />, hasDropdown: true, dropdownItems: [
+      { key: 'ai', href: '/services/ai', label: t('nav.aiServices') ?? 'AI', icon: <Brain className="w-4 h-4" />, description: t('nav.aiServicesDesc') },
+      { key: 'cloud', href: '/services/cloud', label: t('nav.cloud') ?? 'Cloud', icon: <Cloud className="w-4 h-4" />, description: t('nav.cloudDesc') },
+      { key: 'cybersecurity', href: '/services/cybersecurity', label: t('nav.cybersecurity') ?? 'Cybersecurity', icon: <Shield className="w-4 h-4" />, description: t('nav.cybersecurityDesc') },
+      { key: 'infrastructure', href: '/services/infrastructure', label: t('nav.infrastructure') ?? 'Infrastructure', icon: <Zap className="w-4 h-4" />, description: t('nav.infrastructureDesc') },
+      { key: 'transformation', href: '/services/transformation', label: t('nav.transformation') ?? 'Transformation', icon: <FileText className="w-4 h-4" />, description: t('nav.transformationDesc') },
+      { key: 'consulting', href: '/services/consulting', label: t('nav.consulting') ?? 'Consulting', icon: <FileText className="w-4 h-4" />, description: t('nav.consultingDesc') }
+    ]},
+    { key: 'research', href: '/research-development', label: t('nav.research') ?? 'R&D', icon: null },
+    { key: 'case-studies', href: '/case-studies', label: t('nav.caseStudies') ?? 'Case Studies', icon: null },
+    { key: 'news', href: '/news', label: t('nav.news') ?? 'News', icon: null },
+    { key: 'events', href: '/events', label: t('nav.events') ?? 'Events', icon: null },
+    { key: 'careers', href: '/careers', label: t('nav.careers') ?? 'Careers', icon: null },
+    { key: 'contact', href: '/contact', label: t('nav.contact'), icon: null }
   ];
-
-  const moreLinks = [
-    {
-      key: 'categories',
-      href: '/categories',
-      icon: <FileText className="w-4 h-4" />,
-      description: 'Browse service categories'
-      matches: (path: string) => path.startsWith('/equipment'),
-      name: t('nav.equipment')
-    },
-    {
-      key: 'partners',
-      href: '/partners',
-      matches: (path: string) => path.startsWith('/partners')
-      name: 'Talent',
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
-      dropdown: [
-        { href: '/talent', label: 'Find Talent' },
-        { href: '/talent/apply', label: 'Apply as Talent' },
-        { href: '/zion-hire-ai', label: 'AI Hiring' }
-      ]
-    },
-    {
-      key: 'enterprise',
-      href: '/enterprise',
-      matches: (path: string) => path.startsWith('/enterprise')
-      name: 'Talent',
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
-      dropdown: [
-        { href: '/talent', name: 'Browse Talent' },
-        { href: '/talents', name: 'Talent Directory' },
-        { href: '/hire-ai', name: 'Hire AI' }
-      ]
-      key: 'equipment',
-      href: '/equipment',
-      matches: (path: string) => path.startsWith('/equipment')
-    },
-    {
-      key: 'community',
-      href: '/community',
-      key: 'pricing',
-      href: '/pricing',
-      matches: (path: string) => path === '/pricing'
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path === '/about'
-      key: 'company',
-      href: '/about',
-      matches: (path: string) => path.startsWith('/about') || path.startsWith('/careers') || path.startsWith('/partners') || path.startsWith('/contact')
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
-      name: t('nav.community')
-      key: 'about',
-      href: '/about',
-      matches: (path: string) => path === '/about'
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
-    },
-    {
-      key: 'blog',
-      href: '/blog',
-      key: 'blog',
-      href: '/blog',
-      matches: (path: string) => path.startsWith('/blog')
-      key: 'contact',
-      href: '/contact',
-      matches: (path: string) => path === '/contact'
-      icon: <Users className="w-4 h-4" />,
-      description: 'Join our community'
-    },
-    {
-      key: 'help',
-      href: '/help-center',
-      icon: <HelpCircle className="w-4 h-4" />,
-      description: 'Get help and support'
-    },
-    {
-      key: 'faq',
-      href: '/faq',
-      icon: <HelpCircle className="w-4 h-4" />,
-      description: 'Frequently asked questions'
-      name: 'Community',
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
-      dropdown: [
-        { href: '/community', label: 'Forums' },
-        { href: '/blog', label: 'Blog' },
-        { href: '/partners', label: 'Partners' }
-      ]
-    },
-    {
-      key: 'about',
-      href: '/about',
-      key: 'blog',
-      href: '/blog',
-      matches: (path: string) => path.startsWith('/blog')
-      matches: (path: string) => path.startsWith('/blog')
-    }
+  const adminItems = [
+    { key: 'dashboard', href: '/dashboard', label: t('nav.dashboard'), icon: <BarChart3 className="w-4 h-4" /> },
+    { key: 'admin', href: '/admin', label: t('nav.admin'), icon: <Settings className="w-4 h-4" /> }
   ];
-
+  const userItems = [
+    { key: 'profile', href: '/dashboard/profile', label: t('nav.profile'), icon: <Users className="w-4 h-4" /> },
+    { key: 'projects', href: '/dashboard/projects', label: t('nav.projects'), icon: <Briefcase className="w-4 h-4" /> },
+    { key: 'help', href: '/help', label: t('nav.help'), icon: <HelpCircle className="w-4 h-4" /> }
+  ];
   const serviceDropdowns = [
     {
       key: 'ai-services',
@@ -365,15 +177,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     { key: 'cloud-migration', href: '/cloud-migration-services', name: 'Cloud Migration' },
     { key: 'it-onsite', href: '/it-onsite-services', name: 'IT Onsite Services' }
   ];
-
   let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
       matches: (path: string) => path.startsWith('/blog'),
       name: t('nav.blog')
     }
   ];
-
   let links = baseLinks;
-  
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -381,7 +190,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         setIsServicesOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
@@ -391,7 +199,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/about') || path === '/careers' || path === '/contact'
     }
   ];
-
   let links = baseLinks;
       name: 'Community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
@@ -413,9 +220,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       ]
     }
   ];
-
   let links: NavigationLink[] = baseLinks;
-  
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
@@ -425,7 +230,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
     });
   }
-  
   // Add admin-only links
   if (isAdmin) {
     links.push({
@@ -435,39 +239,30 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/analytics')
     });
   }
-
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
-
   const closeDropdown = () => {
     setActiveDropdown(null);
   };
-  
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
-
   const handleDropdownClose = () => {
     setActiveDropdown(null);
   };
-  
   const handleDropdownToggle = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
-
   const closeDropdowns = () => {
     setActiveDropdown(null);
   };
-  
   return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)}>
   const toggleDropdown = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
-
   const isDropdownActive = (key: string) => activeDropdown === key;
-  
   return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
       <ul className="flex items-center gap-1">
@@ -482,15 +277,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 "absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md",
                 link.matches(location.pathname) && "opacity-100"
               )} />
-              
               {/* Glowing border effect */}
               <div className={cn(
                 "absolute inset-0 rounded-md border border-transparent group-hover:border-zion-purple/30 transition-all duration-300",
                 link.matches(location.pathname) && "border-zion-cyan/50"
               )} />
-              
               <span className="relative z-10">{link.name}</span>
             </Link>
+=======
+=======
           <li key={link.key} className="relative" onMouseLeave={handleDropdownClose}>
           <li key={link.name} className="relative">
             {link.dropdown ? (
@@ -508,7 +303,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   {link.name}
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
-                
                 {activeDropdown === link.key && (
                   <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-md shadow-lg z-50">
                     <div className="py-2">
@@ -547,7 +341,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </li>
             );
           }
-          
           if (link.key === 'company') {
             return (
               <li key={link.key}>
@@ -555,7 +348,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </li>
             );
           }
-          
           return (
             <li key={link.name}>
               <Link
@@ -572,7 +364,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </li>
           );
         })}
-
+=======
         {/* Service Dropdowns */}
         {serviceDropdowns.map((dropdown) => (
           <li key={dropdown.key} className="relative">
@@ -593,7 +385,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 isDropdownActive(dropdown.key) ? "rotate-180" : ""
               )} />
             </button>
-
             {/* Dropdown Menu */}
             {isDropdownActive(dropdown.key) && (
               <div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 backdrop-blur-xl z-50">
@@ -614,7 +405,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             )}
           </li>
         ))}
-        
         {/* Services Dropdown */}
         <li className="relative">
           <button
@@ -631,7 +421,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             Services
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
-          
           {isServicesOpen && (
             <div
               className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50"
@@ -665,7 +454,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </div>
           )}
         </li>
-        
         {/* Company Dropdown */}
         <li className="relative">
           <button
@@ -682,7 +470,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             Company
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
-          
           {isCompanyOpen && (
             <div
               className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50"
@@ -722,7 +509,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </div>
           )}
         </li>
-        
         {/* More dropdown */}
         <li className="relative">
           <div ref={dropdownRef}>
@@ -738,7 +524,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             More
             <ChevronDown className={cn("ml-1 w-4 h-4 transition-transform", dropdownOpen && "rotate-180")} />
           </button>
-          
           {dropdownOpen && (
             <div className="absolute top-full left-0 mt-1 w-64 bg-zion-blue-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
               <div className="p-2">
@@ -763,7 +548,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           )}
           </div>
         </li>
-        
         {/* Services Dropdown */}
         <li className="relative" ref={dropdownRef}>
           <button
@@ -778,7 +562,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             Services
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
-          
           {isServicesOpen && (
             <div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
               <div className="py-2">
@@ -799,7 +582,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </div>
           )}
         </li>
-        
         {/* Company dropdown */}
         <li className="relative">
           <button
@@ -849,7 +631,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </div>
           )}
         </li>
-
         {/* Support dropdown */}
         <li className="relative">
           <button
@@ -891,6 +672,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </div>
             </div>
           )}
+=======
         {links.map((link) => (
           <li key={link.name}>
             <Link
@@ -906,7 +688,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </Link>
           </li>
         ))}
-        
         {/* Resources Dropdown */}
         <li>
           <DropdownMenu>
@@ -938,7 +719,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </DropdownMenuContent>
           </DropdownMenu>
         </li>
-        
         {/* Company Dropdown */}
         <li>
           <DropdownMenu>
@@ -975,8 +755,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+=======
         </li>
-        
         {/* Messages link with unread counter */}
         {isAuthenticated && (
           <li>
@@ -991,6 +771,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 location.pathname === "/messages" || location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:border hover:border-zion-purple/20"
+=======
               )}
               onClick={closeDropdown}
             >
@@ -998,6 +779,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               Messages
               {unreadCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
+=======
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {unreadCount}
                 </span>
@@ -1005,7 +787,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </Link>
           </li>
         )}
-
         {/* Request Quote CTA */}
         <li>
           <Link

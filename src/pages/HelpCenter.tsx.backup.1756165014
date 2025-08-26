@@ -10,11 +10,9 @@ import {
   DocumentTextIcon,
   VideoCameraIcon
 } from '@heroicons/react/24/outline';
-
 const HelpCenter: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
-
   const categories = [
     { id: 'all', name: 'All Topics', icon: BookOpenIcon },
     { id: 'getting-started', name: 'Getting Started', icon: QuestionMarkCircleIcon },
@@ -23,12 +21,7 @@ const HelpCenter: React.FC = () => {
     { id: 'billing', name: 'Billing & Pricing', icon: DocumentTextIcon },
     { id: 'account', name: 'Account Management', icon: QuestionMarkCircleIcon }
   ];
-
-<<<<<<< HEAD
-  const faqs = [
-=======
   const helpCategories = [
->>>>>>> 8c95c6b43a5f546b82988393b4a85fe051f55a27
     {
       category: 'getting-started',
       question: 'How do I get started with Zion Tech Group services?',
@@ -70,14 +63,12 @@ const HelpCenter: React.FC = () => {
       answer: 'You can manage your account through our client portal where you can view service status, access documentation, submit support tickets, and manage billing. Our team will provide you with access credentials upon service activation.'
     }
   ];
-
   const filteredFaqs = faqs.filter(faq => 
     activeCategory === 'all' || faq.category === activeCategory
   ).filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
   const contactMethods = [
     {
       title: 'Phone Support',
@@ -101,7 +92,6 @@ const HelpCenter: React.FC = () => {
       href: '#'
     }
   ];
-
   const resources = [
     {
       title: 'Documentation',
@@ -122,7 +112,6 @@ const HelpCenter: React.FC = () => {
       href: '#'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
@@ -142,7 +131,6 @@ const HelpCenter: React.FC = () => {
               Find answers to common questions, access our knowledge base, and get the support you need to succeed with Zion Tech Group.
             </p>
           </motion.div>
-
           {/* Search Bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -163,7 +151,6 @@ const HelpCenter: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         {/* Categories */}
@@ -190,7 +177,6 @@ const HelpCenter: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* FAQs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -220,7 +206,6 @@ const HelpCenter: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Contact Methods */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -259,7 +244,6 @@ const HelpCenter: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Resources */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -301,5 +285,4 @@ const HelpCenter: React.FC = () => {
     </div>
   );
 };
-
 export default HelpCenter;

@@ -1,12 +1,9 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-
 interface DialogContextType {
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
 }
-
 const DialogContext = createContext<DialogContextType | undefined>(undefined);
-
 export function Dialog({ 
   children, 
   open, 
@@ -19,7 +16,6 @@ export function Dialog({
   const [internalOpen, setInternalOpen] = useState(false);
   const isControlled = open !== undefined;
   const isOpen = isControlled ? open : internalOpen;
-
   const setIsOpen = (newOpen: boolean) => {
     if (!isControlled) {
       setInternalOpen(newOpen);
@@ -28,47 +24,37 @@ export function Dialog({
       onOpenChange(newOpen);
     }
   };
-
   return (
     <DialogContext.Provider value={{ isOpen, setIsOpen }}>
       <div className="relative">
 import React from 'react';
 import { cn } from '@/lib/utils';
-
 export interface DialogProps extends React.HTMLAttributes<HTMLDivElement> {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
-
 export interface DialogTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
 }
-
 export interface DialogContentProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
 }
-
 export interface DialogHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
 }
-
 export interface DialogTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
   children: React.ReactNode;
 }
-
 export interface DialogDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {
   children: React.ReactNode;
 }
-
 export interface DialogFooterProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
 }
-
 const DialogContext = React.createContext<{
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 } | undefined>(undefined);
-
 export const Dialog: React.FC<DialogProps> = ({
   open = false,
   onOpenChange,
@@ -77,16 +63,13 @@ export const Dialog: React.FC<DialogProps> = ({
   ...props
 }) => {
   const [isOpen, setIsOpen] = React.useState(open);
-
   React.useEffect(() => {
     setIsOpen(open);
   }, [open]);
-
   const handleOpenChange = (newOpen: boolean) => {
     setIsOpen(newOpen);
     onOpenChange?.(newOpen);
   };
-
   return (
     <DialogContext.Provider value={{ open: isOpen, setOpen: (value: boolean | ((prev: boolean) => boolean)) => {
       if (typeof value === 'function') {
@@ -96,16 +79,15 @@ export const Dialog: React.FC<DialogProps> = ({
       }
     }}}>
       <div className={cn('relative', className)} {...props}>
+=======
         {children}
       </div>
     </DialogContext.Provider>
   );
 }
-
 export function DialogTrigger({ children, asChild = false }: { children: ReactNode; asChild?: boolean }) {
   const context = useContext(DialogContext);
   if (!context) throw new Error('DialogTrigger must be used within Dialog');
-
   if (asChild) {
     return (
       <div onClick={() => context.setIsOpen(true)}>
@@ -113,26 +95,21 @@ export function DialogTrigger({ children, asChild = false }: { children: ReactNo
       </div>
     );
   }
-
   return (
     <div onClick={() => context.setIsOpen(true)}>
       {children}
     </div>
   );
 }
-
 export function DialogContent({ children, className = '' }: { children: ReactNode; className?: string }) {
   const context = useContext(DialogContext);
   if (!context) throw new Error('DialogContent must be used within Dialog');
-
   if (!context.isOpen) return null;
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => context.setIsOpen(false)} />
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
 };
-
 export const DialogTrigger: React.FC<DialogTriggerProps> = ({
   children,
   className,
@@ -142,9 +119,7 @@ export const DialogTrigger: React.FC<DialogTriggerProps> = ({
   if (!context) {
     throw new Error('DialogTrigger must be used within Dialog');
   }
-
   const { setOpen } = context;
-
   return (
     <button
       className={cn('inline-flex items-center justify-center', className)}
@@ -155,7 +130,6 @@ export const DialogTrigger: React.FC<DialogTriggerProps> = ({
     </button>
   );
 };
-
 export const DialogContent: React.FC<DialogContentProps> = ({
   children,
   className,
@@ -165,11 +139,8 @@ export const DialogContent: React.FC<DialogContentProps> = ({
   if (!context) {
     throw new Error('DialogContent must be used within Dialog');
   }
-
   const { open, setOpen } = context;
-
   if (!open) return null;
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div
@@ -183,29 +154,25 @@ export const DialogContent: React.FC<DialogContentProps> = ({
         )}
         {...props}
       >
+=======
         {children}
       </div>
     </div>
   );
 }
-
 export function DialogHeader({ children, className = '' }: { children: ReactNode; className?: string }) {
   return <div className={`mb-4 ${className}`}>{children}</div>;
 }
-
 export function DialogTitle({ children, className = '' }: { children: ReactNode; className?: string }) {
   return <h2 className={`text-lg font-semibold ${className}`}>{children}</h2>;
 }
-
 export function DialogDescription({ children, className = '' }: { children: ReactNode; className?: string }) {
   return <p className={`text-gray-600 mt-2 ${className}`}>{children}</p>;
 }
-
 export function DialogFooter({ children, className = '' }: { children: ReactNode; className?: string }) {
   return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>;
 }
 };
-
 export const DialogHeader: React.FC<DialogHeaderProps> = ({
   children,
   className,
@@ -217,7 +184,6 @@ export const DialogHeader: React.FC<DialogHeaderProps> = ({
     </div>
   );
 };
-
 export const DialogTitle: React.FC<DialogTitleProps> = ({
   children,
   className,
@@ -229,7 +195,6 @@ export const DialogTitle: React.FC<DialogTitleProps> = ({
     </h2>
   );
 };
-
 export const DialogDescription: React.FC<DialogDescriptionProps> = ({
   children,
   className,
@@ -241,7 +206,6 @@ export const DialogDescription: React.FC<DialogDescriptionProps> = ({
     </p>
   );
 };
-
 export const DialogFooter: React.FC<DialogFooterProps> = ({
   children,
   className,
@@ -253,3 +217,4 @@ export const DialogFooter: React.FC<DialogFooterProps> = ({
     </div>
   );
 };
+=======

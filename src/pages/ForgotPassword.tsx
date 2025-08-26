@@ -1,3 +1,4 @@
+=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../SEO';
@@ -5,25 +6,20 @@ import { GradientHeading } from '../GradientHeading';
 import { Button } from '../ui/Button';
 import { Input } from '../ui/Input';
 import { Mail, ArrowLeft, CheckCircle } from 'lucide-react';
-
 export default function ForgotPassword() {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
-
     setIsLoading(true);
-    
     // Simulate API call
     setTimeout(() => {
       setIsSubmitted(true);
       setIsLoading(false);
     }, 2000);
   };
-
   if (isSubmitted) {
     return (
       <>
@@ -63,7 +59,6 @@ export default function ForgotPassword() {
       </>
     );
   }
-
   return (
     <>
       <SEO
@@ -86,7 +81,6 @@ export default function ForgotPassword() {
               Enter your email address and we'll send you a link to reset your password.
             </p>
           </div>
-
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
@@ -105,7 +99,6 @@ export default function ForgotPassword() {
                 />
               </div>
             </div>
-
             <Button
               type="submit"
               disabled={isLoading || !email.trim()}
@@ -114,7 +107,6 @@ export default function ForgotPassword() {
               {isLoading ? 'Sending...' : 'Send Reset Link'}
             </Button>
           </form>
-
           <div className="mt-8 text-center">
             <p className="text-zion-slate-light text-sm">
               Remember your password?{' '}

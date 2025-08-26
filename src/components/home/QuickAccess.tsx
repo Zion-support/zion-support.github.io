@@ -1,8 +1,7 @@
 import React from 'react';
-
+=======
 import React from 'react';
 import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight } from 'lucide-react';
-
 export const QuickAccess: React.FC = () => {
   const quickLinks = [
     {
@@ -48,7 +47,6 @@ export const QuickAccess: React.FC = () => {
       color: "from-yellow-500 to-orange-500"
     }
   ];
-
   return (
     <section className="py-16 bg-slate-800/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +58,6 @@ export const QuickAccess: React.FC = () => {
             Get started quickly with our most popular services and solutions
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {quickLinks.map((link, index) => (
             <a
@@ -74,18 +71,15 @@ export const QuickAccess: React.FC = () => {
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
               </div>
-              
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                 {link.title}
               </h3>
-              
               <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                 {link.description}
               </p>
             </a>
           ))}
         </div>
-
         <div className="text-center mt-12">
           <a
             href="/services"
@@ -99,4 +93,5 @@ export const QuickAccess: React.FC = () => {
     </section>
   );
 };
+=======
 }

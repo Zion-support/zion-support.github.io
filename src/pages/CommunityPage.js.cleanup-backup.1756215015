@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-export default function CommunityPage() {
-    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Community - Zion Tech Group", description: "Join our tech community and connect with fellow professionals.", canonical: "https://ziontechgroup.com/community" }), _jsx(Header, {}), _jsx("main", { className: "min-h-screen bg-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4 py-20", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Community" }), _jsx("p", { className: "text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto", children: "Connect with fellow tech professionals, share knowledge, and grow your network." })] }), _jsx("div", { className: "max-w-6xl mx-auto", children: _jsxs("div", { className: "bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Coming Soon" }), _jsx("p", { className: "text-zion-slate-light mb-6", children: "Our community platform is currently under development." })] }) })] }) }), _jsx(Footer, {})] }));
-=======
 import { useState } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -170,7 +161,6 @@ export default function CommunityPage() {
     const [activeTab, setActiveTab] = useState("categories");
     return (<>
       <SEO title="Community Forum | Zion AI Marketplace" description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals." keywords="community, forum, discussion, AI marketplace, questions, answers" canonical="https://ziontechgroup.com/community"/>
-      
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
           <div>
@@ -179,27 +169,22 @@ export default function CommunityPage() {
               Join the conversation, ask questions, and share your knowledge
             </p>
           </div>
-          
           <CreatePostButton />
         </div>
-        
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
           <TabsList className="mb-6">
             <TabsTrigger value="categories">Categories</TabsTrigger>
             <TabsTrigger value="featured">Featured</TabsTrigger>
             <TabsTrigger value="recent">Recent</TabsTrigger>
           </TabsList>
-          
           <TabsContent value="categories">
             <ForumCategories />
           </TabsContent>
-          
           <TabsContent value="featured">
             <div className="space-y-4">
               {featuredPosts.map((post) => (<PostCard key={post.id} post={post}/>))}
             </div>
           </TabsContent>
-          
           <TabsContent value="recent">
             <div className="space-y-4">
               {recentPosts.map((post) => (<PostCard key={post.id} post={post}/>))}
@@ -208,5 +193,4 @@ export default function CommunityPage() {
         </Tabs>
       </div>
     </>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

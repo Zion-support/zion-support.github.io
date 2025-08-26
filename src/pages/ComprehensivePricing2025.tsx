@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
+=======
 import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
 import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
-
 const ComprehensivePricing2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
-
   const allServices = [
     ...advancedInnovativeServicesExpansionV3,
     ...specializedEnterpriseSolutions2025
   ];
-
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
     { id: 'AI & Machine Learning', name: 'AI & Machine Learning', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine')).length },
@@ -28,21 +26,18 @@ const ComprehensivePricing2025: React.FC = () => {
     { id: 'Energy & Sustainability', name: 'Energy & Sustainability', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Sustainability')).length },
     { id: 'Manufacturing & Industrial', name: 'Manufacturing & Industrial', count: allServices.filter(s => s.category.includes('Manufacturing') || s.category.includes('Industrial')).length }
   ];
-
   const filteredServices = allServices.filter(service => {
     if (selectedCategory === 'all') return true;
     return service.category.includes(selectedCategory) || 
            service.category.includes(selectedCategory.split(' ')[0]) ||
            service.category.includes(selectedCategory.split(' ')[1]);
   });
-
   const getDiscountedPrice = (price: string, discount: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, ''));
     const discountPercent = parseInt(discount.replace(/[^0-9]/g, ''));
     const discountedPrice = numericPrice * (1 - discountPercent / 100);
     return `$${Math.round(discountedPrice).toLocaleString()}`;
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -57,7 +52,6 @@ const ComprehensivePricing2025: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Transparent pricing for our cutting-edge micro SAAS solutions, IT services, and AI-powered innovations. Choose the plan that best fits your business needs and budget.
           </p>
-          
           {/* Billing Cycle Toggle */}
           <div className="flex items-center justify-center space-x-4 mb-12">
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
@@ -77,7 +71,6 @@ const ComprehensivePricing2025: React.FC = () => {
               Annual <span className="text-green-400 text-sm">(Save up to 40%)</span>
             </span>
           </div>
-
           {/* Key Statistics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
@@ -99,7 +92,6 @@ const ComprehensivePricing2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -113,6 +105,7 @@ const ComprehensivePricing2025: React.FC = () => {
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
                     : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'
                 }`}
+=======
               >
                 <Download className="w-5 h-5" />
                 Download Pricing Guide
@@ -129,7 +122,6 @@ const ComprehensivePricing2025: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-green-800 to-blue-800 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,7 +141,6 @@ const ComprehensivePricing2025: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Search and Filters */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-12">
@@ -200,7 +191,7 @@ const ComprehensivePricing2025: React.FC = () => {
             </select>
           </div>
         </div>
-
+=======
       {/* Pricing Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -219,23 +210,21 @@ const ComprehensivePricing2025: React.FC = () => {
                     Most Popular
                   </div>
                 )}
-                
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
                 <p className="text-gray-300 mb-4 line-clamp-2">{service.description}</p>
-                
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30">
                     {service.category}
                   </span>
                 </div>
-
                 <div className="mb-6">
                   <div className="text-3xl font-bold text-green-400 mb-2">
                     {billingCycle === 'annual' && service.annualDiscount 
                       ? getDiscountedPrice(service.price, service.annualDiscount)
                       : service.price
                     }
+=======
                   </div>
                   <div className="text-gray-400 mb-2">{service.period}</div>
                   {billingCycle === 'annual' && service.annualDiscount && (
@@ -244,7 +233,7 @@ const ComprehensivePricing2025: React.FC = () => {
                     </div>
                   )}
                 </div>
-
+=======
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -259,10 +248,10 @@ const ComprehensivePricing2025: React.FC = () => {
                         <span className="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>
                         +{service.features.length - 4} more features
                       </li>
+=======
                     )}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
                     <span>Setup Fee:</span>
@@ -277,7 +266,7 @@ const ComprehensivePricing2025: React.FC = () => {
                     <span className="text-white">{service.setupTime}</span>
                   </div>
                 </div>
-
+=======
                 <div className="space-y-3">
                   <a
                     href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
@@ -292,7 +281,6 @@ const ComprehensivePricing2025: React.FC = () => {
                     Call for Demo
                   </a>
                 </div>
-
                 <div className="mt-6 pt-6 border-t border-white/20">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-400">Rating:</span>
@@ -313,7 +301,6 @@ const ComprehensivePricing2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Enterprise Solutions */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto text-center">
@@ -323,7 +310,6 @@ const ComprehensivePricing2025: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Custom enterprise deployments with dedicated support, custom integrations, and tailored solutions for large organizations
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🏢</div>
@@ -333,7 +319,6 @@ const ComprehensivePricing2025: React.FC = () => {
               </p>
               <div className="text-green-400 font-semibold">Custom Pricing</div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-xl font-semibold text-white mb-3">Integration Services</h3>
@@ -342,7 +327,6 @@ const ComprehensivePricing2025: React.FC = () => {
               </p>
               <div className="text-green-400 font-semibold">From $5,000</div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">👥</div>
               <h3 className="text-xl font-semibold text-white mb-3">Dedicated Support</h3>
@@ -354,7 +338,7 @@ const ComprehensivePricing2025: React.FC = () => {
           </div>
         </div>
       </section>
-
+=======
         {/* Call to Action */}
         {sortedServices.length === 0 && (
           <motion.div
@@ -377,7 +361,6 @@ const ComprehensivePricing2025: React.FC = () => {
           </motion.div>
         )}
       </div>
-
       {/* Bottom CTA Section */}
       <div className="bg-gradient-to-r from-green-800 to-blue-800 py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -386,10 +369,10 @@ const ComprehensivePricing2025: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our services can help transform your business and drive competitive advantage
+=======
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our services can help transform your business and drive competitive advantage
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-2xl mb-2">📧</div>
@@ -399,7 +382,6 @@ const ComprehensivePricing2025: React.FC = () => {
                 kleber@ziontechgroup.com
               </a>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-2xl mb-2">📞</div>
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
@@ -408,7 +390,6 @@ const ComprehensivePricing2025: React.FC = () => {
                 +1 302 464 0950
               </a>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-2xl mb-2">📍</div>
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
@@ -416,11 +397,11 @@ const ComprehensivePricing2025: React.FC = () => {
               <p className="text-blue-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+=======
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
@@ -435,6 +416,7 @@ const ComprehensivePricing2025: React.FC = () => {
             >
               Schedule Consultation
             </a>
+=======
               Schedule Consultation
             </a>
           </div>
@@ -443,5 +425,4 @@ const ComprehensivePricing2025: React.FC = () => {
     </div>
   );
 };
-
 export default ComprehensivePricing2025;

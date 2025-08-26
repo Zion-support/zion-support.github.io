@@ -14,10 +14,8 @@ import {
   RefreshCw,
   ExternalLink
 } from 'lucide-react';
-
 const Status: React.FC = () => {
   const currentTime = new Date().toLocaleString();
-  
   const services = [
     {
       name: 'Website',
@@ -73,7 +71,6 @@ import {
   Wifi,
   Zap
 } from 'lucide-react';
-
 const Status: React.FC = () => {
   const services = [
     {
@@ -125,7 +122,6 @@ const Status: React.FC = () => {
       description: "Firewall, DDoS protection, and monitoring"
     }
   ];
-
   const incidents = [
     {
       id: 1,
@@ -148,7 +144,6 @@ const Status: React.FC = () => {
       affectedServices: ["Database Systems", "API Services"]
     }
   ];
-
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
@@ -163,7 +158,6 @@ const Status: React.FC = () => {
         return <CheckCircle className="w-5 h-5 text-green-500" />;
     }
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
@@ -178,7 +172,6 @@ const Status: React.FC = () => {
         return 'bg-green-500/20 text-green-400 border-green-500/30';
     }
   };
-
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'low':
@@ -191,7 +184,6 @@ const Status: React.FC = () => {
         return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
     }
   };
-
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
@@ -202,13 +194,11 @@ const Status: React.FC = () => {
       minute: '2-digit'
     });
   };
-
   const overallStatus = services.every(service => service.status === 'operational') ? 'operational' : 'degraded';
   const overallUptime = services.reduce((acc, service) => {
     const uptime = parseFloat(service.uptime.replace('%', ''));
     return acc + uptime;
   }, 0) / services.length;
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -225,7 +215,6 @@ const Status: React.FC = () => {
               Real-time status of Zion Tech Group's services and infrastructure. We're committed to transparency and keeping you informed.
             </p>
           </div>
-
           {/* Overall Status */}
           <div className="mb-16">
             <div className={`${getStatusColor(overallStatus)} backdrop-blur-lg rounded-xl p-8 border text-center`}>
@@ -257,7 +246,6 @@ const Status: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Service Status Grid */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Service Status</h2>
@@ -292,7 +280,6 @@ const Status: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Recent Incidents */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Recent Incidents</h2>
@@ -354,7 +341,6 @@ const Status: React.FC = () => {
               </div>
             )}
           </div>
-
           {/* Performance Metrics */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Performance Metrics</h2>
@@ -381,7 +367,6 @@ const Status: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Contact Information */}
           <div className="text-center">
             <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-xl p-8 border border-blue-500/30">
@@ -410,5 +395,4 @@ const Status: React.FC = () => {
     </div>
   );
 };
-
 export default Status;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const Events: React.FC = () => {
   const upcomingEvents = [
     {
@@ -62,7 +61,6 @@ const Events: React.FC = () => {
       maxAttendees: 300
     }
   ];
-
   const pastEvents = [
     {
       id: 5,
@@ -85,7 +83,6 @@ const Events: React.FC = () => {
       recordingUrl: "#"
     }
   ];
-
   const eventCategories = [
     { name: "AI & Machine Learning", count: 8, color: "from-purple-500 to-pink-500" },
     { name: "Cybersecurity", count: 6, color: "from-red-500 to-orange-500" },
@@ -93,7 +90,6 @@ const Events: React.FC = () => {
     { name: "Digital Transformation", count: 4, color: "from-green-500 to-emerald-500" },
     { name: "Quantum Computing", count: 3, color: "from-indigo-500 to-purple-500" }
   ];
-
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
@@ -103,7 +99,6 @@ const Events: React.FC = () => {
       day: 'numeric'
     });
   };
-
   const getEventTypeColor = (type: string) => {
     switch (type) {
       case 'Webinar':
@@ -118,7 +113,6 @@ const Events: React.FC = () => {
         return 'bg-gray-100 text-gray-800';
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Hero Section */}
@@ -135,7 +129,6 @@ const Events: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Event Categories */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -145,7 +138,6 @@ const Events: React.FC = () => {
               Explore our diverse range of events covering all aspects of modern technology and business transformation.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {eventCategories.map((category, index) => (
               <div key={index} className="text-center p-6 rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors duration-300">
@@ -158,7 +150,6 @@ const Events: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Upcoming Events */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -168,7 +159,6 @@ const Events: React.FC = () => {
               Register for our upcoming events and stay ahead of the technology curve.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {upcomingEvents.map((event) => (
               <div key={event.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -181,10 +171,8 @@ const Events: React.FC = () => {
                       {event.isFree ? 'Free' : event.price}
                     </span>
                   </div>
-                  
                   <h3 className="text-xl font-semibold text-slate-900 mb-3">{event.title}</h3>
                   <p className="text-gray-600 mb-4">{event.description}</p>
-                  
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
                       <div className="text-sm font-medium text-gray-500">Date & Time</div>
@@ -197,7 +185,6 @@ const Events: React.FC = () => {
                       <div className="text-sm text-gray-500">Max: {event.maxAttendees} attendees</div>
                     </div>
                   </div>
-                  
                   <div className="mb-4">
                     <div className="text-sm font-medium text-gray-500 mb-2">Speakers</div>
                     <div className="flex flex-wrap gap-2">
@@ -208,13 +195,12 @@ const Events: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                  
                   <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                     Register Now
                   </button>
+=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const Events: React.FC = () => {
   const upcomingEvents = [
     {
@@ -239,7 +225,6 @@ const Events: React.FC = () => {
       type: "Webinar"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -255,7 +240,6 @@ const Events: React.FC = () => {
               Join us for industry insights, networking opportunities, and hands-on learning experiences
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {upcomingEvents.map((event, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
@@ -310,7 +294,6 @@ const Events: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -332,7 +315,7 @@ const Events: React.FC = () => {
             >
               Our Services
             </Link>
-          
+=======
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
@@ -350,7 +333,6 @@ const Events: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Newsletter Signup */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -383,5 +365,4 @@ const Events: React.FC = () => {
     </div>
   );
 };
-
 export default Events;

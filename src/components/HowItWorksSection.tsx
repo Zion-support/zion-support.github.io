@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
-
 const steps = [
   {
     icon: <Search className="w-8 h-8" />,
@@ -79,18 +78,15 @@ const steps = [
     success: "100% client retention"
   }
 ];
-
 const stats = [
   { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },
   { icon: <Target className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },
   { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
   { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" }
 ];
-
 export function HowItWorksSection() {
   const [hoveredStep, setHoveredStep] = useState<number | null>(null);
   const [activeStep, setActiveStep] = useState<number>(0);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -101,7 +97,6 @@ export function HowItWorksSection() {
       }
     }
   ];
-
   const statsVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
@@ -113,7 +108,6 @@ export function HowItWorksSection() {
       }
     }
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background pattern */}
@@ -123,7 +117,6 @@ export function HowItWorksSection() {
           backgroundSize: '40px 40px'
         }} />
       </div>
-
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
         <motion.div 
@@ -142,7 +135,6 @@ export function HowItWorksSection() {
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="text-center mb-20"
@@ -159,7 +151,6 @@ export function HowItWorksSection() {
             Experience the Zion difference with our proven methodology.
           </p>
         </motion.div>
-
         {/* Stats section */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
@@ -182,7 +173,6 @@ export function HowItWorksSection() {
             </motion.div>
           ))}
         </motion.div>
-        
         <motion.div 
           className="relative"
           variants={containerVariants}
@@ -200,7 +190,6 @@ export function HowItWorksSection() {
               transition={{ duration: 2, delay: 0.5 }}
             />
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
             {steps.map((step, index) => (
               <motion.div 
@@ -217,14 +206,12 @@ export function HowItWorksSection() {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border-2 border-zion-cyan text-white font-bold text-xl mb-6 relative z-10 shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">
                     {index + 1}
                   </div>
-                  
                   {/* Icon with enhanced background */}
                   <div className={`inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br ${step.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
                     <div className="text-white">
                       {step.icon}
                     </div>
                   </div>
-                  
                   {/* Title and description */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                     {step.title}
@@ -232,7 +219,6 @@ export function HowItWorksSection() {
                   <p className="text-zion-slate-light leading-relaxed text-sm mb-4">
                     {step.description}
                   </p>
-
                   {/* Duration and success rate */}
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center justify-center gap-2 text-zion-cyan/80 text-xs">
@@ -244,7 +230,6 @@ export function HowItWorksSection() {
                       <span>{step.success}</span>
                     </div>
                   </div>
-
                   {/* Interactive details on hover */}
                   <AnimatePresence>
                     {hoveredStep === index && (
@@ -273,12 +258,10 @@ export function HowItWorksSection() {
                       </motion.div>
                     )}
                   </AnimatePresence>
-
                   {/* Hover indicator */}
                   <div className="mt-4 text-zion-cyan/60 text-xs">
                     {hoveredStep === index ? "Hover to see details" : "Hover for details"}
 import React from 'react';
-
 export function HowItWorksSection() {
   const steps = [
     {
@@ -317,7 +300,6 @@ export function HowItWorksSection() {
       color: 'from-red-500 to-pink-500'
     }
   ];
-
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -329,11 +311,9 @@ export function HowItWorksSection() {
             Our proven methodology ensures successful project delivery and maximum value for your business
           </p>
         </div>
-        
         <div className="relative">
           {/* Connection line */}
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-200 via-purple-200 to-green-200 transform -translate-y-1/2 z-0"></div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
             {steps.map((step, index) => (
               <div key={index} className="text-center group">
@@ -342,17 +322,15 @@ export function HowItWorksSection() {
                   <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     {step.number}
                   </div>
-                  
                   {/* Icon */}
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4 shadow-md border-2 border-gray-200">
                     {step.icon}
+=======
                   </div>
                 </div>
-                
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   {step.title}
                 </h3>
-                
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {step.description}
                 </p>
@@ -360,7 +338,6 @@ export function HowItWorksSection() {
             ))}
           </div>
         </div>
-        
         <div className="text-center mt-12">
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">

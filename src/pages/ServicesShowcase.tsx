@@ -15,7 +15,6 @@ import {
   TrendingUp,
   Users
 } from 'lucide-react';
-
 const ServicesShowcase: React.FC = () => {
   const services = [
     {
@@ -132,6 +131,7 @@ const ServicesShowcase: React.FC = () => {
           marketPosition: "AI-powered email marketing for modern businesses",
           competitors: ["Mailchimp", "Constant Contact", "ConvertKit"],
           competitiveAdvantage: "AI personalization, predictive analytics, and automated optimization"
+=======
         }
       ]
     },
@@ -225,6 +225,7 @@ const ServicesShowcase: React.FC = () => {
           marketPosition: "Next-generation CX platform for customer-centric businesses",
           competitors: ["Adobe Experience Cloud", "Salesforce Service Cloud", "Oracle CX"],
           competitiveAdvantage: "AI-driven personalization, real-time optimization, and comprehensive analytics"
+=======
         }
       ]
     },
@@ -318,6 +319,7 @@ const ServicesShowcase: React.FC = () => {
           marketPosition: "Enterprise blockchain solutions for innovative organizations",
           competitors: ["Ethereum Enterprise", "Hyperledger", "Corda"],
           competitiveAdvantage: "Custom development, enterprise integration, and regulatory compliance"
+=======
         }
       ]
     },
@@ -370,7 +372,6 @@ const ServicesShowcase: React.FC = () => {
       ]
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -380,7 +381,6 @@ const ServicesShowcase: React.FC = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -391,13 +391,11 @@ const ServicesShowcase: React.FC = () => {
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
-        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -431,7 +429,6 @@ const ServicesShowcase: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <motion.div
@@ -450,7 +447,6 @@ const ServicesShowcase: React.FC = () => {
                 <h2 className="text-3xl font-bold text-white mb-4">{category.category}</h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"></div>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
@@ -466,7 +462,6 @@ const ServicesShowcase: React.FC = () => {
                         {service.description}
                       </p>
                     </div>
-                    
                     <div className="mb-6">
                       <h4 className="text-sm font-medium text-gray-300 mb-3">Key Features:</h4>
                       <ul className="space-y-2">
@@ -546,7 +541,6 @@ const ServicesShowcase: React.FC = () => {
       ]
     }
   ];
-
   const categories = [
     'all',
     'Advanced AI & ML',
@@ -569,7 +563,6 @@ const ServicesShowcase: React.FC = () => {
     'Real Estate & Property Management',
     'Legal & Compliance'
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -580,7 +573,6 @@ const ServicesShowcase: React.FC = () => {
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { EnhancedServicesShowcase } from '@/components/EnhancedServicesShowcase';
-
 export default function ServicesShowcase() {
   return (
         <div className="max-w-7xl mx-auto">
@@ -595,7 +587,6 @@ export default function ServicesShowcase() {
               Comprehensive portfolio of innovative technology solutions designed to transform your business and drive growth
             </p>
           </div>
-          
           {serviceCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="mb-20">
               <div className="text-center mb-12">
@@ -607,7 +598,6 @@ export default function ServicesShowcase() {
                   {category.subtitle}
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {category.services.map((service, serviceIndex) => (
                   <div
@@ -616,19 +606,18 @@ export default function ServicesShowcase() {
                   >
                     <h3 className="text-2xl font-semibold text-white mb-4">{service.name}</h3>
                     <p className="text-gray-300 mb-6">{service.description}</p>
-                    
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features</h4>
                       <ul className="space-y-2">
                         {service.features.map((feature, idx) => (
                           <li key={idx} className="text-gray-300 flex items-center">
                             <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+=======
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
-                    
                     <Link
                       to={service.href}
                       className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300"
@@ -645,7 +634,6 @@ export default function ServicesShowcase() {
           ))}
         </motion.div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -683,13 +671,10 @@ export default function ServicesShowcase() {
     </div>
   );
 };
-
-
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-green-400 mb-3">Pricing</h4>
                       <p className="text-xl text-gray-300 font-semibold">{service.pricing}</p>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-yellow-400 mb-3">Key Benefits</h4>
                       <ul className="space-y-2">
@@ -701,17 +686,14 @@ export default function ServicesShowcase() {
                         ))}
                       </ul>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-purple-400 mb-3">Market Position</h4>
                       <p className="text-gray-300">{service.marketPosition}</p>
                     </div>
-
                     <div className="mb-8">
                       <h4 className="text-lg font-semibold text-cyan-400 mb-3">Competitive Advantage</h4>
                       <p className="text-gray-300">{service.competitiveAdvantage}</p>
                     </div>
-                    
                     <Link
                       to="/contact"
                       className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
@@ -728,7 +710,6 @@ export default function ServicesShowcase() {
           ))}
         </div>
       </section>
-
       {/* Enhanced CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -738,7 +719,6 @@ export default function ServicesShowcase() {
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our comprehensive technology services can transform your business
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-3xl mb-2">🚀</div>
@@ -756,7 +736,6 @@ export default function ServicesShowcase() {
               <p className="text-sm text-gray-300">Measurable ROI and performance improvements across industries</p>
             </div>
           </div>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Link
               to="/contact"
@@ -793,7 +772,6 @@ export default function ServicesShowcase() {
           </div>
         </div>
       </section>
-
       {/* Services Summary */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -805,14 +783,12 @@ export default function ServicesShowcase() {
               Explore our wide range of innovative solutions across different technology domains
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.filter(cat => cat !== 'all').map((category, index) => {
               const categoryServices = allServices.filter(service => service.category === category);
               const avgPrice = categoryServices.length > 0 
                 ? categoryServices.reduce((sum, service) => sum + service.price, 0) / categoryServices.length 
                 : 0;
-              
               return (
                 <div
                   key={index}
@@ -832,7 +808,6 @@ export default function ServicesShowcase() {
             })}
           </div>
 import { CogIcon } from '@heroicons/react/24/outline';
-
 const $page: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -865,11 +840,10 @@ const $page: React.FC = () => {
         <meta name="keywords" content="technology services, AI solutions, cloud services, cybersecurity, digital transformation, IT consulting" />
         <link rel="canonical" href="https://ziontechgroup.com/services-showcase" />
       </Helmet>
-      
       <EnhancedServicesShowcase />
     </>
   );
 };
-
 export default $page;
+=======
 export default ServicesShowcase;

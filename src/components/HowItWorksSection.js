@@ -117,14 +117,12 @@ export function HowItWorksSection() {
             backgroundSize: '40px 40px'
         }}/>
       </div>
-
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
         <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }}/>
         <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}/>
       </div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -135,7 +133,6 @@ export function HowItWorksSection() {
             Experience the Zion difference with our proven methodology.
           </p>
         </motion.div>
-
         {/* Stats section */}
         <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {stats.map((stat, index) => (<motion.div key={index} variants={statsVariants} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -146,13 +143,11 @@ export function HowItWorksSection() {
               <div className="text-zion-slate-light text-sm">{stat.label}</div>
             </motion.div>))}
         </motion.div>
-        
         <motion.div className="relative" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {/* Enhanced connection line */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
             <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial={{ width: "0%" }} whileInView={{ width: "100%" }} viewport={{ once: true }} transition={{ duration: 2, delay: 0.5 }}/>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
             {steps.map((step, index) => (<motion.div key={index} variants={itemVariants} className="relative" onHoverStart={() => setHoveredStep(index)} onHoverEnd={() => setHoveredStep(null)} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }}>
                 <div className="text-center h-full">
@@ -160,14 +155,12 @@ export function HowItWorksSection() {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border-2 border-zion-cyan text-white font-bold text-xl mb-6 relative z-10 shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">
                     {index + 1}
                   </div>
-                  
                   {/* Icon with enhanced background */}
                   <div className={`inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br ${step.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
                     <div className="text-white">
                       {step.icon}
                     </div>
                   </div>
-                  
                   {/* Title and description */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                     {step.title}
@@ -175,7 +168,6 @@ export function HowItWorksSection() {
                   <p className="text-zion-slate-light leading-relaxed text-sm mb-4">
                     {step.description}
                   </p>
-
                   {/* Duration and success rate */}
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center justify-center gap-2 text-zion-cyan/80 text-xs">
@@ -187,7 +179,6 @@ export function HowItWorksSection() {
                       <span>{step.success}</span>
                     </div>
                   </div>
-
                   {/* Interactive details on hover */}
                   <AnimatePresence>
                     {hoveredStep === index && (<motion.div className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
@@ -200,24 +191,20 @@ export function HowItWorksSection() {
                         </div>
                       </motion.div>)}
                   </AnimatePresence>
-
                   {/* Hover indicator */}
                   <div className="mt-4 text-zion-cyan/60 text-xs">
                     {hoveredStep === index ? "Hover to see details" : "Hover for details"}
                   </div>
                 </div>
-                
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
                   {step.title}
                 </h3>
-                
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {step.description}
                 </p>
               </div>))}
           </div>
         </></div>
-        
         {/* Enhanced bottom CTA */}
         <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
@@ -232,7 +219,6 @@ export function HowItWorksSection() {
             </div>
           </div>
         </motion.div>
-
         {/* Additional features */}
         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
           <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -242,7 +228,6 @@ export function HowItWorksSection() {
             <h4 className="text-white font-semibold mb-2">Fast Setup</h4>
             <p className="text-zion-slate-light text-sm">Get started in minutes, not days</p>
           </div>
-          
           <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-purple to-zion-cyan mb-4">
               <Shield className="w-8 h-8 text-white"/>
@@ -250,7 +235,6 @@ export function HowItWorksSection() {
             <h4 className="text-white font-semibold mb-2">Secure & Reliable</h4>
             <p className="text-zion-slate-light text-sm">Enterprise-grade security and uptime</p>
           </div>
-          
           <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-cyan-light to-zion-blue mb-4">
               <Users className="w-8 h-8 text-white"/>

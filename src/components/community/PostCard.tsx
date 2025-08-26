@@ -1,10 +1,8 @@
 import React from 'react';
 import { ForumPost } from '@/types/community';
-
 interface PostCardProps {
   post: ForumPost;
 }
-
 export default function PostCard({ post }: PostCardProps) {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
@@ -26,7 +24,7 @@ export default function PostCard({ post }: PostCardProps) {
             <span>{post.likes} likes</span>
             <span>{post.views} views</span>
           </div>
-
+=======
 interface PostCardProps {
   post: {
     id: string;
@@ -38,7 +36,6 @@ interface PostCardProps {
     replies: number;
   };
 }
-
 const PostCard: React.FC<PostCardProps> = ({ post }) => {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4">
@@ -55,6 +52,6 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
     </div>
   );
 };
-
 export default PostCard;
+=======
 }

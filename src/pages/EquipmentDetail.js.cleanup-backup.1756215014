@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-export default function EquipmentDetail() {
-    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Equipment Details - Zion Tech Group", description: "View detailed information about tech equipment and rental options.", canonical: "https://ziontechgroup.com/equipment" }), _jsx(Header, {}), _jsx("main", { className: "min-h-screen bg-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4 py-20", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Equipment Details" }), _jsx("p", { className: "text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto", children: "Detailed information about our tech equipment and rental options." })] }), _jsx("div", { className: "max-w-6xl mx-auto", children: _jsxs("div", { className: "bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Coming Soon" }), _jsx("p", { className: "text-zion-slate-light mb-6", children: "Equipment detail pages are currently under development." })] }) })] }) }), _jsx(Footer, {})] }));
-=======
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -88,7 +79,6 @@ export default function EquipmentDetail() {
                 <div className="aspect-video w-full relative">
                   <img src={equipment.images[selectedImageIndex]} alt={equipment.name} className="w-full h-full object-contain bg-zion-blue-light/10 p-4"/>
                 </div>
-                
                 {/* Thumbnail Gallery */}
                 {equipment.images.length > 1 && (<div className="flex p-4 gap-2 overflow-x-auto">
                     {equipment.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${index === selectedImageIndex ? "border-zion-purple" : "border-transparent"}`}>
@@ -96,7 +86,6 @@ export default function EquipmentDetail() {
                       </div>))}
                   </div>)}
               </div>
-
               {/* Product Details Tabs */}
               <div className="mt-8">
                 <Tabs defaultValue="description" className="w-full">
@@ -111,7 +100,6 @@ export default function EquipmentDetail() {
                       Features
                     </TabsTrigger>
                   </TabsList>
-                  
                   <TabsContent value="description" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <p className="text-zion-slate-light whitespace-pre-line">
@@ -119,7 +107,6 @@ export default function EquipmentDetail() {
                       </p>
                     </div>
                   </TabsContent>
-                  
                   <TabsContent value="specifications" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -132,7 +119,6 @@ export default function EquipmentDetail() {
                       </div>
                     </div>
                   </TabsContent>
-                  
                   <TabsContent value="features" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <ul className="space-y-2">
@@ -146,7 +132,6 @@ export default function EquipmentDetail() {
                 </Tabs>
               </div>
             </div>
-            
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
@@ -159,11 +144,9 @@ export default function EquipmentDetail() {
                       {equipment.subcategory}
                     </Badge>)}
                 </div>
-                
                 {/* Product Title */}
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand}</p>
-                
                 {/* Rating */}
                 {equipment.rating && (<div className="flex items-center gap-2 mb-4">
                     <div className="flex items-center">
@@ -175,12 +158,10 @@ export default function EquipmentDetail() {
                       {equipment.rating.toFixed(1)} ({equipment.reviewCount} reviews)
                     </span>
                   </div>)}
-                
                 {/* Price */}
                 <div className="text-3xl font-bold text-white mb-4">
                   {equipment.currency}{equipment.price.toLocaleString()}
                 </div>
-                
                 {/* Stock Status */}
                 <div className="mb-6">
                   {equipment.inStock ? (<div className="text-emerald-400 flex items-center gap-1">
@@ -194,7 +175,6 @@ export default function EquipmentDetail() {
                       <span>Out of Stock</span>
                     </div>)}
                 </div>
-                
                 {/* Quantity */}
                 <div className="mb-6">
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>
@@ -208,19 +188,16 @@ export default function EquipmentDetail() {
                     </button>
                   </div>
                 </div>
-                
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">
                   <Button onClick={handleBuyNow} disabled={isAdding || !equipment.inStock} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
-                  
                   <Button onClick={handleAddToCart} disabled={isAdding || !equipment.inStock} variant="outline" className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                     <ShoppingCart className="h-4 w-4 mr-2"/>
                     Add to Cart
                   </Button>
                 </div>
-                
                 {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">
                   {/* Shipping */}
@@ -231,7 +208,6 @@ export default function EquipmentDetail() {
                       <p className="text-xs">For orders over $100 within the US</p>
                     </div>
                   </div>
-                  
                   {/* Warranty */}
                   {equipment.warranty && (<div className="flex gap-3 text-zion-slate-light">
                       <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0"/>
@@ -240,7 +216,6 @@ export default function EquipmentDetail() {
                         <p className="text-xs">{equipment.warranty}</p>
                       </div>
                     </div>)}
-                  
                   {/* Return Policy */}
                   {equipment.returnPolicy && (<div className="flex gap-3 text-zion-slate-light">
                       <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0"/>
@@ -257,5 +232,4 @@ export default function EquipmentDetail() {
       </div>
       <Footer />
     </>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

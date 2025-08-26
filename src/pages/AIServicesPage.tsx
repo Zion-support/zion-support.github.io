@@ -1,4 +1,5 @@
 import React from 'react';
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -23,7 +24,6 @@ import {
   Video,
   Search
 } from 'lucide-react';
-
 const AIServices = [
   {
     title: "AI Strategy Consulting",
@@ -137,7 +137,6 @@ const AIServices = [
     link: "/request-quote?service=ai-content"
   }
 ];
-
 const categories = [
   { name: "All", value: "all", icon: <Globe className="h-4 w-4" /> },
   { name: "Strategy", value: "strategy", icon: <CheckCircle className="h-4 w-4" /> },
@@ -153,14 +152,11 @@ const categories = [
   { name: "Security", value: "security", icon: <Lock className="h-4 w-4" /> },
   { name: "Content", value: "content", icon: <FileText className="h-4 w-4" /> }
 ];
-
 export default function AIServicesPage() {
   const [selectedCategory, setSelectedCategory] = React.useState("all");
-
   const filteredServices = selectedCategory === "all" 
     ? AIServices 
     : AIServices.filter(service => service.category.toLowerCase() === selectedCategory);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">
       {/* Hero Section */}
@@ -201,7 +197,6 @@ export default function AIServicesPage() {
   Lock,
   Phone
 } from 'lucide-react';
-
 export default function AIServicesPage() {
   const aiServices = [
     {
@@ -469,7 +464,6 @@ export default function AIServicesPage() {
       contact: "kleber@ziontechgroup.com"
     }
   ];
-
   const categories = [
     "All Services",
     "Conversational AI",
@@ -485,13 +479,10 @@ export default function AIServicesPage() {
     "Supply Chain AI",
     "Testing AI"
   ];
-
   const [selectedCategory, setSelectedCategory] = React.useState("All Services");
-
   const filteredServices = selectedCategory === "All Services" 
     ? aiServices 
     : aiServices.filter(service => service.category === selectedCategory);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Hero Section */}
@@ -513,11 +504,11 @@ export default function AIServicesPage() {
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <MessageSquare className="h-5 w-5 mr-2" />
               Contact Sales
+=======
             </Button>
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -537,7 +528,6 @@ export default function AIServicesPage() {
             </Button>
           ))}
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {filteredServices.map((service, index) => (
@@ -563,7 +553,6 @@ export default function AIServicesPage() {
           ))}
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -576,6 +565,7 @@ export default function AIServicesPage() {
                   </div>
                   {service.badge && (
                     <Badge className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white border-0">
+=======
                       {service.badge}
                     </Badge>
                   )}
@@ -606,7 +596,6 @@ export default function AIServicesPage() {
                   <Link to={service.link}>
                     Get Started
                   </Link>
-              
               <CardContent className="space-y-4">
                 <div>
                   <h4 className="font-semibold text-zion-cyan mb-2">Key Features:</h4>
@@ -619,7 +608,6 @@ export default function AIServicesPage() {
                     ))}
                   </ul>
                 </div>
-                
                 <div>
                   <h4 className="font-semibold text-zion-cyan mb-2">Pricing:</h4>
                   <div className="space-y-1">
@@ -635,7 +623,6 @@ export default function AIServicesPage() {
                   </div>
                 </div>
               </CardContent>
-              
               <div className="p-6 pt-0 space-y-3">
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   <Globe className="h-4 w-4 mr-2" />
@@ -644,12 +631,12 @@ export default function AIServicesPage() {
                 <Button variant="outline" className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
                   <MessageSquare className="h-4 w-4 mr-2" />
                   Contact Sales
+=======
                 </Button>
               </div>
             </Card>
           ))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center py-12">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -661,7 +648,6 @@ export default function AIServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-light text-white">
       </div>
-
       {/* Contact Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -672,6 +658,7 @@ export default function AIServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+=======
               <MessageSquare className="h-5 w-5 mr-2" />
               Schedule Consultation
             </Button>
@@ -692,6 +679,7 @@ export default function AIServicesPage() {
           </div>
         </div>
       </div>
+=======
     </div>
   );
 }

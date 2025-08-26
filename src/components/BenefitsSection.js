@@ -105,14 +105,12 @@ export function BenefitsSection() {
             backgroundSize: '60px 60px'
         }}/>
       </div>
-      
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
         <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }}/>
         <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}/>
       </div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -123,7 +121,6 @@ export function BenefitsSection() {
             Our commitment to excellence drives every project to success.
           </p>
         </motion.div>
-
         {/* Additional stats section */}
         <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {additionalStats.map((stat, index) => (<motion.div key={index} variants={statsVariants} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -134,7 +131,6 @@ export function BenefitsSection() {
               <div className="text-zion-slate-light text-sm">{stat.label}</div>
             </motion.div>))}
         </motion.div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (<motion.div key={index} variants={itemVariants} onHoverStart={() => setHoveredIndex(index)} onHoverEnd={() => setHoveredIndex(null)} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }}>
               <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
@@ -144,12 +140,10 @@ export function BenefitsSection() {
                     {benefit.icon}
                   </div>
                 </div>
-
                 {/* Stats badge */}
                 <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${benefit.bgColor} border border-zion-cyan/30 mb-4`}>
                   <span className="text-zion-cyan font-bold text-sm">{benefit.stats}</span>
                 </div>
-
                 {/* Title and description */}
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
                   {benefit.title}
@@ -157,7 +151,6 @@ export function BenefitsSection() {
                 <p className="text-zion-slate-light leading-relaxed mb-6">
                   {benefit.description}
                 </p>
-
                 {/* Features list */}
                 <AnimatePresence>
                   {hoveredIndex === index && (<motion.div className="space-y-2" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }}>
@@ -167,7 +160,6 @@ export function BenefitsSection() {
                         </motion.div>))}
                     </motion.div>)}
                 </AnimatePresence>
-
                 {/* Hover indicator */}
                 <div className="mt-4 text-zion-cyan/60 text-xs">
                   {hoveredIndex === index ? "Hover to see details" : "Hover for details"}
@@ -175,7 +167,6 @@ export function BenefitsSection() {
               </div>
             </motion.div>))}
         </motion.div>
-
         {/* Call to action */}
         <motion.div className="text-center mt-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">

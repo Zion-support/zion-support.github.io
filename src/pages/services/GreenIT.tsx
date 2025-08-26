@@ -11,7 +11,6 @@ import React from 'react';
               achieve their environmental goals while maintaining operational excellence.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {greenServices.map((service, index) => (
               <div
@@ -36,7 +35,6 @@ import React from 'react';
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -76,7 +74,6 @@ import React from 'react';
           </div>
         </div>
       </section>
-
       {/* Green Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -89,7 +86,6 @@ import React from 'react';
               and environmental responsibility.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (
               <div
@@ -106,7 +102,6 @@ import React from 'react';
           </div>
         </div>
       </section>
-
       {/* Certifications */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -119,7 +114,6 @@ import React from 'react';
               to ensure sustainable practices.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
               <div
@@ -136,7 +130,6 @@ import React from 'react';
           </div>
         </div>
       </section>
-
       {/* Implementation Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -147,7 +140,6 @@ import React from 'react';
             A systematic approach to implementing sustainable technology solutions 
             that maximize environmental and business benefits.
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -180,7 +172,6 @@ import React from 'react';
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -205,9 +196,10 @@ import React from 'react';
               View Solutions
             </a>
           </div>
+=======
+=======
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
-
 const $service: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -235,8 +227,7 @@ const $service: React.FC = () => {
     </div>
   );
 };
-
 export default $service;
+=======
 };
-
 export default $service;

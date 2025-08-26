@@ -1,13 +1,10 @@
         <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark animate-pulse"></div>
-        
         {/* Floating orbs */}
         <div className="absolute top-20 left-20 w-32 h-32 bg-zion-purple/20 rounded-full blur-xl animate-bounce"></div>
         <div className="absolute top-40 right-32 w-24 h-24 bg-zion-cyan/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '1s' }}></div>
         <div className="absolute bottom-32 left-1/3 w-28 h-28 bg-zion-blue/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '2s' }}></div>
-        
         {/* Grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,113,242,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,113,242,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-        
         {/* Neon lines */}
         <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent animate-pulse"></div>
         <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-purple to-transparent animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -16,13 +13,11 @@
       </div>
     );
   }
-
   if (variant === 'section') {
     return (
       <div className={`absolute inset-0 overflow-hidden ${className}`}>
         {/* Subtle animated background */}
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 via-zion-cyan/5 to-zion-blue/5 animate-pulse"></div>
-        
         {/* Floating particles */}
         <div className="absolute top-10 left-10 w-2 h-2 bg-zion-cyan/40 rounded-full animate-ping"></div>
         <div className="absolute top-20 right-20 w-1 h-1 bg-zion-purple/40 rounded-full animate-ping" style={{ animationDelay: '0.5s' }}></div>
@@ -30,13 +25,11 @@
       </div>
     );
   }
-
   if (variant === 'card') {
     return (
       <div className={`absolute inset-0 overflow-hidden rounded-lg ${className}`}>
         {/* Card glow effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-zion-purple/10 via-zion-cyan/5 to-zion-blue/10 animate-pulse"></div>
-        
         {/* Corner accents */}
         <div className="absolute top-0 left-0 w-2 h-2 bg-zion-cyan/60 rounded-full animate-pulse"></div>
         <div className="absolute top-0 right-0 w-2 h-2 bg-zion-purple/60 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -45,33 +38,28 @@
       </div>
     );
   }
-
   return null;
 }
-
 export function NeonBorder({ className = '', children }: { className?: string; children: React.ReactNode }) {
   return (
     <div className={`relative ${className}`}>
       {/* Neon border effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue rounded-lg blur-sm opacity-50"></div>
       <div className="relative bg-zion-slate-dark/90 rounded-lg border border-zion-purple/30">
+=======
+=======
 import React, { useEffect, useRef } from 'react';
-
 interface AnimatedBackgroundProps {
   className?: string;
   variant?: 'grid' | 'particles' | 'waves' | 'matrix';
 }
-
 export function AnimatedBackground({ className = '', variant = 'grid' }: AnimatedBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     let animationFrameId: number;
     let particles: Array<{
       x: number;
@@ -81,16 +69,13 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
       size: number;
       opacity: number;
     }> = [];
-
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-
     const initParticles = () => {
       particles = [];
       const particleCount = variant === 'particles' ? 100 : 50;
-      
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
@@ -102,14 +87,11 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
         });
       }
     };
-
     const drawGrid = () => {
       const gridSize = 40;
       const offset = (Date.now() * 0.001) % gridSize;
-      
       ctx.strokeStyle = 'rgba(139, 21, 233, 0.1)';
       ctx.lineWidth = 1;
-      
       // Vertical lines
       for (let x = offset; x < canvas.width; x += gridSize) {
         ctx.beginPath();
@@ -117,7 +99,6 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
         ctx.lineTo(x, canvas.height);
         ctx.stroke();
       }
-      
       // Horizontal lines
       for (let y = offset; y < canvas.height; y += gridSize) {
         ctx.beginPath();
@@ -126,32 +107,27 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
         ctx.stroke();
       }
     };
-
     const drawParticles = () => {
       particles.forEach((particle, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
-        
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-        
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(34, 221, 210, ${particle.opacity})`;
         ctx.fill();
-        
         // Draw connections
         particles.slice(index + 1).forEach(otherParticle => {
           const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) + 
             Math.pow(particle.y - otherParticle.y, 2)
           );
-          
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
@@ -163,15 +139,12 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
         });
       });
     };
-
     const drawWaves = () => {
       const time = Date.now() * 0.001;
       const amplitude = 50;
       const frequency = 0.01;
-      
       ctx.strokeStyle = 'rgba(34, 221, 210, 0.3)';
       ctx.lineWidth = 2;
-      
       // Draw multiple wave layers
       for (let layer = 0; layer < 3; layer++) {
         ctx.beginPath();
@@ -188,30 +161,23 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
         ctx.stroke();
       }
     };
-
     const drawMatrix = () => {
       const time = Date.now() * 0.001;
       const fontSize = 14;
       const columns = Math.floor(canvas.width / fontSize);
-      
       ctx.fillStyle = 'rgba(34, 221, 210, 0.8)';
       ctx.font = `${fontSize}px monospace`;
-      
       for (let i = 0; i < columns; i++) {
         const x = i * fontSize;
         const y = (Math.sin(time + i) * 0.5 + 0.5) * canvas.height;
-        
         const char = String.fromCharCode(
           Math.floor(Math.random() * 26) + 65
         );
-        
         ctx.fillText(char, x, y);
       }
     };
-
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
       switch (variant) {
         case 'grid':
           drawGrid();
@@ -226,22 +192,17 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
           drawMatrix();
           break;
       }
-      
       animationFrameId = requestAnimationFrame(animate);
     };
-
     resizeCanvas();
     initParticles();
     animate();
-
     window.addEventListener('resize', resizeCanvas);
-
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
   }, [variant]);
-
   return (
     <canvas
       ref={canvasRef}
@@ -252,7 +213,6 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
     />
   );
 }
-
 // Neon glow effect component
 export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }: {
   children: React.ReactNode;
@@ -271,7 +231,6 @@ export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }: {
     </div>
   );
 }
-
 // Floating particles component
 export function FloatingParticles({ count = 20, className = '' }: {
   count?: number;
@@ -294,7 +253,6 @@ export function FloatingParticles({ count = 20, className = '' }: {
     </div>
   );
 }
-
 // Gradient border component
 export function GradientBorder({ children, className = '', borderWidth = '2px' }: {
   children: React.ReactNode;
@@ -315,4 +273,5 @@ export function GradientBorder({ children, className = '', borderWidth = '2px' }
       </div>
     </div>
   );
+=======
 }

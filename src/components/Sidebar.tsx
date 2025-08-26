@@ -5,13 +5,18 @@ import {
   Lightbulb, TrendingUp, BarChart3, Lock, AlertTriangle, Server, CheckCircle, Truck, Car, 
   TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, 
   LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone
-
+=======
 import React from 'react';
 import { motion } from 'framer-motion';
+=======
 import React from 'react';
+=======
 import React, { useState } from 'react';
+=======
 import React from 'react';
+=======
 import React, { useState } from 'react';
+=======
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
@@ -77,35 +82,56 @@ import {
   MapPin
 } from 'lucide-react';
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Database, Network, Zap, Target, Rocket, Cloud, Github } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Zap, ChevronRight, ChevronDown } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Cloud, Database, Code, BarChart3, Target, Heart, Building, Rocket, Lock, Network, Eye, Workflow, Palette, Server, Clock, Zap, Star, TrendingUp, ShoppingCart, Calendar, Video, FileText } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Database, Cloud, Lock, BookOpen, FileText, Calendar, HelpCircle, Settings, Star, TrendingUp, Rocket, Cpu, Network, Server, Code, Palette, Target, Lightbulb, Github } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, ShoppingCart, Code, DollarSign } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Database, Cpu, Lock, Rocket, BookOpen, FileText, Calendar, HelpCircle, Settings, BarChart3, Target, Building2, Heart, Car, Factory, ShoppingCart, GraduationCap, Microscope, Truck, Plane, Satellite, Atom, Cloud, Signal, Github, Link as LinkIcon } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Zap, FileText, HelpCircle, Settings, Rocket, Brain, Database, Lock, Cloud, Code, BarChart3, Palette, Target, Lightbulb, BookOpen, Calendar, MessageSquare, Star, Award, TrendingUp, Cpu, Network, Server, ShieldCheck, Globe2, Smartphone, Wifi, Satellite, Atom, TestTube, Microscope, Car, Plane, Ship, Truck, Building2, Heart, Pill, Stethoscope, Gavel, Scale, Factory, Cog, Bot, Eye, Key, QrCode, Wallet, Coins, Leaf, Sun, Wind, Store, Cookie, Github } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Cloud, Database, Network, Settings, BookOpen, MessageCircle, FileText, Star, Rocket, Target, Lightbulb, CheckCircle, Eye } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Github, Youtube, Shield, Handshake } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Eye } from 'lucide-react';
+=======
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Cloud, Lock, Code, Rocket, Target, Lightbulb, Sparkles } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Target } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, HelpCircle, Settings, Star, Cloud, Code } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, FileText, TrendingUp, ArrowRight, Cloud, Calendar } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Network, Brain, BarChart3, Zap, Database, Command } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, FileText } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Shield, Handshake, Github } from 'lucide-react';
+=======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Atom, Server, Database, Package, Building, Rocket } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
-
 export default function Sidebar() {
   const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
+=======
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+=======
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+=======
   ShoppingCart, 
   Users, 
   Settings, 
@@ -121,7 +147,6 @@ import { cn } from '@/lib/utils';
   Building,
   Leaf
 } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -129,13 +154,17 @@ interface SidebarProps {
       items: [
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
+=======
       title: 'Main Navigation',
       items: [
         { name: 'Home', path: '/', icon: Home },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
+=======
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
         { name: 'Pricing', path: '/pricing', icon: Briefcase },
+=======
+=======
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
         { name: 'Pricing', path: '/pricing', icon: Star },
         { name: 'About', path: '/about', icon: Users },
@@ -143,17 +172,21 @@ interface SidebarProps {
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'About', path: '/about', icon: Users },
+=======
       title: 'Main',
       items: [
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
         { name: 'AI Solutions', path: '/ai-solutions', icon: Briefcase },
+=======
         { name: 'AI Services', path: '/ai-services', icon: Briefcase },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'Pricing', path: '/pricing', icon: Briefcase },
+=======
         { name: 'Solutions', path: '/solutions', icon: Globe },
         { name: 'Pricing', path: '/pricing', icon: Star },
+=======
         { name: 'About', path: '/about', icon: Users },
       title: 'Main Navigation',
       items: [
@@ -164,11 +197,13 @@ interface SidebarProps {
         { name: 'Documentation', path: '/docs', icon: BookOpen },
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Contact', path: '/contact', icon: Phone }
+=======
         { name: 'Contact', path: '/contact', icon: Phone },
         { name: 'Sitemap', path: '/sitemap', icon: Globe }
       ]
     },
     {
+=======
       title: 'AI & Autonomous Systems',
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
@@ -194,13 +229,16 @@ interface SidebarProps {
         { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Briefcase },
         { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Briefcase },
         { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Briefcase }
+=======
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+=======
         { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Briefcase },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
         { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
         { name: 'AI Research Platform', path: '/ai-autonomous-research', icon: Briefcase },
         { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
         { name: 'AI Business Intelligence', path: '/ai-business-intelligence-suite', icon: Briefcase },
+=======
         { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Briefcase },
         { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: Briefcase },
         { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
@@ -216,16 +254,20 @@ interface SidebarProps {
         { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Globe },
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe },
         { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
+=======
+=======
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
         { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
         { name: 'AI & Machine Learning', path: '/services?category=AI%20%26%20Machine%20Learning', icon: Briefcase },
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
         { name: 'Advanced Research Automation', path: '/advanced-research-automation', icon: Briefcase },
+=======
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
         { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Briefcase },
         { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Briefcase },
         { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Briefcase },
+=======
         { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
         { name: 'AI Business Manager 2029', path: '/ai-autonomous-business-manager-2029', icon: Briefcase },
         { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Briefcase },
@@ -240,6 +282,7 @@ interface SidebarProps {
         { name: 'Emerging Technology', path: '/services?category=Emerging%20Technology', icon: Globe },
         { name: 'Autonomous Systems', path: '/services?category=AI%20%26%20Autonomous%20Systems', icon: Users },
         { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Users }
+=======
       title: 'AI & Technology',
       items: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
@@ -247,12 +290,14 @@ interface SidebarProps {
         { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
         { name: 'Advanced Research Automation', path: '/advanced-research-automation', icon: Globe },
         { name: 'Machine Learning', path: '/services#ai-ml', icon: Briefcase }
+=======
       title: 'AI & Autonomous Systems',
       items: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
         { name: 'AI Services', path: '/ai-services', icon: Brain },
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'AI Matcher', path: '/match', icon: Brain }
+=======
         { name: 'AI & Machine Learning', path: '/ai-services', icon: Briefcase },
         { name: 'AI Research Assistant', path: '/ai-research-assistant', icon: Briefcase },
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
@@ -265,6 +310,7 @@ interface SidebarProps {
         { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase },
         { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Globe },
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe }
+=======
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Shield },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
@@ -319,6 +365,7 @@ interface SidebarProps {
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Globe },
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Briefcase },
+=======
       title: 'AI & Autonomous Systems',
       items: [
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
@@ -341,6 +388,7 @@ interface SidebarProps {
     {
         { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
         { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
+=======
         { name: 'Business Intelligence', path: '/services/business-intelligence', icon: Briefcase },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
         { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Briefcase },
@@ -400,9 +448,11 @@ interface SidebarProps {
         { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Rocket },
         { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Rocket },
         { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Users }
+=======
         { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe }
+=======
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
         { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cpu },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Cpu },
@@ -410,6 +460,7 @@ interface SidebarProps {
         { name: 'Managed IT Services', path: '/services/managed-it-services', icon: Cpu },
         { name: 'DevOps Automation', path: '/services/devops-automation', icon: Cpu },
         { name: 'Cloud Migration', path: '/services/cloud-migration', icon: Cpu }
+=======
       title: 'Core Services',
       items: [
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
@@ -598,6 +649,7 @@ interface SidebarProps {
         { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart },
         { name: 'Government Solutions', path: '/solutions/government', icon: Building },
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Rocket }
+=======
       title: 'AI & Technology Services',
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
@@ -625,6 +677,7 @@ interface SidebarProps {
     },
     {
       title: 'Company & Resources',
+=======
       title: 'Company & Support',
       items: [
         { name: 'About Us', path: '/about', icon: Users },
@@ -632,6 +685,7 @@ interface SidebarProps {
         { name: 'Our Team', path: '/team', icon: Users },
         { name: 'News', path: '/news', icon: Globe },
         { name: 'Case Studies', path: '/case-studies', icon: Globe }
+=======
         { name: 'Our Team', path: '/team', icon: Users },
         { name: 'Mission', path: '/mission', icon: Target },
         { name: 'Partners', path: '/partners', icon: Handshake },
@@ -640,6 +694,7 @@ interface SidebarProps {
         { name: 'Blog', path: '/blog', icon: Globe },
         { name: 'Our Mission', path: '/mission', icon: Users },
         { name: 'Partners', path: '/partners', icon: Handshake }
+=======
         { name: 'Our Mission', path: '/mission', icon: Users },
         { name: 'Our Team', path: '/team', icon: Users },
         { name: 'Partners', path: '/partners', icon: Handshake }
@@ -659,6 +714,7 @@ interface SidebarProps {
     {
       title: 'Support & Help',
       items: [
+=======
         { name: 'Help Center', path: '/help', icon: Users },
         { name: 'Documentation', path: '/docs', icon: Globe },
       icon: Home,
@@ -700,6 +756,7 @@ interface SidebarProps {
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Briefcase },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
         { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
+=======
       title: 'AI & Autonomous Systems',
       items: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
@@ -734,6 +791,7 @@ interface SidebarProps {
         { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Car },
         { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Car },
         { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Target },
+=======
         { name: 'Healthcare', path: '/solutions/healthcare', icon: Shield },
         { name: 'Finance', path: '/solutions/finance', icon: Briefcase },
         { name: 'Manufacturing', path: '/solutions/manufacturing', icon: Settings },
@@ -744,6 +802,7 @@ interface SidebarProps {
     },
     {
       title: 'Quantum Technology',
+=======
       title: 'AI & Technology',
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
@@ -852,12 +911,14 @@ interface SidebarProps {
         { name: 'Education Technology', path: '/solutions/education', icon: Brain, description: 'AI-powered learning platforms' },
         { name: 'Real Estate Tech', path: '/solutions/real-estate', icon: Globe, description: 'Property management solutions' },
         { name: 'Transportation & Logistics', path: '/solutions/transportation', icon: Rocket, description: 'Smart mobility solutions' }
+=======
         { name: 'Support Center', path: '/support', icon: Phone },
         { name: 'FAQ', path: '/faq', icon: Globe },
         { name: 'Events', path: '/events', icon: Calendar },
         { name: 'Webinars', path: '/webinars', icon: Video },
         { name: 'White Papers', path: '/white-papers', icon: FileText },
         { name: 'Testimonials', path: '/testimonials', icon: Star }
+=======
         { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
         { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target, description: 'Industry solutions' },
@@ -936,6 +997,7 @@ interface SidebarProps {
         { name: 'FAQ', path: '/faq', icon: HelpCircle, description: 'Frequently asked' },
         { name: 'Pricing', path: '/pricing', icon: Star, description: 'Service costs' },
         { name: 'Status Page', path: '/status', icon: Settings, description: 'System status' }
+=======
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Mission', path: '/mission', icon: Target },
         { name: 'Our Team', path: '/team', icon: Users },
@@ -949,6 +1011,7 @@ interface SidebarProps {
         { name: 'Events', path: '/events', icon: Calendar },
         { name: 'Webinars', path: '/webinars', icon: Calendar },
         { name: 'White Papers', path: '/white-papers', icon: FileText },
+=======
         { name: 'Help Center', path: '/help', icon: Globe },
         { name: 'News', path: '/news', icon: Globe },
         { name: 'Blog', path: '/blog', icon: Globe }
@@ -972,12 +1035,14 @@ interface SidebarProps {
         { name: 'Developer Portal', path: '/developer-portal', icon: Code },
         { name: 'Request Quote', path: '/request-quote', icon: DollarSign },
         { name: 'Pricing', path: '/pricing', icon: DollarSign }
+=======
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Status Page', path: '/status', icon: Globe },
         { name: 'Privacy Policy', path: '/privacy', icon: Shield },
         { name: 'Terms of Service', path: '/terms', icon: FileText },
         { name: 'Cookie Policy', path: '/cookies', icon: Shield },
         { name: 'Sitemap', path: '/sitemap', icon: Globe },
+=======
         { name: 'Blog', path: '/blog', icon: Globe },
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'Help Center', path: '/help', icon: Globe }
@@ -985,6 +1050,7 @@ interface SidebarProps {
     },
     {
       title: 'Support & Legal',
+=======
         { name: 'News', path: '/news', icon: Globe },
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'Events', path: '/events', icon: Globe },
@@ -1001,7 +1067,9 @@ interface SidebarProps {
         { name: 'Privacy Policy', path: '/privacy', icon: Lock },
         { name: 'Terms of Service', path: '/terms', icon: Lock },
         { name: 'Cookie Policy', path: '/cookies', icon: Lock }
+=======
         { name: 'Solutions', path: '/solutions/enterprise', icon: Zap },
+=======
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
         { name: 'Pricing', path: '/pricing', icon: Briefcase },
         { name: 'About', path: '/about', icon: Users },
@@ -1057,6 +1125,7 @@ interface SidebarProps {
         { name: 'AI Customer Support', path: '/services#ai-support', icon: Brain, description: 'Automated support' },
         { name: 'AI HR Automation', path: '/services#ai-hr', icon: Brain, description: 'HR automation' },
         { name: 'AI Marketing Platform', path: '/services#ai-marketing', icon: Brain, description: 'Marketing automation' }
+=======
       title: 'AI & Technology Services',
       items: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
@@ -1130,6 +1199,7 @@ interface SidebarProps {
         { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', icon: Cloud },
         { name: 'Quantum Financial Trading', path: '/quantum-financial-trading', icon: DollarSign },
         { name: 'Quantum Services', path: '/quantum-services', icon: Atom }
+=======
         { name: 'Healthcare AI', path: '/ai-autonomous-healthcare-physician', icon: Users },
         { name: 'Manufacturing AI', path: '/ai-autonomous-manufacturing', icon: Briefcase },
         { name: 'Financial Services', path: '/ai-autonomous-business-operations', icon: TrendingUp },
@@ -1138,6 +1208,7 @@ interface SidebarProps {
         { name: 'Education AI', path: '/ai-autonomous-education-professor', icon: BookOpen },
         { name: 'Legal AI', path: '/ai-autonomous-legal-counsel', icon: Shield },
         { name: 'Logistics AI', path: '/ai-autonomous-logistics', icon: Globe }
+=======
       title: 'AI & Technology',
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
@@ -1200,12 +1271,14 @@ interface SidebarProps {
         { name: 'Help Center', path: '/help', icon: Globe, description: 'Support resources' },
         { name: 'Documentation', path: '/docs', icon: Globe, description: 'Technical guides' },
         { name: 'Status Page', path: '/status', icon: Globe, description: 'System status' }
+=======
         { name: 'Status Page', path: '/status', icon: Globe },
         { name: 'FAQ', path: '/faq', icon: Users },
         { name: 'Privacy Policy', path: '/privacy', icon: Shield },
         { name: 'Terms of Service', path: '/terms', icon: Shield },
         { name: 'Cookie Policy', path: '/cookies', icon: Shield },
         { name: 'Accessibility', path: '/accessibility', icon: Users }
+=======
       items: [
         { name: 'Mission & Vision', path: '/mission', icon: Star },
         { name: 'Partners', path: '/partners', icon: Handshake },
@@ -1223,6 +1296,7 @@ interface SidebarProps {
         { name: 'Blog & News', path: '/news', icon: BookOpen },
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Support', path: '/support', icon: HelpCircle }
+=======
         { name: 'Our Mission', path: '/mission', icon: Rocket },
         { name: 'Team', path: '/team', icon: Users },
         { name: 'Blog', path: '/blog', icon: FileText },
@@ -1231,30 +1305,37 @@ interface SidebarProps {
         { name: 'White Papers', path: '/white-papers', icon: BookOpen },
         { name: 'Events', path: '/events', icon: Calendar },
         { name: 'Partners', path: '/partners', icon: Handshake }
+=======
         { name: 'Contact Us', path: '/contact', icon: Phone },
         { name: 'FAQ', path: '/faq', icon: Users },
         { name: 'News', path: '/news', icon: Globe }
+=======
         { name: 'Contact Support', path: '/support', icon: Phone },
         { name: 'Status Page', path: '/status', icon: Globe },
         { name: 'FAQ', path: '/help#faq', icon: FileText }
+=======
         { name: 'Help Center', path: '/help-center', icon: Users },
         { name: 'Case Studies', path: '/case-studies', icon: Globe },
         { name: 'News', path: '/news', icon: Globe },
         { name: 'Webinars', path: '/webinars', icon: Globe },
         { name: 'White Papers', path: '/white-papers', icon: Globe }
+=======
         { name: 'Contact Support', path: '/support', icon: Phone }
+=======
         { name: 'Status Page', path: '/status', icon: Globe },
         { name: 'FAQ', path: '/faq', icon: Users },
         { name: 'Sitemap', path: '/sitemap', icon: Globe }
+=======
         { name: 'Leadership', path: '/leadership', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Partners', path: '/partners', icon: Users },
         { name: 'News', path: '/news', icon: Globe }
+=======
   className?: string;
 }
-
 export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
   const location = useLocation();
+=======
   Users, 
   MessageSquare, 
   Settings, 
@@ -1269,25 +1350,21 @@ export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
   X
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
-
 interface SidebarProps {
   isOpen: boolean;
   onToggle: () => void;
   className?: string;
 }
-
 export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-
   const navigationItems = [
     {
       title: 'Main',
       items: [
     onClose();
   }, [location.pathname, onClose]);
-
   const navigationItems = [
     {
       title: 'AI Services',
@@ -1303,6 +1380,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
         { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
         { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase }
+=======
         { name: 'AI Content Generation', href: '/ai-services-showcase', icon: Bot, badge: 'Popular' },
         { name: 'AI Business Intelligence', href: '/ai-services-showcase', icon: BarChart3, badge: 'New' },
         { name: 'AI Customer Support', href: '/ai-services-showcase', icon: MessageSquare, badge: 'Featured' },
@@ -1376,6 +1454,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         { name: 'Documentation', href: '/docs', icon: BookOpen },
         { name: 'API Reference', href: '/api', icon: Code },
         { name: 'Status Page', href: '/status', icon: CheckCircle }
+=======
         { name: 'Blog', href: '/blog', icon: BookOpen },
         { name: 'Help Center', href: '/help-center', icon: HelpCircle },
         { name: 'Green IT', href: '/green-it', icon: Leaf },
@@ -1387,6 +1466,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       items: [
         { name: 'Privacy Policy', href: '/privacy', icon: Shield },
         { name: 'Terms of Service', href: '/terms', icon: FileText },
+=======
         { label: 'Home', href: '/', icon: Home },
         { label: 'Marketplace', href: '/marketplace', icon: Briefcase },
         { label: 'Talent', href: '/talent', icon: Users },
@@ -1420,6 +1500,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         { label: 'Help Center', href: '/help', icon: HelpCircle },
         { label: 'Contact', href: '/contact', icon: MessageSquare },
         { label: 'Sitemap', href: '/sitemap', icon: Globe },
+=======
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Mission', path: '/mission', icon: Target },
         { name: 'Our Team', path: '/team', icon: Users },
@@ -1443,7 +1524,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       ]
     }
   ];
-
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
@@ -1451,7 +1531,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
     { icon: Youtube, href: 'https://youtube.com/@ziontechgroup', label: 'YouTube' }
   ];
-
   const sidebarVariants = {
     closed: {
       x: '-100%',
@@ -1470,29 +1549,32 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       }
     }
   };
-
   const overlayVariants = {
     closed: { opacity: 0 },
     open: { opacity: 1 }
   };
-
   // Fixed contact information
   const contactInfo = [
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+=======
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
+=======
     { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
-
   // Fixed social media links with proper URLs
   const socialLinks = [
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
+=======
     { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
     { icon: Youtube, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' }
+=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
+=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
@@ -1500,32 +1582,37 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
+=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' },
     { icon: Globe, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' },
     { icon: Briefcase, href: 'https://github.com/ziontechgroup', label: 'GitHub' }
+=======
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },
     { icon: Users, href: 'https://discord.gg/ziontechgroup', label: 'Discord' }
+=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
     { icon: Globe, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' }
+=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
+=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
+=======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
   ];
-
   const sidebarVariants = {
     closed: {
       x: '-100%',
@@ -1544,12 +1631,12 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       }
     }
   };
-
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
   ];
+=======
   const overlayVariants = {
     closed: {
       opacity: 0,
@@ -1564,10 +1651,12 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       }
     }
   };
-
+=======
   return (
   return (
+=======
   return (
+=======
   return (
     <AnimatePresence>
       {isOpen && (
@@ -1576,17 +1665,17 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             onClick={onClose}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
           />
-          
           {/* Sidebar */}
+=======
     <>
       <AnimatePresence>
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
             onClick={() => setIsSidebarOpen(false)}
           />
-
       {/* Sidebar */}
       <AnimatePresence>
         {isSidebarOpen && (
+=======
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -1594,6 +1683,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             onClick={onClose}
           />
+=======
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -1601,9 +1691,9 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
             onClick={onClose}
           />
-
           {/* Sidebar */}
           <motion.aside
+=======
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -1611,15 +1701,16 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             onClick={onClose}
           />
-
           {/* Sidebar */}
           <motion.aside
+=======
     <AnimatePresence>
       {isOpen && (
         <>
           {/* Overlay */}
           <motion.div
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+=======
     <>
       {/* Overlay */}
       <AnimatePresence>
@@ -1632,22 +1723,21 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
             onClick={onClose}
           />
-
       {/* Sidebar */}
       <AnimatePresence>
         {isOpen && (
           <motion.aside
+=======
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
             onClick={onClose}
           />
         )}
       </AnimatePresence>
-
       {/* Sidebar */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-
+=======
           {/* Sidebar */}
           <motion.aside
             variants={sidebarVariants}
@@ -1669,6 +1759,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     </h2>
                     <p className="text-xs text-gray-400">Navigation Menu</p>
                   </div>
+=======
         {isOpen && (
           <>
             {/* Overlay */}
@@ -1680,7 +1771,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               exit="closed"
               onClick={onClose}
             />
-
             {/* Sidebar */}
             <motion.aside
               className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-black to-blue-900 text-white z-50 shadow-2xl border-r border-cyan-500/30"
@@ -1700,6 +1790,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <button
                   onClick={() => setIsSidebarOpen(false)}
                   className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
+=======
             className="fixed left-0 top-0 h-full w-80 max-w-[90vw] bg-background border-r border-border z-50 overflow-y-auto"
           >
             <div className="p-6">
@@ -1716,11 +1807,13 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-all duration-300"
                 >
                   <X className="w-5 h-5" />
+=======
                   className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-all duration-300"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
+=======
             className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 lg:hidden overflow-y-auto"
           >
             {/* Header */}
@@ -1738,10 +1831,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="w-6 h-6" />
               </button>
             </div>
-
   const overlayVariants = {
     closed: { opacity: 0 },
     open: { opacity: 1 }
+=======
   const handleSocialLinkClick = (social: typeof socialLinks[0]) => {
     try {
       window.open(social.href, '_blank', 'noopener,noreferrer');
@@ -1749,7 +1842,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       console.error(`Failed to open ${social.label}:`, error);
     }
   };
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -1762,7 +1854,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 z-40"
             onClick={onClose}
           />
-          
           {/* Sidebar */}
           <motion.div
             initial="closed"
@@ -1786,7 +1877,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="w-6 h-6" />
               </button>
             </div>
-
                     <button
                       onClick={() => toggleSection(section.title)}
                       className="flex items-center justify-between w-full text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text hover:bg-white/10 rounded-lg p-2 transition-colors"
@@ -1798,13 +1888,11 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         <ChevronRight className="w-4 h-4" />
                       )}
                     </button>
-                    
                     {expandedSections.includes(section.title) && (
                       <div className="space-y-1 ml-4">
                         {section.items.map((item) => {
                           const Icon = item.icon;
                           const isActive = location.pathname === item.path;
-                          
                           return (
                             <Link
                               key={item.name}
@@ -1828,6 +1916,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       </div>
                     )}
                     <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
+=======
               {/* Navigation */}
               <nav className="space-y-8">
                 {navigationItems.map((section) => (
@@ -1853,10 +1942,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         </li>
                       ))}
                     </ul>
+=======
                   </div>
                 ))}
               </nav>
-
               {/* Contact Information */}
               <div className="mt-12 pt-8 border-t border-border">
                 <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
@@ -1899,6 +1988,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         </Link>
                       );
                     })}
+=======
             variants={sidebarVariants}
             className="fixed left-0 top-0 h-full w-80 max-w-[90vw] bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 overflow-y-auto"
           >
@@ -1907,6 +1997,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">Z</span>
+=======
                     <Link 
                       to="/contact"
                       className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hover:scale-105 transition-transform text-center block"
@@ -1919,8 +2010,8 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     >
                       View Pricing
                     </Link>
+=======
             </div>
-
             {/* Navigation Items */}
             <div className="p-4 space-y-6">
               {navigationItems.map((section, sectionIndex) => (
@@ -1954,6 +2045,8 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     <Link to="/contact" className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hover:bg-zion-cyan/10 transition-colors text-center block">
                       Schedule Demo
                     </Link>
+=======
+=======
               {/* Search */}
               <div className="relative">
                 <input
@@ -1963,7 +2056,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 />
               </div>
             </div>
-
             {/* Navigation Content */}
             <div className="p-6 space-y-8">
               {navigationItems.map((section, sectionIndex) => (
@@ -1992,6 +2084,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         </div>
                       </Link>
                     ))}
+=======
             {/* Navigation */}
             <div className="p-6 space-y-8">
               {navigationItems.map((section) => (
@@ -2016,6 +2109,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       </Link>
                     ))}
                   </div>
+=======
                   {contactInfo.map((contact, index) => (
                     <div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">
                       <contact.icon className="h-4 w-4 text-zion-cyan" />
@@ -2050,12 +2144,12 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                           </li>
                         ))}
                       </ul>
+=======
             className="fixed left-0 top-0 h-full w-80 max-w-[90vw] z-50 overflow-hidden"
           >
             {/* Futuristic Background */}
             <div className="absolute inset-0 futuristic-bg opacity-80"></div>
             <div className="absolute inset-0 cyber-grid-bg opacity-30"></div>
-            
             {/* Neural Network Lines */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="neural-line" style={{ top: '20%', width: '60%', left: '20%', animationDelay: '0s' }}></div>
@@ -2063,7 +2157,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               <div className="neural-line" style={{ top: '60%', width: '70%', left: '15%', animationDelay: '2s' }}></div>
               <div className="neural-line" style={{ top: '80%', width: '50%', left: '25%', animationDelay: '3s' }}></div>
             </div>
-
             {/* Floating Quantum Elements */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="quantum-particle" style={{ top: '15%', left: '80%', animationDelay: '0s' }}></div>
@@ -2071,7 +2164,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               <div className="quantum-particle" style={{ top: '55%', left: '90%', animationDelay: '2s' }}></div>
               <div className="quantum-particle" style={{ top: '75%', left: '88%', animationDelay: '3s' }}></div>
             </div>
-
             <div className="relative h-full flex flex-col">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-zion-cyan/30">
@@ -2094,7 +2186,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   <X className="w-5 h-5 text-zion-slate-light group-hover:neon-text transition-colors" />
                 </button>
               </div>
-
               {/* Navigation Content */}
               <div className="flex-1 overflow-y-auto p-6 space-y-6">
                 {/* Main Navigation */}
@@ -2108,7 +2199,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         const Icon = item.icon;
                         const isActive = location.pathname === item.path;
                         const isFeatured = item.featured;
-                        
                         return (
                           <Link
                             key={item.name}
@@ -2139,7 +2229,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   ))}
                 </nav>
               </div>
-
               {/* Social Links */}
               <div className="flex space-x-3">
                 {socialLinks.map((social, index) => (
@@ -2154,18 +2243,17 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     <social.icon className="w-5 h-5 text-zion-slate-light hover:text-zion-cyan transition-colors" />
                   </a>
                 ))}
+=======
                 className="p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
-
             {/* Navigation */}
             <div className="p-6 space-y-6">
               {navigationItems.map((section) => {
                 const Icon = section.icon;
                 const isExpanded = expandedSections.includes(section.title);
-                
                 return (
                   <div key={section.title} className="space-y-3">
                     <button
@@ -2186,7 +2274,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         }`} 
                       />
                     </button>
-                    
                     {isExpanded && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
@@ -2198,7 +2285,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                         {section.items.map((item) => {
                           const ItemIcon = item.icon;
                           const isActive = location.pathname === item.path;
-                          
                           return (
                             <Link
                               key={item.path}
@@ -2229,7 +2315,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 );
               })}
             </div>
-
             {/* Contact & Social */}
             <div className="p-6 border-t border-gray-800/50 space-y-6">
               {/* Contact Info */}
@@ -2249,6 +2334,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       </a>
                     );
                   })}
+=======
             <div className="p-6 border-t border-gray-800 space-y-6">
               {/* Contact Info */}
               <div>
@@ -2266,6 +2352,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       <span className="text-sm">{contact.text}</span>
                     </a>
                   ))}
+=======
             {/* Navigation */}
             <nav className="p-6 space-y-8">
               {navigationItems.map((section) => (
@@ -2287,7 +2374,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   </div>
                 </div>
               ))}
-
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
                   Follow Us
@@ -2301,6 +2387,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       rel="noopener noreferrer"
                       className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-400/10 rounded-lg transition-all duration-200"
                       title={social.label}
+=======
               {/* Social Links */}
               <div className="pt-6 border-t border-cyan-500/20">
                 <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-4 neon-text-cyan">
@@ -2319,8 +2406,8 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       <social.icon className="w-5 h-5" />
                     </a>
                   ))}
+=======
               </div>
-
               {/* Footer */}
               <div className="border-t border-gray-700/50 p-6 space-y-6">
                 {/* Contact Info */}
@@ -2344,7 +2431,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="h-5 w-5" />
               </button>
             </div>
-
             {/* Navigation */}
             <nav className="p-6 space-y-8">
               {navigationItems.map((section) => (
@@ -2356,7 +2442,8 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     {section.items.map((item) => {
                       const IconComponent = item.icon;
                       const isActive = location.pathname === item.path;
-
+=======
+=======
                 {/* Quick Actions */}
                 <div className="space-y-3">
                   <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
@@ -2372,7 +2459,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   </div>
                 </div>
               </div>
-
               {/* Footer */}
               <div className="border-t border-zion-cyan/30 p-6 space-y-4">
                 {/* Contact Info */}
@@ -2393,8 +2479,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                           <IconComponent className="w-4 h-4 flex-shrink-0" />
                           <span className="truncate">{item.name}</span>
                         </Link>
+=======
                       );
                     })}
+=======
                     {contactInfo.map((contact, index) => (
                       <a
                         key={index}
@@ -2406,6 +2494,8 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                       </a>
                     ))}
                   </div>
+=======
+=======
                           <Icon className="w-4 h-4 text-zion-cyan group-hover:neon-text" />
                           <span className="flex-1">{contact.text}</span>
                         </a>
@@ -2413,7 +2503,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     })}
                   </div>
                 </div>
-
                 {/* Social Links */}
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-zion-cyan neon-text">Follow Us</h4>
@@ -2435,7 +2524,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     })}
                   </div>
                 </div>
-
                 {/* Company Info */}
                 <div className="text-center pt-4 border-t border-zion-cyan/20">
                   <p className="text-xs text-zion-slate-light">
@@ -2446,7 +2534,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   </p>
                 </div>
               </div>
-
               {/* Social Links */}
               <div className="mt-6">
                 <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
@@ -2491,7 +2578,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 <X className="w-5 h-5" />
               </button>
             </div>
-
             {/* Navigation */}
             <nav className="p-6 space-y-8">
               {navigationItems.map((section, sectionIndex) => (
@@ -2522,7 +2608,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </div>
               ))}
             </nav>
-
             {/* Contact Information */}
             <div className="p-6 border-t border-gray-700 space-y-4">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
@@ -2544,7 +2629,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
             {/* Social Links */}
             <div className="p-6 border-t border-gray-700 space-y-4">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
@@ -2579,7 +2663,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </div>
               ))}
             </nav>
-
+=======
             {/* Contact Information */}
             <div className="p-6 border-t border-gray-800">
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
@@ -2594,6 +2678,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                   >
                     <contact.icon className="w-4 h-4 text-cyan-500" />
                     <span className="text-sm">{contact.text}</span>
+=======
                     className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-all duration-200"
                     aria-label={social.label}
                   >
@@ -2602,8 +2687,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
-
             {/* CTA Button */}
             <div className="p-6 border-t border-gray-800">
               <Link
@@ -2614,6 +2697,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </Link>
             </div>
           </motion.aside>
+=======
             {/* Quick Actions */}
             <div className="p-6 border-t border-gray-700 space-y-4">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
@@ -2636,7 +2720,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 </Link>
               </div>
             </div>
-
             {/* Footer */}
             <div className="p-6 border-t border-gray-700 text-center">
               <p className="text-gray-500 text-xs">
@@ -2647,11 +2730,12 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </p>
             </div>
           </motion.aside>
+=======
         </>
       )}
     </AnimatePresence>
+=======
                 </div>
-
                 {/* Company Info */}
                 <div className="text-center pt-4 border-t border-zion-cyan/20">
                   <p className="text-xs text-zion-slate-light">
@@ -2661,9 +2745,9 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     Transforming Business with AI & Tech
                   </p>
                 </div>
+=======
               ))}
             </div>
-
             {/* Contact Information */}
             <div className="p-4 border-t border-cyan-500/30 mt-6">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide mb-3 px-3">
@@ -2682,7 +2766,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
             {/* Social Links */}
             <div className="p-4 border-t border-cyan-500/30">
               <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide mb-3 px-3">
@@ -2703,7 +2786,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
             {/* Quick Actions */}
             <div className="p-4 border-t border-cyan-500/30">
               <div className="space-y-2">
@@ -2722,12 +2804,14 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </div>
             </div>
           </motion.aside>
+=======
               </div>
             </motion.aside>
           </>
         )}
       </AnimatePresence>
     </>
+=======
               {/* CTA Button */}
               <div className="pt-6">
                 <Link
@@ -2743,6 +2827,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         </>
       )}
     </AnimatePresence>
+=======
             {/* Social Links */}
             <div className="p-6 border-t border-gray-700">
               <h3 className="text-lg font-semibold text-cyan-400 mb-4">Follow Us</h3>
@@ -2759,7 +2844,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                 ))}
               </div>
             </div>
-
             {/* Newsletter Signup */}
             <div className="p-6 border-t border-gray-700">
               <h3 className="text-lg font-semibold text-cyan-400 mb-4">Stay Updated</h3>
@@ -2778,16 +2862,17 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         </>
       )}
     </AnimatePresence>
+=======
           </motion.div>
         )}
       </AnimatePresence>
     </>
+=======
   const quickActions = [
     { name: 'Get Started', href: '/contact', icon: Rocket, color: 'from-zion-cyan to-zion-blue' },
     { name: 'Request Demo', href: '/request-quote', icon: Video, color: 'from-zion-purple to-zion-cyan' },
     { name: 'Support Chat', href: '/support', icon: MessageSquare, color: 'from-green-400 to-emerald-400' }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: {
@@ -2798,12 +2883,10 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, x: -10 },
     visible: { opacity: 1, x: 0 }
   };
-
   return (
     <motion.aside 
       className={cn("w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 min-h-screen overflow-y-auto", className)}
@@ -2827,7 +2910,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             <p className="text-zion-cyan/70 text-xs font-medium">Innovation • Intelligence • Impact</p>
           </div>
         </div>
-
         {/* Quick Actions */}
         <div className="space-y-2">
           {quickActions.map((action) => (
@@ -2849,7 +2931,6 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
     </aside>
   );
 }
-
 // Add missing icons
 const Database = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -2858,12 +2939,12 @@ const Database = ({ className }: { className?: string }) => (
     <path d="M12 12c-4.42 0-8-1.79-8-4V6.5c2.21 1.86 5.74 2.5 8 2.5s5.79-.64 8-2.5V8c0 2.21-3.58 4-8 4z"/>
   </svg>
 );
-
 const CheckCircle = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
   </svg>
 );
+=======
   MessageSquare, 
   BarChart3,
   ShoppingCart,
@@ -2876,7 +2957,6 @@ const CheckCircle = ({ className }: { className?: string }) => (
   ChevronRight,
   ChevronDown
 } from 'lucide-react';
-
 interface SidebarItem {
   name: string;
   path: string;
@@ -2885,11 +2965,9 @@ interface SidebarItem {
   badge?: string;
   external?: boolean;
 }
-
 export function Sidebar() {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
   const location = useLocation();
-
   const sidebarItems: SidebarItem[] = [
     {
       name: 'Dashboard',
@@ -2997,7 +3075,6 @@ export function Sidebar() {
       ]
     }
   ];
-
   const toggleItem = (itemName: string) => {
     setExpandedItems(prev => 
       prev.includes(itemName)
@@ -3005,14 +3082,11 @@ export function Sidebar() {
         : [...prev, itemName]
     );
   };
-
   const isActive = (path: string) => location.pathname === path;
-
   const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
     const hasChildren = item.children && item.children.length > 0;
     const isExpanded = expandedItems.includes(item.name);
     const isItemActive = isActive(item.path);
-
     return (
       <div key={item.name}>
         <div className={`flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${
@@ -3032,7 +3106,6 @@ export function Sidebar() {
               </span>
             )}
           </Link>
-          
           {hasChildren && (
             <button
               onClick={() => toggleItem(item.name)}
@@ -3050,7 +3123,6 @@ export function Sidebar() {
             </button>
           )}
         </div>
-        
         {hasChildren && isExpanded && (
           <div className="ml-4 mt-2 space-y-1">
             {item.children.map(child => renderSidebarItem(child, level + 1))}
@@ -3059,7 +3131,6 @@ export function Sidebar() {
       </div>
     );
   };
-
   return (
     <aside className="w-64 bg-white border-r border-gray-200 h-screen overflow-y-auto shadow-lg">
       <div className="p-4">
@@ -3072,12 +3143,10 @@ export function Sidebar() {
             <span className="text-xl font-bold text-gray-900">Zion Tech</span>
           </Link>
         </div>
-
         {/* Navigation */}
         <nav className="space-y-2">
           {sidebarItems.map(item => renderSidebarItem(item))}
         </nav>
-
         {/* Quick Actions */}
         <div className="mt-8 pt-6 border-t border-gray-200">
           <h3 className="text-sm font-semibold text-gray-600 mb-3">Quick Actions</h3>
@@ -3089,7 +3158,6 @@ export function Sidebar() {
               <MessageSquare className="h-5 w-5" />
               <span className="font-medium">Request Quote</span>
             </Link>
-            
             <Link
               to="/contact"
               className="flex items-center space-x-3 px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
@@ -3097,7 +3165,6 @@ export function Sidebar() {
               <HelpCircle className="h-5 w-5" />
               <span className="font-medium">Get Help</span>
             </Link>
-
             <Link
               to="/pricing"
               className="flex items-center space-x-3 px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
@@ -3107,7 +3174,6 @@ export function Sidebar() {
             </Link>
           </div>
         </div>
-
         {/* Contact Info */}
         <div className="mt-8 pt-6 border-t border-gray-200">
           <h3 className="text-sm font-semibold text-gray-600 mb-3">Contact</h3>
@@ -3130,5 +3196,4 @@ export function Sidebar() {
     </aside>
   );
 }
-
 export default Sidebar;

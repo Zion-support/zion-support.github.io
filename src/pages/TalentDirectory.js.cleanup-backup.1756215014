@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-export default function TalentDirectory() {
-    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Tech Talent Directory - Zion Tech Group", description: "Browse our curated directory of top tech talent and professionals.", canonical: "https://ziontechgroup.com/talent" }), _jsx(Header, {}), _jsx("main", { className: "min-h-screen bg-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4 py-20", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Tech Talent Directory" }), _jsx("p", { className: "text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto", children: "Discover exceptional developers, designers, and tech professionals ready to bring your projects to life." })] }), _jsx("div", { className: "max-w-6xl mx-auto", children: _jsxs("div", { className: "bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Coming Soon" }), _jsx("p", { className: "text-zion-slate-light mb-6", children: "Our comprehensive talent directory is currently being populated with verified tech professionals. Soon you'll be able to browse profiles, view portfolios, and connect directly with talent." }), _jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8", children: [_jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83D\uDC68\u200D\uD83D\uDCBB" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Developers" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "Full-stack, frontend, backend, and specialized developers" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83C\uDFA8" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Designers" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "UI/UX designers, graphic designers, and creative professionals" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-cyan-light/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83D\uDCF1" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Mobile Devs" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "iOS, Android, and cross-platform mobile developers" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-purple-light/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83E\uDD16" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "AI/ML Engineers" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "Machine learning engineers and AI specialists" })] })] })] }) })] }) }), _jsx(Footer, {})] }));
-}
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { Search, MapPin, Briefcase, Star } from 'lucide-react';
@@ -92,7 +82,6 @@ const TalentDirectory = () => {
     ];
     return (<div className="min-h-screen bg-background">
       <SEO title="Talent Directory - Zion Tech Group" description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more." keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists" canonical="https://ziontechgroup.com/talent-directory"/>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-violet-900 via-violet-800 to-purple-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -115,7 +104,6 @@ const TalentDirectory = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Filters Section */}
       <section className="py-8 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4">
@@ -129,7 +117,6 @@ const TalentDirectory = () => {
           </div>
         </div>
       </section>
-
       {/* Talent Grid */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -139,7 +126,6 @@ const TalentDirectory = () => {
               Discover top-tier technology professionals ready to contribute to your next project
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {talents.map((talent, index) => (<motion.div key={talent.id} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 {/* Header */}
@@ -156,7 +142,6 @@ const TalentDirectory = () => {
                     <span className="text-sm text-gray-600">{talent.rating}</span>
                   </div>
                 </div>
-
                 {/* Details */}
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -172,7 +157,6 @@ const TalentDirectory = () => {
                     <span>{talent.projects} projects completed</span>
                   </div>
                 </div>
-
                 {/* Skills */}
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-gray-700 mb-2">Key Skills</h4>
@@ -182,7 +166,6 @@ const TalentDirectory = () => {
                       </span>))}
                   </div>
                 </div>
-
                 {/* CTA */}
                 <button className="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Connect with {talent.name.split(' ')[0]}
@@ -191,7 +174,6 @@ const TalentDirectory = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-violet-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -213,4 +195,3 @@ const TalentDirectory = () => {
     </div>);
 };
 export default TalentDirectory;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

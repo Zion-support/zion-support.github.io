@@ -41,7 +41,6 @@ export function TestimonialsSection() {
             Don't just take our word for it - hear from the businesses we've helped transform
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (<div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300">
               <div className="flex items-center mb-4">
@@ -53,11 +52,9 @@ export function TestimonialsSection() {
                   <p className="text-sm text-gray-600">{testimonial.role} at {testimonial.company}</p>
                 </div>
               </div>
-              
               <div className="mb-4">
                 {renderStars(testimonial.rating)}
               </div>
-              
               <p className="text-gray-700 leading-relaxed italic">
                 "{testimonial.content}"
               </p>

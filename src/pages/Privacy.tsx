@@ -2,7 +2,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-
 export default function Privacy() {
   return (
     <>
@@ -15,7 +14,6 @@ export default function Privacy() {
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
-
 const Privacy: React.FC = () => {
   return (
     <>
@@ -25,7 +23,7 @@ const Privacy: React.FC = () => {
         keywords="privacy policy, data protection, Zion Tech Group, personal information"
         canonical="https://ziontechgroup.com/privacy"
       />
-      
+=======
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -69,7 +67,6 @@ const Privacy: React.FC = () => {
               Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </p>
           </div>
-          
           <div className="max-w-4xl mx-auto space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">1. Introduction</h2>
@@ -80,7 +77,6 @@ const Privacy: React.FC = () => {
                 By using our services, you agree to the collection and use of information in accordance with this policy.
               </p>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">2. Information We Collect</h2>
               <h3 className="text-xl font-semibold text-zion-cyan mb-3">2.1 Personal Information</h3>
@@ -94,7 +90,6 @@ const Privacy: React.FC = () => {
                 <li>Communication preferences and marketing opt-ins</li>
                 <li>Payment and billing information</li>
               </ul>
-
               <h3 className="text-xl font-semibold text-zion-cyan mb-3">2.2 Automatically Collected Information</h3>
               <p className="text-zion-slate-light mb-4">
                 We automatically collect certain information when you use our services:
@@ -106,7 +101,6 @@ const Privacy: React.FC = () => {
                 <li>Log files and analytics data</li>
               </ul>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">3. How We Use Your Information</h2>
               <p className="text-zion-slate-light mb-4">
@@ -122,7 +116,6 @@ const Privacy: React.FC = () => {
                 <li>Complying with legal obligations</li>
               </ul>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">4. Information Sharing and Disclosure</h2>
               <p className="text-zion-slate-light mb-4">
@@ -136,14 +129,12 @@ const Privacy: React.FC = () => {
                 <li>To prevent fraud or security threats</li>
               </ul>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">5. Data Security</h2>
               <p className="text-zion-slate-light mb-4">
                 We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.
               </p>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">6. Your Rights and Choices</h2>
               <p className="text-zion-slate-light mb-4">
@@ -158,42 +149,36 @@ const Privacy: React.FC = () => {
                 <li>Data portability</li>
               </ul>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">7. Cookies and Tracking Technologies</h2>
               <p className="text-zion-slate-light mb-4">
                 We use cookies and similar technologies to enhance your experience, analyze usage patterns, and provide personalized content. You can control cookie settings through your browser preferences.
               </p>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">8. Third-Party Services</h2>
               <p className="text-zion-slate-light mb-4">
                 Our platform may contain links to third-party websites or integrate with third-party services. We are not responsible for the privacy practices of these external services.
               </p>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">9. Children's Privacy</h2>
               <p className="text-zion-slate-light mb-4">
                 Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.
               </p>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">10. International Data Transfers</h2>
               <p className="text-zion-slate-light mb-4">
                 Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place to protect your data.
               </p>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">11. Changes to This Policy</h2>
               <p className="text-zion-slate-light mb-4">
                 We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on our website and updating the "Last updated" date.
               </p>
             </section>
-
             <section>
               <h2 className="text-2xl font-bold text-white mb-4">12. Contact Us</h2>
               <p className="text-zion-slate-light mb-4">
@@ -217,5 +202,5 @@ const Privacy: React.FC = () => {
     </>
   );
 };
-
 export default Privacy;
+=======

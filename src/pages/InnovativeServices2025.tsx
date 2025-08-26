@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const InnovativeServices2025: React.FC = () => {
   const innovativeServices = [
     {
@@ -281,7 +280,6 @@ const InnovativeServices2025: React.FC = () => {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -316,7 +314,6 @@ const InnovativeServices2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Categories */}
       {innovativeServices.map((category, categoryIndex) => (
         <section key={categoryIndex} className={`py-20 px-4 sm:px-6 lg:px-8 ${categoryIndex % 2 === 0 ? 'bg-white/5' : ''}`}>
@@ -329,7 +326,6 @@ const InnovativeServices2025: React.FC = () => {
                 {category.description}
               </p>
             </div>
-            
             <div className="space-y-12">
               {category.services.map((service, serviceIndex) => (
                 <div
@@ -341,7 +337,6 @@ const InnovativeServices2025: React.FC = () => {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                       <p className="text-gray-300 mb-6 text-lg">{service.description}</p>
-                      
                       <div className="mb-6">
                         <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features:</h4>
                         <ul className="space-y-2">
@@ -353,7 +348,6 @@ const InnovativeServices2025: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <div className="mb-6">
                         <h4 className="text-lg font-semibold text-green-400 mb-3">Key Benefits:</h4>
                         <ul className="space-y-2">
@@ -366,7 +360,6 @@ const InnovativeServices2025: React.FC = () => {
                         </ul>
                       </div>
                     </div>
-
                     {/* Market Information */}
                     <div className="space-y-6">
                       <div className="bg-white/5 rounded-lg p-6">
@@ -382,7 +375,6 @@ const InnovativeServices2025: React.FC = () => {
                           </div>
                         </div>
                       </div>
-
                       <div className="bg-white/5 rounded-lg p-6">
                         <h4 className="text-lg font-semibold text-purple-400 mb-3">Business Information</h4>
                         <div className="space-y-3">
@@ -408,7 +400,6 @@ const InnovativeServices2025: React.FC = () => {
           </div>
         </section>
       ))}
-
       {/* Enhanced CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -442,5 +433,4 @@ const InnovativeServices2025: React.FC = () => {
     </div>
   );
 };
-
 export default InnovativeServices2025;

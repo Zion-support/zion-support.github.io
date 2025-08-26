@@ -14,7 +14,7 @@ import {
   X
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
+=======
 // Accessibility Context
 interface AccessibilityContextType {
   highContrast: boolean;
@@ -26,9 +26,7 @@ interface AccessibilityContextType {
   setFontSize: (size: 'small' | 'medium' | 'large') => void;
   setColorBlindMode: (mode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia') => void;
 }
-
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
-
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (!context) {
@@ -36,14 +34,12 @@ export const useAccessibility = () => {
   }
   return context;
 };
-
 // Accessibility Provider Component
 export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large'>('medium');
   const [colorBlindMode, setColorBlindMode] = useState<'none' | 'protanopia' | 'deuteranopia' | 'tritanopia'>('none');
-
   // Load settings from localStorage
   useEffect(() => {
     const savedSettings = localStorage.getItem('zion-accessibility-settings');
@@ -55,7 +51,6 @@ export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
       setColorBlindMode(settings.colorBlindMode || 'none');
     }
   }, []);
-
   // Save settings to localStorage
   useEffect(() => {
     const settings = {
@@ -66,38 +61,31 @@ export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
     };
     localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
   }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-
   // Apply accessibility settings to document
   useEffect(() => {
     const root = document.documentElement;
-    
     // High contrast mode
     if (highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-
     // Reduced motion
     if (reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-
     // Font size
     root.style.fontSize = fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';
-
     // Color blind mode
     root.style.filter = colorBlindMode === 'none' ? 'none' : 
       colorBlindMode === 'protanopia' ? 'url(#protanopia)' :
       colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :
       'url(#tritanopia)';
   }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-
   const value: AccessibilityContextType = {
     highContrast,
     reducedMotion,
@@ -108,14 +96,12 @@ export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
     setFontSize,
     setColorBlindMode
   };
-
   return (
     <AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>
   );
 };
-
 // Accessibility Panel Component
 export const AccessibilityPanel: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -129,7 +115,6 @@ export const AccessibilityPanel: React.FC = () => {
     setFontSize,
     setColorBlindMode
   } = useAccessibility();
-
   // Keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -138,24 +123,20 @@ export const AccessibilityPanel: React.FC = () => {
         event.preventDefault();
         setIsOpen(!isOpen);
       }
-      
       // Ctrl/Cmd + Shift + H to toggle high contrast
       if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
         event.preventDefault();
         toggleHighContrast();
       }
-      
       // Ctrl/Cmd + Shift + M to toggle reduced motion
       if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
         event.preventDefault();
         toggleReducedMotion();
       }
     };
-
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, toggleHighContrast, toggleReducedMotion]);
-
   return (
     <>
       {/* Floating Accessibility Button */}
@@ -168,7 +149,6 @@ export const AccessibilityPanel: React.FC = () => {
       >
         <Accessibility className="w-6 h-6" />
       </motion.button>
-
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (
@@ -200,7 +180,6 @@ export const AccessibilityPanel: React.FC = () => {
                   <X className="w-4 h-4" />
                 </Button>
               </div>
-
               {/* Settings */}
               <div className="space-y-6">
                 {/* High Contrast */}
@@ -217,7 +196,6 @@ export const AccessibilityPanel: React.FC = () => {
                     {highContrast ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
                   </Button>
                 </div>
-
                 {/* Reduced Motion */}
                 <div className="flex items-center justify-between">
                   <div>
@@ -232,7 +210,6 @@ export const AccessibilityPanel: React.FC = () => {
                     {reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                   </Button>
                 </div>
-
                 {/* Font Size */}
                 <div>
                   <h3 className="text-white font-medium mb-3">Font Size</h3>
@@ -249,7 +226,6 @@ export const AccessibilityPanel: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Color Blind Mode */}
                 <div>
                   <h3 className="text-white font-medium mb-3">Color Blind Support</h3>
@@ -266,7 +242,6 @@ export const AccessibilityPanel: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Keyboard Shortcuts */}
                 <div className="bg-zion-blue-dark/50 rounded-lg p-4">
                   <h3 className="text-white font-medium mb-3 flex items-center gap-2">
@@ -289,7 +264,6 @@ export const AccessibilityPanel: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Footer */}
               <div className="mt-6 pt-4 border-t border-zion-cyan/20">
                 <p className="text-xs text-zion-slate-light text-center">
@@ -303,7 +277,6 @@ export const AccessibilityPanel: React.FC = () => {
     </>
   );
 };
-
 // Skip to Content Link
 export const SkipToContent: React.FC = () => (
   <a
@@ -313,21 +286,16 @@ export const SkipToContent: React.FC = () => (
     Skip to main content
   </a>
 );
-
 // Focus Trap Hook
 export const useFocusTrap = (isActive: boolean) => {
   useEffect(() => {
     if (!isActive) return;
-
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     const container = document.activeElement?.closest('[data-focus-trap]');
-    
     if (!container) return;
-
     const focusableContent = container.querySelectorAll(focusableElements);
     const firstFocusableElement = focusableContent[0] as HTMLElement;
     const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
-
     const handleTabKey = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
         if (e.shiftKey) {
@@ -343,15 +311,12 @@ export const useFocusTrap = (isActive: boolean) => {
         }
       }
     };
-
     document.addEventListener('keydown', handleTabKey);
     return () => document.removeEventListener('keydown', handleTabKey);
   }, [isActive]);
 };
-
 // Screen Reader Only Text
 export const SrOnly: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <span className="sr-only">{children}</span>
 );
-
 export default AccessibilityPanel;

@@ -15,19 +15,17 @@ const EQUIPMENT_FILTERS = [
   { label: "AI", value: "AI" },
   { label: "Robotics", value: "Robotics" },
 ];
-
 export default function EquipmentPage() {
   const [listings, setListings] = useState<ProductListing[]>([
     ...EQUIPMENT_LISTINGS,
   ]);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setListings((prev) => [...prev, generateRandomEquipment()]);
     }, 120000); // add new equipment every 2 minutes
     return () => clearInterval(interval);
+=======
   }, []);
-
   return (
       <DynamicListingPage
         title="Datacenter Equipment"

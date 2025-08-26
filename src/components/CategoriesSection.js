@@ -114,7 +114,6 @@ export function CategoriesSection({ showTitle = true }) {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (<motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <GradientHeading>Explore Categories</GradientHeading>
@@ -123,7 +122,6 @@ export function CategoriesSection({ showTitle = true }) {
               Everything you need to accelerate your digital transformation in one place.
             </p>
           </motion.div>)}
-        
         <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {categories.map((category, index) => (<motion.div key={category.title} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }}>
               <Link to={category.link} className="group block h-full">
@@ -134,7 +132,6 @@ export function CategoriesSection({ showTitle = true }) {
                       {category.icon}
                     </div>
                   </div>
-
                   {/* Title and description */}
                   <h3 className="text-white text-2xl font-bold mb-3 group-hover:text-zion-cyan transition-colors">
                     {category.title}
@@ -142,7 +139,6 @@ export function CategoriesSection({ showTitle = true }) {
                   <p className="text-zion-slate-light mb-6 leading-relaxed">
                     {category.description}
                   </p>
-
                   {/* Features list */}
                   <div className="space-y-2 mb-6">
                     {category.features.map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">
@@ -150,12 +146,10 @@ export function CategoriesSection({ showTitle = true }) {
                         <span>{feature}</span>
                       </div>))}
                   </div>
-
                   {/* Stats */}
                   <div className="text-zion-cyan font-semibold text-sm mb-4">
                     {category.stats}
                   </div>
-
                   {/* CTA arrow */}
                   <div className="flex items-center justify-between">
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
@@ -167,7 +161,6 @@ export function CategoriesSection({ showTitle = true }) {
               </Link>
             </motion.div>))}
         </motion.div>
-        
         {/* Enhanced featured services section */}
         <motion.div className="mt-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
           <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Services</h3>
@@ -188,7 +181,6 @@ export function CategoriesSection({ showTitle = true }) {
                 </Link>
               </motion.div>))}
           </div>
-          
           {/* View all services button */}
           <motion.div className="text-center mt-8" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5 }}>
             <Link to="/comprehensive-services" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple border border-zion-purple/50 hover:border-zion-purple rounded-xl text-white transition-all duration-300 shadow-lg hover:shadow-zion-purple/25 font-semibold group">

@@ -5,12 +5,10 @@ import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Clock, Globe, Shield, Zap, MapPin, CheckCircle } from "lucide-react";
-
 export function ITServiceRequestHero() {
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (location.trim()) {
@@ -21,18 +19,16 @@ export function ITServiceRequestHero() {
         navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
       }, 1000);
 import { MapPin, Clock, Globe, ArrowRight, Shield, Zap } from "lucide-react";
-
 export function ITServiceRequestHero() {
   const [location, setLocation] = useState("");
   const navigate = useNavigate();
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (location.trim()) {
       navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
+=======
     }
   };
-
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -44,7 +40,6 @@ export function ITServiceRequestHero() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -53,14 +48,12 @@ export function ITServiceRequestHero() {
       transition: { duration: 0.5 }
     }
   };
-
   const features = [
     { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
   ];
-
   return (
     <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 md:py-28 border-b border-zion-purple/20 relative overflow-hidden">
       {/* Background decorative elements */}
@@ -95,8 +88,8 @@ export function ITServiceRequestHero() {
             Available worldwide, 24 hours a day
           </p>
         </div>
+=======
       </div>
-
       <motion.div 
         className="container mx-auto px-4 relative z-10"
         variants={containerVariants}
@@ -115,16 +108,13 @@ export function ITServiceRequestHero() {
                 Global IT Services
               </span>
             </div>
-            
             <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
               24x7 Global IT Onsite Services
             </GradientHeading>
-            
             <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
               Request professional technicians anywhere in the world, anytime you need them. 
               Fast, reliable, and secure IT solutions for your business.
             </p>
-
             {/* Feature highlights */}
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3">
@@ -140,7 +130,6 @@ export function ITServiceRequestHero() {
                 <span className="text-zion-blue-light">Same-day response guarantee</span>
               </div>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/10">
               <div className="text-center">
@@ -157,7 +146,6 @@ export function ITServiceRequestHero() {
               </div>
             </div>
           </motion.div>
-
           {/* Right form */}
           <motion.div variants={itemVariants} className="relative">
             <div className="relative">
@@ -170,7 +158,6 @@ export function ITServiceRequestHero() {
                   <h3 className="text-2xl font-bold text-white mb-2">Request Service</h3>
                   <p className="text-zion-slate-light">Enter your location to get started</p>
                 </div>
-
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="relative">
                     <Input
@@ -182,7 +169,6 @@ export function ITServiceRequestHero() {
                     />
                     <MapPin className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan/50" />
                   </div>
-
                   <Button 
                     type="submit" 
                     className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-lg py-4 rounded-xl shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 group"
@@ -193,7 +179,6 @@ export function ITServiceRequestHero() {
                     </span>
                   </Button>
                 </form>
-
                 {/* Trust indicators */}
                 <div className="mt-6 pt-6 border-t border-white/10">
                   <div className="flex items-center justify-center gap-4 text-xs text-zion-slate-light">
@@ -212,7 +197,6 @@ export function ITServiceRequestHero() {
                   </div>
                 </div>
               </div>
-
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-zion-cyan/30 rounded-full animate-pulse"></div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-zion-purple/30 rounded-full animate-pulse" style={{ animationDelay: "1s" }}></div>
@@ -223,9 +207,9 @@ export function ITServiceRequestHero() {
     </section>
   );
 }
+=======
 import React from 'react';
 import { ArrowRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
-
 export const ITServiceRequestHero: React.FC = () => {
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
@@ -236,24 +220,20 @@ export const ITServiceRequestHero: React.FC = () => {
         <div className="absolute top-0 right-0 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-1/2 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 text-orange-400 rounded-full text-sm font-medium mb-6">
             <Zap className="w-4 h-4 mr-2" />
             IT Services & Solutions
           </div>
-          
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Transform Your Business with
             <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent"> Advanced Technology</span>
           </h1>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
             Zion Tech Group delivers cutting-edge AI, cybersecurity, cloud, and quantum computing 
             solutions that drive innovation and accelerate your digital transformation journey.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
               href="/contact"
@@ -269,7 +249,6 @@ export const ITServiceRequestHero: React.FC = () => {
               Explore Solutions
             </a>
           </div>
-
           {/* Feature Icons */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
@@ -299,7 +278,6 @@ export const ITServiceRequestHero: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Bottom Wave */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg
@@ -326,3 +304,4 @@ export const ITServiceRequestHero: React.FC = () => {
     </section>
   );
 };
+=======

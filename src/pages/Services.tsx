@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-<<<<<<<< HEAD:src/pages/Services.tsx
->>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/Services.tsx.backup.1756208062
+=======
 import { useState, useMemo } from 'react';
+=======
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/comprehensiveServices';
+=======
 import React, { useState, useEffect } from 'react';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -31,7 +32,6 @@ import { Link } from 'react-router-dom';
 import { enhancedMicroSaasServices2025, enhancedITServices2025, enhancedAIServices2025 } from '../data/comprehensiveServices2025';
 import Link from 'next/link';
 import { enhancedMicroSaasServices2025 } from '../data/comprehensiveServices2025';
-
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
@@ -106,7 +106,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Service Categories */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,6 +128,8 @@ import {
                   {category.title}
                 </h3>
                 <p className="text-zion-slate mb-6 text-center leading-relaxed">
+=======
+=======
       {/* Service Categories */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -143,12 +144,13 @@ import {
         <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-zion-cyan/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-zion-purple/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '6s' }}></div>
       </div>
-
       <div className="relative z-10">
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <motion.div
             className="text-center"
+=======
+=======
     <div className="min-h-screen bg-zion-blue-dark text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple overflow-hidden">
@@ -158,7 +160,6 @@ import {
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
-        
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -184,7 +185,7 @@ import {
           </div>
         </motion.div>
         </section>
-
+=======
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Revolutionary Technology Services
             </h1>
@@ -213,7 +214,6 @@ import {
           </motion.div>
         </div>
       </section>
-
       {/* Filters and Search */}
       <section className="py-16 px-6 bg-zion-blue-dark/50">
         <div className="max-w-6xl mx-auto">
@@ -231,6 +231,9 @@ import {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300"
+=======
+=======
+=======
           className="mb-12"
         >
           <div className="bg-zion-blue-light/20 backdrop-blur-md border border-zion-purple/30 rounded-2xl p-6">
@@ -245,7 +248,6 @@ import {
                 className="w-full pl-12 pr-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
               />
             </div>
-
             {/* Filters */}
             <div className="flex flex-wrap gap-4">
               {/* Category Filter */}
@@ -255,13 +257,15 @@ import {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
+=======
                 >
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
               </div>
-
+=======
+=======
               {/* Pricing Filter */}
               <div className="flex-1 min-w-48">
                 <label className="block text-zion-slate-light text-sm font-medium mb-2">Pricing Model</label>
@@ -272,10 +276,10 @@ import {
                 >
                   {pricingModels.map(model => (
                     <option key={model} value={model}>{model.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}</option>
+=======
                   ))}
                 </select>
               </div>
-
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             variants={containerVariants}
@@ -314,7 +318,6 @@ import {
                     {service.description}
                   </p>
                 </div>
-
                 {/* Pricing */}
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
@@ -329,7 +332,6 @@ import {
                     </div>
                   )}
                 </div>
-
                 {/* Key Features */}
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-zion-purple mb-2">Key Features:</h4>
@@ -342,7 +344,6 @@ import {
                     ))}
                   </ul>
                 </div>
-
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -364,7 +365,6 @@ import {
                     )}
                   </div>
                 </div>
-
                 {/* Service Content */}
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                   {service.name}
@@ -372,7 +372,6 @@ import {
                 <p className="text-zion-slate-light mb-4 leading-relaxed">
                   {service.description}
                 </p>
-
                 {/* Price Comparison */}
                 <div className="mb-4">
                   <div className="text-2xl font-bold text-zion-cyan">
@@ -382,7 +381,6 @@ import {
                     Market: {service.marketPrice}
                   </div>
                 </div>
-
                 {/* Key Benefits */}
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
@@ -398,7 +396,6 @@ import {
                     ))}
                   </ul>
                 </div>
-
                 {/* Tags */}
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
@@ -453,7 +450,6 @@ import {
             );
           })}
         </motion.div>
-
         {/* Enhanced Services Section */}
         <div className="mt-16 mb-16">
           <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8">
@@ -491,7 +487,6 @@ import {
             </div>
           </div>
         </div>
-
         {/* Additional Services Links */}
         <section className="py-16 px-4">
           <div className="container mx-auto text-center">
@@ -512,7 +507,6 @@ import {
                   View All Services <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
-              
               <Link
                 to="/services/innovative-showcase"
                 className="bg-zion-blue-light/20 rounded-lg p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -528,7 +522,7 @@ import {
             </div>
           </div>
         </section>
-
+=======
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -548,13 +542,10 @@ import {
     { name: "Education", icon: "🎓", description: "EdTech solutions for modern learning" },
     { name: "Government", icon: "🏛️", description: "Secure government technology solutions" }
   ];
-
   const categories = ['all', 'AI/ML', 'Security', 'Cloud', 'Transformation', 'Consulting', 'Global'];
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -562,7 +553,6 @@ import {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
   const getCategoryColor = (category: string) => {
     const colors = {
       'AI/ML': 'from-purple-500 to-pink-500',
@@ -574,7 +564,6 @@ import {
     };
     return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
   };
-
   return (
     <div className="min-h-screen relative">
       <SEO 
@@ -585,14 +574,12 @@ import {
         ogImage="https://ziontechgroup.com/services-og-image.jpg"
         twitterCard="summary_large_image"
       />
-
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-blue-900">
         <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-1000"></div>
         <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-2000"></div>
       </div>
-
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 overflow-hidden">
         <div className="relative z-10 container mx-auto text-center">
@@ -606,7 +593,6 @@ import {
               Comprehensive technology solutions designed to transform your business and drive innovation.
               From AI to cybersecurity, we deliver the expertise you need to succeed.
             </p>
-            
             {/* Search and Filter */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
@@ -619,7 +605,6 @@ import {
                   className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors"
                 />
               </div>
-              
               {/* Category Filter */}
               <div className="flex flex-wrap justify-center gap-2 mt-4">
                 {categories.map((category) => (
@@ -640,7 +625,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="relative py-16 px-4">
         <div className="relative z-10 container mx-auto">
@@ -652,7 +636,6 @@ import {
               Showing {filteredServices.length} of {allServices.length} total services
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <div 
@@ -673,15 +656,12 @@ import {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-
                 {/* Service Title and Description */}
                 <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-
                 {/* Pricing */}
                 <div className="mb-4">
                   <div className="text-2xl font-bold text-blue-400">
@@ -699,7 +679,6 @@ import {
                     </div>
                   )}
                 </div>
-                
                 {/* Rating */}
                 <div className="flex items-center mb-4">
                   <div className="flex items-center">
@@ -712,7 +691,6 @@ import {
                   </div>
                   <span className="text-gray-400 text-sm ml-2">{service.rating}</span>
                 </div>
-                
                 {/* Features */}
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-white mb-3">Key Features:</h4>
@@ -725,7 +703,6 @@ import {
                     ))}
                   </ul>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-green-400 mb-3">Benefits:</h4>
@@ -738,7 +715,6 @@ import {
                     ))}
                   </div>
                 </div>
-
                 {/* Additional Info */}
                 <div className="mb-6 space-y-2 text-sm">
                   {service.serviceType === 'Micro SAAS' ? (
@@ -788,7 +764,6 @@ import {
                     </>
                   )}
                 </div>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {service.tags.map((tag, idx) => (
@@ -800,7 +775,6 @@ import {
                     </span>
                   ))}
                 </div>
-                
                 {/* CTA */}
                 <Link 
                   to={`/services/${service.category.toLowerCase()}`}
@@ -812,7 +786,6 @@ import {
               </div>
             ))}
           </div>
-          
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
               <div className="text-6xl mb-4">🔍</div>
@@ -834,7 +807,6 @@ import {
                 <Filter className="w-4 h-4" />
                 Filters
               </button>
-              
               {Object.keys(filters).length > 0 && (
                 <button
                   onClick={clearFilters}
@@ -844,7 +816,6 @@ import {
                 </button>
               )}
             </div>
-
             <div className="flex items-center gap-2">
               <span className="text-zion-slate-light text-sm">Sort by:</span>
               <button
@@ -871,7 +842,6 @@ import {
               </button>
             </div>
           </motion.div>
-
           {/* Filters Panel */}
           {showFilters && (
             <motion.div
@@ -894,7 +864,6 @@ import {
                     <option value="custom">Custom</option>
                   </select>
                 </div>
-                
                 <div>
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">Support Level</label>
                   <select
@@ -908,7 +877,6 @@ import {
                     <option value="enterprise">Enterprise</option>
                   </select>
                 </div>
-                
                 <div>
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">Price Range</label>
                   <div className="flex gap-2">
@@ -933,7 +901,6 @@ import {
           )}
         </div>
       </section>
-
 const Services = () => {
   const services = [
     {
@@ -991,7 +958,6 @@ const Services = () => {
       link: "/emerging-tech"
     }
   ];
-
   const benefits = [
     {
       icon: Target,
@@ -1020,7 +986,6 @@ const Services = () => {
   Clock,
   Award
 } from 'lucide-react';
-
 export default function Services() {
   const services = [
     {
@@ -1126,7 +1091,6 @@ export default function Services() {
       borderColor: 'border-red-500/30'
     }
   ];
-
   const stats = [
         {/* No Results */}
         {sortedServices.length === 0 && (
@@ -1150,7 +1114,6 @@ export default function Services() {
             </button>
           </motion.div>
         )}
-
               {/* Contact Info */}
               <div>
                 <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
@@ -1177,7 +1140,6 @@ export default function Services() {
                 <p className="text-gray-300">24/7 expert support and dedicated success managers for your business</p>
               </div>
             </div>
-            
             <div className="border-t border-zion-blue-light mt-8 pt-8 text-center">
               <p className="text-zion-slate-light text-sm">
                 © 2024 Zion Tech Group. All rights reserved. | 
@@ -1188,9 +1150,9 @@ export default function Services() {
           </div>
         </div>
         </motion.div>
+=======
                   </div>
                 </div>
-
                 {/* Rating and Reviews */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-1">
@@ -1210,14 +1172,12 @@ export default function Services() {
                     AI Score: {service.aiScore}%
                   </div>
                 </div>
-
                 {/* Contact Info */}
                 <div className="mb-6 p-4 bg-zion-blue-light/5 rounded-lg border border-zion-cyan/20">
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2">Contact Information:</h4>
                   <p>📧 {service.author.name}</p>
                   <p>📱 {service.author.id}</p>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex space-x-3">
                   <Link
@@ -1236,7 +1196,6 @@ export default function Services() {
               </motion.div>
             ))}
           </motion.div>
-
           {/* No Results Message */}
           {filteredServices.length === 0 && (
             <motion.div
@@ -1269,7 +1228,6 @@ export default function Services() {
                     ))}
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={service.link}
@@ -1283,7 +1241,6 @@ export default function Services() {
               </motion.div>
             ))}
           </div>
-
           {filteredServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -1317,7 +1274,6 @@ export default function Services() {
     { value: '24/7', label: 'Support Available', icon: Clock, color: 'text-purple-400' },
     { value: '15+', label: 'Years Experience', icon: Award, color: 'text-yellow-400' }
   ];
-
   const process = [
     {
       step: '01',
@@ -1344,7 +1300,6 @@ export default function Services() {
       icon: Cloud
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
@@ -1379,7 +1334,6 @@ export default function Services() {
               {selectedCategory !== 'all' && ` in ${selectedCategory}`}
             </p>
           </div>
-
           {/* Services Grid */}
           <motion.div
             variants={containerVariants}
@@ -1404,17 +1358,14 @@ export default function Services() {
                       </span>
                     </div>
                   </div>
-                  
                   {/* Service Content */}
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
                       {service.title}
                     </h3>
-                    
                     <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                       {service.description}
                     </p>
-                    
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, index) => (
@@ -1423,7 +1374,6 @@ export default function Services() {
                         </span>
                       ))}
                     </div>
-                    
                     {/* Service Details */}
                     <div className="space-y-2 mb-4 text-sm text-zion-slate-light">
                       <div className="flex items-center gap-2">
@@ -1435,7 +1385,6 @@ export default function Services() {
                         <span>Support: {service.supportLevel}</span>
                       </div>
                     </div>
-                    
                     {/* Price and CTA */}
                     <div className="flex items-center justify-between">
                       <div className="text-2xl font-bold text-zion-cyan">
@@ -1473,7 +1422,6 @@ export default function Services() {
               </div>
             ))}
           </motion.div>
-
           {/* Pagination */}
           {paginatedResults.totalPages > 1 && (
             <div className="flex justify-center items-center gap-2">
@@ -1484,11 +1432,9 @@ export default function Services() {
               >
                 Previous
               </button>
-              
               <span className="px-4 py-2 text-zion-slate-light">
                 Page {currentPage} of {paginatedResults.totalPages}
               </span>
-              
               <button
                 onClick={() => setCurrentPage(currentPage + 1)}
                 disabled={!paginatedResults.hasNextPage}
@@ -1518,36 +1464,29 @@ import {
   Mail,
   Globe
 } from 'lucide-react';
-
 export default function Services() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedSubcategory, setSelectedSubcategory] = useState('');
   const [selectedPricingTier, setSelectedPricingTier] = useState('');
-
   const filteredServices = CORE_SERVICES.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
     const matchesCategory = !selectedCategory || service.category.toLowerCase().includes(selectedCategory.toLowerCase());
     const matchesSubcategory = !selectedSubcategory || service.subcategory.toLowerCase().includes(selectedSubcategory.toLowerCase());
-    
     return matchesSearch && matchesCategory && matchesSubcategory;
   });
-
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI')) return Zap;
     if (category.includes('Cloud')) return Cloud;
     if (category.includes('Security') || category.includes('Cyber')) return Shield;
     return Zap;
   };
-
   const getPricingTierPrice = (basePrice: number, tier: string) => {
     const multiplier = PRICING_TIERS[tier as keyof typeof PRICING_TIERS]?.multiplier || 1;
     return basePrice * multiplier;
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Hero Section */}
@@ -1567,7 +1506,6 @@ export default function Services() {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -1582,7 +1520,6 @@ export default function Services() {
                   className="pl-10"
                 />
               </div>
-              
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                 <SelectTrigger>
                   <SelectValue placeholder="All Categories" />
@@ -1596,7 +1533,6 @@ export default function Services() {
                   ))}
                 </SelectContent>
               </Select>
-
               <Select value={selectedSubcategory} onValueChange={setSelectedSubcategory}>
                 <SelectTrigger>
                   <SelectValue placeholder="All Subcategories" />
@@ -1610,7 +1546,6 @@ export default function Services() {
                   ))}
                 </SelectContent>
               </Select>
-
               <Select value={selectedPricingTier} onValueChange={setSelectedPricingTier}>
                 <SelectTrigger>
                   <SelectValue placeholder="All Pricing Tiers" />
@@ -1628,7 +1563,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
@@ -1661,16 +1595,13 @@ export default function Services() {
                             </Badge>
                           )}
                         </div>
-                        
                         <CardTitle className="text-xl font-bold text-gray-900 mb-2">
                           {service.title}
                         </CardTitle>
-                        
                         <CardDescription className="text-gray-600 leading-relaxed">
                           {service.description}
                         </CardDescription>
                       </CardHeader>
-
                       <CardContent className="pt-0">
                         {/* Rating and AI Score */}
                         <div className="flex items-center gap-4 mb-4">
@@ -1691,7 +1622,6 @@ export default function Services() {
                             </div>
                           )}
                         </div>
-
                         {/* Features */}
                         <div className="mb-4">
                           <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -1704,7 +1634,6 @@ export default function Services() {
                             ))}
                           </div>
                         </div>
-
                         {/* Pricing */}
                         <div className="mb-4">
                           <div className="flex items-baseline gap-2">
@@ -1715,7 +1644,6 @@ export default function Services() {
                           </div>
                           <p className="text-sm text-gray-600">{service.marketPrice}</p>
                         </div>
-
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2 mb-6">
                           {service.tags.slice(0, 3).map((tag, idx) => (
@@ -1724,7 +1652,6 @@ export default function Services() {
                             </Badge>
                           ))}
                         </div>
-
                         {/* Actions */}
                         <div className="flex gap-2">
                           <Button className="flex-1" variant="default">
@@ -1735,7 +1662,6 @@ export default function Services() {
                             <Phone className="h-4 w-4" />
                           </Button>
                         </div>
-
                         {/* Contact Info */}
                         <div className="mt-4 pt-4 border-t border-gray-100">
                           <div className="flex items-center justify-between text-xs text-gray-500">
@@ -1789,8 +1715,8 @@ export default function Services() {
     </div>
   );
 };
-
 export default Services;
+=======
                     <li key={serviceIndex} className="flex items-center gap-2 text-sm text-zion-slate-light">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                       {service}
@@ -1811,7 +1737,6 @@ export default Services;
           </div>
         </div>
       </section>
-
       {/* Emerging Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1831,7 +1756,6 @@ export default Services;
           </div>
         </div>
       </section>
-
       {/* Why Choose Us */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1900,7 +1824,6 @@ export default Services;
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1959,7 +1882,6 @@ export default Services;
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -1976,7 +1898,6 @@ export default Services;
               Comprehensive solutions designed to drive innovation and transform your business
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
               const IconComponent = service.icon;
@@ -1993,7 +1914,6 @@ export default Services;
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
                   <p className="text-zion-slate-light mb-6">{service.description}</p>
-                  
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-zion-cyan mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -2005,7 +1925,6 @@ export default Services;
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="text-center">
                     <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
                     <Link
@@ -2022,7 +1941,6 @@ export default Services;
           </div>
         </div>
       </section>
-
       {/* Industries Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -2039,7 +1957,6 @@ export default Services;
               Proven expertise across diverse industries and business sectors
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
               <motion.div
@@ -2057,7 +1974,6 @@ export default Services;
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -2074,7 +1990,6 @@ export default Services;
               Experience the benefits of professional technology services
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
@@ -2099,7 +2014,6 @@ export default Services;
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -2130,7 +2044,6 @@ export default Services;
               </Link>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">
         {/* Animated Background */}
@@ -2139,7 +2052,6 @@ export default Services;
           <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -2172,6 +2084,7 @@ export default Services;
       </section>
     </div>
   );
+=======
               <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-zion-cyan rounded-lg flex items-center justify-center mb-4 text-white">
                   {category.icon}
@@ -2200,7 +2113,6 @@ export default Services;
           </div>
         </div>
       </section>
-
       {/* Emerging Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
@@ -2221,7 +2133,6 @@ export default Services;
           </div>
         </div>
       </section>
-
       {/* Why Choose Us */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -2237,7 +2148,6 @@ export default Services;
                 in cutting-edge technologies and industry best practices.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <BarChart3 className="w-8 h-8 text-white" />
@@ -2248,7 +2158,6 @@ export default Services;
                 consistently exceeding client expectations and driving measurable results.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Lock className="w-8 h-8 text-white" />
@@ -2259,7 +2168,6 @@ export default Services;
                 and systems remain protected at all times.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Rocket className="w-8 h-8 text-white" />
@@ -2270,7 +2178,6 @@ export default Services;
                 to deliver cutting-edge solutions that give you a competitive advantage.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-white" />
@@ -2281,7 +2188,6 @@ export default Services;
                 to ensure your success regardless of your location.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
@@ -2295,7 +2201,6 @@ export default Services;
           </div>
         </div>
       </section>
-
       {/* Service Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
@@ -2311,7 +2216,6 @@ export default Services;
                 and design a tailored solution strategy.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 2
@@ -2322,7 +2226,6 @@ export default Services;
                 development to ensure successful execution.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 3
@@ -2333,7 +2236,6 @@ export default Services;
                 assurance to deliver exceptional results.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                 4
@@ -2347,7 +2249,6 @@ export default Services;
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -2369,7 +2270,7 @@ export default Services;
             >
               Get Free Quote
             </Link>
-
+=======
       {/* CTA Section */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-4xl mx-auto">
@@ -2396,7 +2297,11 @@ export default Services;
     </div>
   );
 }
+=======
 }
+=======
+=======
+=======
               {/* Results Count */}
               <div className="flex items-end">
                 <span className="text-zion-slate-light">
@@ -2406,7 +2311,6 @@ export default Services;
             </div>
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -2444,12 +2348,10 @@ export default Services;
                   </div>
                 </div>
               </div>
-
               {/* Description */}
               <p className="text-zion-slate-light mb-4 line-clamp-3">
                 {service.description}
               </p>
-
               {/* Key Features */}
               <div className="mb-4">
                 <h4 className="text-white font-medium mb-2 flex items-center gap-2">
@@ -2465,7 +2367,6 @@ export default Services;
                   ))}
                 </div>
               </div>
-
               {/* Service Details */}
               <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
                 <div className="flex items-center gap-2 text-zion-slate-light">
@@ -2477,13 +2378,11 @@ export default Services;
                   <span className="capitalize">{service.supportLevel}</span>
                 </div>
               </div>
-
               {/* Market Price */}
               <div className="mb-4 p-3 bg-zion-blue-dark/30 rounded-lg">
                 <div className="text-xs text-zion-slate-light mb-1">Market Price Range</div>
                 <div className="text-zion-cyan font-medium">{service.marketPrice}</div>
               </div>
-
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.slice(0, 3).map((tag, idx) => (
@@ -2495,7 +2394,6 @@ export default Services;
                   </span>
                 ))}
               </div>
-
               {/* Contact Info */}
               <div className="border-t border-zion-purple/20 pt-4">
                 <div className="flex items-center justify-between">
@@ -2516,7 +2414,6 @@ export default Services;
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -2552,15 +2449,17 @@ export default Services;
       </div>
     </div>
   );
->>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/Services.tsx.backup.1756208062
+========
+=======
 }
+=======
 }
+=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { servicesCatalog } from '@/data/servicesCatalog';
 import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-
 export default function Services() {
 	const contact = {
 		mobile: '+1 302 464 0950',
@@ -2568,7 +2467,6 @@ export default function Services() {
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
 	};
-
 	return (
 		<>
 			<SEO
@@ -2577,7 +2475,6 @@ export default function Services() {
 				canonical="/services"
 				url="https://ziontechgroup.com/services"
 			/>
-
 			<main className="min-h-screen bg-zion-blue pt-24 pb-20">
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-12">
@@ -2586,7 +2483,6 @@ export default function Services() {
 							Real, ready-to-deploy offerings across Micro SaaS, AI, Cybersecurity, Data, and Cloud.
 						</p>
 					</div>
-
 					<div className="grid grid-cols-1 gap-12">
 						{servicesCatalog.map(category => (
 							<section key={category.slug}>
@@ -2604,13 +2500,11 @@ export default function Services() {
 													<div className="text-zion-slate-light text-sm">{item.billing === 'month' ? 'Monthly' : item.billing === 'hour' ? 'Hourly' : 'Project-based'}</div>
 												</div>
 											</div>
-
 											<ul className="mt-4 space-y-2 text-zion-slate-light text-sm list-disc list-inside">
 												{item.features.map((f, idx) => (
 													<li key={idx}>{f}</li>
 												))}
 											</ul>
-
 											<div className="mt-6 flex items-center justify-between">
 												<Link
 													to={item.href}
@@ -2629,7 +2523,6 @@ export default function Services() {
 							</section>
 						))}
 					</div>
-
 					<section className="mt-16">
 						<h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">Contact Us</h2>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -2647,7 +2540,6 @@ export default function Services() {
 							<Link to="/contact" className="inline-flex items-center gap-2 text-white underline">Go to contact page</Link>
 						</div>
 					</section>
-
 				</div>
 			</main>
 		</>

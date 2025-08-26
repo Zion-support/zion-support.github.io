@@ -2,14 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
 export default function AutonomousManufacturingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-manufacturing'));
   if (!service) return null;
   const contactInfo = service.contactInfo;
-
   return (
     <Layout>
       <Head>
@@ -40,6 +37,7 @@ export default function AutonomousManufacturingPage() {
                   <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
+=======
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
               <div className="text-slate-300 text-sm mb-4">Market: {service.marketSize}, Growth: {service.growthRate}</div>
@@ -48,6 +46,7 @@ export default function AutonomousManufacturingPage() {
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
+=======
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
@@ -59,4 +58,3 @@ export default function AutonomousManufacturingPage() {
     </Layout>
   );
 }
-

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -12,8 +11,6 @@ import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
 import { EQUIPMENT_DETAILS, EquipmentDetails } from "@/data/equipmentDetails";
-
-
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string };
   const navigate = useNavigate();
@@ -21,11 +18,9 @@ export default function EquipmentDetail() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
-  
   // In a real app, this would fetch from an API
   const equipment: EquipmentDetails | undefined =
     equipmentId ? EQUIPMENT_DETAILS[equipmentId] : undefined;
-  
   if (!equipment) {
     return (
       <>
@@ -42,10 +37,8 @@ export default function EquipmentDetail() {
       </>
     );
   }
-
   const handleAddToCart = () => {
     setIsAdding(true);
-    
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false);
@@ -55,16 +48,15 @@ export default function EquipmentDetail() {
       });
     }, 800);
   };
-
   const handleBuyNow = async () => {
     if (!isAuthenticated) {
       navigate(`/login?next=/equipment/${equipmentId}`);
       return;
     }
-
     setIsAdding(true);
     try {
       const response = await fetch('/api/checkout_sessions', {
+=======
       const response = await fetch('/checkout/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -74,6 +66,7 @@ export default function EquipmentDetail() {
       const stripe = await getStripe();
       if (stripe && sessionId) {
         await stripe.redirectToCheckout({ sessionId });
+=======
       const { url } = await response.json();
       if (url) {
         window.location.href = url as string;
@@ -84,7 +77,6 @@ export default function EquipmentDetail() {
       setIsAdding(false);
     }
   };
-
   return (
     <>
       <Header />
@@ -102,7 +94,6 @@ export default function EquipmentDetail() {
                     className="w-full h-full object-contain bg-zion-blue-light/10 p-4"
                   />
                 </div>
-                
                 {/* Thumbnail Gallery */}
                 {equipment.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
@@ -124,7 +115,6 @@ export default function EquipmentDetail() {
                   </div>
                 )}
               </div>
-
               {/* Product Details Tabs */}
               <div className="mt-8">
                 <Tabs defaultValue="description" className="w-full">
@@ -139,7 +129,6 @@ export default function EquipmentDetail() {
                       Features
                     </TabsTrigger>
                   </TabsList>
-                  
                   <TabsContent value="description" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <p className="text-zion-slate-light whitespace-pre-line">
@@ -147,7 +136,6 @@ export default function EquipmentDetail() {
                       </p>
                     </div>
                   </TabsContent>
-                  
                   <TabsContent value="specifications" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -162,7 +150,6 @@ export default function EquipmentDetail() {
                       </div>
                     </div>
                   </TabsContent>
-                  
                   <TabsContent value="features" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <ul className="space-y-2">
@@ -178,7 +165,6 @@ export default function EquipmentDetail() {
                 </Tabs>
               </div>
             </div>
-            
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
@@ -193,11 +179,9 @@ export default function EquipmentDetail() {
                     </Badge>
                   )}
                 </div>
-                
                 {/* Product Title */}
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand}</p>
-                
                 {/* Rating */}
                 {equipment.rating && (
                   <div className="flex items-center gap-2 mb-4">
@@ -218,12 +202,10 @@ export default function EquipmentDetail() {
                     </span>
                   </div>
                 )}
-                
                 {/* Price */}
                 <div className="text-3xl font-bold text-white mb-4">
                   {equipment.currency}{equipment.price.toLocaleString()}
                 </div>
-                
                 {/* Stock Status */}
                 <div className="mb-6">
                   {equipment.inStock ? (
@@ -243,7 +225,6 @@ export default function EquipmentDetail() {
                     </div>
                   )}
                 </div>
-                
                 {/* Quantity */}
                 <div className="mb-6">
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>
@@ -270,7 +251,6 @@ export default function EquipmentDetail() {
                     </button>
                   </div>
                 </div>
-                
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">
                   <Button 
@@ -280,7 +260,6 @@ export default function EquipmentDetail() {
                   >
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
-                  
                   <Button 
                     onClick={handleAddToCart}
                     disabled={isAdding || !equipment.inStock}
@@ -291,7 +270,6 @@ export default function EquipmentDetail() {
                     Add to Cart
                   </Button>
                 </div>
-                
                 {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">
                   {/* Shipping */}
@@ -302,7 +280,6 @@ export default function EquipmentDetail() {
                       <p className="text-xs">For orders over $100 within the US</p>
                     </div>
                   </div>
-                  
                   {/* Warranty */}
                   {equipment.warranty && (
                     <div className="flex gap-3 text-zion-slate-light">
@@ -313,7 +290,6 @@ export default function EquipmentDetail() {
                       </div>
                     </div>
                   )}
-                  
                   {/* Return Policy */}
                   {equipment.returnPolicy && (
                     <div className="flex gap-3 text-zion-slate-light">

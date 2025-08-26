@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,6 +9,7 @@ import {
   Zap, 
   Settings, 
   Search, 
+=======
   MessageSquare, 
   Smartphone, 
   Calendar,
@@ -22,7 +22,6 @@ import {
   TrendingUp,
   CheckCircle
 } from "lucide-react";
-
 export function FeatureCTAs() {
   const features = [
     {
@@ -71,13 +70,13 @@ export function FeatureCTAs() {
   AlertTriangle,
   Eye,
   PieChart
+=======
   BarChart3,
   PenTool,
   Shield,
   Cloud
 } from "lucide-react";
 import { AnimatedBackground, NeonBorder } from "@/components/ui/AnimatedBackground";
-
 export function FeatureCTAs() {
   const features = [
     // Existing features
@@ -85,6 +84,7 @@ export function FeatureCTAs() {
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
+=======
       link: "/marketplace",
       badge: "Popular",
       details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities."
@@ -93,6 +93,7 @@ export function FeatureCTAs() {
       title: "Talent Directory",
       description: "Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.",
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
+=======
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
       link: "/talent",
       details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability."
@@ -106,6 +107,7 @@ export function FeatureCTAs() {
       details: "From AI chatbots to advanced analytics, our AI services help businesses leverage artificial intelligence for competitive advantage."
     },
     {
+=======
       title: "Equipment Catalog",
       description: "Find specialized hardware and tech equipment for AI development and research.",
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />,
@@ -167,6 +169,7 @@ export function FeatureCTAs() {
       link: "/micro-saas",
       badge: "New",
       details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank."
+=======
     },
     {
       title: "Zion Hire AI",
@@ -177,7 +180,6 @@ export function FeatureCTAs() {
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
     }
   ];
-
   return (
     <section className="py-16 bg-gradient-to-b from-background to-background/90">
       <div className="container mx-auto px-4">
@@ -187,7 +189,6 @@ export function FeatureCTAs() {
             Explore our comprehensive suite of tools designed to transform how you connect, collaborate, and create in the tech ecosystem.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">
@@ -365,6 +366,7 @@ export function FeatureCTAs() {
       link: "/design-ai",
       badge: "Creative",
       details: "Create professional designs with AI-powered tools and templates. Plans from $19/month."
+=======
     {
       title: "AI Analytics Dashboard",
       description: "Transform your business data into actionable intelligence with AI-powered analytics and insights.",
@@ -396,6 +398,7 @@ export function FeatureCTAs() {
       link: "/cloud-migration-services",
       badge: "Cloud",
       details: "Seamless migration to the cloud with cost optimization, security, and performance improvements."
+=======
     {
       title: "Comprehensive Services",
       description: "Access our complete range of micro SAAS, IT services, and AI solutions in one platform.",
@@ -405,7 +408,6 @@ export function FeatureCTAs() {
       details: "Discover 30+ professional services including AI development, cloud migration, cybersecurity, and more."
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
     visible: {
@@ -418,7 +420,6 @@ export function FeatureCTAs() {
       }
     }
   };
-
   return (
     <section className="py-16 bg-gradient-to-b from-background to-background/90">
       <div className="container mx-auto px-4">
@@ -431,6 +432,7 @@ export function FeatureCTAs() {
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
             Explore our extensive suite of micro SAAS services, AI solutions, and IT services designed to transform how you work, innovate, and grow in the digital age.
+=======
     <section className="py-16 bg-gradient-to-b from-background to-background/90 cyber-grid relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5"></div>
       <div className="relative container mx-auto px-4">
@@ -440,11 +442,11 @@ export function FeatureCTAs() {
             Explore our comprehensive suite of tools designed to transform how you connect, collaborate, and create in the tech ecosystem.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card key={index} className="relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50 group">
               <AnimatedBackground variant="card" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+=======
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50 hover:neon-pulse group">
               <CardHeader className="pb-2">
                 <div className="flex justify-between items-start">
@@ -453,12 +455,14 @@ export function FeatureCTAs() {
                   </div>
                   {feature.badge && (
                     <Badge variant="secondary" className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 text-zion-purple border-zion-purple/30">
+=======
                       {feature.badge}
                     </Badge>
                   )}
                 </div>
                 <CardTitle className="mt-4 text-lg group-hover:text-zion-cyan transition-colors duration-300">{feature.title}</CardTitle>
                 <CardDescription className="line-clamp-2 text-sm">{feature.description}</CardDescription>
+=======
                 <CardTitle className="mt-4">{feature.title}</CardTitle>
                 <CardDescription className="line-clamp-2">{feature.description}</CardDescription>
               </CardHeader>
@@ -471,23 +475,27 @@ export function FeatureCTAs() {
                     <span>Explore {feature.title}</span>
                     <ArrowRight className="h-4 w-4" />
                 <Button asChild className="w-full gap-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white transition-all duration-300 group-hover:shadow-lg group-hover:shadow-zion-purple/25">
+=======
                 <Button asChild className="w-full gap-1 hover:neon-pulse transition-all duration-300">
                   <Link to={feature.link}>
                     <span>Explore {feature.title}</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+=======
                   </Link>
                 </Button>
               </CardFooter>
             </Card>
           ))}
         </div>
+=======
       </div>
     </section>
   );
 }
+=======
+=======
 import React from 'react';
 import { ArrowRight, Play, Download, Users, Zap } from 'lucide-react';
-
 export const FeatureCTAs: React.FC = () => {
   const ctaItems = [
     {
@@ -523,7 +531,6 @@ export const FeatureCTAs: React.FC = () => {
       hoverColor: "from-orange-700 to-red-700"
     }
   ];
-
   return (
     <section className="py-16 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -535,7 +542,6 @@ export const FeatureCTAs: React.FC = () => {
             Choose your next step and begin your journey with Zion Tech Group
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {ctaItems.map((item, index) => (
             <a
@@ -546,15 +552,12 @@ export const FeatureCTAs: React.FC = () => {
               <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300`}>
                 <item.icon className="w-8 h-8 text-white" />
               </div>
-              
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                 {item.title}
               </h3>
-              
               <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mb-4">
                 {item.description}
               </p>
-              
               <div className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${item.color} text-white font-medium rounded-lg hover:bg-gradient-to-r ${item.hoverColor} transition-all duration-300`}>
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -562,7 +565,6 @@ export const FeatureCTAs: React.FC = () => {
             </a>
           ))}
         </div>
-
         <div className="text-center mt-12">
           <p className="text-gray-400 mb-4">
             Need help choosing? Our experts are here to guide you.
@@ -579,3 +581,4 @@ export const FeatureCTAs: React.FC = () => {
     </section>
   );
 };
+=======
