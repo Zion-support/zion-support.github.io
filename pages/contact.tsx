@@ -1,4 +1,6 @@
+import Head from 'next/head'
 export default function Contact(){return (<main style={{padding:20,fontFamily:'sans-serif',lineHeight:1.6,maxWidth:800,margin:'0 auto'}}>
+<Head><title>Contact | Zion Tech Group</title><meta name='description' content='Contact Zion Tech Group for Micro SaaS, AI, and IT solutions.'/></Head>
 <h1>Contact</h1>
 <p>We’d love to hear about your project. Reach us via any of the channels below.</p>
 
