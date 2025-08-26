@@ -6,17 +6,18 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
+    "type-check": "tsc -p tsconfig.json --noEmit",
     "netlify:manifest": "node scripts/generate-netlify-functions-manifest.cjs",
     "build:health-check": "node automation/pre-build-health-check.cjs",
     "prebuild": "npm run build:health-check && npm run netlify:manifest",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build"
   },
   "dependencies": {
-    "framer-motion": "^12.23.12",
-    "lucide-react": "^0.542.0",
     "next": "14.2.32",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "framer-motion": "11.2.10",
+    "lucide-react": "0.460.0"
   },
   "devDependencies": {
     "@types/node": "20.14.11",

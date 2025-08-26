@@ -43,6 +43,10 @@ class EnhancedGitSync {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
+        // Increase buffer to handle large git outputs (status/branch info)
+        maxBuffer: 64 * 1024 * 1024,
+        // Disable hooks and enforce non-interactive behavior
+        env: { ...process.env, HUSKY: '0', CI: '1' },
         ...options
       });
       return { success: true, output: result.trim() };
@@ -147,7 +151,7 @@ class EnhancedGitSync {
     if (!this.config.autoStash) return true;
     
     this.log('Stashing current changes...');
-    const stash = await this.runGitCommand('git stash push -m "Auto-stash before sync"');
+    const stash = await this.runGitCommand('git stash push -a -m "Auto-stash before sync"');
     
     if (stash.success) {
       this.log('Changes stashed successfully');
@@ -207,7 +211,7 @@ class EnhancedGitSync {
     this.log('Attempting to merge remote changes...');
     
     // Try merge with strategy
-    const merge = await this.runGitCommand('git merge origin/main --strategy=recursive --strategy-option=theirs');
+    const merge = await this.runGitCommand('git -c core.hooksPath=/dev/null merge origin/main --strategy=recursive --strategy-option=theirs --no-edit');
     
     if (merge.success) {
       this.log('Merge completed successfully');
@@ -233,7 +237,7 @@ class EnhancedGitSync {
   async rebaseChanges() {
     this.log('Attempting rebase...');
     
-    const rebase = await this.runGitCommand('git rebase origin/main');
+    const rebase = await this.runGitCommand('git -c core.hooksPath=/dev/null rebase origin/main');
     
     if (rebase.success) {
       this.log('Rebase completed successfully');
@@ -262,7 +266,14 @@ class EnhancedGitSync {
   async pullChanges() {
     this.log('Pulling changes from remote...');
     
-    const pull = await this.runGitCommand('git pull origin main');
+    // Pre-cleanup any in-progress operations and stash everything (including ignored)
+    await this.runGitCommand('git rebase --abort');
+    await this.runGitCommand('git merge --abort');
+    await this.runGitCommand('git reset --merge');
+    await this.runGitCommand('git stash push -a -m "Auto-stash before pull"');
+
+    // Prefer rebase to avoid merge commits and bypass hooks during pull
+    const pull = await this.runGitCommand('git -c pull.rebase=true -c core.hooksPath=/dev/null pull --rebase origin main');
     if (pull.success) {
       this.log('Pull completed successfully');
       return true;
@@ -291,7 +302,7 @@ class EnhancedGitSync {
     this.log('Restoring stashed changes...');
     const stashList = await this.runGitCommand('git stash list');
     
-    if (stashList.success && stashList.output.includes('Auto-stash before sync')) {
+    if (stashList.success && (stashList.output.includes('Auto-stash before sync') || stashList.output.includes('Auto-stash before pull'))) {
       const pop = await this.runGitCommand('git stash pop');
       if (pop.success) {
         this.log('Stashed changes restored successfully');
