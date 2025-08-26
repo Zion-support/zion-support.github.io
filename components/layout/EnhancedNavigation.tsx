@@ -247,12 +247,11 @@ const EnhancedNavigation: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30"
+            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50"
           >
             <div className="px-4 py-6 space-y-4">
               {/* Mobile Contact Info */}
@@ -340,7 +339,7 @@ const EnhancedNavigation: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 };
 

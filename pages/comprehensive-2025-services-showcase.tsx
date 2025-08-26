@@ -6,8 +6,8 @@ import {
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom,
   Search, Filter, ArrowRight, Award, Target, Cpu, Database
 } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+import EnhancedFooter from '../components/layout/EnhancedFooter';
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025';
 
 export default function Comprehensive2025ServicesShowcase() {

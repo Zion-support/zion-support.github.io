@@ -2,157 +2,188 @@ export interface InnovativeITService2024 {
   id: string;
   name: string;
   tagline: string;
-<<<<<<< HEAD
-  description: string;
-  variant: string;
   price: string;
-  rating: number;
-  customers: string;
+<<<<<<< HEAD
+  period: string;
+  description: string;
   features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
   technology: string[];
   integrations: string[];
-  compliance: string[];
+  useCases: string[];
   roi: string;
   competitors: string[];
   marketSize: string;
   growthRate: string;
   contactInfo: {
-    phone: string;
+    mobile: string;
     email: string;
+    address: string;
     website: string;
   };
-=======
-  price: string;
-  variant: string;
-  features: string[];
-  rating: number;
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
   customers: string;
->>>>>>> origin/main
+  rating: number;
+  reviews: number;
 }
+
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
 
 export const innovativeITServices2024: InnovativeITService2024[] = [
   {
-<<<<<<< HEAD
-    id: "ai-powered-it-asset-management",
-    name: "AI-Powered IT Asset Management",
-    tagline: "Intelligent asset tracking and lifecycle management for modern enterprises",
-    description: "Advanced IT asset management platform that uses AI to track, monitor, and optimize your entire technology infrastructure.",
-    variant: "it-ai-enterprise",
-    price: "$299/month",
-    rating: 4.8,
-    customers: "500+",
+    id: 'quantum-cloud-infrastructure-2024',
+    name: 'Quantum Cloud Infrastructure',
+    tagline: 'Next-generation cloud computing with quantum processing capabilities',
+    price: '$3,500',
+    period: '/month',
+    description: 'Revolutionary cloud infrastructure that combines traditional cloud computing with quantum processing. Provides unprecedented performance and capabilities for complex computational tasks.',
     features: [
-      "AI-powered asset discovery",
-      "Automated lifecycle management",
-      "Predictive maintenance alerts",
-      "Cost optimization insights",
-      "Compliance reporting",
-      "Integration with major ITSM tools"
+      'Quantum processing units',
+      'Hybrid classical-quantum computing',
+      'Quantum memory systems',
+      'Advanced security protocols',
+      'Scalable infrastructure',
+      'Real-time optimization',
+      'API access',
+      'Monitoring dashboard',
+      'Mobile management',
+      '24/7 support'
     ],
-    benefits: [
-      "Reduce IT costs by 30%",
-      "Improve asset utilization by 40%",
-      "Automate compliance reporting",
-      "Predict and prevent failures"
-    ],
-    useCases: [
-      "Enterprise IT management",
-      "Asset lifecycle tracking",
-      "Compliance and audit",
-      "Cost optimization",
-      "Risk management"
-    ],
-    targetAudience: [
-      "IT managers",
-      "Enterprise companies",
-      "Managed service providers",
-      "Compliance officers"
-    ],
-    technology: ["AI/ML", "React", "Node.js", "PostgreSQL", "Redis"],
-    integrations: ["ServiceNow", "Jira", "Microsoft 365", "AWS", "Azure"],
-    compliance: ["SOX", "GDPR", "HIPAA", "ISO 27001"],
-    roi: "300% within 12 months",
-    competitors: ["ServiceNow", "BMC", "Ivanti", "Freshworks"],
-    marketSize: "$2.8 billion",
-    growthRate: "12.5% annually",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "quantum-enhanced-cybersecurity",
-    name: "Quantum-Enhanced Cybersecurity",
-    tagline: "Next-generation security powered by quantum computing principles",
-    description: "Revolutionary cybersecurity platform that leverages quantum computing principles to provide unbreakable encryption and threat detection.",
-    variant: "it-security-quantum",
-    price: "$499/month",
+    popular: true,
+    icon: '☁️',
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
+    marketPosition: 'First-to-market quantum cloud infrastructure',
+    targetAudience: 'Tech companies, Research institutions, Government agencies, Large enterprises',
+    trialDays: 14,
+    setupTime: '2 weeks',
+    category: 'Cloud Computing',
+    realService: true,
+    technology: ['Quantum computing, Cloud infrastructure, Python, React, Quantum algorithms'],
+    integrations: ['AWS, Azure, Google Cloud, Kubernetes, Docker'],
+    useCases: ['Research computing, AI training, Financial modeling, Scientific simulation'],
+    roi: 'Improve computational performance by 1000x and reduce costs by 60%',
+    competitors: ['AWS, Azure, Google Cloud, IBM Cloud'],
+    marketSize: '$500B cloud computing market',
+    growthRate: '200% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Quantum cloud platform with hybrid computing, advanced security, and scalable infrastructure',
+    launchDate: '2024-01-01',
+    customers: '15+',
     rating: 4.9,
-    customers: "200+",
-    features: [
-      "Quantum-resistant encryption",
-      "AI threat detection",
-      "Zero-trust architecture",
-      "Real-time monitoring",
-      "Automated incident response",
-      "Compliance dashboard"
-    ],
-    benefits: [
-      "Unbreakable encryption",
-      "Real-time threat detection",
-      "Automated security responses",
-      "Future-proof technology"
-    ],
-    useCases: [
-      "Financial institutions",
-      "Healthcare organizations",
-      "Government agencies",
-      "Critical infrastructure",
-      "High-security environments"
-    ],
-    targetAudience: [
-      "CISOs",
-      "Security teams",
-      "Compliance officers",
-      "Government agencies"
-    ],
-    technology: ["Quantum algorithms", "AI/ML", "Blockchain", "Zero-trust"],
-    integrations: ["SIEM tools", "EDR platforms", "Identity providers"],
-    compliance: ["NIST", "ISO 27001", "SOC 2", "FedRAMP"],
-    roi: "400% within 18 months",
-    competitors: ["Palo Alto", "CrowdStrike", "SentinelOne"],
-    marketSize: "$1.9 billion",
-    growthRate: "15.2% annually",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  }
-];
-=======
-    id: 'cloud-automation-2024',
-    name: 'Cloud Automation Platform 2024',
-    tagline: 'Automate your cloud infrastructure',
-    price: '$199',
-    variant: 'cloud',
-    features: ['Infrastructure automation', 'Cost optimization', 'Security compliance'],
-    rating: 4.7,
-    customers: '300+'
+    reviews: 12
   },
+
+  // Edge Computing Orchestration
   {
-    id: 'api-gateway-2024',
-    name: 'API Gateway 2024',
-    tagline: 'Manage and secure your APIs',
-    price: '$149',
-    variant: 'api',
-    features: ['API management', 'Rate limiting', 'Authentication'],
-    rating: 4.6,
-    customers: '400+'
+    id: 'edge-computing-orchestration-2024',
+    name: 'Edge Computing Orchestration',
+    tagline: 'Intelligent edge computing management for IoT and distributed systems',
+    price: '$1,200',
+    period: '/month',
+    description: 'Advanced edge computing platform that intelligently manages distributed computing resources, optimizes performance, and ensures reliability across edge networks.',
+    features: [
+      'Intelligent resource allocation',
+      'Real-time optimization',
+      'IoT device management',
+      'Edge analytics',
+      'Load balancing',
+      'Fault tolerance',
+      'Security protocols',
+      'Monitoring dashboard',
+      'API integration',
+      'Scalable architecture'
+    ],
+    popular: true,
+    icon: '🌐',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/edge-computing',
+    marketPosition: 'Leading edge computing orchestration platform',
+    targetAudience: 'IoT companies, Smart city initiatives, Manufacturing, Healthcare, Transportation',
+    trialDays: 30,
+    setupTime: '3-4 weeks',
+    category: 'Edge Computing',
+    realService: true,
+    technology: ['Edge computing, IoT, AI/ML, Kubernetes, Docker, Python'],
+    integrations: ['IoT platforms, Cloud services, Monitoring tools, Security systems'],
+    useCases: ['Smart cities, Industrial IoT, Healthcare monitoring, Autonomous vehicles, Retail analytics'],
+    roi: 'Reduce latency by 80% and improve reliability by 95%',
+    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT'],
+    marketSize: '$50B+ edge computing market',
+    growthRate: '150% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Intelligent edge computing platform with real-time optimization and IoT management',
+    launchDate: '2024-02-01',
+    customers: '25+',
+    rating: 4.8,
+    reviews: 34
+  },
+
+  // AI-Powered DevOps Platform
+  {
+    id: 'ai-powered-devops-2024',
+    name: 'AI-Powered DevOps Platform',
+    tagline: 'Intelligent automation for modern software development and deployment',
+    price: '$2,800',
+    period: '/month',
+    description: 'Revolutionary DevOps platform that uses artificial intelligence to automate, optimize, and streamline the entire software development lifecycle.',
+    features: [
+      'AI-powered CI/CD',
+      'Intelligent testing',
+      'Automated deployment',
+      'Performance monitoring',
+      'Security scanning',
+      'Resource optimization',
+      'Collaboration tools',
+      'Analytics dashboard',
+      'Mobile app',
+      'API access'
+    ],
+    popular: true,
+    icon: '⚡',
+    color: 'from-purple-600 to-pink-700',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/ai-devops',
+    marketPosition: 'Next-generation AI-powered DevOps platform',
+    targetAudience: 'Development teams, DevOps engineers, Software companies, IT departments',
+    trialDays: 21,
+    setupTime: '1-2 weeks',
+    category: 'DevOps',
+    realService: true,
+    technology: ['AI/ML, DevOps, CI/CD, Kubernetes, Docker, Python, React'],
+    integrations: ['Git platforms, Cloud services, Monitoring tools, Security scanners'],
+    useCases: ['Software development, Continuous integration, Automated testing, Deployment automation'],
+    roi: 'Reduce deployment time by 70% and increase development velocity by 50%',
+    competitors: ['Jenkins, GitLab CI, GitHub Actions, CircleCI'],
+    marketSize: '$30B+ DevOps market',
+    growthRate: '120% YoY',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'AI-powered DevOps platform with intelligent automation and optimization',
+    launchDate: '2024-03-01',
+    customers: '40+',
+    rating: 4.7,
+    reviews: 67
   }
 ];
->>>>>>> origin/main

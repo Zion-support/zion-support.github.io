@@ -14,8 +14,8 @@ import {
 import { advancedAIAutomationServices } from '../data/2027-advanced-ai-automation-services';
 import { emergingTechInnovations } from '../data/2027-emerging-tech-innovations';
 import { enterpriseSolutionsAdvanced } from '../data/2027-enterprise-solutions-advanced';
-// import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
-// import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
+import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
 
 export default function AdvancedServicesShowcase2027() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -27,7 +27,9 @@ export default function AdvancedServicesShowcase2027() {
   const allServices = [
     ...advancedAIAutomationServices,
     ...emergingTechInnovations,
-    ...enterpriseSolutionsAdvanced
+    ...enterpriseSolutionsAdvanced,
+    ...cuttingEdge2027Innovations,
+    ...practicalMicroSaas2027
   ];
 
   // Enhanced service categories with comprehensive offerings
@@ -70,7 +72,7 @@ export default function AdvancedServicesShowcase2027() {
       savings: 'Save 80-95% vs. competitors',
       icon: Sparkles,
       color: 'from-violet-600 to-purple-600',
-      count: 0
+      count: cuttingEdge2027Innovations.length
     },
     {
       name: '🎯 Practical Micro SAAS 2027',
@@ -80,7 +82,7 @@ export default function AdvancedServicesShowcase2027() {
       savings: 'Save 60-80% vs. competitors',
       icon: Target,
       color: 'from-green-600 to-emerald-600',
-      count: 0
+      count: practicalMicroSaas2027.length
     }
   ];
 
@@ -726,4 +728,10 @@ export default function AdvancedServicesShowcase2027() {
       </div>
     </>
   );
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}
 }

@@ -437,3 +437,9 @@ export default function EnhancedServicesShowcase2026V2() {
     </>
   );
 }
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}

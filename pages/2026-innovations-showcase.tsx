@@ -358,3 +358,9 @@ export default function Innovations2026Showcase() {
     </UltraAdvancedFuturisticBackground>
   );
 }
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}

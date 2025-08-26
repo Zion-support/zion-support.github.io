@@ -52,5 +52,11 @@ export default function QuantumCybersecurityPage() {
       </div>
     </Layout>
   );
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}
 }
 

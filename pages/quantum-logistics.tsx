@@ -52,5 +52,11 @@ export default function QuantumLogisticsPage() {
       </div>
     </Layout>
   );
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}
 }
 

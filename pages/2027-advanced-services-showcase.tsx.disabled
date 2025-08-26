@@ -425,4 +425,10 @@ export default function Revolutionary2027ServicesShowcase() {
       </section>
     </UltraQuantumHolographicBackground>
   );
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}
 }

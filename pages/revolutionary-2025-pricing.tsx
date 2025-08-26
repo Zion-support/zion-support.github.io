@@ -502,4 +502,10 @@ export default function Revolutionary2025Pricing() {
       </div>
     </UltraQuantumHolographicBackground>
   );
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}
 }

@@ -2,91 +2,91 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Target, 
-  BarChart3, 
-  Users, 
-  Mail, 
-  MessageSquare, 
-  TrendingUp, 
   Zap, 
-  Brain,
-  Globe,
+  Workflow, 
+  Brain, 
+  Clock, 
+  TrendingUp, 
+  Users, 
+  Database, 
   Shield,
-  Clock,
-  Analytics
+  Globe,
+  Target,
+  CheckCircle,
+  BarChart3
 } from 'lucide-react';
 
-const AIMarketingAutomation: React.FC = () => {
+const AIWorkflowAutomation: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Campaign Optimization",
-      description: "Machine learning algorithms that automatically optimize marketing campaigns for maximum performance and ROI",
-      benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"]
+      title: "AI-Powered Process Analysis",
+      description: "Intelligent analysis of existing workflows to identify optimization opportunities and automation potential",
+      benefits: ["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"]
     },
     {
-      icon: Users,
-      title: "Intelligent Customer Segmentation",
-      description: "Advanced AI algorithms that automatically segment customers based on behavior, preferences, and engagement patterns",
-      benefits: ["Dynamic segmentation", "Behavioral analysis", "Predictive modeling", "Personalization"]
-    },
-    {
-      icon: Analytics,
-      title: "Predictive Analytics",
-      description: "Forecast customer behavior, campaign performance, and market trends using historical data and AI models",
-      benefits: ["Customer lifetime value", "Churn prediction", "Demand forecasting", "Market trends"]
+      icon: Workflow,
+      title: "Intelligent Workflow Design",
+      description: "AI-driven workflow design that adapts to business needs and automatically optimizes for performance",
+      benefits: ["Dynamic workflows", "Conditional logic", "Exception handling", "Performance optimization"]
     },
     {
       icon: Zap,
-      title: "Automated Workflows",
-      description: "Intelligent automation of marketing processes, from lead generation to customer retention",
-      benefits: ["Lead nurturing", "Email automation", "Social media management", "Content scheduling"]
+      title: "Automated Decision Making",
+      description: "AI algorithms that make intelligent decisions based on data, rules, and historical patterns",
+      benefits: ["Rule-based decisions", "Machine learning", "Risk assessment", "Compliance checking"]
+    },
+    {
+      icon: Clock,
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of workflow performance with instant alerts and proactive optimization",
+      benefits: ["Performance tracking", "Real-time alerts", "Predictive maintenance", "KPI monitoring"]
     }
   ];
 
   const solutions = [
     {
-      category: "Email Marketing",
-      icon: Mail,
+      category: "Document Processing",
+      icon: Database,
       solutions: [
-        "AI-powered email personalization",
-        "Send time optimization",
-        "Subject line optimization",
-        "Content recommendations",
-        "Automated drip campaigns"
+        "Automated document classification",
+        "Intelligent data extraction",
+        "Form processing automation",
+        "Document routing and approval",
+        "Compliance checking"
       ]
     },
     {
-      category: "Social Media Marketing",
-      icon: MessageSquare,
+      category: "Customer Service",
+      icon: Users,
       solutions: [
-        "Content performance prediction",
-        "Optimal posting times",
-        "Audience engagement analysis",
-        "Trend identification",
-        "Automated content scheduling"
+        "Ticket routing and prioritization",
+        "Automated responses",
+        "Customer inquiry handling",
+        "Service level monitoring",
+        "Customer satisfaction tracking"
       ]
     },
     {
-      category: "Search & Display Advertising",
-      icon: Target,
-      solutions: [
-        "Bid optimization",
-        "Audience targeting",
-        "Ad creative optimization",
-        "Performance forecasting",
-        "Cross-channel attribution"
-      ]
-    },
-    {
-      category: "Content Marketing",
+      category: "Financial Operations",
       icon: TrendingUp,
       solutions: [
-        "Content performance analysis",
-        "Topic recommendations",
-        "SEO optimization",
-        "Content scheduling",
-        "ROI measurement"
+        "Invoice processing automation",
+        "Payment approval workflows",
+        "Expense report processing",
+        "Budget monitoring",
+        "Financial reporting"
+      ]
+    },
+    {
+      category: "HR & Recruitment",
+      icon: Users,
+      solutions: [
+        "Resume screening automation",
+        "Interview scheduling",
+        "Onboarding workflows",
+        "Performance review automation",
+        "Employee self-service"
       ]
     }
   ];
@@ -94,55 +94,55 @@ const AIMarketingAutomation: React.FC = () => {
   const technologies = [
     {
       name: "Machine Learning",
-      description: "Advanced ML algorithms for pattern recognition and prediction",
+      description: "Advanced ML algorithms for process optimization and decision making",
       icon: Brain
     },
     {
+      name: "Robotic Process Automation",
+      description: "RPA tools for repetitive task automation",
+      icon: Workflow
+    },
+    {
       name: "Natural Language Processing",
-      description: "AI-powered content analysis and generation",
-      icon: MessageSquare
+      description: "AI-powered text analysis and document processing",
+      icon: Database
     },
     {
-      name: "Predictive Analytics",
-      description: "Data-driven forecasting and optimization",
-      icon: Analytics
-    },
-    {
-      name: "Marketing Automation",
-      description: "Intelligent workflow automation",
+      name: "Workflow Engine",
+      description: "Scalable workflow orchestration platform",
       icon: Zap
     },
     {
       name: "Real-time Analytics",
       description: "Instant performance monitoring and optimization",
-      icon: Clock
+      icon: BarChart3
     },
     {
-      name: "Multi-channel Integration",
-      description: "Seamless integration across all marketing channels",
+      name: "API Integration",
+      description: "Seamless integration with existing systems",
       icon: Globe
     }
   ];
 
   const benefits = [
     {
-      title: "Increased ROI",
-      description: "AI optimization typically delivers 20-40% improvement in marketing ROI",
+      title: "Increased Efficiency",
+      description: "Automate repetitive tasks and improve process efficiency by 40-60%",
       icon: TrendingUp
     },
     {
-      title: "Time Savings",
-      description: "Automate repetitive tasks and save 15-20 hours per week",
-      icon: Clock
-    },
-    {
-      title: "Better Targeting",
-      description: "Improve conversion rates by 25-35% with AI-powered segmentation",
+      title: "Cost Reduction",
+      description: "Reduce operational costs by 25-35% through automation",
       icon: Target
     },
     {
-      title: "Scalable Growth",
-      description: "Scale marketing efforts without proportional increase in resources",
+      title: "Error Reduction",
+      description: "Minimize human errors and improve accuracy by 90%+",
+      icon: CheckCircle
+    },
+    {
+      title: "Scalability",
+      description: "Scale operations without proportional increase in resources",
       icon: Users
     }
   ];
@@ -181,28 +181,28 @@ const AIMarketingAutomation: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-6">
-              <Target className="w-10 h-10 text-white" />
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-600 to-red-600 rounded-full mb-6">
+              <Zap className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-green-600 bg-clip-text text-transparent">
-                AI Marketing Automation
+              <span className="bg-gradient-to-r from-orange-400 via-red-400 to-orange-600 bg-clip-text text-transparent">
+                AI Workflow Automation
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your marketing with AI-powered automation that delivers personalized experiences, 
-              optimizes campaigns, and maximizes ROI through intelligent decision-making.
+              Transform your business processes with intelligent automation that learns, adapts, and optimizes 
+              workflows for maximum efficiency and productivity.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
+                className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300"
               >
                 Get Started
               </Link>
               <Link
                 to="/services-showcase"
-                className="border border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300"
+                className="border border-orange-400 text-orange-400 px-8 py-3 rounded-lg font-semibold hover:bg-orange-400 hover:text-white transition-all duration-300"
               >
                 View All Services
               </Link>
@@ -222,8 +222,8 @@ const AIMarketingAutomation: React.FC = () => {
         >
           <h2 className="text-4xl font-bold text-white mb-6">Key Features</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI Marketing Automation platform combines cutting-edge artificial intelligence with 
-            proven marketing strategies to deliver exceptional results.
+            Our AI Workflow Automation platform combines artificial intelligence with advanced workflow 
+            management to create intelligent, adaptive business processes.
           </p>
         </motion.div>
 
@@ -232,10 +232,10 @@ const AIMarketingAutomation: React.FC = () => {
             <motion.div
               key={feature.title}
               variants={itemVariants}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-green-500/50 transition-all duration-300"
+              className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-orange-500/50 transition-all duration-300"
             >
               <div className="flex items-start mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -249,7 +249,7 @@ const AIMarketingAutomation: React.FC = () => {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       {benefit}
                     </li>
                   ))}
@@ -260,8 +260,8 @@ const AIMarketingAutomation: React.FC = () => {
         </div>
       </div>
 
-      {/* Solutions by Channel */}
-      <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-t border-green-500/20">
+      {/* Solutions by Department */}
+      <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 border-t border-orange-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -270,10 +270,10 @@ const AIMarketingAutomation: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Solutions by Marketing Channel</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Solutions by Department</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI automation solutions across all major marketing channels 
-              to create cohesive, data-driven marketing strategies.
+              Tailored workflow automation solutions designed to address the unique challenges 
+              and processes in different business departments.
             </p>
           </motion.div>
 
@@ -288,7 +288,7 @@ const AIMarketingAutomation: React.FC = () => {
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-4">
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">{category.category}</h3>
@@ -297,7 +297,7 @@ const AIMarketingAutomation: React.FC = () => {
                 <ul className="space-y-3">
                   {category.solutions.map((solution, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       {solution}
                     </li>
                   ))}
@@ -319,8 +319,8 @@ const AIMarketingAutomation: React.FC = () => {
         >
           <h2 className="text-4xl font-bold text-white mb-6">Business Benefits</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            AI Marketing Automation delivers measurable results that directly impact your bottom line 
-            and competitive position in the market.
+            AI Workflow Automation delivers measurable results that directly impact your operational 
+            efficiency, cost structure, and competitive position.
           </p>
         </motion.div>
 
@@ -332,9 +332,9 @@ const AIMarketingAutomation: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300"
+              className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-orange-500/50 transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <benefit.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
@@ -345,7 +345,7 @@ const AIMarketingAutomation: React.FC = () => {
       </div>
 
       {/* Technology Stack */}
-      <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-t border-green-500/20">
+      <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 border-t border-orange-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -356,8 +356,8 @@ const AIMarketingAutomation: React.FC = () => {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built on cutting-edge AI and marketing technologies to ensure scalability, 
-              performance, and reliability for enterprise marketing automation.
+              Built on cutting-edge AI and workflow technologies to ensure scalability, 
+              performance, and reliability for enterprise automation.
             </p>
           </motion.div>
 
@@ -369,9 +369,9 @@ const AIMarketingAutomation: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-orange-500/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
@@ -392,22 +392,22 @@ const AIMarketingAutomation: React.FC = () => {
           className="text-center"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Marketing?
+            Ready to Automate Your Workflows?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let our AI marketing experts help you implement intelligent automation that will 
-            transform your marketing performance and drive sustainable growth.
+            Let our AI workflow experts help you implement intelligent automation that will 
+            transform your business processes and drive operational excellence.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
+              className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300"
             >
               Schedule Consultation
             </Link>
             <Link
               to="/case-studies"
-              className="border border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300"
+              className="border border-orange-400 text-orange-400 px-8 py-3 rounded-lg font-semibold hover:bg-orange-400 hover:text-white transition-all duration-300"
             >
               View Case Studies
             </Link>
@@ -418,4 +418,4 @@ const AIMarketingAutomation: React.FC = () => {
   );
 };
 
-export default AIMarketingAutomation;
+export default AIWorkflowAutomation;

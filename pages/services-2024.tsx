@@ -66,6 +66,12 @@ const Services2024Page: React.FC = () => {
         return aValue > bValue ? 1 : -1;
       } else {
         return aValue < bValue ? 1 : -1;
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}
       }
     });
 
