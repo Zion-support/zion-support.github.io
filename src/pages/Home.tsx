@@ -27,6 +27,7 @@ import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
 import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
+import { UltimateServicesShowcase2027 } from "@/components/UltimateServicesShowcase2027";
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -446,6 +447,9 @@ export default function Home() {
 
       {/* Enhanced Innovative Services Showcase */}
       <EnhancedInnovativeServicesShowcase />
+
+      {/* Ultimate Services Showcase 2027 */}
+      <UltimateServicesShowcase2027 />
 
       {/* Enhanced Pricing Comparison */}
       <EnhancedPricingComparison />
