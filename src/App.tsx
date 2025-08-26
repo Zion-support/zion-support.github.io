@@ -1,41 +1,106 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import { EnhancedHeader } from './components/header/EnhancedHeader';
+import { EnhancedFooter } from './components/footer/EnhancedFooter';
+import { FuturisticAnimatedBackground } from './components/backgrounds/FuturisticAnimatedBackground';
 
-// Lazy load pages
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
+// Import pages
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact.tsx';
+import ServicesPage from './pages/ServicesPage';
+import EnhancedServicesShowcase2025 from './pages/EnhancedServicesShowcase2025';
+import NotFound from './pages/NotFound';
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <div className="text-center space-y-4">
-      <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
-      <p className="text-cyan-500 text-lg font-medium">Loading Zion...</p>
-      <p className="text-gray-400 text-sm">Preparing your AI marketplace experience</p>
-    </div>
-  </div>
-);
+// Import other pages as needed
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Dashboard from './pages/Dashboard';
+import Blog from './pages/Blog';
+import Careers from './pages/Careers';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import FAQ from './pages/FAQ';
+import RequestQuote from './pages/RequestQuote';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <AppHeader />
+      <div className="App min-h-screen bg-zion-slate-dark">
+        {/* Futuristic animated background */}
+        <FuturisticAnimatedBackground variant="default" intensity="low" />
         
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </Suspense>
+        {/* Enhanced Header */}
+        <EnhancedHeader />
+        
+        {/* Main Content */}
+        <main className="pt-24">
+          <Routes>
+            {/* Home Route */}
+            <Route path="/" element={<Home />} />
+            
+            {/* Main Pages */}
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
+            
+            {/* Auth Pages */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            
+            {/* Content Pages */}
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/request-quote" element={<RequestQuote />} />
+            
+            {/* Legal Pages */}
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/faq" element={<FAQ />} />
+            
+            {/* Service Detail Pages */}
+            <Route path="/services/:serviceId" element={<ServicesPage />} />
+            
+            {/* AI Services Routes */}
+            <Route path="/ai-services" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/cloud-devops" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/emerging-tech" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions" element={<EnhancedServicesShowcase2025 />} />
+            
+            {/* Company Routes */}
+            <Route path="/leadership" element={<About />} />
+            <Route path="/news" element={<Blog />} />
+            <Route path="/case-studies" element={<About />} />
+            <Route path="/partners" element={<About />} />
+            
+            {/* Resources Routes */}
+            <Route path="/docs" element={<About />} />
+            <Route path="/api" element={<About />} />
+            <Route path="/help" element={<FAQ />} />
+            <Route path="/training" element={<About />} />
+            <Route path="/webinars" element={<About />} />
+            <Route path="/white-papers" element={<About />} />
+            <Route path="/research" element={<About />} />
+            
+            {/* Industry Solutions Routes */}
+            <Route path="/solutions/healthcare" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/financial" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/manufacturing" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/retail" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/transportation" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/energy" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/real-estate" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/solutions/agriculture" element={<EnhancedServicesShowcase2025 />} />
+            
+            {/* 404 Route */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </main>
         
-        <Footer />
+        {/* Enhanced Footer */}
+        <EnhancedFooter />
       </div>
     </Router>
   );
