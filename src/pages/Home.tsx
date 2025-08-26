@@ -9,7 +9,11 @@ import {
   ArrowRight,
   CheckCircle,
   Star,
-  TrendingUp
+  TrendingUp,
+  Brain,
+  Atom,
+  Rocket,
+  Heart
 } from 'lucide-react';
 
 export default function Home() {
@@ -45,25 +49,56 @@ export default function Home() {
       title: "AI Solutions",
       description: "Cutting-edge artificial intelligence services",
       icon: "🤖",
-      link: "/services"
+      link: "/ultimate-services",
+      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
     },
     {
-      title: "Tech Talent",
-      description: "Expert developers and engineers",
-      icon: "👨‍💻",
-      link: "/talent"
+      title: "Quantum Computing",
+      description: "Next-generation quantum solutions",
+      icon: "⚛️",
+      link: "/ultimate-services",
+      features: ["Quantum Algorithms", "Quantum Machine Learning", "Cryptography", "Optimization"]
     },
     {
-      title: "Equipment",
-      description: "High-performance tech infrastructure",
-      icon: "🖥️",
-      link: "/equipment"
+      title: "Blockchain & Web3",
+      description: "Decentralized technology solutions",
+      icon: "🔗",
+      link: "/ultimate-services",
+      features: ["Smart Contracts", "DeFi Platforms", "NFT Solutions", "Supply Chain"]
     },
     {
-      title: "Consulting",
-      description: "Strategic technology guidance",
-      icon: "💡",
-      link: "/consulting"
+      title: "IoT & Edge Computing",
+      description: "Connected device intelligence",
+      icon: "🌐",
+      link: "/ultimate-services",
+      features: ["Smart Cities", "Industrial IoT", "Edge AI", "Real-time Analytics"]
+    }
+  ];
+
+  const innovativeCategories = [
+    {
+      title: "Healthcare AI",
+      icon: Heart,
+      description: "Revolutionary medical diagnostics and patient care",
+      color: "from-pink-500 to-red-500"
+    },
+    {
+      title: "Neuromorphic Computing",
+      icon: Brain,
+      description: "Brain-inspired computing architecture",
+      color: "from-purple-500 to-blue-500"
+    },
+    {
+      title: "Synthetic Biology",
+      icon: Atom,
+      description: "AI-powered biological engineering",
+      color: "from-green-500 to-blue-500"
+    },
+    {
+      title: "Advanced Robotics",
+      icon: Rocket,
+      description: "Intelligent automation and control systems",
+      color: "from-orange-500 to-red-500"
     }
   ];
 
@@ -86,7 +121,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/services" 
+                to="/ultimate-services" 
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Our Services
@@ -152,6 +187,17 @@ export default function Home() {
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-400 mb-4">{service.description}</p>
+                
+                {/* Features */}
+                <div className="mb-4">
+                  {service.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-sm text-gray-400 mb-1">
+                      <CheckCircle className="w-3 h-3 text-green-400" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                
                 <Link 
                   to={service.link}
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -160,6 +206,49 @@ export default function Home() {
                 </Link>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Innovative Categories Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Cutting-Edge Innovation
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our revolutionary technology categories that are shaping the future
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {innovativeCategories.map((category, index) => (
+              <motion.div
+                key={index}
+                className="group cursor-pointer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className={`p-6 rounded-xl bg-gradient-to-br ${category.color} mb-4 group-hover:scale-105 transition-transform duration-300`}>
+                  <category.icon className="w-12 h-12 text-white mx-auto" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2 text-center">{category.title}</h3>
+                <p className="text-gray-400 text-center text-sm">{category.description}</p>
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link 
+              to="/ultimate-services"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              View All Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
           </div>
         </div>
       </section>
@@ -173,13 +262,21 @@ export default function Home() {
           <p className="text-xl text-gray-300 mb-8">
             Join hundreds of companies already leveraging our cutting-edge technology solutions
           </p>
-          <Link 
-            to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-          >
-            Start Your Journey
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/ultimate-services"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link 
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
     </div>
