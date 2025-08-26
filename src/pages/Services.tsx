@@ -88,6 +88,28 @@ const Services: React.FC = () => {
             Each service is designed to transform your business and drive innovation.
           </p>
           
+          {/* Navigation to Comprehensive Services */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Link
+              to="/comprehensive-services-2025"
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
+            >
+              🚀 Enhanced 2025 Services
+            </Link>
+            <Link
+              to="/enhanced-services-2025"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
+            >
+              📊 Services Showcase
+            </Link>
+            <Link
+              to="/comprehensive-services-overview-2025"
+              className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105"
+            >
+              🔍 Services Overview
+            </Link>
+          </div>
+          
           {/* Contact Info */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 max-w-2xl mx-auto">
             <h3 className="text-lg font-semibold text-blue-400 mb-4">Contact Information</h3>
@@ -99,6 +121,36 @@ const Services: React.FC = () => {
               <div>
                 <p><span className="text-blue-400">Website:</span> ziontechgroup.com</p>
                 <p><span className="text-blue-400">Address:</span> 364 E Main St STE 1008, Middletown DE 19709</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Innovative Services Preview */}
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl font-bold text-white mb-6">Discover Our Innovative Services</h3>
+            <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+              Explore cutting-edge solutions including quantum computing, blockchain, IoT, and advanced cybersecurity
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-gradient-to-br from-green-800/30 to-emerald-700/30 backdrop-blur-lg rounded-xl p-6 border border-green-600/30">
+                <div className="text-3xl mb-3">⚛️</div>
+                <h4 className="text-lg font-semibold text-white mb-2">Quantum Computing</h4>
+                <p className="text-sm text-gray-300">Revolutionary quantum solutions for complex problems</p>
+              </div>
+              <div className="bg-gradient-to-br from-orange-800/30 to-red-700/30 backdrop-blur-lg rounded-xl p-6 border border-orange-600/30">
+                <div className="text-3xl mb-3">🔗</div>
+                <h4 className="text-lg font-semibold text-white mb-2">Blockchain & Web3</h4>
+                <p className="text-sm text-gray-300">DeFi, NFTs, and decentralized applications</p>
+              </div>
+              <div className="bg-gradient-to-br from-teal-800/30 to-cyan-700/30 backdrop-blur-lg rounded-xl p-6 border border-teal-600/30">
+                <div className="text-3xl mb-3">🏙️</div>
+                <h4 className="text-lg font-semibold text-white mb-2">IoT & Edge Computing</h4>
+                <p className="text-sm text-gray-300">Smart cities, industrial IoT, and healthcare monitoring</p>
+              </div>
+              <div className="bg-gradient-to-br from-pink-800/30 to-rose-700/30 backdrop-blur-lg rounded-xl p-6 border border-pink-600/30">
+                <div className="text-3xl mb-3">🔒</div>
+                <h4 className="text-lg font-semibold text-white mb-2">Advanced Cybersecurity</h4>
+                <p className="text-sm text-gray-300">Zero-trust security and quantum-resistant cryptography</p>
               </div>
             </div>
           </div>

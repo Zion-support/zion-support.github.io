@@ -1,6 +1,6 @@
 import React from 'react';
 import { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
@@ -47,6 +47,24 @@ const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 
+// New pages from our feature branch
+const About = React.lazy(() => import('./pages/About'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const AIServices = React.lazy(() => import('./pages/services/AI'));
+const CloudServices = React.lazy(() => import('./pages/services/Cloud'));
+const CybersecurityServices = React.lazy(() => import('./pages/services/Cybersecurity'));
+const InfrastructureServices = React.lazy(() => import('./pages/services/Infrastructure'));
+const DigitalTransformation = React.lazy(() => import('./pages/services/Transformation'));
+const ConsultingServices = React.lazy(() => import('./pages/services/Consulting'));
+
+// Additional new service pages
+const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
+const AdvancedServices2025 = React.lazy(() => import('./pages/AdvancedServices2025'));
+const AdvancedServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedServicesShowcase2025'));
+const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 const baseRoutes = [
   { path: '/', element: <Home /> },
   { path: '/match', element: <AIMatcherPage /> },
@@ -73,6 +91,26 @@ const baseRoutes = [
   { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
+<<<<<<< HEAD
+=======
+  // New routes from our feature branch
+  { path: '/about', element: <About /> },
+  { path: '/privacy', element: <Privacy /> },
+  { path: '/terms', element: <Terms /> },
+  { path: '/careers', element: <Careers /> },
+  { path: '/services/ai', element: <AIServices /> },
+  { path: '/services/cloud', element: <CloudServices /> },
+  { path: '/services/cybersecurity', element: <CybersecurityServices /> },
+  { path: '/services/infrastructure', element: <InfrastructureServices /> },
+  { path: '/services/transformation', element: <DigitalTransformation /> },
+  { path: '/services/consulting', element: <ConsultingServices /> },
+  // Additional new service routes
+  { path: '/innovative-services-2025', element: <InnovativeServices2025 /> },
+  { path: '/advanced-services-2025', element: <AdvancedServices2025 /> },
+  { path: '/advanced-services-showcase-2025', element: <AdvancedServicesShowcase2025 /> },
+  { path: '/comprehensive-pricing-2025', element: <ComprehensivePricing2025 /> },
+  { path: '*', element: <NotFound /> },
+>>>>>>> fd14c4b28e9a9b41bb956e379b0167c3bd576414
 ];
 
 // Loading spinner component
@@ -84,10 +122,17 @@ const LoadingSpinner = () => (
 
 function App() {
   return (
+<<<<<<< HEAD
     <ThemeProvider>
       <WhitelabelProvider>
         <div className="App min-h-screen flex flex-col">
           <main className="flex-1">
+=======
+    <Router>
+      <ThemeProvider>
+        <WhitelabelProvider>
+          <div className="App min-h-screen flex flex-col">
+>>>>>>> fd14c4b28e9a9b41bb956e379b0167c3bd576414
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 {baseRoutes.map((route) => (
@@ -95,6 +140,7 @@ function App() {
                 ))}
               </Routes>
             </Suspense>
+<<<<<<< HEAD
           </main>
           <Footer />
           <Toaster />
@@ -102,6 +148,14 @@ function App() {
         </div>
       </WhitelabelProvider>
     </ThemeProvider>
+=======
+            <Toaster />
+            <SonnerToaster />
+          </div>
+        </WhitelabelProvider>
+      </ThemeProvider>
+    </Router>
+>>>>>>> fd14c4b28e9a9b41bb956e379b0167c3bd576414
   );
 }
 

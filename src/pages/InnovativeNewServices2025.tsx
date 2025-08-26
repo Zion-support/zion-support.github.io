@@ -44,7 +44,7 @@ const InnovativeNewServices2025: React.FC = () => {
     if ('price' in service) {
       servicePrice = service.price;
     } else if ('hourlyRate' in service) {
-      servicePrice = service.hourlyRate * 160; // Convert hourly rate to monthly (160 hours/month)
+      servicePrice = (service as any).hourlyRate * 160; // Convert hourly rate to monthly (160 hours/month)
     }
     
     const priceMatch = selectedPriceRange === 'all' || 
@@ -208,7 +208,7 @@ const InnovativeNewServices2025: React.FC = () => {
                       </div>
                       <div className="text-right">
                         <div className="text-2xl font-bold text-cyan-400">
-                          {service.currency}{('price' in service ? service.price : (service.hourlyRate * 160)).toLocaleString()}/mo
+                          {service.currency}{('price' in service ? service.price : ((service as any).hourlyRate * 160)).toLocaleString()}/mo
                         </div>
                         <div className="text-sm text-gray-400">{('pricingModel' in service ? service.pricingModel : 'hourly')}</div>
                       </div>
