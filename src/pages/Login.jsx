@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { safeStorage } from '@/utils/safeStorage';
-import { LoginContent } from '@/components/auth/login';
+import { LoginForm } from '@/components/auth/login/LoginForm';
 import { ErrorBoundary } from 'react-error-boundary';
 import { useCart } from '@/context/CartContext';
 import { SAMPLE_EQUIPMENT } from './EquipmentDetail';
@@ -40,11 +40,11 @@ export default function Login() {
     }
   }, [isAuthenticated, isLoading, navigate, location.search, reduxDispatch]);
 
-  // Render LoginContent if not authenticated and auth is not loading
+  // Render LoginForm if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
     return (
       <ErrorBoundary>
-        <LoginContent />
+        <LoginForm />
       </ErrorBoundary>
     );
   }
