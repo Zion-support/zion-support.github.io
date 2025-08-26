@@ -1,380 +1,601 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
   FileText, 
   Shield, 
   Users, 
   Globe, 
-  AlertTriangle, 
-  CheckCircle,
+  Calendar,
   ArrowRight,
-  Scale,
-  Gavel,
-  BookOpen
+  CheckCircle,
+  AlertTriangle,
+  Lock,
+  Building2,
+  Phone,
+  Mail
 } from 'lucide-react';
 
-export default function Terms() {
-  const keyTerms = [
+const Terms: React.FC = () => {
+  const lastUpdated = 'January 15, 2025';
+
+  const serviceCategories = [
     {
-      icon: Users,
-      title: "Service Users",
-      description: "Individuals and businesses using our marketplace and services."
+      title: 'Technology Consulting',
+      description: 'Strategic technology advisory and digital transformation consulting',
+      includes: ['Technology assessment', 'Digital strategy', 'Implementation planning']
     },
     {
-      icon: Globe,
-      title: "Platform",
-      description: "Our website, applications, and related services."
+      title: 'AI & Machine Learning',
+      description: 'Artificial intelligence solutions and machine learning implementation',
+      includes: ['AI strategy', 'ML model development', 'Data analytics']
     },
     {
-      icon: Shield,
-      title: "Content",
-      description: "Information, data, and materials shared on our platform."
+      title: 'Cloud Solutions',
+      description: 'Cloud infrastructure and platform services',
+      includes: ['Cloud migration', 'Infrastructure management', 'Scalability solutions']
     },
     {
-      icon: Scale,
-      title: "Services",
-      description: "AI solutions, consulting, and technology services offered."
+      title: 'Cybersecurity',
+      description: 'Security assessment and protection services',
+      includes: ['Security audits', 'Threat detection', 'Incident response']
     }
   ];
 
   const userObligations = [
     {
-      title: "Account Security",
-      description: "Maintain secure account credentials and notify us of unauthorized access."
+      obligation: 'Accurate Information',
+      description: 'Provide accurate and complete information when using our services',
+      icon: CheckCircle
     },
     {
-      title: "Accurate Information",
-      description: "Provide truthful and up-to-date information in your profile and communications."
+      obligation: 'Compliance',
+      description: 'Comply with all applicable laws and regulations',
+      icon: Shield
     },
     {
-      title: "Compliance",
-      description: "Follow all applicable laws and regulations when using our services."
+      obligation: 'Security',
+      description: 'Maintain the security of your account and credentials',
+      icon: Lock
     },
     {
-      title: "Respectful Conduct",
-      description: "Treat other users with respect and avoid harassment or discrimination."
-    },
-    {
-      title: "Intellectual Property",
-      description: "Respect copyrights and intellectual property rights of others."
-    },
-    {
-      title: "Service Usage",
-      description: "Use our services for their intended purpose and avoid abuse or misuse."
+      obligation: 'Acceptable Use',
+      description: 'Use our services only for lawful and authorized purposes',
+      icon: Users
     }
   ];
 
   const prohibitedActivities = [
-    "Illegal activities or violations of applicable laws",
-    "Harassment, discrimination, or hate speech",
-    "Spam, phishing, or fraudulent activities",
-    "Distribution of malware or harmful code",
-    "Attempts to gain unauthorized access to systems",
-    "Violation of intellectual property rights",
-    "Interference with service operation",
-    "Sharing of confidential or sensitive information"
+    'Attempting to gain unauthorized access to our systems or networks',
+    'Interfering with or disrupting our services or servers',
+    'Using our services for illegal, harmful, or fraudulent activities',
+    'Attempting to reverse engineer or copy our proprietary technology',
+    'Violating intellectual property rights or third-party rights',
+    'Harassing, abusing, or harming other users or our employees'
   ];
 
-  const serviceTerms = [
+  const intellectualProperty = [
     {
-      category: "AI Solutions",
-      terms: [
-        "AI services are provided 'as is' with no warranty of accuracy",
-        "Users are responsible for reviewing and validating AI outputs",
-        "We reserve the right to improve and update AI models",
-        "Usage limits may apply based on service tier"
-      ]
+      category: 'Our Intellectual Property',
+      description: 'All content, software, and technology we develop remain our exclusive property',
+      examples: ['Proprietary algorithms', 'Software platforms', 'Brand assets']
     },
     {
-      category: "Consulting Services",
-      terms: [
-        "Services are provided by qualified professionals",
-        "Project timelines and deliverables are specified in agreements",
-        "Changes to scope may affect pricing and timelines",
-        "Intellectual property rights are defined in service contracts"
-      ]
+      category: 'Your Intellectual Property',
+      description: 'You retain ownership of your content and intellectual property',
+      examples: ['Business data', 'Custom requirements', 'Proprietary information']
     },
     {
-      category: "Marketplace",
-      terms: [
-        "We facilitate connections but don't guarantee outcomes",
-        "Users are responsible for their own transactions",
-        "Dispute resolution procedures are available",
-        "Quality standards and verification processes apply"
-      ]
+      category: 'Third-Party IP',
+      description: 'We respect third-party intellectual property rights',
+      examples: ['Open source licenses', 'Third-party integrations', 'Licensed content']
+    }
+  ];
+
+  const paymentTerms = [
+    {
+      term: 'Service Fees',
+      description: 'Fees are based on the scope and complexity of services provided',
+      details: ['Hourly rates for consulting', 'Project-based pricing', 'Recurring service fees']
+    },
+    {
+      term: 'Payment Schedule',
+      description: 'Payment terms vary by service type and project scope',
+      details: ['Net 30 for consulting', '50% upfront for projects', 'Monthly for ongoing services']
+    },
+    {
+      term: 'Late Payments',
+      description: 'Late payments may result in additional fees and service suspension',
+      details: ['1.5% monthly interest', 'Service suspension after 60 days', 'Collection costs for overdue accounts']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Terms of <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Service</span>
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-              These terms govern your use of Zion Tech Group's services. Please read them carefully 
-              to understand your rights and responsibilities.
-            </p>
-            <div className="flex items-center justify-center gap-2 text-zion-slate-light">
-              <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
-              <span className="text-sm">Last updated: {new Date().toLocaleDateString()}</span>
-            </div>
-          </div>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="inline-flex items-center justify-center w-20 h-20 bg-zion-cyan/20 rounded-2xl mb-6"
+          >
+            <FileText className="w-10 h-10 text-zion-cyan" />
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
+          >
+            Terms of Service
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl text-zion-cyan/80 max-w-4xl mx-auto leading-relaxed"
+          >
+            These terms govern your use of Zion Tech Group's services. By using our services, 
+            you agree to be bound by these terms and conditions.
+          </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-8 text-zion-cyan/60"
+          >
+            <span className="flex items-center justify-center gap-2">
+              <Calendar className="w-5 h-5" />
+              Last updated: {lastUpdated}
+            </span>
+          </motion.div>
         </div>
       </section>
 
-      {/* Key Terms */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Key Terms & Definitions</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Understanding these terms helps clarify our agreement and your rights.
+      {/* Overview Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20"
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">Agreement Overview</h2>
+            <div className="space-y-4 text-zion-cyan/80 leading-relaxed">
+              <p>
+                These Terms of Service ("Terms") constitute a legally binding agreement between you 
+                ("Client," "you," or "your") and Zion Tech Group ("Company," "we," "us," or "our") 
+                regarding your use of our technology consulting, development, and related services.
+              </p>
+              <p>
+                By accessing or using our services, you acknowledge that you have read, understood, 
+                and agree to be bound by these Terms. If you do not agree to these Terms, you must 
+                not use our services.
+              </p>
+              <p>
+                These Terms apply to all services provided by Zion Tech Group, including but not 
+                limited to technology consulting, software development, cloud solutions, and 
+                cybersecurity services.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Services Description */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Our Services</h2>
+            <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto">
+              Zion Tech Group provides comprehensive technology solutions and consulting services 
+              to help businesses transform and grow in the digital age.
             </p>
-          </div>
+          </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {keyTerms.map((term, index) => (
-              <div key={index} className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20 text-center">
-                <div className="w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <term.icon className="w-8 h-8 text-zion-cyan" />
+          <div className="grid md:grid-cols-2 gap-8">
+            {serviceCategories.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
+              >
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                <p className="text-zion-cyan/80 mb-4">{service.description}</p>
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold text-zion-cyan">Includes:</h4>
+                  <ul className="space-y-1">
+                    {service.includes.map((item, idx) => (
+                      <li key={idx} className="text-sm text-zion-cyan/60 flex items-center gap-2">
+                        <CheckCircle className="w-3 h-3 text-zion-cyan" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{term.title}</h3>
-                <p className="text-zion-slate-light">{term.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Acceptance & Changes */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Acceptance & Changes</h2>
-              <div className="space-y-6">
-                <div className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20">
-                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3" />
-                    Acceptance
-                  </h3>
-                  <p className="text-zion-slate-light">
-                    By using our services, you agree to these terms. If you don't agree, 
-                    please don't use our platform.
-                  </p>
-                </div>
-                
-                <div className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20">
-                  <h3 className="text-xl font-semibold text-white mb-3 flex items-center">
-                    <AlertTriangle className="w-6 h-6 text-yellow-400 mr-3" />
-                    Changes
-                  </h3>
-                  <p className="text-zion-slate-light">
-                    We may update these terms periodically. We'll notify you of significant 
-                    changes via email or platform notifications.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-zion-blue-light/10 rounded-lg p-8 border border-zion-blue-light/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Important Notice</h3>
-              <p className="text-zion-slate-light mb-6">
-                These terms form a legally binding agreement between you and Zion Tech Group. 
-                Please review them carefully and contact us if you have questions.
-              </p>
-              <div className="flex items-center text-zion-cyan">
-                <BookOpen className="w-5 h-5 mr-2" />
-                <span className="text-sm">Legal document - seek counsel if needed</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* User Obligations */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Your Obligations</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              As a user of our services, you have certain responsibilities to maintain 
-              a safe and productive environment.
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Your Obligations</h2>
+            <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto">
+              As a user of our services, you have certain responsibilities and obligations 
+              that help ensure a successful partnership.
             </p>
-          </div>
+          </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {userObligations.map((obligation, index) => (
-              <div key={index} className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20">
-                <h3 className="text-lg font-semibold text-white mb-3">{obligation.title}</h3>
-                <p className="text-zion-slate-light text-sm">{obligation.description}</p>
-              </div>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <obligation.icon className="w-8 h-8 text-zion-cyan" />
+                  <h3 className="text-xl font-bold text-white">{obligation.obligation}</h3>
+                </div>
+                <p className="text-zion-cyan/80">{obligation.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Prohibited Activities */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Prohibited Activities</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              To maintain a safe and professional environment, certain activities are not allowed 
-              on our platform.
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-zion-blue-light/10 rounded-lg p-8 border border-zion-blue-light/20">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {prohibitedActivities.map((activity, index) => (
-                  <div key={index} className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-zion-slate-light">{activity}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
-                <p className="text-red-400 text-sm text-center">
-                  <strong>Violation of these terms may result in account suspension or termination.</strong>
-                </p>
-              </div>
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
+              <h2 className="text-3xl font-bold text-white">Prohibited Activities</h2>
             </div>
-          </div>
+            <p className="text-zion-cyan/80 mb-6">
+              The following activities are strictly prohibited when using our services:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              {prohibitedActivities.map((activity, index) => (
+                <div key={index} className="flex items-start gap-2">
+                  <AlertTriangle className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" />
+                  <span className="text-zion-cyan/80 text-sm">{activity}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl">
+              <p className="text-red-400 text-sm">
+                <strong>Violation Consequences:</strong> Violation of these prohibitions may result in 
+                immediate service termination, legal action, and reporting to appropriate authorities.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Service-Specific Terms */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Service-Specific Terms</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Different services may have additional terms and conditions that apply.
+      {/* Intellectual Property */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Intellectual Property Rights</h2>
+            <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto">
+              We respect intellectual property rights and clearly define ownership 
+              of various types of content and technology.
             </p>
-          </div>
+          </motion.div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {serviceTerms.map((service, index) => (
-              <div key={index} className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{service.category}</h3>
-                <ul className="space-y-3">
-                  {service.terms.map((term, termIndex) => (
-                    <li key={termIndex} className="flex items-start text-zion-slate-light text-sm">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
-                      {term}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {intellectualProperty.map((ip, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
+              >
+                <h3 className="text-xl font-bold text-white mb-3">{ip.category}</h3>
+                <p className="text-zion-cyan/80 mb-4">{ip.description}</p>
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold text-zion-cyan">Examples:</h4>
+                  <ul className="space-y-1">
+                    {ip.examples.map((example, idx) => (
+                      <li key={idx} className="text-sm text-zion-cyan/60 flex items-center gap-2">
+                        <CheckCircle className="w-3 h-3 text-zion-cyan" />
+                        {example}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Intellectual Property */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Intellectual Property</h2>
-              <div className="space-y-6">
-                <div className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20">
-                  <h3 className="text-xl font-semibold text-white mb-3">Our Rights</h3>
-                  <p className="text-zion-slate-light">
-                    Zion Tech Group retains ownership of our platform, technology, and proprietary content. 
-                    Our trademarks and branding are protected intellectual property.
-                  </p>
+      {/* Payment Terms */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Payment Terms</h2>
+            <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto">
+              Clear payment terms ensure a smooth business relationship and help 
+              us deliver high-quality services consistently.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {paymentTerms.map((term, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
+              >
+                <h3 className="text-xl font-bold text-white mb-3">{term.term}</h3>
+                <p className="text-zion-cyan/80 mb-4">{term.description}</p>
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold text-zion-cyan">Details:</h4>
+                  <ul className="space-y-1">
+                    {term.details.map((detail, idx) => (
+                      <li key={idx} className="text-sm text-zion-cyan/60 flex items-center gap-2">
+                        <CheckCircle className="w-3 h-3 text-zion-cyan" />
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                
-                <div className="bg-zion-blue-light/10 rounded-lg p-6 border border-zion-blue-light/20">
-                  <h3 className="text-xl font-semibold text-white mb-3">Your Content</h3>
-                  <p className="text-zion-slate-light">
-                    You retain ownership of content you create and share. By using our services, 
-                    you grant us a license to use your content to provide our services.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-zion-blue-light/10 rounded-lg p-8 border border-zion-blue-light/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Copyright Protection</h3>
-              <p className="text-zion-slate-light mb-6">
-                We respect intellectual property rights and expect our users to do the same. 
-                Report copyright violations through our support channels.
-              </p>
-              <div className="flex items-center text-zion-cyan">
-                <Gavel className="w-5 h-5 mr-2" />
-                <span className="text-sm">DMCA compliant procedures available</span>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Limitation of Liability */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Limitation of Liability</h2>
-          <div className="bg-zion-blue-light/10 rounded-lg p-8 border border-zion-blue-light/20 mb-8">
-            <p className="text-zion-slate-light text-lg leading-relaxed">
-              Zion Tech Group provides services "as is" and "as available." We're not liable for 
-              indirect, incidental, or consequential damages. Our total liability is limited to 
-              the amount you paid for our services in the 12 months preceding the claim.
-            </p>
-          </div>
-          
-          <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-yellow-400 mb-3">Legal Disclaimer</h3>
-            <p className="text-zion-slate-light text-sm">
-              This summary doesn't replace the full terms. For complete legal information, 
-              please read the full document. These terms don't affect your statutory rights.
-            </p>
-          </div>
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20"
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">Limitation of Liability</h2>
+            <div className="space-y-4 text-zion-cyan/80 leading-relaxed">
+              <p>
+                To the maximum extent permitted by applicable law, Zion Tech Group shall not be liable 
+                for any indirect, incidental, special, consequential, or punitive damages, including 
+                but not limited to loss of profits, data, use, goodwill, or other intangible losses.
+              </p>
+              <p>
+                Our total liability to you for any claims arising from or related to these Terms or 
+                our services shall not exceed the amount you paid to us for the specific service 
+                giving rise to the claim in the twelve (12) months preceding the claim.
+              </p>
+              <p>
+                This limitation of liability applies to all causes of action, whether based in contract, 
+                tort (including negligence), strict liability, or any other legal theory.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Contact & Questions */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Questions About These Terms?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            If you have questions about these terms of service or need clarification on any 
-            specific provisions, our legal team is here to help.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium flex items-center justify-center"
-            >
-              Contact Legal Team
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <a
-              href="mailto:legal@ziontechgroup.com"
-              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-medium"
-            >
-              legal@ziontechgroup.com
-            </a>
-          </div>
-          
-          <div className="mt-12 p-6 bg-zion-blue-light/10 rounded-lg border border-zion-blue-light/20">
-            <h3 className="text-lg font-semibold text-white mb-3">Legal Updates</h3>
-            <p className="text-zion-slate-light text-sm">
-              These terms may be updated to reflect changes in our services, legal requirements, 
-              or business practices. We'll provide reasonable notice of material changes.
-            </p>
-          </div>
+      {/* Termination */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20"
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">Termination</h2>
+            <div className="space-y-4 text-zion-cyan/80 leading-relaxed">
+              <p>
+                Either party may terminate these Terms and the service relationship at any time 
+                with written notice to the other party.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 mt-6">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3">Termination by You</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
+                      <span>Provide 30 days written notice</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
+                      <span>Pay for services rendered up to termination date</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
+                      <span>Return any company property or materials</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3">Termination by Us</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
+                      <span>Provide 30 days written notice</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
+                      <span>Complete work in progress when possible</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
+                      <span>Provide transition assistance if requested</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Governing Law */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20"
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">Governing Law and Dispute Resolution</h2>
+            <div className="space-y-4 text-zion-cyan/80 leading-relaxed">
+              <p>
+                These Terms shall be governed by and construed in accordance with the laws of the 
+                State of California, United States, without regard to its conflict of law principles.
+              </p>
+              <p>
+                Any disputes arising from or related to these Terms or our services shall be resolved 
+                through binding arbitration in accordance with the rules of the American Arbitration 
+                Association, with the arbitration to be held in San Francisco, California.
+              </p>
+              <p>
+                Both parties agree to waive any right to a jury trial and to participate in class 
+                action lawsuits related to these Terms or our services.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20"
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <p className="text-zion-cyan/80 mb-6">
+                  If you have any questions about these Terms of Service or need clarification 
+                  on any provision, please contact us:
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3 text-zion-cyan/80">
+                    <Building2 className="w-5 h-5 text-zion-cyan" />
+                    <span>Zion Tech Group</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-zion-cyan/80">
+                    <Mail className="w-5 h-5 text-zion-cyan" />
+                    <span>legal@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-zion-cyan/80">
+                    <Phone className="w-5 h-5 text-zion-cyan" />
+                    <span>+1 (555) 123-4567</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-zion-cyan/80">
+                    <Globe className="w-5 h-5 text-zion-cyan" />
+                    <span>https://ziontechgroup.com</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-4">Legal Department</h3>
+                <p className="text-zion-cyan/80 mb-4">
+                  For legal matters, contract negotiations, or compliance questions, 
+                  our legal team is available to assist you.
+                </p>
+                <button className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                  Contact Legal Team
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Updates Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20"
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">Updates to These Terms</h2>
+            <div className="space-y-4 text-zion-cyan/80 leading-relaxed">
+              <p>
+                We may update these Terms of Service from time to time to reflect changes in our 
+                services, business practices, legal requirements, or other factors. When we make 
+                changes, we will:
+              </p>
+              <ul className="space-y-3 ml-6">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />
+                  <span>Update the "Last Updated" date at the top of these terms</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />
+                  <span>Notify you of significant changes through email or website announcements</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />
+                  <span>Provide you with an opportunity to review and accept the updated terms</span>
+                </li>
+              </ul>
+              <p>
+                Continued use of our services after changes constitutes acceptance of the updated terms. 
+                We encourage you to review these Terms periodically to stay informed about your rights 
+                and obligations.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default Terms;

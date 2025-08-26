@@ -69,21 +69,44 @@ export default function Login() {
               />
             </div>
             
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <input
+                  id="remember-me"
+                  name="remember-me"
+                  type="checkbox"
+                  className="h-4 w-4 text-zion-cyan focus:ring-zion-cyan border-zion-slate-light rounded"
+                />
+                <label htmlFor="remember-me" className="ml-2 block text-sm text-zion-slate-light">
+                  Remember me
+                </label>
+              </div>
+              
+              <div className="text-sm">
+                <a href="#" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+                  Forgot your password?
+                </a>
+              </div>
+            </div>
+            
             <div>
               <button
                 type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-cyan"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-zion-cyan hover:bg-zion-cyan-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-cyan transition-colors duration-200"
               >
                 Sign in
               </button>
             </div>
+            
+            <div className="text-center">
+              <p className="text-sm text-zion-slate-light">
+                Don't have an account?{' '}
+                <a href="/signup" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
+                  Sign up
+                </a>
+              </p>
+            </div>
           </form>
-          
-          <div className="mt-6 text-center">
-            <a href="/contact" className="text-zion-cyan hover:text-zion-cyan-light text-sm">
-              Need help? Contact support
-            </a>
-          </div>
         </div>
       </div>
     </div>
