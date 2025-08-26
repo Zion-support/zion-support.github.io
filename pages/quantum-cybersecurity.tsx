@@ -1,0 +1,1 @@
+export default function QuantumCybersecurity(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Quantum Cybersecurity</h1><p>Protect critical systems with quantum-resistant encryption and detection.</p></main>);}

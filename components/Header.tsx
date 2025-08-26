@@ -7,7 +7,11 @@ export default function Header(){
       <nav style={{display:'flex',gap:16,flexWrap:'wrap'}}>
         <Link href="/solutions">Solutions</Link>
         <Link href="/services">Services</Link>
+        <Link href="/pricing">Pricing</Link>
+        <Link href="/request-quote">Request a Quote</Link>
         <Link href="/case-studies">Case Studies</Link>
+        <Link href="/blog">Blog</Link>
+        <Link href="/partners">Partners</Link>
         <Link href="/news">News</Link>
         <Link href="/events">Events</Link>
         <Link href="/careers">Careers</Link>

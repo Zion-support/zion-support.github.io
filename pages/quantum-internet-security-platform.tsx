@@ -1,0 +1,1 @@
+export default function QuantumInternetSecurityPlatform(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Quantum Internet Security Platform</h1><p>Quantum Key Distribution and post-quantum cryptography for secure communications.</p></main>);}

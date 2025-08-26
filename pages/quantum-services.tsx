@@ -1,0 +1,1 @@
+export default function QuantumServices(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Quantum Services</h1><p>Explore our quantum networking, cybersecurity, and infrastructure offerings. Detailed briefs coming soon.</p></main>);}

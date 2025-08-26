@@ -1,0 +1,1 @@
+export default function AutonomousITOperationsCenter(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Autonomous IT Operations Center</h1><p>Self-healing, self-optimizing IT operations powered by AI.</p></main>);}
