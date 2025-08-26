@@ -14,7 +14,7 @@ import { AppLayout } from '@/layout/AppLayout';
 import { Provider as ReduxProvider } from 'react-redux';
 import { store } from '@/store';
 import { NotificationProvider } from './components/ui/notification';
-import ErrorBoundary from './components/ErrorBoundary';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 const queryClient = new QueryClient();
 
