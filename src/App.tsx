@@ -41,6 +41,10 @@ const CybersecurityServices = React.lazy(() => import('./pages/services/Cybersec
 const InfrastructureServices = React.lazy(() => import('./pages/services/Infrastructure'));
 const DigitalTransformation = React.lazy(() => import('./pages/services/Transformation'));
 const ConsultingServices = React.lazy(() => import('./pages/services/Consulting'));
+const DataAnalyticsServices = React.lazy(() => import('./pages/services/DataAnalytics'));
+const IoTEdgeComputingServices = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
+const BlockchainWeb3Services = React.lazy(() => import('./pages/services/BlockchainWeb3'));
+const DevOpsCloudServices = React.lazy(() => import('./pages/services/DevOpsCloud'));
 
 // Additional service pages
 const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
@@ -109,6 +113,10 @@ const routes = [
   { path: '/services/infrastructure', element: <InfrastructureServices /> },
   { path: '/services/transformation', element: <DigitalTransformation /> },
   { path: '/services/consulting', element: <ConsultingServices /> },
+  { path: '/services/data-analytics', element: <DataAnalyticsServices /> },
+  { path: '/services/iot-edge-computing', element: <IoTEdgeComputingServices /> },
+  { path: '/services/blockchain-web3', element: <BlockchainWeb3Services /> },
+  { path: '/services/devops-cloud', element: <DevOpsCloudServices /> },
   
   // Additional service routes
   { path: '/innovative-services-2025', element: <InnovativeServices2025 /> },

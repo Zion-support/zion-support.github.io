@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ServiceCard from '../components/ServiceCard';
 import InteractiveServiceShowcase from '../components/InteractiveServiceShowcase';
@@ -63,51 +64,51 @@ const Home: React.FC = () => {
   const serviceCategories = [
     {
       name: "AI & Machine Learning",
-      count: 13,
+      count: 15,
       description: "Cutting-edge artificial intelligence solutions",
       icon: "🤖",
       color: "from-zion-blue to-zion-cyan",
       href: "/services/ai"
     },
     {
-      name: "Quantum Computing",
-      count: 1,
-      description: "Revolutionary quantum computing platforms",
-      icon: "🔮",
-      color: "from-zion-purple to-zion-cyan",
-      href: "/services/quantum"
-    },
-    {
-      name: "IT & Infrastructure",
-      count: 2,
-      description: "Enterprise-grade IT solutions",
-      icon: "🖥️",
-      color: "from-zion-cyan to-zion-green",
-      href: "/services/infrastructure"
-    },
-    {
-      name: "Data & Analytics",
-      count: 1,
-      description: "Advanced data analytics platforms",
+      name: "Data Analytics & BI",
+      count: 8,
+      description: "Transform data into actionable insights",
       icon: "📊",
-      color: "from-zion-yellow to-zion-orange",
-      href: "/services/analytics"
+      color: "from-zion-cyan to-zion-blue",
+      href: "/services/data-analytics"
     },
     {
-      name: "Automation",
-      count: 1,
-      description: "Intelligent process automation",
-      icon: "⚡",
+      name: "IoT & Edge Computing",
+      count: 12,
+      description: "Connected ecosystems and edge processing",
+      icon: "🌐",
+      color: "from-zion-green to-zion-emerald",
+      href: "/services/iot-edge-computing"
+    },
+    {
+      name: "Blockchain & Web3",
+      count: 10,
+      description: "Decentralized applications and solutions",
+      icon: "🔗",
+      color: "from-zion-purple to-zion-indigo",
+      href: "/services/blockchain-web3"
+    },
+    {
+      name: "DevOps & Cloud",
+      count: 14,
+      description: "Modern software delivery and infrastructure",
+      icon: "☁️",
       color: "from-zion-orange to-zion-red",
-      href: "/services/automation"
+      href: "/services/devops-cloud"
     },
     {
       name: "Cybersecurity",
-      count: 1,
-      description: "Advanced security solutions",
+      count: 8,
+      description: "Advanced security and threat protection",
       icon: "🛡️",
-      color: "from-zion-red to-zion-purple",
-      href: "/services/security"
+      color: "from-zion-red to-zion-pink",
+      href: "/services/cybersecurity"
     }
   ];
 
@@ -160,6 +161,15 @@ const Home: React.FC = () => {
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Explore our comprehensive range of technology solutions designed to transform your business
             </p>
+            <div className="mt-6">
+              <Link 
+                to="/services" 
+                className="inline-flex items-center px-6 py-3 bg-zion-cyan text-zion-blue-dark rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
+              >
+                View All Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </motion.div>
           
           <motion.div 
