@@ -1,246 +1,434 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const ComponentLibrary: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('buttons');
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const components = {
-    buttons: [
-      { name: 'Primary Button', variant: 'primary', className: 'bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors' },
-      { name: 'Secondary Button', variant: 'secondary', className: 'bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-semibold transition-colors' },
-      { name: 'Success Button', variant: 'success', className: 'bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors' },
-      { name: 'Danger Button', variant: 'danger', className: 'bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors' },
-    ],
-    forms: [
-      { name: 'Text Input', type: 'text', placeholder: 'Enter text...' },
-      { name: 'Email Input', type: 'email', placeholder: 'Enter email...' },
-      { name: 'Password Input', type: 'password', placeholder: 'Enter password...' },
-      { name: 'Textarea', type: 'textarea', placeholder: 'Enter description...' },
-    ],
-    cards: [
-      { title: 'Feature Card', description: 'This is a feature description with supporting text.', icon: '🚀' },
-      { title: 'Info Card', description: 'Information card with details and context.', icon: 'ℹ️' },
-      { title: 'Success Card', description: 'Success message with confirmation details.', icon: '✅' },
-    ],
-  };
-
+export default function ComponentLibraryPage() {
   return (
     <>
       <Head>
-        <title>Component Library - Zion App</title>
-        <meta name="description" content="Explore our comprehensive component library with interactive examples and code snippets." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Component Library — Zion Tech Group</title>
+        <meta name="description" content="Comprehensive component library showcasing reusable UI components and design patterns." />
+        <meta property="og:title" content="Component Library — Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive component library showcasing reusable UI components and design patterns." />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          {/* Navigation */}
+          <nav className="mb-8">
+            <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              ← Back to Home
+            </Link>
+          </nav>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Header */}
-        <header className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center py-6">
-              <div className="flex items-center space-x-4">
-                <Link href="/" className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
-                  Zion App
-                </Link>
-                <nav className="hidden md:flex space-x-8">
-                  <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">Home</Link>
-                  <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">About</Link>
-                  <Link href="/services" className="text-gray-600 hover:text-blue-600 transition-colors">Services</Link>
-                  <Link href="/reports" className="text-gray-600 hover:text-blue-600 transition-colors">Reports</Link>
-                  <Link href="/component-library" className="text-blue-600 font-medium">Component Library</Link>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        {/* Main Content */}
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Component Library</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our comprehensive collection of reusable UI components designed for modern web applications.
-              Each component includes interactive examples and implementation details.
+          {/* Header */}
+          <header className="text-center mb-16">
+            <h1 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Component Library
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Comprehensive collection of reusable UI components, design patterns, and interactive examples
             </p>
-          </div>
+          </header>
 
-          {/* Navigation Tabs */}
-          <div className="flex flex-wrap justify-center mb-12">
-            {Object.keys(components).map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 mx-2 mb-2 rounded-lg font-medium transition-all ${
-                  activeTab === tab
-                    ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-                }`}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
-          </div>
+          {/* Content Sections */}
+          <div className="max-w-6xl mx-auto space-y-12">
+            
+            {/* Overview */}
+            <section className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-cyan-300">Overview</h2>
+              <div className="space-y-4">
+                <p className="text-white/90">
+                  Our component library provides a comprehensive set of reusable UI components built with modern web technologies. 
+                  Each component is designed with accessibility, performance, and customization in mind.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="text-center p-4 bg-white/5 rounded-lg">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">50+</div>
+                    <div className="text-white/80 text-sm">Components</div>
+                  </div>
+                  <div className="text-center p-4 bg-white/5 rounded-lg">
+                    <div className="text-2xl font-bold text-fuchsia-400 mb-2">100%</div>
+                    <div className="text-white/80 text-sm">Accessible</div>
+                  </div>
+                  <div className="text-center p-4 bg-white/5 rounded-lg">
+                    <div className="text-2xl font-bold text-green-400 mb-2">TypeScript</div>
+                    <div className="text-white/80 text-sm">Supported</div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-          {/* Component Examples */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            {activeTab === 'buttons' && (
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Button Components</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {components.buttons.map((button, index) => (
-                    <div key={index} className="text-center">
-                      <button className={button.className}>
-                        {button.name}
+            {/* Navigation Components */}
+            <section className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-fuchsia-300">Navigation Components</h2>
+              <div className="space-y-6">
+                
+                {/* Navbar */}
+                <div className="border border-white/10 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white/90 mb-3">Navbar</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4">
+                    <nav className="flex items-center justify-between">
+                      <div className="text-cyan-400 font-bold text-xl">Zion Tech</div>
+                      <div className="flex space-x-6">
+                        <a href="#" className="text-white/80 hover:text-white transition-colors">Home</a>
+                        <a href="#" className="text-white/80 hover:text-white transition-colors">About</a>
+                        <a href="#" className="text-white/80 hover:text-white transition-colors">Services</a>
+                        <a href="#" className="text-white/80 hover:text-white transition-colors">Contact</a>
+                      </div>
+                    </nav>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    Responsive navigation bar with mobile menu support and customizable styling.
+                  </p>
+                </div>
+
+                {/* Breadcrumbs */}
+                <div className="border border-white/10 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white/90 mb-3">Breadcrumbs</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4">
+                    <nav className="flex items-center space-x-2 text-sm">
+                      <a href="#" className="text-cyan-400 hover:text-cyan-300">Home</a>
+                      <span className="text-white/40">/</span>
+                      <a href="#" className="text-cyan-400 hover:text-cyan-300">Components</a>
+                      <span className="text-white/40">/</span>
+                      <span className="text-white/60">Navigation</span>
+                    </nav>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    Hierarchical navigation component for showing current page location.
+                  </p>
+                </div>
+
+                {/* Pagination */}
+                <div className="border border-white/10 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white/90 mb-3">Pagination</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4">
+                    <nav className="flex items-center space-x-2">
+                      <button className="px-3 py-2 text-white/60 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
+                        Previous
                       </button>
-                      <p className="text-sm text-gray-600 mt-2">{button.name}</p>
-                    </div>
-                  ))}
+                      <button className="px-3 py-2 bg-cyan-500 text-white rounded-lg">1</button>
+                      <button className="px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors">2</button>
+                      <button className="px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors">3</button>
+                      <button className="px-3 py-2 text-white/60 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
+                        Next
+                      </button>
+                    </nav>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    Navigation component for paginated content with customizable styling.
+                  </p>
                 </div>
               </div>
-            )}
+            </section>
 
-            {activeTab === 'forms' && (
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Form Components</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {components.forms.map((input, index) => (
-                    <div key={index} className="space-y-2">
-                      <label className="block text-sm font-medium text-gray-700">{input.name}</label>
-                      {input.type === 'textarea' ? (
-                        <textarea
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder={input.placeholder}
-                          rows={4}
-                        />
-                      ) : (
-                        <input
-                          type={input.type}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder={input.placeholder}
-                        />
-                      )}
+            {/* Form Components */}
+            <section className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-green-300">Form Components</h2>
+              <div className="space-y-6">
+                
+                {/* Input Fields */}
+                <div className="border border-white/10 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white/90 mb-3">Input Fields</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4 space-y-4">
+                    <div>
+                      <label className="block text-sm text-white/80 mb-2">Email Address</label>
+                      <input 
+                        type="email" 
+                        placeholder="Enter your email"
+                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400 transition-colors"
+                      />
                     </div>
-                  ))}
+                    <div>
+                      <label className="block text-sm text-white/80 mb-2">Password</label>
+                      <input 
+                        type="password" 
+                        placeholder="Enter your password"
+                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400 transition-colors"
+                      />
+                    </div>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    Accessible form inputs with focus states and validation support.
+                  </p>
+                </div>
+
+                {/* Buttons */}
+                <div className="border border-white/10 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white/90 mb-3">Buttons</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4 flex flex-wrap gap-4">
+                    <button className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg text-white transition-colors">
+                      Primary Button
+                    </button>
+                    <button className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
+                      Secondary Button
+                    </button>
+                    <button className="px-6 py-3 bg-red-500 hover:bg-red-600 rounded-lg text-white transition-colors">
+                      Danger Button
+                    </button>
+                    <button className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-white transition-colors">
+                      Success Button
+                    </button>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    Various button styles with hover effects and state management.
+                  </p>
+                </div>
+
+                {/* Checkboxes & Radio */}
+                <div className="border border-white/10 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white/90 mb-3">Checkboxes & Radio Buttons</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4 space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <input type="checkbox" id="checkbox1" className="w-4 h-4 text-cyan-500 bg-white/10 border-white/20 rounded focus:ring-cyan-400" />
+                      <label htmlFor="checkbox1" className="text-white/80">Accept terms and conditions</label>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <input type="radio" id="radio1" name="radio" className="w-4 h-4 text-cyan-500 bg-white/10 border-white/20 focus:ring-cyan-400" />
+                      <label htmlFor="radio1" className="text-white/80">Option 1</label>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <input type="radio" id="radio2" name="radio" className="w-4 h-4 text-cyan-500 bg-white/10 border-white/20 focus:ring-cyan-400" />
+                      <label htmlFor="radio2" className="text-white/80">Option 2</label>
+                    </div>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    Accessible form controls with proper labeling and focus management.
+                  </p>
                 </div>
               </div>
-            )}
+            </section>
 
-            {activeTab === 'cards' && (
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Card Components</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {components.cards.map((card, index) => (
-                    <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                      <div className="text-4xl mb-4">{card.icon}</div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{card.title}</h3>
-                      <p className="text-gray-600">{card.description}</p>
+            {/* Data Display Components */}
+            <section className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-yellow-300">Data Display Components</h2>
+              <div className="space-y-6">
+                
+                {/* Cards */}
+                <div className="border border-white/10 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white/90 mb-3">Cards</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                        <h4 className="text-lg font-semibold text-white mb-2">Feature Card</h4>
+                        <p className="text-white/80 text-sm mb-3">
+                          This is a sample feature card with description and action button.
+                        </p>
+                        <button className="px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-lg text-white text-sm transition-colors">
+                          Learn More
+                        </button>
+                      </div>
+                      <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                        <h4 className="text-lg font-semibold text-white mb-2">Info Card</h4>
+                        <p className="text-white/80 text-sm mb-3">
+                          Another card example showing different content layout.
+                        </p>
+                        <button className="px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white text-sm transition-colors">
+                          View Details
+                        </button>
+                      </div>
                     </div>
-                  ))}
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    Flexible card components for displaying content in organized layouts.
+                  </p>
+                </div>
+
+                {/* Tables */}
+                <div className="border border-white/10 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white/90 mb-3">Tables</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4 overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b border-white/20">
+                          <th className="text-left p-2 text-white/80 font-semibold">Name</th>
+                          <th className="text-left p-2 text-white/80 font-semibold">Status</th>
+                          <th className="text-left p-2 text-white/80 font-semibold">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="border-b border-white/10">
+                          <td className="p-2 text-white">Component A</td>
+                          <td className="p-2"><span className="px-2 py-1 bg-green-500/20 text-green-400 rounded-full text-xs">Active</span></td>
+                          <td className="p-2">
+                            <button className="px-3 py-1 bg-cyan-500 hover:bg-cyan-600 rounded text-white text-xs transition-colors">
+                              Edit
+                            </button>
+                          </td>
+                        </tr>
+                        <tr className="border-b border-white/10">
+                          <td className="p-2 text-white">Component B</td>
+                          <td className="p-2"><span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs">Pending</span></td>
+                          <td className="p-2">
+                            <button className="px-3 py-1 bg-cyan-500 hover:bg-cyan-600 rounded text-white text-xs transition-colors">
+                              Edit
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    Responsive table component with sorting and pagination support.
+                  </p>
+                </div>
+
+                {/* Progress Bars */}
+                <div className="border border-white/10 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white/90 mb-3">Progress Indicators</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4 space-y-4">
+                    <div>
+                      <div className="flex justify-between text-sm text-white/80 mb-2">
+                        <span>Upload Progress</span>
+                        <span>75%</span>
+                      </div>
+                      <div className="w-full bg-white/10 rounded-full h-2">
+                        <div className="bg-cyan-500 h-2 rounded-full" style={{ width: '75%' }}></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex justify-between text-sm text-white/80 mb-2">
+                        <span>Task Completion</span>
+                        <span>45%</span>
+                      </div>
+                      <div className="w-full bg-white/10 rounded-full h-2">
+                        <div className="bg-fuchsia-500 h-2 rounded-full" style={{ width: '45%' }}></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    Progress bars and loading indicators for user feedback.
+                  </p>
                 </div>
               </div>
-            )}
-          </div>
+            </section>
 
-          {/* Interactive Demo Section */}
-          <div className="mt-16 bg-white rounded-2xl shadow-xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Interactive Demo</h2>
-            <div className="text-center">
-              <button
-                onClick={() => setModalOpen(true)}
-                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-              >
-                Open Modal Demo
-              </button>
-            </div>
-          </div>
+            {/* Feedback Components */}
+            <section className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-purple-300">Feedback Components</h2>
+              <div className="space-y-6">
+                
+                {/* Alerts */}
+                <div className="border border-white/10 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white/90 mb-3">Alerts & Notifications</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4 space-y-4">
+                    <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-4">
+                      <div className="flex items-center">
+                        <div className="text-green-400 mr-3">✓</div>
+                        <div className="text-green-300">Success! Your action was completed successfully.</div>
+                      </div>
+                    </div>
+                    <div className="bg-yellow-500/20 border border-yellow-500/30 rounded-lg p-4">
+                      <div className="flex items-center">
+                        <div className="text-yellow-400 mr-3">⚠</div>
+                        <div className="text-yellow-300">Warning: Please review your input before proceeding.</div>
+                      </div>
+                    </div>
+                    <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4">
+                      <div className="flex items-center">
+                        <div className="text-red-400 mr-3">✗</div>
+                        <div className="text-red-300">Error: Something went wrong. Please try again.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    Contextual alert components for user feedback and system messages.
+                  </p>
+                </div>
 
-          {/* Usage Guidelines */}
-          <div className="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Usage Guidelines</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Design Principles</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• Consistent spacing and typography</li>
-                  <li>• Accessible color contrast ratios</li>
-                  <li>• Responsive design patterns</li>
-                  <li>• Interactive feedback states</li>
-                </ul>
+                {/* Modals */}
+                <div className="border border-white/10 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white/90 mb-3">Modal Dialogs</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4">
+                    <div className="bg-white/5 border border-white/20 rounded-lg p-6 max-w-md mx-auto">
+                      <h4 className="text-lg font-semibold text-white mb-3">Confirm Action</h4>
+                      <p className="text-white/80 text-sm mb-4">
+                        Are you sure you want to perform this action? This cannot be undone.
+                      </p>
+                      <div className="flex space-x-3">
+                        <button className="px-4 py-2 bg-red-500 hover:bg-red-600 rounded-lg text-white text-sm transition-colors">
+                          Cancel
+                        </button>
+                        <button className="px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-lg text-white text-sm transition-colors">
+                          Confirm
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-white/80 text-sm">
+                    Modal dialogs for confirmations, forms, and content overlays.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Implementation</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li>• Copy component code directly</li>
-                  <li>• Customize props and styling</li>
-                  <li>• Follow accessibility guidelines</li>
-                  <li>• Test across different devices</li>
-                </ul>
+            </section>
+
+            {/* Usage Guidelines */}
+            <section className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-blue-300">Usage Guidelines</h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-white/90 mb-2">Installation</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4">
+                    <pre className="text-white text-sm">
+{`npm install @zion-tech/components
+# or
+yarn add @zion-tech/components`}
+                    </pre>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white/90 mb-2">Basic Usage</h3>
+                  <div className="bg-slate-900 rounded-lg p-4 mb-4">
+                    <pre className="text-white text-sm">
+{`import { Button, Card, Input } from '@zion-tech/components';
+
+function MyComponent() {
+  return (
+    <Card>
+      <Input placeholder="Enter text" />
+      <Button variant="primary">Submit</Button>
+    </Card>
+  );
+}`}
+                    </pre>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white/90 mb-2">Customization</h3>
+                  <p className="text-white/80 text-sm">
+                    All components support extensive customization through CSS variables, 
+                    theme props, and className overrides for consistent branding.
+                  </p>
+                </div>
               </div>
-            </div>
+            </section>
+
+            {/* Next Steps */}
+            <section className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-indigo-300">Get Started</h2>
+              <div className="space-y-4">
+                <p className="text-white/90">
+                  Ready to start building with our component library? Explore the components, 
+                  download the package, and integrate them into your projects.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link href="/contact" className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg text-white transition-colors">
+                    Get Support
+                  </Link>
+                  <Link href="/services" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
+                    View Services
+                  </Link>
+                  <a href="https://github.com/zion-tech/components" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
+                    GitHub Repository
+                  </a>
+                </div>
+              </div>
+            </section>
           </div>
         </main>
-
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold mb-4">Zion App</h3>
-                <p className="text-gray-400">Autonomous, cloud-native app with self-running automations.</p>
-              </div>
-              <div>
-                <h4 className="text-md font-semibold mb-4">Navigation</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-                  <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
-                  <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
-                  <li><Link href="/reports" className="hover:text-white transition-colors">Reports</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-md font-semibold mb-4">Resources</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/component-library" className="hover:text-white transition-colors">Component Library</Link></li>
-                  <li><Link href="/automation" className="hover:text-white transition-colors">Automation</Link></li>
-                  <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-                  <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-md font-semibold mb-4">Connect</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/contact" className="hover:text-white transition-colors">Get in Touch</Link></li>
-                  <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-              <p>&copy; 2025 Zion App. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
       </div>
-
-      {/* Modal */}
-      {modalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-2xl p-8 max-w-md mx-4">
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Modal Demo</h3>
-              <p className="text-gray-600 mb-6">This is an example of a modal component that can be used for dialogs, confirmations, and more.</p>
-              <button
-                onClick={() => setModalOpen(false)}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Close Modal
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
-};
-
-export default ComponentLibrary;
+}
