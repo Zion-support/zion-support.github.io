@@ -43,82 +43,44 @@ const Footer: React.FC = () => {
     }
   ];
 
-  return (
-    <footer className="bg-slate-900 text-white" role="contentinfo">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
-              Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. 
-              We help businesses thrive in the digital age with cutting-edge solutions.
-            </p>
-            
-            {/* Contact Info */}
-            <div className="space-y-2 mb-6 text-sm text-gray-400">
-              <div className="flex items-center">
-                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                +1 (302) 464-0950
-              </div>
-              <div className="flex items-center">
-                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                info@ziontechgroup.com
-              </div>
-              <div className="flex items-center">
-                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314-11.314z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                Wilmington, DE & Remote
-              </div>
-            </div>
-    {
-      title: "Company",
-      links: [
-        { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
-        { label: "Careers", path: "/careers" },
-        { label: "News & Updates", path: "/blog" },
-        { label: "Case Studies", path: "/case-studies" },
-        { label: "Partners", path: "/partners" }
-      ]
-    },
-    {
-      title: "Resources",
-      links: [
-        { label: "Blog", path: "/blog" },
-        { label: "Documentation", path: "/docs" },
-        { label: "White Papers", path: "/white-papers" },
-        { label: "Webinars", path: "/webinars" },
-        { label: "Research", path: "/research" },
-        { label: "Events", path: "/events" }
-      ]
-    },
-    {
-      title: "Support",
-      links: [
-        { label: "Contact Us", path: "/contact" },
-        { label: "Help Center", path: "/help" },
-        { label: "Support Portal", path: "/support" },
-        { label: "Training", path: "/training" },
-        { label: "Consulting", path: "/consulting" },
-        { label: "Request Quote", path: "/request-quote" }
-      ]
-    }
+  const services = [
+    { name: "AI Solutions", path: "/ai-solutions" },
+    { name: "Cloud Services", path: "/cloud-services" },
+    { name: "Digital Transformation", path: "/digital-transformation" },
+    { name: "Cybersecurity", path: "/cybersecurity" },
+    { name: "Data Analytics", path: "/data-analytics" },
+    { name: "Web Development", path: "/web-development" }
+  ];
+
+  const company = [
+    { name: "About Us", path: "/about" },
+    { name: "Our Team", path: "/team" },
+    { name: "Careers", path: "/careers" },
+    { name: "News", path: "/news" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "Partners", path: "/partners" }
+  ];
+
+  const resources = [
+    { name: "Blog", path: "/blog" },
+    { name: "Documentation", path: "/docs" },
+    { name: "White Papers", path: "/white-papers" },
+    { name: "Webinars", path: "/webinars" },
+    { name: "Research", path: "/research" },
+    { name: "Events", path: "/events" }
+  ];
+
+  const legal = [
+    { name: "Privacy Policy", path: "/privacy" },
+    { name: "Terms of Service", path: "/terms" },
+    { name: "Cookie Policy", path: "/cookies" },
+    { name: "GDPR", path: "/gdpr" },
+    { name: "Accessibility", path: "/accessibility" },
+    { name: "Security", path: "/security" }
   ];
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-slate-900 text-white" role="contentinfo">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
@@ -134,6 +96,29 @@ const Footer: React.FC = () => {
               Leading provider of innovative technology solutions, AI-powered services, 
               and digital transformation expertise. We help businesses navigate the future of technology.
             </p>
+            
+            {/* Contact Info */}
+            <div className="space-y-2 mb-6 text-sm text-gray-400">
+              <div className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                +1 (302) 464-0950
+              </div>
+              <div className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                kleber@ziontechgroup.com
+              </div>
+              <div className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314-11.314z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                364 E Main St STE 1008, Middletown DE 19709
+              </div>
+            </div>
             
             {/* Social Links */}
             <div className="flex space-x-4">
@@ -219,23 +204,6 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-          {footerSections.map((section) => (
-            <div key={section.title}>
-              <h3 className="text-lg font-semibold text-white mb-4">{section.title}</h3>
-              <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      to={link.path}
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
       </div>
 
@@ -266,7 +234,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2025 Zion Tech Group. All rights reserved.
+              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center">
