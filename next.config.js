@@ -487,6 +487,7 @@ const nextConfig = {
             },
           },
         },
+        usedExports: false,
       };
 
       // SIMPLIFIED DefinePlugin 
@@ -654,21 +655,21 @@ const nextConfig = {
 
     // Fix webpack cache configuration to prevent build errors and warnings
     if (config.cache) {
-        // Use memory cache to prevent filesystem cache issues and "Serializing big strings" warnings
-        config.cache = {
-          type: 'memory',
-          maxGenerations: dev ? 1 : 5,
-          // Disable cacheUnaffected to avoid Webpack usedExports conflict
-          cacheUnaffected: false,
-        };
-      } else {
-        // Ensure memory cache is properly configured
-        config.cache = {
-          type: 'memory',
-          maxGenerations: dev ? 1 : 5,
-          cacheUnaffected: false,
-        };
-      }
+      // Use memory cache and explicitly disable cacheUnaffected to avoid
+      // "usedExports/cacheUnaffected" conflicts in development
+      config.cache = {
+        type: 'memory',
+        maxGenerations: dev ? 1 : 5,
+        cacheUnaffected: false,
+      };
+    } else {
+      // Ensure memory cache is properly configured
+      config.cache = {
+        type: 'memory',
+        maxGenerations: dev ? 1 : 5,
+        cacheUnaffected: false,
+      };
+    }
 
     // Ensure webpack doesn't enable cacheUnaffected which conflicts with
     // Next.js default usedExports setting
