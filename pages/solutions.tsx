@@ -6,8 +6,8 @@ import {
   Shield, Factory, Globe, Brain, Atom, Rocket,
   ArrowRight, CheckCircle, Star, Users, Zap
 } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
 
 export default function SolutionsPage() {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
@@ -258,15 +258,12 @@ export default function SolutionsPage() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <Head>
-        <title>Solutions — Zion Tech Group | Industry-Specific Technology Solutions</title>
-        <meta name="description" content="Discover Zion Tech Group's industry-specific solutions for finance, healthcare, manufacturing, automotive, education, retail, and government sectors." />
-        <meta property="og:title" content="Solutions — Zion Tech Group" />
-        <meta property="og:description" content="Industry-specific technology solutions that transform businesses across all sectors. From AI to quantum computing, we have the solution for you." />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://ziontechgroup.com/solutions" />
-      </Head>
+    <UltraAdvancedFuturisticBackground>
+      <div className="min-h-screen">
+        <Head>
+          <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
+          <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
+        </Head>
 
       <EnhancedNavigation />
 
@@ -481,10 +478,8 @@ export default function SolutionsPage() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <EnhancedFooter />
-    </div>
+        </section>
+      </div>
+    </UltraAdvancedFuturisticBackground>
   );
 }

@@ -13,81 +13,6 @@
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
-# Security headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://plausible.io; connect-src 'self' https://plausible.io; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
-    Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Resource-Policy = "same-origin"
-    X-DNS-Prefetch-Control = "on"
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
-
-[[redirects]]
-  from = "/ai-consciousness-evolution"
-  to = "/ai-consciousness-evolution-2029"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-internet-security-gateway"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
-  from = "/space-mining-automation-platform"
-  to = "/space-resource-mining-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-creativity-studio"
-  to = "/quantum-materials-discovery-platform"
-  status = 301
-
-[[redirects]]
-  from = "/team"
-  to = "/about"
-  status = 301
-
-[[redirects]]
-  from = "/events"
-  to = "/news"
-  status = 301
-
-[[redirects]]
-  from = "/webinars"
-  to = "/news"
-  status = 301
-
-[[redirects]]
-  from = "/press"
-  to = "/news"
-  status = 301
-
-[[redirects]]
-  from = "/legal"
-  to = "/terms"
-  status = 301
-
-[[redirects]]
-  from = "/api"
-  to = "/api-documentation"
-  status = 301
-
-[[redirects]]
-  from = "/ai-consciousness-evolution-platform"
-  to = "/ai-consciousness-evolution-2029"
-  status = 301
-
-[[redirects]]
-  from = "/ai-creativity-orchestrator"
-  to = "/ai-creativity-studio"
-  status = 301
-=======
   NODE_OPTIONS = "--max_old_space_size=4096"
   NPM_FLAGS = "--prefer-offline"
   NODE_VERSION = "20"
@@ -100,3 +25,44 @@
 
 [functions.environment]
   SENTRY_LOG_LEVEL = "debug"
+=======
+# Static redirects for exported site
+[[redirects]]
+  from = "/ai-customer-success-platform"
+  to = "/services/ai-customer-success-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-sales-intelligence-platform"
+  to = "/services/ai-sales-intelligence-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-financial-planning-platform"
+  to = "/services/ai-financial-planning-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-powered-decision-engine"
+  to = "/services/ai-powered-decision-engine/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-content-automation-platform"
+  to = "/services/intelligent-content-automation-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-hr-analytics-platform"
+  to = "/services/intelligent-hr-analytics-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/smart-crm-intelligence-suite"
+  to = "/services/smart-crm-intelligence-suite/"
+  status = 301
+
+[[redirects]]
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301

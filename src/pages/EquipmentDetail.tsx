@@ -1,6 +1,8 @@
 
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -27,7 +29,7 @@ export default function EquipmentDetail() {
   if (!equipment) {
     return (
       <>
-        
+        <Header />
         <div className="min-h-screen bg-zion-blue py-12 px-4">
           <div className="container mx-auto">
             <div className="text-center py-20">
@@ -36,7 +38,7 @@ export default function EquipmentDetail() {
             </div>
           </div>
         </div>
-        
+        <Footer />
       </>
     );
   }
@@ -46,15 +48,6 @@ export default function EquipmentDetail() {
     
     // Simulate API call
     setTimeout(() => {
-      const stored = safeStorage.getItem(getCartKey(user?.id));
-      let cart: { id: string; name: string; price: number; quantity: number }[] = [];
-      if (stored) {
-        try { cart = JSON.parse(stored); } catch { /* ignore */ }
-      }
-      const existing = cart.find(i => i.id === equipment.id);
-      if (existing) existing.quantity += quantity; else cart.push({ id: equipment.id, name: equipment.name, price: equipment.price, quantity });
-      safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
-      dispatch({ type: 'SET_ITEMS', payload: cart });
       setIsAdding(false);
       toast({
         title: "Added to cart",
@@ -65,7 +58,7 @@ export default function EquipmentDetail() {
 
   const handleBuyNow = async () => {
     if (!isAuthenticated) {
-      navigate(`/login?next=/product/${id}`);
+      navigate(`/login?next=/equipment/${equipmentId}`);
       return;
     }
 
@@ -89,7 +82,7 @@ export default function EquipmentDetail() {
 
   return (
     <>
-      
+      <Header />
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -98,7 +91,7 @@ export default function EquipmentDetail() {
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 {/* Main Image */}
                 <div className="aspect-video w-full relative">
-                  <img loading="lazy" 
+                  <img 
                     src={equipment.images[selectedImageIndex]} 
                     alt={equipment.name} 
                     className="w-full h-full object-contain bg-zion-blue-light/10 p-4"
@@ -116,7 +109,7 @@ export default function EquipmentDetail() {
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         }`}
                       >
-                        <img loading="lazy" 
+                        <img 
                           src={image} 
                           alt={`${equipment.name} - image ${index + 1}`} 
                           className="w-full h-full object-cover"
@@ -332,7 +325,7 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </div>
-      
+      <Footer />
     </>
   );
 }

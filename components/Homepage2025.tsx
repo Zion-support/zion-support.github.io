@@ -1,6 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
+  innovative2035MicroSaasServices 
+} from '../data/innovative-2035-micro-saas-services';
+import { 
+  innovative2035AIServices 
+} from '../data/innovative-2035-ai-services';
+import { 
+  innovative2035ITServices 
+} from '../data/innovative-2035-it-services';
+import { 
+  innovativeRealMicroSaasServices2025 
+} from '../data/2025-innovative-real-micro-saas-services';
+import { 
+  innovativeAIServicesEnhanced2025 
+} from '../data/2025-innovative-ai-services-enhanced';
+import { 
+  innovativeITServicesEnhanced2025 
+} from '../data/2025-innovative-it-services-enhanced';
+import { 
+  emergingTechServicesEnhanced2025 
+} from '../data/2025-emerging-tech-services-enhanced';
+import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
+import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
+import UltraFuturisticBackground2035 from './backgrounds/UltraFuturisticBackground2035';
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
   innovativeRealMicroSaasServices2025 
 } from '../data/2025-innovative-real-micro-saas-services';
 import { 
@@ -53,6 +80,12 @@ const Homepage2025: React.FC = () => {
   };
 
   const allServices = [
+    // New 2035 services (featured first)
+    ...innovative2035MicroSaasServices,
+    ...innovative2035AIServices,
+    ...innovative2035ITServices,
+    
+    // Existing services
     ...innovativeRealMicroSaasServices2025,
     ...innovativeAIServicesEnhanced2025,
     ...innovativeITServicesEnhanced2025,
@@ -65,53 +98,9 @@ const Homepage2025: React.FC = () => {
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden relative">
-      {/* Enhanced Animated Background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
-        
-        {/* Animated Grid */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-        
-        {/* Floating Particles */}
-        <div className="absolute top-0 left-0 w-full h-full">
-          {[...Array(30)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
-              animate={{
-                x: [0, Math.random() * 1200, 0],
-                y: [0, Math.random() * 800, 0],
-                opacity: [0.3, 1, 0.3],
-                scale: [0.5, 1.5, 0.5],
-              }}
-              transition={{
-                duration: Math.random() * 15 + 15,
-                repeat: Infinity,
-                ease: "linear"
-              }}
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Mouse Trail Effect */}
-        <motion.div
-          className="absolute w-4 h-4 bg-cyan-400/30 rounded-full pointer-events-none"
-          animate={{
-            x: mousePosition.x - 8,
-            y: mousePosition.y - 8,
-          }}
-          transition={{ type: "spring", stiffness: 500, damping: 28 }}
-        />
-      </div>
-
-      {/* Enhanced Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-2xl border-b border-white/20 shadow-2xl">
+    <UltraFuturisticBackground2035>
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10" aria-label="Primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <motion.div
@@ -713,68 +702,11 @@ const Homepage2025: React.FC = () => {
                 Visit Our Website
               </a>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Enhanced Footer */}
-      <footer className="bg-black/60 border-t border-white/10 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div>
-              <h3 className="text-white font-bold text-lg mb-4">ZionTech Group</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Services</h4>
-              <ul className="text-gray-400 text-sm space-y-2">
-                <li><a href="#services" className="hover:text-cyan-400 transition-colors">Micro SAAS</a></li>
-                <li><a href="#ai" className="hover:text-cyan-400 transition-colors">AI Services</a></li>
-                <li><a href="#automation" className="hover:text-cyan-400 transition-colors">AI Automation</a></li>
-                <li><a href="#quantum" className="hover:text-cyan-400 transition-colors">Quantum Security</a></li>
-                <li><a href="#it" className="hover:text-cyan-400 transition-colors">IT Solutions</a></li>
-                <li><a href="#emerging" className="hover:text-cyan-400 transition-colors">Emerging Tech</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Company</h4>
-              <ul className="text-gray-400 text-sm space-y-2">
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">About Us</a></li>
-                <li><a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a></li>
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Careers</a></li>
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Blog</a></li>
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">News</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Connect</h4>
-              <ul className="text-gray-400 text-sm space-y-2">
-                <li><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a></li>
-                <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a></li>
-                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Website</a></li>
-                <li><a href="https://www.linkedin.com/company/zion-tech-group" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
-                <li><a href="https://x.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">Twitter</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-white/10 pt-8 text-center">
-            <p className="text-gray-400 text-sm">
-              © 2025 ZionTech Group. All rights reserved. | 
-              <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 ml-2">
-                https://ziontechgroup.com
-              </a>
-            </p>
-            <p className="text-gray-500 text-xs mt-2">
-              Revolutionizing technology, one breakthrough at a time.
-            </p>
           </div>
         </div>
       </footer>
-    </UltraFuturisticBackground2026>
+    </UltraFuturisticBackground2035>
   );
-};
+}
 
 export default Homepage2025;

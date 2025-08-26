@@ -1,5 +1,3 @@
-
-# Allow all crawlers
 User-agent: *
 Allow: /
 
@@ -9,17 +7,6 @@ Sitemap: https://ziontechgroup.com/sitemap
 =======
 =======
 
-# Allow all crawlers
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /careers
-Allow: /faq
-Allow: /privacy
-Allow: /terms
-
-=======
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -43,4 +30,6 @@ Allow: /autonomous-business-operations-platform
 Allow: /ai-powered-it-asset-management
 
 # Crawl delay
+=======
+# Crawl-delay
 Crawl-delay: 1

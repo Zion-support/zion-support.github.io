@@ -1,12 +1,15 @@
+export default function Page(){return null}
+=======
+=======
 import React from 'react';
+=======
+import React, { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import EnhancedContactForm from '../components/EnhancedContactForm';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Send, User, Building2, MessageCircle, Clock as ClockIcon, Globe as GlobeIcon2, Shield as ShieldIcon2, Zap as ZapIcon4, Users as UsersIcon2, Rocket as RocketIcon2, Award as AwardIcon2, TrendingUp as TrendingUpIcon2, CheckCircle, AlertCircle, Info } from 'lucide-react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 
 export default function ContactPage() {
   const contactInfo = [
@@ -197,7 +200,7 @@ const Contact: NextPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Contact Us - Zion Tech Group | Get Started with Your Project</title>
         <meta name="description" content="Contact Zion Tech Group to discuss your technology needs. Get expert consultation, project estimates, and start your digital transformation journey today." />
@@ -697,7 +700,45 @@ export default Contact;
         </section>
       </main>
 
-      <EnhancedFooter />
-    </div>
+        {/* CTA Section */}
+        <div className="text-center">
+          <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Don't wait to transform your business with revolutionary AI & quantum computing technology. 
+              Contact us today and get your free consultation.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Button
+                href="tel:+13024640950"
+                variant="primary"
+                size="lg"
+                className="text-lg px-8 py-4"
+              >
+                Call Now
+                <Phone className="ml-2 w-5 h-5" />
+              </Button>
+              <Button
+                href={`mailto:${contactInfo.email}`}
+                variant="secondary"
+                size="lg"
+                className="text-lg px-8 py-4"
+              >
+                Send Email
+                <Mail className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
+            
+            <div className="text-sm text-gray-400">
+              <p>✓ Free Consultation • ✓ 24/7 Support • ✓ &lt; 2 Hour Response • ✓ Expert Engineers</p>
+              <p className="mt-2">✓ Global Infrastructure • ✓ Enterprise Security • ✓ Custom Solutions • ✓ Ongoing Support</p>
+            </div>
+          </UltraFuturisticCard>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
   );
 }

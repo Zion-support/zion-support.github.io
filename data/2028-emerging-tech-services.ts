@@ -186,7 +186,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     competitors: ['Zendesk', 'Intercom', 'Freshdesk'],
     marketSize: '$12B customer service market',
     growthRate: '40% annual growth',
-    variant: 'ai-automation',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -398,7 +398,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     competitors: ['Jasper', 'Copy.ai', 'Writesonic'],
     marketSize: '$14B AI content creation market',
     growthRate: '35% annual growth',
-    variant: 'ai-automation',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -504,7 +504,7 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     competitors: ['Westlaw', 'LexisNexis', 'Bloomberg Law'],
     marketSize: '$18B legal technology market',
     growthRate: '30% annual growth',
-    variant: 'ai-automation',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

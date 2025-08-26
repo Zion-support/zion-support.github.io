@@ -96,10 +96,12 @@ const legalLinks = [
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin, color: 'hover:text-blue-500' },
-  { name: 'X', href: 'https://x.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
+  { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
+  { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' },
+  { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-500' },
+  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-500' },
+  { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-500' },
+  { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
 ];
 
 export default function UltraFuturisticFooter2029() {

@@ -73,8 +73,16 @@ const serviceCategories = [
     services: [
       { name: 'Research Automation', href: '/advanced-research-automation' },
       { name: 'Quantum Research Platform', href: '/quantum-research-platform' },
-      { name: 'AI Research Assistant', href: '/ai-research-assistant' },
-      { name: 'Biotech Research Suite', href: '/biotech-research-suite' }
+      { name: 'AI Research Assistant', href: '/ai-research-assistant' }
+    ]
+  },
+  {
+    title: '🎯 2030 Innovative Micro SAAS',
+    services: [
+      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' },
+      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' },
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' },
+      { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030' }
     ]
   }
 ];

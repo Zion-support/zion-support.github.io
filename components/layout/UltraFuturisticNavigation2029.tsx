@@ -88,10 +88,10 @@ const serviceCategories = [
     color: 'from-pink-600 to-rose-600',
     description: 'Cutting-edge research and innovation',
     services: [
-      { name: 'Advanced Research Automation', href: '/research-development', description: 'Automated research workflows', price: '$4,999/month' },
-      { name: 'Quantum Research Platform', href: '/quantum-services', description: 'Quantum computing research', price: '$8,999/month' },
-      { name: 'AI Research Assistant', href: '/ai-autonomous-research-assistant', description: 'Intelligent research support', price: '$2,999/month' },
-      { name: 'Biotech Research Suite', href: '/biotech-ai-research-platform', description: 'Comprehensive biotech tools', price: '$6,999/month' }
+      { name: 'AI Research Collaboration Platform', href: '/ai-research-collaboration-2029', description: 'Global AI research network', price: '$34,999/month' },
+      { name: 'Quantum Research Laboratory', href: '/quantum-research-laboratory-2029', description: 'Virtual quantum research environment', price: '$44,999/month' },
+      { name: 'Biotech Innovation Hub', href: '/biotech-innovation-hub-2029', description: 'AI-powered biotech research', price: '$39,999/month' },
+      { name: 'Space Technology Research Platform', href: '/space-technology-research-2029', description: 'Advanced space research tools', price: '$54,999/month' }
     ]
   }
 ];

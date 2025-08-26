@@ -1,141 +1,70 @@
 #!/bin/bash
 
-# Script to merge only the open PRs from GitHub
-set -e
-
-echo "🚀 Starting merge of open PRs only..."
-echo "⏰ Started at: $(date)"
-echo "---"
-
-# Create a backup branch
-BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
-echo "🔒 Creating backup branch: $BACKUP_BRANCH"
-git checkout -b "$BACKUP_BRANCH"
-git push origin "$BACKUP_BRANCH"
-git checkout main
-
-# Initialize counters
-SUCCESSFUL_MERGES=0
-FAILED_MERGES=0
-CONFLICT_RESOLUTIONS=0
-
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    local branch="$2"
-    
-    echo "🔧 Resolving conflicts in $file for branch $branch..."
-    
-    # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Strategy: Keep both versions where possible, prefer main branch for critical files
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            echo "📦 Critical file detected, keeping main version and merging dependencies..."
-            # For package files, we'll need special handling
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
         elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "README.md" || "$file" == "LICENSE" ]]; then
-            echo "📚 Documentation file, keeping both versions where possible..."
-            # Remove conflict markers but try to preserve content
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
         else
             echo "📝 Regular file, attempting to merge both versions..."
             # Remove conflict markers and try to keep both versions
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        fi
-        
-        echo "✅ Resolved conflicts in $file"
-        CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
-    fi
-}
+# Script to merge all open pull requests into main branch
+# This script will resolve merge conflicts and merge all open PRs
 
-# Function to merge a single branch
-merge_branch() {
-    local branch="$1"
+set -e
+
+echo "Starting merge process for open pull requests..."
+
+# Ensure we're in the right directory
+cd /workspace
+
+# Check current status
+echo "Current git status:"
+git status
+
+# Switch to main branch and pull latest changes
+echo "Switching to main branch..."
+git checkout main
+git pull origin main
+
+# List of branches to merge (from the open PRs)
+BRANCHES=(
+    "cursor/analyze-improve-and-deploy-ziontechgroup-app-f7d5"
+    "cursor/analyze-improve-and-deploy-ziontechgroup-app-2401"
+    "cursor/analyze-improve-and-deploy-ziontechgroup-app-586a"
+    "cursor/analyze-improve-and-deploy-ziontechgroup-app-a13d"
+)
+
+# Merge each branch
+for branch in "${BRANCHES[@]}"; do
+    echo "Processing branch: $branch"
     
-    echo "🔄 Attempting to merge $branch..."
-    
-    # Fetch the latest version of the branch
-    git fetch origin "$branch"
-    
-    # Try to merge
-    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        git commit -m "Merge $branch into main - $(date)"
-        SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-        return 0
-    else
-        echo "⚠️  Merge conflicts detected in $branch, resolving..."
+    # Check if branch exists
+    if git show-ref --verify --quiet refs/remotes/origin/$branch; then
+        echo "Merging $branch into main..."
         
-        # Get list of conflicted files
-        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
-        
-        if [ -n "$CONFLICTED_FILES" ]; then
-            echo "📋 Conflicted files: $CONFLICTED_FILES"
-            
-            for file in $CONFLICTED_FILES; do
-                if [ -f "$file" ]; then
-                    resolve_conflicts "$file" "$branch"
-                fi
-            done
-            
-            # Add resolved files
-            git add .
-            
-            # Commit the merge
-            git commit -m "Resolve merge conflicts for $branch - $(date)"
-            
-            echo "✅ Successfully resolved conflicts and merged $branch"
-            SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-            return 0
+        # Try to merge with auto-resolve conflicts
+        if git merge --no-edit --strategy=recursive -X theirs origin/$branch; then
+            echo "Successfully merged $branch"
         else
-            echo "❌ No conflicted files found, but merge failed. Aborting..."
-            git merge --abort
-            FAILED_MERGES=$((FAILED_MERGES + 1))
-            return 1
+            echo "Merge conflict detected in $branch, attempting to resolve..."
+            
+            # Check for conflicts
+            if git status --porcelain | grep -q "^UU"; then
+                echo "Resolving conflicts automatically..."
+                
+                # Add all files to resolve conflicts
+                git add .
+                
+                # Commit the merge
+                git commit -m "Resolve merge conflicts for $branch"
+                echo "Conflicts resolved and committed for $branch"
+            else
+                echo "No conflicts found, continuing..."
+            fi
         fi
+    else
+        echo "Branch $branch not found, skipping..."
     fi
-}
+done
 
-# Get the list of open PRs and extract branch information
-echo "📋 Fetching open PRs from GitHub..."
-curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > prs.json
-
-# Extract PR information and process each one
-echo "🔄 Processing open PRs..."
-awk '
-/"number":/ {
-    number = $2
-    gsub(/,/, "", number)
-    pr_number = number
-}
-/"head":/ {
-    in_head = 1
-}
-/"ref":/ && in_head {
-    ref = substr($0, index($0, ":") + 3)
-    gsub(/,$/, "", ref)
-    gsub(/"/, "", ref)
-    if (ref != "ref" && ref != "href" && ref != "archive_url" && ref != "git_refs_url") {
-        printf "%s|%s\n", pr_number, ref
-        in_head = 0
-    }
-}
-' prs.json | while IFS='|' read -r pr_number branch_name; do
-    if [ -n "$pr_number" ] && [ -n "$branch_name" ]; then
-        echo ""
-        echo "=========================================="
         echo "🔄 Processing PR #$pr_number from branch: $branch_name"
         echo "=========================================="
         
@@ -178,3 +107,15 @@ echo "   2. Test the application thoroughly"
 echo "   3. Delete the backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
 echo "   4. Consider cleaning up old feature branches"
 echo "   5. Run tests to ensure everything works correctly"
+=======
+# Push the merged changes
+echo "Pushing merged changes to main..."
+git push origin main
+
+echo "Merge process completed successfully!"
+
+# List final status
+echo "Final git status:"
+git status
+
+echo "All open pull requests have been merged into main branch."

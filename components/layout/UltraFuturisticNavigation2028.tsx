@@ -9,7 +9,7 @@ import {
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
   Earth, Factory, Car, Building, GraduationCap, Scale,
   Palette, Camera, Video, Music, Gamepad2, Heart,
-  Leaf, Sun, Moon, Wind, Droplets, Mountain, Tree,
+  Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3
 } from 'lucide-react';
 
@@ -158,7 +158,7 @@ const companyLinks = [
 const resourceLinks = [
   { name: '📖 Documentation', href: '/docs', icon: BookOpen },
   { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video },
-  { name: '💡 API Reference', href: '/api-documentation', icon: Code },
+  { name: '💡 API Reference', href: '/api', icon: Code },
   { name: '🛠️ Developer Tools', href: '/dev-tools', icon: Wrench },
   { name: '📱 Mobile Apps', href: '/mobile', icon: Smartphone },
   { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },
@@ -305,7 +305,7 @@ export default function UltraFuturisticNavigation2028() {
                 className="text-purple-200 hover:text-white transition-colors py-2 flex items-center space-x-2"
               >
                 <link.icon className="w-4 h-4" />
-                <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/gu, '').trim()}</span>
+                <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
               </Link>
             ))}
           </div>
@@ -410,7 +410,7 @@ export default function UltraFuturisticNavigation2028() {
                       className="flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                     >
                       <link.icon className="w-5 h-5 text-purple-400" />
-                      <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/gu, '').trim()}</span>
+                      <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
                     </Link>
                   ))}
                 </div>

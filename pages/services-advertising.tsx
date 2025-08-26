@@ -18,14 +18,189 @@ export default function ServicesAdvertisingPage() {
 			<div className="max-w-6xl mx-auto space-y-10">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
 
-				{/* Quick contact */}
-				<div className="flex flex-col md:flex-row items-center gap-4 p-4 rounded-xl bg-black/30 border border-gray-800">
-					<a href="tel:+13024640950" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a>
-					<a href="mailto:kleber@ziontechgroup.com" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a>
-					<a href="/pricing" className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a>
-				</div>
+  const benefits = [
+    '1000% ROI target with measurable KPIs',
+    'Transparent pricing with market references',
+    'Fast onboarding with templates and playbooks',
+    'Enterprise-grade security and compliance',
+    '24/7 support with SLAs',
+    'Proven architectures and reference implementations',
+    'No long-term lock-in; cancel anytime',
+    'SOC 2-aligned processes and data handling',
+    'Flexible deployment: SaaS or self-hosted options'
+  ];
 
 				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
+					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical SMB budget: $20–$80/mo</li>
+						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
+						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</a></li>
+					</ul>
+				</section>
+
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">AI Resume & Cover Letter Builder</h2>
+					<p className="text-slate-300">ATS-optimized resumes and tailored cover letters with role-aware keywording and metric suggestions.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical budget: $8–$25/mo</li>
+						<li>References: {ext('https://www.rezi.ai/pricing')}, {ext('https://resume.io/pricing')}</li>
+						<li>Try: <a href="/services/ai-resume-cover-letter-builder" className="text-cyan-400 underline">ziontechgroup.com/services/ai-resume-cover-letter-builder</a></li>
+					</ul>
+				</section>
+
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
+					<p className="text-slate-300">Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical budget: $10–$30/mo + usage</li>
+						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
+						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</a></li>
+					</ul>
+				</section>
+
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <header className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
+              Services That Ship Outcomes
+            </h1>
+            <p className="text-gray-300 text-lg">AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
+                Talk to Sales <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button href="/market-pricing" variant="outline" className="px-8 py-4 border border-gray-600 text-gray-200">
+                View Market Pricing <ExternalLink className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
+          </header>
+
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Real Micro SaaS</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[ 
+                { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10', 'CI/CD checks', 'PII detection'] },
+                { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIM', 'BIMI readiness', 'Weekly reports'] },
+                { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + Synthetic', 'Core Web Vitals', 'Alerts'] },
+                { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/services/cloud-cost-optimizer', points: ['Anomalies', 'Rightsizing', 'Budgets'] },
+                { name: 'API Observability Starter', price: '$149/mo', href: '/services/api-observability-starter', points: ['Traces', 'SLOs', 'Deps map'] }
+              ].map((o) => (
+                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
+                  <div className="text-sm text-gray-400 mb-1">From</div>
+                  <div className="text-2xl font-bold text-white">{o.price}</div>
+                  <div className="text-gray-200 mt-2 mb-3">{o.name}</div>
+                  <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
+                    {o.points.map((p) => (<li key={p}>{p}</li>))}
+                  </ul>
+                </a>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {benefits.map((b) => (
+                <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
+                    <p className="text-gray-200">{b}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Featured Offerings</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { name: 'LLM Gateway & Cost Control', price: '$299/mo', href: '/llm-gateway' },
+                { name: 'API Observability Starter', price: '$149/mo', href: '/api-observability-starter' },
+                { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/cloud-cost-optimizer' },
+                { name: 'SOC 2 Evidence Automation', price: '$499/mo', href: '/soc2-evidence-automation' },
+                { name: 'Vector Search Starter', price: '$249/mo', href: '/vector-search-starter' },
+                { name: 'TLS Certificate Monitor', price: '$49/mo', href: '/tls-certificate-monitor' },
+                { name: 'Affiliate Marketing Tracking Suite', price: '$149/mo', href: '/services/affiliate-marketing-tracking-suite' },
+                { name: 'SMB Website Analytics Dashboard', price: '$29/mo', href: '/services/smb-website-analytics-dashboard' },
+                { name: 'Customer Support Helpdesk Pro', price: '$79/mo', href: '/services/customer-support-helpdesk-pro' }
+              ].map((o) => (
+                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
+                  <div className="text-sm text-gray-400 mb-1">From</div>
+                  <div className="text-2xl font-bold text-white">{o.price}</div>
+                  <div className="text-gray-200 mt-2">{o.name}</div>
+                </a>
+              ))}
+            </div>
+          </section>
+
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">API Performance Testing</h2>
+					<p className="text-slate-300">Load, latency and regression testing with CI gates and dashboards.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical budget: $30–$150/mo</li>
+						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
+						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</a></li>
+					</ul>
+				</section>
+
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Average Market Prices</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="p-6 rounded-2xl bg-black/40 border border-sky-500/30">
+                <h3 className="text-xl font-semibold text-white mb-3">Affiliate & Partnerships</h3>
+                <ul className="text-slate-300 space-y-1">
+                  <li>Impact.com: <a className="text-cyan-400 underline" href={`https://impact.com/pricing/`} target="_blank" rel="noopener noreferrer">impact.com/pricing</a></li>
+                  <li>PartnerStack: <a className="text-cyan-400 underline" href={`https://partnerstack.com/pricing`} target="_blank" rel="noopener noreferrer">partnerstack.com/pricing</a></li>
+                  <li>Refersion: <a className="text-cyan-400 underline" href={`https://www.refersion.com/pricing`} target="_blank" rel="noopener noreferrer">refersion.com/pricing</a></li>
+                </ul>
+                <div className="text-sm text-slate-400 mt-3">Typical: $99–$500/month + commissions.</div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-emerald-500/30">
+                <h3 className="text-xl font-semibold text-white mb-3">Website Analytics</h3>
+                <ul className="text-slate-300 space-y-1">
+                  <li>Plausible: <a className="text-cyan-400 underline" href={`https://plausible.io/pricing`} target="_blank" rel="noopener noreferrer">plausible.io/pricing</a></li>
+                  <li>Fathom: <a className="text-cyan-400 underline" href={`https://usefathom.com/pricing`} target="_blank" rel="noopener noreferrer">usefathom.com/pricing</a></li>
+                  <li>Simple Analytics: <a className="text-cyan-400 underline" href={`https://simpleanalytics.com/pricing`} target="_blank" rel="noopener noreferrer">simpleanalytics.com/pricing</a></li>
+                </ul>
+                <div className="text-sm text-slate-400 mt-3">Typical: $9–$59/month.</div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-pink-500/30">
+                <h3 className="text-xl font-semibold text-white mb-3">Helpdesk & Chat</h3>
+                <ul className="text-slate-300 space-y-1">
+                  <li>Zendesk: <a className="text-cyan-400 underline" href={`https://www.zendesk.com/pricing/`} target="_blank" rel="noopener noreferrer">zendesk.com/pricing</a></li>
+                  <li>Freshdesk: <a className="text-cyan-400 underline" href={`https://freshdesk.com/pricing`} target="_blank" rel="noopener noreferrer">freshdesk.com/pricing</a></li>
+                  <li>Help Scout: <a className="text-cyan-400 underline" href={`https://www.helpscout.com/pricing/`} target="_blank" rel="noopener noreferrer">helpscout.com/pricing</a></li>
+                </ul>
+                <div className="text-sm text-slate-400 mt-3">Typical: $15–$99/agent/month.</div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Explore by Category</h2>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {anchors.map((a) => (
+                <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
+                  {a.title}
+                </a>
+              ))}
+            </div>
+          </section>
+
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">Podcast Transcription & Insights</h2>
+					<p className="text-slate-300">Transcripts, chapters, show notes, and SEO-ready blog pages.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical budget: $10–$60/mo + usage</li>
+						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
+						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</a></li>
+					</ul>
+				</section>
+
+				<section id="ai-evaluation-orchestrator" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Evaluation Orchestrator</h2>
 					<p className="text-slate-300">Automate LLM evals, regression tests, red-teaming, and leaderboards across OpenAI, Anthropic, Groq, and more.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -264,6 +439,10 @@ export default function ServicesAdvertisingPage() {
 						<li>Typical SMB budget: $20–$200/mo</li>
 						<li>References: {ext('https://www.atlassian.com/software/statuspage/pricing')}, {ext('https://www.checklyhq.com/pricing/')}</li>
 					</ul>
+					<div className="flex gap-3">
+						<a href="/status-pages-slo" className="px-3 py-1.5 rounded-md bg-cyan-600 text-white">View Service</a>
+						<a href="/pricing" className="px-3 py-1.5 rounded-md border border-cyan-500/40 text-cyan-300">Pricing</a>
+					</div>
 				</section>
 
 				<section className="space-y-6">
@@ -345,6 +524,10 @@ export default function ServicesAdvertisingPage() {
 						<li>Typical SMB budget: $9–$50/mo</li>
 						<li>References: {ext('https://plausible.io/pricing')}, {ext('https://usefathom.com/pricing')}</li>
 					</ul>
+					<div className="flex gap-3">
+						<a href="/website-analytics" className="px-3 py-1.5 rounded-md bg-cyan-600 text-white">View Service</a>
+						<a href="/pricing" className="px-3 py-1.5 rounded-md border border-cyan-500/40 text-cyan-300">Pricing</a>
+					</div>
 				</section>
 
 				<section className="space-y-6">
@@ -354,6 +537,10 @@ export default function ServicesAdvertisingPage() {
 						<li>Typical SMB budget: $20–$100/mo</li>
 						<li>References: {ext('https://mailshake.com/pricing')}, {ext('https://www.gmass.co/pricing')}</li>
 					</ul>
+					<div className="flex gap-3">
+						<a href="/email-followups" className="px-3 py-1.5 rounded-md bg-cyan-600 text-white">View Service</a>
+						<a href="/pricing" className="px-3 py-1.5 rounded-md border border-cyan-500/40 text-cyan-300">Pricing</a>
+					</div>
 				</section>
 				
 				<section className="space-y-6">

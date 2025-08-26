@@ -457,7 +457,6 @@ export default function EquipmentPage() {
   }, []);
 
   return (
-    
       <DynamicListingPage
         title="Datacenter Equipment"
         description="Browse professional hardware for modern datacenter and network deployments."
@@ -467,6 +466,5 @@ export default function EquipmentPage() {
         initialPrice={{ min: 400, max: 50000 }}
         detailBasePath="/equipment"
       />
-    
   );
 }

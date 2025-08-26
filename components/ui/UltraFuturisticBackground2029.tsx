@@ -1,7 +1,23 @@
 import React, { useEffect, useRef } from 'react';
 
-const UltraFuturisticBackground2029: React.FC = () => {
+interface Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  opacity: number;
+  color: string;
+}
+
+interface UltraFuturisticBackground2029Props {
+  children: React.ReactNode;
+}
+
+export default function UltraFuturisticBackground2029({ children }: UltraFuturisticBackground2029Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<Particle[]>([]);
+  const animationRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -10,7 +26,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -18,126 +33,104 @@ const UltraFuturisticBackground2029: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle system
-    class Particle {
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      life: number;
-      maxLife: number;
+    // Initialize particles
+    const initParticles = () => {
+      const particles: Particle[] = [];
+      const colors = [
+        'rgba(147, 51, 234, 0.8)', // Purple
+        'rgba(59, 130, 246, 0.8)', // Blue
+        'rgba(16, 185, 129, 0.8)', // Green
+        'rgba(245, 158, 11, 0.8)', // Yellow
+        'rgba(239, 68, 68, 0.8)',  // Red
+        'rgba(236, 72, 153, 0.8)'  // Pink
+      ];
 
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 2;
-        this.vy = (Math.random() - 0.5) * 2;
-        this.size = Math.random() * 3 + 1;
-        this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`;
-        this.life = Math.random() * 100;
-        this.maxLife = 100;
-      }
-
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.life--;
-
-        // Wrap around edges
-        if (this.x < 0) this.x = canvas.width;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
-
-        // Reset particle when it dies
-        if (this.life <= 0) {
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height;
-          this.life = this.maxLife;
-        }
-      }
-
-      draw() {
-        const alpha = this.life / this.maxLife;
-        ctx.save();
-        ctx.globalAlpha = alpha;
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-      }
-    }
-
-    // Create particles
-    const particles: Particle[] = [];
-    for (let i = 0; i < 100; i++) {
-      particles.push(new Particle());
-    }
-
-    // Grid system
-    const gridSize = 50;
-    const gridPoints: { x: number; y: number; active: boolean }[] = [];
-
-    for (let x = 0; x <= canvas.width; x += gridSize) {
-      for (let y = 0; y <= canvas.height; y += gridSize) {
-        gridPoints.push({
-          x,
-          y,
-          active: Math.random() > 0.7
+      for (let i = 0; i < 150; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 3 + 1,
+          opacity: Math.random() * 0.5 + 0.3,
+          color: colors[Math.floor(Math.random() * colors.length)]
         });
       }
-    }
+      particlesRef.current = particles;
+    };
+
+    initParticles();
 
     // Animation loop
-    let animationId: number;
     const animate = () => {
-      // Clear canvas with fade effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw gradient background
+      const gradient = ctx.createRadialGradient(
+        canvas.width / 2,
+        canvas.height / 2,
+        0,
+        canvas.width / 2,
+        canvas.height / 2,
+        Math.max(canvas.width, canvas.height) / 2
+      );
+      gradient.addColorStop(0, 'rgba(15, 23, 42, 1)'); // Dark blue
+      gradient.addColorStop(0.3, 'rgba(30, 41, 59, 0.8)'); // Slate
+      gradient.addColorStop(0.7, 'rgba(51, 65, 85, 0.6)'); // Slate
+      gradient.addColorStop(1, 'rgba(15, 23, 42, 0.8)'); // Dark blue
+      ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
-      particles.forEach(particle => {
-        particle.update();
-        particle.draw();
+      particlesRef.current.forEach((particle, index) => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+
+        // Draw particle with glow effect
+        ctx.save();
+        ctx.globalCompositeOperation = 'screen';
+        
+        // Outer glow
+        ctx.shadowColor = particle.color;
+        ctx.shadowBlur = 20;
+        ctx.fillStyle = particle.color;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Inner glow
+        ctx.shadowBlur = 10;
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.restore();
       });
 
-      // Draw grid
-      ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
-      ctx.lineWidth = 1;
-
-      // Vertical lines
-      for (let x = 0; x <= canvas.width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-
-      // Horizontal lines
-      for (let y = 0; y <= canvas.height; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
-
-      // Draw active grid points
-      gridPoints.forEach(point => {
-        if (point.active) {
-          ctx.fillStyle = 'rgba(6, 182, 212, 0.3)';
-          ctx.beginPath();
-          ctx.arc(point.x, point.y, 2, 0, Math.PI * 2);
-          ctx.fill();
+      // Draw connecting lines between nearby particles
+      ctx.strokeStyle = 'rgba(147, 51, 234, 0.1)';
+      ctx.lineWidth = 0.5;
+      
+      for (let i = 0; i < particlesRef.current.length; i++) {
+        for (let j = i + 1; j < particlesRef.current.length; j++) {
+          const dx = particlesRef.current[i].x - particlesRef.current[j].x;
+          const dy = particlesRef.current[i].y - particlesRef.current[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particlesRef.current[i].x, particlesRef.current[i].y);
+            ctx.lineTo(particlesRef.current[j].x, particlesRef.current[j].y);
+            ctx.stroke();
+          }
         }
-      });
-
-      // Randomly activate/deactivate grid points
-      if (Math.random() > 0.95) {
-        const randomPoint = gridPoints[Math.floor(Math.random() * gridPoints.length)];
-        randomPoint.active = !randomPoint.active;
       }
 
       // Draw floating geometric shapes
@@ -196,98 +189,85 @@ const UltraFuturisticBackground2029: React.FC = () => {
             ctx.lineTo(x, y);
           }
         }
+        ctx.closePath();
         ctx.stroke();
-      }
-
-      // Quantum particles
-      for (let i = 0; i < 20; i++) {
-        const x = Math.sin(time * 0.5 + i) * canvas.width * 0.4 + canvas.width * 0.5;
-        const y = Math.cos(time * 0.3 + i) * canvas.height * 0.4 + canvas.height * 0.5;
-        const size = Math.sin(time + i) * 3 + 4;
         
-        ctx.fillStyle = `rgba(147, 51, 234, ${0.3 + Math.sin(time + i) * 0.2})`;
-        ctx.beginPath();
-        ctx.arc(x, y, size, 0, Math.PI * 2);
-        ctx.fill();
-      }
-
-      // Neural network connections
-      const nodes = [
-        { x: canvas.width * 0.1, y: canvas.height * 0.2 },
-        { x: canvas.width * 0.3, y: canvas.height * 0.4 },
-        { x: canvas.width * 0.5, y: canvas.height * 0.3 },
-        { x: canvas.width * 0.7, y: canvas.height * 0.5 },
-        { x: canvas.width * 0.9, y: canvas.height * 0.8 }
-      ];
-
-      ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
-      ctx.lineWidth = 1;
-
-      nodes.forEach((node, i) => {
-        nodes.slice(i + 1).forEach(targetNode => {
-          const distance = Math.sqrt(
-            Math.pow(node.x - targetNode.x, 2) + Math.pow(node.y - targetNode.y, 2)
-          );
-          
-          if (distance < 300) {
-            const alpha = 1 - distance / 300;
-            ctx.strokeStyle = `rgba(6, 182, 212, ${alpha * 0.1})`;
-            ctx.beginPath();
-            ctx.moveTo(node.x, node.y);
-            ctx.lineTo(targetNode.x, targetNode.y);
-            ctx.stroke();
-          }
-        });
+        ctx.restore();
       });
 
-      // Draw nodes
-      nodes.forEach(node => {
-        ctx.fillStyle = 'rgba(6, 182, 212, 0.3)';
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, 6, 0, Math.PI * 2);
-        ctx.fill();
-      });
-
-      animationId = requestAnimationFrame(animate);
+      animationRef.current = requestAnimationFrame(animate);
     };
 
     animate();
 
-    // Cleanup
     return () => {
       window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationId);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
     };
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{
-          background: 'radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1) 100%)'
-        }}
-      />
-      
-      {/* Additional overlay effects */}
-      <div className="absolute inset-0">
-        {/* Gradient overlays */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-5">
-          <div 
-            className="absolute inset-0" 
-            style={{
-              backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)',
-              backgroundSize: '100px 100px'
-            }}
-          />
+    <>
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        {/* Canvas Background */}
+        <canvas
+          ref={canvasRef}
+          className="w-full h-full"
+          style={{ display: 'block' }}
+        />
+        
+        {/* Overlay Gradients */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+        
+        {/* Animated Grid */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(147,51,234,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(147,51,234,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
         </div>
         
-        {/* Floating orbs */}
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl" />
+        {/* Floating Orbs */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
         
-        {/* Scanning lines */}
+        <motion.div
+          className="absolute top-3/4 right-1/4 w-40 h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.4, 0.7, 0.4],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.5, 0.2],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        {/* Neon Lines */}
         <div className="absolute inset-0">
           <div 
             className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-20"
@@ -312,18 +292,10 @@ const UltraFuturisticBackground2029: React.FC = () => {
           />
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes scan {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-      `}</style>
-    </div>
+      
+      {/* Render children */}
+      {children}
+    </>
   );
 };
 

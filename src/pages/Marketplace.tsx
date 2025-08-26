@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 import React, { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
@@ -14,6 +12,7 @@ import { generateRandomListing } from "@/utils/generateRandomListing";
 import { toast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 import { SearchSuggestion } from "@/types/search";
+import { ListingView } from "@/types/listings";
 
 export default function Marketplace() {
   const navigate = useNavigate();
@@ -140,9 +139,10 @@ export default function Marketplace() {
     
       <main className="flex-grow container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto mb-8">
-          <h1 className="text-3xl font-bold text-white mb-4">{t('marketplace.title')}</h1>
+          <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>
           <p className="text-zion-slate-light">
-            {t('marketplace.description')}
+            Discover professional services and products for your AI and tech projects.
+            Browse our curated collection of solutions from verified providers.
           </p>
         </div>
         
@@ -258,6 +258,4 @@ export default function Marketplace() {
       </main>
     
   );
-};
-
-export default Marketplace;
+}

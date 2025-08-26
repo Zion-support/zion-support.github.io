@@ -1,45 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
-import SEO from '../components/SEO';
-
-export default function Custom404() {
-  const { user } = useAuth();
-  const { t } = useTranslation();
-  const router = useRouter();
-
-  useEffect(() => {
-    const err = new Error('404 - Page Not Found');
-    const eventId = captureException(err, {
-      user: user ? { id: user.id, email: user.email } : undefined,
-      extra: { path: window.location.pathname },
-    });
-    console.log('Reported 404 error. Error ID:', eventId);
-  }, [user]);
-
-  const handleGoBack = () => {
-    if (window.history.length > 1) {
-      router.back();
-    } else {
-      router.push('/');
-    }
-  };
-
-  return (
-    <>
-      <SEO
-        title={t('errors.page_not_found')}
-        description="The requested page could not be found on Zion AI Marketplace."
-      />
-      <Header />
-      <main className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-slate-900 flex items-center justify-center px-4 py-12">
-        <div className="max-w-2xl w-full text-center">
-          {/* Large 404 Number */}
-          <div className="mb-8">
-            <div className="text-8xl md:text-9xl font-bold bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-purple bg-clip-text text-transparent mb-4">
-              404
-            </div>
-            <div className="h-1 w-32 bg-gradient-to-r from-zion-purple to-zion-cyan mx-auto rounded-full"></div>
-          </div>
 
           {/* Error Message */}
           <div className="mb-8 space-y-4">
