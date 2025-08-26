@@ -3,6 +3,7 @@
   <!-- Main Pages -->
   <url>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/</loc>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,9 @@
 =======
             <loc>https://ziontechgroup.com/</loc>
 >>>>>>> origin/cursor/website-audit-and-enhancement-374e
+=======
+            <loc>https://ziontechgroup.com/</loc>
+>>>>>>> origin/cursor/website-audit-and-enhancement-d85a
     <lastmod>2025-05-15</lastmod>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac60
     <changefreq>weekly</changefreq>
@@ -20,6 +24,7 @@
   </url>
   
   <url>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <loc>https://ziontechgroup.com/about</loc>
 <<<<<<< HEAD
@@ -31,26 +36,37 @@
 =======
             <loc>https://ziontechgroup.com/about</loc>
 >>>>>>> origin/cursor/website-audit-and-enhancement-374e
+=======
+            <loc>https://ziontechgroup.com/about</loc>
+>>>>>>> origin/cursor/website-audit-and-enhancement-d85a
     <lastmod>2025-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <loc>https://ziontechgroup.com/contact</loc>
 =======
             <loc>https://ziontechgroup.com/contact</loc>
 >>>>>>> origin/cursor/website-audit-and-enhancement-374e
+=======
+            <loc>https://ziontechgroup.com/contact</loc>
+>>>>>>> origin/cursor/website-audit-and-enhancement-d85a
     <lastmod>2025-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/browse/talent</loc>
 =======
             <loc>https://ziontechgroup.com/browse/talent</loc>
 >>>>>>> origin/cursor/website-audit-and-enhancement-374e
+=======
+            <loc>https://ziontechgroup.com/browse/talent</loc>
+>>>>>>> origin/cursor/website-audit-and-enhancement-d85a
     <lastmod>2025-05-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>

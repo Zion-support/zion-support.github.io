@@ -1110,6 +1110,7 @@ const Terms: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-35e5
@@ -1125,6 +1126,8 @@ const Terms: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-45a9
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-374e
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-d85a
         canonical="https://ziontechgroup.com/terms"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
