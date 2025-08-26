@@ -1,7 +1,7 @@
-import { Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
-import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   darkMode: ["class"],
@@ -11,7 +11,6 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
-  safelist: ['border-border'],
   theme: {
     container: {
       center: true,
@@ -55,16 +54,10 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom Zion colors (updated palette)
         "zion-blue": {
           DEFAULT: "#2e73ea",
-          light: "#8ab1f3",
-          dark: "#172d67",
-        },
-        "zion-purple": {
-          DEFAULT: "#8c15e9",
-          light: "#b971f2",
-          dark: "#530c8b",
+          light: "#5b8fef",
+          dark: "#1e4ea8",
         },
         "zion-cyan": {
           DEFAULT: "#22ddd2",
@@ -76,8 +69,18 @@ const config: Config = {
           light: "#451582",
           dark: "#000000",
         },
-<<<<<<< HEAD
-        // Additional service category colors
+        "zion-neon": {
+          DEFAULT: "#22ddd2",
+          light: "#7aeae4",
+          dark: "#14847e",
+          glow: "#22ddd2",
+        },
+        "zion-purple": {
+          DEFAULT: "#8c15e9",
+          light: "#b971f2",
+          dark: "#530c8b",
+          neon: "#b971f2",
+        },
         "zion-green": {
           DEFAULT: "#10b981",
           light: "#34d399",
@@ -157,19 +160,6 @@ const config: Config = {
           DEFAULT: "#06b6d4",
           light: "#22d3ee",
           dark: "#0891b2",
-=======
-        "zion-neon": {
-          DEFAULT: "#22ddd2",
-          light: "#7aeae4",
-          dark: "#14847e",
-          glow: "#22ddd2",
-        },
-        "zion-purple": {
-          DEFAULT: "#8c15e9",
-          light: "#b971f2",
-          dark: "#530c8b",
-          neon: "#b971f2",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
         },
       },
       borderRadius: {
@@ -189,7 +179,6 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-<<<<<<< HEAD
         "float-slow": {
           "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
           "33%": { transform: "translateY(-20px) translateX(10px)" },
@@ -207,7 +196,7 @@ const config: Config = {
         "fade-in-up": {
           "0%": { opacity: "0", transform: "translateY(30px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
-=======
+        },
         "fade-in": {
           from: { opacity: "0", transform: "translateY(10px)" },
           to: { opacity: "1", transform: "translateY(0)" },
@@ -233,18 +222,15 @@ const config: Config = {
         "gradient-shift": {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-<<<<<<< HEAD
         "float-slow": "float-slow 6s ease-in-out infinite",
         "float-medium": "float-medium 4s ease-in-out infinite",
         "float-fast": "float-fast 3s ease-in-out infinite",
         "fade-in-up": "fade-in-up 0.8s ease-out forwards",
-=======
         "fade-in": "fade-in 0.5s ease-out",
         "slide-in": "slide-in 0.3s ease-out",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
@@ -267,7 +253,6 @@ const config: Config = {
         "glow": "0 0 40px rgba(34, 221, 210, 0.3)",
         "glow-purple": "0 0 40px rgba(140, 21, 233, 0.3)",
         "glow-blue": "0 0 40px rgba(46, 115, 234, 0.3)",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
       },
     },
   },
