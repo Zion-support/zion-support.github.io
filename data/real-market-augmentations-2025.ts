@@ -1,60 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const realMarketAugmentations2025 = [
-  {
-<<<<<<< HEAD
-=======
 export interface RealMarketAugmentation2025 {
   id: string;
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  technology: string[];
-  integrations: string[];
-  compliance: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  fundingTrends: string;
-=======
   name: string;
   tagline: string;
   price: string;
   features: string[];
->>>>>>> origin/main
 }
 
 export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
   {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     id: "ai-market-intelligence-platform",
-    title: "AI Market Intelligence Platform",
-    description: "Advanced market intelligence platform that uses AI to analyze market trends, competitor activities, and customer behavior to provide actionable insights.",
-    category: "AI & Analytics",
-    subcategory: "Market Intelligence",
-    price: 199,
-    currency: "$",
-    pricingModel: "monthly",
+    name: "AI Market Intelligence Platform",
+    tagline: "Advanced market intelligence platform with AI-powered insights",
+    price: "$199/month",
     features: [
       "Real-time market monitoring",
       "AI-powered trend analysis",
@@ -64,132 +21,6 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
       "Custom dashboards",
       "API integration",
       "Automated reporting"
-    ],
-    benefits: [
-      "Make data-driven decisions",
-      "Identify market opportunities early",
-      "Stay ahead of competitors",
-      "Optimize pricing strategies",
-      "Improve customer targeting"
-    ],
-    useCases: [
-      "Market research",
-      "Competitive analysis",
-      "Product development",
-      "Marketing strategy",
-      "Sales optimization"
-    ],
-    targetAudience: [
-      "Product managers",
-      "Marketing teams",
-      "Business analysts",
-      "Strategy consultants",
-      "Startup founders"
-    ],
-    tags: ["AI", "Market Intelligence", "Analytics", "Competitive Analysis", "Predictive Analytics"],
-    estimatedDelivery: "2-3 weeks",
-    supportLevel: "premium",
-    marketPrice: "$199 - $599/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["GPT-4", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"],
-    integrations: ["Salesforce", "HubSpot", "Google Analytics", "Facebook Ads", "LinkedIn Ads"],
-    compliance: ["GDPR", "CCPA", "SOC 2"],
-    roi: "400% within 8 months",
-    competitors: ["Crayon", "Kompyte", "Brandwatch", "Mention"],
-    marketSize: "$2.1 billion",
-    growthRate: "18.5% annually",
-    fundingTrends: "Strong investor interest in AI-powered market intelligence"
-  },
-  {
-    id: "quantum-enhanced-data-analytics",
-    title: "Quantum-Enhanced Data Analytics",
-    description: "Next-generation data analytics platform that leverages quantum computing principles to process massive datasets and provide insights faster than traditional solutions.",
-    category: "Quantum Computing",
-    subcategory: "Data Analytics",
-    price: 299,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum-accelerated processing",
-      "Real-time data streaming",
-      "Advanced visualization",
-      "Predictive modeling",
-      "Natural language queries",
-      "Automated insights",
-      "Multi-cloud support",
-      "Enterprise security"
-    ],
-    benefits: [
-      "Process data 100x faster",
-      "Handle massive datasets",
-      "Real-time insights",
-      "Future-proof technology",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Big data analytics",
-      "Real-time monitoring",
-      "Predictive maintenance",
-      "Risk assessment",
-      "Performance optimization"
-    ],
-    targetAudience: [
-      "Data scientists",
-      "Business analysts",
-      "IT managers",
-      "Research institutions",
-      "Financial services"
-    ],
-    tags: ["Quantum Computing", "Big Data", "Analytics", "Real-time", "Predictive Modeling"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$299 - $999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Quantum algorithms", "Python", "TensorFlow", "Kubernetes", "Apache Kafka"],
-    integrations: ["AWS", "Azure", "Google Cloud", "Snowflake", "Databricks"],
-    compliance: ["ISO 27001", "SOC 2", "HIPAA", "GDPR"],
-    roi: "500% within 12 months",
-    competitors: ["Palantir", "Databricks", "Snowflake", "Tableau"],
-    marketSize: "$3.2 billion",
-    growthRate: "22.8% annually",
-    fundingTrends: "High interest in quantum computing applications"
-=======
-    id: 'market-augmentation-1',
-    name: 'Market Augmentation Service 1',
-    tagline: 'Enhance your market presence',
-    price: '$299',
-    features: ['Market analysis', 'Strategy development', 'Implementation support']
->>>>>>> origin/main
-  }
-<<<<<<< HEAD
-];
-=======
-export interface RealMarketAugmentation2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
-}
-
-export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
-  {
-    id: 'market-augmentation-1',
-    name: 'Market Augmentation Service 1',
-    tagline: 'Enhance your market presence',
-    price: '$299',
-    features: ['Market analysis', 'Strategy development', 'Implementation support']
+    ]
   }
 ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-];
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

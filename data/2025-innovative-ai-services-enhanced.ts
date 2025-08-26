@@ -1336,7 +1336,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-creativity-studio',
     marketPosition: 'Innovative AI-powered creativity platform with advanced content generation and creative collaboration capabilities.',
-    targetAudience: 'Creative professionals', 'Designers', 'Musicians', 'Artists', 'Content creators', 'Marketing teams',
+    targetAudience: ['Creative professionals', 'Designers', 'Musicians', 'Artists', 'Content creators', 'Marketing teams'],
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'AI Creative Tools',
