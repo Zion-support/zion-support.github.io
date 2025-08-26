@@ -1,10 +1,12 @@
 import React, { Suspense } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Header } from './components/header/Header';
 import Footer from './components/Footer';
 import { ThemeProvider } from './components/ThemeProvider';
 import { Toaster as SonnerToaster } from './components/ui/sonner';
 import { Toaster } from './components/ui/toaster';
 import { WhitelabelProvider } from './context/WhitelabelContext';
+import { SidebarProvider } from './context/SidebarContext';
 
 // Lazy load all pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -152,22 +154,25 @@ function App() {
   return (
     <WhitelabelProvider>
       <ThemeProvider>
-        <Router>
-          <div className="App min-h-screen flex flex-col">
-            <main className="flex-1">
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  {routes.map(({ path, element }) => (
-                    <Route key={path} path={path} element={element} />
-                  ))}
-                </Routes>
-              </Suspense>
-            </main>
-            <Footer />
-            <Toaster />
-            <SonnerToaster />
-          </div>
-        </Router>
+        <SidebarProvider>
+          <Router>
+            <div className="App min-h-screen flex flex-col">
+              <Header />
+              <main className="flex-1 pt-32">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    {routes.map(({ path, element }) => (
+                      <Route key={path} path={path} element={element} />
+                    ))}
+                  </Routes>
+                </Suspense>
+              </main>
+              <Footer />
+              <Toaster />
+              <SonnerToaster />
+            </div>
+          </Router>
+        </SidebarProvider>
       </ThemeProvider>
     </WhitelabelProvider>
   );
