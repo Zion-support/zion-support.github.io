@@ -7,7 +7,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
+import SEOHead from "../components/SEOHead";
 import { HeroSection } from "@/components/HeroSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
@@ -203,12 +203,82 @@ const EnhancedServiceCategories = React.memo(() => {
 EnhancedServiceCategories.displayName = 'EnhancedServiceCategories';
 
 export default function Home() {
+  // SEO structured data for the home page
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+    "description": "Leading provider of cutting-edge technology solutions including AI, Cloud Computing, Cybersecurity, and Digital Transformation services",
+    "foundingDate": "2020",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup",
+      "https://github.com/ziontechgroup"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Technology Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI & Machine Learning Solutions",
+            "description": "Cutting-edge artificial intelligence and machine learning services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cloud Computing & DevOps",
+            "description": "Enterprise-grade cloud infrastructure and automated DevOps practices"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cybersecurity Services",
+            "description": "Comprehensive security solutions to protect your digital assets"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Digital Transformation",
+            "description": "End-to-end digital transformation consulting and implementation"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Zion Tech Group - Leading Technology Solutions & Innovation"
         description="Transform your business with Zion Tech Group's cutting-edge technology solutions. AI, Cloud, Cybersecurity, and Digital Transformation services."
         keywords="technology solutions, AI, cloud computing, cybersecurity, digital transformation, IT services"
+        structuredData={structuredData}
       />
       
       <Suspense fallback={<EnhancedLoadingSpinner />}>

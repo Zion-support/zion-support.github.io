@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import SEOHead from '../components/SEOHead';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -21,6 +21,42 @@ import {
 } from 'lucide-react';
 
 export default function Contact() {
+  // SEO structured data for the contact page
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Zion Tech Group",
+    "description": "Get in touch with Zion Tech Group for AI-powered technology solutions, IT services, and business consulting. Contact us today to transform your business.",
+    "url": "https://ziontechgroup.com/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+      "description": "Leading provider of AI-powered technology solutions and comprehensive IT services",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup",
+        "https://github.com/ziontechgroup"
+      ]
+    }
+  };
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -107,10 +143,11 @@ export default function Contact() {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Contact Zion Tech Group - Get in Touch for AI & IT Solutions"
         description="Contact Zion Tech Group for cutting-edge AI, IT, and digital transformation services. Get expert consultation and customized solutions for your business needs."
         keywords="contact, Zion Tech Group, AI solutions, IT services, digital transformation, consultation"
+        structuredData={structuredData}
       />
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
