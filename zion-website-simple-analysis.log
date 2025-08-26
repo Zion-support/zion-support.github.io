@@ -67,3 +67,6 @@
 2025-08-26 16:31:54,583 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/sre-oncall-as-a-service: HTTP Error: 404
 2025-08-26 16:31:55,584 - INFO - 🔍 Analyzing page 37: https://ziontechgroup.com/services/ai-sla-uptime-reporter (depth: 2)
 2025-08-26 16:31:55,634 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/ai-sla-uptime-reporter: HTTP Error: 404
+2025-08-26 16:31:56,634 - INFO - 🔍 Analyzing page 38: https://ziontechgroup.com/services/data-platform-accelerator (depth: 2)
+2025-08-26 16:31:56,677 - ERROR - ❌ Failed to fetch https://ziontechgroup.com/services/data-platform-accelerator: HTTP Error: 404
+2025-08-26 16:31:57,271 - INFO - 📊 Report saved to zion-website-simple-analysis-report-interrupted.json

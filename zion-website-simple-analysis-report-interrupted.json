@@ -1,0 +1,477 @@
+{
+  "analysis_summary": {
+    "base_url": "https://ziontechgroup.com",
+    "total_pages_analyzed": 38,
+    "total_links_found": 84,
+    "analysis_duration_seconds": 39.96,
+    "start_time": "2025-08-26 16:31:17",
+    "end_time": "2025-08-26 16:31:57"
+  },
+  "broken_links": {
+    "count": 33,
+    "details": [
+      {
+        "url": "https://ziontechgroup.com/services/autonomous-analytics-briefs",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/vendor-security-questionnaire-automation",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/managed-sase-lite",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/ai-data-contracts-assistant",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/smart-release-notes-broadcaster",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/ai-autonomous-decision-engine",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/vendor-security-review-assistant",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/quantum-logistics-optimization",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/ai-customer-success-platform",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/managed-mlops-platform",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/ai-healthcare-diagnostics",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/quantum-internet-security",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/ai-powered-healthcare-diagnostics",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/churn-prediction-insights",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/local-seo-insights-engine",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/r-d-tooling-copilot",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/secure-data-mesh",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/real-time-data-analytics",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/agentic-customer-support-suite",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/agentic-supply-chain-copilot",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/ai-legal-contract-analyzer",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/zero-trust-email-and-endpoint",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/biotech-ai",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/ai-metaverse-development",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/ai-sales-sequence-orchestrator",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/agentic-revenue-forecasting-studio",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/data-quality-observability-service",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/docs-to-knowledge-bot",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/partner-portal-builder",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/ai-iot-platform-enterprise",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/sre-oncall-as-a-service",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/ai-sla-uptime-reporter",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/services/data-platform-accelerator",
+        "error": "HTTP Error: 404",
+        "status_code": 404,
+        "depth": 2
+      }
+    ]
+  },
+  "missing_content": {
+    "count": 5,
+    "details": [
+      {
+        "url": "https://ziontechgroup.com",
+        "issues": [
+          "Missing navigation",
+          "No images found"
+        ],
+        "depth": 0
+      },
+      {
+        "url": "https://ziontechgroup.com/request-quote/",
+        "issues": [
+          "Missing navigation",
+          "No images found"
+        ],
+        "depth": 1
+      },
+      {
+        "url": "https://ziontechgroup.com/services",
+        "issues": [
+          "Missing navigation",
+          "No images found"
+        ],
+        "depth": 1
+      },
+      {
+        "url": "https://ziontechgroup.com/request-quote",
+        "issues": [
+          "Missing navigation",
+          "No images found"
+        ],
+        "depth": 2
+      },
+      {
+        "url": "https://ziontechgroup.com/quantum-cybersecurity",
+        "issues": [
+          "Missing navigation",
+          "No images found"
+        ],
+        "depth": 2
+      }
+    ]
+  },
+  "working_links": {
+    "count": 5,
+    "urls": [
+      "https://ziontechgroup.com",
+      "https://ziontechgroup.com/request-quote/",
+      "https://ziontechgroup.com/services",
+      "https://ziontechgroup.com/request-quote",
+      "https://ziontechgroup.com/quantum-cybersecurity"
+    ]
+  },
+  "page_analysis": {
+    "https://ziontechgroup.com": {
+      "url": "https://ziontechgroup.com",
+      "title": "Zion Tech Group — AI, Cloud, and Cybersecurity Solutions",
+      "meta_description": "We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business.",
+      "content_length": 1035,
+      "has_navigation": false,
+      "has_footer": false,
+      "has_main_content": true,
+      "image_count": 0,
+      "form_count": 0,
+      "link_count": 2,
+      "headings": [
+        "Autonomous AI, Cloud, and Cybersecurity",
+        "What we deliver",
+        "AI Autonomous Systems",
+        "Cloud Platforms",
+        "Cybersecurity",
+        "Micro SaaS"
+      ],
+      "content_issues": [
+        "Missing navigation",
+        "No images found"
+      ]
+    },
+    "https://ziontechgroup.com/request-quote/": {
+      "url": "https://ziontechgroup.com/request-quote/",
+      "title": "Zion Tech Group — AI, Quantum, and Autonomous Systems",
+      "meta_description": "Zion Tech Group builds AI autonomous systems, quantum infrastructure, and Micro SaaS products that drive measurable outcomes.",
+      "content_length": 517,
+      "has_navigation": false,
+      "has_footer": false,
+      "has_main_content": true,
+      "image_count": 0,
+      "form_count": 0,
+      "link_count": 0,
+      "headings": [
+        "Request a Quote"
+      ],
+      "content_issues": [
+        "Missing navigation",
+        "No images found"
+      ]
+    },
+    "https://ziontechgroup.com/services": {
+      "url": "https://ziontechgroup.com/services",
+      "title": "Services — Zion Tech Group",
+      "meta_description": "AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.",
+      "content_length": 17538,
+      "has_navigation": false,
+      "has_footer": false,
+      "has_main_content": true,
+      "image_count": 0,
+      "form_count": 0,
+      "link_count": 87,
+      "headings": [
+        "Services",
+        "AI Autonomous Systems",
+        "Cloud Platforms",
+        "Cybersecurity",
+        "Micro SaaS",
+        "Featured Micro SaaS",
+        "Advanced IT Services",
+        "Innovative AI Services",
+        "Why Zion Tech Group"
+      ],
+      "content_issues": [
+        "Missing navigation",
+        "No images found"
+      ]
+    },
+    "https://ziontechgroup.com/request-quote": {
+      "url": "https://ziontechgroup.com/request-quote",
+      "title": "Zion Tech Group — AI, Quantum, and Autonomous Systems",
+      "meta_description": "Zion Tech Group builds AI autonomous systems, quantum infrastructure, and Micro SaaS products that drive measurable outcomes.",
+      "content_length": 517,
+      "has_navigation": false,
+      "has_footer": false,
+      "has_main_content": true,
+      "image_count": 0,
+      "form_count": 0,
+      "link_count": 0,
+      "headings": [
+        "Request a Quote"
+      ],
+      "content_issues": [
+        "Missing navigation",
+        "No images found"
+      ]
+    },
+    "https://ziontechgroup.com/quantum-cybersecurity": {
+      "url": "https://ziontechgroup.com/quantum-cybersecurity",
+      "title": "Zion Tech Group — AI, Quantum, and Autonomous Systems",
+      "meta_description": "Zion Tech Group builds AI autonomous systems, quantum infrastructure, and Micro SaaS products that drive measurable outcomes.",
+      "content_length": 512,
+      "has_navigation": false,
+      "has_footer": false,
+      "has_main_content": true,
+      "image_count": 0,
+      "form_count": 0,
+      "link_count": 0,
+      "headings": [
+        "Quantum Cybersecurity"
+      ],
+      "content_issues": [
+        "Missing navigation",
+        "No images found"
+      ]
+    }
+  },
+  "link_hierarchy": {
+    "https://ziontechgroup.com": [
+      "https://ziontechgroup.com/request-quote/",
+      "https://ziontechgroup.com/services"
+    ],
+    "https://ziontechgroup.com/request-quote/": [],
+    "https://ziontechgroup.com/services": [
+      "https://ziontechgroup.com/services/autonomous-analytics-briefs",
+      "https://ziontechgroup.com/services/vendor-security-questionnaire-automation",
+      "https://ziontechgroup.com/services/managed-sase-lite",
+      "https://ziontechgroup.com/services/ai-data-contracts-assistant",
+      "https://ziontechgroup.com/services/smart-release-notes-broadcaster",
+      "https://ziontechgroup.com/ai-autonomous-decision-engine",
+      "https://ziontechgroup.com/services/vendor-security-review-assistant",
+      "https://ziontechgroup.com/quantum-logistics-optimization",
+      "https://ziontechgroup.com/ai-customer-success-platform",
+      "https://ziontechgroup.com/services/managed-mlops-platform",
+      "https://ziontechgroup.com/ai-healthcare-diagnostics",
+      "https://ziontechgroup.com",
+      "https://ziontechgroup.com/quantum-internet-security",
+      "https://ziontechgroup.com/ai-powered-healthcare-diagnostics",
+      "https://ziontechgroup.com/services/churn-prediction-insights",
+      "https://ziontechgroup.com/services/local-seo-insights-engine",
+      "https://ziontechgroup.com/services/r-d-tooling-copilot",
+      "https://ziontechgroup.com/services/secure-data-mesh",
+      "https://ziontechgroup.com/real-time-data-analytics",
+      "https://ziontechgroup.com/services/agentic-customer-support-suite",
+      "https://ziontechgroup.com/services/agentic-supply-chain-copilot",
+      "https://ziontechgroup.com/ai-legal-contract-analyzer",
+      "https://ziontechgroup.com/services/zero-trust-email-and-endpoint",
+      "https://ziontechgroup.com/biotech-ai",
+      "https://ziontechgroup.com/request-quote",
+      "https://ziontechgroup.com/ai-metaverse-development",
+      "https://ziontechgroup.com/services/ai-sales-sequence-orchestrator",
+      "https://ziontechgroup.com/services/agentic-revenue-forecasting-studio",
+      "https://ziontechgroup.com/services/data-quality-observability-service",
+      "https://ziontechgroup.com/services/docs-to-knowledge-bot",
+      "https://ziontechgroup.com/services/partner-portal-builder",
+      "https://ziontechgroup.com/ai-iot-platform-enterprise",
+      "https://ziontechgroup.com/quantum-cybersecurity",
+      "https://ziontechgroup.com/services/sre-oncall-as-a-service",
+      "https://ziontechgroup.com/services/ai-sla-uptime-reporter",
+      "https://ziontechgroup.com/services/data-platform-accelerator",
+      "https://ziontechgroup.com/ai-powered-devops",
+      "https://ziontechgroup.com/ai-sales-intelligence-platform",
+      "https://ziontechgroup.com/quantum-cloud-platform",
+      "https://ziontechgroup.com/services/ai-fraud-detection-workbench",
+      "https://ziontechgroup.com/services/ai-compliance-policy-watcher",
+      "https://ziontechgroup.com/services/agentic-sales-engineer",
+      "https://ziontechgroup.com/services/zero-trust-access-service",
+      "https://ziontechgroup.com/ai-autonomous-content-factory",
+      "https://ziontechgroup.com/services/ai-rfp-response-copilot",
+      "https://ziontechgroup.com/ai-threat-intelligence",
+      "https://ziontechgroup.com/services/ai-marketing-content-studio",
+      "https://ziontechgroup.com/pricing",
+      "https://ziontechgroup.com/services/marketing-attribution-insights",
+      "https://ziontechgroup.com/quantum-crm-intelligence",
+      "https://ziontechgroup.com/ai-hr-analytics-platform",
+      "https://ziontechgroup.com/services/ai-governance-and-risk-suite",
+      "https://ziontechgroup.com/services/agentic-hr-recruiting-suite",
+      "https://ziontechgroup.com/services/agentic-finops-optimizer",
+      "https://ziontechgroup.com/services/soc2-evidence-collector",
+      "https://ziontechgroup.com/services/network-modernization-accelerator",
+      "https://ziontechgroup.com/ai-api-management",
+      "https://ziontechgroup.com/services/agentic-ops-runbook-engine",
+      "https://ziontechgroup.com/services/managed-kubernetes-platform",
+      "https://ziontechgroup.com/services/managed-observability-platform",
+      "https://ziontechgroup.com/services/managed-vulnerability-management",
+      "https://ziontechgroup.com/services/contract-clause-analyzer",
+      "https://ziontechgroup.com/space-technology",
+      "https://ziontechgroup.com/services/smart-invoice-extractor",
+      "https://ziontechgroup.com/services/smart-terms-policy-generator",
+      "https://ziontechgroup.com/services/data-governance-foundation",
+      "https://ziontechgroup.com/services/cost-aware-kubernetes-hardening",
+      "https://ziontechgroup.com/quantum-financial-trading",
+      "https://ziontechgroup.com/services/smart-churn-winback-campaigns",
+      "https://ziontechgroup.com/services/contract-redline-copilot",
+      "https://ziontechgroup.com/services/sre-and-reliability-ops",
+      "https://ziontechgroup.com/services/agentic-qa-and-test-writer",
+      "https://ziontechgroup.com/quantum-ai-brain-computer-interface",
+      "https://ziontechgroup.com/autonomous-vehicle-ai",
+      "https://ziontechgroup.com/services/risk-and-compliance-copilot",
+      "https://ziontechgroup.com/services/enterprise-sso-and-iam-hardening",
+      "https://ziontechgroup.com/contact",
+      "https://ziontechgroup.com/enterprise-blockchain-platform",
+      "https://ziontechgroup.com/services/gdpr-cookie-consent-manager",
+      "https://ziontechgroup.com/services/ai-procurement-bid-analyzer",
+      "https://ziontechgroup.com/services/data-platform-modernization",
+      "https://ziontechgroup.com/ai-financial-planning-platform"
+    ],
+    "https://ziontechgroup.com/request-quote": [],
+    "https://ziontechgroup.com/quantum-cybersecurity": []
+  },
+  "recommendations": [
+    "Fix 33 broken links to improve user experience",
+    "Address 5 pages with missing content",
+    "Add navigation to 5 pages",
+    "Consider adding images to 5 pages for better visual appeal"
+  ]
+}
