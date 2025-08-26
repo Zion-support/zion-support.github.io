@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
-=======
 import { 
   Search, 
   Users, 
@@ -16,7 +13,6 @@ import {
   Zap, 
   Shield 
 } from 'lucide-react';
->>>>>>> cursor/expand-services-and-deploy-updates-f909
 
 export default function HowItWorksSection() {
   const [hoveredStep, setHoveredStep] = useState(null);
@@ -151,12 +147,7 @@ export default function HowItWorksSection() {
           style={{
             backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
             backgroundSize: '40px 40px'
-<<<<<<< HEAD
-          }}
-        />
-=======
           }}/>
->>>>>>> cursor/expand-services-and-deploy-updates-f909
       </div>
 
       {/* Floating decorative elements */}
@@ -245,11 +236,6 @@ export default function HowItWorksSection() {
                 onMouseEnter={() => setHoveredStep(index)}
                 onMouseLeave={() => setHoveredStep(null)}
               >
-<<<<<<< HEAD
-                <div className="text-center h-full">
-                  {/* Step number with enhanced styling */}
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border-2 border-zion-cyan text-white font-bold text-xl mb-6 relative z-10 shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">
-=======
                 {/* Step Icon */}
                 <div className={`relative mb-6 mx-auto w-20 h-20 rounded-full bg-gradient-to-r ${step.bgColor} border-2 border-transparent group-hover:border-zion-cyan/50 transition-all duration-300 flex items-center justify-center`}>
                   <div className={`text-white group-hover:scale-110 transition-transform duration-300`}>
@@ -257,7 +243,6 @@ export default function HowItWorksSection() {
                   </div>
                   {/* Step Number */}
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white text-sm font-bold border-2 border-zion-blue-dark">
->>>>>>> cursor/expand-services-and-deploy-updates-f909
                     {index + 1}
                   </div>
                 </div>
