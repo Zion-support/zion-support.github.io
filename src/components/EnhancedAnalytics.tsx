@@ -376,7 +376,7 @@ const EnhancedAnalytics: React.FC<AnalyticsProps> = ({
             <h4 className="text-sm font-medium text-gray-700 flex items-center space-x-2">
               <Zap className="w-4 h-4" />
               <span>Performance</span>
-            </div>
+            </h4>
             <div className="space-y-2">
               {analyticsData.performanceMetrics.map((metric) => (
                 <div key={metric.metric} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
@@ -401,7 +401,7 @@ const EnhancedAnalytics: React.FC<AnalyticsProps> = ({
             <h4 className="text-sm font-medium text-gray-700 flex items-center space-x-2">
               <Target className="w-4 h-4" />
               <span>Conversion Funnel</span>
-            </div>
+            </h4>
             <div className="space-y-2">
               {analyticsData.conversionFunnels.map((stage, index) => (
                 <div key={stage.stage} className="relative">

@@ -1,48 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { 
-  CpuChipIcon, 
-  CogIcon, 
-  RocketLaunchIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  ShieldCheckIcon,
-  LightBulbIcon
-} from '@heroicons/react/24/outline';
-=======
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-<<<<<<< HEAD
-  Zap, 
-  Shield, 
-  Cpu, 
-  Database, 
-  Network, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  TrendingUp,
-  Award,
-  Globe,
-  Lock,
-  Code,
-  BarChart3,
-  Target,
-  Lightbulb,
-  Rocket,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Bot,
-  Cog,
-  Activity
-=======
   Cpu, 
   Zap, 
   Shield, 
@@ -51,99 +10,16 @@ import {
   Globe, 
   Database,
   Lock,
-  BarChart3,
-  Target,
-  Rocket
->>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+  Cloud,
+  Settings,
+  Monitor,
+  AlertTriangle,
+  RefreshCw,
+  Eye,
+  Heart,
+  Star
 } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-889e
 
-<<<<<<< HEAD
-const AIAutonomousSystems: React.FC = () => {
-  const features = [
-    {
-<<<<<<< HEAD
-      icon: CpuChipIcon,
-      title: "Intelligent Decision Making",
-      description: "AI-powered autonomous decision-making systems that learn and adapt to complex environments in real-time."
-    },
-    {
-      icon: CpuChipIcon,
-      title: "Machine Learning Integration",
-      description: "Advanced ML algorithms that continuously improve system performance and decision accuracy."
-    },
-    {
-      icon: CogIcon,
-      title: "Automated Operations",
-      description: "Fully autonomous system operations with minimal human intervention and maximum efficiency."
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: "Scalable Architecture",
-      description: "Modular and scalable system architecture that grows with your business needs."
-    },
-    {
-      icon: ChartBarIcon,
-      title: "Performance Analytics",
-      description: "Comprehensive analytics and monitoring for system performance optimization and insights."
-    },
-    {
-      icon: GlobeAltIcon,
-      title: "Global Connectivity",
-      description: "Seamless integration with global networks and cloud-based autonomous systems."
-    }
-  ];
-
-  const benefits = [
-    "Increase operational efficiency by 400%",
-    "Reduce human error by 95%",
-    "24/7 autonomous operation capability",
-    "Real-time adaptive decision making",
-    "Scalable across all business units",
-    "Cost reduction of up to 70% in operations"
-  ];
-
-  const useCases = [
-    {
-      title: "Manufacturing Automation",
-      description: "Intelligent manufacturing systems with autonomous quality control and production optimization."
-    },
-    {
-      title: "Logistics & Supply Chain",
-      description: "Autonomous logistics systems with intelligent routing and inventory management."
-    },
-    {
-      title: "Healthcare Systems",
-      description: "AI-powered healthcare automation with autonomous patient monitoring and care coordination."
-    },
-    {
-      title: "Financial Services",
-      description: "Autonomous trading systems and risk management with real-time market analysis."
-    }
-  ];
-
-  const systemMetrics = [
-    {
-      metric: "Decision Accuracy",
-      value: "99.7%",
-      description: "Accuracy of autonomous decisions"
-    },
-    {
-      metric: "Response Time",
-      value: "<100ms",
-      description: "Average system response time"
-    },
-    {
-      metric: "Uptime",
-      value: "99.99%",
-      description: "System availability and reliability"
-    },
-    {
-      metric: "Learning Rate",
-      value: "+15%",
-      description: "Monthly improvement in performance"
-    }
-=======
 const AIAutonomousSystems = () => {
   const features = [
     {
@@ -204,20 +80,9 @@ const AIAutonomousSystems = () => {
     "Quantum Computing Integration",
     "Blockchain & Distributed Systems",
     "Cloud-Native Architecture"
->>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-<<<<<<< HEAD
-      <Helmet>
-        <title>AI Autonomous Systems - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered autonomous systems platform. Intelligent decision-making, automated operations, and scalable architecture for enterprise transformation." />
-        <meta name="keywords" content="AI systems, autonomous systems, intelligent automation, AI decision making, system automation, AI operations" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-systems" />
-      </Helmet>
-=======
     <div className="min-h-screen bg-background">
       <SEO 
         title="AI & Autonomous Systems - Zion Tech Group" 
@@ -225,7 +90,6 @@ const AIAutonomousSystems = () => {
         tags={["AI autonomous systems", "artificial intelligence", "machine learning", "business automation"]}
         url="https://ziontechgroup.com/services/ai-autonomous-systems"
       />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -282,28 +146,10 @@ export default function AIAutonomousSystems() {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> origin/cursor/website-audit-and-enhancement-da65
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
-              AI Autonomous Systems
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Next-generation autonomous systems powered by artificial intelligence that make 
-              intelligent decisions, operate independently, and continuously learn and improve.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Start System Assessment
-              </button>
-              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                View Demo
-=======
           >
             <div className="flex justify-center mb-6">
               <div className="p-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full">
@@ -322,7 +168,6 @@ export default function AIAutonomousSystems() {
               </button>
               <button className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
                 Learn More
->>>>>>> origin/cursor/website-audit-and-enhancement-da65
               </button>
             </div>
           </motion.div>
@@ -353,7 +198,6 @@ export default function AIAutonomousSystems() {
               </Link>
             </div>
           </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
         </div>
         
         {/* Animated Background Elements */}
@@ -365,31 +209,12 @@ export default function AIAutonomousSystems() {
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
       <section className="py-16 px-4">
->>>>>>> origin/cursor/website-audit-and-enhancement-da65
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Autonomous Capabilities
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI autonomous systems combine cutting-edge artificial intelligence with 
-              advanced automation to deliver unprecedented operational efficiency and intelligence.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -400,21 +225,12 @@ export default function AIAutonomousSystems() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> origin/cursor/website-audit-and-enhancement-da65
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300"
-              >
-                <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
-=======
       title: "Intelligent Decision Making",
       description: "AI systems that make autonomous decisions based on real-time data and learned patterns",
       icon: Brain,
@@ -606,65 +422,12 @@ export default function AIAutonomousSystems() {
                     </ul>
                   </div>
                 </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
               </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-889e
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Operations
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented efficiency and intelligence with our AI autonomous 
-              systems that never sleep and never stop learning.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-xl p-8 border border-cyan-500/30"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">System Performance</h3>
-              <div className="space-y-4">
-                {systemMetrics.map((metric, index) => (
-                  <div key={index} className="flex justify-between items-center">
-                    <span className="text-gray-300">{metric.metric}</span>
-                    <span className="text-cyan-400 font-semibold">{metric.value}</span>
-                  </div>
-                ))}
-=======
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -691,7 +454,6 @@ export default function AIAutonomousSystems() {
                     </li>
                   ))}
                 </ul>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-889e
               </div>
             </motion.div>
 =======
@@ -705,48 +467,17 @@ export default function AIAutonomousSystems() {
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
->>>>>>> origin/cursor/website-audit-and-enhancement-da65
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
       <section className="py-16 px-4 bg-gray-800/30">
->>>>>>> origin/cursor/website-audit-and-enhancement-da65
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From manufacturing to healthcare, our AI autonomous systems provide 
-              intelligent solutions for every industry and use case.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300"
-              >
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
-=======
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -768,7 +499,6 @@ export default function AIAutonomousSystems() {
               >
                 <Target className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span className="text-gray-200">{useCase}</span>
->>>>>>> origin/cursor/website-audit-and-enhancement-da65
               </motion.div>
 =======
       <section className="py-16 px-4 bg-gray-800/20">
@@ -821,72 +551,12 @@ export default function AIAutonomousSystems() {
                   <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
                 </div>
                 <p className="text-gray-300">{useCase.description}</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Pricing Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Plan
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed to meet your automation and AI needs
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`relative bg-gray-800/30 rounded-lg p-8 border transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-purple-500 bg-purple-500/10' 
-                  : 'border-gray-700 hover:border-cyan-500'
-              }`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-white mb-2">
-                    {plan.price}
-                    <span className="text-lg text-gray-400">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300">{plan.description}</p>
-                </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <Link
-                  to={plan.plan === "Enterprise" ? "/contact" : "/contact"}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-purple-600 hover:bg-purple-700 text-white'
-                      : 'bg-cyan-600 hover:bg-cyan-700 text-white'
-                  }`}
-                >
-                  {plan.cta}
-                </Link>
-              </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-889e
-=======
       {/* Technologies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -899,81 +569,20 @@ export default function AIAutonomousSystems() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-gray-700/50 hover:border-cyan-500/30 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="text-cyan-400 text-sm font-medium">{tech}</div>
-              </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
-            ))}
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 p-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {technologies.map((tech, index) => (
+                <div key={index} className="flex items-center text-gray-300">
+                  <Cpu className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  {tech}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Technology Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-=======
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
->>>>>>> origin/cursor/website-audit-and-enhancement-da65
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Cutting-Edge Technology Stack
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built on the latest AI and machine learning technologies for maximum 
-              performance, reliability, and scalability.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
-              <CpuChipIcon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Deep Learning</h3>
-              <p className="text-gray-300">Advanced neural networks for complex pattern recognition and decision making</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center"
-            >
-              <ShieldCheckIcon className="w-16 h-16 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Security First</h3>
-              <p className="text-gray-300">Enterprise-grade security with encryption and access control</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-center"
-            >
-              <LightBulbIcon className="w-16 h-16 text-green-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Continuous Learning</h3>
-              <p className="text-gray-300">Systems that continuously improve and adapt to new challenges</p>
-            </motion.div>
-=======
       <section className="py-16 px-4 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -990,23 +599,10 @@ export default function AIAutonomousSystems() {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how AI autonomous systems can revolutionize your operations and drive growth.
->>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-<<<<<<< HEAD
-              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-600 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2 inline" />
-            </Link>
-            <Link
-              to="/services"
-              className="px-8 py-4 bg-gray-800/50 hover:bg-gray-700/70 text-white font-semibold rounded-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
-            >
-              Explore All Services
-=======
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-lg font-semibold transform hover:scale-105 shadow-lg shadow-cyan-500/30"
             >
               Schedule Consultation
@@ -1016,9 +612,7 @@ export default function AIAutonomousSystems() {
               className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg hover:bg-cyan-400/20 transition-all duration-300 text-lg font-semibold"
             >
               View Pricing
->>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
             </Link>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-889e
           </div>
 =======
             viewport={{ once: true }}
@@ -1036,7 +630,6 @@ export default function AIAutonomousSystems() {
               </button>
             </div>
           </motion.div>
->>>>>>> origin/cursor/website-audit-and-enhancement-da65
         </div>
       </section>
 

@@ -1,37 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
 =======
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Play, Pause, Volume2, VolumeX, ChevronLeft, ChevronRight, Zap, Shield, Users, Globe, Star } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
->>>>>>> origin/cursor/build-and-fix-errors-e276
-import { Link } from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { 
-  ArrowRightIcon,
-  PlayIcon,
-  StarIcon
-} from '@heroicons/react/24/outline';
-=======
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, Sparkles, Users, Zap, Shield, Globe, Cpu, Brain, Star, CheckCircle } from "lucide-react";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-59b2
-
-export function HeroSection() {
-=======
 
 =======
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Building, ArrowRight, Check, Zap, Globe, Shield, Cpu, Rocket, Brain, Server, Code, ShieldCheck, Sparkles, Star, Award, TrendingUp, Users, Clock, Target, BarChart3, Bot, CpuIcon, Eye, Layers, Globe2, ZapIcon } from 'lucide-react';
@@ -41,59 +14,34 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { GradientHeading } from './GradientHeading';
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { Button } from './ui/button';
 
 export const HeroSection: React.FC = () => {
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======
 import { ArrowRight, Sparkles, Globe, Zap } from "lucide-react";
 =======
 import { useTranslation } from "react-i18next";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { AnimatedBackground, NeonGlow, FloatingElements } from "@/components/ui/AnimatedBackground";
-import { Brain, Users, Shield, Zap } from "lucide-react";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
-=======
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Zap, Globe } from "lucide-react";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
 =======
 import { ArrowRight, Sparkles, Zap, Users, Globe } from "lucide-react";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 =======
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Globe, Clock } from "lucide-react";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 =======
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Zap, Users } from "lucide-react";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
 =======
 import { motion } from "framer-motion";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
 =======
 import { ArrowRight, Sparkles, Users, Zap } from "lucide-react";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4514
 =======
 import { motion } from "framer-motion";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6350
+=======
 
 export function HeroSection() {
   const { t } = useTranslation();
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-and-fix-errors-e276
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Search, Zap, Shield, Users, ArrowRight } from 'lucide-react';
@@ -101,42 +49,21 @@ import { Button } from './ui/Button';
 import { Link } from 'react-router-dom';
 
 export function HeroSection() {
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6350
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        staggerChildren: 0.2
-=======
         staggerChildren: 0.2,
-<<<<<<< HEAD
-        delayChildren: 0.3
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-=======
         delayChildren: 0.1
->>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
         staggerChildren: 0.2,
         delayChildren: 0.1
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       }
 =======
 
@@ -176,25 +103,14 @@ const HeroSection = () => {
       icon: <Shield className="w-8 h-8" />,
       title: "Quantum-Ready Security",
       description: "Future-proof cybersecurity and encryption"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
     }
   ];
 
-<<<<<<< HEAD
-  const itemVariants = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    hidden: { y: 30, opacity: 0 },
-=======
     hidden: { y: 50, opacity: 0 },
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======
     hidden: { y: 20, opacity: 0 },
->>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
     hidden: { opacity: 0, y: 30 },
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 =======
         staggerChildren: 0.2,
         delayChildren: 0.1
@@ -204,27 +120,14 @@ const HeroSection = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        duration: 0.8
-=======
         duration: 0.8,
 =======
         duration: 0.6,
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-and-fix-errors-e276
-        ease: "easeOut"
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-=======
         ease: "easeOut" as const
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
       }
 =======
   useEffect(() => {
@@ -234,20 +137,11 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [features.length]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const scrollToServices = () => {
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' });
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
-=======
   const floatingVariants = {
     float: {
 =======
   const floatingVariants = {
     animate: {
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
       y: [-10, 10, -10],
       transition: {
         duration: 6,
@@ -256,19 +150,15 @@ const HeroSection = () => {
 =======
         staggerChildren: 0.2,
         delayChildren: 0.1
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
 =======
         staggerChildren: 0.2,
         delayChildren: 0.1
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 =======
         staggerChildren: 0.2,
         delayChildren: 0.1
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
 =======
         duration: 0.6,
         ease: "easeOut"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
 =======
         staggerChildren: 0.2,
         delayChildren: 0.1
@@ -284,35 +174,18 @@ const HeroSection = () => {
       transition: {
         duration: 0.6,
         ease: "easeOut"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6350
       }
     }
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const pulseVariants = {
-    pulse: {
-      scale: [1, 1.05, 1],
-      opacity: [0.8, 1, 0.8],
-      transition: {
-        duration: 3,
-=======
   const floatingVariants = {
     animate: {
       y: [-10, 10, -10],
       transition: {
         duration: 4,
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         repeat: Infinity,
         ease: "easeInOut"
       }
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
     }
   };
 =======
@@ -346,7 +219,6 @@ const HeroSection = () => {
     { icon: Cpu, text: "Micro SAAS Solutions", color: "from-blue-500 to-cyan-500", ariaLabel: "Micro SAAS software solutions" },
     { icon: Shield, text: "Enterprise Security", color: "from-green-500 to-emerald-500", ariaLabel: "Enterprise-grade security features" }
   ], []);
->>>>>>> origin/cursor/website-audit-and-enhancement-803a
 
   const socialProof = [
     { text: "Trusted by 500+ companies worldwide", icon: CheckCircle },
@@ -369,37 +241,12 @@ const HeroSection = () => {
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <section className="relative py-20 md:py-32 min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-purple opacity-90" />
-=======
     <section className="relative overflow-hidden py-20 md:py-32 min-h-[90vh] flex items-center" role="banner" aria-label="Hero Section">
       {/* Background Layers */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-95" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-59b2
 =======
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Enhanced Animated Background */}
-      <AnimatedBackground variant="particles" intensity="medium" />
-      <FloatingElements count={8} />
-      
-<<<<<<< HEAD
-      {/* Background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue opacity-90"></div>
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
-      
-<<<<<<< HEAD
-      {/* Animated Background Elements */}
-=======
     <section className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
       {/* Enhanced background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"></div>
@@ -408,19 +255,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-transparent to-zion-purple/20 animate-pulse"></div>
       
       {/* Enhanced floating particles with better positioning */}
->>>>>>> origin/cursor/build-and-fix-errors-e276
       <div className="absolute inset-0">
-<<<<<<< HEAD
-        <div className="absolute top-20 left-10 w-20 h-20 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-zion-cyan/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-zion-purple/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-      </div>
-      
-<<<<<<< HEAD
-      {/* Content */}
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark">
       {/* Advanced Quantum Background */}
       <div className="absolute inset-0">
@@ -469,19 +304,14 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"></div>
       
       {/* Enhanced animated floating particles */}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4514
       <div className="absolute inset-0">
 =======
       {/* Enhanced animated floating particles */}
       <div className="absolute inset-0 overflow-hidden">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>
         <div className="absolute top-1/3 right-1/4 w-3 h-3 rounded-full bg-zion-cyan opacity-30 animate-pulse"></div>
         <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse"></div>
         <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-pulse"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-slate to-zion-purple-dark opacity-90"></div>
       <div className="absolute inset-0 cyber-grid opacity-20"></div>
@@ -496,7 +326,6 @@ const HeroSection = () => {
         <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-40 animate-pulse neon-glow"></div>
         <div className="absolute top-1/6 right-1/6 w-1 h-1 rounded-full bg-zion-purple-light opacity-70 animate-pulse neon-glow"></div>
         <div className="absolute bottom-1/3 left-1/6 w-2 h-2 rounded-full bg-zion-cyan opacity-40 animate-pulse neon-glow"></div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 =======
         
         {/* Additional animated elements */}
@@ -519,7 +348,6 @@ const HeroSection = () => {
           backgroundImage: `radial-gradient(circle at 1px 1px, rgba(34, 221, 210, 0.3) 1px, transparent 0)`,
           backgroundSize: '50px 50px'
         }}></div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
 =======
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-float"></div>
         <div className="absolute top-1/3 right-1/3 w-3 h-3 rounded-full bg-zion-cyan opacity-30 animate-float" style={{animationDelay: '1s'}}></div>
@@ -527,7 +355,6 @@ const HeroSection = () => {
         <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-float" style={{animationDelay: '0.5s'}}></div>
         <div className="absolute top-1/6 right-1/6 w-1 h-1 rounded-full bg-zion-purple-light opacity-60 animate-float" style={{animationDelay: '1.5s'}}></div>
         <div className="absolute bottom-1/3 left-1/6 w-2 h-2 rounded-full bg-zion-cyan opacity-25 animate-float" style={{animationDelay: '0.8s'}}></div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
       </div>
       
       <div className="container relative z-10 px-4 mx-auto text-center">
@@ -536,29 +363,10 @@ const HeroSection = () => {
             {t('home.hero_title')}
           </GradientHeading>
         </NeonGlow>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
 
         {/* Neural Network Grid */}
         <div className="absolute inset-0 cyber-grid opacity-10" />
         
-<<<<<<< HEAD
-        {/* Floating Quantum Particles */}
-        <motion.div
-          className="absolute top-1/4 left-1/3 w-2 h-2 bg-zion-cyan rounded-full"
-          variants={floatingVariants}
-          animate="float"
-        />
-        <motion.div
-          className="absolute top-1/3 right-1/4 w-1 h-1 bg-zion-purple rounded-full"
-          variants={floatingVariants}
-          animate="float"
-          style={{ animationDelay: '1s' }}
-        />
-        <motion.div
-          className="absolute bottom-1/3 left-1/4 w-1.5 h-1.5 bg-zion-cyan rounded-full"
-          variants={floatingVariants}
-          animate="float"
-=======
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -577,64 +385,16 @@ const HeroSection = () => {
           className="absolute bottom-32 left-1/3 w-20 h-20 bg-zion-purple/30 rounded-full blur-xl"
           variants={floatingVariants}
           animate="animate"
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
           style={{ animationDelay: '2s' }}
         />
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-=======
       <div className="relative z-10 container mx-auto px-4 text-center">
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         <motion.div
           className="max-w-6xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-<<<<<<< HEAD
-          className="max-w-5xl mx-auto"
-        >
-<<<<<<< HEAD
-          {/* Badge */}
-          <motion.div
-            variants={itemVariants}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-8"
-          >
-            <StarIcon className="w-4 h-4" />
-            Trusted by 500+ Companies Worldwide
-          </motion.div>
-          
-          {/* Main Heading */}
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight"
-          >
-            <span className="bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent animate-pulse">
-              Transform
-            </span>
-            <br />
-            <span className="text-white">Your Business</span>
-            <br />
-            <span className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              with AI
-            </span>
-          </motion.h1>
-          
-          {/* Subtitle */}
-<<<<<<< HEAD
-          <motion.p
-            variants={itemVariants}
-            className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-10 leading-relaxed max-w-4xl mx-auto"
-          >
-            Empowering enterprises with cutting-edge artificial intelligence solutions, 
-            quantum computing, and innovative technology services that drive real results.
-          </motion.p>
-          
-=======
           <motion.div variants={itemVariants} className="mb-12">
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
               Discover cutting-edge AI solutions, connect with top tech talent, and access innovative micro SAAS services 
@@ -678,7 +438,6 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-59b2
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
@@ -688,14 +447,6 @@ const HeroSection = () => {
               to="/services"
               className="group bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-10 py-5 rounded-xl font-semibold text-xl transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 hover:scale-105 flex items-center gap-3"
             >
-<<<<<<< HEAD
-              Explore Services
-              <ArrowRightIcon className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
-            <Link
-              to="/contact"
-              className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-10 py-5 rounded-xl font-semibold text-xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
-=======
               <Link to="/signup" role="button" aria-label="Get Started Today">
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -705,7 +456,6 @@ const HeroSection = () => {
             <Link 
               to="/marketplace"
               className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6 px-8 rounded-xl inline-flex items-center justify-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25 backdrop-blur-md bg-white/5"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-59b2
             >
               Get Started
               <ArrowRightIcon className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
@@ -732,7 +482,6 @@ const HeroSection = () => {
       {/* Decorative geometric shapes */}
       <div className="absolute top-20 right-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"></div>
       <div className="absolute bottom-20 left-20 w-24 h-24 border border-zion-purple/20 transform rotate-45 opacity-30"></div>
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
       
       <motion.div 
         className="container relative z-10 px-4 mx-auto text-center"
@@ -742,36 +491,15 @@ const HeroSection = () => {
       >
         {/* Enhanced title with better typography */}
         <motion.div variants={itemVariants} className="mb-6">
-<<<<<<< HEAD
-          <GradientHeading className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            {t('home.hero_title') || "The Future of Tech is Here"}
-=======
           <GradientHeading className="text-5xl md:text-7xl font-bold leading-tight">
             {t('home.hero_title')}
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
           </GradientHeading>
         </motion.div>
 
         {/* Enhanced subtitle with better spacing */}
-<<<<<<< HEAD
-        <motion.div variants={itemVariants} className="mb-10">
-          <p className="text-lg sm:text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            {t('home.hero_subtitle') || "Discover top AI and tech talent, services, and equipment in one place. Powered by cutting-edge AI matching technology."}
-          </p>
-        </motion.div>
-
-        {/* Enhanced CTA buttons with better mobile layout */}
-        <motion.div 
-          variants={itemVariants}
-          className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 max-w-md sm:max-w-none mx-auto"
-        >
-          <Button
-            className="group bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-=======
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 shadow-lg hover:shadow-zion-purple/25 transition-all duration-300"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
 =======
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -798,13 +526,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
-<<<<<<< HEAD
-      {/* Enhanced background with multiple gradient layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-zion-slate-dark via-transparent to-transparent opacity-60"></div>
-      
-      {/* Animated floating particles with better positioning */}
-=======
       {/* Enhanced Background with multiple layers */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"></div>
       
@@ -812,7 +533,6 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-transparent to-zion-purple-light/20"></div>
       
       {/* Enhanced floating particles with better positioning */}
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
       <motion.div 
         className="absolute inset-0"
         variants={containerVariants}
@@ -820,66 +540,6 @@ const HeroSection = () => {
         animate="visible"
       >
         <motion.div 
-<<<<<<< HEAD
-          className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60"
-          variants={floatingVariants}
-          animate="float"
-        />
-        <motion.div 
-          className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-50"
-          variants={floatingVariants}
-          animate="float"
-          style={{ animationDelay: "1s" }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-70"
-          variants={floatingVariants}
-          animate="float"
-          style={{ animationDelay: "2s" }}
-        />
-        <motion.div 
-          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30"
-          variants={floatingVariants}
-          animate="float"
-          style={{ animationDelay: "0.5s" }}
-        />
-        <motion.div 
-          className="absolute top-3/4 left-1/3 w-2 h-2 rounded-full bg-zion-purple-light opacity-40"
-          variants={floatingVariants}
-          animate="float"
-          style={{ animationDelay: "1.5s" }}
-        />
-      </motion.div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-20 left-10 opacity-20">
-        <Sparkles className="w-8 h-8 text-zion-cyan" />
-      </div>
-      <div className="absolute top-32 right-20 opacity-20">
-        <Zap className="w-6 h-6 text-zion-purple" />
-      </div>
-      <div className="absolute bottom-32 left-20 opacity-20">
-        <Globe className="w-7 h-7 text-zion-cyan-light" />
-      </div>
-      
-      <div className="container relative z-10 px-4 mx-auto text-center max-w-6xl">
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <GradientHeading className="mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            {t('home.hero_title')}
-          </GradientHeading>
-        </motion.div>
-
-        <motion.p 
-          className="text-lg sm:text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed"
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-        >
-=======
       {/* Enhanced background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark opacity-90"></div>
       
@@ -914,7 +574,6 @@ const HeroSection = () => {
         </div>
 
         <p className="text-xl md:text-2xl text-zion-cyan mb-10 max-w-3xl mx-auto font-medium drop-shadow-[0_0_20px_rgba(34,221,210,0.3)]">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
           {t('home.hero_subtitle')}
         </motion.p>
 
@@ -926,7 +585,6 @@ const HeroSection = () => {
         >
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
 =======
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -1039,7 +697,6 @@ const HeroSection = () => {
         >
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 =======
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -1157,7 +814,6 @@ const HeroSection = () => {
         >
           <Button
             className="group bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
 =======
   const particleVariants = {
     float: {
@@ -1231,7 +887,6 @@ const HeroSection = () => {
         >
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
 =======
         <div className="absolute top-1/6 right-1/6 w-1 h-1 rounded-full bg-zion-purple-light opacity-50 animate-pulse"></div>
         <div className="absolute bottom-1/3 left-1/6 w-2 h-2 rounded-full bg-zion-cyan opacity-25 animate-pulse"></div>
@@ -1255,30 +910,6 @@ const HeroSection = () => {
           {t('home.hero_subtitle') || "Connect with world-class AI talent, cutting-edge tech services, and innovative solutions. Join the revolution that's reshaping the future of work."}
         </p>
 
-<<<<<<< HEAD
-        {/* Feature highlights */}
-        <div className="flex flex-wrap justify-center gap-6 mb-10 text-zion-slate-light">
-          <div className="flex items-center gap-2">
-            <Users className="w-5 h-5 text-zion-cyan" />
-            <span>10,000+ Verified Talents</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Zap className="w-5 h-5 text-zion-purple" />
-            <span>AI-Powered Matching</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-zion-cyan-light" />
-            <span>24/7 Global Support</span>
-          </div>
-        </div>
-
-        {/* Enhanced CTA buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-          <Button
-<<<<<<< HEAD
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4514
-=======
   const particleVariants = {
     animate: {
       y: [0, -20, 0],
@@ -1357,16 +988,13 @@ const HeroSection = () => {
         >
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6350
 =======
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 hover-neon transition-all duration-300 hover:scale-105"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
 =======
         {/* Enhanced CTA buttons with neon effects */}
         <div className="flex flex-col sm:flex-row justify-center gap-6">
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg shadow-zion-purple/30 hover:shadow-zion-purple/50 transition-all duration-300 transform hover:scale-105"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
             size="lg"
             asChild
           >
@@ -1378,13 +1006,6 @@ const HeroSection = () => {
               data-testid="hero-signup-btn"
               className="flex items-center gap-2"
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Sparkles className="w-5 h-5" />
-              {t('auth.signup') || "Get Started"}
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
->>>>>>> origin/cursor/build-and-fix-errors-e276
-=======
         <motion.p 
           variants={itemVariants}
           className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed"
@@ -1423,199 +1044,69 @@ const HeroSection = () => {
           >
             <Link to="/signup">
               {t('auth.signup')}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
-=======
               <ArrowRight className="w-5 h-5" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
 =======
               <span className="flex items-center gap-2">
                 {t('auth.signup')}
                 <ArrowRight className="w-5 h-5" />
               </span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 =======
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
 =======
               {t('auth.signup') || "Get Started"}
               <ArrowRight className="w-5 h-5" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4514
             </Link>
           </Button>
           
           <Link
             id="browse-marketplace"
             to="/marketplace"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-xl inline-flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 transform hover:scale-105"
-          >
-            <Globe className="w-5 h-5" />
-            {t('home.browse_marketplace') || "Browse Marketplace"}
-            <Zap className="w-4 h-4 group-hover:scale-110 transition-transform" />
-=======
             className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center transition-all duration-300 hover-lift hover-glow shadow-2xl backdrop-blur-sm"
 =======
             className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-4 rounded-md inline-flex items-center justify-center backdrop-blur-sm transition-all duration-300"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
 =======
             className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center transition-all duration-200 hover:shadow-lg transform hover:scale-105"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
 =======
             className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center transform hover:scale-105 transition-all duration-200 hover:shadow-lg"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6350
 =======
             className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-4 rounded-md inline-flex items-center justify-center hover-glow transition-all duration-300 hover:scale-105"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
 =======
             className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center transition-all duration-300 transform hover:scale-105 shadow-lg shadow-zion-cyan/20 hover:shadow-zion-cyan/40"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
           >
             {t('home.browse_marketplace')}
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
           </Link>
         </motion.div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-          {/* Video Demo Button */}
-          <motion.div
-            variants={itemVariants}
-            className="mb-16"
-          >
-            <button className="inline-flex items-center gap-3 text-zion-slate-light hover:text-white transition-colors duration-300 group">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-zion-cyan/50 group-hover:bg-zion-cyan/20 transition-all duration-300">
-                <PlayIcon className="w-8 h-8 text-white ml-1" />
-              </div>
-              <div className="text-left">
-                <div className="text-sm text-zion-slate-light group-hover:text-zion-cyan transition-colors duration-300">
-                  Watch Demo
-                </div>
-                <div className="text-xs text-zion-slate-light">
-                  2 min overview
-                </div>
-              </div>
-            </button>
-          </motion.div>
-          
-          {/* Stats */}
-          <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto"
-          >
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2 group-hover:text-zion-cyan-light transition-colors duration-300">500+</div>
-              <div className="text-zion-slate-light text-sm">Projects Delivered</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-zion-purple mb-2 group-hover:text-zion-purple-light transition-colors duration-300">50+</div>
-              <div className="text-zion-slate-light text-sm">Enterprise Clients</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2 group-hover:text-zion-cyan-light transition-colors duration-300">99.9%</div>
-              <div className="text-zion-slate-light text-sm">Uptime SLA</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-zion-purple mb-2 group-hover:text-zion-purple-light transition-colors duration-300">24/7</div>
-              <div className="text-zion-slate-light text-sm">Support</div>
-            </div>
-          </motion.div>
-        </motion.div>
-=======
             className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
             {t('home.browse_marketplace') || "Explore Marketplace"}
             <ArrowRight className="w-4 h-4" />
           </Link>
-<<<<<<< HEAD
-        </div>
-
-<<<<<<< HEAD
-        {/* Trust indicators */}
-        <div className="text-sm text-zion-slate-light opacity-80">
-          <p>Trusted by Fortune 500 companies worldwide</p>
-          <p className="mt-1">Join 50,000+ professionals already using Zion</p>
-        </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4514
-      </div>
-      
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-zion-cyan/30 rounded-full flex justify-center">
-          <motion.div
-            className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          />
-        </div>
-<<<<<<< HEAD
-=======
         {/* Enhanced trust indicators */}
         <motion.div 
           variants={itemVariants}
-<<<<<<< HEAD
-          className="mt-12 flex flex-wrap justify-center items-center gap-6 text-zion-slate-light text-sm"
-        >
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-            <span>AI-Powered Matching</span>
-=======
             className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 transform hover:scale-105"
           >
             {t('home.browse_marketplace')}
             <ArrowRight className="w-5 h-5" />
           </Link>
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6350
         </motion.div>
 
         {/* Trust indicators */}
         <motion.div 
-<<<<<<< HEAD
-          className="flex flex-wrap justify-center items-center gap-6 text-sm text-zion-slate-light opacity-80"
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
-=======
           className="mt-12 flex flex-wrap justify-center items-center gap-8 text-zion-slate-light text-sm"
           variants={itemVariants}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6350
         >
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
             <span>24/7 Support</span>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6350
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-zion-purple rounded-full"></div>
             <span>Global Network</span>
           </div>
           <div className="flex items-center gap-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-            <span>24/7 Support</span>
-=======
           className="mt-16 text-zion-slate-light/70"
         >
           <p className="text-sm mb-4">Trusted by leading companies worldwide</p>
@@ -1624,10 +1115,8 @@ const HeroSection = () => {
             <div className="w-16 h-8 bg-zion-slate-light/20 rounded"></div>
             <div className="w-16 h-8 bg-zion-slate-light/20 rounded"></div>
             <div className="w-16 h-8 bg-zion-slate-light/20 rounded"></div>
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
           </div>
         </motion.div>
->>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
           {/* Main Heading */}
           <motion.h1
@@ -1720,7 +1209,6 @@ const HeroSection = () => {
             }}
           />
         </div>
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 =======
           className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-cyan opacity-60"
           variants={floatingVariants}
@@ -1750,7 +1238,6 @@ const HeroSection = () => {
           animate="float"
           style={{ animationDelay: "1.5s" }}
         />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
       </motion.div>
       
       {/* Main content container */}
@@ -1888,14 +1375,12 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </motion.div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 =======
             <div className="w-2 h-2 bg-zion-cyan-light rounded-full"></div>
             <span>AI-Powered</span>
           </div>
         </motion.div>
       </motion.div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6350
 =======
         {/* Additional hero elements */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1927,7 +1412,6 @@ const HeroSection = () => {
           100% { transform: translate(50px, 50px); }
         }
       `}</style>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
     </section>
   );
 };
@@ -2114,60 +1598,11 @@ export const HeroSection: React.FC = () => {
               <Check className="w-5 h-5 text-green-400" />
               <span className="text-sm">GDPR Ready</span>
             </div>
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
           </motion.div>
         </motion.div>
 
         {/* Stats Section */}
         <motion.div
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-        >
-          {[
-            { number: '500+', label: 'Happy Clients' },
-            { number: '50+', label: 'AI Solutions' },
-            { number: '99.9%', label: 'Uptime' },
-            { number: '24/7', label: 'Support' }
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
-              className="text-center"
-            >
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">
-                {stat.number}
-              </div>
-              <div className="text-zion-slate-light text-sm">
-                {stat.label}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-zion-cyan/30 rounded-full flex justify-center"
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
-          />
-=======
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -2191,7 +1626,6 @@ export const HeroSection: React.FC = () => {
               </motion.div>
             ))}
           </div>
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
         </motion.div>
 
         {/* Features Grid */}
@@ -2264,13 +1698,11 @@ export const HeroSection: React.FC = () => {
             <span className="font-medium text-sm">Fast & Secure</span>
           </div>
         </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
 =======
             <div className="w-2 h-2 bg-zion-cyan-light rounded-full"></div>
             <span>AI-Powered</span>
           </div>
         </motion.div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
 =======
             className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
@@ -2291,17 +1723,12 @@ export const HeroSection: React.FC = () => {
             <div className="w-16 h-8 bg-zion-slate-light/20 rounded animate-pulse" style={{ animationDelay: "0.4s" }}></div>
           </div>
         </motion.div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
       </div>
 =======
       </motion.div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
     </section>
   );
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
-=======
     <section className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -2530,7 +1957,6 @@ export const HeroSection: React.FC = () => {
 };
 
 export default HeroSection;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
 =======
 
 // Add missing Play icon component
@@ -2539,4 +1965,3 @@ const Play = ({ className }: { className?: string }) => (
     <path d="M8 5v14l11-7z"/>
   </svg>
 );
->>>>>>> origin/cursor/build-and-fix-errors-c9ef

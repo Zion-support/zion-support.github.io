@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { 
   Check, 
   X, 
@@ -22,28 +11,6 @@ import {
   Zap, 
   Shield, 
   Users, 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Building, 
-  Rocket,
-  Brain,
-  Cpu,
-  Lock,
-  Cloud,
-  ArrowRight,
-  Phone,
-  Mail,
-  Calendar,
-  Clock,
-  DollarSign,
-  TrendingUp,
-  Award,
-  Globe,
-  Headphones
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Globe, 
   Lock, 
   Headphones,
@@ -59,56 +26,20 @@ import {
   Cpu,
   Brain,
   Rocket
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+  Headphones,
+  MapPin
 } from 'lucide-react';
 
 export default function Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
-<<<<<<< HEAD
   const plans = [
-=======
-<<<<<<< HEAD
-  const pricingPlans = [
-=======
-  const plans = [
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     {
       id: 'starter',
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      icon: Zap,
-      price: {
-        monthly: 999,
-        annual: 899
-      },
-      features: [
-        'AI-powered business insights',
-        'Basic workflow automation',
-        'Email support',
-        '5 user licenses',
-        'Standard security features',
-        'Monthly reports',
-        'Basic integrations (3)',
-        'Training sessions (2)'
-      ],
-      limitations: [
-        'Limited AI model access',
-        'Basic analytics only',
-        'No custom development',
-        'Standard response time'
-      ],
-      color: 'from-blue-500 to-cyan-500',
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       price: {
         monthly: 99,
         annual: 79
@@ -129,46 +60,12 @@ export default function Pricing() {
         'Standard response time (24h)'
       ],
       icon: Rocket,
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       popular: false
     },
     {
       id: 'professional',
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      icon: Building,
-      price: {
-        monthly: 2499,
-        annual: 2249
-      },
-      features: [
-        'Everything in Starter',
-        'Advanced AI models',
-        'Custom workflow automation',
-        'Priority support',
-        '15 user licenses',
-        'Enhanced security features',
-        'Real-time analytics',
-        'Advanced integrations (10)',
-        'Quarterly strategy sessions',
-        'Custom dashboard',
-        'API access',
-        'Performance monitoring'
-      ],
-      limitations: [
-        'Limited quantum computing access',
-        'Standard compliance features',
-        'No dedicated account manager'
-      ],
-      color: 'from-purple-500 to-pink-500',
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       price: {
         monthly: 299,
         annual: 239
@@ -193,44 +90,12 @@ export default function Pricing() {
         'Priority response time (8h)'
       ],
       icon: TrendingUp,
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       popular: true
     },
     {
       id: 'enterprise',
       name: 'Enterprise',
       description: 'For large organizations with complex needs',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      icon: Rocket,
-      price: {
-        monthly: 4999,
-        annual: 4499
-      },
-      features: [
-        'Everything in Professional',
-        'Full AI model access',
-        'Quantum computing integration',
-        'Dedicated account manager',
-        'Unlimited user licenses',
-        'Enterprise security & compliance',
-        'Custom AI model training',
-        'Advanced analytics & ML',
-        'White-label solutions',
-        '24/7 priority support',
-        'Custom integrations',
-        'On-site training',
-        'SLA guarantees',
-        'Compliance certifications'
-      ],
-      limitations: [],
-      color: 'from-orange-500 to-red-500',
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -286,10 +151,6 @@ export default function Pricing() {
         'SLA Guarantees'
       ],
       cta: 'Contact Sales',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-bc98
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       price: {
         monthly: 999,
@@ -319,88 +180,10 @@ export default function Pricing() {
         'Immediate response time'
       ],
       icon: Award,
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       popular: false
     }
   ];
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const servicePackages = [
-    {
-      id: 'ai-autonomous',
-      name: 'AI Autonomous Systems',
-      description: 'Complete AI-powered business automation',
-      icon: Brain,
-      startingPrice: 15000,
-      features: [
-        'Custom AI model development',
-        'Business process automation',
-        'Predictive analytics',
-        'Natural language processing',
-        'Machine learning integration',
-        'Continuous learning systems'
-      ],
-      deliveryTime: '8-12 weeks',
-      support: '6 months included'
-    },
-    {
-      id: 'quantum-solutions',
-      name: 'Quantum Technology',
-      description: 'Next-generation quantum computing solutions',
-      icon: Cpu,
-      startingPrice: 25000,
-      features: [
-        'Quantum algorithm development',
-        'Hybrid quantum-classical systems',
-        'Quantum cryptography',
-        'Optimization algorithms',
-        'Quantum machine learning',
-        'Future-ready architecture'
-      ],
-      deliveryTime: '12-16 weeks',
-      support: '12 months included'
-    },
-    {
-      id: 'cybersecurity',
-      name: 'Cybersecurity Suite',
-      description: 'Comprehensive security and compliance',
-      icon: Shield,
-      startingPrice: 12000,
-      features: [
-        'Threat detection & response',
-        'Compliance management',
-        'Security audits',
-        'Penetration testing',
-        'Incident response',
-        'Security training'
-      ],
-      deliveryTime: '6-10 weeks',
-      support: '6 months included'
-    },
-    {
-      id: 'cloud-migration',
-      name: 'Cloud Migration',
-      description: 'Seamless cloud transformation',
-      icon: Cloud,
-      startingPrice: 8000,
-      features: [
-        'Cloud strategy planning',
-        'Migration execution',
-        'Performance optimization',
-        'Cost optimization',
-        'Security implementation',
-        'Training & documentation'
-      ],
-      deliveryTime: '4-8 weeks',
-      support: '3 months included'
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import React, { useState } from 'react';
 import { Header } from '@/components/header/Header';
 import { Footer } from '@/components/Footer';
@@ -466,77 +249,11 @@ export default function Pricing() {
       popular: false,
       icon: Shield,
       color: 'bg-purple-500'
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     }
   ];
 
   const addOns = [
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      name: 'Priority Support',
-      description: '24/7 dedicated support with 2-hour response time',
-      price: 499,
-      period: 'month',
-      features: ['Dedicated support team', 'Priority ticket handling', 'SLA guarantees']
-    },
-    {
-      name: 'Custom Development',
-      description: 'Tailored software development for your specific needs',
-      price: 150,
-      period: 'hour',
-      features: ['Custom features', 'Integration development', 'API development']
-    },
-    {
-      name: 'Training & Certification',
-      description: 'Comprehensive training for your team',
-      price: 2999,
-      period: 'session',
-      features: ['On-site training', 'Certification program', 'Ongoing support']
-    },
-    {
-      name: 'Compliance Services',
-      description: 'SOC2, ISO 27001, and industry compliance',
-      price: 8999,
-      period: 'project',
-      features: ['Compliance assessment', 'Implementation', 'Audit support']
-    }
-  ];
-
-  const getCurrentPrice = (plan: typeof pricingPlans[0]) => {
-    return billingCycle === 'annual' ? plan.price.annual : plan.price.monthly;
-  };
-
-  const getSavings = (plan: typeof pricingPlans[0]) => {
-    if (billingCycle === 'annual') {
-      return plan.price.monthly * 12 - plan.price.annual * 12;
-    }
-    return 0;
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-              Transparent Pricing
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Choose the perfect plan for your business needs. All plans include our core AI and 
-              technology solutions with flexible pricing options.
-            </p>
-            
-            {/* Billing Toggle */}
-            <div className="flex items-center justify-center space-x-4 mb-8">
-              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   const addOns = [
     {
       name: 'AI Model Training',
@@ -661,33 +378,10 @@ export default function Pricing() {
             {/* Billing Toggle */}
             <div className="flex items-center justify-center mb-8">
               <span className={`mr-4 text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 Monthly
               </span>
               <button
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                className={`relative w-16 h-8 bg-gray-700 rounded-full transition-colors duration-300 ${
-                  billingCycle === 'annual' ? 'bg-cyan-500' : ''
-                }`}
-              >
-                <div
-                  className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
-                    billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
-                  }`}
-                />
-              </button>
-              <span className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-gray-400'}`}>
-                Annual
-                {billingCycle === 'annual' && (
-                  <span className="ml-2 text-sm bg-green-500/20 text-green-400 px-2 py-1 rounded-full border border-green-500/30">
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                   billingCycle === 'annual' ? 'bg-cyan-500' : 'bg-gray-600'
                 }`}
@@ -702,35 +396,11 @@ export default function Pricing() {
                 Annual
                 {billingCycle === 'annual' && (
                   <span className="ml-2 inline-block bg-green-500 text-white text-xs px-2 py-1 rounded-full">
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                     Save up to 20%
                   </span>
                 )}
               </span>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-            <div className="flex flex-wrap justify-center gap-4 text-gray-400">
-              <div className="flex items-center space-x-2">
-                <Check className="w-5 h-5 text-green-400" />
-                <span>No hidden fees</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Check className="w-5 h-5 text-green-400" />
-                <span>Free consultation</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Check className="w-5 h-5 text-green-400" />
-                <span>30-day money-back guarantee</span>
-              </div>
-            </div>
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </div>
@@ -862,35 +532,10 @@ export default function Pricing() {
                 </button>
               </div>
             ))}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      {/* Pricing Plans */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan) => {
-              const Icon = plan.icon;
-              const currentPrice = getCurrentPrice(plan);
-              const savings = getSavings(plan);
-              
-              return (
-                <div
-                  key={plan.id}
-                  className={`relative bg-gray-800/50 rounded-2xl border-2 p-8 transition-all duration-300 hover:scale-105 ${
-                    plan.popular 
-                      ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20' 
-                      : 'border-gray-700 hover:border-cyan-500/30'
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       name: 'AI Services Package',
       description: 'Advanced AI and machine learning solutions',
       price: { monthly: 199, yearly: 1990 },
@@ -1013,8 +658,6 @@ export default function Pricing() {
               Get answers to common questions about our pricing and plans
             </p>
           </div>
-<<<<<<< HEAD
-=======
 
           <div className="grid lg:grid-cols-2 gap-8">
             {servicePackages.map((service) => {
@@ -1100,7 +743,6 @@ export default function Pricing() {
               Get answers to common questions about our pricing and plans
             </p>
           </div>
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           
           <div className="space-y-6">
             {faqs.map((faq, index) => (
@@ -1112,53 +754,10 @@ export default function Pricing() {
                 <p className="text-gray-300">{faq.answer}</p>
               </div>
             ))}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      {/* Add-ons */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Additional Services
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Enhance your experience with our premium add-on services designed to provide 
-              additional value and support for your business.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {addOns.map((addon, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300">
-                <h3 className="text-lg font-semibold text-white mb-2">{addon.name}</h3>
-                <p className="text-gray-400 text-sm mb-4">{addon.description}</p>
-                
-                <div className="mb-4">
-                  <span className="text-2xl font-bold text-white">${addon.price.toLocaleString()}</span>
-                  <span className="text-gray-400 text-sm ml-1">/{addon.period}</span>
-                </div>
-
-                <div className="space-y-2 mb-4">
-                  {addon.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-2">
-                      <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-xs">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <button className="w-full py-2 px-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 text-sm">
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   const addOns = [
     {
       name: 'AI Training & Workshops',
@@ -1604,7 +1203,7 @@ export default function Pricing() {
                 <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                 <p className="text-gray-300">{faq.answer}</p>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       {/* CTA Section */}
@@ -1618,8 +1217,6 @@ export default function Pricing() {
             No credit card required.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-=======
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -1646,7 +1243,6 @@ export default function Pricing() {
             No credit card required.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <button className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105">
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -1654,21 +1250,11 @@ export default function Pricing() {
             <button className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
               Contact Sales
             </button>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
           <p className="text-gray-400 text-sm mt-4">
             Questions? Our team is here to help you choose the right plan.
           </p>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </section>
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       </div>
 
       {/* CTA Section */}
@@ -1819,14 +1405,8 @@ export default function Pricing() {
         </div>
       </div>
 =======
-<<<<<<< HEAD
-      </div>
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
 =======
       </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     </div>
 =======
                       <Badge className="bg-zion-blue text-white px-4 py-2">

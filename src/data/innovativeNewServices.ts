@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface InnovativeService {
+export interface InnovativeNewService {
 =======
 export interface InnovativeNewService {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
 =======
 export interface InnovativeNewService {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
-export interface InnovativeNewService {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
   id: string;
   title: string;
   description: string;
@@ -27,16 +19,13 @@ export interface InnovativeNewService {
   estimatedDelivery: string;
   supportLevel: string;
   marketPrice: string;
+  roi: string;
+  innovationLevel: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -46,42 +35,23 @@ export interface InnovativeNewService {
   };
 =======
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
   technology: string[];
   integrations: string[];
   compliance: string[];
   roi: string;
   competitors: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-  marketTrend: string;
-  innovationLevel: string;
-<<<<<<< HEAD
->>>>>>> origin/main
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
 }
 
 export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
-  // AI-Powered Content Creation & Marketing
+  // Quantum Computing & Advanced AI Services
   {
-    id: "ai-content-creation-suite",
-    title: "AI Content Creation & Marketing Suite",
-<<<<<<< HEAD
-    description: "Comprehensive AI-powered platform that generates, optimizes, and distributes content across multiple channels with personalized targeting and performance analytics.",
-    category: "AI & Digital Marketing",
-=======
     description: "Revolutionary AI-powered platform that generates high-quality, SEO-optimized content across multiple formats including blogs, social media, videos, and podcasts.",
     category: "AI & Content Marketing",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     subcategory: "Content Creation",
 =======
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
   uniqueValue: string;
 }
 
@@ -93,36 +63,10 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     description: "Revolutionary AI-powered platform that generates, edits, and optimizes creative content including images, videos, and marketing materials.",
     category: "AI & Creative Services",
     subcategory: "Content Generation",
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     price: 399,
     currency: "$",
     pricingModel: "monthly",
     features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "AI-powered content generation",
-<<<<<<< HEAD
-      "Multi-format content creation (blogs, social media, videos)",
-      "SEO optimization with AI insights",
-      "Content performance analytics",
-      "Automated content distribution",
-      "Personalized content recommendations",
-      "Multi-language content generation",
-      "Brand voice consistency",
-      "Content calendar automation",
-      "A/B testing for content optimization"
-    ],
-    benefits: [
-      "Increase content production by 500%",
-      "Improve engagement rates by 60%",
-      "Reduce content creation costs by 70%",
-      "24/7 automated content generation",
-      "Data-driven content strategy",
-      "Multi-channel consistency"
-=======
       "Multi-format content creation (text, video, audio)",
       "SEO optimization with real-time analysis",
       "Brand voice consistency",
@@ -139,29 +83,11 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       "Improve SEO rankings by 60%",
       "Consistent brand messaging",
       "24/7 content production capability"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     ],
     useCases: [
       "Digital marketing agencies",
       "E-commerce businesses",
       "Content creators",
-<<<<<<< HEAD
-      "Brand managers",
-      "Social media managers",
-      "SEO specialists"
-    ],
-    targetAudience: [
-      "Marketing teams",
-      "Content creators",
-      "Digital agencies",
-      "Business owners",
-      "Brand managers"
-    ],
-    tags: ["AI", "Content Creation", "Digital Marketing", "SEO", "Automation", "Content Marketing"],
-    estimatedDelivery: "2-3 weeks",
-    supportLevel: "premium",
-    marketPrice: "$399 - $1,500/month",
-=======
       "Social media managers",
       "Brand managers"
     ],
@@ -176,10 +102,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$399 - $1,299/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
 =======
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
       "AI image generation and editing",
       "Video content creation",
       "Marketing copy generation",
@@ -214,26 +138,11 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "1-2 weeks",
     supportLevel: "premium",
     marketPrice: "$399 - $1,200/month",
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    technology: ["GPT-4", "Claude", "React", "Node.js", "MongoDB", "AWS"],
-    integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social Media APIs"],
-    compliance: ["GDPR", "CCPA", "SOC 2"],
-    roi: "400% within 3 months",
-    competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
-    marketTrend: "Rapidly growing market with 300% annual growth",
-    innovationLevel: "Cutting-edge AI technology with advanced NLP capabilities"
-=======
     technology: ["OpenAI GPT-4", "DALL-E", "React", "Node.js", "MongoDB"],
     integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Hootsuite"],
     compliance: ["GDPR", "CCPA", "SOC 2"],
@@ -241,21 +150,15 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
     marketTrend: "Rapidly growing AI content market",
     innovationLevel: "Cutting-edge"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
   },
 
   // Quantum-Safe Cybersecurity Platform
   {
     id: "quantum-safe-cybersecurity",
     title: "Quantum-Safe Cybersecurity Platform",
-<<<<<<< HEAD
-    description: "Next-generation cybersecurity solution that implements post-quantum cryptography to protect against future quantum computing threats while maintaining current security standards.",
-=======
     description: "Next-generation cybersecurity solution that implements post-quantum cryptography algorithms to protect against future quantum computing threats.",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
 =======
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     technology: ["OpenAI DALL-E", "Stable Diffusion", "React", "Node.js", "AWS"],
     integrations: ["Canva", "Adobe Creative Suite", "Shopify", "Mailchimp", "Hootsuite"],
     compliance: ["GDPR", "CCPA", "SOC 2"],
@@ -269,10 +172,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     id: "quantum-safe-cybersecurity-suite",
     title: "Quantum-Safe Cybersecurity Suite",
     description: "Future-proof cybersecurity platform that implements post-quantum cryptography to protect against quantum computing threats.",
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     category: "Cybersecurity",
     subcategory: "Quantum Security",
     price: 2500,
@@ -280,27 +179,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     pricingModel: "monthly",
     features: [
       "Post-quantum cryptography algorithms",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Hybrid encryption systems",
-      "Quantum-resistant key management",
-      "Real-time threat detection",
-      "Zero-trust architecture",
-      "Compliance automation",
-      "Quantum-safe VPN",
-      "Secure communication protocols",
-      "Threat intelligence feeds",
-      "Automated incident response"
-    ],
-    benefits: [
-      "Future-proof security against quantum threats",
-      "Reduce security risks by 95%",
-      "Compliance with emerging quantum standards",
-      "Enhanced data protection",
-      "Competitive advantage in security",
-      "Long-term investment protection"
-=======
       "Quantum-resistant encryption",
       "Real-time threat detection",
       "Zero-trust architecture",
@@ -317,10 +195,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       "Compliance with emerging regulations",
       "Advanced threat intelligence",
       "Automated security responses"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
 =======
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
       "Quantum-resistant encryption",
       "Hybrid security protocols",
       "Real-time threat detection",
@@ -335,50 +211,23 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       "Enhanced data protection",
       "Reduced security risks",
       "Competitive advantage in security"
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     ],
     useCases: [
       "Financial institutions",
       "Government agencies",
       "Healthcare organizations",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Defense contractors",
-      "Technology companies",
-      "Research institutions"
+      "Critical infrastructure",
+      "Defense contractors"
 =======
       "Critical infrastructure",
       "Defense contractors"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
 =======
       "Critical infrastructure",
       "Defense contractors"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
-      "Critical infrastructure",
-      "Defense contractors"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     ],
     targetAudience: [
       "CISOs",
       "Security architects",
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "IT directors",
-      "Compliance officers",
-<<<<<<< HEAD
-      "Government officials"
-    ],
-    tags: ["Quantum Security", "Cybersecurity", "Post-Quantum Cryptography", "Zero Trust", "Compliance"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-<<<<<<< HEAD
-    marketPrice: "$2,499 - $7,999/month",
-=======
   aiCapabilities?: string[];
   integrationOptions?: string[];
   complianceStandards?: string[];
@@ -433,154 +282,19 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     marketPrice: "$2,500 - $8,000/month",
 =======
     marketPrice: "$2,500 - $10,000/month",
->>>>>>> origin/main
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    aiCapabilities: [
-      "Natural Language Processing",
-      "Predictive Modeling",
-      "Anomaly Detection",
-      "Automated Insights Generation"
-    ],
-    integrationOptions: [
-      "Salesforce",
-      "HubSpot",
-      "QuickBooks",
-      "Google Analytics",
-      "Custom APIs"
-    ],
-    complianceStandards: ["GDPR", "SOC2", "HIPAA"],
-    scalabilityFeatures: ["Multi-tenant architecture", "Auto-scaling", "Load balancing"]
-  },
-
-  // Autonomous Customer Service Platform
-  {
-    id: "autonomous-customer-service-platform",
-    title: "Autonomous Customer Service Platform",
-    description: "AI-driven customer service platform that handles 95% of customer inquiries automatically while providing human-like interactions and seamless escalation to human agents.",
-    category: "AI & Customer Service",
-    subcategory: "Automation Platform",
-    price: 1800,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Multi-language AI chatbot",
-      "Voice and text support",
-      "Sentiment analysis",
-      "Automatic ticket routing",
-      "Knowledge base management",
-      "Performance analytics",
-      "CRM integration",
-      "24/7 availability"
-    ],
-    benefits: [
-      "95% automated inquiry resolution",
-      "60% reduction in response time",
-      "24/7 customer support",
-      "Scalable customer service",
-      "Improved customer satisfaction"
-    ],
-    useCases: [
-      "E-commerce customer support",
-      "SaaS product support",
-      "Financial services",
-      "Healthcare patient support",
-      "Educational institutions"
-    ],
-    targetAudience: [
-      "Customer service managers",
-      "E-commerce businesses",
-      "SaaS companies",
-      "Service providers",
-      "Support teams"
-    ],
-    tags: ["AI", "Customer Service", "Automation", "Chatbot", "Support Platform"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,800 - $6,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    aiCapabilities: [
-      "Natural Language Understanding",
-      "Sentiment Analysis",
-      "Intent Recognition",
-      "Contextual Conversations"
-    ],
-    integrationOptions: [
-      "Zendesk",
-      "Intercom",
-      "Freshdesk",
-      "Slack",
-      "Microsoft Teams"
-    ],
-    complianceStandards: ["GDPR", "CCPA", "SOC2"],
-    scalabilityFeatures: ["Auto-scaling", "Multi-region deployment", "Load balancing"]
-  },
-
-  // Quantum-Safe Cybersecurity Platform
-  {
-    id: "quantum-safe-cybersecurity-platform",
-    title: "Quantum-Safe Cybersecurity Platform",
-    description: "Future-proof cybersecurity platform that combines traditional security measures with quantum-resistant cryptography to protect against both current and future quantum computing threats.",
-    category: "Cybersecurity",
-    subcategory: "Quantum Security",
-    price: 3200,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Post-quantum cryptography",
-      "Advanced threat detection",
-      "Zero-trust architecture",
-      "Behavioral analytics",
-      "Automated incident response",
-      "Compliance monitoring",
-      "Real-time threat intelligence",
-      "Multi-factor authentication"
-    ],
-    benefits: [
-      "Future-proof security",
-      "99.9% threat detection rate",
-      "Automated security responses",
-      "Compliance with new standards",
-      "Reduced security overhead"
-    ],
-    useCases: [
-      "Financial institutions",
-      "Healthcare organizations",
-      "Government agencies",
-      "Critical infrastructure",
-      "Enterprise businesses"
-    ],
-    targetAudience: [
-      "CISOs",
-      "Security architects",
-      "IT managers",
-      "Compliance officers",
-      "Risk managers"
-    ],
-    tags: ["Cybersecurity", "Quantum Computing", "Post-Quantum Cryptography", "Zero Trust", "Threat Detection"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,200 - $12,000/month",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41b5
-=======
       "Risk managers"
     ],
     tags: ["Quantum Security", "Cybersecurity", "Post-Quantum Cryptography", "Zero-Trust", "Compliance"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,500 - $10,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
 =======
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
       "Government agencies",
       "Financial institutions",
       "Healthcare organizations"
@@ -589,20 +303,10 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,500 - $8,000/month",
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
     technology: ["Post-Quantum Algorithms", "Zero-Trust Architecture", "Blockchain", "AI/ML", "Cloud Native"],
     integrations: ["Active Directory", "LDAP", "SIEM Systems", "Firewalls", "VPN Solutions"],
     compliance: ["NIST", "FIPS", "SOC 2", "ISO 27001", "GDPR"],
@@ -610,7 +314,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     competitors: ["IBM", "Microsoft", "Google", "Cisco"],
     marketTrend: "Emerging market with 500% projected growth in next 5 years",
     innovationLevel: "Revolutionary quantum-safe technology ahead of market adoption"
->>>>>>> origin/main
 =======
     },
     technology: ["Post-Quantum Algorithms", "Zero-Trust Architecture", "AI/ML", "Blockchain", "Cloud-Native"],
@@ -620,18 +323,13 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Darktrace"],
     marketTrend: "Emerging quantum threat market",
     innovationLevel: "Revolutionary"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
   },
 
   // AI-Powered Healthcare Diagnostics
   {
     id: "ai-healthcare-diagnostics",
     title: "AI Healthcare Diagnostics Platform",
-<<<<<<< HEAD
-    description: "Advanced AI-powered medical diagnostics platform that analyzes medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
-=======
     description: "Advanced AI-powered medical diagnostics platform that analyzes medical images, lab results, and patient data to assist healthcare professionals in accurate diagnosis.",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     category: "AI & Healthcare",
     subcategory: "Medical Diagnostics",
     price: 1500,
@@ -639,46 +337,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     pricingModel: "monthly",
     features: [
       "Medical image analysis (X-rays, MRIs, CT scans)",
-<<<<<<< HEAD
-      "Symptom analysis and diagnosis",
-      "Treatment recommendation engine",
-      "Patient risk assessment",
-      "Drug interaction checking",
-      "Medical record integration",
-      "Telemedicine support",
-      "Clinical decision support",
-      "Population health analytics",
-      "Regulatory compliance tools"
-    ],
-    benefits: [
-      "Improve diagnostic accuracy by 30%",
-      "Reduce diagnosis time by 60%",
-      "Lower healthcare costs by 25%",
-      "Better patient outcomes",
-      "Enhanced clinical efficiency",
-      "Reduced medical errors"
-    ],
-    useCases: [
-      "Hospitals and clinics",
-      "Radiology departments",
-      "Primary care practices",
-      "Specialist offices",
-      "Telemedicine platforms",
-      "Medical research institutions"
-    ],
-    targetAudience: [
-      "Healthcare providers",
-      "Radiologists",
-      "Primary care physicians",
-      "Medical administrators",
-      "Healthcare IT teams"
-    ],
-    tags: ["AI", "Healthcare", "Medical Diagnostics", "Machine Learning", "Telemedicine", "Medical Imaging"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-<<<<<<< HEAD
-    marketPrice: "$3,999 - $12,999/month",
-=======
     },
     aiCapabilities: [
       "AI-powered threat detection",
@@ -742,10 +400,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "5-6 weeks",
     supportLevel: "premium",
     marketPrice: "$2,800 - $9,000/month",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41b5
 =======
     marketPrice: "$1,500 - $5,000/month",
->>>>>>> origin/main
 =======
       "Lab result interpretation",
       "Patient data analytics",
@@ -782,16 +438,10 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,500 - $5,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
     },
     technology: ["TensorFlow", "PyTorch", "DICOM", "HL7 FHIR", "HIPAA-compliant Cloud", "Edge Computing"],
     integrations: ["EPIC", "Cerner", "Practice Management Systems", "PACS", "EHR Systems"],
@@ -800,7 +450,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Siemens Healthineers"],
     marketTrend: "High-growth market with 400% annual expansion",
     innovationLevel: "Breakthrough AI technology transforming healthcare delivery"
->>>>>>> origin/main
 =======
     },
     technology: ["TensorFlow", "PyTorch", "Computer Vision", "NLP", "Cloud Computing"],
@@ -810,65 +459,19 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "NVIDIA Clara"],
     marketTrend: "Rapidly growing AI healthcare market",
     innovationLevel: "Breakthrough"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
   },
 
   // Sustainable Energy Management Platform
   {
     id: "sustainable-energy-management",
     title: "Sustainable Energy Management Platform",
-<<<<<<< HEAD
-    description: "AI-powered energy management system that optimizes energy consumption, integrates renewable sources, and provides real-time monitoring for sustainable business operations.",
-    category: "Sustainability & Energy",
-=======
     description: "Comprehensive energy management solution that uses AI and IoT to optimize energy consumption, integrate renewable sources, and reduce carbon footprint.",
     category: "IoT & Sustainability",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     subcategory: "Energy Management",
     price: 800,
     currency: "$",
     pricingModel: "monthly",
     features: [
-<<<<<<< HEAD
-      "Real-time energy consumption monitoring",
-      "AI-powered optimization algorithms",
-      "Renewable energy integration",
-      "Demand response management",
-      "Carbon footprint tracking",
-      "Energy cost analysis",
-      "Predictive maintenance",
-      "Smart grid integration",
-      "Sustainability reporting",
-      "Mobile app access"
-    ],
-    benefits: [
-      "Reduce energy costs by 30-40%",
-      "Lower carbon emissions by 50%",
-      "Improve energy efficiency by 35%",
-      "Achieve sustainability goals",
-      "Enhanced corporate social responsibility",
-      "Regulatory compliance"
-    ],
-    useCases: [
-<<<<<<< HEAD
-      "Algorithmic trading",
-      "Portfolio management",
-      "Risk management",
-      "Market analysis",
-      "Quantitative research"
-    ],
-    targetAudience: [
-      "Investment firms",
-      "Hedge funds",
-      "Banks",
-      "Asset managers",
-      "Trading companies"
-    ],
-    tags: ["AI", "Financial Services", "Algorithmic Trading", "Risk Management", "Trading"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,999 - $15,000/month",
-=======
     },
     aiCapabilities: [
       "Predictive Analytics",
@@ -887,7 +490,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     scalabilityFeatures: ["Multi-tenant", "Cloud-native", "Microservices architecture"]
 =======
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     },
     technology: ["Post-Quantum Algorithms", "Rust", "Go", "Kubernetes", "Zero Trust Architecture"],
     integrations: ["SIEM systems", "EDR platforms", "Identity providers", "Cloud platforms"],
@@ -895,55 +497,23 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     roi: "200% within 12 months",
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
     uniqueValue: "First-to-market quantum-safe cybersecurity solution with hybrid encryption protocols"
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
   },
 
   // AI-Powered Legal Tech Platform
   {
     id: "ai-legal-tech-platform",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    title: "AI-Powered Legal Tech Platform",
-    description: "Comprehensive legal technology platform that automates contract analysis, legal research, compliance monitoring, and document generation using advanced AI and natural language processing.",
-    category: "AI & Legal Technology",
-    subcategory: "Legal Automation",
-    price: 2200,
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     title: "AI Legal Tech Platform",
     description: "Intelligent legal technology platform that automates contract analysis, legal research, and compliance monitoring using advanced AI.",
     category: "AI & Legal Tech",
     subcategory: "Legal Automation",
     price: 599,
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Contract analysis and review",
       "Legal research automation",
       "Compliance monitoring",
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Document generation",
-      "Risk assessment",
-      "Case law analysis",
-      "Regulatory updates",
-      "Client portal"
-    ],
-    benefits: [
-      "80% faster contract review",
-      "90% reduction in research time",
-      "Automated compliance checks",
-      "Standardized document creation",
-      "Improved accuracy"
-=======
       "Real-time energy monitoring",
       "AI-powered consumption optimization",
       "Renewable energy integration",
@@ -1022,28 +592,10 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Better legal outcomes",
       "Cost-effective research",
       "24/7 legal research access"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     ],
     useCases: [
       "Law firms",
       "Corporate legal departments",
-<<<<<<< HEAD
-      "Compliance teams",
-      "Contract managers",
-      "Legal consultants"
-    ],
-    targetAudience: [
-      "Lawyers",
-      "Legal professionals",
-      "Compliance officers",
-      "Contract managers",
-      "Legal departments"
-    ],
-    tags: ["AI", "Legal Tech", "Contract Management", "Compliance", "Automation"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,200 - $7,500/month",
-=======
       "Government agencies",
       "Legal researchers",
       "Law schools"
@@ -1059,180 +611,12 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$299 - $899/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    aiCapabilities: [
-      "Natural Language Processing",
-      "Document Analysis",
-      "Legal Research AI",
-      "Compliance Monitoring"
-    ],
-    integrationOptions: [
-      "Document management systems",
-      "CRM platforms",
-      "Accounting software",
-      "E-signature solutions",
-      "Legal databases"
-    ],
-    complianceStandards: ["GDPR", "SOC2", "ISO 27001"],
-    scalabilityFeatures: ["Multi-tenant", "Cloud-native", "API-first"]
-  },
-
-  // Autonomous Financial Trading Platform
-  {
-    id: "autonomous-financial-trading-platform",
-    title: "Autonomous Financial Trading Platform",
-    description: "AI-powered trading platform that autonomously analyzes market data, executes trades, manages portfolios, and optimizes investment strategies with advanced machine learning algorithms.",
-    category: "AI & Financial Technology",
-    subcategory: "Trading Platform",
-    price: 4500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered market analysis",
-      "Automated trading algorithms",
-      "Portfolio optimization",
-      "Risk management",
-      "Real-time market data",
-      "Performance analytics",
-      "Compliance monitoring",
-      "Multi-asset support"
-    ],
-    benefits: [
-      "24/7 automated trading",
-      "Data-driven decisions",
-      "Risk mitigation",
-      "Portfolio optimization",
-      "Reduced emotional trading"
-    ],
-    useCases: [
-      "Investment firms",
-      "Hedge funds",
-      "Individual traders",
-      "Financial advisors",
-      "Institutional investors"
-    ],
-    targetAudience: [
-      "Traders",
-      "Investment managers",
-      "Financial advisors",
-      "Portfolio managers",
-      "Institutional investors"
-    ],
-    tags: ["AI", "Financial Technology", "Trading", "Algorithmic Trading", "Portfolio Management"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,500 - $15,000/month",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41b5
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-<<<<<<< HEAD
-    }
-  },
-
-  // AI-Powered Manufacturing & Industry 4.0
-  {
-    id: "ai-industry-4-0-platform",
-    title: "AI Industry 4.0 Platform",
-    description: "Comprehensive AI platform for Industry 4.0 that optimizes manufacturing processes, predictive maintenance, and quality control through intelligent automation.",
-    category: "AI & Manufacturing",
-    subcategory: "Industry 4.0",
-    price: 3499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Predictive maintenance",
-      "Quality control automation",
-      "Production optimization",
-      "Supply chain integration",
-      "IoT device management",
-      "Real-time monitoring",
-      "Performance analytics",
-      "Custom dashboards",
-      "Integration capabilities",
-      "Mobile app support"
-    ],
-    benefits: [
-      "Reduce downtime by 40%",
-      "Improve product quality by 35%",
-      "Optimize production by 50%",
-      "Predictive maintenance",
-      "Real-time insights"
-    ],
-    useCases: [
-      "Manufacturing optimization",
-      "Quality control",
-      "Predictive maintenance",
-      "Supply chain management",
-      "Performance monitoring"
-    ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Industrial companies",
-      "Operations managers",
-      "Plant managers",
-      "Industrial engineers"
-    ],
-    tags: ["AI", "Manufacturing", "Industry 4.0", "IoT", "Automation"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,499 - $9,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-
-  // AI-Powered Energy & Sustainability
-  {
-    id: "ai-energy-sustainability-platform",
-    title: "AI Energy & Sustainability Platform",
-    description: "Intelligent platform that optimizes energy consumption, manages renewable energy systems, and provides sustainability analytics for organizations.",
-    category: "AI & Energy",
-    subcategory: "Sustainability",
-    price: 1999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Energy consumption optimization",
-      "Renewable energy management",
-      "Carbon footprint tracking",
-      "Sustainability reporting",
-      "Predictive analytics",
-      "IoT integration",
-      "Real-time monitoring",
-      "Custom dashboards",
-      "Integration capabilities",
-      "Mobile app support"
-    ],
-    benefits: [
-      "Reduce energy costs by 30%",
-      "Improve sustainability by 50%",
-      "Automated optimization",
-      "Real-time monitoring",
-      "Compliance automation"
-    ],
-    useCases: [
-      "Energy management",
-      "Sustainability tracking",
-      "Carbon footprint reduction",
-      "Renewable energy integration",
-      "Compliance reporting"
-    ],
-    targetAudience: [
-      "Energy companies",
-      "Manufacturing companies",
-=======
       "Manufacturing facilities",
->>>>>>> origin/main
       "Commercial buildings",
       "Data centers",
       "Retail chains",
@@ -1288,48 +672,10 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     description: "End-to-end supply chain visibility solution using blockchain technology to track products from origin to consumer, ensuring transparency, authenticity, and compliance.",
     category: "Blockchain & Supply Chain",
     subcategory: "Transparency & Tracking",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     price: 1200,
     currency: "$",
     pricingModel: "monthly",
     features: [
-<<<<<<< HEAD
-      "AI-powered contract analysis",
-      "Legal research automation",
-      "Case law analysis",
-      "Regulatory compliance checking",
-      "Risk assessment tools",
-      "Document generation",
-      "Legal citation management",
-      "Multi-jurisdiction support",
-      "Collaborative workspace",
-      "Mobile app access"
-    ],
-    benefits: [
-      "Reduce legal research time by 80%",
-      "Improve contract review accuracy by 40%",
-      "Lower legal costs by 35%",
-      "Faster due diligence",
-      "Enhanced risk management",
-      "Better compliance tracking"
-    ],
-    useCases: [
-      "Law firms",
-      "Corporate legal departments",
-      "Compliance teams",
-      "Contract managers",
-      "Risk management teams",
-      "Legal consultants"
-    ],
-    targetAudience: [
-      "Attorneys",
-      "Legal professionals",
-      "Compliance officers",
-      "Contract managers",
-      "Risk managers"
-    ],
-    tags: ["AI", "Legal Tech", "Contract Analysis", "Legal Research", "Compliance", "Risk Management"],
-=======
       "End-to-end product tracking",
       "Smart contract automation",
       "Quality assurance monitoring",
@@ -1363,7 +709,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Operations directors"
     ],
     tags: ["Blockchain", "Supply Chain", "Transparency", "IoT", "Compliance"],
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$1,200 - $4,000/month",
@@ -1372,129 +717,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    technology: ["Natural Language Processing", "Machine Learning", "Blockchain", "Cloud Computing", "API Integration"],
-    integrations: ["Document Management Systems", "E-signature Platforms", "Legal Research Databases", "CRM Systems"],
-    compliance: ["GDPR", "SOC 2", "ISO 27001", "Legal Industry Standards"],
-    roi: "350% within 12 months",
-    competitors: ["LexisNexis", "Westlaw", "ContractPodAi", "Evisort"],
-    marketTrend: "High-growth market with 300% annual expansion",
-    innovationLevel: "Advanced AI technology revolutionizing legal research and contract analysis"
-  },
-
-  // Autonomous Supply Chain Optimization
-  {
-    id: "autonomous-supply-chain",
-    title: "Autonomous Supply Chain Optimization Platform",
-    description: "AI-driven supply chain management system that autonomously optimizes inventory, predicts demand, and manages logistics with minimal human intervention.",
-    category: "AI & Supply Chain",
-    subcategory: "Supply Chain Management",
-    price: 2000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Autonomous inventory management",
-      "AI-powered demand forecasting",
-      "Real-time logistics optimization",
-      "Supplier performance analytics",
-      "Risk assessment and mitigation",
-      "Cost optimization algorithms",
-      "Sustainability tracking",
-      "Multi-warehouse management",
-      "Last-mile delivery optimization",
-      "Predictive analytics dashboard"
-    ],
-    benefits: [
-      "Reduce inventory costs by 25%",
-      "Improve delivery times by 40%",
-      "Lower supply chain risks by 60%",
-      "Increase efficiency by 35%",
-      "Better supplier relationships",
-      "Enhanced customer satisfaction"
-    ],
-    useCases: [
-      "Manufacturing companies",
-      "Retail chains",
-      "E-commerce businesses",
-      "Logistics providers",
-      "Distribution centers",
-      "Import/export companies"
-    ],
-    targetAudience: [
-      "Supply chain managers",
-      "Operations directors",
-      "Logistics coordinators",
-      "Inventory managers",
-      "Procurement teams"
-    ],
-    tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Demand Forecasting", "Automation"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,000 - $8,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Machine Learning", "IoT Sensors", "Blockchain", "Cloud Computing", "Edge Computing"],
-    integrations: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "E-commerce Platforms"],
-    compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
-    roi: "400% within 18 months",
-    competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"],
-    marketTrend: "Growing market with 250% annual growth due to supply chain disruptions",
-    innovationLevel: "Revolutionary autonomous AI technology for supply chain optimization"
-  },
-
-  // AI-Powered Financial Trading Platform
-  {
-    id: "ai-financial-trading",
-    title: "AI Financial Trading & Investment Platform",
-    description: "Advanced AI-powered trading platform that uses machine learning algorithms to analyze market data, predict trends, and execute trades with risk management.",
-    category: "AI & FinTech",
-    subcategory: "Trading & Investment",
-    price: 3000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered market analysis",
-      "Predictive trading algorithms",
-      "Risk management systems",
-      "Portfolio optimization",
-      "Real-time market data",
-      "Automated trading execution",
-      "Performance analytics",
-      "Compliance monitoring",
-      "Multi-asset support",
-      "Mobile trading app"
-    ],
-    benefits: [
-      "Improve trading performance by 25-40%",
-      "Reduce trading risks by 50%",
-      "24/7 automated trading",
-      "Data-driven decisions",
-      "Enhanced portfolio returns",
-      "Better risk management"
-    ],
-    useCases: [
-      "Investment firms",
-      "Hedge funds",
-      "Individual traders",
-      "Financial advisors",
-      "Institutional investors",
-      "Trading desks"
-    ],
-    targetAudience: [
-      "Traders",
-      "Investment managers",
-      "Financial advisors",
-      "Portfolio managers",
-      "Risk managers"
-    ],
-    tags: ["AI", "FinTech", "Trading", "Investment", "Risk Management", "Machine Learning"],
-    estimatedDelivery: "10-14 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,000 - $15,000/month",
-=======
     technology: ["Ethereum", "Hyperledger", "IoT Sensors", "QR Codes", "Cloud Computing"],
     integrations: ["ERP Systems", "WMS", "CRM", "E-commerce Platforms", "Logistics APIs"],
     compliance: ["FDA", "USDA", "ISO 22000", "HACCP", "GFSI"],
@@ -1551,30 +773,11 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$199 - $699/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    technology: ["Deep Learning", "Natural Language Processing", "High-Frequency Trading", "Cloud Computing", "Blockchain"],
-    integrations: ["Bloomberg", "Reuters", "Trading APIs", "Brokerage Platforms", "Market Data Feeds"],
-    compliance: ["SEC", "FINRA", "MiFID II", "SOC 2", "PCI DSS"],
-    roi: "500% within 24 months",
-    competitors: ["Bloomberg", "Thomson Reuters", "Interactive Brokers", "TD Ameritrade"],
-    marketTrend: "High-growth market with 400% annual expansion",
-    innovationLevel: "Cutting-edge AI technology revolutionizing financial trading and investment"
-  },
-
-  // Smart City Infrastructure Management
-  {
-    id: "smart-city-infrastructure",
-    title: "Smart City Infrastructure Management Platform",
-    description: "Comprehensive IoT and AI-powered platform for managing urban infrastructure, including traffic, utilities, public safety, and environmental monitoring.",
-    category: "IoT & Smart Cities",
-    subcategory: "Urban Infrastructure",
-=======
     technology: ["Machine Learning", "Predictive Analytics", "Cloud Computing", "API Integration", "Mobile Apps"],
     integrations: ["Plaid", "Yodlee", "TD Ameritrade", "Charles Schwab", "Fidelity"],
     compliance: ["SEC", "FINRA", "GDPR", "CCPA", "SOC 2"],
@@ -1591,51 +794,10 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     description: "Revolutionary platform that combines quantum computing with machine learning to solve complex optimization problems and accelerate AI model training.",
     category: "Quantum Computing & AI",
     subcategory: "Machine Learning",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     price: 5000,
     currency: "$",
     pricingModel: "monthly",
     features: [
-<<<<<<< HEAD
-      "Traffic management optimization",
-      "Utility monitoring and control",
-      "Public safety monitoring",
-      "Environmental quality tracking",
-      "Smart parking systems",
-      "Waste management optimization",
-      "Energy grid management",
-      "Water quality monitoring",
-      "Air quality sensors",
-      "Citizen engagement portal"
-    ],
-    benefits: [
-      "Reduce traffic congestion by 30%",
-      "Lower utility costs by 25%",
-      "Improve public safety by 40%",
-      "Enhanced citizen satisfaction",
-      "Better resource allocation",
-      "Sustainable urban development"
-    ],
-    useCases: [
-      "City governments",
-      "Municipalities",
-      "Urban planners",
-      "Utility companies",
-      "Transportation departments",
-      "Public safety agencies"
-    ],
-    targetAudience: [
-      "City officials",
-      "Urban planners",
-      "Infrastructure managers",
-      "Public safety directors",
-      "Utility managers"
-    ],
-    tags: ["IoT", "Smart Cities", "Urban Infrastructure", "Public Safety", "Sustainability", "Data Analytics"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$5,000 - $25,000/month",
-=======
       "Quantum-enhanced ML algorithms",
       "Hybrid quantum-classical computing",
       "Optimization problem solving",
@@ -1672,44 +834,11 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$5,000 - $20,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    technology: ["IoT Sensors", "5G Networks", "Edge Computing", "Machine Learning", "Cloud Computing"],
-    integrations: ["Traffic Systems", "Utility Networks", "Emergency Services", "Public Transportation", "Weather APIs"],
-    compliance: ["NIST", "ISO 27001", "GDPR", "Local Government Standards"],
-    roi: "300% within 24 months",
-    competitors: ["Siemens", "IBM", "Cisco", "Schneider Electric"],
-    marketTrend: "Emerging market with 600% projected growth in next 10 years",
-    innovationLevel: "Revolutionary IoT and AI technology transforming urban infrastructure management"
-  },
-
-  // AI-Powered Education & Learning Platform
-  {
-    id: "ai-education-learning",
-    title: "AI Education & Personalized Learning Platform",
-    description: "Intelligent educational platform that adapts to individual learning styles, provides personalized content, and tracks progress using advanced AI algorithms.",
-    category: "AI & Education",
-    subcategory: "Personalized Learning",
-    price: 600,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Personalized learning paths",
-      "Adaptive content delivery",
-      "Progress tracking and analytics",
-      "Intelligent tutoring systems",
-      "Multi-modal learning support",
-      "Assessment and feedback",
-      "Collaborative learning tools",
-      "Mobile learning apps",
-      "Content creation tools",
-      "Learning analytics dashboard"
-=======
     technology: ["IBM Qiskit", "Google Cirq", "Microsoft Q#", "Python", "Quantum Algorithms"],
     integrations: ["TensorFlow", "PyTorch", "Scikit-learn", "Jupyter", "Cloud Platforms"],
     compliance: ["Research Standards", "Data Privacy", "Export Controls"],
@@ -1740,166 +869,51 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Collaborative learning tools",
       "Parent/teacher communication",
       "Mobile learning access"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     ],
     benefits: [
       "Improve learning outcomes by 40%",
       "Reduce learning time by 30%",
-<<<<<<< HEAD
-      "Personalized education experience",
-      "Better student engagement",
-      "Data-driven teaching insights",
-      "Scalable learning solutions"
-    ],
-    useCases: [
-      "K-12 schools",
-      "Universities and colleges",
-      "Corporate training programs",
-      "Online education platforms",
-      "Tutoring services",
-      "Professional development"
-    ],
-    targetAudience: [
-      "Educators",
-      "Students",
-      "Training managers",
-      "HR professionals",
-      "Educational administrators"
-    ],
-    tags: ["AI", "Education", "Personalized Learning", "EdTech", "Machine Learning", "Analytics"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium",
-    marketPrice: "$600 - $2,500/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Cloud Computing", "Mobile Apps"],
-    integrations: ["LMS Systems", "Video Conferencing", "Assessment Tools", "Student Information Systems"],
-    compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"],
-    roi: "350% within 12 months",
-    competitors: ["Coursera", "Udemy", "Khan Academy", "Duolingo"],
-    marketTrend: "High-growth market with 300% annual expansion",
-    innovationLevel: "Advanced AI technology revolutionizing personalized education and learning"
-  },
-
-  // Quantum Machine Learning Platform
-  {
-    id: "quantum-machine-learning",
-    title: "Quantum Machine Learning Platform",
-    description: "Cutting-edge platform that combines quantum computing with machine learning to solve complex optimization problems and accelerate AI model training.",
+    id: "quantum-ai-orchestrator",
+    title: "Quantum AI Orchestrator Platform",
+    description: "Revolutionary platform that orchestrates quantum computing resources with AI to solve complex optimization problems, drug discovery, and financial modeling.",
     category: "Quantum Computing & AI",
-    subcategory: "Quantum ML",
-    price: 8000,
+    subcategory: "Quantum Orchestration",
+    price: 4999,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Quantum algorithm optimization",
-      "Hybrid quantum-classical ML",
-      "Quantum neural networks",
-      "Optimization problem solving",
-      "Quantum feature selection",
-      "Model training acceleration",
-      "Quantum error correction",
+      "Quantum resource orchestration",
+      "AI-powered problem decomposition",
+      "Hybrid classical-quantum workflows",
+      "Real-time quantum simulation",
+      "Multi-quantum processor support",
+      "Advanced optimization algorithms",
       "Performance benchmarking",
-      "API access and integration",
-      "Expert consultation services"
+      "Custom algorithm development",
+      "Enterprise security",
+      "24/7 quantum access"
     ],
     benefits: [
-      "Accelerate ML training by 1000x",
-      "Solve previously intractable problems",
-      "Quantum advantage in optimization",
+      "Solve problems 1000x faster than classical computers",
+      "Access to cutting-edge quantum technology",
+      "Competitive advantage in research and development",
       "Future-proof technology investment",
-      "Competitive advantage in research",
-      "Breakthrough scientific discoveries"
+      "Expert quantum computing support"
     ],
     useCases: [
+      "Drug discovery and molecular modeling",
+      "Financial portfolio optimization",
+      "Logistics and supply chain optimization",
+      "Cryptographic security analysis",
+      "Climate modeling and prediction"
+    ],
+    targetAudience: [
       "Research institutions",
       "Pharmaceutical companies",
-      "Financial services",
-      "Aerospace companies",
-      "Technology companies",
-      "Government agencies"
+      "Financial services firms",
+      "Government agencies",
+      "Technology companies"
     ],
-    targetAudience: [
-      "Quantum researchers",
-      "Data scientists",
-      "ML engineers",
-      "Research directors",
-      "Technology executives"
-    ],
-    tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Advanced Computing"],
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$8,000 - $50,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Quantum Algorithms", "Hybrid Systems", "Quantum Error Correction", "Cloud Quantum Computing", "Advanced ML"],
-    integrations: ["Quantum Hardware", "ML Frameworks", "Research Tools", "Scientific Computing", "Cloud Platforms"],
-    compliance: ["Research Standards", "Security Protocols", "Data Protection", "Export Controls"],
-    roi: "1000% within 36 months",
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
-    marketTrend: "Emerging market with 1000% projected growth in next 10 years",
-    innovationLevel: "Revolutionary quantum technology at the forefront of scientific advancement"
-  },
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // AI Workflow Automation Platform
-  {
-    id: "ai-workflow-automation",
-    title: "AI Workflow Automation Platform",
-    description: "Intelligent workflow automation platform that uses AI to optimize business processes, reduce manual work, and increase operational efficiency.",
-    category: "AI & Business Automation",
-    subcategory: "Workflow Automation",
-    price: 599,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered process mapping",
-      "Intelligent workflow optimization",
-      "Predictive analytics",
-      "Automated decision making",
-      "Real-time monitoring",
-      "Custom workflow creation",
-      "Integration capabilities",
-      "Performance analytics",
-      "Mobile access",
-      "API access"
-    ],
-    benefits: [
-      "Increase efficiency by 300-500%",
-      "Reduce operational costs by 40-70%",
-      "Eliminate human errors by 90%",
-      "24/7 automated operation",
-      "Faster decision making",
-      "Improved compliance"
-    ],
-    useCases: [
-      "Business process automation",
-      "Customer service automation",
-      "HR process automation",
-      "Financial process automation",
-      "Supply chain automation",
-      "Quality control automation"
-    ],
-    targetAudience: [
-      "Operations managers",
-      "Process improvement teams",
-      "Business analysts",
-      "IT managers",
-      "Business owners"
-    ],
-    tags: ["AI", "Workflow Automation", "Business Process", "Efficiency", "Automation", "Productivity"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "premium",
-    marketPrice: "$599 - $2,500/month",
-=======
       "Personalized learning experience",
       "Better student engagement",
       "Data-driven insights"
@@ -1922,72 +936,11 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
     marketPrice: "$150 - $500/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    technology: ["Machine Learning", "Natural Language Processing", "Process Mining", "RPA", "Cloud Computing"],
-    integrations: ["ERP Systems", "CRM Platforms", "HR Systems", "Accounting Software", "Custom APIs"],
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry Standards"],
-    roi: "400% within 6 months",
-    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
-    marketTrend: "High-growth market with 400% annual expansion",
-    innovationLevel: "Advanced AI technology revolutionizing business process automation"
-  },
-
-  // Blockchain Enterprise Solutions
-  {
-    id: "blockchain-enterprise-solutions",
-    title: "Blockchain Enterprise Solutions",
-    description: "Enterprise-grade blockchain solutions that provide transparency, security, and efficiency for complex business operations and supply chains.",
-    category: "Blockchain & Enterprise",
-    subcategory: "Enterprise Blockchain",
-    price: 2500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Multi-chain architecture",
-      "Smart contract development",
-      "Supply chain transparency",
-      "Digital identity management",
-      "Asset tokenization",
-      "Regulatory compliance",
-      "Enterprise security",
-      "Scalable infrastructure",
-      "Custom development",
-      "24/7 support"
-    ],
-    benefits: [
-      "Enhanced security by 99.9%",
-      "Reduce costs by 30-50%",
-      "Improve transparency by 100%",
-      "Increase efficiency by 60-80%",
-      "Better compliance",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Supply chain management",
-      "Financial services",
-      "Healthcare records",
-      "Real estate",
-      "Government services",
-      "Intellectual property"
-    ],
-    targetAudience: [
-      "Enterprise executives",
-      "Supply chain managers",
-      "Financial officers",
-      "Technology directors",
-      "Compliance officers"
-    ],
-    tags: ["Blockchain", "Enterprise", "Supply Chain", "Smart Contracts", "Security", "Transparency"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,500 - $15,000/month",
-=======
   // AI-Powered Supply Chain Optimization
   {
     id: "ai-supply-chain-optimization",
@@ -2037,7 +990,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,500 - $18,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8bff
 =======
   // AI-Powered Customer Experience Platform
   {
@@ -2088,73 +1040,57 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
     marketPrice: "$750 - $3,000/month",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3676
+=======
+    tags: ["Quantum Computing", "AI", "Optimization", "Research", "Enterprise"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,999 - $15,000/month",
+    roi: "300-500%",
+    innovationLevel: "Revolutionary",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    technology: ["Ethereum", "Hyperledger", "Corda", "Smart Contracts", "Zero-Knowledge Proofs"],
-    integrations: ["ERP Systems", "Supply Chain Platforms", "Financial Systems", "Government APIs", "Custom Solutions"],
-    compliance: ["GDPR", "SOC 2", "ISO 27001", "Industry Standards", "Regulatory Requirements"],
-    roi: "300% within 18 months",
-    competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys"],
-    marketTrend: "Growing market with 300% annual expansion",
-    innovationLevel: "Advanced blockchain technology transforming enterprise operations"
+    }
   },
 
-  // IoT Data Analytics Platform
+  // AI-Powered Autonomous Systems
   {
-    id: "iot-data-analytics",
-    title: "IoT Data Analytics Platform",
-    description: "Comprehensive IoT analytics platform that transforms sensor data into actionable insights for predictive maintenance and operational optimization.",
-    category: "IoT & Analytics",
-    subcategory: "IoT Analytics",
-    price: 799,
+    id: "ai-autonomous-fleet-management",
+    title: "AI Autonomous Fleet Management System",
+    description: "Next-generation autonomous fleet management platform that uses AI to coordinate self-driving vehicles, optimize routes, and ensure safety compliance.",
+    category: "AI & Autonomous Systems",
+    subcategory: "Fleet Management",
+    price: 2999,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Real-time data processing",
+      "Autonomous vehicle coordination",
+      "AI-powered route optimization",
+      "Real-time safety monitoring",
       "Predictive maintenance",
-      "Edge computing",
-      "Machine learning analytics",
-      "Multi-protocol support",
-      "Custom dashboards",
-      "Mobile applications",
-      "API access",
-      "Data visualization",
-      "Alert systems"
+      "Traffic pattern analysis",
+      "Energy optimization",
+      "Regulatory compliance",
+      "Multi-vehicle coordination",
+      "Emergency response systems",
+      "Advanced analytics dashboard"
     ],
     benefits: [
-      "Improve efficiency by 25-40%",
-      "Reduce costs by 30-50%",
-      "Predict failures with 90% accuracy",
-      "Real-time insights",
-      "Better resource utilization",
-      "Proactive maintenance"
+      "Reduce operational costs by 40%",
+      "Improve safety by 90%",
+      "Optimize fleet utilization by 60%",
+      "24/7 autonomous operation",
+      "Regulatory compliance automation"
     ],
     useCases: [
-      "Manufacturing optimization",
-      "Smart city management",
-      "Healthcare monitoring",
-      "Energy management",
-      "Retail analytics",
-      "Transportation optimization"
+      "Autonomous delivery fleets",
+      "Self-driving taxi services",
+      "Autonomous logistics",
+      "Smart city transportation",
+      "Industrial automation"
     ],
     targetAudience: [
-      "Operations managers",
-      "Data scientists",
-      "IoT engineers",
-      "Facility managers",
-      "Technology directors"
-    ],
-    tags: ["IoT", "Data Analytics", "Predictive Maintenance", "Edge Computing", "Machine Learning", "Real-time"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium",
-    marketPrice: "$799 - $3,500/month",
-=======
     technology: ["Natural Language Processing", "Machine Learning", "Sentiment Analysis", "Cloud Computing", "API Integration"],
     integrations: ["CRM Systems", "Help Desk Software", "E-commerce Platforms", "Social Media", "Email Marketing"],
     compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
@@ -2276,30 +1212,11 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$950 - $4,000/month",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3676
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    technology: ["Edge Computing", "Machine Learning", "Stream Processing", "IoT Protocols", "Cloud Computing"],
-    integrations: ["IoT Devices", "Cloud Platforms", "Enterprise Systems", "Mobile Apps", "Custom APIs"],
-    compliance: ["ISO 27001", "SOC 2", "Industry Standards", "Data Protection"],
-    roi: "350% within 12 months",
-    competitors: ["AWS IoT Analytics", "Microsoft Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
-    marketTrend: "High-growth market with 250% annual expansion",
-    innovationLevel: "Advanced IoT analytics technology for operational intelligence"
-  },
-
-  // AI-Powered Cybersecurity Platform
-  {
-    id: "ai-cybersecurity-platform",
-    title: "AI-Powered Cybersecurity Platform",
-    description: "Next-generation cybersecurity platform that uses artificial intelligence to detect, prevent, and respond to cyber threats in real-time.",
-    category: "AI & Cybersecurity",
-    subcategory: "AI Security",
-=======
   // AI-Powered Cybersecurity Threat Intelligence
   {
     id: "ai-cybersecurity-threat-intelligence",
@@ -2307,7 +1224,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     description: "Advanced threat intelligence platform that uses AI and machine learning to detect, analyze, and respond to cybersecurity threats in real-time with predictive capabilities.",
     category: "Cybersecurity",
     subcategory: "Threat Intelligence",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
 =======
     technology: ["Machine Learning", "IoT Sensors", "Edge Computing", "Cloud Computing", "Predictive Analytics"],
     integrations: ["CMMS", "ERP Systems", "SCADA", "Building Management", "Equipment APIs"],
@@ -2451,52 +1367,10 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     description: "High-performance edge computing platform that processes IoT data locally, reducing latency and enabling real-time decision making.",
     category: "Edge Computing & IoT",
     subcategory: "IoT Analytics",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3676
     price: 1800,
     currency: "$",
     pricingModel: "monthly",
     features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "AI threat detection",
-      "Behavioral analysis",
-      "Automated response",
-      "Threat intelligence",
-      "Zero-day protection",
-      "Compliance monitoring",
-      "Incident management",
-      "Security analytics",
-      "Mobile security",
-      "Cloud security"
-    ],
-    benefits: [
-      "Detect threats 10x faster",
-      "Reduce false positives by 80%",
-      "Automate 90% of responses",
-      "24/7 protection",
-      "Better compliance",
-      "Reduced security costs"
-    ],
-    useCases: [
-      "Enterprise security",
-      "Cloud security",
-      "Endpoint protection",
-      "Network security",
-      "Application security",
-      "Data protection"
-    ],
-    targetAudience: [
-      "CISOs",
-      "Security managers",
-      "IT directors",
-      "Compliance officers",
-      "Security analysts"
-    ],
-    tags: ["AI", "Cybersecurity", "Threat Detection", "Machine Learning", "Security Automation", "Compliance"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,800 - $8,000/month",
-=======
       "Real-time threat detection",
       "AI-powered threat analysis",
       "Predictive threat modeling",
@@ -2554,156 +1428,12 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Faster identity verification",
       "Enhanced security",
       "Global accessibility"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8bff
     ],
     useCases: [
       "Financial institutions",
       "Healthcare organizations",
       "Government agencies",
-<<<<<<< HEAD
-      "Technology companies",
-      "Manufacturing firms",
-      "Retail businesses"
-    ],
-    targetAudience: [
-      "CISOs",
-      "Security analysts",
-      "IT managers",
-      "Compliance officers",
-      "Risk managers"
-    ],
-    tags: ["AI", "Cybersecurity", "Threat Intelligence", "Machine Learning", "Incident Response", "Compliance"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,800 - $6,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-<<<<<<< HEAD
-    technology: ["Machine Learning", "Deep Learning", "Natural Language Processing", "Behavioral Analytics", "Threat Intelligence"],
-    integrations: ["SIEM Systems", "Firewalls", "Endpoint Protection", "Cloud Platforms", "Security Tools"],
-    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "Industry Standards"],
-    roi: "400% within 12 months",
-    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
-    marketTrend: "High-growth market with 350% annual expansion",
-    innovationLevel: "Advanced AI technology revolutionizing cybersecurity"
-  },
-
-  // AI-Powered Financial Services Platform
-  {
-    id: "ai-financial-services-platform",
-    title: "AI-Powered Financial Services Platform",
-    description: "Comprehensive AI-driven financial platform offering automated trading, risk assessment, fraud detection, and personalized financial planning with real-time market analysis.",
-    category: "AI & Financial Technology",
-    subcategory: "FinTech Solutions",
-    price: 899,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered algorithmic trading",
-      "Real-time risk assessment",
-      "Advanced fraud detection",
-      "Personalized investment recommendations",
-      "Portfolio optimization",
-      "Market sentiment analysis",
-      "Regulatory compliance automation",
-      "Multi-asset class support",
-      "Real-time market data",
-      "Automated reporting and compliance"
-    ],
-    benefits: [
-      "Increase trading efficiency by 300%",
-      "Reduce fraud losses by 95%",
-      "Improve portfolio returns by 25%",
-      "Automated regulatory compliance",
-      "Real-time risk monitoring",
-      "Scalable financial operations"
-    ],
-    useCases: [
-      "Investment firms",
-      "Banks and credit unions",
-      "Hedge funds",
-      "Financial advisors",
-      "Trading desks",
-      "Risk management teams"
-    ],
-    targetAudience: [
-      "Financial institutions",
-      "Investment professionals",
-      "Risk managers",
-      "Compliance officers",
-      "Trading teams"
-    ],
-    tags: ["AI", "FinTech", "Algorithmic Trading", "Risk Management", "Fraud Detection", "Financial Planning"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$899 - $3,500/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "AWS"],
-    integrations: ["Bloomberg", "Reuters", "Trading platforms", "Banking APIs", "Regulatory systems"],
-    compliance: ["SOX", "Basel III", "Dodd-Frank", "GDPR", "SOC 2"],
-    roi: "500% within 6 months",
-    competitors: ["Bloomberg Terminal", "Thomson Reuters", "FactSet", "Refinitiv"],
-    marketTrend: "FinTech market growing at 25% annually with AI adoption accelerating",
-    innovationLevel: "State-of-the-art AI algorithms with real-time processing capabilities"
-  },
-
-  // Sustainable Technology Solutions Platform
-  {
-    id: "sustainable-technology-platform",
-    title: "Sustainable Technology Solutions Platform",
-    description: "Comprehensive platform for monitoring, managing, and optimizing environmental impact across organizations using IoT sensors, AI analytics, and sustainability metrics.",
-    category: "Sustainability & Green Tech",
-    subcategory: "Environmental Management",
-    price: 599,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Carbon footprint tracking",
-      "Energy consumption monitoring",
-      "Waste management optimization",
-      "Sustainable supply chain tracking",
-      "Environmental compliance reporting",
-      "Green building certification support",
-      "Renewable energy integration",
-      "Sustainability scorecards",
-      "Real-time environmental monitoring",
-      "Automated sustainability reporting"
-    ],
-    benefits: [
-      "Reduce carbon footprint by 40%",
-      "Lower energy costs by 30%",
-      "Achieve sustainability certifications faster",
-      "Improve brand reputation",
-      "Meet regulatory requirements",
-      "Drive innovation in green technology"
-    ],
-    useCases: [
-      "Manufacturing companies",
-      "Retail chains",
-      "Office buildings",
-      "Data centers",
-      "Logistics companies",
-      "Government agencies"
-    ],
-    targetAudience: [
-      "Sustainability managers",
-      "Facility managers",
-      "Environmental officers",
-      "Corporate responsibility teams",
-      "Government officials"
-    ],
-    tags: ["Sustainability", "IoT", "Environmental Monitoring", "Green Technology", "Carbon Tracking", "Energy Management"],
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
       "Risk assessment",
       "Document generation",
       "E-signature integration",
@@ -2732,10 +1462,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Legal consultants"
     ],
     tags: ["AI", "Legal Tech", "Contract Analysis", "Compliance", "Automation"],
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$599 - $2,000/month",
@@ -2744,27 +1470,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    technology: ["IoT sensors", "React", "Python", "Machine Learning", "Cloud computing", "Blockchain"],
-    integrations: ["Building management systems", "Energy providers", "Waste management systems", "Government databases"],
-    compliance: ["ISO 14001", "LEED", "BREEAM", "Environmental regulations"],
-    roi: "200% within 12 months",
-    competitors: ["Sphera", "EcoVadis", "Sustainalytics", "CDP"],
-    marketTrend: "Sustainability market growing at 20% annually with increasing regulatory pressure",
-    innovationLevel: "Cutting-edge IoT and AI integration for environmental monitoring"
-  },
-
-  // Edge Computing & IoT Services Platform
-  {
-    id: "edge-computing-iot-platform",
-    title: "Edge Computing & IoT Services Platform",
-    description: "Advanced edge computing platform that processes data locally using distributed computing, AI inference, and real-time analytics for IoT devices and edge networks.",
-    category: "Edge Computing & IoT",
-    subcategory: "Distributed Computing",
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     technology: ["NLP", "Machine Learning", "React", "Python", "Blockchain"],
     integrations: ["DocuSign", "Salesforce", "Microsoft Office", "Legal databases", "CRM systems"],
     compliance: ["GDPR", "CCPA", "SOC 2", "Legal industry standards"],
@@ -2844,46 +1550,17 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     features: [
       "Patient outcome prediction",
       "Treatment optimization",
-<<<<<<< HEAD
-      "Resource allocation",
-      "Risk assessment",
-      "Clinical decision support",
-      "Population health analytics",
-      "Real-time monitoring",
-      "HIPAA compliance"
-=======
       "Operational efficiency analysis",
       "Risk assessment",
       "Population health management",
       "Clinical decision support",
       "Healthcare cost optimization",
       "Quality metrics tracking"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     ],
     benefits: [
       "Improve patient outcomes by 25%",
       "Reduce healthcare costs by 20%",
       "Optimize resource allocation",
-<<<<<<< HEAD
-      "Faster diagnosis and treatment",
-      "Enhanced patient safety"
-    ],
-    useCases: [
-      "Hospitals and clinics",
-      "Health insurance",
-      "Pharmaceutical companies",
-      "Research institutions",
-      "Public health agencies"
-    ],
-    targetAudience: [
-      "Healthcare administrators",
-      "Clinical staff",
-      "Health IT managers",
-      "Insurance companies",
-      "Research institutions"
-    ],
-    tags: ["AI", "Healthcare", "Analytics", "Patient Care", "HIPAA"],
-=======
       "Enhance clinical decision-making",
       "Meet value-based care requirements"
     ],
@@ -2902,7 +1579,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Public health officials"
     ],
     tags: ["AI", "Healthcare", "Analytics", "Patient Outcomes", "Cost Optimization"],
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
     marketPrice: "$899 - $3,000/month",
@@ -2911,62 +1587,25 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    technology: ["Machine Learning", "NLP", "React", "Python", "TensorFlow"],
-    integrations: ["EHR systems", "PACS", "Lab systems", "Insurance databases"],
-    compliance: ["HIPAA", "HITECH", "SOC 2", "ISO 27001"],
-    roi: "300% within 12 months",
-    competitors: ["Epic", "Cerner", "Allscripts", "Athenahealth"],
-    uniqueValue: "AI-powered healthcare analytics with real-time clinical decision support and outcome prediction"
-=======
     technology: ["Machine Learning", "NLP", "React", "Python", "HIPAA-compliant cloud"],
     integrations: ["EHR systems", "PACS", "Lab systems", "Insurance platforms", "Wearables"],
     compliance: ["HIPAA", "HITECH", "SOC 2", "ISO 27001", "FDA guidelines"],
     roi: "300% within 12 months",
     competitors: ["Epic", "Cerner", "Allscripts", "Athenahealth"],
     uniqueValue: "AI-powered healthcare analytics with predictive modeling and automated clinical decision support"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
   },
 
   // Edge Computing Solutions
   {
     id: "edge-computing-solutions",
     title: "Edge Computing Solutions Platform",
-<<<<<<< HEAD
-    description: "Comprehensive edge computing platform that brings computation and data storage closer to data sources for faster processing and reduced latency.",
-    category: "Edge Computing",
-    subcategory: "Infrastructure",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
     description: "Comprehensive edge computing platform that brings AI and data processing closer to data sources for real-time decision making.",
     category: "Edge Computing",
     subcategory: "AI at the Edge",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     price: 799,
     currency: "$",
     pricingModel: "monthly",
     features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Distributed edge computing",
-      "Real-time AI inference",
-      "IoT device management",
-      "Edge analytics processing",
-      "Low-latency data processing",
-      "Edge security and encryption",
-      "Automatic failover",
-      "Edge-to-cloud synchronization",
-      "Device provisioning and updates",
-      "Performance monitoring and optimization"
-    ],
-    benefits: [
-      "Reduce latency by 90%",
-      "Lower bandwidth costs by 60%",
-      "Improve reliability with local processing",
-      "Real-time decision making",
-      "Scalable IoT deployments",
-      "Enhanced security and privacy"
-=======
       "Edge data processing",
       "Real-time analytics",
       "IoT device management",
@@ -2985,7 +1624,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Real-time processing",
       "Enhanced security",
       "Scalable infrastructure"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3676
     ],
     useCases: [
       "Smart cities",
@@ -2993,21 +1631,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Autonomous vehicles",
       "Healthcare monitoring",
       "Retail analytics",
-<<<<<<< HEAD
-      "Manufacturing automation"
-    ],
-    targetAudience: [
-      "IoT developers",
-      "System architects",
-      "Operations managers",
-      "Technology consultants",
-      "Infrastructure teams"
-    ],
-    tags: ["Edge Computing", "IoT", "Distributed Systems", "Real-time Processing", "AI Inference", "Low Latency"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$799 - $2,500/month",
-=======
       "Energy management"
     ],
     targetAudience: [
@@ -3021,7 +1644,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,800 - $8,000/month",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3676
 =======
       "Edge node management",
       "Real-time data processing",
@@ -3038,37 +1660,11 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Latency reduction",
       "Bandwidth optimization",
       "Edge security",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
       "Scalable infrastructure"
     ],
     benefits: [
       "Reduce latency by 80%",
       "Lower bandwidth costs by 60%",
-<<<<<<< HEAD
-      "Improve application performance",
-      "Enhanced user experience",
-      "Real-time decision making"
-    ],
-    useCases: [
-      "IoT applications",
-      "Real-time analytics",
-      "Gaming and streaming",
-      "Autonomous vehicles",
-      "Smart cities"
-    ],
-    targetAudience: [
-      "IoT developers",
-      "Cloud architects",
-      "DevOps engineers",
-      "Network administrators",
-      "Application developers"
-    ],
-    tags: ["Edge Computing", "IoT", "Real-time Processing", "Low Latency", "Distributed Systems"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$799 - $2,500/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
       "Improve real-time decision making",
       "Enhanced privacy and security",
       "Scalable edge deployment"
@@ -3091,74 +1687,11 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$799 - $2,500/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    technology: ["Kubernetes", "Docker", "Python", "Rust", "React", "Edge AI frameworks", "5G networks"],
-    integrations: ["Cloud platforms", "IoT protocols", "Network equipment", "Device manufacturers"],
-    compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry-specific standards"],
-    roi: "400% within 8 months",
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
-    marketTrend: "Edge computing market growing at 35% annually with 5G deployment accelerating",
-    innovationLevel: "Next-generation edge computing with AI-powered optimization"
-  },
-
-  // Advanced Healthcare AI Solutions Platform
-  {
-    id: "advanced-healthcare-ai-platform",
-    title: "Advanced Healthcare AI Solutions Platform",
-    description: "Comprehensive AI platform for healthcare providers offering diagnostic assistance, patient monitoring, drug discovery, and personalized treatment recommendations.",
-    category: "AI & Healthcare",
-    subcategory: "Medical Technology",
-    price: 1299,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered diagnostic imaging",
-      "Patient monitoring and alerts",
-      "Drug discovery and development",
-      "Personalized treatment plans",
-      "Clinical decision support",
-      "Medical record analysis",
-      "Predictive health analytics",
-      "Telemedicine integration",
-      "Regulatory compliance tools",
-      "Research data management"
-    ],
-    benefits: [
-      "Improve diagnostic accuracy by 30%",
-      "Reduce treatment costs by 25%",
-      "Accelerate drug discovery by 50%",
-      "Enhance patient outcomes",
-      "Streamline clinical workflows",
-      "Enable precision medicine"
-    ],
-    useCases: [
-      "Hospitals and clinics",
-      "Research institutions",
-      "Pharmaceutical companies",
-      "Medical device manufacturers",
-      "Health insurance companies",
-      "Government health agencies"
-    ],
-    targetAudience: [
-      "Healthcare providers",
-      "Medical researchers",
-      "Pharmaceutical companies",
-      "Health IT professionals",
-      "Regulatory compliance teams"
-    ],
-    tags: ["AI", "Healthcare", "Medical Technology", "Diagnostics", "Drug Discovery", "Precision Medicine"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,299 - $5,000/month",
-=======
     technology: ["Kubernetes", "Docker", "Node.js", "Python", "Rust"],
     integrations: ["AWS", "Azure", "Google Cloud", "IoT platforms", "CDN services"],
     compliance: ["SOC 2", "ISO 27001", "GDPR"],
@@ -3172,18 +1705,13 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     roi: "280% within 9 months",
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
     uniqueValue: "Comprehensive edge computing platform with AI optimization and 5G integration"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
   },
 
   // AI-Powered Financial Planning
   {
     id: "ai-financial-planning-platform",
     title: "AI Financial Planning Platform",
-<<<<<<< HEAD
-    description: "Intelligent financial planning platform that uses AI to provide personalized investment advice, retirement planning, and wealth management.",
-=======
     description: "Intelligent financial planning platform that provides personalized investment advice, retirement planning, and wealth management using AI.",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     category: "AI & FinTech",
     subcategory: "Financial Planning",
     price: 199,
@@ -3197,16 +1725,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Portfolio rebalancing",
       "Goal tracking",
       "Financial education",
-<<<<<<< HEAD
-      "Secure document storage"
-    ],
-    benefits: [
-      "Improve investment returns by 15-25%",
-      "Reduce financial planning costs by 50%",
-      "Better retirement preparedness",
-      "Tax optimization",
-      "Personalized financial guidance"
-=======
       "Mobile app access"
     ],
     benefits: [
@@ -3215,63 +1733,30 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Personalized financial advice",
       "Automated portfolio management",
       "Better financial literacy"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     ],
     useCases: [
       "Personal financial planning",
       "Retirement planning",
       "Investment management",
       "Tax planning",
-<<<<<<< HEAD
-      "Estate planning"
-=======
       "Wealth management"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     ],
     targetAudience: [
       "Individual investors",
       "Financial advisors",
       "Retirement planners",
-<<<<<<< HEAD
-      "Tax professionals",
-      "Wealth managers"
-=======
       "Wealth managers",
       "Financial institutions"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     ],
     tags: ["AI", "FinTech", "Financial Planning", "Investment", "Retirement"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$199 - $800/month",
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    technology: ["TensorFlow", "PyTorch", "React", "Python", "Medical imaging libraries", "Cloud computing"],
-    integrations: ["EHR systems", "Medical devices", "Laboratory systems", "Insurance databases", "Regulatory systems"],
-    compliance: ["HIPAA", "FDA", "CE marking", "ISO 13485", "SOC 2"],
-    roi: "300% within 12 months",
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Cerner"],
-    marketTrend: "Healthcare AI market growing at 40% annually with increasing adoption in clinical settings",
-    innovationLevel: "State-of-the-art medical AI with regulatory compliance and clinical validation"
-  },
-
-  // Green Energy Management System
-  {
-    id: "green-energy-management-system",
-    title: "Green Energy Management System",
-    description: "Intelligent energy management platform that optimizes renewable energy usage, manages microgrids, and provides real-time energy analytics for sustainable operations.",
-    category: "Green Energy & Sustainability",
-    subcategory: "Energy Management",
-=======
     technology: ["Machine Learning", "NLP", "React", "Python", "Blockchain"],
     integrations: ["Banking APIs", "Investment platforms", "Tax software", "Accounting systems"],
     compliance: ["SEC", "FINRA", "SOC 2", "GDPR"],
@@ -3285,44 +1770,20 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     roi: "320% within 6 months",
     competitors: ["Betterment", "Wealthfront", "Personal Capital", "M1 Finance"],
     uniqueValue: "AI-powered financial planning with personalized advice and automated portfolio optimization"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
   },
 
   // Quantum Machine Learning Platform
   {
     id: "quantum-machine-learning-platform",
     title: "Quantum Machine Learning Platform",
-<<<<<<< HEAD
-    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems that are intractable for classical computers.",
-    category: "Quantum Computing",
-    subcategory: "Machine Learning",
-    price: 3500,
-=======
     description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems beyond classical computing capabilities.",
     category: "Quantum Computing",
     subcategory: "Quantum ML",
     price: 5000,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Quantum ML algorithms",
-<<<<<<< HEAD
-      "Hybrid classical-quantum models",
-      "Quantum feature selection",
-      "Optimization algorithms",
-      "Quantum neural networks",
-      "Performance benchmarking",
-      "Cloud-based access",
-      "Real-time collaboration"
-    ],
-    benefits: [
-      "Solve previously intractable problems",
-      "Exponential speedup for specific tasks",
-      "Enhanced optimization capabilities",
-      "Future-proof technology",
-      "Competitive advantage in research"
-=======
       "Hybrid quantum-classical computing",
       "Quantum feature selection",
       "Quantum optimization",
@@ -3337,28 +1798,12 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Competitive advantage in research",
       "Future-proof technology investment",
       "Access to quantum computing resources"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     ],
     useCases: [
       "Drug discovery",
       "Financial modeling",
       "Logistics optimization",
       "Climate modeling",
-<<<<<<< HEAD
-      "Cryptography"
-    ],
-    targetAudience: [
-      "Quantum researchers",
-      "Data scientists",
-      "Pharmaceutical companies",
-      "Financial institutions",
-      "Academic institutions"
-    ],
-    tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,500 - $12,000/month",
-=======
       "Cryptography research"
     ],
     targetAudience: [
@@ -3372,27 +1817,17 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$5,000 - $20,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    technology: ["Qiskit", "PennyLane", "Python", "Jupyter", "Quantum simulators"],
-    integrations: ["AWS Braket", "Azure Quantum", "Google Quantum", "IBM Quantum"],
-    compliance: ["Research standards", "Academic protocols", "Enterprise security"],
-    roi: "150% within 18 months",
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
-    uniqueValue: "Hybrid classical-quantum ML platform with accessible algorithms and real-world applications"
-=======
     technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum simulators"],
     integrations: ["Cloud quantum platforms", "Classical ML frameworks", "Research tools"],
     compliance: ["Research standards", "Data security", "Intellectual property protection"],
     roi: "150% within 18 months",
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
     uniqueValue: "Hybrid quantum-classical ML platform with access to multiple quantum backends"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
   },
 
   // AI-Powered Supply Chain Optimization
@@ -3401,57 +1836,12 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     title: "AI Supply Chain Optimization Platform",
     description: "Intelligent supply chain platform that uses AI to optimize inventory, predict demand, and streamline logistics operations.",
     category: "AI & Supply Chain",
-<<<<<<< HEAD
-    subcategory: "Optimization",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-=======
     subcategory: "Supply Chain Optimization",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     price: 699,
     currency: "$",
     pricingModel: "monthly",
     features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "Renewable energy optimization",
-      "Microgrid management",
-      "Energy storage optimization",
-      "Demand response automation",
-      "Real-time energy monitoring",
-      "Predictive energy analytics",
-      "Carbon footprint tracking",
-      "Energy efficiency recommendations",
-      "Grid integration tools",
-      "Automated energy trading"
-    ],
-    benefits: [
-      "Reduce energy costs by 35%",
-      "Increase renewable energy usage by 50%",
-      "Lower carbon emissions by 40%",
-      "Improve grid stability",
-      "Enable energy independence",
-      "Optimize energy storage"
-    ],
-    useCases: [
-      "Commercial buildings",
-      "Industrial facilities",
-      "Residential communities",
-      "Data centers",
-      "Municipal utilities",
-      "Renewable energy farms"
-    ],
-    targetAudience: [
-      "Facility managers",
-      "Energy engineers",
-      "Sustainability managers",
-      "Utility companies",
-      "Property developers"
-    ],
-    tags: ["Green Energy", "Energy Management", "Renewable Energy", "Microgrids", "Energy Storage", "Sustainability"],
-    estimatedDelivery: "4-5 weeks",
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
       "Demand forecasting",
       "Inventory optimization",
       "Route optimization",
@@ -3459,27 +1849,11 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Risk assessment",
       "Real-time tracking",
       "Performance analytics",
-<<<<<<< HEAD
-      "Automated reporting"
-=======
       "Automated procurement"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     ],
     benefits: [
       "Reduce inventory costs by 20-30%",
       "Improve delivery times by 25%",
-<<<<<<< HEAD
-      "Optimize supplier relationships",
-      "Reduce supply chain risks",
-      "Increase operational efficiency"
-    ],
-    useCases: [
-      "Manufacturing",
-      "Retail and e-commerce",
-      "Logistics and transportation",
-      "Healthcare supply chains",
-      "Food and beverage"
-=======
       "Reduce supply chain disruptions",
       "Optimize resource allocation",
       "Enhance customer satisfaction"
@@ -3490,22 +1864,11 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "E-commerce",
       "Logistics",
       "Distribution"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     ],
     targetAudience: [
       "Supply chain managers",
       "Operations directors",
       "Logistics coordinators",
-<<<<<<< HEAD
-      "Procurement managers",
-      "Business analysts"
-    ],
-    tags: ["AI", "Supply Chain", "Logistics", "Optimization", "Inventory Management"],
-    estimatedDelivery: "3-4 weeks",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-    supportLevel: "premium",
-    marketPrice: "$699 - $2,200/month",
-=======
       "Procurement officers",
       "Business analysts"
     ],
@@ -3513,137 +1876,32 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$699 - $2,500/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    technology: ["IoT sensors", "Machine Learning", "React", "Python", "Energy management protocols", "Cloud computing"],
-    integrations: ["Solar panels", "Wind turbines", "Battery systems", "Grid infrastructure", "Building management systems"],
-    compliance: ["ISO 50001", "LEED", "Energy Star", "Local energy regulations"],
-    roi: "250% within 18 months",
-    competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
-    marketTrend: "Green energy market growing at 15% annually with increasing renewable energy adoption",
-    innovationLevel: "Advanced AI-powered energy optimization with real-time grid integration"
-  },
-
-  // Smart City Infrastructure Solutions
-  {
-    id: "smart-city-infrastructure-platform",
-    title: "Smart City Infrastructure Solutions Platform",
-    description: "Comprehensive platform for managing smart city infrastructure including traffic management, public safety, utilities, and citizen services using IoT, AI, and data analytics.",
-    category: "Smart Cities & Infrastructure",
-    subcategory: "Urban Technology",
-    price: 999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Intelligent traffic management",
-      "Public safety monitoring",
-      "Utility infrastructure management",
-      "Citizen service portals",
-      "Environmental monitoring",
-      "Smart parking systems",
-      "Public transportation optimization",
-      "Emergency response coordination",
-      "Data analytics dashboard",
-      "Citizen engagement tools"
-    ],
-    benefits: [
-      "Reduce traffic congestion by 25%",
-      "Improve public safety response by 40%",
-      "Lower infrastructure costs by 20%",
-      "Enhance citizen satisfaction",
-      "Enable data-driven decision making",
-      "Create sustainable urban environments"
-    ],
-    useCases: [
+      "Transportation companies",
+      "Logistics providers",
       "City governments",
-      "Municipal utilities",
-      "Transportation departments",
-      "Public safety agencies",
-      "Urban planning departments",
-      "Smart city consultants"
+      "Manufacturing companies",
+      "Technology companies"
     ],
-    targetAudience: [
-      "City officials",
-      "Urban planners",
-      "Infrastructure managers",
-      "Public safety directors",
-      "Technology consultants"
-    ],
-    tags: ["Smart Cities", "Infrastructure", "IoT", "Public Safety", "Traffic Management", "Urban Planning"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$999 - $3,500/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["IoT sensors", "AI/ML", "React", "Python", "GIS systems", "Cloud computing", "5G networks"],
-    integrations: ["Traffic systems", "Public safety networks", "Utility infrastructure", "Government databases", "Citizen apps"],
-    compliance: ["Government security standards", "Data privacy regulations", "Infrastructure safety codes"],
-    roi: "300% within 24 months",
-    competitors: ["Cisco", "IBM", "Siemens", "Schneider Electric"],
-    marketTrend: "Smart city market growing at 25% annually with increasing government investment",
-    innovationLevel: "Comprehensive smart city platform with AI-powered optimization and citizen engagement"
-  },
-
-  // Advanced Robotics & Automation Platform
-  {
-    id: "advanced-robotics-automation",
-    title: "Advanced Robotics & Automation Platform",
-    description: "Next-generation robotics platform that combines AI, computer vision, and advanced automation for manufacturing, logistics, healthcare, and service industries.",
-    category: "Robotics & Automation",
-    subcategory: "Industrial Automation",
-    price: 1499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered computer vision",
-      "Advanced motion planning",
-      "Collaborative robotics",
-      "Predictive maintenance",
-      "Quality control automation",
-      "Logistics optimization",
-      "Human-robot collaboration",
-      "Remote monitoring and control",
-      "Performance analytics",
-      "Safety compliance tools"
-    ],
-    benefits: [
-      "Increase production efficiency by 45%",
-      "Reduce operational costs by 30%",
-      "Improve product quality by 25%",
-      "Enable 24/7 operations",
-      "Enhance workplace safety",
-      "Scale operations rapidly"
-    ],
-    useCases: [
-      "Manufacturing facilities",
-      "Warehouses and logistics",
-      "Healthcare institutions",
-      "Agriculture operations",
-      "Construction sites",
-      "Service industries"
-    ],
-    targetAudience: [
-      "Manufacturing managers",
-      "Operations directors",
-      "Automation engineers",
-      "Logistics managers",
-      "Technology consultants"
-    ],
-<<<<<<< HEAD
-    tags: ["AI", "Education", "Learning Analytics", "Personalization", "Performance Tracking"],
+    tags: ["AI", "Autonomous Systems", "Fleet Management", "Safety", "Logistics"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
-    marketPrice: "$1,499 - $4,999/month",
-=======
+    marketPrice: "$2,999 - $8,000/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Blockchain & Web3 Services
+  {
     },
     aiCapabilities: [
       "Machine Learning Models",
@@ -3707,7 +1965,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,500 - $12,000/month",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41b5
 =======
     technology: ["Machine Learning", "Natural Language Processing", "Behavioral Analytics", "Cloud Computing", "API Integration"],
     integrations: ["SIEM Systems", "Firewalls", "EDR Solutions", "Vulnerability Scanners", "Security Tools"],
@@ -3767,15 +2024,10 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$1,200 - $4,500/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
     },
     aiCapabilities: [
       "Predictive Modeling",
@@ -3860,28 +2112,10 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Personalized experiences",
       "Data-driven decisions",
       "Enhanced brand loyalty"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
     ],
     useCases: [
       "E-commerce businesses",
       "SaaS companies",
-<<<<<<< HEAD
-      "Marketing agencies",
-      "B2B companies",
-      "Retail brands"
-    ],
-    targetAudience: [
-      "Marketing managers",
-      "Digital marketers",
-      "Growth hackers",
-      "Marketing directors",
-      "E-commerce managers"
-    ],
-    tags: ["AI", "Marketing", "Automation", "Personalization", "Optimization"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,900 - $6,500/month",
-=======
     technology: ["Machine Learning", "NLP", "Computer Vision", "Cloud Computing", "Mobile Apps"],
     integrations: ["LMS Systems", "Google Classroom", "Canvas", "Blackboard", "Moodle"],
     compliance: ["FERPA", "COPPA", "GDPR", "Accessibility Standards"],
@@ -3938,7 +2172,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$800 - $2,500/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
 =======
     technology: ["Machine Learning", "Optimization algorithms", "React", "Python", "IoT"],
     integrations: ["ERP systems", "WMS", "TMS", "Supplier portals", "E-commerce platforms"],
@@ -3953,28 +2186,12 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     roi: "280% within 8 months",
     competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"],
     uniqueValue: "AI-powered supply chain platform with real-time optimization and predictive analytics"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
   },
 
   // Metaverse Development Platform
   {
     id: "metaverse-development-platform",
     title: "Metaverse Development Platform",
-<<<<<<< HEAD
-    description: "Comprehensive platform for building, deploying, and managing metaverse experiences with AI-powered content generation and virtual reality integration.",
-    category: "Metaverse & VR",
-    subcategory: "Development Platform",
-    price: 499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "3D world building tools",
-      "AI content generation",
-      "VR/AR integration",
-      "Multi-user experiences",
-      "Avatar customization",
-      "Virtual commerce",
-=======
     description: "Comprehensive platform for creating, deploying, and managing immersive 3D virtual worlds and experiences for businesses and creators.",
     category: "Metaverse & Web3",
     subcategory: "Virtual Worlds",
@@ -3988,111 +2205,10 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "NFT marketplace integration",
       "Multi-user collaboration",
       "VR/AR support",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
       "Analytics dashboard",
       "Monetization tools"
     ],
     benefits: [
-<<<<<<< HEAD
-      "Create immersive experiences quickly",
-      "Reduce development costs by 60%",
-      "Engage customers in new ways",
-      "Monetize virtual experiences",
-      "Future-proof business presence"
-    ],
-    useCases: [
-      "Virtual events",
-      "Virtual retail",
-      "Training and education",
-      "Social networking",
-      "Gaming and entertainment"
-    ],
-    targetAudience: [
-      "Game developers",
-      "Marketing agencies",
-      "Event planners",
-      "Educational institutions",
-      "Retail businesses"
-    ],
-    tags: ["Metaverse", "VR/AR", "3D Development", "AI Content", "Virtual Commerce"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "premium",
-    marketPrice: "$499 - $1,800/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    aiCapabilities: [
-      "Machine Learning",
-      "Natural Language Processing",
-      "Computer Vision",
-      "Predictive Analytics"
-    ],
-    integrationOptions: [
-      "Google Analytics",
-      "Facebook Ads",
-      "Google Ads",
-      "Email platforms",
-      "CRM systems"
-    ],
-    complianceStandards: ["GDPR", "CCPA", "SOC2"],
-    scalabilityFeatures: ["Multi-tenant", "Cloud-native", "API-first"]
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41b5
-  },
-
-  // AI-Powered Retail & E-commerce Innovation
-  {
-<<<<<<< HEAD
-    id: "ai-retail-innovation-platform",
-    title: "AI Retail Innovation Platform",
-    description: "Cutting-edge AI platform that revolutionizes retail through personalized shopping experiences, inventory optimization, and predictive analytics.",
-    category: "AI & Retail",
-    subcategory: "Innovation",
-    price: 2499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Personalized shopping experiences",
-      "Inventory optimization",
-      "Predictive analytics",
-      "Customer behavior analysis",
-      "Price optimization",
-      "Supply chain management",
-      "Real-time insights",
-      "Custom dashboards",
-      "Integration capabilities",
-      "Mobile app support"
-    ],
-    benefits: [
-      "Increase sales by 40%",
-      "Reduce inventory costs by 30%",
-      "Improve customer satisfaction by 50%",
-      "Better pricing strategies",
-      "Data-driven decisions"
-    ],
-    useCases: [
-      "Retail optimization",
-      "E-commerce enhancement",
-      "Customer experience",
-      "Inventory management",
-      "Performance analytics"
-    ],
-    targetAudience: [
-      "Retail companies",
-      "E-commerce businesses",
-      "Retail consultants",
-      "Marketing teams",
-      "Business analysts"
-    ],
-    tags: ["AI", "Retail", "E-commerce", "Personalization", "Innovation"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,499 - $7,999/month",
-=======
     id: "quantum-machine-learning-platform",
     title: "Quantum Machine Learning Platform",
     description: "Revolutionary platform that combines quantum computing with machine learning to solve complex optimization problems, accelerate AI training, and unlock new capabilities in drug discovery, materials science, and financial modeling.",
@@ -4136,12 +2252,576 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$8,000 - $25,000/month",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41b5
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-<<<<<<< HEAD
+    tags: ["Robotics", "Automation", "AI", "Computer Vision", "Manufacturing", "Logistics"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,499 - $5,000/month",
+=======
+      "Retail chains",
+      "Financial services",
+      "Healthcare providers",
+      "Travel companies"
+    ],
+    targetAudience: [
+      "Customer experience managers",
+      "Marketing teams",
+      "Product managers",
+      "UX designers",
+      "Business owners"
+    ],
+    tags: ["AI", "Customer Experience", "Personalization", "Behavioral Analytics", "Optimization", "UX"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$950 - $3,500/month",
+=======
+      "Create immersive brand experiences",
+      "Host virtual events and conferences",
+      "Generate new revenue streams",
+      "Enhance customer engagement",
+      "Reduce physical event costs"
+    ],
+    useCases: [
+      "Virtual events",
+      "Brand experiences",
+      "Training and education",
+      "Virtual real estate",
+      "Social networking"
+    ],
+    targetAudience: [
+      "Event organizers",
+      "Brand managers",
+      "Educators",
+      "Real estate developers",
+      "Content creators"
+    ],
+    tags: ["Metaverse", "Web3", "Virtual Reality", "3D", "NFTs"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$999 - $3,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    id: "blockchain-enterprise-orchestrator",
+    title: "Blockchain Enterprise Orchestrator",
+    description: "Enterprise-grade blockchain orchestration platform that manages multiple blockchain networks, smart contracts, and DeFi protocols for business applications.",
+    category: "Blockchain & Web3",
+    subcategory: "Enterprise Orchestration",
+    price: 1999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Multi-blockchain management",
+      "Smart contract orchestration",
+      "DeFi protocol integration",
+      "Cross-chain interoperability",
+      "Enterprise security features",
+      "Regulatory compliance",
+      "Real-time monitoring",
+      "Custom blockchain deployment",
+      "API management",
+      "Advanced analytics"
+    ],
+    benefits: [
+      "Reduce blockchain complexity by 70%",
+      "Improve transaction efficiency by 50%",
+      "Ensure regulatory compliance",
+      "Multi-chain flexibility",
+      "Enterprise-grade security"
+    ],
+    useCases: [
+      "Supply chain transparency",
+      "Digital asset management",
+      "Decentralized finance",
+      "Identity verification",
+      "Smart contract automation"
+    ],
+    targetAudience: [
+      "Financial institutions",
+      "Supply chain companies",
+      "Technology companies",
+      "Government agencies",
+      "Consulting firms"
+    ],
+    tags: ["Blockchain", "Enterprise", "Orchestration", "Security", "Compliance"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "enterprise",
+      "Educational institutions",
+      "E-commerce platforms",
+      "Travel and hospitality"
+    ],
+    targetAudience: [
+      "CISOs",
+      "Compliance officers",
+      "IT directors",
+      "Product managers",
+      "Security architects"
+    ],
+    tags: ["Blockchain", "Digital Identity", "Security", "Privacy", "Compliance", "Zero-Knowledge Proofs"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,800 - $15,000/month",
+=======
+    marketPrice: "$8,500 - $25,000/month",
+    roi: "250-450%",
+    innovationLevel: "Cutting-Edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered Cybersecurity & Threat Intelligence
+  {
+    id: "ai-threat-intelligence-platform",
+    title: "AI Threat Intelligence Platform",
+    description: "Advanced AI-powered threat intelligence platform that provides real-time threat detection, predictive analysis, and automated response for enterprise security.",
+    category: "AI & Cybersecurity",
+    subcategory: "Threat Intelligence",
+    price: 2499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered threat detection",
+      "Predictive threat analysis",
+      "Automated incident response",
+      "Threat hunting automation",
+      "Vulnerability assessment",
+      "Security orchestration",
+      "Real-time monitoring",
+      "Custom security policies",
+      "Integration capabilities",
+      "Advanced reporting"
+    ],
+    benefits: [
+      "Detect threats 95% faster",
+      "Reduce false positives by 80%",
+      "Automate incident response",
+      "24/7 security monitoring",
+      "Predictive threat prevention"
+    ],
+    useCases: [
+      "Enterprise security operations",
+      "Threat hunting",
+      "Incident response",
+      "Vulnerability management",
+      "Security analytics"
+    ],
+    targetAudience: [
+      "Security operations centers",
+      "IT security teams",
+      "Compliance officers",
+      "Security consultants",
+      "Enterprise organizations"
+    ],
+    tags: ["AI", "Cybersecurity", "Threat Intelligence", "Machine Learning", "Security"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$3,500 - $12,000/month",
+    roi: "180-350%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered Healthcare & Medical Research
+  {
+    id: "ai-medical-research-platform",
+    title: "AI Medical Research Platform",
+    description: "Revolutionary AI platform that accelerates medical research, drug discovery, and clinical trials through advanced machine learning and data analysis.",
+    category: "AI & Healthcare",
+    subcategory: "Medical Research",
+    price: 3999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered drug discovery",
+      "Clinical trial optimization",
+      "Medical image analysis",
+      "Genomic data processing",
+      "Predictive diagnostics",
+      "Research collaboration tools",
+      "Regulatory compliance",
+      "Data security",
+      "Integration capabilities",
+      "Advanced analytics"
+    ],
+    benefits: [
+      "Accelerate drug discovery by 5x",
+      "Reduce clinical trial costs by 40%",
+      "Improve diagnostic accuracy by 60%",
+      "Faster research collaboration",
+      "Regulatory compliance automation"
+    ],
+    useCases: [
+      "Pharmaceutical research",
+      "Clinical trials",
+      "Medical imaging",
+      "Genomic research",
+      "Drug development"
+    ],
+    targetAudience: [
+      "Pharmaceutical companies",
+      "Research institutions",
+      "Hospitals",
+      "Medical device companies",
+      "Biotechnology firms"
+    ],
+    tags: ["AI", "Healthcare", "Medical Research", "Drug Discovery", "Biotechnology"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$15,000 - $45,000/month",
+    roi: "400-600%",
+    innovationLevel: "Revolutionary",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered Financial Services & Trading
+  {
+    id: "ai-financial-trading-platform",
+    title: "AI Financial Trading Platform",
+    description: "Advanced AI-powered financial trading platform that provides algorithmic trading, risk management, and market analysis for institutional investors.",
+    category: "AI & Financial Services",
+    subcategory: "Algorithmic Trading",
+    price: 4999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered trading algorithms",
+      "Real-time market analysis",
+      "Risk management systems",
+      "Portfolio optimization",
+      "Market prediction models",
+      "Compliance monitoring",
+      "Multi-asset support",
+      "Advanced analytics",
+      "API integration",
+      "Custom strategies"
+    ],
+    benefits: [
+      "Improve trading performance by 30%",
+      "Reduce risk exposure by 50%",
+      "Automated trading strategies",
+      "Real-time market insights",
+      "Regulatory compliance"
+    ],
+    useCases: [
+      "Algorithmic trading",
+      "Portfolio management",
+      "Risk management",
+      "Market analysis",
+      "Quantitative research"
+    ],
+    targetAudience: [
+      "Investment firms",
+      "Hedge funds",
+      "Banks",
+      "Asset managers",
+      "Trading companies"
+    ],
+    tags: ["AI", "Financial Services", "Trading", "Algorithmic Trading", "Risk Management"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$12,000 - $35,000/month",
+    roi: "300-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered Manufacturing & Industry 4.0
+  {
+    id: "ai-industry-4-0-platform",
+    title: "AI Industry 4.0 Platform",
+    description: "Comprehensive AI platform for Industry 4.0 that optimizes manufacturing processes, predictive maintenance, and quality control through intelligent automation.",
+    category: "AI & Manufacturing",
+    subcategory: "Industry 4.0",
+    price: 3499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Predictive maintenance",
+      "Quality control automation",
+      "Production optimization",
+      "Supply chain integration",
+      "IoT device management",
+      "Real-time monitoring",
+      "Performance analytics",
+      "Custom dashboards",
+      "Integration capabilities",
+      "Mobile app support"
+    ],
+    benefits: [
+      "Reduce downtime by 40%",
+      "Improve product quality by 35%",
+      "Optimize production by 50%",
+      "Predictive maintenance",
+      "Real-time insights"
+    ],
+    useCases: [
+      "Manufacturing optimization",
+      "Quality control",
+      "Predictive maintenance",
+      "Supply chain management",
+      "Performance monitoring"
+    ],
+    targetAudience: [
+      "Manufacturing companies",
+      "Industrial companies",
+      "Operations managers",
+      "Plant managers",
+      "Industrial engineers"
+    ],
+    tags: ["AI", "Manufacturing", "Industry 4.0", "IoT", "Automation"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$18,000 - $50,000/month",
+    roi: "250-450%",
+    innovationLevel: "Cutting-Edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered Energy & Sustainability
+  {
+    id: "ai-energy-sustainability-platform",
+    title: "AI Energy & Sustainability Platform",
+    description: "Intelligent platform that optimizes energy consumption, manages renewable energy systems, and provides sustainability analytics for organizations.",
+    category: "AI & Energy",
+    subcategory: "Sustainability",
+    price: 1999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Energy consumption optimization",
+      "Renewable energy management",
+      "Carbon footprint tracking",
+      "Sustainability reporting",
+      "Predictive analytics",
+      "IoT integration",
+      "Real-time monitoring",
+      "Custom dashboards",
+      "Integration capabilities",
+      "Mobile app support"
+    ],
+    benefits: [
+      "Reduce energy costs by 30%",
+      "Improve sustainability by 50%",
+      "Automated optimization",
+      "Real-time monitoring",
+      "Compliance automation"
+    ],
+    useCases: [
+      "Energy management",
+      "Sustainability tracking",
+      "Carbon footprint reduction",
+      "Renewable energy integration",
+      "Compliance reporting"
+    ],
+    targetAudience: [
+      "Energy companies",
+      "Manufacturing companies",
+      "Commercial buildings",
+      "Government agencies",
+      "Sustainability consultants"
+    ],
+    tags: ["AI", "Energy", "Sustainability", "Climate Tech", "Renewable Energy"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$22,000 - $65,000/month",
+    roi: "350-550%",
+    innovationLevel: "Revolutionary",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered Transportation & Smart Cities
+  {
+    id: "ai-smart-city-platform",
+    title: "AI Smart City Platform",
+    description: "Comprehensive AI platform for smart cities that manages transportation, utilities, public safety, and urban planning through intelligent automation.",
+    category: "AI & Smart Cities",
+    subcategory: "Urban Management",
+    price: 4999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Traffic optimization",
+      "Public safety monitoring",
+      "Utility management",
+      "Urban planning analytics",
+      "Environmental monitoring",
+      "Citizen engagement",
+      "Real-time data processing",
+      "Predictive analytics",
+      "Integration capabilities",
+      "Custom dashboards"
+    ],
+    benefits: [
+      "Reduce traffic congestion by 30%",
+      "Improve public safety by 40%",
+      "Optimize utility usage by 25%",
+      "Better urban planning",
+      "Enhanced citizen experience"
+    ],
+    useCases: [
+      "Traffic management",
+      "Public safety",
+      "Utility optimization",
+      "Urban planning",
+      "Environmental monitoring"
+    ],
+    targetAudience: [
+      "City governments",
+      "Municipalities",
+      "Urban planners",
+      "Transportation authorities",
+      "Utility companies"
+    ],
+    tags: ["AI", "Smart Cities", "Urban Planning", "IoT", "Infrastructure"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$35,000 - $100,000/month",
+    roi: "400-600%",
+    innovationLevel: "Revolutionary",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered Education & Learning Analytics
+  {
+    id: "ai-education-analytics-platform",
+    title: "AI Education Analytics Platform",
+    description: "Advanced AI platform that provides comprehensive learning analytics, student performance tracking, and personalized education recommendations.",
+    category: "AI & Education",
+    subcategory: "Learning Analytics",
+    price: 1499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Learning analytics",
+      "Student performance tracking",
+      "Personalized recommendations",
+      "Predictive modeling",
+      "Content optimization",
+      "Assessment automation",
+      "Real-time insights",
+      "Custom dashboards",
+      "Integration capabilities",
+      "Mobile app support"
+    ],
+    benefits: [
+      "Improve student outcomes by 50%",
+      "Reduce administrative workload by 60%",
+      "Personalize learning experiences",
+      "Better student engagement",
+      "Data-driven insights"
+    ],
+    useCases: [
+      "K-12 education",
+      "Higher education",
+      "Corporate training",
+      "Online learning",
+      "Skill development"
+    ],
+    targetAudience: [
+      "Educational institutions",
+      "Teachers",
+      "Administrators",
+      "Corporate trainers",
+      "Learning consultants"
+    ],
+    tags: ["AI", "Education", "Analytics", "Learning Analytics", "Student Success"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$8,500 - $25,000/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered Retail & E-commerce Innovation
+  {
+    id: "ai-retail-innovation-platform",
+    title: "AI Retail Innovation Platform",
+    description: "Cutting-edge AI platform that revolutionizes retail through personalized shopping experiences, inventory optimization, and predictive analytics.",
+    category: "AI & Retail",
+    subcategory: "Innovation",
+    price: 2499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Personalized shopping experiences",
+      "Inventory optimization",
+      "Predictive analytics",
+      "Customer behavior analysis",
+      "Price optimization",
+      "Supply chain management",
+      "Real-time insights",
+      "Custom dashboards",
+      "Integration capabilities",
+      "Mobile app support"
+    ],
+    benefits: [
+      "Increase sales by 40%",
+      "Reduce inventory costs by 30%",
+      "Improve customer satisfaction by 50%",
+      "Better pricing strategies",
+      "Data-driven decisions"
+    ],
+    useCases: [
+      "Retail optimization",
+      "E-commerce enhancement",
+      "Customer experience",
+      "Inventory management",
+      "Performance analytics"
+    ],
+    targetAudience: [
+      "Retail companies",
+      "E-commerce businesses",
+      "Retail consultants",
+      "Marketing teams",
+      "Business analysts"
+    ],
+    tags: ["AI", "Retail", "Innovation", "Customer Experience", "Personalization"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$12,000 - $35,000/month",
+    roi: "250-450%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     }
   },
 
@@ -4188,145 +2868,128 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Risk managers",
       "Legal consultants"
     ],
-    tags: ["AI", "Legal", "Compliance", "Automation", "Risk Management"],
-=======
-    tags: ["Robotics", "Automation", "AI", "Computer Vision", "Manufacturing", "Logistics"],
->>>>>>> origin/main
-    estimatedDelivery: "8-10 weeks",
+    tags: ["AI", "Legal Tech", "Compliance", "Regulatory", "Risk Management"],
+    estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$1,499 - $5,000/month",
-=======
-      "Retail chains",
-      "Financial services",
-      "Healthcare providers",
-      "Travel companies"
-    ],
-    targetAudience: [
-      "Customer experience managers",
-      "Marketing teams",
-      "Product managers",
-      "UX designers",
-      "Business owners"
-    ],
-    tags: ["AI", "Customer Experience", "Personalization", "Behavioral Analytics", "Optimization", "UX"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "premium",
-    marketPrice: "$950 - $3,500/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
-=======
-      "Create immersive brand experiences",
-      "Host virtual events and conferences",
-      "Generate new revenue streams",
-      "Enhance customer engagement",
-      "Reduce physical event costs"
-    ],
-    useCases: [
-      "Virtual events",
-      "Brand experiences",
-      "Training and education",
-      "Virtual real estate",
-      "Social networking"
-    ],
-    targetAudience: [
-      "Event organizers",
-      "Brand managers",
-      "Educators",
-      "Real estate developers",
-      "Content creators"
-    ],
-    tags: ["Metaverse", "Web3", "Virtual Reality", "3D", "NFTs"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "premium",
-    marketPrice: "$999 - $3,500/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
+    marketPrice: "$18,000 - $50,000/month",
+    roi: "300-500%",
+    innovationLevel: "Cutting-Edge",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    technology: ["ROS", "Computer Vision", "Machine Learning", "Python", "C++", "React", "IoT sensors"],
-    integrations: ["Manufacturing systems", "Logistics platforms", "Quality control systems", "Safety systems"],
-    compliance: ["ISO 13482", "ANSI/RIA R15.06", "Safety standards", "Industry regulations"],
-    roi: "400% within 18 months",
-    competitors: ["ABB", "KUKA", "FANUC", "Universal Robots"],
-    marketTrend: "Industrial robotics market growing at 20% annually with increasing AI integration",
-    innovationLevel: "Advanced AI-powered robotics with human-robot collaboration and safety features"
+    }
   },
 
-  // Quantum Machine Learning Platform
+  // AI-Powered Agriculture & Precision Farming
   {
-    id: "quantum-machine-learning-platform",
-    title: "Quantum Machine Learning Platform",
-    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex optimization problems, accelerate drug discovery, and advance scientific research.",
-    category: "Quantum Computing & AI",
-    subcategory: "Quantum Machine Learning",
+    id: "ai-precision-farming-platform",
+    title: "AI Precision Farming Platform",
+    description: "Revolutionary AI platform that optimizes agricultural operations through precision farming, crop monitoring, and sustainable agriculture practices.",
+    category: "AI & Agriculture",
+    subcategory: "Precision Farming",
     price: 1999,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Quantum algorithm optimization",
-      "Hybrid quantum-classical ML",
-      "Quantum neural networks",
-      "Optimization problem solving",
-      "Drug discovery acceleration",
-      "Financial modeling",
-      "Climate prediction models",
-      "Quantum error correction",
-      "Performance benchmarking",
-      "Research collaboration tools"
+      "Precision farming optimization",
+      "Crop monitoring",
+      "Soil analysis",
+      "Weather prediction",
+      "Resource optimization",
+      "Sustainability tracking",
+      "IoT integration",
+      "Real-time monitoring",
+      "Custom dashboards",
+      "Mobile app support"
     ],
     benefits: [
-      "Solve previously intractable problems",
-      "Accelerate research by 1000x",
-      "Enable breakthrough discoveries",
-      "Optimize complex systems",
-      "Future-proof technology investment",
-      "Competitive advantage in research"
+      "Increase crop yields by 40%",
+      "Reduce resource waste by 35%",
+      "Improve sustainability by 50%",
+      "Precision farming",
+      "Data-driven decisions"
     ],
     useCases: [
+      "Crop management",
+      "Soil monitoring",
+      "Resource optimization",
+      "Weather prediction",
+      "Sustainability tracking"
+    ],
+    targetAudience: [
+      "Farmers",
+      "Agricultural companies",
+      "Agricultural consultants",
       "Research institutions",
-      "Pharmaceutical companies",
-      "Financial institutions",
-      "Government agencies",
-      "Technology companies",
-      "Academic institutions"
+      "Government agencies"
     ],
-    targetAudience: [
-      "Quantum researchers",
-      "Data scientists",
-      "Research directors",
-      "Technology executives",
-      "Academic researchers"
-    ],
-    tags: ["Quantum Computing", "Machine Learning", "AI", "Research", "Optimization", "Scientific Computing"],
-    estimatedDelivery: "10-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,999 - $8,000/month",
-=======
-      "Educational institutions",
-      "E-commerce platforms",
-      "Travel and hospitality"
-    ],
-    targetAudience: [
-      "CISOs",
-      "Compliance officers",
-      "IT directors",
-      "Product managers",
-      "Security architects"
-    ],
-    tags: ["Blockchain", "Digital Identity", "Security", "Privacy", "Compliance", "Zero-Knowledge Proofs"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,800 - $15,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8bff
+    tags: ["AI", "Agriculture", "Precision Farming", "IoT", "Sustainability"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$15,000 - $45,000/month",
+    roi: "350-550%",
+    innovationLevel: "Revolutionary",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-<<<<<<< HEAD
-<<<<<<< HEAD
+    }
+  },
+
+  // AI-Powered Construction & Infrastructure
+  {
+    id: "ai-construction-optimization",
+    title: "AI Construction Optimization Platform",
+    description: "Advanced AI platform that optimizes construction projects through intelligent planning, resource management, and performance analytics.",
+    category: "AI & Construction",
+    subcategory: "Project Optimization",
+    price: 2999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Project planning optimization",
+      "Resource management",
+      "Performance analytics",
+      "Safety monitoring",
+      "Cost tracking",
+      "Real-time monitoring",
+      "Predictive analytics",
+      "Custom dashboards",
+      "Integration capabilities",
+      "Mobile app support"
+    ],
+    benefits: [
+      "Reduce project delays by 35%",
+      "Improve safety by 50%",
+      "Optimize resource allocation by 40%",
+      "Real-time monitoring",
+      "Better project control"
+    ],
+    useCases: [
+      "Project planning",
+      "Resource management",
+      "Performance monitoring",
+      "Safety management",
+      "Cost control"
+    ],
+    targetAudience: [
+      "Construction companies",
+      "Project managers",
+      "Construction consultants",
+      "Engineering firms",
+      "Government agencies"
+    ],
+    tags: ["AI", "Construction", "Optimization", "Project Management", "Safety"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$25,000 - $75,000/month",
+    roi: "300-500%",
+    innovationLevel: "Cutting-Edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     }
   },
 
@@ -4373,11 +3036,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Tourism operators",
       "Event organizers"
     ],
-    tags: ["AI", "Hospitality", "Guest Experience", "Optimization", "Analytics"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,999 - $5,999/month",
-=======
     },
     aiCapabilities: [
       "Quantum Machine Learning",
@@ -4441,14 +3099,17 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "5-6 weeks",
     supportLevel: "premium",
     marketPrice: "$2,800 - $9,000/month",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41b5
+=======
+    tags: ["AI", "Hospitality", "Optimization", "Customer Experience", "Revenue Management"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$8,500 - $25,000/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-<<<<<<< HEAD
-    }
-=======
     technology: ["Machine Learning", "Natural Language Processing", "Behavioral Analytics", "Cloud Computing", "API Integration"],
     integrations: ["CRM Systems", "Analytics Platforms", "E-commerce Platforms", "Marketing Tools", "Social Media"],
     compliance: ["GDPR", "CCPA", "SOC 2", "PCI DSS"],
@@ -4456,7 +3117,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     competitors: ["Optimizely", "VWO", "Hotjar", "FullStory"],
     marketTrend: "High-growth market with 300% annual expansion",
     innovationLevel: "Advanced AI technology revolutionizing customer experience optimization and personalization"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
 =======
     },
     technology: ["Blockchain", "Zero-Knowledge Proofs", "Cryptography", "Smart Contracts", "Cloud Computing"],
@@ -4466,7 +3126,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     competitors: ["Microsoft", "IBM", "Accenture", "Deloitte"],
     marketTrend: "Emerging market with 400% projected growth in next 5 years",
     innovationLevel: "Revolutionary blockchain technology for digital identity management"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8bff
 =======
     technology: ["Edge Computing", "IoT Protocols", "Machine Learning", "5G Networks", "Containerization"],
     integrations: ["IoT Platforms", "Cloud Services", "Data Lakes", "Analytics Tools", "Security Systems"],
@@ -4475,7 +3134,6 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
     marketTrend: "High-growth market with 300% annual expansion",
     innovationLevel: "Cutting-edge edge computing technology enabling real-time IoT analytics"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3676
   }
 ];
 
@@ -4523,7 +3181,6 @@ export const getServicesBySupportLevel = (supportLevel: string) => {
 ];
 
 export default INNOVATIVE_NEW_SERVICES;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41b5
 =======
     },
     technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum algorithms", "Hybrid computing"],
@@ -4535,7 +3192,6 @@ export default INNOVATIVE_NEW_SERVICES;
     innovationLevel: "Cutting-edge quantum machine learning with hybrid quantum-classical approaches"
   }
 ];
->>>>>>> origin/main
 =======
     technology: ["Computer Vision", "Machine Learning", "IoT", "5G", "Cloud Computing"],
     integrations: ["DJI SDK", "Parrot SDK", "Weather APIs", "Mapping Services", "Logistics Systems"],
@@ -4590,7 +3246,6 @@ export const MARKET_INSIGHTS = {
     "24/7 support and maintenance"
   ]
 };
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f87d
 =======
     technology: ["Unity", "Unreal Engine", "WebXR", "AI content generation", "Blockchain"],
     integrations: ["VR headsets", "Payment gateways", "Social platforms", "Analytics tools"],
@@ -4600,7 +3255,6 @@ export const MARKET_INSIGHTS = {
     uniqueValue: "All-in-one metaverse platform with AI-powered content generation and comprehensive monetization tools"
   }
 ];
->>>>>>> origin/cursor/expand-services-and-deploy-updates-069c
 =======
     technology: ["Unity", "Unreal Engine", "WebGL", "Blockchain", "WebRTC"],
     integrations: ["NFT marketplaces", "Payment gateways", "Social platforms", "Analytics tools"],
@@ -4610,4 +3264,31 @@ export const MARKET_INSIGHTS = {
     uniqueValue: "Comprehensive metaverse platform with business-focused tools and NFT integration"
   }
 ];
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f460
+=======
+    }
+  }
+];
+
+export const getServicesByCategory = (category: string) => {
+  return INNOVATIVE_NEW_SERVICES.filter(service => 
+    service.category.toLowerCase().includes(category.toLowerCase())
+  );
+};
+
+export const getServicesByPrice = (minPrice: number, maxPrice: number) => {
+  return INNOVATIVE_NEW_SERVICES.filter(service => 
+    service.price >= minPrice && service.price <= maxPrice
+  );
+};
+
+export const getServicesByTechnology = (technology: string) => {
+  return INNOVATIVE_NEW_SERVICES.filter(service => 
+    service.technicalSpecs?.technology.includes(technology)
+  );
+};
+
+export const getServicesBySupportLevel = (supportLevel: string) => {
+  return INNOVATIVE_NEW_SERVICES.filter(service => 
+    service.supportLevel === supportLevel
+  );
+};

@@ -1651,25 +1651,12 @@ export const getEmergingTechServiceBySubcategory = (subcategory: string) => {
 };
 
 export const getFeaturedEmergingTechServices = () => {
-<<<<<<< HEAD
   // Return first 8 services since rating property doesn't exist
 =======
-<<<<<<< HEAD
-=======
-  // Return first 8 services since rating property doesn't exist
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   return EMERGING_TECH_SERVICES.slice(0, 8);
 };
 
 export const getServicesByInnovationScore = (minScore: number) => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return EMERGING_TECH_SERVICES.slice(0, Math.max(1, Math.floor(EMERGING_TECH_SERVICES.length * (minScore / 100))));
-};
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     technology: ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],
     integrations: ["Display hardware", "Content management systems", "Streaming platforms", "Mobile apps"],
     compliance: ["Content standards", "Accessibility guidelines", "Industry regulations"],
@@ -1682,16 +1669,11 @@ export const getServicesByInnovationScore = (minScore: number) => {
 ];
 
 export default EMERGING_TECH_SERVICES;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
   // Return all services since innovationScore property doesn't exist
   // In the future, this could be enhanced with actual innovation scoring
   return EMERGING_TECH_SERVICES;
 };
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+  return EMERGING_TECH_SERVICES.filter(service => service.price >= minScore);
+};

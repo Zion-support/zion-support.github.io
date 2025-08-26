@@ -1,22 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
+import { SEOHead } from '../../components/SEOHead';
 import { 
-  Brain, 
-  TrendingUp, 
+  Code, 
   Shield, 
   Zap, 
-  BarChart3, 
   Users, 
-  Target, 
-  Clock,
+  BarChart3, 
+  Target,
   CheckCircle,
-  ArrowRight,
   Star,
-  Award,
-  Rocket,
-=======
 import { 
   Brain, 
   Code, 
@@ -30,49 +22,37 @@ import {
   Play,
   Star,
   Award,
->>>>>>> origin/cursor/website-audit-and-enhancement-62c0
   Globe,
   Cpu,
   Database,
   Network,
   Lock,
   Eye,
-<<<<<<< HEAD
-  BarChart
+  Brain,
+  Eye,
+  Clock,
+  TrendingUp
 } from 'lucide-react';
 
 const AIAutonomousCodeReview: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: "Intelligent  A I Autonomous Code Review",
-      description: "AI-powered  a i autonomous code review system that leverages advanced machine learning algorithms for optimal performance."
-    },
-    {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Advanced forecasting models that predict trends and optimize  a i autonomous code review operations with 95%+ accuracy."
+      icon: Code,
+      title: "Automated Code Analysis",
+      description: "AI-powered code review that identifies bugs, security vulnerabilities, and optimization opportunities"
     },
     {
       icon: Shield,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security measures and compliance frameworks to protect your  a i autonomous code review operations."
+      title: "Security Scanning",
+      description: "Advanced security analysis to detect vulnerabilities, injection attacks, and compliance issues"
+    },
+    {
+      icon: Brain,
+      title: "Intelligent Suggestions",
+      description: "AI-generated recommendations for code improvements, best practices, and performance optimization"
     },
     {
       icon: Zap,
-      title: "Real-time Processing",
-      description: "Lightning-fast processing capabilities that handle  a i autonomous code review tasks in real-time with minimal latency."
-    },
-    {
-      icon: BarChart3,
-      title: "Performance Monitoring",
-      description: "Comprehensive dashboards and analytics that provide real-time insights into  a i autonomous code review performance."
-    },
-    {
-      icon: Users,
-      title: "User Experience",
-      description: "Intuitive interfaces and seamless integration that enhance user experience across all  a i autonomous code review touchpoints."
-=======
   BarChart,
   Rocket,
   Layers,
@@ -145,80 +125,59 @@ const AIAutonomousCodeReview = () => {
       description: "High-level code architecture and design pattern analysis",
       icon: Layers,
       capabilities: ["Design pattern validation", "Architecture assessment", "Dependency analysis", "Scalability review"]
->>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+=======
+      title: "Real-time Review",
+      description: "Instant feedback and continuous monitoring of code quality throughout development"
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-    "Increase efficiency by up to 300%",
-    "Reduce operational costs by 40%",
-    "Improve accuracy and reduce errors",
-    "24/7 autonomous operation",
-    "Scalable across all business units",
-    "Real-time optimization and adaptation"
+    "Reduce code review time by 80%",
+    "Improve code quality and maintainability",
+    "Detect security vulnerabilities early",
+    "Ensure consistent coding standards",
+    "Accelerate development cycles",
+    "Reduce technical debt"
   ];
 
-  const useCases = [
-    {
-      title: "Enterprise Solutions",
-      description: "Large-scale  a i autonomous code review implementations for Fortune 500 companies and enterprise organizations."
-    },
-    {
-      title: "SME Applications",
-      description: "Tailored  a i autonomous code review solutions for small and medium enterprises looking to scale efficiently."
-    },
-    {
-      title: "Startup Innovation",
-      description: "Cutting-edge  a i autonomous code review technology for startups and innovative companies disrupting traditional industries."
-    },
-    {
-      title: "Government & Public Sector",
-      description: "Secure and compliant  a i autonomous code review solutions for government agencies and public sector organizations."
-    }
+  const supportedLanguages = [
+    "JavaScript/TypeScript", "Python", "Java", "C#", "Go", "Rust",
+    "PHP", "Ruby", "Swift", "Kotlin", "Scala", "C++"
   ];
 
-  const pricing = [
-    {
-      name: "Starter",
-      price: "$1,999",
-      period: "/month",
+  const pricing = {
+    basic: {
+      price: "$1,500/month",
       features: [
-        "Basic  A I Autonomous Code Review features",
-        "Up to 3 business processes",
-        "Standard analytics dashboard",
+        "Up to 10 repositories",
+        "Basic code analysis",
+        "Security scanning",
         "Email support",
-        "Basic training"
+        "Weekly reports"
       ]
     },
-    {
-      name: "Professional",
-      price: "$4,999",
-      period: "/month",
+    professional: {
+      price: "$3,500/month",
       features: [
-        "Advanced  A I Autonomous Code Review capabilities",
-        "Up to 15 business processes",
-        "Custom analytics dashboard",
+        "Up to 50 repositories",
+        "Advanced AI analysis",
+        "Custom rules engine",
         "Priority support",
-        "Full training & onboarding",
-        "API access"
-      ],
-      popular: true
+        "API access",
+        "Daily reports"
+      ]
     },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
+    enterprise: {
+      price: "$8,000/month",
       features: [
-        "Full  A I Autonomous Code Review system",
-        "Unlimited business processes",
-        "Custom integrations",
-        "Dedicated support team",
+        "Unlimited repositories",
+        "Custom AI models",
         "White-label solution",
-        "Custom AI model training"
+        "Dedicated support",
+        "Custom integrations",
+        "Real-time monitoring"
       ]
     }
-=======
     "Reduce code review time by 80%",
     "Improve code quality by 60%",
     "Catch bugs before production",
@@ -238,37 +197,19 @@ const AIAutonomousCodeReview = () => {
     "CircleCI",
     "GitHub Actions",
     "VS Code"
->>>>>>> origin/cursor/website-audit-and-enhancement-62c0
   ];
+=======
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      <SEOHead 
+        title="AI Autonomous Code Review - Zion Tech Group"
+        description="Revolutionize your development process with AI-powered autonomous code review. Automated analysis, security scanning, and intelligent suggestions."
+        keywords="AI code review, automated code review, code analysis, security scanning, Zion Tech Group"
+      />
+      
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mb-4">
-                <Brain className="w-8 h-8 text-white" />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-               A I Autonomous Code Review
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionize your business with our cutting-edge  A I Autonomous Code Review solution. 
-              Leverage the power of artificial intelligence to automate, optimize, and transform your operations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-                Schedule Demo
-              </button>
-            </div>
-=======
 import { Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight } from 'lucide-react';
 
 const AIAutonomousCodeReview: React.FC = () => {
@@ -304,7 +245,6 @@ const AIAutonomousCodeReview: React.FC = () => {
             <button className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400/20 transition-all duration-300">
               Watch Demo
             </button>
->>>>>>> origin/cursor/website-audit-and-enhancement-ac08
 =======
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -332,24 +272,30 @@ const AIAutonomousCodeReview: React.FC = () => {
                 Demo Review
               </button>
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+=======
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex items-center justify-center mb-6">
+            <Code className="h-12 w-12 text-cyan-400 mr-3" />
+            <h1 className="text-4xl md:text-6xl font-bold text-white">
+              AI Autonomous Code Review
+            </h1>
+          </div>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Transform your development workflow with AI-powered autonomous code review. 
+            Get instant feedback, security insights, and quality improvements automatically.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Start Free Trial
+            </button>
+              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Watch Demo
+            </button>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Revolutionary Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our  A I Autonomous Code Review combines cutting-edge artificial intelligence with 
-              advanced business logic to create the most intelligent solution in the market.
-=======
       {/* Review Features */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -360,29 +306,10 @@ const AIAutonomousCodeReview: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered code review system provides comprehensive analysis across multiple dimensions 
               to ensure your code is secure, efficient, and maintainable
->>>>>>> origin/cursor/website-audit-and-enhancement-62c0
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4 text-cyan-400">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {feature.description}
-                  </p>
-                </div>
-              );
-            })}
-=======
             {reviewFeatures.map((feature, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -430,29 +357,22 @@ const AIAutonomousCodeReview: React.FC = () => {
                 </div>
               </div>
             ))}
->>>>>>> origin/cursor/website-audit-and-enhancement-62c0
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Transform Your Business
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented growth and efficiency with our AI-powered  A I Autonomous Code Review solution.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
-                <span className="text-lg text-gray-300">{benefit}</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+            Revolutionary Features
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+                <div className="bg-cyan-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="h-8 w-8 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
 =======
@@ -526,35 +446,17 @@ const AIAutonomousCodeReview: React.FC = () => {
               </p>
             </div>
             
->>>>>>> origin/cursor/website-audit-and-enhancement-ac08
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Industry Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our  A I Autonomous Code Review is designed to work across all industries, 
-              providing tailored solutions for your specific business needs.
-            </p>
-          </div>
-          
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+            Why Choose AI Code Review?
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
-                <h3 className="text-2xl font-semibold mb-4 text-cyan-400">
-                  {useCase.title}
-                </h3>
-                <p className="text-gray-300 text-lg">
-                  {useCase.description}
-                </p>
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -573,60 +475,60 @@ const AIAutonomousCodeReview: React.FC = () => {
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-gray-300">{benefit}</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+=======
+            <div>
+              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
+              <ul className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-gray-800/50 rounded-xl p-8">
+              <h3 className="text-2xl font-semibold text-white mb-6">Performance Metrics</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Review Speed</span>
+                  <span className="text-cyan-400 font-semibold">80% faster</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Bug Detection</span>
+                  <span className="text-cyan-400 font-semibold">95% accuracy</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Security Coverage</span>
+                  <span className="text-cyan-400 font-semibold">99.9%</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Supported Languages</span>
+                  <span className="text-cyan-400 font-semibold">12+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Supported Languages */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+            Supported Programming Languages
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {supportedLanguages.map((language, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 border border-gray-700 text-center hover:border-cyan-500 transition-all duration-300">
+                <Code className="h-8 w-8 text-cyan-400 mx-auto mb-2" />
+                <span className="text-white font-medium">{language}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Choose Your Plan
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your business needs.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border ${plan.popular ? 'border-cyan-500/50 bg-gradient-to-br from-gray-800/80 to-cyan-900/20' : 'border-gray-700/50'}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-semibold mb-4">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
-                </div>
-                
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400' : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/20'}`}>
-                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                </button>
-              </div>
-            ))}
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -718,7 +620,6 @@ const AIAutonomousCodeReview: React.FC = () => {
               </div>
               
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-ac08
 =======
       {/* Integrations Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
@@ -741,30 +642,23 @@ const AIAutonomousCodeReview: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white">{integration}</h3>
               </div>
             ))}
->>>>>>> origin/cursor/website-audit-and-enhancement-62c0
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Business?
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Revolutionize Your Code Review?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of businesses already using AI to automate and optimize their operations.
+          <p className="text-xl text-cyan-100 mb-8">
+            Join thousands of developers using AI to improve code quality and security.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
+            <button className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
               Start Free Trial
             </button>
-            <Link to="/contact" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-              Contact Us
-            </Link>
-=======
           <div className="bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 rounded-3xl p-12 border border-cyan-500/30">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Get Started?
@@ -787,7 +681,6 @@ const AIAutonomousCodeReview: React.FC = () => {
                 Explore All Services
               </Link>
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-ac08
 =======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -812,7 +705,10 @@ const AIAutonomousCodeReview: React.FC = () => {
             >
               View Pricing
             </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+=======
+            <button className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+              Schedule Demo
+            </button>
           </div>
         </div>
       </section>
@@ -820,8 +716,4 @@ const AIAutonomousCodeReview: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutonomousCodeReview;
-=======
-export default AIAutonomousCodeReview;
->>>>>>> origin/cursor/website-audit-and-enhancement-62c0

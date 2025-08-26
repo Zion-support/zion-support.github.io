@@ -5,25 +5,6 @@ import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
 
 const categories = [
   {
-    title: "AI Services",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    description: "Cutting-edge AI solutions, chatbots, and machine learning",
-    icon: <Brain className="w-10 h-10" />,
-    link: "/ai-services",
-    color: "from-purple-500 to-indigo-600",
-    gradient: "from-zion-purple to-zion-purple-dark",
-  },
-  {
-    title: "Micro SAAS",
-    description: "Cloud-based software solutions for modern businesses",
-    icon: <Cloud className="w-10 h-10" />,
-    link: "/micro-saas",
-    color: "from-cyan-500 to-blue-600",
-    gradient: "from-zion-cyan to-zion-blue",
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     description: "AI-powered solutions for automation, analytics, and intelligent decision making",
     icon: <Bot className="w-10 h-10" />,
     link: "/micro-saas-services?category=ai",
@@ -90,24 +71,22 @@ const categories = [
     count: "3+ Services"
   },
   {
+=======
     title: "Services",
     description: "On-demand IT support, consulting, development, and more",
     icon: <Briefcase className="w-10 h-10" />,
     link: "/services",
-    color: "from-cyan-500 to-blue-600",
-    count: "10+ Services"
+    color: "from-purple-500 to-indigo-600",
+    gradient: "from-zion-purple to-zion-purple-dark",
   },
   {
     title: "Talents",
     description: "Connect with AI experts, developers, and tech specialists",
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
-    color: "from-pink-500 to-rose-600",
-    count: "100+ Experts"
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+    color: "from-cyan-500 to-blue-600",
+    gradient: "from-zion-cyan to-zion-blue",
   },
   {
     title: "IT Services",
@@ -115,35 +94,19 @@ const categories = [
     icon: <Zap className="w-10 h-10" />,
     link: "/all-services",
     color: "from-amber-500 to-orange-600",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    gradient: "from-zion-cyan-light to-zion-cyan",
-  },
-  {
-    title: "Digital Transformation",
-    description: "Business modernization and digital strategy",
-    icon: <TrendingUp className="w-10 h-10" />,
-    link: "/all-services",
-    color: "from-emerald-500 to-green-600",
-    gradient: "from-zion-purple-light to-zion-purple",
-  },
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     count: "50+ Items"
+=======
+    gradient: "from-zion-cyan-light to-zion-cyan",
   },
   {
     title: "Innovation",
     description: "Discover cutting-edge solutions and tech breakthroughs",
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/category/innovation",
-    color: "from-green-500 to-emerald-600",
-    count: "25+ Solutions"
-  }
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+    color: "from-emerald-500 to-green-600",
+    gradient: "from-zion-purple-light to-zion-purple",
+  },
 ];
 
 const specialServices = [
@@ -191,32 +154,21 @@ const itemVariants = {
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
     <section className="py-20 bg-zion-blue relative overflow-hidden">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
           backgroundSize: '50px 50px'
         }}></div>
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-72 h-72 bg-zion-purple/10 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-zion-cyan/10 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -227,53 +179,27 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             <GradientHeading>Explore Categories</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           <div className="text-center mb-16">
             <GradientHeading>Explore Our Ecosystem</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto">
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovative solutions
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </p>
           </motion.div>
         )}
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => (
             <Link 
               key={category.title} 
               href={category.link} 
               className="group block"
             >
-              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px] hover:shadow-2xl">
-                <div className="flex items-center justify-between mb-4">
-                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="text-white">
-                      {category.icon}
-                    </div>
+              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px]">
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="text-white">
+                    {category.icon}
                   </div>
-                  <div className="flex gap-2">
-                    {category.isNew && (
-                      <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">New</span>
-                    )}
-                    {category.isFeatured && (
-                      <span className="px-2 py-1 bg-zion-purple/20 text-zion-purple-light text-xs rounded-full">Featured</span>
-                    )}
-                    {category.isPopular && (
-                      <span className="px-2 py-1 bg-orange-500/20 text-orange-400 text-xs rounded-full">Popular</span>
-                    )}
-                  </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                </motion.div>
-              </Link>
-            </motion.div>
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 </div>
                 <h3 className="text-white text-xl font-bold mb-2 group-hover:text-zion-cyan transition-colors">
                   {category.title}
@@ -286,19 +212,15 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 </div>
               </div>
             </Link>
-<<<<<<< HEAD
           ))}
         </motion.div>
         
-        <div className="mb-12">
-          <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Solutions</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+                </motion.div>
+              </Link>
+            </motion.div>
           ))}
         </motion.div>
         
-<<<<<<< HEAD
         <motion.div 
           className="mt-12"
           initial={{ opacity: 0, y: 20 }}
@@ -308,21 +230,16 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         >
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
           <div className="flex flex-wrap justify-center gap-4">
-=======
         <div className="mb-12">
           <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Solutions</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+=======
             {specialServices.map((service) => (
               <motion.div
                 key={service.title}
                 href={service.link}
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 <Link 
                   to={service.link}
                   className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25 flex items-center gap-2"
@@ -331,26 +248,17 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
-=======
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 <div className="text-3xl mb-3">{item.icon}</div>
                 <h4 className="text-white font-semibold mb-2 group-hover:text-zion-cyan transition-colors">
                   {item.title}
                 </h4>
                 <div className="text-zion-cyan font-bold">{item.price}</div>
               </Link>
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             ))}
           </div>
         </motion.div>
         
-<<<<<<< HEAD
-        <div className="text-center">
-=======
-<<<<<<< HEAD
         <motion.div 
           className="mt-12 flex justify-center"
           initial={{ opacity: 0, y: 20 }}
@@ -358,24 +266,16 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-=======
         <div className="text-center">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+=======
           <Link 
             href="/categories" 
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
-<<<<<<< HEAD
             Explore All Services →
 =======
-<<<<<<< HEAD
             View All Categories
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-=======
-            Explore All Services →
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </Link>
         </motion.div>
       </div>

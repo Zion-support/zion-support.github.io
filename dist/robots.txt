@@ -1,15 +1,8 @@
 User-agent: *
 Allow: /
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Sitemaps
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-<<<<<<< HEAD
-=======
 # Crawl-delay for respectful crawling
 =======
 # Sitemap location
@@ -17,38 +10,16 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap
 
 # Crawl-delay
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 Crawl-delay: 1
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
 # Disallow admin and development areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-<<<<<<< HEAD
-=======
 Disallow: /static/
 Disallow: /temp/
 Disallow: /backup/
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fbd9
-
-# Allow important pages
-<<<<<<< HEAD
-Allow: /
-<<<<<<< HEAD
-Allow: /services/
-Allow: /ai-solutions/
-Allow: /about/
-Allow: /contact/
-<<<<<<< HEAD
-Allow: /blog/
-<<<<<<< HEAD
-Allow: /news/
-<<<<<<< HEAD
-=======
 Allow: /case-studies/
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5910
 =======
 Disallow: /node_modules/
 Disallow: /.git/
@@ -57,32 +28,16 @@ Disallow: /scripts/
 
 # Allow important pages
 Allow: /services/
-Allow: /solutions/
+Allow: /ai-solutions/
 Allow: /about/
 Allow: /contact/
 Allow: /blog/
 Allow: /news/
-Allow: /careers/
-Allow: /pricing/
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
-
-# Specific rules for different bots
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0.5
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
 =======
 Allow: /case-studies/
 
 # Crawl delay (optional)
 Crawl-delay: 1
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fbd9
 =======
 Allow: /services/
 Allow: /solutions/
@@ -93,7 +48,6 @@ Allow: /news/
 
 # Crawl delay (optional)
 Crawl-delay: 1
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c
 =======
 
 User-agent: Slurp
@@ -110,6 +64,10 @@ Crawl-delay: 2
 
 User-agent: YandexBot
 Allow: /
+=======
+Allow: /case-studies/
+
+# Crawl delay
 Crawl-delay: 1
 
 # Block bad bots
@@ -134,10 +92,8 @@ Disallow: /
 # Rate limiting for aggressive bots
 User-agent: *
 Crawl-delay: 2
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
 =======
 Allow: /about
 Allow: /contact
 Allow: /services
 Allow: /technologies
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974

@@ -625,9 +625,9 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   }, [title, description, canonical, finalStructuredData]);
 
   // Merge custom structured data
-  const finalStructuredData = structuredData 
-    ? { ...pageStructuredData, ...structuredData }
-    : pageStructuredData;
+  const mergedStructuredData = structuredData 
+    ? { ...defaultStructuredData, ...structuredData }
+    : defaultStructuredData;
 
   // Preload critical resources
   useEffect(() => {
@@ -1013,7 +1013,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 <<<<<<< HEAD
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
       <meta name="author" content={author} />
       <meta name="robots" content={finalRobots} />
       <meta name="language" content={language} />

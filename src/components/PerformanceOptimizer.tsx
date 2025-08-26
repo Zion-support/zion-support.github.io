@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, TrendingUp, AlertTriangle, CheckCircle, X, Settings, BarChart3, Cpu, HardDrive, Clock, Download } from 'lucide-react';
-=======
 import React, { useEffect, useCallback } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -16,14 +8,6 @@ interface PerformanceMetrics {
   optimizationSuggestions: string[];
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface PerformanceOptimizerProps {
-  showMetrics?: boolean;
-  onOptimize?: (metrics: PerformanceMetrics) => void;
-  autoOptimize?: boolean;
-}
-=======
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(false);
@@ -32,7 +16,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     domContentLoaded: 0,
     firstContentfulPaint: 0
   });
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
 
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   showMetrics = false,
@@ -54,45 +37,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const measurePerformance = useCallback(() => {
     const startTime = performance.now();
     
-<<<<<<< HEAD
-    // Measure page load time
-    const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
-    
-    // Estimate memory usage (if available)
-    const memoryUsage = (performance as any).memory ? 
-      Math.round((performance as any).memory.usedJSHeapSize / 1024 / 1024) : 0;
-    
-    // Estimate bundle size based on loaded scripts
-    const scripts = document.querySelectorAll('script[src]');
-    const bundleSize = Array.from(scripts).reduce((total, script) => {
-      const src = script.getAttribute('src');
-      if (src && src.includes('js/')) {
-        return total + 100; // Rough estimate
-      }
-      return total;
-    }, 0);
-    
-    // Calculate Lighthouse-like score
-    let lighthouseScore = 100;
-    if (loadTime > 3000) lighthouseScore -= 30;
-    if (loadTime > 5000) lighthouseScore -= 20;
-    if (memoryUsage > 50) lighthouseScore -= 20;
-    if (bundleSize > 500) lighthouseScore -= 15;
-    
-    // Generate optimization suggestions
-    const suggestions: string[] = [];
-    if (loadTime > 2000) suggestions.push('Consider implementing lazy loading for images and components');
-    if (memoryUsage > 50) suggestions.push('Optimize memory usage by cleaning up event listeners and references');
-    if (bundleSize > 500) suggestions.push('Implement code splitting and tree shaking to reduce bundle size');
-    if (lighthouseScore < 80) suggestions.push('Run Lighthouse audit for detailed performance insights');
-    
-    const newMetrics: PerformanceMetrics = {
-      loadTime,
-      memoryUsage,
-      bundleSize,
-      lighthouseScore,
-      optimizationSuggestions: suggestions
-=======
     // Hide loading state after a short delay to prevent flickering
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -167,7 +111,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       nextRoutePreload.rel = 'prefetch';
       nextRoutePreload.href = '/services';
       document.head.appendChild(nextRoutePreload);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
     };
     
     setMetrics(newMetrics);
@@ -180,24 +123,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return newMetrics;
   }, [onOptimize]);
 
-<<<<<<< HEAD
-  // Auto-optimization
-  const performAutoOptimization = useCallback(() => {
-    const currentMetrics = measurePerformance();
-    
-    if (currentMetrics.lighthouseScore < 70) {
-      // Implement automatic optimizations
-      if (currentMetrics.loadTime > 3000) {
-        // Preload critical resources
-        const criticalLinks = document.querySelectorAll('link[rel="preload"]');
-        criticalLinks.forEach(link => link.setAttribute('rel', 'preload'));
-      }
-      
-      if (currentMetrics.memoryUsage > 50) {
-        // Suggest garbage collection
-        if ('gc' in window) {
-          (window as any).gc();
-=======
     // Preload resources when component mounts
     preloadCriticalResources();
 
@@ -233,7 +158,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             
             imageObserver.unobserve(img);
           }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
         }
       }
     }
@@ -264,175 +188,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     };
   }, [showMetrics, measurePerformance, autoOptimize]);
 
-<<<<<<< HEAD
-  // Performance tips
-  const performanceTips = [
-    'Use lazy loading for images and components',
-    'Implement code splitting to reduce initial bundle size',
-    'Optimize images and use modern formats (WebP, AVIF)',
-    'Minimize third-party scripts and load them asynchronously',
-    'Use service workers for caching and offline support',
-    'Implement critical CSS inlining',
-    'Use resource hints (preload, prefetch, preconnect)',
-    'Optimize fonts with font-display: swap'
-  ];
-
-  if (!showMetrics) {
-    return null;
-  }
-
-  return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl max-w-sm"
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-white/20">
-              <div className="flex items-center space-x-2">
-                <Zap className="w-5 h-5 text-cyan-400" />
-                <h3 className="text-white font-semibold">Performance Monitor</h3>
-              </div>
-              <div className="flex items-center space-x-2">
-                <button
-                  onClick={() => setIsExpanded(!isExpanded)}
-                  className="p-1 hover:bg-white/20 rounded transition-colors"
-                >
-                  <BarChart3 className="w-4 h-4 text-white" />
-                </button>
-                <button
-                  onClick={() => setIsVisible(false)}
-                  className="p-1 hover:bg-white/20 rounded transition-colors"
-                >
-                  <X className="w-4 h-4 text-white" />
-                </button>
-              </div>
-            </div>
-
-            {/* Metrics */}
-            <div className="p-4 space-y-3">
-              <div className="grid grid-cols-2 gap-3">
-                <div className="text-center p-3 bg-white/5 rounded-lg">
-                  <Clock className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{metrics.loadTime}ms</div>
-                  <div className="text-xs text-gray-400">Load Time</div>
-                </div>
-                <div className="text-center p-3 bg-white/5 rounded-lg">
-                  <HardDrive className="w-6 h-6 text-purple-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{metrics.memoryUsage}MB</div>
-                  <div className="text-xs text-gray-400">Memory</div>
-                </div>
-              </div>
-              
-              <div className="text-center p-3 bg-white/5 rounded-lg">
-                <Cpu className="w-6 h-6 text-green-400 mx-auto mb-2" />
-                <div className="text-white font-semibold">{metrics.lighthouseScore}/100</div>
-                <div className="text-xs text-gray-400">Performance Score</div>
-              </div>
-            </div>
-
-            {/* Optimization Suggestions */}
-            {metrics.optimizationSuggestions.length > 0 && (
-              <div className="p-4 border-t border-white/20">
-                <h4 className="text-white font-semibold mb-3 flex items-center">
-                  <AlertTriangle className="w-4 h-4 text-yellow-400 mr-2" />
-                  Optimization Tips
-                </h4>
-                <ul className="space-y-2">
-                  {metrics.optimizationSuggestions.map((suggestion, index) => (
-                    <li key={index} className="text-sm text-gray-300 flex items-start">
-                      <span className="text-cyan-400 mr-2">•</span>
-                      {suggestion}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {/* Expanded View */}
-            {isExpanded && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                className="border-t border-white/20"
-              >
-                <div className="p-4 space-y-4">
-                  {/* Performance History */}
-                  <div>
-                    <h4 className="text-white font-semibold mb-3">Performance History</h4>
-                    <div className="space-y-2">
-                      {optimizationHistory.map((metric, index) => (
-                        <div key={index} className="flex items-center justify-between text-sm">
-                          <span className="text-gray-400">#{optimizationHistory.length - index}</span>
-                          <span className={`font-semibold ${
-                            metric.lighthouseScore > 80 ? 'text-green-400' : 
-                            metric.lighthouseScore > 60 ? 'text-yellow-400' : 'text-red-400'
-                          }`}>
-                            {metric.lighthouseScore}/100
-                          </span>
-                          <span className="text-gray-400">{metric.loadTime}ms</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Quick Tips */}
-                  <div>
-                    <h4 className="text-white font-semibold mb-3">Quick Tips</h4>
-                    <div className="space-y-2">
-                      {performanceTips.slice(0, 4).map((tip, index) => (
-                        <div key={index} className="text-sm text-gray-300 flex items-start">
-                          <span className="text-cyan-400 mr-2">💡</span>
-                          {tip}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-
-            {/* Actions */}
-            <div className="p-4 border-t border-white/20">
-              <div className="flex space-x-2">
-                <button
-                  onClick={measurePerformance}
-                  className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
-                >
-                  <TrendingUp className="w-4 h-4 mr-2" />
-                  Measure
-                </button>
-                <button
-                  onClick={performAutoOptimization}
-                  className="flex-1 bg-purple-500 hover:bg-purple-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
-                >
-                  <Zap className="w-4 h-4 mr-2" />
-                  Optimize
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Toggle Button */}
-      {!isVisible && (
-        <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          onClick={() => setIsVisible(true)}
-          className="bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-          title="Performance Monitor"
-        >
-          <Zap className="w-6 h-6" />
-        </motion.button>
-      )}
-=======
 import React, { useEffect, useRef, useState } from 'react';
 
 interface PerformanceOptimizerProps {
@@ -453,9 +208,10 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasIntersected) {
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
           setIsVisible(true);
           setHasIntersected(true);
           // Unobserve after first intersection for performance
@@ -474,12 +230,87 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       observer.observe(ref.current);
     }
 
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, [threshold, rootMargin, hasIntersected]);
+    return () => observer.disconnect();
+  }, [threshold, rootMargin]);
+
+  useEffect(() => {
+    if (isVisible && !isLoaded) {
+      // Simulate loading delay for better UX
+      const timer = setTimeout(() => setIsLoaded(true), 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible, isLoaded]);
+
+  if (!isVisible) {
+    return (
+      <div ref={ref} className={className}>
+        {fallback}
+      </div>
+    );
+  }
+
+  if (!isLoaded) {
+    return (
+      <div className={className}>
+        {fallback}
+      </div>
+    );
+  }
+
+  return <div className={className}>{children}</div>;
+};
+
+// Intersection Observer Hook Component
+export const IntersectionObserver: React.FC<IntersectionObserverProps> = ({
+  children,
+  threshold = 0.1,
+  rootMargin = '0px',
+  triggerOnce = true,
+  className = ''
+}) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, {
+    amount: threshold,
+    once: triggerOnce
+  });
+
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+// Virtual Scrolling Component
+export const VirtualScroll: React.FC<VirtualScrollProps> = ({
+  items,
+  itemHeight,
+  containerHeight,
+  renderItem,
+  overscan = 5
+}) => {
+  const [scrollTop, setScrollTop] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const totalHeight = items.length * itemHeight;
+  const visibleItemCount = Math.ceil(containerHeight / itemHeight);
+  const startIndex = Math.max(0, Math.floor(scrollTop / itemHeight) - overscan);
+  const endIndex = Math.min(
+    items.length - 1,
+    Math.ceil(scrollTop / itemHeight) + visibleItemCount + overscan
+  );
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    setScrollTop(e.currentTarget.scrollTop);
+  };
+
+  const visibleItems = items.slice(startIndex, endIndex + 1);
 
   return (
     <div
@@ -489,51 +320,10 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       } ${className}`}
     >
       {children}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2868
     </div>
   );
 };
 
-<<<<<<< HEAD
-// Image Optimization Component
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  placeholder?: string;
-  lazy?: boolean;
-}
-
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFlMjYzYiIvPjwvc3ZnPg==',
-  lazy = true
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-  };
-
-  const handleError = () => {
-    setHasError(true);
-  };
-
-  if (hasError) {
-    return (
-      <div
-        className={`bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      >
-        <span className="text-zion-slate-light text-sm">Image failed to load</span>
-=======
   useEffect(() => {
     // Enhanced service worker registration with better error handling
     if ('serviceWorker' in navigator) {
@@ -629,13 +419,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
           <p className="text-gray-400 text-sm mt-2">Optimizing your experience</p>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
       </div>
     );
   }
 
-<<<<<<< HEAD
-=======
   return (
     <>
       {children}
@@ -660,7 +447,6 @@ export const LazyImage: React.FC<{
 }> = ({ src, alt, className, width, height }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
   return (
     <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
       {/* Placeholder */}
@@ -827,66 +613,10 @@ export const PerformanceMonitor: React.FC = () => {
       <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
       <div>FID: {metrics.fid.toFixed(0)}ms</div>
       <div>CLS: {metrics.cls.toFixed(3)}</div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2868
     </div>
   );
 };
 
-<<<<<<< HEAD
-// Performance Monitoring Hook
-export const usePerformanceMonitor = (componentName: string) => {
-  useEffect(() => {
-    const startTime = performance.now();
-    
-    return () => {
-      const endTime = performance.now();
-      const duration = endTime - startTime;
-      
-      if (duration > 16) { // 60fps threshold
-        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
-      }
-    };
-  }, [componentName]);
-};
-
-// Debounce Hook
-export const useDebounce = <T>(value: T, delay: number): T => {
-  const [debouncedValue, setDebouncedValue] = useState<T>(value);
-
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [value, delay]);
-
-  return debouncedValue;
-};
-
-// Throttle Hook
-export const useThrottle = <T>(value: T, limit: number): T => {
-  const [throttledValue, setThrottledValue] = useState<T>(value);
-  const lastRan = useRef<number>(Date.now());
-
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      if (Date.now() - lastRan.current >= limit) {
-        setThrottledValue(value);
-        lastRan.current = Date.now();
-      }
-    }, limit - (Date.now() - lastRan.current));
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [value, limit]);
-
-  return throttledValue;
-};
-=======
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   // Performance monitoring
   const measurePerformance = useCallback(() => {
@@ -1116,7 +846,6 @@ declare global {
     gtag?: (...args: any[]) => void;
   }
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
 =======
 import React, { useEffect, useCallback } from 'react';
 
@@ -1248,7 +977,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   return null; // This component doesn't render anything
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c
 =======
 // Resource Preloader
 export const ResourcePreloader: React.FC = () => {
@@ -1297,4 +1025,27 @@ export const BundleOptimizer: React.FC = () => {
 
   return null;
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-2868
+=======
+
+// Main Performance Optimizer Component
+interface PerformanceOptimizerProps {
+  children: ReactNode;
+  enableMonitoring?: boolean;
+  enableOptimizations?: boolean;
+  showMetrics?: boolean;
+}
+
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  children,
+  enableMonitoring = true,
+  enableOptimizations = true,
+  showMetrics = false
+}) => {
+  return (
+    <div className="performance-optimizer">
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceOptimizer;

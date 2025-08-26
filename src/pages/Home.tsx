@@ -1,5 +1,4 @@
 import React, { useState, useEffect, Suspense } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   ChevronLeft, 
@@ -28,46 +27,19 @@ import {
   Phone,
   Mail,
   MapPin,
-  Star as StarIcon
+  Sparkles,
+  Eye,
+  Heart,
+  Target as TargetIcon,
+  Bot,
+  Globe2,
+  BarChart,
+  ShieldCheck,
+  Zap as ZapIcon
 } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import { SEOHead } from '../components/SEOHead';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Lazy load components for better performance
-const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
-const LazyFeaturesSection = React.lazy(() => import('../components/home/FeaturesSection'));
-const LazyTestimonialsSection = React.lazy(() => import('../components/home/TestimonialsSection'));
-const LazyCTASection = React.lazy(() => import('../components/home/CTASection'));
-
-// Loading fallback component
-const LoadingFallback = ({ message }: { message: string }) => (
-  <div className="flex items-center justify-center py-12">
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>
-    <span className="ml-3 text-gray-600">{message}</span>
-  </div>
-);
-
-const Home: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const seoMetadata = {
-    title: "Zion Tech Group - AI-Powered Technology Solutions",
-    description: "Transform your business with cutting-edge AI solutions, cloud services, and digital transformation expertise.",
-    keywords: "AI solutions, cloud services, cybersecurity, digital transformation, IT consulting",
-    image: "/images/zion-tech-group-hero.jpg"
-  };
-
-  const heroSlides = [
-    {
-      title: "AI-Powered Solutions",
-      subtitle: "Transform your business with cutting-edge artificial intelligence",
-      description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.",
-      image: "/images/hero-ai-solutions.jpg",
-      cta: "Explore AI Solutions",
-      path: "/ai-solutions",
-      color: "from-blue-400 to-purple-400"
+      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"]
     },
     {
       title: "Comprehensive IT Services",
@@ -76,7 +48,7 @@ const Home: React.FC = () => {
       image: "/images/hero-it-services.jpg",
       cta: "View Our Services",
       path: "/services",
-      color: "from-cyan-400 to-blue-400"
+      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"]
     },
     {
       title: "Micro-SaaS Solutions",
@@ -85,7 +57,7 @@ const Home: React.FC = () => {
       image: "/images/hero-saas.jpg",
       cta: "Learn More",
       path: "/services/micro-saas-solutions",
-      color: "from-green-400 to-teal-400"
+      features: ["Custom Development", "Scalable Architecture", "API Integration", "User Management"]
     }
   ];
 
@@ -98,53 +70,35 @@ const Home: React.FC = () => {
 
   const services = [
     {
-      title: "AI Solutions",
-      description: "Cutting-edge artificial intelligence for business automation",
+      title: "AI Business Intelligence",
+      description: "Transform data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.",
       icon: Brain,
-      link: "/ai-solutions",
-      color: "from-blue-500 to-purple-500"
+      path: "/services/ai-business-intelligence",
+      category: "AI Solutions",
+      price: "$2,500/mo",
+      rating: 4.9,
+      reviewCount: 127,
+      highlights: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "AI Insights"],
+      features: ["Machine Learning", "Data Visualization", "API Integration", "24/7 Support", "Custom Alerts", "Performance Monitoring"]
     },
     {
-      title: "Cloud Services",
-      description: "Scalable cloud infrastructure and management",
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions designed for enterprise performance and security. Optimize costs while maintaining high availability and performance.",
       icon: Cloud,
       link: "/cloud-devops",
       color: "from-cyan-500 to-blue-500"
     },
     {
-      title: "Cybersecurity",
-      description: "Comprehensive security and compliance solutions",
+      title: "Cybersecurity Solutions",
+      description: "Comprehensive security services to protect your digital assets and data. Stay ahead of threats with proactive security measures.",
       icon: Shield,
-      link: "/services/cybersecurity",
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      title: "Digital Transformation",
-      description: "End-to-end business transformation services",
-      icon: Zap,
-      link: "/digital-transformation",
-      color: "from-green-500 to-teal-500"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO, TechCorp",
-      content: "Zion Tech Group transformed our infrastructure with AI-powered solutions that increased our efficiency by 300%.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "CEO, InnovateLab",
-      content: "The autonomous business platform revolutionized our operations. We've never been more efficient or scalable.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "VP Engineering, DataFlow",
-      content: "Outstanding service and cutting-edge technology. Zion Tech Group is our trusted partner for innovation.",
-      rating: 5
+      path: "/services/cybersecurity",
+      category: "Security",
+      price: "$3,200/mo",
+      rating: 4.9,
+      reviewCount: 156,
+      highlights: ["Threat Detection", "Compliance Ready", "24/7 Monitoring", "Incident Response"],
+      features: ["Penetration Testing", "Security Audits", "Incident Response", "Training", "Vulnerability Assessment", "Security Architecture"]
     }
   ];
 
@@ -165,6 +119,37 @@ const Home: React.FC = () => {
       description: "Grow without limits with our flexible infrastructure"
     },
     {
+      icon: Database,
+      title: "Data-Driven",
+      description: "Insights that drive better business decisions and strategic planning"
+    }
+  ];
+
+  const trustSignals = [
+    { icon: Eye, label: "Transparent Pricing", description: "No hidden fees or surprises" },
+    { icon: Heart, label: "Customer First", description: "Your success is our priority" },
+    { icon: TargetIcon, label: "Results Focused", description: "Measurable outcomes guaranteed" },
+    { icon: Sparkles, label: "Innovation Leader", description: "Cutting-edge technology solutions" }
+  ];
+
+  const aiServices = [
+    {
+      title: "AI Autonomous Systems",
+      description: "Self-managing AI systems that operate independently",
+      icon: Bot,
+      path: "/services/ai-autonomous-systems",
+      features: ["Self-Learning", "Automated Decision Making", "Continuous Optimization"]
+    },
+    {
+      title: "Quantum Technology",
+      description: "Next-generation computing solutions",
+      icon: Cpu,
+      path: "/services/quantum-technology",
+      features: ["Quantum Computing", "Quantum Security", "Quantum Algorithms"]
+    },
+    {
+      title: "Machine Learning",
+      description: "Custom ML models for your business needs",
       icon: Brain,
       title: "AI-Powered",
       description: "Intelligent automation and decision making"
@@ -199,228 +184,40 @@ const Home: React.FC = () => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };
-=======
 import React from 'react';
-<<<<<<< HEAD
-import { CategoriesSection } from "@/components/CategoriesSection";
-<<<<<<< HEAD
-=======
 import { EnhancedCategoriesSection } from "@/components/EnhancedCategoriesSection";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { HomePageSEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
+import { SEO } from "@/components/SEO";
+import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
 =======
 import { SEO } from "@/components/SEO";
 import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
 =======
 import { SEO } from "@/components/SEO";
 import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
 =======
 import { SEO } from "@/components/SEO";
 import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
-=======
-import { SEO } from "@/components/SEO";
-import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
 =======
 import { SEO } from "@/components/SEO";
 import { FuturisticHero } from "@/components/home/FuturisticHero";
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { MicroSaasShowcase } from "@/components/home/MicroSaasShowcase";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
-import { BottomNavigation } from "@/components/MobileNavigation";
-import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
->>>>>>> origin/cursor/website-audit-and-enhancement-ba38
-=======
 import { ServicesOverview } from "@/components/home/ServicesOverview";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-302a
 =======
 import { FloatingCTA } from "@/components/FloatingCTA";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
+=======
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
-      <SEOHead {...seoMetadata} />
-      
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
-        {/* Animated Hero Content */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="text-center z-10 px-4 sm:px-6 lg:px-8"
-          >
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6"
-            >
-              <span className={`bg-gradient-to-r ${heroSlides[currentSlide].color} bg-clip-text text-transparent`}>
-                {heroSlides[currentSlide].title}
-              </span>
-            </motion.h1>
-            
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-4"
-            >
-              {heroSlides[currentSlide].subtitle}
-            </motion.h2>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-8"
-            >
-              {heroSlides[currentSlide].description}
-            </motion.p>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
-              >
-                Explore Services
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300"
-              >
-                Get Started
-              </Link>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
-        
-        {/* Slide Controls */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
-        >
-          <ChevronLeft className="w-6 h-6 text-white" />
-        </button>
-        
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
-        >
-          <ChevronRight className="w-6 h-6 text-white" />
-        </button>
-        
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-white scale-125' : 'bg-white/30'
-              }`}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth and innovation.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative"
-              >
-                <Link to={service.link}>
-                  <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 group-hover:scale-105">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{service.description}</p>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-=======
     <div className="min-h-screen bg-background">
       <HomePageSEO />
->>>>>>> origin/cursor/website-audit-and-enhancement-ba38
 =======
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark relative overflow-hidden">
       {/* Futuristic Background Effects */}
@@ -441,26 +238,19 @@ import { AdvancedAnalytics } from "@/components/AdvancedAnalytics";
 =======
 import { ServicesShowcase } from "@/components/home/ServicesShowcase";
 import { ContactInfo } from "@/components/ContactInfo";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
 =======
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 =======
 import { ComprehensiveServicesShowcase } from "@/components/home/ComprehensiveServicesShowcase";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8a54
 =======
 import { ServicesShowcase } from "@/components/home/ServicesShowcase";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
 =======
 import { ServicesShowcase } from "@/components/home/ServicesShowcase";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
 =======
 import { ServicesOverview } from "@/components/ServicesOverview";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
 =======
 import { FuturisticBackground } from "@/components/FuturisticBackground";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
 =======
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -532,32 +322,23 @@ const STATS_DATA = [
   { number: "50+", label: "Service Categories", icon: <Code className="w-6 h-6" /> },
   { number: "98%", label: "Client Satisfaction", icon: <Star className="w-6 h-6" /> }
 ];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
 =======
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { ServiceRecommendations } from "@/components/ServiceRecommendations";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
 =======
 import { AdvancedServicesShowcase } from "@/components/home/AdvancedServicesShowcase";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
 =======
 import { AnimatedBackground, FloatingElements } from "@/components/ui/AnimatedBackground";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
 =======
 import { ServicesShowcase } from "@/components/ServicesShowcase";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-ad2d
 =======
 import { MicroSaasShowcase } from "@/components/home/MicroSaasShowcase";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
 =======
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-defc
 =======
 import { ServicesShowcase } from "@/components/ServicesShowcase";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f15c
 =======
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
 
 export default function Home() {
   const features = [
@@ -642,13 +423,6 @@ export default function Home() {
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-background" id="main-content">
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
       {/* Futuristic background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-purple/5 via-transparent to-zion-cyan/5"></div>
@@ -662,29 +436,13 @@ export default function Home() {
         <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-zion-cyan/8 rounded-full blur-2xl animate-pulse delay-1500"></div>
       </div>
 
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
 =======
     <div className="min-h-screen bg-background relative">
       <FuturisticBackground intensity="low" />
       
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
 =======
     <div className="min-h-screen bg-background relative overflow-hidden">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
       <SEO 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title="Zion - The Tech & AI Marketplace" 
-        description="Discover top AI and tech talent, services, and equipment in one place."
-        keywords="AI, technology, marketplace, services, talent"
-        canonical="https://ziontechgroup.com/"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         title="Leading Tech & AI Marketplace - Connect with World-Class Talent & Services" 
         description="Zion Tech Group is the premier marketplace for AI talent, IT services, and cutting-edge technology solutions. Connect with 10,000+ verified professionals, get 24/7 global IT support, and accelerate your digital transformation."
         keywords="AI marketplace, tech talent, IT services, software development, artificial intelligence, technology consulting, digital transformation, tech recruitment, AI solutions, enterprise technology, Zion Tech Group"
@@ -692,158 +450,271 @@ export default function Home() {
         type="website"
         ogImage="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&h=630&fit=crop&crop=center"
         tags={["AI", "Technology", "Marketplace", "IT Services", "Digital Transformation"]}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4514
 =======
         title="Zion Tech Group - Premier AI & Tech Marketplace" 
         description="Discover cutting-edge AI services, tech talent, and innovative micro SAAS solutions. Transform your business with our comprehensive ecosystem of technology services."
         keywords="AI services, machine learning, cloud migration, cybersecurity, data analytics, tech talent, micro SAAS, IT services"
         canonical="https://ziontechgroup.com/"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
 =======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
 =======
         title="Zion Tech Group - The Tech & AI Marketplace" 
         description="Discover top AI and tech talent, services, and equipment in one place. Transform your business with cutting-edge AI services, IT solutions, and intelligent automation tools."
         keywords="AI, technology, marketplace, services, talent, micro SAAS, IT consulting, business automation, cloud migration, cybersecurity, data analytics"
         canonical="https://ziontechgroup.com/"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-8717
 =======
         title="Zion Tech Group - Premier Tech & AI Marketplace" 
         description="Discover cutting-edge AI services, enterprise IT solutions, and innovative SaaS platforms. Connect with top talent and transform your business with next-generation technology."
         keywords="AI services, IT solutions, SaaS platforms, technology marketplace, enterprise solutions, AI consulting, cloud services, cybersecurity, digital transformation"
         canonical="https://ziontechgroup.com/"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-bbee
 =======
         title="Zion Tech Group - The Future of Tech Solutions" 
         description="Discover cutting-edge AI services, innovative IT solutions, and transformative business tools. Zion Tech Group - Where innovation meets excellence."
         keywords="AI services, IT solutions, business automation, cloud services, cybersecurity, micro SAAS, Zion Tech Group"
         canonical="https://ziontechgroup.com/"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
       />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Trusted by <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Thousands</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our solutions are powering businesses around the world with proven results.
-            </p>
-          </motion.div>
-=======
       {/* Animated Background */}
       <AnimatedBackground variant="particles" intensity="medium" />
       <FloatingElements />
 
-<<<<<<< HEAD
-      <ITServiceRequestHero />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Zion Tech Group
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/services" 
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">
-                  <stat.icon className="w-8 h-8" />
+                Explore Our Services
+              </Link>
+              <Link 
+                to="/contact" 
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 animate-float">
+          <div className="w-4 h-4 bg-cyan-400 rounded-full opacity-60"></div>
+        </div>
+        <div className="absolute top-40 right-20 animate-float-delayed">
+          <div className="w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
+        </div>
+        <div className="absolute bottom-40 left-20 animate-float">
+          <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60"></div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-black/50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </motion.div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+                <div className="text-lg font-semibold mb-2">{stat.label}</div>
+                <div className="text-sm text-gray-400">{stat.description}</div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              What Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Clients Say</span>
+      {/* AI Services Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              AI-Powered Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it - hear from the businesses we've helped transform.
+              Discover how artificial intelligence can transform your business operations and drive innovation
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-lg">
-                    {testimonial.name.charAt(0)}
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
-                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                  </div>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {aiServices.map((service, index) => (
+              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <StarIcon key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
                   ))}
+                </ul>
+                <Link 
+                  to={service.path}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Services Section */}
+      <section className="py-20 bg-black/30">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Featured Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our most popular solutions trusted by businesses worldwide
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-8">
+            {featuredServices.map((service, index) => (
+              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 overflow-hidden hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="p-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                      <div className="text-sm text-gray-400">{service.category}</div>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  
+                  <div className="flex items-center mb-4">
+                    <div className="flex items-center mr-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className={`w-5 h-5 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} />
+                      ))}
+                    </div>
+                    <span className="text-gray-400">({service.reviewCount} reviews)</span>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-2 mb-6">
+                    {service.highlights.map((highlight, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {highlight}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <Link 
+                    to={service.path}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                  >
+                    Get Started
+                  </Link>
                 </div>
-                
-                <p className="text-gray-300 leading-relaxed">"{testimonial.content}"</p>
-              </motion.div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Solutions Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Industry Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Tailored solutions designed for specific industry challenges and opportunities
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {industrySolutions.map((solution, index) => (
+              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6">
+                  <solution.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{solution.title}</h3>
+                <p className="text-gray-300 mb-6">{solution.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {solution.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link 
+                  to={solution.path}
+                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group"
+                >
+                  Explore Solutions
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-black/30">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Why Choose Zion Tech Group?
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We combine cutting-edge technology with proven expertise to deliver exceptional results
             </p>
           </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyChooseUs.map((reason, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <reason.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">{reason.title}</h3>
+                <p className="text-gray-300">{reason.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      {/* Trust Signals Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Trusted by Businesses Worldwide
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our commitment to excellence and customer success has made us a trusted partner
+            </p>
+          </div>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChooseUs.map((feature, index) => (
               <div key={index} className="text-center group">
@@ -899,6 +770,8 @@ export default function Home() {
                 <div className="text-zion-slate-light text-sm md:text-base">
                   {stat.label}
                 </div>
+                <h3 className="text-xl font-bold mb-3">{signal.label}</h3>
+                <p className="text-gray-300">{signal.description}</p>
               </div>
             ))}
           </div>
@@ -952,136 +825,59 @@ export default function Home() {
                 </div>
                 <div className="font-medium text-gray-900">{tech.name}</div>
                 <div className="text-sm text-gray-500">{tech.category}</div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-10"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Let's discuss how our AI-powered solutions can accelerate your growth and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300"
-              >
-                Learn More
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-=======
       <HeroSection />
 =======
       <EnhancedHeroSection />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
 =======
       <EnhancedHeroSection />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
 =======
       <EnhancedHeroSection />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
 =======
       <EnhancedHeroSection />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
 =======
       <FuturisticHero />
 
       <EnhancedServicesShowcase />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
       
       <QuickAccess />
       
       <FeatureCTAs />
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <MicroSaasServicesSection />
+      <MicroSaasShowcase />
 =======
       <MicroSaasShowcase />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
-=======
-      <MicroSaasShowcase />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
       
       <FeatureHighlights />
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <MicroSaasShowcase />
-=======
       <ServicesOverview />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-302a
 =======
       <ServicesShowcase />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
 =======
       <TestimonialCarousel />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 =======
       <ComprehensiveServicesShowcase />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8a54
 =======
       <ServicesOverview />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
 =======
       <ServicesOverview />
       
       <ServiceRecommendations maxRecommendations={6} />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
 =======
       <AdvancedServicesShowcase />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
 =======
       <MicroSaasShowcase />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
 =======
       <ServicesShowcase />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-ad2d
 =======
       <EnhancedServicesShowcase />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-defc
 =======
       <ServicesShowcase />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f15c
 =======
       <EnhancedServicesShowcase />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
       
       <CategoriesSection />
       <ServicesShowcase />
@@ -1291,10 +1087,8 @@ export default function Home() {
       <CategoriesSection />
       
       {/* Benefits Section */}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
 =======
       <EnhancedCategoriesSection />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
       <BenefitsSection />
       
       {/* How It Works Section */}
@@ -1302,22 +1096,11 @@ export default function Home() {
       
       {/* Featured Listings Section */}
       <FeaturedListingsSection />
-<<<<<<< HEAD
-      <ContactInfo />
-=======
       
       {/* Newsletter Section */}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
       <NewsletterSection />
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Mobile Bottom Navigation */}
-      <BottomNavigation />
->>>>>>> origin/cursor/website-audit-and-enhancement-ba38
-=======
       <FloatingCTA />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
 =======
       </div>
 
@@ -1385,6 +1168,10 @@ export default function Home() {
       <div className="py-20 bg-zion-blue text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
+=======
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
+        <div className="max-w-4xl mx-auto text-center px-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
@@ -1400,18 +1187,32 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </div>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
-=======
       <FloatingCTA />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 =======
     <div className="min-h-screen bg-background" id="main-content">
       <CategoriesSection />
       <ServicesShowcase />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
+=======
+      </section>
+
+      {/* Lazy Loaded Sections */}
+      <Suspense fallback={<LoadingFallback message="Loading services..." />}>
+        <LazyServicesSection />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingFallback message="Loading features..." />}>
+        <LazyFeaturesSection />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
+        <LazyTestimonialsSection />
+      </Suspense>
+      
+      <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
+        <LazyCTASection />
+      </Suspense>
     </div>
   );
-};
+}
 
 export default Home;

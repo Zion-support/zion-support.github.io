@@ -7,51 +7,6 @@ import {
   TrendingUp, 
   Shield, 
   Globe, 
-<<<<<<< HEAD
-  Palette,
-  FileText,
-  Video,
-  Music,
-  Camera,
-  Car,
-  Home,
-  ShoppingCart,
-  CreditCard,
-  Calendar,
-  MessageSquare,
-  FileImage,
-  Monitor,
-  Server,
-  Network,
-  Key,
-  Eye,
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  DollarSign,
-  Star,
-  Award,
-  Lightbulb,
-  Compass,
-  Layers,
-  GitBranch,
-  Zap as Lightning,
-  Globe as World,
-  Shield as Security,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Flame,
-  Snowflake,
-  Package,
-  BookOpen,
-  Factory,
-  ShoppingBag,
-  Atom
-=======
   Shield, 
   TrendingUp, 
   Database,
@@ -76,9 +31,6 @@ import {
   Building, 
   Rocket, 
   Cpu, 
-<<<<<<< HEAD
-  BarChart3 
-=======
   BarChart3,
   Database,
   Cloud,
@@ -91,17 +43,21 @@ import {
   Star,
   ArrowRight,
   Brain
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
->>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 } from 'lucide-react';
 
 export default function MicroSAASSolutions() {
   const services = [
     {
-      title: "Custom SAAS Development",
-      description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
-      icon: Code,
-      features: ["Custom workflows", "API integration", "User management", "Scalable architecture"]
+      title: "AI-Powered CRM Platform",
+      description: "Intelligent customer relationship management with predictive analytics, automated follow-ups, and smart lead scoring.",
+      icon: '🧠',
+      features: ["Predictive Analytics", "Automated Follow-ups", "Smart Lead Scoring", "Real-time Insights", "AI Chat Support"],
+      price: "$299/month",
+      marketPrice: "$599/month",
+      savings: "50% savings",
+      category: "Customer Management",
+      rating: 4.9,
+      reviewCount: 342
     },
     {
       title: "Multi-tenant Architecture",
