@@ -22,6 +22,12 @@ import {
   DeveloperRoutes
 } from './routes';
 const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const News = React.lazy(() => import('./pages/News'));
+const Press = React.lazy(() => import('./pages/Press'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
@@ -45,6 +51,12 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
+  { path: '/about', element: <About /> },
+  { path: '/careers', element: <Careers /> },
+  { path: '/news', element: <News /> },
+  { path: '/press', element: <Press /> },
+  { path: '/case-studies', element: <CaseStudies /> },
+  { path: '/white-papers', element: <WhitePapers /> },
   { path: '/match', element: <AIMatcherPage /> },
   { path: '/login', element: <Login /> },
   { path: '/signup', element: <Signup /> },
