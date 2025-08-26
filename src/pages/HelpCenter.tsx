@@ -423,7 +423,7 @@ export default function HelpCenter() {
                     >
                       <div className="flex items-start gap-4">
                         <div className={`w-8 h-8 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-purple flex items-center justify-center flex-shrink-0 mt-1`}>
-                          <getCategoryIcon(faq.category) className="h-4 w-4 text-white" />
+                          {getCategoryIcon(faq.category)({ className: "h-4 w-4 text-white" })}
                         </div>
                         <div className="flex-1">
                           <h3 className="text-white font-medium text-lg mb-2">{faq.question}</h3>
@@ -462,7 +462,7 @@ export default function HelpCenter() {
                               <p className="text-zion-slate-light leading-relaxed">{faq.answer}</p>
                               <div className="mt-4 flex items-center gap-4 text-sm text-zion-slate-light">
                                 <span className={`flex items-center gap-1 ${getCategoryColor(faq.category)}`}>
-                                  <getCategoryIcon(faq.category) className="h-4 w-4" />
+                                  {getCategoryIcon(faq.category)({ className: "h-4 w-4" })}
                                   {helpCategories.find(c => c.id === faq.category)?.title}
                                 </span>
                                 <span className="flex items-center gap-1">

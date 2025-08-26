@@ -492,7 +492,10 @@ export default function SearchPage() {
                         >
                           <div className="flex items-start justify-between mb-4">
                             <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-                              <result.type === 'service' ? getCategoryIcon(result.category) : getTypeIcon(result.type) className="h-6 w-6 text-white" />
+                              {result.type === 'service' ? 
+                                getCategoryIcon(result.category)({ className: "h-6 w-6 text-white" }) : 
+                                getTypeIcon(result.type)({ className: "h-6 w-6 text-white" })
+                              }
                             </div>
                             {result.featured && (
                               <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
@@ -566,7 +569,10 @@ export default function SearchPage() {
                         >
                           <div className="flex items-start gap-6">
                             <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center flex-shrink-0">
-                              <result.type === 'service' ? getCategoryIcon(result.category) : getTypeIcon(result.type) className="h-8 w-8 text-white" />
+                              {result.type === 'service' ? 
+                                getCategoryIcon(result.category)({ className: "h-8 w-8 text-white" }) : 
+                                getTypeIcon(result.type)({ className: "h-8 w-8 text-white" })
+                              }
                             </div>
 
                             <div className="flex-1 min-w-0">
