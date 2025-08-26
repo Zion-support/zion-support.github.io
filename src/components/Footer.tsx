@@ -23,30 +23,11 @@ export default function Footer() {
       title: 'Services',
       links: [
         { name: 'AI Solutions', href: '/services/ai' },
+        { name: 'Cloud & DevOps', href: '/services/cloud' },
         { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Cloud Computing', href: '/services/cloud' },
-        { name: 'IT Consulting', href: '/services/consulting' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
-      ]
-    },
-    {
-      title: 'Solutions',
-      links: [
-        { name: 'Enterprise AI', href: '/solutions/enterprise-ai' },
-        { name: 'Quantum Computing', href: '/solutions/quantum' },
-        { name: 'Autonomous Systems', href: '/solutions/autonomous' },
-        { name: 'Blockchain', href: '/solutions/blockchain' },
-        { name: 'IoT Platform', href: '/solutions/iot' }
-      ]
-    },
-    {
-      title: 'Industries',
-      links: [
-        { name: 'Healthcare', href: '/industries/healthcare' },
-        { name: 'Finance', href: '/industries/finance' },
-        { name: 'Manufacturing', href: '/industries/manufacturing' },
-        { name: 'Retail', href: '/industries/retail' },
-        { name: 'Education', href: '/industries/education' }
+        { name: 'IT Infrastructure', href: '/services/infrastructure' },
+        { name: 'Digital Transformation', href: '/services/transformation' },
+        { name: 'Technology Consulting', href: '/services/consulting' }
       ]
     },
     {
@@ -56,7 +37,27 @@ export default function Footer() {
         { name: 'Leadership', href: '/leadership' },
         { name: 'Careers', href: '/careers' },
         { name: 'News', href: '/news' },
+        { name: 'Blog', href: '/blog' },
         { name: 'Contact', href: '/contact' }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Tutorials', href: '/tutorials' },
+        { name: 'Support', href: '/support' }
+      ]
+    },
+    {
+      title: 'Legal',
+      links: [
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Cookie Policy', href: '/cookies' },
+        { name: 'Accessibility', href: '/accessibility' }
       ]
     }
   ];
