@@ -160,6 +160,9 @@ export function FeaturedListingsSection() {
       image: '🔒',
       link: '/services/cybersecurity',
       features: ['Security Audits', 'Threat Detection', 'Incident Response']
+    }
+  ];
+
 export function FeaturedListingsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<number | null>(null);

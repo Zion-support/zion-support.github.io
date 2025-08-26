@@ -1,25 +1,20 @@
 {
-  "name": "bolt.new.zion.app",
+  "name": "zion-tech-group",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=20.18.1",
-    "npm": ">=10.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --max-warnings 0",
     "preview": "vite preview",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run --browser chrome",
-    "test:accessibility": "vitest run tests/Accessibility.test.tsx"
+    "test": "vitest run"
   },
   "dependencies": {
-    "@hello-pangea/dnd": "^18.0.1",
     "@hookform/resolvers": "^3.3.4",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -47,7 +42,6 @@
     "cmdk": "^0.2.1",
     "date-fns": "^3.3.1",
     "embla-carousel-react": "^8.6.0",
-    "firebase": "^9.23.0",
     "framer-motion": "^12.23.12",
     "fuse.js": "^7.0.0",
     "i18next": "^23.7.16",
@@ -58,7 +52,6 @@
     "lodash.debounce": "^4.0.8",
     "lucide-react": "^0.323.0",
     "next-themes": "^0.2.1",
-    "next": "^14.2.5",
     "notistack": "^3.0.0",
     "react": "^18.2.0",
     "react-day-picker": "^8.9.1",
@@ -70,10 +63,8 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@testing-library/cypress": "^8.0.2",
     "@testing-library/jest-dom": "^6.1.2",
     "@testing-library/react": "^14.1.2",
-    "@types/jest": "^29.5.3",
     "@types/node": "^20.11.17",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
@@ -82,20 +73,12 @@
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.21",
     "cssnano": "^7.1.1",
-    "cypress": "^11.2.0",
-    "cypress-real-events": "^1.12.0",
-    "eslint": "8.57.1",
+    "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.3.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "jsdom": "^24.0.0",
     "postcss": "^8.4.35",
-    "rimraf": "^5.0.5",
     "tailwindcss": "^3.4.1",
-    "ts-jest": "^29.1.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vitest": "^1.4.0"
