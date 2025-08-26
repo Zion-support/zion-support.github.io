@@ -9,7 +9,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -44,16 +43,6 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         // Zion brand colors
-        'zion-cyan': '#22ddd2',
-        'zion-blue': '#2e73ea',
-        'zion-purple': '#8c15e9',
-        'zion-blue-dark': '#172d67',
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-=======
         'zion-blue-dark': '#172d67',
         'zion-blue': '#1e3a8a',
         'zion-blue-light': '#2e73ea',
@@ -74,6 +63,9 @@ module.exports = {
         'shimmer': 'shimmer 2.5s linear infinite',
         'gradient': 'gradient 8s ease infinite',
         'neon-pulse': 'neon-pulse 1.5s ease-in-out infinite alternate',
+        'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+        'slide-in-right': 'slide-in-right 0.5s ease-out forwards',
+        'scale-in': 'scale-in 0.3s ease-out forwards',
       },
       keyframes: {
         float: {
@@ -100,6 +92,18 @@ module.exports = {
             textShadow: '0 0 10px rgba(34, 221, 210, 0.8), 0 0 20px rgba(34, 221, 210, 0.6), 0 0 30px rgba(34, 221, 210, 0.4)' 
           },
         },
+        'fade-in-up': {
+          '0%': { opacity: 0, transform: 'translateY(30px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+        'slide-in-right': {
+          '0%': { opacity: 0, transform: 'translateX(30px)' },
+          '100%': { opacity: 1, transform: 'translateX(0)' },
+        },
+        'scale-in': {
+          '0%': { opacity: 0, transform: 'scale(0.9)' },
+          '100%': { opacity: 1, transform: 'scale(1)' },
+        },
       },
       backdropBlur: {
         'xs': '2px',
@@ -112,12 +116,14 @@ module.exports = {
         'purple-neon': '0 0 20px rgba(140, 21, 233, 0.5)',
         'purple-neon-lg': '0 0 30px rgba(140, 21, 233, 0.6)',
         'purple-neon-xl': '0 0 40px rgba(140, 21, 233, 0.7)',
+        'zion-glow': '0 0 30px rgba(34, 221, 210, 0.3), 0 0 60px rgba(34, 221, 210, 0.1)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'gradient-mesh': 'linear-gradient(45deg, #22ddd2, #8c15e9, #2e73ea, #22ddd2)',
         'gradient-mesh-2': 'linear-gradient(135deg, #8c15e9, #22ddd2, #2e73ea, #8c15e9)',
+        'gradient-zion': 'linear-gradient(135deg, #172d67 0%, #1e3a8a 25%, #2e73ea 50%, #22ddd2 75%, #8c15e9 100%)',
       },
       backgroundSize: {
         '200%': '200% 200%',
@@ -173,6 +179,9 @@ module.exports = {
         'extra-loose': '2.25',
       },
       borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
         '4xl': '2rem',
         '5xl': '2.5rem',
       },
@@ -188,7 +197,6 @@ module.exports = {
       minHeight: {
         'screen-75': '75vh',
         'screen-90': '90vh',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
       },
     },
   },
