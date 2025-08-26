@@ -1,10 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-<<<<<<< HEAD
-import path from 'node:path'
-=======
 import { resolve } from 'path'
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
 
 export default defineConfig({
   root: '.',
@@ -12,10 +8,6 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-<<<<<<< HEAD
-      '@': path.resolve(__dirname, './src')
-    }
-=======
       '@': resolve(__dirname, './src'),
       '@components': resolve(__dirname, './src/components'),
       '@pages': resolve(__dirname, './src/pages'),
@@ -25,17 +17,12 @@ export default defineConfig({
       '@styles': resolve(__dirname, './src/styles'),
       '@assets': resolve(__dirname, './src/assets'),
     },
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
   },
   build: {
     target: 'esnext',
     minify: 'esbuild',
     sourcemap: false,
     rollupOptions: {
-<<<<<<< HEAD
-      input: path.resolve(__dirname, 'index.html'),
-=======
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
@@ -80,8 +67,6 @@ export default defineConfig({
       },
       external: [],
     },
-<<<<<<< HEAD
-=======
     terserOptions: {
       compress: {
         drop_console: true,
@@ -90,7 +75,6 @@ export default defineConfig({
       },
       mangle: { safari10: true },
     },
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
     chunkSizeWarningLimit: 1000,
     outDir: 'dist',
     copyPublicDir: true,
@@ -104,27 +88,32 @@ export default defineConfig({
       'lucide-react',
       'clsx',
       'tailwind-merge',
+      'class-variance-authority',
     ],
-    exclude: ['@radix-ui/react-icons'],
+    exclude: ['@modelcontextprotocol/sdk'],
   },
-  css: { devSourcemap: false },
   server: {
     port: 3000,
     host: true,
     open: true,
     cors: true,
-    hmr: { overlay: false },
+    hmr: {
+      overlay: false,
+    },
   },
-  preview: { port: 4173, host: true, open: true },
+  preview: {
+    port: 4173,
+    host: true,
+    open: true,
+  },
+  css: {
+    postcss: './postcss.config.js',
+  },
   define: {
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.VITE_APP_TITLE': JSON.stringify(process.env.VITE_APP_TITLE),
   },
-  esbuild: { drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [] },
-  worker: { format: 'es' },
-  envPrefix: ['VITE_', 'ZION_'],
-<<<<<<< HEAD
+  esbuild: {
+    jsxInject: `import React from 'react'`,
+  },
 })
-=======
-})
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a

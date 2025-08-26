@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 export default {
   content: [
@@ -8,53 +8,52 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         card: {
-          DEFAULT: "var(--card)",
-          foreground: "var(--card-foreground)",
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
         popover: {
-          DEFAULT: "var(--popover)",
-          foreground: "var(--popover-foreground)",
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
         },
         primary: {
-          DEFAULT: "var(--primary)",
-          foreground: "var(--primary-foreground)",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "var(--secondary)",
-          foreground: "var(--secondary-foreground)",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         muted: {
-          DEFAULT: "var(--muted)",
-          foreground: "var(--muted-foreground)",
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "var(--accent)",
-          foreground: "var(--accent-foreground)",
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
         destructive: {
-          DEFAULT: "var(--destructive)",
-          foreground: "var(--destructive-foreground)",
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
-        border: "var(--border)",
-        input: "var(--input)",
-        ring: "var(--ring)",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
         chart: {
-          "1": "var(--chart-1)",
-          "2": "var(--chart-2)",
-          "3": "var(--chart-3)",
-          "4": "var(--chart-4)",
-          "5": "var(--chart-5)",
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
         },
         // Zion Tech Group brand colors
         "zion-blue": {
           DEFAULT: "#1e40af",
           light: "#3b82f6",
-          lighter: "#60a5fa",
           dark: "#1e3a8a",
-          darker: "#1e293b",
+          lighter: "#dbeafe",
         },
         "zion-cyan": {
           DEFAULT: "#22ddd2",
@@ -66,8 +65,6 @@ export default {
           light: "#451582",
           dark: "#000000",
         },
-<<<<<<< HEAD
-=======
         // Additional service category colors
         "zion-green": {
           DEFAULT: "#10b981",
@@ -149,7 +146,6 @@ export default {
           light: "#22d3ee",
           dark: "#0891b2",
         },
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
         "zion-neon": {
           DEFAULT: "#22ddd2",
           light: "#7aeae4",
@@ -159,110 +155,63 @@ export default {
         "zion-purple": {
           DEFAULT: "#8c15e9",
           light: "#b971f2",
-<<<<<<< HEAD
-          dark: "#530c8b",
-          neon: "#b971f2",
-=======
-          dark: "#7c3aed",
+          dark: "#6b21a8",
         },
-        "zion-purple-light": {
-          DEFAULT: "#a855f7",
-          light: "#c084fc",
-          dark: "#9333ea",
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+        // Futuristic theme colors
+        futuristic: {
+          DEFAULT: "#0a0a0a",
+          light: "#1a1a1a",
+          dark: "#000000",
+        },
+        neon: {
+          blue: "#00f5ff",
+          green: "#00ff41",
+          pink: "#ff00ff",
+          yellow: "#ffff00",
         },
       },
       fontFamily: {
-<<<<<<< HEAD
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        "fade-in": {
-          from: { opacity: "0" },
-          to: { opacity: "1" },
-        },
-        "fade-out": {
-          from: { opacity: "1" },
-          to: { opacity: "0" },
-        },
-        "slide-in-from-top": {
-          from: { transform: "translateY(-100%)" },
-          to: { transform: "translateY(0)" },
-        },
-        "slide-in-from-bottom": {
-          from: { transform: "translateY(100%)" },
-          to: { transform: "translateY(0)" },
-        },
-        "slide-in-from-left": {
-          from: { transform: "translateX(-100%)" },
-          to: { transform: "translateX(0)" },
-        },
-        "slide-in-from-right": {
-          from: { transform: "translateX(100%)" },
-          to: { transform: "translateX(0)" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.3s ease-out",
-        "fade-out": "fade-out 0.3s ease-out",
-        "slide-in-from-top": "slide-in-from-top 0.3s ease-out",
-        "slide-in-from-bottom": "slide-in-from-bottom 0.3s ease-out",
-        "slide-in-from-left": "slide-in-from-left 0.3s ease-out",
-        "slide-in-from-right": "slide-in-from-right 0.3s ease-out",
-      },
-    },
-  },
-  plugins: [animatePlugin],
-};
-
-export default config;
-=======
         sans: ["Inter", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
+        futuristic: ["Orbitron", "monospace"],
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",
         "slide-up": "slideUp 0.5s ease-out",
         "slide-down": "slideDown 0.5s ease-out",
+        "slide-left": "slideLeft 0.5s ease-out",
+        "slide-right": "slideRight 0.5s ease-out",
         "scale-in": "scaleIn 0.3s ease-out",
-        "bounce-gentle": "bounceGentle 2s infinite",
-        "pulse-gentle": "pulseGentle 3s infinite",
-        "float": "float 6s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite alternate",
-        "gradient": "gradient 8s ease infinite",
-        "shimmer": "shimmer 2.5s linear infinite",
-        "typing": "typing 3.5s steps(40, end)",
-        "blink-caret": "blinkCaret 0.75s step-end infinite",
-        "slide-in-left": "slideInLeft 0.5s ease-out",
-        "slide-in-right": "slideInRight 0.5s ease-out",
-        "slide-in-top": "slideInTop 0.5s ease-out",
-        "slide-in-bottom": "slideInBottom 0.5s ease-out",
-        "zoom-in": "zoomIn 0.3s ease-out",
-        "zoom-out": "zoomOut 0.3s ease-out",
-        "rotate-in": "rotateIn 0.5s ease-out",
+        "bounce-in": "bounceIn 0.6s ease-out",
+        "rotate-in": "rotateIn 0.6s ease-out",
         "flip-in": "flipIn 0.6s ease-out",
-        "hinge": "hinge 2s ease-in-out",
-        "roll-in": "rollIn 0.6s ease-out",
-        "bounce-in": "bounceIn 0.8s ease-out",
-        "fade-in-up": "fadeInUp 0.6s ease-out",
-        "fade-in-down": "fadeInDown 0.6s ease-out",
-        "fade-in-left": "fadeInLeft 0.6s ease-out",
-        "fade-in-right": "fadeInRight 0.6s ease-out",
-        "fade-out": "fadeOut 0.5s ease-in",
-        "fade-out-up": "fadeOutUp 0.6s ease-in",
-        "fade-out-down": "fadeOutDown 0.6s ease-in",
-        "fade-out-left": "fadeOutLeft 0.6s ease-in",
-        "fade-out-right": "fadeOutRight 0.6s ease-in",
+        "zoom-in": "zoomIn 0.3s ease-out",
+        "pulse-glow": "pulseGlow 2s ease-in-out infinite",
+        "float": "float 3s ease-in-out infinite",
+        "shimmer": "shimmer 2s linear infinite",
+        "gradient-x": "gradientX 3s ease infinite",
+        "gradient-y": "gradientY 3s ease infinite",
+        "gradient-xy": "gradientXY 3s ease infinite",
+        "text-shimmer": "textShimmer 2s linear infinite",
+        "border-glow": "borderGlow 2s ease-in-out infinite",
+        "neon-flicker": "neonFlicker 1.5s infinite alternate",
+        "cyber-pulse": "cyberPulse 2s ease-in-out infinite",
+        "matrix-rain": "matrixRain 20s linear infinite",
+        "hologram": "hologram 3s ease-in-out infinite",
+        "quantum-shift": "quantumShift 4s ease-in-out infinite",
+        "time-warp": "timeWarp 5s ease-in-out infinite",
+        "dimension-hop": "dimensionHop 6s ease-in-out infinite",
+        "reality-bend": "realityBend 7s ease-in-out infinite",
+        "cosmic-drift": "cosmicDrift 8s ease-in-out infinite",
+        "stellar-rotation": "stellarRotation 10s linear infinite",
+        "nebula-swirl": "nebulaSwirl 12s ease-in-out infinite",
+        "black-hole": "blackHole 15s ease-in-out infinite",
+        "wormhole": "wormhole 20s ease-in-out infinite",
+        "time-machine": "timeMachine 25s ease-in-out infinite",
+        "reality-engine": "realityEngine 30s ease-in-out infinite",
+        "cosmos-expansion": "cosmosExpansion 40s ease-in-out infinite",
+        "multiverse": "multiverse 60s ease-in-out infinite",
+        "infinity": "infinity 120s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -270,71 +219,29 @@ export default config;
           "100%": { opacity: "1" },
         },
         slideUp: {
-          "0%": { transform: "translateY(20px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
-        },
-        slideDown: {
-          "0%": { transform: "translateY(-20px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
-        },
-        scaleIn: {
-          "0%": { transform: "scale(0.9)", opacity: "0" },
-          "100%": { transform: "scale(1)", opacity: "1" },
-        },
-        bounceGentle: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
-        pulseGentle: {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.8" },
-        },
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
-        },
-        glow: {
-          "0%": { boxShadow: "0 0 5px #22ddd2" },
-          "100%": { boxShadow: "0 0 20px #22ddd2, 0 0 30px #22ddd2" },
-        },
-        gradient: {
-          "0%, 100%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-        },
-        shimmer: {
-          "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" },
-        },
-        typing: {
-          "from": { width: "0" },
-          "to": { width: "100%" },
-        },
-        blinkCaret: {
-          "from, to": { borderColor: "transparent" },
-          "50%": { borderColor: "#22ddd2" },
-        },
-        slideInLeft: {
-          "0%": { transform: "translateX(-100%)", opacity: "0" },
-          "100%": { transform: "translateX(0)", opacity: "1" },
-        },
-        slideInRight: {
-          "0%": { transform: "translateX(100%)", opacity: "0" },
-          "100%": { transform: "translateX(0)", opacity: "1" },
-        },
-        slideInTop: {
-          "0%": { transform: "translateY(-100%)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
-        },
-        slideInBottom: {
           "0%": { transform: "translateY(100%)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
-        zoomIn: {
-          "0%": { transform: "scale(0.8)", opacity: "0" },
+        slideDown: {
+          "0%": { transform: "translateY(-100%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        slideLeft: {
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        slideRight: {
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        scaleIn: {
+          "0%": { transform: "scale(0)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
-        zoomOut: {
-          "0%": { transform: "scale(1.2)", opacity: "0" },
+        bounceIn: {
+          "0%": { transform: "scale(0.3)", opacity: "0" },
+          "50%": { transform: "scale(1.05)" },
+          "70%": { transform: "scale(0.9)" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
         rotateIn: {
@@ -348,115 +255,195 @@ export default config;
           "80%": { transform: "perspective(400px) rotateY(-5deg)" },
           "100%": { transform: "perspective(400px) rotateY(0deg)", opacity: "1" },
         },
-        hinge: {
-          "0%": { transform: "rotate(0)", transformOrigin: "top left", animationTimingFunction: "ease-in-out" },
-          "20%, 60%": { transform: "rotate(80deg)", transformOrigin: "top left", animationTimingFunction: "ease-in-out" },
-          "40%, 80%": { transform: "rotate(60deg)", transformOrigin: "top left", animationTimingFunction: "ease-in-out", opacity: "1" },
-          "100%": { transform: "rotate(60deg)", transformOrigin: "top left", opacity: "0" },
-        },
-        rollIn: {
-          "0%": { transform: "translateX(-100%) rotate(-120deg)", opacity: "0" },
-          "100%": { transform: "translateX(0) rotate(0deg)", opacity: "1" },
-        },
-        bounceIn: {
-          "0%": { transform: "scale(0.3)", opacity: "0" },
-          "50%": { transform: "scale(1.05)" },
-          "70%": { transform: "scale(0.9)" },
+        zoomIn: {
+          "0%": { transform: "scale(0)", opacity: "0" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
-        fadeInUp: {
-          "0%": { transform: "translateY(30px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
+        pulseGlow: {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(34, 221, 210, 0.5)" },
+          "50%": { boxShadow: "0 0 40px rgba(34, 221, 210, 0.8)" },
         },
-        fadeInDown: {
-          "0%": { transform: "translateY(-30px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
         },
-        fadeInLeft: {
-          "0%": { transform: "translateX(-30px)", opacity: "0" },
-          "100%": { transform: "translateX(0)", opacity: "1" },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
-        fadeInRight: {
-          "0%": { transform: "translateX(30px)", opacity: "0" },
-          "100%": { transform: "translateX(0)", opacity: "1" },
+        gradientX: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
         },
-        fadeOut: {
+        gradientY: {
+          "0%, 100%": { backgroundPosition: "50% 0%" },
+          "50%": { backgroundPosition: "50% 100%" },
+        },
+        gradientXY: {
+          "0%, 100%": { backgroundPosition: "0% 0%" },
+          "50%": { backgroundPosition: "100% 100%" },
+        },
+        textShimmer: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "100% 50%" },
+        },
+        borderGlow: {
+          "0%, 100%": { borderColor: "rgba(34, 221, 210, 0.5)" },
+          "50%": { borderColor: "rgba(34, 221, 210, 1)" },
+        },
+        neonFlicker: {
           "0%": { opacity: "1" },
-          "100%": { opacity: "0" },
+          "100%": { opacity: "0.8" },
         },
-        fadeOutUp: {
-          "0%": { opacity: "1", transform: "translateY(0)" },
-          "100%": { opacity: "0", transform: "translateY(-30px)" },
+        cyberPulse: {
+          "0%, 100%": { transform: "scale(1)", filter: "brightness(1)" },
+          "50%": { transform: "scale(1.05)", filter: "brightness(1.2)" },
         },
-        fadeOutDown: {
-          "0%": { opacity: "1", transform: "translateY(0)" },
-          "100%": { opacity: "0", transform: "translateY(30px)" },
+        matrixRain: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100vh)" },
         },
-        fadeOutLeft: {
-          "0%": { opacity: "1", transform: "translateX(0)" },
-          "100%": { opacity: "0", transform: "translateX(-30px)" },
+        hologram: {
+          "0%, 100%": { opacity: "0.7", filter: "hue-rotate(0deg)" },
+          "50%": { opacity: "1", filter: "hue-rotate(180deg)" },
         },
-        fadeOutRight: {
-          "0%": { opacity: "1", transform: "translateX(0)" },
-          "100%": { opacity: "0", transform: "translateX(30px)" },
+        quantumShift: {
+          "0%, 100%": { transform: "translateX(0) rotate(0deg)" },
+          "25%": { transform: "translateX(20px) rotate(90deg)" },
+          "50%": { transform: "translateX(0) rotate(180deg)" },
+          "75%": { transform: "translateX(-20px) rotate(270deg)" },
+        },
+        timeWarp: {
+          "0%": { transform: "scale(1) rotate(0deg)" },
+          "25%": { transform: "scale(1.1) rotate(90deg)" },
+          "50%": { transform: "scale(0.9) rotate(180deg)" },
+          "75%": { transform: "scale(1.05) rotate(270deg)" },
+          "100%": { transform: "scale(1) rotate(360deg)" },
+        },
+        dimensionHop: {
+          "0%": { transform: "translateZ(0) rotateX(0deg)" },
+          "25%": { transform: "translateZ(100px) rotateX(90deg)" },
+          "50%": { transform: "translateZ(0) rotateX(180deg)" },
+          "75%": { transform: "translateZ(-100px) rotateX(270deg)" },
+          "100%": { transform: "translateZ(0) rotateX(360deg)" },
+        },
+        realityBend: {
+          "0%": { transform: "skewX(0deg) skewY(0deg)" },
+          "25%": { transform: "skewX(10deg) skewY(5deg)" },
+          "50%": { transform: "skewX(0deg) skewY(0deg)" },
+          "75%": { transform: "skewX(-10deg) skewY(-5deg)" },
+          "100%": { transform: "skewX(0deg) skewY(0deg)" },
+        },
+        cosmicDrift: {
+          "0%": { transform: "translateX(0) translateY(0)" },
+          "25%": { transform: "translateX(10px) translateY(-10px)" },
+          "50%": { transform: "translateX(0) translateY(0)" },
+          "75%": { transform: "translateX(-10px) translateY(10px)" },
+          "100%": { transform: "translateX(0) translateY(0)" },
+        },
+        stellarRotation: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        nebulaSwirl: {
+          "0%": { transform: "rotate(0deg) scale(1)" },
+          "50%": { transform: "rotate(180deg) scale(1.2)" },
+          "100%": { transform: "rotate(360deg) scale(1)" },
+        },
+        blackHole: {
+          "0%": { transform: "scale(1) rotate(0deg)" },
+          "50%": { transform: "scale(0.5) rotate(180deg)" },
+          "100%": { transform: "scale(1) rotate(360deg)" },
+        },
+        wormhole: {
+          "0%": { transform: "perspective(1000px) rotateY(0deg)" },
+          "50%": { transform: "perspective(1000px) rotateY(180deg)" },
+          "100%": { transform: "perspective(1000px) rotateY(360deg)" },
+        },
+        timeMachine: {
+          "0%": { transform: "translateX(0) scale(1)" },
+          "25%": { transform: "translateX(100px) scale(1.1)" },
+          "50%": { transform: "translateX(0) scale(0.9)" },
+          "75%": { transform: "translateX(-100px) scale(1.05)" },
+          "100%": { transform: "translateX(0) scale(1)" },
+        },
+        realityEngine: {
+          "0%": { transform: "rotateX(0deg) rotateY(0deg)" },
+          "25%": { transform: "rotateX(90deg) rotateY(90deg)" },
+          "50%": { transform: "rotateX(180deg) rotateY(180deg)" },
+          "75%": { transform: "rotateX(270deg) rotateY(270deg)" },
+          "100%": { transform: "rotateX(360deg) rotateY(360deg)" },
+        },
+        cosmosExpansion: {
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.5)" },
+          "100%": { transform: "scale(1)" },
+        },
+        multiverse: {
+          "0%": { transform: "translateX(0) translateY(0) scale(1)" },
+          "25%": { transform: "translateX(50px) translateY(-50px) scale(1.2)" },
+          "50%": { transform: "translateX(0) translateY(0) scale(0.8)" },
+          "75%": { transform: "translateX(-50px) translateY(50px) scale(1.1)" },
+          "100%": { transform: "translateX(0) translateY(0) scale(1)" },
+        },
+        infinity: {
+          "0%": { transform: "rotate(0deg) scale(1)" },
+          "25%": { transform: "rotate(90deg) scale(1.1)" },
+          "50%": { transform: "rotate(180deg) scale(0.9)" },
+          "75%": { transform: "rotate(270deg) scale(1.05)" },
+          "100%": { transform: "rotate(360deg) scale(1)" },
         },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "gradient-zion": "linear-gradient(135deg, #1e40af 0%, #22ddd2 100%)",
-        "gradient-zion-dark": "linear-gradient(135deg, #1e3a8a 0%, #14847e 100%)",
-        "gradient-zion-light": "linear-gradient(135deg, #3b82f6 0%, #7aeae4 100%)",
-        "gradient-zion-purple": "linear-gradient(135deg, #8c15e9 0%, #22ddd2 100%)",
-        "gradient-zion-cyan": "linear-gradient(135deg, #22ddd2 0%, #7aeae4 100%)",
-        "gradient-zion-blue": "linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)",
-        "gradient-zion-green": "linear-gradient(135deg, #10b981 0%, #22ddd2 100%)",
-        "gradient-zion-orange": "linear-gradient(135deg, #f59e0b 0%, #22ddd2 100%)",
-        "gradient-zion-red": "linear-gradient(135deg, #ef4444 0%, #22ddd2 100%)",
-        "gradient-zion-pink": "linear-gradient(135deg, #ec4899 0%, #22ddd2 100%)",
-        "gradient-zion-indigo": "linear-gradient(135deg, #6366f1 0%, #22ddd2 100%)",
-        "gradient-zion-emerald": "linear-gradient(135deg, #10b981 0%, #22ddd2 100%)",
-        "gradient-zion-teal": "linear-gradient(135deg, #14b8a6 0%, #22ddd2 100%)",
-        "gradient-zion-amber": "linear-gradient(135deg, #f59e0b 0%, #22ddd2 100%)",
-        "gradient-zion-yellow": "linear-gradient(135deg, #eab308 0%, #22ddd2 100%)",
-        "gradient-zion-lime": "linear-gradient(135deg, #84cc16 0%, #22ddd2 100%)",
-        "gradient-zion-rose": "linear-gradient(135deg, #f43f5e 0%, #22ddd2 100%)",
-        "gradient-zion-violet": "linear-gradient(135deg, #8b5cf6 0%, #22ddd2 100%)",
-        "gradient-zion-fuchsia": "linear-gradient(135deg, #d946ef 0%, #22ddd2 100%)",
-        "gradient-zion-sky": "linear-gradient(135deg, #0ea5e9 0%, #22ddd2 100%)",
-        "gradient-zion-blue-light": "linear-gradient(135deg, #3b82f6 0%, #22ddd2 100%)",
-        "gradient-zion-cyan-light": "linear-gradient(135deg, #06b6d4 0%, #22ddd2 100%)",
-        "gradient-zion-neon": "linear-gradient(135deg, #22ddd2 0%, #7aeae4 100%)",
-        "gradient-zion-purple": "linear-gradient(135deg, #8c15e9 0%, #22ddd2 100%)",
-        "gradient-zion-purple-light": "linear-gradient(135deg, #a855f7 0%, #22ddd2 100%)",
-      },
-      boxShadow: {
-        "zion": "0 4px 20px rgba(34, 221, 210, 0.3)",
-        "zion-lg": "0 10px 40px rgba(34, 221, 210, 0.4)",
-        "zion-xl": "0 20px 60px rgba(34, 221, 210, 0.5)",
-        "zion-2xl": "0 25px 80px rgba(34, 221, 210, 0.6)",
-        "zion-inner": "inset 0 2px 4px rgba(34, 221, 210, 0.2)",
-        "zion-neon": "0 0 20px rgba(34, 221, 210, 0.8), 0 0 40px rgba(34, 221, 210, 0.4)",
-        "zion-glow": "0 0 30px rgba(34, 221, 210, 0.6), 0 0 60px rgba(34, 221, 210, 0.3)",
+        "cyber-grid": "linear-gradient(rgba(34, 221, 210, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 221, 210, 0.1) 1px, transparent 1px)",
+        "neon-glow": "radial-gradient(circle, rgba(34, 221, 210, 0.3) 0%, transparent 70%)",
+        "hologram": "linear-gradient(45deg, transparent 30%, rgba(34, 221, 210, 0.1) 50%, transparent 70%)",
+        "quantum-field": "radial-gradient(ellipse at center, rgba(34, 221, 210, 0.2) 0%, transparent 70%)",
+        "time-stream": "linear-gradient(90deg, transparent 0%, rgba(34, 221, 210, 0.1) 50%, transparent 100%)",
+        "reality-fabric": "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(34, 221, 210, 0.05) 10px, rgba(34, 221, 210, 0.05) 20px)",
+        "cosmic-dust": "radial-gradient(circle at 20% 80%, rgba(34, 221, 210, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(34, 221, 210, 0.1) 0%, transparent 50%)",
+        "stellar-wind": "linear-gradient(45deg, transparent 0%, rgba(34, 221, 210, 0.05) 25%, transparent 50%, rgba(34, 221, 210, 0.05) 75%, transparent 100%)",
+        "nebula-cloud": "radial-gradient(ellipse at center, rgba(34, 221, 210, 0.15) 0%, rgba(34, 221, 210, 0.05) 40%, transparent 70%)",
+        "black-hole": "radial-gradient(circle at center, rgba(0, 0, 0, 0.8) 0%, rgba(34, 221, 210, 0.1) 50%, transparent 100%)",
+        "wormhole": "conic-gradient(from 0deg at 50% 50%, rgba(34, 221, 210, 0.2) 0deg, transparent 90deg, rgba(34, 221, 210, 0.2) 180deg, transparent 270deg, rgba(34, 221, 210, 0.2) 360deg)",
+        "time-machine": "linear-gradient(135deg, transparent 0%, rgba(34, 221, 210, 0.1) 25%, transparent 50%, rgba(34, 221, 210, 0.1) 75%, transparent 100%)",
+        "reality-engine": "repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(34, 221, 210, 0.05) 20px, rgba(34, 221, 210, 0.05) 40px)",
+        "cosmos-expansion": "radial-gradient(circle at center, rgba(34, 221, 210, 0.1) 0%, transparent 60%)",
+        "multiverse": "conic-gradient(from 45deg at 50% 50%, rgba(34, 221, 210, 0.1) 0deg, transparent 120deg, rgba(34, 221, 210, 0.1) 240deg, transparent 360deg)",
+        "infinity": "linear-gradient(45deg, transparent 0%, rgba(34, 221, 210, 0.05) 25%, transparent 50%, rgba(34, 221, 210, 0.05) 75%, transparent 100%)",
       },
       backdropBlur: {
         xs: "2px",
       },
-      spacing: {
-        "18": "4.5rem",
-        "88": "22rem",
-        "128": "32rem",
+      boxShadow: {
+        "neon-blue": "0 0 20px rgba(34, 221, 210, 0.5)",
+        "neon-green": "0 0 20px rgba(0, 255, 65, 0.5)",
+        "neon-pink": "0 0 20px rgba(255, 0, 255, 0.5)",
+        "neon-yellow": "0 0 20px rgba(255, 255, 0, 0.5)",
+        "cyber": "0 0 30px rgba(34, 221, 210, 0.3)",
+        "hologram": "0 0 40px rgba(34, 221, 210, 0.4)",
+        "quantum": "0 0 50px rgba(34, 221, 210, 0.5)",
+        "time": "0 0 60px rgba(34, 221, 210, 0.6)",
+        "reality": "0 0 70px rgba(34, 221, 210, 0.7)",
+        "cosmos": "0 0 80px rgba(34, 221, 210, 0.8)",
+        "multiverse": "0 0 90px rgba(34, 221, 210, 0.9)",
+        "infinity": "0 0 100px rgba(34, 221, 210, 1)",
       },
-      maxWidth: {
-        "8xl": "88rem",
-        "9xl": "96rem",
-      },
-      zIndex: {
-        "60": "60",
-        "70": "70",
-        "80": "80",
-        "90": "90",
-        "100": "100",
+      textShadow: {
+        "neon-blue": "0 0 10px rgba(34, 221, 210, 0.8)",
+        "neon-green": "0 0 10px rgba(0, 255, 65, 0.8)",
+        "neon-pink": "0 0 10px rgba(255, 0, 255, 0.8)",
+        "neon-yellow": "0 0 10px rgba(255, 255, 0, 0.8)",
+        "cyber": "0 0 15px rgba(34, 221, 210, 0.9)",
+        "hologram": "0 0 20px rgba(34, 221, 210, 1)",
+        "quantum": "0 0 25px rgba(34, 221, 210, 1)",
+        "time": "0 0 30px rgba(34, 221, 210, 1)",
+        "reality": "0 0 35px rgba(34, 221, 210, 1)",
+        "cosmos": "0 0 40px rgba(34, 221, 210, 1)",
+        "multiverse": "0 0 45px rgba(34, 221, 210, 1)",
+        "infinity": "0 0 50px rgba(34, 221, 210, 1)",
       },
     },
   },
@@ -466,5 +453,4 @@ export default config;
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/line-clamp"),
   ],
-} satisfies Config
->>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+} satisfies Config;
