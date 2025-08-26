@@ -16,17 +16,14 @@ declare module '*.module.css' {
 
 declare module '@tanstack/react-query';
 declare module 'react-day-picker' {
+  import { FC } from 'react';
+
   export interface DateRange {
     from?: Date;
     to?: Date;
   }
 
-  // Minimal placeholder for the DayPicker component used in the app
-  // The actual library provides full typings but we stub them here so the
-  // TypeScript compiler can understand the imports without requiring the real
-  // type definitions.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  export const DayPicker: any;
+  export const DayPicker: FC<any>;
 }
 declare module 'sonner';
 declare module 'lucide-react' {
