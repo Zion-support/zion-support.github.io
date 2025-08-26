@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEOHead } from '@/components/SEOHead';
+import SEOHead from '@/components/SEOHead';
 import { UltimateServicesShowcase } from '@/components/UltimateServicesShowcase';
 import { 
   Brain, 
