@@ -1,57 +1,45 @@
 import React from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
 
 export function LoginErrorFallback({ error, resetErrorBoundary }) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple p-4">
-      <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+    <div className="flex items-center justify-center min-h-screen bg-gray-50">
+      <div className="max-w-md w-full bg-white rounded-lg shadow-md p-6">
         <div className="text-center">
-          <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-red-100 mb-4">
-            <AlertTriangle className="h-8 w-8 text-red-600" />
+          <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 mb-4">
+            <svg className="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
           </div>
-          
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Something went wrong
-          </h2>
-          
-          <p className="text-zion-slate-light mb-6">
-            We encountered an error while loading the login page. This might be a temporary issue.
+          <h3 className="text-lg font-medium text-gray-900 mb-2">
+            Login Error
+          </h3>
+          <p className="text-sm text-gray-600 mb-4">
+            Something went wrong during the login process. Please try again.
           </p>
-          
           {error && (
-            <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4 mb-6">
-              <p className="text-red-200 text-sm font-mono">
-                {error.message || 'Unknown error occurred'}
-              </p>
-            </div>
+            <details className="text-left mb-4">
+              <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
+                Error Details
+              </summary>
+              <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+                {error.message}
+              </pre>
+            </details>
           )}
-          
-          <div className="space-y-3">
+          <div className="space-y-2">
             <button
               onClick={resetErrorBoundary}
-              className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
             >
-              <RefreshCw className="w-5 h-5" />
               Try Again
             </button>
-            
             <button
               onClick={() => window.location.href = '/'}
-              className="w-full bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+              className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors"
             >
-              Go to Homepage
+              Go Home
             </button>
           </div>
-          
-          <p className="text-zion-slate-light text-sm mt-6">
-            If the problem persists, please contact our support team at{' '}
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
-              className="text-zion-cyan hover:text-zion-cyan-light underline"
-            >
-              kleber@ziontechgroup.com
-            </a>
-          </p>
         </div>
       </div>
     </div>

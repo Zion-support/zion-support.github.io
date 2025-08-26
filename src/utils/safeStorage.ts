@@ -1,4 +1,4 @@
-import {logErrorToProduction} from '@/utils/productionLogger';
+import {error as logErrorToProduction} from '@/utils/productionLogger';
 
 // In-memory storage for fallback with optimizations
 const inMemoryStore: Record<string, string> = {};

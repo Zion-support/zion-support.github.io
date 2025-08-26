@@ -1,46 +1,84 @@
-/**
- * Production logging utility for error tracking and monitoring
- */
+// Production Logger Utility
+// Provides logging functionality for production environment
 
-/**
- * Log error to production monitoring service
- * @param {string} message - Error message
- * @param {Error} error - Error object
- */
-export function logErrorToProduction(message, error) {
-  // In production, this would typically send to a service like Sentry, LogRocket, etc.
-  // For now, we'll just console.error to avoid breaking the build
-  
-  if (process.env.NODE_ENV === 'development') {
-    console.error('[Production Logger]', message, error);
+const isDevelopment = process.env.NODE_ENV === 'development';
+
+class ProductionLogger {
+  constructor() {
+    this.enabled = !isDevelopment;
   }
-  
-  // TODO: Implement actual production logging service integration
-  // Example: Sentry.captureException(error);
+
+  log(message, data = null) {
+    if (this.enabled) {
+      console.log(`[Zion Production] ${message}`, data || '');
+    }
+  }
+
+  error(message, error = null) {
+    if (this.enabled) {
+      console.error(`[Zion Production Error] ${message}`, error || '');
+      
+      // In production, you might want to send this to an error tracking service
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'exception', {
+          description: message,
+          fatal: false
+        });
+      }
+    }
+  }
+
+  warn(message, data = null) {
+    if (this.enabled) {
+      console.warn(`[Zion Production Warning] ${message}`, data || '');
+    }
+  }
+
+  info(message, data = null) {
+    if (this.enabled) {
+      console.info(`[Zion Production Info] ${message}`, data || '');
+    }
+  }
+
+  // Track user actions for analytics
+  track(eventName, parameters = {}) {
+    if (this.enabled && typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, parameters);
+    }
+  }
+
+  // Performance monitoring
+  measure(name, fn) {
+    if (this.enabled) {
+      const start = performance.now();
+      const result = fn();
+      const duration = performance.now() - start;
+      
+      this.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+      
+      // Track performance metrics
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'timing_complete', {
+          name: name,
+          value: Math.round(duration)
+        });
+      }
+      
+      return result;
+    }
+    return fn();
+  }
 }
 
-/**
- * Log warning to production monitoring service
- * @param {string} message - Warning message
- * @param {Object} context - Additional context data
- */
-export function logWarningToProduction(message, context = {}) {
-  if (process.env.NODE_ENV === 'development') {
-    console.warn('[Production Logger]', message, context);
-  }
-  
-  // TODO: Implement actual production logging service integration
-}
+// Create singleton instance
+const productionLogger = new ProductionLogger();
 
-/**
- * Log info to production monitoring service
- * @param {string} message - Info message
- * @param {Object} context - Additional context data
- */
-export function logInfoToProduction(message, context = {}) {
-  if (process.env.NODE_ENV === 'development') {
-    console.info('[Production Logger]', message, context);
-  }
-  
-  // TODO: Implement actual production logging service integration
-}
+export default productionLogger;
+
+// Export individual methods for convenience
+export const log = (message, data) => productionLogger.log(message, data);
+export const error = (message, error) => productionLogger.error(message, error);
+export const warn = (message, data) => productionLogger.warn(message, data);
+export const info = (message, data) => productionLogger.info(message, data);
+export const track = (eventName, parameters) => productionLogger.track(eventName, parameters);
+export const measure = (name, fn) => productionLogger.measure(name, fn);
