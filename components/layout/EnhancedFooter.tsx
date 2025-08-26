@@ -34,9 +34,9 @@ const EnhancedFooter: React.FC = () => {
 					<div>
 						<h3 className="text-lg font-semibold mb-4">Follow Us</h3>
 						<div className="flex space-x-4">
-							<a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">Twitter</a>
-							<a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">LinkedIn</a>
-							<a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">GitHub</a>
+							<a href="https://www.linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">LinkedIn</a>
+							<a href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">GitHub</a>
+							<a href="https://www.youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">YouTube</a>
 						</div>
 					</div>
 				</div>

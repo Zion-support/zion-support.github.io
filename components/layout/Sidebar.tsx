@@ -18,21 +18,13 @@ const Sidebar: React.FC = () => {
 							<Link href="/resources" className="text-gray-700 hover:text-indigo-600">Resources</Link>
 						</li>
 						<li>
+							<Link href="/resources" className="text-gray-700 hover:text-indigo-600">Resources</Link>
+						</li>
+						<li>
+							<Link href="/pricing" className="text-gray-700 hover:text-indigo-600">Pricing</Link>
+						</li>
+						<li>
 							<Link href="/blog" className="text-gray-700 hover:text-indigo-600">Blog</Link>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<h3 className="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-2">Solutions</h3>
-					<ul className="space-y-2">
-						<li>
-							<Link href="/2026-services-showcase" className="text-gray-700 hover:text-indigo-600">2026 Services Showcase</Link>
-						</li>
-						<li>
-							<Link href="/zero-trust-network-architecture-2029" className="text-gray-700 hover:text-indigo-600">Zero Trust 2029</Link>
-						</li>
-						<li>
-							<Link href="/2029-innovative-services-showcase" className="text-gray-700 hover:text-indigo-600">2029 Innovations</Link>
 						</li>
 					</ul>
 				</div>
@@ -44,9 +36,6 @@ const Sidebar: React.FC = () => {
 						</li>
 						<li>
 							<Link href="/contact" className="text-gray-700 hover:text-indigo-600">Contact</Link>
-						</li>
-						<li>
-							<Link href="/case-studies" className="text-gray-700 hover:text-indigo-600">Case Studies</Link>
 						</li>
 						<li>
 							<Link href="/privacy" className="text-gray-700 hover:text-indigo-600">Privacy Policy</Link>
