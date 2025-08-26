@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from 'react';
 import Link from 'next/link';
 import { 
@@ -15,15 +19,31 @@ import {
   Rocket,
   Users
 } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
 
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
+<<<<<<< HEAD
+=======
 import { TrustedBySection } from "@/components/TrustedBySection";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+<<<<<<<< HEAD:src/pages/ServicesPage.tsx
 import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
+========
+<<<<<<< HEAD
+import { Globe, ExternalLink, Star, Clock, Shield, Zap, Database, Code, Smartphone, Blockchain, Cpu, BarChart3 } from "lucide-react";
+=======
+import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
+>>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/ServicesPage.tsx.backup.1756208062
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
+import { SEO } from "@/components/SEO";
+=======
 import { EXPANDED_SERVICES } from "@/data/expandedServices";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 
 import { ProductListing } from "@/types/listings";
@@ -32,6 +52,7 @@ import { Link } from "react-router-dom";
 import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
 import { useEffect, useState } from "react";
 import { SEO } from "@/components/SEO";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 // Enhanced service listings with new micro SAAS services
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -639,6 +660,10 @@ export default function ServicesPage() {
   }, []);
 
   return (
+<<<<<<< HEAD
+    <>
+<<<<<<< HEAD
+=======
     <div className="min-h-screen bg-background">
       <SEO 
         title="IT & AI Services - Zion Tech Group" 
@@ -647,10 +672,19 @@ export default function ServicesPage() {
         url="https://ziontechgroup.com/services"
       />
       
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
           <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
+            <Link to="/enhanced-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                Enhanced AI & IT Services
+              </Button>
+            </Link>
+=======
       <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-8 px-4 md:px-8 mb-8 border-b border-zion-purple/30">
         <div className="container mx-auto">
           <div className="text-center mb-6">
@@ -703,6 +737,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8757
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10 backdrop-blur-sm">
                 <Globe className="h-4 w-4 mr-2" />
@@ -728,12 +763,17 @@ export default function ServicesPage() {
             <Link to="/contact">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                 Request a Quote
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </Button>
             </Link>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-zion-blue mb-4">IT & AI Services</h1>
@@ -779,6 +819,8 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+=======
       <DynamicListingPage 
         title="Comprehensive Micro SAAS Solutions"
         description="Find the perfect AI-powered tools and services to accelerate your business growth. All services include free trials and expert support."
@@ -790,7 +832,9 @@ export default function ServicesPage() {
       
       <TrustedBySection />
     </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 =======
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
@@ -800,4 +844,5 @@ import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 export default function ServicesPage() {
     return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Tech Services - Zion Tech Group", description: "Browse our comprehensive range of technology services and solutions.", canonical: "https://ziontechgroup.com/services" }), _jsx(Header, {}), _jsx("main", { className: "min-h-screen bg-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4 py-20", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Tech Services" }), _jsx("p", { className: "text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto", children: "Comprehensive technology services to help your business grow and succeed in the digital age." })] }), _jsx("div", { className: "max-w-6xl mx-auto", children: _jsxs("div", { className: "bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter",                 children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Revolutionary Services Available Now!" }), _jsx("p", { className: "text-zion-slate-light mb-6", children: "Explore our cutting-edge micro SAAS services, specialized IT solutions, and innovative AI platforms designed to transform your business in 2025 and beyond." }), _jsx("div", { className: "text-center mt-6 mb-8", children: _jsx("a", { href: "/revolutionary-services-2025", className: "bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105", children: "Explore Revolutionary Services 2025" }) }) }), _jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8", children: [_jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83D\uDCBB" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Web Development" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "Custom websites, web apps, and e-commerce solutions" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83D\uDCF1" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Mobile Apps" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "iOS, Android, and cross-platform mobile applications" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-cyan-light/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\u2601\uFE0F" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Cloud Services" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "AWS, Azure, and Google Cloud solutions" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-purple-light/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83D\uDD12" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Cybersecurity" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "Security audits, penetration testing, and compliance" })] })] })] }) })] }) }), _jsx(Footer, {})] }));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-494a
 }

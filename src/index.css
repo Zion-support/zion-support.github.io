@@ -188,7 +188,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: #e5e7eb;
   }
 
   body {
@@ -214,16 +214,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: theme('colors["zion-blue"].DEFAULT');
+    background: #0ea5e9;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: theme('colors["zion-purple"].dark');
+    background: #5b21b6;
     border-radius: 5px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: theme('colors["zion-purple"].DEFAULT');
+    background: #7c3aed;
   }
 
   /* Smooth scrolling */

@@ -1,5 +1,9 @@
 module.exports = {
   plugins: {
+<<<<<<< HEAD
+    "@tailwindcss/postcss": {},
+    autoprefixer: {},
+=======
     tailwindcss: {},
     autoprefixer: {},
 =======
@@ -16,5 +20,6 @@ module.exports = {
         minifySelectors: true,
       }]
     } : false,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-494a
   },
 };
