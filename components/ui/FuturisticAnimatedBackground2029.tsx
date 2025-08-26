@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface FuturisticAnimatedBackground2029Props {
   className?: string;
@@ -284,27 +283,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div className="fixed inset-0 bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 -z-10">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]"></div>
-    </div>
-  );
-}
-
-=======
-import React from 'react';
-
-const FuturisticAnimatedBackground2029: React.FC = () => {
-  return (
-    <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-black opacity-50" />
-  );
-};
-
-export default FuturisticAnimatedBackground2029;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-    <div className={`fixed inset-0 pointer-events-none ${className}`}>
+    <div className={`fixed inset-0 pointer-events-none -z-10 ${className}`}>
       <canvas
         ref={canvasRef}
         className="w-full h-full"
@@ -313,7 +292,7 @@ export default FuturisticAnimatedBackground2029;
         }}
       />
       
-      {/* Overlay gradient */}
+      {/* Overlay gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/10 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-blue-900/10 to-transparent" />
       
@@ -324,5 +303,3 @@ export default FuturisticAnimatedBackground2029;
     </div>
   );
 }
-
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
