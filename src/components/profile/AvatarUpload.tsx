@@ -25,9 +25,9 @@ export function AvatarUpload({ value, onChange }: Props) {
           className="h-20 w-20 rounded-full"
         />
       )}
-      {process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME &&
-      process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !== 'YOUR_CLOUDINARY_CLOUD_NAME_HERE' &&
-      process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !== '' ? (
+      {import.meta.env.VITE_CLOUDINARY_CLOUD_NAME &&
+import.meta.env.VITE_CLOUDINARY_CLOUD_NAME !== 'YOUR_CLOUDINARY_CLOUD_NAME_HERE' &&
+import.meta.env.VITE_CLOUDINARY_CLOUD_NAME !== '' ? (
         <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}>
           Upload Avatar
         </CldUploadButton>
