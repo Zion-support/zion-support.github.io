@@ -31,6 +31,7 @@ export interface SpecializedMicroSaasService2025 {
     limitations: string[];
   };
 }
+
 export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService2025[] = [
   // AI-Powered Content Generation Suite
   {
@@ -91,6 +92,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
       limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
     }
   },
+
   // Smart Invoice Management System
   {
     id: "smart-invoice-management-system",
@@ -150,6 +152,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
       limitations: ["No API access", "Limited integrations", "Basic templates"]
     }
   },
+
   // AI-Powered Customer Support Platform
   {
     id: "ai-customer-support-platform",
@@ -209,6 +212,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
       limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
     }
   },
+
   // Smart Project Management Tool
   {
     id: "smart-project-management-tool",
@@ -268,6 +272,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
       limitations: ["Limited AI features", "No advanced reporting", "Basic integrations"]
     }
   },
+
   // AI-Powered Email Marketing Platform
   {
     id: "ai-email-marketing-platform",
@@ -327,6 +332,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
       limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
     }
   },
+
   // Smart Inventory Management System
   {
     id: "smart-inventory-management-system",
@@ -386,6 +392,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
       limitations: ["Limited AI features", "Basic reporting", "No API access"]
     }
   },
+
   // AI-Powered Social Media Manager
   {
     id: "ai-social-media-manager",
@@ -445,6 +452,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
       limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
     }
   },
+
   // Smart Time Tracking Solution
   {
     id: "smart-time-tracking-solution",
@@ -504,6 +512,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
       limitations: ["No AI features", "Basic reporting", "Limited integrations"]
     }
   },
+
   // AI-Powered Lead Generation Platform
   {
     id: "ai-lead-generation-platform",
@@ -563,6 +572,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
       limitations: ["Limited AI models", "Basic analytics", "No custom branding"]
     }
   },
+
   // Smart Document Management System
   {
     id: "smart-document-management-system",

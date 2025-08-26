@@ -1,34 +1,174 @@
 export const completeSitemap = [
-    // Main Pages
-    { path: '/', label: 'Home', description: 'Zion Tech Group homepage' },
-    { path: '/about', label: 'About Us', description: 'Learn about Zion Tech Group' },
-    { path: '/careers', label: 'Careers', description: 'Join our team' },
-    { path: '/contact', label: 'Contact', description: 'Get in touch with us' },
-    { path: '/sitemap', label: 'Sitemap', description: 'Complete site navigation' },
-    { path: '/privacy', label: 'Privacy Policy', description: 'Our privacy practices' },
-    { path: '/terms', label: 'Terms of Service', description: 'Terms and conditions' },
-    // Marketplace
-    { path: '/marketplace', label: 'Marketplace', description: 'Browse products and services' },
-    { path: '/services', label: 'Services', description: 'Professional services' },
-    { path: '/talent', label: 'Find Talent', description: 'Connect with skilled professionals' },
-    { path: '/equipment', label: 'Equipment', description: 'Browse equipment listings' },
-    { path: '/categories', label: 'Categories', description: 'Browse by category' },
-    { path: '/green-it', label: 'Green IT', description: 'Sustainable technology solutions' },
-    { path: '/it-onsite-services', label: 'IT Onsite Services', description: 'On-site IT support' },
-    // Community & Support
-    { path: '/community', label: 'Community', description: 'Join our community' },
-    { path: '/blog', label: 'Blog', description: 'Latest news and insights' },
-    { path: '/faq', label: 'FAQ', description: 'Frequently asked questions' },
-    { path: '/help', label: 'Help Center', description: 'Get help and support' },
-    // AI & Tools
-    { path: '/match', label: 'AI Matcher', description: 'AI-powered talent matching' },
-    { path: '/zion-hire-ai', label: 'Zion Hire AI', description: 'AI hiring assistant' },
-    { path: '/request-quote', label: 'Request Quote', description: 'Get a custom quote' },
-    // Partners & Business
-    { path: '/partners', label: 'Partners', description: 'Our business partners' },
-    { path: '/developers', label: 'Developer Portal', description: 'Developer resources' },
-    { path: '/api-docs', label: 'API Documentation', description: 'Technical documentation' },
-    // Authentication
-    { path: '/login', label: 'Login', description: 'Sign in to your account' },
-    { path: '/signup', label: 'Sign Up', description: 'Create a new account' },
+    {
+        path: '/',
+        title: 'Home',
+        label: 'Home',
+        description: 'Zion Tech Group - World\'s first free marketplace for high-tech and AI',
+        priority: 1.0,
+        changefreq: 'daily'
+    },
+    {
+        path: '/about',
+        title: 'About Us',
+        label: 'About Us',
+        description: 'Learn about Zion Tech Group and our mission',
+        priority: 0.8,
+        changefreq: 'monthly'
+    },
+    {
+        path: '/services',
+        title: 'Services',
+        label: 'Services',
+        description: 'Explore our comprehensive tech services',
+        priority: 0.8,
+        changefreq: 'weekly'
+    },
+    {
+        path: '/marketplace',
+        title: 'Marketplace',
+        label: 'Marketplace',
+        description: 'Browse our marketplace for tech products and services',
+        priority: 0.9,
+        changefreq: 'daily'
+    },
+    {
+        path: '/talent',
+        title: 'Talent',
+        label: 'Talent',
+        description: 'Find and connect with top tech talent',
+        priority: 0.8,
+        changefreq: 'daily'
+    },
+    {
+        path: '/equipment',
+        title: 'Equipment',
+        label: 'Equipment',
+        description: 'Browse specialized tech equipment',
+        priority: 0.7,
+        changefreq: 'weekly'
+    },
+    {
+        path: '/community',
+        title: 'Community',
+        label: 'Community',
+        description: 'Join our tech community forum',
+        priority: 0.6,
+        changefreq: 'daily'
+    },
+    {
+        path: '/blog',
+        title: 'Blog',
+        label: 'Blog',
+        description: 'Latest insights and news from Zion Tech Group',
+        priority: 0.7,
+        changefreq: 'weekly'
+    },
+    {
+        path: '/careers',
+        title: 'Careers',
+        label: 'Careers',
+        description: 'Career opportunities at Zion Tech Group',
+        priority: 0.6,
+        changefreq: 'monthly'
+    },
+    {
+        path: '/contact',
+        title: 'Contact',
+        label: 'Contact',
+        description: 'Get in touch with Zion Tech Group',
+        priority: 0.5,
+        changefreq: 'monthly'
+    },
+    {
+        path: '/privacy',
+        title: 'Privacy Policy',
+        label: 'Privacy Policy',
+        description: 'Privacy policy and data protection',
+        priority: 0.3,
+        changefreq: 'yearly'
+    },
+    {
+        path: '/terms',
+        title: 'Terms of Service',
+        label: 'Terms of Service',
+        description: 'Terms and conditions of use',
+        priority: 0.3,
+        changefreq: 'yearly'
+    },
+    {
+        path: '/faq',
+        title: 'FAQ',
+        label: 'FAQ',
+        description: 'Frequently asked questions',
+        priority: 0.4,
+        changefreq: 'monthly'
+    },
+    {
+        path: '/sitemap',
+        title: 'Sitemap',
+        label: 'Sitemap',
+        description: 'Complete site navigation',
+        priority: 0.2,
+        changefreq: 'monthly'
+    },
+    {
+        path: '/login',
+        title: 'Login',
+        label: 'Login',
+        description: 'Sign in to your account',
+        priority: 0.4,
+        changefreq: 'monthly',
+        requiredAuth: false
+    },
+    {
+        path: '/signup',
+        title: 'Sign Up',
+        label: 'Sign Up',
+        description: 'Create a new account',
+        priority: 0.4,
+        changefreq: 'monthly',
+        requiredAuth: false
+    },
+    {
+        path: '/talent-dashboard',
+        title: 'Talent Dashboard',
+        label: 'Talent Dashboard',
+        description: 'Manage your talent profile',
+        priority: 0.6,
+        changefreq: 'daily',
+        requiredAuth: true,
+        requiredRoles: ['talent', 'jobSeeker', 'creator']
+    },
+    {
+        path: '/employer-dashboard',
+        title: 'Employer Dashboard',
+        label: 'Employer Dashboard',
+        description: 'Manage your hiring needs',
+        priority: 0.6,
+        changefreq: 'daily',
+        requiredAuth: true,
+        requiredRoles: ['employer', 'buyer']
+    },
+    {
+        path: '/admin',
+        title: 'Admin Panel',
+        label: 'Admin Panel',
+        description: 'Administrative controls',
+        priority: 0.3,
+        changefreq: 'monthly',
+        requiredAuth: true,
+        requiredRoles: ['admin']
+    }
 ];
+export const dynamicPaths = {
+    services: [
+        { path: '/services/ai', title: 'AI Services', priority: 0.8 },
+        { path: '/services/development', title: 'Development Services', priority: 0.8 },
+        { path: '/services/consulting', title: 'Consulting Services', priority: 0.7 }
+    ],
+    marketplace: [
+        { path: '/marketplace/software', title: 'Software Products', priority: 0.8 },
+        { path: '/marketplace/hardware', title: 'Hardware Products', priority: 0.7 },
+        { path: '/marketplace/services', title: 'Tech Services', priority: 0.8 }
+    ]
+};

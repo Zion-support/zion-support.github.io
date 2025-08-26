@@ -1,6 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 // Export all hooks from messaging directory
 export * from './messaging';
 export * from './use-toast';
@@ -10,6 +10,7 @@ export * from './usePageViewTracking';
 export * from './useReactId';
 export * from './useScrollToTop';
 export * from './usePostsByCategory';
+<<<<<<< HEAD
 =======
 export function useScrollToTop() {
   // Simple hook to scroll to top
@@ -17,6 +18,7 @@ export function useScrollToTop() {
     window.scrollTo(0, 0);
   }, []);
 }
+
 export function useAuth() {
   // Simple auth hook
   return {
@@ -24,4 +26,6 @@ export function useAuth() {
     isAuthenticated: false
   };
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

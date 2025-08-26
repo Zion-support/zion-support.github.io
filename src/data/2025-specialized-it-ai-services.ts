@@ -1,4 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
+
 export interface SpecializedITService {
   id: string;
   name: string;
@@ -43,6 +44,7 @@ export interface SpecializedITService {
   sla: string;
   support: string;
 }
+
 export const specializedITServices2025: SpecializedITService[] = [
   // Neuromorphic Computing Platform
   {
@@ -100,6 +102,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     sla: '99.0% uptime guarantee',
     support: 'Research hours support with dedicated neuromorphic specialists'
   },
+
   // Federated Learning Platform
   {
     id: 'federated-learning',
@@ -156,6 +159,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     sla: '99.9% uptime guarantee',
     support: 'Business hours support with dedicated privacy specialists'
   },
+
   // AI Ethics & Governance Platform
   {
     id: 'ai-ethics-governance',
@@ -212,6 +216,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     sla: '99.9% uptime guarantee',
     support: 'Business hours support with dedicated ethics specialists'
   },
+
   // Edge AI Orchestration Platform
   {
     id: 'edge-ai-orchestration',
@@ -268,6 +273,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     sla: '99.9% uptime guarantee',
     support: 'Business hours support with dedicated edge computing specialists'
   },
+
   // AI-Powered DevOps Automation
   {
     id: 'ai-devops-automation',
@@ -324,6 +330,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     sla: '99.9% uptime guarantee',
     support: '24/7 technical support with dedicated DevOps specialists'
   },
+
   // AI-Powered Data Quality Platform
   {
     id: 'ai-data-quality',
@@ -380,6 +387,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     sla: '99.9% uptime guarantee',
     support: 'Business hours support with dedicated data specialists'
   },
+
   // AI-Powered API Management Platform
   {
     id: 'ai-api-management',
@@ -436,6 +444,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     sla: '99.9% uptime guarantee',
     support: 'Business hours support with dedicated API specialists'
   },
+
   // AI-Powered Network Security Platform
   {
     id: 'ai-network-security',
@@ -493,4 +502,5 @@ export const specializedITServices2025: SpecializedITService[] = [
     support: '24/7 security operations center with dedicated security engineers'
   }
 ];
+
 export default specializedITServices2025;

@@ -33,6 +33,7 @@ export interface SpecializedIndustrySolution {
   marketOpportunity: string;
   competitiveAdvantage: string;
 }
+
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] = [
   // 1. Healthcare AI Diagnostic Platform
   {
@@ -99,6 +100,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     marketOpportunity: "$45.2 billion by 2027",
     competitiveAdvantage: "Advanced AI algorithms with healthcare-specific training"
   },
+
   // 2. Financial Services AI Compliance Platform
   {
     id: "financial-ai-compliance-elite",
@@ -164,6 +166,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     marketOpportunity: "$28.9 billion by 2026",
     competitiveAdvantage: "AI-powered compliance with real-time monitoring"
   },
+
   // 3. Manufacturing IoT Intelligence Platform
   {
     id: "manufacturing-iot-intelligence-elite",
@@ -229,6 +232,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     marketOpportunity: "$32.1 billion by 2027",
     competitiveAdvantage: "Comprehensive IoT platform with AI-powered analytics"
   },
+
   // 4. Retail AI Personalization Platform
   {
     id: "retail-ai-personalization-elite",
@@ -294,6 +298,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     marketOpportunity: "$22.4 billion by 2026",
     competitiveAdvantage: "AI-powered personalization with real-time optimization"
   },
+
   // 5. Energy Management AI Platform
   {
     id: "energy-management-ai-elite",
@@ -359,6 +364,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     marketOpportunity: "$38.7 billion by 2027",
     competitiveAdvantage: "AI-powered energy optimization with sustainability focus"
   },
+
   // 6. Transportation & Logistics AI Platform
   {
     id: "transportation-logistics-ai-elite",
@@ -424,6 +430,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     marketOpportunity: "$26.8 billion by 2026",
     competitiveAdvantage: "AI-powered logistics with real-time optimization"
   },
+
   // 7. Education AI Learning Platform
   {
     id: "education-ai-learning-elite",
@@ -489,6 +496,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     marketOpportunity: "$19.6 billion by 2026",
     competitiveAdvantage: "AI-powered personalized learning with adaptive content"
   },
+
   // 8. Real Estate AI Platform
   {
     id: "real-estate-ai-elite",
@@ -555,4 +563,5 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] 
     competitiveAdvantage: "AI-powered market intelligence with predictive analytics"
   }
 ];
+
 export default SPECIALIZED_INDUSTRY_SOLUTIONS_2025;

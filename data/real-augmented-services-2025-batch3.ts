@@ -1,34 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const augmentedServicesBatch3 = [
+=======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+export interface RealAugmentedService2025Batch3 {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+}
+
+export const augmentedServicesBatch3: RealAugmentedService2025Batch3[] = [
+<<<<<<< HEAD
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   {
     id: 'batch3-service-1',
-    name: 'Batch 3 Service 2025',
-    tagline: 'Batch 3 service solutions',
-    price: '$199',
-    category: 'Batch Services'
+    name: 'Batch 3 Service 1',
+    tagline: 'Third batch of enhanced services',
+    price: '$499',
+    features: ['Enhanced capabilities', 'Better performance', 'Advanced features']
   }
 ];
-=======
-export const realAugmentedServices2025Batch3 = [
-  {
-    id: 'aug-2025-batch3-001',
-    title: 'Quantum Machine Learning Suite',
-    description: 'Advanced machine learning powered by quantum computing',
-    category: 'Machine Learning',
-    pricing: {
-      starter: 199,
-      professional: 599,
-      enterprise: 1499
-    },
-    features: [
-      'Quantum algorithms',
-      'ML model training',
-      'Optimization tools',
-      'Performance analytics'
-    ],
-    slug: 'quantum-machine-learning-suite'
-  }
-];
-
-export default realAugmentedServices2025Batch3;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7

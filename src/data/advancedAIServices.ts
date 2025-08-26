@@ -28,6 +28,7 @@ export interface AdvancedAIService {
   marketSize: string;
   growthRate: string;
 }
+
 export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
   // AI-Powered Financial Trading Platform
   {
@@ -87,6 +88,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$12.5 billion",
     growthRate: "23.5% annually"
   },
+
   // AI-Powered Healthcare Diagnostics
   {
     id: "ai-healthcare-diagnostics",
@@ -145,6 +147,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$8.2 billion",
     growthRate: "28.7% annually"
   },
+
   // AI-Powered Supply Chain Optimization
   {
     id: "ai-supply-chain-optimization",
@@ -203,6 +206,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$15.8 billion",
     growthRate: "18.9% annually"
   },
+
   // AI-Powered Cybersecurity Threat Detection
   {
     id: "ai-cybersecurity-threat-detection",
@@ -261,6 +265,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$22.4 billion",
     growthRate: "31.2% annually"
   },
+
   // AI-Powered Content Creation Studio
   {
     id: "ai-content-creation-studio",
@@ -319,6 +324,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$18.7 billion",
     growthRate: "26.4% annually"
   },
+
   // AI-Powered Legal Document Analysis
   {
     id: "ai-legal-document-analysis",
@@ -377,6 +383,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$6.8 billion",
     growthRate: "22.1% annually"
   },
+
   // AI-Powered Real Estate Analytics
   {
     id: "ai-real-estate-analytics",
@@ -435,6 +442,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     marketSize: "$9.3 billion",
     growthRate: "19.8% annually"
   },
+
   // AI-Powered Energy Management
   {
     id: "ai-energy-management",

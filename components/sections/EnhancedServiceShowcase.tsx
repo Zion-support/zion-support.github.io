@@ -20,49 +20,8 @@ import { professionalServices } from '../../data/professional-services';
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 
-interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant?: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
-
-interface EnhancedServiceShowcaseProps {
-  services: any[];
+interface ServiceShowcaseProps {
+  className?: string;
   title?: string;
   subtitle?: string;
   showFilters?: boolean;
@@ -77,38 +36,60 @@ const EnhancedServiceShowcase: React.FC<ServiceShowcaseProps> = ({
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Get unique categories
-  const categories = ['All', ...Array.from(new Set(services.map(s => {
-    if (typeof s.category === 'string') {
-      return s.category.split('&')[0].trim();
-    }
-    return 'Other';
-  })))];
-  
-  // Filter and sort services
-  const filteredServices = services
-    .filter(service => {
-      if (selectedCategory === 'All') return true;
-      if (typeof service.category === 'string') {
-        return service.category.includes(selectedCategory);
-      }
-      return false;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'popular':
-          return b.popular ? 1 : -1;
-        case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-        case 'rating':
-          return b.rating - a.rating;
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-        default:
-          return 0;
-      }
-    })
-    .slice(0, maxServices);
+  const allServices = [
+    ...innovativeAIServices,
+    ...quantumSpaceServices,
+    ...enterpriseITServices,
+    ...enhancedRealMicroSaasServices,
+    ...nextGenerationAIServices,
+    ...emergingTechnologyServices,
+    ...comprehensiveITSolutions,
+    ...marketValidatedServices,
+    ...newRealInnovations,
+    ...realMarketServices,
+    ...realOperationalServices,
+    ...professionalServices,
+    ...verified2025Additions,
+    ...realServicesQ32025
+  ];
+
+  // Derived counts to better reflect all datasets
+  const aiCount = allServices.filter(s => (s.category || '').toLowerCase().includes('ai')).length;
+  const quantumCount = allServices.filter(s => s.name.toLowerCase().includes('quantum') || (s.category || '').toLowerCase().includes('quantum')).length;
+  const spaceCount = allServices.filter(s => s.name.toLowerCase().includes('space')).length;
+  const enterpriseCount = allServices.filter(s => ['enterprise', 'it', 'cloud', 'security'].some(k => (s.category || '').toLowerCase().includes(k))).length;
+  const microSaasCount = allServices.filter(s => (s.category || '').toLowerCase().includes('saas')).length || enhancedRealMicroSaasServices.length;
+  const emergingCount = allServices.filter(s => (s.category || '').toLowerCase().includes('emerging')).length;
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', count: quantumCount },
+    { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
+    { id: 'saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
+    { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: emergingCount }
+  ];
+
+  const filteredServices = allServices.filter(service => {
+    const categoryLower = (service.category || '').toLowerCase();
+    const nameLower = service.name.toLowerCase();
+
+    const matchesCategory = selectedCategory === 'all' || 
+      (selectedCategory === 'ai' && (categoryLower.includes('ai') || categoryLower.includes('machine'))) ||
+      (selectedCategory === 'quantum' && (nameLower.includes('quantum') || categoryLower.includes('quantum'))) ||
+      (selectedCategory === 'space' && nameLower.includes('space')) ||
+      (selectedCategory === 'enterprise' && ['enterprise', 'it', 'cloud', 'security'].some(k => categoryLower.includes(k))) ||
+      (selectedCategory === 'saas' && categoryLower.includes('saas')) ||
+      (selectedCategory === 'emerging' && categoryLower.includes('emerging'));
+    
+    const searchLower = searchTerm.toLowerCase();
+    const matchesSearch = nameLower.includes(searchLower) ||
+                         (service.description || '').toLowerCase().includes(searchLower) ||
+                         categoryLower.includes(searchLower);
+    
+    return matchesCategory && matchesSearch;
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },

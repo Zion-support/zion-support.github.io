@@ -4,6 +4,7 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
+
 export interface IoTEdgeComputingService {
   id: number;
   name: string;
@@ -39,6 +40,7 @@ export interface IoTEdgeComputingService {
   aiIntegration: boolean;
   predictiveAnalytics: boolean;
 }
+
 // IoT & Edge Computing Services for 2025
 export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
   {
@@ -378,4 +380,5 @@ export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
     predictiveAnalytics: true
   }
 ];
+
 export default iotEdgeComputingServices2025;

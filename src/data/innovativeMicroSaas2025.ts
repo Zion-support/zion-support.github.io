@@ -29,6 +29,7 @@ export interface InnovativeMicroSaas2025 {
   marketTrend: string;
   aiCapabilities: string[];
 }
+
 export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
   // AI-Powered Content Creation Suite
   {
@@ -89,6 +90,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
     marketTrend: "Explosive Growth",
     aiCapabilities: ["Natural Language Generation", "Content Optimization", "SEO Analysis", "Brand Voice Training"]
   },
+
   // Autonomous Business Process Automation
   {
     id: "autonomous-business-process-automation",
@@ -148,6 +150,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
     marketTrend: "High Growth",
     aiCapabilities: ["Process Discovery", "Automated Optimization", "Predictive Analytics", "Intelligent Decision Making"]
   },
+
   // Quantum-Ready Data Analytics Platform
   {
     id: "quantum-ready-data-analytics",
@@ -207,6 +210,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
     marketTrend: "Emerging",
     aiCapabilities: ["Hybrid Algorithms", "Quantum Optimization", "Predictive Analytics", "Real-time Processing"]
   },
+
   // AI-Powered Customer Experience Platform
   {
     id: "ai-customer-experience-platform",
@@ -266,6 +270,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
     marketTrend: "High Growth",
     aiCapabilities: ["Behavioral Analysis", "Predictive Recommendations", "Real-time Personalization", "Sentiment Analysis"]
   },
+
   // Blockchain-Based Identity Management
   {
     id: "blockchain-identity-management",
@@ -325,6 +330,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
     marketTrend: "Growing",
     aiCapabilities: ["Fraud Detection", "Behavioral Analysis", "Risk Assessment", "Automated Compliance"]
   },
+
   // IoT Edge Computing Platform
   {
     id: "iot-edge-computing-platform",

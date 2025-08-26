@@ -4,6 +4,7 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
+
 export interface AIService {
   id: number;
   name: string;
@@ -39,6 +40,7 @@ export interface AIService {
   multilingualSupport: boolean;
   industrySpecific: boolean;
 }
+
 // Enhanced AI Services for 2025
 export const enhancedAIServices2025: AIService[] = [
   {
@@ -602,4 +604,5 @@ export const enhancedAIServices2025: AIService[] = [
     industrySpecific: true
   }
 ];
+
 export default enhancedAIServices2025;

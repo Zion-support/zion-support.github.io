@@ -15,7 +15,15 @@ const categories = [
     stats: "500+ Services"
   },
   {
-    title: "Talents",
+    title: "AI & IT Services",
+    description: "Professional IT consulting, development, and AI integration",
+    icon: <Brain className="w-10 h-10" />,
+    link: "/services",
+    color: "from-zion-purple to-zion-purple-dark",
+    featured: true
+  },
+  {
+    title: "Talent Network",
     description: "Connect with AI experts, developers, and tech specialists",
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
@@ -24,7 +32,7 @@ const categories = [
     stats: "10,000+ Talents"
   },
   {
-    title: "Equipment",
+    title: "Equipment & Hardware",
     description: "Rent or buy specialized hardware, servers, and devices",
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
@@ -33,7 +41,7 @@ const categories = [
     stats: "1,000+ Items"
   },
   {
-    title: "Innovation",
+    title: "Innovation Hub",
     description: "Discover cutting-edge solutions and tech breakthroughs",
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/category/innovation",
@@ -41,6 +49,14 @@ const categories = [
     features: ["Latest Tech", "Research Labs", "Startup Solutions"],
     stats: "100+ Innovations"
   },
+  {
+    title: "AI Hiring Platform",
+    description: "AI-powered recruitment and talent acquisition tools",
+    icon: <ZapIcon className="w-10 h-10" />,
+    link: "/zion-hire-ai",
+    color: "from-zion-purple to-zion-purple-dark",
+    featured: true
+  }
 ];
 
 const specialServices = [

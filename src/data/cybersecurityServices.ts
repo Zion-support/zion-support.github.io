@@ -21,6 +21,7 @@ export interface CybersecurityService {
     website: string;
   };
 }
+
 export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
   // Zero Trust Security Platform
   {
@@ -71,6 +72,7 @@ export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // AI-Powered Threat Detection
   {
     id: "ai-threat-detection",
@@ -120,6 +122,7 @@ export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // Cloud Security Posture Management
   {
     id: "cloud-security-posture",
@@ -169,6 +172,7 @@ export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // Privacy Compliance Automation
   {
     id: "privacy-compliance-automation",
@@ -218,6 +222,7 @@ export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+
   // IoT Security Management
   {
     id: "iot-security-management",

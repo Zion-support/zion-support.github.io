@@ -29,6 +29,7 @@ export interface CuttingEdgeService {
   compliance: string[];
   useCases: string[];
 }
+
 export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
   // AI-Powered Micro SAAS Services
   {
@@ -172,6 +173,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     compliance: ["ISO 27001", "SOC 2", "GDPR"],
     useCases: ["Predictive maintenance", "Quality control", "Traffic management", "Health monitoring"]
   },
+
   // Advanced IT Infrastructure Services
   {
     id: 4,
@@ -267,6 +269,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     compliance: ["SOC 2", "ISO 27001", "GDPR"],
     useCases: ["Financial modeling", "Drug discovery", "Logistics optimization", "Climate research"]
   },
+
   // Emerging Technology Services
   {
     id: 6,
@@ -362,6 +365,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     compliance: ["SOC 2", "ISO 27001", "GDPR", "Financial regulations"],
     useCases: ["Supply chain tracking", "Digital identity", "Cross-border payments", "Asset tokenization"]
   },
+
   // Advanced AI Automation Services
   {
     id: 8,
@@ -457,6 +461,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     compliance: ["GDPR", "AI Act", "Algorithmic Accountability", "Fair Credit Reporting"],
     useCases: ["Credit scoring", "Hiring decisions", "Medical diagnosis", "Criminal justice"]
   },
+
   // Specialized Industry Solutions
   {
     id: 10,
@@ -506,26 +511,32 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     useCases: ["Traffic management", "Energy optimization", "Public safety", "Environmental monitoring"]
   }
 ];
+
 // Utility functions for service management
 export const getServicesByCategory = (category: string): CuttingEdgeService[] => {
   return cuttingEdgeInnovations2025.filter(service => service.category === category);
 };
+
 export const getServicesBySubcategory = (subcategory: string): CuttingEdgeService[] => {
   return cuttingEdgeInnovations2025.filter(service => service.subcategory === subcategory);
 };
+
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number): CuttingEdgeService[] => {
   return cuttingEdgeInnovations2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
 };
+
 export const getPopularServices = (limit: number = 6): CuttingEdgeService[] => {
   return cuttingEdgeInnovations2025.slice(0, limit);
 };
+
 export const getServicesByTechnology = (technology: string): CuttingEdgeService[] => {
-  return cuttingEdgeInnovations2025.filter(service =>
+  return cuttingEdgeInnovations2025.filter(service => 
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
   );
 };
+
 export const getServicesByCompliance = (compliance: string): CuttingEdgeService[] => {
-  return cuttingEdgeInnovations2025.filter(service =>
+  return cuttingEdgeInnovations2025.filter(service => 
     service.compliance.some(comp => comp.toLowerCase().includes(compliance.toLowerCase()))
   );
 };

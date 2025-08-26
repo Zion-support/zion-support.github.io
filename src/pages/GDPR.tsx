@@ -1,10 +1,14 @@
 import React from 'react';
 
-const GDPR: React.FC = () => (
-	<div className="pt-32 pb-20 container mx-auto px-4">
-		<h1 className="text-3xl font-bold mb-4">GDPR Compliance</h1>
-		<p className="text-gray-600">We are committed to GDPR compliance. This page will outline data rights, processing, and contact details.</p>
-	</div>
-);
-
-export default GDPR;
+export default function GDPR() {
+	return (
+		<div className="min-h-screen bg-background text-foreground py-16">
+			<div className="container mx-auto px-4 max-w-3xl">
+				<h1 className="text-3xl font-bold mb-4">GDPR Compliance</h1>
+				<p className="text-muted-foreground">
+					We comply with GDPR. For data requests or deletions, contact privacy@ziontechgroup.com.
+				</p>
+			</div>
+		</div>
+	);
+}

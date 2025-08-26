@@ -8,6 +8,7 @@ export interface ProductListing {
   pricingModel: 'one-time' | 'subscription' | 'usage-based' | 'custom';
   features: string[];
   tags: string[];
+
   images?: string[];
   rating?: number;
   reviewCount?: number;

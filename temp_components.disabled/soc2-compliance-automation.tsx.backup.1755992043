@@ -3,6 +3,18 @@ import SEO from '../components/SEO';
 import Link from 'next/link';
 
 export default function SOC2ComplianceAutomationPage() {
+<<<<<<< HEAD
+	const title = 'SOC 2 Compliance Automation — Zion Tech Group';
+	const description = 'Automate evidence collection, controls mapping, and auditor-ready reports. Reduce audit time and ensure continuous compliance.';
+
+	return (
+		<div className="relative isolate">
+			<SEO title="SOC 2 Compliance Automation" description="Automate SOC 2 readiness with continuous controls, evidence pipelines, vendor risk and audit workspace." />
+			<section className="px-6 lg:px-10 py-16 lg:py-24">
+				<div className="max-w-6xl mx-auto">
+					<h1 className="text-3xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-pink-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">SOC 2 Compliance Automation</h1>
+					<p className="mt-4 text-gray-300 max-w-3xl">Automate SOC 2 readiness with continuous controls monitoring, evidence collection, asset inventory, vendor risk, and audit workspace. Reduce audit time and cost dramatically.</p>
+=======
 	return (
 		<>
 			<SEO title="SOC 2 Compliance Automation" description="Automate evidence collection, controls mapping, and auditor-ready reports. Reduce audit time and ensure continuous compliance." />
@@ -12,6 +24,7 @@ export default function SOC2ComplianceAutomationPage() {
 					<p className="mt-6 text-lg text-gray-300 max-w-3xl">
 						Automate SOC 2 readiness with continuous controls, evidence pipelines, and prebuilt auditor workflows. Integrates with cloud providers and ticketing systems.
 					</p>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0a60
 
 					<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{[
@@ -51,28 +64,17 @@ export default function SOC2ComplianceAutomationPage() {
 						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://www.vanta.com/" target="_blank" rel="noreferrer">Vanta</a>, <a className="underline hover:text-cyan-300" href="https://drata.com/" target="_blank" rel="noreferrer">Drata</a>, <a className="underline hover:text-cyan-300" href="https://securityscorecard.com/" target="_blank" rel="noreferrer">SecurityScorecard</a>.</p>
 					</div>
 
-=======
-	return (
-		<>
-			<SEO title="SOC 2 Compliance Automation" description="Automate SOC 2 evidence collection, control verification, and reporting." />
-			<div className="container mx-auto px-4 py-16">
-				<section className="max-w-5xl mx-auto">
-					<h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">SOC 2 Compliance Automation</h1>
-					<p className="mt-4 text-lg text-gray-300">Streamline SOC 2 readiness with automated evidence collection, control mapping, and auditor-friendly exports.</p>
 					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
 					</div>
-		</>
+				</div>
+			</section>
+<<<<<<< HEAD
+		</div>
 =======
-
-					<div className="mt-8 flex flex-col sm:flex-row gap-4">
-						<Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-white text-black font-semibold hover:bg-gray-200 transition-colors">Get a Demo</Link>
-						<Link href="/pricing" className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-white/30 text-white font-semibold hover:bg-white/10 transition-colors">View Pricing</Link>
-					</div>
-				</section>
-			</div>
 		</>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0a60
 	);
 }

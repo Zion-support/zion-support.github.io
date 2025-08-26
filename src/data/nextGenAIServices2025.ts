@@ -24,6 +24,7 @@ export interface NextGenAIService {
     address: string;
   };
 }
+
 export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   // Revolutionary AI Services
   {

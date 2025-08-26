@@ -1,11 +1,13 @@
-<<<<<<< HEAD
 import { createClient } from '@supabase/supabase-js';
-import { captureException } from '@/lib/sentry';
-
+import { supabaseStorageAdapter } from './safeStorageAdapter';
+<<<<<<< HEAD
 =======
 // Mock Supabase client for development
 // In production, this would be the actual Supabase client
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+
 interface SupabaseClient {
   auth: {
     signUp: (credentials: any) => Promise<any>;
@@ -19,67 +21,57 @@ interface SupabaseClient {
     from: (bucket: string) => any;
   };
 }
+
 // Mock implementation
 const createMockSupabaseClient = (): SupabaseClient => ({
   auth: {
-    persistSession: true,
-    autoRefreshToken: true,
-    storage: supabaseStorageAdapter,
+    signUp: async (credentials: any) => {
+      console.log('Mock signUp:', credentials);
+      return { data: { user: { id: '1', email: credentials.email } }, error: null };
+    },
+    signIn: async (credentials: any) => {
+      console.log('Mock signIn:', credentials);
+      return { data: { user: { id: '1', email: credentials.email } }, error: null };
+    },
+    signOut: async () => {
+      console.log('Mock signOut');
+      return { error: null };
+    },
+    user: () => ({ id: '1', email: 'user@example.com' }),
+    onAuthStateChange: (callback: any) => {
+      console.log('Mock onAuthStateChange');
+      return { data: { subscription: { unsubscribe: () => {} } } };
+    },
+  },
+  from: (table: string) => ({
+    select: (columns: string) => ({
+      eq: (column: string, value: any) => ({
+        single: async () => ({ data: null, error: null }),
+        execute: async () => ({ data: [], error: null }),
+      }),
+      execute: async () => ({ data: [], error: null }),
+    }),
+    insert: (data: any) => ({
+      execute: async () => ({ data: null, error: null }),
+    }),
+    update: (data: any) => ({
+      eq: (column: string, value: any) => ({
+        execute: async () => ({ data: null, error: null }),
+      }),
+    }),
+    delete: () => ({
+      eq: (column: string, value: any) => ({
+        execute: async () => ({ data: null, error: null }),
+      }),
+    }),
+  }),
+  storage: {
+    from: (bucket: string) => ({
+      upload: async (path: string, file: File) => ({ data: null, error: null }),
+      download: async (path: string) => ({ data: null, error: null }),
+      remove: async (paths: string[]) => ({ data: null, error: null }),
+    }),
   },
 });
-<<<<<<< HEAD
 
-// Helper function to access profiles table
-export const getFromProfiles = () => supabase.from('profiles');
-
-export async function checkOnline(): Promise<boolean> {
-  try {
-    return typeof navigator !== 'undefined' && navigator.onLine;
-  } catch {
-    return false;
-  }
-}
-
-// Helper function for safe fetching with retries
-export async function safeFetch(url: string, options: RequestInit = {}) {
-  const maxRetries = 3;
-  let lastError;
-
-  for (let i = 0; i < maxRetries; i++) {
-    try {
-      if (!(await checkOnline())) {
-        throw new Error('You must be online to connect to Supabase');
-      }
-
-      const headers =
-        options.headers instanceof Headers
-          ? options.headers
-          : new Headers(options.headers ?? {});
-
-      if (!headers.has('apikey')) {
-        headers.set('apikey', supabaseAnonKey);
-      }
-
-      const response = await fetch(url, {
-        ...options,
-        headers,
-      });
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      return response;
-    } catch (error) {
-      lastError = new Error('Failed to connect to Supabase');
-      // Wait before retrying (exponential backoff)
-      await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
-    }
-  }
-
-  captureException(lastError);
-  throw new Error('Failed to connect to Supabase');
-}
-=======
 export const supabase = createMockSupabaseClient();
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896

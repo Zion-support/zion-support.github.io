@@ -2,54 +2,37 @@ export interface ForumPost {
   id: string;
   title: string;
   content: string;
-  author: {
-    id: string;
-    name: string;
-    avatar: string;
-    role: string;
-  };
   authorId: string;
+  authorName: string;
+  authorAvatar: string;
   category: string;
-  categoryId: string;
   tags: string[];
   createdAt: string;
   updatedAt: string;
-  replies: ForumReply[];
   likes: number;
-  views: number;
-  upvotes: number;
-  downvotes: number;
-  replyCount: number;
+  replies: ForumReply[];
   isPinned: boolean;
   isLocked: boolean;
-  isAnswered: boolean;
-  authorName: string;
-  authorAvatar: string;
-  authorRole: string;
 }
+
 export interface ForumReply {
   id: string;
   content: string;
-  author: {
-    id: string;
-    name: string;
-    avatar: string;
-    role: string;
-  };
-  postId: string;
+  authorId: string;
+  authorName: string;
+  authorAvatar: string;
   createdAt: string;
   updatedAt: string;
   likes: number;
-  isSolution: boolean;
-  isAnswer: boolean;
+  parentId?: string;
 }
+
 export interface ForumCategoryInfo {
   id: string;
   name: string;
   description: string;
-  postCount: number;
-  adminOnly: boolean;
   icon: string;
+  postCount: number;
   lastPost?: {
     title: string;
     author: string;
@@ -57,7 +40,9 @@ export interface ForumCategoryInfo {
   };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+
 export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
   {
     id: 'general',
@@ -108,4 +93,6 @@ export const FORUM_CATEGORIES: ForumCategoryInfo[] = [
     },
   },
 ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

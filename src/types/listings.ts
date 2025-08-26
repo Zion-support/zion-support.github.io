@@ -2,17 +2,21 @@ export interface Listing {
   id: string;
   title: string;
   description: string;
+  price: number;
+  currency: string;
   category: string;
-  subcategory?: string;
-  price?: number;
-  currency?: string;
   tags: string[];
+<<<<<<< HEAD
   author: {
     name: string;
-<<<<<<< HEAD
     id: string;
     avatarUrl?: string;
+<<<<<<< HEAD
 =======
+  images: string[];
+  seller: {
+    id: string;
+    name: string;
     avatar: string;
     rating: number;
     reviews: number;
@@ -41,25 +45,30 @@ export interface Listing {
     cost: number;
   };
 }
+
 export interface ListingFilter {
   category?: string;
   priceRange?: {
     min: number;
     max: number;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   };
-  images: string[];
-  createdAt: string;
-  rating: number;
-  reviewCount: number;
-  featured?: boolean;
   location?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  availability?: string;
+  aiScore?: number;
+  pricingTier?: string;
+=======
   condition?: string;
   tags?: string[];
   sellerRating?: number;
   sortBy?: 'price' | 'date' | 'rating' | 'views';
   sortOrder?: 'asc' | 'desc';
 }
+
 export interface ListingSearchResult {
   listings: Listing[];
   total: number;
@@ -67,6 +76,7 @@ export interface ListingSearchResult {
   limit: number;
   hasMore: boolean;
 }
+
 export interface ListingFormData {
   title: string;
   description: string;
@@ -89,6 +99,7 @@ export interface ListingFormData {
     cost: number;
   };
 }
+
 export interface ListingStats {
   totalListings: number;
   activeListings: number;
@@ -96,27 +107,10 @@ export interface ListingStats {
   totalFavorites: number;
   averagePrice: number;
   categoryDistribution: Record<string, number>;
-}
-
-export interface ProductListing {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  price: number;
-  currency: string;
-  tags: string[];
-  author: {
-    name: string;
-    id: string;
-    avatarUrl?: string;
-    email?: string;
-  };
-  images: string[];
-  createdAt: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+  availability?: string;
   aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  featured?: boolean;
-  link?: string;
+  pricingTier?: string;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+
 interface AccessibilityPreferences {
   highContrast: boolean;
   largeText: boolean;
@@ -7,12 +8,14 @@ interface AccessibilityPreferences {
   screenReader: boolean;
   keyboardNavigation: boolean;
 }
+
 interface AccessibilitySettings {
   fontSize: 'small' | 'medium' | 'large' | 'xlarge';
   colorScheme: 'default' | 'high-contrast' | 'dark' | 'light';
   motionPreference: 'reduce' | 'no-preference';
   focusStyle: 'default' | 'high-visibility' | 'minimal';
 }
+
 export const useAccessibility = () => {
   const [preferences, setPreferences] = useState<AccessibilityPreferences>({
     highContrast: false,
@@ -22,16 +25,19 @@ export const useAccessibility = () => {
     screenReader: false,
     keyboardNavigation: true
   });
+
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 'medium',
     colorScheme: 'default',
     motionPreference: 'no-preference',
     focusStyle: 'default'
   });
+
   // Load preferences from localStorage
   useEffect(() => {
     const savedPreferences = localStorage.getItem('zion-accessibility-preferences');
     const savedSettings = localStorage.getItem('zion-accessibility-settings');
+    
     if (savedPreferences) {
       try {
         setPreferences(JSON.parse(savedPreferences));
@@ -39,6 +45,7 @@ export const useAccessibility = () => {
         console.warn('Failed to parse accessibility preferences:', error);
       }
     }
+    
     if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings));
@@ -47,20 +54,24 @@ export const useAccessibility = () => {
       }
     }
   }, []);
+
   // Save preferences to localStorage
   const savePreferences = useCallback((newPreferences: Partial<AccessibilityPreferences>) => {
     const updatedPreferences = { ...preferences, ...newPreferences };
     setPreferences(updatedPreferences);
     localStorage.setItem('zion-accessibility-preferences', JSON.stringify(updatedPreferences));
   }, [preferences]);
+
   const saveSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings };
     setSettings(updatedSettings);
     localStorage.setItem('zion-accessibility-settings', JSON.stringify(updatedSettings));
   }, [settings]);
+
   // Apply accessibility features
   useEffect(() => {
     const root = document.documentElement;
+    
     // Apply high contrast
     if (preferences.highContrast) {
       root.classList.add('high-contrast');
@@ -69,6 +80,7 @@ export const useAccessibility = () => {
       root.classList.remove('high-contrast');
       root.style.removeProperty('--contrast-multiplier');
     }
+    
     // Apply large text
     if (preferences.largeText) {
       root.classList.add('large-text');
@@ -77,6 +89,7 @@ export const useAccessibility = () => {
       root.classList.remove('large-text');
       root.style.removeProperty('--font-size-multiplier');
     }
+    
     // Apply reduced motion
     if (preferences.reducedMotion) {
       root.classList.add('reduced-motion');
@@ -85,6 +98,7 @@ export const useAccessibility = () => {
       root.classList.remove('reduced-motion');
       root.style.removeProperty('--motion-reduction');
     }
+    
     // Apply focus indicator
     if (preferences.focusIndicator) {
       root.classList.add('focus-visible');
@@ -92,9 +106,11 @@ export const useAccessibility = () => {
       root.classList.remove('focus-visible');
     }
   }, [preferences]);
+
   // Keyboard navigation support
   useEffect(() => {
     if (!preferences.keyboardNavigation) return;
+    
     const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content
       if (event.key === 'Tab' && event.altKey) {
@@ -104,6 +120,7 @@ export const useAccessibility = () => {
           (mainContent as HTMLElement).focus();
         }
       }
+      
       // Toggle accessibility menu
       if (event.key === 'Escape') {
         // Close any open modals or menus
@@ -115,9 +132,11 @@ export const useAccessibility = () => {
         });
       }
     };
+    
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [preferences.keyboardNavigation]);
+
   // Screen reader announcements
   const announceToScreenReader = useCallback((message: string) => {
     if (preferences.screenReader) {
@@ -126,21 +145,26 @@ export const useAccessibility = () => {
       announcement.setAttribute('aria-atomic', 'true');
       announcement.className = 'sr-only';
       announcement.textContent = message;
+      
       document.body.appendChild(announcement);
+      
       setTimeout(() => {
         document.body.removeChild(announcement);
       }, 1000);
     }
   }, [preferences.screenReader]);
+
   // Focus management
   const focusFirstInteractive = useCallback((container: HTMLElement) => {
     const focusableElements = container.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
+    
     if (focusableElements.length > 0) {
       (focusableElements[0] as HTMLElement).focus();
     }
   }, []);
+
   const trapFocus = useCallback((container: HTMLElement) => {
     const focusableElements = Array.from(
       container.querySelectorAll(
@@ -150,9 +174,12 @@ export const useAccessibility = () => {
       const element = el as HTMLElement;
       return !(element as HTMLButtonElement | HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement).disabled;
     }) as HTMLElement[];
+    
     if (focusableElements.length === 0) return;
+    
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
+    
     const handleTabKey = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         if (event.shiftKey) {
@@ -168,9 +195,11 @@ export const useAccessibility = () => {
         }
       }
     };
+    
     container.addEventListener('keydown', handleTabKey);
     return () => container.removeEventListener('keydown', handleTabKey);
   }, []);
+
   return {
     preferences,
     settings,

@@ -3,7 +3,6 @@ import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<<< HEAD:src/pages/Press.tsx.backup.1756208061
 =======
 import { Link } from 'react-router-dom';
 import { 
@@ -25,8 +24,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
 
-========
->>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896:broken_files_backup/Press.tsx
 const Press: React.FC = () => {
   const pressReleases = [
     {
@@ -79,6 +76,7 @@ const Press: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-5c03
     }
   ];
+
   const mediaAssets = [
     {
 <<<<<<< HEAD
@@ -134,6 +132,7 @@ const Press: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-5c03
     }
   ];
+
   const companyStats = [
 <<<<<<< HEAD
     { metric: 'Founded', value: '2010' },
@@ -143,6 +142,7 @@ const Press: React.FC = () => {
     { metric: 'Projects Completed', value: '2500+' },
     { metric: 'Countries', value: '25+' }
   ];
+
   return (
     <>
       <Helmet>
@@ -151,6 +151,7 @@ const Press: React.FC = () => {
         <meta name="keywords" content="Zion Tech Group press kit, media resources, company information, press releases, media assets" />
         <link rel="canonical" href="https://ziontechgroup.com/press" />
       </Helmet>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -159,7 +160,7 @@ const Press: React.FC = () => {
               Press <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Kit</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-              Welcome to Zion Tech Group's press room. Find company information, press releases,
+              Welcome to Zion Tech Group's press room. Find company information, press releases, 
               media assets, and resources for journalists and media professionals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -178,6 +179,7 @@ const Press: React.FC = () => {
             </div>
           </div>
         </section>
+
         {/* Company Overview */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -187,18 +189,18 @@ const Press: React.FC = () => {
                   About Zion Tech Group
                 </h2>
                 <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  Zion Tech Group is a leading technology solutions provider specializing in AI-powered services,
-                  cybersecurity, cloud computing, and digital transformation. Founded in 2010, we've grown from
+                  Zion Tech Group is a leading technology solutions provider specializing in AI-powered services, 
+                  cybersecurity, cloud computing, and digital transformation. Founded in 2010, we've grown from 
                   a small startup to a global technology leader serving over 1,000 clients across 25 countries.
                 </p>
                 <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  Our mission is to empower businesses with innovative technology solutions that drive growth,
-                  efficiency, and competitive advantage. We combine deep technical expertise with business
+                  Our mission is to empower businesses with innovative technology solutions that drive growth, 
+                  efficiency, and competitive advantage. We combine deep technical expertise with business 
                   acumen to deliver transformative results for our clients.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Headquartered in New York with offices across North America, Europe, and Asia, we're
-                  committed to building the future of technology through innovation, collaboration, and
+                  Headquartered in New York with offices across North America, Europe, and Asia, we're 
+                  committed to building the future of technology through innovation, collaboration, and 
                   unwavering commitment to excellence.
                 </p>
               </div>
@@ -216,6 +218,7 @@ const Press: React.FC = () => {
             </div>
           </div>
         </section>
+
         {/* Press Releases */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
@@ -259,6 +262,7 @@ const Press: React.FC = () => {
             </div>
           </div>
         </section>
+
         {/* Media Assets */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -374,6 +378,7 @@ const Press: React.FC = () => {
           </div>
 <<<<<<< HEAD
         </section>
+
         {/* Leadership Team */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
@@ -444,6 +449,7 @@ const Press: React.FC = () => {
           </div>
 <<<<<<< HEAD
         </section>
+
         {/* Contact Information */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -588,4 +594,5 @@ const Press: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-5c03
   );
 };
+
 export default Press;
