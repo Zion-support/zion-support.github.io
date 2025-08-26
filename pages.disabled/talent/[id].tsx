@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD:pages.disabled/talent/[id].tsx
-import { useParams } from 'react-router-dom';
-=======
 import { useRouter } from 'next/router';
->>>>>>> origin/cursor/website-audit-and-enhancement-aa85:pages/talent/[id].tsx
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
@@ -69,11 +65,7 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
-<<<<<<< HEAD:pages.disabled/talent/[id].tsx
-  if (error || !profile) return <ProfileErrorState error={error || 'Talent not found'} />;
-=======
   if (error || !profile) return <ProfileErrorState error={error} />;
->>>>>>> origin/cursor/website-audit-and-enhancement-aa85:pages/talent/[id].tsx
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">
