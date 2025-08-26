@@ -18,7 +18,7 @@ const Services2024Page: React.FC = () => {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
   // Combine all services
-  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024];
+  const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026];
 
   // Filter and sort services
   const filteredServices = useMemo(() => {

@@ -3,6 +3,7 @@ export interface CuttingEdgeInnovation2027 {
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];
@@ -46,3 +47,4 @@ export const cuttingEdge2027Innovations: CuttingEdgeInnovation2027[] = [
     technology: ['Quantum Computing', 'Consciousness Research', 'Quantum Algorithms', 'Advanced Security']
   }
 ];
+

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
+import { Button } from "../ui/button";
+import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
 import { 
   Settings, 
@@ -18,7 +18,7 @@ import {
   Smartphone,
   TrendingUp as Activity
 } from "lucide-react";
-import { TrustedBySection } from "@/components/TrustedBySection";
+import { TrustedBySection } from "../TrustedBySection";
 
 const iotServices = [
   {
@@ -213,13 +213,13 @@ export default function IoTServicesPage() {
               advanced analytics, we deliver comprehensive IoT solutions that drive innovation and efficiency.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/request-quote">
-                <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3">
+              <Link href="/request-quote">
+                <Button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3">
                   Start IoT Project
                 </Button>
               </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+              <Link href="/contact">
+                <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
                   Schedule Demo
                 </Button>
               </Link>
@@ -336,7 +336,7 @@ export default function IoTServicesPage() {
                 </CardContent>
                 <CardContent className="pt-0">
                   <Button asChild className="w-full">
-                    <Link to={service.link}>
+                    <Link href={service.link}>
                       Learn More
                       <ArrowRight className="h-4 w-4 ml-2" />
                     </Link>
@@ -359,13 +359,13 @@ export default function IoTServicesPage() {
               Join the IoT revolution and transform your business with connected technology
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/request-quote">
-                <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3">
+              <Link href="/request-quote">
+                <Button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3">
                   Get IoT Quote
                 </Button>
               </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+              <Link href="/contact">
+                <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
                   Contact IoT Experts
                 </Button>
               </Link>

@@ -12,6 +12,7 @@ export interface EmergingTechBreakthrough2029 {
 
 export const emergingTechBreakthroughs2029: EmergingTechBreakthrough2029[] = [
   {
+<<<<<<< HEAD
     id: 'quantum-consciousness-interface-2029',
     name: 'Quantum Consciousness Interface 2029',
     tagline: 'Next-generation quantum consciousness technology',

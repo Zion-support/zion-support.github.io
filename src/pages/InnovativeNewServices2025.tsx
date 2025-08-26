@@ -17,9 +17,9 @@ import {
   MapPin,
   ExternalLink
 } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import { SEOHead } from '../components/SEOHead';
 import { INNOVATIVE_NEW_SERVICES_2025 } from '../data/innovativeNewServices2025';
-import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
+import { SPECIALIZED_IT_SERVICES_2025, getServicesByCategory } from '../data/specializedITServices2025';
 
 const InnovativeNewServices2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -39,18 +39,13 @@ const InnovativeNewServices2025: React.FC = () => {
   const filteredServices = allServices.filter(service => {
     const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
     
-    // Handle different price properties for different service types
-    let servicePrice = 0;
-    if ('price' in service) {
-      servicePrice = service.price;
-    } else if ('hourlyRate' in service) {
-      servicePrice = (service as any).hourlyRate * 160; // Convert hourly rate to monthly (160 hours/month)
-    }
+    // All services have a price property
+    const servicePrice = service.price;
     
     const priceMatch = selectedPriceRange === 'all' || 
-      (selectedPriceRange === '0-2000' && servicePrice < 2000) ||
-      (selectedPriceRange === '2000-5000' && servicePrice >= 2000 && servicePrice < 5000) ||
-      (selectedPriceRange === '5000+' && servicePrice >= 5000);
+      (selectedPriceRange === '0-2000' && service.price < 2000) ||
+      (selectedPriceRange === '2000-5000' && service.price >= 2000 && service.price < 5000) ||
+      (selectedPriceRange === '5000+' && service.price >= 5000);
     
     return categoryMatch && priceMatch;
   });
@@ -88,13 +83,11 @@ const InnovativeNewServices2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       <SEOHead 
-        config={{
-          title: "Innovative New Services 2025 - Zion Tech Group",
-          description: "Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology.",
-          keywords: "AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group",
-          type: "website",
-          url: "https://ziontechgroup.com/innovative-new-services-2025"
-        }}
+        title="Innovative New Services 2025 - Zion Tech Group"
+        description="Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology."
+        keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group"
+        type="website"
+        url="https://ziontechgroup.com/innovative-new-services-2025"
       />
 
       {/* Hero Section */}
@@ -208,9 +201,9 @@ const InnovativeNewServices2025: React.FC = () => {
                       </div>
                       <div className="text-right">
                         <div className="text-2xl font-bold text-cyan-400">
-                          {service.currency}{('price' in service && typeof service.price === 'number') ? service.price : (('hourlyRate' in service && typeof service.hourlyRate === 'number') ? service.hourlyRate * 160 : 0)}/mo
+                          {service.currency}{service.price.toLocaleString()}/mo
                         </div>
-                        <div className="text-sm text-gray-400">{('pricingModel' in service ? service.pricingModel : 'hourly')}</div>
+                        <div className="text-sm text-gray-400">{service.pricingModel}</div>
                       </div>
                     </div>
 

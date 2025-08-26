@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 
 interface FuturisticAnimatedBackground2029Props {
@@ -303,3 +304,4 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
     </div>
   );
 }
+

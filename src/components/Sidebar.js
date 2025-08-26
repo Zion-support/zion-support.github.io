@@ -1,111 +1,259 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Home, Briefcase, Users, Settings, FileText, HelpCircle, MessageSquare, BarChart3, ShoppingCart, Wrench, Globe, Building, Code, Shield, Zap, ChevronRight, ChevronDown } from 'lucide-react';
-export function Sidebar() {
-    const [expandedItems, setExpandedItems] = useState([]);
-    const location = useLocation();
-    const sidebarItems = [
-        {
-            name: 'Dashboard',
-            path: '/',
-            icon: Home
-        },
-        {
-            name: 'Services',
-            path: '/services',
-            icon: Briefcase,
-            children: [
-                { name: 'IT Solutions', path: '/services/it-solutions', icon: Settings },
-                { name: 'AI Services', path: '/services/ai-services', icon: Zap },
-                { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-                { name: 'Green IT', path: '/green-it', icon: Globe },
-                { name: 'On-Site Support', path: '/it-onsite-services', icon: Wrench },
-            ]
-        },
-        {
-            name: 'Talent',
-            path: '/talent',
-            icon: Users,
-            children: [
-                { name: 'Browse Talents', path: '/talents', icon: Users },
-                { name: 'Talent Directory', path: '/talent', icon: Users },
-                { name: 'AI Matcher', path: '/match', icon: Zap },
-                { name: 'Hire Now', path: '/contact', icon: Briefcase },
-                { name: 'Post a Job', path: '/contact', icon: FileText },
-            ]
-        },
-        {
-            name: 'Marketplace',
-            path: '/marketplace',
-            icon: ShoppingCart,
-            children: [
-                { name: 'Equipment', path: '/equipment', icon: Wrench },
-                { name: 'Categories', path: '/categories', icon: Settings },
-                { name: 'Featured', path: '/featured', icon: Star },
-                { name: 'Deals', path: '/deals', icon: Zap },
-            ]
-        },
-        {
-            name: 'Company',
-            path: '/about',
-            icon: Building,
-            children: [
-                { name: 'About Us', path: '/about', icon: Building },
-                { name: 'Team', path: '/team', icon: Users },
-                { name: 'Partners', path: '/partners', icon: Users },
-                { name: 'Contact', path: '/contact', icon: FileText },
-            ]
-        },
-        {
-            name: 'Resources',
-            path: '/blog',
-            icon: FileText,
-            children: [
-                { name: 'Blog', path: '/blog', icon: FileText },
-                { name: 'Tutorials', path: '/tutorials', icon: Code },
-                { name: 'Webinars', path: '/webinars', icon: Code },
-                { name: 'White Papers', path: '/white-papers', icon: Code },
-                { name: 'Case Studies', path: '/services', icon: FileText },
-            ]
-        },
-        {
-            name: 'Support',
-            path: '/support',
-            icon: HelpCircle,
-            children: [
-                { name: 'Help Center', path: '/help-center', icon: HelpCircle },
-                { name: 'FAQ', path: '/faq', icon: HelpCircle },
-                { name: 'Contact', path: '/contact', icon: MessageSquare },
-                { name: 'Request Quote', path: '/request-quote', icon: MessageSquare },
-                { name: 'Support', path: '/support', icon: BarChart3 },
-            ]
-        },
-        {
-            name: 'Analytics',
-            path: '/analytics',
-            icon: BarChart3
-        }
-    ];
-    const toggleItem = (itemName) => {
-        setExpandedItems(prev => prev.includes(itemName)
-            ? prev.filter(name => name !== itemName)
-            : [...prev, itemName]);
-    };
-    const isActive = (path) => location.pathname === path;
-    const renderSidebarItem = (item, level = 0) => {
-        const hasChildren = item.children && item.children.length > 0;
-        const isExpanded = expandedItems.includes(item.name);
-        const isItemActive = isActive(item.path);
-        return (_jsxs("div", { children: [_jsxs("div", { className: `flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${isItemActive
-                        ? 'bg-zion-blue text-white'
-                        : 'text-gray-700 hover:bg-gray-100'}`, children: [_jsxs(Link, { to: item.path, className: `flex items-center space-x-3 flex-1 ${level > 0 ? 'ml-4' : ''}`, children: [_jsx(item.icon, { className: `h-5 w-5 ${isItemActive ? 'text-white' : 'text-gray-500'}` }), _jsx("span", { className: "font-medium", children: item.name })] }), hasChildren && (_jsx("button", { onClick: () => toggleItem(item.name), className: `p-1 rounded transition-colors ${isItemActive
-                                ? 'text-white hover:bg-white/20'
-                                : 'text-gray-500 hover:bg-gray-200'}`, children: isExpanded ? (_jsx(ChevronDown, { className: "h-4 w-4" })) : (_jsx(ChevronRight, { className: "h-4 w-4" })) }))] }), hasChildren && isExpanded && (_jsx("div", { className: "ml-4 mt-2 space-y-1", children: item.children.map(child => renderSidebarItem(child, level + 1)) }))] }, item.name));
-    };
-    return (_jsx("aside", { className: "w-64 bg-white border-r border-gray-200 h-screen overflow-y-auto", children: _jsxs("div", { className: "p-4", children: [_jsx("div", { className: "mb-6", children: _jsx("h2", { className: "text-xl font-bold text-gray-900", children: "Navigation" }) }), _jsx("nav", { className: "space-y-2", children: sidebarItems.map(item => renderSidebarItem(item)) }), _jsxs("div", { className: "mt-8 pt-6 border-t border-gray-200", children: [_jsx("h3", { className: "text-sm font-semibold text-gray-600 mb-3", children: "Quick Actions" }), _jsxs("div", { className: "space-y-2", children: [_jsxs(Link, { to: "/request-quote", className: "flex items-center space-x-3 px-4 py-3 bg-zion-blue text-white rounded-lg hover:bg-zion-blue/90 transition-colors", children: [_jsx(MessageSquare, { className: "h-5 w-5" }), _jsx("span", { className: "font-medium", children: "Request Quote" })] }), _jsxs(Link, { to: "/contact", className: "flex items-center space-x-3 px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors", children: [_jsx(HelpCircle, { className: "h-5 w-5" }), _jsx("span", { className: "font-medium", children: "Get Help" })] })] })] })] }) }));
-}
-// Star icon component for the Featured item
-function Star({ className }) {
-    return (_jsx("svg", { className: className, fill: "currentColor", viewBox: "0 0 20 20", children: _jsx("path", { d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" }) }));
-}
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  LayoutDashboard, 
+  Settings, 
+  Users, 
+  Building2, 
+  FileText, 
+  HelpCircle, 
+  BarChart3,
+  ChevronDown,
+  ChevronRight,
+  Home,
+  Briefcase,
+  Globe,
+  Shield,
+  Cloud,
+  Cpu,
+  Database,
+  Zap,
+  Target,
+  TrendingUp,
+  BookOpen,
+  Calendar,
+  MessageSquare,
+  Star,
+  Award,
+  Users2,
+  Handshake,
+  Newspaper,
+  DollarSign,
+  Headphones,
+  FileCode,
+  Code2,
+  BookMarked,
+  Users3
+} from 'lucide-react';
+
+const Sidebar = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [expandedSections, setExpandedSections] = useState({
+    services: false,
+    talent: false,
+    company: false,
+    resources: false,
+    support: false,
+    analytics: false
+  });
+
+  const toggleSection = (section) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [section]: !prev[section]
+    }));
+  };
+
+  const services = [
+    { name: 'AI Solutions', href: '/ai-solutions', icon: Cpu, description: 'Machine Learning & AI' },
+    { name: 'Cloud & DevOps', href: '/cloud-devops', icon: Cloud, description: 'Cloud Migration & Automation' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Security & Protection' },
+    { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Database, description: 'Network & Systems' },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap, description: 'Business Optimization' },
+    { name: 'Quantum Computing', href: '/services/quantum-technology', icon: Target, description: 'Next-Gen Computing' },
+    { name: 'Blockchain Solutions', href: '/blockchain-enterprise-solutions', icon: Building2, description: 'Distributed Ledger' },
+    { name: 'IoT & Data Analytics', href: '/iot-data-analytics', icon: TrendingUp, description: 'Connected Devices' }
+  ];
+
+  const talent = [
+    { name: 'Hire Developers', href: '/talent/developers', icon: Users, description: 'Expert developers' },
+    { name: 'Hire Designers', href: '/talent/designers', icon: Users2, description: 'Creative designers' },
+    { name: 'Hire Engineers', href: '/talent/engineers', icon: Code2, description: 'Skilled engineers' },
+    { name: 'Hire Consultants', href: '/talent/consultants', icon: Briefcase, description: 'Business consultants' }
+  ];
+
+  const company = [
+    { name: 'About Us', href: '/about', icon: Building2, description: 'Our story and mission' },
+    { name: 'Our Team', href: '/team', icon: Users, description: 'Leadership and experts' },
+    { name: 'Mission & Vision', href: '/mission', icon: Target, description: 'Our purpose and goals' },
+    { name: 'Careers', href: '/careers', icon: Star, description: 'Join our team' },
+    { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
+    { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service plans' },
+    { name: 'Contact', href: '/contact', icon: MessageSquare, description: 'Get in touch' }
+  ];
+
+  const resources = [
+    { name: 'Blog', href: '/blog', icon: FileText, description: 'Insights and articles' },
+    { name: 'Case Studies', href: '/case-studies', icon: BookOpen, description: 'Success stories' },
+    { name: 'White Papers', href: '/white-papers', icon: BookMarked, description: 'Research and analysis' },
+    { name: 'Webinars', href: '/webinars', icon: Calendar, description: 'Educational sessions' },
+    { name: 'Events', href: '/events', icon: Calendar, description: 'Industry conferences' },
+    { name: 'Documentation', href: '/docs', icon: FileCode, description: 'Technical guides' },
+    { name: 'Community', href: '/community', icon: Users3, description: 'User community' }
+  ];
+
+  const support = [
+    { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Support articles' },
+    { name: 'Contact Support', href: '/contact', icon: Headphones, description: 'Get help' },
+    { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Common questions' },
+    { name: 'Status Page', href: '/status', icon: BarChart3, description: 'Service status' },
+    { name: 'Training', href: '/training', icon: BookOpen, description: 'Learning resources' },
+    { name: 'API Documentation', href: '/api-docs', icon: Code2, description: 'Developer guides' }
+  ];
+
+  const analytics = [
+    { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard, description: 'Main dashboard' },
+    { name: 'Performance', href: '/analytics/performance', icon: TrendingUp, description: 'Performance metrics' },
+    { name: 'Reports', href: '/analytics/reports', icon: BarChart3, description: 'Analytics reports' },
+    { name: 'Insights', href: '/analytics/insights', icon: Target, description: 'Data insights' }
+  ];
+
+  const renderMenuItem = (item, isSubItem = false) => {
+    const IconComponent = item.icon;
+    return (
+      <Link
+        key={item.name}
+        to={item.href}
+        className={`flex items-center px-3 py-2 text-sm rounded-lg transition-all duration-200 group ${
+          isSubItem 
+            ? 'ml-4 text-gray-400 hover:text-white hover:bg-white/10' 
+            : 'text-gray-300 hover:text-white hover:bg-white/10'
+        }`}
+      >
+        <IconComponent className={`w-4 h-4 mr-3 ${isSubItem ? 'w-3 h-3' : ''}`} />
+        <div className="flex-1">
+          <div className="font-medium">{item.name}</div>
+          {!isCollapsed && (
+            <div className="text-xs text-gray-500 group-hover:text-gray-400">
+              {item.description}
+            </div>
+          )}
+        </div>
+      </Link>
+    );
+  };
+
+  const renderSection = (title, items, sectionKey, icon: IconComponent) => {
+    const isExpanded = expandedSections[sectionKey];
+    
+    return (
+      <div key={sectionKey}>
+        <button
+          onClick={() => toggleSection(sectionKey)}
+          className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+        >
+          <div className="flex items-center">
+            <IconComponent className="w-4 h-4 mr-3" />
+            {!isCollapsed && title}
+          </div>
+          {!isCollapsed && (
+            isExpanded ? (
+              <ChevronDown className="w-4 h-4" />
+            ) : (
+              <ChevronRight className="w-4 h-4" />
+            )
+          )}
+        </button>
+        
+        {isExpanded && !isCollapsed && (
+          <div className="mt-1 space-y-1">
+            {items.map(item => renderMenuItem(item, true))}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <div className={`bg-slate-800/95 backdrop-blur-lg border-r border-white/10 h-screen transition-all duration-300 ${
+      isCollapsed ? 'w-16' : 'w-80'
+    }`}>
+      {/* Header */}
+      <div className="flex items-center justify-between p-4 border-b border-white/10">
+        {!isCollapsed && (
+          <h2 className="text-lg font-semibold text-white">Navigation</h2>
+        )}
+        <button
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          className="p-2 rounded-lg hover:bg-white/10 transition-colors duration-200"
+        >
+          {isCollapsed ? (
+            <ChevronRight className="w-4 h-4 text-gray-300" />
+          ) : (
+            <ChevronDown className="w-4 h-4 text-gray-300" />
+          )}
+        </button>
+      </div>
+
+      {/* Navigation Menu */}
+      <nav className="p-4 space-y-2">
+        {/* Home */}
+        <Link
+          to="/"
+          className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+        >
+          <Home className="w-4 h-4 mr-3" />
+          {!isCollapsed && 'Home'}
+        </Link>
+
+        {/* Dashboard */}
+        <Link
+          to="/dashboard"
+          className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+        >
+          <LayoutDashboard className="w-4 h-4 mr-3" />
+          {!isCollapsed && 'Dashboard'}
+        </Link>
+
+        {/* Services Section */}
+        {renderSection('Services', services, 'services', Briefcase)}
+
+        {/* Talent Section */}
+        {renderSection('Talent', talent, 'talent', Users)}
+
+        {/* Company Section */}
+        {renderSection('Company', company, 'company', Building2)}
+
+        {/* Resources Section */}
+        {renderSection('Resources', resources, 'resources', FileText)}
+
+        {/* Support Section */}
+        {renderSection('Support', support, 'support', HelpCircle)}
+
+        {/* Analytics Section */}
+        {renderSection('Analytics', analytics, 'analytics', BarChart3)}
+
+        {/* Settings */}
+        <Link
+          to="/settings"
+          className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+        >
+          <Settings className="w-4 h-4 mr-3" />
+          {!isCollapsed && 'Settings'}
+        </Link>
+      </nav>
+
+      {/* Collapsed State Icons Only */}
+      {isCollapsed && (
+        <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center space-y-2">
+          {services.slice(0, 4).map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <Link
+                key={index}
+                to={service.href}
+                className="p-2 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                title={service.name}
+              >
+                <IconComponent className="w-4 h-4 text-gray-300 hover:text-white" />
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Sidebar;

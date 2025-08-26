@@ -1,10 +1,10 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface RealMicroSaasService2024 {
   id: string;
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];

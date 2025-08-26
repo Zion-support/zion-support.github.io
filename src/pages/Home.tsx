@@ -1,171 +1,34 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion, Variants } from 'framer-motion';
-import HeroSection from '../components/HeroSection';
-import ServiceCard from '../components/ServiceCard';
-import InteractiveServiceShowcase from '../components/InteractiveServiceShowcase';
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { NewsletterSection } from "@/components/NewsletterSection";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { SEO } from "@/components/SEO";
+import { HeroSection } from "@/components/HeroSection";
+import { QuickAccess } from "@/components/home/QuickAccess";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
+import { AnimatedBackground, FloatingParticles } from "@/components/ui/AnimatedBackground";
 
-const Home: React.FC = () => {
-  const featuredServices = [
-    {
-      title: "AI Strategy Consulting",
-      description: "Comprehensive AI strategy development and implementation consulting for enterprises",
-      icon: "🤖",
-      price: "From $2,500",
-      category: "AI & Machine Learning",
-      features: ["Strategic Planning", "Implementation Roadmap", "ROI Analysis"],
-      isPopular: true
-    },
-    {
-      title: "Quantum AI Fusion Platform",
-      description: "Revolutionary platform combining quantum computing with artificial intelligence",
-      icon: "🔮",
-      price: "From $25,000",
-      category: "Quantum Computing",
-      features: ["Quantum Algorithms", "AI Integration", "Performance Optimization"],
-      isNew: true
-    },
-    {
-      title: "Neuromorphic Computing Platform",
-      description: "Brain-inspired computing architecture for ultra-efficient AI processing",
-      icon: "🧠",
-      price: "From $35,000",
-      category: "AI Architecture",
-      features: ["Neural Networks", "Efficient Processing", "Scalable Architecture"]
-    },
-    {
-      title: "Edge AI Orchestration Platform",
-      description: "Intelligent orchestration of AI workloads across distributed edge computing",
-      icon: "🌐",
-      price: "From $15,000",
-      category: "Edge Computing",
-      features: ["Edge Deployment", "Load Balancing", "Real-time Processing"]
-    },
-    {
-      title: "Federated Learning Platform",
-      description: "Privacy-preserving AI training across distributed data sources",
-      icon: "🔒",
-      price: "From $20,000",
-      category: "Privacy AI",
-      features: ["Data Privacy", "Distributed Training", "Secure Communication"]
-    },
-    {
-      title: "AI Ethics & Governance Platform",
-      description: "Comprehensive framework for ethical AI development and governance",
-      icon: "⚖️",
-      price: "From $18,000",
-      category: "AI Governance",
-      features: ["Ethical Guidelines", "Compliance Tools", "Audit Trails"]
-    }
-  ];
-
-  const serviceCategories = [
-    {
-      name: "AI & Machine Learning",
-      count: 13,
-      description: "Cutting-edge artificial intelligence solutions",
-      icon: "🤖",
-      color: "from-zion-blue to-zion-cyan",
-      href: "/services/ai"
-    },
-    {
-      name: "Quantum Computing",
-      count: 1,
-      description: "Revolutionary quantum computing platforms",
-      icon: "🔮",
-      color: "from-zion-purple to-zion-cyan",
-      href: "/services/quantum"
-    },
-    {
-      name: "IT & Infrastructure",
-      count: 2,
-      description: "Enterprise-grade IT solutions",
-      icon: "🖥️",
-      color: "from-zion-cyan to-zion-green",
-      href: "/services/infrastructure"
-    },
-    {
-      name: "Data & Analytics",
-      count: 1,
-      description: "Advanced data analytics platforms",
-      icon: "📊",
-      color: "from-zion-yellow to-zion-orange",
-      href: "/services/analytics"
-    },
-    {
-      name: "Automation",
-      count: 1,
-      description: "Intelligent process automation",
-      icon: "⚡",
-      color: "from-zion-orange to-zion-red",
-      href: "/services/automation"
-    },
-    {
-      name: "Cybersecurity",
-      count: 1,
-      description: "Advanced security solutions",
-      icon: "🛡️",
-      color: "from-zion-red to-zion-purple",
-      href: "/services/security"
-    }
-  ];
-
-  const stats = [
-    { label: "Projects Completed", value: "500+", icon: "🚀" },
-    { label: "Happy Clients", value: "200+", icon: "😊" },
-    { label: "Team Members", value: "50+", icon: "👥" },
-    { label: "Years Experience", value: "10+", icon: "⏰" }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO, TechCorp Inc.",
-      content: "Zion Tech Group transformed our AI infrastructure. Their quantum computing solutions gave us a 300% performance boost.",
-      avatar: "👩‍💼",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "VP Engineering, DataFlow Systems",
-      content: "The AI strategy consulting was game-changing. We now have a clear roadmap for digital transformation.",
-      avatar: "👨‍💻",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "CEO, Innovation Labs",
-      content: "Outstanding service quality and cutting-edge technology. Zion Tech Group is our trusted partner for all AI needs.",
-      avatar: "👩‍🔬",
-      rating: 5
-    }
-  ];
-
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants: Variants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
-  };
-
+export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
+    <div className="min-h-screen bg-background relative">
+      <SEO 
+        title="Zion - The Tech & AI Marketplace" 
+        description="Discover top AI and tech talent, services, and equipment in one place."
+        keywords="AI, technology, marketplace, services, talent"
+        canonical="https://ziontechgroup.com/"
+      />
+
+      {/* Animated Background */}
+      <AnimatedBackground variant="particles" />
+      <FloatingParticles count={30} />
+
+      <ITServiceRequestHero />
+
       <HeroSection />
       
       {/* Service Categories Overview */}
@@ -397,6 +260,30 @@ const Home: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
+                  to="/ultimate-services-showcase-2026"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-purple-500/25 transition-all duration-300 border border-purple-500/30 hover:border-purple-500/60"
+                >
+                  <span className="text-xl">🔮</span>
+                  Ultimate Services 2026
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  to="/comprehensive-pricing-2026"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-green-500/25 transition-all duration-300 border border-green-500/30 hover:border-green-500/60"
+                >
+                  <span className="text-xl">💰</span>
+                  View Pricing
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
                   to="/services"
                   className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white font-semibold text-lg py-4 px-8 rounded-xl border border-white/30 hover:border-zion-cyan/50 hover:bg-white/20 transition-all duration-300 shadow-lg"
                 >
@@ -410,6 +297,4 @@ const Home: React.FC = () => {
       </motion.section>
     </div>
   );
-};
-
-export default Home;
+}

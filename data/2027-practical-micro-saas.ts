@@ -12,6 +12,7 @@ export interface PracticalMicroSaas2027 {
 
 export const practicalMicroSaas2027: PracticalMicroSaas2027[] = [
   {
+<<<<<<< HEAD
     id: 'ai-customer-success-automation',
     name: 'AI Customer Success Automation',
     tagline: 'Intelligent customer success automation platform',

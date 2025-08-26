@@ -3,14 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Zap, Shield, Globe, Microscope, Atom, Cpu, Database, Lock, Eye, Code, Palette, Cloud, Server, Network, TestTube, Dna, Car, Gamepad2, ShieldCheck } from 'lucide-react';
-import { innovative2026MicroSaasV4Services } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
-import { ultimate2026Services } from '../data/ultimate-2026-services';
-import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
-import { nextGenAI2026Services } from '../data/next-gen-ai-2026-services';
-import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
+import { innovativeRealMicroSaasServices2025 as allData } from '../data/2025-innovative-real-micro-saas-services';
 import UltraAdvancedFuturisticBackground2026V2 from '../components/ui/UltraAdvancedFuturisticBackground2026V2';
 import UltraAdvancedNavigation2026V2 from '../components/layout/UltraAdvancedNavigation2026V2';
 
@@ -21,16 +14,7 @@ export default function EnhancedServicesShowcase2026V2() {
   const [sortBy, setSortBy] = useState<string>('name');
 
   // Combine all services for comprehensive showcase
-  const allServices = [
-    ...innovative2026MicroSaasV4Services,
-    ...emergingTech2026ServicesV4,
-    ...ultimate2026Services,
-    ...revolutionary2026Innovations,
-    ...nextGenAI2026Services,
-    ...aiAutonomousServices2026,
-    ...quantumSpaceTechServices2026,
-    ...metaverseDigitalRealityServices2026
-  ];
+  const allServices = allData;
 
   // Dynamic category counts
   const aiCount = allServices.filter(service => 

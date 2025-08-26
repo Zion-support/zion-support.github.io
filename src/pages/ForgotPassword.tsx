@@ -1,10 +1,10 @@
-import { GradientHeading } from '@/components/GradientHeading';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { ArrowLeft, CheckCircle, Mail } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../SEO';
+import { GradientHeading } from '../GradientHeading';
+import { Button } from '../ui/Button';
+import { Input } from '../ui/Input';
+import { Mail, ArrowLeft, CheckCircle } from 'lucide-react';
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -95,11 +95,13 @@ export default function ForgotPassword() {
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
                 <Input
+                  id="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
+                  required
                 />
               </div>
             </div>

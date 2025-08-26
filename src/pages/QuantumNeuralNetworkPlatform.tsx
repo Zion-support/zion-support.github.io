@@ -1,234 +1,295 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import { Brain, Cpu, Zap, Shield, TrendingUp, Users, ArrowRight } from 'lucide-react';
 
 const QuantumNeuralNetworkPlatform: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Quantum Neural Network Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary quantum neural network platform combining quantum computing with advanced AI for unprecedented computational power and intelligence." />
-        <meta name="keywords" content="quantum neural network, quantum AI, quantum computing, neural networks, Zion Tech Group" />
-      </Helmet>
+  const features = [
+    {
+      icon: Brain,
+      title: 'Quantum Neural Networks',
+      description: 'Advanced neural network architectures leveraging quantum computing principles for unprecedented processing power.'
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Processing',
+      description: 'Lightning-fast data processing and analysis with quantum-enhanced algorithms and parallel computing.'
+    },
+    {
+      icon: Target,
+      title: 'Precision Optimization',
+      description: 'Quantum-inspired optimization algorithms that find optimal solutions in complex, multi-dimensional spaces.'
+    },
+    {
+      icon: Shield,
+      title: 'Quantum Security',
+      description: 'Next-generation encryption and security protocols based on quantum mechanics principles.'
+    }
+  ];
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <div className="p-3 bg-blue-500/20 rounded-full">
-                <Brain className="h-8 w-8 text-blue-400" />
-              </div>
+  const useCases = [
+    {
+      title: 'Financial Modeling',
+      description: 'Advanced risk assessment, portfolio optimization, and market prediction using quantum neural networks.',
+      icon: TrendingUp
+    },
+    {
+      title: 'Drug Discovery',
+      description: 'Accelerated molecular simulation and drug candidate screening for pharmaceutical research.',
+      icon: Globe
+    },
+    {
+      title: 'Climate Modeling',
+      description: 'Complex climate pattern analysis and prediction with quantum-enhanced computational power.',
+      icon: Globe
+    },
+    {
+      title: 'AI Training',
+      description: 'Faster and more efficient training of large language models and neural networks.',
+      icon: Brain
+    }
+  ];
+
+  const benefits = [
+    'Exponential speedup in complex computations',
+    'Enhanced accuracy in pattern recognition',
+    'Scalable architecture for growing datasets',
+    'Energy-efficient quantum-inspired algorithms',
+    'Seamless integration with existing AI systems',
+    'Real-time decision making capabilities'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              Quantum AI Platform
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Quantum Neural Network Platform
+              Quantum Neural Network
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                {' '}Platform
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Experience the future of AI with our revolutionary quantum neural network platform. 
-              Combining quantum computing power with advanced neural architectures for unprecedented 
-              computational intelligence.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Revolutionize your AI capabilities with our cutting-edge quantum neural network platform. 
+              Experience unprecedented computational power and unlock new possibilities in machine learning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <button className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+                <Play className="mr-2 w-5 h-5" />
                 Watch Demo
               </button>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Features Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Revolutionary Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Our platform combines cutting-edge quantum computing with advanced neural network architectures
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-                <div className="p-3 bg-blue-500/20 rounded-lg w-fit mb-4">
-                  <Cpu className="h-6 w-6 text-blue-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Quantum Processing</h3>
-                <p className="text-gray-300">
-                  Leverage quantum superposition and entanglement for exponential computational speed improvements
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-                <div className="p-3 bg-green-500/20 rounded-lg w-fit mb-4">
-                  <Brain className="h-6 w-6 text-green-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Neural Architecture</h3>
-                <p className="text-gray-300">
-                  Advanced neural network designs optimized for quantum computing environments
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-                <div className="p-3 bg-purple-500/20 rounded-lg w-fit mb-4">
-                  <Zap className="h-6 w-6 text-purple-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Real-time Learning</h3>
-                <p className="text-gray-300">
-                  Continuous adaptation and learning from quantum data streams in real-time
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-                <div className="p-3 bg-red-500/20 rounded-lg w-fit mb-4">
-                  <Shield className="h-6 w-6 text-red-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Quantum Security</h3>
-                <p className="text-gray-300">
-                  Unbreakable encryption using quantum key distribution and quantum-resistant algorithms
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-                <div className="p-3 bg-yellow-500/20 rounded-lg w-fit mb-4">
-                  <TrendingUp className="h-6 w-6 text-yellow-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Scalable Performance</h3>
-                <p className="text-gray-300">
-                  Linear scaling with quantum bits, enabling massive parallel processing capabilities
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-                <div className="p-3 bg-indigo-500/20 rounded-lg w-fit mb-4">
-                  <Users className="h-6 w-6 text-indigo-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Collaborative AI</h3>
-                <p className="text-gray-300">
-                  Multi-user quantum AI development with real-time collaboration features
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transformative Applications
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Discover how quantum neural networks are revolutionizing industries
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="p-2 bg-blue-500/20 rounded-lg">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Drug Discovery</h3>
-                    <p className="text-gray-300">
-                      Accelerate pharmaceutical research with quantum-powered molecular modeling and simulation
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="p-2 bg-green-500/20 rounded-lg">
-                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Financial Modeling</h3>
-                    <p className="text-gray-300">
-                      Complex risk assessment and portfolio optimization with quantum precision
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="p-2 bg-purple-500/20 rounded-lg">
-                    <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Climate Prediction</h3>
-                    <p className="text-gray-300">
-                      Advanced weather forecasting and climate modeling with quantum accuracy
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="p-2 bg-red-500/20 rounded-lg">
-                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Autonomous Systems</h3>
-                    <p className="text-gray-300">
-                      Next-generation robotics and autonomous vehicles with quantum decision-making
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="p-2 bg-yellow-500/20 rounded-lg">
-                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Cybersecurity</h3>
-                    <p className="text-gray-300">
-                      Unbreakable encryption and threat detection using quantum algorithms
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="p-2 bg-indigo-500/20 rounded-lg">
-                    <div className="w-3 h-3 bg-indigo-400 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">AI Research</h3>
-                    <p className="text-gray-300">
-                      Breakthrough discoveries in artificial general intelligence and consciousness
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Experience the Future?
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Revolutionary Quantum Features
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join the quantum revolution and unlock unprecedented AI capabilities
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform combines the best of quantum computing and neural networks to deliver 
+              unprecedented performance and capabilities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
-                Get Started Today
-              </button>
-              <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 text-lg">
-                Schedule Demo
-              </button>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                    <IconComponent className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transform Your Industry
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Discover how quantum neural networks are revolutionizing various sectors and 
+              creating new opportunities for innovation.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => {
+              const IconComponent = useCase.icon;
+              return (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300 text-lg">{useCase.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why Choose Our Quantum Platform?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Experience the future of computing with our quantum neural network platform. 
+                Get ahead of the competition with cutting-edge technology that delivers real results.
+              </p>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+              <h3 className="text-2xl font-semibold text-white mb-6">Performance Metrics</h3>
+              <div className="space-y-6">
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-gray-300">Computational Speed</span>
+                    <span className="text-green-400 font-semibold">1000x Faster</span>
+                  </div>
+                  <div className="w-full bg-slate-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full" style={{ width: '95%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-gray-300">Accuracy Improvement</span>
+                    <span className="text-green-400 font-semibold">99.9%</span>
+                  </div>
+                  <div className="w-full bg-slate-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full" style={{ width: '99%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-gray-300">Energy Efficiency</span>
+                    <span className="text-green-400 font-semibold">80% Less</span>
+                  </div>
+                  <div className="w-full bg-slate-700 rounded-full h-2">
+                    <div className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full" style={{ width: '80%' }}></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Experience the Future?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join the quantum revolution and transform your AI capabilities today. 
+            Our team of experts is ready to help you get started.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Schedule a Demo
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/pricing"
+              className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+            >
+              View Pricing
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Resources Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Learn More About Quantum AI
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Explore our resources to understand how quantum neural networks can transform your business.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Documentation</h3>
+              <p className="text-gray-300 mb-4">Comprehensive guides and API documentation for developers.</p>
+              <Link to="/docs" className="text-blue-400 hover:text-blue-300 transition-colors duration-300">
+                Read Docs →
+              </Link>
+            </div>
+            
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                <Download className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">SDK & Tools</h3>
+              <p className="text-gray-300 mb-4">Download our SDK and development tools to get started.</p>
+              <Link to="/downloads" className="text-blue-400 hover:text-blue-300 transition-colors duration-300">
+                Download →
+              </Link>
+            </div>
+            
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                <MessageSquare className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Support</h3>
+              <p className="text-gray-300 mb-4">Get help from our quantum computing experts and support team.</p>
+              <Link to="/contact" className="text-blue-400 hover:text-blue-300 transition-colors duration-300">
+                Contact Support →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

@@ -1,14 +1,14 @@
-import React, { HTMLAttributes } from 'react'
+import React from 'react';
 
-interface CardProps extends HTMLAttributes<HTMLDivElement> {
-	className?: string
-	children: React.ReactNode
+interface UICardProps {
+	className?: string;
+	children: React.ReactNode;
 }
 
-export default function UICard({ className = '', children, ...rest }: CardProps) {
+export default function UICard({ className = '', children }: UICardProps) {
 	return (
-		<div className={`rounded-xl border border-white/10 bg-white/5 shadow-sm ${className}`} {...rest}>
+		<div className={`rounded-lg border border-gray-700 bg-black/40 ${className}`}>
 			{children}
 		</div>
-	)
+	);
 }

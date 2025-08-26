@@ -3,6 +3,7 @@ export interface InnovativeITService2024 {
   name: string;
   tagline: string;
   price: string;
+<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];

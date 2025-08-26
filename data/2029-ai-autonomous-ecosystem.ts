@@ -12,6 +12,7 @@ export interface AIAutonomousEcosystem2029 {
 
 export const aiAutonomousEcosystem2029: AIAutonomousEcosystem2029[] = [
   {
+<<<<<<< HEAD
     id: 'ai-autonomous-ecosystem',
     name: 'AI Autonomous Ecosystem',
     tagline: 'Complete autonomous AI ecosystem for 2029',
