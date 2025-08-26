@@ -1,4 +1,14 @@
 import NextHead from 'next/head';
+<<<<<<< HEAD
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+import Card from '../components/ui/Card';
+import UIButton from '../components/ui/Button';
+import { ArrowRight, Check as CheckIcon } from 'lucide-react';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+
+export default function AIAgents() {
+	return null;
+=======
 import { Bot, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -65,4 +75,5 @@ export default function AIAgentsPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7d74
 }

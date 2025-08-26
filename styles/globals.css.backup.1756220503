@@ -734,6 +734,51 @@ p {
   font-size: 1rem;
 }
 
+<<<<<<< HEAD
+li {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: 'Courier New', monospace;
+  color: var(--neon-green);
+}
+
+blockquote {
+  border-left: 4px solid var(--neon-blue);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* Mobile-First Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+}
+
+/* Mobile-First Modal Styles */
+.modal, .overlay {
+=======
 /* Accessibility: improved focus outlines */
 :focus-visible {
   outline: 2px dashed rgba(34, 211, 238, 0.9);
@@ -757,6 +802,7 @@ p {
 /* Enhanced Background Patterns */
 body::before {
   content: '';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7d74
   position: fixed;
   top: 0;
   left: 0;

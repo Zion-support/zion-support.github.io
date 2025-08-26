@@ -1,5 +1,12 @@
 import React from 'react';
 
+<<<<<<< HEAD
+export default function UltraAdvancedNavigation() {
+	return (
+		<nav className="w-full h-12 bg-black/80 border-b border-gray-800"></nav>
+	);
+}
+=======
 const UltraAdvancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -438,3 +445,4 @@ const UltraAdvancedNavigation: React.FC = () => {
 };
 
 export default UltraAdvancedNavigation;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7d74

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export default function QuantumInternetSecurityPlatform(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>Quantum Internet Security Platform</h1><p>Quantum Key Distribution and post-quantum cryptography for secure communications.</p></main>);}
+=======
 import NextHead from 'next/head';
 import { Lock, Check, Phone, Mail, MapPin } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -57,3 +60,4 @@ export default function QuantumInternetSecurityPlatformPage() {
   );
 }
 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7d74
