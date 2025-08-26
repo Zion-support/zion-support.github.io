@@ -2,9 +2,13 @@
 
 import * as React from "react";
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export type Theme = "dark" | "light" | "system"
 
-export type ThemeProviderProps = {
+type ThemeProviderProps = {
   children: React.ReactNode
 }
 
@@ -33,6 +37,54 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     theme,
     setTheme: () => {},
   }
+<<<<<<< HEAD
+=======
+interface ThemeProviderProps {
+  children: React.ReactNode;
+  defaultTheme?: string;
+  storageKey?: string;
+}
+
+export function ThemeProvider({ 
+  children, 
+  defaultTheme = "system", 
+  storageKey = "vite-ui-theme" 
+}: ThemeProviderProps) {
+  const [theme, setTheme] = React.useState<string>(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem(storageKey) || defaultTheme;
+    }
+    return defaultTheme;
+  });
+
+  React.useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove("light", "dark");
+
+    if (theme === "system") {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      root.classList.add(systemTheme);
+      return;
+    }
+
+    root.classList.add(theme);
+  }, [theme]);
+
+  const value = React.useMemo(
+    () => ({
+      theme,
+      setTheme: (theme: string) => {
+        localStorage.setItem(storageKey, theme);
+        setTheme(theme);
+      },
+    }),
+    [theme, storageKey]
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   return (
     <ThemeContext.Provider value={value}>
@@ -41,6 +93,10 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   );
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export const useTheme = (): ThemeProviderState => {
   const context = useContext(ThemeProviderContext)
 
@@ -49,3 +105,22 @@ export const useTheme = (): ThemeProviderState => {
 
   return context
 }
+<<<<<<< HEAD
+=======
+interface ThemeContextType {
+  theme: string;
+  setTheme: (theme: string) => void;
+}
+
+const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
+
+export const useTheme = () => {
+  const context = React.useContext(ThemeContext);
+  if (context === undefined) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+  return context;
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

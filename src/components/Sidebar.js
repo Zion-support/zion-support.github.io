@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -55,14 +56,13 @@ const Sidebar = () => {
   };
 
   const services = [
-    { name: 'AI Solutions', href: '/ai-solutions', icon: Cpu, description: 'Machine Learning & AI' },
-    { name: 'Cloud & DevOps', href: '/cloud-devops', icon: Cloud, description: 'Cloud Migration & Automation' },
+    { name: 'AI Services', href: '/services/ai', icon: Cpu, description: 'Machine Learning & AI' },
+    { name: 'Cloud', href: '/services/cloud', icon: Cloud, description: 'Cloud Migration & Automation' },
     { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Security & Protection' },
-    { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Database, description: 'Network & Systems' },
-    { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap, description: 'Business Optimization' },
-    { name: 'Quantum Computing', href: '/services/quantum-technology', icon: Target, description: 'Next-Gen Computing' },
-    { name: 'Blockchain Solutions', href: '/blockchain-enterprise-solutions', icon: Building2, description: 'Distributed Ledger' },
-    { name: 'IoT & Data Analytics', href: '/iot-data-analytics', icon: TrendingUp, description: 'Connected Devices' }
+    { name: 'Infrastructure', href: '/services/infrastructure', icon: Database, description: 'Network & Systems' },
+    { name: 'Consulting', href: '/services/consulting', icon: Briefcase, description: 'Advisory & Strategy' },
+    { name: 'Digital Transformation', href: '/services/transformation', icon: Zap, description: 'Business Optimization' },
+    { name: 'Quantum AI', href: '/services/quantum-ai', icon: Target, description: 'Next-Gen Computing' },
   ];
 
   const talent = [
@@ -86,7 +86,6 @@ const Sidebar = () => {
   const resources = [
     { name: 'Blog', href: '/blog', icon: FileText, description: 'Insights and articles' },
     { name: 'Case Studies', href: '/case-studies', icon: BookOpen, description: 'Success stories' },
-    { name: 'White Papers', href: '/white-papers', icon: BookMarked, description: 'Research and analysis' },
     { name: 'Webinars', href: '/webinars', icon: Calendar, description: 'Educational sessions' },
     { name: 'Events', href: '/events', icon: Calendar, description: 'Industry conferences' },
     { name: 'Documentation', href: '/docs', icon: FileCode, description: 'Technical guides' },
@@ -99,7 +98,7 @@ const Sidebar = () => {
     { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Common questions' },
     { name: 'Status Page', href: '/status', icon: BarChart3, description: 'Service status' },
     { name: 'Training', href: '/training', icon: BookOpen, description: 'Learning resources' },
-    { name: 'API Documentation', href: '/api-docs', icon: Code2, description: 'Developer guides' }
+    { name: 'API Documentation', href: '/api', icon: Code2, description: 'Developer guides' }
   ];
 
   const analytics = [
@@ -257,3 +256,6 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+=======
+export {};
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

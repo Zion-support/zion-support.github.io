@@ -196,6 +196,7 @@ export default function ComprehensiveServicesOverview() {
     return service.price?.monthly || 0;
   };
 
+<<<<<<<< HEAD:src/pages/ComprehensiveServicesOverview.tsx.backup.1756164650
   const getServiceCurrency = (service: any) => {
     if (typeof service.price === 'number') {
       return service.currency || '$';
@@ -221,6 +222,10 @@ export default function ComprehensiveServicesOverview() {
           url="https://ziontechgroup.com/comprehensive-services-overview"
         />
 =======
+========
+  return (
+    <>
+>>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f:src/pages/ComprehensiveServicesOverview.tsx
       <SEOHead 
         title="Comprehensive Technology Services - Zion Tech Group"
         description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions."

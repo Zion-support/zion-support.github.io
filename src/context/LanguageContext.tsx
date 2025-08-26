@@ -1,26 +1,25 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+=======
+import * as React from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 interface LanguageContextType {
   language: string;
   setLanguage: (lang: string) => void;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   t: (key: string) => string;
   isRTL: boolean;
 }
 
-const supportedLanguages = [
-  { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' },
-  { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
-];
-
-const defaultLanguageContext: LanguageContextType = {
-  currentLanguage: 'en',
-  changeLanguage: async () => {},
-  isRTL: false,
-  supportedLanguages
-};
-
-export const useLanguage = () =>
-  useContext<LanguageContextType>(LanguageContext);
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 interface LanguageProviderProps {
   children: ReactNode;
@@ -55,4 +54,38 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       {children}
     </LanguageContext.Provider>
   );
+}
+
+export function useLanguage(): LanguageContextType {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+}
+<<<<<<< HEAD
+=======
+}
+
+const LanguageContext = React.createContext<LanguageContextType | undefined>(undefined);
+
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = React.useState('en');
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      {children}
+    </LanguageContext.Provider>
+  );
 };
+
+export const useLanguage = (): LanguageContextType => {
+  const context = React.useContext(LanguageContext);
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

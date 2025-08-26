@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth";
-import { useNavigate } from "react-router-dom";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import React from 'react';
+import { Button } from '@/components/ui/button';
 
 interface CreatePostButtonProps {
   categoryId?: string;
@@ -9,17 +7,8 @@ interface CreatePostButtonProps {
 
 export default function CreatePostButton({ categoryId }: CreatePostButtonProps) {
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Button className={className} onClick={handleClick}>
-            Create New Post
-          </Button>
-        </TooltipTrigger>
-        {!user && (
-          <TooltipContent>Please log in to use this feature</TooltipContent>
-        )}
-      </Tooltip>
-    </TooltipProvider>
+    <Button className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate-dark">
+      Create New Post
+    </Button>
   );
 }

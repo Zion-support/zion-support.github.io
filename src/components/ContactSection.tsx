@@ -1,5 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import Link from 'next/link';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { 
   Mail, 
   Phone, 
@@ -210,14 +217,14 @@ export function ContactSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform"
             >
               Contact Us Now
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              to="/request-quote"
+              href="/request-quote"
               className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
               Request Quote

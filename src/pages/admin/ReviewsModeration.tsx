@@ -1,6 +1,5 @@
 
-import { Footer } from "@/components/Footer";
-import { NextSeo } from "@/components/NextSeo";
+import { SEO } from "@/components/SEO";
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useState, useEffect } from "react";
@@ -43,7 +42,7 @@ function ReviewsModerationContent() {
   
   return (
     <>
-      <NextSeo
+      <SEO
         title="Review Moderation | Zion AI Marketplace"
         description="Moderate and manage reviews in the Zion AI Marketplace"
       />

@@ -1,33 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  innovative2035MicroSaasServices 
-} from '../data/innovative-2035-micro-saas-services';
-import { 
-  innovative2035AIServices 
-} from '../data/innovative-2035-ai-services';
-import { 
-  innovative2035ITServices 
-} from '../data/innovative-2035-it-services';
-import { 
-  innovativeRealMicroSaasServices2025 
-} from '../data/2025-innovative-real-micro-saas-services';
-import { 
-  innovativeAIServicesEnhanced2025 
-} from '../data/2025-innovative-ai-services-enhanced';
-import { 
-  innovativeITServicesEnhanced2025 
-} from '../data/2025-innovative-it-services-enhanced';
-import { 
-  emergingTechServicesEnhanced2025 
-} from '../data/2025-emerging-tech-services-enhanced';
-import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
-import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
-import UltraFuturisticBackground2035 from './backgrounds/UltraFuturisticBackground2035';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
   innovativeRealMicroSaasServices2025 
 } from '../data/2025-innovative-real-micro-saas-services';
 import { 
@@ -80,12 +53,6 @@ const Homepage2025: React.FC = () => {
   };
 
   const allServices = [
-    // New 2035 services (featured first)
-    ...innovative2035MicroSaasServices,
-    ...innovative2035AIServices,
-    ...innovative2035ITServices,
-    
-    // Existing services
     ...innovativeRealMicroSaasServices2025,
     ...innovativeAIServicesEnhanced2025,
     ...innovativeITServicesEnhanced2025,
@@ -98,9 +65,53 @@ const Homepage2025: React.FC = () => {
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   return (
-    <UltraFuturisticBackground2035>
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10" aria-label="Primary">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden relative">
+      {/* Enhanced Animated Background */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
+        
+        {/* Animated Grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+        
+        {/* Floating Particles */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          {[...Array(30)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
+              animate={{
+                x: [0, Math.random() * 1200, 0],
+                y: [0, Math.random() * 800, 0],
+                opacity: [0.3, 1, 0.3],
+                scale: [0.5, 1.5, 0.5],
+              }}
+              transition={{
+                duration: Math.random() * 15 + 15,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Mouse Trail Effect */}
+        <motion.div
+          className="absolute w-4 h-4 bg-cyan-400/30 rounded-full pointer-events-none"
+          animate={{
+            x: mousePosition.x - 8,
+            y: mousePosition.y - 8,
+          }}
+          transition={{ type: "spring", stiffness: 500, damping: 28 }}
+        />
+      </div>
+
+      {/* Enhanced Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-2xl border-b border-white/20 shadow-2xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <motion.div
@@ -702,11 +713,11 @@ const Homepage2025: React.FC = () => {
                 Visit Our Website
               </a>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
-      </footer>
-    </UltraFuturisticBackground2035>
+      </section>
+    </div>
   );
-}
+};
 
 export default Homepage2025;

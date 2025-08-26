@@ -8,7 +8,22 @@ interface SelectProps {
   disabled?: boolean;
 }
 
+<<<<<<< HEAD
 export function Select({ children, className = '', value, onValueChange }: SelectProps) {
+<<<<<<< HEAD
+=======
+export function Select({ 
+  children, 
+  className = '', 
+  value, 
+  onChange, 
+  disabled = false 
+}: SelectProps) {
+  const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
+  
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
     <select
       className={`${baseClasses} ${className}`}
@@ -28,6 +43,10 @@ interface SelectItemProps {
 
 export function SelectItem({ children, value }: SelectItemProps) {
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <div
       className={`
         flex h-10 w-full items-center justify-between rounded-md border 
@@ -39,6 +58,20 @@ export function SelectItem({ children, value }: SelectItemProps) {
       `}
       {...props}
     >
+<<<<<<< HEAD
+=======
+    <option value={value}>
+      {children}
+    </option>
+  );
+}
+
+export function SelectTrigger({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+  return (
+    <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {children}
     </div>
   );
@@ -48,6 +81,7 @@ export function SelectValue({ placeholder }: { placeholder?: string }) {
   return <span className="text-sm">{placeholder || 'Select an option'}</span>;
 }
 
+<<<<<<< HEAD
 export function SelectContent({ children, className = '' }: SelectProps) {
   return (
     <div className={`
@@ -80,4 +114,11 @@ export function SelectItem({ children, className = '', value, ...props }: Select
       {children}
     </div>
   );
+<<<<<<< HEAD
+=======
+export function SelectContent({ children }: { children: React.ReactNode }) {
+  return <div className="relative">{children}</div>;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }

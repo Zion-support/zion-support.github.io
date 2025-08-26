@@ -1,16 +1,21 @@
-import * as Sentry from '@sentry/browser';
-
-const DSN = import.meta.env.VITE_SENTRY_DSN;
-
-if (DSN) {
-  Sentry.init({ dsn: DSN });
+let nodeSentry: any;
+try {
+  // Optional dependency for server-side logging
+  nodeSentry = require('@sentry/node');
+} catch {
+  nodeSentry = null;
 }
 
 export function captureException(error: unknown) {
-  if (DSN) {
-    Sentry.captureException(error);
-  }
-  if (typeof console !== 'undefined') {
-    console.error('Sentry captured exception:', error);
+  if (process.env.NODE_ENV === 'development') {
+    if (typeof console !== 'undefined') {
+      console.error(error);
+    }
+  } else {
+    if (typeof window !== 'undefined' && (window as any).Sentry?.captureException) {
+      (window as any).Sentry.captureException(error);
+    } else if (nodeSentry?.captureException) {
+      nodeSentry.captureException(error);
+    }
   }
 }

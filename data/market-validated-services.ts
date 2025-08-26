@@ -1,1 +1,0 @@
-export const marketValidatedServices: Array<Record<string, any>> = []

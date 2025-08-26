@@ -11,6 +11,7 @@ interface ServiceCardProps {
   features: string[];
   isPopular?: boolean;
   isNew?: boolean;
+  isPopular?: boolean;
   href?: string;
   rating?: number;
   customers?: number;

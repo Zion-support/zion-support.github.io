@@ -1,8 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { NextSeo } from '@/components/NextSeo';
+import { SEO } from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -94,8 +92,8 @@ export default function AccountSettings() {
 
   return (
     <>
-      <NextSeo title="Account Settings" description="Manage your account" />
-      <Header />
+      <SEO title="Account Settings" description="Manage your account" />
+      
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
         

@@ -20,119 +20,175 @@ export interface SpecializedITInfrastructureService2025 {
     email: string;
     website: string;
   };
-  technology: string[];
-  integrations: string[];
-  compliance: string[];
-  roi: string;
-  competitors: string[];
-  infrastructure: string;
-  scalability: string;
-  uptime: string;
+  websiteUrl: string;
+  demoUrl?: string;
+  documentationUrl?: string;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureService2025[] = [
   // Edge Computing Orchestration Platform
+=======
+export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService2025[] = [
+  // Edge Computing Infrastructure Platform
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   {
-    id: "edge-computing-orchestration-platform",
-    title: "Edge Computing Orchestration Platform",
-    description: "Advanced edge computing platform that distributes computing resources closer to data sources, enabling real-time processing, reduced latency, and improved performance for IoT and mobile applications.",
-    category: "IT Infrastructure",
-    subcategory: "Edge Computing",
-    price: 1800,
+    id: "edge-computing-infrastructure-platform",
+    title: "Edge Computing Infrastructure Platform",
+    description: "Comprehensive edge computing platform that brings processing power closer to data sources, enabling real-time analytics, low-latency applications, and distributed computing capabilities.",
+    category: "Edge Computing",
+    subcategory: "Infrastructure Platform",
+    price: 2800,
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Distributed edge nodes",
       "Real-time data processing",
+      "Low-latency connectivity",
+      "Edge AI capabilities",
       "Load balancing",
-      "Edge AI inference",
-      "5G network optimization",
-      "IoT device management",
       "Edge security",
-      "Performance monitoring"
+      "Monitoring and analytics",
+      "Scalable infrastructure"
     ],
     benefits: [
-      "Reduce latency by 80%",
-      "Improve application performance",
-      "Reduce bandwidth costs",
-      "Enable real-time processing",
-      "Scalable edge deployment"
+      "Reduced latency by 90%",
+      "Lower bandwidth costs",
+      "Real-time processing",
+      "Improved user experience",
+      "Scalable edge network"
     ],
     useCases: [
       "IoT applications",
-      "Mobile gaming",
-      "Autonomous vehicles",
-      "Smart cities",
-      "Industrial automation"
+      "Real-time analytics",
+      "Content delivery",
+      "Autonomous systems",
+      "Gaming platforms"
     ],
     targetAudience: [
       "IoT companies",
-      "Mobile app developers",
+      "Content providers",
+      "Gaming companies",
       "Manufacturing firms",
-      "Smart city projects",
-      "Telecommunications"
+      "Technology companies"
     ],
-    tags: ["Edge Computing", "IoT", "5G", "Real-time", "Infrastructure"],
-    estimatedDelivery: "4-6 weeks",
+    tags: ["Edge Computing", "Infrastructure", "Real-time", "IoT", "Low Latency"],
+    estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$1,800 - $6,000/month",
+    marketPrice: "$2,800 - $12,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Kubernetes", "Docker", "Python", "Node.js", "Edge hardware"],
-    integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "5G networks"],
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry 4.0"],
-    roi: "300% within 12 months",
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge"],
-    infrastructure: "Distributed edge nodes",
-    scalability: "Auto-scaling edge clusters",
-    uptime: "99.9% edge availability"
+    websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure"
   },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // Quantum-Ready Cloud Infrastructure
+=======
+  // Quantum Network Infrastructure
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   {
-    id: "quantum-ready-cloud-infrastructure",
-    title: "Quantum-Ready Cloud Infrastructure",
-    description: "Future-proof cloud infrastructure designed to seamlessly integrate with quantum computing resources, enabling hybrid classical-quantum applications and quantum algorithm development.",
-    category: "IT Infrastructure",
-    subcategory: "Quantum Computing",
+    id: "quantum-network-infrastructure",
+    title: "Quantum Network Infrastructure",
+    description: "Next-generation quantum network infrastructure that enables quantum communications, quantum key distribution, and quantum internet protocols for ultra-secure data transmission.",
+    category: "Quantum Networking",
+    subcategory: "Network Infrastructure",
+    price: 4500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Quantum key distribution",
+      "Quantum repeaters",
+      "Quantum memory systems",
+      "Quantum routing",
+      "Quantum network protocols",
+      "Quantum security",
+      "Network monitoring",
+      "Scalable architecture"
+    ],
+    benefits: [
+      "Unbreakable encryption",
+      "Quantum advantage",
+      "Future-proof infrastructure",
+      "Ultra-secure communications",
+      "Quantum network scalability"
+    ],
+    useCases: [
+      "Government communications",
+      "Financial institutions",
+      "Healthcare data",
+      "Military communications",
+      "Research networks"
+    ],
+    targetAudience: [
+      "Government agencies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Defense contractors",
+      "Research institutions"
+    ],
+    tags: ["Quantum Networking", "Quantum Security", "Infrastructure", "Encryption", "Communications"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,500 - $20,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure"
+  },
+
+  // 5G Enterprise Infrastructure Solutions
+  {
+    id: "5g-enterprise-infrastructure-solutions",
+    title: "5G Enterprise Infrastructure Solutions",
+    description: "Comprehensive 5G enterprise infrastructure that provides ultra-fast connectivity, low latency, and massive IoT support for enterprise applications and digital transformation.",
+    category: "5G Technology",
+    subcategory: "Enterprise Infrastructure",
     price: 3200,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Quantum-classical hybrid architecture",
-      "Quantum algorithm development tools",
-      "Quantum-safe cryptography",
-      "Quantum simulation environments",
-      "Quantum resource management",
-      "Quantum error correction",
-      "Quantum networking",
-      "Quantum security protocols"
+      "5G network deployment",
+      "Enterprise connectivity",
+      "IoT device support",
+      "Low-latency applications",
+      "Network slicing",
+      "Security and compliance",
+      "Performance monitoring",
+      "Scalable infrastructure"
     ],
     benefits: [
-      "Future-proof infrastructure",
-      "Quantum advantage preparation",
-      "Hybrid computing capabilities",
-      "Quantum security compliance",
-      "Research and development platform"
+      "10x faster connectivity",
+      "Ultra-low latency",
+      "Massive IoT support",
+      "Enterprise-grade security",
+      "Future-ready infrastructure"
     ],
     useCases: [
-      "Quantum research",
-      "Cryptography development",
-      "Financial modeling",
-      "Drug discovery",
-      "Climate simulation"
+      "Smart manufacturing",
+      "Autonomous vehicles",
+      "Remote surgery",
+      "AR/VR applications",
+      "Industrial IoT"
     ],
     targetAudience: [
-      "Research institutions",
-      "Financial services",
-      "Pharmaceutical companies",
-      "Government agencies",
-      "Tech enterprises"
+      "Manufacturing companies",
+      "Healthcare organizations",
+      "Transportation companies",
+      "Technology firms",
+      "Industrial companies"
     ],
-    tags: ["Quantum Computing", "Cloud Infrastructure", "Future Tech", "Research", "Security"],
+    tags: ["5G", "Enterprise", "Infrastructure", "IoT", "Connectivity"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,200 - $15,000/month",
@@ -141,16 +197,13 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureServ
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Qiskit", "Cirq", "Python", "Quantum hardware", "Cloud platforms"],
-    integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum"],
-    compliance: ["ISO 27001", "SOC 2", "Quantum security standards"],
-    roi: "400% within 24 months",
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
-    infrastructure: "Hybrid quantum-classical",
-    scalability: "Quantum resource scaling",
-    uptime: "99.5% quantum availability"
+    websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure"
   },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // Autonomous DevOps Infrastructure
   {
     id: "autonomous-devops-infrastructure",
@@ -339,55 +392,111 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureServ
     category: "IT Infrastructure",
     subcategory: "Cloud Orchestration",
     price: 1900,
+=======
+  // Hybrid Cloud Infrastructure Platform
+  {
+    id: "hybrid-cloud-infrastructure-platform",
+    title: "Hybrid Cloud Infrastructure Platform",
+    description: "Advanced hybrid cloud platform that seamlessly integrates on-premises, private cloud, and public cloud resources for optimal performance, cost, and security.",
+    category: "Cloud Infrastructure",
+    subcategory: "Hybrid Cloud",
+    price: 2500,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Multi-cloud management",
-      "Hybrid cloud orchestration",
-      "Cost optimization",
+      "Hybrid connectivity",
+      "Workload optimization",
+      "Cost management",
+      "Security compliance",
       "Performance monitoring",
-      "Compliance management",
-      "Workload portability",
-      "Disaster recovery",
-      "Security management"
+      "Automated scaling",
+      "Disaster recovery"
     ],
     benefits: [
-      "Reduce cloud costs by 30%",
-      "Improve performance",
-      "Avoid vendor lock-in",
-      "Enhance compliance",
-      "Optimize resource usage"
+      "Optimized cost structure",
+      "Flexible deployment",
+      "Enhanced security",
+      "Improved performance",
+      "Scalable infrastructure"
     ],
     useCases: [
-      "Enterprise IT",
-      "Multi-cloud strategies",
-      "Hybrid deployments",
-      "Disaster recovery",
+      "Enterprise applications",
+      "Data analytics",
+      "Development environments",
+      "Backup and recovery",
       "Compliance requirements"
     ],
     targetAudience: [
-      "Cloud architects",
-      "DevOps engineers",
-      "IT managers",
-      "Enterprise organizations",
-      "Multi-cloud users"
+      "Enterprise companies",
+      "Technology firms",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies"
     ],
-    tags: ["Multi-Cloud", "Hybrid Cloud", "Orchestration", "Cost Optimization", "Compliance"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,900 - $6,000/month",
+    tags: ["Hybrid Cloud", "Cloud Infrastructure", "Multi-cloud", "Enterprise", "Scalability"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,500 - $12,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Kubernetes", "Terraform", "Ansible", "Python", "Cloud APIs"],
-    integrations: ["AWS", "Azure", "Google Cloud", "On-premises systems"],
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
-    roi: "280% within 12 months",
-    competitors: ["HashiCorp", "VMware", "Red Hat"],
-    infrastructure: "Multi-cloud distributed",
-    scalability: "Cross-cloud scaling",
-    uptime: "99.9% orchestration availability"
+    websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure"
+  },
+
+  // AI-Powered Infrastructure Management
+  {
+    id: "ai-powered-infrastructure-management",
+    title: "AI-Powered Infrastructure Management",
+    description: "Intelligent infrastructure management platform that uses AI to optimize performance, predict failures, and automate infrastructure operations for maximum efficiency.",
+    category: "AI Infrastructure",
+    subcategory: "Management & Optimization",
+    price: 1800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered monitoring",
+      "Predictive maintenance",
+      "Automated optimization",
+      "Performance analytics",
+      "Resource allocation",
+      "Capacity planning",
+      "Anomaly detection",
+      "Automated scaling"
+    ],
+    benefits: [
+      "Reduced downtime by 80%",
+      "Optimized performance",
+      "Lower operational costs",
+      "Proactive maintenance",
+      "Automated operations"
+    ],
+    useCases: [
+      "Data center management",
+      "Cloud infrastructure",
+      "Network operations",
+      "Server management",
+      "Storage optimization"
+    ],
+    targetAudience: [
+      "IT operations teams",
+      "DevOps engineers",
+      "Infrastructure managers",
+      "System administrators",
+      "Technology companies"
+    ],
+    tags: ["AI", "Infrastructure Management", "Automation", "Monitoring", "Optimization"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,800 - $8,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management"
   }
 ];

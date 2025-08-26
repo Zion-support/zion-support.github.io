@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2034Props {
@@ -11,6 +12,20 @@ export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground20
   className = '' 
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+=======
+
+interface UltraFuturisticBackground2034Props {
+  intensity?: number;
+  theme?: 'quantum' | 'neon' | 'holographic';
+}
+
+const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
+  intensity = 0.8,
+  theme = 'quantum'
+}) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const animationRef = useRef<number>();
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -19,8 +34,15 @@ export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground20
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+<<<<<<< HEAD
     let animationFrameId: number;
     let particles: Array<{
+=======
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles: Array<{
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       x: number;
       y: number;
       vx: number;
@@ -30,6 +52,7 @@ export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground20
       color: string;
     }> = [];
 
+<<<<<<< HEAD
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -51,10 +74,33 @@ export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground20
         });
       }
     };
+=======
+    const colors = {
+      quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'],
+      neon: ['#ff0080', '#8000ff', '#00ffff', '#ffff00'],
+      holographic: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4']
+    };
+
+    const selectedColors = colors[theme];
+
+    // Create particles
+    for (let i = 0; i < 100; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 3 + 1,
+        opacity: Math.random() * 0.5 + 0.3,
+        color: selectedColors[Math.floor(Math.random() * selectedColors.length)]
+      });
+    }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+<<<<<<< HEAD
       // Create gradient background
       const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.95)');
@@ -65,6 +111,8 @@ export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground20
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
@@ -79,16 +127,27 @@ export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground20
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+<<<<<<< HEAD
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
 
         // Draw connecting lines
         particles.slice(index + 1).forEach(otherParticle => {
+=======
+        ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
+        ctx.fill();
+
+        // Draw connections
+        particles.forEach((otherParticle, otherIndex) => {
+          if (index === otherIndex) return;
+          
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) + 
             Math.pow(particle.y - otherParticle.y, 2)
           );
+<<<<<<< HEAD
           
           if (distance < 100) {
             ctx.beginPath();
@@ -96,11 +155,21 @@ export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground20
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = `rgba(100, 150, 255, ${0.1 * (1 - distance / 100)})`;
             ctx.lineWidth = 0.5;
+=======
+
+          if (distance < 150) {
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 150) * 0.3 * 255).toString(16).padStart(2, '0')}`;
+            ctx.lineWidth = 1;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             ctx.stroke();
           }
         });
       });
 
+<<<<<<< HEAD
       // Draw grid lines
       ctx.strokeStyle = 'rgba(100, 150, 255, 0.1)';
       ctx.lineWidth = 0.5;
@@ -228,6 +297,104 @@ export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground20
         }}
       />
     </div>
+=======
+      // Add quantum effects
+      if (theme === 'quantum') {
+        ctx.save();
+        ctx.globalCompositeOperation = 'screen';
+        
+        // Quantum wave effect
+        for (let i = 0; i < 5; i++) {
+          const time = Date.now() * 0.001;
+          const wave = Math.sin(time + i) * 100;
+          
+          ctx.beginPath();
+          ctx.arc(canvas.width / 2, canvas.height / 2, 100 + wave, 0, Math.PI * 2);
+          ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * intensity})`;
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        }
+        
+        ctx.restore();
+      }
+
+      // Add neon effects
+      if (theme === 'neon') {
+        ctx.save();
+        ctx.shadowColor = '#ff0080';
+        ctx.shadowBlur = 20;
+        
+        particles.forEach(particle => {
+          if (particle.size > 2) {
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
+            ctx.strokeStyle = particle.color;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        });
+        
+        ctx.restore();
+      }
+
+      // Add holographic effects
+      if (theme === 'holographic') {
+        ctx.save();
+        ctx.globalCompositeOperation = 'overlay';
+        
+        // Holographic grid
+        const gridSize = 50;
+        for (let x = 0; x < canvas.width; x += gridSize) {
+          ctx.beginPath();
+          ctx.moveTo(x, 0);
+          ctx.lineTo(x, canvas.height);
+          ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * intensity})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+        
+        for (let y = 0; y < canvas.height; y += gridSize) {
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(canvas.width, y);
+          ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * intensity})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+        
+        ctx.restore();
+      }
+
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [intensity, theme]);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{
+        opacity: intensity,
+        filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
+      }}
+    />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 };
 

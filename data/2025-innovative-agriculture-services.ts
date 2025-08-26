@@ -220,7 +220,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
     marketSize: '$18.4B+ food traceability market',
     growthRate: '320% YoY',
-    variant: 'cyberpunk',
+    variant: 'default',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Blockchain food traceability platform with supply chain tracking and product authentication capabilities.',

@@ -1,29 +1,38 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
 
-interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'default' | 'secondary' | 'destructive' | 'outline';
+interface BadgeProps {
   children: React.ReactNode;
+  className?: string;
+  variant?: 'default' | 'secondary' | 'destructive' | 'outline';
 }
 
-export function Badge({ className, variant = 'default', children, ...props }: BadgeProps) {
+const Badge: React.FC<BadgeProps> = ({ 
+  children, 
+  className = '', 
+  variant = 'default' 
+}) => {
+  const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
+  
   const variantClasses = {
-    default: 'bg-zion-purple text-white',
-    secondary: 'bg-zion-blue text-white',
-    destructive: 'bg-red-500 text-white',
-    outline: 'border border-zion-purple text-zion-purple'
+    default: 'border-transparent bg-primary text-primary-foreground',
+    secondary: 'border-transparent bg-secondary text-secondary-foreground',
+    destructive: 'border-transparent bg-destructive text-destructive-foreground',
+    outline: 'text-foreground'
   };
   
   return (
-    <div
-      className={cn(
-        'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2',
-        variantClasses[variant],
-        className
-      )}
-      {...props}
-    >
+    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+};
+
+export { Badge };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

@@ -60,9 +60,7 @@ export default function QuoteManager() {
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
-    // Resetting the calendar selection requires `undefined` rather than an
-    // empty object so that `react-day-picker` clears the range correctly.
-    setDateRange(undefined);
+    setDateRange({ from: undefined, to: undefined });
   };
 
   if (!isAdmin) {

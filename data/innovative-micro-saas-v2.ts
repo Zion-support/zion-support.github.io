@@ -39,6 +39,7 @@ export interface InnovativeMicroSaasV2 {
   reviews: number;
 }
 
+<<<<<<< HEAD
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   {
     id: 'ai-powered-sales-automation',
@@ -245,5 +246,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     reviews: 45
   }
 ];
-
-export const innovativeMicroSaasV2Services = innovativeMicroSaasV2;
+=======
+export const innovativeMicroSaasV2Services = [] as any[];
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

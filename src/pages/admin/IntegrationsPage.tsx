@@ -1,13 +1,13 @@
 
 import React, { useState } from "react";
 import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";
-import { NextSeo } from "@/components/NextSeo";
+import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 
 export default function IntegrationsPage() {
   return (
     <ProtectedRoute adminOnly={true}>
-      <NextSeo
+      <SEO
         title="Integrations - Zion AI Marketplace"
         description="Connect your Zion account with CRMs and Applicant Tracking Systems."
       />

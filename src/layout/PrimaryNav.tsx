@@ -19,12 +19,7 @@ import { Menu, X, ShoppingCart } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-} from '@/components/ui/popover';
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
+import { ModeToggle } from '@/components/ModeToggle';
 
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -114,9 +109,10 @@ export function PrimaryNav() {
             {/* Compact actions group */}
             <div className="flex items-center gap-1">
               <PointsBadge />
-              <Popover>
-                <PopoverTrigger asChild>
-                  <button
+              <HoverCard openDelay={100}>
+                <HoverCardTrigger asChild>
+                  <Link
+                    href="/cart"
                     className="relative p-1"
                     aria-label={t('nav.cart', 'Cart')}
                   >
@@ -126,15 +122,12 @@ export function PrimaryNav() {
                         {cartCount}
                       </span>
                     )}
-                  </button>
-                </PopoverTrigger>
-                <PopoverContent className="w-56" align="end">
-                  <MiniCartPreview />
-                  <Link href="/cart" className="mt-2 block text-sm text-primary hover:underline">
-                    {t('cart.view_cart', 'View Cart')}
                   </Link>
-                </PopoverContent>
-              </Popover>
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <MiniCartPreview />
+                </HoverCardContent>
+              </HoverCard>
             </div>
             
             {/* Compact controls group */}

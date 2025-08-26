@@ -2,12 +2,10 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Heart, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { useToast } from "@/hooks/use-toast";
+import { MapPin, Clock, CheckCircle2 } from "lucide-react";
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { useNavigate } from "react-router-dom";
 import { TalentProfile } from "@/types/talent";
-import { useAppDispatch } from "@/store/hooks";
-import { addToWishlist, getApiUrl } from "@/store/wishlistSlice";
 
 export interface TalentCardProps {
   talent: TalentProfile;
@@ -23,19 +21,6 @@ const TalentCardComponent = ({
   isAuthenticated
 }: TalentCardProps) => {
   const navigate = useNavigate();
-  const location = useLocation();
-  const { toast } = useToast();
-  const dispatch = useAppDispatch();
-  
-  const handleViewProfile = () => {
-    // Navigate directly to the talent profile
-    navigate(`/talent/${talent.id}`);
-    
-    // Also call the onViewProfile callback if provided
-    if (onViewProfile) {
-      onViewProfile(talent.id);
-    }
-  };
 
   const handleMessage = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -53,13 +38,6 @@ const TalentCardComponent = ({
     if (onBook) {
       onBook(talent);
     }
-
-    dispatch(addToWishlist({ id: talent.id, type: 'talent', data: talent }));
-    fetch(`${getApiUrl()}/wishlist`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: talent.id, type: 'talent' })
-    }).catch(() => {});
   };
 
 
@@ -78,10 +56,10 @@ const TalentCardComponent = ({
           <div className="relative mr-4">
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
               {talent.profile_picture_url ? (
-                <img
-                  src={talent.profile_picture_url}
-                  alt={`Avatar of ${talent.full_name}`}
-                  className="w-full h-full object-cover"
+                <img loading="lazy" 
+                  src={talent.profile_picture_url} 
+                  alt={talent.full_name} 
+                  className="w-full h-full object-cover" 
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
@@ -100,16 +78,7 @@ const TalentCardComponent = ({
           <div className="flex-1">
             <div className="flex justify-between items-start">
               <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
-              <Button
-                variant="ghost"
-                size="sm"
-                aria-label="save-to-wishlist"
-                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
-                onClick={handleToggleSave}
-              >
-                <Heart className={`h-5 w-5 ${isSaved ? 'fill-red-500 text-red-500' : ''}`} />
-                <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
-              </Button>
+              <FavoriteButton itemId={talent.id} itemType="talent" className="-mt-1" />
             </div>
             <p className="text-white font-medium">{talent.professional_title}</p>
             

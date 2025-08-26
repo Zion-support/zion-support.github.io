@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
+import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";
 import { 
   Brain, 
   Shield, 
@@ -24,7 +24,109 @@ import {
 } from "lucide-react";
 
 export function ServicesShowcase() {
-  const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
+  const featuredServices = [
+    {
+      title: "AI Content Generator",
+      description: "Generate high-quality content, code, and documentation using advanced AI models.",
+      icon: <Brain className="h-12 w-12 text-zion-cyan" />,
+      price: "$29/month",
+      features: ["Blog posts", "Technical docs", "Marketing copy", "Code snippets"],
+      category: "AI Services",
+      badge: "Popular",
+      link: "/ai-content-generator",
+      glowColor: "#00ffff"
+    },
+    {
+      title: "Cybersecurity Assessment",
+      description: "Comprehensive security audits and vulnerability assessments for your digital infrastructure.",
+      icon: <Shield className="h-12 w-12 text-red-400" />,
+      price: "$299/month",
+      features: ["Security audits", "Penetration testing", "Vulnerability scans", "Compliance reports"],
+      category: "Security",
+      badge: "Enterprise",
+      link: "/cybersecurity-assessment",
+      glowColor: "#ef4444"
+    },
+    {
+      title: "Cloud Migration Service",
+      description: "Seamless migration to cloud platforms with minimal downtime and optimized performance.",
+      icon: <Cloud className="h-12 w-12 text-blue-400" />,
+      price: "$499/month",
+      features: ["AWS/Azure/GCP", "Zero downtime", "Performance optimization", "24/7 support"],
+      category: "Cloud Services",
+      badge: "Professional",
+      link: "/cloud-migration",
+      glowColor: "#3b82f6"
+    },
+    {
+      title: "Data Analytics Dashboard",
+      description: "Real-time business intelligence and analytics to drive data-driven decision making.",
+      icon: <BarChart3 className="h-12 w-12 text-green-400" />,
+      price: "$99/month",
+      features: ["Real-time dashboards", "Predictive analytics", "Custom reports", "Data visualization"],
+      category: "Analytics",
+      badge: "Business",
+      link: "/data-analytics",
+      glowColor: "#22c55e"
+    },
+    {
+      title: "AI Model Training",
+      description: "Custom AI model development and training for your specific business requirements.",
+      icon: <Brain className="h-12 w-12 text-purple-400" />,
+      price: "$1,999/month",
+      features: ["Custom models", "Industry-specific", "Training pipelines", "Model deployment"],
+      category: "AI Development",
+      badge: "Advanced",
+      link: "/ai-model-training",
+      glowColor: "#a855f7"
+    },
+    {
+      title: "Network Infrastructure",
+      description: "Design, implement, and maintain robust network infrastructure for optimal performance.",
+      icon: <Network className="h-12 w-12 text-yellow-400" />,
+      price: "$399/month",
+      features: ["Network design", "24/7 monitoring", "Security implementation", "Performance tuning"],
+      category: "Infrastructure",
+      badge: "Professional",
+      link: "/network-infrastructure",
+      glowColor: "#eab308"
+    }
+  ];
+
+  const emergingServices = [
+    {
+      title: "Quantum Computing API",
+      description: "Access to quantum computing resources for complex calculations and simulations.",
+      icon: <Zap className="h-10 w-10 text-pink-400" />,
+      price: "$0.10/quantum-second",
+      category: "Quantum Computing",
+      link: "/quantum-computing-api"
+    },
+    {
+      title: "Edge Computing Platform",
+      description: "Distributed computing platform for low-latency applications and real-time processing.",
+      icon: <Layers className="h-10 w-10 text-cyan-400" />,
+      price: "$0.50/hour",
+      category: "Edge Computing",
+      link: "/edge-computing"
+    },
+    {
+      title: "Blockchain Integration",
+      description: "Integrate blockchain technology into your applications for enhanced security and transparency.",
+      icon: <Key className="h-10 w-10 text-emerald-400" />,
+      price: "$199/month",
+      category: "Blockchain",
+      link: "/blockchain-integration"
+    },
+    {
+      title: "IoT Device Management",
+      description: "Comprehensive IoT platform for device connectivity, monitoring, and data collection.",
+      icon: <Network className="h-10 w-10 text-blue-400" />,
+      price: "$0.50/device/month",
+      category: "IoT Platform",
+      link: "/iot-device-management"
+    }
+  ];
 
   return (
     <section className="py-20 relative">
@@ -69,45 +171,32 @@ export function ServicesShowcase() {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-
-              <CardContent className="pt-0">
-                {/* Pricing */}
-                <div className="mb-4">
-                  <div className="text-2xl font-bold text-zion-purple">
-                    ${service.price?.toLocaleString()}
-                  </div>
+              
+              <CardContent className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded">
+                    {service.category}
+                  </span>
+                  <span className="text-lg font-bold text-primary">
+                    {service.price}
+                  </span>
                 </div>
-
-                {/* Tags */}
-                <div className="mb-4">
-                  <div className="flex flex-wrap gap-2">
-                    {service.tags.slice(0, 3).map((tag, index) => (
-                      <Badge key={index} variant="outline" className="text-xs">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                    <span className="text-sm font-medium">{service.rating}</span>
-                    <span className="text-sm text-gray-500">({service.reviewCount} reviews)</span>
-                  </div>
-                </div>
-
-                {/* Actions */}
-                <div className="space-y-2">
-                  <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
-                    Get Started
-                  </Button>
-                  <Link to={`/micro-saas-services#${service.id}`}>
-                    <Button variant="outline" size="sm" className="w-full">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Button>
+                
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
+                      <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              
+              <div className="px-6 pb-6">
+                <Button asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                  <Link to={service.link}>
+                    <span>Get Started</span>
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </Button>
               </div>

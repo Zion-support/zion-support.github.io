@@ -1,64 +1,90 @@
-import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { addToWishlist, loadWishlistFromDB, removeFromWishlist } from '@/store/wishlistSlice';
-import { useAuth } from '@/hooks/useAuth';
+import { useFavorites } from '@/hooks/useFavorites';
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { TalentCard } from '@/components/talent/TalentCard';
 import { Button } from '@/components/ui/button';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { toast } from 'sonner';
+import { useCart } from '@/context/CartContext';
+import { toast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { useCart } from '@/context/CartContext';
+import { getCartKey } from '@/utils/cartUtils';
+import { useNavigate } from 'react-router-dom';
 
-export default function Wishlist() {
-  const dispatch = useAppDispatch();
-  const items = useAppSelector((s) => s.wishlist.items);
+export default function WishlistPage() {
+  const { favorites, loading } = useFavorites();
   const { user } = useAuth();
+  const { dispatch } = useCart();
   const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
-    if (!user) {
-      navigate(`/login?next=${encodeURIComponent(location.pathname)}`);
-      return;
+    // Redirect if not authenticated and auth loading is complete
+    if (!isAuthLoading && !user) {
+      router.push('/login');
     }
-    dispatch(loadWishlistFromDB(user.id!));
-  }, [user, dispatch, navigate, location]);
+  }, [user, isAuthLoading, router]);
 
-  const handleRemove = (id: string) => {
-    dispatch(removeFromWishlist({ id }));
+  if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
+    return null; // Or a loading spinner
+  }
+
+  const { items, dispatch } = useCart();
+
+  const addToCart = (item: { id: string; title?: string; price?: number }) => {
+    const stored = safeStorage.getItem(getCartKey(user?.id));
+    const cart = stored ? JSON.parse(stored) : [];
+    cart.push({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });
+    safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
+    dispatch({ type: 'SET_ITEMS', payload: cart });
   };
 
-  const pathForItem = (item: { id: string; type: string }) => {
-    switch (item.type) {
-      case 'product':
-        return `/marketplace/listing/${item.id}`;
-      case 'service':
-        return `/services/${item.id}`;
-      case 'talent':
-        return `/talent/${item.id}`;
-      default:
-        return '#';
-    }
-  };
+  const productMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {
+    acc[p.id] = p;
+    return acc;
+  }, {});
+  const talentMap = TALENT_PROFILES.reduce<Record<string, any>>((acc, t) => {
+    acc[t.id] = t;
+    return acc;
+  }, {});
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4">Your Wishlist</h1>
-      {items.length === 0 ? (
+    <div className="container py-8">
+      <h1 className="text-3xl font-bold mb-6">Wishlist</h1>
+      {loading ? (
+        <p>Loading...</p>
+      ) : favorites.length === 0 ? (
         <p>No items saved.</p>
       ) : (
-        <ul className="space-y-4">
-          {items.map((item) => (
-            <li key={`${item.type}-${item.id}`} className="border border-zion-blue-light p-4 rounded-lg flex justify-between items-center">
-              <div>{item.data?.title || item.data?.full_name || item.id}</div>
-              <div className="flex gap-2">
-                <Link to={pathForItem(item)} className="text-zion-cyan underline">
-                  Go to item
-                </Link>
-                <Button size="sm" variant="outline" onClick={() => handleRemove(item.id)}>
-                  Remove
+        <div className="responsive-grid">
+          {favorites.map(fav => {
+            if (fav.item_type === 'talent') {
+              const talent = talentMap[fav.item_id];
+              return talent ? (
+                <TalentCard
+                  key={fav.item_id}
+                  talent={talent}
+                  onMessage={() => {}}
+                  onBook={() => {}}
+                  isAuthenticated={true}
+                />
+              ) : null;
+            }
+            const item = productMap[fav.item_id];
+            return item ? (
+              <div key={fav.item_id} className="relative">
+                <ProductListingCard listing={item} />
+                <Button
+                  size="sm"
+                  className="absolute bottom-2 right-2"
+                  onClick={() => addToCart(item)}
+                  disabled={items.some(i => i.id === item.id)}
+                >
+                  {items.some(i => i.id === item.id) ? 'In Cart' : 'Add to Cart'}
                 </Button>
               </div>
-            </li>
-          ))}
-        </ul>
+            ) : null;
+          })}
+        </div>
       )}
     </div>
   );
