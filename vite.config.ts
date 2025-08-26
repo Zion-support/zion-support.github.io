@@ -52,7 +52,7 @@ export default defineConfig({
           'animation-vendor': ['framer-motion'],
           'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
           'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
-          'icons-vendor': ['lucide-react', 'react-icons'],
+          'icons-vendor': ['lucide-react'],
           'charts-vendor': ['recharts'],
           'date-vendor': ['date-fns', 'react-day-picker'],
         },
