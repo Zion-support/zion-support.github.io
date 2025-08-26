@@ -1,88 +1,51 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export function SEO({ title, description, keywords, image, canonical, ogImage, url }) {
-  const siteName = 'Zion Tech Group';
-  const fullTitle = `${title} | ${siteName}`;
-  const imageUrl = ogImage || image || '/og-image.jpg';
-  const canonicalUrl = canonical || url;
+export function SEO({ title, description, keywords, image, url }) {
+  const defaultTitle = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Next-Generation Technology Solutions';
+  const defaultDescription = 'Pioneering the future with revolutionary AI, quantum computing, and next-generation technology solutions. Transform your business with cutting-edge innovation.';
+  const defaultKeywords = 'AI, artificial intelligence, quantum computing, technology solutions, IT services, micro SAAS, cybersecurity, cloud infrastructure, digital transformation';
+  const defaultImage = '/og-image.jpg';
+  const defaultUrl = 'https://ziontechgroup.com';
 
-  useEffect(() => {
-    // Update document title
-    document.title = fullTitle;
+  const seoTitle = title || defaultTitle;
+  const seoDescription = description || defaultDescription;
+  const seoKeywords = keywords || defaultKeywords;
+  const seoImage = image || defaultImage;
+  const seoUrl = url || defaultUrl;
 
-    // Update or create meta tags
-    const updateMetaTag = (name, content, property = false) => {
-      let meta = document.querySelector(`meta[${property ? 'property' : 'name'}="${name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        if (property) {
-          meta.setAttribute('property', name);
-        } else {
-          meta.setAttribute('name', name);
-        }
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', content);
-    };
-
-    // Update description
-    updateMetaTag('description', description);
-
-    // Update keywords if provided
-    if (keywords) {
-      updateMetaTag('keywords', keywords);
-    }
-
-    // Update Open Graph tags
-    updateMetaTag('og:title', fullTitle, true);
-    updateMetaTag('og:description', description, true);
-    updateMetaTag('og:image', imageUrl, true);
-    updateMetaTag('og:type', 'website', true);
-    updateMetaTag('og:site_name', siteName, true);
-    if (canonicalUrl) {
-      updateMetaTag('og:url', canonicalUrl, true);
-    }
-
-    // Update Twitter tags
-    updateMetaTag('twitter:card', 'summary_large_image');
-    updateMetaTag('twitter:title', fullTitle);
-    updateMetaTag('twitter:description', description);
-    updateMetaTag('twitter:image', imageUrl);
-
-    // Update canonical URL
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (canonicalUrl) {
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.setAttribute('href', canonicalUrl);
-    }
-
-    // Update robots and author
-    updateMetaTag('robots', 'index, follow');
-    updateMetaTag('author', siteName);
-
-    // Cleanup function
-    return () => {
-      // Reset title to default if needed
-      document.title = siteName;
-    };
-  }, [title, description, keywords, image, canonical, ogImage, url, fullTitle, imageUrl, canonicalUrl, siteName]);
-
-  // This component doesn't render anything
-  return null;
-      <meta name="twitter:description" content={description}/>
-      <meta name="twitter:image" content={imageUrl}/>
+  return (
+    <Helmet>
+      <title>{seoTitle}</title>
+      <meta name="description" content={seoDescription} />
+      <meta name="keywords" content={seoKeywords} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={seoTitle} />
+      <meta property="og:description" content={seoDescription} />
+      <meta property="og:image" content={seoImage} />
+      <meta property="og:url" content={seoUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={seoTitle} />
+      <meta name="twitter:description" content={seoDescription} />
+      <meta name="twitter:image" content={seoImage} />
+      
+      {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Contact Information */}
+      <meta name="contact:phone" content="+1 302 464 0950" />
+      <meta name="contact:email" content="kleber@ziontechgroup.com" />
+      <meta name="contact:address" content="364 E Main St STE 1008 Middletown DE 19709" />
       
       {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
-      
-      {/* Additional meta tags */}
-      <meta name="robots" content="index, follow"/>
-      <meta name="author" content={siteName}/>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </Helmet>);
->>>>>>> main
+      <link rel="canonical" href={seoUrl} />
+    </Helmet>
+  );
 }

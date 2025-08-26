@@ -4,10 +4,8 @@ interface User {
   id: string;
   email: string;
   name: string;
-  role: 'user' | 'admin' | 'moderator';
+  role: string;
   userType?: string;
-  displayName?: string;
-  avatarUrl?: string;
 }
 
 interface AuthState {
@@ -103,11 +101,10 @@ export const useAuth = () => {
 
   return {
     user: authState.user,
-    loading: authState.isLoading,
+    isAuthenticated: authState.isAuthenticated,
+    isLoading: authState.isLoading,
     login,
     logout,
     register,
-    isAuthenticated: authState.isAuthenticated,
-    isAdmin: authState.user?.role === 'admin'
   };
 };

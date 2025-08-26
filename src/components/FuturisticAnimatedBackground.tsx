@@ -1,18 +1,8 @@
 import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
-interface FuturisticAnimatedBackgroundProps {
-  className?: string;
-  intensity?: 'low' | 'medium' | 'high';
-  colorScheme?: 'blue' | 'purple' | 'green' | 'multi';
-}
-
-export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> = ({
-  className = '',
-  intensity = 'medium',
-  colorScheme = 'multi'
-}) => {
+export function FuturisticAnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -20,6 +10,10 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+
+    let animationFrameId: number;
+    let particles: Particle[] = [];
+    let connections: Connection[] = [];
 
     // Set canvas size
     const resizeCanvas = () => {
@@ -30,8 +24,8 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle system
-    const particles: Array<{
+    // Particle class
+    class Particle {
       x: number;
       y: number;
       vx: number;
@@ -39,52 +33,127 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       size: number;
       opacity: number;
       color: string;
-      life: number;
-      maxLife: number;
-    }> = [];
 
-    // Color schemes
-    const colorSchemes = {
-      blue: ['#00ffff', '#0080ff', '#0040ff', '#0000ff'],
-      purple: ['#ff00ff', '#8000ff', '#4000ff', '#0000ff'],
-      green: ['#00ff00', '#00ff80', '#00ff40', '#00ff00'],
-      multi: ['#00ffff', '#ff00ff', '#00ff00', '#ffff00', '#ff8000', '#8000ff']
-    };
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
+        this.size = Math.random() * 2 + 1;
+        this.opacity = Math.random() * 0.5 + 0.2;
+        this.color = `hsl(${200 + Math.random() * 60}, 70%, 60%)`;
+      }
 
-    const colors = colorSchemes[colorScheme];
-    const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
 
-    // Initialize particles
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.1,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        life: Math.random() * 100,
-        maxLife: 100
-      });
+        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+        this.opacity += (Math.random() - 0.5) * 0.02;
+        this.opacity = Math.max(0.1, Math.min(0.8, this.opacity));
+      }
+
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
     }
 
-    // Grid lines
-    const gridSize = 50;
-    const gridOpacity = intensity === 'low' ? 0.1 : intensity === 'medium' ? 0.2 : 0.3;
+    // Connection class
+    class Connection {
+      particle1: Particle;
+      particle2: Particle;
+      opacity: number;
+
+      constructor(p1: Particle, p2: Particle) {
+        this.particle1 = p1;
+        this.particle2 = p2;
+        this.opacity = Math.random() * 0.3 + 0.1;
+      }
+
+      draw() {
+        const distance = Math.sqrt(
+          Math.pow(this.particle1.x - this.particle2.x, 2) +
+          Math.pow(this.particle1.y - this.particle2.y, 2)
+        );
+
+        if (distance < 150) {
+          ctx.save();
+          ctx.globalAlpha = this.opacity * (1 - distance / 150);
+          ctx.strokeStyle = `hsl(${200 + Math.random() * 60}, 70%, 60%)`;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(this.particle1.x, this.particle1.y);
+          ctx.lineTo(this.particle2.x, this.particle2.y);
+          ctx.stroke();
+          ctx.restore();
+        }
+      }
+    }
+
+    // Initialize particles and connections
+    const init = () => {
+      particles = [];
+      connections = [];
+
+      // Create particles
+      for (let i = 0; i < 100; i++) {
+        particles.push(new Particle());
+      }
+
+      // Create connections
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          if (Math.random() < 0.1) {
+            connections.push(new Connection(particles[i], particles[j]));
+          }
+        }
+      }
+    };
 
     // Animation loop
     const animate = () => {
-      // Clear canvas with fade effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw grid
-      ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity})`;
-      ctx.lineWidth = 1;
+      // Update and draw particles
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
+
+      // Draw connections
+      connections.forEach(connection => {
+        connection.draw();
+      });
+
+      // Draw grid pattern
+      drawGrid();
+
+      // Draw floating elements
+      drawFloatingElements();
+
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    // Draw grid pattern
+    const drawGrid = () => {
+      const gridSize = 50;
+      const offsetX = (Date.now() * 0.01) % gridSize;
+      const offsetY = (Date.now() * 0.01) % gridSize;
+
+      ctx.save();
+      ctx.strokeStyle = 'rgba(34, 221, 210, 0.1)';
+      ctx.lineWidth = 0.5;
 
       // Vertical lines
-      for (let x = 0; x < canvas.width; x += gridSize) {
+      for (let x = offsetX; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
@@ -92,132 +161,176 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       }
 
       // Horizontal lines
-      for (let y = 0; y < canvas.height; y += gridSize) {
+      for (let y = offsetY; y < canvas.height; y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
         ctx.stroke();
       }
 
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-
-        // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) {
-          particle.vx *= -1;
-        }
-        if (particle.y <= 0 || particle.y >= canvas.height) {
-          particle.vy *= -1;
-        }
-
-        // Update life
-        particle.life--;
-        if (particle.life <= 0) {
-          particle.life = particle.maxLife;
-          particle.x = Math.random() * canvas.width;
-          particle.y = Math.random() * canvas.height;
-        }
-
-        // Draw particle
-        const alpha = (particle.life / particle.maxLife) * particle.opacity;
-        ctx.fillStyle = `${particle.color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Draw glow effect
-        const gradient = ctx.createRadialGradient(
-          particle.x, particle.y, 0,
-          particle.x, particle.y, particle.size * 3
-        );
-        gradient.addColorStop(0, `${particle.color}${Math.floor(alpha * 100).toString(16).padStart(2, '0')}`);
-        gradient.addColorStop(1, 'transparent');
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
-        ctx.fill();
-      });
-
-      // Draw connecting lines between nearby particles
-      ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity * 0.5})`;
-      ctx.lineWidth = 0.5;
-
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 100) {
-            const alpha = (1 - distance / 100) * gridOpacity * 0.5;
-            ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-
-      // Draw floating orbs
-      const time = Date.now() * 0.001;
-      for (let i = 0; i < 3; i++) {
-        const x = Math.sin(time * 0.5 + i) * canvas.width * 0.3 + canvas.width * 0.5;
-        const y = Math.cos(time * 0.3 + i) * canvas.height * 0.3 + canvas.height * 0.5;
-        const size = Math.sin(time + i) * 20 + 40;
-        const alpha = (Math.sin(time * 2 + i) + 1) * 0.1 + 0.05;
-
-        // Orb glow
-        const gradient = ctx.createRadialGradient(x, y, 0, x, y, size * 2);
-        gradient.addColorStop(0, `rgba(0, 255, 255, ${alpha})`);
-        gradient.addColorStop(0.5, `rgba(0, 255, 255, ${alpha * 0.5})`);
-        gradient.addColorStop(1, 'transparent');
-
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
-        ctx.arc(x, y, size * 2, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Orb core
-        ctx.fillStyle = `rgba(0, 255, 255, ${alpha * 2})`;
-        ctx.beginPath();
-        ctx.arc(x, y, size * 0.3, 0, Math.PI * 2);
-        ctx.fill();
-      }
-
-      // Draw scanning line effect
-      const scanY = (time * 50) % (canvas.height + 100) - 50;
-      const scanGradient = ctx.createLinearGradient(0, scanY - 2, 0, scanY + 2);
-      scanGradient.addColorStop(0, 'transparent');
-      scanGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.3)');
-      scanGradient.addColorStop(1, 'transparent');
-
-      ctx.fillStyle = scanGradient;
-      ctx.fillRect(0, scanY - 2, canvas.width, 4);
-
-      animationRef.current = requestAnimationFrame(animate);
+      ctx.restore();
     };
 
+    // Draw floating elements
+    const drawFloatingElements = () => {
+      const time = Date.now() * 0.001;
+
+      // Floating circles
+      for (let i = 0; i < 5; i++) {
+        const x = Math.sin(time * 0.5 + i) * 200 + canvas.width / 2;
+        const y = Math.cos(time * 0.3 + i) * 150 + canvas.height / 2;
+        const size = Math.sin(time + i) * 20 + 40;
+
+        ctx.save();
+        ctx.globalAlpha = 0.1;
+        ctx.strokeStyle = 'rgba(34, 221, 210, 0.3)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(x, y, size, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      // Floating squares
+      for (let i = 0; i < 3; i++) {
+        const x = Math.cos(time * 0.4 + i) * 300 + canvas.width / 2;
+        const y = Math.sin(time * 0.6 + i) * 200 + canvas.height / 2;
+        const size = Math.cos(time + i) * 15 + 25;
+        const rotation = time * 0.5 + i;
+
+        ctx.save();
+        ctx.globalAlpha = 0.08;
+        ctx.strokeStyle = 'rgba(140, 21, 233, 0.3)';
+        ctx.lineWidth = 1.5;
+        ctx.translate(x, y);
+        ctx.rotate(rotation);
+        ctx.strokeRect(-size / 2, -size / 2, size, size);
+        ctx.restore();
+      }
+    };
+
+    init();
     animate();
 
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
       window.removeEventListener('resize', resizeCanvas);
+      cancelAnimationFrame(animationFrameId);
     };
-  }, [intensity, colorScheme]);
+  }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className={`fixed inset-0 pointer-events-none ${className}`}
-      style={{ zIndex: -1 }}
-    />
-  );
-};
+    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+      {/* Canvas background */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+      />
 
-export default FuturisticAnimatedBackground;
+      {/* Overlay gradients */}
+      <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark/20 via-transparent to-zion-slate-dark/20" />
+      
+      {/* Animated geometric shapes */}
+      <motion.div
+        className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/10 rounded-full"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.1, 0.3, 0.1],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+
+      <motion.div
+        className="absolute bottom-32 right-32 w-24 h-24 border border-zion-purple/10 rounded-full"
+        animate={{
+          scale: [1.2, 1, 1.2],
+          opacity: [0.3, 0.1, 0.3],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+
+      <motion.div
+        className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan/10 rounded-full transform -translate-x-1/2 -translate-y-1/2"
+        animate={{
+          scale: [1, 1.5, 1],
+          opacity: [0.1, 0.2, 0.1],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+
+      {/* Floating particles */}
+      <motion.div
+        className="absolute top-40 right-40 w-2 h-2 bg-zion-cyan rounded-full"
+        animate={{
+          y: [0, -20, 0],
+          opacity: [0.3, 0.8, 0.3],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+
+      <motion.div
+        className="absolute bottom-40 left-40 w-1.5 h-1.5 bg-zion-purple rounded-full"
+        animate={{
+          y: [0, 15, 0],
+          opacity: [0.5, 0.9, 0.5],
+        }}
+        transition={{
+          duration: 2.5,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+
+      {/* Scanning line effect */}
+      <motion.div
+        className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-zion-cyan to-transparent"
+        animate={{
+          y: [0, window.innerHeight],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+      />
+
+      {/* Corner accents */}
+      <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-zion-cyan/20" />
+      <div className="absolute top-0 right-0 w-32 h-32 border-r-2 border-t-2 border-zion-purple/20" />
+      <div className="absolute bottom-0 left-0 w-32 h-32 border-l-2 border-b-2 border-zion-cyan/20" />
+      <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-zion-purple/20" />
+
+      {/* Energy field effect */}
+      <motion.div
+        className="absolute inset-0"
+        animate={{
+          background: [
+            "radial-gradient(circle at 20% 80%, rgba(34, 221, 210, 0.03) 0%, transparent 50%)",
+            "radial-gradient(circle at 80% 20%, rgba(140, 21, 233, 0.03) 0%, transparent 50%)",
+            "radial-gradient(circle at 20% 80%, rgba(34, 221, 210, 0.03) 0%, transparent 50%)",
+          ],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+    </div>
+  );
+}

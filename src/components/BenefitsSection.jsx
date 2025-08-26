@@ -91,6 +91,7 @@ export function BenefitsSection() {
       }
     }
   };
+<<<<<<< HEAD
   
   const statsVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -144,15 +145,142 @@ export function BenefitsSection() {
           viewport={{ once: true }} 
           transition={{ duration: 0.6 }}
         >
+=======
+
+  const benefits = [
+    {
+      icon: <Brain className="w-10 h-10" />,
+      title: "AI-Powered Innovation",
+      description: "Cutting-edge artificial intelligence solutions that transform business operations and drive growth.",
+      stats: "40% Efficiency Boost",
+      color: "from-zion-cyan to-zion-blue",
+      bgColor: "from-zion-cyan/20 to-zion-blue/20",
+      features: [
+        "Machine Learning Algorithms",
+        "Predictive Analytics",
+        "Natural Language Processing",
+        "Computer Vision Solutions"
+      ]
+    },
+    {
+      icon: <Shield className="w-10 h-10" />,
+      title: "Enterprise Security",
+      description: "Military-grade security protocols and compliance standards to protect your business assets.",
+      stats: "99.9% Uptime",
+      color: "from-zion-purple to-zion-red",
+      bgColor: "from-zion-purple/20 to-zion-red/20",
+      features: [
+        "SOC 2 Compliance",
+        "End-to-End Encryption",
+        "Zero-Trust Architecture",
+        "24/7 Security Monitoring"
+      ]
+    },
+    {
+      icon: <Rocket className="w-10 h-10" />,
+      title: "Rapid Deployment",
+      description: "Quick implementation and deployment of solutions with minimal disruption to operations.",
+      stats: "50% Faster",
+      color: "from-zion-green to-zion-cyan",
+      bgColor: "from-zion-green/20 to-zion-cyan/20",
+      features: [
+        "Agile Development",
+        "Continuous Integration",
+        "Automated Testing",
+        "Cloud-Native Architecture"
+      ]
+    },
+    {
+      icon: <Users className="w-10 h-10" />,
+      title: "Expert Support",
+      description: "Round-the-clock technical support and consultation from certified professionals.",
+      stats: "24/7 Support",
+      color: "from-zion-orange to-zion-yellow",
+      bgColor: "from-zion-orange/20 to-zion-yellow/20",
+      features: [
+        "Dedicated Account Managers",
+        "Technical Consultation",
+        "Training & Workshops",
+        "Performance Optimization"
+      ]
+    },
+    {
+      icon: <TrendingUp className="w-10 h-10" />,
+      title: "Scalable Solutions",
+      description: "Flexible infrastructure that grows with your business needs and requirements.",
+      stats: "Unlimited Growth",
+      color: "from-zion-indigo to-zion-purple",
+      bgColor: "from-zion-indigo/20 to-zion-purple/20",
+      features: [
+        "Auto-scaling Resources",
+        "Load Balancing",
+        "Global CDN",
+        "Multi-region Deployment"
+      ]
+    },
+    {
+      icon: <Zap className="w-10 h-10" />,
+      title: "Performance Optimization",
+      description: "Lightning-fast applications and systems optimized for maximum efficiency and speed.",
+      stats: "10x Faster",
+      color: "from-zion-yellow to-zion-green",
+      bgColor: "from-zion-yellow/20 to-zion-green/20",
+      features: [
+        "Code Optimization",
+        "Database Tuning",
+        "Caching Strategies",
+        "Performance Monitoring"
+      ]
+    }
+  ];
+
+  const stats = [
+    { icon: <Star className="w-6 h-6" />, value: "500+", label: "Projects Delivered" },
+    { icon: <Users className="w-6 h-6" />, value: "50+", label: "Expert Team" },
+    { icon: <Globe className="w-6 h-6" />, value: "25+", label: "Countries Served" },
+    { icon: <TrendingUp className="w-6 h-6" />, value: "99.9%", label: "Client Satisfaction" }
+  ];
+
+  return (
+    <section className="py-24 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-zion-blue/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <motion.div 
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.div 
+            className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 rounded-full border border-zion-cyan/30 mb-6"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Zap className="w-5 h-5 text-zion-cyan" />
+            <span className="text-zion-cyan font-medium text-sm">Why Choose Zion Tech Group</span>
+          </motion.div>
+          
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbbe
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Why Choose <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Zion Tech Group</span>?
+            The <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">Zion Advantage</span>
           </h2>
-          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            We combine cutting-edge technology with proven methodologies to deliver exceptional results. 
-            Our commitment to excellence drives every project to success.
+          
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
+            Experience the perfect blend of cutting-edge technology, expert craftsmanship, and unwavering commitment to your success.
           </p>
         </motion.div>
 
+<<<<<<< HEAD
         {/* Additional stats section */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" 
@@ -166,6 +294,21 @@ export function BenefitsSection() {
               key={index} 
               variants={statsVariants} 
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
+=======
+        {/* Stats Section */}
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {stats.map((stat, index) => (
+            <motion.div 
+              key={index} 
+              variants={statsVariants}
+              className="text-center p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/40 to-zion-blue-dark/20 backdrop-blur-sm border border-zion-blue-light/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-xl hover:shadow-zion-cyan/20 group"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbbe
             >
               <div className="text-zion-cyan mb-2 flex justify-center">
                 {stat.icon}
