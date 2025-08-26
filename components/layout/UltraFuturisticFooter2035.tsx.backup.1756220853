@@ -21,6 +21,13 @@ const footerSections = [
   {
     title: '🚀 Core Services',
     links: [
+<<<<<<< HEAD
+      { name: 'AI & Consciousness', href: '/ai-services', description: 'Revolutionary AI solutions' },
+      { name: 'Quantum Computing', href: '/quantum-services', description: 'Next-gen quantum tech' },
+      { name: 'Enterprise IT', href: '/enterprise-it', description: 'Enterprise infrastructure' },
+      { name: 'Space Technology', href: '/space-technology', description: 'Space exploration solutions' },
+      { name: 'Micro SAAS', href: '/micro-saas', description: 'Business automation tools' }
+=======
       { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform', featured: true },
       { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', featured: true },
       { name: 'AI Financial Planning', href: '/ai-financial-planning-platform', featured: true },
@@ -33,11 +40,19 @@ const footerSections = [
              { name: 'SEO Automation Suite', href: '/seo-automation-suite' },
                { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent' },
         { name: 'Managed Postgres HA', href: '/managed-postgres-ha' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ce67
     ]
   },
   {
     title: '💡 Innovation Areas',
     links: [
+<<<<<<< HEAD
+      { name: 'Research & Development', href: '/research-development', description: 'Breakthrough technologies' },
+      { name: 'Emerging Tech', href: '/emerging-tech', description: 'Future technology trends' },
+      { name: 'AI Consciousness', href: '/ai-consciousness-evolution-2029', description: 'AI evolution research' },
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing', description: 'Hybrid computing' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface', description: 'Neural technology' }
+=======
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029' },
       { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network' },
       { name: 'AI Autonomous Business Operations', href: '/ai-autonomous-business-operations' },
@@ -47,11 +62,19 @@ const footerSections = [
       { name: 'AI Content Personalization', href: '/ai-content-personalization-engine' },
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager' },
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ce67
     ]
   },
   {
     title: '🏢 Business Solutions',
     links: [
+<<<<<<< HEAD
+      { name: 'Customer Success AI', href: '/customer-success-ai-pro', description: 'AI-powered customer success' },
+      { name: 'Smart Inventory AI', href: '/smart-inventory-ai', description: 'Inventory optimization' },
+      { name: 'HR Compliance Pro', href: '/hr-compliance-pro', description: 'HR compliance automation' },
+      { name: 'Expense AI Manager', href: '/expense-ai-manager', description: 'Expense management' },
+      { name: 'Contract Flow AI', href: '/contract-flow-ai', description: 'Contract automation' }
+=======
       { name: 'Space Resource Mining', href: '/space-resource-mining-platform' },
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
       { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure' },
@@ -63,6 +86,7 @@ const footerSections = [
       { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform' },
       { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
       { name: 'Quantum Robotics', href: '/quantum-robotics' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ce67
     ]
   },
   {
