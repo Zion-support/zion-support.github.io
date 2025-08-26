@@ -6,6 +6,7 @@ import { AppHeader } from '../AppHeader'; // Adjust path as necessary
 import { useAuth } from '@/hooks/useAuth';
 import type { AuthContextType } from '@/types/auth';
 import { useTranslation } from 'react-i18next';
+import type { TFunction } from 'i18next';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useMessaging } from '@/context/MessagingContext';
 
@@ -56,7 +57,7 @@ jest.mock('@/components/header/MobileBottomNav', () => ({
 
 
 describe('AppHeader', () => {
-  const mockT = jest.fn((key) => key); // Simple translation mock
+  const mockT = jest.fn<(key: string) => string>((key: string) => key) as unknown as jest.MockedFunction<TFunction>; // Simple translation mock
 
   beforeEach(() => {
     mockedUseAuth.mockClear();

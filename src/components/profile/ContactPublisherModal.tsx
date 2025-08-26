@@ -55,7 +55,7 @@ export function ContactPublisherModal({
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const form = useForm<FormValues>({
-    resolver: zodResolver(schema),
+    resolver: yupResolver(schema),
     mode: 'onChange',
     defaultValues: { subject: '', message: '' },
   });

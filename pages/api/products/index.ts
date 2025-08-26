@@ -1,5 +1,5 @@
-
-import { Prisma, PrismaClient, type Product } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
+import type { Product } from '@/types/product';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 type ProductModel = Product;
